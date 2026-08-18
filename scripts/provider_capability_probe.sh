@@ -2,7 +2,7 @@
 set -euo pipefail
 
 # Secret-safe capability probe for HydraDG burst/evaluation providers.
-# Run on magicPRObox. It reports only PRESENT/MISSING or CLI availability.
+# Run on magicPRObox. It reports only PRESENT/MISSING or CLI/config availability.
 # It never prints credential values and does not modify provider accounts.
 
 ROOT="/Users/byron/projects/active/hydradg"
@@ -50,8 +50,27 @@ file_key_state(){
   fi
 }
 
+file_state(){
+  local label="$1" file="$2"
+  if [ -f "$file" ]; then
+    printf 'CONFIG_FILE:%s=PRESENT\n' "$label"
+  else
+    printf 'CONFIG_FILE:%s=MISSING\n' "$label"
+  fi
+}
+
+PROVIDER_KEYS=(
+  MODAL_TOKEN_ID MODAL_TOKEN_SECRET MODAL_PROFILE
+  KAGGLE_USERNAME KAGGLE_KEY
+  EXA_API_KEY
+  APIFY_API_TOKEN APIFY_TOKEN
+  DAYTONA_API_KEY DAYTONA_API_URL DAYTONA_TARGET
+  GMI_API_KEY GMI_CLOUD_API_KEY
+  RUNPOD_API_KEY
+)
+
 {
-  echo "schema=hydradg.provider_capability_probe.v1"
+  echo "schema=hydradg.provider_capability_probe.v2"
   echo "timestamp_utc=$(date -u +%Y-%m-%dT%H:%M:%SZ)"
   echo "host=$(hostname)"
 
@@ -59,16 +78,17 @@ file_key_state(){
     command_state "$c"
   done
 
-  # Common provider variable names. Presence only; values are never emitted.
-  for k in \
-    MODAL_TOKEN_ID MODAL_TOKEN_SECRET MODAL_PROFILE \
-    KAGGLE_USERNAME KAGGLE_KEY \
-    EXA_API_KEY \
-    APIFY_API_TOKEN APIFY_TOKEN \
-    DAYTONA_API_KEY \
-    RUNPOD_API_KEY; do
+  # Provider variable names. Presence only; values are never emitted.
+  # GMI_API_KEY / GMI_CLOUD_API_KEY are HydraDG probe conventions because
+  # GMI's API documentation specifies Bearer-token API credentials but does
+  # not prescribe a shell environment-variable name on the referenced page.
+  for k in "${PROVIDER_KEYS[@]}"; do
     env_state "$k"
   done
+
+  # Non-secret configuration-file existence checks only.
+  file_state MODAL_PROFILE_FILE "$HOME/.modal.toml"
+  file_state KAGGLE_CONFIG "$HOME/.kaggle/kaggle.json"
 
   if [ -d "$OLLARMA/.git" ]; then
     echo "OLLARMA_REPO=PRESENT"
@@ -81,13 +101,7 @@ file_key_state(){
   for f in "$OLLARMA/.env" "$OLLARMA/.env.local"; do
     [ -f "$f" ] || continue
     echo "LOCAL_ENV_FILE=$(basename "$f")=PRESENT"
-    for k in \
-      MODAL_TOKEN_ID MODAL_TOKEN_SECRET MODAL_PROFILE \
-      KAGGLE_USERNAME KAGGLE_KEY \
-      EXA_API_KEY \
-      APIFY_API_TOKEN APIFY_TOKEN \
-      DAYTONA_API_KEY \
-      RUNPOD_API_KEY; do
+    for k in "${PROVIDER_KEYS[@]}"; do
       file_key_state "$f" "$k"
     done
   done
@@ -101,14 +115,14 @@ jq -n \
   --arg host "$(hostname)" \
   --arg capabilities_sha "$CAP_SHA" \
   '{
-    schema:"hydradg.provider_capability_receipt.v1",
+    schema:"hydradg.provider_capability_receipt.v2",
     run_id:$run_id,
     timestamp_utc:$timestamp,
     host:$host,
     execution_class:"LOCAL_RECOMPUTED_SECRET_SAFE_CAPABILITY_PROBE",
     evidence_sha256:{capabilities:$capabilities_sha},
     secret_policy:"PRESENCE_ONLY_NO_VALUES_EMITTED",
-    claim_ceiling:"LOCAL_PROVIDER_TOOL_AND_CREDENTIAL_PRESENCE_ONLY",
+    claim_ceiling:"LOCAL_PROVIDER_TOOL_CONFIG_AND_CREDENTIAL_PRESENCE_ONLY",
     signature_state:"NOT_SIGNED_BY_THIS_SCRIPT",
     mmr_state:"APPEND_PENDING"
   }' > "$OUT/PROVIDER_CAPABILITY_RECEIPT.json"
