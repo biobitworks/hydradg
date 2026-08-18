@@ -44,6 +44,7 @@ const edgeTypes = [
   "TRANSITIONS_TO",
 ] as const;
 
+const HYDRADG_INDEX_VERTEX = Number.MAX_SAFE_INTEGER - 1;
 const nodeLabelSet = new Set<string>(nodeLabels);
 const edgeTypeSet = new Set<string>(edgeTypes);
 type NodeLabel = (typeof nodeLabels)[number];
@@ -65,42 +66,7 @@ function nodeRow(node: ReturnType<typeof makeFcoNode>) {
   };
 }
 
-async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
-  if (!nodeLabelSet.has(label)) throw new Error(`unsupported node label: ${label}`);
-  const row = nodeRow(node);
-
-  const existing = await runGraph(
-    "MATCH (n {id: $id}) RETURN n.fco_id AS fco_id LIMIT 1",
-    { id: row.vertex },
-  );
-  const existingFcoId = typeof existing[0]?.fco_id === "string" ? existing[0].fco_id : "";
-  if (existingFcoId && existingFcoId !== node.id) {
-    throw new Error(`HydraDB numeric-address collision for ${node.id}`);
-  }
-
-  if (graphBackend() === "hydradb-http") {
-    // HydraDB's documented vertex-upsert path is the client-service UNWIND form.
-    // Standalone node-only MERGE is intentionally not executable in its Query engine.
-    await runGraph(
-      `UNWIND $rows AS row
-       MERGE (n {id: row.vertex})
-       SET n:${label},
-           n.fco_id = row.fco_id,
-           n.object_sha256 = row.object_sha256,
-           n.type = row.type,
-           n.payload_json = row.payload_json,
-           n.claim_ceiling = row.claim_ceiling,
-           n.evidence_class = row.evidence_class,
-           n.subject_key = row.subject_key,
-           n.is_current = row.is_current,
-           n.version = row.version,
-           n.observed_at = row.observed_at`,
-      { rows: [row] },
-    );
-    return;
-  }
-
-  await runGraph(`MERGE (n:${label} {id: $id})`, { id: row.vertex });
+async function setNodeProperties(label: string, row: ReturnType<typeof nodeRow>) {
   await runGraph(
     `MATCH (n:${label} {id: $id})
      SET n.fco_id = $fco_id,
@@ -127,6 +93,36 @@ async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
       observed_at: row.observed_at,
     },
   );
+}
+
+async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
+  if (!nodeLabelSet.has(label)) throw new Error(`unsupported node label: ${label}`);
+  const row = nodeRow(node);
+
+  const existing = await runGraph(
+    "MATCH (n {id: $id}) RETURN n.fco_id AS fco_id LIMIT 1",
+    { id: row.vertex },
+  );
+  const existingFcoId = typeof existing[0]?.fco_id === "string" ? existing[0].fco_id : "";
+  if (existingFcoId && existingFcoId !== node.id) {
+    throw new Error(`HydraDB numeric-address collision for ${node.id}`);
+  }
+
+  if (graphBackend() === "hydradb-http") {
+    // The HTTP mutation engine executes one-hop edge MERGE. Use an internal
+    // indexing edge to materialize the FCO vertex, then store FCO properties
+    // with a separate MATCH ... SET statement. INDEXES_FCO is storage
+    // scaffolding only and is not part of the semantic FCG.
+    await runGraph(
+      `MERGE (root:HydraDGIndex {id: $root})-[:INDEXES_FCO]->(n:${label} {id: $id})`,
+      { root: HYDRADG_INDEX_VERTEX, id: row.vertex },
+    );
+    await setNodeProperties(label, row);
+    return;
+  }
+
+  await runGraph(`MERGE (n:${label} {id: $id})`, { id: row.vertex });
+  await setNodeProperties(label, row);
 }
 
 async function upsertEdge(srcFcoId: string, relation: string, dstFcoId: string) {
@@ -164,9 +160,7 @@ async function loadDemoFixture() {
   const fixture = buildDemoFixture();
   for (const [label, node] of fixture.nodes) await upsertNode(label, node);
   const edgeIds: string[] = [];
-  for (const [src, relation, dst] of fixture.edges) {
-    edgeIds.push(await upsertEdge(src, relation, dst));
-  }
+  for (const [src, relation, dst] of fixture.edges) edgeIds.push(await upsertEdge(src, relation, dst));
   return {
     fixture_state: "DETERMINISTIC_SYNTHETIC_TEST_FIXTURE",
     claim_ceiling: "DEMO_FIXTURE_ONLY",
@@ -242,10 +236,7 @@ async function exaRetrieve(term: string): Promise<ExaResponse> {
         query: term,
         type: "auto",
         numResults: 6,
-        contents: {
-          text: { maxCharacters: 4000 },
-          highlights: { query: term, maxCharacters: 1200 },
-        },
+        contents: { text: { maxCharacters: 4000 }, highlights: { query: term, maxCharacters: 1200 } },
       };
 
   const response = await fetch(endpoint, {
@@ -306,10 +297,7 @@ async function ingestExa(term: string, response: ExaResponse) {
     admitted.push({
       source_id: source.id,
       evidence_id: evidence.id,
-      edge_ids: [
-        await upsertEdge(tool.id, "PRODUCED", evidence.id),
-        await upsertEdge(evidence.id, "DERIVED_FROM", source.id),
-      ],
+      edge_ids: [await upsertEdge(tool.id, "PRODUCED", evidence.id), await upsertEdge(evidence.id, "DERIVED_FROM", source.id)],
     });
   }
   return { tool_action_id: tool.id, admitted };
