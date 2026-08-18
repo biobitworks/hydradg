@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { buildDemoFixture } from "@/lib/demoFixture";
-import { canonicalJson, makeFcoNode, sha256Text } from "@/lib/fco";
+import { canonicalJson, hydraNumericId, makeFcoNode, sha256Text } from "@/lib/fco";
 import { graphConfigured, runGraph } from "@/lib/graph";
 
 export const runtime = "nodejs";
@@ -24,39 +24,65 @@ type ExaResponse = {
   statuses?: unknown[];
 };
 
-const nodeLabels = new Set([
+const nodeLabels = [
   "ToolAction",
   "Source",
   "Evidence",
   "KnowledgeAtom",
   "SeedOfTruth",
   "ClassificationReceipt",
-]);
-const edgeTypes = new Set([
+] as const;
+const nodeLabelSet = new Set<string>(nodeLabels);
+const edgeTypes = [
   "PRODUCED",
   "DERIVED_FROM",
   "SUPPORTED_BY",
   "SUPERSEDED_BY",
   "CONTRADICTS",
   "CLASSIFIES",
-]);
+] as const;
+const edgeTypeSet = new Set<string>(edgeTypes);
+
+type NodeLabel = (typeof nodeLabels)[number];
+type EdgeType = (typeof edgeTypes)[number];
 
 async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
-  if (!nodeLabels.has(label)) throw new Error(`unsupported node label: ${label}`);
-  const subjectKey = typeof node.payload.subject_key === "string" ? node.payload.subject_key : null;
-  const isCurrent = typeof node.payload.is_current === "boolean" ? node.payload.is_current : null;
+  if (!nodeLabelSet.has(label)) throw new Error(`unsupported node label: ${label}`);
+  const numericId = hydraNumericId(node.id);
+
+  // The native HydraDB vertex id is u64; FCO identity remains the full hash string.
+  // Detect the extremely unlikely adapter-key collision before writing properties.
+  const existing = await runGraph(
+    `MATCH (n {id: $id}) RETURN n.fco_id AS fco_id LIMIT 1`,
+    { id: numericId },
+  );
+  const existingFcoId = typeof existing[0]?.fco_id === "string" ? existing[0].fco_id : "";
+  if (existingFcoId && existingFcoId !== node.id) {
+    throw new Error(`HydraDB numeric-address collision for ${node.id}`);
+  }
+
+  // HydraDB mutations are intentionally separate from reads/RETURN clauses.
+  await runGraph(`MERGE (n:${label} {id: $id})`, { id: numericId });
+
+  const subjectKey = typeof node.payload.subject_key === "string" ? node.payload.subject_key : "";
+  const isCurrent = typeof node.payload.is_current === "boolean" ? node.payload.is_current : false;
+  const version = typeof node.payload.version === "number" ? node.payload.version : 0;
+  const observedAt = typeof node.payload.observed_at === "string" ? node.payload.observed_at : "";
   await runGraph(
-    `MERGE (n:${label} {id: $id})
-     SET n.object_sha256 = $object_sha256,
+    `MATCH (n:${label} {id: $id})
+     SET n.fco_id = $fco_id,
+         n.object_sha256 = $object_sha256,
          n.type = $type,
          n.payload_json = $payload_json,
          n.claim_ceiling = $claim_ceiling,
          n.evidence_class = $evidence_class,
          n.subject_key = $subject_key,
-         n.is_current = $is_current
-     RETURN n.id AS id`,
+         n.is_current = $is_current,
+         n.version = $version,
+         n.observed_at = $observed_at`,
     {
-      id: node.id,
+      id: numericId,
+      fco_id: node.id,
       object_sha256: node.object_sha256,
       type: node.type,
       payload_json: canonicalJson(node.payload),
@@ -64,21 +90,33 @@ async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
       evidence_class: String(node.payload.evidence_class || "UNSPECIFIED"),
       subject_key: subjectKey,
       is_current: isCurrent,
+      version,
+      observed_at: observedAt,
     },
   );
 }
 
-async function upsertEdge(src: string, rel: string, dst: string) {
-  if (!edgeTypes.has(rel)) throw new Error(`unsupported edge type: ${rel}`);
-  const edgeBody = { src, rel, dst, payload: {} };
-  const id = `fcg:${sha256Text(canonicalJson(edgeBody))}`;
+async function upsertEdge(srcFcoId: string, rel: string, dstFcoId: string) {
+  if (!edgeTypeSet.has(rel)) throw new Error(`unsupported edge type: ${rel}`);
+  const edgeBody = { src: srcFcoId, rel, dst: dstFcoId, payload: {} };
+  const fcgId = `fcg:${sha256Text(canonicalJson(edgeBody))}`;
+  const edgeId = hydraNumericId(fcgId);
+  const src = hydraNumericId(srcFcoId);
+  const dst = hydraNumericId(dstFcoId);
+
   await runGraph(
     `MATCH (a {id: $src}), (b {id: $dst})
-     MERGE (a)-[r:${rel} {id: $id}]->(b)
-     RETURN r.id AS id`,
-    { src, dst, id },
+     MERGE (a)-[r:${rel} {id: $edge_id}]->(b)`,
+    { src, dst, edge_id: edgeId },
   );
-  return id;
+  await runGraph(
+    `MATCH (a {id: $src})-[r:${rel} {id: $edge_id}]->(b {id: $dst})
+     SET r.fcg_id = $fcg_id,
+         r.src_fco_id = $src_fco_id,
+         r.dst_fco_id = $dst_fco_id`,
+    { src, dst, edge_id: edgeId, fcg_id: fcgId, src_fco_id: srcFcoId, dst_fco_id: dstFcoId },
+  );
+  return fcgId;
 }
 
 async function loadDemoFixture() {
@@ -97,29 +135,46 @@ async function loadDemoFixture() {
   };
 }
 
-async function traceProvenance(startId: string, maxDepth = 4) {
-  const allowed = ["DERIVED_FROM", "SUPPORTED_BY", "PRODUCED", "CLASSIFIES"];
-  const seen = new Set<string>([startId]);
-  let frontier = [startId];
+async function readLabel(label: NodeLabel, limit = 50) {
+  return runGraph(
+    `MATCH (n:${label})
+     RETURN n.id AS hydra_id, n.fco_id AS id, n.type AS type,
+            n.subject_key AS subject_key, n.is_current AS is_current,
+            n.claim_ceiling AS claim_ceiling, n.evidence_class AS evidence_class,
+            n.payload_json AS payload, n.version AS version, n.observed_at AS observed_at
+     LIMIT ${Math.max(1, Math.min(limit, 100))}`,
+  );
+}
+
+async function traceOneRelation(fromFcoId: string, relation: EdgeType) {
+  const id = hydraNumericId(fromFcoId);
+  return runGraph(
+    `MATCH (a {id: $id})-[:${relation}]->(b)
+     RETURN a.fco_id AS from_id, b.fco_id AS to_id, b.type AS to_type,
+            b.claim_ceiling AS claim_ceiling, b.payload_json AS payload`,
+    { id },
+  );
+}
+
+async function traceProvenance(startFcoId: string, maxDepth = 4) {
+  const allowed: EdgeType[] = ["DERIVED_FROM", "SUPPORTED_BY", "PRODUCED", "CLASSIFIES"];
+  const seen = new Set<string>([startFcoId]);
+  let frontier = [startFcoId];
   const hops: Array<Record<string, unknown>> = [];
 
   for (let depth = 0; depth < maxDepth && frontier.length; depth += 1) {
     const next: string[] = [];
-    for (const id of frontier) {
-      const rows = await runGraph(
-        `MATCH (a)-[r]->(b)
-         WHERE a.id = $id AND type(r) IN $allowed
-         RETURN a.id AS from_id, type(r) AS relation, b.id AS to_id,
-                b.type AS to_type, b.claim_ceiling AS claim_ceiling,
-                b.payload_json AS payload`,
-        { id, allowed },
-      );
-      for (const row of rows) {
-        hops.push({ depth: depth + 1, ...row });
-        const toId = typeof row.to_id === "string" ? row.to_id : null;
-        if (toId && !seen.has(toId)) {
-          seen.add(toId);
-          next.push(toId);
+    for (const fromId of frontier) {
+      for (const relation of allowed) {
+        const rows = await traceOneRelation(fromId, relation);
+        for (const row of rows) {
+          const enriched = { depth: depth + 1, relation, ...row };
+          hops.push(enriched);
+          const toId = typeof row.to_id === "string" ? row.to_id : null;
+          if (toId && !seen.has(toId)) {
+            seen.add(toId);
+            next.push(toId);
+          }
         }
       }
     }
@@ -172,6 +227,7 @@ async function ingestExa(term: string, response: ExaResponse) {
     request_term: term,
     request_id: response.requestId || null,
     retrieved_at: retrievedAt,
+    observed_at: retrievedAt,
     evidence_class: "EXTERNALLY_RETRIEVED_EVIDENCE",
     claim_ceiling: "RETRIEVAL_PROVENANCE_ONLY",
     custody_state: "HASHED",
@@ -187,6 +243,7 @@ async function ingestExa(term: string, response: ExaResponse) {
       author: result.author || null,
       published_date: result.publishedDate || null,
       provider: "Exa",
+      observed_at: retrievedAt,
       evidence_class: "EXTERNALLY_RETRIEVED_EVIDENCE",
       claim_ceiling: "SOURCE_CONTENT_ONLY",
       custody_state: "HASHED",
@@ -198,6 +255,7 @@ async function ingestExa(term: string, response: ExaResponse) {
       text: extractedText,
       text_sha256: sha256Text(extractedText),
       highlights: result.highlights || [],
+      observed_at: retrievedAt,
       evidence_class: "EXTERNALLY_RETRIEVED_EVIDENCE",
       claim_ceiling: "EXTRACTED_SOURCE_EVIDENCE",
       custody_state: "HASHED",
@@ -227,52 +285,51 @@ export async function POST(request: NextRequest) {
     }
 
     if (action === "memory") {
-      const term = body.term?.trim();
+      const term = body.term?.trim().toLowerCase();
       if (!term) return NextResponse.json({ error: "term is required" }, { status: 400 });
-      const rows = await runGraph(
-        `MATCH (n)
-         WHERE n.id = $term OR toLower(n.payload_json) CONTAINS toLower($term)
-         RETURN n.id AS id, n.type AS type, n.subject_key AS subject_key,
-                n.is_current AS is_current, n.claim_ceiling AS claim_ceiling,
-                n.evidence_class AS evidence_class, n.payload_json AS payload
-         LIMIT 30`,
-        { term },
-      );
-      return NextResponse.json({ action, rows });
+      const batches = await Promise.all(nodeLabels.map((label) => readLabel(label, 50)));
+      const rows = batches
+        .flat()
+        .filter((row) => JSON.stringify(row).toLowerCase().includes(term))
+        .slice(0, 30);
+      return NextResponse.json({ action, rows, search_mode: "BOUNDED_CLIENT_FILTER_OVER_TYPED_HYDRADB_READS" });
     }
 
     if (action === "current") {
       const subjectKey = body.subject_key?.trim() || body.term?.trim();
       if (!subjectKey) return NextResponse.json({ error: "subject_key is required" }, { status: 400 });
-      const rows = await runGraph(
-        `MATCH (n)
-         WHERE n.subject_key = $subject_key AND n.is_current = true
-         RETURN n.id AS id, n.type AS type, n.claim_ceiling AS claim_ceiling,
-                n.evidence_class AS evidence_class, n.payload_json AS payload
-         LIMIT 20`,
-        { subject_key: subjectKey },
-      );
+      const queries: NodeLabel[] = ["SeedOfTruth", "KnowledgeAtom"];
+      const rows = (
+        await Promise.all(
+          queries.map((label) =>
+            runGraph(
+              `MATCH (n:${label})
+               WHERE n.subject_key = $subject_key AND n.is_current = true
+               RETURN n.id AS hydra_id, n.fco_id AS id, n.type AS type,
+                      n.claim_ceiling AS claim_ceiling, n.evidence_class AS evidence_class,
+                      n.payload_json AS payload, n.version AS version`,
+              { subject_key: subjectKey },
+            ),
+          ),
+        )
+      ).flat();
       return NextResponse.json({ action, subject_key: subjectKey, rows });
     }
 
     if (action === "history") {
-      const id = body.id?.trim();
-      if (!id) return NextResponse.json({ error: "id is required" }, { status: 400 });
-      const rows = await runGraph(
-        `MATCH (a)-[r]->(b)
-         WHERE a.id = $id AND type(r) IN $relations
-         RETURN a.id AS from_id, type(r) AS relation, b.id AS to_id,
-                b.type AS to_type, b.payload_json AS payload
-         LIMIT 50`,
-        { id, relations: ["SUPERSEDED_BY", "CONTRADICTS"] },
-      );
+      const fcoId = body.id?.trim();
+      if (!fcoId) return NextResponse.json({ error: "id is required" }, { status: 400 });
+      const rows: Array<Record<string, unknown>> = [];
+      for (const relation of ["SUPERSEDED_BY", "CONTRADICTS"] as EdgeType[]) {
+        for (const row of await traceOneRelation(fcoId, relation)) rows.push({ relation, ...row });
+      }
       return NextResponse.json({ action, rows });
     }
 
     if (action === "provenance") {
-      const id = body.id?.trim();
-      if (!id) return NextResponse.json({ error: "id is required" }, { status: 400 });
-      return NextResponse.json({ action, start_id: id, hops: await traceProvenance(id) });
+      const fcoId = body.id?.trim();
+      if (!fcoId) return NextResponse.json({ error: "id is required" }, { status: 400 });
+      return NextResponse.json({ action, start_id: fcoId, hops: await traceProvenance(fcoId) });
     }
 
     if (action === "exa") {
