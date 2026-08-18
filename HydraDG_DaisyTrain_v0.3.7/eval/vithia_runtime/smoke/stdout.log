@@ -1,0 +1,21 @@
+{
+  "run_id": "magicstudiobox_preflight_smoke",
+  "final_state_hash": "5add57f9c1ea45a7299c48b6c4f624c01a1fe86a64b9b7e06be6ca44f08790e9",
+  "checkpoint_file_sha256": "6c651b95b76082191950df7e7239d2b88fa4ba531ba1b0afecf8d087a443236e",
+  "environment": {
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.8.0",
+    "cuda_available": false,
+    "torch_num_threads": 1,
+    "torch_num_interop_threads": 10,
+    "env": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": null,
+      "PYTHONHASHSEED": "314159"
+    }
+  }
+}

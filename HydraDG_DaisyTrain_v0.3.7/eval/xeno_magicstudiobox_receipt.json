@@ -1,0 +1,31 @@
+{
+  "argv": [
+    "python",
+    "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/cafa6_governed_eval.py",
+    "--table",
+    "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/residual_table.jsonl",
+    "--ckpt",
+    "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/ckpt_latest.pt",
+    "--out",
+    "/var/folders/mh/9bzx4_6n0g1b3h625lycqvsm0000gn/T/xeno_replay_4t0k3nbf/outputs",
+    "--report-name",
+    "cafa6_governed_eval_report.json",
+    "--seed",
+    "20260710"
+  ],
+  "claim_boundary": "Execution receipt; correctness and historical identity are separate.",
+  "input_sha256": {
+    "CHECKPOINT": "196adc4decd513b120165128ae6ac8da1cd07accb6ae082a4f730aab937de18a",
+    "CONTRACT": "072901cd82727d14583af94f8c5868ddca91ad8785f41345461581d67abddc5f",
+    "HARNESS": "3e26b7c2b5f5567b9cc2872deaa19f9412ff99738c5afebd6ce61b932309761c",
+    "TABLE": "eaf1ad10f5ead0d00afea03ee1051593fc2f5eeccbbd34841b3313cc055e516c"
+  },
+  "metrics": {},
+  "mode": "local",
+  "outputs": {},
+  "returncode": 1,
+  "schema": "hydradg.xeno_execution_receipt.v1",
+  "stderr": "/Users/byron/fco-venv/lib/python3.9/site-packages/torch/nn/modules/transformer.py:392: UserWarning: enable_nested_tensor is True, but self.use_nested_tensor is False because encoder_layer.norm_first was True\n  warnings.warn(\nTraceback (most recent call last):\n  File \"/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/cafa6_governed_eval.py\", line 727, in <module>\n    sys.exit(main())\n  File \"/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/cafa6_governed_eval.py\", line 691, in main\n    report = build_report(table_path, ckpt_path, seed=args.seed,\n  File \"/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/cafa6_governed_eval.py\", line 577, in build_report\n    \"auroc\": auroc(y_ho, p_ho),\n  File \"/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/cafa6_governed_eval.py\", line 396, in auroc\n    from sklearn.metrics import roc_auc_score\nModuleNotFoundError: No module named 'sklearn'\n",
+  "stdout": "",
+  "timestamp_utc": "2026-08-17T16:10:58.188255+00:00"
+}
