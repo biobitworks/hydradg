@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 
 import { graphBackend, graphConfigured, probeGraph } from "@/lib/graph";
+import { eligibilityClaimCeiling, hackHydraEligibility } from "@/lib/eligibility";
 import { projectSources } from "@/lib/sources";
 
 export const runtime = "nodejs";
@@ -26,6 +27,10 @@ export async function GET() {
       repository: "hydra-db/hydradb",
       commit: "6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
       claim_ceiling: "SOURCE_REVISION_PIN_ONLY",
+    },
+    eligibility: {
+      claim_ceiling: eligibilityClaimCeiling,
+      items: hackHydraEligibility,
     },
     sources: projectSources,
   });
