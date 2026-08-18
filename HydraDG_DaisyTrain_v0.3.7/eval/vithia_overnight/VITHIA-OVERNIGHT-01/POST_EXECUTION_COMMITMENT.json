@@ -1,0 +1,35 @@
+{
+  "schema": "hydradg.post_execution_commitment.v1",
+  "experiment": "VITHIA-OVERNIGHT-01",
+  "commitment_type": "POST_EXECUTION_COMMITMENT",
+  "note": "Signature applied after execution completed. Not contemporaneous with original run.",
+  "packet_sha256": "b1099608b07da848f7c0ed5f5ee21e25253cc0b5934a827b5273ad0d2261e3cc",
+  "commitment_timestamp_utc": "2026-08-18T14:22:04.214062+00:00",
+  "signer_key_source": "FCO_SIGNING_KEY (~/.fco/keys/fcg_signing_ed25519.pem) on magicPRObox",
+  "algorithm": "Ed25519",
+  "public_key_ref": "PUBLIC_KEY.ed25519.pub (fractal-custody-objects)",
+  "signature_state": "SIGNED_AND_VERIFIED",
+  "merkle_state": "ANCHORED_AND_VERIFIED",
+  "original_execution_timestamps": {
+    "started_utc": "2026-08-18T07:49:44.881907+00:00",
+    "completed_utc": "2026-08-18T08:06:11.614152+00:00"
+  },
+  "signatures": {
+    "packet": {
+      "signed_digest": "b1099608b07da848f7c0ed5f5ee21e25253cc0b5934a827b5273ad0d2261e3cc",
+      "signature_hex": "79a4a746b3b474ed2ea72c5b4b96949d7f6e5a2934ca7b948093c8f82a051c8d98c0e552b0f687c3b52ad3d79e5a7fd85dc42974c6732cb6edd2612bcbdea508",
+      "verification": "Signature Verified Successfully"
+    },
+    "fco_output": {
+      "signed_digest": "268291e7b6e1481613ffcfca59155b9a9b7bfecab154a226882797360a9d886d",
+      "signature_hex": "977767d051a18aa52942d7ff9a7443c50d694c64774377105eff0b4fa224e695610b6432930e09f40e2554ad2f06b978b8e1fb6b392f57a4df5878076f8d1708",
+      "verification": "Signature Verified Successfully"
+    }
+  },
+  "merkle_mmr": {
+    "anchor_id": "0a48f4d8fff702e9e15e28f10db08d5387aad59bbea92cbe2bd8445c11626b4f",
+    "n_leaves": 64,
+    "bagged_root": "353400cb01aefdb1a11bf01a7d425f2f102a7f1734d7d7e385825e27f6766dc9",
+    "verify": "PASS"
+  }
+}

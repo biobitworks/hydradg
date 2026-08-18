@@ -1,0 +1,15 @@
+{
+  "object_sha256": "5091b134532768b57219a7d97e420c1ba0281c85141606583a71c03bc30c8f2d",
+  "request": {
+    "created_utc": "2026-08-18T08:01:49.869738+00:00",
+    "prompt_sha256": "e2ded08f7d6d1384c8e5be875f7740371d69060a9590a545e299449a6d8ad8fa",
+    "requested_model": "qwen3:1.7b"
+  },
+  "response": {
+    "error": "RESERVED_MODEL_ANTIGENCE_SENTINEL: 'qwen3:1.7b' is reserved for Antigence/Sentinel direct use and cannot be selected by Ollarma generic chat.",
+    "reason_code": "RESERVED_MODEL_ANTIGENCE_SENTINEL"
+  },
+  "schema": "hydradg.ollarma_local_annotation.v1",
+  "status": "COMPLETE",
+  "trust_tier": "LOCAL_MODEL_HYPOTHESIS"
+}

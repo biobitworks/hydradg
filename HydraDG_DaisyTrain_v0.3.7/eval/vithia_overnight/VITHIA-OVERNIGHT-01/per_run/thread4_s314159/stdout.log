@@ -1,0 +1,21 @@
+{
+  "run_id": "thread4_s314159",
+  "final_state_hash": "7b758b69f2bc60ba1e5c97602e0a050fb1531aee2a8e5a30c07272e915d588d1",
+  "checkpoint_file_sha256": "883b1a777e5f2f64afb7985c2dac98d0b772db8de401e1d3b958660d2ffeaf05",
+  "environment": {
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "torch": "2.8.0",
+    "cuda_available": false,
+    "torch_num_threads": 4,
+    "torch_num_interop_threads": 10,
+    "env": {
+      "OMP_NUM_THREADS": "4",
+      "MKL_NUM_THREADS": "4",
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": null,
+      "PYTHONHASHSEED": "314159"
+    }
+  }
+}

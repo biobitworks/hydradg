@@ -1,0 +1,9 @@
+{
+  "schema": "hydradg.execution_wrapper_anomaly.v1",
+  "timestamp_utc": "2026-08-18T14:22:04.214062+00:00",
+  "event": "task-650 find command exited code 1",
+  "explanation": "The find command wrapper returned exit-code-1 due to permission errors during broad filesystem search. The packet generation itself succeeded (ANTIGRAVITY_PACKET.json exists, SHA-256 verified). This is an execution-wrapper failure, not evidence that packet generation failed.",
+  "packet_exists": true,
+  "packet_sha256_verified": true,
+  "classification": "execution_wrapper_failure_not_packet_failure"
+}

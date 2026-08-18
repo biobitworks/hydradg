@@ -1,0 +1,57 @@
+{
+  "schema": "hydradg.antigravity_interaction_fco.v1",
+  "experiment": "VITHIA-OVERNIGHT-01",
+  "interaction_type": "bounded_audit",
+  "timestamp_utc": "2026-08-18T14:21:20.990866+00:00",
+  "prompt": {
+    "artifact": "FINAL_ANTIGRAVITY_PROMPT.txt",
+    "sha256": "PROMPT_NOT_ON_THIS_HOST",
+    "location": "antigravity_hydradg_low_token/FINAL_ANTIGRAVITY_PROMPT.txt"
+  },
+  "model_provider": "Antigravity (Google DeepMind)",
+  "output": {
+    "artifact": "ANTIGRAVITY_REVIEW.json",
+    "sha256": "9b18348c4b2266051e6cca7fe0168011ddbd3f3f836aa75d06cd8967479eb653",
+    "location": "eval/vithia_overnight/VITHIA-OVERNIGHT-01/ANTIGRAVITY_REVIEW.json"
+  },
+  "source_fco_hashes": {
+    "antigravity_packet": "b1099608b07da848f7c0ed5f5ee21e25253cc0b5934a827b5273ad0d2261e3cc",
+    "evidence_index": "034f09a4183ed431c1a2de867ead8d452bc22bf7039ea1ca7a909a46b844da04",
+    "matrix": "9a08a28f0745cf1326d99ff790630525623ec4bca762d5f34e637b2678c0bc72"
+  },
+  "ollarma_first_pass": {
+    "model": "granite4.1:8b",
+    "sha256": "2595f388c2d8fe0c4868688c882b0ab5b01fc8b8552fd72833c76774554b7df1"
+  },
+  "signature_receipt": {
+    "algorithm": "Ed25519",
+    "signed_digest": "b1099608b07da848f7c0ed5f5ee21e25253cc0b5934a827b5273ad0d2261e3cc",
+    "signature_hex": "79a4a746b3b474ed2ea72c5b4b96949d7f6e5a2934ca7b948093c8f82a051c8d98c0e552b0f687c3b52ad3d79e5a7fd85dc42974c6732cb6edd2612bcbdea508",
+    "pubkey_fingerprint": "f496a067808026d45fbbad785bf83c6acd66429c2d257d246cc103c6d7ff460d",
+    "verification": "Signature Verified Successfully",
+    "signer_host": "magicPRObox",
+    "commitment_type": "POST_EXECUTION_COMMITMENT"
+  },
+  "merkle_mmr_receipt": {
+    "anchor_id": "0a48f4d8fff702e9e15e28f10db08d5387aad59bbea92cbe2bd8445c11626b4f",
+    "n_leaves": 64,
+    "n_peaks": 1,
+    "bagged_root": "353400cb01aefdb1a11bf01a7d425f2f102a7f1734d7d7e385825e27f6766dc9",
+    "verify": "PASS",
+    "anchor_class": "local_self_witness",
+    "tooling": "fractal-custody-objects/scripts/witness_peak.py"
+  },
+  "claim_ceiling": "POST_EXECUTION_COMMITMENT \u2014 execution provenance only",
+  "deterministic_vs_probabilistic": {
+    "phase_a_preflight": "deterministic",
+    "phase_b_signing": "deterministic",
+    "phase_b_mmr": "deterministic",
+    "phase_c_ollarma": "probabilistic",
+    "phase_d_review": "probabilistic",
+    "phase_e_fco": "deterministic"
+  },
+  "token_budget": {
+    "input_tokens": "not reported by provider",
+    "output_tokens": "not reported by provider"
+  }
+}

@@ -1,0 +1,112 @@
+{
+  "claim_boundary": "Preflight/queue declaration only. Local model supervises annotations; training is performed by the frozen Vithia PyTorch fixture.",
+  "core_path": "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/scripts/vithia_divergence_core.py",
+  "core_sha256": "86a0e7bb9355ced44a178d671403ca3cd5ae45787e8b1958527e77776211f714",
+  "cutoff_local": "2026-08-18T08:00:00-07:00",
+  "host": "magicSTUDIObox.local",
+  "installed_models": [
+    "deepseek-r1:14b",
+    "gpt-oss:20b",
+    "granite4.1:8b",
+    "llava:7b",
+    "nomic-embed-text:latest",
+    "phi4-mini:latest",
+    "qwen2.5-coder:7b",
+    "qwen2.5:1.5b",
+    "qwen3.5:9b",
+    "qwen3.6:27b",
+    "qwen3:1.7b",
+    "qwen3:4b",
+    "qwen3:8b"
+  ],
+  "object_sha256": "75660b281efb0844678c82e0a1218810e532f87cca6f30db71a90a8c5c2192da",
+  "ollama_url": "http://127.0.0.1:11434",
+  "ollarma_client_source": "/Users/byron/projects/active/ollarma/clients/ollarma_client.py",
+  "ollarma_url": "http://127.0.0.1:8484",
+  "package_root": "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7",
+  "platform": "macOS-26.5.2-arm64-arm-64bit",
+  "python": "/Users/byron/fco-venv/bin/python3",
+  "queue": [
+    {
+      "perturb_step": -1,
+      "perturb_token_delta": 0,
+      "run_id": "control_s314159_r1",
+      "seed": 314159,
+      "threads": 1
+    },
+    {
+      "perturb_step": -1,
+      "perturb_token_delta": 0,
+      "run_id": "control_s314159_r2",
+      "seed": 314159,
+      "threads": 1
+    },
+    {
+      "perturb_step": -1,
+      "perturb_token_delta": 0,
+      "run_id": "control_s314159_r3",
+      "seed": 314159,
+      "threads": 1
+    },
+    {
+      "perturb_step": -1,
+      "perturb_token_delta": 0,
+      "run_id": "thread4_s314159",
+      "seed": 314159,
+      "threads": 4
+    },
+    {
+      "perturb_step": 2,
+      "perturb_token_delta": 1,
+      "run_id": "perturb_early_s314159",
+      "seed": 314159,
+      "threads": 1
+    },
+    {
+      "perturb_step": 8,
+      "perturb_token_delta": 1,
+      "run_id": "perturb_mid_s314159",
+      "seed": 314159,
+      "threads": 1
+    },
+    {
+      "perturb_step": 18,
+      "perturb_token_delta": 1,
+      "run_id": "perturb_late_s314159",
+      "seed": 314159,
+      "threads": 1
+    },
+    {
+      "perturb_step": -1,
+      "perturb_token_delta": 0,
+      "run_id": "control_s271828",
+      "seed": 271828,
+      "threads": 1
+    },
+    {
+      "perturb_step": 8,
+      "perturb_token_delta": 1,
+      "run_id": "perturb_mid_s271828",
+      "seed": 271828,
+      "threads": 1
+    },
+    {
+      "perturb_step": -1,
+      "perturb_token_delta": 0,
+      "run_id": "control_s161803",
+      "seed": 161803,
+      "threads": 1
+    },
+    {
+      "perturb_step": 8,
+      "perturb_token_delta": 1,
+      "run_id": "perturb_mid_s161803",
+      "seed": 161803,
+      "threads": 1
+    }
+  ],
+  "run_family": "VITHIA-OVERNIGHT-01",
+  "schema": "hydradg.vithia_overnight_preflight.v1",
+  "selected_local_model": "qwen3:1.7b",
+  "started_utc": "2026-08-18T07:49:44.881907+00:00"
+}

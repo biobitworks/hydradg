@@ -1,0 +1,44 @@
+{
+  "command": [
+    "/Users/byron/fco-venv/bin/python3",
+    "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/scripts/vithia_divergence_core.py",
+    "--run-id",
+    "perturb_late_s314159",
+    "--outdir",
+    "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/eval/vithia_overnight/VITHIA-OVERNIGHT-01/runs",
+    "--seed",
+    "314159",
+    "--steps",
+    "24",
+    "--batch",
+    "2",
+    "--seq",
+    "128",
+    "--lr",
+    "0.0003",
+    "--perturb-step",
+    "18",
+    "--perturb-token-delta",
+    "1"
+  ],
+  "core_sha256": "86a0e7bb9355ced44a178d671403ca3cd5ae45787e8b1958527e77776211f714",
+  "cwd": "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7",
+  "declared_env": {
+    "MKL_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "1",
+    "PYTHONHASHSEED": "314159",
+    "TOKENIZERS_PARALLELISM": "false"
+  },
+  "object_sha256": "6500c4997e8e9e4165a822d8fd668ad4abd7ddac76c5c2faa7232ade8bf5e338",
+  "perturbation": {
+    "perturb_step": 18,
+    "perturb_token_delta": 1
+  },
+  "queue_index": 7,
+  "queue_total": 11,
+  "run_family": "VITHIA-OVERNIGHT-01",
+  "run_id": "perturb_late_s314159",
+  "schema": "hydradg.vithia_local_run_manifest.v1",
+  "selected_local_model": "qwen3:1.7b",
+  "started_utc": "2026-08-18T07:58:39.209094+00:00"
+}

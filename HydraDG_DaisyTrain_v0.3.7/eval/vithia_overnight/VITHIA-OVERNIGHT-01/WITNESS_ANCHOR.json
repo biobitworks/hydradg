@@ -1,0 +1,19 @@
+{
+  "schema": "fco.mmr_witness_anchor.v1",
+  "log": "eval/vithia_overnight/VITHIA-OVERNIGHT-01/mmr_event_log.jsonl",
+  "n_leaves": 64,
+  "n_peaks": 1,
+  "peaks": [
+    {
+      "height": 6,
+      "root": "353400cb01aefdb1a11bf01a7d425f2f102a7f1734d7d7e385825e27f6766dc9"
+    }
+  ],
+  "bagged": "353400cb01aefdb1a11bf01a7d425f2f102a7f1734d7d7e385825e27f6766dc9",
+  "prev_anchor": null,
+  "external_anchor": null,
+  "anchor_class": "local_self_witness",
+  "ceiling": "tamper-evident; a LOCAL holder can rewrite + re-anchor history UNLESS an external anchor binds these peaks (v1 \u00a75 caveat bounded)",
+  "llm_in_science_leaf": false,
+  "anchor_id": "0a48f4d8fff702e9e15e28f10db08d5387aad59bbea92cbe2bd8445c11626b4f"
+}

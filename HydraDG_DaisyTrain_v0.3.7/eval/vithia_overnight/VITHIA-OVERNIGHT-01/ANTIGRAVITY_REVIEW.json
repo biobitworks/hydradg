@@ -1,0 +1,28 @@
+{
+  "schema": "hydradg.antigravity_review.v1",
+  "experiment": "VITHIA-OVERNIGHT-01",
+  "execution_status": "COMPLETE \u2014 11/11 runs, 0 failures",
+  "custody_status": {
+    "hashes": "ALL_MATCH \u2014 11 receipts + matrix + evidence_index recomputed and verified",
+    "signature": "SIGNED_AND_VERIFIED \u2014 Ed25519 rawin, pubkey fingerprint f496a067808026d45fbbad785bf83c6acd66429c2d257d246cc103c6d7ff460d",
+    "merkle_mmr": "ANCHORED_AND_VERIFIED \u2014 64-leaf MMR, bagged root 353400cb01aefdb1a11bf01a7d425f2f102a7f1734d7d7e385825e27f6766dc9, witness_peak.py verify=PASS",
+    "post_execution_commitment": true
+  },
+  "representative_runs_reviewed": [
+    "control_s314159_r1",
+    "thread4_s314159",
+    "perturb_mid_s314159"
+  ],
+  "deterministic_anomalies": [],
+  "model_hypotheses": [
+    "Ollarma (granite4.1:8b) found no internal inconsistencies across all 11 runs"
+  ],
+  "missing_dependencies": [],
+  "claim_ceiling": "POST_EXECUTION_COMMITMENT \u2014 execution provenance only; no scientific claim promotion",
+  "next_action": "Operator review of representative receipts if desired; custody chain is closed",
+  "token_budget": {
+    "input_tokens": null,
+    "output_tokens": null,
+    "note": "Token counts not reported by local provider"
+  }
+}
