@@ -30,6 +30,23 @@ LW_REPO="biobitworks/lesswrong"
 log(){ printf '[%3s%%] %s\n' "$1" "$2"; }
 fail(){ echo "FAIL=$1"; exit "${2:-1}"; }
 
+# Fail before touching Git state if the requested role does not match the machine.
+# ComputerName is preferred on macOS; hostname is the portable fallback.
+HOST_LABEL="$(scutil --get ComputerName 2>/dev/null || hostname)"
+HOST_LOWER="$(printf '%s' "$HOST_LABEL" | tr '[:upper:]' '[:lower:]')"
+case "$ROLE:$HOST_LOWER" in
+  studio:*magicstudiobox*|pro:*magicprobox*) ;;
+  *)
+    echo "HOST=$HOST_LABEL"
+    echo "REQUESTED_ROLE=$ROLE"
+    echo "Expected: role=studio on magicSTUDIObox; role=pro on magicPRObox."
+    fail "ROLE_HOST_MISMATCH" 3
+    ;;
+esac
+
+echo "HOST=$HOST_LABEL"
+echo "ROLE=$ROLE"
+
 require(){ command -v "$1" >/dev/null 2>&1 || fail "MISSING_$1" 10; }
 require git
 require gh
