@@ -1,0 +1,72 @@
+{
+  "batch": 1,
+  "checkpoint_file_sha256": "6c651b95b76082191950df7e7239d2b88fa4ba531ba1b0afecf8d087a443236e",
+  "deterministic_requested": true,
+  "environment": {
+    "cuda_available": false,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": null,
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "PYTHONHASHSEED": "314159"
+    },
+    "machine": "arm64",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python": "3.9.6 (default, May 22 2026, 11:13:45) \n[Clang 21.0.0 (clang-2100.1.1.101)]",
+    "torch": "2.8.0",
+    "torch_num_interop_threads": 10,
+    "torch_num_threads": 1
+  },
+  "final_state_hash": "5add57f9c1ea45a7299c48b6c4f624c01a1fe86a64b9b7e06be6ca44f08790e9",
+  "lr": 0.0003,
+  "perturb_step": -1,
+  "perturb_token_delta": 0,
+  "records": [
+    {
+      "loss": 10.904560089111328,
+      "probe_top_ids": [
+        11,
+        9,
+        5,
+        13,
+        8,
+        4,
+        10,
+        2,
+        12,
+        6,
+        14,
+        0,
+        1,
+        3,
+        7,
+        15
+      ],
+      "probe_top_logits": [
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN,
+        NaN
+      ],
+      "state_hash": "5add57f9c1ea45a7299c48b6c4f624c01a1fe86a64b9b7e06be6ca44f08790e9",
+      "step": 0
+    }
+  ],
+  "run_id": "magicstudiobox_preflight_smoke",
+  "seed": 314159,
+  "seq": 16,
+  "steps": 1
+}

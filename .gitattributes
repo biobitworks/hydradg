@@ -1,8 +1,0 @@
-*.pt filter=lfs diff=lfs merge=lfs -text
-*.bin filter=lfs diff=lfs merge=lfs -text
-*.safetensors filter=lfs diff=lfs merge=lfs -text
-HydraDG_DaisyTrain_v0.3.6/data/longmemeval_s_cleaned.json filter=lfs diff=lfs merge=lfs -text
-HydraDG_DaisyTrain_v0.3.6/inputs/xeno/ckpt_latest.pt filter=lfs diff=lfs merge=lfs -text
-HydraDG_DaisyTrain_v0.3.7/inputs/xeno/ckpt_latest.pt filter=lfs diff=lfs merge=lfs -text
-HydraDG_HackHydra_Plan_v0.2.3/modal_runs_v3 filter=lfs diff=lfs merge=lfs -text
-HydraDG_HackHydra_Plan_v0.2.4/modal_runs_v3 filter=lfs diff=lfs merge=lfs -text

@@ -1,6 +1,0 @@
-python scripts/verify_package.py
-modal run modal/modal_eca_extension.py
-mkdir -p eval/eca
-modal volume get hydradg-eca-extension-v032 /runs/eca_extension_80.json eval/eca/eca_extension_80.json --force
-python scripts/validate_eca_extension.py eval/eca/eca_extension_80.json
-python scripts/render_eca_figures.py eval/eca/eca_extension_80.json --outdir figures/generated
