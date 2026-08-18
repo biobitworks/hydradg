@@ -1,0 +1,34 @@
+{
+  "custody": {
+    "file_hashes": "COMPUTED",
+    "merkle": "NOT_MERKLE_COMMITTED",
+    "signature": "NOT_SIGNED"
+  },
+  "logging": {
+    "chat_error_file": "logs/LAST_ERROR_FOR_CHAT.txt",
+    "protocol": "LOGGING_PROTOCOL.md",
+    "sequence_wrapper": "scripts/run_sequence.sh",
+    "single_command_wrapper": "scripts/run_logged.sh"
+  },
+  "package": "HydraDG_DaisyTrain_v0.3.3",
+  "python_syntax": {
+    "modal/modal_eca_extension.py": "PASS",
+    "modal/modal_xenodisorder_cafa6_replay.py": "PASS",
+    "scripts/build_fco_fcg_import.py": "PASS",
+    "scripts/build_longmemeval_smoke80.py": "PASS",
+    "scripts/compare_xeno_receipts.py": "PASS",
+    "scripts/daisy_receipt.py": "PASS",
+    "scripts/download_verify_longmemeval.py": "PASS",
+    "scripts/eca_core.py": "PASS",
+    "scripts/freeze_xeno_assets.py": "PASS",
+    "scripts/preflight_xeno_assets.py": "PASS",
+    "scripts/render_eca_figures.py": "PASS",
+    "scripts/run_xeno_contract.py": "PASS",
+    "scripts/score_track03.py": "PASS",
+    "scripts/validate_eca_extension.py": "PASS",
+    "scripts/validate_fco_fcg_import.py": "PASS",
+    "scripts/verify_package.py": "PASS"
+  },
+  "source_package": "HydraDG_DaisyTrain_v0.3.2",
+  "status": "LOGGING_WRAPPER_ADDED"
+}

@@ -1,0 +1,175 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "ablations": {
+      "additionalProperties": {
+        "properties": {
+          "context_tokens_mean": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "evidence_path_coverage": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "latency_p50_ms": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "latency_p95_ms": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "n": {
+            "type": "integer"
+          },
+          "overall": {
+            "type": "number"
+          }
+        },
+        "type": "object"
+      },
+      "required": [
+        "A",
+        "B",
+        "C",
+        "D"
+      ],
+      "type": "object"
+    },
+    "injected_perturbation": {
+      "properties": {
+        "first_divergence_exact": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "history_reconstruction": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "impact_exact_match": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "impact_f1": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "impact_precision": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "impact_recall": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "n": {
+          "type": "integer"
+        },
+        "recovery_class_accuracy": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "unsupported_claim_rejection": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "type": "object"
+    },
+    "longmemeval": {
+      "properties": {
+        "abstention": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "context_tokens_mean": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "information_extraction": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "knowledge_updates": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "latency_p50_ms": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "latency_p95_ms": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "multi_session_reasoning": {
+          "type": [
+            "number",
+            "null"
+          ]
+        },
+        "n": {
+          "const": 500,
+          "type": "integer"
+        },
+        "overall": {
+          "type": "number"
+        },
+        "temporal_reasoning": {
+          "type": [
+            "number",
+            "null"
+          ]
+        }
+      },
+      "required": [
+        "n",
+        "overall"
+      ],
+      "type": "object"
+    }
+  },
+  "required": [
+    "longmemeval",
+    "ablations"
+  ],
+  "title": "HydraDG Track03 Result",
+  "type": "object"
+}

@@ -1,0 +1,15 @@
+{
+  "category_counts": {
+    "knowledge-update": 13,
+    "multi-session": 21,
+    "single-session-assistant": 9,
+    "single-session-preference": 5,
+    "single-session-user": 11,
+    "temporal-reasoning": 21
+  },
+  "schema": "hydradg.longmemeval_smoke.v1",
+  "selected_n": 80,
+  "selection": "category-proportional + sha256 stable rank",
+  "source_n": 500,
+  "source_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+}

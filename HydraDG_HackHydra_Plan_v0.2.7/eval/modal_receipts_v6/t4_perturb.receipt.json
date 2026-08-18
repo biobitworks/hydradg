@@ -1,0 +1,3489 @@
+{
+  "batch": 2,
+  "checkpoint_file_sha256": "ee2338e105625f6b1d4a91ad62af250c3b34bbf3ed0123bb33250ad3e38d581d",
+  "deterministic_requested": true,
+  "environment": {
+    "cuda": "12.8",
+    "cuda_available": true,
+    "cuda_matmul_allow_tf32": false,
+    "cudnn": 91002,
+    "cudnn_allow_tf32": false,
+    "cudnn_benchmark": false,
+    "cudnn_deterministic": true,
+    "deterministic_algorithms_enabled": true,
+    "env": {
+      "CUBLAS_WORKSPACE_CONFIG": ":4096:8",
+      "CUDA_VISIBLE_DEVICES": null,
+      "MKL_NUM_THREADS": "1",
+      "OMP_NUM_THREADS": "1",
+      "PYTHONHASHSEED": "0"
+    },
+    "float32_matmul_precision": "highest",
+    "gpu_capability": [
+      7,
+      5
+    ],
+    "gpu_name": "Tesla T4",
+    "gpu_total_memory": 15637086208,
+    "machine": "x86_64",
+    "numpy": "2.2.6",
+    "nvidia_smi": "GPU-5f91d8f6-b969-7266-a06a-66866a05680a, Tesla T4, 580.95.05",
+    "platform": "Linux-4.19.0-gvisor-x86_64-with-glibc2.36",
+    "python": "3.13.3 (main, May 21 2025, 23:35:07) [GCC 12.2.0]",
+    "torch": "2.8.0+cu128",
+    "torch_num_interop_threads": 1,
+    "torch_num_threads": 1,
+    "transformers": "4.55.0"
+  },
+  "final_state_hash": "a8c67406e0891b599b2ceebf5bb3e15557c8a3f4a10ba7fb44b856eb5934a40f",
+  "initial_model_state_hash": "4ff0fab260d4901bd1667a27f731f0f84a57b754572a0d56a35c6aa9d5bd2ddf",
+  "lr": 0.0003,
+  "model_config": {
+    "_name_or_path": "",
+    "add_cross_attention": false,
+    "architectures": [
+      "GPTNeoXForCausalLM"
+    ],
+    "attention_bias": true,
+    "attention_dropout": 0.0,
+    "bad_words_ids": null,
+    "begin_suppress_tokens": null,
+    "bos_token_id": 0,
+    "chunk_size_feed_forward": 0,
+    "classifier_dropout": 0.1,
+    "cross_attention_hidden_size": null,
+    "decoder_start_token_id": null,
+    "diversity_penalty": 0.0,
+    "do_sample": false,
+    "early_stopping": false,
+    "encoder_no_repeat_ngram_size": 0,
+    "eos_token_id": 0,
+    "exponential_decay_length_penalty": null,
+    "finetuning_task": null,
+    "forced_bos_token_id": null,
+    "forced_eos_token_id": null,
+    "hidden_act": "gelu",
+    "hidden_dropout": 0.0,
+    "hidden_size": 128,
+    "id2label": {
+      "0": "LABEL_0",
+      "1": "LABEL_1"
+    },
+    "initializer_range": 0.02,
+    "intermediate_size": 512,
+    "is_decoder": false,
+    "is_encoder_decoder": false,
+    "label2id": {
+      "LABEL_0": 0,
+      "LABEL_1": 1
+    },
+    "layer_norm_eps": 1e-05,
+    "length_penalty": 1.0,
+    "max_length": 20,
+    "max_position_embeddings": 2048,
+    "min_length": 0,
+    "model_type": "gpt_neox",
+    "no_repeat_ngram_size": 0,
+    "num_attention_heads": 4,
+    "num_beam_groups": 1,
+    "num_beams": 1,
+    "num_hidden_layers": 6,
+    "num_return_sequences": 1,
+    "output_attentions": false,
+    "output_hidden_states": false,
+    "output_scores": false,
+    "pad_token_id": null,
+    "partial_rotary_factor": 0.25,
+    "prefix": null,
+    "problem_type": null,
+    "pruned_heads": {},
+    "remove_invalid_values": false,
+    "repetition_penalty": 1.0,
+    "return_dict": true,
+    "return_dict_in_generate": false,
+    "rope_scaling": null,
+    "rope_theta": 10000,
+    "rotary_emb_base": 10000,
+    "rotary_pct": 0.25,
+    "sep_token_id": null,
+    "suppress_tokens": null,
+    "task_specific_params": null,
+    "temperature": 1.0,
+    "tf_legacy_loss": false,
+    "tie_encoder_decoder": false,
+    "tie_word_embeddings": false,
+    "tokenizer_class": null,
+    "top_k": 50,
+    "top_p": 1.0,
+    "torch_dtype": null,
+    "torchscript": false,
+    "transformers_version": "4.55.0",
+    "typical_p": 1.0,
+    "use_bfloat16": false,
+    "use_cache": false,
+    "use_parallel_residual": true,
+    "vocab_size": 50304
+  },
+  "model_config_sha256": "a57466dddac1d8b350b2361d0a5b380039f179f96c71774ff268ba5b2d8d093e",
+  "model_config_source": {
+    "mode": "FROZEN_ARCHITECTURE_FROM_PUBLIC_SOURCE",
+    "repository": "EleutherAI/pythia-14m",
+    "source_commit": "94f7c35d5e9f2e9bac8ca839329f505b4d007d5d",
+    "source_file": "config.json"
+  },
+  "perturb_step": 2,
+  "perturb_token_delta": 1,
+  "perturbation_receipt": {
+    "coordinate": [
+      0,
+      0
+    ],
+    "original_token": 21725,
+    "perturbed_token": 21726,
+    "step": 2,
+    "token_delta": 1
+  },
+  "records": [
+    {
+      "gradient_by_parameter": {
+        "embed_out.weight": {
+          "l2_norm": 0.7106382846832275,
+          "max_abs": 0.0173709224909544,
+          "mean": 1.7334168429523726e-14,
+          "present": true,
+          "sha256": "de08a138ecfd28fd911a75d637438a68d56f937a030693bbe89e5cdcd85aafe1",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.embed_in.weight": {
+          "l2_norm": 0.7234960198402405,
+          "max_abs": 0.035557810217142105,
+          "mean": 2.5456594365575076e-14,
+          "present": true,
+          "sha256": "630102748d3c9af92f984e74a8474af6f18c76fb26610aa69a91c0f05f246907",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.bias": {
+          "l2_norm": 0.014590715989470482,
+          "max_abs": 0.0039048423059284687,
+          "mean": 0.000206019205506891,
+          "present": true,
+          "sha256": "3fe89f629a9a9dd7fefcd0493dfa5820168a3dab2ee3fe3d5d5176fcbb4a49c3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.weight": {
+          "l2_norm": 0.01472985465079546,
+          "max_abs": 0.004626254551112652,
+          "mean": 0.0004063117376063019,
+          "present": true,
+          "sha256": "1f6f085b26f7f7396ef4dca4b6a1a7cc6718fcffc82ffd167498334ad037eec9",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.bias": {
+          "l2_norm": 0.3656758964061737,
+          "max_abs": 0.11431741714477539,
+          "mean": -1.1641532182693481e-10,
+          "present": true,
+          "sha256": "537901d9c55cb83bbda87d84cec4cf2559676781625b90b4b291bf03068f5f54",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.weight": {
+          "l2_norm": 0.2180599719285965,
+          "max_abs": 0.012350865639746189,
+          "mean": -1.6626700016786344e-12,
+          "present": true,
+          "sha256": "d5772cee966b57d7ed87ed0fbddb954d02af1c24b26cd5f90ca47a4d322fd6f2",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.bias": {
+          "l2_norm": 0.07707285135984421,
+          "max_abs": 0.018784260377287865,
+          "mean": 8.341311331605539e-05,
+          "present": true,
+          "sha256": "5587bd3e010b084e8c81757231a3daccb99b656690bd57d3dbee92b9f2d9f354",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.weight": {
+          "l2_norm": 0.22455541789531708,
+          "max_abs": 0.014915011823177338,
+          "mean": -2.2737367544323206e-13,
+          "present": true,
+          "sha256": "33fe1daf444fbc4f430d7724c8610458aa483a473edf55e5d4ab425dbaa74498",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.bias": {
+          "l2_norm": 0.017438385635614395,
+          "max_abs": 0.004846679046750069,
+          "mean": 5.540494748856872e-05,
+          "present": true,
+          "sha256": "8344852c4c0a9d63696daa965625b4a3691b6877febaef0af8772eea16ab5453",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.weight": {
+          "l2_norm": 0.0052716294303536415,
+          "max_abs": 0.0022872642148286104,
+          "mean": -1.5028133930172771e-05,
+          "present": true,
+          "sha256": "e7fef87b8ca7757bdbd8b9683edb75193e01ef2ac76f4a51649b5c32c8606820",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.3656758964061737,
+          "max_abs": 0.11431741714477539,
+          "mean": -1.1641532182693481e-10,
+          "present": true,
+          "sha256": "537901d9c55cb83bbda87d84cec4cf2559676781625b90b4b291bf03068f5f54",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.6409240365028381,
+          "max_abs": 0.010872622951865196,
+          "mean": -1.7408297026122455e-13,
+          "present": true,
+          "sha256": "5652f6ef80774ed47249cc5ee6f54f441f9265451135f5aaaf54c29127cc832d",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.0844617411494255,
+          "max_abs": 0.011553589254617691,
+          "mean": -0.00016755011165514588,
+          "present": true,
+          "sha256": "d0448be5e09379611707611f74ae8f7a252e3ff8b5e261fb04372e4da415f931",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.6363534927368164,
+          "max_abs": 0.015081973746418953,
+          "mean": -4.547473508864641e-13,
+          "present": true,
+          "sha256": "670dcc2dffeb7cea6e9f668790b8467b45af4aad9701c3b28320b86bbe6d32e4",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.bias": {
+          "l2_norm": 0.02003241889178753,
+          "max_abs": 0.006183689925819635,
+          "mean": -0.0003690442244987935,
+          "present": true,
+          "sha256": "2d10f028662475055bec05a61de3b12ce82582f2a673cd9c9cd9279654a47b9f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.weight": {
+          "l2_norm": 0.01247468963265419,
+          "max_abs": 0.004347721580415964,
+          "mean": -3.4917364246211946e-05,
+          "present": true,
+          "sha256": "953e718e13f6b1906067c4202e93aae781c7a80259b330d7d3cd75573276672d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.bias": {
+          "l2_norm": 0.22923608124256134,
+          "max_abs": 0.05644131079316139,
+          "mean": 2.9103830456733704e-10,
+          "present": true,
+          "sha256": "3b94879abb1e8b7436868e1ceee130fae0347db49ca457271a544b40ae6a4a83",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.weight": {
+          "l2_norm": 0.21130654215812683,
+          "max_abs": 0.009802941232919693,
+          "mean": 3.1015190415928373e-12,
+          "present": true,
+          "sha256": "c847c0c79ba62cc7df651b8fa1dc46ea5140c85e24ba85e0997163ca4dc5c769",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.bias": {
+          "l2_norm": 0.05136710777878761,
+          "max_abs": 0.016703855246305466,
+          "mean": -9.316398063674569e-06,
+          "present": true,
+          "sha256": "aa72d5648efabca3981ab12e8e5e560ae9fff9049602925e122767c895e7d363",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.weight": {
+          "l2_norm": 0.19723200798034668,
+          "max_abs": 0.010752689093351364,
+          "mean": -7.579122740649855e-14,
+          "present": true,
+          "sha256": "eba99d8eead0814be2ba08c0eccb74489c66e18f9a94fa1c4c6af7f759daa701",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.bias": {
+          "l2_norm": 0.010962478816509247,
+          "max_abs": 0.002284784335643053,
+          "mean": 0.00025211446336470544,
+          "present": true,
+          "sha256": "3769c7f81a426f7cc87c008960cf0d30b46e8a02e35b4596bbe360919506346e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.weight": {
+          "l2_norm": 0.004535110667347908,
+          "max_abs": 0.0017370273126289248,
+          "mean": -5.491037882165983e-05,
+          "present": true,
+          "sha256": "06d3e3e22e1ad7b8e944ce1df7e9e6a94886a922794eee68381284064e798895",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.22923608124256134,
+          "max_abs": 0.05644131079316139,
+          "mean": 2.9103830456733704e-10,
+          "present": true,
+          "sha256": "3b94879abb1e8b7436868e1ceee130fae0347db49ca457271a544b40ae6a4a83",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.4624197781085968,
+          "max_abs": 0.00980611052364111,
+          "mean": 6.572520305780927e-12,
+          "present": true,
+          "sha256": "f27629103bad1de7018c1829cafa5784c84123d736643eb998674657fd2b9d25",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.05260065570473671,
+          "max_abs": 0.007802732288837433,
+          "mean": 0.00011381707736290991,
+          "present": true,
+          "sha256": "89d6ac53f5cab1b70d37daa3326616d6eb2622f735045d239915da0fceb3af6a",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.4666505753993988,
+          "max_abs": 0.008774103596806526,
+          "mean": 6.821210263296962e-13,
+          "present": true,
+          "sha256": "d42ee938f471776f0334bfb900dba577e72bf9b23d64683ba33379d11a4213f9",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.bias": {
+          "l2_norm": 0.01384874526411295,
+          "max_abs": 0.004747631028294563,
+          "mean": -3.260167795815505e-05,
+          "present": true,
+          "sha256": "d2b4214bd14da31580115d2c7820286d440223c796d76eac7069a877fa476967",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.weight": {
+          "l2_norm": 0.009260950610041618,
+          "max_abs": 0.0024001835845410824,
+          "mean": 2.3876466002548113e-05,
+          "present": true,
+          "sha256": "8eada6f03858c48954cc23e6dc1eb6ce3838689aad15395121e12a579d41718d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.bias": {
+          "l2_norm": 0.17285045981407166,
+          "max_abs": 0.04352929815649986,
+          "mean": -2.9103830456733704e-11,
+          "present": true,
+          "sha256": "2d4de0850fabb8a2b2655ce6045c491a2fd0bc56de3a6eb557e9e9a45a4775fa",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.weight": {
+          "l2_norm": 0.17061321437358856,
+          "max_abs": 0.007317725569009781,
+          "mean": -8.490985692333197e-13,
+          "present": true,
+          "sha256": "413f171b4ceeff89b4719471e832305a6ff0b05b514cb81ad3b2b1de12e06ca9",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.bias": {
+          "l2_norm": 0.0437726266682148,
+          "max_abs": 0.014333895407617092,
+          "mean": -3.406435644137673e-05,
+          "present": true,
+          "sha256": "1b415d5555f644621b73ce8cb6ce0f3fc6b4deff4b3012a63fffb435e6c40b90",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.weight": {
+          "l2_norm": 0.1852436363697052,
+          "max_abs": 0.015237958170473576,
+          "mean": -2.2737367544323206e-13,
+          "present": true,
+          "sha256": "d83d46fde4242d0643de30864afb87f273b1755ab5d5cb28ff7fecb4c1d9dfca",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.bias": {
+          "l2_norm": 0.009519760496914387,
+          "max_abs": 0.002170800231397152,
+          "mean": -0.0001526970008853823,
+          "present": true,
+          "sha256": "a4e2ea459306eb4a8a84e2a683962eb96f53ee1dd0818a3205f9f2f65b385995",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.weight": {
+          "l2_norm": 0.0034830570220947266,
+          "max_abs": 0.0009319566888734698,
+          "mean": 1.6680693079251796e-05,
+          "present": true,
+          "sha256": "82b7a0a7b87e3050e765f57d6d6471163d305bb1fdb4fde2fef469f68e851efb",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.17285045981407166,
+          "max_abs": 0.04352929815649986,
+          "mean": -2.9103830456733704e-11,
+          "present": true,
+          "sha256": "2d4de0850fabb8a2b2655ce6045c491a2fd0bc56de3a6eb557e9e9a45a4775fa",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.38153010606765747,
+          "max_abs": 0.008246738463640213,
+          "mean": 1.1013412404281553e-13,
+          "present": true,
+          "sha256": "1015d0430d05cc08ecf60a9d94491c552ac746aaaff0247c1cbf93fd8692b3f9",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.04207361489534378,
+          "max_abs": 0.006736043840646744,
+          "mean": 2.202049654442817e-05,
+          "present": true,
+          "sha256": "520805c1fe152936a8949a83d5958bb54f343a5aef10838eeb75db450a098a95",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.38516131043434143,
+          "max_abs": 0.008580640889704227,
+          "mean": 7.958078640513122e-13,
+          "present": true,
+          "sha256": "bd575f8ae3c7ca4e1006c30fd89ff60bc5498eea5396b37d56b559b5b6f17a31",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.bias": {
+          "l2_norm": 0.01031640823930502,
+          "max_abs": 0.0029236148111522198,
+          "mean": -5.667800360242836e-05,
+          "present": true,
+          "sha256": "fab4ba081bb9628b5ec987a3a37ba2c31adc01771ce6898b1527a57a50d4e235",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.weight": {
+          "l2_norm": 0.008481324650347233,
+          "max_abs": 0.001961426343768835,
+          "mean": -1.2853080079366919e-05,
+          "present": true,
+          "sha256": "01d0175a15a69ce8eeb680e67ea1e12dc2109ccb33d8dc4e75a7b801517747ef",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.bias": {
+          "l2_norm": 0.138558030128479,
+          "max_abs": 0.02957364358007908,
+          "mean": -5.820766091346741e-11,
+          "present": true,
+          "sha256": "1d664af311747b9fe3ac698c3341ae980e2adbd23c05c8a45ec34f7dad0ea1cd",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.weight": {
+          "l2_norm": 0.14494773745536804,
+          "max_abs": 0.006768997758626938,
+          "mean": -8.633094239485217e-13,
+          "present": true,
+          "sha256": "4c1a8ce4230f9c908f0e51e281ca4b0c172ad738e4ef4e8763ac7927eb1163d0",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.bias": {
+          "l2_norm": 0.03483995050191879,
+          "max_abs": 0.009905163198709488,
+          "mean": -9.35841235332191e-05,
+          "present": true,
+          "sha256": "156b0fe2011a964251292c9eb94728606ce4e59104b66da4e5adb5ee2c8c479c",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.weight": {
+          "l2_norm": 0.15609417855739594,
+          "max_abs": 0.011010690592229366,
+          "mean": -1.7053025658242404e-13,
+          "present": true,
+          "sha256": "8f5891c5a745016031000d3a2a691d27110158cfff1f333f6ffd542354d3f456",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.bias": {
+          "l2_norm": 0.00761990062892437,
+          "max_abs": 0.0019149406580254436,
+          "mean": 5.48253083252348e-05,
+          "present": true,
+          "sha256": "89d889da33075c058e6bebda4b3016e1a940091ec96a6d72c7c1a0027b1220a3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.weight": {
+          "l2_norm": 0.003043227596208453,
+          "max_abs": 0.000923766812775284,
+          "mean": 3.631899744505063e-05,
+          "present": true,
+          "sha256": "3c31b6b36f9cf854da4cf48ef382211dca2dac1bba8121cd539febffa0a287aa",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.138558030128479,
+          "max_abs": 0.02957364358007908,
+          "mean": -5.820766091346741e-11,
+          "present": true,
+          "sha256": "1d664af311747b9fe3ac698c3341ae980e2adbd23c05c8a45ec34f7dad0ea1cd",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.3385554552078247,
+          "max_abs": 0.0068050045520067215,
+          "mean": -1.4033219031261979e-12,
+          "present": true,
+          "sha256": "4ff5010d65b178f4de7907a50834f4ce939d83c0a18c1dcb7e6cfbc6e235b809",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.032571058720350266,
+          "max_abs": 0.005534838885068893,
+          "mean": -2.3859473003540188e-05,
+          "present": true,
+          "sha256": "afc1af9aff268f6339473de24a9d47e4fb2255b049bc71a25216cf7b27ae234e",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.3356652855873108,
+          "max_abs": 0.007607066072523594,
+          "mean": 5.684341886080801e-13,
+          "present": true,
+          "sha256": "2df7074f68e3c4ebf99513b3555418086651b4c6f815d3d167491060e6736e4f",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.bias": {
+          "l2_norm": 0.006994189228862524,
+          "max_abs": 0.0017759923357516527,
+          "mean": -0.00011287795496173203,
+          "present": true,
+          "sha256": "5228f21f50800ef0fad677f717bebefea2de00e9f616f7f162aa18ac45742505",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.weight": {
+          "l2_norm": 0.00695380475372076,
+          "max_abs": 0.0018344818381592631,
+          "mean": -1.4813188045081915e-06,
+          "present": true,
+          "sha256": "69a003940e2223815d432d63b7dd0ac86f4d3fb9ebc695e505300e486d82dc24",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.bias": {
+          "l2_norm": 0.1143735945224762,
+          "max_abs": 0.03156428039073944,
+          "mean": 1.0186340659856796e-10,
+          "present": true,
+          "sha256": "00e58fe85586feffef71385152701184aaa7a11d218eeb8cfff004ca75a6c78f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.weight": {
+          "l2_norm": 0.12741497159004211,
+          "max_abs": 0.008733161725103855,
+          "mean": 7.975842208907125e-13,
+          "present": true,
+          "sha256": "a2f28c79a8bb9abea380a4503ebd4076e77678c7f8d3b0a306cf03a0101453ef",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.bias": {
+          "l2_norm": 0.024006055667996407,
+          "max_abs": 0.006915338337421417,
+          "mean": -4.344842454884201e-05,
+          "present": true,
+          "sha256": "2cd2c165c77d9789a04755e86a9229c88deda772a5b98e01ef281e8c3172d227",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.weight": {
+          "l2_norm": 0.12905210256576538,
+          "max_abs": 0.006737107876688242,
+          "mean": -6.063298192519884e-13,
+          "present": true,
+          "sha256": "a9a3ca603967d80395717f3fa704fc50de4ebaf215354b54a7c3638387dc87bc",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.bias": {
+          "l2_norm": 0.005528743844479322,
+          "max_abs": 0.0012537043076008558,
+          "mean": 6.203479279065505e-05,
+          "present": true,
+          "sha256": "09c7a511076581473665371b5506b71cf67158e984fe882133b20526a07c873a",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.weight": {
+          "l2_norm": 0.0024278024211525917,
+          "max_abs": 0.0006814859807491302,
+          "mean": -7.101837582013104e-06,
+          "present": true,
+          "sha256": "e737c2b106b4d74984f1661738ebf7fcfe5fb25da7f3b5638e725087914c4469",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1143735945224762,
+          "max_abs": 0.03156428039073944,
+          "mean": 1.0186340659856796e-10,
+          "present": true,
+          "sha256": "00e58fe85586feffef71385152701184aaa7a11d218eeb8cfff004ca75a6c78f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.2906765639781952,
+          "max_abs": 0.006614934653043747,
+          "mean": 2.277289468111121e-12,
+          "present": true,
+          "sha256": "c2fbf5a84ea88c44951dc02ba5b99a50217301bdcf94a8d600cd56abc0b77edd",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.029049498960375786,
+          "max_abs": 0.004157054703682661,
+          "mean": -4.4426938984543085e-05,
+          "present": true,
+          "sha256": "39553e9b39100132068e12662096722de19f79b631eb89c3a939a63baff7e30c",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.2994309663772583,
+          "max_abs": 0.005458919331431389,
+          "mean": -6.679101716144942e-13,
+          "present": true,
+          "sha256": "8abc8604e846966c07bbc9b0eb7b2d1654641cdb1b013601802149df04cc647c",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.bias": {
+          "l2_norm": 0.006890889722853899,
+          "max_abs": 0.0017499959794804454,
+          "mean": 2.354825301154051e-05,
+          "present": true,
+          "sha256": "626505665d9857b733340f18e7738eeaf55e7d1c307012ea6118c6252c8601bb",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.weight": {
+          "l2_norm": 0.005752846132963896,
+          "max_abs": 0.0017576641403138638,
+          "mean": 6.148124612082029e-06,
+          "present": true,
+          "sha256": "b1643392812e877e130fa37df0a5e39a3d9fa6b933a2c561b5172417e0a2f90d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.bias": {
+          "l2_norm": 0.10119674354791641,
+          "max_abs": 0.02792046219110489,
+          "mean": 2.3283064365386963e-10,
+          "present": true,
+          "sha256": "a97859c207344ce015b3e0c5f9de2a88aae2a51ee072a8f65a9e32e30bc6603b",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.weight": {
+          "l2_norm": 0.12318935245275497,
+          "max_abs": 0.007216980680823326,
+          "mean": -2.1742607714259066e-12,
+          "present": true,
+          "sha256": "7751fec23e216e7fe6e461f3040864e270a8e663123199293802316e9b6e2741",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.bias": {
+          "l2_norm": 0.024144724011421204,
+          "max_abs": 0.006498139817267656,
+          "mean": 5.712927668355405e-05,
+          "present": true,
+          "sha256": "529d7fc8956f26970c486aee50d3b83b20c0b603a252ad9687f514ba82cdaef2",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.weight": {
+          "l2_norm": 0.12343984097242355,
+          "max_abs": 0.007326742634177208,
+          "mean": 3.031649096259942e-13,
+          "present": true,
+          "sha256": "6785e52b2b5b71f61599a20f4f13a958240b9f5509d765bc7e2cf349df9a125d",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.bias": {
+          "l2_norm": 0.006068952847272158,
+          "max_abs": 0.001355259446427226,
+          "mean": -1.6048257748479955e-05,
+          "present": true,
+          "sha256": "f74a4066f99a4e075dcab845b3ca3fd2107f78c33c793b0b27d8a081e96357a9",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.weight": {
+          "l2_norm": 0.002399622928351164,
+          "max_abs": 0.0006237126071937382,
+          "mean": -6.8185236159479246e-06,
+          "present": true,
+          "sha256": "eff0530ab48cac14962daf3d29d2b1ae4126831895364c7e83c3692eca589540",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.10119674354791641,
+          "max_abs": 0.02792046219110489,
+          "mean": 2.3283064365386963e-10,
+          "present": true,
+          "sha256": "a97859c207344ce015b3e0c5f9de2a88aae2a51ee072a8f65a9e32e30bc6603b",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.26927027106285095,
+          "max_abs": 0.005899837240576744,
+          "mean": 3.7836400679225335e-12,
+          "present": true,
+          "sha256": "634658e94c70d93da429067fd6f2cb59eee3d662960a990c2df26dcb81159f1b",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.024665549397468567,
+          "max_abs": 0.004665227606892586,
+          "mean": 1.4172206647344865e-05,
+          "present": true,
+          "sha256": "bb6fbe715566eb8f94686af6caa294b9de25b784d90eb4b8fd78949a2d4c258f",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.27212217450141907,
+          "max_abs": 0.006069879978895187,
+          "mean": 2.2737367544323206e-13,
+          "present": true,
+          "sha256": "d29965c26a577f9b1ca173837ec1a215efa3dc2b563e92874116f341c6b3d75d",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.bias": {
+          "l2_norm": 0.00611095642670989,
+          "max_abs": 0.001350946957245469,
+          "mean": -3.871849912684411e-06,
+          "present": true,
+          "sha256": "127a5e54bb03f1d5cadb34c24182b213ee202684a77e4b4fa77dc0f86b41c404",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.weight": {
+          "l2_norm": 0.005722568370401859,
+          "max_abs": 0.001394936116412282,
+          "mean": -1.9631617760751396e-05,
+          "present": true,
+          "sha256": "b3cba620e3f9b730d7886d37641e1b6689047d7988db316b65b1c83da42c3f96",
+          "shape": [
+            128
+          ]
+        }
+      },
+      "gradient_hash": "4fad427473004fc9501e8808b77b637524a8ae9c836d1a0980b97f2f6b1fa8bd",
+      "input_hash": "679e8bded3acb99d596b06f3c4ac744cbc21dfb2662151cdf589ada440fc1f51",
+      "loss": 10.852296829223633,
+      "loss_float32_bits_hex": "412da302",
+      "post_step_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+      "pre_step_state_hash": "4ff0fab260d4901bd1667a27f731f0f84a57b754572a0d56a35c6aa9d5bd2ddf",
+      "probe_top_ids": [
+        12894,
+        21088,
+        12804,
+        40375,
+        36177,
+        1212,
+        4498,
+        20571,
+        49611,
+        5628,
+        41636,
+        12159,
+        37516,
+        32863,
+        46239,
+        38827
+      ],
+      "probe_top_logits": [
+        0.883702278137207,
+        0.8787620663642883,
+        0.85068279504776,
+        0.8481687307357788,
+        0.847554087638855,
+        0.8465867638587952,
+        0.8414584994316101,
+        0.8334147334098816,
+        0.8262661695480347,
+        0.8243972659111023,
+        0.8242025971412659,
+        0.8237549066543579,
+        0.8207846283912659,
+        0.777519941329956,
+        0.7717426419258118,
+        0.7609711289405823
+      ],
+      "state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+      "step": 0
+    },
+    {
+      "gradient_by_parameter": {
+        "embed_out.weight": {
+          "l2_norm": 0.7089952826499939,
+          "max_abs": 0.015269866213202477,
+          "mean": 6.132725214160265e-14,
+          "present": true,
+          "sha256": "fe212c8e52d6db2996d34f461548315677f3e21cedb48d9525c51612a8c228c3",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.embed_in.weight": {
+          "l2_norm": 0.7317968010902405,
+          "max_abs": 0.035037651658058167,
+          "mean": -1.9671005276056253e-14,
+          "present": true,
+          "sha256": "855ca7f89d9ea12a55de23232060c5bd95d5ddf30901aac29954d3de8fe6d421",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.bias": {
+          "l2_norm": 0.015484180301427841,
+          "max_abs": 0.0033847459126263857,
+          "mean": -2.7566231437958777e-05,
+          "present": true,
+          "sha256": "06c334637f654f1942cd6719562c3ffc605590dd61f6e096f5f18c88122c2375",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.weight": {
+          "l2_norm": 0.014427672140300274,
+          "max_abs": 0.004108035005629063,
+          "mean": 0.00038037431659176946,
+          "present": true,
+          "sha256": "ec4446d30ab0a4a9eabe6d36e01b3b37288aa126db3fa8c197dec55864b5b998",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.bias": {
+          "l2_norm": 0.40902504324913025,
+          "max_abs": 0.11386527866125107,
+          "mean": 2.3283064365386963e-10,
+          "present": true,
+          "sha256": "c62373969ce38a1545af5f03706a399e9bd4096bbeecff3b0b202456e4b676b0",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.weight": {
+          "l2_norm": 0.20368897914886475,
+          "max_abs": 0.014675814658403397,
+          "mean": 1.2079226507921703e-13,
+          "present": true,
+          "sha256": "83607ecdc43bf8e74c88cbfb31a56790ee87d6ee7fa7cd9cd549c69bd6417b57",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.bias": {
+          "l2_norm": 0.09697388112545013,
+          "max_abs": 0.02087603695690632,
+          "mean": -4.67391473648604e-05,
+          "present": true,
+          "sha256": "a15cd0b23ea5e089ad109c4b8714642ff131e65b771cc4713ec7b743817f2ce5",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.weight": {
+          "l2_norm": 0.21741177141666412,
+          "max_abs": 0.00964802224189043,
+          "mean": 1.0609255696181208e-09,
+          "present": true,
+          "sha256": "ac8c4729fbeab49f3dfa5922df6cdbe15e8a5c736901e36a74ef14c2d8d5a4af",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.bias": {
+          "l2_norm": 0.02288617379963398,
+          "max_abs": 0.0054342010989785194,
+          "mean": 6.660731014562771e-05,
+          "present": true,
+          "sha256": "4f6320417da296a8bd510f4fbe700835ba42a2e8cfbce358a324c7b69607bbd8",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.weight": {
+          "l2_norm": 0.004793579690158367,
+          "max_abs": 0.001904980163089931,
+          "mean": -4.0431259549222887e-05,
+          "present": true,
+          "sha256": "3dcd8236942a9a285f8a8d96e39cca854cf61fe7f5c8550f7a9020e1fc6a2297",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.40902504324913025,
+          "max_abs": 0.11386527866125107,
+          "mean": 2.3283064365386963e-10,
+          "present": true,
+          "sha256": "c62373969ce38a1545af5f03706a399e9bd4096bbeecff3b0b202456e4b676b0",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.6230783462524414,
+          "max_abs": 0.011768685653805733,
+          "mean": 5.5493387662863825e-12,
+          "present": true,
+          "sha256": "4af16f37340eefaf3465b9a432785866ae02b3fb0ab76e12ec23b6e35ffb920e",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.09470727294683456,
+          "max_abs": 0.015090586617588997,
+          "mean": -0.00010323592141503468,
+          "present": true,
+          "sha256": "96b4948557c178ffd91703944544952857b53e126029037e1c92a143b4cd253d",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.6268004775047302,
+          "max_abs": 0.012963740155100822,
+          "mean": -5.215269993641414e-09,
+          "present": true,
+          "sha256": "a777c1e633ce77f45f444a9a6896e43eb453306fe1fffe8d01135cd296e67340",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.bias": {
+          "l2_norm": 0.02062055468559265,
+          "max_abs": 0.005309033673256636,
+          "mean": 0.00015218823682516813,
+          "present": true,
+          "sha256": "f739cdf50013634d633f442b5d93cfcb4382f4989530d2b4205b6078a2213e15",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.weight": {
+          "l2_norm": 0.013117021881043911,
+          "max_abs": 0.0027651474811136723,
+          "mean": -5.9056037571281195e-06,
+          "present": true,
+          "sha256": "c8048cf7faf1d91cb4e95cd1dc19a41a98f470b2f89a43bc4e2656c2a3018654",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.bias": {
+          "l2_norm": 0.25012585520744324,
+          "max_abs": 0.058278847485780716,
+          "mean": -4.656612873077393e-10,
+          "present": true,
+          "sha256": "aea10eac0cd79958b9750bac7608fa5ee6d84031e308dedec19d5d3fa982aa8b",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.weight": {
+          "l2_norm": 0.1971510350704193,
+          "max_abs": 0.009390118531882763,
+          "mean": 1.3784529073745944e-12,
+          "present": true,
+          "sha256": "62c0689abdcd57bbd7bc80fbfb9d1de7ec016bda50c542056e90aab018f372a9",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.bias": {
+          "l2_norm": 0.05252892151474953,
+          "max_abs": 0.012421883642673492,
+          "mean": -5.3677740652346984e-05,
+          "present": true,
+          "sha256": "7f56e9f6c9927e3f0a7fe936c5c4511ba2813d8ff13ade3e70c19f5bf18272a0",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.weight": {
+          "l2_norm": 0.1887541264295578,
+          "max_abs": 0.009119926020503044,
+          "mean": 6.949449016246945e-09,
+          "present": true,
+          "sha256": "048b6c6e17e1d6e1fc1bff40fb15ced3e4af6a4edc92c7da317223fbd542a138",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.bias": {
+          "l2_norm": 0.013613262213766575,
+          "max_abs": 0.0030185142531991005,
+          "mean": -8.787094702711329e-05,
+          "present": true,
+          "sha256": "16e412bbfc1983acfa3d0220b25893bd57cff16de7af5e3ba6af2d583c672ec5",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.weight": {
+          "l2_norm": 0.0037461949978023767,
+          "max_abs": 0.0012463945895433426,
+          "mean": 5.699776011169888e-07,
+          "present": true,
+          "sha256": "9de1c0aefb1fe80d6c94dd603f9e02627f52ec7f8a800d30c6f63677eb0f4a46",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.25012585520744324,
+          "max_abs": 0.058278847485780716,
+          "mean": -4.656612873077393e-10,
+          "present": true,
+          "sha256": "aea10eac0cd79958b9750bac7608fa5ee6d84031e308dedec19d5d3fa982aa8b",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.45967280864715576,
+          "max_abs": 0.010311413556337357,
+          "mean": -7.389644451905042e-13,
+          "present": true,
+          "sha256": "431bec9d7bc9c0d70f126b431fb715f1d29d9871f1e567163ffbbd0fa451662a",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.05987728759646416,
+          "max_abs": 0.008114471100270748,
+          "mean": -1.5903606254141778e-05,
+          "present": true,
+          "sha256": "8a918fd28b3d942ec95912c42ddd3d94e4d02eb38c15d48bb689f815adbdbcbb",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.4574378430843353,
+          "max_abs": 0.01032083947211504,
+          "mean": -1.9788330973824486e-09,
+          "present": true,
+          "sha256": "1179b8fe7f5f120a9499d89ae1b26b634b67e64fd562a0e8155cd1b7c6fa093b",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.bias": {
+          "l2_norm": 0.013652496971189976,
+          "max_abs": 0.0033421674743294716,
+          "mean": -0.00013953549205325544,
+          "present": true,
+          "sha256": "5607f8c3211886ea48ea98f4c55aeea2b0a9a6e717f7deb33dfd8853d4a67b73",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.weight": {
+          "l2_norm": 0.009226053021848202,
+          "max_abs": 0.0024690385907888412,
+          "mean": 3.383158036740497e-05,
+          "present": true,
+          "sha256": "13cfd453a8f10f6a2d891bccac1fc512ea4cc43637519f95eb8c3bfe63fa3a96",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.bias": {
+          "l2_norm": 0.17036476731300354,
+          "max_abs": 0.039492156356573105,
+          "mean": -1.7462298274040222e-10,
+          "present": true,
+          "sha256": "cd78bad59d999745f71947f40af5813ac731e0f60a570997977d423fb5e6c744",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.weight": {
+          "l2_norm": 0.1601668745279312,
+          "max_abs": 0.006973154377192259,
+          "mean": -1.4708234630234074e-12,
+          "present": true,
+          "sha256": "56a9696cd9788f08a11d1b8a283a2171e25766e0d9c8ccd0fa95b5ca161c6500",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.bias": {
+          "l2_norm": 0.039362650364637375,
+          "max_abs": 0.009894358925521374,
+          "mean": 8.373705350095406e-05,
+          "present": true,
+          "sha256": "e325c7044636f5bcc1c881dad5d38c8c5e218201e75a02043e60aefd15f01004",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.weight": {
+          "l2_norm": 0.16156424582004547,
+          "max_abs": 0.008335039019584656,
+          "mean": 3.6582339379975792e-09,
+          "present": true,
+          "sha256": "d6f48042a391390aa0c8d0ed15e91c0159dd348a143e600acc698252d8e1fc4f",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.bias": {
+          "l2_norm": 0.008284438401460648,
+          "max_abs": 0.0020564876031130552,
+          "mean": -2.4507029593223706e-05,
+          "present": true,
+          "sha256": "9e0166208ce552e5f45a09da798cb2a22fede8759414eeb2a04d2247dde9ec22",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.weight": {
+          "l2_norm": 0.0031632627360522747,
+          "max_abs": 0.0009573280694894493,
+          "mean": -6.374802069331054e-06,
+          "present": true,
+          "sha256": "cd798952cf980e20a5d8b635d659a07e539ca5e5fd2fc4508f636a541380185b",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.17036476731300354,
+          "max_abs": 0.039492156356573105,
+          "mean": -1.7462298274040222e-10,
+          "present": true,
+          "sha256": "cd78bad59d999745f71947f40af5813ac731e0f60a570997977d423fb5e6c744",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.3746129274368286,
+          "max_abs": 0.009600043296813965,
+          "mean": -1.199040866595169e-13,
+          "present": true,
+          "sha256": "0f95efd985b085d25665b44696a3e571c5cb9b9942d9a69d60e0659d61e8dc07",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.040120720863342285,
+          "max_abs": 0.006428108084946871,
+          "mean": 0.00011857212666654959,
+          "present": true,
+          "sha256": "f76e8ed9e9d86c26e98ed9edd2cd8c97a92611e20b977a15e6b31fdb378e7062",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.37761351466178894,
+          "max_abs": 0.007199102081358433,
+          "mean": 5.14887688041199e-10,
+          "present": true,
+          "sha256": "ce3959bb47c43f36e1579079a7e04717e258f0c83804670e97038a52aa95daf7",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.bias": {
+          "l2_norm": 0.009039369411766529,
+          "max_abs": 0.002848698291927576,
+          "mean": -3.592917710193433e-05,
+          "present": true,
+          "sha256": "7f515702160eda557d3061a764cad228719330cdfe1af3612600477c6d029e6c",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.weight": {
+          "l2_norm": 0.007614144589751959,
+          "max_abs": 0.0020759450271725655,
+          "mean": 1.697183688520454e-05,
+          "present": true,
+          "sha256": "05b3f01fd5f1ae2ddba7ad0e6ead3409c3875307484b51748b90548bbe278e10",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.bias": {
+          "l2_norm": 0.1397726684808731,
+          "max_abs": 0.035951871424913406,
+          "mean": -1.1641532182693481e-10,
+          "present": true,
+          "sha256": "d8a62a273724ec2bc31b4ad7d36ad43a0ae0487e5f422d25509fdf03c4de577e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.weight": {
+          "l2_norm": 0.13684511184692383,
+          "max_abs": 0.008016260340809822,
+          "mean": 1.3109513474773848e-12,
+          "present": true,
+          "sha256": "7e5b184d3f53b17089207c637794edebb1dec1d4aac961d2d4c2b9a0e46b023e",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.bias": {
+          "l2_norm": 0.03163471072912216,
+          "max_abs": 0.007791944779455662,
+          "mean": -6.963019404793158e-05,
+          "present": true,
+          "sha256": "7f1460b87eb3629eb27c600d9dd5ff916f154fa4846cafbe7caccd304b9b34e4",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.weight": {
+          "l2_norm": 0.1360587477684021,
+          "max_abs": 0.006571493577212095,
+          "mean": 1.883866618257457e-09,
+          "present": true,
+          "sha256": "db3788d04184253df79f47ea912334c878b3b8c66f72ae46ae5998a9183cdae3",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.bias": {
+          "l2_norm": 0.006962551735341549,
+          "max_abs": 0.0016246465966105461,
+          "mean": 2.082576247630641e-05,
+          "present": true,
+          "sha256": "c8d24329a0ef85fa85d85ae9ac9a0211e26f2d30fe5191291fcceb6c397d6a7a",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.weight": {
+          "l2_norm": 0.002762099262326956,
+          "max_abs": 0.0007726798066869378,
+          "mean": 2.053759089903906e-05,
+          "present": true,
+          "sha256": "9c819c5bc4c960b64017e9f48b0d6d8390627c8b7c90a30ef40906510ece1e02",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1397726684808731,
+          "max_abs": 0.035951871424913406,
+          "mean": -1.1641532182693481e-10,
+          "present": true,
+          "sha256": "d8a62a273724ec2bc31b4ad7d36ad43a0ae0487e5f422d25509fdf03c4de577e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.32438889145851135,
+          "max_abs": 0.007621693424880505,
+          "mean": -4.263256414560601e-13,
+          "present": true,
+          "sha256": "7cf2b9ea2a758c4d25796b514dad2d6795c1750c0a3396c3351254105b15df61",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.03376953303813934,
+          "max_abs": 0.0053115105256438255,
+          "mean": -1.4647268471890129e-05,
+          "present": true,
+          "sha256": "b6dd2c5cd5b5b4bc11e9092c16dbfc8750726e36a32c04d499e15dcd7b8bd631",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.32920631766319275,
+          "max_abs": 0.006263101473450661,
+          "mean": -2.6927864382741973e-09,
+          "present": true,
+          "sha256": "3ec3fd71df127c9efe60138a313446d0e3003bd17671f1a31d02f20edad15bd6",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.bias": {
+          "l2_norm": 0.0073149194940924644,
+          "max_abs": 0.0016074103768914938,
+          "mean": 6.932922406122088e-05,
+          "present": true,
+          "sha256": "4f1946a94ef573325c6ff93013a9d9cc1f37c90a4e1b97c5b95e9f33339ec7c8",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.weight": {
+          "l2_norm": 0.006499015726149082,
+          "max_abs": 0.0017535679508000612,
+          "mean": -6.608519470319152e-06,
+          "present": true,
+          "sha256": "9e2bebddcc56e9fd7d920664bd411e0afce1c1d30229ffecdfb20969a0d0ff49",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.bias": {
+          "l2_norm": 0.11370442062616348,
+          "max_abs": 0.035480037331581116,
+          "mean": 5.820766091346741e-11,
+          "present": true,
+          "sha256": "1914f5a5bfc4c6b7877471c1e5fcefa1401f18161d8befdf7f9e64a0ed9444aa",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.weight": {
+          "l2_norm": 0.12811031937599182,
+          "max_abs": 0.009129798971116543,
+          "mean": 3.410605131648481e-13,
+          "present": true,
+          "sha256": "89256d91ba33a51dcd9a8b8984555daca7d19dca788d14946e95a2b7c2c0377c",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.bias": {
+          "l2_norm": 0.028915001079440117,
+          "max_abs": 0.006458161398768425,
+          "mean": -5.517661338672042e-05,
+          "present": true,
+          "sha256": "ec0fa8b0abea8cf245ba58fb5f72ae1ad19e68d34f1c42d44bda6d91506e6a94",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.weight": {
+          "l2_norm": 0.13498632609844208,
+          "max_abs": 0.007766205817461014,
+          "mean": 5.571412775573492e-10,
+          "present": true,
+          "sha256": "0ac4689998adc72c0306c9d695560a86846618f2dd4454497cab6b9ac0bb191a",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.bias": {
+          "l2_norm": 0.006785317789763212,
+          "max_abs": 0.0016985810361802578,
+          "mean": -5.459667227114551e-05,
+          "present": true,
+          "sha256": "7291f89013310731e949a03dc9ce55dfb38543c846dfc1fadf263ee4de5e424d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.weight": {
+          "l2_norm": 0.002487611724063754,
+          "max_abs": 0.000663730432279408,
+          "mean": -4.332431126385927e-05,
+          "present": true,
+          "sha256": "6c0d007e3ef1974462c49456c2f5a4169315d0ad1462196a95ffc1c233a23488",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.11370442062616348,
+          "max_abs": 0.035480037331581116,
+          "mean": 5.820766091346741e-11,
+          "present": true,
+          "sha256": "1914f5a5bfc4c6b7877471c1e5fcefa1401f18161d8befdf7f9e64a0ed9444aa",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.287445068359375,
+          "max_abs": 0.0074707502499222755,
+          "mean": -1.8491874698156607e-12,
+          "present": true,
+          "sha256": "625224b53f2e2a1f8d164c8630f2618619eb692960529be429a880f0160f6cb9",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.026463665068149567,
+          "max_abs": 0.0035487257409840822,
+          "mean": -6.62308229948394e-06,
+          "present": true,
+          "sha256": "e117e123ed6c277811e24ccc8bd656e89065acf4036bf0f75668ab544fed95fc",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.29007163643836975,
+          "max_abs": 0.006007812917232513,
+          "mean": 1.3711201063415501e-09,
+          "present": true,
+          "sha256": "1a6944ca8ea7f08301b2819f44ab3bca968afcd6d63ea85995d788f81d854899",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.bias": {
+          "l2_norm": 0.005662902258336544,
+          "max_abs": 0.0015952656976878643,
+          "mean": -4.828272358281538e-05,
+          "present": true,
+          "sha256": "7a231e03a0d8b5dd935ca00fd275f9959dece9b603b0fd0743f99f05a7b3cb73",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.weight": {
+          "l2_norm": 0.005918958690017462,
+          "max_abs": 0.001567243249155581,
+          "mean": -9.479379514232278e-06,
+          "present": true,
+          "sha256": "d08ff9f783b64b6e4ea861a7b11974a7507f6fcff5ff1f13ed62844db7025cae",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.bias": {
+          "l2_norm": 0.10653985291719437,
+          "max_abs": 0.02451298013329506,
+          "mean": 5.820766091346741e-11,
+          "present": true,
+          "sha256": "a082aaff0b7bcf0c58b1f335dc3a59a64c2ed38f85b10317c191a86cfba997f3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.weight": {
+          "l2_norm": 0.12506121397018433,
+          "max_abs": 0.00706861587241292,
+          "mean": 2.1795898419441073e-12,
+          "present": true,
+          "sha256": "61cb4c437a246942867992d6612fde80cc73a02f89f9161b6750b924d915a30a",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.bias": {
+          "l2_norm": 0.021883701905608177,
+          "max_abs": 0.005133563652634621,
+          "mean": 8.32002770039253e-05,
+          "present": true,
+          "sha256": "f976560a3e909ebbecc59ce6eee3ef5dfe20be79488a4153b215be7ada98eb30",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.weight": {
+          "l2_norm": 0.11760467290878296,
+          "max_abs": 0.00640201848000288,
+          "mean": 3.241969748213336e-10,
+          "present": true,
+          "sha256": "92885cec55c395e29617f7caeefd22e695f08a92f616609f0a0566d030ab7742",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.bias": {
+          "l2_norm": 0.00484241358935833,
+          "max_abs": 0.0013515329919755459,
+          "mean": 3.0975865229265764e-05,
+          "present": true,
+          "sha256": "36ec74d7dcb76ad523f1157d9048220ee10309ccf5572023facb6381f5b1652e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.weight": {
+          "l2_norm": 0.002547549782320857,
+          "max_abs": 0.0008475616341456771,
+          "mean": -8.738590622670017e-06,
+          "present": true,
+          "sha256": "699d586669c21bff5c9182bdecbf1a7f670aada2e94d7595f10568f987eb5c59",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.10653985291719437,
+          "max_abs": 0.02451298013329506,
+          "mean": 5.820766091346741e-11,
+          "present": true,
+          "sha256": "a082aaff0b7bcf0c58b1f335dc3a59a64c2ed38f85b10317c191a86cfba997f3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.2658100724220276,
+          "max_abs": 0.0061922864988446236,
+          "mean": -2.568611989772762e-12,
+          "present": true,
+          "sha256": "37a28772c57ede7f1256775f9fad226075539936ed16f683458a704e15552262",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.02462955005466938,
+          "max_abs": 0.0034498192835599184,
+          "mean": 7.382639159914106e-05,
+          "present": true,
+          "sha256": "8c022dc151d42122f457afb5ffa0bf7db9a16124edceac88e481597faaeeaf79",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.26580366492271423,
+          "max_abs": 0.005504906643182039,
+          "mean": -1.1475549399619922e-09,
+          "present": true,
+          "sha256": "f4b754d70099c692d5e91fac064fd8f048865a9bb631e1727aad31f79872f845",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.bias": {
+          "l2_norm": 0.004801716189831495,
+          "max_abs": 0.0014976891689002514,
+          "mean": 2.4155113351298496e-05,
+          "present": true,
+          "sha256": "091d34ba7d269733a4cc24844814717de40889f2ec763747fbac0b3a9e248ba3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.weight": {
+          "l2_norm": 0.004536156542599201,
+          "max_abs": 0.001055381027981639,
+          "mean": 2.3125381630961783e-05,
+          "present": true,
+          "sha256": "4ebf5f1eb174d7765fd4e541c2c78ec04587cce751a9ef6cdadf7617ddab2f27",
+          "shape": [
+            128
+          ]
+        }
+      },
+      "gradient_hash": "516424432ec52a791d225ed4dbfb9c04c04e242c96d437a0b71d4a0af8a7e43f",
+      "input_hash": "d61f2709faf7e0d09e8ce4e29a935fefc44e371cd05bb40538e55c3bb69497ec",
+      "loss": 10.849024772644043,
+      "loss_float32_bits_hex": "412d959b",
+      "post_step_state_hash": "a07918dabdb7f5b436d1eef2a9ba4d4afd444fbf5b30225065e2ee7dccc806d5",
+      "pre_step_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+      "probe_top_ids": [
+        12894,
+        40375,
+        1212,
+        12804,
+        21088,
+        36177,
+        4498,
+        41636,
+        12159,
+        49611,
+        6716,
+        14779,
+        16913,
+        35844,
+        5628,
+        22977
+      ],
+      "probe_top_logits": [
+        0.9356915950775146,
+        0.9253789782524109,
+        0.8826208114624023,
+        0.8578634262084961,
+        0.8389782905578613,
+        0.8207250833511353,
+        0.7817252278327942,
+        0.7784719467163086,
+        0.7784541845321655,
+        0.7688989043235779,
+        0.7647188305854797,
+        0.762649416923523,
+        0.7618283033370972,
+        0.7582558393478394,
+        0.755826473236084,
+        0.7473791837692261
+      ],
+      "state_hash": "a07918dabdb7f5b436d1eef2a9ba4d4afd444fbf5b30225065e2ee7dccc806d5",
+      "step": 1
+    },
+    {
+      "gradient_by_parameter": {
+        "embed_out.weight": {
+          "l2_norm": 0.7095751166343689,
+          "max_abs": 0.017406169325113297,
+          "mean": -1.6452771143841082e-15,
+          "present": true,
+          "sha256": "e82b1fbe9bcee9504f272bf7f759412d8bd3560a940e1967e2446e53c4a5cde8",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.embed_in.weight": {
+          "l2_norm": 0.6366041302680969,
+          "max_abs": 0.025023622438311577,
+          "mean": 1.3885415339504482e-14,
+          "present": true,
+          "sha256": "dff1cc352d9868d906d75e94145c08888ed4fb3857601e0021e752932dab7ba1",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.bias": {
+          "l2_norm": 0.015298611484467983,
+          "max_abs": 0.003273298731073737,
+          "mean": 0.00015762886323500425,
+          "present": true,
+          "sha256": "e64b1df9db8ead996ad7bf5812964b54c6d2ca148fcc06a88adc79dd131a845f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.weight": {
+          "l2_norm": 0.014101050794124603,
+          "max_abs": 0.003455613972619176,
+          "mean": 0.0002861196990124881,
+          "present": true,
+          "sha256": "6cb20a3fd8f9312c1055c11c67404752f4e7abef02f316d96d5704dc2fa74c5d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.bias": {
+          "l2_norm": 0.33412137627601624,
+          "max_abs": 0.08974143862724304,
+          "mean": 1.4551915228366852e-11,
+          "present": true,
+          "sha256": "ae713c487210773aa6bd06db265cb4623c27685f80981615cd76bbd49a435845",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.weight": {
+          "l2_norm": 0.18220119178295135,
+          "max_abs": 0.011126551777124405,
+          "mean": -6.039613253960852e-14,
+          "present": true,
+          "sha256": "c0359988454022d13aeed99b8a4daf8e0be518e7834a5da134fffeb1033004ee",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.bias": {
+          "l2_norm": 0.08516229689121246,
+          "max_abs": 0.021606236696243286,
+          "mean": -0.00032336488948203623,
+          "present": true,
+          "sha256": "b7345e0ae05ebe19cec3464107426c7f337385f3a994ff077dbc2cf39ac813bd",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.weight": {
+          "l2_norm": 0.1698319911956787,
+          "max_abs": 0.007471603807061911,
+          "mean": 4.318129409597304e-09,
+          "present": true,
+          "sha256": "9c0fdf49095f433e1ed99045518fe6a77aa30fe3c76cfe0629b36b66f1405d59",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.bias": {
+          "l2_norm": 0.020499061793088913,
+          "max_abs": 0.0058086831122636795,
+          "mean": -5.5584012443432584e-05,
+          "present": true,
+          "sha256": "25de6cdbfaad34db4d1bfbc9a964d920e28d429960fb57a1e57e4aff73af3a5e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.weight": {
+          "l2_norm": 0.003515957621857524,
+          "max_abs": 0.0013491630088537931,
+          "mean": -1.92867355508497e-05,
+          "present": true,
+          "sha256": "e9fd4ef42ae58d64a77bda255f8285e98fd8a8af183f39fce5b2b57e187711ac",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.33412137627601624,
+          "max_abs": 0.08974143862724304,
+          "mean": 1.4551915228366852e-11,
+          "present": true,
+          "sha256": "ae713c487210773aa6bd06db265cb4623c27685f80981615cd76bbd49a435845",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.5421929359436035,
+          "max_abs": 0.010677605867385864,
+          "mean": -3.4567904094728874e-12,
+          "present": true,
+          "sha256": "677d28cdf5be8eac3455c4a2a26736c8393c302db5ae34bd7c36f24968ceb21e",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.07783397287130356,
+          "max_abs": 0.011673619970679283,
+          "mean": -4.613252167473547e-05,
+          "present": true,
+          "sha256": "1f0a3a1db4bbeebfe0664d155c03ec050da4995882cfa357a5c061adf4a91de3",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.545914888381958,
+          "max_abs": 0.010871590115129948,
+          "mean": -9.709992809803225e-10,
+          "present": true,
+          "sha256": "386e828fdf60ff7e52ad1cbb995e0bdb1174fb529a4c6389247a794af2a175d2",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.bias": {
+          "l2_norm": 0.01637193188071251,
+          "max_abs": 0.004380181897431612,
+          "mean": -0.00017426389968022704,
+          "present": true,
+          "sha256": "3466e7c9b6b9f43394477d3bf0f4a369e65d9098c4abab9774ee5f2c58df2183",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.weight": {
+          "l2_norm": 0.011588992550969124,
+          "max_abs": 0.0029799866024404764,
+          "mean": -0.00011436099885031581,
+          "present": true,
+          "sha256": "14af399ce64de5cce4cc82c9d0b29ede5ed3c2cbeb5e0d5f6a220c89416c7820",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.bias": {
+          "l2_norm": 0.2186579555273056,
+          "max_abs": 0.05627042055130005,
+          "mean": -2.473825588822365e-10,
+          "present": true,
+          "sha256": "08b0d3947691f387504941d40aa82d8f1589f21c10c8630e89e6eafef10aab56",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.weight": {
+          "l2_norm": 0.19342361390590668,
+          "max_abs": 0.009838711470365524,
+          "mean": -2.106759211528697e-12,
+          "present": true,
+          "sha256": "b3de07f5ac1fd935bb7d7ebfe88d2d345cbfb76804ad1bfef9e6a0019813b148",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.bias": {
+          "l2_norm": 0.05026168003678322,
+          "max_abs": 0.012769125401973724,
+          "mean": -6.536283035529777e-05,
+          "present": true,
+          "sha256": "2c49ca01b31fb065ca5f88acfa89aea20e5fc2a5705e8e2a5c8e96cae9342c3d",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.weight": {
+          "l2_norm": 0.18013624846935272,
+          "max_abs": 0.008397887460887432,
+          "mean": 7.251552691656116e-09,
+          "present": true,
+          "sha256": "91a5ae8dec04516ff58892d4084b4b3ad27d54a01741c490966301dd7381ced9",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.bias": {
+          "l2_norm": 0.010151647962629795,
+          "max_abs": 0.002434797352179885,
+          "mean": -0.00011143241863464937,
+          "present": true,
+          "sha256": "89676a71af81a3aade3642767014dd59287e40256a7e8085f67cca2b21dddddf",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.weight": {
+          "l2_norm": 0.003321189433336258,
+          "max_abs": 0.0010729788336902857,
+          "mean": 1.742142194416374e-05,
+          "present": true,
+          "sha256": "ada3df7eecc21fdfed9032f0fd65b4ea9a68b50163a0a9af78097e53639d0a16",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.2186579555273056,
+          "max_abs": 0.05627042055130005,
+          "mean": -2.473825588822365e-10,
+          "present": true,
+          "sha256": "08b0d3947691f387504941d40aa82d8f1589f21c10c8630e89e6eafef10aab56",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.4088849425315857,
+          "max_abs": 0.00835615023970604,
+          "mean": -1.1617373729677638e-12,
+          "present": true,
+          "sha256": "c28de1a31a55181f7f4c379a085670ea6121865dbcc39a362d0e38c8aee6f5ee",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.05168838053941727,
+          "max_abs": 0.00806683860719204,
+          "mean": 5.1515744416974485e-06,
+          "present": true,
+          "sha256": "d484397c0391a3d84dbfc22f6304411e5da89452fd1c94d99605eca7f128a8f9",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.40742170810699463,
+          "max_abs": 0.008588254451751709,
+          "mean": -2.914305241574766e-09,
+          "present": true,
+          "sha256": "f1ee9b686899d4665f8a910d89c89b11f8fb16ccd2e4f4f0bfddee917e87d03e",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.bias": {
+          "l2_norm": 0.011753298342227936,
+          "max_abs": 0.0033565841149538755,
+          "mean": 8.626005001133308e-05,
+          "present": true,
+          "sha256": "9e3580373f210d2f46b6fb40756ba7201dc1c70d0c8415c58026759301add978",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.weight": {
+          "l2_norm": 0.008336685597896576,
+          "max_abs": 0.0031903167255222797,
+          "mean": 1.3478007531375624e-05,
+          "present": true,
+          "sha256": "bcaa6f983ee0cc2ecf9a1721f9acd13de9fdf77f482c40559a8965a6e05a5928",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.bias": {
+          "l2_norm": 0.1646270900964737,
+          "max_abs": 0.03376529738306999,
+          "mean": -8.731149137020111e-11,
+          "present": true,
+          "sha256": "48af687d5930982a8395766d02fa195913cd14827df7893071a57170b091a9eb",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.weight": {
+          "l2_norm": 0.17128697037696838,
+          "max_abs": 0.008397105149924755,
+          "mean": 9.947598300641403e-13,
+          "present": true,
+          "sha256": "27cb5429a0508cd1e60ffc4a54bd47859a65bb7d59a3e00fb753f98234b7bbf4",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.bias": {
+          "l2_norm": 0.036810245364904404,
+          "max_abs": 0.007526606321334839,
+          "mean": -4.4972355681238696e-05,
+          "present": true,
+          "sha256": "187b5cd731b8b15ea1b27a1d7fa8889bae98651b34eae8171cdabe6d6ea6c550",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.weight": {
+          "l2_norm": 0.16569550335407257,
+          "max_abs": 0.008367735892534256,
+          "mean": -2.6795230478882104e-09,
+          "present": true,
+          "sha256": "c757dd027771ed738c43cc53196164f9bb88ae0302048af9e279398f348385ac",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.bias": {
+          "l2_norm": 0.009173775091767311,
+          "max_abs": 0.0022394410334527493,
+          "mean": 5.806477929581888e-05,
+          "present": true,
+          "sha256": "273d2f962bc5dbd613880a02a4967368bbdc2564b4f736245b7912be1e5facf1",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.weight": {
+          "l2_norm": 0.003551372094079852,
+          "max_abs": 0.0012675615726038814,
+          "mean": -6.438760465243831e-06,
+          "present": true,
+          "sha256": "ffb8e76e60764395d4cacb7be1362d3180a98857f52f7bedf3431fc1939f529c",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1646270900964737,
+          "max_abs": 0.03376529738306999,
+          "mean": -8.731149137020111e-11,
+          "present": true,
+          "sha256": "48af687d5930982a8395766d02fa195913cd14827df7893071a57170b091a9eb",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.34003746509552,
+          "max_abs": 0.0071382420137524605,
+          "mean": -1.1475265182525618e-12,
+          "present": true,
+          "sha256": "ecc1c2c1058bd6b174db8d8ea4ea241ac83178df8fba0d29e13722af261554ce",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.03960869461297989,
+          "max_abs": 0.005769138224422932,
+          "mean": 0.00020421243971213698,
+          "present": true,
+          "sha256": "d0002398d3c5a35985c1ed8ea566cdaa92a20939027cb389276167bb882a4d10",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.3366663455963135,
+          "max_abs": 0.006797719281166792,
+          "mean": 8.813913154881448e-09,
+          "present": true,
+          "sha256": "eb499ade3d4935a949d2180a15299ec60ece8c82c7ce80e05b80e9bc2a5b0be4",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.bias": {
+          "l2_norm": 0.009253611788153648,
+          "max_abs": 0.0027017230167984962,
+          "mean": -3.64686238754075e-05,
+          "present": true,
+          "sha256": "92d5616b96cfa2d68c93c80d5696f98693aef9bb212c28d085622971291e521e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.weight": {
+          "l2_norm": 0.006873524282127619,
+          "max_abs": 0.001494210446253419,
+          "mean": 5.9899455663980916e-05,
+          "present": true,
+          "sha256": "85a9ac693ab510cc319181e40fc12637d6229cf8e2681b793363fa010c5e915c",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.bias": {
+          "l2_norm": 0.1240071952342987,
+          "max_abs": 0.027970364317297935,
+          "mean": 2.9103830456733704e-11,
+          "present": true,
+          "sha256": "071d3243adc51c52615d82f8465a74e968314c8a4262a5ee3bda2a743fbfddff",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.weight": {
+          "l2_norm": 0.14785724878311157,
+          "max_abs": 0.007350249215960503,
+          "mean": -1.7763568394002505e-14,
+          "present": true,
+          "sha256": "dafa987705e0f0e07aafbd062164a487e4607475af85ef3b275698967c991e1e",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.bias": {
+          "l2_norm": 0.029867341741919518,
+          "max_abs": 0.00643602991476655,
+          "mean": 2.0425284674274735e-05,
+          "present": true,
+          "sha256": "ded74a70fccf19b76cfdb58970d5ab85119ee9531ccec355faae503441fdf858",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.weight": {
+          "l2_norm": 0.15422353148460388,
+          "max_abs": 0.010605939663946629,
+          "mean": -9.38806921091384e-10,
+          "present": true,
+          "sha256": "3f11551af40700e91c3d88dd43f42f6ce782abc2e385e9e4d47a95a2d4e89e65",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.bias": {
+          "l2_norm": 0.006287429481744766,
+          "max_abs": 0.001566426013596356,
+          "mean": -6.5597690991126e-05,
+          "present": true,
+          "sha256": "3942c1ed1aea248932755656ffca6f96f1571b79f227b743be2f34eb2ab09906",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.weight": {
+          "l2_norm": 0.0029898297507315874,
+          "max_abs": 0.0012295730412006378,
+          "mean": 2.2605963749811053e-05,
+          "present": true,
+          "sha256": "df7cf420327eee3f0a6c5fa7fe80e82c1a4c0f51eb3510efa62e8e6def61fb4d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1240071952342987,
+          "max_abs": 0.027970364317297935,
+          "mean": 2.9103830456733704e-11,
+          "present": true,
+          "sha256": "071d3243adc51c52615d82f8465a74e968314c8a4262a5ee3bda2a743fbfddff",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.2962297797203064,
+          "max_abs": 0.0076206149533391,
+          "mean": -9.237055564881302e-14,
+          "present": true,
+          "sha256": "655277b3e51b478586fa09982aeabb2544f8e181a835603d3086dedcd35e83bf",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.029651662334799767,
+          "max_abs": 0.00399927981197834,
+          "mean": 4.2746803956106305e-05,
+          "present": true,
+          "sha256": "8d7a8154e72c3f6acc1df39b4eea6e27d3acbb8e329a0db33569a2608a75c62b",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.2955440878868103,
+          "max_abs": 0.0067316824570298195,
+          "mean": 2.3374013835564256e-10,
+          "present": true,
+          "sha256": "851d217856b233bfe90e7545b38d0717befee023584398666ab0f7351f828715",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.bias": {
+          "l2_norm": 0.006855569779872894,
+          "max_abs": 0.001684477087110281,
+          "mean": -4.8528720071772113e-05,
+          "present": true,
+          "sha256": "6f9fdfb44e7a88e8fd94807e5c1f4027da965db8cfd81c123adf908960cabdd4",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.weight": {
+          "l2_norm": 0.0060499669052660465,
+          "max_abs": 0.001433497411198914,
+          "mean": 7.340891897911206e-05,
+          "present": true,
+          "sha256": "6d8d158f89b7fd9c3d907e2d006b2d1832d9dcb0afc649de995a15d7d308f75c",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.bias": {
+          "l2_norm": 0.10639950633049011,
+          "max_abs": 0.026210274547338486,
+          "mean": -2.9103830456733704e-11,
+          "present": true,
+          "sha256": "c3d4aebda6b91fb37f46a00f145109e3cecaefdf5dfb77839e8cbd90a7167dec",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.weight": {
+          "l2_norm": 0.1357051134109497,
+          "max_abs": 0.0075558885000646114,
+          "mean": -2.7853275241795927e-12,
+          "present": true,
+          "sha256": "30eb9925caa94cd5efc94e352cd09a7a00310707301a0a0f925167608f8bfc25",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.bias": {
+          "l2_norm": 0.023813441395759583,
+          "max_abs": 0.006707534193992615,
+          "mean": 1.3227007002569735e-05,
+          "present": true,
+          "sha256": "fe54c2b6b36a526ffd0fbaa1e42841c32525a7aa326f6dacd95e6aa6e14f7301",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.weight": {
+          "l2_norm": 0.13926926255226135,
+          "max_abs": 0.009958913549780846,
+          "mean": 2.4122451258712374e-10,
+          "present": true,
+          "sha256": "86faf82cd90033088d37dfabbb49d03dd81b30196a526b7be245b5f384196571",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.bias": {
+          "l2_norm": 0.006081762257963419,
+          "max_abs": 0.0017203297466039658,
+          "mean": -1.719884130579885e-05,
+          "present": true,
+          "sha256": "c2839b83a56c5715e7760a366e4b0b163cb2f415e1bd009593031b23f194df40",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.weight": {
+          "l2_norm": 0.0027916214894503355,
+          "max_abs": 0.0013088854029774666,
+          "mean": 8.057158993324265e-06,
+          "present": true,
+          "sha256": "9872ec60c8a612fc54eb0a2224de61e8ac92fef36eb176d3823f43f04adc84c8",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.10639950633049011,
+          "max_abs": 0.026210274547338486,
+          "mean": -2.9103830456733704e-11,
+          "present": true,
+          "sha256": "c3d4aebda6b91fb37f46a00f145109e3cecaefdf5dfb77839e8cbd90a7167dec",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.2603421211242676,
+          "max_abs": 0.007485964335501194,
+          "mean": -1.4424017535930034e-12,
+          "present": true,
+          "sha256": "f8023a06eee39eb87fce31c301e1046ae01120bbfe9f8d9a099a1a58084daafa",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.025871355086565018,
+          "max_abs": 0.0036720260977745056,
+          "mean": -3.4630120353540406e-05,
+          "present": true,
+          "sha256": "5ff7d866f2cb743dd313bdbca7abfbedbfec8ac88b319631eb348b9c77a10e58",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.2638401985168457,
+          "max_abs": 0.006618107669055462,
+          "mean": 4.5054093789076433e-10,
+          "present": true,
+          "sha256": "c7585f984036ada91f28aab7e91890cd8c938df4682107bd474c7c901704c076",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.bias": {
+          "l2_norm": 0.006190161686390638,
+          "max_abs": 0.0013603634433820844,
+          "mean": 4.171055115875788e-05,
+          "present": true,
+          "sha256": "0472e639bb1c0be0d13d94f20edc81377d66bc2c47f4579b119f377aa63abb97",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.weight": {
+          "l2_norm": 0.005492107942700386,
+          "max_abs": 0.001456751604564488,
+          "mean": -6.845209281891584e-05,
+          "present": true,
+          "sha256": "4cb25a7481b95ac21f1a0013b9e41a534ccdc740246209b3b07077dc8fae5e73",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.bias": {
+          "l2_norm": 0.09321445971727371,
+          "max_abs": 0.022013705223798752,
+          "mean": 4.3655745685100555e-11,
+          "present": true,
+          "sha256": "f5429e725e5abee7bf23d586880df19a8a8fc4cfc52e8cf836440018c31a6740",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.weight": {
+          "l2_norm": 0.1357283592224121,
+          "max_abs": 0.008168003521859646,
+          "mean": -4.192202140984591e-13,
+          "present": true,
+          "sha256": "8e2d4594afafcdcbf99cf2999deded43cafd87fcd70ea5f455fd54c85123fb7a",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.bias": {
+          "l2_norm": 0.021945061162114143,
+          "max_abs": 0.004813062027096748,
+          "mean": -6.469322397606447e-05,
+          "present": true,
+          "sha256": "2c8551a346acdc2a2cce931912ae48a4be6324568b52b5e2f8193beea2ca213b",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.weight": {
+          "l2_norm": 0.14363490045070648,
+          "max_abs": 0.007025798317044973,
+          "mean": 6.518045131409522e-11,
+          "present": true,
+          "sha256": "bba3b8f6b673afdf702255a7a99ded73d760f6b4c549fd088d72e83dfbf6bc14",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.bias": {
+          "l2_norm": 0.005154312122613192,
+          "max_abs": 0.001178181846626103,
+          "mean": 8.633020115667023e-06,
+          "present": true,
+          "sha256": "fbb4be9fa9d22771806f0426ce653ac53d8be17a1b58b009fa3aafb2f0fea482",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.weight": {
+          "l2_norm": 0.0028188908472657204,
+          "max_abs": 0.0010586096905171871,
+          "mean": 3.865813596348744e-06,
+          "present": true,
+          "sha256": "644fad4ae9a5b2719d9d9414d7d6431ba6d1f3843b2cc998fe22b799f3c9b732",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.09321445971727371,
+          "max_abs": 0.022013705223798752,
+          "mean": 4.3655745685100555e-11,
+          "present": true,
+          "sha256": "f5429e725e5abee7bf23d586880df19a8a8fc4cfc52e8cf836440018c31a6740",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.2424689531326294,
+          "max_abs": 0.006691360846161842,
+          "mean": 4.991562718714704e-13,
+          "present": true,
+          "sha256": "0b2c8e2ead1431c4a7e654338a89a925c56677763a413148d96e297dc6151743",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.02265460230410099,
+          "max_abs": 0.003439026651903987,
+          "mean": -6.256726919673383e-05,
+          "present": true,
+          "sha256": "25e79e46714e28e2b1caa4f310e342e9af1b0cc22f2f73fb001eacd44342aef6",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.24501943588256836,
+          "max_abs": 0.005893100518733263,
+          "mean": 2.7341684472048655e-10,
+          "present": true,
+          "sha256": "53c4e553d88b5995e50b4378f9bcce2509a7b71bd5fe883cfe124acfe87598f5",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.bias": {
+          "l2_norm": 0.005022892262786627,
+          "max_abs": 0.0012314363848417997,
+          "mean": 2.563332236604765e-05,
+          "present": true,
+          "sha256": "73f43c1661c44d8a648be9dc4b71b0ad81e2a6595629405a616de7adbe62f49d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.weight": {
+          "l2_norm": 0.005101419053971767,
+          "max_abs": 0.0011010862654075027,
+          "mean": 4.8236495786113665e-05,
+          "present": true,
+          "sha256": "e851ba3955bfb7814f6f6fa1fc90d176accdcd6c25ce38f9bcedbe76520e7255",
+          "shape": [
+            128
+          ]
+        }
+      },
+      "gradient_hash": "fb4ab41d96448ffed053e52d9296524b3bc53a126674e80f0f4a5ef4388e42f4",
+      "input_hash": "6b76244af5772c73aeaa8d66c2e54b34314a5c7223cb5c65f8476e4cf7c5ee0e",
+      "loss": 10.836971282958984,
+      "loss_float32_bits_hex": "412d643c",
+      "post_step_state_hash": "9597b64163cc23af77c3b04610db94d1b20844e1a6c62683e4f928bbce254e01",
+      "pre_step_state_hash": "a07918dabdb7f5b436d1eef2a9ba4d4afd444fbf5b30225065e2ee7dccc806d5",
+      "probe_top_ids": [
+        1212,
+        21088,
+        40375,
+        6716,
+        12894,
+        12804,
+        4349,
+        22977,
+        27087,
+        41636,
+        36177,
+        14779,
+        387,
+        35684,
+        18529,
+        1396
+      ],
+      "probe_top_logits": [
+        0.9081763625144958,
+        0.8739425539970398,
+        0.8709893226623535,
+        0.8630217909812927,
+        0.8550299406051636,
+        0.8429996371269226,
+        0.8065141439437866,
+        0.7909097075462341,
+        0.7868495583534241,
+        0.7736764550209045,
+        0.7687279582023621,
+        0.7601619362831116,
+        0.7537935972213745,
+        0.7490035891532898,
+        0.7408416271209717,
+        0.7229604721069336
+      ],
+      "state_hash": "9597b64163cc23af77c3b04610db94d1b20844e1a6c62683e4f928bbce254e01",
+      "step": 2
+    },
+    {
+      "gradient_by_parameter": {
+        "embed_out.weight": {
+          "l2_norm": 0.7095257639884949,
+          "max_abs": 0.022276582196354866,
+          "mean": -6.282788959227625e-15,
+          "present": true,
+          "sha256": "13026fbc05cc46da395cc69eb2cc60f3660104747c5cbd68026782d76c2bb124",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.embed_in.weight": {
+          "l2_norm": 0.6099968552589417,
+          "max_abs": 0.028055408969521523,
+          "mean": 3.2399301611810843e-14,
+          "present": true,
+          "sha256": "041d4fba895c6563287f24ad505cf99dfe5defbdf66906e91f9a5b45e93dad52",
+          "shape": [
+            50304,
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.bias": {
+          "l2_norm": 0.013833035714924335,
+          "max_abs": 0.003490020986646414,
+          "mean": -1.9309089111629874e-05,
+          "present": true,
+          "sha256": "68b0e4598c519bd129a2ebab16e0b1fd6670dd63f8ec528616f609b073f91a4b",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.final_layer_norm.weight": {
+          "l2_norm": 0.01540155429393053,
+          "max_abs": 0.004608441144227982,
+          "mean": 0.0004235910892020911,
+          "present": true,
+          "sha256": "c831d80bdc7796e27a4878d2c358828be4e8b17d5c673f65f5a5fc68b4fcbea2",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.bias": {
+          "l2_norm": 0.25957661867141724,
+          "max_abs": 0.06483370065689087,
+          "mean": -3.4924596548080444e-10,
+          "present": true,
+          "sha256": "93c121345627e71216d2ca17acf588d114691c89426af81e6a8e5aa226e7a96c",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.dense.weight": {
+          "l2_norm": 0.17020276188850403,
+          "max_abs": 0.009738855995237827,
+          "mean": 5.409006575973763e-13,
+          "present": true,
+          "sha256": "6788afea999c12ec50253a213a943b7d3d70aabe5fd99d1505d8c850d8ccfda1",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.bias": {
+          "l2_norm": 0.0673840269446373,
+          "max_abs": 0.01935138925909996,
+          "mean": -0.00010123477113666013,
+          "present": true,
+          "sha256": "9d3737606e1ae3802967ea6ea4e96b5f789df9b4f4ff5848c5d73f3ecc5728d7",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.0.attention.query_key_value.weight": {
+          "l2_norm": 0.17074941098690033,
+          "max_abs": 0.00890056136995554,
+          "mean": 1.6114730660987675e-09,
+          "present": true,
+          "sha256": "53eaef06ac194b9bc61f7e82a8cf3f04c5bcb82ce7eaf6e080671ac855d7b59e",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.bias": {
+          "l2_norm": 0.014545897021889687,
+          "max_abs": 0.004047142807394266,
+          "mean": 2.51482124440372e-05,
+          "present": true,
+          "sha256": "7fdb2736cf7af4655e3816e89a1485b41a6dba86c9225ebe6e34897cf77ee2ab",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.input_layernorm.weight": {
+          "l2_norm": 0.0035747047513723373,
+          "max_abs": 0.0009885961189866066,
+          "mean": 1.5997065929695964e-06,
+          "present": true,
+          "sha256": "81879ab21d20b1831cf2fdbb6d8385f4385d3892112581212fbaa0f9221dfadd",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.25957661867141724,
+          "max_abs": 0.06483370065689087,
+          "mean": -3.4924596548080444e-10,
+          "present": true,
+          "sha256": "93c121345627e71216d2ca17acf588d114691c89426af81e6a8e5aa226e7a96c",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.5059409737586975,
+          "max_abs": 0.009793611243367195,
+          "mean": 1.8758328224066645e-12,
+          "present": true,
+          "sha256": "348c541c8e8bb9c156afb55eef1e0c192815291be278ea006567558b205df304",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.05964183434844017,
+          "max_abs": 0.00997105147689581,
+          "mean": 1.0772188034025021e-05,
+          "present": true,
+          "sha256": "2f8248b047324f1170e8038a812901e1c5b480d0f56b3b178362c13dd05c5ac5",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.0.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.5134335160255432,
+          "max_abs": 0.009115200489759445,
+          "mean": 1.1823431123048067e-09,
+          "present": true,
+          "sha256": "bd2cd30cea959f0e432fc38563f703cfa01d0ba070299e27ffeea7f9a704ef31",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.bias": {
+          "l2_norm": 0.012704670429229736,
+          "max_abs": 0.0030439188703894615,
+          "mean": -0.00010445916996104643,
+          "present": true,
+          "sha256": "96e080b656db4725565d689abfa5f2ea153952e0a36ef80cab84818e6f9d1f38",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.0.post_attention_layernorm.weight": {
+          "l2_norm": 0.01144664641469717,
+          "max_abs": 0.003065752563998103,
+          "mean": 0.00017411836597602814,
+          "present": true,
+          "sha256": "ad4ad39ee89ec14e2fe999bcea3980e7d99782b08bcb238b81ee9efefbf4dd0f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.bias": {
+          "l2_norm": 0.1626802384853363,
+          "max_abs": 0.04251467436552048,
+          "mean": -1.7462298274040222e-10,
+          "present": true,
+          "sha256": "e4d40cf0ba46455e9c31cd671c1ffb0ebccf223d365be36b18a8cbff2df25826",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.dense.weight": {
+          "l2_norm": 0.15160849690437317,
+          "max_abs": 0.007005118764936924,
+          "mean": 1.2008172234345693e-12,
+          "present": true,
+          "sha256": "9b5172dd3f0654ae1d60d78055c1a71741efb61ccb963e28fab11083febaf709",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.bias": {
+          "l2_norm": 0.03533266857266426,
+          "max_abs": 0.0077309319749474525,
+          "mean": 0.00013654811482410878,
+          "present": true,
+          "sha256": "7a7a9d2ee2bea88192f7896f50943e7e718aca39922b2f7e575ceb85da0f7906",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.1.attention.query_key_value.weight": {
+          "l2_norm": 0.14524857699871063,
+          "max_abs": 0.0072591290809214115,
+          "mean": -1.557217821357426e-08,
+          "present": true,
+          "sha256": "ac950c4708f97f1260bd71636e0f527d2373faf417f1064644e8886f48e247bc",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.bias": {
+          "l2_norm": 0.008350051939487457,
+          "max_abs": 0.001771639916114509,
+          "mean": 4.691089270636439e-05,
+          "present": true,
+          "sha256": "08af17c85fae30e92a5ec2959dd521e4dd39ef73c85ce549a684179be577af9e",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.input_layernorm.weight": {
+          "l2_norm": 0.0026723097544163465,
+          "max_abs": 0.0009186192764900625,
+          "mean": -1.402400630468037e-05,
+          "present": true,
+          "sha256": "48ee90202a52f556c2d6a9c31f665c9bcd3fbae0b1c8fc9e89479ed97baa0cf1",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1626802384853363,
+          "max_abs": 0.04251467436552048,
+          "mean": -1.7462298274040222e-10,
+          "present": true,
+          "sha256": "e4d40cf0ba46455e9c31cd671c1ffb0ebccf223d365be36b18a8cbff2df25826",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.35949188470840454,
+          "max_abs": 0.008333359844982624,
+          "mean": -5.329070518200751e-12,
+          "present": true,
+          "sha256": "7146fcfb39800cf97ec7842482d262bd0bc2faa9c64c8038810158bf3e734b0e",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.037009574472904205,
+          "max_abs": 0.005328667350113392,
+          "mean": -0.00011784675734816119,
+          "present": true,
+          "sha256": "1045ed4c1b8ef076cd5dcc23ee680304ec410445c099433ad15893c515db45f3",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.1.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.3628031313419342,
+          "max_abs": 0.006796848960220814,
+          "mean": -3.4710865293163806e-09,
+          "present": true,
+          "sha256": "7217fb031326b1f532acc8f7d9688972451cd6dc900a1d45d3c3be10964c1050",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.bias": {
+          "l2_norm": 0.008731931447982788,
+          "max_abs": 0.002165104728192091,
+          "mean": 4.366477514849976e-05,
+          "present": true,
+          "sha256": "05a36b4d9b02c17b3a8e8f08d4298401426ffebf9a31b1bfdc579e8c1deac279",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.1.post_attention_layernorm.weight": {
+          "l2_norm": 0.006901147775352001,
+          "max_abs": 0.0015661887591704726,
+          "mean": -9.942674660123885e-05,
+          "present": true,
+          "sha256": "60b07355dd9390ea323fa1b4f7dca22a6f201704a4ab13ab88a7cef3be6f236f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.bias": {
+          "l2_norm": 0.1265314370393753,
+          "max_abs": 0.032340895384550095,
+          "mean": -3.2014213502407074e-10,
+          "present": true,
+          "sha256": "d51d1c15d74733346f0a82408189dc5ab4fb8eaef1eebce160edc998394cdfb3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.dense.weight": {
+          "l2_norm": 0.140223428606987,
+          "max_abs": 0.008079375140368938,
+          "mean": -2.5579538487363607e-13,
+          "present": true,
+          "sha256": "f16d478d5775c8000189122431ebd0366a1bdde2cdd85259b72a1242c9680236",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.bias": {
+          "l2_norm": 0.02864435687661171,
+          "max_abs": 0.00670207105576992,
+          "mean": 7.986458513187245e-05,
+          "present": true,
+          "sha256": "f48ce7d11fb029d362f6204db117e6393f155c6f99782676a42625d843f68f2b",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.2.attention.query_key_value.weight": {
+          "l2_norm": 0.1296340525150299,
+          "max_abs": 0.006746398750692606,
+          "mean": 5.131369107402861e-09,
+          "present": true,
+          "sha256": "ba451d97192f03e21374d494a53abb2d7b9fb2b3c492a54022bf613b5c7fe561",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.bias": {
+          "l2_norm": 0.005868549458682537,
+          "max_abs": 0.001394634717144072,
+          "mean": -3.851007932098582e-06,
+          "present": true,
+          "sha256": "a960d7819dcfc3f3a9bdde074dff0ede2b2caa6306d65dea3936901d948fc404",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.input_layernorm.weight": {
+          "l2_norm": 0.0025793700478971004,
+          "max_abs": 0.0009349563042633235,
+          "mean": 1.189774411614053e-05,
+          "present": true,
+          "sha256": "06c0160e0e907502bce197fd6cebd3ed1623b1688dcf4dde6799f4d803d71da7",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1265314370393753,
+          "max_abs": 0.032340895384550095,
+          "mean": -3.2014213502407074e-10,
+          "present": true,
+          "sha256": "d51d1c15d74733346f0a82408189dc5ab4fb8eaef1eebce160edc998394cdfb3",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.29906436800956726,
+          "max_abs": 0.008277974091470242,
+          "mean": -3.700151296470722e-12,
+          "present": true,
+          "sha256": "681c7ec195a5c128f523d90672ba9640a742be3040b1caa7c99ea3081c28a78b",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.029865778982639313,
+          "max_abs": 0.004288341850042343,
+          "mean": 2.7793797926278785e-05,
+          "present": true,
+          "sha256": "9a216ff0d272b34682bad394172517128da4809080af2e3c6b47e2bd941b10b3",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.2.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.3001275658607483,
+          "max_abs": 0.005480046384036541,
+          "mean": 3.3542164601385593e-09,
+          "present": true,
+          "sha256": "80ee57a739728a0051d125a34b0d3e051ce17290f78cefad58f677f52a5c04f3",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.bias": {
+          "l2_norm": 0.007568025961518288,
+          "max_abs": 0.001789728063158691,
+          "mean": 3.048798316740431e-05,
+          "present": true,
+          "sha256": "3282d18f09370688e893740de74b8a375970d4bd5f55b591b59551b6fda2e246",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.2.post_attention_layernorm.weight": {
+          "l2_norm": 0.005736412014812231,
+          "max_abs": 0.0014713439159095287,
+          "mean": -2.8648337320191786e-05,
+          "present": true,
+          "sha256": "29173d0c6492e28045bcf89cb7a8cbb9ee0cd244c5bb8e460262df81d7d4a098",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.bias": {
+          "l2_norm": 0.1007751077413559,
+          "max_abs": 0.02374788373708725,
+          "mean": -2.0372681319713593e-10,
+          "present": true,
+          "sha256": "18d008388847feb8adf53becbbbf1f35b3aafe77fbc9f6d0f6ad8f38c499935d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.dense.weight": {
+          "l2_norm": 0.12457689642906189,
+          "max_abs": 0.00787344854325056,
+          "mean": 9.556799795973347e-13,
+          "present": true,
+          "sha256": "c94d6454699254eb7613653485ffd994282aaa7e60d046623185057d9ceef3f3",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.bias": {
+          "l2_norm": 0.021074900403618813,
+          "max_abs": 0.0050875055603682995,
+          "mean": 6.11243667663075e-05,
+          "present": true,
+          "sha256": "0a512a4e0dff1f5c7503a0241b83eef473c5d4282fd7f6fbb1bccfa189624173",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.3.attention.query_key_value.weight": {
+          "l2_norm": 0.11948089301586151,
+          "max_abs": 0.006655657663941383,
+          "mean": -2.508386387489736e-09,
+          "present": true,
+          "sha256": "3302a5c2b3523366d1a4e38ed87907690c91ff0323c2d626a92cc6e9f493c2c4",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.bias": {
+          "l2_norm": 0.005001427605748177,
+          "max_abs": 0.0014140693238005042,
+          "mean": -5.205604975344613e-05,
+          "present": true,
+          "sha256": "ac66a48982bd52b1e45430a995c94fd073a8def9e510fa17ca9a5a1f142c9c0f",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.input_layernorm.weight": {
+          "l2_norm": 0.0025803803000599146,
+          "max_abs": 0.0008650085655972362,
+          "mean": -6.4077303250087425e-06,
+          "present": true,
+          "sha256": "c56890fcd1d14a539cb84600977ec658a3d24e62fc6586b0075a1067f953ab98",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.1007751077413559,
+          "max_abs": 0.02374788373708725,
+          "mean": -2.0372681319713593e-10,
+          "present": true,
+          "sha256": "18d008388847feb8adf53becbbbf1f35b3aafe77fbc9f6d0f6ad8f38c499935d",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.26788079738616943,
+          "max_abs": 0.0062178936786949635,
+          "mean": -2.4780177909633494e-12,
+          "present": true,
+          "sha256": "78400c0d97a1d07b438fc92f9b769de3cee22277e356431df49d5df82dac1cc2",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.02423056960105896,
+          "max_abs": 0.003159442450851202,
+          "mean": -6.041755113983527e-05,
+          "present": true,
+          "sha256": "2a4afe13d3d3e5a664d711aa57734c64b143f71f9c8a9d8e2ed6625125673004",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.3.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.2685258686542511,
+          "max_abs": 0.005753105040639639,
+          "mean": -8.606320989201777e-09,
+          "present": true,
+          "sha256": "93bab4c8c782bc072be3713d30d614a76de4a928a7a3d7f418fc9aa938729125",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.bias": {
+          "l2_norm": 0.005477754399180412,
+          "max_abs": 0.0013441657647490501,
+          "mean": 3.307815859443508e-05,
+          "present": true,
+          "sha256": "4d9dc2f07900a9ef9273bf82b92cfb35ca142fed807f06d88a463e3c0a961eb4",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.3.post_attention_layernorm.weight": {
+          "l2_norm": 0.005866397637873888,
+          "max_abs": 0.002200019545853138,
+          "mean": -1.6892161511350423e-05,
+          "present": true,
+          "sha256": "0cf7d82a0ff8bcea22d242fb783f07b6cdcfd2663a623f0146dca7fe3d90a8df",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.bias": {
+          "l2_norm": 0.08862674236297607,
+          "max_abs": 0.024059265851974487,
+          "mean": -1.4551915228366852e-10,
+          "present": true,
+          "sha256": "006beda242e3af1d3220adda15fa4ea93a906dd187ff778eca364277d9b24864",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.dense.weight": {
+          "l2_norm": 0.13270635902881622,
+          "max_abs": 0.00942848902195692,
+          "mean": 3.375077994860476e-13,
+          "present": true,
+          "sha256": "255bc795870159d9bbb6a37de453942d739547d0ddc81374426926bbed684576",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.bias": {
+          "l2_norm": 0.021454988047480583,
+          "max_abs": 0.0052170599810779095,
+          "mean": -2.32937018154189e-05,
+          "present": true,
+          "sha256": "de24aab73cecf77496e525d4bace44867f2a45be2c5021e60fc557beb9607b4d",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.4.attention.query_key_value.weight": {
+          "l2_norm": 0.13713346421718597,
+          "max_abs": 0.007584409322589636,
+          "mean": 3.5792406816170796e-09,
+          "present": true,
+          "sha256": "7b3a7d82380ab9dab81c7df2ee5eb6807f63bee8e39f850a99584d36786037f2",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.bias": {
+          "l2_norm": 0.004591807723045349,
+          "max_abs": 0.0011264891363680363,
+          "mean": -2.868870069505647e-06,
+          "present": true,
+          "sha256": "52eba57522855f0e6f4156db6cd1cf7e54ff70e168bb599077110a2e653de3d1",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.input_layernorm.weight": {
+          "l2_norm": 0.002925097243860364,
+          "max_abs": 0.001081806723959744,
+          "mean": 2.3210412109619938e-05,
+          "present": true,
+          "sha256": "02b94004cee16c59981819f32ce1319faa0eeedeebadabaff6de28865e0dc522",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.08862674236297607,
+          "max_abs": 0.024059265851974487,
+          "mean": -1.4551915228366852e-10,
+          "present": true,
+          "sha256": "006beda242e3af1d3220adda15fa4ea93a906dd187ff778eca364277d9b24864",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.23723185062408447,
+          "max_abs": 0.006626925431191921,
+          "mean": -1.8758328224066645e-12,
+          "present": true,
+          "sha256": "5a65beb0940168148746bb8f4f3e9bc5d548562ebd002a4fa1ef8e8e113f187c",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.020937787368893623,
+          "max_abs": 0.0030299718491733074,
+          "mean": -5.136328036314808e-05,
+          "present": true,
+          "sha256": "0fdf915cf2a07567d417ab779c8268f1997fac57f391cb5b43227163f1ec7f68",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.4.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.23904718458652496,
+          "max_abs": 0.005208606831729412,
+          "mean": 9.475797924096696e-11,
+          "present": true,
+          "sha256": "e22b7947a72750536e1145d7f116568db541b2eeebadf3f76b38b05349fdb662",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.bias": {
+          "l2_norm": 0.004507767967879772,
+          "max_abs": 0.001133552985265851,
+          "mean": -1.058433099387912e-06,
+          "present": true,
+          "sha256": "0b51376b6065cdbb6ec36e89032c5f2b636091d0fd1b85ddcf0179609aab5999",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.4.post_attention_layernorm.weight": {
+          "l2_norm": 0.005560397636145353,
+          "max_abs": 0.0017241877503693104,
+          "mean": 7.798011210979894e-06,
+          "present": true,
+          "sha256": "2b45de64c466351938df9b6ed1ac1959c3f563ae72cd0adf67e91cb34796fa00",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.bias": {
+          "l2_norm": 0.07927611470222473,
+          "max_abs": 0.02029412053525448,
+          "mean": -2.9103830456733704e-11,
+          "present": true,
+          "sha256": "d6f26a9e46c602ad00c7d1b9c1887ca32b7a2f3352c8e6de239a6ac1fa7cd45a",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.dense.weight": {
+          "l2_norm": 0.13030017912387848,
+          "max_abs": 0.009119727648794651,
+          "mean": -3.1512570330960443e-12,
+          "present": true,
+          "sha256": "48cb5a2e47877115622bc089d88337e259bb7dca6781746f84290c9ba80ffb5e",
+          "shape": [
+            128,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.bias": {
+          "l2_norm": 0.01847185380756855,
+          "max_abs": 0.004754000809043646,
+          "mean": -2.2898128008819185e-05,
+          "present": true,
+          "sha256": "535942d50db0d1c7f2f3cbb924ce7c1290066effaba7eaa02344f846925b6cd2",
+          "shape": [
+            384
+          ]
+        },
+        "gpt_neox.layers.5.attention.query_key_value.weight": {
+          "l2_norm": 0.13080424070358276,
+          "max_abs": 0.006968522444367409,
+          "mean": -8.15380929442e-10,
+          "present": true,
+          "sha256": "1bb314d6ddb4dec86d1e1f8ff54ea8c17952d54338f198265fe978e96016c227",
+          "shape": [
+            384,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.bias": {
+          "l2_norm": 0.004415280185639858,
+          "max_abs": 0.0011316968593746424,
+          "mean": 7.796633144607767e-05,
+          "present": true,
+          "sha256": "030ee2059f61da8c1df848557145cd2097c2bf315c1d8ad7fb4a2c92f0761ccd",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.input_layernorm.weight": {
+          "l2_norm": 0.0023365940432995558,
+          "max_abs": 0.0007566913263872266,
+          "mean": -3.5457076137390686e-06,
+          "present": true,
+          "sha256": "0c8d89b1dc2f642eb4597ac51e5fcf7a02d84f9f4423e88e8f96d8d541544306",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.bias": {
+          "l2_norm": 0.07927611470222473,
+          "max_abs": 0.02029412053525448,
+          "mean": -2.9103830456733704e-11,
+          "present": true,
+          "sha256": "d6f26a9e46c602ad00c7d1b9c1887ca32b7a2f3352c8e6de239a6ac1fa7cd45a",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_4h_to_h.weight": {
+          "l2_norm": 0.21915268898010254,
+          "max_abs": 0.006565636955201626,
+          "mean": -1.440181307543753e-12,
+          "present": true,
+          "sha256": "41bb63310fe1c43f3f2443dbee68e996c970a33ee110fdd6ceb393ed428e377b",
+          "shape": [
+            128,
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.bias": {
+          "l2_norm": 0.01952941156923771,
+          "max_abs": 0.0032646083272993565,
+          "mean": -8.376261394005269e-05,
+          "present": true,
+          "sha256": "64a66f5104379de8c51a67036ed450118728fde2ad17911becaf348101caf992",
+          "shape": [
+            512
+          ]
+        },
+        "gpt_neox.layers.5.mlp.dense_h_to_4h.weight": {
+          "l2_norm": 0.22289997339248657,
+          "max_abs": 0.005921842530369759,
+          "mean": 2.865192527679028e-09,
+          "present": true,
+          "sha256": "54a3daec6e846c428e5f59cd7ff229b49d76dcaa850b18a26d75cc985a39ce30",
+          "shape": [
+            512,
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.bias": {
+          "l2_norm": 0.00443847244605422,
+          "max_abs": 0.0009576798183843493,
+          "mean": 1.9146198610542342e-05,
+          "present": true,
+          "sha256": "c9d35b9af58097d78671adc212f14e790955cda57a25e024e18500e02fc2de60",
+          "shape": [
+            128
+          ]
+        },
+        "gpt_neox.layers.5.post_attention_layernorm.weight": {
+          "l2_norm": 0.004784163553267717,
+          "max_abs": 0.0013532412704080343,
+          "mean": -4.341490421211347e-05,
+          "present": true,
+          "sha256": "a9994831bbb6d9dc7bcbfc202b70bd8bddc0d833ae4ab1ea4aa1416d8ec6153b",
+          "shape": [
+            128
+          ]
+        }
+      },
+      "gradient_hash": "f382418b3dc51f34446ebe0eb0a69ee6356c219213585a635cf489c20c67693a",
+      "input_hash": "1c6ab6202239fc1fb113916a6ec7320c112ec0811e7ccb2c736a8f105f26f530",
+      "loss": 10.8545560836792,
+      "loss_float32_bits_hex": "412dac43",
+      "post_step_state_hash": "a8c67406e0891b599b2ceebf5bb3e15557c8a3f4a10ba7fb44b856eb5934a40f",
+      "pre_step_state_hash": "9597b64163cc23af77c3b04610db94d1b20844e1a6c62683e4f928bbce254e01",
+      "probe_top_ids": [
+        6716,
+        1212,
+        21088,
+        27087,
+        12894,
+        4349,
+        22977,
+        12804,
+        40375,
+        48911,
+        30945,
+        3561,
+        14779,
+        35684,
+        41636,
+        40490
+      ],
+      "probe_top_logits": [
+        0.8914529085159302,
+        0.8757014870643616,
+        0.8533328771591187,
+        0.8225332498550415,
+        0.8202216029167175,
+        0.8080009818077087,
+        0.8039149045944214,
+        0.7969940900802612,
+        0.7915518283843994,
+        0.7451559901237488,
+        0.739255964756012,
+        0.7390465140342712,
+        0.738079309463501,
+        0.7279011011123657,
+        0.7230240106582642,
+        0.7223714590072632
+      ],
+      "state_hash": "a8c67406e0891b599b2ceebf5bb3e15557c8a3f4a10ba7fb44b856eb5934a40f",
+      "step": 3
+    }
+  ],
+  "run_id": "t4_perturb",
+  "schema": "hydradg.run_receipt.v0.2.7",
+  "seed": 314159,
+  "seq": 128,
+  "steps": 4
+}

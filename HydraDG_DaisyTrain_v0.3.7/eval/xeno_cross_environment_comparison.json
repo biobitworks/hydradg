@@ -1,0 +1,90 @@
+{
+  "claim_boundary": "Frozen evaluation replay comparison only; not original-training reproduction or biological validation.",
+  "classification": "CROSS_ENVIRONMENT_RESULT_DIVERGENCE",
+  "differences": [
+    {
+      "abs_diff": 1.1102230246251565e-16,
+      "kind": "numeric",
+      "local": 0.8591219328891647,
+      "path": "$.auroc",
+      "remote": 0.8591219328891648
+    },
+    {
+      "abs_diff": 2.8488322811881517e-13,
+      "kind": "numeric",
+      "local": 0.9999999950207508,
+      "path": "$.cca[0]",
+      "remote": 0.9999999950210356
+    },
+    {
+      "abs_diff": 0.4303388365252931,
+      "kind": "numeric",
+      "local": 0.43383835388586894,
+      "path": "$.cca[1]",
+      "remote": 0.864177190411162
+    },
+    {
+      "abs_diff": 0.8563492023816052,
+      "kind": "numeric",
+      "local": 0.06386097651575302,
+      "path": "$.cca[2]",
+      "remote": 0.9202101788973582
+    },
+    {
+      "abs_diff": 0.030561384005732273,
+      "kind": "numeric",
+      "local": 0.9999999954408845,
+      "path": "$.cca[3]",
+      "remote": 0.9694386114351522
+    },
+    {
+      "abs_diff": 0.001580872481284432,
+      "kind": "numeric",
+      "local": 0.0065741233267060046,
+      "path": "$.cca[4]",
+      "remote": 0.008154995807990437
+    },
+    {
+      "abs_diff": 5.960464477539063e-08,
+      "kind": "numeric",
+      "local": 0.9999964237213135,
+      "path": "$.ridge_r2[0]",
+      "remote": 0.9999964833259583
+    },
+    {
+      "abs_diff": 1.7881393432617188e-07,
+      "kind": "numeric",
+      "local": 0.9999963045120239,
+      "path": "$.ridge_r2[1]",
+      "remote": 0.9999964833259583
+    },
+    {
+      "abs_diff": 4.112720489501953e-06,
+      "kind": "numeric",
+      "local": 0.9998285174369812,
+      "path": "$.ridge_r2[2]",
+      "remote": 0.9998244047164917
+    },
+    {
+      "abs_diff": 1.7881393432617188e-07,
+      "kind": "numeric",
+      "local": 0.9999963045120239,
+      "path": "$.ridge_r2[3]",
+      "remote": 0.9999964833259583
+    },
+    {
+      "abs_diff": 7.152557373046875e-07,
+      "kind": "numeric",
+      "local": 0.9999634027481079,
+      "path": "$.ridge_r2_uniform_average",
+      "remote": 0.9999626874923706
+    }
+  ],
+  "epsilon": 1e-12,
+  "equivalent_within_epsilon": false,
+  "exact": false,
+  "local_scientific_sha256": "4c31c7a26ac32cafd6ba498b11765bac7134219a0ad0d7a8e230d32c0f7df658",
+  "max_abs_numeric_diff": 0.8563492023816052,
+  "remote_scientific_sha256": "dadd21158d64502255d970012f43af798357bf56189c14de0dfb5bd6c65f755f",
+  "schema": "hydradg.xeno_cross_environment_comparison.v1"
+}

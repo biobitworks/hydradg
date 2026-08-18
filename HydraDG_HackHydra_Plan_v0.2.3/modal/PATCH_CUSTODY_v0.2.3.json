@@ -1,0 +1,26 @@
+{
+  "execution_state": "NOT_EXECUTED_AFTER_PATCH",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "package_version": "0.2.3",
+  "patch": {
+    "include_source": false,
+    "pythia_config_source_commit": "94f7c35d5e9f2e9bac8ca839329f505b4d007d5d",
+    "remote_python": "3.13",
+    "runtime_external_config_fetch": false,
+    "serialized": true
+  },
+  "patch_evidence": {
+    "observed_local_python": "3.13",
+    "observed_remote_python": "3.11",
+    "v0.2.2_image_build": "SUCCESS_REPORTED_IN_USER_LOG",
+    "v0.2.2_training": "NOT_STARTED_DUE_TO_PYTHON_VERSION_MISMATCH"
+  },
+  "signature_state": "NOT_SIGNED",
+  "static_validation": {
+    "modal/modal_vithia_divergence.py": "PASS",
+    "modal/modal_vithia_divergence_v2.py": "PASS",
+    "modal/modal_vithia_divergence_v3.py": "PASS",
+    "scripts/download_verify_ingest_longmemeval.py": "PASS",
+    "scripts/vithia_divergence_core.py": "PASS"
+  }
+}

@@ -1,0 +1,55 @@
+[##----------------------]  10% stage=CONFIRM_PACKAGE
+PACKAGE=/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7
+[####--------------------]  20% stage=CONFIRM_XENO_CLOSED
+xeno_classification = CROSS_ENVIRONMENT_RESULT_DIVERGENCE
+xeno_max_abs_numeric_diff = 0.8563492023816052
+06f8e41d17979ad16681786c832a34b4063fec3950ad7febd14b69e96f38058a  eval/xeno_cross_environment_comparison.json
+[########----------------]  35% stage=LOCATE_HYDRADB_FILES
+./config/hydradb_pin.template.json
+./eval/hydradb_preflight_20260818T071339Z.txt
+config/hydradb_pin.template.json
+[############------------]  50% stage=SHOW_EXISTING_PIN
+HYDRADB_PIN_MISSING
+[###############---------]  65% stage=LOCATE_HYDRADB_CHECKOUT
+NO_KNOWN_HYDRADB_CHECKOUT_FOUND
+[##################------]  78% stage=CHECK_RUNNING_SERVICE
+40725    00:01 tee eval/hydradb_preflight_20260818T071339Z.txt
+NO_HYDRADB_DOCKER_CONTAINER_FOUND
+[#####################---]  90% stage=DISCOVER_RUNBOOK_REFERENCES
+README.md:10:4. `LongMemEval-S` — Track 03-facing memory evaluation: deterministic smoke80 during development, then all 500 cases after the HydraDB graph/query path is frozen.
+README.md:12:The Daisy Train is an execution order. The scientific FCG remains a DAG: ECA, XenoDisorder, and Vithia are independent evidence lanes that merge only at FCO/FCG normalization and HydraDB ingestion.
+README.md:18:- This package does not claim an MMR root, signature, independent replication, or HydraDB benchmark result.
+README.md:22:- HydraDB API calls are not fabricated here. Pin the HydraDB repository/API revision before implementing the adapter in `hydra/`.
+PLAN.md:38:## Priority 4 — Pin HydraDB before writing the adapter
+PLAN.md:39:Record the exact HydraDB commit/API surface. Only then implement ingestion/traversal calls.
+PLAN.md:54:- Use deterministic smoke80 while implementing HydraDB.
+PLAN.md:60:B. HydraDB temporal graph
+PLAN.md:61:C. HydraDB temporal graph + FCO provenance
+PLAN.md:74:- sign or Merkle-commit only if those operations are actually implemented and verified.
+DAISY_TRAIN.md:8:  source paths / commits / hashes / claim ceilings
+DAISY_TRAIN.md:22:CAR 5 — Pin HydraDB commit/API, then ingest
+DAISY_TRAIN.md:49:- `NOT_MERKLE_COMMITTED`
+RUNBOOK_MAGICPROBOX_MODAL.md:89:Expected historical evaluator source commit for the harness path:
+RUNBOOK_MAGICPROBOX_MODAL.md:198:## 6. CAR 5 — pin HydraDB before adapter work
+RUNBOOK_MAGICPROBOX_MODAL.md:201:- HydraDB commit SHA
+RUNBOOK_MAGICPROBOX_MODAL.md:206:in `config/hydradb_pin.json`.
+RUNBOOK_MAGICPROBOX_MODAL.md:208:Only after that file is real should an adapter invoke HydraDB. The current package intentionally does not invent an API surface.
+config/hydradb_pin.template.json:4:  "commit_sha": null,
+config/hydradb_pin.template.json:5:  "repository": "hydra-db/hydradb",
+config/hydradb_pin.template.json:6:  "schema": "hydradg.hydradb_pin.v1",
+config/daisy_train.json:47:      "name": "hydradb_pin_and_ingest"
+config/kg_home.json:10:    "hydradb/pins",
+config/kg_home.json:11:    "hydradb/receipts",
+config/kg_home.json:12:    "hydradb/exports",
+scripts/bootstrap_active_kg.sh:10:  hydradb/pins hydradb/receipts hydradb/exports
+scripts/bootstrap_active_kg.sh:76:HydraDB state:
+scripts/bootstrap_active_kg.sh:77:- hydradb/
+scripts/bootstrap_active_kg.sh:84:The live JSONL journal is not itself a HydraDB database. HydraDB ingestion requires a
+scripts/bootstrap_active_kg.sh:85:separate successful write/read receipt.
+scripts/bootstrap_active_kg.sh:88:Merkle state: NOT_MERKLE_COMMITTED unless a separate commitment operation is performed.
+scripts/verify_live_custody.py:132: "claim_boundary":"PASS verifies the local FCO/FCG journal structure and hashes only; it does not prove skill invocation, correctness, signing, Merkle commitment, or HydraDB ingestion."
+scripts/build_fco_fcg_import.py:75: "signature_state":"NOT_SIGNED","merkle_state":"NOT_MERKLE_COMMITTED"
+scripts/daisy_receipt.py:36:    "merkle_state":"NOT_MERKLE_COMMITTED"
+scripts/finalize_live_fcg.py:19: "hydradb_state":"NOT_YET_INGESTED_UNLESS_SEPARATE_RECEIPT_EXISTS",
+scripts/finalize_live_fcg.py:20: "signature_state":"NOT_SIGNED","merkle_state":"NOT_MERKLE_COMMITTED"
+[########################] 100% stage=HYDRADB_PREFLIGHT_COMPLETE

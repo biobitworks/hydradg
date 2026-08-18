@@ -1,0 +1,34 @@
+{
+  "ablation_matrix": [
+    "flat_retrieval",
+    "hydradb_temporal",
+    "hydradb_plus_provenance",
+    "hydradb_plus_divergence",
+    "full_hydradg"
+  ],
+  "hydradg_metrics": [
+    "first_divergence_localization_accuracy",
+    "impact_set_precision",
+    "impact_set_recall",
+    "impact_set_exact_match",
+    "evidence_path_coverage",
+    "unsupported_claim_rejection_rate",
+    "claim_impact_accuracy",
+    "recovery_equivalence_class",
+    "storage_overhead_ratio",
+    "write_latency_p50_ms",
+    "write_latency_p95_ms"
+  ],
+  "standard_memory_metrics": [
+    "qa_accuracy_overall",
+    "qa_accuracy_by_question_type",
+    "session_recall",
+    "turn_recall",
+    "knowledge_update_accuracy",
+    "temporal_reasoning_accuracy",
+    "correct_abstention_rate",
+    "retrieved_tokens_mean",
+    "query_latency_p50_ms",
+    "query_latency_p95_ms"
+  ]
+}

@@ -1,0 +1,233 @@
+ANTIGRAVITY — HYDRADG LOW-TOKEN EXECUTION / AUDIT PROMPT
+Version: 2026-08-18
+Mode: bounded, local-first, FCO/FCG-governed
+
+GOAL
+Audit the completed VITHIA-OVERNIGHT-01 experiment, cryptographically close its custody records using the approved local signing/Merkle tooling if available, and produce a compact next-action packet while minimizing paid/remote-model token use.
+
+AUTHORITATIVE LOCAL PATH
+/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7
+
+REMOTE WORKER
+magicstudiobox
+
+CURRENT EXECUTION CLAIM TO VERIFY LOCALLY
+- run family: VITHIA-OVERNIGHT-01
+- expected terminal status: COMPLETE
+- expected completed runs: 11
+- expected failed runs: 0
+- expected matrix:
+  eval/vithia_overnight/VITHIA-OVERNIGHT-01/vithia_overnight_matrix.json
+- expected evidence index:
+  eval/vithia_overnight/VITHIA-OVERNIGHT-01/EVIDENCE_INDEX.json
+- previously observed matrix SHA-256:
+  9a08a28f0745cf1326d99ff790630525623ec4bca762d5f34e637b2678c0bc72
+- previously observed evidence-index SHA-256:
+  034f09a4183ed431c1a2de867ead8d452bc22bf7039ea1ca7a909a46b844da04
+
+DO NOT TRUST THOSE VALUES BLINDLY.
+Recompute hashes locally before using them as evidence.
+
+FCO/FCG RULES
+Maintain:
+source/evidence
+-> transformation/model/tool
+-> derived evidence
+-> claim
+-> artifact
+
+Do not promote claims beyond evidence.
+Hashing is not signing.
+A list of hashes is not a Merkle commitment.
+Provenance is not correctness.
+Model agreement is not independent verification.
+A post-execution signature/commitment must be labeled POST_EXECUTION_COMMITMENT and must not be described as having existed at original run time.
+
+LOW-TOKEN ROUTING POLICY
+Before any remote-model call:
+
+1. Can Python/bash/jq answer deterministically?
+   YES -> do it locally. No LLM.
+
+2. Can an existing FCO/receipt answer it?
+   YES -> reuse the admitted object. Do not reread upstream material.
+
+3. Can Ollarma/local Ollama answer it adequately?
+   YES -> use the local model first and save the result as probabilistic/model output.
+
+4. Is the question only about changed dependencies?
+   YES -> send only the delta.
+
+5. Only then use Antigravity reasoning.
+   Supply the minimum evidence packet necessary.
+   Never recursively load the repository into model context.
+
+6. If evidence is missing, identify the exact missing dependency and stop.
+   Do not broaden the search automatically.
+
+TOKEN BUDGET
+Target for Antigravity reasoning:
+- routine audit: <= 2,000 input tokens, <= 600 output tokens
+- bounded repair: <= 4,000 input tokens, <= 1,200 output tokens
+- > 8,000 input tokens requires an explicit reason in the receipt
+- no automatic model retries
+- no chain-of-thought capture
+- JSON-first outputs
+
+PHASE A — DETERMINISTIC PREFLIGHT
+Run over SSH on magicstudiobox where applicable.
+
+Verify only:
+1. status.json
+2. vithia_overnight_matrix.json
+3. EVIDENCE_INDEX.json
+4. eval/vithia_runtime/runtime_snapshot.json
+5. per-run receipts/checkpoints referenced by EVIDENCE_INDEX.json
+
+Do NOT recursively scan unrelated directories.
+
+Recompute SHA-256 for all material files.
+Confirm:
+- status COMPLETE
+- completed_runs == 11
+- failed_runs == 0
+- every admitted run has a receipt
+- every checkpoint referenced by a receipt exists
+- stored checkpoint hash matches recomputed checkpoint hash
+- runtime/environment records are present
+- no receipt silently claims SIGNED or MERKLE_COMMITTED unless evidence exists
+
+Representative runs for deeper review:
+- control_s314159_r1
+- thread4_s314159
+- perturb_mid_s314159
+
+Only expand beyond those three if deterministic comparison detects an anomaly.
+
+PHASE B — CRYPTOGRAPHIC CUSTODY CLOSURE
+Policy target for every material model run, model annotation, terminal custody object, and later Antigravity output:
+
+canonical FCO bytes
+-> SHA-256
+-> private-key signature
+-> public-key signature verification
+-> Merkle/MMR leaf
+-> updated root
+-> root receipt
+
+IMPORTANT:
+- Never print, export, commit, or place a private key in prompts/logs.
+- Use only the project's already-approved local signing/key mechanism.
+- If no approved signer/key configuration is present, do not invent one.
+  Emit:
+  signature_state = PENDING_CRYPTO
+  merkle_state = PENDING_CRYPTO
+  missing_dependency = <exact signer/key/MMR dependency>
+  and stop crypto claim promotion.
+
+For already-completed Vithia runs:
+- retain original execution timestamps
+- create a separate POST_EXECUTION_COMMITMENT record
+- sign/verify the frozen receipt or canonical FCO digest
+- append the resulting leaf to the approved Merkle/MMR structure
+- retain leaf index, parent/root identifiers, algorithm, key_id/public-key fingerprint, verification result, commitment timestamp, and proof/reference
+- never claim the run was signed at execution time
+
+If the repository has multiple signing implementations, identify the canonical one using project authority files before executing.
+
+PHASE C — LOCAL OLLARMA FIRST PASS
+Use local Ollarma/Ollama only after deterministic extraction.
+
+Preferred workflow:
+- deterministic script creates compact evidence packet
+- Ollarma annotates the packet
+- save exact prompt, model name, output, timestamps, and hashes
+- subject the resulting model-output FCO to the same signing/Merkle policy
+- the local model must never compute authoritative SHA-256/signatures/Merkle roots
+
+Ask Ollarma only:
+1. Are any deterministic results internally inconsistent?
+2. Which representative run warrants human/Antigravity review?
+3. What is the narrowest missing evidence dependency?
+
+Limit local-model output to <= 400 tokens.
+
+PHASE D — ANTIGRAVITY REVIEW
+Read only the compact packet plus:
+- the three representative run receipts
+- deterministic anomaly records, if any
+
+Do not reread terminal history unless a missing dependency points to one exact log.
+
+Return JSON only:
+
+{
+  "schema": "hydradg.antigravity_review.v1",
+  "experiment": "VITHIA-OVERNIGHT-01",
+  "execution_status": "...",
+  "custody_status": {
+    "hashes": "...",
+    "signature": "...",
+    "merkle_mmr": "...",
+    "post_execution_commitment": true
+  },
+  "representative_runs_reviewed": [],
+  "deterministic_anomalies": [],
+  "model_hypotheses": [],
+  "missing_dependencies": [],
+  "claim_ceiling": "...",
+  "next_action": "...",
+  "token_budget": {
+    "input_tokens": null,
+    "output_tokens": null
+  }
+}
+
+Keep the answer <= 600 tokens.
+If nothing material is wrong, say so and stop.
+Do not generate an essay.
+
+PHASE E — SAVE THE ANTIGRAVITY INTERACTION AS AN FCO
+Save:
+- exact prompt bytes or prompt SHA-256 + durable prompt artifact
+- exact model/provider identity available to the runtime
+- exact output bytes
+- input/output token counts if the provider reports them
+- timestamps
+- source FCO hashes
+- output SHA-256
+- claim ceiling
+- deterministic vs probabilistic classification
+
+Then:
+- sign using the approved local signer
+- verify signature
+- append to approved Merkle/MMR
+- save proof/root receipt
+
+If signer/MMR is unavailable, preserve hashes and emit PENDING_CRYPTO.
+Never claim SIGNED or MERKLE_COMMITTED without the actual evidence.
+
+STOP CONDITIONS
+Stop immediately if:
+- any frozen input hash changes unexpectedly
+- a checkpoint hash does not match its receipt
+- a required receipt is missing
+- signature verification fails
+- Merkle/MMR inclusion verification fails
+- a command would expose a private key/credential
+- a step requires recursively ingesting the whole repo into model context
+- a claim would exceed the supporting evidence
+
+FINAL HUMAN-FACING SUMMARY
+After the JSON artifact is written, print no more than 8 lines:
+- execution state
+- number of runs admitted
+- deterministic anomaly count
+- signature state
+- Merkle/MMR state
+- claim ceiling
+- next action
+- paths to the review + custody receipt
+
+Do not start a new training run unless explicitly requested.

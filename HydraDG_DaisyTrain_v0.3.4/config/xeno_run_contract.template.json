@@ -1,0 +1,19 @@
+{
+  "argv": [
+    "python",
+    "{HARNESS}",
+    "REPLACE_WITH_EXACT_HISTORICAL_OR_FROZEN_ARGUMENTS"
+  ],
+  "capture_globs": [
+    "**/*.json",
+    "**/*.jsonl",
+    "**/*.csv",
+    "**/*.txt"
+  ],
+  "cwd": "{WORKDIR}",
+  "environment": {},
+  "metric_json_paths": [],
+  "notes": "Do not run until argv is replaced with the exact frozen command.",
+  "schema": "hydradg.xeno_run_contract.v1",
+  "status": "TEMPLATE_REQUIRES_OPERATOR_FREEZE"
+}

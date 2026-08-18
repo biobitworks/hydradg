@@ -1,0 +1,81 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "claim_ceiling": {
+      "type": "string"
+    },
+    "content_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_class": {
+      "type": "string"
+    },
+    "hash_scope": {
+      "enum": [
+        "NONE",
+        "PUBLIC_CANONICAL",
+        "PRIVATE_INTERNAL"
+      ]
+    },
+    "id": {
+      "type": "string"
+    },
+    "metadata": {
+      "type": "object"
+    },
+    "source_coordinates": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "transaction_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "type": {
+      "enum": [
+        "Source",
+        "Session",
+        "Turn",
+        "Atom",
+        "Fact",
+        "Claim",
+        "Run",
+        "TensorState",
+        "Perturbation",
+        "Recovery",
+        "Answer",
+        "Evaluation",
+        "Artifact"
+      ]
+    },
+    "valid_time": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "visibility": {
+      "enum": [
+        "PUBLIC",
+        "PRIVATE_PHI",
+        "PRIVATE_NONPHI"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "type",
+    "evidence_class",
+    "claim_ceiling",
+    "visibility"
+  ],
+  "title": "HydraDG SeedGraph object",
+  "type": "object"
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "hydradg.backend_matrix.v1",
+  "backends": {
+    "local_selftest": {
+      "status": "COMPLETED",
+      "result_body_sha256": "f4d655fc7acf1136c706eeec88ce00e14e5703bd484a6af0bb9c6b1d2cb66434",
+      "schema_version": "hydradg.eca_extension.v0.3.1",
+      "path": "eval/PACKAGE_SELFTEST_v0.3.2.json"
+    },
+    "magicstudiobox": {
+      "status": "COMPLETED",
+      "result_body_sha256": "f4d655fc7acf1136c706eeec88ce00e14e5703bd484a6af0bb9c6b1d2cb66434",
+      "schema_version": "hydradg.eca_extension.v0.3.1",
+      "path": "eval/eca/eca_extension_80_magicstudiobox.json",
+      "comparison_with_local": "CONTENT_EXACT"
+    },
+    "modal": {
+      "status": "COMPLETED",
+      "result_body_sha256": "bf721043ead82d3e15be9427116341fbdc6b62d26a0bc45aa288198e047391fa",
+      "schema_version": "hydradg.eca_extension.v0.3.2",
+      "path": "eval/eca/eca_extension_80.json",
+      "comparison_with_local": "DIVERGED_OR_SCHEMA_DIFFERENCE",
+      "comparison_with_magicstudiobox": "DIVERGED_OR_SCHEMA_DIFFERENCE"
+    },
+    "kaggle": {
+      "status": "NOT_EXECUTED",
+      "blocker": "Kaggle CLI is missing on the local system (command not found)."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "actual_ssh_host": "magicstudiobox",
+  "ollarma_status": "OLLARMA_NOT_FOUND",
+  "ollama_version": "0.20.3",
+  "model_tags": [
+    "qwen3.6:27b",
+    "llava:7b",
+    "gpt-oss:20b",
+    "qwen2.5-coder:7b",
+    "deepseek-r1:14b",
+    "granite4.1:8b",
+    "qwen3.5:9b",
+    "qwen3:8b",
+    "qwen3:4b",
+    "phi4-mini:latest",
+    "qwen2.5:1.5b",
+    "nomic-embed-text:latest",
+    "qwen3:1.7b"
+  ],
+  "tunnel_method": "ssh -N -o ExitOnForwardFailure=yes -L 127.0.0.1:11434:127.0.0.1:11434 magicstudiobox",
+  "endpoint": "http://127.0.0.1:11434"
+}

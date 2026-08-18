@@ -1,0 +1,35 @@
+{
+  "antigravity_prompt": "ANTIGRAVITY_DAISY_ORCHESTRATOR.md",
+  "backend_preflight": "scripts/preflight_backends.sh",
+  "cross_backend_compare": "scripts/compare_eca_backends.py",
+  "custody": {
+    "file_hashes": "COMPUTED",
+    "merkle": "NOT_MERKLE_COMMITTED",
+    "signature": "NOT_SIGNED"
+  },
+  "modal_full_sequence": "commands/02_modal_eca_full.txt",
+  "ollama_probe": "scripts/probe_magicstudiobox_ollama.sh",
+  "ollama_tunnel": "scripts/open_magicstudiobox_ollama_tunnel.sh",
+  "package": "HydraDG_DaisyTrain_v0.3.4",
+  "python_syntax": {
+    "modal/modal_eca_extension.py": "PASS",
+    "modal/modal_xenodisorder_cafa6_replay.py": "PASS",
+    "scripts/build_fco_fcg_import.py": "PASS",
+    "scripts/build_longmemeval_smoke80.py": "PASS",
+    "scripts/compare_eca_backends.py": "PASS",
+    "scripts/compare_xeno_receipts.py": "PASS",
+    "scripts/daisy_receipt.py": "PASS",
+    "scripts/download_verify_longmemeval.py": "PASS",
+    "scripts/eca_core.py": "PASS",
+    "scripts/freeze_xeno_assets.py": "PASS",
+    "scripts/preflight_xeno_assets.py": "PASS",
+    "scripts/render_eca_figures.py": "PASS",
+    "scripts/run_xeno_contract.py": "PASS",
+    "scripts/score_track03.py": "PASS",
+    "scripts/validate_eca_extension.py": "PASS",
+    "scripts/validate_fco_fcg_import.py": "PASS",
+    "scripts/verify_package.py": "PASS"
+  },
+  "source_package": "HydraDG_DaisyTrain_v0.3.3",
+  "status": "ANTIGRAVITY_ORCHESTRATION_PREPARED_NOT_EXECUTED"
+}

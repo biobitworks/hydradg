@@ -1,0 +1,57 @@
+{
+  "comparisons": [
+    {
+      "backend_a": "local",
+      "backend_b": "modal",
+      "classification": "DIVERGED_OR_SCHEMA_DIFFERENCE",
+      "first_difference": {
+        "only_a": [
+          "two_local_runs_same_result_body_sha256"
+        ],
+        "only_b": [
+          "claim_ceiling",
+          "design",
+          "experiment_id",
+          "schema",
+          "status",
+          "trajectories"
+        ],
+        "path": "$",
+        "reason": "KEYS"
+      },
+      "path_a": "eval/PACKAGE_SELFTEST_v0.3.2.json",
+      "path_b": "eval/eca/eca_extension_80.json",
+      "result_body_sha256_a": "f4d655fc7acf1136c706eeec88ce00e14e5703bd484a6af0bb9c6b1d2cb66434",
+      "result_body_sha256_b": "bf721043ead82d3e15be9427116341fbdc6b62d26a0bc45aa288198e047391fa",
+      "result_body_sha256_equal": false
+    },
+    {
+      "backend_a": "local",
+      "backend_b": "magicstudiobox",
+      "classification": "CONTENT_EXACT",
+      "first_difference": null,
+      "path_a": "eval/PACKAGE_SELFTEST_v0.3.2.json",
+      "path_b": "eval/eca/eca_extension_80_magicstudiobox.json",
+      "result_body_sha256_a": "f4d655fc7acf1136c706eeec88ce00e14e5703bd484a6af0bb9c6b1d2cb66434",
+      "result_body_sha256_b": "f4d655fc7acf1136c706eeec88ce00e14e5703bd484a6af0bb9c6b1d2cb66434",
+      "result_body_sha256_equal": true
+    },
+    {
+      "backend_a": "modal",
+      "backend_b": "magicstudiobox",
+      "classification": "DIVERGED_OR_SCHEMA_DIFFERENCE",
+      "first_difference": {
+        "a": "hydradg.eca_extension.v0.3.2",
+        "b": "hydradg.eca_extension.v0.3.1",
+        "path": "$.schema",
+        "reason": "VALUE"
+      },
+      "path_a": "eval/eca/eca_extension_80.json",
+      "path_b": "eval/eca/eca_extension_80_magicstudiobox.json",
+      "result_body_sha256_a": "bf721043ead82d3e15be9427116341fbdc6b62d26a0bc45aa288198e047391fa",
+      "result_body_sha256_b": "f4d655fc7acf1136c706eeec88ce00e14e5703bd484a6af0bb9c6b1d2cb66434",
+      "result_body_sha256_equal": false
+    }
+  ],
+  "schema": "hydradg.eca_cross_backend_compare.v1"
+}

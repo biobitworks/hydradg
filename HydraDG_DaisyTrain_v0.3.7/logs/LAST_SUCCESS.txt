@@ -1,0 +1,6 @@
+STATUS=SUCCESS
+LABEL=CAR3_VERIFY_SHA256
+EXIT_CODE=0
+LOG=/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/logs/20260817_090326_CAR3_VERIFY_SHA256.log
+META=/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/logs/20260817_090326_CAR3_VERIFY_SHA256.meta.txt
+COMMAND=shasum -a 256 inputs/vithia/MODAL_FULL_PHASE_RESULT_v0.2.7.json 

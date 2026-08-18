@@ -1,0 +1,116 @@
+{
+  "comparisons": [
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "9c63fed57a28e05a1814127844ad4f0d7ab877625297d40deb128eb8d6a38ab6",
+        "b": "3258333a1645a27f45dc69fde67762ea44da428dbc3eba369105d21605ad6ae9",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "a10_a",
+      "run_b": "l4_a"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "9c63fed57a28e05a1814127844ad4f0d7ab877625297d40deb128eb8d6a38ab6",
+        "b": "0efe2e1a1bdaf4962db23e68462b527b4ae624a7b394391f575639df7b6c03b6",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "a10_a",
+      "run_b": "t4_a"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "9c63fed57a28e05a1814127844ad4f0d7ab877625297d40deb128eb8d6a38ab6",
+        "b": "0efe2e1a1bdaf4962db23e68462b527b4ae624a7b394391f575639df7b6c03b6",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "a10_a",
+      "run_b": "t4_b"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "9c63fed57a28e05a1814127844ad4f0d7ab877625297d40deb128eb8d6a38ab6",
+        "b": "0efe2e1a1bdaf4962db23e68462b527b4ae624a7b394391f575639df7b6c03b6",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "a10_a",
+      "run_b": "t4_perturb"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "3258333a1645a27f45dc69fde67762ea44da428dbc3eba369105d21605ad6ae9",
+        "b": "0efe2e1a1bdaf4962db23e68462b527b4ae624a7b394391f575639df7b6c03b6",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "l4_a",
+      "run_b": "t4_a"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "3258333a1645a27f45dc69fde67762ea44da428dbc3eba369105d21605ad6ae9",
+        "b": "0efe2e1a1bdaf4962db23e68462b527b4ae624a7b394391f575639df7b6c03b6",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "l4_a",
+      "run_b": "t4_b"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "3258333a1645a27f45dc69fde67762ea44da428dbc3eba369105d21605ad6ae9",
+        "b": "0efe2e1a1bdaf4962db23e68462b527b4ae624a7b394391f575639df7b6c03b6",
+        "phase": "BACKWARD_GRADIENTS",
+        "step": 0
+      },
+      "run_a": "l4_a",
+      "run_b": "t4_perturb"
+    },
+    {
+      "final_state_equal": true,
+      "first_phase_divergence": null,
+      "run_a": "t4_a",
+      "run_b": "t4_b"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "5ab3042e03f406c4ab041b4cc26bcba415631538f59a2be697a24aab2d109932",
+        "b": "b368a0f0d0d8a74f3cd2cc4bf40d9c9cd33e4cc04a6622f2bbcfc7beb914b783",
+        "phase": "INPUT_BATCH",
+        "step": 8
+      },
+      "run_a": "t4_a",
+      "run_b": "t4_perturb"
+    },
+    {
+      "final_state_equal": false,
+      "first_phase_divergence": {
+        "a": "5ab3042e03f406c4ab041b4cc26bcba415631538f59a2be697a24aab2d109932",
+        "b": "b368a0f0d0d8a74f3cd2cc4bf40d9c9cd33e4cc04a6622f2bbcfc7beb914b783",
+        "phase": "INPUT_BATCH",
+        "step": 8
+      },
+      "run_a": "t4_b",
+      "run_b": "t4_perturb"
+    }
+  ],
+  "runs": [
+    "a10_a",
+    "l4_a",
+    "t4_a",
+    "t4_b",
+    "t4_perturb"
+  ]
+}

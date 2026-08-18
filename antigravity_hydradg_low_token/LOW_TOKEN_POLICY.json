@@ -1,0 +1,38 @@
+{
+  "claim_boundary": "Policy/configuration object only; does not itself execute, sign, verify, or Merkle-commit anything.",
+  "crypto_policy": {
+    "fail_closed_state_when_crypto_unavailable": "PENDING_CRYPTO",
+    "hash_algorithm": "sha256",
+    "merkle_or_mmr_commitment_required": true,
+    "post_execution_commitment_must_be_labeled": true,
+    "private_key_in_prompt_or_log": false,
+    "signature_verification_required": true,
+    "signatures_required_for_material_fcos": true
+  },
+  "representative_runs": [
+    "control_s314159_r1",
+    "thread4_s314159",
+    "perturb_mid_s314159"
+  ],
+  "routing_order": [
+    "deterministic_local",
+    "existing_fco",
+    "ollarma_local",
+    "delta_only",
+    "antigravity_bounded"
+  ],
+  "schema": "hydradg.antigravity_low_token_policy.v1",
+  "token_targets": {
+    "automatic_retries": 0,
+    "bounded_repair": {
+      "input_max": 4000,
+      "output_max": 1200
+    },
+    "explicit_reason_required_above_input": 8000,
+    "routine_audit": {
+      "input_max": 2000,
+      "output_max": 600
+    }
+  },
+  "version": "2026-08-18"
+}

@@ -1,0 +1,20 @@
+{
+  "kaggle": {
+    "credentials": "USE_EXISTING_AUTH_NEVER_LOG_VALUES",
+    "eca_accelerator": "none",
+    "eca_kernel_visibility": "private"
+  },
+  "magicstudiobox": {
+    "access_policy": "SSH_TUNNEL_PREFERRED",
+    "ollama_remote_endpoint": "http://127.0.0.1:11434",
+    "public_bind": "PROHIBITED_BY_DEFAULT",
+    "ssh_alias_candidates": [
+      "magicstudiobox",
+      "magicstudiobox.local"
+    ]
+  },
+  "modal": {
+    "eca_volume": "hydradg-eca-extension-v032"
+  },
+  "schema": "hydradg.backends.v0.3.4"
+}

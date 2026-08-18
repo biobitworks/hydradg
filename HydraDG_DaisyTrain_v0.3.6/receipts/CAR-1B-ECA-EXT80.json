@@ -1,0 +1,25 @@
+{
+  "claim_ceiling": "BOUNDED_DETERMINISTIC_CONFORMANCE",
+  "custody_state": "HASHED",
+  "inputs": [
+    {
+      "bytes": 5753,
+      "path": "modal/modal_eca_extension.py",
+      "sha256": "72ce6314e89a4a307f3ea6882f011e5a0fd2247af7517ac537d0299793983979"
+    }
+  ],
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "outputs": [
+    {
+      "bytes": 1295884,
+      "path": "eval/eca/eca_extension_80.json",
+      "sha256": "aa3d53786727557bd8abd1809c9ab20854e2e1692f60e4b547b6cb0b7f80c69c"
+    }
+  ],
+  "parent_receipt_sha256": null,
+  "receipt_body_sha256": "734fc66c6b297740eff20f0d8a8fc7b2055a365070f12e709930e48e17026afe",
+  "schema": "hydradg.daisy_stage_receipt.v1",
+  "signature_state": "NOT_SIGNED",
+  "stage": "CAR-1B-ECA-EXT80",
+  "timestamp_utc": "2026-08-17T15:48:12.805677+00:00"
+}

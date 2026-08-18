@@ -1,0 +1,110 @@
+{
+  "admission_states": [
+    "PENDING",
+    "ADMITTED",
+    "REJECTED",
+    "SUPERSEDED"
+  ],
+  "evidence_states": [
+    "DIRECTLY_SUPPLIED",
+    "REPO_RETRIEVED",
+    "EXTERNAL_RETRIEVED",
+    "RECOMPUTED",
+    "RETAINED_RUN_ARTIFACT",
+    "METHOD_DEFINITION",
+    "INFERENCE",
+    "EMPIRICAL_MEASUREMENT",
+    "PENDING_IMPORT"
+  ],
+  "note": "JSON bridge is a deterministic interchange layer; it does not claim to reproduce the entire current SeedGraph database schema.",
+  "object_types": {
+    "claim": {
+      "required": [
+        "claim_id",
+        "claim_text",
+        "proposition_ids",
+        "claim_ceiling",
+        "evidence_state",
+        "roundtrip_state"
+      ]
+    },
+    "context_atom": {
+      "required": [
+        "atom_id",
+        "content",
+        "content_sha256",
+        "context_envelope_id",
+        "source_id",
+        "evidence_role",
+        "claim_ceiling"
+      ]
+    },
+    "context_envelope": {
+      "required": [
+        "context_envelope_id",
+        "source_scope",
+        "route_scope",
+        "temporal_scope",
+        "epistemic_scope"
+      ]
+    },
+    "edit_event": {
+      "required": [
+        "event_id",
+        "timestamp_utc",
+        "actor",
+        "event_type",
+        "target_id",
+        "state"
+      ]
+    },
+    "manuscript_link": {
+      "required": [
+        "manuscript_object_id",
+        "location",
+        "text",
+        "claim_ids",
+        "origin",
+        "review_state"
+      ]
+    },
+    "proposition": {
+      "required": [
+        "proposition_id",
+        "canonical_form",
+        "atom_ids",
+        "modality",
+        "negation",
+        "roundtrip_state"
+      ]
+    },
+    "seed": {
+      "required": [
+        "seed_id",
+        "claim_ids",
+        "atom_ids",
+        "admission_state",
+        "claim_ceiling"
+      ]
+    },
+    "source": {
+      "required": [
+        "source_id",
+        "source_type",
+        "identity",
+        "evidence_state"
+      ]
+    }
+  },
+  "purpose": "Portable JSON bridge for manuscript traceability before consolidation into SeedGraph/Neo4j.",
+  "roundtrip_states": [
+    "PENDING_IMPORT",
+    "PENDING_LOGIC",
+    "PASS_SOURCE_RECOVERY",
+    "PASS_BENCHMARK",
+    "PASS_INTERNAL",
+    "FAIL_SOURCE_RECOVERY",
+    "FAIL_LOGIC"
+  ],
+  "schema_id": "msm-seedgraph-bridge-v0.1"
+}

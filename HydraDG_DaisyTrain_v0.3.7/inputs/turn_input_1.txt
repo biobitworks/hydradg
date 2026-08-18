@@ -1,0 +1,5 @@
+Yes. Your concern is valid: the current Antigravity prompt can instruct FCO/FCG behavior without proving that the FCO skill was invoked or that a Turn/KG update was actually emitted.
+I added a hard verifier so we can distinguish those states instead of trusting the agent's narrative.
+Download HydraDG Daisy Train v0.3.7: sandbox:/mnt/data/HydraDG_DaisyTrain_v0.3.7.zip
+SHA-256: 3932c4c85ff4dcefa30e2e7ea9f927fff26ad40f0fab4c95688194f4a761f908
+/skills, /hooks, Always On rule, verify_fco_runtime.sh, snapshot_fco_runtime.py before/after test.

@@ -1,0 +1,71 @@
+{
+  "receipt_chain": {
+    "mmr": false,
+    "signed": false,
+    "type": "HASH_LINKED_APPLICATION_CHAIN"
+  },
+  "schema": "hydradg.daisy_train.v0.3.1",
+  "stages": [
+    {
+      "id": "CAR-0",
+      "name": "authority_freeze"
+    },
+    {
+      "id": "CAR-1A",
+      "name": "historical_eca_source_recovery",
+      "parallel_group": "evidence_lanes"
+    },
+    {
+      "id": "CAR-1B",
+      "name": "eca_ext80_modal",
+      "parallel_group": "evidence_lanes"
+    },
+    {
+      "id": "CAR-2",
+      "name": "xenodisorder_local_modal_replay",
+      "parallel_group": "evidence_lanes"
+    },
+    {
+      "id": "CAR-3",
+      "name": "vithia_evidence_import",
+      "parallel_group": "evidence_lanes"
+    },
+    {
+      "depends_on": [
+        "CAR-1B",
+        "CAR-2",
+        "CAR-3"
+      ],
+      "id": "CAR-4",
+      "name": "fco_fcg_normalize"
+    },
+    {
+      "depends_on": [
+        "CAR-4"
+      ],
+      "id": "CAR-5",
+      "name": "hydradb_pin_and_ingest"
+    },
+    {
+      "depends_on": [
+        "CAR-5"
+      ],
+      "id": "CAR-6",
+      "name": "longmemeval_smoke80"
+    },
+    {
+      "depends_on": [
+        "CAR-6"
+      ],
+      "id": "CAR-7",
+      "name": "longmemeval_full500"
+    },
+    {
+      "depends_on": [
+        "CAR-7"
+      ],
+      "id": "CAR-8",
+      "name": "ablations_scorecard_figures_demo"
+    }
+  ]
+}

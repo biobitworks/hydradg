@@ -1,0 +1,30 @@
+{
+  "argv": [
+    "python",
+    "{HARNESS}",
+    "--table",
+    "{TABLE}",
+    "--ckpt",
+    "{CHECKPOINT}",
+    "--out",
+    "{OUTPUT_DIR}",
+    "--report-name",
+    "cafa6_governed_eval_report.json",
+    "--seed",
+    "20260710"
+  ],
+  "capture_globs": [
+    "**/*.json",
+    "**/*.jsonl",
+    "**/*.csv",
+    "**/*.txt"
+  ],
+  "cwd": "{WORKDIR}",
+  "environment": {},
+  "metric_json_paths": [
+    "{OUTPUT_DIR}/cafa6_governed_eval_report.json"
+  ],
+  "notes": "Frozen exact cafa6_governed_eval invocation with seed 20260710 matching historical report.",
+  "schema": "hydradg.xeno_run_contract.v1",
+  "status": "FROZEN"
+}

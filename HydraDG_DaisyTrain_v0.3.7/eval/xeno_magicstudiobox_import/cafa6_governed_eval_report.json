@@ -1,0 +1,221 @@
+{
+  "schema": "fco.cafa6_governed_eval_report/v1",
+  "created_utc": "2026-08-18T06:43:40.040882+00:00",
+  "experiment_ref": "EXP-CAFA6-008 governed eval (metric-audit response)",
+  "handoff_ref": [
+    "xenodisorder/HANDOFF_CAFA6_metric_audit_2026-07-10.md",
+    "xenodisorder/HANDOFF_CAFA6_metric_audit_2026-07-10.json"
+  ],
+  "claim_ceiling": "representation/benchmark utility only; HYPOTHESIS_STAGE_1",
+  "pi_audit_status": "unaudited \u2014 hand to XD governance",
+  "admissibility": {
+    "train_auroc_inmemory_is_admissible": false,
+    "reason": "in-memory TRAIN auroc (no held-out split) reported by the training kernel is not an admissible AUC/utility claim; see metrics_heldout below for the admissible, parent-grouped, leakage-safe held-out numbers"
+  },
+  "checkpoint": {
+    "path": "xeno/ckpt_latest.pt",
+    "sha256": "196adc4decd513b120165128ae6ac8da1cd07accb6ae082a4f730aab937de18a",
+    "ckpt_epoch": 79,
+    "ckpt_phase": "ft",
+    "arch_inferred_from_state_dict": {
+      "d": 512,
+      "layers": 8,
+      "heads": 16,
+      "f_pos": 1,
+      "n_cloud": 100,
+      "n_scal": 3
+    }
+  },
+  "kernel_source_provenance": {
+    "cafa6_tpu (d=384 default)": {
+      "path": "scratchpad/cafa6_tpu/cafa6-2d-cloud-encoder-tpu.py",
+      "sha256": null,
+      "exists": false
+    },
+    "cafa6_exp2 (d=512 default, matches audited checkpoint)": {
+      "path": "scratchpad/cafa6_exp2/cafa6-2d-cloud-encoder-tpu.py",
+      "sha256": null,
+      "exists": false
+    }
+  },
+  "eval_dataset": {
+    "table_path": "xeno/residual_table.jsonl",
+    "table_sha256": "eaf1ad10f5ead0d00afea03ee1051593fc2f5eeccbbd34841b3313cc055e516c",
+    "row_count": 21352,
+    "n_parents": 5,
+    "kaggle_dataset_slug": "biobitworks/cafa6-cellico-fragment-disorder-corpus-v1",
+    "note": "Bounded 23MB download per operator SSD-minimization instruction. This corpus was NOT part of the checkpoint's original training table (biobitworks/cafa6-residual-table-afrsa, 20083 rows, no parent_id) -- the ENTIRE corpus is out-of-training-distribution for the checkpoint under audit. Used here because it is schema-compatible with CloudRows AND carries parent_id, which the original training table does not."
+  },
+  "split": {
+    "rule": "sort parents by sha256(f'{seed}:{parent_id}')[:15 hex]-derived unit interval value ascending; greedily assign to HELD-OUT until cumulative row fraction >= target_holdout_frac; remainder -> TRAIN",
+    "seed": 20260710,
+    "target_holdout_frac": 0.2,
+    "n_parents_total": 5,
+    "train_parents": [
+      "P08253",
+      "P25445",
+      "P51671",
+      "Q99988"
+    ],
+    "heldout_parents": [
+      "P08476"
+    ],
+    "assignment": {
+      "P08253": "train",
+      "P08476": "heldout",
+      "P25445": "train",
+      "P51671": "train",
+      "Q99988": "train"
+    },
+    "n_rows_train": 16352,
+    "n_rows_heldout": 5000,
+    "n_rows_total": 21352,
+    "heldout_row_fraction": 0.2341701011614837
+  },
+  "grouping_proof": {
+    "shared_parents": [],
+    "n_shared_parents": 0,
+    "n_train_parents": 4,
+    "n_heldout_parents": 1,
+    "both_splits_nonempty": true,
+    "check": "PASS"
+  },
+  "metrics_heldout": {
+    "n_rows": 5000,
+    "label_balance": {
+      "n_pos": 2266,
+      "n_neg": 2734,
+      "pos_frac": 0.4532
+    },
+    "auroc": 0.8591219328891648,
+    "fmax_unweighted": {
+      "value": 0.8231954582319546,
+      "threshold": 0.88,
+      "n_thresholds_swept": 101,
+      "n_thresholds_valid": 100
+    },
+    "wfmax": {
+      "value": 0.8417768556183474,
+      "threshold": 0.88,
+      "n_thresholds_swept": 101,
+      "n_thresholds_valid": 100,
+      "weighting": "sklearn-'balanced' inverse-class-frequency, w_c = n / (2*n_c), computed from this held-out split's own label prior"
+    },
+    "representation_vs_reference": {
+      "reference_dims": [
+        "residual_z",
+        "track_mean",
+        "track_std",
+        "frac_track_ge_0.5",
+        "k_len"
+      ],
+      "excluded_reference_dims": {
+        "afrsa": "constant 0.0 across corpus (afrsa_present==0 for all rows) -- zero-variance, degenerate",
+        "disorder_background": "constant single-cohort mean across corpus by construction of the corpus builder -- zero-variance, degenerate"
+      },
+      "reference_collinearity_diagnostic": {
+        "reference_dims": [
+          "residual_z",
+          "track_mean",
+          "track_std",
+          "frac_track_ge_0.5",
+          "k_len"
+        ],
+        "pairwise_correlation_matrix_heldout": [
+          [
+            0.9999999999999998,
+            0.9999999999999987,
+            -0.0522930327394722,
+            0.9999999999999987,
+            -0.016046354636374396
+          ],
+          [
+            0.9999999999999987,
+            1.0,
+            -0.052293022883479943,
+            1.0,
+            -0.01604634346340864
+          ],
+          [
+            -0.0522930327394722,
+            -0.052293022883479943,
+            1.0,
+            -0.052293022883479943,
+            0.29344128021067856
+          ],
+          [
+            0.9999999999999987,
+            1.0,
+            -0.052293022883479943,
+            1.0,
+            -0.01604634346340864
+          ],
+          [
+            -0.016046354636374393,
+            -0.01604634346340864,
+            0.29344128021067856,
+            -0.01604634346340864,
+            0.9999999999999999
+          ]
+        ],
+        "near_collinear_pairs_abs_r_ge_0.98": [
+          {
+            "dim_a": "residual_z",
+            "dim_b": "track_mean",
+            "pearson_r": 0.9999999999999987
+          },
+          {
+            "dim_a": "residual_z",
+            "dim_b": "frac_track_ge_0.5",
+            "pearson_r": 0.9999999999999987
+          },
+          {
+            "dim_a": "track_mean",
+            "dim_b": "frac_track_ge_0.5",
+            "pearson_r": 1.0
+          }
+        ],
+        "interpretation": "If a pair above has |r| near 1.0, a high R^2/canonical-correlation touching BOTH of those dims is largely the SAME signal counted twice, not two independently-recovered quantities. k_len is additionally a literal architectural input to the encoder (self.k_scale(k) is added to every position embedding) -- its near-perfect recovery is expected by construction, independent of any collinearity finding above."
+      },
+      "cca_n_components": 5,
+      "cca_canonical_correlations_heldout": [
+        0.9999999950210356,
+        0.864177190411162,
+        0.9202101788973582,
+        0.9694386114351522,
+        0.008154995807990437
+      ],
+      "ridge_alpha": 1.0,
+      "ridge_r2_per_reference_dim_heldout": [
+        0.9999964833259583,
+        0.9999964833259583,
+        0.9998244047164917,
+        0.9999964833259583,
+        0.9999996423721313
+      ],
+      "ridge_r2_uniform_average_heldout": 0.9999626874923706,
+      "fit_split": "train-parent group only (StandardScaler, CCA, Ridge all .fit() on TRAIN)",
+      "eval_split": "heldout-parent group only (.transform()/.predict()/.score() on HELDOUT)",
+      "read_before_citing": "see reference_collinearity_diagnostic + module docstring CCA/R^2 DEFINITION caveats (a)/(b) before quoting a headline number -- some reference dims may be redundant (collinear) or architecturally tautological (k_len is a literal encoder input), not independently recovered semantic content."
+    }
+  },
+  "train_split_sanity_NOT_ADMISSIBLE": {
+    "n_rows": 16352,
+    "auroc_in_sample_NOT_ADMISSIBLE": 0.8697384259345525
+  },
+  "determinism": {
+    "seed": 20260710,
+    "torch_num_threads": 1,
+    "model_eval_mode_dropout_disabled": true,
+    "note": "forward pass is CPU, single-thread, eval-mode (no dropout, no RNG) -- a pure function of (checkpoint bytes, table bytes, seed); re-running this exact invocation on this machine/library-version reproduces bit-identical metrics. Cross-machine / cross-BLAS-version drift is disclosed as eps-tolerant, never claimed as bit-identical (repo determinism-disclosure convention)."
+  },
+  "environment": {
+    "python": "3.9.6",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "torch": "2.8.0",
+    "numpy": "2.0.2",
+    "sklearn": "1.6.1"
+  },
+  "run_command": "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/cafa6_governed_eval.py --table /Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/residual_table.jsonl --ckpt /Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/inputs/xeno/ckpt_latest.pt --out /Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/eval/xeno_magicstudiobox/outputs --report-name cafa6_governed_eval_report.json --seed 20260710",
+  "wall_s": 138.24
+}

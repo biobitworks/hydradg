@@ -1,0 +1,25 @@
+{
+  "math_smoke": {
+    "float32_bit_components": {
+      "bit_divergence": 0.015625,
+      "changed_bits": 1,
+      "exponent_bit_divergence": 0.0,
+      "fraction_bit_divergence": 0.021739130434782608,
+      "sign_divergence": 0.0,
+      "total_bits": 64
+    },
+    "impact_metrics": {
+      "exact_match": false,
+      "precision": 0.5,
+      "recall": 0.5
+    },
+    "js_divergence": 0.009966389341172797,
+    "recovery_fraction": 0.8000000000002,
+    "relative_l2": 4.4721359556226853e-07
+  },
+  "syntax": {
+    "build_synthetic_divergence.py": "PASS",
+    "ingest_longmemeval.py": "PASS",
+    "math_metrics.py": "PASS"
+  }
+}

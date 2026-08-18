@@ -1,0 +1,214 @@
+{
+  "comparisons": [
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": true,
+      "first_observed_divergence": null,
+      "gpu_a": "Tesla T4",
+      "gpu_b": "Tesla T4",
+      "gpu_uuid_a": "GPU-b1b29183-6543-a0a5-0476-0a1207144a85",
+      "gpu_uuid_b": "GPU-db344f66-d84d-9bba-4281-5d7c672f2353",
+      "model_config_equal": true,
+      "run_a": "t4_a",
+      "run_b": "t4_b"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+        "b_state_hash": "cd80ee6fea3981265a951348e3e7d60be3f74733862423fdd19c57e683803e96",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 2.2649765014648438e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "Tesla T4",
+      "gpu_b": "NVIDIA L4",
+      "gpu_uuid_a": "GPU-b1b29183-6543-a0a5-0476-0a1207144a85",
+      "gpu_uuid_b": "GPU-26c68942-7808-fc6c-cbb6-7372fe1b2dd5",
+      "model_config_equal": true,
+      "run_a": "t4_a",
+      "run_b": "l4_a"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+        "b_state_hash": "8fee59dfbd008b6769faa62e0ba8a4c49e3de1a9c246e1d114f302f3223b6269",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 1.4901161193847656e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "Tesla T4",
+      "gpu_b": "NVIDIA A10G",
+      "gpu_uuid_a": "GPU-b1b29183-6543-a0a5-0476-0a1207144a85",
+      "gpu_uuid_b": "GPU-7b688be5-b2e9-bbc2-67a3-275fc038d251",
+      "model_config_equal": true,
+      "run_a": "t4_a",
+      "run_b": "a10_a"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "7dd323ad339b836f7c585599338572dbda1db948bd7adb078c3dca786a549103",
+        "b_state_hash": "9597b64163cc23af77c3b04610db94d1b20844e1a6c62683e4f928bbce254e01",
+        "loss_abs_delta": 0.0025396347045898438,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 0.003940582275390625,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 2
+      },
+      "gpu_a": "Tesla T4",
+      "gpu_b": "Tesla T4",
+      "gpu_uuid_a": "GPU-b1b29183-6543-a0a5-0476-0a1207144a85",
+      "gpu_uuid_b": "GPU-31951d01-48cc-cee8-5324-8bd9aa1fe21b",
+      "model_config_equal": true,
+      "run_a": "t4_a",
+      "run_b": "t4_perturb"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+        "b_state_hash": "cd80ee6fea3981265a951348e3e7d60be3f74733862423fdd19c57e683803e96",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 2.2649765014648438e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "Tesla T4",
+      "gpu_b": "NVIDIA L4",
+      "gpu_uuid_a": "GPU-db344f66-d84d-9bba-4281-5d7c672f2353",
+      "gpu_uuid_b": "GPU-26c68942-7808-fc6c-cbb6-7372fe1b2dd5",
+      "model_config_equal": true,
+      "run_a": "t4_b",
+      "run_b": "l4_a"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+        "b_state_hash": "8fee59dfbd008b6769faa62e0ba8a4c49e3de1a9c246e1d114f302f3223b6269",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 1.4901161193847656e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "Tesla T4",
+      "gpu_b": "NVIDIA A10G",
+      "gpu_uuid_a": "GPU-db344f66-d84d-9bba-4281-5d7c672f2353",
+      "gpu_uuid_b": "GPU-7b688be5-b2e9-bbc2-67a3-275fc038d251",
+      "model_config_equal": true,
+      "run_a": "t4_b",
+      "run_b": "a10_a"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "7dd323ad339b836f7c585599338572dbda1db948bd7adb078c3dca786a549103",
+        "b_state_hash": "9597b64163cc23af77c3b04610db94d1b20844e1a6c62683e4f928bbce254e01",
+        "loss_abs_delta": 0.0025396347045898438,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 0.003940582275390625,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 2
+      },
+      "gpu_a": "Tesla T4",
+      "gpu_b": "Tesla T4",
+      "gpu_uuid_a": "GPU-db344f66-d84d-9bba-4281-5d7c672f2353",
+      "gpu_uuid_b": "GPU-31951d01-48cc-cee8-5324-8bd9aa1fe21b",
+      "model_config_equal": true,
+      "run_a": "t4_b",
+      "run_b": "t4_perturb"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "cd80ee6fea3981265a951348e3e7d60be3f74733862423fdd19c57e683803e96",
+        "b_state_hash": "8fee59dfbd008b6769faa62e0ba8a4c49e3de1a9c246e1d114f302f3223b6269",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 1.6093254089355469e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "NVIDIA L4",
+      "gpu_b": "NVIDIA A10G",
+      "gpu_uuid_a": "GPU-26c68942-7808-fc6c-cbb6-7372fe1b2dd5",
+      "gpu_uuid_b": "GPU-7b688be5-b2e9-bbc2-67a3-275fc038d251",
+      "model_config_equal": true,
+      "run_a": "l4_a",
+      "run_b": "a10_a"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "cd80ee6fea3981265a951348e3e7d60be3f74733862423fdd19c57e683803e96",
+        "b_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 2.2649765014648438e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "NVIDIA L4",
+      "gpu_b": "Tesla T4",
+      "gpu_uuid_a": "GPU-26c68942-7808-fc6c-cbb6-7372fe1b2dd5",
+      "gpu_uuid_b": "GPU-31951d01-48cc-cee8-5324-8bd9aa1fe21b",
+      "model_config_equal": true,
+      "run_a": "l4_a",
+      "run_b": "t4_perturb"
+    },
+    {
+      "checkpoint_file_bytes_equal": false,
+      "different_gpu_uuid": true,
+      "final_canonical_state_equal": false,
+      "first_observed_divergence": {
+        "a_state_hash": "8fee59dfbd008b6769faa62e0ba8a4c49e3de1a9c246e1d114f302f3223b6269",
+        "b_state_hash": "d9813103bff4d4ce028250ffd964005f2f61ee7ed2e549de5c7e002a3db1896c",
+        "loss_abs_delta": 0.0,
+        "probe_top_ids_equal": true,
+        "probe_top_logits_max_abs_delta": 1.4901161193847656e-06,
+        "scale": "CANONICAL_MODEL_STATE_HASH",
+        "step": 0
+      },
+      "gpu_a": "NVIDIA A10G",
+      "gpu_b": "Tesla T4",
+      "gpu_uuid_a": "GPU-7b688be5-b2e9-bbc2-67a3-275fc038d251",
+      "gpu_uuid_b": "GPU-31951d01-48cc-cee8-5324-8bd9aa1fe21b",
+      "model_config_equal": true,
+      "run_a": "a10_a",
+      "run_b": "t4_perturb"
+    }
+  ],
+  "runs": [
+    "t4_a",
+    "t4_b",
+    "l4_a",
+    "a10_a",
+    "t4_perturb"
+  ],
+  "warning": "Raw checkpoint byte equality is not canonical model-state equality."
+}

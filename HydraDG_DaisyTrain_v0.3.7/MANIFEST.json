@@ -1,0 +1,66 @@
+{
+  "custody": {
+    "file_hashes": "COMPUTED",
+    "merkle": "NOT_MERKLE_COMMITTED",
+    "signature": "NOT_SIGNED"
+  },
+  "package": "HydraDG_DaisyTrain_v0.3.7",
+  "python_syntax": {
+    "modal/modal_eca_extension.py": "PASS",
+    "modal/modal_xenodisorder_cafa6_replay.py": "PASS",
+    "scripts/audit_fco_skill.py": "PASS",
+    "scripts/build_fco_fcg_import.py": "PASS",
+    "scripts/build_longmemeval_smoke80.py": "PASS",
+    "scripts/compare_eca_backends.py": "PASS",
+    "scripts/compare_xeno_receipts.py": "PASS",
+    "scripts/daisy_receipt.py": "PASS",
+    "scripts/download_verify_longmemeval.py": "PASS",
+    "scripts/eca_core.py": "PASS",
+    "scripts/fco_live_common.py": "PASS",
+    "scripts/finalize_live_fcg.py": "PASS",
+    "scripts/freeze_xeno_assets.py": "PASS",
+    "scripts/preflight_xeno_assets.py": "PASS",
+    "scripts/record_agent_turn.py": "PASS",
+    "scripts/record_knowledge_update.py": "PASS",
+    "scripts/record_tool_action.py": "PASS",
+    "scripts/render_eca_figures.py": "PASS",
+    "scripts/run_xeno_contract.py": "PASS",
+    "scripts/score_track03.py": "PASS",
+    "scripts/snapshot_fco_runtime.py": "PASS",
+    "scripts/validate_eca_extension.py": "PASS",
+    "scripts/validate_fco_fcg_import.py": "PASS",
+    "scripts/validate_live_fcg.py": "PASS",
+    "scripts/verify_live_custody.py": "PASS",
+    "scripts/verify_package.py": "PASS"
+  },
+  "rule_activation_state": "MUST_BE_SET_ALWAYS_ON_IN_ANTIGRAVITY_PROJECT_UI",
+  "skill_invocation_state": "NOT_PROVEN_BY_PACKAGE",
+  "source_package": "HydraDG_DaisyTrain_v0.3.6",
+  "status": "FCO_RUNTIME_VERIFICATION_ADDED",
+  "verifier_selftest": {
+    "record_rc": 0,
+    "verify": {
+      "artifact_files_rehashed": 2,
+      "claim_boundary": "PASS verifies the local FCO/FCG journal structure and hashes only; it does not prove skill invocation, correctness, signing, Merkle commitment, or HydraDB ingestion.",
+      "edge_count": 7,
+      "edges_jsonl_sha256": "db8cdf799ccfdf78ad519a778f7cbe1472b2e150004cff3ee70b82d705ae9704",
+      "errors": [],
+      "graph_dir": "/tmp/tmp08ereoqm/g",
+      "latest_turn_timestamp_utc": "2026-08-17T15:50:40.064937+00:00",
+      "node_count": 7,
+      "nodes_jsonl_sha256": "48e67c7e6da6ce9c45b3218093cc8ab6790053627f48b3cdccb900e4e84407f5",
+      "schema": "hydradg.live_custody_verification.v1",
+      "status": "PASS",
+      "type_counts": {
+        "Agent": 1,
+        "AgentSession": 1,
+        "Artifact": 2,
+        "Model": 1,
+        "ModelInvocation": 1,
+        "Turn": 1
+      },
+      "warnings": []
+    },
+    "verify_rc": 0
+  }
+}
