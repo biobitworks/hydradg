@@ -1,0 +1,56 @@
+{
+  "schema": "hydradg.turn_custody_gap_incident.v1",
+  "incident_id": "TURN-HASH-GAPS-20260818",
+  "date": "2026-08-18",
+  "status": "CONFIRMED_BY_USER_AND_ASSISTANT_REVIEW",
+  "incident_class": "REPEATED_IN_TURN_HASHING_CONTROL_FAILURE",
+  "workstream": "HydraDG / Hack Hydra Track 03",
+  "requirement": "Material project turns should preserve the actually capturable visible input/output scope, compute SHA-256, create a Turn FCO, and link it to the prior verified turn where possible.",
+  "observed_gap_locations": [
+    {
+      "segment": "HydraDG remote-work and repository setup discussion",
+      "observation": "The user repeatedly had to remind the assistant to perform in-turn hashing rather than relying on prose policy alone."
+    },
+    {
+      "segment": "HydraDB versus LessWrong context-drift recovery",
+      "observation": "The assistant created context-control artifacts but did not consistently execute the turn-hashing control before every substantive response."
+    },
+    {
+      "segment": "Hack Hydra public-submission / licensing / evaluation planning",
+      "observation": "The user again explicitly reported that in-turn hashing had been forgotten."
+    }
+  ],
+  "precision_limit": "Exact byte-identical historical turn hashes are not retroactively asserted for affected turns whose exact final UI serialization was not captured. Prior assistant-displayed hashes without recomputation evidence remain UNVERIFIED_PREVIOUS_TURN_HASH_CLAIM.",
+  "earliest_divergent_dependency": {
+    "class": "TURN_CUSTODY_GATE_NOT_EXECUTED_AS_A_HARD_PRE_OUTPUT_GATE",
+    "description": "The hashing requirement existed as policy/context but was treated as a footer convention instead of a mandatory tool-backed execution dependency before a material response was emitted."
+  },
+  "contributing_factors": [
+    "Rapid switching among infrastructure, repository, licensing, submission and article workstreams",
+    "Turn custody was not implemented as a fail-closed pre-output control in this ChatGPT runtime",
+    "Some earlier hashes were emitted as text without a contemporaneous recomputation trace and therefore cannot be promoted to verified turn identities"
+  ],
+  "affected_claims": [
+    "continuous turn-level custody",
+    "complete conversational hash-chain continuity"
+  ],
+  "unaffected_claims": [
+    "underlying GitHub commit identities actually returned by GitHub tools",
+    "HydraDB upstream pin 6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
+    "technical execution evidence independently preserved in terminal/Git receipts"
+  ],
+  "recovery": {
+    "class": "PARTIAL_RECOVERY",
+    "actions": [
+      "Make context-route check visible at the start of substantive HydraDG responses",
+      "Compute the current turn hash with an actual hashing tool before final output when available",
+      "Record missing historical turn hashes as custody gaps instead of fabricating continuity",
+      "Append the gap and recovery objects into the FCO/FCG staging journal",
+      "Ingest these immutable IDs into HydraDB only after a pinned write/read-capable instance is operational"
+    ]
+  },
+  "claim_ceiling": "DOCUMENTED_CONVERSATIONAL_CUSTODY_GAP_WITHOUT_RETROACTIVE_HASH_CONTINUITY",
+  "hydradb_ingestion_state": "NOT_YET_INGESTED_INTO_PINNED_HYDRADB",
+  "signature_state": "NOT_SIGNED_BY_THIS_RECORD",
+  "mmr_state": "APPEND_PENDING"
+}
