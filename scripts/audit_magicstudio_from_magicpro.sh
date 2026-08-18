@@ -1,28 +1,36 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# Run ONLY on magicPRObox. This script audits magicSTUDIObox over SSH/Tailscale.
-# It does not install anything. It writes a bounded receipt locally in HydraDG,
-# commits/pushes it on the setup branch, then verifies local == remote.
+# Run ONLY on magicPRObox. Audits magicSTUDIObox over ordinary SSH carried by
+# Tailscale. It does not install anything. It writes a bounded receipt locally
+# in HydraDG, commits/pushes it on the setup branch, then verifies local == remote.
 
 ROOT="/Users/byron/projects/active/hydradg"
 BRANCH="${HYDRADG_BRANCH:-setup/remote-work-20260818}"
 STUDIO_SSH="${STUDIO_SSH:-magicstudiobox}"
 RUN_ID="MAGICSTUDIO-DEPS-$(date -u +%Y%m%dT%H%M%SZ)"
 OUT="$ROOT/HydraDG_DaisyTrain_v0.3.7/eval/remote_work/$RUN_ID"
-mkdir -p "$OUT"
 
 log(){ printf '[%3s%%] %s\n' "$1" "$2"; }
-fail(){ echo "FAIL=$1" | tee -a "$OUT/final_status.txt"; exit "${2:-1}"; }
+fail(){
+  local msg="FAIL=$1"
+  echo "$msg"
+  if [ -d "${OUT:-}" ]; then printf '%s\n' "$msg" >> "$OUT/final_status.txt"; fi
+  exit "${2:-1}"
+}
 
 log 5 "pull/verify MagicPro control-plane branch"
 cd "$ROOT"
 test "$(git rev-parse --show-toplevel)" = "$ROOT" || fail WRONG_HYDRADG_ROOT 10
+# Critical ordering: the run directory is not created until after this clean gate.
 test -z "$(git status --porcelain)" || { git status --short; fail DIRTY_MAGICPRO_HYDRADG 11; }
 git fetch origin "$BRANCH" --quiet
 git switch "$BRANCH" >/dev/null 2>&1 || git switch -c "$BRANCH" --track "origin/$BRANCH"
 git pull --ff-only origin "$BRANCH" >/dev/null
 test "$(git rev-parse HEAD)" = "$(git rev-parse "origin/$BRANCH")" || fail MAGICPRO_BRANCH_DIVERGED 12
+test -z "$(git status --porcelain)" || fail DIRTY_MAGICPRO_AFTER_PULL 13
+
+mkdir -p "$OUT"
 
 log 15 "verify Tailscale/SSH transport"
 command -v tailscale >/dev/null || fail TAILSCALE_MISSING_MAGICPRO 20
@@ -46,8 +54,14 @@ echo "HOMEBREW=PASS"
 echo "BREW_PREFIX=$(brew --prefix)"
 echo "BREW_VERSION=$(brew --version | head -n1)"
 
-# Formulae needed by HydraDB source builds + remote operations.
-for F in just cmake pkgconf llvm suite-sparse tmux uv gh jq git-lfs; do
+if brew tap | grep -qx 'cleishm/neo4j'; then
+  echo "BREW_TAP:cleishm/neo4j=PASS"
+else
+  echo "BREW_TAP:cleishm/neo4j=MISS"
+fi
+
+# HydraDB source-build dependencies + our remote operator/runtime dependencies.
+for F in just cmake pkgconf llvm suite-sparse tmux uv gh jq git-lfs gitleaks; do
   if brew list --versions "$F" >/dev/null 2>&1; then
     echo "BREW_FORMULA:$F=PASS:$(brew list --versions "$F" | head -n1)"
   else
@@ -55,7 +69,7 @@ for F in just cmake pkgconf llvm suite-sparse tmux uv gh jq git-lfs; do
   fi
 done
 
-# libcypher-parser comes from the cleishm/neo4j tap, but its pkg-config name is cypher-parser.
+# libcypher-parser comes from cleishm/neo4j; pkg-config package is cypher-parser.
 if brew list --versions libcypher-parser >/dev/null 2>&1; then
   echo "BREW_FORMULA:libcypher-parser=PASS:$(brew list --versions libcypher-parser | head -n1)"
 else
@@ -102,11 +116,20 @@ if curl -fsS http://127.0.0.1:9090/readyz >/dev/null 2>&1; then echo "HYDRADB_RE
 REMOTE
 
 log 55 "summarize exact missing dependencies"
-grep -E '^(HOMEBREW|BREW_FORMULA|PKGCONFIG|XCODE_CLT|COMMAND|REPO|OLLAMA_API|OLLARMA_HEALTH|WATCHTOWER_HEALTH|HYDRADB_READYZ)=' "$OUT/studio_dependency_audit.txt" > "$OUT/studio_dependency_summary.txt" || true
-# Colon-bearing records need their own extraction.
-grep -E '^(BREW_FORMULA:|PKGCONFIG:|COMMAND:|REPO:)' "$OUT/studio_dependency_audit.txt" >> "$OUT/studio_dependency_summary.txt" || true
-sort -u "$OUT/studio_dependency_summary.txt" -o "$OUT/studio_dependency_summary.txt"
+{
+  grep -E '^(HOMEBREW|XCODE_CLT|OLLAMA_API|OLLARMA_HEALTH|WATCHTOWER_HEALTH|HYDRADB_READYZ)=' "$OUT/studio_dependency_audit.txt" || true
+  grep -E '^(BREW_TAP:|BREW_FORMULA:|PKGCONFIG:|COMMAND:|REPO:)' "$OUT/studio_dependency_audit.txt" || true
+} | sort -u > "$OUT/studio_dependency_summary.txt"
 grep -E '=MISS($|:)' "$OUT/studio_dependency_summary.txt" > "$OUT/studio_missing.txt" || true
+
+# Produce a bounded operator hint without executing it.
+{
+  echo '# Suggested remediation; review audit first.'
+  echo 'brew formula baseline: just cmake pkgconf llvm suite-sparse tmux uv gh jq git-lfs gitleaks'
+  echo 'external tap formula: cleishm/neo4j/libcypher-parser'
+  echo 'Rust: rustup stable (not Homebrew)'
+  echo 'Xcode CLT: required if XCODE_CLT=MISS; not installed by this script'
+} > "$OUT/remediation_hint.txt"
 
 AUDIT_SHA="$(shasum -a 256 "$OUT/studio_dependency_audit.txt" | awk '{print $1}')"
 MISSING_SHA="$(shasum -a 256 "$OUT/studio_missing.txt" | awk '{print $1}')"
