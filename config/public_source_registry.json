@@ -1,38 +1,39 @@
 {
-  "schema": "hydradg.public_source_registry.v0.1",
+  "schema": "hydradg.public_source_registry.v0.2",
   "policy": {
     "admit_source_types": ["PUBLIC_PREPRINT", "PUBLIC_GITHUB"],
-    "license_required": true,
+    "license_required_for_content_import_or_redistribution": true,
+    "reference_only_without_relicensing": "ALLOWED_FOR_BIBLIOGRAPHIC_METADATA_AND_ORIGINAL_PARAPHRASE_WITH_CITATION",
     "version_pin_required": true,
     "source_citation_required": true,
-    "private_only_source_atoms": "REJECT_OR_QUARANTINE"
+    "private_only_source_atoms": "REJECT_OR_QUARANTINE",
+    "upstream_license_overrides_project_default": true
   },
   "sources": [
     {
-      "source_id": "src:fco-zenodo-v3-21420906",
-      "title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
-      "source_type": "PUBLIC_PREPRINT",
-      "public_url": "https://zenodo.org/records/21420906",
-      "doi": "10.5281/zenodo.21420906",
-      "version": "v3",
+      "source_id": "src:hydradb-pinned-6a2fbb1",
+      "title": "HydraDB",
+      "source_type": "PUBLIC_GITHUB",
+      "public_url": "https://github.com/hydra-db/hydradb",
+      "repo": "hydra-db/hydradb",
+      "ref": "6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
       "public_status": "VERIFIED_PUBLIC",
-      "license_id": null,
-      "license_status": "REQUIRES_EXACT_PUBLIC_RECORD_LICENSE_VERIFICATION_BEFORE_ATOM_ADMISSION",
-      "admission_state": "QUARANTINED_LICENSE_UNRESOLVED",
-      "notes": "Public Zenodo record is verified. Search metadata exposes the record and custody claims, but the exact license identifier was not reliably retrieved in this session. Do not infer it from a private repository copy."
+      "license_id": "AGPL-3.0",
+      "admission_state": "ADMISSIBLE_AS_PINNED_UPSTREAM_RUNTIME",
+      "notes": "HydraDG is an application on top of HydraDB; upstream AGPL terms are not overwritten by HydraDG documentation licensing."
     },
     {
-      "source_id": "src:fco-zenodo-v1-21210575",
-      "title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
+      "source_id": "src:enßlin-weig-1004.2868",
+      "title": "Inference with minimal Gibbs free energy in information field theory",
       "source_type": "PUBLIC_PREPRINT",
-      "public_url": "https://zenodo.org/records/21210575",
-      "doi": "10.5281/zenodo.21210575",
-      "version": "v1",
-      "public_status": "VERIFIED_PUBLIC",
+      "public_url": "https://arxiv.org/abs/1004.2868",
+      "doi": "10.1103/PhysRevE.82.051112",
+      "version": "arXiv:1004.2868",
+      "public_status": "VERIFIED_PUBLIC_PREPRINT",
       "license_id": null,
-      "license_status": "REQUIRES_EXACT_PUBLIC_RECORD_LICENSE_VERIFICATION_BEFORE_ATOM_ADMISSION",
-      "admission_state": "QUARANTINED_LICENSE_UNRESOLVED",
-      "notes": "Public Zenodo record verified; exact license identifier must be captured from the public record before atoms are admitted."
+      "license_status": "NO_PROJECT_RELICENSING_OF_SOURCE_TEXT",
+      "admission_state": "REFERENCE_ONLY_BIBLIOGRAPHIC_METADATA_AND_ORIGINAL_PARAPHRASED_ATOMS",
+      "notes": "Used to ground the information-theoretic Gibbs/free-energy analogy. HydraDG does not redistribute the paper text and does not claim physical thermodynamic units for its G* abstraction."
     },
     {
       "source_id": "src:biocustody-github-main",
@@ -46,7 +47,58 @@
       "license_url": "https://github.com/biobitworks/biocustody/blob/main/LICENSE",
       "license_evidence_blob_sha": "eb721210925ad2c04776f4bdf0c42dc2f607f009",
       "admission_state": "ADMISSIBLE_FOR_REPOSITORY_CODE_AND_DOCUMENTATION_SUBJECT_TO_FILE_BOUNDARIES",
-      "notes": "README explicitly separates repository license from third-party datasets, provider outputs, API responses, credentials, and source evidence. Those third-party objects require their own license/terms records."
+      "reuse_scope": [
+        "cross-device FCO aggregation pattern",
+        "model-agent-device provenance pattern",
+        "per-turn transcript custody pattern",
+        "optional voice narration interface pattern",
+        "deterministic/probabilistic/creative claim-ceiling separation"
+      ],
+      "notes": "Third-party datasets, provider outputs, API responses, credentials, and source evidence retain their own terms."
+    },
+    {
+      "source_id": "src:protein-hinge-github-main",
+      "title": "Protein Hinge",
+      "source_type": "PUBLIC_GITHUB",
+      "public_url": "https://github.com/biobitworks/protein-hinge",
+      "repo": "biobitworks/protein-hinge",
+      "ref": "main",
+      "public_status": "VERIFIED_PUBLIC",
+      "license_id": "CC-BY-ND-4.0",
+      "license_url": "https://github.com/biobitworks/protein-hinge/blob/main/LICENSE",
+      "license_evidence_blob_sha": "1a93cb68bff22c5ca994cfb601d9a75dbfc03023",
+      "admission_state": "REFERENCE_ONLY_FOR_PARAPHRASED_MECHANICS_UNLESS_SEPARATE_PERMISSION_ALLOWS_DERIVATIVE_DISTRIBUTION",
+      "reuse_scope": [
+        "recompute-or-reject pattern",
+        "first-divergence localization concept",
+        "mutation-vs-record-repair tamper-test pattern",
+        "science-versus-legal/FTO lane separation principle"
+      ],
+      "notes": "No modified Protein Hinge material is redistributed by HydraDG under this source record. HydraDG implements independently written generic mechanics."
+    },
+    {
+      "source_id": "src:fco-zenodo-v3-21420906",
+      "title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
+      "source_type": "PUBLIC_PREPRINT",
+      "public_url": "https://zenodo.org/records/21420906",
+      "doi": "10.5281/zenodo.21420906",
+      "version": "v3",
+      "public_status": "VERIFIED_PUBLIC",
+      "license_id": null,
+      "license_status": "REQUIRES_EXACT_PUBLIC_RECORD_LICENSE_VERIFICATION_BEFORE_CONTENT_IMPORT",
+      "admission_state": "REFERENCE_ONLY_PENDING_LICENSE_VERIFICATION"
+    },
+    {
+      "source_id": "src:fco-zenodo-v1-21210575",
+      "title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
+      "source_type": "PUBLIC_PREPRINT",
+      "public_url": "https://zenodo.org/records/21210575",
+      "doi": "10.5281/zenodo.21210575",
+      "version": "v1",
+      "public_status": "VERIFIED_PUBLIC",
+      "license_id": null,
+      "license_status": "REQUIRES_EXACT_PUBLIC_RECORD_LICENSE_VERIFICATION_BEFORE_CONTENT_IMPORT",
+      "admission_state": "REFERENCE_ONLY_PENDING_LICENSE_VERIFICATION"
     },
     {
       "source_id": "src:vitaology-private-connected-repo",
@@ -55,8 +107,7 @@
       "repo": "biobitworks/vitaology",
       "public_status": "PRIVATE_IN_CONNECTED_GITHUB",
       "license_id": null,
-      "admission_state": "BLOCKED_PRIVATE_ONLY",
-      "notes": "The connected repository reports public-domain historical source material and Apache-2.0/CC-BY-4.0 project licensing, but this private repository cannot itself be used as the public atom source. Locate the corresponding public preprint or public GitHub artifact and register that exact object before import."
+      "admission_state": "BLOCKED_PRIVATE_ONLY"
     },
     {
       "source_id": "src:gtm-cellico-private",
@@ -65,8 +116,7 @@
       "repo": "biobitworks/gtm-cellico",
       "public_status": "PRIVATE_IN_CONNECTED_GITHUB",
       "license_id": null,
-      "admission_state": "BLOCKED_AS_SCIENTIFIC_SOURCE",
-      "notes": "May inform governance/process only. Its own README states it is not scientific source truth. Reusable scientific atoms must resolve to a public preprint or public GitHub source."
+      "admission_state": "BLOCKED_AS_SCIENTIFIC_SOURCE"
     },
     {
       "source_id": "src:seedgraph-public-contract",
@@ -92,7 +142,7 @@
       "doi": "10.5281/zenodo.21829929",
       "public_status": "REQUIRES_RETRIEVAL_VERIFICATION",
       "license_id": null,
-      "admission_state": "QUARANTINED_PENDING_PUBLIC_RECORD_AND_LICENSE_VERIFICATION"
+      "admission_state": "REFERENCE_ONLY_PENDING_PUBLIC_RECORD_AND_LICENSE_VERIFICATION"
     }
   ]
 }
