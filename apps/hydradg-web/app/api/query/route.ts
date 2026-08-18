@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from "next/server";
 
 import { buildDemoFixture } from "@/lib/demoFixture";
 import { canonicalJson, hydraNumericId, makeFcoNode, sha256Text } from "@/lib/fco";
-import { graphConfigured, runGraph } from "@/lib/graph";
+import { graphBackend, graphConfigured, runGraph } from "@/lib/graph";
 
 export const runtime = "nodejs";
 
@@ -49,22 +49,58 @@ const edgeTypeSet = new Set<string>(edgeTypes);
 type NodeLabel = (typeof nodeLabels)[number];
 type EdgeType = (typeof edgeTypes)[number];
 
+function nodeRow(node: ReturnType<typeof makeFcoNode>) {
+  return {
+    vertex: hydraNumericId(node.id),
+    fco_id: node.id,
+    object_sha256: node.object_sha256,
+    type: node.type,
+    payload_json: canonicalJson(node.payload),
+    claim_ceiling: String(node.payload.claim_ceiling || "PROVENANCE_ONLY"),
+    evidence_class: String(node.payload.evidence_class || "UNSPECIFIED"),
+    subject_key: typeof node.payload.subject_key === "string" ? node.payload.subject_key : "",
+    is_current: typeof node.payload.is_current === "boolean" ? node.payload.is_current : false,
+    version: typeof node.payload.version === "number" ? node.payload.version : 0,
+    observed_at: typeof node.payload.observed_at === "string" ? node.payload.observed_at : "",
+  };
+}
+
 async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
   if (!nodeLabelSet.has(label)) throw new Error(`unsupported node label: ${label}`);
-  const id = hydraNumericId(node.id);
+  const row = nodeRow(node);
 
   const existing = await runGraph(
     "MATCH (n {id: $id}) RETURN n.fco_id AS fco_id LIMIT 1",
-    { id },
+    { id: row.vertex },
   );
   const existingFcoId = typeof existing[0]?.fco_id === "string" ? existing[0].fco_id : "";
   if (existingFcoId && existingFcoId !== node.id) {
     throw new Error(`HydraDB numeric-address collision for ${node.id}`);
   }
 
-  // HydraDB accepts one statement per request and mutations do not append RETURN.
-  await runGraph(`MERGE (n:${label} {id: $id})`, { id });
+  if (graphBackend() === "hydradb-http") {
+    // HydraDB's documented vertex-upsert path is the client-service UNWIND form.
+    // Standalone node-only MERGE is intentionally not executable in its Query engine.
+    await runGraph(
+      `UNWIND $rows AS row
+       MERGE (n {id: row.vertex})
+       SET n:${label},
+           n.fco_id = row.fco_id,
+           n.object_sha256 = row.object_sha256,
+           n.type = row.type,
+           n.payload_json = row.payload_json,
+           n.claim_ceiling = row.claim_ceiling,
+           n.evidence_class = row.evidence_class,
+           n.subject_key = row.subject_key,
+           n.is_current = row.is_current,
+           n.version = row.version,
+           n.observed_at = row.observed_at`,
+      { rows: [row] },
+    );
+    return;
+  }
 
+  await runGraph(`MERGE (n:${label} {id: $id})`, { id: row.vertex });
   await runGraph(
     `MATCH (n:${label} {id: $id})
      SET n.fco_id = $fco_id,
@@ -78,17 +114,17 @@ async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
          n.version = $version,
          n.observed_at = $observed_at`,
     {
-      id,
-      fco_id: node.id,
-      object_sha256: node.object_sha256,
-      type: node.type,
-      payload_json: canonicalJson(node.payload),
-      claim_ceiling: String(node.payload.claim_ceiling || "PROVENANCE_ONLY"),
-      evidence_class: String(node.payload.evidence_class || "UNSPECIFIED"),
-      subject_key: typeof node.payload.subject_key === "string" ? node.payload.subject_key : "",
-      is_current: typeof node.payload.is_current === "boolean" ? node.payload.is_current : false,
-      version: typeof node.payload.version === "number" ? node.payload.version : 0,
-      observed_at: typeof node.payload.observed_at === "string" ? node.payload.observed_at : "",
+      id: row.vertex,
+      fco_id: row.fco_id,
+      object_sha256: row.object_sha256,
+      type: row.type,
+      payload_json: row.payload_json,
+      claim_ceiling: row.claim_ceiling,
+      evidence_class: row.evidence_class,
+      subject_key: row.subject_key,
+      is_current: row.is_current,
+      version: row.version,
+      observed_at: row.observed_at,
     },
   );
 }
@@ -166,13 +202,7 @@ async function traceOneRelation(fromFcoId: string, relation: EdgeType) {
 }
 
 async function traceProvenance(startFcoId: string, maxDepth = 4) {
-  const allowed: EdgeType[] = [
-    "DERIVED_FROM",
-    "SUPPORTED_BY",
-    "PRODUCED",
-    "CLASSIFIES",
-    "OBSERVES",
-  ];
+  const allowed: EdgeType[] = ["DERIVED_FROM", "SUPPORTED_BY", "PRODUCED", "CLASSIFIES", "OBSERVES"];
   const seen = new Set<string>([startFcoId]);
   let frontier = [startFcoId];
   const hops: Array<Record<string, unknown>> = [];
@@ -296,23 +326,14 @@ export async function POST(request: NextRequest) {
     };
     const action = body.action;
 
-    if (action === "fixture") {
-      return NextResponse.json({ action, fixture: await loadDemoFixture() });
-    }
+    if (action === "fixture") return NextResponse.json({ action, fixture: await loadDemoFixture() });
 
     if (action === "memory") {
       const term = body.term?.trim().toLowerCase();
       if (!term) return NextResponse.json({ error: "term is required" }, { status: 400 });
       const batches = await Promise.all(nodeLabels.map((label) => readLabel(label)));
-      const rows = batches
-        .flat()
-        .filter((row) => JSON.stringify(row).toLowerCase().includes(term))
-        .slice(0, 30);
-      return NextResponse.json({
-        action,
-        rows,
-        search_mode: "BOUNDED_FILTER_OVER_TYPED_HYDRADB_READS",
-      });
+      const rows = batches.flat().filter((row) => JSON.stringify(row).toLowerCase().includes(term)).slice(0, 30);
+      return NextResponse.json({ action, rows, search_mode: "BOUNDED_FILTER_OVER_TYPED_HYDRADB_READS" });
     }
 
     if (action === "current") {
@@ -367,9 +388,6 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({ error: "unsupported action" }, { status: 400 });
   } catch (error) {
-    return NextResponse.json(
-      { error: error instanceof Error ? error.message : String(error) },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: error instanceof Error ? error.message : String(error) }, { status: 500 });
   }
 }
