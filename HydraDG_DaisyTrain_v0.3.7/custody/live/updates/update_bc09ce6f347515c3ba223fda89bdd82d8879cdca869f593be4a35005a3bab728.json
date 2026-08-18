@@ -1,0 +1,43 @@
+{
+  "admission_state": "ADMIT",
+  "atoms": [
+    {
+      "claim_ceiling": "USER_DECLARED_PROJECT_REQUIREMENT",
+      "content": "For HydraDG, continue turn-level hashing and FCG updates and use the GitHub repository biobitworks/hydradg as the project custody target.",
+      "evidence_class": "DIRECTLY_SUPPLIED_EVIDENCE",
+      "source_ref": "current_user_turn",
+      "uncertainty": "NONE_FOR_USER_INTENT"
+    },
+    {
+      "claim_ceiling": "SOURCE_REFERENCE_ONLY",
+      "content": "Project integration source reference: Exa Search API Guide.",
+      "evidence_class": "DIRECTLY_SUPPLIED_EVIDENCE",
+      "source_ref": "https://exa.ai/docs/reference/search-api-guide",
+      "uncertainty": "CONTENT_NOT_YET_RETRIEVED_OR_VERIFIED"
+    },
+    {
+      "claim_ceiling": "SOURCE_REFERENCE_ONLY",
+      "content": "Project integration source reference: GMI Cloud API introduction.",
+      "evidence_class": "DIRECTLY_SUPPLIED_EVIDENCE",
+      "source_ref": "https://docs.gmicloud.ai/api-reference/introduction",
+      "uncertainty": "CONTENT_NOT_YET_RETRIEVED_OR_VERIFIED"
+    },
+    {
+      "claim_ceiling": "SOURCE_REFERENCE_ONLY",
+      "content": "Project integration source reference: Daytona API docs.",
+      "evidence_class": "DIRECTLY_SUPPLIED_EVIDENCE",
+      "source_ref": "https://www.daytona.io/docs/en/tools/api/#daytona",
+      "uncertainty": "CONTENT_NOT_YET_RETRIEVED_OR_VERIFIED"
+    },
+    {
+      "claim_ceiling": "SOURCE_REFERENCE_ONLY",
+      "content": "Project integration source reference: Modal docs.",
+      "evidence_class": "DIRECTLY_SUPPLIED_EVIDENCE",
+      "source_ref": "https://modal.com/docs",
+      "uncertainty": "CONTENT_NOT_YET_RETRIEVED_OR_VERIFIED"
+    }
+  ],
+  "claim_ceiling": "USER_DECLARED_PROJECT_REQUIREMENT",
+  "uncertainty": "EXTERNAL_DOC_CONTENT_NOT_YET_RETRIEVED_OR_VERIFIED",
+  "update_type": "ADD"
+}
