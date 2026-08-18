@@ -1,0 +1,98 @@
+{
+  "schema": "hydradg.public_source_registry.v0.1",
+  "policy": {
+    "admit_source_types": ["PUBLIC_PREPRINT", "PUBLIC_GITHUB"],
+    "license_required": true,
+    "version_pin_required": true,
+    "source_citation_required": true,
+    "private_only_source_atoms": "REJECT_OR_QUARANTINE"
+  },
+  "sources": [
+    {
+      "source_id": "src:fco-zenodo-v3-21420906",
+      "title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
+      "source_type": "PUBLIC_PREPRINT",
+      "public_url": "https://zenodo.org/records/21420906",
+      "doi": "10.5281/zenodo.21420906",
+      "version": "v3",
+      "public_status": "VERIFIED_PUBLIC",
+      "license_id": null,
+      "license_status": "REQUIRES_EXACT_PUBLIC_RECORD_LICENSE_VERIFICATION_BEFORE_ATOM_ADMISSION",
+      "admission_state": "QUARANTINED_LICENSE_UNRESOLVED",
+      "notes": "Public Zenodo record is verified. Search metadata exposes the record and custody claims, but the exact license identifier was not reliably retrieved in this session. Do not infer it from a private repository copy."
+    },
+    {
+      "source_id": "src:fco-zenodo-v1-21210575",
+      "title": "Fractal Custody Objects: route-comparable chain-of-custody for deterministic computational biology and AI-agent provenance",
+      "source_type": "PUBLIC_PREPRINT",
+      "public_url": "https://zenodo.org/records/21210575",
+      "doi": "10.5281/zenodo.21210575",
+      "version": "v1",
+      "public_status": "VERIFIED_PUBLIC",
+      "license_id": null,
+      "license_status": "REQUIRES_EXACT_PUBLIC_RECORD_LICENSE_VERIFICATION_BEFORE_ATOM_ADMISSION",
+      "admission_state": "QUARANTINED_LICENSE_UNRESOLVED",
+      "notes": "Public Zenodo record verified; exact license identifier must be captured from the public record before atoms are admitted."
+    },
+    {
+      "source_id": "src:biocustody-github-main",
+      "title": "BioCustody — Cross-Device Chain of Custody Terminal",
+      "source_type": "PUBLIC_GITHUB",
+      "public_url": "https://github.com/biobitworks/biocustody",
+      "repo": "biobitworks/biocustody",
+      "ref": "main",
+      "public_status": "VERIFIED_PUBLIC",
+      "license_id": "Apache-2.0",
+      "license_url": "https://github.com/biobitworks/biocustody/blob/main/LICENSE",
+      "license_evidence_blob_sha": "eb721210925ad2c04776f4bdf0c42dc2f607f009",
+      "admission_state": "ADMISSIBLE_FOR_REPOSITORY_CODE_AND_DOCUMENTATION_SUBJECT_TO_FILE_BOUNDARIES",
+      "notes": "README explicitly separates repository license from third-party datasets, provider outputs, API responses, credentials, and source evidence. Those third-party objects require their own license/terms records."
+    },
+    {
+      "source_id": "src:vitaology-private-connected-repo",
+      "title": "Vitaology",
+      "source_type": "PRIVATE_GITHUB_REFERENCE_ONLY",
+      "repo": "biobitworks/vitaology",
+      "public_status": "PRIVATE_IN_CONNECTED_GITHUB",
+      "license_id": null,
+      "admission_state": "BLOCKED_PRIVATE_ONLY",
+      "notes": "The connected repository reports public-domain historical source material and Apache-2.0/CC-BY-4.0 project licensing, but this private repository cannot itself be used as the public atom source. Locate the corresponding public preprint or public GitHub artifact and register that exact object before import."
+    },
+    {
+      "source_id": "src:gtm-cellico-private",
+      "title": "gtm-cellico",
+      "source_type": "PRIVATE_GITHUB_REFERENCE_ONLY",
+      "repo": "biobitworks/gtm-cellico",
+      "public_status": "PRIVATE_IN_CONNECTED_GITHUB",
+      "license_id": null,
+      "admission_state": "BLOCKED_AS_SCIENTIFIC_SOURCE",
+      "notes": "May inform governance/process only. Its own README states it is not scientific source truth. Reusable scientific atoms must resolve to a public preprint or public GitHub source."
+    },
+    {
+      "source_id": "src:seedgraph-public-contract",
+      "title": "SeedGraph public implementation/specification",
+      "source_type": "UNRESOLVED",
+      "public_status": "SOURCE_RECOVERY_REQUIRED",
+      "license_id": null,
+      "admission_state": "BLOCKED_UNTIL_PUBLIC_SOURCE_AND_LICENSE_PINNED"
+    },
+    {
+      "source_id": "src:anticube-public-contract",
+      "title": "Anticube public implementation/specification",
+      "source_type": "UNRESOLVED",
+      "public_status": "SOURCE_RECOVERY_REQUIRED",
+      "license_id": null,
+      "admission_state": "BLOCKED_UNTIL_PUBLIC_SOURCE_AND_LICENSE_PINNED"
+    },
+    {
+      "source_id": "src:fco-current-21829929",
+      "title": "Fractal Custody Objects — v4/v5 publication-version package with Vithia companion evidence",
+      "source_type": "PUBLIC_PREPRINT_CLAIMED_BY_OPERATOR",
+      "public_url": "https://doi.org/10.5281/zenodo.21829929",
+      "doi": "10.5281/zenodo.21829929",
+      "public_status": "REQUIRES_RETRIEVAL_VERIFICATION",
+      "license_id": null,
+      "admission_state": "QUARANTINED_PENDING_PUBLIC_RECORD_AND_LICENSE_VERIFICATION"
+    }
+  ]
+}
