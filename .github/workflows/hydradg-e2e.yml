@@ -158,9 +158,16 @@ jobs:
         run: |
           set -euo pipefail
           curl -fsS http://127.0.0.1:3000/api/status | tee /tmp/hydradg-e2e/status.json
-          curl -fsS -X POST http://127.0.0.1:3000/api/query \
+          FIXTURE_STATUS=$(curl -sS -o /tmp/hydradg-e2e/fixture.json -w '%{http_code}' \
+            -X POST http://127.0.0.1:3000/api/query \
             -H 'Content-Type: application/json' \
-            --data '{"action":"fixture"}' | tee /tmp/hydradg-e2e/fixture.json
+            --data '{"action":"fixture"}')
+          cat /tmp/hydradg-e2e/fixture.json
+          if [[ "$FIXTURE_STATUS" != "200" ]]; then
+            echo "fixture HTTP status=$FIXTURE_STATUS" >&2
+            cat /tmp/hydradg-e2e/hydradg-web.log >&2 || true
+            exit 1
+          fi
           python3 - <<'PY'
           import json
           s=json.load(open('/tmp/hydradg-e2e/status.json'))
