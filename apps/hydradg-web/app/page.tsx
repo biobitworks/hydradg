@@ -9,7 +9,12 @@ type Status = {
   sources: Array<{ name: string; url: string; status: string; role: string }>;
 };
 
-type QueryAction = "memory" | "history" | "provenance";
+type QueryAction = "memory" | "current" | "history" | "provenance";
+type FixtureReceipt = {
+  subject_key?: string;
+  ids?: Record<string, string>;
+  [key: string]: unknown;
+};
 
 function StatusPill({ ok, children }: { ok: boolean; children: React.ReactNode }) {
   return <span className={`pill ${ok ? "pillGood" : "pillMuted"}`}>{children}</span>;
@@ -21,6 +26,8 @@ export default function Home() {
   const [term, setTerm] = useState("");
   const [queryResult, setQueryResult] = useState<unknown>(null);
   const [queryBusy, setQueryBusy] = useState(false);
+  const [fixture, setFixture] = useState<FixtureReceipt | null>(null);
+  const [fixtureBusy, setFixtureBusy] = useState(false);
   const [exaTerm, setExaTerm] = useState("");
   const [exaIngest, setExaIngest] = useState(true);
   const [exaResult, setExaResult] = useState<unknown>(null);
@@ -33,17 +40,45 @@ export default function Home() {
       .catch((error) => setQueryResult({ error: String(error) }));
   }, []);
 
-  const providerEntries = useMemo(
-    () => Object.entries(status?.providers || {}),
-    [status],
-  );
+  const providerEntries = useMemo(() => Object.entries(status?.providers || {}), [status]);
+
+  async function loadFixture() {
+    setFixtureBusy(true);
+    try {
+      const response = await fetch("/api/query", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ action: "fixture" }),
+      });
+      const data = (await response.json()) as { fixture?: FixtureReceipt; error?: string };
+      setFixture(data.fixture || data);
+      if (data.fixture?.subject_key) {
+        setAction("current");
+        setTerm(data.fixture.subject_key);
+      }
+    } finally {
+      setFixtureBusy(false);
+    }
+  }
+
+  function chooseFixtureId(key: string, nextAction: QueryAction) {
+    const id = fixture?.ids?.[key];
+    if (!id) return;
+    setAction(nextAction);
+    setTerm(id);
+  }
 
   async function submitGraph(event: FormEvent) {
     event.preventDefault();
     setQueryBusy(true);
     setQueryResult(null);
     try {
-      const payload = action === "memory" ? { action, term } : { action, id: term };
+      const payload =
+        action === "memory"
+          ? { action, term }
+          : action === "current"
+            ? { action, subject_key: term }
+            : { action, id: term };
       const response = await fetch("/api/query", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -73,13 +108,18 @@ export default function Home() {
 
   return (
     <main>
+      <nav>
+        <a href="/demo">Demo + video</a>
+        <a href="/eligibility">Submission custody</a>
+      </nav>
+
       <header className="hero">
         <div>
-          <p className="eyebrow">Hack Hydra · Track 03</p>
+          <p className="eyebrow">Hack Hydra · Track 03 — Memory + Context Retrieval</p>
           <h1>HydraDG</h1>
           <p className="lede">
-            Custody-aware persistent memory: retrieve the current fact, reconstruct history,
-            traverse provenance, and show where evidence diverged or recovered.
+            Custody-aware persistent memory: retrieve the current state, reconstruct history,
+            traverse provenance, and show exactly where evidence changed.
           </p>
         </div>
         <div className="heroStatus">
@@ -99,7 +139,7 @@ export default function Home() {
         <article className="metric">
           <span className="metricLabel">HydraDB pin</span>
           <strong className="mono compact">{status?.hydradb_pin.commit.slice(0, 12) || "loading"}</strong>
-          <span className="small muted">source revision only</span>
+          <span className="small muted">source revision pin</span>
         </article>
         <article className="metric">
           <span className="metricLabel">Custody</span>
@@ -107,10 +147,37 @@ export default function Home() {
           <span className="small muted">claim ceilings preserved</span>
         </article>
         <article className="metric">
-          <span className="metricLabel">Benchmark target</span>
-          <strong>LongMemEval-S</strong>
-          <span className="small muted">smoke80 → full500</span>
+          <span className="metricLabel">Temporal memory</span>
+          <strong>Current + history</strong>
+          <span className="small muted">append-only supersession fixture</span>
         </article>
+      </section>
+
+      <section className="panel architecture">
+        <div className="panelHead">
+          <div>
+            <p className="eyebrow">Deterministic end-to-end fixture</p>
+            <h2>Seed the complete graph path</h2>
+          </div>
+          <StatusPill ok={Boolean(status?.graph.reachable)}>HydraDB required</StatusPill>
+        </div>
+        <p className="muted">
+          Loads two synthetic temporal states with source → evidence → atom → Seed of Truth lineage.
+          The fixture is explicitly claim-bounded and its Anticube adapter remains fail-closed until a
+          public contract is pinned.
+        </p>
+        <div className="actions">
+          <button className="primary" onClick={loadFixture} disabled={fixtureBusy || !status?.graph.reachable}>
+            {fixtureBusy ? "Loading…" : "Load deterministic fixture"}
+          </button>
+          <button className="secondary" onClick={() => chooseFixtureId("seed_v1", "history")} disabled={!fixture?.ids?.seed_v1}>
+            Trace seed history
+          </button>
+          <button className="secondary" onClick={() => chooseFixtureId("seed_v2", "provenance")} disabled={!fixture?.ids?.seed_v2}>
+            Trace current provenance
+          </button>
+        </div>
+        <ResultBox value={fixture} empty="Load the fixture to get deterministic object IDs and FCG edge receipts." />
       </section>
 
       <section className="grid twoCol">
@@ -124,13 +191,8 @@ export default function Home() {
           </div>
 
           <div className="tabs" role="tablist" aria-label="Graph query mode">
-            {(["memory", "history", "provenance"] as QueryAction[]).map((mode) => (
-              <button
-                key={mode}
-                type="button"
-                className={action === mode ? "tab active" : "tab"}
-                onClick={() => setAction(mode)}
-              >
+            {(["memory", "current", "history", "provenance"] as QueryAction[]).map((mode) => (
+              <button key={mode} type="button" className={action === mode ? "tab active" : "tab"} onClick={() => setAction(mode)}>
                 {mode}
               </button>
             ))}
@@ -138,16 +200,16 @@ export default function Home() {
 
           <form onSubmit={submitGraph} className="stack">
             <label>
-              {action === "memory" ? "Text or exact FCO id" : "Exact FCO id"}
+              {action === "memory" ? "Text or exact FCO id" : action === "current" ? "Subject key" : "Exact FCO id"}
               <input
                 value={term}
                 onChange={(event) => setTerm(event.target.value)}
-                placeholder={action === "memory" ? "e.g. Vithia or fco:…" : "fco:…"}
+                placeholder={action === "current" ? "hydradg.demo.memory" : action === "memory" ? "demo state" : "fco:…"}
                 required
               />
             </label>
-            <button className="primary" disabled={queryBusy || !term.trim()}>
-              {queryBusy ? "Querying…" : action === "memory" ? "Search memory" : `Trace ${action}`}
+            <button className="primary" disabled={queryBusy || !term.trim() || !status?.graph.reachable}>
+              {queryBusy ? "Querying…" : action === "memory" ? "Search memory" : action === "current" ? "Get current state" : `Trace ${action}`}
             </button>
           </form>
 
@@ -163,29 +225,19 @@ export default function Home() {
             <StatusPill ok={Boolean(status?.providers.exa)}>Exa</StatusPill>
           </div>
           <p className="muted">
-            Enter a research query or a URL. URL mode uses Exa Contents; query mode uses Exa Search.
-            Admission creates hashed ToolAction, Source, and Evidence FCOs plus typed FCG edges.
+            URL mode uses Exa Contents; query mode uses Exa Search. External retrieval is optional
+            and remains separate from the deterministic HydraDB fixture.
           </p>
           <form onSubmit={submitExa} className="stack">
             <label>
               Query or URL
-              <textarea
-                rows={4}
-                value={exaTerm}
-                onChange={(event) => setExaTerm(event.target.value)}
-                placeholder="https://share.google/aimode/… or a research question"
-                required
-              />
+              <textarea rows={4} value={exaTerm} onChange={(event) => setExaTerm(event.target.value)} placeholder="Public source URL or research query" required />
             </label>
             <label className="checkRow">
-              <input
-                type="checkbox"
-                checked={exaIngest}
-                onChange={(event) => setExaIngest(event.target.checked)}
-              />
+              <input type="checkbox" checked={exaIngest} onChange={(event) => setExaIngest(event.target.checked)} />
               Admit retrieved evidence to FCO/FCG graph
             </label>
-            <button className="primary" disabled={exaBusy || !exaTerm.trim()}>
+            <button className="primary" disabled={exaBusy || !exaTerm.trim() || !status?.providers.exa}>
               {exaBusy ? "Retrieving…" : exaIngest ? "Retrieve and admit" : "Retrieve only"}
             </button>
           </form>
@@ -195,51 +247,27 @@ export default function Home() {
 
       <section className="grid twoCol">
         <article className="panel">
-          <div className="panelHead">
-            <div>
-              <p className="eyebrow">Execution providers</p>
-              <h2>Bounded compute adapters</h2>
-            </div>
-          </div>
+          <p className="eyebrow">Execution providers</p>
+          <h2>Bounded compute adapters</h2>
           <div className="providerList">
             {providerEntries.map(([name, configured]) => (
               <div className="provider" key={name}>
-                <div>
-                  <strong>{name}</strong>
-                  <p className="small muted">
-                    {name === "daytona" && "isolated sandbox execution"}
-                    {name === "gmi" && "container / GPU compute"}
-                    {name === "modal" && "remote functions and model endpoints"}
-                    {name === "exa" && "search and URL content retrieval"}
-                  </p>
-                </div>
-                <StatusPill ok={configured}>{configured ? "configured" : "not configured"}</StatusPill>
+                <strong>{name}</strong>
+                <StatusPill ok={configured}>{configured ? "configured" : "optional / unconfigured"}</StatusPill>
               </div>
             ))}
           </div>
-          <p className="small muted note">
-            MVP exposes provider readiness only. Paid or destructive compute invocation remains disabled
-            until its run contract, limits, and receipt schema are pinned.
-          </p>
+          <p className="small muted note">Provider presence is not treated as proof of a successful live call.</p>
         </article>
 
         <article className="panel">
-          <div className="panelHead">
-            <div>
-              <p className="eyebrow">Source registry</p>
-              <h2>Inputs and unresolved evidence</h2>
-            </div>
-          </div>
+          <p className="eyebrow">Source registry</p>
+          <h2>Inputs and unresolved evidence</h2>
           <div className="sourceList">
             {(status?.sources || []).map((source) => (
               <a href={source.url} target="_blank" rel="noreferrer" className="source" key={source.url}>
-                <div>
-                  <strong>{source.name}</strong>
-                  <p className="small muted">{source.role}</p>
-                </div>
-                <span className={`sourceStatus ${source.status === "verified-doc" ? "verified" : "unresolved"}`}>
-                  {source.status}
-                </span>
+                <div><strong>{source.name}</strong><p className="small muted">{source.role}</p></div>
+                <span className={`sourceStatus ${source.status === "verified-doc" ? "verified" : "unresolved"}`}>{source.status}</span>
               </a>
             ))}
           </div>
@@ -252,8 +280,8 @@ export default function Home() {
           <h2>Evidence becomes queryable memory without losing lineage</h2>
         </div>
         <div className="flow mono">
-          <span>source</span><b>→</b><span>retrieval</span><b>→</b><span>SHA-256 FCO</span><b>→</b>
-          <span>FCG edges</span><b>→</b><span>HydraDB</span><b>→</b><span>answer + provenance</span>
+          <span>source</span><b>→</b><span>evidence</span><b>→</b><span>atom</span><b>→</b>
+          <span>Seed of Truth</span><b>→</b><span>temporal state</span><b>→</b><span>HydraDB query</span>
         </div>
       </section>
     </main>
