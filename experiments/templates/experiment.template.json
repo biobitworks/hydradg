@@ -1,0 +1,40 @@
+{
+  "schema": "hydradg.experiment.v0.1",
+  "experiment_id": "EXP-NNN",
+  "title": "",
+  "status": "PLANNED",
+  "question": "",
+  "hypothesis": "",
+  "public_source_ids": [],
+  "license_evidence_ids": [],
+  "input_objects": [],
+  "code": {
+    "repository": "biobitworks/hydradg",
+    "branch": "hack-hydra/webapp-mvp-20260818",
+    "commit": "UNPINNED"
+  },
+  "runner": "run.py",
+  "notebook": "notebook.ipynb",
+  "lab_note": "LAB_NOTE.md",
+  "execution": {
+    "human_operators": [],
+    "agent_session_ids": [],
+    "model_invocations": [],
+    "tool_actions": []
+  },
+  "step_classes": {
+    "deterministic": [],
+    "probabilistic": []
+  },
+  "expected_outputs": [],
+  "claim_ceiling": "PROPOSED_UNTIL_EXECUTED",
+  "parent_experiments": [],
+  "receipts": [],
+  "red_team_checks": [],
+  "custody": {
+    "object_hashes_required": true,
+    "signature_state": "NOT_EXECUTED",
+    "merkle_mmr_state": "NOT_EXECUTED",
+    "independent_verification": "NOT_EXECUTED"
+  }
+}
