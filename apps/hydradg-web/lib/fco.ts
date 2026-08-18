@@ -40,3 +40,17 @@ export function makeFcoNode(
     payload,
   };
 }
+
+/**
+ * HydraDB's native vertex identity is a u64. FCO identity remains the complete
+ * SHA-256 string; this helper derives a deterministic 52-bit traversal key that
+ * stays exactly representable as a JavaScript number. The canonical fco_id and
+ * object_sha256 are always stored as properties and remain the custody identity.
+ *
+ * This is an addressing adapter, not a cryptographic identity replacement.
+ */
+export function hydraNumericId(stableId: string): number {
+  const digest = /^[a-z]+:([0-9a-f]{64})$/i.exec(stableId)?.[1] || sha256Text(stableId);
+  const value = Number.parseInt(digest.slice(0, 13), 16); // 52 bits, JS-safe integer
+  return value === 0 ? 1 : value;
+}
