@@ -31,20 +31,29 @@ log(){ printf '[%3s%%] %s\n' "$1" "$2"; }
 fail(){ echo "FAIL=$1"; exit "${2:-1}"; }
 
 # Fail before touching Git state if the requested role does not match the machine.
-# ComputerName is preferred on macOS; hostname is the portable fallback.
-HOST_LABEL="$(scutil --get ComputerName 2>/dev/null || hostname)"
-HOST_LOWER="$(printf '%s' "$HOST_LABEL" | tr '[:upper:]' '[:lower:]')"
+# macOS ComputerName is user-facing and may remain e.g. "Byron's MacBook Pro",
+# while hostname/LocalHostName carries the actual machine role. Accept a match in
+# any declared host identity rather than trusting ComputerName alone.
+COMPUTER_NAME="$(scutil --get ComputerName 2>/dev/null || true)"
+LOCAL_HOST_NAME="$(scutil --get LocalHostName 2>/dev/null || true)"
+HOSTNAME_VALUE="$(hostname 2>/dev/null || true)"
+HOST_IDENTITIES="${COMPUTER_NAME} ${LOCAL_HOST_NAME} ${HOSTNAME_VALUE}"
+HOST_LOWER="$(printf '%s' "$HOST_IDENTITIES" | tr '[:upper:]' '[:lower:]')"
 case "$ROLE:$HOST_LOWER" in
   studio:*magicstudiobox*|pro:*magicprobox*) ;;
   *)
-    echo "HOST=$HOST_LABEL"
+    echo "COMPUTER_NAME=$COMPUTER_NAME"
+    echo "LOCAL_HOST_NAME=$LOCAL_HOST_NAME"
+    echo "HOSTNAME=$HOSTNAME_VALUE"
     echo "REQUESTED_ROLE=$ROLE"
-    echo "Expected: role=studio on magicSTUDIObox; role=pro on magicPRObox."
+    echo "Expected one host identity to contain magicSTUDIObox for role=studio or magicPRObox for role=pro."
     fail "ROLE_HOST_MISMATCH" 3
     ;;
 esac
 
-echo "HOST=$HOST_LABEL"
+echo "COMPUTER_NAME=$COMPUTER_NAME"
+echo "LOCAL_HOST_NAME=$LOCAL_HOST_NAME"
+echo "HOSTNAME=$HOSTNAME_VALUE"
 echo "ROLE=$ROLE"
 
 require(){ command -v "$1" >/dev/null 2>&1 || fail "MISSING_$1" 10; }
