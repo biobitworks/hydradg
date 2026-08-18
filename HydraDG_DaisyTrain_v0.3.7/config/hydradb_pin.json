@@ -1,0 +1,14 @@
+{
+  "schema": "hydradg.hydradb_pin.v1",
+  "repository": "hydra-db/hydradb",
+  "commit_sha": "6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
+  "build_command": "just native-check; just smoke; PYTHON=<venv>/bin/python bash scripts/runtime_smoke.sh",
+  "client_or_api": "HydraDB official runtime smoke: Bolt 5.x + HTTP OpenCypher API",
+  "schema_mapping_version": "hydradg-fco-fcg-v0.3.1",
+  "runtime": {
+    "rustc": "rustc 1.97.1 (8bab26f4f 2026-07-14)",
+    "cargo": "cargo 1.97.1 (c980f4866 2026-06-30)",
+    "just": "just 1.58.0"
+  },
+  "status": "PINNED_AND_LOCAL_RUNTIME_SMOKE_VERIFIED"
+}

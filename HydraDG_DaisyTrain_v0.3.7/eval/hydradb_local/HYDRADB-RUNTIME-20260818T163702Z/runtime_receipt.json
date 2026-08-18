@@ -1,0 +1,16 @@
+{
+  "schema": "hydradg.hydradb_runtime_receipt.v1",
+  "timestamp_utc": "2026-08-18T16:42:04Z",
+  "hydradb_commit": "6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
+  "execution_class": "LOCAL_RECOMPUTED",
+  "native_check": "PASS",
+  "storage_smoke": "PASS",
+  "runtime_smoke": "PASS",
+  "runtime_smoke_scope": "official HydraDB harness exercising Bolt and HTTP with a round-tripped graph operation",
+  "native_check_log_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "storage_smoke_log_sha256": "338d996b25d99bafef837593a43d5218c1cf4f28d582ed720c168ffc65634d1f",
+  "runtime_smoke_log_sha256": "80f12f3b32686a79c8ca4e8f09b50e31097735585a1ac00e6ef7c56209b234e7",
+  "claim_ceiling": "LOCAL_HYDRADB_RUNTIME_SMOKE_VERIFIED_ONLY",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_MERKLE_COMMITTED"
+}
