@@ -22,9 +22,7 @@ async function runHydraDbHttp(
   const namespace = process.env.HYDRADB_GRAPH_NAMESPACE || "default";
   const cellId = process.env.HYDRADB_CELL_ID || "cell-0";
 
-  if (!baseUrl || !token) {
-    throw new Error("HydraDB HTTP backend is not configured");
-  }
+  if (!baseUrl || !token) throw new Error("HydraDB HTTP backend is not configured");
 
   const response = await fetch(`${baseUrl}/v1/graphs/${encodeURIComponent(graphId)}/query`, {
     method: "POST",
@@ -33,12 +31,7 @@ async function runHydraDbHttp(
       "Content-Type": "application/json",
       "X-Graph-Namespace": namespace,
     },
-    body: JSON.stringify({
-      cell_id: cellId,
-      query,
-      parameters,
-      page_size: 256,
-    }),
+    body: JSON.stringify({ cell_id: cellId, query, parameters, page_size: 256 }),
     cache: "no-store",
   });
 
@@ -47,10 +40,7 @@ async function runHydraDbHttp(
     rows?: unknown[][];
     error?: { code?: string; message?: string };
   };
-
-  if (!response.ok) {
-    throw new Error(body.error?.message || `HydraDB query failed (${response.status})`);
-  }
+  if (!response.ok) throw new Error(body.error?.message || `HydraDB query failed (${response.status})`);
 
   const columns = body.columns || [];
   return (body.rows || []).map((row) =>
@@ -76,18 +66,12 @@ function normalizeNeo4j(value: unknown): unknown {
   return value;
 }
 
-async function runNeo4j(
-  query: string,
-  parameters: GraphParameters,
-): Promise<GraphRow[]> {
+async function runNeo4j(query: string, parameters: GraphParameters): Promise<GraphRow[]> {
   const uri = process.env.NEO4J_URI;
   const username = process.env.NEO4J_USERNAME;
   const password = process.env.NEO4J_PASSWORD;
   const database = process.env.NEO4J_DATABASE || undefined;
-
-  if (!uri || !username || !password) {
-    throw new Error("Neo4j backend is not configured");
-  }
+  if (!uri || !username || !password) throw new Error("Neo4j backend is not configured");
 
   const neo4j = await import("neo4j-driver");
   const driver = neo4j.default.driver(uri, neo4j.default.auth.basic(username, password));
@@ -112,23 +96,17 @@ export function graphConfigured(): boolean {
   return Boolean(process.env.HYDRADB_HTTP_URL && process.env.HYDRADB_AUTH_TOKEN);
 }
 
-export async function runGraph(
-  query: string,
-  parameters: GraphParameters = {},
-): Promise<GraphRow[]> {
-  return graphBackend() === "neo4j"
-    ? runNeo4j(query, parameters)
-    : runHydraDbHttp(query, parameters);
+export async function runGraph(query: string, parameters: GraphParameters = {}): Promise<GraphRow[]> {
+  return graphBackend() === "neo4j" ? runNeo4j(query, parameters) : runHydraDbHttp(query, parameters);
 }
 
 export async function probeGraph(): Promise<{ ok: boolean; error?: string }> {
   if (!graphConfigured()) return { ok: false, error: "not configured" };
   try {
     if (graphBackend() === "hydradb-http") {
-      // HydraDB deliberately implements a bounded OpenCypher subset. A count
-      // query is valid against an empty graph and avoids assuming literal-only
-      // RETURN support.
-      await runGraph("MATCH (n) RETURN count(*) AS node_count");
+      // HydraDB requires a node-only MATCH to carry an id, label, or property
+      // predicate. A labeled read is valid even when no such node exists.
+      await runGraph("MATCH (n:HydraDGHealth) RETURN n.id AS id LIMIT 1");
     } else {
       await runGraph("RETURN 1 AS ok");
     }
