@@ -30,13 +30,25 @@ echo "ARCH=$(uname -m)"
 
 echo
 echo "=== HOMEBREW ==="
-if ! command -v brew >/dev/null 2>&1; then
+# Non-login SSH shells on Apple Silicon may not inherit /opt/homebrew/bin.
+# Detect the supported Homebrew prefix explicitly and activate shellenv before
+# auditing command availability.
+if command -v brew >/dev/null 2>&1; then
+  BREW_BIN="$(command -v brew)"
+elif [ -x /opt/homebrew/bin/brew ]; then
+  BREW_BIN=/opt/homebrew/bin/brew
+elif [ -x /usr/local/bin/brew ]; then
+  BREW_BIN=/usr/local/bin/brew
+else
   echo "BREW=MISS"
-  echo "ACTION=Install Homebrew interactively on magicSTUDIObox, then rerun this audit."
+  echo "ACTION=Install Homebrew on magicSTUDIObox, then rerun this audit."
   exit 20
 fi
+
+eval "$($BREW_BIN shellenv)"
 BREW_PREFIX="$(brew --prefix)"
 echo "BREW=PASS"
+echo "BREW_BIN=$(command -v brew)"
 echo "BREW_PREFIX=$BREW_PREFIX"
 brew --version | head -n1
 
@@ -95,7 +107,7 @@ fi
 if [ "$INSTALL" = "1" ]; then
   if [ -n "${MISSING_FORMULAE// /}" ]; then
     echo
-echo "=== INSTALL MISSING FORMULAE ==="
+    echo "=== INSTALL MISSING FORMULAE ==="
     # shellcheck disable=SC2086
     brew install $MISSING_FORMULAE
   else
@@ -114,7 +126,7 @@ if command -v gh >/dev/null 2>&1; then
     echo "GH_AUTH=PASS"
   else
     echo "GH_AUTH=MISS_OR_EXPIRED"
-    echo "ACTION_FROM_MAGICPRO=ssh -t magicstudiobox 'gh auth login --hostname github.com --git-protocol https --web && gh auth setup-git'"
+    echo "ACTION_FROM_MAGICPRO=ssh -t magicstudiobox 'eval \"$(/opt/homebrew/bin/brew shellenv)\"; gh auth login --hostname github.com --git-protocol https --web && gh auth setup-git'"
   fi
 fi
 
