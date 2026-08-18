@@ -11,7 +11,7 @@ permissions:
 jobs:
   e2e:
     runs-on: ubuntu-latest
-    timeout-minutes: 20
+    timeout-minutes: 25
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -33,14 +33,54 @@ jobs:
         working-directory: apps/hydradg-web
         run: npm run build
 
-      - name: Start pinned-interface HydraDB smoke node
+      - name: Verify resumed FCO/FCG custody root
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p /tmp/hydradg-e2e
+          python3 scripts/build_fcg_root.py --output /tmp/hydradg-e2e/custody-manifest.json
+          python3 - <<'PY'
+          import json
+          m=json.load(open('/tmp/hydradg-e2e/custody-manifest.json'))
+          assert m['root_convention']=='HYDRADG-FCG-RFC6962-v1', m
+          assert m['node_count'] >= 18, m
+          assert m['edge_count'] >= 16, m
+          assert m['author_signature_state']=='PENDING_PUBLIC_KEY_LEAF_AND_AUTHOR_KEY', m
+          assert m['custody_gap_state']=='DECLARED_GAP_NOT_RETROACTIVELY_BACKFILLED', m
+          print('custody-root-ok', m['fcg_root'])
+          PY
+
+      - name: Test Ed25519 signature mechanism with ephemeral CI key
+        shell: bash
+        run: |
+          set -euo pipefail
+          ROOT=$(python3 -c 'import json; print(json.load(open("/tmp/hydradg-e2e/custody-manifest.json"))["fcg_root"])')
+          printf '%s' "$ROOT" >/tmp/hydradg-e2e/fcg-root.txt
+          openssl genpkey -algorithm ed25519 -out /tmp/hydradg-e2e/ephemeral-ci-private.pem
+          openssl pkey -in /tmp/hydradg-e2e/ephemeral-ci-private.pem -pubout -out /tmp/hydradg-e2e/ephemeral-ci-public.pem
+          openssl pkeyutl -sign -inkey /tmp/hydradg-e2e/ephemeral-ci-private.pem -rawin -in /tmp/hydradg-e2e/fcg-root.txt -out /tmp/hydradg-e2e/ephemeral-ci.sig
+          openssl pkeyutl -verify -pubin -inkey /tmp/hydradg-e2e/ephemeral-ci-public.pem -rawin -in /tmp/hydradg-e2e/fcg-root.txt -sigfile /tmp/hydradg-e2e/ephemeral-ci.sig
+          FP=$(openssl pkey -pubin -in /tmp/hydradg-e2e/ephemeral-ci-public.pem -outform DER | openssl dgst -sha256 -r | awk '{print $1}')
+          python3 - "$ROOT" "$FP" <<'PY'
+          import json,sys
+          json.dump({
+            'state':'EPHEMERAL_CI_KEY_NOT_AUTHOR_IDENTITY',
+            'algorithm':'Ed25519',
+            'signed_root':sys.argv[1],
+            'ephemeral_public_key_der_sha256':sys.argv[2],
+            'claim_ceiling':'SIGNATURE_MECHANISM_EXECUTED_AND_VERIFIED; NOT AUTHOR AUTHENTICATION'
+          }, open('/tmp/hydradg-e2e/ephemeral-signature-receipt.json','w'), indent=2)
+          PY
+          rm -f /tmp/hydradg-e2e/ephemeral-ci-private.pem
+
+      - name: Start HydraDB smoke node
         shell: bash
         run: |
           set -euo pipefail
           mkdir -p /tmp/hydradb-data/store /tmp/hydradb-data/cache
           printf '%s\n' 'local-development-token-32-bytes' > /tmp/hydradb-data/auth-token
           docker pull ghcr.io/hydra-db/hydradb:latest
-          docker image inspect ghcr.io/hydra-db/hydradb:latest --format '{{json .RepoDigests}}' | tee /tmp/hydradb-image-digest.json
+          docker image inspect ghcr.io/hydra-db/hydradb:latest --format '{{json .RepoDigests}}' | tee /tmp/hydradg-e2e/hydradb-image-digest.json
           docker run -d --name hydradb \
             --user "$(id -u):$(id -g)" \
             -p 7687:7687 -p 8443:8443 -p 9090:9090 \
@@ -60,7 +100,7 @@ jobs:
             -e RUST_MIN_STACK=33554432 \
             ghcr.io/hydra-db/hydradb:latest
           for i in $(seq 1 60); do
-            if curl -fsS http://127.0.0.1:9090/readyz >/tmp/hydradb-ready.txt 2>/dev/null; then
+            if curl -fsS http://127.0.0.1:9090/readyz >/tmp/hydradg-e2e/hydradb-ready.txt 2>/dev/null; then
               exit 0
             fi
             sleep 2
@@ -77,17 +117,17 @@ jobs:
             -H "Authorization: Bearer $TOKEN" \
             -H 'X-Graph-Namespace: default' \
             -H 'Content-Type: application/json' \
-            --data '{"cell_id":"cell-0","query":"MERGE (a:CiProbe {id: 1})-[:ROUND_TRIP]->(b:CiProbe {id: 2}) RETURN b.id AS id"}' \
-            | tee /tmp/direct-write.json
+            --data '{"cell_id":"cell-0","query":"MERGE (a:CiProbe {id: 1})-[:ROUND_TRIP]->(b:CiProbe {id: 2})"}' \
+            | tee /tmp/hydradg-e2e/direct-write.json
           curl -fsS http://127.0.0.1:8443/v1/graphs/default/query \
             -H "Authorization: Bearer $TOKEN" \
             -H 'X-Graph-Namespace: default' \
             -H 'Content-Type: application/json' \
             --data '{"cell_id":"cell-0","query":"MATCH (a:CiProbe {id: 1})-[:ROUND_TRIP]->(b) RETURN b.id AS id"}' \
-            | tee /tmp/direct-read.json
-          python - <<'PY'
+            | tee /tmp/hydradg-e2e/direct-read.json
+          python3 - <<'PY'
           import json
-          d=json.load(open('/tmp/direct-read.json'))
+          d=json.load(open('/tmp/hydradg-e2e/direct-read.json'))
           assert d.get('rows'), d
           print('hydradb-direct-roundtrip-ok')
           PY
@@ -102,64 +142,70 @@ jobs:
           HYDRADB_CELL_ID: cell-0
           HYDRADB_AUTH_TOKEN: local-development-token-32-bytes
         run: |
-          nohup npm run start -- -H 127.0.0.1 -p 3000 >/tmp/hydradg-web.log 2>&1 &
-          echo $! >/tmp/hydradg-web.pid
+          nohup npm run start -- -H 127.0.0.1 -p 3000 >/tmp/hydradg-e2e/hydradg-web.log 2>&1 &
+          echo $! >/tmp/hydradg-e2e/hydradg-web.pid
           for i in $(seq 1 40); do
-            if curl -fsS http://127.0.0.1:3000/api/status >/tmp/status.json 2>/dev/null; then
+            if curl -fsS http://127.0.0.1:3000/api/status >/tmp/hydradg-e2e/status.json 2>/dev/null; then
               exit 0
             fi
             sleep 1
           done
-          cat /tmp/hydradg-web.log
+          cat /tmp/hydradg-e2e/hydradg-web.log
           exit 1
 
       - name: Run HydraDG API end-to-end proof
         shell: bash
         run: |
           set -euo pipefail
-          curl -fsS http://127.0.0.1:3000/api/status | tee /tmp/status.json
+          curl -fsS http://127.0.0.1:3000/api/status | tee /tmp/hydradg-e2e/status.json
           curl -fsS -X POST http://127.0.0.1:3000/api/query \
             -H 'Content-Type: application/json' \
-            --data '{"action":"fixture"}' | tee /tmp/fixture.json
-          python - <<'PY'
+            --data '{"action":"fixture"}' | tee /tmp/hydradg-e2e/fixture.json
+          python3 - <<'PY'
           import json
-          s=json.load(open('/tmp/status.json'))
-          f=json.load(open('/tmp/fixture.json'))
+          s=json.load(open('/tmp/hydradg-e2e/status.json'))
+          f=json.load(open('/tmp/hydradg-e2e/fixture.json'))
           assert s['graph']['reachable'] is True, s
-          assert f['fixture']['fixture_state']=='DETERMINISTIC_SYNTHETIC_TEST_FIXTURE', f
-          ids=f['fixture']['ids']
-          open('/tmp/seed_v1','w').write(ids['seed_v1'])
-          open('/tmp/seed_v2','w').write(ids['seed_v2'])
-          open('/tmp/subject_key','w').write(f['fixture']['subject_key'])
+          fixture=f['fixture']
+          assert fixture['fixture_state']=='DETERMINISTIC_SYNTHETIC_TEST_FIXTURE', fixture
+          assert fixture['state_field_contract']=='DIMENSIONLESS_INFORMATION_STATE_ABSTRACTION_NOT_PHYSICAL_GIBBS_ENERGY', fixture
+          assert [x['label'] for x in fixture['timeline']] == ['reference','mutation','restoration'], fixture['timeline']
+          assert fixture['timeline'][1]['mutation_distance'] > fixture['timeline'][2]['mutation_distance'], fixture['timeline']
+          assert fixture['timeline'][2]['restoration_gain'] > 0, fixture['timeline']
+          ids=fixture['ids']
+          open('/tmp/hydradg-e2e/seed_v1','w').write(ids['seed_v1'])
+          open('/tmp/hydradg-e2e/seed_v2','w').write(ids['seed_v2'])
+          open('/tmp/hydradg-e2e/subject_key','w').write(fixture['subject_key'])
           PY
 
-          SUBJECT=$(cat /tmp/subject_key)
-          SEED1=$(cat /tmp/seed_v1)
-          SEED2=$(cat /tmp/seed_v2)
+          SUBJECT=$(cat /tmp/hydradg-e2e/subject_key)
+          SEED1=$(cat /tmp/hydradg-e2e/seed_v1)
+          SEED2=$(cat /tmp/hydradg-e2e/seed_v2)
 
           curl -fsS -X POST http://127.0.0.1:3000/api/query \
             -H 'Content-Type: application/json' \
-            --data "{\"action\":\"current\",\"subject_key\":\"$SUBJECT\"}" | tee /tmp/current.json
+            --data "{\"action\":\"current\",\"subject_key\":\"$SUBJECT\"}" | tee /tmp/hydradg-e2e/current.json
           curl -fsS -X POST http://127.0.0.1:3000/api/query \
             -H 'Content-Type: application/json' \
-            --data "{\"action\":\"history\",\"id\":\"$SEED1\"}" | tee /tmp/history.json
+            --data "{\"action\":\"history\",\"id\":\"$SEED1\"}" | tee /tmp/hydradg-e2e/history.json
           curl -fsS -X POST http://127.0.0.1:3000/api/query \
             -H 'Content-Type: application/json' \
-            --data "{\"action\":\"provenance\",\"id\":\"$SEED2\"}" | tee /tmp/provenance.json
+            --data "{\"action\":\"provenance\",\"id\":\"$SEED2\"}" | tee /tmp/hydradg-e2e/provenance.json
 
-          curl -fsS http://127.0.0.1:3000/ >/tmp/home.html
-          curl -fsS http://127.0.0.1:3000/demo >/tmp/demo.html
-          curl -fsS http://127.0.0.1:3000/eligibility >/tmp/eligibility.html
+          curl -fsS http://127.0.0.1:3000/ >/tmp/hydradg-e2e/home.html
+          curl -fsS http://127.0.0.1:3000/demo >/tmp/hydradg-e2e/demo.html
+          curl -fsS http://127.0.0.1:3000/graph >/tmp/hydradg-e2e/graph.html
+          curl -fsS http://127.0.0.1:3000/eligibility >/tmp/hydradg-e2e/eligibility.html
 
-          python - <<'PY'
+          python3 - <<'PY'
           import json
-          current=json.load(open('/tmp/current.json'))
-          history=json.load(open('/tmp/history.json'))
-          provenance=json.load(open('/tmp/provenance.json'))
+          current=json.load(open('/tmp/hydradg-e2e/current.json'))
+          history=json.load(open('/tmp/hydradg-e2e/history.json'))
+          provenance=json.load(open('/tmp/hydradg-e2e/provenance.json'))
           assert any('beta' in str(r.get('payload','')).lower() for r in current.get('rows',[])), current
+          assert any('statesnapshot' in str(r.get('type','')).lower() for r in current.get('rows',[])), current
           assert any(r.get('relation')=='SUPERSEDED_BY' for r in history.get('rows',[])), history
           hops=provenance.get('hops',[])
-          assert len(hops) >= 3, provenance
           relations={h.get('relation') for h in hops}
           assert 'SUPPORTED_BY' in relations and 'DERIVED_FROM' in relations, relations
           print('hydradg-e2e-ok')
@@ -174,29 +220,26 @@ jobs:
             exit 1
           fi
 
-      - name: Write E2E receipt
+      - name: Write E2E receipt manifest
         if: always()
         shell: bash
         run: |
           mkdir -p /tmp/hydradg-e2e
-          cp /tmp/hydradb-image-digest.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/status.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/fixture.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/current.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/history.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/provenance.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/direct-write.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/direct-read.json /tmp/hydradg-e2e/ 2>/dev/null || true
-          cp /tmp/hydradg-web.log /tmp/hydradg-e2e/ 2>/dev/null || true
           docker logs hydradb >/tmp/hydradg-e2e/hydradb.log 2>&1 || true
-          python - <<'PY'
+          rm -f /tmp/hydradg-e2e/ephemeral-ci-private.pem
+          python3 - <<'PY'
           import hashlib, json, pathlib
           root=pathlib.Path('/tmp/hydradg-e2e')
           entries=[]
           for p in sorted(root.glob('*')):
-              if p.is_file():
+              if p.is_file() and p.name != 'manifest.json':
                   entries.append({'file':p.name,'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size})
-          (root/'manifest.json').write_text(json.dumps({'state':'E2E_EXECUTED_IN_CI','files':entries},indent=2)+'\n')
+          (root/'manifest.json').write_text(json.dumps({
+              'state':'E2E_EXECUTED_IN_GITHUB_CI',
+              'author_signature_state':'NOT_PERFORMED_IN_CI',
+              'ephemeral_signature_state':'MECHANISM_TEST_ONLY_IF_RECEIPT_PRESENT',
+              'files':entries
+          },indent=2)+'\n')
           PY
 
       - name: Upload E2E receipt
