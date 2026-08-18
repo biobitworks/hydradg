@@ -1,0 +1,13 @@
+wrote /Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/eval/xeno_magicstudiobox/outputs/cafa6_governed_eval_report.json
+split: seed=20260710 heldout_parents=['P08476'] n_heldout=5000 n_train=16352 heldout_frac=0.2342
+grouping_proof: PASS (shared_parents=0)
+AUROC (held-out, admissible) = 0.8591
+Fmax unweighted (held-out)   = 0.8232 @t=0.88
+wFmax (held-out)             = 0.8418 @t=0.88
+CCA canonical correlations (held-out) = [0.9999999950210356, 0.864177190411162, 0.9202101788973582, 0.9694386114351522, 0.008154995807990437]
+Ridge R^2 per-dim (held-out)            = {'residual_z': 1.0, 'track_mean': 1.0, 'track_std': 0.9998, 'frac_track_ge_0.5': 1.0, 'k_len': 1.0}
+Ridge R^2 uniform avg (held-out)       = 1.0000
+⚠ near-collinear reference-dim pairs (|r|>=0.98): [{'dim_a': 'residual_z', 'dim_b': 'track_mean', 'pearson_r': 0.9999999999999987}, {'dim_a': 'residual_z', 'dim_b': 'frac_track_ge_0.5', 'pearson_r': 0.9999999999999987}, {'dim_a': 'track_mean', 'dim_b': 'frac_track_ge_0.5', 'pearson_r': 1.0}]
+  -> a high R^2/canonical-correlation touching these dims is a redundant signal, not independent recoveries. See module docstring CCA/R^2 caveats before citing.
+claim_ceiling: representation/benchmark utility only; HYPOTHESIS_STAGE_1
+pi_audit_status: unaudited — hand to XD governance
