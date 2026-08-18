@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.experiment.v0.1",
+  "experiment_id": "EXP-011",
+  "title": "TRAITS crosswalk for Antigence",
+  "status": "PLANNED",
+  "question": "Can the recovered TRAITS Antigence framework be operationally crosswalked to current cybersecurity, AI risk, assurance, and quantitative-risk frameworks while demonstrating any added local/private-first runtime evidence capabilities without overstating compliance?",
+  "hypothesis": "TRAITS may function as a portable runtime control-evidence profile complementary to existing assurance, risk, management-system, threat-taxonomy, and control frameworks; all claimed gaps require control-by-control evidence.",
+  "traits_source": {
+    "expansion": "Truth-Preserving, Resilient, Adversarially Aware, Immune-Inspired, Traceable, Sovereign",
+    "earliest_recovered_source": "Byron P. Lee conversation, 2026-07-17",
+    "evidence_class": "DIRECT_HUMAN_AUTHORED_PROJECT_DEFINITION_RECOVERED_FROM_PRIOR_CONVERSATION",
+    "public_source_state": "NOT_YET_LOCATED"
+  },
+  "framework_targets": [
+    "AICPA_SOC2_TSC_2017_REVISED_POF_2022",
+    "OPEN_FAIR_ORA_2.0.1_ORT_3.0.1",
+    "FAIR_CRMP_1.0",
+    "NIST_CSF_2.0",
+    "NIST_AI_RMF_1.0",
+    "NIST_AI_600-1_GENAI_PROFILE",
+    "ISO_IEC_42001_2023",
+    "OWASP_AGENTIC_TOP10_2026",
+    "MITRE_ATLAS",
+    "CSA_AICM_1.1"
+  ],
+  "runner": "run.py",
+  "notebook": "notebook.ipynb",
+  "lab_note": "LAB_NOTE.md",
+  "expected_outputs": [
+    "framework_source_registry.json",
+    "traits_crosswalk.jsonl",
+    "gap_matrix.csv",
+    "fair_scenarios.jsonl",
+    "red_team_mapping.jsonl",
+    "cross_stack_portability_results.json"
+  ],
+  "claim_ceiling": "PROPOSED_CROSSWALK_UNTIL_EXECUTED_AND_REVIEWED",
+  "parent_experiments": ["EXP-001", "EXP-008"],
+  "custody": {
+    "object_hashes_required": true,
+    "source_license_citation_required_per_derived_mapping_atom": true,
+    "signature_state": "NOT_EXECUTED",
+    "merkle_mmr_state": "NOT_EXECUTED",
+    "independent_verification": "NOT_EXECUTED"
+  }
+}
