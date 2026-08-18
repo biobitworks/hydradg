@@ -1,6 +1,6 @@
 export type EligibilityState =
   | "EVIDENCE_BUILDING"
-  | "ACTIVE_TESTING"
+  | "CI_BACKEND_VERIFIED"
   | "BLOCKED_PENDING_PUBLICATION"
   | "HUMAN_ATTESTATION_REQUIRED";
 
@@ -46,15 +46,19 @@ export const hackHydraEligibility: EligibilityItem[] = [
   {
     key: "hydradb_requirement",
     label: "Meaningful HydraDB use",
-    state: "ACTIVE_TESTING",
+    state: "CI_BACKEND_VERIFIED",
     evidence: [
-      "pinned hydra-db/hydradb source revision",
+      "pinned hydra-db/hydradb source revision 6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
       "HydraDB HTTP graph adapter",
-      "current/history/provenance query path",
-      "backend write/read/replay tests and receipts once executed",
+      "HydraDB container digest sha256:db78309a233be54662db29744047e985a39b51c45a270d1a1f47c31a62cdb709",
+      "GitHub Actions run 32187451568 / run #28",
+      "direct HydraDB write/read round trip",
+      "HydraDG deterministic fixture admission",
+      "current/history/provenance query proof",
+      "E2E artifact sha256:5c3acbbef4f266f32b1ba59f36d525e326fe04c5e31b9e9b62f52db5087b939b",
     ],
     limitation:
-      "Do not mark verified until the backend graph tests execute against the selected HydraDB runtime and receipts are retained.",
+      "This state means the declared backend path executed successfully in GitHub CI against the recorded HydraDB image. It is not a claim that magicstudiobox, every deployment environment, or every possible graph workload has been verified.",
   },
   {
     key: "link_accessibility",
@@ -66,16 +70,13 @@ export const hackHydraEligibility: EligibilityItem[] = [
       "optional deployed app off-session accessibility check",
     ],
     limitation:
-      "The repository is not yet public and the final video does not yet exist, so this confirmation is intentionally blocked.",
+      "The repository has not yet been independently rechecked as public and the final video does not yet exist, so this confirmation remains blocked.",
   },
   {
     key: "one_submission_rule",
     label: "One submission per team member",
     state: "HUMAN_ATTESTATION_REQUIRED",
-    evidence: [
-      "hashed final team roster",
-      "submission-candidate receipt",
-    ],
+    evidence: ["hashed final team roster", "submission-candidate receipt"],
     limitation:
       "HydraDG cannot independently observe every hackathon submission by each person; this remains a human/team attestation.",
   },
