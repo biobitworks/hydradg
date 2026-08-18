@@ -13,19 +13,28 @@ For HydraDG/Antigence implementation work, TRAITS is:
 - **Transparent**
 - **Secure**
 
-This definition was directly supplied by Byron P. Lee in the project conversation on 2026-08-18.
+## Earliest recovered repository evidence
 
-## Historical provenance boundary
+The earliest repository evidence currently recovered and directly verified is:
 
-Byron states that TRAITS originated earlier in the ImmunOS project, before the current FCO/FCG hashing and custody workflow.
+- Repository: `biobitworks/antigence`
+- Commit: `7d0c2e929d4bd8fc0bf6620d60f9245ae8cd083d`
+- Commit message: `Accelerate AIS with PyTorch backend and parallelize B-Cell recognition`
+- Commit date context: January 2026
+- Evidence in diff: the Antigence README was changed to state that the platform enforces **TRAITS (Traceable, Rigorous, Accurate, Interpretable, Transparent, Secure)**.
+- Commit also records Antigence security-review and model/agent metadata, including Claude Sonnet 4.5 attribution for the development session.
 
-Therefore:
+This is stronger historical evidence than the later 2026-08-18 conversation correction because it is repository-versioned and predates the current HydraDG work.
 
-1. The current six-term definition above is accepted as direct human-supplied project evidence.
-2. It is **not** currently claimed to be cryptographically proven as the earliest historical wording.
-3. The private `biobitworks/immunos` repository may be used for chronology/source recovery, but it is not an admissible public source atom for the HydraDG publication path while it remains private.
-4. Historical-origin claims require a matching public preprint or public GitHub artifact before promotion under the MVP admission policy.
-5. The earlier AI-generated expansion `Truth-Preserving, Resilient, Adversarially Aware, Immune-Inspired, Traceable, Sovereign` is superseded and must not be represented as the original TRAITS definition.
+## Public-source claim ceiling
+
+`biobitworks/antigence` is currently private. Therefore:
+
+1. The commit above is accepted as an **internal historical provenance anchor**.
+2. It is **not yet an admissible public-source atom** for the HydraDG publication path under the current rule requiring a public preprint or public GitHub source.
+3. If the exact commit becomes publicly accessible, or the same historical definition is published in a public preprint/public GitHub artifact with compatible rights metadata, the source registry may promote it after visibility and license verification.
+4. We do not claim that this commit is cryptographically proven to be the first-ever human formulation of TRAITS; it is the earliest repository evidence recovered so far.
+5. The earlier AI-generated expansion `Truth-Preserving, Resilient, Adversarially Aware, Immune-Inspired, Traceable, Sovereign` is superseded and must not be represented as the historical TRAITS definition.
 
 ## Crosswalk hypothesis to test
 
@@ -48,7 +57,8 @@ Each crosswalk atom must record at minimum:
 - external framework/control identifier;
 - public source URL;
 - source version/date;
-- license/rights evidence;
+- upstream license/rights evidence;
+- project-output license state;
 - source locator;
 - atom text or normalized mapping statement;
 - human author/source authorship;
