@@ -124,7 +124,14 @@ export async function runGraph(
 export async function probeGraph(): Promise<{ ok: boolean; error?: string }> {
   if (!graphConfigured()) return { ok: false, error: "not configured" };
   try {
-    await runGraph("RETURN 1 AS ok");
+    if (graphBackend() === "hydradb-http") {
+      // HydraDB deliberately implements a bounded OpenCypher subset. A count
+      // query is valid against an empty graph and avoids assuming literal-only
+      // RETURN support.
+      await runGraph("MATCH (n) RETURN count(*) AS node_count");
+    } else {
+      await runGraph("RETURN 1 AS ok");
+    }
     return { ok: true };
   } catch (error) {
     return { ok: false, error: error instanceof Error ? error.message : String(error) };
