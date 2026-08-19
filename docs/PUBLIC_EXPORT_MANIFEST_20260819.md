@@ -17,15 +17,11 @@ new Git history created after Aug 12
 
 ## Why a fresh export is required
 
-The private working repository contains a large Aug-18 snapshot of broader Byron/FCO/FCG project material. A post-Aug-12 commit timestamp does not prove every participant-authored byte in that snapshot was written during the Hack Hydra window.
+The private working repository contains broader Byron/FCO/FCG project material whose content-origin dates are not all established by the Hack Hydra release evidence. A post-Aug-12 commit timestamp does not prove every participant-authored byte in that history was written during the event window.
 
-The official rule says participant project work starts on/after Aug 12 and that nothing participant-authored before then can go into the submission. Pre-existing upstream libraries, templates, infrastructure and public datasets are permitted when attributed.
-
-Therefore the private repository itself must **not** simply be made public for submission.
+The public submission therefore uses an explicit fresh-history export instead of making the private working repository public.
 
 ## Allowed top-level publication objects
-
-The export builder copies only:
 
 ### Project/release documentation
 - `README.md`
@@ -33,42 +29,42 @@ The export builder copies only:
 - `THIRD_PARTY_NOTICES.md`
 - `docs/HACK_HYDRA_ELIGIBILITY_AUDIT_20260819.md`
 - `docs/PUBLIC_EXPORT_MANIFEST_20260819.md`
+- `docs/PROJECT_FCG_UPDATE_20260819.md`
+- `docs/PROJECT_FCG_CHANGELOG_20260819.json`
+- `docs/WHY_FCG_UPDATED_20260819.md`
+- `docs/KNOWLEDGE_LINK_CONTRACT_20260819.md`
+- `docs/WEBSITE_MVP_AND_FALLBACK_20260819.md`
+- `docs/LIVE_AND_STATIC_RELEASE_POLICY_20260819.md`
+- `docs/MVP_RELEASE_DELIVERABLES_20260819.md`
+- `docs/VIDEO_RECORDING_RUNBOOK_20260819.md`
+- `docs/TURN_HASHING_POLICY_20260819.md`
+- `docs/HASHING_PROOF_20260819.md`
+- `docs/HASH_PROOF_CURRENT_PASS_20260819.md`
+- `docs/CONTEXT_ICEBERG_4D_RELEASE_WATCH_20260819.md`
+- `schemas/context_iceberg_state.schema.json`
 - `handoff/SUBMISSION_TASKS_20260819.md`
 - `handoff/RELEASE_EXECUTION_LEDGER_20260819.md`
 
 ### Web application — Hack-Hydra implementation
 - `apps/hydradg-web/`
 
-This contains the Judge Lab, site-level FCO/FCG representation, Track 01/02/03 pages, graph explorer, evidence/eligibility pages, and fail-closed local/hosted adapters developed during the Hack Hydra work window.
+This contains the judge surface, Context Iceberg, site-level FCO/FCG representation, Track 01/02/03 pages, graph explorer, evidence/eligibility pages, static fallback and fail-closed local/hosted adapters developed for the Hack Hydra release.
 
 ### Track 01/02/03 implementation substrate
-Only the explicit `HydraDG_DaisyTrain_v0.3.7` files below:
-
-- `BEST_USE_MAGICSTUDIO.md`
-- `docs/DATASETS_TRACK01_TRACK03.md`
-- `eval/best_use_reference/HYDRADB_CI_FAILURE_20260819.md`
-- `eval/best_use_reference/REFERENCE_SMOKE80_20260818.md`
-- `scripts/analyze_best_use_ablation.py`
-- `scripts/best_use_local_server.py`
-- `scripts/best_use_local_server_hackhydra.py`
-- `scripts/best_use_magicstudio.sh`
-- `scripts/best_use_structural_suite.py`
-- `scripts/best_use_typed_graph.py`
-- `scripts/bootstrap_best_use_magicstudio.sh`
-- `scripts/pull_track01_track03_datasets.sh`
-- `scripts/run_best_use_longmemeval.py`
-- `scripts/run_best_use_typed_longmemeval.py`
-- `scripts/run_submission_daisy_track03.sh`
-- `scripts/run_track03_live_golden_path.py`
-- `scripts/track01_hydraontology_canary.py`
-- `scripts/track02_hydrablast_canary.py`
+Only the explicit `HydraDG_DaisyTrain_v0.3.7` files selected by `scripts/build_hackhydra_public_export.sh`.
 
 ### Release verification / public-boundary tooling
 - `scripts/check_hydradg_web_links.py`
+- `scripts/check_static_fallback.py`
+- `scripts/check_term_knowledge_coverage.py`
+- `scripts/hash_release_artifacts.py`
+- `scripts/run_release_watch_parallel_safe.sh`
+- `scripts/video_ready_gate.sh`
+- `scripts/start_video_demo.sh`
 - `scripts/run_hackhydra_release_batches_magicstudio.sh`
 - `scripts/build_hackhydra_public_export.sh`
 
-These are Hack-Hydra-specific release tools. The batch runner creates local execution receipts; the export builder creates a fresh-history public tree but does not itself publish it.
+The video scripts are release/presentation tooling only. `video_ready_gate.sh` is non-mutating with respect to HydraDB/SeedGraph/scientific treatments; it validates the current web build, routes, Context Iceberg contract and secret scan. `start_video_demo.sh` starts the built local application when available and otherwise serves the static fallback with an explicit fallback claim note.
 
 ### CI recipes
 - `.github/workflows/hackhydra-best-use-v2-structural.yml`
@@ -76,53 +72,44 @@ These are Hack-Hydra-specific release tools. The batch runner creates local exec
 - `.github/workflows/hackhydra-track01-canary.yml`
 - `.github/workflows/hackhydra-track02-canary.yml`
 
-The older `hackhydra-best-use-smoke80.yml` is excluded from the public release allowlist because the final release should expose the current structural and track-specific gates, not obsolete trigger experiments.
-
 ## Explicit exclusions
 
 The export must not include:
-
-- historical `HydraDG_DaisyTrain_v0.3.1`, `.3.3`, `.3.4`, `.3.6` package trees;
-- historical `HydraDG_HackHydra_Plan_*` snapshots;
-- Vithia/Pythia implementation packages;
-- XenoDisorder implementation packages;
-- Fractal Waves/ECA implementation packages;
-- old FCO/FCG implementation packages not freshly implemented for Hack Hydra;
-- `custody/` history from unrelated/pre-hackathon work;
+- historical package trees not admitted by the export transform;
+- unrelated/pre-hackathon implementation packages;
+- unrelated custody history;
 - local datasets or model weights;
-- `.env*` other than the reviewed `.env.example` in the web app;
-- private keys, bearer tokens, credentials, secret reports containing matched secret text;
+- `.env*` other than reviewed `.env.example` files;
+- private keys, bearer tokens, credentials or unredacted secret reports;
 - `.git` history from the private working repository;
-- user-supplied COMPUTE template source archive itself unless its redistribution terms are separately established. The template is attributed as an input/reference; HydraDG's adapted implementation is what is exported.
+- user-supplied template archives unless redistribution rights are separately established.
 
 ## Data policy
 
-Public data **identifiers and acquisition recipes** are included. Large dataset bytes remain outside Git by default.
-
-Current executed data state:
-- LongMemEval-S: executed and hash-identified.
-- EnterpriseRAG-Bench: upstream source confirmed, local pull receipt pending.
-- HERB: upstream source confirmed, local pull receipt pending; CC-BY-NC-4.0.
-- LongMemEval-V2: upstream source confirmed, local pull receipt pending.
-- BEAM: upstream source confirmed, local pull receipt pending.
+Public data identifiers, hashes, revisions and acquisition recipes may be included. Large dataset bytes remain outside Git by default. License/use restrictions remain dataset-specific and must not be silently erased by the public export.
 
 ## Publication gates
 
-The builder must fail closed unless:
-
+The builder fails closed unless:
 1. source branch is the explicit Hack Hydra release branch;
 2. source worktree is clean;
 3. every allowlisted path exists;
-4. no unexpected `.git`, secret, private-key, model-weight, or dataset payload enters the export;
-5. Gitleaks passes if installed; otherwise publication remains `SECRET_SCAN_REQUIRES_GITLEAKS`;
+4. no unexpected `.git`, secret, private-key, model-weight or dataset payload enters the export;
+5. Gitleaks passes;
 6. no ordinary Git file exceeds the project release size gate;
 7. fresh repository history is initialized in the export directory;
-8. final human review confirms content-origin eligibility before `gh repo create --public`.
+8. final human review confirms content-origin eligibility before public repository creation.
+
+## Video boundary
+
+A local video may be recorded before Vercel is current if `VIDEO_READY_LIVE=YES` is established by the non-mutating video gate. If only the static fallback is used, the recording must explicitly describe it as an offline presentation fallback rather than a live HydraDB control surface.
+
+The video gate establishes build/route/security/presentation readiness only. It does not promote scientific claims, establish a signature, or establish a project Merkle/MMR commitment.
 
 ## Claim boundary
 
-A fresh-history export removes private-history contamination from the public submission surface. It does **not** independently prove the creation date or originality of every source line. The content-origin review remains a human/custody admission gate.
+A fresh-history export removes private-history contamination from the public submission surface. It does **not** independently prove the creation date or originality of every source line. Final content-origin admission remains a human/custody gate.
 
 State:
 
-`PUBLIC_EXPORT_POLICY_DEFINED / FRESH_HISTORY_REQUIRED / CONTENT_ORIGIN_FINAL_REVIEW_REQUIRED / NOT_SIGNED / NOT_MERKLE_COMMITTED`
+`PUBLIC_EXPORT_POLICY_DEFINED / FRESH_HISTORY_REQUIRED / VIDEO_GATE_DEFINED / CONTENT_ORIGIN_FINAL_REVIEW_REQUIRED / NOT_SIGNED / NOT_PROJECT_COMMITTED`
