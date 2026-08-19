@@ -75,7 +75,7 @@ prepare_hydradb() {
   [[ "$(git -C "$HYDRA_SRC" rev-parse HEAD)" == "$HYDRADB_PIN" ]] || fail "HydraDB pin mismatch"
   if [[ ! -x "$HYDRA_SRC/target/debug/graph-node" ]]; then
     say "[hydradb] first build; this compiles the pinned Rust server"
-    (cd "$HYDRA_SRC" && cargo build --locked --features server-runtime --bin graph-node)
+    (cd "$HYDRA_SRC" && env BINDGEN_EXTRA_CLANG_ARGS="-I/opt/homebrew/include" CPATH="/opt/homebrew/include" LIBRARY_PATH="/opt/homebrew/lib" cargo build --locked --features server-runtime --bin graph-node)
   fi
 }
 
@@ -110,8 +110,9 @@ start_hydra() {
       GRAPH_CELL_ID=cell-0 \
       GRAPH_CELLS=cell-0 \
       GRAPH_NODE_ID=node-0 \
-      GRAPH_BOLT_NODE_ADDRESSES=node-0=127.0.0.1:7687 \
-      GRAPH_ADVERTISED_BOLT_ADDR=127.0.0.1:7687 \
+      GRAPH_BOLT_ADDR=127.0.0.1:17687 \
+      GRAPH_BOLT_NODE_ADDRESSES=node-0=127.0.0.1:17687 \
+      GRAPH_ADVERTISED_BOLT_ADDR=127.0.0.1:17687 \
       GRAPH_DATA_CACHE_DIR="$CACHE" \
       GRAPH_AUTH_TOKEN_FILE="$AUTH" \
       GRAPH_ALLOW_PLAINTEXT=true \

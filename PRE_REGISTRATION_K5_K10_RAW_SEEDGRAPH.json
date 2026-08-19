@@ -1,0 +1,54 @@
+{
+  "registration_version": "1.0",
+  "experiment_name": "LongMemEval_2x2_RAW_vs_SeedGraph_K5_K10_Matrix",
+  "timestamp_utc": "2026-08-19T10:38:00Z",
+  "provenance": {
+    "hydradg_commit": "0d409c5c34f8ecb772780f95be74ef9ea59879e6",
+    "seedgraph_target_commit": "6807b1960dd1e981afbf13e79c2f29c3d803b79a",
+    "seedgraph_active_commit": "bb8e0b6845444d7c7d58524e9c61cdf6031ac53e",
+    "raw_dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+    "raw_dataset_bytes": 277383467,
+    "scientific_dataset_root": "8ef33ff9c7ad9cb1e2fa7c142677be06922f3ab9ecc30c9972d8b8fd764070e8",
+    "hydradb_bootstrap": "pinned_local_http"
+  },
+  "matrix_design": {
+    "dimensions": {
+      "representation": ["RAW", "SeedGraph_FCO_FCG"],
+      "k_depth": [5, 10]
+    },
+    "replicates_per_cell": 3,
+    "cells": [
+      "RAW_K5_R1", "RAW_K5_R2", "RAW_K5_R3",
+      "RAW_K10_R1", "RAW_K10_R2", "RAW_K10_R3",
+      "SG_K5_R1", "SG_K5_R2", "SG_K5_R3",
+      "SG_K10_R1", "SG_K10_R2", "SG_K10_R3"
+    ]
+  },
+  "representation_definitions": {
+    "RAW": {
+      "description": "Exact LongMemEval bytes without semantic extraction (extractor=none)",
+      "semantic_facts_added": false
+    },
+    "SeedGraph_FCO_FCG": {
+      "description": "Canonical SeedGraph governed intake/ingestion with explicit FCO/FCG provenance link DERIVED_FROM source session",
+      "semantic_facts_added": true
+    }
+  },
+  "null_hypotheses": {
+    "H0_rep": "Canonical scientific payload R1 = R2 = R3 within each cell (exact SHA-256 equality).",
+    "H0_representation_k": "M(SG, k) - M(RAW, k) = 0",
+    "H0_advantage_k": "M(SG, k) - M(RAW, k) <= 0",
+    "H0_K_rep": "M(rep, K10) - M(rep, K5) <= 0",
+    "H0_interaction": "[SG_K10 - RAW_K10] - [SG_K5 - RAW_K5] = 0"
+  },
+  "metrics": {
+    "primary": ["hit@k", "mean_session_recall@k"],
+    "secondary_mechanistic": ["evidence_path_coverage", "retrieval_reason_composition", "question_type_effects"],
+    "operational": ["latency_ms"]
+  },
+  "rules": {
+    "abstention_rule": "30 benchmark abstentions emitted but excluded from retrieval scoring (470 total retrieval-scored).",
+    "stopping_rule": "If replicate canonical scientific payload SHA-256 hashes differ within any cell, HALT execution, locate earliest divergent dependency, record DIVERGED_AT FCG relation.",
+    "claim_ceiling": "RETRIEVAL_SCORED_ABLATION_ONLY (not QA accuracy until frozen reader evaluated)."
+  }
+}
