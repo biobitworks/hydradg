@@ -14,6 +14,8 @@ RUNTIME="${BEST_USE_RUNTIME:-$HOME/.local/share/hydradg-best-use}"
 EVALDIR="$RUNTIME/eval/submission_track03"
 RECEIPTDIR="$RUNTIME/receipts"
 DATA="$RUNTIME/data/longmemeval_s_cleaned.json"
+REPO_DATA_REL="HydraDG_DaisyTrain_v0.3.6/data/longmemeval_s_cleaned.json"
+REPO_DATA="$REPO/$REPO_DATA_REL"
 AUTH="$RUNTIME/hydradb-auth-token"
 EXTRACTOR="${BEST_USE_EXTRACTOR:-heuristic}"
 K="${BEST_USE_K:-5}"
@@ -24,8 +26,9 @@ OUT="$EVALDIR/longmemeval_full500_k${K}_${EXTRACTOR}.jsonl"
 STATS="$EVALDIR/longmemeval_full500_k${K}_${EXTRACTOR}_stats.json"
 RECEIPT="$RECEIPTDIR/submission_track03_full500_receipt.json"
 LOG="$EVALDIR/submission_track03.log"
+EXPECTED_SHA="d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
 
-mkdir -p "$EVALDIR" "$RECEIPTDIR"
+mkdir -p "$EVALDIR" "$RECEIPTDIR" "$RUNTIME/data"
 
 say() { printf '%s\n' "$*" | tee -a "$LOG"; }
 fail() { printf 'ERROR: %s\n' "$*" | tee -a "$LOG" >&2; exit 1; }
@@ -42,6 +45,33 @@ PY
   fi
 }
 
+hydrate_full_data() {
+  if [[ -s "$DATA" ]] && [[ "$(sha256_file "$DATA")" == "$EXPECTED_SHA" ]]; then
+    say "[daisy] full500 data already hydrated: $DATA"
+    return 0
+  fi
+
+  [[ -f "$REPO_DATA" ]] || fail "pinned LongMemEval LFS path missing: $REPO_DATA"
+
+  if head -n 1 "$REPO_DATA" 2>/dev/null | grep -q '^version https://git-lfs.github.com/spec/v1'; then
+    have git || fail "git required to hydrate LongMemEval LFS object"
+    have git-lfs || have git || true
+    say "[daisy] hydrating LongMemEval full500 from Git LFS"
+    git -C "$REPO" lfs pull --include="$REPO_DATA_REL" --exclude="" 2>&1 | tee -a "$LOG"
+  fi
+
+  [[ -s "$REPO_DATA" ]] || fail "LongMemEval repository source is empty after LFS hydration"
+  REPO_SHA="$(sha256_file "$REPO_DATA")"
+  [[ "$REPO_SHA" == "$EXPECTED_SHA" ]] || fail "repository LongMemEval SHA mismatch after hydration: $REPO_SHA"
+
+  TMP="$DATA.tmp.$$"
+  cp "$REPO_DATA" "$TMP"
+  mv "$TMP" "$DATA"
+  DATA_SHA="$(sha256_file "$DATA")"
+  [[ "$DATA_SHA" == "$EXPECTED_SHA" ]] || fail "runtime LongMemEval SHA mismatch after copy: $DATA_SHA"
+  say "[daisy] full500 data hydrated sha256=$DATA_SHA bytes=$(wc -c < "$DATA" | tr -d ' ')"
+}
+
 : > "$LOG"
 say "[daisy] Track 03 submission train"
 say "[daisy] extractor=$EXTRACTOR k=$K"
@@ -56,11 +86,14 @@ say "[daisy] claim ceiling during execution: EXECUTION_IN_PROGRESS"
 say "[daisy] CAR 5/structural gate: starting pinned HydraDB"
 bash "$BOOTSTRAP" start 2>&1 | tee -a "$LOG"
 
-[[ -f "$DATA" ]] || fail "full LongMemEval data not found after bootstrap: $DATA"
+# The full500 object is intentionally a Git LFS research artifact. Bootstrap only
+# guarantees the runtime and smoke data, so hydrate the exact pinned full source here.
+hydrate_full_data
+
+[[ -f "$DATA" ]] || fail "full LongMemEval data not found after hydration: $DATA"
 [[ -s "$AUTH" ]] || fail "HydraDB token file missing after bootstrap"
 
 FULL_SHA="$(sha256_file "$DATA")"
-EXPECTED_SHA="d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
 [[ "$FULL_SHA" == "$EXPECTED_SHA" ]] || fail "LongMemEval full source SHA mismatch: $FULL_SHA"
 
 say "[daisy] CAR 7: LongMemEval-S full500 A/B/C/D"
