@@ -349,16 +349,51 @@ export default function GraphPage() {
           <p className="eyebrow">Information-state heat layer</p>
           <h2>Mutation → restoration</h2>
           <div className="metrics" style={{ gridTemplateColumns: "repeat(2, minmax(0,1fr))" }}>
-            <div className="metric"><span className="metricLabel">Shannon H</span><strong>{activeMetric?.shannon_entropy.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">G*</span><strong>{activeMetric?.g_star.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">ΔG*</span><strong>{activeMetric?.delta_g_star.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">Mutation</span><strong>{activeMetric?.mutation_distance.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">Restoration</span><strong>{activeMetric?.restoration_gain.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">U* burden</span><strong>{activeMetric?.burden.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric">
+              <span className="metricLabel">
+                <a href="/knowledge#shannon-h" title="Knowledge Base: Shannon 1948 Citation & Formula">Shannon H ↗</a>
+              </span>
+              <strong>{activeMetric?.shannon_entropy.toFixed(3) ?? "—"}</strong>
+              <span className="small muted"><a href="/graph?q=StateSnapshot" className="mono compact">FCG: StateSnapshot</a></span>
+            </div>
+            <div className="metric">
+              <span className="metricLabel">
+                <a href="/knowledge#g-star" title="Knowledge Base: Friston Free Energy Citation">G* ↗</a>
+              </span>
+              <strong>{activeMetric?.g_star.toFixed(3) ?? "—"}</strong>
+              <span className="small muted"><a href="/graph?q=g_star" className="mono compact">FCG: HydraDB G*</a></span>
+            </div>
+            <div className="metric">
+              <span className="metricLabel">
+                <a href="/knowledge#delta-g-star" title="Knowledge Base: Lin 1991 Citation & Formula">ΔG* ↗</a>
+              </span>
+              <strong>{activeMetric?.delta_g_star.toFixed(3) ?? "—"}</strong>
+              <span className="small muted"><a href="/graph?q=delta_g_star" className="mono compact">FCG: ΔG* edge</a></span>
+            </div>
+            <div className="metric">
+              <span className="metricLabel">
+                <a href="/knowledge#mutation-distance" title="Knowledge Base: JSD Citation & Formula">Mutation ↗</a>
+              </span>
+              <strong>{activeMetric?.mutation_distance.toFixed(3) ?? "—"}</strong>
+              <span className="small muted"><a href="/graph?q=mutation" className="mono compact">FCG: Mutation JSD</a></span>
+            </div>
+            <div className="metric">
+              <span className="metricLabel">
+                <a href="/knowledge#restoration-gain" title="Knowledge Base: Antidote Gain Citation">Restoration ↗</a>
+              </span>
+              <strong>{activeMetric?.restoration_gain.toFixed(3) ?? "—"}</strong>
+              <span className="small muted"><a href="/graph?q=restoration" className="mono compact">FCG: Antidote Gain</a></span>
+            </div>
+            <div className="metric">
+              <span className="metricLabel">
+                <a href="/knowledge#u-star-burden" title="Knowledge Base: Perturbation Burden Formula">U* burden ↗</a>
+              </span>
+              <strong>{activeMetric?.burden.toFixed(3) ?? "—"}</strong>
+              <span className="small muted"><a href="/graph?q=burden" className="mono compact">FCG: U* Burden</a></span>
+            </div>
           </div>
           <p className="small muted note">
-            H is Shannon entropy. G* and ΔG* are dimensionless information-state abstractions inspired by
-            free-energy inference; they are not physical Gibbs free energy and carry no kcal/mol or joule claim.
+            H is Shannon entropy (<a href="/knowledge#shannon-h">Shannon 1948</a>). G* and ΔG* are dimensionless information-state abstractions (<a href="/knowledge#g-star">Friston 2010</a>; <a href="/knowledge#delta-g-star">Lin 1991</a>); they are not physical Gibbs free energy and carry no kcal/mol or joule claim.
           </p>
 
           <div className="panel" style={{ marginTop: 18 }}>
