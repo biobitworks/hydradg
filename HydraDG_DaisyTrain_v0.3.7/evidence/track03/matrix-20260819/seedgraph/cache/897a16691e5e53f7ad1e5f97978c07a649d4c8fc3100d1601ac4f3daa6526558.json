@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "897a16691e5e53f7ad1e5f97978c07a649d4c8fc3100d1601ac4f3daa6526558",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a durable material like nylon or polyester",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a durable material like nylon or polyester",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4b8aef903dd70224ee6c0713f9b35f72f036b5abff184c6afb8938a29bec135e"
+}

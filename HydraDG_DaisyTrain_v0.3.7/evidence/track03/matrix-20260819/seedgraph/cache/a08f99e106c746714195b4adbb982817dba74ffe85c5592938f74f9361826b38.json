@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a08f99e106c746714195b4adbb982817dba74ffe85c5592938f74f9361826b38",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the hybrid approach",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the hybrid approach",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e698b4802766a3de13781080b20d308db145b21aebb5524474872dc0ed04ab20"
+}

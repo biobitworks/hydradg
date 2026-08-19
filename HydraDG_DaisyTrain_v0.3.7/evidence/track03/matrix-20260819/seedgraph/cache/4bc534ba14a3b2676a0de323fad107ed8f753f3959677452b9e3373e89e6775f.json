@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4bc534ba14a3b2676a0de323fad107ed8f753f3959677452b9e3373e89e6775f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Spa-Inspired Retreat",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a glossy finish and the added protection against scratches and stain",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Spa-Inspired Retreat",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a glossy finish and the added protection against scratches and stains",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b6eec43f3cc3ab9d59126134fa16d9669d38c3a7834b3e7d8ca6ce7c02ead67d"
+}

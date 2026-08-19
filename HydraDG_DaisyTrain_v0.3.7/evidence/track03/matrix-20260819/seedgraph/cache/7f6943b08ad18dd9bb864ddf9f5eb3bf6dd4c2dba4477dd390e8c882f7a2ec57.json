@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7f6943b08ad18dd9bb864ddf9f5eb3bf6dd4c2dba4477dd390e8c882f7a2ec57",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having audio cues and customizable goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having audio cues and customizable goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "766fc25e93d3eb4ca316edda2501fe5c1f84223e651e15b4e3c1b7e571289d98"
+}

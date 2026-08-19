@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "10f5bd39605e70da8ba4ceea0a8905b92e279f2bc39dbf0652935429d2b45c4c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "cashback apps like Ibotta or Fetch Rewards to earn rewards on toilet paper purch",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "cashback apps like Ibotta or Fetch Rewards to earn rewards on toilet paper purchases at Target or Kr",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36856f0de287a1258486ecb2306996bcacb5e54463fb80adc1a4a5d03f9e71ad"
+}

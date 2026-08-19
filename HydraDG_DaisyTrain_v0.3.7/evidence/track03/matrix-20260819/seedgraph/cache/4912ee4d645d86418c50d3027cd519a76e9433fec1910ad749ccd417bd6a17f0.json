@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4912ee4d645d86418c50d3027cd519a76e9433fec1910ad749ccd417bd6a17f0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "longer exposures",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "longer exposures",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4d1af2fbbce64ced81750a7104c6a8a91d51540ccbe0c431c2f04dd768db3f06"
+}

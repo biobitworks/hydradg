@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f01ca3fdf99997e18e5cc5bc4728fd9a91af8e2075f9f130b2e19c64f901a0fc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"Sunday Funday\" and setting boundaries",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"Sunday Funday\" and setting boundaries",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33ea8be4607c3112471323b2b35016d3390619010aa11c04fd4c559b29108250"
+}

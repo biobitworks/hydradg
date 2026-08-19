@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ab72e3d3c926231b8c9ab752284cb65b6705c70f17a52661009ce4c44f50ece9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those storage crate options, especially the Crosley one",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those storage crate options, especially the Crosley one",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9306b6715d7120048f76ee9985a7542da4ba514fa632334900987117aeb975ad"
+}

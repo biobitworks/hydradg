@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a5ecee3d9bcbd7e29dfec25cd43ac4fcc5bc2ecb0bd806ba253fddbc8580ffdd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a wider range of colors to choose from, and the enhanced dura",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a wider range of colors to choose from, and the enhanced durability and stain res",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "96f05f0b86e619821f0c77cf811f417490217b62272c4d3bfdd949928c474100"
+}

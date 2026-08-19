@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a37a2912bceab99ef85df0d0104fd5dbce6450d84309b405d8b97c4c4a70b3da",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a different type of salt like kosher salt or Himalayan pink salt instead of flak",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a different type of salt like kosher salt or Himalayan pink salt instead of flaky sea salt",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d38cd131a1a4adcd7639751fdda9edf67bef15f36e6a5c4c102e908c56d367c7"
+}

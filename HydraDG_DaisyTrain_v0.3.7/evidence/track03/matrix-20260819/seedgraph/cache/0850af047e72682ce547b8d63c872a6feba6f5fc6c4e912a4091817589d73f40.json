@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0850af047e72682ce547b8d63c872a6feba6f5fc6c4e912a4091817589d73f40",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a mid-range hotel with a good location, preferably within walking distance to po",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Hyatt Centric Fisherman's Wharf, but I'd like to know more abou",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a mid-range hotel with a good location, preferably within walking distance to popular attractions li",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Hyatt Centric Fisherman's Wharf, but I'd like to know more about the area",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "765df54c4fe49580628a48bfe3544186757b0447dcb7eef56914c595febd43ee"
+}

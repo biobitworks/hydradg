@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "46ca2ce42536a32eba77c5d9aafe80b70911d5f0d210d01195e9e2a422dd30f7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Messenger mostly for chatting with friends and family, but for work, I use Slack",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Messenger mostly for chatting with friends and family, but for work, I use Slack",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6779aa72c4102a66508c2fc3b68bb0420e98ba492ab7d194384cfa581ee9247c"
+}

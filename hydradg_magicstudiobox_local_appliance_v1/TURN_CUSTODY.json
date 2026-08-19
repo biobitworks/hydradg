@@ -1,0 +1,33 @@
+{
+  "claim_ceiling": "LOCAL_APPLIANCE_DESIGN_AND_HANDOFF_ONLY",
+  "direct_user_request_excerpt_sha256": "a9d0cf161087dc6ea40e2c84e3f8f7289c91e8c6f5183424c188cd71afc44be5",
+  "event": "MAGICSTUDIOBOX_LOCAL_PRIVATE_APPLIANCE_DESIGN_AND_HANDOFF",
+  "event_time_local": "2026-08-19T12:41:00-07:00",
+  "full_user_turn_exact_hash_state": "PENDING_ORIGINAL_TURN_CAPTURE",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "HUMAN",
+      "evidence_class": "DIRECT_USER_REQUEST_EXCERPT",
+      "file": "CURRENT_USER_REQUEST_EXCERPT.txt",
+      "sha256": "a9d0cf161087dc6ea40e2c84e3f8f7289c91e8c6f5183424c188cd71afc44be5"
+    },
+    {
+      "actor": "AI",
+      "evidence_class": "AI_DERIVED_ARCHITECTURE",
+      "file": "docs/MAGICSTUDIOBOX_LOCAL_APPLIANCE_ARCHITECTURE.md",
+      "sha256": "9771514ce322ae3892cc0e8fe7d927d82b83e2a76d9f725a763f9064eba1d9da"
+    },
+    {
+      "actor": "AI",
+      "evidence_class": "AI_DERIVED_IMPLEMENTATION_PROMPT",
+      "file": "prompts/MAGICSTUDIOBOX_LOCAL_APPLIANCE_IMPLEMENTATION_PROMPT.md",
+      "sha256": "53f7ebe747da1bc0d76509a1f69293d970f682b4fddb98d52ffa37d4e75891ee"
+    }
+  ],
+  "project_fcg_append_state": "PENDING_LOCAL_PROJECT",
+  "reason_full_turn_pending": "The current turn contains a long pasted execution log; this package hashes the separately typed request excerpt and generated artifacts but does not claim byte-exact capture of the entire UI turn.",
+  "schema": "hydradg.turn_custody.v0.3.0",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "turn_root_sha256": "dd3eb2df23240c3dbd7db71ecacebca66941c924f970619a6547314379718c9b"
+}

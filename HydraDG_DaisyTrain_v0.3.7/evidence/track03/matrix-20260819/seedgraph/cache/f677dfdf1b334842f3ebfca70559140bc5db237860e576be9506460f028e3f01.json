@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f677dfdf1b334842f3ebfca70559140bc5db237860e576be9506460f028e3f01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating exercise into my morning routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating exercise into my morning routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "15961e141b30ceabbd83ee259d92f4409eca1b071f30c4c9ca5aef6fd5e2bd56"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "baedbdc65b289b5fc47ee31ac62a2b81f305b1f4eccd7f0ed08afc820029893c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a wake-up routine, and I think it could help me establish a consiste",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a wake-up routine, and I think it could help me establish a consistent wake-up time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4ed940d13de6a24113b2a93d7a1d9c6c35167d9bd51d9a452e0e0776dc9e3c59"
+}

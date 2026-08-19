@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3c220e8277af5458312f879fd68ec50699232a4da53b45a20230996f49926463",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "THESE FIVE LESSONS",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "THESE FIVE LESSONS",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4d6681911b7e6bc0461f28c2016b02bd3d0863769eb9279864f73eb59d8e50f5"
+}

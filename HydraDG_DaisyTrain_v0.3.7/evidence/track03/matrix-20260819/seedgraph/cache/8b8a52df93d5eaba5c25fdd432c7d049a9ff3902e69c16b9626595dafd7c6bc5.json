@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8b8a52df93d5eaba5c25fdd432c7d049a9ff3902e69c16b9626595dafd7c6bc5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the design on the one I found, so it'll be a fun way to personalize my laptop",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the design on the one I found, so it'll be a fun way to personalize my laptop",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "358fdcf5ae34b02b1b26e60b58361bc6b4ef38e5a8d1b3ca31d8d506293d137c"
+}

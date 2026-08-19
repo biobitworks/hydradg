@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "57e593450a01e2dcf1ebdb051b1811f0ef1c4038ab93088ef45d406e8bf661a0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a baby skincare set",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a baby skincare set",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5e8fc9bfe72806f3d6b497b2dbaecf779d3f9932c0b06f64534882ca9ed8cb76"
+}

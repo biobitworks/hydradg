@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "940688b3ed6ca57dc6b748549a8dc30281c999295139724102ac731b25da1a78",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a region with hot summers but mild winters, do you think I could still grow Prun",
+      "type": "value"
+    },
+    {
+      "name": "shopping for my food at the grocery store instead of growing my own fruits or ve",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a region with hot summers but mild winters, do you think I could still grow Prunus salicina",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "shopping for my food at the grocery store instead of growing my own fruits or vegetables",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "45d509ba7b7ed3b6b47ad6f48449f32fd8114d186dbaf55a9b30f4f564e38c64"
+}

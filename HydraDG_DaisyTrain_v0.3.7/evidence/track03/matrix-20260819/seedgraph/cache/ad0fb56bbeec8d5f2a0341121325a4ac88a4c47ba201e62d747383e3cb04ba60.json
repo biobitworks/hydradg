@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ad0fb56bbeec8d5f2a0341121325a4ac88a4c47ba201e62d747383e3cb04ba60",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to dine outside these days",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to dine outside these days",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f50872f3c59fcd00ac0ebcb2a9cc62d8d8bf37a85fa44f0330fdb94a748208de"
+}

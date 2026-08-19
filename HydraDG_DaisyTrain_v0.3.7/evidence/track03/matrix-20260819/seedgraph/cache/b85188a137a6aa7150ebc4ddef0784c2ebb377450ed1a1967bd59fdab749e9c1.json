@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b85188a137a6aa7150ebc4ddef0784c2ebb377450ed1a1967bd59fdab749e9c1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the modern design and the lockable door will keep my figurines dust-free and sec",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the modern design and the lockable door will keep my figurines dust-free and secure",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b7afa748ecc4fe0012884e0669868f2bc857d70d6adf8dcc803b0d0123dceaf9"
+}

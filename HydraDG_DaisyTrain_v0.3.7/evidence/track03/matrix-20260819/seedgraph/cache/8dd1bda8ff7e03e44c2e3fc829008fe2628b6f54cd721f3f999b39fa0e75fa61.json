@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8dd1bda8ff7e03e44c2e3fc829008fe2628b6f54cd721f3f999b39fa0e75fa61",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how they focus on specific cases",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how they focus on specific cases",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aac4d614101c4b194dc4c1a4ee0b526a331bea9ea5edfd2e2120620e1817643b"
+}

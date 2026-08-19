@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7bb9c9a01a3281343cacc07a6f3d34b7ec9e5d5d13912a9cb9069d1d43621752",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the visual approach",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the visual approach",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9571f3ac272a7ab8b403f856139bb211fa49e764a22d417c0b382a82777f228b"
+}

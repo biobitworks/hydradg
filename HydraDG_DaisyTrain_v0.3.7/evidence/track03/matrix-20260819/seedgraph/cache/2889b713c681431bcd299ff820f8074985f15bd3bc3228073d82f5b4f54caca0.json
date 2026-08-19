@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2889b713c681431bcd299ff820f8074985f15bd3bc3228073d82f5b4f54caca0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that they're both pretty simple to make and still offer a nice change from my us",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a soft, fluffy interior and a slightly sweet flavor to complement th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that they're both pretty simple to make and still offer a nice change from my usual pancakes or scra",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a soft, fluffy interior and a slightly sweet flavor to complement the avocado and eggs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36888cdf5036ba458fa1221b4f43be8198caf69b8cd829f376519aa344541120"
+}

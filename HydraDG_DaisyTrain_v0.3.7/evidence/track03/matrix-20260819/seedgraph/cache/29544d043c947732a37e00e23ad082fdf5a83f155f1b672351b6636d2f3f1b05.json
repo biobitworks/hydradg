@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "29544d043c947732a37e00e23ad082fdf5a83f155f1b672351b6636d2f3f1b05",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "linear interpolation to resample financial data to match the time period of the ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "linear interpolation to resample financial data to match the time period of the price data and can y",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "22f43b6a6e96b20b4e1a5be5fd5a4f3f792291d90f12f64028e3ef4c732a1e84"
+}

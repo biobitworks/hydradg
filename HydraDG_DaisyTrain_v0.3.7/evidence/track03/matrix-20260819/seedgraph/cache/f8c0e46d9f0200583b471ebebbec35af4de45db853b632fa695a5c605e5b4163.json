@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f8c0e46d9f0200583b471ebebbec35af4de45db853b632fa695a5c605e5b4163",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a focal point with the new lamp",
+      "type": "value"
+    },
+    {
+      "name": "the idea of varying shades of gray",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a focal point with the new lamp",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of varying shades of gray",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3fa89c1a6993adb1b89a50232be8562a0665c30a2e5d3247cf8648f33f24c41"
+}

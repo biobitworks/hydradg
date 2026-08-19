@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a74c24b9c0e62f3d3e72209e4407d9d92ff58fbc4458d433f9f352f60e75c4d8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the oversized sweater and blouse options",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the oversized sweater and blouse options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8029d5492dceaaedffb2b539a1144fd2ffaaef85bd9d9768765d7e25642abdf4"
+}

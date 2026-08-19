@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2acdea509c7a124c276c58d7f1ceede487504be16f8ef7e9eca24d23a962b848",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "smart home technology if I rent my home instead of owning it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "smart home technology if I rent my home instead of owning it",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d4a82ff2dad12d99be6590952590458eeb55ceaa89f144e44e1ff871156438d"
+}

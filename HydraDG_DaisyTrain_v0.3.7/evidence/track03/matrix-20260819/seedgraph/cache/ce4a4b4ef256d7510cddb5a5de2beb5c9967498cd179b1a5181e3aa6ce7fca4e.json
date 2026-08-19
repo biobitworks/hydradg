@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce4a4b4ef256d7510cddb5a5de2beb5c9967498cd179b1a5181e3aa6ce7fca4e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "frequently, seems to be consuming some bandwidth in the background",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "frequently, seems to be consuming some bandwidth in the background",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "624d12d168241b1f932e36281d4318226aae9726d2754ba908ec879bb2e808b5"
+}

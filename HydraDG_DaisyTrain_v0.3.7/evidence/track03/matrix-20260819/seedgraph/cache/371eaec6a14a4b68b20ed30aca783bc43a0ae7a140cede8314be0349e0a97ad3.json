@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "371eaec6a14a4b68b20ed30aca783bc43a0ae7a140cede8314be0349e0a97ad3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a variety of veggies and lean protein in one container",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a variety of veggies and lean protein in one container",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bed69e78eae709e365e2196be647fc1bf1c6dcbdf7189edfded8d8d769433dd4"
+}

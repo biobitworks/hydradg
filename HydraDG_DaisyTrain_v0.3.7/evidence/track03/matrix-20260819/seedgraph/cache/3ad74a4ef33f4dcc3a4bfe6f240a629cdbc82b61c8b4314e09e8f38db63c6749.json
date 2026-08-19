@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ad74a4ef33f4dcc3a4bfe6f240a629cdbc82b61c8b4314e09e8f38db63c6749",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the deep teal and emerald green options",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a calm and serene atmosphere in my living room",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the deep teal and emerald green options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a calm and serene atmosphere in my living room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d8891662f5543142db233134cf3a84999888d30db3527348b55e938dff387f75"
+}

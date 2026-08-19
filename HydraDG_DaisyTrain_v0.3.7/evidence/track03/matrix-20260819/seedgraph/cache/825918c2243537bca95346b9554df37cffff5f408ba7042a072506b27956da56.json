@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "825918c2243537bca95346b9554df37cffff5f408ba7042a072506b27956da56",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Eisenhower Matrix, it's a helpful tool",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Eisenhower Matrix, it's a helpful tool",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f6a426147b643d0999124f6e2ab9da2633618dba4346d1d659f7362bcb1c6305"
+}

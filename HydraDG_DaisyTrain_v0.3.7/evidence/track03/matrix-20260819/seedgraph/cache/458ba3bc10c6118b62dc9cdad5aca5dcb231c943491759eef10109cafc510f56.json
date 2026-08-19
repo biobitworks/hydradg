@@ -1,0 +1,60 @@
+{
+  "cache_hit": false,
+  "cache_key": "458ba3bc10c6118b62dc9cdad5aca5dcb231c943491759eef10109cafc510f56",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the coastal color scheme and using natural materials like bluestone",
+      "type": "value"
+    },
+    {
+      "name": "the sound of amplifying the sound of the water feature using natural or decorati",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using natural fabrics like linen or canvas for the throw pillows and",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the coastal color scheme and using natural materials like bluestone or flagstone",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of amplifying the sound of the water feature using natural or decorative elements",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using natural fabrics like linen or canvas for the throw pillows and blankets",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using natural fabrics like linen or canvas for the throw pillows and blankets",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "50768869f75b3d17c0ac4790846cd2518c9023981e418df2e1afcb851aeb324e"
+}

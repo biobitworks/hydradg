@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7b3e7f88e8657ff518ddd6b3564088940bfd7627190d1c6ccd6f687dfdf557de",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the team name \"Steps for St",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the team name \"Steps for St",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c721ecd618a26e61cb3dc58f0f23d1dd77d109792c3bbccbba47eef15804a52"
+}

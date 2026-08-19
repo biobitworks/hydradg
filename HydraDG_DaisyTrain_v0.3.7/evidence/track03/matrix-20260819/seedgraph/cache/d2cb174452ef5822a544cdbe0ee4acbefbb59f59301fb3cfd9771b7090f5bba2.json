@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d2cb174452ef5822a544cdbe0ee4acbefbb59f59301fb3cfd9771b7090f5bba2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "number 2 - generate a final draft with that title the summary and rework the tit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "number 2 - generate a final draft with that title the summary and rework the title into the summary",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "25d182a100378363a2ce4442e773ca307d8e2bb6e4df05519693e804e2b11286"
+}

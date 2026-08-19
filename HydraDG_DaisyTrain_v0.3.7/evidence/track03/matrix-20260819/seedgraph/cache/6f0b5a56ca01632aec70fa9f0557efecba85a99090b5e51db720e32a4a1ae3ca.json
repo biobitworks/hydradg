@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6f0b5a56ca01632aec70fa9f0557efecba85a99090b5e51db720e32a4a1ae3ca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a regular human shampoo for my long haired rabbit if I run out of rabbit shampoo",
+      "type": "value"
+    },
+    {
+      "name": "scissors to trim my long haired rabbit's fur or do I need a specific type of tri",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a regular human shampoo for my long haired rabbit if I run out of rabbit shampoo",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "scissors to trim my long haired rabbit's fur or do I need a specific type of trimmer",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7721f1c24301e12ed865287806da48ac8e92a451d0119fbccdc8abc9fba9858b"
+}

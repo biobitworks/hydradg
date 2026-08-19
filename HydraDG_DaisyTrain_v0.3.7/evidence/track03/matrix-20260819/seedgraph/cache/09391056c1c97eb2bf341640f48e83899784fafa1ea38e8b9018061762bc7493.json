@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "09391056c1c97eb2bf341640f48e83899784fafa1ea38e8b9018061762bc7493",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Ring Stick Up Cam to monitor my garage door and receive alerts if it's left ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Ring Stick Up Cam to monitor my garage door and receive alerts if it's left open",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f46d87c2c070e94e3db07e011439bac9f5f368c13994b331c599ecd058499a84"
+}

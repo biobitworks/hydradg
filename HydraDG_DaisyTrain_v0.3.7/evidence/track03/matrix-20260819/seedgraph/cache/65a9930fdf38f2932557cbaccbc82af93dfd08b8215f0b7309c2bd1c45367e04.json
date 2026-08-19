@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "65a9930fdf38f2932557cbaccbc82af93dfd08b8215f0b7309c2bd1c45367e04",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a tiered display",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a wooden crate tiered display",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a tiered display",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a wooden crate tiered display",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "49d0cea4b084b3235a921b407428c6b126b49cfba47f5a9f473d46f7763d7c80"
+}

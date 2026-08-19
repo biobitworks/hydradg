@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f7746699340b7a7817869d1983548d0808def43d7ec53eb8b90e629a0af94cfd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of niching down to a specific area, but I'm not sure which one to focus",
+      "type": "value"
+    },
+    {
+      "name": "the idea of combining my cat posts and artwork, especially the \"Whimsical Wildli",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of niching down to a specific area, but I'm not sure which one to focus on",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of combining my cat posts and artwork, especially the \"Whimsical Wildlife Art\" concept",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fafbaca677a928b05599fac270a44bee330755f19f0b5a2952ac17acef32f08c"
+}

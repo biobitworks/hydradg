@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ed5de7d2b4e328a4cf5743ca34401a947523100ca0c5644ba39f79b6433052e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a multi-level patio",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using porcelain pavers for my patio",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a multi-level patio",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using porcelain pavers for my patio",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7ad933d24533579b5572d8c97a59f7fa9e4188ed63cb89f3475b2af1fe8c9066"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "38191f46765e22c98c43d4012d9bedf6453932dabb90b5284fe4f0ed2f7f4d05",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city of Raleigh, North Carolina",
+      "type": "value"
+    },
+    {
+      "name": "routes with minimal traffic and bike lanes or bike paths",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city of Raleigh, North Carolina",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "routes with minimal traffic and bike lanes or bike paths",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e107138bf754f06f79f4ba0f4a259468dadc1d40ea3c0e7471e79207003d33e2"
+}

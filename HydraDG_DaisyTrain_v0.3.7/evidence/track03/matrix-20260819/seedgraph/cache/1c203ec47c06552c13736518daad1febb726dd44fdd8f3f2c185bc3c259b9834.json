@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c203ec47c06552c13736518daad1febb726dd44fdd8f3f2c185bc3c259b9834",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa bowl idea, but I've already tried something similar with my quinoa sa",
+      "type": "value"
+    },
+    {
+      "name": "the lentil or black bean chili idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using cumin and chili powder to give my chili a smoky flavor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa bowl idea, but I've already tried something similar with my quinoa salad with roasted veg",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the lentil or black bean chili idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using cumin and chili powder to give my chili a smoky flavor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ffd506894490d6c8f67330fd22f41ad3d2e48da224fe3d8dfb4886bf247fa1e2"
+}

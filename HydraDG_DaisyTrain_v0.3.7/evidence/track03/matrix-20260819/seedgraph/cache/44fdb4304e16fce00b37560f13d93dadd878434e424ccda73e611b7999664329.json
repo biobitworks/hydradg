@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "44fdb4304e16fce00b37560f13d93dadd878434e424ccda73e611b7999664329",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"Photo Dump\" post, but I'm not sure what kind of captions I should",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"Photo Dump\" post, but I'm not sure what kind of captions I should write",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e3a71ad05cf9afd2aadde842f4bcd9b65e51a83da0a59c457f278904a798a52e"
+}

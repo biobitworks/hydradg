@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dbca5d826b09451b3e4ac2156ba0ea745f1fa8aee26c8a7892e6272fcf5579f0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"sinful indulgence\", keep that",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"sinful indulgence\", keep that",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "acbfac064c0cf5f687846e94f11406bdd93e211565c719115855ecb0a2201293"
+}

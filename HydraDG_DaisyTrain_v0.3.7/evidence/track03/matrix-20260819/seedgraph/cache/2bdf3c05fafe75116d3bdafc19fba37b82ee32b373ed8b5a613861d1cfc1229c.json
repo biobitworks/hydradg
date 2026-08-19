@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2bdf3c05fafe75116d3bdafc19fba37b82ee32b373ed8b5a613861d1cfc1229c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Southwestern Chicken Pasta Salad, especially with the chipotle ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Southwestern Chicken Pasta Salad, especially with the chipotle ranch dressing",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e1eb8f61aed1283c61d78d3ca209d6640c8c2dbf97689471b46121b83461c25e"
+}

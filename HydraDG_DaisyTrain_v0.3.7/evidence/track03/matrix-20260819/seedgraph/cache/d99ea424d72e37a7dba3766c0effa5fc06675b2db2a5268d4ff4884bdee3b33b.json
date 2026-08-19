@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d99ea424d72e37a7dba3766c0effa5fc06675b2db2a5268d4ff4884bdee3b33b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Avocado Toast with Poached Eggs and the Smoothie Bowl",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Avocado Toast with Poached Eggs and the Smoothie Bowl",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a6fcd6649cda7e78df6aa9748923836402aa049ac63a7f780236c9bd29dab8de"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff721028048553d4757418c06f27668b7f2e8ccc63b96dc92377b9a072efe6ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of serving it with warm flour tortillas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of serving it with warm flour tortillas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fae01a5f386b9e02db8bf006239aaa8ee69c9c1eeee478f1b944e5b111a23228"
+}

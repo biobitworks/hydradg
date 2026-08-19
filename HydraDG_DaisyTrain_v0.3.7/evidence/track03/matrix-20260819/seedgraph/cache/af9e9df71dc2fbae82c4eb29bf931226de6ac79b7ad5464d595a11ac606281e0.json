@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "af9e9df71dc2fbae82c4eb29bf931226de6ac79b7ad5464d595a11ac606281e0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of planning ahead, but last Wednesday was just one of those days",
+      "type": "value"
+    },
+    {
+      "name": "the idea of building in a buffer",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning ahead, but last Wednesday was just one of those days",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of building in a buffer",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3a2ad7b3b59f5f9dbdf667b000887ff6430d4ee26c036f0d0e0e8687a6f0f84e"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "91cccdac77ea00828a2429a314e3c796cb515e4f90d1c547ae099b777af8e473",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using coconut fiber sponges and reusable cloths",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using coconut fiber sponges and reusable cloths",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2fa6d270a1492c91457b4f46be8a65b61b52d9aa620f4a7b8256f8e197456d64"
+}

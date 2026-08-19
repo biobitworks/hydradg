@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2ea2c3116ce6dad442321fb8efb2dd3a34c4f054ef572fe5f0d328e6eb05da53",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "machine learning to do process mining",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "machine learning to do process mining",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0480ec1c9d770a3c8a500f5ca9b6cc4beeecaa55982c207c96d4e03b50d851d4"
+}

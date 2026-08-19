@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7f3829527b28acabbb4c74f86d21843270dddff001ed5925f52dba0a087a0634",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions you provided for my resume and LinkedIn profile",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions you provided for my resume and LinkedIn profile",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c2066ec844f91290c60bb8a7d6f3e5e0cac1b090f379d76edc7bef9861ddd17a"
+}

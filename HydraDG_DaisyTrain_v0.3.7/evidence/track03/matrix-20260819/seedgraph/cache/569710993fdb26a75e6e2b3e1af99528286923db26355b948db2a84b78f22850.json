@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "569710993fdb26a75e6e2b3e1af99528286923db26355b948db2a84b78f22850",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the schedule, but I think I need to make some adjustments to fit in my morning m",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the schedule, but I think I need to make some adjustments to fit in my morning meditation practice a",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f0bd1f1dcc214058610cfbdbdcc6122f5e4e976f737cf7d9ac3d2619d9d52a03"
+}

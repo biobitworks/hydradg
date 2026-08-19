@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "207d441af1c417bb02154c5dbb703526a0cb086a2ecdedcb74443e44f2eae76f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the OKR framework, I'll definitely give it a try",
+      "type": "value"
+    },
+    {
+      "name": "the idea of involving my team in the goal-setting process",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the OKR framework, I'll definitely give it a try",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of involving my team in the goal-setting process",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b106e3972f5bede6d19e97227ed4d39f8381e30796f56b65d70dcdf0bce58b71"
+}

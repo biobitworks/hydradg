@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4dfcd476b31a99b597b8fd1dc2463f7d8d48d9ce6c111419bc810a7e5552c20e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a secure mounting system and adjustable design that's specifi",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the One Touch system and the built-in cable management",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a secure mounting system and adjustable design that's specifically designed for m",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the One Touch system and the built-in cable management",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e9b04254ec58c04d718dc2e46f68ba232881c343ab1802f3c83d7685a9b5646f"
+}

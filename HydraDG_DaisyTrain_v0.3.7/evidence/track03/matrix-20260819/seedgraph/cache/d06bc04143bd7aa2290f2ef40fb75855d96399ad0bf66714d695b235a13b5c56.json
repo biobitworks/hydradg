@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d06bc04143bd7aa2290f2ef40fb75855d96399ad0bf66714d695b235a13b5c56",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating content pillars and storytelling",
+      "type": "value"
+    },
+    {
+      "name": "the idea of hosting Q&A sessions on Instagram Live",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating content pillars and storytelling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of hosting Q&A sessions on Instagram Live",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e8e2cf22562a155579c1379b2c483ae7d469071ea0959083222f97ebb281ca99"
+}

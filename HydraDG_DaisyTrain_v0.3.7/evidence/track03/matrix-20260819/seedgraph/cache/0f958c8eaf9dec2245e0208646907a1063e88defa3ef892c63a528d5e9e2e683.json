@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f958c8eaf9dec2245e0208646907a1063e88defa3ef892c63a528d5e9e2e683",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a Shutterfly promo code and also use a cashback app",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a personalized gift",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a customized phone case from Shutterfly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a Shutterfly promo code and also use a cashback app",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized gift",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized phone case from Shutterfly",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a324a57801af31de03732b8c5d83adf848e16f9d9ab385a91808611c1186c43c"
+}

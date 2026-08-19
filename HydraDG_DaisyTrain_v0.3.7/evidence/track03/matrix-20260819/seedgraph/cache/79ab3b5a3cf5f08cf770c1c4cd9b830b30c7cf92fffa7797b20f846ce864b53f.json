@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "79ab3b5a3cf5f08cf770c1c4cd9b830b30c7cf92fffa7797b20f846ce864b53f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding dividers within larger pockets to separate different types of",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding dividers within larger pockets to separate different types of supplies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c20ddc99c19b6f9ee39f35512ceefe679757662466f57682acb74b2a930fb299"
+}

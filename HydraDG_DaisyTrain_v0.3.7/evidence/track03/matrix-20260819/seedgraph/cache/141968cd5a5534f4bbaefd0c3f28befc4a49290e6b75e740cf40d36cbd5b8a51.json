@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "141968cd5a5534f4bbaefd0c3f28befc4a49290e6b75e740cf40d36cbd5b8a51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gifting a cycling computer or GPS device",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gifting a cycling computer or GPS device",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6905db85ff2bfaf2c0768be505cf9794faf068390097d32710f68114de131061"
+}

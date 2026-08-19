@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "dfb987fd31f68005d4035fec3368a6f4a31a7ea999d578a4a7ed488f32ee8c9d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "\"nc -N\" to close the connection instead of the second nc command",
+      "type": "value"
+    },
+    {
+      "name": "\"nc -l\" to listen for requests instead of reading from /dev/tcp",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "\"nc -N\" to close the connection instead of the second nc command",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "\"nc -l\" to listen for requests instead of reading from /dev/tcp",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a903442610d2623baccf22a48999d4c6ba5c2a72005ff0992dfe3c1b3b4c5e53"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e7cbbf2f1819f39d9ca6a10e53100c95c8d06d79c7eaa07d6c5f2ff7b2b0b850",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of these recipes",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using the almonds to add crunch to the chicken",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of these recipes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using the almonds to add crunch to the chicken",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "84e641317d03d26097ed397802a8f7ba81728f18dd0541ff708b285f9dbdcc9d"
+}

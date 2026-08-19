@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5ccbf841166d1546190c665a503dc28ef86fd2a72384440a575a5132b93119d0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the user interface of Lightroom, so maybe something similar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the user interface of Lightroom, so maybe something similar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0792a15a0e1d2347238e4db2ddc3b52340162d5ba0228c8cf83cacf71e4a4457"
+}

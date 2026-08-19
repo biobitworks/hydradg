@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "3e2ba4df848aa23f12d2fadc81eeefd70df00c9933811b296a62f6955b3c9a94",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a physical journal, but I'm also curious about using a digita",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using my physical journal for reflection and note-taking, and my dig",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a visual representation of my TBR list, and Goodreads is alre",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a physical journal, but I'm also curious about using a digital platform to track",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using my physical journal for reflection and note-taking, and my digital platform for tr",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a visual representation of my TBR list, and Goodreads is already a great resource",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4e1f8c6f0cfc5f605802fae9a6efe44f52d176d5f0962eb0a169409d7c9a3dca"
+}

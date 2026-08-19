@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "cc9a03307a5d7ebf6ad4cfba50c28a2df51db18af666dfcd8092c358d8034c2b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "orange bitters to Angostura, it gives a nice twist to the classic recipe",
+      "type": "value"
+    },
+    {
+      "name": "the Smoked Cherry Old Fashioned recipe, but I'm not sure about the smoked simple",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "orange bitters to Angostura, it gives a nice twist to the classic recipe",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Smoked Cherry Old Fashioned recipe, but I'm not sure about the smoked simple syrup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "953a802a1a05801f01e76be1e8e4ad0957ee41fb744b8b78e08208c3107ccd30"
+}

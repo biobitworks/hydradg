@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ea20825ce07d6d83048b46c4928bae24b14bd9efc55082305e8f4cc128c9347a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of searching online",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of searching online",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3813666eef6936661c1bcb039da743a085c365e30c38dc9f188a4265a348a362"
+}

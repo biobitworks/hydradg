@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cc0b146e7ed8cd00def8b46df7ab3a35964b57b62eccb2eda265413c969bedfa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my stand mixer to whip up a meringue topping for my pancakes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my stand mixer to whip up a meringue topping for my pancakes",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef3f133ba3e0088fb701cc6513d8b43ae76aefbd9dac80d2307af46352e31c2e"
+}

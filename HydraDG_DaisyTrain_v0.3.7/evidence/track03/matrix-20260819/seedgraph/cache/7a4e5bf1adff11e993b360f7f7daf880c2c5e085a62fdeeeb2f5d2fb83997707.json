@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a4e5bf1adff11e993b360f7f7daf880c2c5e085a62fdeeeb2f5d2fb83997707",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the larger 1 TB SSD and the Intel Iris Xe Graphics",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the larger 1 TB SSD and the Intel Iris Xe Graphics",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2de3736753f080d362ebc43530d1bc17cdb76eadc9863faee71c27e6052dba3c"
+}

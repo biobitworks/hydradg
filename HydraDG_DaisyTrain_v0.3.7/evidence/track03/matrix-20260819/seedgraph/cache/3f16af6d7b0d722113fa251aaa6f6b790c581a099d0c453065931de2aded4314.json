@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3f16af6d7b0d722113fa251aaa6f6b790c581a099d0c453065931de2aded4314",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to get my exercise out of the way early in the day",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to get my exercise out of the way early in the day",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "38fc958ffe04e18c886b94a18d72f2d9cf62a104dcf74df0fffdacc6c7106378"
+}

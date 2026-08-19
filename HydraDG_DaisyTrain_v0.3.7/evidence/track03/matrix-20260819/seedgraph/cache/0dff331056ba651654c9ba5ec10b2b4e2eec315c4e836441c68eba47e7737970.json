@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0dff331056ba651654c9ba5ec10b2b4e2eec315c4e836441c68eba47e7737970",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using terracotta clay and a clear glaze to bring out the natural col",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using terracotta clay and a clear glaze to bring out the natural color of the clay",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9b198d45fc41639b6df9b8a3b6c6b53934427ccdb80421b1cd1bfa3f165d3986"
+}

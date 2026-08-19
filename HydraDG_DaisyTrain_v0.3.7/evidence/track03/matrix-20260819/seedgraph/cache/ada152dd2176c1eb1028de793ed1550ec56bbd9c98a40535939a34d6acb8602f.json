@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ada152dd2176c1eb1028de793ed1550ec56bbd9c98a40535939a34d6acb8602f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the silicone spatulas and kitchen shears",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the silicone spatulas and kitchen shears",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7d12a87b5077005221504de6422c5a1440361333ccf03879c6b314a77e023d82"
+}

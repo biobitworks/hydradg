@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f79e6caa3ddf423017e311bd8a88c3799753df9ff5ba4e2c35d74665f09f2e9f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting small goals and tracking progress",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting small goals and tracking progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "66632f5331f5a26e4e0a0e752a9271121d2e511e01cc6921aaa065046c8f2083"
+}

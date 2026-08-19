@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8e23746c9d254dab75a926c7a2312b3056f9e8a3733ecc12fe87085d0f9902f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of embracing humor in difficult situations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of embracing humor in difficult situations",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1507492b18bf61ad23fc39a31126010ac972bb03c6465ee8b9bda468d94db66f"
+}

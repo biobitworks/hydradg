@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fd6804f886cea45c6da912f45b9e85d94f0db5689c715dd74a9de6d2aa56e35c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing my ankle boots with a flowy dress",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing my ankle boots with a flowy dress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c4208f82f3d00f034e723a2075b11a1c7abfcf136d85563fdd2ce533c1592d24"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce4d4da3bb814b693a777d2098152d178daebc9443b1f6d008af381944052f0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to get the job done",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to get the job done",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c42fdb55ac97fca5146815fada320cb851b2dbc9adc6626735deae0f0684d53"
+}

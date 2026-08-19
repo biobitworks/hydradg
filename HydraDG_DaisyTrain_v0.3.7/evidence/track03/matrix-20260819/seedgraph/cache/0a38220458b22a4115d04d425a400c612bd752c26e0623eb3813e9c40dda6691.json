@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0a38220458b22a4115d04d425a400c612bd752c26e0623eb3813e9c40dda6691",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a memory book or scrapbook",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a memory book or scrapbook",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0dd72b287713b39eb8ca620a9e1719113b50f196bb213b0a22182142ecdb7cf3"
+}

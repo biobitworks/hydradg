@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "309c538acbae78b0cf0c25b9562d47aa514f934cdb72f2d5a51b903057989183",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized keychain or necklace",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized keychain or necklace",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "69b568b92fdddf8b56a605dbed8b1e735133c63e041944ee8f1db8ee1104bdfb"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3bb15f5c22479889e3ed39844c3f76127cffdd7163e5072115c55c03c07e5b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa breakfast bowl idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa breakfast bowl idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "faee9c29c41134f4a433ecdb70f68c236d36abe01c0ff26382e1bdd2ee4275d8"
+}

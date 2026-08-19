@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8be537256e1b37b266dabd534f2298b15fe592b53bd68e29f3b18a9dceb4b781",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, and I'll definitely check them out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, and I'll definitely check them out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "484363be9814be5cc6ecb3511bfb98788ca2b6da16704157c5075c31c2652cfc"
+}

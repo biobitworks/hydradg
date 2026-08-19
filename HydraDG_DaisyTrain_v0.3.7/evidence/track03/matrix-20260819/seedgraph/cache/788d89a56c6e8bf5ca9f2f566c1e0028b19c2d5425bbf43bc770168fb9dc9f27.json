@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "788d89a56c6e8bf5ca9f2f566c1e0028b19c2d5425bbf43bc770168fb9dc9f27",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "12",
+      "type": "value"
+    },
+    {
+      "name": "them to be around 6 feet long and 4 inches in diameter",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "12",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "them to be around 6 feet long and 4 inches in diameter",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f109cedafbf3c6644df6c21f93730c5f4d4808f427794df5c36a1e57916d6293"
+}

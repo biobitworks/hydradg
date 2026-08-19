@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "406e0170825c5fa724cd4edca03838869ac431cdfe461ab2caedf806286c9420",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using the ground beef and chicken breast together, and I can always ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using the ground beef and chicken breast together, and I can always customize it with my",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2fb936f66d1454e361603f8ff3941942be77ba00406af2297bec1dd391e879b"
+}

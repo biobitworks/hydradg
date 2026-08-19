@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c6dfce8993fd5eb6de1b52a10b1695cd8c62f1755194dd745c4b251e33023bf4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of tracking my progress",
+      "type": "value"
+    },
+    {
+      "name": "the idea of varying my routine to avoid boredom",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of varying my routine to avoid boredom",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1f350dc81cef3ab6eb872110cb97d0d4e34cb4a89777e200bca0986497b4edfe"
+}

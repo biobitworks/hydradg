@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "aa18ca76a1c165ac9bb465f733c3b3aba7aed2f5a906bb9a1a4a9e21a397ae96",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "leftover roasted vegetables instead of saut\u00e9ing them",
+      "type": "value"
+    },
+    {
+      "name": "the sound of those breakfast ideas",
+      "type": "value"
+    },
+    {
+      "name": "the sound of those ingredients",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "leftover roasted vegetables instead of saut\u00e9ing them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of those breakfast ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of those ingredients",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36f02b65e57b3f8277ac316aee3af96d5215f28e886f26b92b77fa3b97d3f6d0"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d3bf72ecabfe631e946a2192790ec1011d91e288b64338ae3a837e0d964ea237",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Mango Habanero Spritz idea, but I'm not sure about the habanero pepper syrup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Mango Habanero Spritz idea, but I'm not sure about the habanero pepper syrup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9a3e8edb174de44a84baef55fb6afa81c1ffb733f7ed2e517ec45f2c2293ca26"
+}

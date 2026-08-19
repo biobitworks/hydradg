@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1158418c6b6b396c75c7fa57ac79527c68926c0e0ee42979c80838f3252bce87",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to move it around to access different areas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to move it around to access different areas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8c1a5dfe7d66c28d1fe537d99e274634d98b4af799393dd0719aa8253c4f3c00"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d96824aae11669599c950a8a3df88c85ceeccba4910de7ff1b88b48bc0e367b5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how they both seem to have a strong focus on characters and atmosphere, which is",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how they both seem to have a strong focus on characters and atmosphere, which is something I loved a",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2be536e71996dbee7e4904d46472bb9c91e41d6443c98e307b2882c83f72020b"
+}

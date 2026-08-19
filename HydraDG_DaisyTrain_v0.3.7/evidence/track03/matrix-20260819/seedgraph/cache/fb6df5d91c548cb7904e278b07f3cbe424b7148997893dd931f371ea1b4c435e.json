@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fb6df5d91c548cb7904e278b07f3cbe424b7148997893dd931f371ea1b4c435e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the breakfast burrito with black beans and scrambled egg",
+      "type": "value"
+    },
+    {
+      "name": "those ideas, especially the veggie-packed omelette",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the breakfast burrito with black beans and scrambled eggs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the veggie-packed omelette",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "09a4909a5492b075b2cf540d4fa465e0009ced15ac7ca3044897d25552685b9b"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "785013ac9cea6ff3b570b0505911b24914c76f50de0ba40d51bd350359eed7ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my own device or do I need to rent one from the museum",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my own device or do I need to rent one from the museum",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b85f5aab7a54c49df3c9e06e7b09d732fb190f6168ef901607886a3d442f75c9"
+}

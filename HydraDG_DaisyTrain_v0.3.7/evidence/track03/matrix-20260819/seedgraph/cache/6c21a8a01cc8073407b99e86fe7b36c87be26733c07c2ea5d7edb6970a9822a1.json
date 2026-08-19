@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6c21a8a01cc8073407b99e86fe7b36c87be26733c07c2ea5d7edb6970a9822a1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to paddle whitewater rivers and loved it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to paddle whitewater rivers and loved it",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "af8a25cba4d14ee77d98c5552b3513b59b7da1c96cbd69ce738ae5e02d8f19d5"
+}

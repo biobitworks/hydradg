@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ebefd43b4938bfff562de1c1c264fbe4e6661e4779a62411053f94c0f291b26f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having 3 burners and the 513 sq",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having 3 burners and the 513 sq",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "475bb9098a32f2f470418fced9f95694dd1b1c2d3c3d115c24f8656430285b7d"
+}

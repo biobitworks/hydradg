@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b474241c1bcdc135e642a7d44f9ff9c5b45d11d100ffa74187f704dd540d9dc2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a suburb of a major city, about 20 miles outside of downtown",
+      "type": "value"
+    },
+    {
+      "name": "paved trails or smooth dirt paths, nothing too rugged",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a suburb of a major city, about 20 miles outside of downtown",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "paved trails or smooth dirt paths, nothing too rugged",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b07cb1ca5808f5cb10cd4c4b5f8487512ad5108befbdd4695bb53060fb3b7eb5"
+}

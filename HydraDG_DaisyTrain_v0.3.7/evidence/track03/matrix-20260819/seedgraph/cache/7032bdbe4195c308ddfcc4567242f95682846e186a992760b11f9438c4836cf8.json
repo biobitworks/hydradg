@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7032bdbe4195c308ddfcc4567242f95682846e186a992760b11f9438c4836cf8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to customize the flavor myself",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to customize the flavor myself",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "544230fca6bcdcada558fd8bedf7e965cd82f1d602b138e62b9a19055b5e822e"
+}

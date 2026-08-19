@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6f18d552b20b876d118a24846e86ef31807e3a2f36b8b024c7e79b2743ecdf1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a separate folder for each year",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a separate folder for each year",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dcd246b468fdc1e9aaca07af831fb431e67432e4c9fb12d2bb2ebb6ab67ab68e"
+}

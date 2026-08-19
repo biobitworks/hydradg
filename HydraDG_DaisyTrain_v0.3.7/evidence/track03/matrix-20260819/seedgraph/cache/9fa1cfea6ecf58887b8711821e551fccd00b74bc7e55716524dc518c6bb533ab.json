@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9fa1cfea6ecf58887b8711821e551fccd00b74bc7e55716524dc518c6bb533ab",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of soft blouses and casual knit tops",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of soft blouses and casual knit tops",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4cd2f96688238d8d194b7e273596e674f308bf38fb93a0d3a5ea7b2fed3661ce"
+}

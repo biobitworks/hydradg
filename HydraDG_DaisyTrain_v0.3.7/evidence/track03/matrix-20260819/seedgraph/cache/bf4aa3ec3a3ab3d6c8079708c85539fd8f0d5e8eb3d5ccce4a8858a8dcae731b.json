@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bf4aa3ec3a3ab3d6c8079708c85539fd8f0d5e8eb3d5ccce4a8858a8dcae731b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to create an ad-hoc reporting capability in a SaaS product that uses AWS Aurora ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to create an ad-hoc reporting capability in a SaaS product that uses AWS Aurora Postgres database",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f4e4e86b5104cea32a899a125ee114d9f5c1fc3ddfe179663df3093a4f86eb74"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40b69097117ae19f516365cd361c94a7b8658a112aad175eb32e5b0c2863d440",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "glass containers or plastic ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "glass containers or plastic ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "de7e2c8c0e7967ab443f2452292f6e7616315efe5d936788183eca6fa89c389a"
+}

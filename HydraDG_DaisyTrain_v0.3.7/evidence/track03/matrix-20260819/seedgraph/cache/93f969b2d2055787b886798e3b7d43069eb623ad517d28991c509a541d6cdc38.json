@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "93f969b2d2055787b886798e3b7d43069eb623ad517d28991c509a541d6cdc38",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Korean-Style BBQ Chicken and the BBQ Chicken Tacos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Korean-Style BBQ Chicken and the BBQ Chicken Tacos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1c0b6cf02f3f1767da89c89191eabb51c6e3fa4cfd3022c2f6aab6ebbbea2c47"
+}

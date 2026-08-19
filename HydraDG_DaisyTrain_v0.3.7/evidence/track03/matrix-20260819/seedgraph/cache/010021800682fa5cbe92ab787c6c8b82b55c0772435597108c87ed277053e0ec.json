@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "010021800682fa5cbe92ab787c6c8b82b55c0772435597108c87ed277053e0ec",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "doing my weekly ritual on Sundays, it's a day to unwind and recharge for the wee",
+      "type": "value"
+    },
+    {
+      "name": "to do my weekly ritual of changing my bed sheets",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "doing my weekly ritual on Sundays, it's a day to unwind and recharge for the week ahead",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to do my weekly ritual of changing my bed sheets",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a55890699183ed93d09fcc9420e40ace5046214241d8b8cd22aaaa88db529e72"
+}

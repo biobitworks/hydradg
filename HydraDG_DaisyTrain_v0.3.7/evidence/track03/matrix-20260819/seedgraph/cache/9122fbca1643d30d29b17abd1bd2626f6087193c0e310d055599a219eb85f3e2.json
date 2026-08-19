@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9122fbca1643d30d29b17abd1bd2626f6087193c0e310d055599a219eb85f3e2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of behind-the-scenes content and themed weeks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of behind-the-scenes content and themed weeks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e329de0671e62c5fdd4b5fcb745e889d3ed5a141542875fe6f7979b2ff466f8"
+}

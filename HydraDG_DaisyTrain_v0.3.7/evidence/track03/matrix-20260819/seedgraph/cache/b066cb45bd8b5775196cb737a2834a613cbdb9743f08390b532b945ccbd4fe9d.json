@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b066cb45bd8b5775196cb737a2834a613cbdb9743f08390b532b945ccbd4fe9d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using website blockers and scheduling social media breaks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using website blockers and scheduling social media breaks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6ffd9343cec1d5068b7b40025a3993ffb74d39b11c8e01ac8d7b33c7e96be6fb"
+}

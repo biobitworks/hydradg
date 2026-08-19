@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5d3ffd292d96e4bcb453826cd68a9b4808e010d2e981e9c4cc4f6df70cbd049e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "action and adventure",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "action and adventure",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8c265e5021cccfa6feab5316f316ffb9441d19450d319c14536d42424318855"
+}

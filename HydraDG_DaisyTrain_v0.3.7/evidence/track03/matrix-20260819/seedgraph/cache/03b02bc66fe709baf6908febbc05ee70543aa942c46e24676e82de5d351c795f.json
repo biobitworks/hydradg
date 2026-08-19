@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03b02bc66fe709baf6908febbc05ee70543aa942c46e24676e82de5d351c795f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that layout",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that layout",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "adde25337c128e38d659f38773c6c5d9b26f53f749123a62fae96fb2c18bcce2"
+}

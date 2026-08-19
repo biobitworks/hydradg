@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ea2d5e770775a99c87a760d33228e51d49f700993ecdd721a46e71c34323ec36",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing my expenses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing my expenses",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3b247ebfdb45d09ee538f5a4f6ae2e11c88d25ab66f3e5755131b322e86a327"
+}

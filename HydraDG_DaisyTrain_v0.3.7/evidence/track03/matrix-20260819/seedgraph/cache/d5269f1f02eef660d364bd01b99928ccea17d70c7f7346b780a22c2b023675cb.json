@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5269f1f02eef660d364bd01b99928ccea17d70c7f7346b780a22c2b023675cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of industrial-chic vases",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of industrial-chic vases",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "01a2fd02d30cc492e23c4c39398cee2510e0ff27208ce91f7d53c55d01e0b49d"
+}

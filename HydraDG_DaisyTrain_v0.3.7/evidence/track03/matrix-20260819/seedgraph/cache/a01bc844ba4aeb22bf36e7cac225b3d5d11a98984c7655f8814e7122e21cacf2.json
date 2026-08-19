@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a01bc844ba4aeb22bf36e7cac225b3d5d11a98984c7655f8814e7122e21cacf2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "vegetable broth instead, or even water as a substitute",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "vegetable broth instead, or even water as a substitute",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f4edb64b3a08ca334b7ee74cbd97a4f97df24aa178032b6aa357d965d860bfb6"
+}

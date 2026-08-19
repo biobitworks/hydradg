@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "284cd79fe9773add6326152e7b94c81d640aeb0fd6c80a7939e4780006477616",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "morning yoga since I'm more productive during early morning hours and it gives m",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "morning yoga since I'm more productive during early morning hours and it gives me an energy boost",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "01301f18adb3c9aab2625949eccb7d0a30825613608083414a9d777c719c825d"
+}

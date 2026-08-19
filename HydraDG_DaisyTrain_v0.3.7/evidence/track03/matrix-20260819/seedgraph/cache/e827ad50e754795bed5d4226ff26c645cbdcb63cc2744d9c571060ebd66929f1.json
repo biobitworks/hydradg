@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e827ad50e754795bed5d4226ff26c645cbdcb63cc2744d9c571060ebd66929f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to make several servings of a dinner at once then eat it for a few days",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to make several servings of a dinner at once then eat it for a few days",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b96ceeafb02dec2a5527d0579c11fa40847a7924e803c04c02d12e77e7235bee"
+}

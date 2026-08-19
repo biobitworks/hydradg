@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a26c3d211849e52ad1e8aa7fd72c2974c40c501325d5315a854b8c710a42f94c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "coconut oil instead of regular oil for cooking the tofu and the vegetables",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "coconut oil instead of regular oil for cooking the tofu and the vegetables",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fbd9bd11865509eb8716d5017f9d316e700c77f71e880484adc83d2c1b3ce6dc"
+}

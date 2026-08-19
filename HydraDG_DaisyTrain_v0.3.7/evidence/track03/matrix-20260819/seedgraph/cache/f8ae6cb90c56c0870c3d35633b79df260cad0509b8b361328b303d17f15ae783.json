@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f8ae6cb90c56c0870c3d35633b79df260cad0509b8b361328b303d17f15ae783",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Stew Sandwiches and Beef Stew Quesadilla",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Stew Sandwiches and Beef Stew Quesadilla",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9dfb703881c7c77f5fabe7192d0e20493a42abf02e26f17fd05324ea70ed8057"
+}

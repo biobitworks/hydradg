@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7d80059a61280ce8a502a6a8bb37926dafe6a163af00d435e62e91ceb65948c7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how you mentioned the limited edition print I won at the art auction",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how you mentioned the limited edition print I won at the art auction",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79658c918e6659cf22512d8a54f24c1572452b36cbb7fe7a36046dba43a8618f"
+}

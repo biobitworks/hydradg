@@ -1,0 +1,100 @@
+{
+  "cache_hit": false,
+  "cache_key": "5c09a1519e82dfea735373a736e744101e59fc134d4d74459a30bc7a83aa1a98",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "tend to be more expensive",
+      "type": "value"
+    },
+    {
+      "name": "you like, um, you know, especially, especially the black owned brands, right, li",
+      "type": "value"
+    },
+    {
+      "name": "to amplify that stuff",
+      "type": "value"
+    },
+    {
+      "name": "like most people who if you make playlists, you're always trying to create the p",
+      "type": "value"
+    },
+    {
+      "name": "putting in songs together and feeling like I literally put the perfect sequence ",
+      "type": "value"
+    },
+    {
+      "name": "the discovery piece of it",
+      "type": "value"
+    },
+    {
+      "name": "how the algorithms that they have will send you in the direction on its own to f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "tend to be more expensive",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "you like, um, you know, especially, especially the black owned brands, right, like, you know, I wrot",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to amplify that stuff",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "like most people who if you make playlists, you're always trying to create the perfect playlist",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "putting in songs together and feeling like I literally put the perfect sequence of songs together, o",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the discovery piece of it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "how the algorithms that they have will send you in the direction on its own to find new new artists",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "94ef16a5e471d98a54b9b079aff6872672ae54ec68ff439c0c4e7e5bb08d11b8"
+}

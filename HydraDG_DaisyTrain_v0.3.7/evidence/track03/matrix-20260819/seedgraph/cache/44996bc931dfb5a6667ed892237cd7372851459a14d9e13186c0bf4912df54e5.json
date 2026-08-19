@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "44996bc931dfb5a6667ed892237cd7372851459a14d9e13186c0bf4912df54e5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "online and self-paced learning, and my budget is around $1,000 to $2,000",
+      "type": "value"
+    },
+    {
+      "name": "that it's Python-focused and covers machine learning and data visualization",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "online and self-paced learning, and my budget is around $1,000 to $2,000",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it's Python-focused and covers machine learning and data visualization",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8cf2776b01cd4328162d03f8f77a95116b5ef6062eb4f59d0e63a2d4ab2285b8"
+}

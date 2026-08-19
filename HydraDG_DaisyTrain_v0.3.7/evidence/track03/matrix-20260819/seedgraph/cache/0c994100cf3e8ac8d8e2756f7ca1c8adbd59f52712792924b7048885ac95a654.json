@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c994100cf3e8ac8d8e2756f7ca1c8adbd59f52712792924b7048885ac95a654",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that to grind the Yerba Mate leaves",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that to grind the Yerba Mate leaves",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f6a4886ce9c8d846823d3f939f6e0259d5c9c2859fba8b9926b793de13b1fa4e"
+}

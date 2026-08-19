@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7fa352e87cfbf9b34be99f2a868ebb362d91edf9091a942d40f3de3f2e1f665e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how they challenge me and help me build strength and flexibility",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how they challenge me and help me build strength and flexibility",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9c02d49914dd43310f2cf660deefdb7b875b0debfe5daa3085d23869a313c495"
+}

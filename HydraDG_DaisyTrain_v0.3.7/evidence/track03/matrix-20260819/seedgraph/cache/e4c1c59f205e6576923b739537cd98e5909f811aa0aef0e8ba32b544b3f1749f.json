@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e4c1c59f205e6576923b739537cd98e5909f811aa0aef0e8ba32b544b3f1749f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized photo album, but I'm not sure which service to use",
+      "type": "value"
+    },
+    {
+      "name": "the idea of being able to customize the design and templates",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized photo album, but I'm not sure which service to use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to customize the design and templates",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "474733573707aedfe92369da55fc6f57375c8a696d345caf547ae5626cae636b"
+}

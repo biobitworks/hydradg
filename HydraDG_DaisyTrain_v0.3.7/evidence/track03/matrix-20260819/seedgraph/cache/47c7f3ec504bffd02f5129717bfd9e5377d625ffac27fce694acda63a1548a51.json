@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "47c7f3ec504bffd02f5129717bfd9e5377d625ffac27fce694acda63a1548a51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of not having to apply something monthly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of not having to apply something monthly",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "31d5ded13123f543fc8052f532e4ee1b02d329de91984a00cacb544cd7f1452d"
+}

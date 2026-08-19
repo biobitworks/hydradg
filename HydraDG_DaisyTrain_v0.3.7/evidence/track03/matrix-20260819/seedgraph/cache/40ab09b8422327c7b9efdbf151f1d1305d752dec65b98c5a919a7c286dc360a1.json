@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40ab09b8422327c7b9efdbf151f1d1305d752dec65b98c5a919a7c286dc360a1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the downtown area, and I'm open to any type of brunch",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the downtown area, and I'm open to any type of brunch",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f361708e49afabc8fcae00bfbf577b86658c5dc166363ebd8f614931a6eee0dc"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e63316e480e79fb3c8b61fd76bfaa43e2622f1ca74e344ae95e67cee266065f0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "ketchup, how will the final product be affected",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "ketchup, how will the final product be affected",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8391d2e9b1016679553d0143be95368ad176a61f9482d36423ad8e49067efb39"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9fcb85a1c846c22cbbeaf05cf2c0bec76bc499381ba4223b0c68fa50e9985a24",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item or a memory book",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item or a memory book",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d1febb06f845d0ca9031443255401e025fafc740b9813668ade591f6289ba134"
+}

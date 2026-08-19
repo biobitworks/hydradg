@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "351f0bb82880ee783f494d658e9fea14cd5651aa177faf03e1c4769302df02e1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a focal point in my stall",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a focal point in my stall",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "db6d0b9b0826f7d1ee17677aa14006ce2202a757a8352a2da45aecf1088188b9"
+}

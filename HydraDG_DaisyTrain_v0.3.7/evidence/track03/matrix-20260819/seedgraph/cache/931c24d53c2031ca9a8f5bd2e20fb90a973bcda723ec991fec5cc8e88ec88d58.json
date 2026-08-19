@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "931c24d53c2031ca9a8f5bd2e20fb90a973bcda723ec991fec5cc8e88ec88d58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to create Lottie animations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to create Lottie animations",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "54f473c2842fbfd4ff001bff8c467580411f33cb027c118040877b7d728339e3"
+}

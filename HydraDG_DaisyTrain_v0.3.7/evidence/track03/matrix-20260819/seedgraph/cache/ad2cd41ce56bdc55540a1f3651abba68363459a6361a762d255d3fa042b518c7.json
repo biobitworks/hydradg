@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ad2cd41ce56bdc55540a1f3651abba68363459a6361a762d255d3fa042b518c7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "leftover chicken from last night's dinner",
+      "type": "value"
+    },
+    {
+      "name": "the one-pot pasta idea, but I'm not sure what protein to use",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "leftover chicken from last night's dinner",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the one-pot pasta idea, but I'm not sure what protein to use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0652dc8f48e116ef844f2460d668729c983abc0f32af62107dd044bda567f811"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e80401e738f7fa18f70f9179b9eaf869db284845a5ebf92c221452683574f332",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a series of posts that explore different time management st",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a series of posts that explore different time management strategies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "47744fde83eaaf267dbab12b75d855ccbb8a88729e756ae0a20600868b2cd583"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6fd97e3bb6552e08b53b150a9ce230130d3aa7a7b3a3786c218052a680d96917",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the nature-inspired prints and terracotta vase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the nature-inspired prints and terracotta vase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2ec5258c0c84e684c318faad00a800239be2e656da447504edb00058a4a11b18"
+}

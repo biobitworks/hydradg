@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c3fa4bff9f6b84914fddfee3a846618d7af8abf80c75de3c9e2e92a43088c97a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the monogrammed necklace and customized phone case",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the monogrammed necklace and customized phone case",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ded736e6536b1092eb1b39a3f67032e9bb910c216e1028e06e2ba0505d5eaccc"
+}

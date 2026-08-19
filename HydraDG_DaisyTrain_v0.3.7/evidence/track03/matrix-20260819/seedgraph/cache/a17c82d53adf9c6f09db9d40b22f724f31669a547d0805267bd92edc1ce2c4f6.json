@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a17c82d53adf9c6f09db9d40b22f724f31669a547d0805267bd92edc1ce2c4f6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the personalized blanket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the personalized blanket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e6af0b8fa3a2c04174150755538c1b3e9582aa70bb3ac9d80a2fb6041a6a88d"
+}

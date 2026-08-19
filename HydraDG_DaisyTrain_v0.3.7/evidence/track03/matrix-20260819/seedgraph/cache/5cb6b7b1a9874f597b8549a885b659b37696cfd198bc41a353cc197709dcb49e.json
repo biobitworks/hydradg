@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5cb6b7b1a9874f597b8549a885b659b37696cfd198bc41a353cc197709dcb49e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of neutral shoes, beige or light gray would work well",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of neutral shoes, beige or light gray would work well",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7841c35125e99e61089fdb2019cd764a8f91031cd0b821f51d92a974860bd770"
+}

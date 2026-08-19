@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f4e38cadf9ca96111077a511ca6e8f265904823464f10ab53a7e585342a32ab7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to pack versatile pieces that can be mixed and matched",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to pack versatile pieces that can be mixed and matched",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1883a183476f91ed2c1f8f6852db91be935eb76f8445cdbc71326fc93bd6b554"
+}

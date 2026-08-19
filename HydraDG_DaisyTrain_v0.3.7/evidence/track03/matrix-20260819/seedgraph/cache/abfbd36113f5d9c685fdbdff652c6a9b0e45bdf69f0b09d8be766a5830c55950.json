@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "abfbd36113f5d9c685fdbdff652c6a9b0e45bdf69f0b09d8be766a5830c55950",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "seeing and trying on clothes before purchasing them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "seeing and trying on clothes before purchasing them",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ea70a72866fba38fd1f73b9c04f8ed34cbd12039dd4bf47e93c00988bbcd4e05"
+}

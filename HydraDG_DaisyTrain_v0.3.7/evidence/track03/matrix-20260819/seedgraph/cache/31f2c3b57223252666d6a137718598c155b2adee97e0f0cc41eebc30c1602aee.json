@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "31f2c3b57223252666d6a137718598c155b2adee97e0f0cc41eebc30c1602aee",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to customize it to fit my specific needs",
+      "type": "value"
+    },
+    {
+      "name": "the compact design and the built-in cable management features",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to customize it to fit my specific needs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the compact design and the built-in cable management features",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9b08028e3be5492768c7f8f25bb99a677f047953d9a081f183c4bf7546f78582"
+}

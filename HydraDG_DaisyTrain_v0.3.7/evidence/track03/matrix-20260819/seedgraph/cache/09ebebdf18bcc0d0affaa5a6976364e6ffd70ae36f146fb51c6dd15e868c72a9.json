@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "09ebebdf18bcc0d0affaa5a6976364e6ffd70ae36f146fb51c6dd15e868c72a9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wireless charging pad I have",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wireless charging pad I have",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7a3ce82ba74d8a47f113274aec1de307bdf74c151d0ffd96a7adbe1587965bd9"
+}

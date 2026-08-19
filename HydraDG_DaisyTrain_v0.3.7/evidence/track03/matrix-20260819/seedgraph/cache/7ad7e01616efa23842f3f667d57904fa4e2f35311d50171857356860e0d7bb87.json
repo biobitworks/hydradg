@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7ad7e01616efa23842f3f667d57904fa4e2f35311d50171857356860e0d7bb87",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how it's not afraid to poke fun at the conventions of period dramas and the char",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how it's not afraid to poke fun at the conventions of period dramas and the characters are all so we",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eaa098f92862651b4ad83f31e1cd97504391f5176d3a7027fd448c4b5659fc95"
+}

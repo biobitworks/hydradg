@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f4f711f07976d3e95bf4255d1237950df865a79c0b9f2b4a600adbc1307b5d61",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Wake-Up Light in the evening to help me wind down before bed",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Wake-Up Light in the evening to help me wind down before bed",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "715b900fca6932655f410cc351416f806d446cd7b075a4cd268e7cb10c39f2e2"
+}

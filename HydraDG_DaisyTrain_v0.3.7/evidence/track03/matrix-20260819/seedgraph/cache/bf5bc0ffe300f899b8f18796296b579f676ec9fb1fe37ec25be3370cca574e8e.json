@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bf5bc0ffe300f899b8f18796296b579f676ec9fb1fe37ec25be3370cca574e8e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a conversational circle and a floating furniture arrangement",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a conversational circle and a floating furniture arrangement",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "19eb95809403e1b6e3dd6a83c0540ddd2691d6190801b08ca549a5f4612f39af"
+}

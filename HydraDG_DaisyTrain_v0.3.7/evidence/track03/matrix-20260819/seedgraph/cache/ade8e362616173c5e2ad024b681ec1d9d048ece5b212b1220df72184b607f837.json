@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ade8e362616173c5e2ad024b681ec1d9d048ece5b212b1220df72184b607f837",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a series of Reels",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a series of Reels",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1148fa1b47949ba498ee8fbbaea772a31f4c8607bee20b3d6de5a4a32c4049a3"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b880642b160c16444f18d875abfead5baacaa9144a577ae636515f355793ff8d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa and black bean bowl idea",
+      "type": "value"
+    },
+    {
+      "name": "the smoky flavor of chipotle peppers and it sounds like it would pair well with ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa and black bean bowl idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the smoky flavor of chipotle peppers and it sounds like it would pair well with the quinoa and black",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cbfd02653ca3d3f9aa0e76b961c9ccb99f70c26eac1d4b844715af6f1d0936a6"
+}

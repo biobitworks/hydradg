@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "947aa1f6bf736f77539843142d1ad6bbb611e414da8f0a85c74d0d6ae7dc06a4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of those book recommendations, especially \"The Seven Husbands of Evely",
+      "type": "value"
+    },
+    {
+      "name": "those tips on staying motivated and consistent with new habits",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of those book recommendations, especially \"The Seven Husbands of Evelyn Hugo\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those tips on staying motivated and consistent with new habits",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "10b788b48494b771490a6327f6ad7727dd581237cf86b8da143c5d85903fcaf9"
+}

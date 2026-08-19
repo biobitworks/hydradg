@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c10f41d96b22922006ad25827bd54f4580bf84c20dd63c50c04c3379b16d1d42",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a mix of paved paths and dirt trails",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a mix of paved paths and dirt trails",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df91a6688aec2703d2d4a7e598590e5087958e4a4ac3b17a819a5ea4cdabd248"
+}

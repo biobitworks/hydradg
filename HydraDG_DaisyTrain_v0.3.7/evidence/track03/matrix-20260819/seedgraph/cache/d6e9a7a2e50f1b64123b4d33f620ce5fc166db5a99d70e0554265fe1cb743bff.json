@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d6e9a7a2e50f1b64123b4d33f620ce5fc166db5a99d70e0554265fe1cb743bff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my songs to help others through difficult times, to bring light into the darknes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my songs to help others through difficult times, to bring light into the darkness, and to bring peop",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "beb31cc6103ab10977232ba4855b6dce41f2ba991675f753a63947bb7dae548e"
+}

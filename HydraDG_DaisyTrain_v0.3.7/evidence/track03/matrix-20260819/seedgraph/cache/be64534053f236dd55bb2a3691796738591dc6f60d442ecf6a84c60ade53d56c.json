@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "be64534053f236dd55bb2a3691796738591dc6f60d442ecf6a84c60ade53d56c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "an app to track my progress",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "an app to track my progress",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "15b61e95c6ada16142da1129d6bf07bcd122c78dcdb72e0922674501b5c9d16f"
+}

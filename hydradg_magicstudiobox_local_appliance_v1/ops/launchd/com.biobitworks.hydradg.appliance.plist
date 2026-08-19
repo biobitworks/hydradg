@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.biobitworks.hydradg.appliance</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/zsh</string>
+    <string>/Users/byron/projects/active/hydradg/ops/magicstudiobox/scripts/hydradg_appliance_supervisor.sh</string>
+  </array>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>HYDRADG_APPLIANCE_BIND</key>
+    <string>127.0.0.1</string>
+    <key>HYDRADG_APPLIANCE_PORT</key>
+    <string>3010</string>
+    <key>OLLAMA_BASE_URL</key>
+    <string>http://127.0.0.1:11434</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/byron/.local/share/hydradg-appliance/launchd.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/byron/.local/share/hydradg-appliance/launchd.err.log</string>
+</dict>
+</plist>

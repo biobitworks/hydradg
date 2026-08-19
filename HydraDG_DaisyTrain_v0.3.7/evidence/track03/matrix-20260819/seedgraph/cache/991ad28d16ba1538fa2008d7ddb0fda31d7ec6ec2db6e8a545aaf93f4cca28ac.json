@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "991ad28d16ba1538fa2008d7ddb0fda31d7ec6ec2db6e8a545aaf93f4cca28ac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these tips, especially the one about being authentic and respectful",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these tips, especially the one about being authentic and respectful",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e806a58f10c69a4e22e7920985a6dd796d6ca7933679789f20cfb5f6d2891907"
+}

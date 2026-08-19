@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9b31f457ab05b2b3197217287fe6b7ec7420d15d88e5f1a7d194579d4e4e9495",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Chicken and Quinoa Bowl and the Korean-Style Ground Beef and Ve",
+      "type": "value"
+    },
+    {
+      "name": "the suggestion of planning my meals and making a grocery list",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Chicken and Quinoa Bowl and the Korean-Style Ground Beef and Vegetable Stir-Fry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the suggestion of planning my meals and making a grocery list",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8b3e0af7e3d80ed813947fb7eda3992b89ce10ffd29e17064fe2561873308ab"
+}

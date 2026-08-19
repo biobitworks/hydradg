@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a98a3a559a0f7d9619aa966459330c1d576489dbc51d4b57f343f745b4073d29",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this cashew cheese in other recipes, like vegan lasagna or vegan mac and cheese",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this cashew cheese in other recipes, like vegan lasagna or vegan mac and cheese",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2109781ecd8189bef50605fe3e94363e1106dd0cbfd121c5cf0ffb486dde52f8"
+}

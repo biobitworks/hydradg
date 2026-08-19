@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "87ce57f5f1c5a3211fe71fb1f6f1e867ba66085f1c65a0486a6b2e84a3ddd7b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a deep jewel-toned cotton for the binding",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a deep jewel-toned cotton for the binding",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dff57a55611beb9c69c2a422a7219a165334f063e9c73e9337bcc2f3422e83aa"
+}

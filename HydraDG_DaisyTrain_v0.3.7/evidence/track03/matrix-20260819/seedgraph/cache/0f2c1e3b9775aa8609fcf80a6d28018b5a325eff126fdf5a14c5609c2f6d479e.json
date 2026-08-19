@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f2c1e3b9775aa8609fcf80a6d28018b5a325eff126fdf5a14c5609c2f6d479e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the 24/7 fitness center and the variety of equipment and classes they offer",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the 24/7 fitness center and the variety of equipment and classes they offer",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a34b196d7eab5720d46408fb92867841468ae9df1d598c77122ad2d3c22b1409"
+}

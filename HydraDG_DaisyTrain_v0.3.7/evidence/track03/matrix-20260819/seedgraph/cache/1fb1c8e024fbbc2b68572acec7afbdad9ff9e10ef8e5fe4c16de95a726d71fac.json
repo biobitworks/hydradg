@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1fb1c8e024fbbc2b68572acec7afbdad9ff9e10ef8e5fe4c16de95a726d71fac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a neutral sound signature and accurate sound reproduction",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a neutral sound signature and accurate sound reproduction",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "94941f43ecc94bdcc69af74329eaa5e2e94f2b812b2b19be996dcbf518833454"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f33e3d8a5af0781b2281bcc1a82fba06ca496461028f99f5256560114ae46d83",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the 5-Minute Rule idea, I can definitely fit that into my morning routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the 5-Minute Rule idea, I can definitely fit that into my morning routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a1b605bcb891cfd085cc3eaa9f6b4f16c7d9ac77cc4878e89397b7ff32251cef"
+}

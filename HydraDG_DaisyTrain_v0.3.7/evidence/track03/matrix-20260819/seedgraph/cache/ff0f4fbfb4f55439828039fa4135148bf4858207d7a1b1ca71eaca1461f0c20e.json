@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff0f4fbfb4f55439828039fa4135148bf4858207d7a1b1ca71eaca1461f0c20e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the right detergent",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the right detergent",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a23cc1a71cd54391f99c11e3270d76c719e304e8f420d94802477a5714b7a07"
+}

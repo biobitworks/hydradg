@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "54e6e6590a24d7fbce39e3f77d52fd23823cf49d7fba92c28ddf382d9525a88c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of visualizing my tasks with boards and lists",
+      "type": "value"
+    },
+    {
+      "name": "the idea of visualizing my tasks with boards and lists, and it seems like it wou",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of visualizing my tasks with boards and lists",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of visualizing my tasks with boards and lists, and it seems like it would be easy to use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cf3d8218490658ce264f9a6462d751611e92e749acc115a28ce6fd0476bfe0f8"
+}

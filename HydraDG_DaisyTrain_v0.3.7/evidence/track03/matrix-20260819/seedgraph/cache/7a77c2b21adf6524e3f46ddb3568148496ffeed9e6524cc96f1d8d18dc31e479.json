@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a77c2b21adf6524e3f46ddb3568148496ffeed9e6524cc96f1d8d18dc31e479",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Montserrat, it looks really clean",
+      "type": "value"
+    },
+    {
+      "name": "the suggestion of leaving space for reflection and doodling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Montserrat, it looks really clean",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the suggestion of leaving space for reflection and doodling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3f724967b7f936d3d7143bc3870b539ea438c34e42830d26be7808c4d905e65c"
+}

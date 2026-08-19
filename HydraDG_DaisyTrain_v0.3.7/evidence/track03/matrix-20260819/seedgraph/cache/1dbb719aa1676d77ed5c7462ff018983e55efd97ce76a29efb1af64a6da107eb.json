@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1dbb719aa1676d77ed5c7462ff018983e55efd97ce76a29efb1af64a6da107eb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "feeling sore after a workout",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "feeling sore after a workout",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4fecda00a72cea4a23d1d26f3fd5466617082871ac97e5c06668b1084eb79f98"
+}

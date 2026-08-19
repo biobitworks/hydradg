@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d249ce1e7404da12b5ec74ed1e63e0607f5d8559780749d8da5aa20cf6209a45",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of handmade jewelry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of handmade jewelry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d889c73c3212be2f179655ad010ce28c1b554c222f88e343fefa7b83b1cb0d7"
+}

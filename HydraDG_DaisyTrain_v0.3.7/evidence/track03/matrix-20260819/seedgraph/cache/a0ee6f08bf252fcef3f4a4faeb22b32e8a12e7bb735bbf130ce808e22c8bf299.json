@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a0ee6f08bf252fcef3f4a4faeb22b32e8a12e7bb735bbf130ce808e22c8bf299",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to have games on my phone that I can take with me on the go",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to have games on my phone that I can take with me on the go",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f03807b600daea1d4d36ce5e28be20e0324927bcd907915b2fb77bacf8f1e57e"
+}

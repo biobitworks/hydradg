@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1db3a5d138ee18576c25db3884725e1a212d391d0d821bc8df4f0cb231b1b47b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of arranging by artist/style-based, but I'm not sure how to handle the ",
+      "type": "value"
+    },
+    {
+      "name": "these suggestions, especially the idea of creating a miscellaneous/general art s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of arranging by artist/style-based, but I'm not sure how to handle the books that don't fit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these suggestions, especially the idea of creating a miscellaneous/general art section",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "353cb22818012f5ca11b1fba97877f31d0f52b45049b79c55005c6c5aca9c5ff"
+}

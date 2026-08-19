@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "670e7e18eddf23c5a927d24b62fb6e4c45f5a2efea58b982122dce71cf96e3cf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the idea of scheduling a follow-up hangout with my f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the idea of scheduling a follow-up hangout with my friends",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e5df536ab1ec1078bc682bf5a0fed1bd080163a9bb69df765ca7c6b1fdff345f"
+}

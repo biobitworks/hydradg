@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "06d7d657ce654892979007bae2f6df6581e12da6f210ed5cf18435f7a4474009",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "ones that are around 15-20 hours long",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "ones that are around 15-20 hours long",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a2c945d1e395a1a86a1ce71739df331126a47b60d1b4a1d6c5aa0624098cc2c7"
+}

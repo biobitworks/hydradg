@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5c35443e2b44b1f1ee5ee90f33be0b36b0510375f9ed4c228726de9b807f056b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing my contacts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing my contacts",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "55395f8e752c8fb309b797dd9a7db751b700d800b39c33f388c0ff99bd986684"
+}

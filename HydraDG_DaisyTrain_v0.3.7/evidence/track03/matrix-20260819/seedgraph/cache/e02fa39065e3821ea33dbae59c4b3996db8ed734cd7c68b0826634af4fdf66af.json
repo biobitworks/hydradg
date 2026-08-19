@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e02fa39065e3821ea33dbae59c4b3996db8ed734cd7c68b0826634af4fdf66af",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "routes with low traffic and scenic views",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "routes with low traffic and scenic views",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1bf8883db4de031b448f72c0e6c092522c77c2a2d4c9f2e5a72827ddd651c228"
+}

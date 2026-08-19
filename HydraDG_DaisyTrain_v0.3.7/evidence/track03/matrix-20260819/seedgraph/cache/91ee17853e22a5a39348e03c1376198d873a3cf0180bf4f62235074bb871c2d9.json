@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "91ee17853e22a5a39348e03c1376198d873a3cf0180bf4f62235074bb871c2d9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a watch",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a watch",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fafd716f98de24f652045c2b6631c968932e2f5d4de9e715d3372d609672360a"
+}

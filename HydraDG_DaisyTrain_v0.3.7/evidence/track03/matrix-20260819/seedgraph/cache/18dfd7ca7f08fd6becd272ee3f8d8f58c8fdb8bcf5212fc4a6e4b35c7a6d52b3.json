@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "18dfd7ca7f08fd6becd272ee3f8d8f58c8fdb8bcf5212fc4a6e4b35c7a6d52b3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of featuring products from the craft fair and incorporating educational",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of featuring products from the craft fair and incorporating educational content to attract",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9ef925453a38a81ae96ce00ad499fe026a70ee7b13c8dcaa688ae1b13efb8aeb"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c3291e7159c3c1246138db0a5b0645c46d8697410b4e1f3579ebf5bb211dd421",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a protein-packed stir-fry recipe for meal prep",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a protein-packed stir-fry recipe for meal prep",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a90d2931ce39cfa116d6c8553021867a21b32938aa83bd6709316c8d4aaa1fe9"
+}

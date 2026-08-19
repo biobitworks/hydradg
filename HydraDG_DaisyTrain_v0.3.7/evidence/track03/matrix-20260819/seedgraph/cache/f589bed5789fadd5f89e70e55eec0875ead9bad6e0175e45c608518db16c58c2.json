@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f589bed5789fadd5f89e70e55eec0875ead9bad6e0175e45c608518db16c58c2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially Alex and Ani",
+      "type": "value"
+    },
+    {
+      "name": "these ideas, especially the personalized photo blanket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially Alex and Ani",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the personalized photo blanket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "01e6d2c50d9f595ea4c527a1699afc055f7e0d83fa2448a5bf1ff6590ae58694"
+}

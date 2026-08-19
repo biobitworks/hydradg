@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "41d0117487688724d0673c354d0fd88965c69de6f8892d8e34e1f18827bb43a8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Kansas City, Missouri",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Kansas City, Missouri",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "735a6f65612149ad48597a21d3cf46fdfa40c3b95034f5ec777d89d39131acad"
+}

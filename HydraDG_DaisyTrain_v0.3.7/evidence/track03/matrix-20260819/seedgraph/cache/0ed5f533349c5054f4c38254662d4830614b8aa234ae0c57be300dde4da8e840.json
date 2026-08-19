@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ed5f533349c5054f4c38254662d4830614b8aa234ae0c57be300dde4da8e840",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of combining the grapefruit with gin and a splash of soda water",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of combining the grapefruit with gin and a splash of soda water",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f900a6f73589a81962f053dfc900563e5e40abbab18afa82d7f4b4e068edf6c2"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e06b3a0ad6a939cc2edd20ee460c3fdcc08de3d066de62c29639200ed1c79d50",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting intentions for the day",
+      "type": "value"
+    },
+    {
+      "name": "the idea of breaking down my weekly goals into daily tasks to help me stay focus",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting intentions for the day",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking down my weekly goals into daily tasks to help me stay focused and motivated",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "84253613f9c79c8cd349d445c3d9b5747dd424f6e7a241b726f9618dc3c70341"
+}

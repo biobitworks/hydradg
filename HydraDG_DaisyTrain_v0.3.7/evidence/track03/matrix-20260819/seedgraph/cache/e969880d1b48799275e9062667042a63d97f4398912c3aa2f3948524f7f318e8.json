@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e969880d1b48799275e9062667042a63d97f4398912c3aa2f3948524f7f318e8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the celestial design idea for my embroidery project",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the celestial design idea for my embroidery project",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3ab46700a6ce2214f39de0fa6001af6d3d124079682a9ae75869224c901ee64d"
+}

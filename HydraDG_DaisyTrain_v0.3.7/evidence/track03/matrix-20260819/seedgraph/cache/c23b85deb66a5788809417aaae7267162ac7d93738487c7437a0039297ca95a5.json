@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c23b85deb66a5788809417aaae7267162ac7d93738487c7437a0039297ca95a5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a binder with labeled sections",
+      "type": "value"
+    },
+    {
+      "name": "buying household items, toiletries, and sometimes clothes for my kids",
+      "type": "value"
+    },
+    {
+      "name": "how it's organized by category and how I can easily browse through the offers an",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a binder with labeled sections",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "buying household items, toiletries, and sometimes clothes for my kids",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "how it's organized by category and how I can easily browse through the offers and add them to my lis",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1667efc9636a5ae94339cdc210e8a792e1136771f2128ae6f3be34c6f7c63022"
+}

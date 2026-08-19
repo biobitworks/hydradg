@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f345d4b300a08035fe7d54646aff67e41c3299adf2bc09b39b0f86af66737664",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to review portfolios and bids before selecting an artist",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to review portfolios and bids before selecting an artist",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75f40b42c2906db54e0be0e4ddfab6cd0ffba0c8f6d5edff24ccc86208a1fdeb"
+}

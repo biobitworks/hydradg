@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d425353a3744502f700a2949e4f697f525e653430eb1b7377590801138def829",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the outline, but I'm not sure if I want to have the event in Quarter 2",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a charity run or walk in January",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the outline, but I'm not sure if I want to have the event in Quarter 2",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a charity run or walk in January",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "953fc700cabab70e6da4008c705da2f6eea60f239ea6a3e8c7c8f2efc021ee6f"
+}

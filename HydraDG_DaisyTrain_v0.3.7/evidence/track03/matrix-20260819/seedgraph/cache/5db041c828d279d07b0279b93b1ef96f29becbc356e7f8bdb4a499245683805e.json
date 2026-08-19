@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5db041c828d279d07b0279b93b1ef96f29becbc356e7f8bdb4a499245683805e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a Rainbow Chevron quilt, but I'm not sure how to arrange the colors",
+      "type": "value"
+    },
+    {
+      "name": "the idea of starting with a range of widths and auditioning them to see what loo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a Rainbow Chevron quilt, but I'm not sure how to arrange the colors",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of starting with a range of widths and auditioning them to see what looks best with my fabr",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "87648e01b793facce834460fea3a6754d82d14ea0dd492f1728c9d71f6608765"
+}

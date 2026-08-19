@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d32a2734e0f51d37e9c3cd14b2a3074abaeeb1444412624af32363e30154d938",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a \"Journey Begins\" stamp with a picture of a plane, and a \"Fo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a \"Journey Begins\" stamp with a picture of a plane, and a \"Forever Family\" stamp",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d8ee9af89c4d1360f07a39abc66c8f647b5ad9560c10fa67c57a7a798c0589d"
+}

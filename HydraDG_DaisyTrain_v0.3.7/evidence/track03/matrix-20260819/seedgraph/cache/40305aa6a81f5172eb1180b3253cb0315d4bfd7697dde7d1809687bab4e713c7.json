@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40305aa6a81f5172eb1180b3253cb0315d4bfd7697dde7d1809687bab4e713c7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "modern poetry, but I'm open to exploring other styles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "modern poetry, but I'm open to exploring other styles",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "29330bd10258a3f36aa74f176e26eb4eb67a1b9c080953ff4fc75ac19915bda0"
+}

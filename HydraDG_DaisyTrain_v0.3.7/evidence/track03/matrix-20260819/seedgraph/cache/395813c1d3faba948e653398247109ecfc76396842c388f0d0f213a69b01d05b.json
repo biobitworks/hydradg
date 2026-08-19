@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "395813c1d3faba948e653398247109ecfc76396842c388f0d0f213a69b01d05b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the love story timeline",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the love story timeline",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c413bd60e75f55d4f5d2fff12b50264dbdd2155bf3f376efd3cb2e8c9ea2094f"
+}

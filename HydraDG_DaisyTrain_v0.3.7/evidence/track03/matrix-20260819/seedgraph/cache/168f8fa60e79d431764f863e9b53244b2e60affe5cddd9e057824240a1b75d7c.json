@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "168f8fa60e79d431764f863e9b53244b2e60affe5cddd9e057824240a1b75d7c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a credit card or PayPal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a credit card or PayPal",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a26ecb0899db01d65c32106179e5bc4b0401c3142800d86c6a1aadde3e6eba44"
+}

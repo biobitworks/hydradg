@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0d910c70cac0118038196fe7ea23f6a0c0c7904bc061f85654449ac0421a3ade",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a self-care bundle, but I'm worried that it might be difficult to pa",
+      "type": "value"
+    },
+    {
+      "name": "the idea of partnering with one brand to create a bundle",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a self-care bundle, but I'm worried that it might be difficult to partner with multiple",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of partnering with one brand to create a bundle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0cf1c41f9e655ddddbebd1cd26022ddfc5ae9f4b90b864c67d8bab9479cad572"
+}

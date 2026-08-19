@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7e91a9e83949a6952d199c1e29cd0e9a7ec51eaab416687f8466dbcc9ad64b4f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of joining a book club since I love reading",
+      "type": "value"
+    },
+    {
+      "name": "the idea of sharing my thoughts and opinions about the book",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of joining a book club since I love reading",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing my thoughts and opinions about the book",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b1063ebc8f9b3bedf9fd84c3838f8b163cbaaa296138726c5059d6bff3ad4370"
+}

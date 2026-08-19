@@ -1,0 +1,48 @@
+{
+  "cache_hit": false,
+  "cache_key": "bb2a2196d68bfa6433ec95f8d979e08b1d4a9c7a1c2ecd6c14116e2147371ccf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gradually adjusting my wake-up time",
+      "type": "value"
+    },
+    {
+      "name": "the idea of hydration station",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gradually adjusting my wake-up time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of hydration station",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of gradually adjusting my wake-up time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "403aadde8a6c9f575b731c40a4664dc21f08c388ebf78c78f883147d00cbabac"
+}

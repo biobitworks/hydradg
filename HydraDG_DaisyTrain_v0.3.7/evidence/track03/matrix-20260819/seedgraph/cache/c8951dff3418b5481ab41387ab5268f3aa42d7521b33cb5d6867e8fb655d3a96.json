@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c8951dff3418b5481ab41387ab5268f3aa42d7521b33cb5d6867e8fb655d3a96",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "something like infusoria or a commercial fry food",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "something like infusoria or a commercial fry food",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8aefc9333d1a8edbe57e7a28bf1e8751251159ce500d08f378389246387e4ffe"
+}

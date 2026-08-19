@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6c656f154df810321aa17c648f47be245af818a02a57a374524a18cf578c6b03",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the gourmet food basket idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the gourmet food basket idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "540e842970310465efe25e378bc68f756d58d0cf52af442ec4e3fe193f372fbd"
+}

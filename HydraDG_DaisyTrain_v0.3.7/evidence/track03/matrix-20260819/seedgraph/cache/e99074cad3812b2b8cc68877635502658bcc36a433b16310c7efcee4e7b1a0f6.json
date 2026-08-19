@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e99074cad3812b2b8cc68877635502658bcc36a433b16310c7efcee4e7b1a0f6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the options you provided, especially the Klean Kanteen Insulated Reflect Hydrati",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the options you provided, especially the Klean Kanteen Insulated Reflect Hydration Bottle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ee9d64454c03a4a8d96b8ead9170d101cbda55fbb77db3ef8f3112e42bbb539b"
+}

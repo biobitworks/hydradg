@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "b9f2b8c2f774232d0319ed281126d6e0ddf4d8e4a8a01324a3220723e20ed2dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a collaborative coaching style and virtual coaching sessions",
+      "type": "value"
+    },
+    {
+      "name": "a female coach with at least 10 years of experience in the finance industry",
+      "type": "value"
+    },
+    {
+      "name": "the coach to speak English",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a collaborative coaching style and virtual coaching sessions",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a female coach with at least 10 years of experience in the finance industry",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the coach to speak English",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "55c2f47a21131b1f73d4af6b84c8810d2a29a074b7bfa8390f437b3f096f1f63"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "77a2a462bbd37793da0ea7c7b62f46c0c3ed6280e86fdb8787bd22dadb2677c9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a sheet mask on my butt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a sheet mask on my butt",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d4405c16548f2f9a8feb668061a816e7c1bce20a98e389fbc33781864289c6c9"
+}

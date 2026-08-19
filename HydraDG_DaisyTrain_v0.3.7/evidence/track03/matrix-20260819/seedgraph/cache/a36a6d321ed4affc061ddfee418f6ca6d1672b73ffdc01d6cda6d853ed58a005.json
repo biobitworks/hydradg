@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a36a6d321ed4affc061ddfee418f6ca6d1672b73ffdc01d6cda6d853ed58a005",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting up a separate fund for big-ticket items, though",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up a separate fund for big-ticket items, though",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb8f13d25a85a86fc9c4b55fb41ffb162b8b6764eee890783bdd7993a700beb8"
+}

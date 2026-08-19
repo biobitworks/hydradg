@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5b71223e424cd55e9ee45aab7e0ee3a985c7d13778ffd7797b69034dc148382a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Lentil and Veggie Burgers, can you give me more information on ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Lentil and Veggie Burgers, can you give me more information on how to make them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d1851c6c610c9fc80ec86d34e4bca720cdf79a393ac8df1fcdd4c94770c2ce48"
+}

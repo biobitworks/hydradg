@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "6b62d61c7c2ab2f91c7233a744005a1b56872b311fa187b26364fcf391d7abf9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to",
+      "type": "value"
+    },
+    {
+      "name": "sports",
+      "type": "value"
+    },
+    {
+      "name": "to read in my free time",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "sports",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to read in my free time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1a358bd2cea939b66096ec2463b785be47b9191f4638976d5fadf977bc5a0fc8"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "32a1fceb6bb8090b5aa6af4eb84866ed9a38f081db22ebef2319c808d461306c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a sports-themed scavenger hunt, and the example clues and challenges",
+      "type": "value"
+    },
+    {
+      "name": "the idea of incorporating LA Lakers trivia and challenges around the LA Live com",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a sports-themed scavenger hunt, and the example clues and challenges you provided are gr",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating LA Lakers trivia and challenges around the LA Live complex",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d938d2db1c9d487a71cd527b232759ae471c323b4db8f0cc34eab106ccca16cd"
+}

@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac020fe228fd6950639227fa5122cbef050f2bb317648aae0e09ddd4667a364b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of nesting tables, but I'm not sure if they'd fit well with my current ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the industrial cart coffee table with storage baskets",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a warm, earthy tone that complements my rug's color",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of nesting tables, but I'm not sure if they'd fit well with my current furniture style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the industrial cart coffee table with storage baskets",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a warm, earthy tone that complements my rug's color",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bc56cc905c39e42217d0f6743a56cb86bbd200dbf9b8ba53e6887c3f50a50878"
+}

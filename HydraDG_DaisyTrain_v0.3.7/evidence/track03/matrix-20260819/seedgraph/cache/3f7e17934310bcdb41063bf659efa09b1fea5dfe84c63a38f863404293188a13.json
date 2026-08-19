@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3f7e17934310bcdb41063bf659efa09b1fea5dfe84c63a38f863404293188a13",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of ease of use and consistency, and I'm not sure I'm ready to dive into",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of ease of use and consistency, and I'm not sure I'm ready to dive into the more complex wo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6f86a87ca70764a75d2956d72d47e043c2818e3d9563893747caeafbf2810140"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "02c4f8801b6c60f3dfc331101706995b4cdfe872d5c447c9725f97ae6b5039e6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that I can control the ingredients and portion sizes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that I can control the ingredients and portion sizes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "250fc95e5fa3d2087b48645dd8d1be6a2e697888839ce37491508a6208cfb527"
+}

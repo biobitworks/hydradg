@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8b44080fa70d759e3e5c082677384034cc7018cd6f24f28d20a66580d2cdb49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting personal goals and breaking them down into achievable tasks",
+      "type": "value"
+    },
+    {
+      "name": "to listen to pop music when I need a boost",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting personal goals and breaking them down into achievable tasks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to listen to pop music when I need a boost",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79ea1bef6be270031a4581d6a6da171ee22829b43b1d1057fce624b11894356a"
+}

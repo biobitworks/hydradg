@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f4591d693cf600f6c3b936222a308a6452df7f3fb61c3cd8cdc94094fce4bfd2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "green for important takeaways, yellow for questions or areas I need further clar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "green for important takeaways, yellow for questions or areas I need further clarification on, and or",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a1ae0187d1df7911f8c83c9a9cc7d57d091747a2bb8885184ecaf83c7a25fc41"
+}

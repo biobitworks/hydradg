@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0410137d036d9806c4bfa4d9da4f24df254e9e75ee673355217acf48b852e405",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Last Memory\" and \"The Generation Ship\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Last Memory\" and \"The Generation Ship\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "77ae971452335f11f9b12148e04144b788e66058dabf138fd1130b3829f4c5ef"
+}

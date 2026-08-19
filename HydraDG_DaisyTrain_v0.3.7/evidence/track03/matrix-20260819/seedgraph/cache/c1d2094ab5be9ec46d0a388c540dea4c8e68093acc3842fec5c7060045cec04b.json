@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c1d2094ab5be9ec46d0a388c540dea4c8e68093acc3842fec5c7060045cec04b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "regularly, I'm hoping it will work well with the stain remover",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "regularly, I'm hoping it will work well with the stain remover",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "18cf5fea77e9118132ab4aaf37e3394417d1cd68f28ad91053e70e35d51e2c93"
+}

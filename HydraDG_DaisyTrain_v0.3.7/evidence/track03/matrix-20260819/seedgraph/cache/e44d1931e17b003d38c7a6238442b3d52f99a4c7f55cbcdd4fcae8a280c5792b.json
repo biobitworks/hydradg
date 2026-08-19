@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e44d1931e17b003d38c7a6238442b3d52f99a4c7f55cbcdd4fcae8a280c5792b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these outfit ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these outfit ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3079a3351798d2921316d5a89cf15366e46da7e641dc400699095c2034c91ec0"
+}

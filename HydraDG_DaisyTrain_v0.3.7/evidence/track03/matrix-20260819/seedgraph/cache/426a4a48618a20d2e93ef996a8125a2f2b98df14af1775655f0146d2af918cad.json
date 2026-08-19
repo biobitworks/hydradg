@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "426a4a48618a20d2e93ef996a8125a2f2b98df14af1775655f0146d2af918cad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that plan, but I was thinking of using my meal prep routine on Sunday to help me",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that plan, but I was thinking of using my meal prep routine on Sunday to help me stay energized thro",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "796a9af8bd0b83f6faaa6cf0acb64057816eca5dfaf0a7338550cb486771fb88"
+}

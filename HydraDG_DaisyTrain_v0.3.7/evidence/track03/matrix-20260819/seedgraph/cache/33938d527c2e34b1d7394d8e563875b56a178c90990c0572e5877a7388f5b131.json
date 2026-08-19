@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "33938d527c2e34b1d7394d8e563875b56a178c90990c0572e5877a7388f5b131",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a focal point in the room",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a focal point in the room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cb9a31081a96f41ce79426d87a4e90ba6b926c752857828b5b77949bce24414d"
+}

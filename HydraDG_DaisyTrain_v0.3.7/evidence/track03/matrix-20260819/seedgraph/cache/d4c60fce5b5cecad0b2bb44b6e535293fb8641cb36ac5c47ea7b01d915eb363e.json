@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "d4c60fce5b5cecad0b2bb44b6e535293fb8641cb36ac5c47ea7b01d915eb363e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas you provided",
+      "type": "value"
+    },
+    {
+      "name": "the idea of focusing on the ones that are both urgent and important, and then sc",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating an index or table of contents for each notebook or digital ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas you provided",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of focusing on the ones that are both urgent and important, and then scheduling the ones th",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating an index or table of contents for each notebook or digital tool, and scheduling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "953d8d05543b85a9f8f5be40a731ac419aa0df6d4c6cd78c2300b377105ed956"
+}

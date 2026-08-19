@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6d2f6cb8c26c2e6b3aeb0528792c114e2339ed349ebddc287ffaae88512a8d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the example you provided, it gives me a good idea of how to structure my applica",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the example you provided, it gives me a good idea of how to structure my application",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "379608f549b58ee0e088c2212dce8d5150b0db391e774ff6ba3cd50537b83fab"
+}

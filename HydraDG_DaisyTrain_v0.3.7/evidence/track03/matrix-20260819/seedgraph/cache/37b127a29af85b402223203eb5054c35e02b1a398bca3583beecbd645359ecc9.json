@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "37b127a29af85b402223203eb5054c35e02b1a398bca3583beecbd645359ecc9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Korean-Style BBQ Beef Tacos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Korean-Style BBQ Beef Tacos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "307d4c246de199bffd49e3d3a7cf0a66c7f192edc6c449999a3bb99ce92e838b"
+}

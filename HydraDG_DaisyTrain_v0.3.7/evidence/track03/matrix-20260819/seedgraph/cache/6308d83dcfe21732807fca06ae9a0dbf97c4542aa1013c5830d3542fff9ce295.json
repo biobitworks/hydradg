@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6308d83dcfe21732807fca06ae9a0dbf97c4542aa1013c5830d3542fff9ce295",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Instagram Stories and IGTV to increase engagement and attract new followers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Instagram Stories and IGTV to increase engagement and attract new followers",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "18bb26741024fbde0793e20e9f0b9c5d39354b38d4907b288b63fd954d619b53"
+}

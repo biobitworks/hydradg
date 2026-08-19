@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a18a8509c76428165ef4b2b6a3741edb42eb760ea1716dc6e9c263c47e67c962",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "handbags that are timeless, yet still make a statement",
+      "type": "value"
+    },
+    {
+      "name": "their trendy designs",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "handbags that are timeless, yet still make a statement",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "their trendy designs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a32460e7d86a7d2d2df8db10a849ac60e80ab6aff90598a348d34d1c085f75fb"
+}

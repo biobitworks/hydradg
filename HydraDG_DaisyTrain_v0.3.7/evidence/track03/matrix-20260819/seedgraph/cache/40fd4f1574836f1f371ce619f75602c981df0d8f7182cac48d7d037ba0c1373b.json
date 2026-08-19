@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40fd4f1574836f1f371ce619f75602c981df0d8f7182cac48d7d037ba0c1373b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Cinnamon Apple Oatmeal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Cinnamon Apple Oatmeal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "57bafcecf92e61f9d88c68bfbed74247217ac8b289d42073b02ff86e2331720e"
+}

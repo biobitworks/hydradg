@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "79a2a17f15d1a8f28b273bbbe9082c20775263e25942f8111603fbfc07fd0a12",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a petting zoo, but I'm worried about the logistics of keeping all th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a petting zoo, but I'm worried about the logistics of keeping all the animals contained",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e6e2204e9728b60f0bf3624a66f875e98a94ee450f6aae158577164b12883d94"
+}

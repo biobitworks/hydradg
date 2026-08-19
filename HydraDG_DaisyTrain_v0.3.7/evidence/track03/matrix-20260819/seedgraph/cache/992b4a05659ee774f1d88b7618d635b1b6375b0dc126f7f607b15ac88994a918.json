@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "992b4a05659ee774f1d88b7618d635b1b6375b0dc126f7f607b15ac88994a918",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the same fertilizer for Slinky that I use for my succulents",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the same fertilizer for Slinky that I use for my succulents",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bf1e0e78cb07555873cb028c2b416f87065dbedcda1314412ae43cc7f1fb9182"
+}

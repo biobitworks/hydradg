@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "58bde3eaafbf4c314004538a6799e75c4831e2b88e837f373adadc0afc6d998b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the idea of establishing a relaxing bedtime routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the idea of establishing a relaxing bedtime routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "148382255dbd72396519ae6c5deda9ebafc9632c5e9793ea0360a690f13e7782"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5cc5bf2755dee25743fff0ecc6271a6c11ae92cf24cb708f5368de734ddeb2b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the distressed denim idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the distressed denim idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "66100060135a3ecf2257ab9bc7f3aa98d2e48f9c45579882e093907a2e76a2da"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2816bcf56f7f99214406a666e1c74b1dbb3b32accc19844b84057805dc3e7e83",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the monochromatic idea, I'll definitely try that out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the monochromatic idea, I'll definitely try that out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a54fe4cbdfe2805647313c32979abc27f8d684082ce424950c058842435b98a"
+}

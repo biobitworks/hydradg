@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6480cbb88c38ef2ad3be95cf31cb6b2560a0ddbfd88172dce442dd99f0eba43",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city, and I'm interested in an adult monthly pass",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city, and I'm interested in an adult monthly pass",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "13769eca9d9e7ab33e991a0e2ec85a97cf065d1abeba8a6d1ed1086edb7f7dc0"
+}

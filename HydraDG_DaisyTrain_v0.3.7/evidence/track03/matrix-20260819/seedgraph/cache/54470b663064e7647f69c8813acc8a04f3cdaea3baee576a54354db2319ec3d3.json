@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "54470b663064e7647f69c8813acc8a04f3cdaea3baee576a54354db2319ec3d3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas, especially the guided tours and animal encounters",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the guided tours and animal encounters",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "73dd58468b3a249da1673d40ccca6af800514a6632cd902e99e9b23fe4e9e3a8"
+}

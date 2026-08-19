@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "203c83538e4d83105b462a4a6ca3df1706fd0ab137775fc5d20e452a30fc4e3e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a \"treat yourself\" budget",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a \"treat yourself\" budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "66a4d2238d96296688955ff39e6a3d4cada829dc742587888089c6327901baaa"
+}

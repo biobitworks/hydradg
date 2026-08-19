@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d411daeacc48dff4662c285aeef96ef231c2329d9a623943d588f3e154d0852c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "morning sessions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "morning sessions",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9c9042a311b455de89933110645d93a37bf932b41a49324ed6ab3f2f4b2e295c"
+}

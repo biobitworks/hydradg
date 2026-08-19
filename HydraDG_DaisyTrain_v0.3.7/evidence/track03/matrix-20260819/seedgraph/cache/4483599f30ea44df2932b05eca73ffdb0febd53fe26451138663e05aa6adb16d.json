@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4483599f30ea44df2932b05eca73ffdb0febd53fe26451138663e05aa6adb16d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Google Calendar for my scheduling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Google Calendar for my scheduling",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9d7f5ced9272e2a60f3b97835e4f09da627d1fbb2bdc010da4b79001b39cd314"
+}

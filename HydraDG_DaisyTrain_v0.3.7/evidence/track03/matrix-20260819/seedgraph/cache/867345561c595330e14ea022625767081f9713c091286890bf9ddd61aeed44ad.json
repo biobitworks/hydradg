@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "867345561c595330e14ea022625767081f9713c091286890bf9ddd61aeed44ad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of Sense Memory",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of Sense Memory",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2df77f56f75d21ea33c5b3acaa8b3b452bd38627bc54420f863dab3c95d1ceda"
+}

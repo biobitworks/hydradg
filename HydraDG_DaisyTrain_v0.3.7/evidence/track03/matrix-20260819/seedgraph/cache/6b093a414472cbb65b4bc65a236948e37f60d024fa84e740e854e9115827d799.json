@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6b093a414472cbb65b4bc65a236948e37f60d024fa84e740e854e9115827d799",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those online stores, I'll take a look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those online stores, I'll take a look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2b02c71a3606a9b1b9f1bd6af043bde8bbacda2058fedaebb4e76ef48680bf5d"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d49eb7a3ce98c0d6f470e282cf5ffd4ad33673ced28d207078f7475b7abbc80c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to incorporate statement pieces into my outfits, but I also like to keep things ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to incorporate statement pieces into my outfits, but I also like to keep things simple and effortles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef51fef85facd9ef83922a7934388c627f8509d8dfaf73a9c7b344fc6118fe62"
+}

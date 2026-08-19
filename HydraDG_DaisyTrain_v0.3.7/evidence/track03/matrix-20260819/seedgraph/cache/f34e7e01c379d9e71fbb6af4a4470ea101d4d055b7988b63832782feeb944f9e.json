@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f34e7e01c379d9e71fbb6af4a4470ea101d4d055b7988b63832782feeb944f9e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to follow the progress of all the teams in various sports and provide informatio",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to follow the progress of all the teams in various sports and provide information and insights when",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f9a7a2e26fd01a3252278bc141934cf863d0aa666d38c7ecdc5b917ef9f6cdf8"
+}

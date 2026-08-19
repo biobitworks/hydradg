@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "8d9daf3369437a343686717173d2b113ed4b9db9e20f97253f48d408dfb65de1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to stay informed and organized \ud83d\udcda\ud83d\udcbb\"",
+      "type": "value"
+    },
+    {
+      "name": "to stay informed and organized \ud83d\udcda\ud83d\udcbb",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to stay informed and organized \ud83d\udcda\ud83d\udcbb\"",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to stay informed and organized \ud83d\udcda\ud83d\udcbb",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "456e17728fcd386e43f6d426d05b8931bf385d52823b0fc58620056961f9e003"
+}

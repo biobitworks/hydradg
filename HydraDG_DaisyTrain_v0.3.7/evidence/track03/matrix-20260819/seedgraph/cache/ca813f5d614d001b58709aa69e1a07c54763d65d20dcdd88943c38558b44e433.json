@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ca813f5d614d001b58709aa69e1a07c54763d65d20dcdd88943c38558b44e433",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a separate calendar just for birthdays, or is there a way to prioritize certain ",
+      "type": "value"
+    },
+    {
+      "name": "colors, labels, or something else",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a separate calendar just for birthdays, or is there a way to prioritize certain events in my main ca",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "colors, labels, or something else",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5e4a103d2e536e70d3a3c4180338104436fe13a2adb2a87461b5c22913796dae"
+}

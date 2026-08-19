@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "efd7dc90e0546d27c21e08d73a768bfb6ea1d2316265b8a458fb26d58c314dfc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the premium design and the additional features it offers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the premium design and the additional features it offers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "871fe3e1fe299a1734eb097e651719c80ed46619a70522c4f0de720bc60e32cc"
+}

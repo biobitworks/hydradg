@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b684edd696abbd00218a53cfec5fffa47bd1c8cd7131bc0a95c0f0b45a7c8a88",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of limited editions, it could create a sense of urgency for customers t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of limited editions, it could create a sense of urgency for customers to buy them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "34eb47101aade8bbbb97e120c3b8c1a8cc5855c576d76a0d79baa40b709f5ebe"
+}

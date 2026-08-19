@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "69467192e4920d8951d6e2c6db1826986c9560584d76475ad72e55c78e353f1f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that time for something else, like a short walk or exercise routine",
+      "type": "value"
+    },
+    {
+      "name": "to take an hour to relax, and I spend 30 minutes eating lunch",
+      "type": "value"
+    },
+    {
+      "name": "the revised schedule, but I'm not sure about the 5:30 pm - 6:00 pm block for per",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that time for something else, like a short walk or exercise routine",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to take an hour to relax, and I spend 30 minutes eating lunch",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the revised schedule, but I'm not sure about the 5:30 pm - 6:00 pm block for personal tasks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dd64c8141f5616df3c94d1206f025ad1923d9ac99969fd5e39d0dbdca1d2e037"
+}

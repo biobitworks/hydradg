@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "297d6da673aafd337e9408b1fc3343c15ada7dbc7c8a10cb45cb39c15126bb27",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "morning workouts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "morning workouts",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "10ebdc759cbefbf6e27cea2f7ad24f4d982117ca966806e567c9e01d2854f2d2"
+}

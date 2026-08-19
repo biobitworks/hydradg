@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6163063b21fe9406b3817e24051c8e943d5b1ec60dd79f9c5d6dc52dd39d8d77",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Razer BlackWidow Chroma V2, but I'm not sure about the Romer-G ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Razer BlackWidow Chroma V2, but I'm not sure about the Romer-G switches",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e2110548ed8fcbbce7bb4c98587c9bd573dd09c188d0a42f99bbc5457d1d107"
+}

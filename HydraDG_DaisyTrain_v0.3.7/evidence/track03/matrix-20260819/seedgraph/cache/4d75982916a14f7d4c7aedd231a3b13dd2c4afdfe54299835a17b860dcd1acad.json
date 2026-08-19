@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4d75982916a14f7d4c7aedd231a3b13dd2c4afdfe54299835a17b860dcd1acad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "chicken breast instead of thighs or drumsticks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "chicken breast instead of thighs or drumsticks",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9e116fb564fa49c41eeb7708e8f4a164af822c77883cad2631b35be3fe24a10e"
+}

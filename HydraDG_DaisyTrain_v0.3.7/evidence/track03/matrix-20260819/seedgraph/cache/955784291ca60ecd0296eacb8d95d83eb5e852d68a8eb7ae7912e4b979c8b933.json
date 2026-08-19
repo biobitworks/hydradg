@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "955784291ca60ecd0296eacb8d95d83eb5e852d68a8eb7ae7912e4b979c8b933",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the roasted chickpeas and veggie sticks with hummus",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the roasted chickpeas and veggie sticks with hummus",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "77ddb35a20e0a036ae30815ee059175ea6aa9529dd995767cc6368d88d1714a0"
+}

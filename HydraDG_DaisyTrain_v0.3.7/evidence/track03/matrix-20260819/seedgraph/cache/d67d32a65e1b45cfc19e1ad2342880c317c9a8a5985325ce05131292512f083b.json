@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d67d32a65e1b45cfc19e1ad2342880c317c9a8a5985325ce05131292512f083b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions for the title, especially \"Quarterly Faves & Wants\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions for the title, especially \"Quarterly Faves & Wants\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2b37a2fab7118a95f21e822d72bea026747286f554a62818d8d41214a2c951db"
+}

@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "e4d190c24b4381d05afd7b39b8894f96536efd607c718c8056af1c0caf5b3a94",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "broad categories like \"entertainment\" or \"clothing\" or be more specific like \"di",
+      "type": "value"
+    },
+    {
+      "name": "the idea of tracking my expenses, but I'm not sure about using an app",
+      "type": "value"
+    },
+    {
+      "name": "the 30-day rule and the 10-second rule",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "broad categories like \"entertainment\" or \"clothing\" or be more specific like \"dining out\" or \"makeup",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my expenses, but I'm not sure about using an app",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the 30-day rule and the 10-second rule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4cfc2d813224ea362fee32c09d71dee8bdbe61cc5daf482a1faf4febb6e0c35e"
+}

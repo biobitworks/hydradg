@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9dd1ab24f6371f0b4a31ecea5bd9bda8fef461745fce50ca62dd98728fab3e18",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to focus on improving my skills and doing good work",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to focus on improving my skills and doing good work",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3afe043b3a43c8a49e6320b5919121541c85d7b3d77a85dbccf22604e270cdd1"
+}

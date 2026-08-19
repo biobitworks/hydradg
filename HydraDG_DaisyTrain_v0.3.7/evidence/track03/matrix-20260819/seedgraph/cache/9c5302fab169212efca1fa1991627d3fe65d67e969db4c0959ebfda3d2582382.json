@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9c5302fab169212efca1fa1991627d3fe65d67e969db4c0959ebfda3d2582382",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the way this day of the year feels",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the way this day of the year feels",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "300cf6772e150e25ee5343bdf1760879cf31c4b21a4e19039d90850b48ce8296"
+}

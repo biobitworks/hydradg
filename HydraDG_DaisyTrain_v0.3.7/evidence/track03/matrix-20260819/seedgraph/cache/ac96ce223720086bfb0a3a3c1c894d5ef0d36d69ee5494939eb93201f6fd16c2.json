@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac96ce223720086bfb0a3a3c1c894d5ef0d36d69ee5494939eb93201f6fd16c2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having regular check-ins to track progress towards smaller goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having regular check-ins to track progress towards smaller goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "525513b5c96ac953e5fc1325b148f4a53ccb59dae8dbe6cc648cdf305bdd1b77"
+}

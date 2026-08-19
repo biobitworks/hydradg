@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "407456354ab7ad7c1ee622143ebed63cad7e560cdaee38e5558ecb969c9289f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "morning workouts, so let's schedule those between 6:30-8:30 am",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "morning workouts, so let's schedule those between 6:30-8:30 am",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e7fdcbc5160b246b1668fea8dc4cf431de2568d5f9f29beb9e0c0ad175d5e88"
+}

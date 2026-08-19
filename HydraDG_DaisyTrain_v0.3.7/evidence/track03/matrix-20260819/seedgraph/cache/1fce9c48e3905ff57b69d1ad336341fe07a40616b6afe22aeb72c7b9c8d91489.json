@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1fce9c48e3905ff57b69d1ad336341fe07a40616b6afe22aeb72c7b9c8d91489",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and try to incorporate some of these ideas into my own life",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and try to incorporate some of these ideas into my own life",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3ce83368b7e5c330934211daae0243f852f60056ded2c6adc14ccfee4e18a3cc"
+}

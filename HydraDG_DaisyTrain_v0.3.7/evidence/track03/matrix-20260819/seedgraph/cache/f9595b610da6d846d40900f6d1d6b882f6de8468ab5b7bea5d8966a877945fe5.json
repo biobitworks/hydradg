@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f9595b610da6d846d40900f6d1d6b882f6de8468ab5b7bea5d8966a877945fe5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing and grouping my shoes",
+      "type": "value"
+    },
+    {
+      "name": "that they're breathable and can be stacked on top of each other",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and grouping my shoes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that they're breathable and can be stacked on top of each other",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0b7f0beaa502a7658197d07962d5a828e645dbc416e54c0977d84536ce78c662"
+}

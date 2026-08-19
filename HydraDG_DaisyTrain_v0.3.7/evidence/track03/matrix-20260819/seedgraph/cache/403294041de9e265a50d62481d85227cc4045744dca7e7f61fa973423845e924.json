@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "403294041de9e265a50d62481d85227cc4045744dca7e7f61fa973423845e924",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a rural area and it's really hard to get around without a car",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a rural area and it's really hard to get around without a car",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7809c4d7fd0a875bb63d0020cbedf185a550ca446c00cf802e9be6e79c5c80c2"
+}

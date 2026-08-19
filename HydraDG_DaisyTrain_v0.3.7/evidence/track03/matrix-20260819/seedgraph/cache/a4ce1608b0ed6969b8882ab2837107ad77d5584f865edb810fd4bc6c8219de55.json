@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "a4ce1608b0ed6969b8882ab2837107ad77d5584f865edb810fd4bc6c8219de55",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of embroidering the baby's name and initials",
+      "type": "value"
+    },
+    {
+      "name": "the idea of \"Big Sister Badge\" or \"Sisterly Love\" design",
+      "type": "value"
+    },
+    {
+      "name": "the \"Big Sister of a Little Bro\" design",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding Emily's name above the phrase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of embroidering the baby's name and initials",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of \"Big Sister Badge\" or \"Sisterly Love\" design",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the \"Big Sister of a Little Bro\" design",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding Emily's name above the phrase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "760bd9d34b0199d0a6744a7bb8f8bdd3b414f237afb1c55cfae8bce590ad64b7"
+}

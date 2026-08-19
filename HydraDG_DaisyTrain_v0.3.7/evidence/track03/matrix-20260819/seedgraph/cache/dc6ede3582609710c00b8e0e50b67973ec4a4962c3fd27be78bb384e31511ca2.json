@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dc6ede3582609710c00b8e0e50b67973ec4a4962c3fd27be78bb384e31511ca2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using stackable baskets, do you think they'd work well with the adju",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using stackable baskets, do you think they'd work well with the adjustable shelf divider",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0cac11601b0d51498b36f22d135d219e5dd2ff976dfbddc348cb63e62b5b78c8"
+}

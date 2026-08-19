@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "02a4e4ae80e7a671aadac4e3d90b4205d3bfde42c635e38eff4e1bfb8bc8131d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Twin Peaks, I've heard great things about it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Twin Peaks, I've heard great things about it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "297331656677abd0aac537cc7a0bd92aac2362bf182173728d777b429e33a59c"
+}

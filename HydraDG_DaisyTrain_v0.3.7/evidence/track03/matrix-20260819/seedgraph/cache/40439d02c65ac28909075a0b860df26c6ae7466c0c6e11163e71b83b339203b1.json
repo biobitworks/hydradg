@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40439d02c65ac28909075a0b860df26c6ae7466c0c6e11163e71b83b339203b1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a layer of small rocks at the bottom for drainage",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a layer of small rocks at the bottom for drainage",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d86df0424eb78461e2b286521bddeabbd024cf978a2cea4ceba415d0b8b9e6fc"
+}

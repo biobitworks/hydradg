@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "43ffb21e5d0699a500b1b093e6260549c858558d340e50d6aabab68cd1208bc4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of an abstract expressionism piece, but I'm not sure where to start",
+      "type": "value"
+    },
+    {
+      "name": "the idea of dripping and pouring paint",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of an abstract expressionism piece, but I'm not sure where to start",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of dripping and pouring paint",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0bef2226200a78c93dc1bb086e5a2b4d888d09dd57468e4f55bda8664d524b3f"
+}

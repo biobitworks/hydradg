@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "666c4b28d0624358839348ea2d58920d08548d57dc5b2498b2b8923243695957",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "adhesive hooks or small nails to hang them",
+      "type": "value"
+    },
+    {
+      "name": "the ideas you've listed, especially the warm white fairy lights and caf\u00e9-style s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "adhesive hooks or small nails to hang them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the ideas you've listed, especially the warm white fairy lights and caf\u00e9-style string lights",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fc2df786931287fdc9b4e65d370b0aa14841ed7f6070bbb37f9bbfff86488102"
+}

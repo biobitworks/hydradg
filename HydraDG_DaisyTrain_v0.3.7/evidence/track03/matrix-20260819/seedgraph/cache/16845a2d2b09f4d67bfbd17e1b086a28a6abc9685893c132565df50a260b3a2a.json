@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "16845a2d2b09f4d67bfbd17e1b086a28a6abc9685893c132565df50a260b3a2a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the layout, it's pretty straightforward",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the layout, it's pretty straightforward",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1edf838e2bae6d85b505cf689bc58cecfeeb09143194af78b206203fd8a4360f"
+}

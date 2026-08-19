@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff7b5f16352c1a15b4d61d35de602b5546b1b28b64bf9052b98fe2d8403d80fb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "machine learning algorithms to classify users into different mental health categ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "machine learning algorithms to classify users into different mental health categories based on their",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e2fc480b58cfbe5da7531f5b2d6753e82986c3fd128de66d895aa2d35c9661e0"
+}

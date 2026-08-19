@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "35c211347bc4823de3963689393c30fd8e771ff89fbfd01f384523aeba587a8e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "being able to flip back through the pages and see my progress",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "being able to flip back through the pages and see my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f0dfba60143f61c120cb5d0e264fdf4cb30addad9406162c6aa20d9e72f5168c"
+}

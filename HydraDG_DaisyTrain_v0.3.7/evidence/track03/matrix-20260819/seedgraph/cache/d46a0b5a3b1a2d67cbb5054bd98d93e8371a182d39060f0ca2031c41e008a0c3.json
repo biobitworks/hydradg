@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d46a0b5a3b1a2d67cbb5054bd98d93e8371a182d39060f0ca2031c41e008a0c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a USB-rechargeable light",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a USB-rechargeable light",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2690e5a2c57c6d2aa73c817f633a5e5c15d6f37350c9746328bb4334ab044008"
+}

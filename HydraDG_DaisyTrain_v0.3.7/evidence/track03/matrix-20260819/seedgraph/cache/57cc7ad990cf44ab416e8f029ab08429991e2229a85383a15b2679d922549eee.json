@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "57cc7ad990cf44ab416e8f029ab08429991e2229a85383a15b2679d922549eee",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Under the Sea theme, but I'm not sure if my sister would like it",
+      "type": "value"
+    },
+    {
+      "name": "the Whimsical Wonderland theme, it sounds fun and playful",
+      "type": "value"
+    },
+    {
+      "name": "the idea of making paper flowers and pompoms",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Under the Sea theme, but I'm not sure if my sister would like it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Whimsical Wonderland theme, it sounds fun and playful",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of making paper flowers and pompoms",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9cfa5f2785c5e871b33851a5e82ad568dd3cc32e8b1b7eb674850d1e5ccd6daa"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a29a57f9fea832e3ee8339fc8daea62cc2178a9b1dda67dfb75f4d6601f07ce7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Bordeaux wine please",
+      "type": "value"
+    },
+    {
+      "name": "medium to full body French wine and Napa US wine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Bordeaux wine please",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "medium to full body French wine and Napa US wine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "84195c35c470e1cc5d5fb44535675ef2c7eb6e9f8f236caf8d5609a00ea08e2f"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a7d1cce5870b2b6fdd577d2956e7d64b9ee16024b5559e5bf62884308a1c0c95",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some new nuts and seeds to my trail mix",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some new nuts and seeds to my trail mix",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2ee682376bd85f8a6bbf914d7924b0f073953a8074f90a858765cf57979001f6"
+}

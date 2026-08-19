@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "46a38b17182c1f2fbf039b00f6355d0131c3c32d9daacf21d59d55140da2313e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the pet station idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the pet station idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ea6c58301cbb36322671b60abc2b7edce50d95dbf958a4464be0ab87dd9347a3"
+}

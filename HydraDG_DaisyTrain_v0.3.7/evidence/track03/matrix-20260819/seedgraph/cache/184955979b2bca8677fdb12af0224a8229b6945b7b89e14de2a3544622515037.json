@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "184955979b2bca8677fdb12af0224a8229b6945b7b89e14de2a3544622515037",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for Lola, it was $80 when I bought it last year, and it's been a good investment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for Lola, it was $80 when I bought it last year, and it's been a good investment since I use it regu",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "379a0389dbe8c30c0d728b78fe21161b905c8725d350a0b26dfc189d5de0a6a0"
+}

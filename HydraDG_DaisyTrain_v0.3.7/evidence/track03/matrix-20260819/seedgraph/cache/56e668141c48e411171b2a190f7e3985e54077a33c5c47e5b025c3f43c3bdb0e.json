@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "56e668141c48e411171b2a190f7e3985e54077a33c5c47e5b025c3f43c3bdb0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a food forest or edible garden, we've been getting into sustainable ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a food forest or edible garden, we've been getting into sustainable living and self-suff",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "113958cf19730c13befe2f326c6843fbb075c3661999581aa18ba1f040a12f1a"
+}

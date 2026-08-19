@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "65a8699d58993ded11fb78d92889d071ccdbac37acf73529ec06b54865451e3c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a fruit tart, but I'm not sure what type of fruit to use",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a fruit tart, but I'm not sure what type of fruit to use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2141a43496b25dc2fcd70e8f5c1c9d49fe5d785dc5037fa8a6059fafd6c7e6d5"
+}

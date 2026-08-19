@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c95044d2dbad1b6011057d176ae1d00920db3691949cde432dd98d7338633dbb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Quinoa and Black Bean Chili",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Roasted Sweet Potato Wedges and Mixed Greens with Cherry Tomato",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Quinoa and Black Bean Chili",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Roasted Sweet Potato Wedges and Mixed Greens with Cherry Tomatoes and Cilantro",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c5bd7947f17b9a0c459c2d2c1e438d483bdd8f372a79bb7e738ee0bec47d166c"
+}

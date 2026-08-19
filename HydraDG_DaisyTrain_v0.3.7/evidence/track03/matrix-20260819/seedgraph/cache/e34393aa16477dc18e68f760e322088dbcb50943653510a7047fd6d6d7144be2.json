@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e34393aa16477dc18e68f760e322088dbcb50943653510a7047fd6d6d7144be2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of planning a multi-generational trip and taking breaks during family t",
+      "type": "value"
+    },
+    {
+      "name": "the idea of visiting Lake Como, Italy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning a multi-generational trip and taking breaks during family trips",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of visiting Lake Como, Italy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "00eba69d6da794c5922f2843ff3af5f46c3096c0aab99e3f05b005f694743749"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "976e9c72e0d63b014cc9adb8fcc44ac4898768e35b800ee947e88211f0a32540",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the structure, but I'm thinking of creating a subfolder for contacts under \"Indi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the structure, but I'm thinking of creating a subfolder for contacts under \"Individuals\" to store th",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5a007c2af9aecc43622e0f4860ff8cdca4e8fc959557289d3f549adfb491f14b"
+}

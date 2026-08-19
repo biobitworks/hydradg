@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ee386bcda03f1aef25d459f161107d0ef989e0989018f234199dac0cc0fad5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the undercut with pompadour idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the undercut with pompadour idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da8bb76674ad22687cd1611edebf5ab7ea811abe88bd91eedc1a6b88d39a4950"
+}

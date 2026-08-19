@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "82cd32995a0e524f50826ab816b457c8cf8d025c1309b740b648e4ddf814aebb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and don't like in a hotel stay",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and don't like in a hotel stay",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0ebb5a63e2e1c3d0a7ab653c99b133f8793bc4e6ac52a7ba4fefa1a9da1d28c5"
+}

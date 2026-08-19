@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "24017c2cff44e0a112bafe7d5c5e3360c26c79c3e0a4dd9cd09158e78f1346f7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing the grey sweater with black leggings",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing the grey sweater with black leggings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e3125169ffbac6ba5c4f2ee9295874226e9143d9d36d2fde6d3e54899a36d393"
+}

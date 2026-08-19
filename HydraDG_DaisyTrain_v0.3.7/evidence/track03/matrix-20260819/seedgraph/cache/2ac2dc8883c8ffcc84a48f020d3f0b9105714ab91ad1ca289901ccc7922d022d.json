@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2ac2dc8883c8ffcc84a48f020d3f0b9105714ab91ad1ca289901ccc7922d022d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of anchoring my tidying routine to a habit like brushing my teeth",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of anchoring my tidying routine to a habit like brushing my teeth",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8fb08e8b78c85f5b964b9f1e48759b5a64d4f0ae293a24364db84940dce0c30e"
+}

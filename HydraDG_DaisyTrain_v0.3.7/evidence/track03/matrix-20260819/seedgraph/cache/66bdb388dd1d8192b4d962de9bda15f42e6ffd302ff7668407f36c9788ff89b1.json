@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "66bdb388dd1d8192b4d962de9bda15f42e6ffd302ff7668407f36c9788ff89b1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh or dried herbs, and how long should I let it steep",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh or dried herbs, and how long should I let it steep",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd4fc2bc855ad6d3591aa27bdaff9a7665f94aeb568ee713b53a223557dae15c"
+}

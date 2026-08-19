@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7261bb5238c30b777a3967d5160593b32070f873900885243cc15687872c23b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "sliced or slivered almonds, and how long do I need to toast them for",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "sliced or slivered almonds, and how long do I need to toast them for",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d5c91f1a63a4e4325e1d2b93db78763dd5791ae291e6d554005b34b8650a24ba"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ccaa0aef5dc5169f7d756b16018289ed6cf07556362c77a80981558117af3947",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it, or should I go all in and replace all my bulbs at once",
+      "type": "value"
+    },
+    {
+      "name": "it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it, or should I go all in and replace all my bulbs at once",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4e2129ea2f3f5eda44044c67a5e616671f07f4528422e3913feae56d2a067d93"
+}

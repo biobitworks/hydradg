@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a16ba2816d167c52049e0d45a6329874cd983d55bb3f353b378a900588f6c87a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a pan or a skillet",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Breakfast Quesadilla",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a pan or a skillet",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Breakfast Quesadilla",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a14da250968144bd8b0b3ccfb0599fb403b76c414e0a9fc1e820f2777a984d90"
+}

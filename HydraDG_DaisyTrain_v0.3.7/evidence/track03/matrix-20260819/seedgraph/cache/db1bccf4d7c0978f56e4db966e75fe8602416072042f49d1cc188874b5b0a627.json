@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "db1bccf4d7c0978f56e4db966e75fe8602416072042f49d1cc188874b5b0a627",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to play, and after selecting a category or two, you\u2019ll continue to ask probing q",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to play, and after selecting a category or two, you\u2019ll continue to ask probing questions about my vi",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0b2a76e24ca36141bbbcee45c14f93972f20da912e7845b4ee7995cfdbb935f4"
+}

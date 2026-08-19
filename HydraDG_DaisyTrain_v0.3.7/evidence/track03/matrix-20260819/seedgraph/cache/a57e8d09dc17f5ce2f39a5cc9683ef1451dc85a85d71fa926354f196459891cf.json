@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a57e8d09dc17f5ce2f39a5cc9683ef1451dc85a85d71fa926354f196459891cf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a lightweight, non-greasy moisturizer, and I'm open to trying different ingredie",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a lightweight, non-greasy moisturizer, and I'm open to trying different ingredients",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "977d3451753183814ec035f3eeb847e6cab14b0a2dfa8e6550338714da8657de"
+}

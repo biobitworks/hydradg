@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "12e90a91d95dfeb845b139320a719e281f0b02908e6b22c44effa3d58d022569",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "plant-based meals and have a slight lactose intolerance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "plant-based meals and have a slight lactose intolerance",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "46e717b1082baa8c34414976ae211a2b7c942079a6d2cb146740f315a63d93ca"
+}

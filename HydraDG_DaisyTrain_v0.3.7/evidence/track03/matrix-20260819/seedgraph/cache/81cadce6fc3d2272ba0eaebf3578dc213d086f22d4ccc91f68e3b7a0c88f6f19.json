@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "81cadce6fc3d2272ba0eaebf3578dc213d086f22d4ccc91f68e3b7a0c88f6f19",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to wear dresses more often than tops and bottoms, and I'd like to bring more ski",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to wear dresses more often than tops and bottoms, and I'd like to bring more skincare products than",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b505b1a1a0257574e463b44a52a4d27fae670a6b964268f9c0b005abe5438fbc"
+}

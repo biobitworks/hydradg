@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b606d08133e3ee943a2e8fc40960402e410f32436d43e6d0fb1d315f958d135b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "176996c97d6a45e0ff34d4e47858b02bc8c0bb18c7a43885c83f01c34489fb93"
+}

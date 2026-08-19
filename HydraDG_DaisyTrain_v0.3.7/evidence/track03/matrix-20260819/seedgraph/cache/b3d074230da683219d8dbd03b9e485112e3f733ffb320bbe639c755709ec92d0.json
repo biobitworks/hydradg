@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3d074230da683219d8dbd03b9e485112e3f733ffb320bbe639c755709ec92d0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the minimalist necklace and elegant earrings",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the minimalist necklace and elegant earrings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6be83a022c47c59bc751f3a667d8f944190fab25467906be186d591a13b66187"
+}

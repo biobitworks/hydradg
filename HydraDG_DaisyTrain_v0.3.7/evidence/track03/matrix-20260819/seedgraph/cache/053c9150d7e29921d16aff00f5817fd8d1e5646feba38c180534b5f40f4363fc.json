@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "053c9150d7e29921d16aff00f5817fd8d1e5646feba38c180534b5f40f4363fc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the alias name, how many path from \"sb\" to \"td\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the alias name, how many path from \"sb\" to \"td\"",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb3224877e461f3f22d43d5580df17f322e3e7e138c86359aece6b3177b6248e"
+}

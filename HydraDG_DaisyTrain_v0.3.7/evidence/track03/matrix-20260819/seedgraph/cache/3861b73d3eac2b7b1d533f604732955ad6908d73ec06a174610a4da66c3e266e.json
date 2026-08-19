@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3861b73d3eac2b7b1d533f604732955ad6908d73ec06a174610a4da66c3e266e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "some of my worsted weight yarn for the amigurumi toys",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "some of my worsted weight yarn for the amigurumi toys",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "156e8dbb3679e1c51efd398606acc495eea2fa1fbc8033bdc3abaa28479b6ddf"
+}

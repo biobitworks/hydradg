@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fbad2ca4fc8cf53303a6a7e996b93fdc4766a08b044e044585c010470101f941",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a primary focus on portraits, but still allowing myself to ex",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a primary focus on portraits, but still allowing myself to experiment with other",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c6f19368b1c346d7a29073261f4fca4bdd8845a52c0d559f92839c17b3e6b0a1"
+}

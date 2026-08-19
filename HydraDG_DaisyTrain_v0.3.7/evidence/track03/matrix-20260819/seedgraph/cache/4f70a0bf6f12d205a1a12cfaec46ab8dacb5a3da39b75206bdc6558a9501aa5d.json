@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4f70a0bf6f12d205a1a12cfaec46ab8dacb5a3da39b75206bdc6558a9501aa5d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a city, and I'm interested in fiction writing, particularly novels",
+      "type": "value"
+    },
+    {
+      "name": "about the group]",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a city, and I'm interested in fiction writing, particularly novels",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "about the group]",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2cfe55e44eb0bf4b0823b1932cc1cc6e021f9924b7b137714d5676beafed48b"
+}

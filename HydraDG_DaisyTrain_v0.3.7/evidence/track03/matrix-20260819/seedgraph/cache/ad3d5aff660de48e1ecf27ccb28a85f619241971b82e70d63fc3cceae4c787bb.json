@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ad3d5aff660de48e1ecf27ccb28a85f619241971b82e70d63fc3cceae4c787bb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of planning my outfits and packing multipurpose items",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning my outfits and packing multipurpose items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df26a680bf013b65c298b375a57a2dbc21bd9d4d9e68bcd94fe7b46484ea800f"
+}

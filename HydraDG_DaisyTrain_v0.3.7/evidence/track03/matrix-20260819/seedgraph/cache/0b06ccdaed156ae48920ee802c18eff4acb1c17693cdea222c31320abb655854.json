@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0b06ccdaed156ae48920ee802c18eff4acb1c17693cdea222c31320abb655854",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using online marketplaces like Thumbtack or GigSalad to find instruc",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using online marketplaces like Thumbtack or GigSalad to find instructors",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "669b3d1e999e4951d42ce8a8e711eadfd54775730b7a6b638f42ed1f5dec85db"
+}

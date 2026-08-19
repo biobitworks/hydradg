@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "da51cb40653d7a68c91b6e76090376532f9e5ac39143c7738a9266637ac780e1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sponsoring a community water project",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sponsoring a community water project",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d0feaa7560f94c870fee408784fafc0855bf8724f2e32aa9c0829cf5371dfcb"
+}

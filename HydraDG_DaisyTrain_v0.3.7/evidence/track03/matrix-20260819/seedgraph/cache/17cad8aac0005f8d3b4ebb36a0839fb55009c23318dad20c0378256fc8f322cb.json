@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "17cad8aac0005f8d3b4ebb36a0839fb55009c23318dad20c0378256fc8f322cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that flourless chocolate cake, I'll have to try that out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that flourless chocolate cake, I'll have to try that out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "602d07bc1d6ecf32a47400a6d7107e7503a03b348904cf6e49edf7c3d60516e9"
+}

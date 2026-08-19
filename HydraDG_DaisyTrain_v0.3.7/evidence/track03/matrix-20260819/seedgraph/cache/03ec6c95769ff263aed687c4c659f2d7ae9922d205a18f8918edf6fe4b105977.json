@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03ec6c95769ff263aed687c4c659f2d7ae9922d205a18f8918edf6fe4b105977",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tips, but I'm still unsure about what tops to pair with my jeans",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tips, but I'm still unsure about what tops to pair with my jeans",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "216209b8060cba4611fe3073d2206ed9c97b312ec83147fd9d742cfd283008a3"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "00ed0faef665c0b3b2e7460eec7bf5ff08b092b0b614d40893766d0fea9fa083",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a passport holder, it seems more practical than a luggage tag",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a passport holder, it seems more practical than a luggage tag",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "797139f81d51417f43356b0c5831818461247d017c2c0a656b43341af086a9a0"
+}

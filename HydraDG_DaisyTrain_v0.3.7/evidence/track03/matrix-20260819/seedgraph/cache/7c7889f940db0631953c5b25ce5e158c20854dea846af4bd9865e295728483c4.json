@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "7c7889f940db0631953c5b25ce5e158c20854dea846af4bd9865e295728483c4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this",
+      "type": "value"
+    },
+    {
+      "name": "that information - the fact that my piece is a Pawn, in order to create a new co",
+      "type": "value"
+    },
+    {
+      "name": "if type(the\\_captured\\_piece) == piece",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that information - the fact that my piece is a Pawn, in order to create a new condition",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "if type(the\\_captured\\_piece) == piece",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1161bd7bee50b1ec5543769fbe3aaa5d617572a19998932049410b8a2c8f5b80"
+}

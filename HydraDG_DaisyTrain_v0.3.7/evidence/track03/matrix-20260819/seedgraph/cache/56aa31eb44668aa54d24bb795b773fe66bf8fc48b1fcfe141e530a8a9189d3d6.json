@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "56aa31eb44668aa54d24bb795b773fe66bf8fc48b1fcfe141e530a8a9189d3d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the neutral heels",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the neutral heels",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8b6c4467007573f7530f803a1631a12471fd68d19f1eabac0f2eccafb8d41c8f"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc7478c73a089efc33437334843ac5fb830710e1c2a62dadfb9e03d2aebacbc6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, especially the white or light-colored tops",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, especially the white or light-colored tops",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a89ab85364bf0257971c73f3ee58c16d84ada3d4be8a4eb2cfd6c864dc4e1132"
+}

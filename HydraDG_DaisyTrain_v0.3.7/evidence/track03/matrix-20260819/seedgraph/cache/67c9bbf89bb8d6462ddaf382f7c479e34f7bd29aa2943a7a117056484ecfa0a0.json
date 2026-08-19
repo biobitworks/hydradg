@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "67c9bbf89bb8d6462ddaf382f7c479e34f7bd29aa2943a7a117056484ecfa0a0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to attach it to a mirror or wall art",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to attach it to a mirror or wall art",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1896b596d912e473c5a33d7d6c279ab56159474ec0fa052a0e44240145daaeb2"
+}

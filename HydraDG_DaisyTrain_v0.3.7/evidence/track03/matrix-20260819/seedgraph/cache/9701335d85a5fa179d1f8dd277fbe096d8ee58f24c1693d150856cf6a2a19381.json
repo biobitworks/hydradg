@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9701335d85a5fa179d1f8dd277fbe096d8ee58f24c1693d150856cf6a2a19381",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using transit apps to plan my route in advance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using transit apps to plan my route in advance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7a2e9f6482cbfcb74aa5d9041458c61c9df63486697e03033a1308c9bbdae3d7"
+}

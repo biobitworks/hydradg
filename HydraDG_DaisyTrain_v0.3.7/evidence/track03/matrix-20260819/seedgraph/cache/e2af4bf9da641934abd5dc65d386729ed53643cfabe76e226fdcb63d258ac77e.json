@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e2af4bf9da641934abd5dc65d386729ed53643cfabe76e226fdcb63d258ac77e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Unity in Diversity Festival idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a cultural exchange station where attendees can learn about d",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Unity in Diversity Festival idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a cultural exchange station where attendees can learn about different cultures",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "94fc31a9971b7899ba45dfc9b7698aadd56361cbbc2cfac244a7f6ab6074fd5a"
+}

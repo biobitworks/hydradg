@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "435e6dc6dbd90d038d3ac28c9a3ecc5d340792255c72d562bb3010e9deae7f45",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a mix of niche and broad hashtags, my posts get more likes and comments",
+      "type": "value"
+    },
+    {
+      "name": "certain hashtags",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a mix of niche and broad hashtags, my posts get more likes and comments",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "certain hashtags",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f3bf020a209182e1b31b0e5e5a7f54e84a8d0e991c7be654b43d78f9c8aea3da"
+}

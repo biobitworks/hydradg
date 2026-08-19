@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c582a7b353fd61eaff001e9bd97dcdb9f9658bdc4f7a6b256036d41325180a49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a combination of built-in features and third-party apps to track my data",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a combination of built-in features and third-party apps to track my data",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "465f08361c4eb0ddff5adf52ebea392c8ecc9e87f6dc3bcfaa153d8902b9dddb"
+}

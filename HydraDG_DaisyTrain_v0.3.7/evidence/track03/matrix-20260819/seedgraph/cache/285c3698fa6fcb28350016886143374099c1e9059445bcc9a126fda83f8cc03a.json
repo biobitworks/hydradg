@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "285c3698fa6fcb28350016886143374099c1e9059445bcc9a126fda83f8cc03a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the one-pan wonders idea, especially the shrimp and vegetable stir-fry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the one-pan wonders idea, especially the shrimp and vegetable stir-fry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1088f78f46abd3f791f5a9c92502aa5494edd5714f3f88279d41f0076f275e18"
+}

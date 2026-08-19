@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3569910910f88bc28d81491da14785a1726122336cefb0222013c6a6089b4dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a meal plan and grocery list generated for me",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a meal plan and grocery list generated for me",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f93410a8f6ff110317f0f88cb8d1c12c229427b7fb3e8c58022dbc844037acb"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9b25f8b5e892798b3d89bbe84182dda2f40c2702e95c02e816d7ba5791faf39a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of this being the \"best\" path, with the characters successfully alertin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of this being the \"best\" path, with the characters successfully alerting the military and w",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fc39b19e70c61365ac3353782ff433397ffce1aaac4e2ff4887afde41b48df51"
+}

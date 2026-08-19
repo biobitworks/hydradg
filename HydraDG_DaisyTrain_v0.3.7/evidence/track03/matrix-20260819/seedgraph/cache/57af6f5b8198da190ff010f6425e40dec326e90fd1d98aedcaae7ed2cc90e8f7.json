@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "57af6f5b8198da190ff010f6425e40dec326e90fd1d98aedcaae7ed2cc90e8f7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that joke",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that joke",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1822d7a31ab937c8a18c028580fb96bef77e76f995b95844fee5b1502b9d0873"
+}

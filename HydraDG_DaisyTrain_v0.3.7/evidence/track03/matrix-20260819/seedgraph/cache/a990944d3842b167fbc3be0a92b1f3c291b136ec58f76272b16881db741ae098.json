@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "a990944d3842b167fbc3be0a92b1f3c291b136ec58f76272b16881db741ae098",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "social media to find job opportunities",
+      "type": "value"
+    },
+    {
+      "name": "social media to build my personal brand and increase my visibility",
+      "type": "value"
+    },
+    {
+      "name": "personal anecdotes to connect with my audience and build a strong personal brand",
+      "type": "value"
+    },
+    {
+      "name": "technology and tools to improve my productivity",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "social media to find job opportunities",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "social media to build my personal brand and increase my visibility",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "personal anecdotes to connect with my audience and build a strong personal brand",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "technology and tools to improve my productivity",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "15b476eac6e3833170929b3dffd9cf112531b7d071755e5bdc56def082f3cfbd"
+}

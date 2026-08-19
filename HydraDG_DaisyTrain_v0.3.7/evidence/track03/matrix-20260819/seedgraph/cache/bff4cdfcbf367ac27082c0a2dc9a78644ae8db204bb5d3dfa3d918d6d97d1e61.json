@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bff4cdfcbf367ac27082c0a2dc9a78644ae8db204bb5d3dfa3d918d6d97d1e61",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Denver, Colorado",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Denver, Colorado",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "29d4cd3daef1ac4be23c16045f1fe2a47975b6528f9fb49aee8e2913c5a1a44f"
+}

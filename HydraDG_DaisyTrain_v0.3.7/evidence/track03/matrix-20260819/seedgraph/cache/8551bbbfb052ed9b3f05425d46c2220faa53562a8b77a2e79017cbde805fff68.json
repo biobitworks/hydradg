@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8551bbbfb052ed9b3f05425d46c2220faa53562a8b77a2e79017cbde805fff68",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template, but can I also add a column for \"Next Steps\" or \"Follow-up Tasks\" ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template, but can I also add a column for \"Next Steps\" or \"Follow-up Tasks\" to keep track of wha",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "39f91cdaa38b3acd9cc25a6c72db87b6941cfa9ecfd3dfbd12061bb43056e2b6"
+}

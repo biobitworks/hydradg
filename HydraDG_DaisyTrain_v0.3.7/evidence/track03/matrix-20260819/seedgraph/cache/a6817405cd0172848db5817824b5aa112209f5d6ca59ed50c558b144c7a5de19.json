@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a6817405cd0172848db5817824b5aa112209f5d6ca59ed50c558b144c7a5de19",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my credit card to buy tickets and then pay off the balance in full before the in",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my credit card to buy tickets and then pay off the balance in full before the interest kicks in",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "13eceee0a59bbb34dd5f84c3d3f6f25ac55247b19de8bc6c2d9b5a1fadc8029d"
+}

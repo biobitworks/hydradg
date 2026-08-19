@@ -1,0 +1,76 @@
+{
+  "cache_hit": false,
+  "cache_key": "2744de170a346a31c96be10a950446118e5c8cd80da3ffd1c58f14e74762f8b8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the one-pot wonders and stir-fry magic",
+      "type": "value"
+    },
+    {
+      "name": "to sleep in on Sundays and have a bigger breakfast then",
+      "type": "value"
+    },
+    {
+      "name": "those make-ahead breakfast ideas, especially the overnight oats and breakfast bu",
+      "type": "value"
+    },
+    {
+      "name": "to indulge in a bigger breakfast like pancakes and bacon after sleeping in till ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding fruits and veggies to my meals, especially during lunchtime",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the one-pot wonders and stir-fry magic",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to sleep in on Sundays and have a bigger breakfast then",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those make-ahead breakfast ideas, especially the overnight oats and breakfast burritos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to indulge in a bigger breakfast like pancakes and bacon after sleeping in till 9 am",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding fruits and veggies to my meals, especially during lunchtime",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2cc44f2c00e9a15eb74b17497e9ff074076ca2d8876f4691bc699bda7f4f47d7"
+}

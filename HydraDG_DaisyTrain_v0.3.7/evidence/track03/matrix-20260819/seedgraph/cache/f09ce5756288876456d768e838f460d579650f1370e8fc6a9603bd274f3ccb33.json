@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f09ce5756288876456d768e838f460d579650f1370e8fc6a9603bd274f3ccb33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the outdoor games idea, but I'm not sure if we'll have enough time to organize a",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the outdoor games idea, but I'm not sure if we'll have enough time to organize a full-day event",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "742f13798a06a535d9bd3999fe8d19d68688ded508131603e97c8f7d3a369d81"
+}

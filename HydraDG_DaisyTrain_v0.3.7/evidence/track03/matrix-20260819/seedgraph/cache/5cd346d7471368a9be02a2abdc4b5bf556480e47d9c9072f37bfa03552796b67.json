@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5cd346d7471368a9be02a2abdc4b5bf556480e47d9c9072f37bfa03552796b67",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "rest stops or gas stations for bathroom breaks while I'm on the road",
+      "type": "value"
+    },
+    {
+      "name": "not to disclose the names of my children for privacy reasons",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "rest stops or gas stations for bathroom breaks while I'm on the road",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "not to disclose the names of my children for privacy reasons",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8b13174177be01e8f61fcdf311fc9ec0a88ecca188053f595c7f5af97eac359f"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a4e5a108917225ff845eef1928ea95d7ec384c237381b3865e36cf5a9ef6484c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "purified water",
+      "type": "value"
+    },
+    {
+      "name": "coffee grounds to fertilize my coffee plants",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "purified water",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "coffee grounds to fertilize my coffee plants",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a189949f49132b85de57bbe8dfe0aefbe88b483944ef37e06a7a3e732fb25b6"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d6615c98ba322a5dd4399af05f979164d779e5f1ec4fae8cac0f69482c343336",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "store-bought gochujang paste instead of making my own",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Korean-Style Chicken Breast with Gochujang Glaze",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "store-bought gochujang paste instead of making my own",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Korean-Style Chicken Breast with Gochujang Glaze",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6764000e531dc56bdfb6c499c769f2a4d7a2e7edea0657d5c52ba9d67c35c2d3"
+}

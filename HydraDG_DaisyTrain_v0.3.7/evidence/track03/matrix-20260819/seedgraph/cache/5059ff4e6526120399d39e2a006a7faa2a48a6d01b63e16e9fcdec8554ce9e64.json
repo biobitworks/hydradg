@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5059ff4e6526120399d39e2a006a7faa2a48a6d01b63e16e9fcdec8554ce9e64",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized baby blanket or onesie",
+      "type": "value"
+    },
+    {
+      "name": "the idea of it being a cozy gift that can provide comfort and warmth for the bab",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized baby blanket or onesie",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of it being a cozy gift that can provide comfort and warmth for the baby",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4b14e91180e6ba61aca3afa0226715cc113af82781465bbcf4ceb1e3f6bd5f4b"
+}

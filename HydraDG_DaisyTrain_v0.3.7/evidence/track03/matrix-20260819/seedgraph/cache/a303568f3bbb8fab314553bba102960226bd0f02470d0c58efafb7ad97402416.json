@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a303568f3bbb8fab314553bba102960226bd0f02470d0c58efafb7ad97402416",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Springfield",
+      "type": "value"
+    },
+    {
+      "name": "flat routes with scenic views, and I'd like to run in areas with minimal traffic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Springfield",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "flat routes with scenic views, and I'd like to run in areas with minimal traffic",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a9310c495a86d39ba20a2d1449a050e621c5af0d983528bedb795742a3b46fb8"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "144aa6d77c36231ccf9d0015a9138ef62d12e4217cbaf47c1b9acca03b95d759",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a routine and prioritizing sections",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a routine and prioritizing sections",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "91985a3d9c4c0993d52852e8f7733c2abccbc410a872d159e7084695105f2d8b"
+}

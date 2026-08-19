@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0e44d44231127cac4e72c5be26fd11a3157a9f99eb0a9462fad8ee189bf89f5a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sharing my photography and experiences, as well as tutorials and tip",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing my photography and experiences, as well as tutorials and tips",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "87f976972affc3645d1d898c5fc51eebfdd54577577353b453c23fc9db44dc9f"
+}

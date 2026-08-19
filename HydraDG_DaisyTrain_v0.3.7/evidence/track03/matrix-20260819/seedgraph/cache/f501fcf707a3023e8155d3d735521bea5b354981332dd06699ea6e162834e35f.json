@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f501fcf707a3023e8155d3d735521bea5b354981332dd06699ea6e162834e35f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Midtown West, especially since I've already stayed in Times Square",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the rooftop bar being open year-round",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Midtown West, especially since I've already stayed in Times Square",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the rooftop bar being open year-round",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03a5b2e8910d80b0f0905279f903ed394d491480b1ab004c3aa8d38262550631"
+}

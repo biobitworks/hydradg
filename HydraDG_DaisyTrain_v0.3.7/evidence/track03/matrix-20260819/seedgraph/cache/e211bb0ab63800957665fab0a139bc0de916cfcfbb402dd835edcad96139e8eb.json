@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e211bb0ab63800957665fab0a139bc0de916cfcfbb402dd835edcad96139e8eb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of finding a workout buddy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of finding a workout buddy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fce7a41eb855086043352c869f73eb2a0543795244d27e8dfe5aff371f0fca3a"
+}

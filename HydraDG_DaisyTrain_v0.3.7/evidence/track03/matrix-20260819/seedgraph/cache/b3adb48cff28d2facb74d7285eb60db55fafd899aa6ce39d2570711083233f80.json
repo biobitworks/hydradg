@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3adb48cff28d2facb74d7285eb60db55fafd899aa6ce39d2570711083233f80",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "canned corn and beans instead of dried ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "canned corn and beans instead of dried ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ae5712fb72c94078b484b911f2c3fd5631045a25cf92233ddb5f7830771f86a1"
+}

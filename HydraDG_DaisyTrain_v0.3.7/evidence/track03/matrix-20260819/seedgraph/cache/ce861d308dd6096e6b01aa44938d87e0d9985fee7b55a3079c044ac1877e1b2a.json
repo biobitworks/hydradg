@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce861d308dd6096e6b01aa44938d87e0d9985fee7b55a3079c044ac1877e1b2a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of purging and categorizing my clothes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of purging and categorizing my clothes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6ff709a09108312efb362dbf14f1297f9a2ddd41ca657d27329b062ae29ff1ba"
+}

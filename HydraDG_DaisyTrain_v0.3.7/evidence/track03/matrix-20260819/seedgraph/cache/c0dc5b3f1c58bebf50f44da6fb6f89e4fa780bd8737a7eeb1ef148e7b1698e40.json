@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c0dc5b3f1c58bebf50f44da6fb6f89e4fa780bd8737a7eeb1ef148e7b1698e40",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting my workout clothes out the night before to save time",
+      "type": "value"
+    },
+    {
+      "name": "the idea of overnight oats",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting my workout clothes out the night before to save time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of overnight oats",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2464e4e966854a50d416f17e23f2b107919bf5a0e9c9c0f2ce817cdff2eb1f50"
+}

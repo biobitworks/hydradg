@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "beba32cec7349eebfea36757e539ad17472c738d68583f4e40c88640f9527258",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Zagg InvisibleShield Glass+ screen protector",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Zagg InvisibleShield Glass+ screen protector",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "549a2c1a1374f5d06c966d9c524ebf9426b656962397350da2c68439982cd03c"
+}

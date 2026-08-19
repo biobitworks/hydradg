@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a61a7939e67c1c3444dad7dc066d1106fb76a7a935e0d68b97c5bb226b8dd59a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of engaging with the news more",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of engaging with the news more",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "064dafc055c9435173ce4b93ce35bd44afeeb8b1a1f7f3e77ff704b13baa96d0"
+}

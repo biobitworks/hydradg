@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6591129fa7b422f4fdd8cb167e81b207ff47486ebf9e35e5773e3266f4785bd5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the stream-of-consciousness journaling and the sense mem",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the stream-of-consciousness journaling and the sense memory exercise",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "68abbbb2ea56a762f41b5f1a008e6b342bb95936c9d041ffc0e9a6970b432b03"
+}

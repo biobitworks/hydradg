@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "8c3dde0611758e9560e79ced6efe4b6ea163b4a9e1596a5039a4ee8d9eb4098c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the Pimm's Cup with a Twist, but I've already made a classic Pimm's ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the bitterness balancing out the sweetness of the Pimm's",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a balanced flavor and a lovely pink hue",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Pimm's Cup with a Twist, but I've already made a classic Pimm's Cup and classic cock",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the bitterness balancing out the sweetness of the Pimm's",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a balanced flavor and a lovely pink hue",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ee11218d73c87c96ebed4121cba9833cfcbdd084c94d9b5aa37ef81957c28f0b"
+}

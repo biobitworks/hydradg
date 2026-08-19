@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "07b09ff75e47636e0b282363cbc72b04844733969ed5adfd6f6a2f5c6b259039",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized photo album",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized photo album",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fde9ec385bdc95084f92cf136e7d76788b4eb8924ff9b203ef4c84072d8790b2"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6c500448e77e843e632267e7d5b323946a98c56861b790df40af1f8c3387a232",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the part about offering free shipping or a free gift wit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the part about offering free shipping or a free gift with bulk purchases",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ba2173d1572378f9a214772fed819c50cfa6f9378be4a6f7893fb01ea6e811a4"
+}

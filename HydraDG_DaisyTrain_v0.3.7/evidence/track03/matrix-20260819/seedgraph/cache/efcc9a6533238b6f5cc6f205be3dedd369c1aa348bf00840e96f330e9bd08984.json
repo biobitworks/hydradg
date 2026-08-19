@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "efcc9a6533238b6f5cc6f205be3dedd369c1aa348bf00840e96f330e9bd08984",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the same recipe as the one I'm serving with the jerk chicken",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the same recipe as the one I'm serving with the jerk chicken",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fe181a294dca2daff57ee9d78c9f941794b44ee4721fb0eb0d653987d8152537"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "249d80cd3e73d60cb0d2894796b82d07edfc92f75c7947ee3b855c4b71b78f53",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the structure of this schedule, but I'd like to incorporate some time for readin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the structure of this schedule, but I'd like to incorporate some time for reading and learning about",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6e4ad343e161e80a7108bc5690f53b1cf3824e479ed8b98e290da15aab0d5fed"
+}

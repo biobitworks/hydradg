@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8e1c6770f60a718bdf7d5442cadf5fac7a9dba380658d30666165cf019da434c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to shop in person so I can see and touch the souvenirs before I buy them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to shop in person so I can see and touch the souvenirs before I buy them",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5ae42fe9bbb077a59d6025cdaa780102c7d4cd6c22ba45a0351da9740f132109"
+}

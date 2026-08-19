@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9b7728f160504b8eebdcb23e1dd84db15e86d9e93333e9c100525ee4b636abfa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of those lunch ideas",
+      "type": "value"
+    },
+    {
+      "name": "those book suggestions, especially the nature writing and poetry ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of those lunch ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those book suggestions, especially the nature writing and poetry ones",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "217c836f43f8fb15f6cd2d090aac8b0495c07513d661a0eaafb70395e3bda54d"
+}

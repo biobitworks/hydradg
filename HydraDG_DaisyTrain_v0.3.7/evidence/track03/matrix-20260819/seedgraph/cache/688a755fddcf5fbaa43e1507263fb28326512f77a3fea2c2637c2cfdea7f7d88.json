@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "688a755fddcf5fbaa43e1507263fb28326512f77a3fea2c2637c2cfdea7f7d88",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Philips Hue app to create a custom scene with this specific color temperatur",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Philips Hue app to create a custom scene with this specific color temperature and brightness lev",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "89367e8843c6ad73d044f31f0300c70985a422561086f3858d60237040e5ed82"
+}

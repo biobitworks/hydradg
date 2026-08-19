@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8659909f932ba8c7fb4356de05c115ae74d89482e18dbec6310adc9c5a32e035",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them for Thursday's lunch",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them for Thursday's lunch",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "24a688a0b49c4cca9a801016a6ca307266e0460fa9ecff9f3d32ee3d161ee0bf"
+}

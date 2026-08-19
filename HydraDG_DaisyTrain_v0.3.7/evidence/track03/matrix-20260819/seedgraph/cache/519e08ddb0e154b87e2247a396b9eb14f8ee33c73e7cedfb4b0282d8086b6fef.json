@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "519e08ddb0e154b87e2247a396b9eb14f8ee33c73e7cedfb4b0282d8086b6fef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them for aromatherapy",
+      "type": "value"
+    },
+    {
+      "name": "any type of diffuser for aromatherapy or do I need to get a special one",
+      "type": "value"
+    },
+    {
+      "name": "essential oils to treat all kinds of medical conditions",
+      "type": "value"
+    },
+    {
+      "name": "them to cure my cold or my headache",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them for aromatherapy",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "any type of diffuser for aromatherapy or do I need to get a special one",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "essential oils to treat all kinds of medical conditions",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "them to cure my cold or my headache",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df110cc197881141edd4b6dabcce9927ae5abbedc448d7cb53373dd80017e55a"
+}

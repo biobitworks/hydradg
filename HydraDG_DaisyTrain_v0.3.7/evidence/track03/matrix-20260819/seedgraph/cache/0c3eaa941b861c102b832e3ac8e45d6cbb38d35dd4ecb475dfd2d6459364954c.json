@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c3eaa941b861c102b832e3ac8e45d6cbb38d35dd4ecb475dfd2d6459364954c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to remind myself: \"Before you ask a question, you need to know what you're going",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to remind myself: \"Before you ask a question, you need to know what you're going to do with the answ",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "59335c5fc8e9bdd32ac855b8f824dd0ffdbc32f8d8d7dfa7bc8a30e7416fb03a"
+}

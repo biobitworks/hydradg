@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a9f4e74e89d01087ba3d60565d7a41b38f0ff01ca89666ce10057ed71bae9e8d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them in the morning, at night, or both",
+      "type": "value"
+    },
+    {
+      "name": "it in the morning or at night",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them in the morning, at night, or both",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it in the morning or at night",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6b2e31f62b99da262a066769da2511449e5e0b438dda8bcfa1e5e5894bc13c36"
+}

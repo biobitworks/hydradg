@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f97aa4116ecc08dd5bc79f7a443b8678080daffbebfb8da755d11a9f891597a4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the personalized planner and marketing books",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the personalized planner and marketing books",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "06b3df5b1185fb4b4b41e2dc2f16f8fee9eff5a4aebffbd375b5408c3858d975"
+}

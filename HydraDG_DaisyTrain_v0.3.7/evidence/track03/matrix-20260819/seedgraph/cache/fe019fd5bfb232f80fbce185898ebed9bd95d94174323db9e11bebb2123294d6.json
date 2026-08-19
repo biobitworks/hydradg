@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "fe019fd5bfb232f80fbce185898ebed9bd95d94174323db9e11bebb2123294d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using metaphors to describe the journey of perseverance",
+      "type": "value"
+    },
+    {
+      "name": "the idea of describing the journey of perseverance as a path filled with obstacl",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using the phrase \"with every step\" as a refrain to create a sense of",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using metaphors to describe the journey of perseverance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of describing the journey of perseverance as a path filled with obstacles, and I think it c",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using the phrase \"with every step\" as a refrain to create a sense of rhythm and momentum",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a7cdc784ffb3b541c4a90d152ff235400d4d81c195089335b12073382dfc0c2c"
+}

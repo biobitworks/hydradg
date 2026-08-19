@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "968a286c7ad39ec260beb3c0556430fd4b5bf5efe84d95782a6b5b55eab8adb7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a \"zone\" system",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a \"zone\" system",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6311128f9b7e9fc82eae253c1020441f35a70cc724b5076b29ad897ed1505825"
+}

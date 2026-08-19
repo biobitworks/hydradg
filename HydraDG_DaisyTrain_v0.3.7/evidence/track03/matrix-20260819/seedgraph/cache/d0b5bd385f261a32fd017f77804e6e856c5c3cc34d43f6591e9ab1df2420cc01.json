@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d0b5bd385f261a32fd017f77804e6e856c5c3cc34d43f6591e9ab1df2420cc01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a vignette",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a vignette",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "171406208618224d4a379db3cda9878c1dc1488002646d4619e02126a7964b18"
+}

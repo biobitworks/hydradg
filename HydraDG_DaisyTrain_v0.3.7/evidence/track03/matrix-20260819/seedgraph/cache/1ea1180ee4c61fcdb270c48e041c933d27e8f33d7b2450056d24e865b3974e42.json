@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1ea1180ee4c61fcdb270c48e041c933d27e8f33d7b2450056d24e865b3974e42",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of quick journaling prompts, but I'm not sure which ones would work bes",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting a daily mantra",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of quick journaling prompts, but I'm not sure which ones would work best for me",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a daily mantra",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d327afdd3379a57411948ebbe527e5c3246e78a5928362c36dd6ca7a0dd1a903"
+}

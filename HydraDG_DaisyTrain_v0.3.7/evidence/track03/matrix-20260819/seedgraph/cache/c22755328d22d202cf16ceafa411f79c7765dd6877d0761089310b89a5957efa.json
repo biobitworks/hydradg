@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c22755328d22d202cf16ceafa411f79c7765dd6877d0761089310b89a5957efa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of industrialization and trade",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of industrialization and trade",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1bcc402f018bee2f190080df649646ff58053805c7d25b0a84792a49cbe1772a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4587f53fd29bf26caca4788b4685ff43592543169a53a9251f45b55322eefd1d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that they offer a variety of guided meditations and tracking features",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that they offer a variety of guided meditations and tracking features",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8053d05b11f202b4605e8c0797679d3d2acbb8db68d1bdf79a1503625f3e18b9"
+}

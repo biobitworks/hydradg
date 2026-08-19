@@ -1,0 +1,76 @@
+{
+  "cache_hit": false,
+  "cache_key": "aef29712716711082ddcd822aa4d92e8739080a00bb4a71967694c6a24898f33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Soft Shade Lamps",
+      "type": "value"
+    },
+    {
+      "name": "the sound of Robert Abbey's Adjustable Arm Table Lamp",
+      "type": "value"
+    },
+    {
+      "name": "to adjust the light level depending on the time of day or my mood",
+      "type": "value"
+    },
+    {
+      "name": "to charge my phone or e-reader while I'm reading",
+      "type": "value"
+    },
+    {
+      "name": "the warm tone of bronze and it will match my dining room's decor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Soft Shade Lamps",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of Robert Abbey's Adjustable Arm Table Lamp",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to adjust the light level depending on the time of day or my mood",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to charge my phone or e-reader while I'm reading",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the warm tone of bronze and it will match my dining room's decor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b714470f88428b6643f45f3bf289215a3f098d7dda0f302d9aca65d26ccf2627"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b604a454265c6d82ddf5e9c57862ed50ffc5cb557faa0729be788c0396fb7de1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Facebook, Instagram, Twitter, LinkedIn, and WhatsApp regularly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Facebook, Instagram, Twitter, LinkedIn, and WhatsApp regularly",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cdb68351f2b49bd0328372dd7b862b4042abe8939d839716810f03bb705d266b"
+}

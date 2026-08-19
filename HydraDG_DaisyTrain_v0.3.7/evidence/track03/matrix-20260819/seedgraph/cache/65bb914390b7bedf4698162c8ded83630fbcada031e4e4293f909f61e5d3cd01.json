@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "65bb914390b7bedf4698162c8ded83630fbcada031e4e4293f909f61e5d3cd01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the integrated cable lock and the higher weight capacity, since I ha",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the integrated cable lock and the higher weight capacity, since I have a hybrid bike tha",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "243b33ee1094bbed566f61423bf25214f53b6b620a6319ac328a979f2ca14496"
+}

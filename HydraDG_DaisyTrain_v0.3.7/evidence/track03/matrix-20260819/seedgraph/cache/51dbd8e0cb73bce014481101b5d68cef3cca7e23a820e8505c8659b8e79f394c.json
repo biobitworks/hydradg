@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "51dbd8e0cb73bce014481101b5d68cef3cca7e23a820e8505c8659b8e79f394c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a cropped fitted sweater, but I'm not sure if I have anything like t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a cropped fitted sweater, but I'm not sure if I have anything like that in my closet",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4aa7606699bac87580ba68ae33eb76d4b3bc13e5efed1ad0b26852df32b1a9b6"
+}

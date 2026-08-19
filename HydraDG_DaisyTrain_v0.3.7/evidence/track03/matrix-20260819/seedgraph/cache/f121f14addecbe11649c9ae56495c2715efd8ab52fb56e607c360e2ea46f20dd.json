@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f121f14addecbe11649c9ae56495c2715efd8ab52fb56e607c360e2ea46f20dd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breaking tasks into smaller chunks and creating a \"Stop Doing\" list",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking tasks into smaller chunks and creating a \"Stop Doing\" list",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e377455beec4df4d1449374038b5fe4280a56f9da8f8423af630413ea60c1477"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "581736fd6dd390efb4bf244ed9a53d87b9015d5584f8b92231968b0f42ecb2d1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a matching candle holder or vase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a matching candle holder or vase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "02ba24c6937fbfa71009a5bcfbcd6865c26cd3112576318dcd455d050124cab9"
+}

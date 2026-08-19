@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6c99dced16035627cb0b55a84e833da939ab17e405e6d3b65740e0a58f492b5f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to Move It\" from Madagascar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to Move It\" from Madagascar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5a551fe9817928d871cde0f156f476842257b8803f13c9ba7e2d28717c40b62a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "30b15593ada411458df3c86506a572ea8f47f999ed7890787b0afbbf6fdd1a72",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding more plants, I already have some Java moss and Anacharis",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding more plants, I already have some Java moss and Anacharis",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "740ac9de44001eb318e137f38d51718216c4a9bc7cf31c4066c802049fb4d9b0"
+}

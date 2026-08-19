@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c0b5f444271e1bef1d7e3276130b89f5048ba2fdab107087225c3efe28343178",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a bedtime routine to improve my sleep quality",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a bedtime routine to improve my sleep quality",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0856c160bac38de230c6707c5f7b0b75500537d9854d5df02512348ede89eca0"
+}

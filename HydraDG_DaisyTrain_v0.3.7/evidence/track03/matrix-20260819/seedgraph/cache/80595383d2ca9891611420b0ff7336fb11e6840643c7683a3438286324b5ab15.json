@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "80595383d2ca9891611420b0ff7336fb11e6840643c7683a3438286324b5ab15",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a user-centered design approach, which means that I design the website with the ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a user-centered design approach, which means that I design the website with the user's needs and goa",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ebf7f9850dad4664557e5e3bfe0d28c1b462b2f836576a7f1f357757703c5c4b"
+}

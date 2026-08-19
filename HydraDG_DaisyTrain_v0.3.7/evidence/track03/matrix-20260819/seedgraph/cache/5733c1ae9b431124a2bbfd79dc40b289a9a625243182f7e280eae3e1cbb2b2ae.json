@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5733c1ae9b431124a2bbfd79dc40b289a9a625243182f7e280eae3e1cbb2b2ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a task management tool",
+      "type": "value"
+    },
+    {
+      "name": "the idea of visualizing my connections on a board",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a task management tool",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of visualizing my connections on a board",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2b595df777527a0217f38ed32165307fb14fbb31f3792f8f6d6d9416587c562f"
+}

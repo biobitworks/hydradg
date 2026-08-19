@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "119f7b3c461429cf124e3c30697d673324b4198f873b5c79670f7c9986b88987",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a \"parking lot\" for non-essential topics",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a \"parking lot\" for non-essential topics",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a63e469ec11dd8d70dc6e42caf16173e6382e616307cb3e18badd4e525a99e78"
+}

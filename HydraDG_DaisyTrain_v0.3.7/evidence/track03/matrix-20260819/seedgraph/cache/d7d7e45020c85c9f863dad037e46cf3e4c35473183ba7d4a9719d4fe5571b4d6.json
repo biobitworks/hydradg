@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d7d7e45020c85c9f863dad037e46cf3e4c35473183ba7d4a9719d4fe5571b4d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of customizing my own mug",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of customizing my own mug",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05627adc034a5f025b1d9d900a50d5c548fbbbc2f4b6b60485f20ccf134b2506"
+}

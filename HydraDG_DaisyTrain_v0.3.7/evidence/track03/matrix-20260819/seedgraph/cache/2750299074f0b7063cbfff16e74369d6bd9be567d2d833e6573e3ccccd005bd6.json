@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2750299074f0b7063cbfff16e74369d6bd9be567d2d833e6573e3ccccd005bd6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a shared Google Photos album",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a shared Google Photos album",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1deb811e681cf98274545ab4f34c63d0f141e6e8ab012e2eeff7fa2420117012"
+}

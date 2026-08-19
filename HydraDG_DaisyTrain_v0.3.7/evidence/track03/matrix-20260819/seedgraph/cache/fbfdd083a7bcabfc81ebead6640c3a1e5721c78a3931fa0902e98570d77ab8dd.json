@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fbfdd083a7bcabfc81ebead6640c3a1e5721c78a3931fa0902e98570d77ab8dd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a digital tool, maybe Google Calendar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a digital tool, maybe Google Calendar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3a4dd9c43f79c232d701859b012aa8a9da8a3b93d8b13625cb02cec759afa582"
+}

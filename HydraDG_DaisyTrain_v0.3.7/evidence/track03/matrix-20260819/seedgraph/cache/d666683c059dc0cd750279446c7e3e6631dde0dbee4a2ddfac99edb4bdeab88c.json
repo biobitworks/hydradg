@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d666683c059dc0cd750279446c7e3e6631dde0dbee4a2ddfac99edb4bdeab88c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those prompts and questions",
+      "type": "value"
+    },
+    {
+      "name": "the idea of being able to track my habits and journaling practice on my phone, a",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those prompts and questions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to track my habits and journaling practice on my phone, and the reminders wil",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2b1b1ae591819163f8b63f12f2aee6f5cf70293cc57cfdc2e8022b697b51b49c"
+}

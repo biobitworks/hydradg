@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e852b2d162d730720bcd8936137ffc8db4dd61433900107c3bb09d6c0c63d8c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sharing day-to-day life",
+      "type": "value"
+    },
+    {
+      "name": "the idea of ordering food and eating together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing day-to-day life",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of ordering food and eating together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "388b4565fa9dd2ad3a2d16f9e4557c4e0d004ecb37a80623d2e83be52e51bfae"
+}

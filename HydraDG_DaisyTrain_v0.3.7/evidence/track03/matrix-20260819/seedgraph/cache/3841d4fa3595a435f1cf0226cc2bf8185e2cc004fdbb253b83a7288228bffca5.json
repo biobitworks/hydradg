@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3841d4fa3595a435f1cf0226cc2bf8185e2cc004fdbb253b83a7288228bffca5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to stay focused throughout the day",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to stay focused throughout the day",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5b6e1ad2adcac10e0befcb6dc5dcc1e92c2806266c4568808b9810eb59e782fe"
+}

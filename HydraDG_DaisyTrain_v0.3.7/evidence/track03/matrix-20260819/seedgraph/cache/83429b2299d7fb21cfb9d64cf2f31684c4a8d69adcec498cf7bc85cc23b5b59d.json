@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "83429b2299d7fb21cfb9d64cf2f31684c4a8d69adcec498cf7bc85cc23b5b59d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Creamy Chicken and Mashed Potato Casserole, but I'm worried abo",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Tropical Trio combination",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Creamy Chicken and Mashed Potato Casserole, but I'm worried about the calorie count",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Tropical Trio combination",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9aab426815626b3fb48d460da4d7d1ce53b7c4f846f0e9c1445366d5f3a126f8"
+}

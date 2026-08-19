@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7c0514033b664a9baca6c1251769791e63ef9ea461edac97e2acd2e223ceb9b0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a linear pendant, but I'm not sure about the length and number of li",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a linear pendant, but I'm not sure about the length and number of lights",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aa44630ff64da4ba3fb06c52bdf50cb98c444a7d4085f1ebb5f110f15e1bd6f8"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5f690cc6aa60f2806dc81eb548ba0a1820652f95608bd325337c7f6f93ca80d1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the schedule so far",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the schedule so far",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1fd74f71bb2675ab2d855f7dc9e2a36ab7c792c622b77f49bae95825e4269cf9"
+}

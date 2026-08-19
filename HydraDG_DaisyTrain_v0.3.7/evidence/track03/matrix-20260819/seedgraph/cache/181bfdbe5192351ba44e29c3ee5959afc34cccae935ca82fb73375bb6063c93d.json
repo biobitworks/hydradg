@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "181bfdbe5192351ba44e29c3ee5959afc34cccae935ca82fb73375bb6063c93d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of checking out West Elm's throw pillow selection since I just got my c",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Grid Velvet Pillow Cover, especially the Navy color",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of checking out West Elm's throw pillow selection since I just got my coffee table from the",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Grid Velvet Pillow Cover, especially the Navy color",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b39c65567b8dd3cabfbf127667003f1c46160e7608113a0b0764a08e7664256d"
+}

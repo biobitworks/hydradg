@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "866ae66c88b0d0ffb07a639b3eec680d2fb314a252ca27d6e8fe77af457737b8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "running on roads and trails",
+      "type": "value"
+    },
+    {
+      "name": "the sound of Route 1: Park Loop with a Hill Challenge",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "running on roads and trails",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of Route 1: Park Loop with a Hill Challenge",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "24e383338a0b8b00a884860b96e565945465ad82df7f93f45b2ae12da0c68a8b"
+}

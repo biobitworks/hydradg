@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d0ed48d2122349f3ff7db6ab844e0eb3643a2c41984c68ec54a63005b321828e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to buy it online",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to buy it online",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d8f540bdc26342ae56ab27926707e408baff3326b1d3e4833b022d2d5505cfd2"
+}

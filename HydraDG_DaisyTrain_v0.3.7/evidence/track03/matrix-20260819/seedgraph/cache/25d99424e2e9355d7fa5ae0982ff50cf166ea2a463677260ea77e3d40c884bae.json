@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "25d99424e2e9355d7fa5ae0982ff50cf166ea2a463677260ea77e3d40c884bae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating zones in my closet",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating zones in my closet",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fc5eb550e0cf0fa6e64701fff061aee8ddedcc030131f679d7587397a3476ca5"
+}

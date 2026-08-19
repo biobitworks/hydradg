@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8a76058fe1a6aeab9a563b17da925cf1d7e41fedd4474037f4b705c8ce726b3f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a subscription box",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a subscription box",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "02c4251fb7258098de2cdb6ccf444341f669fc6f65f209d4234e1c5e3fb7aa26"
+}

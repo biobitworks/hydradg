@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03dbb67884530cda9abe2e21de2341a0300c9b969c3dfb2655164892742aa0f8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breaking tasks into smaller chunks and setting realistic goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking tasks into smaller chunks and setting realistic goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d28d85063fd5884c615ed4ae14a85646bcf23f1df4a3ef51613b8e1cb2a53557"
+}

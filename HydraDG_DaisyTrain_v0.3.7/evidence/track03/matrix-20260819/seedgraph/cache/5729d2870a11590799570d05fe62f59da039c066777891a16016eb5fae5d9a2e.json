@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5729d2870a11590799570d05fe62f59da039c066777891a16016eb5fae5d9a2e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding them at different stages of cooking to get the right texture",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding them at different stages of cooking to get the right texture",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8442891b3f108a4d3476f1aaaf9ec1ade7e3fc211996460c6d2492828f9f4ae9"
+}

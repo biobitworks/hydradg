@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "60e7ccd9a496a9551a33c427d2b1bfadc7b665d8efed95a11867a1906c0cfdde",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "books that are engaging and easy to follow, not too complex or heavy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "books that are engaging and easy to follow, not too complex or heavy",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "54a8614dabb578c3554c6d94e053a5afc906f85ceb93721fbf2bf08519ca876f"
+}

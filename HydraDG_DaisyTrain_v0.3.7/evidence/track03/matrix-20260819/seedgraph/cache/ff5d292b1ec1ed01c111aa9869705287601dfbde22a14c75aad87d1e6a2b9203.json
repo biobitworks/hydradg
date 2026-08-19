@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff5d292b1ec1ed01c111aa9869705287601dfbde22a14c75aad87d1e6a2b9203",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the idea of rolling up the hem of the jeans",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the idea of rolling up the hem of the jeans",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "adccd54117bf3dbca32b0bea8e2ceba1a4f26911ab908f85b79addd89766676c"
+}

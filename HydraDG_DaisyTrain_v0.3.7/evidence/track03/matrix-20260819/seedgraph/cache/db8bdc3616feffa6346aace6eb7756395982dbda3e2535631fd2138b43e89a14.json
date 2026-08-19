@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "db8bdc3616feffa6346aace6eb7756395982dbda3e2535631fd2138b43e89a14",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas you provided, especially the fresh fruits and veggies section",
+      "type": "value"
+    },
+    {
+      "name": "the idea of focusing on components instead of entire meals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas you provided, especially the fresh fruits and veggies section",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of focusing on components instead of entire meals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03c2638d6b706163295974ab56630ee1a0a091c9e3caccda1b7dafeb1c9a23bb"
+}

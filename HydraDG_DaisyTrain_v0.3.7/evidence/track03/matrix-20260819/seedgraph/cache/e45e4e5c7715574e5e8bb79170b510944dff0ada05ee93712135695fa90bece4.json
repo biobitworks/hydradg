@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e45e4e5c7715574e5e8bb79170b510944dff0ada05ee93712135695fa90bece4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a sunny area and my Honda is parked outside, so I'm looking for something that c",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a sunny area and my Honda is parked outside, so I'm looking for something that can protect it from t",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a2dadfabe303a976b501b01d1880757bb3fe2d5f48d43ad81896d712c8467f7"
+}

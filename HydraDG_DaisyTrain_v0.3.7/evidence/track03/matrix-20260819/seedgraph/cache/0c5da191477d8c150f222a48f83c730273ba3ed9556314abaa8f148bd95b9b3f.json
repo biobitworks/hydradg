@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c5da191477d8c150f222a48f83c730273ba3ed9556314abaa8f148bd95b9b3f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them frequently",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a digital coupon binder",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a digital coupon binder",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4f5688754c9a8ee8922715312a4c73c016b37ee4c9fcd264083738209eed16a5"
+}

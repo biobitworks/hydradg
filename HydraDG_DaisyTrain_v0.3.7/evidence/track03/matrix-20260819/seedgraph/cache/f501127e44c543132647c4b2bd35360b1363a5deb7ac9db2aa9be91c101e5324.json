@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f501127e44c543132647c4b2bd35360b1363a5deb7ac9db2aa9be91c101e5324",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a specific goal and schedule for decluttering my desk and wo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a specific goal and schedule for decluttering my desk and workspace",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a5a88b1645daea6064d810b6eeca8dad797d1950910e42f9cfc43c8a4a81534"
+}

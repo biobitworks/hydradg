@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ec49a06d2159e56a29daa2a89bf86cd0f4b35c25c3ca6088cdaddb82eb5bd415",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh or ground ginger",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh or ground ginger",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "576c34032eda73cab0e0de48ea45397227408bcba49c4aed3518de63056c6501"
+}

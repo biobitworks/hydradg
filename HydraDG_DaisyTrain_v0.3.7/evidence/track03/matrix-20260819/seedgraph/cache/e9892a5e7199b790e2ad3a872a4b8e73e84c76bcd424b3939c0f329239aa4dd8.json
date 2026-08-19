@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e9892a5e7199b790e2ad3a872a4b8e73e84c76bcd424b3939c0f329239aa4dd8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "something with more action and excitement",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "something with more action and excitement",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "19438a109aa25f2812f41c9bc4fddf3b6811f7f2296b05f60d996791cea0e29b"
+}

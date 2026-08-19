@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6d7b8b92107508ab888bf4b00504bbebf7a6b5c40bce62282247110487594699",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of offering a bundle, but I'm not sure if I should include three items ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering a bundle, but I'm not sure if I should include three items in the bundle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c672eb1303bd199e5a50fc6ae1cd4324465844710700eacdcb2325efad9f9d73"
+}

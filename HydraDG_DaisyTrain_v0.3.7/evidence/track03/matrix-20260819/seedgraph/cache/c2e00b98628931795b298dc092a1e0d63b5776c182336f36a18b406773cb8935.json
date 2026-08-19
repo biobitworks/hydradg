@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c2e00b98628931795b298dc092a1e0d63b5776c182336f36a18b406773cb8935",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a woman who knows what she wants and isn't afraid to go after it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a woman who knows what she wants and isn't afraid to go after it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9701c759df24d4c69566ba2b47df41cc1d3abcc3fa78ceddca297f575875f870"
+}

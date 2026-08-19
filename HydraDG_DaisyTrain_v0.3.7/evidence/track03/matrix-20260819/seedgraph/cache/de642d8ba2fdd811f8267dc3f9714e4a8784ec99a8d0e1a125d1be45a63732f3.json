@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "de642d8ba2fdd811f8267dc3f9714e4a8784ec99a8d0e1a125d1be45a63732f3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a good challenge,\" it says and lunges at Aylen, its tendrils reaching for her on",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a good challenge,\" it says and lunges at Aylen, its tendrils reaching for her once again",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d9f7227eac44cf650cf7d76c64f287da1ac8f33d3b2b05796aeb1e8f15386810"
+}

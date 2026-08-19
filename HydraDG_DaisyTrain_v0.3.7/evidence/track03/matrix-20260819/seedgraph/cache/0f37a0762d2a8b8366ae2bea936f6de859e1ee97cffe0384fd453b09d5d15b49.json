@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f37a0762d2a8b8366ae2bea936f6de859e1ee97cffe0384fd453b09d5d15b49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's easy to clean and allows the tea leaves to steep properly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's easy to clean and allows the tea leaves to steep properly",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d8fb29da96cb95113f8fee14f2400856e9632b2b01799f3af182666271774e7c"
+}

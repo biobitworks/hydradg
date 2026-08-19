@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f455c70347da21a880998cf647533f1a6a5718177b45a533086caa915e9524ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "writing down my schedule and tasks by hand",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a dedicated space for tracking my habits and activities, and ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "writing down my schedule and tasks by hand",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a dedicated space for tracking my habits and activities, and the flexibility to c",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3f41500251f095200073008ba11a843b8116c27092a892b4309495e2ae96f11"
+}

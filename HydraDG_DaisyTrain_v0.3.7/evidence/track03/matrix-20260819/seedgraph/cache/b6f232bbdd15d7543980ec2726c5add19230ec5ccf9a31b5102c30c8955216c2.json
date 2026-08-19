@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b6f232bbdd15d7543980ec2726c5add19230ec5ccf9a31b5102c30c8955216c2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those options, especially the samosas and naan bites",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those options, especially the samosas and naan bites",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36248e1acd334e835ee30e311e3132d1cc82e29a0e66806d1d348bb20cf5033c"
+}

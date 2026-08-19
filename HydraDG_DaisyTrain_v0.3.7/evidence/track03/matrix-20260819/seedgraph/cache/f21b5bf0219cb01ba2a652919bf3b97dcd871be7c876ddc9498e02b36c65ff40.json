@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f21b5bf0219cb01ba2a652919bf3b97dcd871be7c876ddc9498e02b36c65ff40",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some plants to the reading nook, but I'm not sure if I should",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding visual interest and creating a more dynamic look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some plants to the reading nook, but I'm not sure if I should get more of the sam",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding visual interest and creating a more dynamic look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "45ef2768711e787410808a79e268da606d4ac43268369f1fac0c365cfe0ecbd0"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c01d15e941c03b568333ba60d06c73d974aaa076018561da3ff82fb1375240aa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the Film Scores and Lo-Fi Electronic genres",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the Film Scores and Lo-Fi Electronic genres",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "58f7b0bbaa187212c5b30267dd6cb777daa4b25ce5b101232db2b4d1d9f58fb4"
+}

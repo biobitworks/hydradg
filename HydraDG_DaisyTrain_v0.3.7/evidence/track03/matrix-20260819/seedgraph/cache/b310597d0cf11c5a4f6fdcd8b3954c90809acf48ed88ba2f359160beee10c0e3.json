@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b310597d0cf11c5a4f6fdcd8b3954c90809acf48ed88ba2f359160beee10c0e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these cashback credit cards with cashback portals like Ebates or TopCashback",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these cashback credit cards with cashback portals like Ebates or TopCashback",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2732ac646d7cda82f77ee5c69a91d6d3f91dad496f161dc576c2000a622f16c5"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "05b7e6cfa46499b16aa826f202292ee8d37661580ddb3949215690e95e6e7086",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those tips and I think I'll try to schedule my writing time in the morning",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those tips and I think I'll try to schedule my writing time in the morning",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1b05d0e2cc976861ee2764eaca5ec2e812ae7666aa5e732a06291d1ee466fc49"
+}

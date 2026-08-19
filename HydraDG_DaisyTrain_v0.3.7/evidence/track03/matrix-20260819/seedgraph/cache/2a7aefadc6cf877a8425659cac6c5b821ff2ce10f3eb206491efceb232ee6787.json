@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2a7aefadc6cf877a8425659cac6c5b821ff2ce10f3eb206491efceb232ee6787",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the ones about sharing personal stories and lessons lear",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a content calendar to plan my posts in advance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the ones about sharing personal stories and lessons learned",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a content calendar to plan my posts in advance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "afcda687a8aa9e2c47c6ca3cfaf1477666cced6ebab75ca37dd3b98c22af9710"
+}

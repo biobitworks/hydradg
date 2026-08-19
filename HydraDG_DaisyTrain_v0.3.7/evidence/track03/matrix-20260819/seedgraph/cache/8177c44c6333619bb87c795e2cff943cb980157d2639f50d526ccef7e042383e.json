@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8177c44c6333619bb87c795e2cff943cb980157d2639f50d526ccef7e042383e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of Habitica and I'm willing to give it a try",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of Habitica and I'm willing to give it a try",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05578131879314efd6e4323a7b02748dbfaf1e4ae8f311f3593d13c52be80ee2"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "672a4ff7c96675774ab4efee408d25ef2dbed31ee4c630aedec209ed1debaaed",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggested timeline, but I think I need to adjust it a bit to fit my specific",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggested timeline, but I think I need to adjust it a bit to fit my specific research requiremen",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9945974daeece4bb1fd244bac1424e233ab3f79bae750f7580c2e61ce033bd2d"
+}

@@ -1,0 +1,60 @@
+{
+  "cache_hit": false,
+  "cache_key": "fb02b5ab4cbddb55fe96a58c575e4337c4eb5869b072c8c00cfb69058a11e055",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this item frequently",
+      "type": "value"
+    },
+    {
+      "name": "this palette frequently",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting a luxury budget and identifying my triggers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this item frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "this palette frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "this item frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a luxury budget and identifying my triggers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4667ac86304d2a3878a769b59a09ba9fa9093e6461ab9f7b46f0b8bbe6984012"
+}

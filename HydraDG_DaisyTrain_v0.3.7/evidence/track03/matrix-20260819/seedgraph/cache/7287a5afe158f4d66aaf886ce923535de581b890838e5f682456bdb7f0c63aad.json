@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7287a5afe158f4d66aaf886ce923535de581b890838e5f682456bdb7f0c63aad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing my shows and setting a \"next episode\" goal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing my shows and setting a \"next episode\" goal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c82664cfb7368223631f8a637bfea0eee613ff6b5e7680aff9b01e5535fdf7af"
+}

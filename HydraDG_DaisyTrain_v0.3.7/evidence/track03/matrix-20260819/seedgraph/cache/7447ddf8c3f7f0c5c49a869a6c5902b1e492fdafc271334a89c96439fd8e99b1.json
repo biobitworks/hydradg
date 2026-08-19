@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7447ddf8c3f7f0c5c49a869a6c5902b1e492fdafc271334a89c96439fd8e99b1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized journal or planner for my mom",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized journal or planner for my mom",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "267714f052adddb05e60d3eebb064fce36fd2b02dc6c98746910cd56867afd4d"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4dac07d18f0ba9794266c561bd00c8d293e8ff0b521f7a1659357192922dd4e2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "online shopping due to its convenience and comfort",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "online shopping due to its convenience and comfort",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2f98b22972590aba3743816a8ae7bc2f2b7b164c245ca771154f42d91816ba02"
+}

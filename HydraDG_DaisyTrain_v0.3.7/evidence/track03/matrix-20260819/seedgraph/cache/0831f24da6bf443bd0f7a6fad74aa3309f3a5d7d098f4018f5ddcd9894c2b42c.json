@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0831f24da6bf443bd0f7a6fad74aa3309f3a5d7d098f4018f5ddcd9894c2b42c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a digital reminder on my phone",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a digital reminder on my phone",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c21ac1efc859cf91fbebec26347eae9be18b85e55233dca3bc5f065e2255fbee"
+}

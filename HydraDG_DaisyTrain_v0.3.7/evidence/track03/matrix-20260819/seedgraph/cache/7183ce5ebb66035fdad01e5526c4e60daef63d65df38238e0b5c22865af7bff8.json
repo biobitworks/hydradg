@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7183ce5ebb66035fdad01e5526c4e60daef63d65df38238e0b5c22865af7bff8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of promoting work-life balance",
+      "type": "value"
+    },
+    {
+      "name": "the idea of providing support for team members who may need extra help",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of promoting work-life balance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of providing support for team members who may need extra help",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "232445393708d46e98f6a1bd620e701410648a9f76133b4e0b91fdb888e74098"
+}

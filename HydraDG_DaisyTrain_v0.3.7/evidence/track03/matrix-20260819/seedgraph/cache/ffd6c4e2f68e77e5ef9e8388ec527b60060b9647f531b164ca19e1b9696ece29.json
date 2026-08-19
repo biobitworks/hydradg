@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ffd6c4e2f68e77e5ef9e8388ec527b60060b9647f531b164ca19e1b9696ece29",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized mug or phone case",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized mug or phone case",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6d7aad9d0729227364bbb50163327ec04c8276ea55166d50901b42bbac1cf21a"
+}

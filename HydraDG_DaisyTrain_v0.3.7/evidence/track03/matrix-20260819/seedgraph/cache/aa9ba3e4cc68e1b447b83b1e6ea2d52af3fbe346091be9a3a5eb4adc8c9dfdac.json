@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "aa9ba3e4cc68e1b447b83b1e6ea2d52af3fbe346091be9a3a5eb4adc8c9dfdac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "different types of seafood in this recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "different types of seafood in this recipe",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bfc2963928418048d0a0d21ba5e9b17fb7921ab391c510a449047f9bffbafb0f"
+}

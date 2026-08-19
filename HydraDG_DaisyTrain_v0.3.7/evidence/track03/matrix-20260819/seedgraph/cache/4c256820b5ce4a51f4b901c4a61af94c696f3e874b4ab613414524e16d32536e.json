@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c256820b5ce4a51f4b901c4a61af94c696f3e874b4ab613414524e16d32536e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the soft, wispy look it gives",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the soft, wispy look it gives",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7fc6c28090463fd68edc4dbc9c82450bdb24baa14a3b30183bddc916bc01d375"
+}

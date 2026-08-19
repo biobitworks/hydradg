@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5805278f87c38a5789d669b3b851e169fd2e68d8595fa90f606aca45612d69d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a fruit and yogurt parfait bar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a fruit and yogurt parfait bar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "636dc260115862e03e1ee759a353ad7d4ec2543a20d4f9d98c9bdc3134fd3a45"
+}

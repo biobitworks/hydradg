@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "dc486c7c3db8080a845d804ef932e336ab989ccf786d6ca82c9557f1abacb0b3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "pork neck bones or pork rib bones instead of just pork bones",
+      "type": "value"
+    },
+    {
+      "name": "other types of steak like ribeye or sirloin",
+      "type": "value"
+    },
+    {
+      "name": "a slow cooker or Instant Pot to cook the broth instead of simmering it on the st",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "pork neck bones or pork rib bones instead of just pork bones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "other types of steak like ribeye or sirloin",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a slow cooker or Instant Pot to cook the broth instead of simmering it on the stovetop or in the ove",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9b82934aa6a9165c26ce6d8768fb060d3b10aa94f1075e8a38e7390eb90e873b"
+}

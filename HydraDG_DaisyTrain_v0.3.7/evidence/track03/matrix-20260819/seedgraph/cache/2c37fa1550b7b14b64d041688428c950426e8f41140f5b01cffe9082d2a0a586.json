@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2c37fa1550b7b14b64d041688428c950426e8f41140f5b01cffe9082d2a0a586",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to fly out of LaGuardia Airport",
+      "type": "value"
+    },
+    {
+      "name": "an aisle seat, if possible",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to fly out of LaGuardia Airport",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "an aisle seat, if possible",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ec5ab9d0347475a9955fcfcb90755d16ee180fb71e55e3febf6bd1af33ad59b4"
+}

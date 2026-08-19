@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "475577b2ef80dc5639ab78a1bddcd8ab9d9a4575c5b71351905471d46630c07e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting personal goals and finding a buddy to volunteer with",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting personal goals and finding a buddy to volunteer with",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "603353e8f3d087e859a6cb174af2d714df07148e094b5b5ae1fb49217ed3df4a"
+}

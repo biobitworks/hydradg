@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d2f008d110bcdb1c9945899525ad9abf28a3729a45bfb6cdf25bc9d6c031483a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a theme-based playlist",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a theme-based playlist",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "04a12b03c2a849eaeb89a8f2ec76cf57160307deca11f5c5a3468730df1ba25c"
+}

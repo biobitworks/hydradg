@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "626f1c67314330b7b4c53d2cb6aae2ebea2783ac744d9e5c07b4f1269e9bb3af",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these tips, especially the spreadsheet idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these tips, especially the spreadsheet idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "873d08727bd811a1a625a4fe957e7ee7058bbe1dafa92d46bc02ec0096f23be5"
+}

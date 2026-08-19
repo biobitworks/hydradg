@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f2bcfb0848ffd5194c6c6774c3836b354a4af990af46e036050e387ad8cce17",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the casual chic idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the casual chic idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "199ef97ab2c6759a2008129ec3605942062b2759a235a75067c7baf00728e06f"
+}

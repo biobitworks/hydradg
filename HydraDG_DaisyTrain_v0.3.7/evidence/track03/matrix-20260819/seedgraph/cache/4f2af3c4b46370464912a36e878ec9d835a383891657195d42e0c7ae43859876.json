@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4f2af3c4b46370464912a36e878ec9d835a383891657195d42e0c7ae43859876",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Fitbit ecosystem",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Fitbit ecosystem",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a7f4e8e12c5172c297cc317548e9ad75a6745f985df98de8849fe4aa8c2db204"
+}

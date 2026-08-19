@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2ed6b9946f97650df96b76e584f1ad2d4ceb531808d2905468587a4c05cc4ce1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "gym workouts since I recently joined a new gym",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "gym workouts since I recently joined a new gym",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "920fece5eb1732af1d86ea5fb7dc3f6394b48157f39a660782ecb1d7b1251d1b"
+}

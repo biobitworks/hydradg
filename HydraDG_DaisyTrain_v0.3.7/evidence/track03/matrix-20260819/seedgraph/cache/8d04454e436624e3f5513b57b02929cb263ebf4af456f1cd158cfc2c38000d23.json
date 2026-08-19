@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8d04454e436624e3f5513b57b02929cb263ebf4af456f1cd158cfc2c38000d23",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my phone quite frequently, especially for social media and watching videos, so I",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my phone quite frequently, especially for social media and watching videos, so I'm not sure if that'",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cabb92253fa870e33cb2d531010bedde0a7aafca9fb76a182a529986b0549309"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "89721318bd6b7cdedbf322e6da20b9fededd3b5ba5acb69d1d5dd02d698a6d30",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of hosting a Q&A session",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of hosting a Q&A session",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d1be4f8055f0d81e28764181159d9e8fd79bd30a04f6a695e94797e34560e1cf"
+}

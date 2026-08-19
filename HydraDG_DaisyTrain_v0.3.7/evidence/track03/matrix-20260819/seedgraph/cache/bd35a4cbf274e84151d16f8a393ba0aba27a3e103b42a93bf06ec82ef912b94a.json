@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bd35a4cbf274e84151d16f8a393ba0aba27a3e103b42a93bf06ec82ef912b94a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "TV shows over movies",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having access to their premium original content, and I'm willing to ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "TV shows over movies",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having access to their premium original content, and I'm willing to pay a bit more for i",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b787043f49befccf49a209911842341936391f64d4d350a197c19196e4551eb4"
+}

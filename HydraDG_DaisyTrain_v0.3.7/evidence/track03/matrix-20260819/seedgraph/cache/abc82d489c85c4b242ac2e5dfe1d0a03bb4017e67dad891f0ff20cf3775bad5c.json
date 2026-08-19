@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "abc82d489c85c4b242ac2e5dfe1d0a03bb4017e67dad891f0ff20cf3775bad5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"World's Okayest [Job Title]\" mug idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"World's Okayest [Job Title]\" mug idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d0f2c5a45d85c1d932952f46f290ec5f72f4596523986991b2d90b9c069a7747"
+}

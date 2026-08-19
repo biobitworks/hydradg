@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "353041305c658538c2b30ba08f4ddf6e5bb055eb50d3f3c30a99f9b522b57406",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them throughout the week in different meals",
+      "type": "value"
+    },
+    {
+      "name": "to keep it simple and use a drizzle of olive oil, salt, and pepper",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them throughout the week in different meals",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to keep it simple and use a drizzle of olive oil, salt, and pepper",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b4b462a6138380a9b0b227a8e5d8f130cb61fd96ded1823bbf281060f27e0998"
+}

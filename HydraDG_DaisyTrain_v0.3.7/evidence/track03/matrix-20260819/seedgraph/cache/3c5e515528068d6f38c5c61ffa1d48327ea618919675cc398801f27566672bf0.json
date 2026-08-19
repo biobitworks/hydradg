@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3c5e515528068d6f38c5c61ffa1d48327ea618919675cc398801f27566672bf0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of dressing up as a bumbling detective, inspired by our improv session",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of dressing up as a bumbling detective, inspired by our improv session",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0fee98da56a8812d0c6af6595e93f50af3f50651c9452b879999e3f295f90cfc"
+}

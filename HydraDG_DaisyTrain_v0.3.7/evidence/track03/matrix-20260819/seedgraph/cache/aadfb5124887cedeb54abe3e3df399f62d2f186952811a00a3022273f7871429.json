@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "aadfb5124887cedeb54abe3e3df399f62d2f186952811a00a3022273f7871429",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting specific goals and tracking my progress",
+      "type": "value"
+    },
+    {
+      "name": "the idea of writing down my goals and reflecting on what I've accomplished each ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting specific goals and tracking my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of writing down my goals and reflecting on what I've accomplished each day",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd83c63dee8a1dceb66678f91775c3f83ab2b4ccd48e1718ace97b3b1bc10ffd"
+}

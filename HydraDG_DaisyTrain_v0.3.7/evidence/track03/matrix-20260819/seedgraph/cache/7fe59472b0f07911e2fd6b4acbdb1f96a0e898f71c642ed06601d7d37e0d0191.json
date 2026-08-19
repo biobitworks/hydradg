@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7fe59472b0f07911e2fd6b4acbdb1f96a0e898f71c642ed06601d7d37e0d0191",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "paved roads and scenic routes with a mix of coastal and rural views",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "paved roads and scenic routes with a mix of coastal and rural views",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5fa067cf2311f46db9c2461c390781fe75776d9581d9d4eb60faf29586167240"
+}

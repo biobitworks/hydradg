@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9a6ea3f5259763ce4cc9f625d6be89a24a4db23402bfd0384ecf19f7b819078d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "casual and comfortable clothing with a bit of a bohemian touch",
+      "type": "value"
+    },
+    {
+      "name": "earthy tones and neutral colors, but I'm open to bold patterns and bright colors",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "casual and comfortable clothing with a bit of a bohemian touch",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "earthy tones and neutral colors, but I'm open to bold patterns and bright colors as well",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5fba811db44bec160cb6721141bf1b0cc6c291e8edc3f2cb250e23754fe7634f"
+}

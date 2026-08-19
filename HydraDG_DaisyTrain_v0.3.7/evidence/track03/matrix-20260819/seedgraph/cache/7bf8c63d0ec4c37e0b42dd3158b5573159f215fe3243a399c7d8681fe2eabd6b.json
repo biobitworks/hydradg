@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7bf8c63d0ec4c37e0b42dd3158b5573159f215fe3243a399c7d8681fe2eabd6b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the grilled chicken breast with quinoa and veggies",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the grilled chicken breast with quinoa and veggies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d04ec1c32913bfb2f98f47503569e871e3c27a50560cfe09065e20bb7fd6a52f"
+}

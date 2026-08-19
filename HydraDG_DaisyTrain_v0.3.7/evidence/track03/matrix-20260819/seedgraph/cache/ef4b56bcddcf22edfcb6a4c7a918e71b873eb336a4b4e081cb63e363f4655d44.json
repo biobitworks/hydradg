@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ef4b56bcddcf22edfcb6a4c7a918e71b873eb336a4b4e081cb63e363f4655d44",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the checklist, thanks for creating it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the checklist, thanks for creating it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "713bed55e5d4193c348ccb5a2289d17ce65e267c74e21ba42acfab529ba54aed"
+}

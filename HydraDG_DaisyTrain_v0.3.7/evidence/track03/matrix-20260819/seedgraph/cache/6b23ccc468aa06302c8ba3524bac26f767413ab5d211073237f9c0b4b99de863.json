@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6b23ccc468aa06302c8ba3524bac26f767413ab5d211073237f9c0b4b99de863",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a different one specifically designed for indoor plants",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a different one specifically designed for indoor plants",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "26db44a5cfe2024a5b9da8c5494110a882b4ba080cada18e8546fbe12456eb95"
+}

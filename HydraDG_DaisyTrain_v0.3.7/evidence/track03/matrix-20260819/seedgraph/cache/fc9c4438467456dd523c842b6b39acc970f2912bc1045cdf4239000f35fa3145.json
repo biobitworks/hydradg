@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc9c4438467456dd523c842b6b39acc970f2912bc1045cdf4239000f35fa3145",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of getting a customized apron or wine-themed gift",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of getting a customized apron or wine-themed gift",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f40e23c463d4cb40726163cbbcb03662292076833c25edf6cfa8004dd9438625"
+}

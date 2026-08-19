@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5e3a952967f8c33e9a175e01ec292886a5583d50d009f1f7aec8987e6ebc352",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having sport-specific stations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having sport-specific stations",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2be772d4fb6b6862e4f7cabd477113f2ec721a5c5e1e84638f8c8bfa4635e13f"
+}

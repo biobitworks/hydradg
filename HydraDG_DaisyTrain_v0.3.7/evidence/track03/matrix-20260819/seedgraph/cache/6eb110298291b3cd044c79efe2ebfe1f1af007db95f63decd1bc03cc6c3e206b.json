@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6eb110298291b3cd044c79efe2ebfe1f1af007db95f63decd1bc03cc6c3e206b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a behind-the-scenes tour",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a behind-the-scenes tour",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "81469d1f3fb2b05e2dfb31f366ec70c16fcb1d760729389a1b170ce3dbb1b9d5"
+}

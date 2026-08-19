@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "919e6e373f96e44d8e1d670af5534fe8d3bb16b76f747e3ffe21cae807450f64",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Habitica to track my progress on days when I don't have a 30-minute jog, like on",
+      "type": "value"
+    },
+    {
+      "name": "the idea of planning my morning the night before",
+      "type": "value"
+    },
+    {
+      "name": "the idea of gamifying my morning routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Habitica to track my progress on days when I don't have a 30-minute jog, like on Mondays, Wednesdays",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning my morning the night before",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of gamifying my morning routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "85332981fc42944f93ef19d2c717805a90ea2622e108b58471297bd21e6f37e9"
+}

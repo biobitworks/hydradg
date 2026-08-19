@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1b12ecc848b50ba64e7e5dd9482041886753f6375390d729fd32877c5b7caf01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the White Blouse and Blazer combo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the White Blouse and Blazer combo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "78af98bbea44a20197afe4851d04e1407cfd8da0df17b1ad4424c33eb6dd6079"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b6ff2e386372f85087251a7572b806501f310d82f3e52f47611f658d57e33b58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating breathwork and meditation into my daily routine, even ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating breathwork and meditation into my daily routine, even on busy days",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8f46471a6b422076291c4f7058123286078fc9d263ca76e74fc6d2b4ab8387d"
+}

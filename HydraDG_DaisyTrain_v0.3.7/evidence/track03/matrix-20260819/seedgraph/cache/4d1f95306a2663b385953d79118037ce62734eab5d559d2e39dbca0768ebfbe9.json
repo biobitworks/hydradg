@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4d1f95306a2663b385953d79118037ce62734eab5d559d2e39dbca0768ebfbe9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to work out in the morning, around 6:30 am",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting specific goals and rewarding myself when I reach them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to work out in the morning, around 6:30 am",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting specific goals and rewarding myself when I reach them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "874fef526c4dcd4e091ea13e8ece777360d22ad15cefabcc9d0d01eed7cebecb"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7223be343c135dc09045ade0736ea556af6a213b72343cb36b464f4bd7fc82ea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wine and cheese gift basket idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wine and cheese gift basket idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "70db4dba58b6ec6b27c6e42aaffee889f2c89530ca003f22c1a0565bf3c642b1"
+}

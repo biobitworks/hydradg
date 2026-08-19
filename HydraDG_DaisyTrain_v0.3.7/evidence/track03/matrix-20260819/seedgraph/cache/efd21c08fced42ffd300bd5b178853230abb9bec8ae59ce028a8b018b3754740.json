@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "efd21c08fced42ffd300bd5b178853230abb9bec8ae59ce028a8b018b3754740",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to mix it up with different flavors, like peanut butter banana or strawberry",
+      "type": "value"
+    },
+    {
+      "name": "the one-pot chicken and veggies idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to mix it up with different flavors, like peanut butter banana or strawberry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the one-pot chicken and veggies idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "635695009e3d46bc9918c332cf9e62636ab4c401246b44f47515cfe97c3dae3d"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4b3d004bdd30c35873e00190eb7041ccf8840fccb932b751507dbf32481fd1f7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breaking down tasks into smaller chunks and using a Kanban board to ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking down tasks into smaller chunks and using a Kanban board to visualize the workfl",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d8600e308ed464de66328add9f6cb2cd71a90bef0c515be9da73e4878d2344c6"
+}

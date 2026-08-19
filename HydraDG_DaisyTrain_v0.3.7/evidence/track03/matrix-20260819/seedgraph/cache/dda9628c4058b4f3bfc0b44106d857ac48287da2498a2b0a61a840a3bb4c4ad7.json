@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dda9628c4058b4f3bfc0b44106d857ac48287da2498a2b0a61a840a3bb4c4ad7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Father\" and \"Minari\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Father\" and \"Minari\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9a999d6fb3ea4327e7ac8c43c57b56f34afee86ac68215d96a5cc576e9d5cfd6"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ba99d541c9cd35050639cdaeb72da801917ceadb8f581a8a29a2d03e53d2785e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a writing calendar, especially since I've been enjoying writing shor",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a prompt or theme to generate ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a writing calendar, especially since I've been enjoying writing short stories lately",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a prompt or theme to generate ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "38809b7b7b3a1a981e97cfa68e4aa39ff582923b18fac99c4ac7f68cde00b1fa"
+}

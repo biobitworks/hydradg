@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0388d9855aa31bc1aed2c29e91aa766b88c27ecce211f4fa77693a72738cdf88",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it allows me to set goals and track my progress",
+      "type": "value"
+    },
+    {
+      "name": "that I can set goals and challenges for myself, and it's also a great way to con",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it allows me to set goals and track my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that I can set goals and challenges for myself, and it's also a great way to connect with friends wh",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4bbb47ae9daacf650390b5dd41cfc3e575e8cfef27cf5e5ce73f7a835d3011c5"
+}

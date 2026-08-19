@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0fa988633067956d72260527f55410a61c63fcf50c07561250bc81f2b1d7bd1c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Stripe's go client (\"github",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Stripe's go client (\"github",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e1f99e1af4daed02fcd6609cd5b55bf21a27689d4b5e192b50bebec68339264e"
+}

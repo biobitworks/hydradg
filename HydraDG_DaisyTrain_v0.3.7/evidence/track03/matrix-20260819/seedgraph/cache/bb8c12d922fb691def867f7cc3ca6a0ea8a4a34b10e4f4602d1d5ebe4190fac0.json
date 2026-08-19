@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bb8c12d922fb691def867f7cc3ca6a0ea8a4a34b10e4f4602d1d5ebe4190fac0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a lamp that's not too bulky or ornate, but still makes a statement i",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a lamp that's not too bulky or ornate, but still makes a statement in the room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "08f9911c4ca576efd78213c0e6679ac97f7f0087bb73b67d1e7beee36d3c0926"
+}

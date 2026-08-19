@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e4d70385415ac6230bd697c92eec5d108e3ab1514d0e6e03600bce769b4835d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the strategies I learned to achieve them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the strategies I learned to achieve them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3f3f4384923fc496e2ffb357dca8a40390c5e56fce6b857b4cd2103ad378739b"
+}

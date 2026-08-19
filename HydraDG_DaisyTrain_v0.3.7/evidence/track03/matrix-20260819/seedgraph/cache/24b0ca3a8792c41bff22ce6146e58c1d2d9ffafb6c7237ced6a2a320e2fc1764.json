@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "24b0ca3a8792c41bff22ce6146e58c1d2d9ffafb6c7237ced6a2a320e2fc1764",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a very specific JSON structure that I call Lollipop JSON to represent a web page",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a very specific JSON structure that I call Lollipop JSON to represent a web page",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "66631df80d4d6df574f4c159eed4a63cbeed7d060ee61e30b1a6725c6a7dad19"
+}

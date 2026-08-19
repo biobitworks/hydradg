@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dc61c6623149bc0832cb4d3798a7e2c21cba051a3132ddca42521067aef484b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for my other plants, so I'll dilute it to half the recommended strength",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for my other plants, so I'll dilute it to half the recommended strength",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "41f17d8c7e95e58b2b715516ea5886c180c3328397239380725d15343be4038d"
+}

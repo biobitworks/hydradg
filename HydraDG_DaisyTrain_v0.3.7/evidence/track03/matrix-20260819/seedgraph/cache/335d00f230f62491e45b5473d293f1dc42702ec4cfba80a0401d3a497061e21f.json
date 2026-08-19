@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "335d00f230f62491e45b5473d293f1dc42702ec4cfba80a0401d3a497061e21f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating content that's both informative and engaging",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating content that's both informative and engaging",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bfa100e999b0355239b289e625f65a9c9ccf454195b373c384afa5f42f3e3e77"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7c6cf140dfd776d8e091d6af18a82ac914b92eea7a0cee6a532af3440a93070f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that Avocado Toast recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that Avocado Toast recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7ddcf818e2adbc41514f215f8ed8d147922e164814049403f4e177bd6abe75a0"
+}

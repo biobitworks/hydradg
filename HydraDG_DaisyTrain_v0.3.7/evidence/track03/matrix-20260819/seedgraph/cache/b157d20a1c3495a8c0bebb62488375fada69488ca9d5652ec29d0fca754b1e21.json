@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b157d20a1c3495a8c0bebb62488375fada69488ca9d5652ec29d0fca754b1e21",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting up a signature cocktail station with all the ingredients and",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up a signature cocktail station with all the ingredients and garnishes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bc20dc7b2ab2c39814324b943fe47deeff4db5896974d2116b25461b18f41f41"
+}

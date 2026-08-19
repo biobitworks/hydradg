@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "170cc06f46ef9e6b6ab3cdcea3d73bf3735a0aeef28cdaf1f46796ee9251724c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to have control over my work",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to have control over my work",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "455bcb403850126edd4cdffdce328e11678f0f14ef5811c3d368ec17348bcb05"
+}

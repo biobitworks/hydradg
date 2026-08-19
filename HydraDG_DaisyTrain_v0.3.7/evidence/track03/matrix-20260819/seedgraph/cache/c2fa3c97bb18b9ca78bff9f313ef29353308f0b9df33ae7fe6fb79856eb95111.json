@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c2fa3c97bb18b9ca78bff9f313ef29353308f0b9df33ae7fe6fb79856eb95111",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them all together, or is it better to start with one product and see how my hair",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them all together, or is it better to start with one product and see how my hair responds",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7d2fe314b7b495ce6fcec478559f6eb4334e3d09fb0bf098b2e2883e162c2491"
+}

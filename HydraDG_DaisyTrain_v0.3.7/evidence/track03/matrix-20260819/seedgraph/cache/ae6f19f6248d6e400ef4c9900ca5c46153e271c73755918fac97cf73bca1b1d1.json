@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ae6f19f6248d6e400ef4c9900ca5c46153e271c73755918fac97cf73bca1b1d1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "some of the suggestions, especially Codenames since I've already had a great exp",
+      "type": "value"
+    },
+    {
+      "name": "some of the theme and decoration ideas you suggested",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "some of the suggestions, especially Codenames since I've already had a great experience with it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "some of the theme and decoration ideas you suggested",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6560aef95a0bda72f76f6ee415f22968e30933c60c78f86a702d0a00232301ec"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "89ff1f9a2fa1ccc099c6428f24b9afe5ea0392e4f1ee79cba6e5224152af2481",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Armarkat Cat Scratching Post",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Armarkat Cat Scratching Post",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a6a50763e4e3f5a5ee150aaf53ffc24d0e71ccdb5d4ae82778dbf7295df67c0c"
+}

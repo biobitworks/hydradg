@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "230072ea9c9b1ad5ce57c489136135bf7d6f40fc62c3793f98d1d5f95570a337",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of reaching out to old friends through social media",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of reaching out to old friends through social media",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0da4671cdbe2f9f5d84fa88a6df8da7ba91e8f5b7916312990c54acf79fff573"
+}

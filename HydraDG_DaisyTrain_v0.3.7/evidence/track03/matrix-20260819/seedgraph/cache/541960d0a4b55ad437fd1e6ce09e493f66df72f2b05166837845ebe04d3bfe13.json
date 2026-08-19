@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "541960d0a4b55ad437fd1e6ce09e493f66df72f2b05166837845ebe04d3bfe13",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of doing some quick exercises at my desk",
+      "type": "value"
+    },
+    {
+      "name": "the idea of focusing on how I'll feel after the workout",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of doing some quick exercises at my desk",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of focusing on how I'll feel after the workout",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "49cc56477200793bac437e7c44684aca2869a8b11d85d0ad706d90f1c7ebaff1"
+}

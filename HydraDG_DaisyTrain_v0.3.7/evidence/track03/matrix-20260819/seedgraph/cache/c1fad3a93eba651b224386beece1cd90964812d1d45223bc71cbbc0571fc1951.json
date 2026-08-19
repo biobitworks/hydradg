@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c1fad3a93eba651b224386beece1cd90964812d1d45223bc71cbbc0571fc1951",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "lavender essential oil to experience these benefits",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "lavender essential oil to experience these benefits",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f5d036a944424d6e9b19c026d273553fd54d4cbc87caa071c754f83afd1c884"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "550f729a5043fcf4f4e48376f4bf74724cab1de854ee6b3d6efe96933cc3f3e6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my coffee strong and bold, and I'm looking for a cozy atmosphere with plenty of ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my coffee strong and bold, and I'm looking for a cozy atmosphere with plenty of seating and outlets",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6375da8439feea985ec77ccb1a0efb4278e2ecf7c77994ff6ead5aa152f97adc"
+}

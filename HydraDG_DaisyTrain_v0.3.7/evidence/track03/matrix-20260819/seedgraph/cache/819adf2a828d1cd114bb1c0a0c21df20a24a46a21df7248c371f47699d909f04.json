@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "819adf2a828d1cd114bb1c0a0c21df20a24a46a21df7248c371f47699d909f04",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, especially the brass or copper accented lamps",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, especially the brass or copper accented lamps",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "52a90825a81ca4d2a34754eaf800bc9bcd5456db31c16d2f90f050b2d2b8982f"
+}

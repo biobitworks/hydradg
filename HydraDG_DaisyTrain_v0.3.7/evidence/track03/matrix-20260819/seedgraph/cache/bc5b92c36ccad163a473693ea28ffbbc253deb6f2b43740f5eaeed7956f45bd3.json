@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc5b92c36ccad163a473693ea28ffbbc253deb6f2b43740f5eaeed7956f45bd3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of doing a behind-the-scenes content, especially since my audience seem",
+      "type": "value"
+    },
+    {
+      "name": "the idea of making it interactive, so I think I'll ask my audience to help me de",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of doing a behind-the-scenes content, especially since my audience seemed to enjoy the impr",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of making it interactive, so I think I'll ask my audience to help me decide on the topic of",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "27fdce7239323068fc89db1b54800ca5dc8a856e2ee578c5cd10b42ad2d90061"
+}

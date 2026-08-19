@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "84503ba65f9cd92c1be57dbd3b8b51ac97b4d2f5275a3a2d18954be30a6324ef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a family celebration",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a family celebration",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1ab7bfbbb18e6e4fb10a3423835822db639ad529b32473229956f7613d9816c1"
+}

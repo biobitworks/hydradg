@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "87318c8ef6c82156fbb3b094fb0b87f5e1143338441222198f730c40c2215df3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the compact size and the vari-angle touchscreen LCD",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the compact size and the vari-angle touchscreen LCD",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7bef2b0a7d0c8b8ba0ba79414155035a200d8006c99594aa9c43a1e0e31c8edc"
+}

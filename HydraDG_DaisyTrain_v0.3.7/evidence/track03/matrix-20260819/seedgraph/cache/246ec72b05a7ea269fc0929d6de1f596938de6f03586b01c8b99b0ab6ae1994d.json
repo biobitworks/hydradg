@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "246ec72b05a7ea269fc0929d6de1f596938de6f03586b01c8b99b0ab6ae1994d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a plan to tackle my credit card debt and build an emergency",
+      "type": "value"
+    },
+    {
+      "name": "the ideas you've suggested, and I think I can definitely make some changes to in",
+      "type": "value"
+    },
+    {
+      "name": "the idea of offering a \"bundle and save\" option, so I'll make sure to mention th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a plan to tackle my credit card debt and build an emergency fund",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the ideas you've suggested, and I think I can definitely make some changes to increase my income and",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering a \"bundle and save\" option, so I'll make sure to mention that in my listings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "47e27ccf3361240d09e34008c815b601cebb43902a49cd0ff7b6dc46466c2a3e"
+}

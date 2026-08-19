@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b1bf77b7f37c194176717b0f48852c97051bfe198f4ef5142e8cf7ffb1887dfb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep things simple and comfortable",
+      "type": "value"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep things simple and comfortable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "06f5233469a81fc6f4a67e83f2d4df3444654f81c5513e7de4337c63ca838f96"
+}

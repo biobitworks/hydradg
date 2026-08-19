@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "74371ab58da6b041468c74b7aec34d15dc6e363d0ce37eff002ac2c35d0882b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wine pairing suggestions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wine pairing suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "594c39038e125f91d203ec9ab5c8fa61751ee92f84898eb5d20ffadfc12bb7f9"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "66ed9d6bd818815c9d62bc638de76f76e2c0a93064631afc0f6ae6eecdf59964",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing my dark jeans with a white or light-colored blouse",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing my dark jeans with a white or light-colored blouse",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a82c2041554afc658acc54b046bdc791b196264af9a591511c019b6a50ee53fd"
+}

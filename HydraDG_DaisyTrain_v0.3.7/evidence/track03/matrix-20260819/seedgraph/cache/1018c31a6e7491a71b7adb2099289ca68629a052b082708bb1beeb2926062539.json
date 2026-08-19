@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1018c31a6e7491a71b7adb2099289ca68629a052b082708bb1beeb2926062539",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using tofu scramble and cashew cream for the egg substitute",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using tofu scramble and cashew cream for the egg substitute",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "10a9330a5178058cf3fcad9562d3e3ca58a84d523ff9068c856a162b683677a3"
+}

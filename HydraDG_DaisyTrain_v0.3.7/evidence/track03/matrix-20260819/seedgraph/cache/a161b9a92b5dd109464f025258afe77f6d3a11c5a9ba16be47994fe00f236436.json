@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a161b9a92b5dd109464f025258afe77f6d3a11c5a9ba16be47994fe00f236436",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of doing a restaurant roundup, but I'm not sure how to make it engaging",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of doing a restaurant roundup, but I'm not sure how to make it engaging",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "680bdd90a6f74fd527bd1e0d569e9a29d8abc5523e2122ad533df22f412ecdce"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "eee43b12500b5ab72dcf4f2517abb391e63a223d68242eaf34f99b421430f909",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a modern coffee shop with outdoor seating",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a modern coffee shop with outdoor seating",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b7451a4e4ba065fb07e103ddbb3ba6c85792140d4cded3c9aa50c85cd6cbc604"
+}

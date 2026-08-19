@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e1e9e3ffafef0c760d57844cd50a591d6952e6f80064b1ef33fcf791e898bc0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "other types of vegetables instead of sweet potatoes, Brussels sprouts, and cauli",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "other types of vegetables instead of sweet potatoes, Brussels sprouts, and cauliflower",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "88c02927b131ebc47bd2e24a178aa35a8ebfee1016f8e3cf4b9d71a825fa7df6"
+}

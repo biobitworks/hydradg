@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d88b56546f3301b55ca09165fcd7cf5d9c62c7cd46148025da30c17ae5c5bea6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a brunch theme, it's casual and relaxed",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting up stations or tables with different categories of food",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a brunch theme, it's casual and relaxed",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up stations or tables with different categories of food",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4828d0404add4a292a836a5ff0879e00a175848ba5743a114a884caeaca616a6"
+}

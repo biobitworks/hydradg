@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5e7cdf62376363bfab086491bef6d0cb9255d3c0f38702f9b1692d8e9030c58b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "some of those suggestions, especially FlavorQuest and The Food Explorer",
+      "type": "value"
+    },
+    {
+      "name": "the recipe, thanks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "some of those suggestions, especially FlavorQuest and The Food Explorer",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the recipe, thanks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4980dc664225ee5659cadecb89d16be55276feb37ea9b2b28c76491098331e02"
+}

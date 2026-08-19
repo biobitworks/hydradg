@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5e09e4c011f07f0a20f4a604eb38c71a28cdd16f8ebeb8a77506dfc00cbda324",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Todoist and Evernote",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Todoist and Evernote",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "83fd882598fc81752a5a2f17d39880b46510845f9be0042be9151ece7e7dc78a"
+}

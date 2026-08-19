@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "49cf85f73b4e3b5285bd92aa7cf341888c53b1fa579b40847f935ad72daecf79",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that $200 for debt repayment instead",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that $200 for debt repayment instead",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bf2c38e56f1631f7fb231251ec236cda05cdeb768f72a9dcbc96cd41eb3fb3ae"
+}

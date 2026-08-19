@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e214fde3ed8c920205628967d8b182e8b082bf87430716146583a5a9973f0b4f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a digital folder and a wardrobe inventory document",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a digital folder and a wardrobe inventory document",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2dabcd94e77ef846b9a7df6bb9a9f3c4f755b987f7060b671512c77d8f2518fd"
+}

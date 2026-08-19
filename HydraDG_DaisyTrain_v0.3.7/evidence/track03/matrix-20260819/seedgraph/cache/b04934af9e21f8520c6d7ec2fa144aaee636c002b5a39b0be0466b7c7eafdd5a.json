@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b04934af9e21f8520c6d7ec2fa144aaee636c002b5a39b0be0466b7c7eafdd5a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that they both have high ratings and seem user-friendly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that they both have high ratings and seem user-friendly",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "08ace2b46c63e12174512a6813258353f80300696b1cf2cbf65a93628ae3185d"
+}

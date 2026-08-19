@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ca7c9de004ac450d1e4ea4330c439fddf672acb2d675809d44c820d884ac200",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "evening classes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "evening classes",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4500eacb5bf02548eb93108ebfdbe6f765b2beb385f6cbdc0a123f04dd3d3399"
+}

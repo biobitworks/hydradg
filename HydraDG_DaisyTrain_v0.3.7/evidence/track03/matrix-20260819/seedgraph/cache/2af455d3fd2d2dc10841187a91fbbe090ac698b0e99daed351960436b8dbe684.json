@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2af455d3fd2d2dc10841187a91fbbe090ac698b0e99daed351960436b8dbe684",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the jeans and graphic tee combo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the jeans and graphic tee combo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a9e4e7aa630b77c7b7b9579c62347ecc5c9a4bdb905083503df6b86d4ada1c46"
+}

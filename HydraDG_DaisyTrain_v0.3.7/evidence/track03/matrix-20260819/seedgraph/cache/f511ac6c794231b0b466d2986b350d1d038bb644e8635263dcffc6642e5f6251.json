@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f511ac6c794231b0b466d2986b350d1d038bb644e8635263dcffc6642e5f6251",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Enchanted Garden theme, it sounds really sweet",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Enchanted Garden theme, it sounds really sweet",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79aa82fa581a7feb0574538cf45710283411ad17ca4a58128fd2e3709364981b"
+}

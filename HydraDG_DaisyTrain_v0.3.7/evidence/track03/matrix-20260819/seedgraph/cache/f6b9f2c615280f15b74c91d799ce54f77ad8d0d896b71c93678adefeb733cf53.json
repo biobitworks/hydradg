@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6b9f2c615280f15b74c91d799ce54f77ad8d0d896b71c93678adefeb733cf53",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the playful design and it seems more affordable",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the playful design and it seems more affordable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c20d661650b88435f31d12227161c13e7db3ac168e49297da396bf73004d0ea0"
+}

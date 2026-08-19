@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "be5f135ca34fc86f69b9eae59ade7d2aac29936a040be512c8c84c6dd9ce4f14",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a distraction-free writing environment and the ability to create Tre",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a distraction-free writing environment and the ability to create Trello cards directly f",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "44fa15390e8c71e92f7ebd530a5673979851da4afe72eb1f4d3916dafa17ab4a"
+}

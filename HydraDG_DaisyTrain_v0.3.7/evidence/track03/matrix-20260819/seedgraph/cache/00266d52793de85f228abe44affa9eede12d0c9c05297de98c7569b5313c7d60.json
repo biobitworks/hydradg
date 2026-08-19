@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "00266d52793de85f228abe44affa9eede12d0c9c05297de98c7569b5313c7d60",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the earthy tone placemats, but I'm not sure what dinnerware and glasses would go",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using earthy tone ceramics and glasses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the earthy tone placemats, but I'm not sure what dinnerware and glasses would go well with them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using earthy tone ceramics and glasses",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e56226849d93af860009510578e9c44360d9a6b78a8eef81bc0ca70b68a0191c"
+}

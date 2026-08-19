@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c387011dda4065ca21e617124b2d4612f28c8909e8e4a0abe1b0cff848c46119",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding custom shelves and decorative details to the Billy Bookcase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding custom shelves and decorative details to the Billy Bookcase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ba66087946af2af053bf8d7e0e43d9007c92483c575d34816a6749e5419bb895"
+}

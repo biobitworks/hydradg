@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1b59235e0d803337e0b5b14045f1a5bc9ccc7557219923bdd45bdacd9795e39d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of reframing negative thoughts and practicing self-compassion",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of reframing negative thoughts and practicing self-compassion",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ae596751f19dd1b21c00a13e575177ad455453bf874f39cb6383d24ef80f3b4a"
+}

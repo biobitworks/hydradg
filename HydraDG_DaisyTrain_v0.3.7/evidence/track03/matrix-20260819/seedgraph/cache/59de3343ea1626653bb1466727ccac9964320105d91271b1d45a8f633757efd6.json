@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "59de3343ea1626653bb1466727ccac9964320105d91271b1d45a8f633757efd6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized baby blanket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized baby blanket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0212a34f00806bac6745f179c615ea32f2683edc82ebf655254864b2ec1e34dc"
+}

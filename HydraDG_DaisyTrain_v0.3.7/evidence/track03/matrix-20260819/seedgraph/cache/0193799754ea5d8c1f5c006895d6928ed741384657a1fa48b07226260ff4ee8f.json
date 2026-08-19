@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0193799754ea5d8c1f5c006895d6928ed741384657a1fa48b07226260ff4ee8f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of scheduling it in and finding an exercise I enjoy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of scheduling it in and finding an exercise I enjoy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f6beaad6b403e8591d688c981559a4a9bb7f7a2047e6ed37770b052ed80c3e27"
+}

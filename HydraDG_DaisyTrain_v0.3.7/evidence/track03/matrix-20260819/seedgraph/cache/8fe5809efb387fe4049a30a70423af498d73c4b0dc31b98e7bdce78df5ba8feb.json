@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8fe5809efb387fe4049a30a70423af498d73c4b0dc31b98e7bdce78df5ba8feb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some protein and nutrients to the dish, and chicken and spina",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some protein and nutrients to the dish, and chicken and spinach are a classic com",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "521a31cfd077c000d902530e165c00e04f0b030957240c28d0569932eefc7f66"
+}

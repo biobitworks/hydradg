@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4b13089bb2a90dff559a8d6ff020861153c8a7b4d3804a408fa79bfe609e365e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a gentle detergent or a specialized cleaner, and are there any specific instruct",
+      "type": "value"
+    },
+    {
+      "name": "their designs and quality, but I'm not sure which one would be the most function",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a gentle detergent or a specialized cleaner, and are there any specific instructions I should follow",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "their designs and quality, but I'm not sure which one would be the most functional for my daily comm",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1cc05d420cf7d867c97808b9a128a2aa507bb47502c2012d2541aff7124c7778"
+}

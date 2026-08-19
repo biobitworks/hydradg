@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "37fcc58642a37e50ae4d1a030266117f4c27496866f267d2c60aa148dba0f629",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "regularly for cooking",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "regularly for cooking",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f14b3dd6c444adb57444e0a657fddbe45b3890f9daf363424530ab4aed133b66"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c69b5293c8d77b7ff959814324f3d5326482a427a0c55ee846e55dc2876c9f25",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a nature walk and the lake-themed treasure hunt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a nature walk and the lake-themed treasure hunt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "145cde81aa36ceb1ff8fb5eeac9a330cc45c9f571286991f90070e43bf48f434"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f28217a91f23eefa20a38c051bfad598fdcb898f5a6b1b896eedd4e23f68d2a1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "vacuum storage bags to store them as well",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "vacuum storage bags to store them as well",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3da2d9855763a05fe8ace83423edef9896a5212e2b611cb7a4eb95f7b2d530ae"
+}

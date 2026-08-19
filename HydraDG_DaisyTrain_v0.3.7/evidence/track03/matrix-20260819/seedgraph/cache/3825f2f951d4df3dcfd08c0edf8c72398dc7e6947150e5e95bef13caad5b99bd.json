@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3825f2f951d4df3dcfd08c0edf8c72398dc7e6947150e5e95bef13caad5b99bd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my data science team",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my data science team",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5d4f0780ee791888da5bbc52f2d3e684fec9a227013fc5589b9dd4f027bdae32"
+}

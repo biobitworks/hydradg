@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "41a95af11bfe9201b6b78a3305e2f0f72ced0ad8518f4c857ba80d8313cf43f6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having individual slots for each shoe and being able to see what I h",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a light-colored countertop and cabinets to make the space feel",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having individual slots for each shoe and being able to see what I have",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a light-colored countertop and cabinets to make the space feel brighter and more a",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4585160c0a07f996bf56bc0df8c6a7c2dfcf1ed60fabdd315a31b7d92ed5e0ed"
+}

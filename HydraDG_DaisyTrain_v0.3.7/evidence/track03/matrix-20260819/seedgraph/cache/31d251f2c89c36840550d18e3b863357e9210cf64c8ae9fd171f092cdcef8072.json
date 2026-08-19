@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "31d251f2c89c36840550d18e3b863357e9210cf64c8ae9fd171f092cdcef8072",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "milder weather and fewer crowds, so spring sounds like the perfect time for me t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "milder weather and fewer crowds, so spring sounds like the perfect time for me to visit Greece",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5c646447485e73d79c268d5b0e3c8383134b7b7a9150116ee9e95bea4df3c72b"
+}

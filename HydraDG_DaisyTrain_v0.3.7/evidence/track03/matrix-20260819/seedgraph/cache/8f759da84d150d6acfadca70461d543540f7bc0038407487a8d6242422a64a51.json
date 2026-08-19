@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f759da84d150d6acfadca70461d543540f7bc0038407487a8d6242422a64a51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "downtown area, and we're looking for something cozy and intimate with comfortabl",
+      "type": "value"
+    },
+    {
+      "name": "to sit outside when the weather is nice",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "downtown area, and we're looking for something cozy and intimate with comfortable seating and a quie",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to sit outside when the weather is nice",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f3bf5c05e897c07e778993886beb75e26800aadafa503aaa315057183fe94622"
+}

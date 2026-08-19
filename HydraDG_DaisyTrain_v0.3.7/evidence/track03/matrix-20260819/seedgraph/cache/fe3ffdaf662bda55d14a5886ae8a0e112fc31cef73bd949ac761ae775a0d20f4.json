@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fe3ffdaf662bda55d14a5886ae8a0e112fc31cef73bd949ac761ae775a0d20f4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of fabric stamping",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of fabric stamping",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6ff87f0c1a2cb1a3eb686073feddf84729bfcbaa116d864b30eb8c290f50ff51"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f525482bab93f625b6a0b0ab28e628046a036dbaeea18ac9f1ebc1e5045ad269",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Cafe24, but I always ask for something",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Cafe24, but I always ask for something",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b411d5d39857494b902b4ce5190be0f05f06439b1bb0915d5adfe7f13d44e8a1"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "058798cc8294402490c7454a9c947178dfc613d05a76b529a703f1254b47584c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the salad jar idea, I'll try that out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the salad jar idea, I'll try that out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9e544621070d9a2f2f08aa0022fd5d0ebf65a545db70ea59907c725f3c3f92a6"
+}

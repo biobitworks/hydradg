@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "90b8631afef004c3d0737e4b93932fb1b1e533366a809d24395eaa0015690be9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the daily and weekly tasks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the daily and weekly tasks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79747d175764b6598f4b55171f3adc27bedeac840108908022493c8972333696"
+}

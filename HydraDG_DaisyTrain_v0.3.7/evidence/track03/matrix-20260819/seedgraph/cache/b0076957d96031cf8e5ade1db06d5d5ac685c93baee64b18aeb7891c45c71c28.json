@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b0076957d96031cf8e5ade1db06d5d5ac685c93baee64b18aeb7891c45c71c28",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's compact and lightweight, but still has a decent capacity",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's compact and lightweight, but still has a decent capacity",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "02257da1276a515e23d9883c41903c208d9057b9e22dcb807a24c60420def5dd"
+}

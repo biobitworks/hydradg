@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0bcd6e0f677ca28c4a020fb1ee5bfb727c31714be9711df6822f6469e2f07016",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "their music",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "their music",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "17cad821b9f42e6ef7f27ca28d64d77dd65c7c38d83a807d6cc48aadfb9e9bf1"
+}

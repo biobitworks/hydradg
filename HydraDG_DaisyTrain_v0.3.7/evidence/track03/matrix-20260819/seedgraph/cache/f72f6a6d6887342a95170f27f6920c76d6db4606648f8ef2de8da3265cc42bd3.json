@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f72f6a6d6887342a95170f27f6920c76d6db4606648f8ef2de8da3265cc42bd3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of demonstrations and offering free samples",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of demonstrations and offering free samples",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a1030c91b6b3c549e16706b83d4e7d28932a5ed521bcdc5f34d624e5351b93bf"
+}

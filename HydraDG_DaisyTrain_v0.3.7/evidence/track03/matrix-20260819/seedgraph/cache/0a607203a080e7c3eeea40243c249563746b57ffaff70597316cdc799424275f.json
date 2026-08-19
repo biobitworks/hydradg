@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0a607203a080e7c3eeea40243c249563746b57ffaff70597316cdc799424275f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of an artisanal scarf",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of an artisanal scarf",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4d4cf860d70c68967237e442e5c726576ec18a7bd983fb066d2213357d03a74c"
+}

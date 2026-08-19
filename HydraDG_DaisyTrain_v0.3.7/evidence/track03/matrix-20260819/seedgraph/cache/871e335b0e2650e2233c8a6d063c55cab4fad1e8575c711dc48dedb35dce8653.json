@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "871e335b0e2650e2233c8a6d063c55cab4fad1e8575c711dc48dedb35dce8653",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Royal We\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Royal We\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aa4a6158fb1c02180745d8375e173c969c8ab54a28db59eb1ae7b3f4210d623e"
+}

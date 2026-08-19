@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3fbce54e502ac73c2d4e63fc8d510d798a3a6372c676b28e451db21a01836a51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the customized baby tree idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the customized baby tree idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e5a1aa5f831c4e101e2bf721921f7f59a97a814a77646cccfe11125e01fe3a75"
+}

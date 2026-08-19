@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "de3b96b53453884cab16419c92b2dc1b55004803bfadfabc6420639983b6827f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the personalized notebook idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the personalized notebook idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "83b8273789ea36ce8e8228950d497d1f062925306a1ee055d18a5883bbc5b265"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c7475a3f1716f6e026b61207b162a1998fab177f2a029255b1c0e065b4b04b38",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the pegboard idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the pegboard idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "41035e1500fe5f07161690132b212ed72131da7315272c70bd70382d8681ea32"
+}

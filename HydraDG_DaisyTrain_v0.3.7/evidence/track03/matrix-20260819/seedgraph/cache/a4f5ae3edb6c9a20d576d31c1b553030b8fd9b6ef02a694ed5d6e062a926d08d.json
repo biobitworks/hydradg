@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a4f5ae3edb6c9a20d576d31c1b553030b8fd9b6ef02a694ed5d6e062a926d08d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, especially the mac 'n cheese and fruit salad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, especially the mac 'n cheese and fruit salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b9c68ccac84ecde1e3dcfce30588a397db9e6e3cd4c1fc818aab26e6c7d3ba78"
+}

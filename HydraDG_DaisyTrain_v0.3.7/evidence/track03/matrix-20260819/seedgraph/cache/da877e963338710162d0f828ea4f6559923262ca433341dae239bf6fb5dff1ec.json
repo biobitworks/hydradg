@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "da877e963338710162d0f828ea4f6559923262ca433341dae239bf6fb5dff1ec",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"Alumni Hive\" suggestion, but I'm not sure if it's too casual for a professi",
+      "type": "value"
+    },
+    {
+      "name": "the \"Alumni Network of [University Name]\" suggestion",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"Alumni Hive\" suggestion, but I'm not sure if it's too casual for a professional setting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the \"Alumni Network of [University Name]\" suggestion",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e86eb7e3e838cb2c9191a0828dbb41e924d7c762c65c44340a9ff4281d84644b"
+}

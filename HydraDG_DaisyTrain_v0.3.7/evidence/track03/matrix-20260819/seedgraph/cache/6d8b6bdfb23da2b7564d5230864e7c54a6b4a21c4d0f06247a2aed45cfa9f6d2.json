@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6d8b6bdfb23da2b7564d5230864e7c54a6b4a21c4d0f06247a2aed45cfa9f6d2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a high-security lock with a 18mm shackle",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a high-security lock with a 18mm shackle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "52fccedae12871d0966d3a74944882c09eda1129a5a017c2cbcbe7bc44e22c96"
+}

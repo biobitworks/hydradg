@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4273c39b3aadb50e94b4c8a687303f4c65ee2e9ed0496174c34a1a37c1adc4ef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a tiered bundle",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a tiered bundle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9b27a0c5004bbf3eb16e20d0988fd83195bc8397047b25805bcff2115562dc6a"
+}

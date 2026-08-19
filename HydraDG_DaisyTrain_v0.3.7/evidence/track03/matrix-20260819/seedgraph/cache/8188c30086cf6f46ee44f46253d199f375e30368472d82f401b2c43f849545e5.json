@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8188c30086cf6f46ee44f46253d199f375e30368472d82f401b2c43f849545e5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Sports Stadium Party idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Sports Stadium Party idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "71ac19dac8d4ee024457c8f227f82f012163d75745118997be600060341ea81d"
+}

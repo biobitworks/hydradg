@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "54ed709a9271952dc4b48410055fe7e23c9a9992169f8fbf016943da37ecde37",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Song of Achilles\" and \"The Brief Wondrous Life of Oscar Wao\"",
+      "type": "value"
+    },
+    {
+      "name": "better",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Song of Achilles\" and \"The Brief Wondrous Life of Oscar Wao\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "better",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c946725067c7039cf5950489b4ade1847ed69de6cf4f3ec387db46376317d6c2"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "117979c00465b106164c19441f38f27a3a06d920cf711f835c6db4f6f052d9e4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of dividing my workday into focused 90-minute blocks, and scheduling my",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a few healthy snack options to keep my energy levels up throu",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of dividing my workday into focused 90-minute blocks, and scheduling my most important task",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a few healthy snack options to keep my energy levels up throughout the day",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "447d5ae0cd5afebbb91d0168eaf669d55ee866e57caa3762f30d76a171a9eb64"
+}

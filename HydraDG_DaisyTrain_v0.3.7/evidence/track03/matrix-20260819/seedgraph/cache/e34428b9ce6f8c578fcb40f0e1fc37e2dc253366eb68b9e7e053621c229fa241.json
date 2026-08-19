@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e34428b9ce6f8c578fcb40f0e1fc37e2dc253366eb68b9e7e053621c229fa241",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the creamy tomato soup and grilled cheese sandwich combo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the creamy tomato soup and grilled cheese sandwich combo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "179c03ad714b4a1c9448813472c0ecd4bbb830e15e02975bed0c94feb99aae8b"
+}

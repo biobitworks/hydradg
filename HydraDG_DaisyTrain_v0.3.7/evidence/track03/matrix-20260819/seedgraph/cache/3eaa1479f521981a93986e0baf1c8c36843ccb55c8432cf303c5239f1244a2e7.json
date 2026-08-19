@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3eaa1479f521981a93986e0baf1c8c36843ccb55c8432cf303c5239f1244a2e7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting up a separate category for luxury purchases",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up a separate category for luxury purchases",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fa4d15c72b41b39a3e644f56868caf18ad0814c50c44edf7d6154d48e71cc577"
+}

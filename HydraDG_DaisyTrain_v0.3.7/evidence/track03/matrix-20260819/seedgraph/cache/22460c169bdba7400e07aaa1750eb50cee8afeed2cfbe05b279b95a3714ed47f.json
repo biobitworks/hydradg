@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "22460c169bdba7400e07aaa1750eb50cee8afeed2cfbe05b279b95a3714ed47f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing and grouping similar items",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and grouping similar items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e1dd0e1b7ca8a3435f54bf4986d2cfa5be3e7e65efac3f3c0555697aba7af13"
+}

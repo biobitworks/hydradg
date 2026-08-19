@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "eed75f6b29bc792d63088695a73c75a5bf7ef295d72fdf76b086433045fdb370",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of recipes you provided",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of recipes you provided",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "330b0acc2c7dc498635afd2f33c3c6fdfe6da9ec0bce3290229671a441d7515e"
+}

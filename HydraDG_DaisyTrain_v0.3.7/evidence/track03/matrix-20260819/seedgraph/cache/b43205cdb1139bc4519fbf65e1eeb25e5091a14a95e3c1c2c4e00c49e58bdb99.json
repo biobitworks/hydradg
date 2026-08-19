@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b43205cdb1139bc4519fbf65e1eeb25e5091a14a95e3c1c2c4e00c49e58bdb99",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Mellow Morn playlist, but I'm not sure if it'll be energetic en",
+      "type": "value"
+    },
+    {
+      "name": "the idea of including a practice tracker page in my journal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Mellow Morn playlist, but I'm not sure if it'll be energetic enough for my Vinyasa",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of including a practice tracker page in my journal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f92b747e1a54608a6537ef04415412644a61f11a7a3472fa0d8c8d81b453e4e"
+}

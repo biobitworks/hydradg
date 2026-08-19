@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2999d3baeddec3e534c8a482d88cc6fb072da796deb232261dbe2cc6650f9e1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of including the event objectives and lessons learned sections",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of including the event objectives and lessons learned sections",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b4eab03a0946344a8fac79e2a14f935f1ce9e4c21869e3947d7adec0c5aebcd7"
+}

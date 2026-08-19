@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c2451b0906c536bc26825c4b92ac483b0485a3be50ee92f1e0a6b402102a0b15",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of scheduling alternative activities and finding accountability partner",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of scheduling alternative activities and finding accountability partners",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7a425e35e70156e74ccf003974a621ea22dff287c427c3282a74015024e08a70"
+}

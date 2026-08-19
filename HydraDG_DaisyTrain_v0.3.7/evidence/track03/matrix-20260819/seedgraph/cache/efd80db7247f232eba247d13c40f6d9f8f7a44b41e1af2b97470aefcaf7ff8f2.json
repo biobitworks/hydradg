@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "efd80db7247f232eba247d13c40f6d9f8f7a44b41e1af2b97470aefcaf7ff8f2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a hat, I've never made one before",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a hat, I've never made one before",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9fba9b66c9081a7d79dfc512e78fd6dd4901c6295f6ad1402baeacd71b4537d7"
+}

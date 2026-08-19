@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a0480d998b59fb5436a90d3df2c3d5141365c41af50274484305b43abd5f066",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "high-energy and fast-paced songs, since that's what gets me moving",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "high-energy and fast-paced songs, since that's what gets me moving",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "128d8bc940c83dea3b3adf5792124c6c1032f24a9c4c34c17db2a517707686e9"
+}

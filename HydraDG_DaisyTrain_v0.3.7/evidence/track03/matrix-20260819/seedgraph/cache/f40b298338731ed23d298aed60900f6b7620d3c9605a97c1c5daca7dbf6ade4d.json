@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f40b298338731ed23d298aed60900f6b7620d3c9605a97c1c5daca7dbf6ade4d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of planning my themes and topics in advance",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using interactive tools to make the Q&A session more engaging",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning my themes and topics in advance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using interactive tools to make the Q&A session more engaging",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b9eb7051d837d972d89e957b4e8615f22cf8b34d3b67a63b68f2540a2c671376"
+}

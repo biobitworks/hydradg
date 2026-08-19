@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ad75c27d63efbfa5da285b4ba4f9c3dfbd52f9841f2c7cd7193745b0bfb0c4d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of engraving a personal message",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of engraving a personal message",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ec9749a871dda648de66552451bab64ff5442deea25708a5212b2604a569c9ae"
+}

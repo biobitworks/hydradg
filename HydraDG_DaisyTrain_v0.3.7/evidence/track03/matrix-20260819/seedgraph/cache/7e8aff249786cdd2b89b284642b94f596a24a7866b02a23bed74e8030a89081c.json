@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7e8aff249786cdd2b89b284642b94f596a24a7866b02a23bed74e8030a89081c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the height, material, and color of my old pair, but I'm open to trying out diffe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the height, material, and color of my old pair, but I'm open to trying out different features like w",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "737864c6607c9c8018aa2d544ac04934fb9f22dc25493c0d12c61d8cbfdb4907"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a9ec52d4e4001c356d095c72e6bc55d4ad5235a6dcd2de7afba945bbe41da7fd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the most frequently",
+      "type": "value"
+    },
+    {
+      "name": "the idea of categorizing my coupons by type, but how do I decide which categorie",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the most frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing my coupons by type, but how do I decide which categories to prioritize",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "46e9141456c8f727f405dfd9a5de4e6d3d5f8372f0d91885aa877792593b7423"
+}

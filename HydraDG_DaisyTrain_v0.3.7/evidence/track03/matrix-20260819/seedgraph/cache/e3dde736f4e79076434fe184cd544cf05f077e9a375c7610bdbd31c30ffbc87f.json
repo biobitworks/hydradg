@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3dde736f4e79076434fe184cd544cf05f077e9a375c7610bdbd31c30ffbc87f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of zone cleaning and dedicating a day for a deeper clean",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of zone cleaning and dedicating a day for a deeper clean",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f69e5a2afeab900075c60416707c17182b09d6e3b529f004ede6a308660d6a8d"
+}

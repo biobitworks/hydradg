@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "be3bfc71fb07b78cd5a6cffc5d2919d60b92297fc481edbbf793d0671b0c7c08",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the rustic charm and modern farmhouse ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the rustic charm and modern farmhouse ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c9a6b9b4241c30ae49ea15cfda14339e26cd03b5c5ca1d69b5a2f6b35e13344"
+}

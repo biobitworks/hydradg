@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3bde1cee33a30e4d75d164d3802f543b3a87ff5d7eb274737694ec5470525a4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it has a browser extension and mobile apps",
+      "type": "value"
+    },
+    {
+      "name": "that Toggl has a browser extension and mobile apps, and the offline tracking fea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it has a browser extension and mobile apps",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that Toggl has a browser extension and mobile apps, and the offline tracking feature is a big plus",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9e4cffca7cbf7f901e63599ab17df59144e575ada1fcecb94de889dbc21e2cff"
+}

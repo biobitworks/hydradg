@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e344289b4c62719310074e987d2d4bf0bf80ef8c536fd2b7be21367c1ad35964",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of preparing everything the night before",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of preparing everything the night before",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6551f4c1f130f087a47b2b76310f40ffec6e2b5e23a5a8c73d8a3b7143c3573b"
+}

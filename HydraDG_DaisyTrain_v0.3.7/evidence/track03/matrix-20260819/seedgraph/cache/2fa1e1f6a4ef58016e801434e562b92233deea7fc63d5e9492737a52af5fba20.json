@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2fa1e1f6a4ef58016e801434e562b92233deea7fc63d5e9492737a52af5fba20",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the layered lighting concept",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a linen shade, it sounds really cozy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the layered lighting concept",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a linen shade, it sounds really cozy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dbd7d38ba50770a75b842aa31e025129d75105dc8c8b5fa307721371199e107a"
+}

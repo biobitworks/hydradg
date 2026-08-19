@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f37376a4d762f3337cf559e53ff04c3c372f78e2459bd25a9e3a08b069b2fee6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of integrating the cleanup event into the school's curriculum and assig",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of integrating the cleanup event into the school's curriculum and assigning student leaders",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6fc053330edd7df17a62215b58c0eb4bf2d669cb858660296367cea31c8edc90"
+}

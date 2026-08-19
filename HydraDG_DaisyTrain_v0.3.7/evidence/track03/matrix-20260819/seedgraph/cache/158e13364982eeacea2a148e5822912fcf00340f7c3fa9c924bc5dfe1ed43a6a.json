@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "158e13364982eeacea2a148e5822912fcf00340f7c3fa9c924bc5dfe1ed43a6a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of simple art prints",
+      "type": "value"
+    },
+    {
+      "name": "the sound of Soft Blooms by Rachel Austin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of simple art prints",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of Soft Blooms by Rachel Austin",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33924a78f53a8c28b55b6eab9ad0f2fde6ab99d59706b0fdc9434d8907334534"
+}

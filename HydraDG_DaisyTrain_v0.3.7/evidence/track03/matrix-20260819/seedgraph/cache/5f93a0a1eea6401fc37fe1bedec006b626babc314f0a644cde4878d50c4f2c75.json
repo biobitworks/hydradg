@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5f93a0a1eea6401fc37fe1bedec006b626babc314f0a644cde4878d50c4f2c75",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the customized home decor and unique experiences",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a cooking class",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the customized home decor and unique experiences",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a cooking class",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c25fcdbbacf9f182f33c0002120f089022d5b6b7d587d5265c5bb4d612778a5"
+}

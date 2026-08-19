@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "44732e18aef9f6f50ea260cd8f59f609fcd2d5c6ea76b6d917c9274f5ded653e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a comfortable seating arrangement",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a U-Shape Configuration",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a comfortable seating arrangement",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a U-Shape Configuration",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "53a02bf79eccb2da14b6d1bd8881b496b0a47f934dde5626f6606c85b90b375d"
+}

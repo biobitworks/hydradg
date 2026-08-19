@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8936707e04415630b5447c50eea9e6e0b0c196aa7a03034c304a28e016e3e8c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the IKEA NOT Lamp and the CB2 Simple Glass Table Lamp",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the IKEA NOT Lamp and the CB2 Simple Glass Table Lamp",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6bd40181bc7ab62cd54bf16320f7f671c883960c6274854c651c42a9bff5afab"
+}

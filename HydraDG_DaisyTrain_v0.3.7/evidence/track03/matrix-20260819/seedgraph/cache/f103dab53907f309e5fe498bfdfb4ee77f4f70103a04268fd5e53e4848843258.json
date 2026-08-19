@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f103dab53907f309e5fe498bfdfb4ee77f4f70103a04268fd5e53e4848843258",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breaking down tasks into smaller chunks and prioritizing them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking down tasks into smaller chunks and prioritizing them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b0e49c880003a191ace7ae5e7bf560b834b6e84421386351483ba5fa816aeea9"
+}

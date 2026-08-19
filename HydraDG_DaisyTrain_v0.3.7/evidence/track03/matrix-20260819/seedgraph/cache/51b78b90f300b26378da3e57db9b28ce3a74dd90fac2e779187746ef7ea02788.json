@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "51b78b90f300b26378da3e57db9b28ce3a74dd90fac2e779187746ef7ea02788",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Mediterranean Roasted Vegetable Quinoa Bowl recipe, but I was thinking of so",
+      "type": "value"
+    },
+    {
+      "name": "the idea of keeping it simple and letting the roasted vegetables be the star of ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Mediterranean Roasted Vegetable Quinoa Bowl recipe, but I was thinking of something a bit simple",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of keeping it simple and letting the roasted vegetables be the star of the show",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33104f575411d0e0ab82a223074d5ca7aef5cd76114975ed07b30e97fbea42f5"
+}

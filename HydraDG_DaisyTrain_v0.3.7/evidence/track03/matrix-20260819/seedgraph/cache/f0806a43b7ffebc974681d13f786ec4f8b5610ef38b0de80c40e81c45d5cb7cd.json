@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f0806a43b7ffebc974681d13f786ec4f8b5610ef38b0de80c40e81c45d5cb7cd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the metallic glam look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the metallic glam look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "287a7c8847b2919d871eef3fd6c9fcd820f7608ca8504e3fed686d4ac17fd4d1"
+}

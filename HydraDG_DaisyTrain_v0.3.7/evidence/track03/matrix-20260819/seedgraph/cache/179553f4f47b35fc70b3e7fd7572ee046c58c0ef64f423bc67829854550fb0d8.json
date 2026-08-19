@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "179553f4f47b35fc70b3e7fd7572ee046c58c0ef64f423bc67829854550fb0d8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of getting her a pampering set or a fashion accessory",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of getting her a pampering set or a fashion accessory",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9b65e1437c7d055ca0c326c125abe5e7b94a3ed2749373ea18280b30b43b29dd"
+}

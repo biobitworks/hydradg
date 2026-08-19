@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "10313c3a435d17a7300a0d4a1e9dd86a9a6d13983641a8d533008650c7acc617",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Classic BBQ Bacon Cheeseburger recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Classic BBQ Bacon Cheeseburger recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "264a2baf63dc233e789251e439b482a37815735e0ff58678ac08502b542dee7a"
+}

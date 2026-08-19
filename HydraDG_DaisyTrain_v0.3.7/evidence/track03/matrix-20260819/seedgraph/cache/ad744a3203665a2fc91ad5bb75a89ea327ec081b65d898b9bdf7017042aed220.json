@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ad744a3203665a2fc91ad5bb75a89ea327ec081b65d898b9bdf7017042aed220",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a daily reminder and scheduling walk breaks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a daily reminder and scheduling walk breaks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "529d68d3884937a1185ebce627a3a2dc1d0218b48c0a4f1a4dc438e61f4fa07e"
+}

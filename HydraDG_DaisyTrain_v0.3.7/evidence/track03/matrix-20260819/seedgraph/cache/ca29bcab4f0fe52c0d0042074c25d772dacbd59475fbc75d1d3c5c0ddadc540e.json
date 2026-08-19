@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ca29bcab4f0fe52c0d0042074c25d772dacbd59475fbc75d1d3c5c0ddadc540e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a weekly cleaning schedule",
+      "type": "value"
+    },
+    {
+      "name": "the idea of focusing on deeper cleaning and organization tasks for the weekly sc",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a weekly cleaning schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of focusing on deeper cleaning and organization tasks for the weekly schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33f96372ab879f057f8d43c93f73517ab74c0be8af6aca425dfe6551507249ad"
+}

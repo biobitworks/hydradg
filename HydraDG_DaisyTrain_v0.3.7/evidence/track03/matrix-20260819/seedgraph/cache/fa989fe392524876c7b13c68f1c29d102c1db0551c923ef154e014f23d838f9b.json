@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fa989fe392524876c7b13c68f1c29d102c1db0551c923ef154e014f23d838f9b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a DSLR, and I'm looking for something functional and comfortable for long period",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Peak Design Slide",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a DSLR, and I'm looking for something functional and comfortable for long periods of use",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Peak Design Slide",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6f9b7e72ab992811c31fd05efa6e9382881c82f9529cf5c775de987b636412a2"
+}

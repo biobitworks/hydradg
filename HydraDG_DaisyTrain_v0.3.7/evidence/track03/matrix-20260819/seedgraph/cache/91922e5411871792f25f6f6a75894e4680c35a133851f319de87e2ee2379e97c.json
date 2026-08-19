@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "91922e5411871792f25f6f6a75894e4680c35a133851f319de87e2ee2379e97c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "up all the ingredients I buy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "up all the ingredients I buy",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7a00a5010d1e8711b94ee1931d2e6468a87463af23777dec172724814f1b87d8"
+}

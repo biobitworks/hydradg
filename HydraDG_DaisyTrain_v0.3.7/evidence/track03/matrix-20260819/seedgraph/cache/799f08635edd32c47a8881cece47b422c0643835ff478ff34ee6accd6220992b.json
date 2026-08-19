@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "799f08635edd32c47a8881cece47b422c0643835ff478ff34ee6accd6220992b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wine country escape idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a customized photo album or video message",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wine country escape idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized photo album or video message",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "76b8525932c5de17e6145d5c3a576190aa3b0bf4dc71aacf043c8a58e9c2a9b1"
+}

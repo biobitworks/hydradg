@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "52f50d1c3637533df1a0d0f2e79b894e07fe337e43ea54cedbad53ce298dd299",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the cashew cream addition",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the cashew cream addition",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d11c06fcf77314e9baf4acab28c1803c7bd487ba7a69b542c5caadef935f5f95"
+}

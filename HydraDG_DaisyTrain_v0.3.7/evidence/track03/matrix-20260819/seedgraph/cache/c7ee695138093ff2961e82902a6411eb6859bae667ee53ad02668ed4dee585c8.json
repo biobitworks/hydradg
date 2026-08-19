@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c7ee695138093ff2961e82902a6411eb6859bae667ee53ad02668ed4dee585c8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of personalized consultations and gamification",
+      "type": "value"
+    },
+    {
+      "name": "the \"Crack the Code\" Challenge idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of offering hints and a cheat sheet to help attendees solve the puzzles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of personalized consultations and gamification",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the \"Crack the Code\" Challenge idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering hints and a cheat sheet to help attendees solve the puzzles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "252cd091fb77ffa804c9c814119fb9c5336e2cec37f760b8b1e14b66ca6ce0a8"
+}

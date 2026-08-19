@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c8cf8aabee0b38e2c397c4abf6ab2b4323aa2fc76bef67c8e96aa614d94cd1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a shadow box",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a diagonal composition",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a shadow box",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a diagonal composition",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "de680751098fedcfe45145fed31b09803060cc20d86473bebf36d1ec14af57b5"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "63b3fc923598feedc826170bc85a5e883011165d24894532b97147c6dd3a0c57",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a themed section, can you give me more information on how to create ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a themed section, can you give me more information on how to create an effective \"Experi",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6060d6b4b7f8cede717d531358d8b70a2fe731a45b276402b40cb627c08d60a3"
+}

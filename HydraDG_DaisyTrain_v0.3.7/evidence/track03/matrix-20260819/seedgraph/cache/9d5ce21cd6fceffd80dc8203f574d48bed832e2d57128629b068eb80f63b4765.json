@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9d5ce21cd6fceffd80dc8203f574d48bed832e2d57128629b068eb80f63b4765",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Panko breadcrumbs or regular breadcrumbs",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Panko breadcrumbs or regular breadcrumbs",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "13bedbf024070c5c200a0174214758b27a9a7e31da33632ceec0487ae3639916"
+}

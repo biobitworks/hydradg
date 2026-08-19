@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e1143ec5b165b6e4cc3685e023e9911b0f4ddea5546505b48562ed629172b41c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the birthstone ring idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the Citrine and Sterling Silver Filigree Ring",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the birthstone ring idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Citrine and Sterling Silver Filigree Ring",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1814b8bdd8de4ae8a8efa0b2f29cfa4c78a50e769a7ba357f12178f3e3c3c5eb"
+}

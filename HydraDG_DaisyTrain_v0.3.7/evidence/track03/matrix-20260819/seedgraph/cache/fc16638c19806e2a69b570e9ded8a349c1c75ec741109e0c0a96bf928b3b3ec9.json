@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc16638c19806e2a69b570e9ded8a349c1c75ec741109e0c0a96bf928b3b3ec9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Korean-Style BBQ Chicken idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having separate compartments to keep my meals organized",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Korean-Style BBQ Chicken idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having separate compartments to keep my meals organized",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e027799e39121f9836e585331719a8e656319d8ab19119880e2630e4abb740ee"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "678d99e527249fd5d07f356ea922a56043133be3422c4e958e1435b743dccede",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that they're anthology series, so I can jump in and out of different stories and",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that they're anthology series, so I can jump in and out of different stories and themes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ee91bb5e0bda84aa7db6e68d393ef11b4c78e8754ebf2bb31ecc54d9477bf24e"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "02d8799c7c801ff70965e0100c9ff8a3b346065965b6d7fc734845498f8151fa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a structured routine, but I'm not sure if I can commit to 30 minutes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a structured routine, but I'm not sure if I can commit to 30 minutes in the morning and",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "96cd27a5ba2cdebdd6aa8e0c286a33e674a1dada17a9ec02dd53246694b6350f"
+}

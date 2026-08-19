@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "936ce286d3f63f38923c71a901487e6420b1950388e999f746ffb0da56e63c2d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a email marketing service like Mailchimp or Constant Contact",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a email marketing service like Mailchimp or Constant Contact",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "168ef1813b4a419fbcd2ba2eb91d0267c707207581cde8fb00075128d2f0d274"
+}

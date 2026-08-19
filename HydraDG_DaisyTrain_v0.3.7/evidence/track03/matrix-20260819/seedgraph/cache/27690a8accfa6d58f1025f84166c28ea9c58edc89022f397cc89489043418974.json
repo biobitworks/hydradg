@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "27690a8accfa6d58f1025f84166c28ea9c58edc89022f397cc89489043418974",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "your idea of tracking my progress over time",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "your idea of tracking my progress over time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "30159420d0e92d912c03ad9709da418e82ce3ed9314421e4362608fc92a905a3"
+}

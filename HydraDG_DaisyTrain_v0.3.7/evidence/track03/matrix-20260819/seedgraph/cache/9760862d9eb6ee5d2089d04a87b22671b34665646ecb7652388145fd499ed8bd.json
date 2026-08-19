@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9760862d9eb6ee5d2089d04a87b22671b34665646ecb7652388145fd499ed8bd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to look at a stock\u2019s free-cash-flow yield [a ratio that measures the free cash f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to look at a stock\u2019s free-cash-flow yield [a ratio that measures the free cash flow per share agains",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cc1c1bf08c161789e746d282e7fdac0b81267b2b7587881ad252707f07bd0ce6"
+}

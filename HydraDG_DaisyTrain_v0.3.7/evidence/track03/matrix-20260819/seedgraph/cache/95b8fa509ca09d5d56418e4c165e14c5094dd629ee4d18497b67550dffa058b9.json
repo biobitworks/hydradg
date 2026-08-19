@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "95b8fa509ca09d5d56418e4c165e14c5094dd629ee4d18497b67550dffa058b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "almond milk instead of soy milk or cashew milk for the creamy texture",
+      "type": "value"
+    },
+    {
+      "name": "oat milk instead of almond milk",
+      "type": "value"
+    },
+    {
+      "name": "nutritional yeast to give my vegan mac and cheese a cheesy flavor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "almond milk instead of soy milk or cashew milk for the creamy texture",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "oat milk instead of almond milk",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "nutritional yeast to give my vegan mac and cheese a cheesy flavor",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "473ae03d09d8c9ea30464f2e9fceb56ed05ae8460f0834024e55b85aad7d31ed"
+}

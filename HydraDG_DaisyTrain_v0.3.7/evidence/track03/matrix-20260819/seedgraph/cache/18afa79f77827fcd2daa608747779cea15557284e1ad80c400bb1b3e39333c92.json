@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "18afa79f77827fcd2daa608747779cea15557284e1ad80c400bb1b3e39333c92",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the exercises you suggested, especially the Pallof Press and Bird Dog",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the exercises you suggested, especially the Pallof Press and Bird Dog",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5253d59dc7226dea9e58524870c8261ce788cbe37b9d92ea40221392aff188a9"
+}

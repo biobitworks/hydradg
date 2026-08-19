@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b12194dd0702275d4e6f273bc55bdeef7ac42071ac26d085de609abce0d0fded",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a digital detox before bed",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a digital detox before bed",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "326d51a6575ee6b2f37e5dcb62d6a8986552f7c7b5724f1de835c31c74282e32"
+}

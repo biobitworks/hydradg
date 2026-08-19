@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "9a58c6102c4f01b6aa35ac74bf4bdd8419e966fd86113419beaac32cbb0c4c2f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a chronological order, but I'm not sure about the sectional approach",
+      "type": "value"
+    },
+    {
+      "name": "the one \"A grandmother is a little bit of heaven on earth",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a bold serif font for the title and a smaller script font for ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a chronological order, but I'm not sure about the sectional approach",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the one \"A grandmother is a little bit of heaven on earth",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a bold serif font for the title and a smaller script font for the quote",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a89ed41e51931bed8157c2c29dda34c5e9288cbf65179422172f04220cbded4e"
+}

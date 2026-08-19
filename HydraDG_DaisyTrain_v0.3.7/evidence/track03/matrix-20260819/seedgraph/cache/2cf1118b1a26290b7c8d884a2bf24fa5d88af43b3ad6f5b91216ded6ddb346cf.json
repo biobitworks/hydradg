@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2cf1118b1a26290b7c8d884a2bf24fa5d88af43b3ad6f5b91216ded6ddb346cf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a cozy atmosphere with good pour-over coffee",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a cozy atmosphere with good pour-over coffee",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7d6bb75cdbd95e10db9bc5d04c7b8469b5aa94dd5dc8f0c2b413c62861dfc066"
+}

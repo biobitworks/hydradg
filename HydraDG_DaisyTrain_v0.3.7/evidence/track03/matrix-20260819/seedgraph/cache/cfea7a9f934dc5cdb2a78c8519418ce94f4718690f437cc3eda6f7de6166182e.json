@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cfea7a9f934dc5cdb2a78c8519418ce94f4718690f437cc3eda6f7de6166182e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Hootsuite to schedule posts on Instagram, especially for that daily writing prom",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Hootsuite to schedule posts on Instagram, especially for that daily writing prompt account I've been",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b3b0d48b6c18d11136f1973b71ce54923de89f890dbc34611767ae222485e7bc"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cbfb083e2f090f3603d61c1dd201158bce2cad7002ee4838896a8b80648b795d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to exercise alone and I don't trust sharing my personal data with strangers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to exercise alone and I don't trust sharing my personal data with strangers",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f96a1de24bc870c05d1997a2bfc9a08d3ccda2c5d9fce6b0b51cbaa11ff871d5"
+}

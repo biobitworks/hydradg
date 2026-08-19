@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ece43df0a9a6f84899e4bae8ff563e203d3495eaf308fec1ed9f1ff57f5f8978",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of writing from a different perspective",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the book being owned by a character from one of my previous stories",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of writing from a different perspective",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the book being owned by a character from one of my previous stories",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "77223c0932051f85b7197609990a15b22a4b6f2befb67af81082169ca60dcc0f"
+}

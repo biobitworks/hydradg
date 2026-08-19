@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a75182c2f7a893bce64152f421523e50e960b14f31d106ae90238e7dabd1568b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "but it's slightly above my budget",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "but it's slightly above my budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f2f6b0325242fe305424b47802f89f2186e5d8af49e1a9c78d3164c822328759"
+}

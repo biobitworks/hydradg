@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "92ab9f48e9b5e4006bbfd5766d2da9242409e768591b4650f991d674f7ceece6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those to replace the current one",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a bulb that's specifically designed for kitchen use",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those to replace the current one",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a bulb that's specifically designed for kitchen use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "004b4bab85dbea12589e550d27d68fcf409c8cdf2da7c09c957922b3e6dd3de3"
+}

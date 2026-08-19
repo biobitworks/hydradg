@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a79a87ebab797e547d66961c0d7a12b5a76c61f764a86f96f828deb9f8ecbaaa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of training it to grow on the driftwood branch I recently added to the ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of training it to grow on the driftwood branch I recently added to the tank",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e36d031e12f8e86453e04c495b26424176bdfcd8993d5c4ab453430c32932691"
+}

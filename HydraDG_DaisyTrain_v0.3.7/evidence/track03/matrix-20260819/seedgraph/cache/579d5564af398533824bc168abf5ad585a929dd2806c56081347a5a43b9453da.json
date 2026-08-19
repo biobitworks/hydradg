@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "579d5564af398533824bc168abf5ad585a929dd2806c56081347a5a43b9453da",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "New York City",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "New York City",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "44b44d6bda7f9ef50ba860da3f5f32f46b0ec44bad3a4c0b13c53f90baa9eec8"
+}

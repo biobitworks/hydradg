@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "524d09480a81880b50531a466a35cd134894943fca7ada21c7d863211269ae05",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how these are turning out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how these are turning out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7571d0b70f1616994311a4dcf115ec9821c5638f080d7cad081f34062fa708a8"
+}

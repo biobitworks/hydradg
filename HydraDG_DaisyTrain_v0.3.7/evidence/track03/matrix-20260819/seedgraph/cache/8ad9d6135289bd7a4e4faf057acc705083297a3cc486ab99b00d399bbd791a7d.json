@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8ad9d6135289bd7a4e4faf057acc705083297a3cc486ab99b00d399bbd791a7d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Rice and Grilled Chicken and Veggies idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Rice and Grilled Chicken and Veggies idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8a5e14f8372770223a7726593cd39d5e67222bf59e1fc443106cf1d7101b8d8"
+}

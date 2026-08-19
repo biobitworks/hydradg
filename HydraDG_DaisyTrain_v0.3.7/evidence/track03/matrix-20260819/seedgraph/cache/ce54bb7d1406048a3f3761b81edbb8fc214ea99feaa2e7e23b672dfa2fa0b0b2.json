@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce54bb7d1406048a3f3761b81edbb8fc214ea99feaa2e7e23b672dfa2fa0b0b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing a fitted top with my flowy skirt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing a fitted top with my flowy skirt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a1f17f0d88bc3ecd3749c44ce71878bca11428dc1902ce6b9adee342eb81cfa1"
+}

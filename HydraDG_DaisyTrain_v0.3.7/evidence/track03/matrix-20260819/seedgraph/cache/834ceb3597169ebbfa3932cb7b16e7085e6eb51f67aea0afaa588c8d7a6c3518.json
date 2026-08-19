@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "834ceb3597169ebbfa3932cb7b16e7085e6eb51f67aea0afaa588c8d7a6c3518",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of reaching out to a friend or two",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of reaching out to a friend or two",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "07fa1674d05081385929d1c69b1ac115fa6f55eb1cbaef0c18fd026dc087caf2"
+}

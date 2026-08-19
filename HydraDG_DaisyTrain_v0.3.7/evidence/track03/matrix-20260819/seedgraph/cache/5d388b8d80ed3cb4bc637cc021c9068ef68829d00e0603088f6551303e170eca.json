@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5d388b8d80ed3cb4bc637cc021c9068ef68829d00e0603088f6551303e170eca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of hosting my own events or gatherings to bring women together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of hosting my own events or gatherings to bring women together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "deb003583b01d1812286d668dd2e9e737ceda9423118fd5b9f610ef070c3e2fb"
+}

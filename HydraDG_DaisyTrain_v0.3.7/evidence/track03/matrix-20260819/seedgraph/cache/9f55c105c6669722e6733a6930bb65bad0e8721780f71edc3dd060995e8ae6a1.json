@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9f55c105c6669722e6733a6930bb65bad0e8721780f71edc3dd060995e8ae6a1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to catalog my stamp collection to catalog my Pok\u00e9mon cards as well",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to catalog my stamp collection to catalog my Pok\u00e9mon cards as well",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b75407fd9a0502d973e04c237aeffe6958a61904758288ed05b043bfe82960ac"
+}

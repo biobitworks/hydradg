@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "00980d983507c2d936914794d49a58358e26a7ea964b5c47a2a3d7ac558b715d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the charity run/walk",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the charity run/walk",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75d896c4bf8797321ba6844350f22484e038792aaa38289879124e6b28fb8b0a"
+}

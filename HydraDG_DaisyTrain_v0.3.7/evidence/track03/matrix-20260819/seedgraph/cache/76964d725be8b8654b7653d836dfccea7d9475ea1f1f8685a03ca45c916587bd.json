@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "76964d725be8b8654b7653d836dfccea7d9475ea1f1f8685a03ca45c916587bd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using adjustable shelves and dividers to categorize my products",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using adjustable shelves and dividers to categorize my products",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e783bbde0ed381a1916a951ba644fbf1aa803d110e190eeccfc698ff186a0a1"
+}

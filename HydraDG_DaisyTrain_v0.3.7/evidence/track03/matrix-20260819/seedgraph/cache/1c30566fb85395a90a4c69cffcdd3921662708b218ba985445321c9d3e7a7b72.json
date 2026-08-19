@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c30566fb85395a90a4c69cffcdd3921662708b218ba985445321c9d3e7a7b72",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Chicken Fajitas recipe, but I already have a fajita recipe from",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Chicken Fajitas recipe, but I already have a fajita recipe from my Blue Apron meal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8128f0e15a8a3a44b28ac730221871b10df7fe3425f59b69f4896fa49de7ca9b"
+}

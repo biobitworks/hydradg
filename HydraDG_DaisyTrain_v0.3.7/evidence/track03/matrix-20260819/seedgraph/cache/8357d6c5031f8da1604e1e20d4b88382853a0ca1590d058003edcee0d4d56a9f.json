@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8357d6c5031f8da1604e1e20d4b88382853a0ca1590d058003edcee0d4d56a9f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a task management system like Todoist or Trello",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a task management system like Todoist or Trello",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c5e721e00209e9e8ce9ce5c265b9d56afed395aa3b59c1ae2993b38403d1273f"
+}

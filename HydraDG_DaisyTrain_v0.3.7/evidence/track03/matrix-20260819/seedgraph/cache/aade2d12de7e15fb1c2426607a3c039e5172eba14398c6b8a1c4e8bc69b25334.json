@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "aade2d12de7e15fb1c2426607a3c039e5172eba14398c6b8a1c4e8bc69b25334",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the customized briefcase or laptop bag idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the customized briefcase or laptop bag idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b88103aedb647f7ac72c0724b9f0a874f4763591fe84ab97c16f648cdc7c79db"
+}

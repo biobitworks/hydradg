@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a4e6fc17ff766f7466b49cdc2525aaa46d67e9e250b2b2f8460b41fe8713a230",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a guitar amp with a digital piano",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a guitar amp with a digital piano",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dc56c7049ae50b28a1370ccd5f834fe3e7733a4660d0b1d5bfcb3a34548fd7e1"
+}

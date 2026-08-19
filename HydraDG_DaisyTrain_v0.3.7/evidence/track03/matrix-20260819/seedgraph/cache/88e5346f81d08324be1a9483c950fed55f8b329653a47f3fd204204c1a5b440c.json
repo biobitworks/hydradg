@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "88e5346f81d08324be1a9483c950fed55f8b329653a47f3fd204204c1a5b440c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a city near LA, California",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a city near LA, California",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "73e264cf7e9e6f2bb724852ab2f4b601aedb6296a2f9e9902794413d25cebedf"
+}

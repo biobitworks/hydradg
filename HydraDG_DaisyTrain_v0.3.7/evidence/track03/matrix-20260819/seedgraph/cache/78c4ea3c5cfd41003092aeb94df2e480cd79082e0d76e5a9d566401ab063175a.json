@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "78c4ea3c5cfd41003092aeb94df2e480cd79082e0d76e5a9d566401ab063175a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a dry pan or oven to toast them",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the K-Town Gyoza and the Kimchi Maki Rolls",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a dry pan or oven to toast them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the K-Town Gyoza and the Kimchi Maki Rolls",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7ec9634d23547a3c558f95b37e537dd13de896b842f1d3ea0ee91714ef2033a6"
+}

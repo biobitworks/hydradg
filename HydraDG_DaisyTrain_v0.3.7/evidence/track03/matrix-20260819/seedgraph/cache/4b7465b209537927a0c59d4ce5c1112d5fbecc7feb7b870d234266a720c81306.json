@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4b7465b209537927a0c59d4ce5c1112d5fbecc7feb7b870d234266a720c81306",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the lentil soup with whole grain crackers and a mixed green salad",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the muffin tin frittatas and the breakfast burritos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the lentil soup with whole grain crackers and a mixed green salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the muffin tin frittatas and the breakfast burritos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "856a6f63df050de1181672318c3c13c018096ccb7d291d9c26708a0380242778"
+}

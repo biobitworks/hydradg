@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ada554032d6e12422603794d7b5f7f1cd7b6759b66ff63e798133eccf6929d3d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a private garden picnic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a private garden picnic",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "949703e37e7f3796941c015f52082787cbf98989d3555c0ec22991e13c4800a2"
+}

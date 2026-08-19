@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "356003fcceed5ce1e31b85db34731f9199348004c3f2b17c0ab31bba21db942f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, but I'm also interested in tracking my progress",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, but I'm also interested in tracking my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "daef8fea8c4e3b253b0602b6e2b30ebdcd2f37ae6a77606760b0c441733a3d90"
+}

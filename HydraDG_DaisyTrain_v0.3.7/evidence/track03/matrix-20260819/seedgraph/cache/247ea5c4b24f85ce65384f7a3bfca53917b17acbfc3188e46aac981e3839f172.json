@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "247ea5c4b24f85ce65384f7a3bfca53917b17acbfc3188e46aac981e3839f172",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Elasticsearch to build a full-text search engine that supports complex queries a",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Elasticsearch to build a full-text search engine that supports complex queries and faceted search",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4c6418cd682b8d44e61c3e918e1d5edd23865a7e187f55c324370c9766db7c8f"
+}

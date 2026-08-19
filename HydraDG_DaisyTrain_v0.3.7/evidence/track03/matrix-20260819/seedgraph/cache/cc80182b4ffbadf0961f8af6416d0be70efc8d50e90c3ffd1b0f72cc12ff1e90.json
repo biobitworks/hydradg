@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cc80182b4ffbadf0961f8af6416d0be70efc8d50e90c3ffd1b0f72cc12ff1e90",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "you better",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "you better",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8896da70494991dee220a1e16358aac71752dcdd551e6f6c09fda780bf0e8726"
+}

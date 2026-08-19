@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "14cc4b1cf5641edf6d8573722ac4229d5df2b79e1d96d79d80a748134e9022b8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tips and the sample meal plan you provided",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding hoisin sauce for a thicker, sweeter flavor, and sriracha for ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tips and the sample meal plan you provided",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding hoisin sauce for a thicker, sweeter flavor, and sriracha for a spicy kick",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cfcc7e8d0ab22c2811bc73c3214771f0b61d812c77c445d93ca432d56b1995ab"
+}

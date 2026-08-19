@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "667e1504464f812ecfb3f9cfbd73ce0f7c1accd414a16475fb2b86fa6c3a8553",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city, and I prefer running on roads",
+      "type": "value"
+    },
+    {
+      "name": "running on roads",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city, and I prefer running on roads",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "running on roads",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2725e09f73b4455b826c8a3762ea13b12d5eb54e6bfe39df7afd75daf39a7bdc"
+}

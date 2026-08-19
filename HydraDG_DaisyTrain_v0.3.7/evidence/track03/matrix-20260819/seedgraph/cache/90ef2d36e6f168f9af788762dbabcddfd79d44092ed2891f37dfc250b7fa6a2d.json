@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "90ef2d36e6f168f9af788762dbabcddfd79d44092ed2891f37dfc250b7fa6a2d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Moorish magic spice blend as a substitute for the traditional ras el hanout ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Moorish magic spice blend as a substitute for the traditional ras el hanout spice blend commonly",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "720a2e33885d0f227947ba554cddbb13bb5e3d78e0bba8ddff8521ad2856b73d"
+}

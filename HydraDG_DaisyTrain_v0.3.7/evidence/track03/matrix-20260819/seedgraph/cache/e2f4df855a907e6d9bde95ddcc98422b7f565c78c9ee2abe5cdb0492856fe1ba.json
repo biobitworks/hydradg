@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e2f4df855a907e6d9bde95ddcc98422b7f565c78c9ee2abe5cdb0492856fe1ba",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to achieve this week/month/year",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to achieve this week/month/year",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "58b4eb47b9611d395c4e8d51281779db8e7529a2d0b7fb93ba2ededc66b86c78"
+}

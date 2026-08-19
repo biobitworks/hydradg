@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b429e9b2593f98a5c9ebd631955e2d546827cb6a6fbf5e89fa8128d6b512070b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to run in the morning and cycle in the afternoon or evening",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to run in the morning and cycle in the afternoon or evening",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e61ada1435d446a91114965db95a7bd500c7f713be95dd0fae292d6d325b439f"
+}

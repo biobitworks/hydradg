@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bb69a73a22db42ed6fb568cace5aec2f7610d0c49cb21eeed3983ede70c8d2d2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a blouse with subtle details",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a blouse with subtle details",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8cb20fbb641d30861a5ad48b40fce6b3e39f93e06c336e3215180d3891da4721"
+}

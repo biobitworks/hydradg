@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f49dee4f8a4186485d8f7a344d802fc661c0526406f668afb7c1861e2a1046ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a more interactive library like Plotly or Bokeh",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a more interactive library like Plotly or Bokeh",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "88cdbcac6d70d896e6d347d9f595c6f641b0adb9a9450c3099c7b757d37bfeac"
+}

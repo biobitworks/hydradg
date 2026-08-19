@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "42ed0c3902f5da683db9e932eba3db3ee5010aadafe827047d91fdd546c27b3f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Earthy Tones palette",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Earthy Tones palette",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "146faf3c975e608e125f4b79058f59661f8eef1fb7760880376234eaf90734e4"
+}

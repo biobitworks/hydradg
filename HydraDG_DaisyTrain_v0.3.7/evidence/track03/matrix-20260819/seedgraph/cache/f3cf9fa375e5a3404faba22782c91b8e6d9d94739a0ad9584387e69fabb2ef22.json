@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3cf9fa375e5a3404faba22782c91b8e6d9d94739a0ad9584387e69fabb2ef22",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a retro-themed display that incorporates both my camera and",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a retro-themed display that incorporates both my camera and vinyl records",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8227f9fe56d3516c98e46aa2b54d4f7285c1b7656102bae5b7843161383ddb4c"
+}

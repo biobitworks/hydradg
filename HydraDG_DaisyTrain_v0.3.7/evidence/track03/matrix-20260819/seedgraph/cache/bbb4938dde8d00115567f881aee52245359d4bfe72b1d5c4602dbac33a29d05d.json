@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bbb4938dde8d00115567f881aee52245359d4bfe72b1d5c4602dbac33a29d05d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a 5-star system, where 5 stars is \"loved it\" and 1 star is \"didn't e",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a 5-star system, where 5 stars is \"loved it\" and 1 star is \"didn't enjoy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c6f6a95ecd1e5e09715672de5172071c6c6784f7643720f006a0f1bc3bad0576"
+}

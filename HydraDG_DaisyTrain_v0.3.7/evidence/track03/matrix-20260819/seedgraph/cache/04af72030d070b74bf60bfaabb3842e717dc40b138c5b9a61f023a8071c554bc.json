@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "04af72030d070b74bf60bfaabb3842e717dc40b138c5b9a61f023a8071c554bc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it to set deadlines and reminders for each task, and also track the time I spend",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it to set deadlines and reminders for each task, and also track the time I spend on each task",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1406e25b2d16edfb1a58e1121fc21c87b211196f7b03e518c39c514bc6aae5ba"
+}

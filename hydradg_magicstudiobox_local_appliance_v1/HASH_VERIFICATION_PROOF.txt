@@ -1,0 +1,16 @@
+exit_code=0
+turn_root_sha256=dd3eb2df23240c3dbd7db71ecacebca66941c924f970619a6547314379718c9b
+manifest_sha256=cdfeffb6894a8d84dd92520fcc01b0671e3e27b2ae9514fc09436a15a30e814b
+
+CURRENT_USER_REQUEST_EXCERPT.txt: OK
+SIGNING_HANDOFF.json: OK
+TURN_CUSTODY.json: OK
+docs/LOCAL_MODEL_EFFICIENCY_FRONTIER_PROTOCOL.md: OK
+docs/MAGICSTUDIOBOX_LOCAL_APPLIANCE_ARCHITECTURE.md: OK
+ops/launchd/com.biobitworks.hydradg.appliance.plist: OK
+ops/scripts/healthcheck.sh: OK
+ops/scripts/hydradg_appliance_supervisor.sh: OK
+ops/scripts/install_launchagent.sh: OK
+prompts/MAGICSTUDIOBOX_LOCAL_APPLIANCE_IMPLEMENTATION_PROMPT.md: OK
+schemas/local_model_output.schema.json: OK
+verify_hashes.sh: OK

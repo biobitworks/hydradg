@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c7fe0b350e9f1c1fd75ecad7e27a65ed10d8c5fc311d0145416fdd1aa03b47bb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a suede cleaner on the straps, or do they require a different type of cleaner",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a suede cleaner on the straps, or do they require a different type of cleaner",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb900d3fab63fa52985e066609abdf3d7d91f0b66626cd4ebf266b439123ddbd"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8097cf50f9c5a6b799b8be3e03fbe3e36df00d1e66c289b317e84e191989293",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and what pages are needed in this funnel",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and what pages are needed in this funnel",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "40065d9dcc5f9264a74afeccd82ca6e0cf9c3ed5c9b1ba29d5a1987d8a74a76a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d199cdd14631cb117db841485de69e364b514e4c2faebbc0f03f342a9d433140",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the art supplies kit and the building sets or LEGO",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the art supplies kit and the building sets or LEGO",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "92360c2562a6afc295642ae586d84ad9e424173c939a9ac24287efa9901be71d"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "12d4c2a569a747f43d158cc653357e80debed0732c62fd807a2b1f1318d82e09",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Tide",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Tide",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bad4f78af371fb325f16b4c5af513337dfbe635a9d1baea68e2498536088b403"
+}

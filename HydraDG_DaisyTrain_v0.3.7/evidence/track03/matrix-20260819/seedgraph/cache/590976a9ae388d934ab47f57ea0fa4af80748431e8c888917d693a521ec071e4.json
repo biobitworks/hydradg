@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "590976a9ae388d934ab47f57ea0fa4af80748431e8c888917d693a521ec071e4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them to my advantage",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them to my advantage",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2479c1de981ddd6633265598225eeaf93667c24d24002ed105fe6f1bbb34770a"
+}

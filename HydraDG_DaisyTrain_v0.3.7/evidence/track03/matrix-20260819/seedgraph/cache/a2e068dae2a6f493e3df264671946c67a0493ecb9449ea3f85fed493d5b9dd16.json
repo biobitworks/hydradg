@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "a2e068dae2a6f493e3df264671946c67a0493ecb9449ea3f85fed493d5b9dd16",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of meal prepping on Sundays to make my weekdays easier",
+      "type": "value"
+    },
+    {
+      "name": "the idea of marinating and seasoning the chicken before grilling or baking it",
+      "type": "value"
+    },
+    {
+      "name": "the idea of trying out different marinades for chicken",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of meal prepping on Sundays to make my weekdays easier",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of marinating and seasoning the chicken before grilling or baking it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of trying out different marinades for chicken",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9e2ed1f4ba7418b2dccaf42f7ef84720a89ec67906780d0ad0d0956b9f695c14"
+}

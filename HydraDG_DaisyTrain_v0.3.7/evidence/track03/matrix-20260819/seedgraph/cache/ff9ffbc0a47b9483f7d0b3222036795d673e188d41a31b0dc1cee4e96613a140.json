@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff9ffbc0a47b9483f7d0b3222036795d673e188d41a31b0dc1cee4e96613a140",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the personalized cookbook",
+      "type": "value"
+    },
+    {
+      "name": "those tips",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the personalized cookbook",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those tips",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5e35aecba73c57e22631f0c0667ebf6b8f2fb32f1687813da05d4556b2d62eb7"
+}

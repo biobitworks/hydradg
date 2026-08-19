@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "93c6bd7880ae4a5a979670945f235321a9bb8f5dba5893f0cbe506744f9f0faf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Tumblr to promote my artwork and connect with fellow artists",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Tumblr to promote my artwork and connect with fellow artists",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c1ada015a65d8c07df5b67ab3d363c845ee2e7e6326d8e8e8f0e184386737d72"
+}

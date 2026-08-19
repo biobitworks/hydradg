@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c821e79b3433384dc2264bb0961de0769b4808293d80394463337b6c5e4b2da",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a consistent ecosystem",
+      "type": "value"
+    },
+    {
+      "name": "the fact that it has dual-input charging and dual-output charging, which will ma",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a consistent ecosystem",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the fact that it has dual-input charging and dual-output charging, which will make it easy to charge",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75b9c75e0f37d6aee79de4abce0f1c84dd2e076a845a97c46eaba8ce80989bd5"
+}

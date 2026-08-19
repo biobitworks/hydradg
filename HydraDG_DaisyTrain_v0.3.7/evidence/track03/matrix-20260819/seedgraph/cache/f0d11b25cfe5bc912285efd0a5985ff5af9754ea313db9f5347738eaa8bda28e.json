@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f0d11b25cfe5bc912285efd0a5985ff5af9754ea313db9f5347738eaa8bda28e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the plan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the plan",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c8cfcfe4e7fd48adf0a914b7f35dcbec105fc82718e9f5e45ab223a52cde7a9c"
+}

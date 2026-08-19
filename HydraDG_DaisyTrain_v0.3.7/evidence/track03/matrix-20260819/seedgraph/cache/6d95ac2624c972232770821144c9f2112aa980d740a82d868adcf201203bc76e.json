@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6d95ac2624c972232770821144c9f2112aa980d740a82d868adcf201203bc76e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Garden Party theme, it sounds so elegant and relaxing",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Garden Party theme, it sounds so elegant and relaxing",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "74000d440b331adf0426312356a2a284307208ac53c299a051da41c27f3e6fa7"
+}

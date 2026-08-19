@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "af88b8262bd86ed6d06c839f7b175dbf4e4ad3cfb360ab476b8674cdc266bade",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a honeymoon fund contribution",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a spreadsheet to track my gift expenses",
+      "type": "value"
+    },
+    {
+      "name": "the idea of including a \"Category\" column to categorize the gifts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a honeymoon fund contribution",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a spreadsheet to track my gift expenses",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of including a \"Category\" column to categorize the gifts",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5b7f32e73ec789440cdcc6d3cbd92df13d121bb87900616b48be8cc8472ff22d"
+}

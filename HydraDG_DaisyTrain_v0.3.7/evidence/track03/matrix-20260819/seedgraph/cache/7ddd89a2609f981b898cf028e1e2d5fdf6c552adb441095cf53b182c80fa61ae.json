@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7ddd89a2609f981b898cf028e1e2d5fdf6c552adb441095cf53b182c80fa61ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized doormat",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized doormat",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "34548c291de56cc183bd54d80dc8ba36b37d43911c458f4c2b9cab0fd6df3518"
+}

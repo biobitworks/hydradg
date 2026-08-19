@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "8fcb5a22cdcb56c164944ff2b798aa9b955a1dbf70f2559587c2e1cdc8cb0d0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of customizable categories and automated categorization, as well as the",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a hybrid approach that gives me flexibility while still provi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of customizable categories and automated categorization, as well as the ability to set budg",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a hybrid approach that gives me flexibility while still providing a sense of acco",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3dbfe83f6ae618894a65e1ff7a7b293a56b40ffaaba9675731ecdddc535f4a31"
+}

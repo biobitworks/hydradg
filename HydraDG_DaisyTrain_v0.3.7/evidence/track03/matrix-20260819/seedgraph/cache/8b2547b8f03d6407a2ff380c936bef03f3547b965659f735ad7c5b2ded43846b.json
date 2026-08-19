@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8b2547b8f03d6407a2ff380c936bef03f3547b965659f735ad7c5b2ded43846b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a wooden TV stand with a natural finish, something that will blend i",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a wooden TV stand with a natural finish, something that will blend in with my coffee tab",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f4800d79dc6d68ad64af7a2339aa997b0529e8a45efcbe1b5e5e2b1b8f154a0"
+}

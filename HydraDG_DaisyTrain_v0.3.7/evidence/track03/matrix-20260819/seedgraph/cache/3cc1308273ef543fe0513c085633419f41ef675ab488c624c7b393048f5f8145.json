@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3cc1308273ef543fe0513c085633419f41ef675ab488c624c7b393048f5f8145",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the neutral chic idea",
+      "type": "value"
+    },
+    {
+      "name": "the Madewell Transport Tote in Beige",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the neutral chic idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Madewell Transport Tote in Beige",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d66e349e8c2b144d0240e79029a742524cd3128dc91e09d403ae813768f03ee1"
+}

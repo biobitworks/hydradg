@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "49c6402895ce9c1fc2464727f475328bb84f7957f9e8ed3ad90caa18d3b3f7e8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of playing with wordplay",
+      "type": "value"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    },
+    {
+      "name": "where this is going",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of playing with wordplay",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "where this is going",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e6fc5671b1af357f42a2839f510599251eff95c5c1a025f3f1a46262aa32511b"
+}

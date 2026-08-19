@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3a4aff01e81748dc25eacd2c07b47fb05782a38fd825a711310ce8f732b79e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Coastal Chic style, but I'm not sure about the beachy accents",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Coastal Chic style, but I'm not sure about the beachy accents",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "11e9b68d15869a7e4c06bc9f3ccf3e7c52e8fc8cd81c961faea1100dc6e6cd9e"
+}

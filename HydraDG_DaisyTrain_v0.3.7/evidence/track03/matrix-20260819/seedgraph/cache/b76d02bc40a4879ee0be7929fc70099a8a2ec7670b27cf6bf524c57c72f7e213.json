@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b76d02bc40a4879ee0be7929fc70099a8a2ec7670b27cf6bf524c57c72f7e213",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the breakdown of tasks for each project",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the breakdown of tasks for each project",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca938d8b37e68a5470a9fc120cea8fd4fc15a55309813ca37573aa59279b6957"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "41fe9300b1e0b2b5aa08386079759c5c12308bde87d99cad64b3f76a97a88346",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the mason jar salad idea",
+      "type": "value"
+    },
+    {
+      "name": "the citrus vinaigrette recipe, I'll try it out this weekend",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the mason jar salad idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the citrus vinaigrette recipe, I'll try it out this weekend",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "21f84caf4a1c9892f88d61f2e590d81788902dfe04ff9a4dbf538310453599f7"
+}

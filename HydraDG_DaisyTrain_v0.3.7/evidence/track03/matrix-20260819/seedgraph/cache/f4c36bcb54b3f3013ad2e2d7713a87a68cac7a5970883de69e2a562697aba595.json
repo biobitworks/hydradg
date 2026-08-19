@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f4c36bcb54b3f3013ad2e2d7713a87a68cac7a5970883de69e2a562697aba595",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Habitica to track my progress over time, like seeing how many days in a row I've",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Habitica to track my progress over time, like seeing how many days in a row I've exercised or how ma",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e59c13194a6b1ad5de1b46aa8008028b957dc036256d13af1fc3eb4f2fc4220a"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "48b6e157334abc59c65ab4870ec4b933c1e337db22bf841f12716845e65ab655",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my yoga app to guide me through meditation sessions as well, or are there specif",
+      "type": "value"
+    },
+    {
+      "name": "the idea of incorporating mindfulness and meditation into my routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my yoga app to guide me through meditation sessions as well, or are there specific meditation apps t",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating mindfulness and meditation into my routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c3e384b5cee7a8be528f9382dc2622c086fa59c7b2ba7b60e82fec9293aa41c7"
+}

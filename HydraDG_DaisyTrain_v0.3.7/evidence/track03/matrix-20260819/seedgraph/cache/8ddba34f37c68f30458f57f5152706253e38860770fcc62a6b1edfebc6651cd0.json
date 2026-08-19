@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8ddba34f37c68f30458f57f5152706253e38860770fcc62a6b1edfebc6651cd0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a fitness tracker, a sleep app, or a physical journal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a fitness tracker, a sleep app, or a physical journal",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "89ad05b6d88e6459462954b53aa5813a7cabe5891d9debc7c14a5430c22738c8"
+}

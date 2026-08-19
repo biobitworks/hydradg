@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e883bd26a7b62c3e259956525498d9dc0676cecf90c5b9afc7067e6da09e8963",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Trello to manage my files and documents, and what are some best practices for us",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Trello to manage my files and documents, and what are some best practices for using this integration",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef7c0a5e6f515ad59592df278e97ada5c57c3be6b0540ead67415304980ddec2"
+}

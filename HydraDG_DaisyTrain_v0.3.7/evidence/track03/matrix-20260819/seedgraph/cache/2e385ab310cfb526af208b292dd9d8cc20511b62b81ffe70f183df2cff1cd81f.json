@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2e385ab310cfb526af208b292dd9d8cc20511b62b81ffe70f183df2cff1cd81f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a \"New Arrivals\" section",
+      "type": "value"
+    },
+    {
+      "name": "the idea of offering bundles or promotions to incentivize customers to buy more",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a \"New Arrivals\" section",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering bundles or promotions to incentivize customers to buy more",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c62235550b763c5610a7d9590c84305d24e9c2a47813aba71bb3edae0ce5313c"
+}

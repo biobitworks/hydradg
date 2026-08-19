@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "960bbe8d69ba6b82df159cecdf04d8f6a1e0e3c20e432931f47ddf08d9e006e5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Cartwheel offer for 20% off on all Up & Up brand cleaning supplies again thi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Cartwheel offer for 20% off on all Up & Up brand cleaning supplies again this week",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "65809bd989311e8da66aae6345e2654bc97e5a965692b5f03a0d5dbae5274755"
+}

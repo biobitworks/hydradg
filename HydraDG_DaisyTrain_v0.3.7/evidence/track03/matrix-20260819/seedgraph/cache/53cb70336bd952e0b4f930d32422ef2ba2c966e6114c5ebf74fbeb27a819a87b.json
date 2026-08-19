@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "53cb70336bd952e0b4f930d32422ef2ba2c966e6114c5ebf74fbeb27a819a87b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to stay connected, even when I'm out in nature",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to stay connected, even when I'm out in nature",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b30f65c09dc02a9cfc146b08b995732672862aecbd6e294cf2968b4705273adb"
+}

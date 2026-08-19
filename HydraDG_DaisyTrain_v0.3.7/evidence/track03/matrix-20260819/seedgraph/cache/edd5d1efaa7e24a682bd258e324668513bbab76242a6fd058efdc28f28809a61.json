@@ -1,0 +1,36 @@
+{
+  "cache_hit": false,
+  "cache_key": "edd5d1efaa7e24a682bd258e324668513bbab76242a6fd058efdc28f28809a61",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "USA ADDRESS BUISINESS SO ALL 100000 USE THE DEFAULT COMPANY NAME FOR THE ADDRESS",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "USA ADDRESS BUISINESS SO ALL 100000 USE THE DEFAULT COMPANY NAME FOR THE ADDRESS, THIS CAN BE ACTIVA",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "USA ADDRESS BUISINESS SO ALL 100000 USE THE DEFAULT COMPANY NAME FOR THE ADDRESS, THIS CAN BE ACTIVA",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd7fed4bba0c2f4046cc5493861f069cd9b4f41d87b73c449402cd80a373ca09"
+}

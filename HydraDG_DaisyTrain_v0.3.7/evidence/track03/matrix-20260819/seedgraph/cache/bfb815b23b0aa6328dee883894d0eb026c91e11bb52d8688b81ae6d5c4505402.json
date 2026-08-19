@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bfb815b23b0aa6328dee883894d0eb026c91e11bb52d8688b81ae6d5c4505402",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gifting an experience",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gifting an experience",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b4d74d1c09fe5e45cc9f1a41b612d84eab1647c46ce4ac3d1afcca0eb35a01d8"
+}

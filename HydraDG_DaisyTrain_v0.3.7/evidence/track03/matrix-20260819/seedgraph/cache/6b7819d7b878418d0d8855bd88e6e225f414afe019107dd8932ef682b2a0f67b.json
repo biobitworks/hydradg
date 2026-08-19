@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6b7819d7b878418d0d8855bd88e6e225f414afe019107dd8932ef682b2a0f67b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of scheduling regular video calls with my best friend",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of scheduling regular video calls with my best friend",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8854a94ad48b5c0ff80d3a27f080adc50a4be729ea9138325fb5213becca1afb"
+}

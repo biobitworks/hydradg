@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f32f6e943f95fd1b31744687b843425beb26273f4b0393a802fcd0eb1bd6797d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of finding an exercise I enjoy, as I've been feeling a bit bored with m",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of finding an exercise I enjoy, as I've been feeling a bit bored with my current routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5ebd15908aaff090f88e85d807c680e6d2e1f2985392c47ba9dd00b24f429d5c"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9b693c743cf8d071ab78fc64ebd4b6b4a803609feefacc1e9380ae08599c8021",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "evening for running and cycling",
+      "type": "value"
+    },
+    {
+      "name": "the schedule, but I want to add one more activity to my routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "evening for running and cycling",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the schedule, but I want to add one more activity to my routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7cf9232a89427ddf627a6b67a4f59a1185cdace46412e1ea12c8882afc5aad05"
+}

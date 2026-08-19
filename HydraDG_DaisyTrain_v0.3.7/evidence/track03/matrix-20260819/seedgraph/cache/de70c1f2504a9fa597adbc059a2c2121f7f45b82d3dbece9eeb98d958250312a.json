@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "de70c1f2504a9fa597adbc059a2c2121f7f45b82d3dbece9eeb98d958250312a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Depeche Mode and The Human League, I'll definitely check them out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Depeche Mode and The Human League, I'll definitely check them out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3a7537d87dfced8bb84cc2855268a7cbacd7a9b958d86fcda262ed027cd580e5"
+}

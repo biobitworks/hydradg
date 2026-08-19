@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f59a0a78fe2e84c5d260dfeb27e02bf8ec509a326b8c6187b5bae7422086d41b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the \"Last Memory\" prompt",
+      "type": "value"
+    },
+    {
+      "name": "the idea of exploring the theme of personal quest",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the \"Last Memory\" prompt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of exploring the theme of personal quest",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7430cd657f8de63d2dd82b83ca3fec6483612d6e22892b0da3128b9fb5e17ba5"
+}

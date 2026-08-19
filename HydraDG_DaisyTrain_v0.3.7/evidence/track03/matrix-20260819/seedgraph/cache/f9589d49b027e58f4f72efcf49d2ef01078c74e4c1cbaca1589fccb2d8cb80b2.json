@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f9589d49b027e58f4f72efcf49d2ef01078c74e4c1cbaca1589fccb2d8cb80b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "- it's got a great layout and some nice heavyweight paper that will be perfect f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "- it's got a great layout and some nice heavyweight paper that will be perfect for sketching",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ceca7596b96c2bc91cf16e19cdf5c8031ffdd8abb44ed2e5defcdc713a2dafbd"
+}

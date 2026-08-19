@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4fcf96136d922f04d6356aa58349a6d4d5a8d78d8e1649a59b82569bc8e85525",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to work on my thesis from 9 am to 1 pm, Monday to Friday",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a visual board for my tasks and being able to track my time s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to work on my thesis from 9 am to 1 pm, Monday to Friday",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a visual board for my tasks and being able to track my time spent on each task",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "210c727ab600273a8dbed5eef318c899b40f54f4252004f39038c3942835cd93"
+}

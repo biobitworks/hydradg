@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "884408c40b5d4a3ac91cb06c583585e0efa5923f7fd54d16d7b05acb2f1dbe4a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "clean lines, simple shapes, and a limited color palette",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "clean lines, simple shapes, and a limited color palette",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fd98e04306b792dfc573887bfb8db3561b3ba6c9f3ff225b7d55f0a303cf6025"
+}

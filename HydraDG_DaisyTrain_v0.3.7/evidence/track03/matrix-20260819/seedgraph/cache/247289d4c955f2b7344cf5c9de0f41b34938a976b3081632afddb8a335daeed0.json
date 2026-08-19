@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "247289d4c955f2b7344cf5c9de0f41b34938a976b3081632afddb8a335daeed0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the container being reusable too",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the container being reusable too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cfd5fc945228d0112098f6ea8ad12a42461914b8c5c4b860e06d220902614e0f"
+}

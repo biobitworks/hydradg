@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1d71333885f30a72ab05cbeeca5472613132e52e59a5ab6c2334b45f755dbc08",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a bedtime routine, but I'm not sure how to fit it into my s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a bedtime routine, but I'm not sure how to fit it into my schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "405bf3905ab78cac24dfa8018cdebf9e222a0384d4ed668bae086a04deec18bf"
+}

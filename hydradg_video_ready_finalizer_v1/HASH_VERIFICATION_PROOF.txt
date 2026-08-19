@@ -1,0 +1,16 @@
+exit_code=0
+turn_root_sha256=3c22a719d42d29121f5a2523057789f4ba83e80ee4ffcaf6d51cb6de64780340
+manifest_sha256=6eca3345d8c6765180f65e2e0bd0976fe1d247a33325bbda1786dd8e4dd18d63
+shell_checks={"scripts/start_video_stack.sh": {"exit_code": 0, "stderr": ""}, "scripts/video_ready_gate.sh": {"exit_code": 0, "stderr": ""}}
+
+README.md: OK
+configs/video_ready.json: OK
+custody/CURRENT_HUMAN_REQUEST.txt: OK
+custody/SIGNING_HANDOFF.json: OK
+custody/TURN_CUSTODY.json: OK
+docs/VIDEO_CLAIM_BOUNDARIES.md: OK
+docs/VIDEO_SCRIPT_90S.md: OK
+prompts/VIDEO_READY_MASTER_PROMPT.md: OK
+scripts/start_video_stack.sh: OK
+scripts/video_ready_gate.sh: OK
+verify_hashes.sh: OK

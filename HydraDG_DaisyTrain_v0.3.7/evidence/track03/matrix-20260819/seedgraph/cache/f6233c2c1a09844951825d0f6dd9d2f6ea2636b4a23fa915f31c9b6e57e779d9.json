@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6233c2c1a09844951825d0f6dd9d2f6ea2636b4a23fa915f31c9b6e57e779d9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "public transportation or rent a car",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "public transportation or rent a car",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c41cd44c9a9a6a2693f6330b0fbe7f45e41fa9459de5bec6db44a91ba7c3a2c8"
+}

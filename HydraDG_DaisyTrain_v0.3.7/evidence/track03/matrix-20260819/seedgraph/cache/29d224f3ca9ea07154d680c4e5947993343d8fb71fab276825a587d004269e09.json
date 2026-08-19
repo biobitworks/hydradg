@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "29d224f3ca9ea07154d680c4e5947993343d8fb71fab276825a587d004269e09",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "regular table salt instead",
+      "type": "value"
+    },
+    {
+      "name": "table salt instead",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "regular table salt instead",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "table salt instead",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a7bdc2fadef84104cb968332c63d1881ab827b9b14166ce969b50f44bbaaf29"
+}

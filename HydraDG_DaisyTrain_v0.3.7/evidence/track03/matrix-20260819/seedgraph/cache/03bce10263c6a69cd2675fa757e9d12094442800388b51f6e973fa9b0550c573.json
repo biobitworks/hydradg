@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03bce10263c6a69cd2675fa757e9d12094442800388b51f6e973fa9b0550c573",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a meat thermometer to check the temperature",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a meat thermometer to check the temperature",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "45bd1a23ca7e3b6ac7b2f18dd7d1e1498861fcf87efafd3d21f2de578487cdfe"
+}

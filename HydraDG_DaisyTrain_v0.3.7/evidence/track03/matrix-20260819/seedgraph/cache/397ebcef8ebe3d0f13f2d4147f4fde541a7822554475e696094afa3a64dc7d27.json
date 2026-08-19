@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "397ebcef8ebe3d0f13f2d4147f4fde541a7822554475e696094afa3a64dc7d27",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a cashback app or a promo code",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a personalized item, but I'm not sure what my friend would like",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a cashback app or a promo code",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item, but I'm not sure what my friend would like",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e3720c390106d733270df9b869cbbc67cbdbf1f87c1cb8bc4e97abd731968c13"
+}

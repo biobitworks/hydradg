@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b14c43c577dccb362b827724601c74c5ce65c7532b7a030bd91f943fb4808e99",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of finding an exercise I enjoy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of finding an exercise I enjoy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4e1fdbdc021640b999e7ecaa678826290de3d477496f36025a7f2ffe0c2c7da2"
+}

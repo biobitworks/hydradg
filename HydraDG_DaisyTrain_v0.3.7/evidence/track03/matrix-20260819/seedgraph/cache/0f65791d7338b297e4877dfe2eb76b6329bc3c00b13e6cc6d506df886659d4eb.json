@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f65791d7338b297e4877dfe2eb76b6329bc3c00b13e6cc6d506df886659d4eb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "learning through reading",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "learning through reading",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "30bea78fa4a8687724aa70c2c472e445bd0abf8cc08428fdd6494f8572daed30"
+}

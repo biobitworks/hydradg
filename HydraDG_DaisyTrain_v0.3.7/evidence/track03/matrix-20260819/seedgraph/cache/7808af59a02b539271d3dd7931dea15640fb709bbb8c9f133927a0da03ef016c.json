@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7808af59a02b539271d3dd7931dea15640fb709bbb8c9f133927a0da03ef016c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this schedule, but I think I need to adjust it a bit",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating playlists for my practice sessions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this schedule, but I think I need to adjust it a bit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating playlists for my practice sessions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bf35b84ec5b710e1de768dfe7aac564eb15953fdcacec7f2b63a0d8e23e91103"
+}

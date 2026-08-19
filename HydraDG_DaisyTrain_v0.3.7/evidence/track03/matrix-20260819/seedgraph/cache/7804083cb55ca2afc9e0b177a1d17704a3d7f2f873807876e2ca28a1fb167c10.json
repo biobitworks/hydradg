@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7804083cb55ca2afc9e0b177a1d17704a3d7f2f873807876e2ca28a1fb167c10",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a chair or bench with a soft cushion or should it be a hard surface",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a chair or bench with a soft cushion or should it be a hard surface",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ab8222a16f0c2b1d19abc95696062483bdc56445627345828d147cd8161249a0"
+}

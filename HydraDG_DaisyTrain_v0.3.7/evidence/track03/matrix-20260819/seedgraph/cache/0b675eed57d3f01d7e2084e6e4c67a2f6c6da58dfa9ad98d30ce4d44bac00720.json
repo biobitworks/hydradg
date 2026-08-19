@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0b675eed57d3f01d7e2084e6e4c67a2f6c6da58dfa9ad98d30ce4d44bac00720",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "historical results grouped into clusters using kmeans as a fundamental part of t",
+      "type": "value"
+    },
+    {
+      "name": "random forests",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "historical results grouped into clusters using kmeans as a fundamental part of the strategy",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "random forests",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ec2a8dd44c9903b36fcf2c6fea5381a2469c5085a3883a26aef744af7eac933b"
+}

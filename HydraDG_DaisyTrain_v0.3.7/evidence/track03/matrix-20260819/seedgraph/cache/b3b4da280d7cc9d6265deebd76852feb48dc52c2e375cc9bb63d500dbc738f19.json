@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3b4da280d7cc9d6265deebd76852feb48dc52c2e375cc9bb63d500dbc738f19",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "all three of these together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "all three of these together",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "859524349a538f9dbd5808facbb7932fd12f9910c3d46c11d048d48d5935ab1b"
+}

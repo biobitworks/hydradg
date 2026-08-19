@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "40a715c75f6a55094aa528a3557b426672cf53d406fd92f124ac24872005ca2f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting reminders and creating a schedule",
+      "type": "value"
+    },
+    {
+      "name": "the idea of theme nights, so I might try to designate specific nights for differ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of celebrating milestones, so I'll set small rewards for myself when I ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting reminders and creating a schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of theme nights, so I might try to designate specific nights for different cuisines",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of celebrating milestones, so I'll set small rewards for myself when I reach certain milest",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0e2ce45a8480dc311c8d87152e5c593f49a44c0259575ea7f429fa15c022c3b5"
+}

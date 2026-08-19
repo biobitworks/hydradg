@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7fc3cc237430f09184494a0ad256c3aa0ec78c2e2229f918ca73354cb0089183",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized piece of jewelry, maybe a necklace with her birthstone ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized piece of jewelry, maybe a necklace with her birthstone or initials",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "acace65e9778bfa3d99797c02236f5524efbca57b2fe29bbd98bfd308db1f450"
+}

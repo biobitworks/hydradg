@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "516f962fb5a81a3482e3de50fdb5d05de09b5aeca33a489228ff933dd2424fb8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for my daily commute",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for my daily commute",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "71a82b0982baef92134d92f5b628992eefd8720fa6eb2e67b4d31d8a740174cf"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b2b8f2ad253a7c499084ed1c73192522ae7590c69439f15c36722780f26931d7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the bake sale and walk/run event",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the bake sale and walk/run event",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "66acb71e106af6966a7dc77d6a0dcfb88bf588f2eb87b90328ca4583dc0717ed"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8e2b8bdc12e145d16e373912e65991d9c5681b51efcca6f49733eb0273625c17",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "is the local train service",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "is the local train service",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "59d1db26ec28984ec1778d47103fa1bf442abfebb54bb605c972f7dae6f0cfed"
+}

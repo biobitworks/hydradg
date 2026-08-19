@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d850f0ce7b574098aef5d46938955d197f01aec0c35f5760c06a76dd04af9477",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Airbnb",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Airbnb",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "50c27c9f59c5c1b570405d47ad7402fd9008451dc62dd4d2d3fa09290b0fd435"
+}

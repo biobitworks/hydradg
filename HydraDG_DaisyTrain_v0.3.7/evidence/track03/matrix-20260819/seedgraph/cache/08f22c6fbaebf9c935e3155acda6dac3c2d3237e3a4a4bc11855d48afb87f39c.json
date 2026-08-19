@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "08f22c6fbaebf9c935e3155acda6dac3c2d3237e3a4a4bc11855d48afb87f39c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Secura Jewelry Armoire, but I'm not sure if it's the right size",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Secura Jewelry Armoire, but I'm not sure if it's the right size for my space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f95829147ae4ba7dc5ec6dca41bb43bb7e773a74286f326fbb286a18ab472cf"
+}

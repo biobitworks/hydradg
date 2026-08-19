@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "644e97aa09b9eee9e1f630c6eb8c1c9925152243d26ec71902449bbdc4a54391",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a dry climate and I've heard it's good for the guitar's health",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a dry climate and I've heard it's good for the guitar's health",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0e1a6abd1177b43184174f67de206f43d5625f60172a8a87e59bacfee537e24b"
+}

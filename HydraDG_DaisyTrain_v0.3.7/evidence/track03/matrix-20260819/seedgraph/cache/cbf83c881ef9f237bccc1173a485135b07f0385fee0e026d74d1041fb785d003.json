@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cbf83c881ef9f237bccc1173a485135b07f0385fee0e026d74d1041fb785d003",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my Mac and keep it clean",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my Mac and keep it clean",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f11eea435088315c74d0eaae24c7664f825c1bde26cca24d4a0273aa3fb7fdab"
+}

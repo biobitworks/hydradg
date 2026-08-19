@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "be0b09921c98189cd34b4bf617b656843c27ed885417b478731e54c1d6ed803d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a burlap background and incorporating leaf impressions, but I'",
+      "type": "value"
+    },
+    {
+      "name": "the idea of incorporating symbols or marks that evoke nature",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a burlap background and incorporating leaf impressions, but I'm not sure how to ti",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating symbols or marks that evoke nature",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "668a16def92dacfeeb43b7b33b8bb1f7a2046161995a06ac39dcb39acde2a772"
+}

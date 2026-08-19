@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b2106f9b7d80ed5859a8219b4a71be0da117dd63abd44948facb83dfac4010d8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of listening to audiobooks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of listening to audiobooks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2a695c51c0077013c666ed18d61feeef0732192461ef6e73ad7eaf26fe31e37"
+}

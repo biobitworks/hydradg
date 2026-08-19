@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bbaac15bf5130ec9c73c221b3708b71deb9f79042925e87e3487e1d3b18b5d48",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Televero Health and we are currently recruiting for psychiatry positions that co",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Televero Health and we are currently recruiting for psychiatry positions that complement your skills",
+      "polarity": "affirmed",
+      "predicate": "works_at",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5e7e430fd258f7c6ffdcdad7b060e2766ab05f8ab5c95f702afdff048e3a9310"
+}

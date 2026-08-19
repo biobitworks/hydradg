@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "735f8476690926122cce5e8c665bed3c4ab26ce8d9f093127dba406aa329528e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of virtual coffee breaks",
+      "type": "value"
+    },
+    {
+      "name": "the suggestion to discuss and agree with the team first",
+      "type": "value"
+    },
+    {
+      "name": "the idea of framing it as a collaborative suggestion",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of virtual coffee breaks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the suggestion to discuss and agree with the team first",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of framing it as a collaborative suggestion",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5c248acd74db61359025c00eaffbfd85eab8f432899b8987fbcf7d20032301b7"
+}

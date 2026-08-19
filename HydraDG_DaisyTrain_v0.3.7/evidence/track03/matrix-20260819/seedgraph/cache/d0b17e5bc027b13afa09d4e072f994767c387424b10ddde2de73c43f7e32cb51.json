@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d0b17e5bc027b13afa09d4e072f994767c387424b10ddde2de73c43f7e32cb51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the leftover kale and carrots to make a soup, and do you have any suggestions on",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the leftover kale and carrots to make a soup, and do you have any suggestions on how to store them t",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3aac34553d9d4f3f1d7af931c9a309c8ce87069248a6efa9c25d98ba9f061d7d"
+}

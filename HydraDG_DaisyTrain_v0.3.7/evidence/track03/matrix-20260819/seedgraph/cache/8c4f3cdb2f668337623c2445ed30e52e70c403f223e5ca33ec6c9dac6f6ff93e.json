@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8c4f3cdb2f668337623c2445ed30e52e70c403f223e5ca33ec6c9dac6f6ff93e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep it in a place where I can see it and appreciate it every day",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep it in a place where I can see it and appreciate it every day",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1a25eddbc5b75358282c321703d580403414035abc9214274c907bad7421f00d"
+}

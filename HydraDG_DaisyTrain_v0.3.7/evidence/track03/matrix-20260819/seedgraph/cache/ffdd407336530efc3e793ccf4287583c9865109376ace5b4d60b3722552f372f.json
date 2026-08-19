@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ffdd407336530efc3e793ccf4287583c9865109376ace5b4d60b3722552f372f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's eco-friendly and lightweight",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's eco-friendly and lightweight",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "750335695e10614c36dd79de9c710bf895ee1d8b7cb95cab5c969cdfdb564bad"
+}

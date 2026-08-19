@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2c4a7916caf98a2fdc7f5720670c0b8bea4a3496c75664dd813075761a229ea5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quilt-patterned mug idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quilt-patterned mug idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a308823f990811e4bca5d22d9a95bca863c538accc4a5c6e3b3b251457738dec"
+}

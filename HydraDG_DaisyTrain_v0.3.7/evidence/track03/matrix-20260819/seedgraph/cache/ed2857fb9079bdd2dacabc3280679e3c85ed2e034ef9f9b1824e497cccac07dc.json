@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "ed2857fb9079bdd2dacabc3280679e3c85ed2e034ef9f9b1824e497cccac07dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "red lentils instead of green or brown",
+      "type": "value"
+    },
+    {
+      "name": "store-bought kimchi instead of making my own",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having my cookbooks visible and easily accessible, as it will encour",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "red lentils instead of green or brown",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "store-bought kimchi instead of making my own",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having my cookbooks visible and easily accessible, as it will encourage me to try out ne",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1176d5f922fe92879c7acb0acecd9000c5a6307d2901a0afd9c6f32954dffa37"
+}

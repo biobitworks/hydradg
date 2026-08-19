@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e516d0b3bd5b704b8d805dea0fbfae3a7e4a34d16953146dec43b436fe67e32a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "frozen crab legs for this recipe",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a natural fiber table runner and a simple white tablecloth",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "frozen crab legs for this recipe",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a natural fiber table runner and a simple white tablecloth",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e76437d0892575431ad09d2ca176500cc43643359eee8bb7c1017ee7505b9d09"
+}

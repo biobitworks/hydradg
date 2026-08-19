@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "685d670bf48adea0dfd500bf5449d0474f225bd93f94176f70df3889cb5368c1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Lightroom to edit and organize all my photos, and love its ability to sync acros",
+      "type": "value"
+    },
+    {
+      "name": "CamRanger to control my camera remotely, which is especially useful for wildlife",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Lightroom to edit and organize all my photos, and love its ability to sync across multiple devices",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "CamRanger to control my camera remotely, which is especially useful for wildlife and landscape photo",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "747052af0a9706e8ed116fb39aeccd43d13f9e37565e37b5a9ad1286eaed9662"
+}

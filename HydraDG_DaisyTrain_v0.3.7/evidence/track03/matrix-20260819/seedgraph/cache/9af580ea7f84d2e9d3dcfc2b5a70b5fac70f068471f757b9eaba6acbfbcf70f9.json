@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9af580ea7f84d2e9d3dcfc2b5a70b5fac70f068471f757b9eaba6acbfbcf70f9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of grilled chicken and marinated tofu",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of grilled chicken and marinated tofu",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f501c48b8a8e48ee170a5884c5e10fc35c39d8f21c662b60175f2d98b585c8d"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "91feed1b020ac0a08b3ba5f65695b683bb34d25dd4f4843007c1c0cb90af907d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my own products to stay organized and productive",
+      "type": "value"
+    },
+    {
+      "name": "my own [Product Name] to stay organized and on track",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my own products to stay organized and productive",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "my own [Product Name] to stay organized and on track",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "63da10867b31d3608f66d372ac0237ff03e708c5f20a79301c3f3bf23c86437c"
+}

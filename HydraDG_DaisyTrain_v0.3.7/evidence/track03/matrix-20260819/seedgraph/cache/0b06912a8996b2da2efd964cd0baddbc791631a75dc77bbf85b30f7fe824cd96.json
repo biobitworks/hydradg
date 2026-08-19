@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0b06912a8996b2da2efd964cd0baddbc791631a75dc77bbf85b30f7fe824cd96",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Sharepoint to refer to content available on a network share such that the conten",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Sharepoint to refer to content available on a network share such that the content is indexed but not",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca3828a1287a43da12b03ba03fe2a8417eeab5bbc9d7d1f3bcbf071d263c659d"
+}

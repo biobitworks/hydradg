@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d0446b1e5ac58a208fe0e8e95f0a4ce039e2a479d0479f70cc3740ddc4b93fe0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it as a calming tool",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it as a calming tool",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "26b81603e4455f2c5619d98c9974d1db84e47b68022d2193052cd28e369a4816"
+}

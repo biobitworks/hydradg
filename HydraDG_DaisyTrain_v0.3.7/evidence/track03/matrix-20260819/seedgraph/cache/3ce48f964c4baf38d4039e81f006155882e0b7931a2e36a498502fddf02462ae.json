@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ce48f964c4baf38d4039e81f006155882e0b7931a2e36a498502fddf02462ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the two truths and a lie game",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the two truths and a lie game",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ece24bdb78452c9f78a6d6b6ac1d47d3fc6a3c722ffcda7f728f7247936d50e4"
+}

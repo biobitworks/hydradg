@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "04e38bdded38463a8ada4bf4d4a9f1f263ca24169d3666db0e72f80879cb83f4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those tips, especially the one about pricing strategically",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those tips, especially the one about pricing strategically",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d8e32f6768b7ecd3d52f6c3e960c05db551e8d98da0c734adae5ef44263310b0"
+}

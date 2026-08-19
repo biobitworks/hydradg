@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "385d95b9db06aaf8c5fb710af13abdf8650adf6204158ce25602ee64e7207cef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing my grey sweater with a skirt and tights",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing my grey sweater with a skirt and tights",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2a477c5655108457ced766ec2d2af83673485513d0f8425cd2ecc1ad2d8a8776"
+}

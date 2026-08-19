@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ef5b5eef4886f33e35ff9293c60d72ad6fba1eef8063f46e320e6b681f6a8dd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh leaves",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Citrus Sunrise and Mint to Be recipes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh leaves",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Citrus Sunrise and Mint to Be recipes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f82174b04add90b74d9178da447c1a94884332ad7978c4450e4430b85178b278"
+}

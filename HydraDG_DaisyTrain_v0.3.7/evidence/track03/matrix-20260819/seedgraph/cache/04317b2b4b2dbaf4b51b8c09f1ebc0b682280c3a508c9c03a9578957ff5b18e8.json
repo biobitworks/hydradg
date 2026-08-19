@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "04317b2b4b2dbaf4b51b8c09f1ebc0b682280c3a508c9c03a9578957ff5b18e8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the backyard BBQ idea, but I'm not sure if the weather will hold up",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the backyard BBQ idea, but I'm not sure if the weather will hold up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8161c880c8b61480b36b128dc12206420739f3d185505b5c47a1c3d75de96a45"
+}

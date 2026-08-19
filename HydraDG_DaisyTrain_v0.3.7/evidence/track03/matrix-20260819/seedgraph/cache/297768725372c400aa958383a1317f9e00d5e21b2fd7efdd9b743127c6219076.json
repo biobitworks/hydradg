@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "297768725372c400aa958383a1317f9e00d5e21b2fd7efdd9b743127c6219076",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Luxo L-1 LED Task Lamp, but I'm also curious about those smart ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Luxo L-1 LED Task Lamp, but I'm also curious about those smart bulbs I've been hear",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e8344f541ea0ebf19a880599786d4f53c26dd980fc59316fa6ba2321aaac1704"
+}

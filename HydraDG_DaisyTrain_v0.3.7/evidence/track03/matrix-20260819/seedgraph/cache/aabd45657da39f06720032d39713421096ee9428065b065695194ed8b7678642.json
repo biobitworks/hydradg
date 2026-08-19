@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "aabd45657da39f06720032d39713421096ee9428065b065695194ed8b7678642",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of wall-mounted shelves",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of wall-mounted shelves",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df2d3eb97d8d07d4b5bd05b5d7d05c6ae09df8294c63c77b5439110574a46356"
+}

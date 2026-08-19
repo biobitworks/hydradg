@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "afc0944f6b43435684a3874ed2a89eb25d4dc8df1cd7cfda36b8dc68ada23b28",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Watermelon and Feta Salad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Watermelon and Feta Salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5d8a080048c949fcc655b441bd833646634c4794c2781fcbe35ffbafb1109bfe"
+}

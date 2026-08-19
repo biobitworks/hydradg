@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e7951c94e83ebf2c1533a6b150cc0c0aa9d4bd61c5af66fd34cfbe33f6f0e58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a cook-off with a special guest",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a cook-off with a special guest",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "381722854372932bf12465414da4facd6aae2bc89007692ffde3fe5e142d28cd"
+}

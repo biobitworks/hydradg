@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d80ff28e32eeabc8c7a54c689e1877acccbcc488a71c1bb3940efe09273c651c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "your ideas, especially the focal point and balance suggestions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "your ideas, especially the focal point and balance suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "30093020fc02c0a7eb10e6545962ddc174877f383f14ed9ceffbbb60d56165df"
+}

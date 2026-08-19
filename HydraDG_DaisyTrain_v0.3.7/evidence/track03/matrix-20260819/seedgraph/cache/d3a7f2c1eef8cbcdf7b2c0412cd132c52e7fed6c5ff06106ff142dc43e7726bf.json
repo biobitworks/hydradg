@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d3a7f2c1eef8cbcdf7b2c0412cd132c52e7fed6c5ff06106ff142dc43e7726bf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of getting her some more scratching posts and pads, and maybe even a ca",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of getting her some more scratching posts and pads, and maybe even a cat tree",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3f875e42b17046497e44f7ad6a172a9cb20b6097e7e616020c930ab0c504f61"
+}

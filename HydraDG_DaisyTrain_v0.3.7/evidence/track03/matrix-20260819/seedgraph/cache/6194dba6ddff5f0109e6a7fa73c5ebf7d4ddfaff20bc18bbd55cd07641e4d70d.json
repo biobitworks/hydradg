@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6194dba6ddff5f0109e6a7fa73c5ebf7d4ddfaff20bc18bbd55cd07641e4d70d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these suggestions, especially the idea of taking a power break and getting some ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these suggestions, especially the idea of taking a power break and getting some sunlight",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6de7b03b0b53f825baa454a94ad883e5727dca9af3d6c1e7ebbf3cd9e8bab36a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ec2cd30b12b072ad7cf8d9d35d6614887711794e53b6973bba2341a2940aa446",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a neutral base with pops of color",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a neutral base with pops of color",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "951191e75cbcd0290393b65917be106ca92caca17653a77c76597fff94824763"
+}

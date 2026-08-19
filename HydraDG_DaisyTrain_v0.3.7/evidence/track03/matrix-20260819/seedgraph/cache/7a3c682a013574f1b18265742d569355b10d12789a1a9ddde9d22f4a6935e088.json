@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a3c682a013574f1b18265742d569355b10d12789a1a9ddde9d22f4a6935e088",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the options you provided, but I'm still unsure about the light temperature",
+      "type": "value"
+    },
+    {
+      "name": "the slim metal body",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the options you provided, but I'm still unsure about the light temperature",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the slim metal body",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "722251883b689654dfbc64be4e92e431d0472cc697f9814abb62b187ba106f1b"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d4dc84f8e7a4bb02c74f28957b762315ce463c605103ad61b48170445c5015ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting clear goals and objectives, but I'm not sure how to do it ef",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting clear goals and objectives, but I'm not sure how to do it effectively",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b9a5a397b16b1586acdc19518de61488783c967df3db3884430f1e26f6501ecc"
+}

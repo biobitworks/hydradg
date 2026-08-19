@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "906bc2b6813c6b2b5999bb25a4f0ee82a89f95c5f55f08e0e6c5140b374447dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them to book a flight on Lufthansa or Swiss Air",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them to book a flight on Lufthansa or Swiss Air",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cef42c5a123e92228218303fa1eae3dc98aca38256254679f8796a4d5a59a173"
+}

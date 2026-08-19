@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7863cc877107aa32b2dc8b3ea78623f11707129558327bcece6c6bf451472095",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized vase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized vase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5cb69ba4abc910ac1d2399711000dbcb1761a2fa547954e33758409f7b1bba6b"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "76beee046b9e9b6df894b47c50da714d933df0b62144e85980c512fc13b3bb83",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's affordable and has a lot of features that will help me track my fitnes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's affordable and has a lot of features that will help me track my fitness goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b24d54e3b8c3d2363aea9d89e4c16239bd85806c4ba4bf224a2383466543d031"
+}

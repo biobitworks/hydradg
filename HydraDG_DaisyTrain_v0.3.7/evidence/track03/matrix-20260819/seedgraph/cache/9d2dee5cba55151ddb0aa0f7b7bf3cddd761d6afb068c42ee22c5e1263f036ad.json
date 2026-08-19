@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9d2dee5cba55151ddb0aa0f7b7bf3cddd761d6afb068c42ee22c5e1263f036ad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how Dan brought up Gary Halbert and Napoleon Hill in the email",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how Dan brought up Gary Halbert and Napoleon Hill in the email",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4bd3908bc1cb1d859bb5f2ca24b41d7fff634f07c32cbd5c45590609b5c17852"
+}

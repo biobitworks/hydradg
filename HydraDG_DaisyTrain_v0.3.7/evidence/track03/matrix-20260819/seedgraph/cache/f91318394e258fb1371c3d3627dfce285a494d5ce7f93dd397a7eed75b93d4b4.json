@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f91318394e258fb1371c3d3627dfce285a494d5ce7f93dd397a7eed75b93d4b4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a muted green accent color to tie in with the nature-inspired ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a muted green accent color to tie in with the nature-inspired theme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a85b7280a353236374d7d6c2083dc56d3d5763f6beecda55403a969e9313052a"
+}

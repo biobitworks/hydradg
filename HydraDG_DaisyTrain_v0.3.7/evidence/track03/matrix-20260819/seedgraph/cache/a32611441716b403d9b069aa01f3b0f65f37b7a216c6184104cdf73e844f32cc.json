@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a32611441716b403d9b069aa01f3b0f65f37b7a216c6184104cdf73e844f32cc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a content calendar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a content calendar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "89915a052b5cdbcd93386eb7c13365787903150af47207bea90124f5efdd54a8"
+}

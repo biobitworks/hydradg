@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dcb34009cbb5ddf4189f11f0969b1d843eefdaece54c8d32d7741506ba51ab89",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a welcome basket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a welcome basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f6db0d1bf10d5f9bbba083cf2cbe17319c6541c62f9477a45c64aed0b5ad1c7f"
+}

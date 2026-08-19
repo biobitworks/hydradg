@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dce2f6f7d5719c47bd5ed294bc0fe8f7060ec4e739d90dd913f35481a93cc24e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the light neutrals, especially the beige shades",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the light neutrals, especially the beige shades",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8c88d0f938021dcbc81d2c869a69c567f1b32ad3c23389e66d40f6922a830a17"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "21877898960c46326efcc48b71ea1d53ab79040534d9ebae1f050fbc89681b5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that for filigree work, or do I need to get a finer gauge wire",
+      "type": "value"
+    },
+    {
+      "name": "the idea of making some candles, but I was thinking of trying something new",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that for filigree work, or do I need to get a finer gauge wire",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of making some candles, but I was thinking of trying something new",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fae5465dc0f7d6b3457cee67d234e22da745b1acdfd081aabf2dd92b181cf704"
+}

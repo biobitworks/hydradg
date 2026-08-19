@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7f2c57d0177f3d113863d389db8d6c439695f03f001f961a51b1c0159b0e3e03",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "using Welltory to track my stress levels and HRV, but I find the app a bit clunk",
+      "type": "value"
+    },
+    {
+      "name": "the stress tracking and HRV analysis, I find the app's recommendations to be a b",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "using Welltory to track my stress levels and HRV, but I find the app a bit clunky and difficult to n",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the stress tracking and HRV analysis, I find the app's recommendations to be a bit generic",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a07fa0074f7f962f29c9e5f6d1522236926996da860b2cd08aebe9e1214af298"
+}

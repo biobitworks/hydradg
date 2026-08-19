@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d31dbb2951314885d7cd654451672fbfbcf7d13c502326c043ce158f08ebd2ea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "spicy food",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "spicy food",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d4b8ed14d6602dfb993491aad88578100ed35c398539ca0dd1bc8c7af4343f54"
+}

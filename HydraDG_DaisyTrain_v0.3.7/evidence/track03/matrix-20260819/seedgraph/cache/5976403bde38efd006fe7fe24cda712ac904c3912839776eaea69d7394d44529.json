@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5976403bde38efd006fe7fe24cda712ac904c3912839776eaea69d7394d44529",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "an area with limited sunlight",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "an area with limited sunlight",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef5329b4fd13b6af1b09e5e86841283e4f178387aafe91c2d9f256e23f374ef2"
+}

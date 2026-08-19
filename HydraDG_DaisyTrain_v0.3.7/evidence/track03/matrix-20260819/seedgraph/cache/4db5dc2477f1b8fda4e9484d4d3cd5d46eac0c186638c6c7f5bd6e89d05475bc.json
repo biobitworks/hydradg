@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4db5dc2477f1b8fda4e9484d4d3cd5d46eac0c186638c6c7f5bd6e89d05475bc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a wired mouse for reliability",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a wired mouse for reliability",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05093e685b2e044f416a967cb66aa5813baaa48c056ac7a65c30214918e6d6fe"
+}

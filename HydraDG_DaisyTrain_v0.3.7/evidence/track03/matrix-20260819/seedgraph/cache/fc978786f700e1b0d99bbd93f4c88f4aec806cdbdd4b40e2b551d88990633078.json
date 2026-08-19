@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc978786f700e1b0d99bbd93f4c88f4aec806cdbdd4b40e2b551d88990633078",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to charge my phone and smartwatch at home",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to charge my phone and smartwatch at home",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d6e5389c27a8ac2829b3dbefa9e2ec5f40bb93be7a743bd5e3cf4689d12ea05"
+}

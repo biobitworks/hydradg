@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7c80596caae720f3408cd1adf8c202cfaa277991d65f8de3ce093a365d8a4925",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Simple Tote Bag Pattern by Craftsy, I think I'll give that a tr",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Simple Tote Bag Pattern by Craftsy, I think I'll give that a try",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f98d8b6864e5a263311565cdd5970e4e2f293b75a542239514509efdbb7bbcd3"
+}

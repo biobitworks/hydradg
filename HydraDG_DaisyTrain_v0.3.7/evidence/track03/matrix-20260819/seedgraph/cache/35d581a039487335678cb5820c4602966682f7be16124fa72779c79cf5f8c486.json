@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "35d581a039487335678cb5820c4602966682f7be16124fa72779c79cf5f8c486",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of batching my content and focusing on quality over quantity",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of batching my content and focusing on quality over quantity",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "813c1236c76935f8e6ed6e56e480dc6de0eb89569ef93194e6082a2e8b938c71"
+}

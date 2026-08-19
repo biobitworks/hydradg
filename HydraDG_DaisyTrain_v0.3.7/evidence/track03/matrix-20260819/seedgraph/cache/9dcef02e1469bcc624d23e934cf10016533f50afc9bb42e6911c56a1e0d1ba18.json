@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9dcef02e1469bcc624d23e934cf10016533f50afc9bb42e6911c56a1e0d1ba18",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a clean and modern look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a clean and modern look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d54cfb16fe03417fd27e97dbd59da003822ed22de63d27a11e5fcca6d4d0c176"
+}

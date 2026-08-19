@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e9e96abb28ab7635b5cd6448b966dc1901526eb0ef0decacb64cf759a2a148c9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using white frames for the more neutral pieces and a wood frame for ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using white frames for the more neutral pieces and a wood frame for the bold print",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "95c13fe914cb71e16f1b6a77efdb667d5cba59530985b2709d65efd3909e1b99"
+}

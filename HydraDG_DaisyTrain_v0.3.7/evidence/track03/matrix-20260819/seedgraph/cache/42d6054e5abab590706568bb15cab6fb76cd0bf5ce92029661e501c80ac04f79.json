@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "42d6054e5abab590706568bb15cab6fb76cd0bf5ce92029661e501c80ac04f79",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "training in the evenings or weekends, and I'd like to include rest days in my ca",
+      "type": "value"
+    },
+    {
+      "name": "the template, but I'd like to add a section to track my progress towards specifi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "training in the evenings or weekends, and I'd like to include rest days in my calendar",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the template, but I'd like to add a section to track my progress towards specific goals, like improv",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75f25b3c7e91dd5625ec3b048bb4d16ca2c6ee06033e978a24751241f0f34891"
+}

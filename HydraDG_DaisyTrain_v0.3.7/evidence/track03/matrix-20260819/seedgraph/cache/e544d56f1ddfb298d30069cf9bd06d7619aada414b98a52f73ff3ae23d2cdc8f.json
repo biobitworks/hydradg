@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "e544d56f1ddfb298d30069cf9bd06d7619aada414b98a52f73ff3ae23d2cdc8f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tips you provided, especially the one about re-evaluating my goals",
+      "type": "value"
+    },
+    {
+      "name": "the idea of designating specific times to check my notifications and setting lim",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting reminders and creating a pre-check routine to help me stay o",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tips you provided, especially the one about re-evaluating my goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating specific times to check my notifications and setting limits on how often I c",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting reminders and creating a pre-check routine to help me stay on track",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "44628a1d2f7f085203f6f389670861b81aedc99f843778535f1995b9209f07a5"
+}

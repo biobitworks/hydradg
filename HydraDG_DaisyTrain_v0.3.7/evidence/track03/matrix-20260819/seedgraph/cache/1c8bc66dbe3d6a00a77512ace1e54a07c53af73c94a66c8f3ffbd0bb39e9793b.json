@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c8bc66dbe3d6a00a77512ace1e54a07c53af73c94a66c8f3ffbd0bb39e9793b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized photo album or frame",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized photo album or frame",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "20fd530863a55343acbee01aa4359449335bbd9ed8c3094cb2544302accfc5d8"
+}

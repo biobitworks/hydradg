@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "4f89c389b70b4e65bf948bdc6ef5a6670c7f1602b6e4d8899c34370612f335d5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas, but I'm not sure if they're all feasible given our budget",
+      "type": "value"
+    },
+    {
+      "name": "these ideas, especially the wildflower seed packets and homemade cookies or trea",
+      "type": "value"
+    },
+    {
+      "name": "\"Sweet Treats from Emily & [Partner's Name]\" with a simple illustration of a coo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas, but I'm not sure if they're all feasible given our budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the wildflower seed packets and homemade cookies or treats",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "\"Sweet Treats from Emily & [Partner's Name]\" with a simple illustration of a cookie or a heart",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2e3fc3f92a4a9fd262a39714825b5b1a64994140d91d9961c82170cd8fdd6011"
+}

@@ -1,0 +1,48 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3dd9474850945cbbf121288f8951b1bfcd8b7b74fb2a63f7c03af07f3c46439",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the prompt about the reflection's personality",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the reflection having a sarcastic and snarky personality",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the prompt about the reflection's personality",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the reflection having a sarcastic and snarky personality",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the reflection having a sarcastic and snarky personality",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "55d4929e19fa3a33ead209f63a666c98a04107dc3518a43be4363ba507697ca9"
+}

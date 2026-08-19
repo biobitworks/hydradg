@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a464aca58c09c7dfb70ef96216054a4513ffe0c13b1add4562d32204b0e99391",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using table lamps and candles to create a cozier ambiance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using table lamps and candles to create a cozier ambiance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0951e781f3a32a075e7a904bcc870b1dad86bc59eb41b70ce710ba1f59be760d"
+}

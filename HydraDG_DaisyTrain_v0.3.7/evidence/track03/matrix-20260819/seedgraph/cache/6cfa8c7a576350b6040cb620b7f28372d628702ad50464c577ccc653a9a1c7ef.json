@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6cfa8c7a576350b6040cb620b7f28372d628702ad50464c577ccc653a9a1c7ef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Wix and Squarespace, as I've heard good things about them from othe",
+      "type": "value"
+    },
+    {
+      "name": "that it includes site analytics and email marketing tools, which will be helpful",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Wix and Squarespace, as I've heard good things about them from others in my online comm",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it includes site analytics and email marketing tools, which will be helpful for my freelance bu",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9067463ccb6e3bcee5ee6f51b2cd501ec021acfe3f917ea7f6c25aaccc7f807d"
+}

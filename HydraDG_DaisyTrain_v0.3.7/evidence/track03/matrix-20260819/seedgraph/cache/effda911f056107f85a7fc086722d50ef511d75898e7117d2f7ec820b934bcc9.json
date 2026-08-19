@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "effda911f056107f85a7fc086722d50ef511d75898e7117d2f7ec820b934bcc9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "reading physical copies of magazines",
+      "type": "value"
+    },
+    {
+      "name": "to set aside Sundays to catch up on my reading, with a cup of coffee - it's beco",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "reading physical copies of magazines",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to set aside Sundays to catch up on my reading, with a cup of coffee - it's become a nice ritual for",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4518939352b2ef1843f9716a2fa39dad6495bb765f7b665f15d92b67e0f90383"
+}

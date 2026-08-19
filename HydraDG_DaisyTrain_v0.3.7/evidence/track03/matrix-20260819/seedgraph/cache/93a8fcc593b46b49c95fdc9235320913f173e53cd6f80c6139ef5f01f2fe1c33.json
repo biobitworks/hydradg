@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "93a8fcc593b46b49c95fdc9235320913f173e53cd6f80c6139ef5f01f2fe1c33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of Krampus punishing naughty children",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of Krampus punishing naughty children",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e73f093a0be2837a428db08c3036f6ead387c0b53839d0e183c4b4f5313de027"
+}

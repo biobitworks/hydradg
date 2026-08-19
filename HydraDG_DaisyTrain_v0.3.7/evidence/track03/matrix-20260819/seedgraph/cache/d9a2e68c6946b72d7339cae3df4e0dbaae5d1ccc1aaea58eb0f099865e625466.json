@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d9a2e68c6946b72d7339cae3df4e0dbaae5d1ccc1aaea58eb0f099865e625466",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a city and don't have access to clean lakes or rivers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a city and don't have access to clean lakes or rivers",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "54012a5e7fa377c0853c8c9056a6c4470ab8dedfee266c3322e039c6673c08e3"
+}

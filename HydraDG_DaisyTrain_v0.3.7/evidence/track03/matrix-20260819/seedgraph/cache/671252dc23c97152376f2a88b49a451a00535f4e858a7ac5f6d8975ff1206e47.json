@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "671252dc23c97152376f2a88b49a451a00535f4e858a7ac5f6d8975ff1206e47",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "alliteration or rhyme to create a funny phrase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "alliteration or rhyme to create a funny phrase",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f5e7f3683441985a60c65dcbb803069a9a037e5e71500f476678c9fecfc3600"
+}

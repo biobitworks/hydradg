@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ca026994f988f1684a19a4d83cc0d8868eb73e2b827d337a83e00277c00b6263",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "analytics to track my progress and stay on top of my social media goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "analytics to track my progress and stay on top of my social media goals",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "23fdeaaccdfb2ae111c0624d316410498ccc5df26edb6f0610a05c87eb83c53b"
+}

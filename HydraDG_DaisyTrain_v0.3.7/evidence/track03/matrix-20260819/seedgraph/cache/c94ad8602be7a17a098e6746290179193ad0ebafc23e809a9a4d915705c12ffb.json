@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c94ad8602be7a17a098e6746290179193ad0ebafc23e809a9a4d915705c12ffb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my coffee strong, so I've been using about 1 tablespoon of coffee for every 6 ou",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my coffee strong, so I've been using about 1 tablespoon of coffee for every 6 ounces of water, and o",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cb5c6f06eafff67ad936b31e17528a00c862d702cdee045bd038c45afad28b8c"
+}

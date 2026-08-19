@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0e56eb09492baaa9461a846a5ffc5ed1353c6b4928d12a8bc940a93542695b6a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a triangle with the wooden carving and African mask",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a triangle with the wooden carving and African mask",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "addd89344aedebf9c97b63a903d9441e37bcf922cad518272852986a5ba1c4b8"
+}

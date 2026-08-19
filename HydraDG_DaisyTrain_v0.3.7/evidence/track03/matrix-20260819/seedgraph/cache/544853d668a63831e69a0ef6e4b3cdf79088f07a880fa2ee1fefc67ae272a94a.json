@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "544853d668a63831e69a0ef6e4b3cdf79088f07a880fa2ee1fefc67ae272a94a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having different tiers, so frequent customers can unlock exclusive r",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having different tiers, so frequent customers can unlock exclusive rewards",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c1a30a355ca5b1ba8d9a35ec52cbda619b990af705cd3e263afe168d43707ed8"
+}

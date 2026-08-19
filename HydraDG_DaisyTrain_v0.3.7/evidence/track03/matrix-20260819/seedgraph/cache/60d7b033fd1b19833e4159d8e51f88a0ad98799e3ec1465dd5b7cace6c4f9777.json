@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "60d7b033fd1b19833e4159d8e51f88a0ad98799e3ec1465dd5b7cace6c4f9777",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the same balanced fertilizer, or is there something specific I should look for",
+      "type": "value"
+    },
+    {
+      "name": "for my succulents, or is there a specific type of fertilizer that's better suite",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the same balanced fertilizer, or is there something specific I should look for",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "for my succulents, or is there a specific type of fertilizer that's better suited for spider plants",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e865269df7fb557ebe553e53ca110cc5c1f09ab95877924d5fe7c1c044a6334f"
+}

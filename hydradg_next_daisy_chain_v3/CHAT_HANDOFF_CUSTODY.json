@@ -1,0 +1,34 @@
+{
+  "canonical_binding_state": "PENDING_LOCAL_PROJECT",
+  "claim_ceiling": "HANDOFF_ARTIFACTS_HASHED; CANONICAL_PROJECT_FCG_APPEND_AND_SIGNATURE_PENDING",
+  "event": "NEXT_DAISY_CHAIN_LIVE_CUSTODY_MATH_PROMPT",
+  "event_time_local": "2026-08-19T12:04:00-07:00",
+  "handoff_root_sha256": "71df2cc66a542aa22e6e69cac971cd21894a5a29a86fb1f9f4f7c6efa013df8e",
+  "local_project_fcg_append_state": "NOT_PERFORMED_IN_CHAT_RUNTIME",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "HUMAN",
+      "bytes": 383,
+      "evidence_class": "DIRECTLY_SUPPLIED_TEXT",
+      "file": "CURRENT_HUMAN_TURN.txt",
+      "file_sha256": "61ccebe8617753e8baeb732c80f754b9181016defd29e5be5a331386c382660e"
+    },
+    {
+      "actor": "AI",
+      "bytes": 23353,
+      "evidence_class": "AI_DERIVED_EXECUTION_INSTRUCTION_ARTIFACT",
+      "file": "ANTIGRAVITY_GEMINI_NEXT_DAISY_CHAIN_V3.md",
+      "file_sha256": "18a330513838db469ae0d0e25cd9fd2342b760fe7c3de7c238967cd94b642f1d"
+    }
+  ],
+  "previous_fcg_delta_file_sha256": "0e1056c15363b3ad67b7c4e8d4e3bb8f6374e773d6649860c687b7e0d644815d",
+  "previous_fcg_update_root_sha256": "0f800c80b871eed6615288ca4770dfe5bb7a53b6d39d1b5ca426829016d426ad",
+  "previous_turn_root_sha256": "279525e1f08e0b22615dea9281a079fba6f98a07dbf7d90b18fc7f300a4db64a",
+  "schema": "hydradg.chat_handoff_custody.v1",
+  "signature": {
+    "private_key_material_included": false,
+    "requested_algorithm": "Ed25519",
+    "state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION"
+  }
+}

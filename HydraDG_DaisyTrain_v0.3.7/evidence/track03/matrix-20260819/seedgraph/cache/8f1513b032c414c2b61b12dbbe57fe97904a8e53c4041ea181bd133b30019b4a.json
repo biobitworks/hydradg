@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f1513b032c414c2b61b12dbbe57fe97904a8e53c4041ea181bd133b30019b4a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my heart rate data to track my fitness progress and make changes to my workouts ",
+      "type": "value"
+    },
+    {
+      "name": "these tips, especially the part about making my goals specific and measurable",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my heart rate data to track my fitness progress and make changes to my workouts to continue making p",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these tips, especially the part about making my goals specific and measurable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e759f274bde144f8f35c186180b4c37f415627f3e36c1840ca74c41b75491c1e"
+}

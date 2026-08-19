@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "94775baeb9d85e661db7e01008f3c01a72bd3291f120671afa345c7e069b3b26",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Aulani, a Disney Resort & Spa, especially with the kids' clubs and ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Aulani, a Disney Resort & Spa, especially with the kids' clubs and water park",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d271f7c9e9a8dd2d9f5fc19dc8b19c143f12c0cae911a3374bf96ca850774468"
+}

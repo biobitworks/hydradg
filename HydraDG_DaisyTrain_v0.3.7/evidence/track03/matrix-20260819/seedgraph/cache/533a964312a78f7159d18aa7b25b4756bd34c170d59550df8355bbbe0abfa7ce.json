@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "533a964312a78f7159d18aa7b25b4756bd34c170d59550df8355bbbe0abfa7ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the sci-fi prompt about a world with no gravity",
+      "type": "value"
+    },
+    {
+      "name": "the idea of exploring the psychological effects of living in a gravity-free envi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the sci-fi prompt about a world with no gravity",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of exploring the psychological effects of living in a gravity-free environment",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "236ccc70b353e25eafd0529dcef4d16d660eb2f2939819d40f6e05d497de9ab5"
+}

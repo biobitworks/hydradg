@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f1be5702e4646e62e21d74be42384993b9709fd8a77592cfbe221c6826c56336",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Enchanted Garden theme",
+      "type": "value"
+    },
+    {
+      "name": "the flower crown station idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Enchanted Garden theme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the flower crown station idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e0a223b34529f4730b1caf78de05359876f7a5202840346feab98e0b3ff36dd1"
+}

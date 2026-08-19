@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "06c695f4f68e80f71e4806f6a729b30e094b996a57d331c4e792c8327c1f6dd5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breaking it down into smaller tasks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking it down into smaller tasks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bd6db0fbc033b748369628f1219717231e14a363a2cc33f6e5935ba81ba66d4a"
+}

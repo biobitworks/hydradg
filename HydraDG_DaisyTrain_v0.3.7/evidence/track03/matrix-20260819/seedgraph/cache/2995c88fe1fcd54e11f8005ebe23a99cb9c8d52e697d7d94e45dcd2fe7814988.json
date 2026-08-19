@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2995c88fe1fcd54e11f8005ebe23a99cb9c8d52e697d7d94e45dcd2fe7814988",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of hosting a Q&A session in my stories and creating a challenge for my ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of hosting a Q&A session in my stories and creating a challenge for my audience",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4f838e73724044facae0eb462efa8f3ca77f991b8686bbf1f8a75c507e8906ee"
+}

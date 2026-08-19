@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "18d21091ff0a7d7ba1eabf1057d7076fc963d11a273f765f27d187d366972737",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how they release new episodes on a weekly basis, it makes it feel more like trad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how they release new episodes on a weekly basis, it makes it feel more like traditional TV",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f88e0969e00033fed12b6e87a220968a8a12606b822070283be7a6f983a49af"
+}

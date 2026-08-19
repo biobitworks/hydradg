@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4bc3bca4f7ec97dcd84dc7d9f7ef4367e99ffcc95fab6b6e87942f807c94818c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Hero8 Black to capture photos during whitewater rafting as well, or is it mo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Hero8 Black to capture photos during whitewater rafting as well, or is it more geared towards vi",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "846c3d97d6de050e7d1bac504db2ccbe675eb92fd9e51cbbc66908aeed7391f7"
+}

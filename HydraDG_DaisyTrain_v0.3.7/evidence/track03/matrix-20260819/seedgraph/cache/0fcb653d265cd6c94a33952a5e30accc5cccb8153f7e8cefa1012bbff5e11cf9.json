@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0fcb653d265cd6c94a33952a5e30accc5cccb8153f7e8cefa1012bbff5e11cf9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a simple, classic design that won't draw attention away from my boot",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a simple, classic design that won't draw attention away from my boots",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a17695f455f47d51ed92951fbb7466703fe4ee8aeebb7cb41a460ac3575a9d49"
+}

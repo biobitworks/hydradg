@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b5d501546d7ae895ec8c7a82b4224f05a2e9e24d2f761ff37cf5808efdb2fef3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a creamy sauce and the addition of heavy cream sounds rich and indul",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a creamy sauce and the addition of heavy cream sounds rich and indulgent",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "61b9b3115ff060273285796c6486f40f371e327c8f9060680e5b8fa039b74897"
+}

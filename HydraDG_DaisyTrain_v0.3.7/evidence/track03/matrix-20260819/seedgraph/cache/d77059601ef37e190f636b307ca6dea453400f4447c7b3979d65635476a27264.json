@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d77059601ef37e190f636b307ca6dea453400f4447c7b3979d65635476a27264",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it to drive me forward, to push myself to be better",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it to drive me forward, to push myself to be better",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7704a49bd27bbb1fda90385bbd458b8bc8ec6f4489b325db999dae2aeddc228e"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "66c9e6ae6056f4a76da97799cfbe6a36d87362a1220d4cd09835cacce4e6bf29",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "artificial light to supplement the sunlight for Nepenthes growth",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "artificial light to supplement the sunlight for Nepenthes growth",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3e9c9b4d42e720e07c089b5a6be465c504f0b38419b64873278fc643501a8a63"
+}

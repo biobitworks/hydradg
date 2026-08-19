@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "009fdd7720d4590196b191ba624da39f07dce8f8ec68dd7b0bacba4f1fbb1a33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a forEach method in the following lines",
+      "type": "value"
+    },
+    {
+      "name": "a forEach loop to go through each object in the array and add the event listener",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a forEach method in the following lines",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a forEach loop to go through each object in the array and add the event listener to the telInput ele",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6fba58a3f408dfd2a92a47bfa1b23bd8a4f57f3ea06c5abd3b3546dae27e1986"
+}

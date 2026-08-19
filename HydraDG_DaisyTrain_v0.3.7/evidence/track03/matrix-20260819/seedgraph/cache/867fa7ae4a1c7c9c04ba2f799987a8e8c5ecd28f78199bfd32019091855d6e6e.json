@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "867fa7ae4a1c7c9c04ba2f799987a8e8c5ecd28f78199bfd32019091855d6e6e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh chicken breast",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh chicken breast",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c751accdde672669540f1879e96c6ece89defc36e492e48e87cd6c06ff985575"
+}

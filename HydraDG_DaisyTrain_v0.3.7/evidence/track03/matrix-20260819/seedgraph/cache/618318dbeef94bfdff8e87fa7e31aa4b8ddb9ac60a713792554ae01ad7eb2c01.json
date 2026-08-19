@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "618318dbeef94bfdff8e87fa7e31aa4b8ddb9ac60a713792554ae01ad7eb2c01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a twin-themed gift basket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a twin-themed gift basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5e58be1619cb4ce6e6134c7f9e302c06d90fe2add974e6a2c860458c2f8bf1f5"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e144e58bd77e28c901e213208ecb746f9f3d49f0f92958bdf29fbe7905562f45",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a pre-bedtime routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a pre-bedtime routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d631d573d83889b3dc1646d51d64c15a4cea77f42c1b8daa81c89dcb4824badd"
+}

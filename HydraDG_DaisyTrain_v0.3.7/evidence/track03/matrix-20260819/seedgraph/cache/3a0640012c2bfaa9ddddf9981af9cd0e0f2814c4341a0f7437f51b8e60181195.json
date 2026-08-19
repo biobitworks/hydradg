@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3a0640012c2bfaa9ddddf9981af9cd0e0f2814c4341a0f7437f51b8e60181195",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "regular potting soil for both plants or do I need to get a special type of soil",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "regular potting soil for both plants or do I need to get a special type of soil",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d56ec4eb087bd21589c319f49e7cb9049a34568ab9e62c199ce45e39b39d95f2"
+}

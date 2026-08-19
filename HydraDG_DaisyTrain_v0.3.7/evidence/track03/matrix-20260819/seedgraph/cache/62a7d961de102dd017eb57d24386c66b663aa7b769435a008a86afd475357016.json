@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "62a7d961de102dd017eb57d24386c66b663aa7b769435a008a86afd475357016",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of placing a large planter or a statement plant on a plant stand near t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of placing a large planter or a statement plant on a plant stand near the window to create",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c6d974c93335dd91089e89470b37279010e0b3e5cd16d270ffae7e69ed2dd4c1"
+}

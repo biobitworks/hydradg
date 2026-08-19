@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9ca230116a0fcde7aea00b5cc98c280f5da75dbea80b254d65f700044bd09759",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized baby blanket with Lucas' name on it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized baby blanket with Lucas' name on it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "285d80fc37ded5ae6595077f045701cb26d42e53da491835fffa39e71a6ed928"
+}

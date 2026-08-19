@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "569170963153d9c251c21aa7ce512be4c3142c6a4c8ee66c0642fd0895df7dde",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the challenge of navigating through technical sections, but I also enjoy the flo",
+      "type": "value"
+    },
+    {
+      "name": "to ride regularly, but I'm always looking to explore new ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the challenge of navigating through technical sections, but I also enjoy the flowy parts where I can",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to ride regularly, but I'm always looking to explore new ones",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "14131f04afce47271830521cf3534ca6eb2e3488d0a7a75643acaa43ec34e598"
+}

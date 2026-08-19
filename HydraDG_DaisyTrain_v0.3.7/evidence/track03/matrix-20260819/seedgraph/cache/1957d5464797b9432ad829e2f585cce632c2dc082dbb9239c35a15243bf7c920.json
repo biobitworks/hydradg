@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1957d5464797b9432ad829e2f585cce632c2dc082dbb9239c35a15243bf7c920",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "your approach of recording at home first and then taking your songs to a studio",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "your approach of recording at home first and then taking your songs to a studio",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "900f7d1d62fd19a2646c2dc192bd8006192ad601f8531cf9efe76fea2ad9fd55"
+}

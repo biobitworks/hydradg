@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "64d4fbd07e0e33138db113f7d9ee2695968563fc4aab8a3c440edda6c92ee25c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of learning a new language",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of learning a new language",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aef9e6c7a68d709a803cb961c1def3bc0ae27bf92697d208ea7e45049fb4c210"
+}

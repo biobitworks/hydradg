@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5aeec66e7eb246f6080ecdc3cb9cf11f8dcd0300ce6502fcc2df2c6699a200bc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gamification and the customization options sound really useful",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gamification and the customization options sound really useful",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a6933e25982e4dcdfa9f40356c9ae2533dd8a75c378624f9e2f6ddc964c07fd5"
+}

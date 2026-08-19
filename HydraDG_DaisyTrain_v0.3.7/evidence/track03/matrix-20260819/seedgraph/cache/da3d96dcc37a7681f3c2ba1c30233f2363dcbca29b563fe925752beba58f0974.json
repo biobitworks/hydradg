@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "da3d96dcc37a7681f3c2ba1c30233f2363dcbca29b563fe925752beba58f0974",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of them causing radiation poisoning",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of them causing radiation poisoning",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "96647444c3858379fd490db1fd9a30a2f027e9aed24239e5a7ae84af31faff62"
+}

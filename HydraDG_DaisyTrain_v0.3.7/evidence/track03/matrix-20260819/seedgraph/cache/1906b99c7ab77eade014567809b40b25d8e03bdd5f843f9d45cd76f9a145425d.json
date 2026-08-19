@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1906b99c7ab77eade014567809b40b25d8e03bdd5f843f9d45cd76f9a145425d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Ecobee Room Sensors with my existing smart home setup, like my Amazon Echo a",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Ecobee Room Sensors with my existing smart home setup, like my Amazon Echo and smart plugs",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "66c65dcbf6a0335633c2632cd46f1e6bcdf4c7fbbbc2f709572a2ff5884344f6"
+}

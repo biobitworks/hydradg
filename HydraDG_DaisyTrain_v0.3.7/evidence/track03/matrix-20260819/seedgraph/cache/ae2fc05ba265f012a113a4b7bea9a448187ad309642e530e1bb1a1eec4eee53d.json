@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ae2fc05ba265f012a113a4b7bea9a448187ad309642e530e1bb1a1eec4eee53d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's durable and water-resistant, and it seems to have enough space for my ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's durable and water-resistant, and it seems to have enough space for my mat, blocks, and str",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e5c31b6ed95e635780978beb9652327e492dfc1ab221131f67bb885742790cb"
+}

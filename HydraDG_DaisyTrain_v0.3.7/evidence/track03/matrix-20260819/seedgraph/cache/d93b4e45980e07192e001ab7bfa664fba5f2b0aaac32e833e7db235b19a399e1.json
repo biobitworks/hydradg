@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "d93b4e45980e07192e001ab7bfa664fba5f2b0aaac32e833e7db235b19a399e1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a dry rub with a mix of salt, pepper, garlic powder, and paprika",
+      "type": "value"
+    },
+    {
+      "name": "to keep things simple, so I use a dry rub with a mix of salt, pepper, garlic pow",
+      "type": "value"
+    },
+    {
+      "name": "to use a water pan in my smoker to add moisture and help keep the brisket tender",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a dry rub with a mix of salt, pepper, garlic powder, and paprika",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to keep things simple, so I use a dry rub with a mix of salt, pepper, garlic powder, and paprika",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to use a water pan in my smoker to add moisture and help keep the brisket tender",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "876700f6fd0c74a1a5477c43fb05ffa5ef31c59609bc6433c90d4b40b41b30c8"
+}

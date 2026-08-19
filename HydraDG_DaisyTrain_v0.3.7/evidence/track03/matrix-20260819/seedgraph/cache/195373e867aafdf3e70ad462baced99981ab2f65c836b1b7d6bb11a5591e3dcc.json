@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "195373e867aafdf3e70ad462baced99981ab2f65c836b1b7d6bb11a5591e3dcc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a roux and coconut milk",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a roux and coconut milk",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2722f70e40d623c13c628e41658577b1c58d639479bb216acf19a48b6ae89779"
+}

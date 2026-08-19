@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dbba7212a2fbac6d693a46787f610a5b26c91d31ecdb16595d78bec97ba8e2b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "New York City, and I'm looking to join an adult co-ed indoor league, probably th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "New York City, and I'm looking to join an adult co-ed indoor league, probably through the local comm",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "87e3d3021a8f019070875483e1d2f3bf30eea74eda75673ebe343866a56ab252"
+}

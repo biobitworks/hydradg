@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0fcc4f06f8a1b31d5c09e4a1dbb3049ab60355db1111150386eb38d15b256602",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Tom Bihn Cache sleeve, but I'm not sure if it's worth the $40-$50 price tag",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Tom Bihn Cache sleeve, but I'm not sure if it's worth the $40-$50 price tag",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a78d7e3a35e07261672f75c342cf6bc66f832ea3de261bc37453bee412ad217b"
+}

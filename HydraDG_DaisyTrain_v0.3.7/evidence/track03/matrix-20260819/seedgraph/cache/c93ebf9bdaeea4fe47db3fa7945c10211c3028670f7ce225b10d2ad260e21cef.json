@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c93ebf9bdaeea4fe47db3fa7945c10211c3028670f7ce225b10d2ad260e21cef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of writing things down by hand and being able to flip through the pages",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of writing things down by hand and being able to flip through the pages to see my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "37fc1630f8708a5cb41e4bf0c93d305db6acc4d12d4892a0104f2c44834afe28"
+}

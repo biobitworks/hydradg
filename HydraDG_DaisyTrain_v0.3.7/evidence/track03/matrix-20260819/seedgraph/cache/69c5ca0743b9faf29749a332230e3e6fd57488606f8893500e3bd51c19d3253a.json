@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "69c5ca0743b9faf29749a332230e3e6fd57488606f8893500e3bd51c19d3253a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "artificial lighting for my terrarium plants in case I don't have enough sunlight",
+      "type": "value"
+    },
+    {
+      "name": "tap water to water my terrarium plants or do I need to use distilled or filtered",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "artificial lighting for my terrarium plants in case I don't have enough sunlight in my home",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "tap water to water my terrarium plants or do I need to use distilled or filtered water",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e46ac0bdbec2270b0a929fedf43a81a1ad9a973d256a9209fbe680734926424f"
+}

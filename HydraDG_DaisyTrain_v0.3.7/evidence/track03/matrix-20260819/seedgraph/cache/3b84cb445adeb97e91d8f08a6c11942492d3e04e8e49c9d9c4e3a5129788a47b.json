@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3b84cb445adeb97e91d8f08a6c11942492d3e04e8e49c9d9c4e3a5129788a47b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the classic tomato sauce idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the classic tomato sauce idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5c62f540a6a7b47a48c891966bccf1a6009c3114c6599565df92f9fd20085728"
+}

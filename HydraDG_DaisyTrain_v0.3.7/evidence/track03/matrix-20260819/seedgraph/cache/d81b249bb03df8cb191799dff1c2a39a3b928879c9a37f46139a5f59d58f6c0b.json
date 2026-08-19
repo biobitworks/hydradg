@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d81b249bb03df8cb191799dff1c2a39a3b928879c9a37f46139a5f59d58f6c0b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggested schedule, but I'm a bit concerned about leaving only 2 hours to fi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggested schedule, but I'm a bit concerned about leaving only 2 hours to finish the report in t",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2b464ca3b90e86a97a72b6cda01a4bd5a8f8c2f2eaee75c3b4e4d1b07074edc"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3ea7046aea91e0759d2a2df0d17e5cb6950343bd5ecd2fc4d1de87b449c0000",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to plan my meals too",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to plan my meals too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "96226fff9d3c5d87bf06ab99b2fbbca3fab8c83fd048c070340f0ab32a22001c"
+}

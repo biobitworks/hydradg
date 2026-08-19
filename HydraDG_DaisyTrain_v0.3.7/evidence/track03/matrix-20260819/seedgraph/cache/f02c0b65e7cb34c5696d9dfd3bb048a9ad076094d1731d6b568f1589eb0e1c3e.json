@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "f02c0b65e7cb34c5696d9dfd3bb048a9ad076094d1731d6b568f1589eb0e1c3e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of oversized hoodies and soft tees",
+      "type": "value"
+    },
+    {
+      "name": "the layered look idea",
+      "type": "value"
+    },
+    {
+      "name": "those suggestions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of oversized hoodies and soft tees",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the layered look idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f1c08b03db97db193459dc71edf2e82e60ed2e59b0eaceb3b792a40a246c5354"
+}

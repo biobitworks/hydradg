@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c61106734c5c8eaf5cb7968ad32f3fcf83d15a2d95fe7285fb418e356096499",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my portable power bank to charge my Samsung Galaxy S22 Ultra smartphone as well",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my portable power bank to charge my Samsung Galaxy S22 Ultra smartphone as well",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9017704ecf62da10459ed77385ffcb0838549c05704cd2b14b5c7470d8c8b65c"
+}

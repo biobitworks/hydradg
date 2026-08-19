@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "123f9e1023ff373611f1ed6abfa88d0358339d0ead3db8452383e34f2f60ef9f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Instagram's \"Question\" sticker to ask my followers questions and encourage them ",
+      "type": "value"
+    },
+    {
+      "name": "the mix of content themes and post types",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Instagram's \"Question\" sticker to ask my followers questions and encourage them to engage with me",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the mix of content themes and post types",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b41d3001cf278a62ba99da40a264da91292f99893d1698e49d49f183212f2041"
+}

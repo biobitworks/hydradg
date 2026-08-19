@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2b323aabbee46a12721ad099428d2177abc80e5e2e90027b10b7bf92be0e695e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template, but I think I need to plan my gym sessions too",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template, but I think I need to plan my gym sessions too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "295f0d8177380e7898b7fd63b7988b05e459146a9d2b07b3f692306103489bf9"
+}

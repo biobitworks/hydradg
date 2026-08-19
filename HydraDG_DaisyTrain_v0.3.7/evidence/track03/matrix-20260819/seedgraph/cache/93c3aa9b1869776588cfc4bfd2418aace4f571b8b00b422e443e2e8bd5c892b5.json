@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "93c3aa9b1869776588cfc4bfd2418aace4f571b8b00b422e443e2e8bd5c892b5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "both of those pitches, can you make another one that combines those ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "both of those pitches, can you make another one that combines those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d42a3a2d2279f23f5627b371a868a77921431b68815b9cf1037f215e29d39358"
+}

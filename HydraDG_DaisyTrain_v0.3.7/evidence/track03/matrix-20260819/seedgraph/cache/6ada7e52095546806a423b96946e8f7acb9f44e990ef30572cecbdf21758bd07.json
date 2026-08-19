@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ada7e52095546806a423b96946e8f7acb9f44e990ef30572cecbdf21758bd07",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Mango Habanero Mule and the Mango Chipotle Mojito",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Mango Habanero Mule and the Mango Chipotle Mojito",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "adf5e7e67b01a773bc04d2fd06bb7771d188ec0b41cdfca5156eb277c48dc213"
+}

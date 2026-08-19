@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "78f777d547b442ee69f2147cb2dde9f7830c651c5d22c54b47156de925c063df",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suburbs of a mid-sized city",
+      "type": "value"
+    },
+    {
+      "name": "routes with a mix of flat and hilly terrain, nothing too extreme",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suburbs of a mid-sized city",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "routes with a mix of flat and hilly terrain, nothing too extreme",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1038d332caae48100116ecd5606d3436db3862c1e3e9e3b819524bbd20b6bc25"
+}

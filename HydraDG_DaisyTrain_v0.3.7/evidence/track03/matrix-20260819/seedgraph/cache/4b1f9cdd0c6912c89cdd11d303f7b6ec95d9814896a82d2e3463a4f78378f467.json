@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4b1f9cdd0c6912c89cdd11d303f7b6ec95d9814896a82d2e3463a4f78378f467",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the modern design and the full-color display sounds really appealing",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the modern design and the full-color display sounds really appealing",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5adec33cae9c7b0e10845762af559e6bea52e317435f13a2186ed700f8f01a67"
+}

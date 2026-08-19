@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ddf804074a0cdc62b8bf93f4c941fa6f4b30f714428bdb5ca977ca6110caf21",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of designating a launching pad and establishing a routine",
+      "type": "value"
+    },
+    {
+      "name": "those ideas for retracing my steps, thanks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating a launching pad and establishing a routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas for retracing my steps, thanks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1f9f778f63999635d2509c91552652dae8f22b62b0a9cfcc5e17295decc8d56a"
+}

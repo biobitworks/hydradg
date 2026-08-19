@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6783773e0866035dd6b314f0448e92ef9f9b9e51f2bcbea0ed05aa2be881a7fa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Traditional Elegance style",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Traditional Elegance style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "85acd9523571c20509e7f59593be4d9fcab4ead397fe235fd926553cd13cd456"
+}

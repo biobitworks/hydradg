@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ee689e044fae73e0ded40a65ef0cff2ed9db67e0f24e02e00315dd7246a09b53",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa bowl idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa bowl idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9253238253952b8f005272aa51dee97444826e2ab8e812b69ee0f6e664d0a809"
+}

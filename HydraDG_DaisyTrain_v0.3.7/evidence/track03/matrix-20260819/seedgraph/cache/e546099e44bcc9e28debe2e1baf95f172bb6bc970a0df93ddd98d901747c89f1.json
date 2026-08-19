@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e546099e44bcc9e28debe2e1baf95f172bb6bc970a0df93ddd98d901747c89f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, especially Taboo and What Do You Meme",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, especially Taboo and What Do You Meme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5d5bd0437872ad94c2e0e58c169ea203469dcd844c868e7beeea07289dacd3f3"
+}

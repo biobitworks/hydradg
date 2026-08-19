@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "34ff9186a4df724fcf0dd9b7a61a15e3ac1550ec020536092cfd9c89bb6b7855",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of designating zones on my desk",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having separate sections within my inbox and outbox for different ty",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating zones on my desk",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having separate sections within my inbox and outbox for different types of tasks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75397ad115f5ae47564765e70db507d41319563578adcf0b2d00626304be2267"
+}

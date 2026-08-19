@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "37e3a30e2e563dc46f80d05b182ef787d3aba4720f6e4723515c606c569783f6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and how do I find relevant ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and how do I find relevant ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f3a103a20cffce820cc588f8577f43082d1267dd57c8b95300b8745f82abae63"
+}

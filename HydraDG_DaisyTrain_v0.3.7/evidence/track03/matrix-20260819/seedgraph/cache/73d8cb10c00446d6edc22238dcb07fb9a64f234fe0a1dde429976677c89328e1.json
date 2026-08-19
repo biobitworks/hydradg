@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "73d8cb10c00446d6edc22238dcb07fb9a64f234fe0a1dde429976677c89328e1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to stay one step ahead to help you plan an amazing trip",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to stay one step ahead to help you plan an amazing trip",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "42a3536358fc6cf8b79a5619ba4fd34135f374c2a762a6c81ca160e8768c2573"
+}

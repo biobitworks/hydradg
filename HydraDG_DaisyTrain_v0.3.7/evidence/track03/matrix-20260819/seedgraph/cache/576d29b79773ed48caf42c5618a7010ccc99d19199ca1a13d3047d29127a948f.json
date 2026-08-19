@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "576d29b79773ed48caf42c5618a7010ccc99d19199ca1a13d3047d29127a948f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that I can fill it with treats or peanut butter to keep him occupied",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that I can fill it with treats or peanut butter to keep him occupied",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3b3ae688b4ca7960c8a798b4fce3efa8055c406e9c5e8a3f8d453b18dd1db416"
+}

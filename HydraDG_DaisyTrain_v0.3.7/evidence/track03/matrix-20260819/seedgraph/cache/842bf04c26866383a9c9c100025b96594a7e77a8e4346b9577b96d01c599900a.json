@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "842bf04c26866383a9c9c100025b96594a7e77a8e4346b9577b96d01c599900a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "some of these ideas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a shared gift, especially the gourmet gift basket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "some of these ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a shared gift, especially the gourmet gift basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03a8c0d47b4fc9911a28249a6784334b5ae62449c908e0d22f678945ccdfb656"
+}

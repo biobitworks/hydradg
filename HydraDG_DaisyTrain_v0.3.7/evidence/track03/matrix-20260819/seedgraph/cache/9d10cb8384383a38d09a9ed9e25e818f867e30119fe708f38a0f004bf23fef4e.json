@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9d10cb8384383a38d09a9ed9e25e818f867e30119fe708f38a0f004bf23fef4e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Quinoa and Black Bean Salad idea, as I actually made something similar recen",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Quinoa and Black Bean Salad idea, as I actually made something similar recently",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "244d12d5addb2dd134cfe079a8b6e5eb19ee6dc49208e0bd0d7b370fe8b0e4c0"
+}

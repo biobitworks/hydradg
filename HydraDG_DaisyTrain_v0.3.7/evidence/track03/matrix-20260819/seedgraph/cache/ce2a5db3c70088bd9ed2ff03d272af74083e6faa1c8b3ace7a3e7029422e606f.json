@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce2a5db3c70088bd9ed2ff03d272af74083e6faa1c8b3ace7a3e7029422e606f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's plant-based and biodegradable",
+      "type": "value"
+    },
+    {
+      "name": "that it's a brand that's committed to sustainability",
+      "type": "value"
+    },
+    {
+      "name": "the idea of reducing my plastic waste",
+      "type": "value"
+    },
+    {
+      "name": "that they're insulated and can keep drinks hot or cold for hours",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's plant-based and biodegradable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it's a brand that's committed to sustainability",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of reducing my plastic waste",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that they're insulated and can keep drinks hot or cold for hours",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3f5673556bffc4321f1b40d4ab84cb2a7a691fcc50d92a829f357d48299d58fe"
+}

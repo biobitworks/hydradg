@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "56bef5c680b671f7e9ac94cb7b26f32b1c9edad1b67cab899a060b79f08632bd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the rooftop bar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the rooftop bar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "482ec80334bdcd246118776c6262b2fc32e2d6129321bf2676469d87e27790ca"
+}

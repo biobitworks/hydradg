@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "04edb11599343abf59d4044e5dc0547f6ae6d0580c236a17acb8d5fde6a5ecaf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "any of these tools to schedule my social media posts in advance",
+      "type": "value"
+    },
+    {
+      "name": "a different tool for analytics and still use Hootsuite for scheduling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "any of these tools to schedule my social media posts in advance",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a different tool for analytics and still use Hootsuite for scheduling",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0437629472972fa08a6a993312ef8178f2dc063726e3f46755f84ddde4b16302"
+}

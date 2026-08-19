@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a2ce2860f63a270e7494282f85fa530b0c54dcb00a21536e7eacfac297355d80",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to take highways and interstates to cover the long distance efficiently",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to take highways and interstates to cover the long distance efficiently",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "78ee709a39fbbd1cf9c12d9cb5ec268ca85b1bb8d5dfe3a45e73aff97337a338"
+}

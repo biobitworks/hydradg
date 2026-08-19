@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "cbde9cbcea2a17ca80109326f29f774e715a80da0e5f4d05a10fd4a6115aa619",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of building good habits and making small changes to my daily routine",
+      "type": "value"
+    },
+    {
+      "name": "the idea of gamifying my reading habit and earning rewards",
+      "type": "value"
+    },
+    {
+      "name": "the idea of earning rewards and seeing my progress bar fill up, so I'll try to m",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of building good habits and making small changes to my daily routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of gamifying my reading habit and earning rewards",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of earning rewards and seeing my progress bar fill up, so I'll try to make it a habit to lo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b78cf312a0c0d8bfe7ebfbe371c299f20bb93928875ada4e328fa6b136c974b5"
+}

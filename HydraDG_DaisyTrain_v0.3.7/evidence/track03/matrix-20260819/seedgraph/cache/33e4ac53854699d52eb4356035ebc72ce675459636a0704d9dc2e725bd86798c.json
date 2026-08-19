@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "33e4ac53854699d52eb4356035ebc72ce675459636a0704d9dc2e725bd86798c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my favorite pen and a journal that inspires me to stay creative",
+      "type": "value"
+    },
+    {
+      "name": "or keep them more general",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my favorite pen and a journal that inspires me to stay creative",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "or keep them more general",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "97dacb0381ff56e4cba151900f62ebcca81a7c23723a17c2452b9ccc71d369b4"
+}

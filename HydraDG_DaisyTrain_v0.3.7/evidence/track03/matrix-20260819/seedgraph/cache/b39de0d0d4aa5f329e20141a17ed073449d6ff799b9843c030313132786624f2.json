@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b39de0d0d4aa5f329e20141a17ed073449d6ff799b9843c030313132786624f2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a dry climate",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a dry climate",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "94968a04939aa70d070935be2529207483e7aa7cb7db0e78c9a10f47e00cdef2"
+}

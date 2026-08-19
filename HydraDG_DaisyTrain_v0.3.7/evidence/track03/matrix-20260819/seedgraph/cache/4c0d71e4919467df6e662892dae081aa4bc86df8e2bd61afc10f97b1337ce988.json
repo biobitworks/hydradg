@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c0d71e4919467df6e662892dae081aa4bc86df8e2bd61afc10f97b1337ce988",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a community college in Texas in the US",
+      "type": "value"
+    },
+    {
+      "name": "a community college in Texas and am using Share GPT for professional development",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a community college in Texas in the US",
+      "polarity": "affirmed",
+      "predicate": "works_at",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a community college in Texas and am using Share GPT for professional development activities in the D",
+      "polarity": "affirmed",
+      "predicate": "works_at",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1517d3b2aeed8bd303b27fdde556c1dc386f739f41f0aef39d2a3c35a74053ef"
+}

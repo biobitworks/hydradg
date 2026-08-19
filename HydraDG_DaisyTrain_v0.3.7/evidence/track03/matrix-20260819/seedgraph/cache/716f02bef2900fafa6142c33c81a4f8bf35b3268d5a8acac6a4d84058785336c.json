@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "716f02bef2900fafa6142c33c81a4f8bf35b3268d5a8acac6a4d84058785336c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the UPPAbaby VISTA, but I'm worried about the price tag",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the UPPAbaby VISTA, but I'm worried about the price tag",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3bf1ff00885024f16b7defc8768763523a54891a7a3f7b00c74a42540624dd7b"
+}

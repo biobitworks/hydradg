@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3a1e05c2eabdebb1fe6d7df2672999369e4537861a5d92af58cbc073f22bfd32",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some ambient lighting to the space",
+      "type": "value"
+    },
+    {
+      "name": "the idea of being able to control the lighting remotely and schedule scenes, eve",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some ambient lighting to the space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to control the lighting remotely and schedule scenes, even if it's not a full",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "35521b6ff7765d52c0f0fb62dbaa4c9f3b0ee974701469a6466980c121b954a0"
+}

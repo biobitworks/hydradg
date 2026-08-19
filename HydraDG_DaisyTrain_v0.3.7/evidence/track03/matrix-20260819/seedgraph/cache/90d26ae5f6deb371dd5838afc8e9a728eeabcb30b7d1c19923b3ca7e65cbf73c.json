@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "90d26ae5f6deb371dd5838afc8e9a728eeabcb30b7d1c19923b3ca7e65cbf73c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's durable, easy to clean, and sustainable",
+      "type": "value"
+    },
+    {
+      "name": "the idea of keeping it concise and elegant, and it fits well with their modern a",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's durable, easy to clean, and sustainable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of keeping it concise and elegant, and it fits well with their modern and minimalist style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c0e786112fc0a86725485bed56765c05efcffcd71a8c7215f47357e364c56c99"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "486f27543d2aa5fb348c3afd8e6c21fc3823e919da8efbc94465cf94bcf06891",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to compare it to a house",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to compare it to a house",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "26c7ffd814aefb6dc674166b40403f48f8a51d121e5fdd2398004dff5fab15bc"
+}

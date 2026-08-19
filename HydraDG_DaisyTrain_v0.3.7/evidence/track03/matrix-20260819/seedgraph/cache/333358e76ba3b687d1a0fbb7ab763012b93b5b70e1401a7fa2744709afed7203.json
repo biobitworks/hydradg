@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "333358e76ba3b687d1a0fbb7ab763012b93b5b70e1401a7fa2744709afed7203",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"Touch Once\" system and a \"Landing Strip\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"Touch Once\" system and a \"Landing Strip\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "53ad757dc72d0fc67f87eb6dcf55fdf228a313944ea3b13d27aecdf61f9a1f42"
+}

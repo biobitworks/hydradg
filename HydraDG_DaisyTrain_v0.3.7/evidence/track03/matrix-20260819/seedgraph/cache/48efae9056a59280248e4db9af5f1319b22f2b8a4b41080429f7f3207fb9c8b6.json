@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "48efae9056a59280248e4db9af5f1319b22f2b8a4b41080429f7f3207fb9c8b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a hands-on station, where attendees can interact with our new",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a hands-on station, where attendees can interact with our new product",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f0790e63b7551a47b786cd003316ddc13e8e1125c539ffc597cec0a09fed7e42"
+}

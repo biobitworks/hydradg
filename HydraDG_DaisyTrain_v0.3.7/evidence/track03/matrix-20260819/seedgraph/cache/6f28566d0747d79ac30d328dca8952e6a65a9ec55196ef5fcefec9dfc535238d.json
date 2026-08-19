@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6f28566d0747d79ac30d328dca8952e6a65a9ec55196ef5fcefec9dfc535238d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a quilled border for my journal pages",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a quilled border for my journal pages",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f9b2b883e7c473a0177f015f9656a6bbe11163ca89d1cbd53094aa8f386c7616"
+}

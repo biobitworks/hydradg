@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "ea2c16fd40b9675f73798ece71d8cb49b780c9d662214540554b593d9d66c157",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the phone",
+      "type": "value"
+    },
+    {
+      "name": "the Xiaomi 13 so much, then I\u2019d be happy to tell you what\u2019s so great about it",
+      "type": "value"
+    },
+    {
+      "name": "the Xiaomi 13: phones that are better than it, aren\u2019t as small as it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the phone",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Xiaomi 13 so much, then I\u2019d be happy to tell you what\u2019s so great about it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Xiaomi 13: phones that are better than it, aren\u2019t as small as it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33f940b1058f31eb0f659f0ad272e99d61e6abb0396d865fb68db3930ac18cce"
+}

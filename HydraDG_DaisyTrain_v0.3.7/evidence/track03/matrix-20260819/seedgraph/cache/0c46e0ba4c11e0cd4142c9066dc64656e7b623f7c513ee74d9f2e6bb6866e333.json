@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c46e0ba4c11e0cd4142c9066dc64656e7b623f7c513ee74d9f2e6bb6866e333",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a digital app to help me generate meal ideas and make grocery",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a digital app to help me generate meal ideas and make grocery lists, but I also l",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0424b27834d7dd11e6f0e5c84195aac141bed119913bc82b7d156aef2c65e253"
+}

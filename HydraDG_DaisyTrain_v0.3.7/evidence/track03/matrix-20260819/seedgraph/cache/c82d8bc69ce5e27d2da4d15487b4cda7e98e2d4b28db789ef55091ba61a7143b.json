@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c82d8bc69ce5e27d2da4d15487b4cda7e98e2d4b28db789ef55091ba61a7143b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Herby Delight and Indian-Style popcorn ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Herby Delight and Indian-Style popcorn ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f60487f343663393b102a1d0b7d2e6c7edf1ea4a4527ea015dbdda7ff5f8b11e"
+}

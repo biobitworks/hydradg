@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "7ec679beb4eab1bc07e9572b82e29f80c864b017f66a02c4f98a1fea2d30e9cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the spreadsheet to track my progress towards a specific reward, like the free dr",
+      "type": "value"
+    },
+    {
+      "name": "the template",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using conditional formatting",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the spreadsheet to track my progress towards a specific reward, like the free drink at The Daily Gri",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the template",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using conditional formatting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "383ad251f20536b08d480c22e370bc4d1fe5f79e0d61c4f5909a7f71d90b5e19"
+}

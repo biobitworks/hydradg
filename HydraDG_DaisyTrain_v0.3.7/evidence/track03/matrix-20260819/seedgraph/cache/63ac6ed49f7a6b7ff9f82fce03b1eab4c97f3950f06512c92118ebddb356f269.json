@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "63ac6ed49f7a6b7ff9f82fce03b1eab4c97f3950f06512c92118ebddb356f269",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Layout 1, but I'm not sure about the floor lamp",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Layout 1, but I'm not sure about the floor lamp",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a076783db6cf09aaab2337234f0d42ff0dc0dc22fa35008ba5a9d988b6297ce"
+}

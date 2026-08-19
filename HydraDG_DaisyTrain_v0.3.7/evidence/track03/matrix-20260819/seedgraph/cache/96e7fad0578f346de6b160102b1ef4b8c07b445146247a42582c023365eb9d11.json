@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "96e7fad0578f346de6b160102b1ef4b8c07b445146247a42582c023365eb9d11",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"question\" sticker to ask my followers questions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"question\" sticker to ask my followers questions",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8f3857523fdf2e05e04a92370d70f932d5ff5dcc1290b40c5d5a3ef46de578fe"
+}

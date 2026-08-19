@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5436ff94ea852da7d7ad3766d7525ec66a0059bf6b3f8696bc1a042f03f3a473",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the chickpea and spinach tagine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the chickpea and spinach tagine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8f54794ee8df1832f81eccc79061e3db1a9692a0defeb8a975778d6b5d7c9e74"
+}

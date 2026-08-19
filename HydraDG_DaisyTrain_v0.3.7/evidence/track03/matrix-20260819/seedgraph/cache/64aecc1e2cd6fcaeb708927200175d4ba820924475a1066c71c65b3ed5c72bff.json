@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "64aecc1e2cd6fcaeb708927200175d4ba820924475a1066c71c65b3ed5c72bff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "It When You Sleep, for You Are So Beautiful yet So Unaware of It,\" was released ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "It When You Sleep, for You Are So Beautiful yet So Unaware of It,\" was released in 2016 and debuted",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9c1934657db74796440849f146dbaa86b5c6eb72b53530125bbd75a6eb8823dc"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "295a6ee2e94d788891f777482e26eeba5e31a7b8d3c13dc6ac2cffcdae262a39",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of building and customizing locomotives, and the dynamic board sounds i",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of building and customizing locomotives, and the dynamic board sounds interesting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b30441f4bc1596fc087376f4bd675b6fad1250132ac18fd93cb9aac4a4572e7f"
+}

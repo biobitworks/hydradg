@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a59265aa4dff25199c50123674f7695273c22f41ca01ac398c7fe4d33847eba0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a spa day or massage",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a spa day or massage",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "48393aa87c43aa997de0df80f0409ffc4e204eef34530f9684a781b240b86189"
+}

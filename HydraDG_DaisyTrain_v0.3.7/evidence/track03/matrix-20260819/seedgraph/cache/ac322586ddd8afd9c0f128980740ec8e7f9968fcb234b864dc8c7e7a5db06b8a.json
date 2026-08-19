@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac322586ddd8afd9c0f128980740ec8e7f9968fcb234b864dc8c7e7a5db06b8a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using leftovers for tacos, salads, or rice bowls",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using leftovers for tacos, salads, or rice bowls",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9586ed219f5625b8a63acd5291e3a23d74858834d0b24b7092e7c72ee3cfcd1d"
+}

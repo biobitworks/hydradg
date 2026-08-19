@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fa3b93ceff929fafdfc43ff246a5ce4b568ef48fe99f0b1d08bec539b28f3f87",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the structure, but I think I need to add another category, maybe \"Asylum\" under ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the structure, but I think I need to add another category, maybe \"Asylum\" under the Immigration fold",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c96a1521b1c6ea0f683f07e0e9796fb34f46960935424e00fcbac6d99eb64811"
+}

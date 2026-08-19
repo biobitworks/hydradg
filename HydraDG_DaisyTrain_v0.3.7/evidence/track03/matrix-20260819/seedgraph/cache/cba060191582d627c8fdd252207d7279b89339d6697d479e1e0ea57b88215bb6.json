@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cba060191582d627c8fdd252207d7279b89339d6697d479e1e0ea57b88215bb6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to save my weekends for local birding trips",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to save my weekends for local birding trips",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1442fb863319e9a5ca908fc6be1d2061217f264035fa78b6252413cf66eadbf4"
+}

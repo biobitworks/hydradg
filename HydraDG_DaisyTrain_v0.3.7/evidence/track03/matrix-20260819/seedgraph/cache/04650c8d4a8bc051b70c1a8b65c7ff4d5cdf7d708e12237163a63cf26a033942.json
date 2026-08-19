@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "04650c8d4a8bc051b70c1a8b65c7ff4d5cdf7d708e12237163a63cf26a033942",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Mediterranean and Indian-Inspired options",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Mediterranean and Indian-Inspired options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6d2c6016d58a1ac47b1480c80700e188ca3e74926916e1e590298fdfd7c37cc1"
+}

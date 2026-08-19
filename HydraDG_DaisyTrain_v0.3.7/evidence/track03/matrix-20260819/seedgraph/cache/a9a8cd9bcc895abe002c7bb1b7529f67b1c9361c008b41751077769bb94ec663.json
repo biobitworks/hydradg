@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a9a8cd9bcc895abe002c7bb1b7529f67b1c9361c008b41751077769bb94ec663",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of batching similar content together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of batching similar content together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c8c048bb25080c3b44a8df7499eac19bba13abfcb26ebb235f44c75b33dfcfe2"
+}

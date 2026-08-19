@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f858ad53e32a17ad6c2c8cbbe7d90a392919dc1941eb9c7052f8652045353c6b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "personas or archetypes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "personas or archetypes",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2eadbf55c19105600fb18c1eaae9114d4cd82e89b4649b1bfdcbeba96cc239cc"
+}

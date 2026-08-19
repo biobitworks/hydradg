@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "82626adc9c292124749a0b22d95d0ba0dffe574cc0669f129aaee3e40477fff5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that idea, but it's a bit boring",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that idea, but it's a bit boring",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1e6681de27205799a055d9bc862568be2067574521f07ac5a416413d5b5f352e"
+}

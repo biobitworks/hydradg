@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d25059792125ce0ce24e2c5ec3b1da1c606e01f487b3a60ebfc89c4828ace81b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Cinnamon Apple Quinoa Breakfast Bowl",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Cinnamon Apple Quinoa Breakfast Bowl",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bb0d0dee4111d6850074e6ed1d4ce339eca9543270984fcc4d3a90c351344462"
+}

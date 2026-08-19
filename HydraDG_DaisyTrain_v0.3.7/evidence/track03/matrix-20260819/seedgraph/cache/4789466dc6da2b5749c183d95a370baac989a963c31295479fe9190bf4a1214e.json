@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4789466dc6da2b5749c183d95a370baac989a963c31295479fe9190bf4a1214e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a dedicated album and using tags or keywords",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a personalized message or a phone call to congratulate my friend",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a dedicated album and using tags or keywords",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized message or a phone call to congratulate my friend",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1ec7f37c950d9326d360dea7af4bf400f6c3b76037778c3bfc53a625e81aae6d"
+}

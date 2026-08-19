@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7f4c0310da680e21d6bafd797d62b496d84446968e3a247131155f88845e3ccb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the plan, but I think I'll move my lunch break to 12:30 PM since I usually take ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the plan, but I think I'll move my lunch break to 12:30 PM since I usually take a walk during that t",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f320e24fa41ba86feddf3e27f4fe53e7f85a8edaa7c7a46fde78284d3125964f"
+}

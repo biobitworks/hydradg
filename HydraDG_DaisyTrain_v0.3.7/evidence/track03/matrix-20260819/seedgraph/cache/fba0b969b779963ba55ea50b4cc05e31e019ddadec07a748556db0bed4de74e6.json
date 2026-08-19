@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fba0b969b779963ba55ea50b4cc05e31e019ddadec07a748556db0bed4de74e6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's high in fiber, protein, and healthy fats to keep me energized througho",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's high in fiber, protein, and healthy fats to keep me energized throughout the morning",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bca952ea005e839aa60085d89dcf66fb42cdbe512225ce467b5321a0b85eada2"
+}

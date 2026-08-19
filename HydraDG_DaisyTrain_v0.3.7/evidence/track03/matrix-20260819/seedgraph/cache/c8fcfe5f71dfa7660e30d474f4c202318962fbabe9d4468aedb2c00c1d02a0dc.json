@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c8fcfe5f71dfa7660e30d474f4c202318962fbabe9d4468aedb2c00c1d02a0dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a volunteer log",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a spreadsheet to track my volunteer work",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a volunteer log",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a spreadsheet to track my volunteer work",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b017834a9a643d23887d47ce5a82310a077112c5782bae28c90ced8771b208e3"
+}

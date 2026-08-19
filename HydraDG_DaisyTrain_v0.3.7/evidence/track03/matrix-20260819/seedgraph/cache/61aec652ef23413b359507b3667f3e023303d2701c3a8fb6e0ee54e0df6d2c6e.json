@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "61aec652ef23413b359507b3667f3e023303d2701c3a8fb6e0ee54e0df6d2c6e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of taking a class or workshop",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of taking a class or workshop",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7110d71ab29886c82cfde3a475c9e662fcd0fef45c3af3b036c3542f7c51d635"
+}

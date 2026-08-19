@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "a57ac4a97ef17c1ac6cbee3e059a29ae63bf657ea7424756861b84501c5aaf4a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sample summary you provided, but I'd like to add a bit more about my work ex",
+      "type": "value"
+    },
+    {
+      "name": "how you incorporated my work experience and MBA achievement",
+      "type": "value"
+    },
+    {
+      "name": "the updated sample summary, especially how you incorporated my career goals and ",
+      "type": "value"
+    },
+    {
+      "name": "the reorganized structure and simplified language",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sample summary you provided, but I'd like to add a bit more about my work experience, specifical",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "how you incorporated my work experience and MBA achievement",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the updated sample summary, especially how you incorporated my career goals and objectives for the n",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the reorganized structure and simplified language",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3b21f032f391cb19670f66d89a9bda0edfe8c089fd0c2d8001ffc1a955011194"
+}

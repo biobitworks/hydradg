@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3696410a607954fb0ad7a02cab280f2f44e35a7b8f703667e346db1b3b35b8a7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a floating shelf, it sounds like it would add a nice touch to my liv",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a floating shelf, it sounds like it would add a nice touch to my living room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b815a3f12ec1f65733eee04e3c1bdf70ef0951b3db7f44fcdf9541776de12232"
+}

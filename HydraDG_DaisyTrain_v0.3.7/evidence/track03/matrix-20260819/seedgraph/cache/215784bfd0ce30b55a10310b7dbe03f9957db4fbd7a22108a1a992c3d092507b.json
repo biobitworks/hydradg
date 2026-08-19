@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "215784bfd0ce30b55a10310b7dbe03f9957db4fbd7a22108a1a992c3d092507b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city, and I'm pretty close to the park where I've been taking my walks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city, and I'm pretty close to the park where I've been taking my walks",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cff4d51c75e7c08dc127b1dc96eb3b8f3c41435602f5ed689b1459cec69e8109"
+}

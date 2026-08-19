@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "21883664635838f62d5e8d8be044cd735b1ea7eaf06adca8a793548728f83278",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "neutral colors",
+      "type": "value"
+    },
+    {
+      "name": "classic and timeless pieces, and I prefer neutral colors",
+      "type": "value"
+    },
+    {
+      "name": "that they're breathable and can be easily labeled",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "neutral colors",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "classic and timeless pieces, and I prefer neutral colors",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that they're breathable and can be easily labeled",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e84b28401c8c37759ed227de6ad9091b2ccb5103aafef9e42568a82188f4993b"
+}

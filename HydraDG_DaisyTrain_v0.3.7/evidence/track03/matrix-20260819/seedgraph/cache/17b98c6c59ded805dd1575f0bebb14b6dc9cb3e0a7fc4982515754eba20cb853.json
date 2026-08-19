@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "17b98c6c59ded805dd1575f0bebb14b6dc9cb3e0a7fc4982515754eba20cb853",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of trying out yoga on my rest days",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of trying out yoga on my rest days",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "813a2ca6022315a286f3f3029f203469450a13399b2e810f1e37d19008278646"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c7c7140444d8b72ebf096ed36d22a655d1114b1da9bdef4b56bd413746fe4663",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "its sleek and modern look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "its sleek and modern look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ff2bbb5bcd1312eceb9ab8d8b9909c19c33f8cd6fe6d5050cd011dd9acd05300"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f79ca74fbaedeb6ed57aadb57daf46958731511cceec196c21147672c60df43",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Orange You Glad It's a Whiskey Sour recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Orange You Glad It's a Whiskey Sour recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "69dd1202ba671c3d32f9aa5edadd46cb64d10e5b80362656838e483d545a7643"
+}

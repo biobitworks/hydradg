@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "98959c6b038efafa67a4712c69a82c3bfbf219d37bc3a55eb7d4a6062fcc65e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the fruit and nut butter wraps",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the fruit and nut butter wraps",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6b571de143d1a1378e89e0c647f81f6ab94547abaa8facf8c3380e426f5a18b5"
+}

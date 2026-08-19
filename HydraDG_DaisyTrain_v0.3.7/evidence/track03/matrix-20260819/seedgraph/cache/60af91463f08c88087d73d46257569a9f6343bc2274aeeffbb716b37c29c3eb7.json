@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "60af91463f08c88087d73d46257569a9f6343bc2274aeeffbb716b37c29c3eb7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding roasted vegetables to my quinoa salad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding roasted vegetables to my quinoa salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4ec8d0455e86175a8b30fbbe3a1eb46a2c8f6685363ee3928453c79a669857d1"
+}

@@ -1,0 +1,136 @@
+{
+  "cache_hit": false,
+  "cache_key": "61a061fa5b532a88e64a73b135b04cee13e9a718903f67cfb37f59a69064b173",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a lot of these sorts of tools, and would use more if I had them",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having all tools in one area with the same system",
+      "type": "value"
+    },
+    {
+      "name": "the compact storage of multiple, useful tools",
+      "type": "value"
+    },
+    {
+      "name": "the compact form of the tools that fits my needs",
+      "type": "value"
+    },
+    {
+      "name": "that it works with our Doer as well",
+      "type": "value"
+    },
+    {
+      "name": "useful compact tools",
+      "type": "value"
+    },
+    {
+      "name": "power tools designed for small scale projects",
+      "type": "value"
+    },
+    {
+      "name": "craftmanship work",
+      "type": "value"
+    },
+    {
+      "name": "to make stuff",
+      "type": "value"
+    },
+    {
+      "name": "to build small projects as a hobby",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a lot of these sorts of tools, and would use more if I had them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having all tools in one area with the same system",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the compact storage of multiple, useful tools",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the compact form of the tools that fits my needs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it works with our Doer as well",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "useful compact tools",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "power tools designed for small scale projects",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "craftmanship work",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to make stuff",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to build small projects as a hobby",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "02c20d1ffe0268715e666105f6d3f560323facf80833d8c6a3b130e51c555aca"
+}

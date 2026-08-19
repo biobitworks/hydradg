@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b25043312b68e3067e728fbdf55b09001bc004984d5817936299bf7cd7818e5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a region with a limited budget for urban planning initiatives",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a region with a limited budget for urban planning initiatives",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "44ca7a629709caa4dc966a0a2429d306c4562ceca4fb2ceb773ee19e21f329b2"
+}

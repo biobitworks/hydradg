@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4b7e158f8ff25e239b6fa91fc19e9123b2fa593c2ec64768664bc630e4433997",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and why",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and why",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1dbc93162b620b8a92f22c39ee633aceb5cafd160d2a077166afcc0f089d6508"
+}

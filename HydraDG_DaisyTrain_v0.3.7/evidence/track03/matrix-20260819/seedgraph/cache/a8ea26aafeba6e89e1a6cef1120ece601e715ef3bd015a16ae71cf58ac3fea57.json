@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a8ea26aafeba6e89e1a6cef1120ece601e715ef3bd015a16ae71cf58ac3fea57",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a figure of a racing mechanic and a miniature toolbox",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a figure of a racing mechanic and a miniature toolbox",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6917ba16c0dbd543a33fdf2854b531af3241358e6a7fb560bf96289f39992032"
+}

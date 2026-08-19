@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "653e432440ba9cebdfb3764afc5180e07bec6c389dcb1b29083d772311bef487",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Cucumber Lime Refresher",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Cucumber-Mint Simple Syrup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Cucumber Lime Refresher",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Cucumber-Mint Simple Syrup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9cd087ca1de8001b6206a4af545a8450cc077d0c88193df2b810a64730282d08"
+}

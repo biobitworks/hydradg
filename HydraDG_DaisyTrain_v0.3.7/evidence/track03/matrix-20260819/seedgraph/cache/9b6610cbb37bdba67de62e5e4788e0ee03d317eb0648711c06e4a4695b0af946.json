@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9b6610cbb37bdba67de62e5e4788e0ee03d317eb0648711c06e4a4695b0af946",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Rosemary's Sunset cocktail",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Rosemary's Sunset cocktail",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "438d9f7ff1757ccfcbfe9a2a9ee539f103b9a36a07ef418e399c73f34833021b"
+}

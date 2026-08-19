@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9c640f5ed67e7b19b1067eae6ef95aca3291e464e2451c7988e84375cadc74cc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a private key instead of a password",
+      "type": "value"
+    },
+    {
+      "name": "a private key when getting the token from the Snowflake Authentication API",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a private key instead of a password",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a private key when getting the token from the Snowflake Authentication API",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "77e0691a1e675d7ca3ce8445119fedf5ac3e847ee2a604da1d89e4dec3479ba4"
+}

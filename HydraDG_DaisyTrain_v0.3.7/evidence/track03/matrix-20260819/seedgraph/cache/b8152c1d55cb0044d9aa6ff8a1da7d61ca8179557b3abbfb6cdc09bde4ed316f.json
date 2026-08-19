@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8152c1d55cb0044d9aa6ff8a1da7d61ca8179557b3abbfb6cdc09bde4ed316f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using technology to communicate with tenants",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using technology to communicate with tenants",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "08a96462ff5268b4dfcc51dc1b83271bbd3f10e37768c227565ca00bf7634a6c"
+}

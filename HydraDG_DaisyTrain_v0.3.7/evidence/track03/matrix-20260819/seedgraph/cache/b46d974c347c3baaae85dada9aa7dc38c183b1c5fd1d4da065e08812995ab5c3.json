@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "b46d974c347c3baaae85dada9aa7dc38c183b1c5fd1d4da065e08812995ab5c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"launching pad\" and a storage ottoman",
+      "type": "value"
+    },
+    {
+      "name": "that it provides both storage and a surface for my \"launching pad\" items",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using table lamps and string lights to create a cozy ambiance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"launching pad\" and a storage ottoman",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it provides both storage and a surface for my \"launching pad\" items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using table lamps and string lights to create a cozy ambiance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "67a35b8c6f57cddcf9b474125ae52339a4102ae831d88c8d5874fa1af32e6efe"
+}

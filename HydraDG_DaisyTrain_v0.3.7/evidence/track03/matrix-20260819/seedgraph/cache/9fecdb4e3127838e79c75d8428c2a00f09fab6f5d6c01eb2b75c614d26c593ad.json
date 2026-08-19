@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9fecdb4e3127838e79c75d8428c2a00f09fab6f5d6c01eb2b75c614d26c593ad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Cilantro Lime Refresher and the Carrot-Ginger Fizz",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Cilantro Lime Refresher and the Carrot-Ginger Fizz",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1e0fc163b9bdfa1f9aea6857c172c5291a6c408f130b661e6279325e20e7d5e9"
+}

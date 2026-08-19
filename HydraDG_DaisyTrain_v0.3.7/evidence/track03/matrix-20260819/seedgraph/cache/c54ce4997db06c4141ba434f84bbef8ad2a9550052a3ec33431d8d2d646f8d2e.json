@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c54ce4997db06c4141ba434f84bbef8ad2a9550052a3ec33431d8d2d646f8d2e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using the leftover chili for different meals throughout the week",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using the leftover chili for different meals throughout the week",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "242f22e1a327b16f7f9b81d2a7072d7365c49bd3ef4a1a0e06b38fd6c3e8ce13"
+}

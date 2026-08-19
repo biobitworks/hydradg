@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "498f4bd7b4b709cecabe4c527f931615f129555138643ea72e52ce9a683e7c76",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Adesso Floor Lamp",
+      "type": "value"
+    },
+    {
+      "name": "the warm, earthy tone and the subtle patina that gives it a slightly aged look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Adesso Floor Lamp",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the warm, earthy tone and the subtle patina that gives it a slightly aged look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f5a641eb499cc619725685bba3547cb2971cd9680f6a377226d934d70d8fdf13"
+}

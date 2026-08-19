@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f0035c41fedff3625bcca405faa83b63ed044e8cac2e51922d9f988d9b22136f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the workout sessions idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the workout sessions idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3072e44d7a7561968fc21fe073b40072845b7805b329b8125f3698bfc7bf6dda"
+}

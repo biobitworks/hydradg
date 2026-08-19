@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3f423557832858722953fa027ce10a4a8220c3b369c8e7d8c4984c243293dc5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it in python",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it in python",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "57b47c7e189e5a17bc2503e1cca1ad7a47c291b229ba52740a3984a03adbe40a"
+}

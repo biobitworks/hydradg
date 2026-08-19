@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e83043baad6d327a91ec52272f66fbc71c32713e82bb29cb781fae7c690980b7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sparkly shoes and t-shirt I got for my niece as part of the treasure hunt cl",
+      "type": "value"
+    },
+    {
+      "name": "the DIY decoration ideas, especially the paper flower garland and tissue paper p",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sparkly shoes and t-shirt I got for my niece as part of the treasure hunt clues or prizes",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the DIY decoration ideas, especially the paper flower garland and tissue paper pompoms",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a05ef99fd14f87a9b735adb7a8efd4a4f7c611a80663ddb0df3a0d6df781b98b"
+}

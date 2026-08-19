@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "52844ec4295925d7fb6a509f78010cdaffbc7e4c0d3febb929ad268254c581ea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the conversational circle layout idea, but I'm not sure about placing the TV sta",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the conversational circle layout idea, but I'm not sure about placing the TV stand on the shorter wa",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "76060a412538ef0e9d72f1cdb3daa5456a0d4409d6324548d0548142047667a0"
+}

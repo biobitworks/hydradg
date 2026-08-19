@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5a7af8aeec0499e4e775c04e8aa9cd1b93dc437fd107346d3bdfd0147d629781",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the more vibrant colors",
+      "type": "value"
+    },
+    {
+      "name": "the way it looks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the more vibrant colors",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the way it looks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "276f12fae2203b7ad457e14af48971710bb33e250558b7d11d016318cedcede3"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b0341b7d2b8f72464de8f5d20913034ef55dcf94e45fd975a1a53fe0207358ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this approach but would like to step through it once before i give more guidance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this approach but would like to step through it once before i give more guidance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e8084518288e20369e713d165eaf3c77f9d55d0d0e05a6a9b0ec4e80a10f8fa4"
+}

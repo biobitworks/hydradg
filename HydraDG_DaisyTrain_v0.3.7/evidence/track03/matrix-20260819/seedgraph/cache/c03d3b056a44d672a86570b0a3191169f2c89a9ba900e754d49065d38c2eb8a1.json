@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c03d3b056a44d672a86570b0a3191169f2c89a9ba900e754d49065d38c2eb8a1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting clear goals and priorities, as well as designating social me",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a pre-journaling routine to signal to my mind that it's tim",
+      "type": "value"
+    },
+    {
+      "name": "the idea of making gratitude journaling a ritual and treating it as a special ti",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting clear goals and priorities, as well as designating social media-free zones and t",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a pre-journaling routine to signal to my mind that it's time to reflect",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of making gratitude journaling a ritual and treating it as a special time for myself",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "287beccbc52fd2282649648c23ac2b07982c9538bff598ff1b0de8fc461f7fde"
+}

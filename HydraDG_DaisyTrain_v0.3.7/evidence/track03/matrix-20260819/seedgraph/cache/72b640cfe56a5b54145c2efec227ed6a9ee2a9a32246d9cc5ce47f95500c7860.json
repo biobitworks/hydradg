@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "72b640cfe56a5b54145c2efec227ed6a9ee2a9a32246d9cc5ce47f95500c7860",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Handmaid's Tale\" and \"The Night Circus\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Handmaid's Tale\" and \"The Night Circus\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03727353c51b51e3bbe06d1afadf8b9edb7a45b4e9d2850984ad5cd4f618444f"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a505079efb1634eefa88d27d92d0398e94be6b5b34fc9ff35175375acf9857b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the same area as the school I've been supporting - it's great to see the communi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the same area as the school I've been supporting - it's great to see the community come together to",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5163960d068c357e362eb8b4641260bdc6108c5dd8a235819a95f3dfe6d9949c"
+}

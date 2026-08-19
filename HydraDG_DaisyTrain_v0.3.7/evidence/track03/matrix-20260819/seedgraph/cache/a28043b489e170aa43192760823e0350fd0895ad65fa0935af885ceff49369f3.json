@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a28043b489e170aa43192760823e0350fd0895ad65fa0935af885ceff49369f3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of recognizing her support and giving her a shoutout during the Q&A ses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of recognizing her support and giving her a shoutout during the Q&A session",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "421c0618fa5ff10a1ff38501e8164fb9e9148c5b57fcbed0ffbde0c9be80a036"
+}

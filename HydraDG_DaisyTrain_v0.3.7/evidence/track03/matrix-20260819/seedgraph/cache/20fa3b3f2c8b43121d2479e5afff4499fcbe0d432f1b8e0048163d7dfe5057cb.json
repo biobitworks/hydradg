@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "20fa3b3f2c8b43121d2479e5afff4499fcbe0d432f1b8e0048163d7dfe5057cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of scheduling physical activity into my daily routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of scheduling physical activity into my daily routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "56f27e9ca99ea4d30bab7c8266dec62f2201e502ebd9005244c4027323c81fe4"
+}

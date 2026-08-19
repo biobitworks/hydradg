@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f326aff1ea5510c3fc8cdb06a1d193ba87276c1dfd7708ddedac9937a058ca0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a different ratio with Hendrick's gin compared to, say, Bombay Sapphire",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a different ratio with Hendrick's gin compared to, say, Bombay Sapphire",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "baf1660328e15c841a8753842f3f5b601bd4835ea46128d4d4b54500e780ebdf"
+}

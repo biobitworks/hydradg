@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6e6a142b8e7c1387e0700a59c3a0e4355799730e885a0a1c0ca7218096c31205",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to sleep in on weekends until around 9:00 AM, can you make sure the reminders do",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to sleep in on weekends until around 9:00 AM, can you make sure the reminders don't go off on Saturd",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1eb07aa1b9cdb336fcb29534a753a674457faae72331b31239e2386644a557ca"
+}

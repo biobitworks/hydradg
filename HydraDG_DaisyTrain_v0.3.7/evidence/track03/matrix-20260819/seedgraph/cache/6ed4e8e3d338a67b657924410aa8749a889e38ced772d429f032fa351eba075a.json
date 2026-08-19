@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ed4e8e3d338a67b657924410aa8749a889e38ced772d429f032fa351eba075a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it as an accent color or try to carry it throughout the entire hat",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a slouchy hat, but can you suggest some yarns that would work well w",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding some sparkle to my hat",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating an ombre-like effect",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it as an accent color or try to carry it throughout the entire hat",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a slouchy hat, but can you suggest some yarns that would work well with the pale blue ch",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some sparkle to my hat",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating an ombre-like effect",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6a37b7744f482978023904b871abaf06d1ee20df572b593cff422d0a1c245c27"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c068e051a1d24762260bd78dc73523baaf7e64a7c62d18f5b22bb554ede34ab",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using color-coding to differentiate the scents",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using color-coding to differentiate the scents",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f78a05e73ef0aacfaf732d175f8f724bb615a947fce0171af50eeb6f853b1e60"
+}

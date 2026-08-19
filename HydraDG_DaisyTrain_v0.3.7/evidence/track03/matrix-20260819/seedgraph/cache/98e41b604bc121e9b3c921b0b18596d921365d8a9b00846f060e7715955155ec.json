@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "98e41b604bc121e9b3c921b0b18596d921365d8a9b00846f060e7715955155ec",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a goal for fundraising, but how can I make sure my child doe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a goal for fundraising, but how can I make sure my child doesn't get discouraged",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9ca1f40808a073d4eb5d8a466488e32c2c295f6111c49a21f9b89317e5b95683"
+}

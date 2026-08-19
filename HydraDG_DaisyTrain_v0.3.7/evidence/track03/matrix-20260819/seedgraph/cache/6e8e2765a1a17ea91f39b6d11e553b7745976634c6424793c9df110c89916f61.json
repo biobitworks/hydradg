@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6e8e2765a1a17ea91f39b6d11e553b7745976634c6424793c9df110c89916f61",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "rivers and streams, but I'm also up for lakes or ponds if they're known for good",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "rivers and streams, but I'm also up for lakes or ponds if they're known for good fishing",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f1eb0dd305bd1f4ce9af44d62aed5cf2005ee96f60ecb628046f02723bd8bbb"
+}

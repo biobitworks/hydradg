@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "01da2ca452734218444c3704d2e5106edf2e70e78376fb1294eb6830608778c5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of tracking my progress and getting personalized book recommendations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my progress and getting personalized book recommendations",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e6c6a66aece08da6b2be31cb07ca830b619df3f3931ef8e032ab2acacd63353a"
+}

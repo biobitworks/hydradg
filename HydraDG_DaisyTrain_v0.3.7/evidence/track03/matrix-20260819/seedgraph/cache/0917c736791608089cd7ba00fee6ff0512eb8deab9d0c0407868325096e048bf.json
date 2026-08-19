@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0917c736791608089cd7ba00fee6ff0512eb8deab9d0c0407868325096e048bf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the overnight oats idea, I tried it last Thursday and it worked well",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the overnight oats idea, I tried it last Thursday and it worked well",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f6b01eb578d56589973e4c24dde622217a323b88e780f1f50f7f34220ba107c6"
+}

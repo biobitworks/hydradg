@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "67fe092d6f45b29ad0236e674f651cb087c7e3342babf39dc56860357c6a743d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a potluck, it's always nice to have a variety of dishes and it makes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a potluck, it's always nice to have a variety of dishes and it makes it feel more like a",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "29c56f94feef8350520ee44ea9767f3d61b866404676a6cbbd1ea54bc5b30242"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "936efdb7630c86ba92b7eec56aad1e5d953fe827a44b1d8f8f58f8bf1088c522",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sorting my fabrics by color, type, and value",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sorting my fabrics by color, type, and value",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a7e279451beaa00f74e51faa3ed29caf4aa9f2d65834c4d253d96bd0df3ece56"
+}

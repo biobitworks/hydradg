@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5a0ae829359b0039e66c255fa92879d5e322ea8becf63acf82325736ad7a79a4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of running a contest or giveaway",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of running a contest or giveaway",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b91c2ccc8a43782549192ebf362e2224cdcf0a40405b15af18660366b755a8f5"
+}

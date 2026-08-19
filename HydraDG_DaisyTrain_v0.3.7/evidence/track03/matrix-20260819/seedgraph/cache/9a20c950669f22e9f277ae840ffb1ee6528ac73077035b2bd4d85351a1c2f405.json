@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9a20c950669f22e9f277ae840ffb1ee6528ac73077035b2bd4d85351a1c2f405",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a weekly theme, but I'm not sure if I can come up with that m",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using Twitter threads to break down complex topics into smaller chun",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a weekly theme, but I'm not sure if I can come up with that many different types",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Twitter threads to break down complex topics into smaller chunks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "febe24979baf1b271baeec1e270d4bb6baa016372705b01625bf8e144593ce1f"
+}

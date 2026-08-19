@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "642c4002ab8bd718b81a014f0031439d60f672821370ca25a336a0852ce9269b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using reusable masks and gowns",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using reusable masks and gowns",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1b15ace00b3b535237035a3688240b758f2f32d074b301adcdbaa7ae9c783db5"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2e7701c8cc85fe360caafc9ea287ebf0ad691893e41b5d809f4e4bdc0055026d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of serving the Paper Plane with some citrus-marinated olives",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of serving the Paper Plane with some citrus-marinated olives",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "15f858c1fcd73e4a7a6c8b9eb0b658b05de5b12dacd2ad66e1579b70cea85966"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "27cf4529c329cd8d0d54584b6c61fc1a4aa92798db8473e05f82a8f75827ccf2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sample workout routine you provided, but I was thinking of starting with som",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sample workout routine you provided, but I was thinking of starting with something a bit more lo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "932bf47a6e3a65b0baa85071059aa14ea1b2b552363801364d63e3e80eaa5151"
+}

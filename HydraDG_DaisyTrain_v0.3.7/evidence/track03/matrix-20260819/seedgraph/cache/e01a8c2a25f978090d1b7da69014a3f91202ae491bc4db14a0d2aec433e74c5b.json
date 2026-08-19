@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e01a8c2a25f978090d1b7da69014a3f91202ae491bc4db14a0d2aec433e74c5b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a master calendar and setting clear goals and objectives",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a master calendar and setting clear goals and objectives",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca51d9d149012f5b949478b4a65ca5ef5b7447acea2583ce528e95b24234a66a"
+}

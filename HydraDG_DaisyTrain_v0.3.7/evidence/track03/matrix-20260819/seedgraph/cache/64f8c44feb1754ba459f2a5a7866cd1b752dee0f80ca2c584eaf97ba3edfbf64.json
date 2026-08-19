@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "64f8c44feb1754ba459f2a5a7866cd1b752dee0f80ca2c584eaf97ba3edfbf64",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a personal message to the gift card",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a personal message to the gift card",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d0b1911fe70594d3c7f0e907f124de0c7e4b0c3f7a3b27e89180c79c0e3c8603"
+}

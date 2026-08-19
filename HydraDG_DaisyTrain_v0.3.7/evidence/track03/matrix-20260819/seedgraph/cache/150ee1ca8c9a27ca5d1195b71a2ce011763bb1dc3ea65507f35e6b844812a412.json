@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "150ee1ca8c9a27ca5d1195b71a2ce011763bb1dc3ea65507f35e6b844812a412",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wine idea, but I'm not sure what type to get",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wine idea, but I'm not sure what type to get",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4e389a799f9f9ce8a67c8ed90c00c5c6723347572192e297402ea57539db50da"
+}

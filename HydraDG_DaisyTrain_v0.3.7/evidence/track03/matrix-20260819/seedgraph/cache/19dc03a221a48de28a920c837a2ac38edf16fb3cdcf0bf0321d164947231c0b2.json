@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "19dc03a221a48de28a920c837a2ac38edf16fb3cdcf0bf0321d164947231c0b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the 7-Minute Workout",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the 7-Minute Workout",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8c483265be58fa531fbde290e7ba6107ad5383737e5b01696e0d0a8d271049ac"
+}

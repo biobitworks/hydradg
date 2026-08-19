@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2b05a2e4fdbbc2ef80a629f2529ec126ed5262fd5c6b84e6a841f67a4a97993e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "more in-depth courses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "more in-depth courses",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6f9693cefd12ad36fc14e65fe11492b00efd57ae1e2dac683328e3b41d67e8cc"
+}

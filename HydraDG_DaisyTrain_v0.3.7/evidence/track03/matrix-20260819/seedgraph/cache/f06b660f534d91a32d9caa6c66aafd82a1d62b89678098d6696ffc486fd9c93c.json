@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f06b660f534d91a32d9caa6c66aafd82a1d62b89678098d6696ffc486fd9c93c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sharing my personal story and passion for wellness, and focusing on ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing my personal story and passion for wellness, and focusing on the \"why\" behind my",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "304bca4540a5c5e852ec765b2b3a73bb741aa935891aea2c92474922b8aaac2b"
+}

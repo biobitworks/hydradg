@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "76a976d5dcc1d4c0f239eccf6c823eacb8c7ceab2190654317ad1177559c0e89",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a snack routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a snack routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a74dccb4dc17a9a4954c64756d7a1498d68b7340734d2f2f1a5e87024bcd69e"
+}

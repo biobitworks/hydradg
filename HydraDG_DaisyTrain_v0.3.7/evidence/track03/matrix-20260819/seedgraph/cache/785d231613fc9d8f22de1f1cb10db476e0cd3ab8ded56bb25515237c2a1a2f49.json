@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "785d231613fc9d8f22de1f1cb10db476e0cd3ab8ded56bb25515237c2a1a2f49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the oatmeal porridge idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the oatmeal porridge idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0bb6d43dcde6386870ff1c47ee61db0daec3818a934365ff9f11f41e46527654"
+}

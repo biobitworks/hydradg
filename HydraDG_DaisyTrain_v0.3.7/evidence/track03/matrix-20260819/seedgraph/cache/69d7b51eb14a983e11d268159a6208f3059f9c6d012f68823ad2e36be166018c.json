@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "69d7b51eb14a983e11d268159a6208f3059f9c6d012f68823ad2e36be166018c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "proper punctuation in my sentence with the word `considered",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "proper punctuation in my sentence with the word `considered",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d24ca4e0d04ecf314844fdae93080d0d39833b2cd9d2a6df22e1a5c933959a06"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1a50f06c669d695801440e30990397414c76fa1aff26a7738bf4df6bf58c40dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a pre-mixed curry powder or should I use individual spices like cumin, coriander",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a pre-mixed curry powder or should I use individual spices like cumin, coriander, and turmeric",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a57d972a9203b45082e7c6d31a00b9f1eb14e070250bc7fb6e2f2a591dfd86de"
+}

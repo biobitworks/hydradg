@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "a6c840dd660b7ecae57ce5c067649682bc7babb957d08f0de94a372b2d609d92",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of layering the lighting",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a metallic accent, maybe something with a chrome or silver base",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of layering the lighting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a metallic accent, maybe something with a chrome or silver base",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "122c13745a3165d6d203307b76481fd1128733f8c4d2febb04b67c5a3bd70b52"
+}

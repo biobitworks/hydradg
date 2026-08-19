@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f2d22eb35caf6359369a2b559d034b874a6c83a2aba2c394f12cf3f301f4e962",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that instead of creating a new repository",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that instead of creating a new repository",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dc9945c61bb1e9c28de0abdaa09e36d9942e5a170fadf20f4f137538272b05a7"
+}

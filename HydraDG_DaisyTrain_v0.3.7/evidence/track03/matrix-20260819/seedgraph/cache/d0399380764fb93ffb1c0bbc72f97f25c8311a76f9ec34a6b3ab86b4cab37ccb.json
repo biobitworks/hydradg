@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d0399380764fb93ffb1c0bbc72f97f25c8311a76f9ec34a6b3ab86b4cab37ccb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for the pressure relief mechanism",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for the pressure relief mechanism",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd0037401ed7e353a81259e5b7b5328ed642ff7c4b91efb08e892b55eb27017f"
+}

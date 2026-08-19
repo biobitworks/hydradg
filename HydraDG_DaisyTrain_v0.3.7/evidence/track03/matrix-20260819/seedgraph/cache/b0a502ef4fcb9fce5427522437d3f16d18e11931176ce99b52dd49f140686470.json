@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b0a502ef4fcb9fce5427522437d3f16d18e11931176ce99b52dd49f140686470",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "hints or clues in a game",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "hints or clues in a game",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da78c9777839cc4c718906f44de41d3aaf1d333c1a939b3dce64d96db0e0e07b"
+}

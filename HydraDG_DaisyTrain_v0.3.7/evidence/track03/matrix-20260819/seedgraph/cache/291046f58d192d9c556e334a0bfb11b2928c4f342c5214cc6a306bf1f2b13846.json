@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "291046f58d192d9c556e334a0bfb11b2928c4f342c5214cc6a306bf1f2b13846",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "on my face on every part of my body",
+      "type": "value"
+    },
+    {
+      "name": "a different product for each body part, won't it take longer to apply everything",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "on my face on every part of my body",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a different product for each body part, won't it take longer to apply everything",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5dd1926c0d3bb33fd15fbb5046658ac9408638b7e53c0613cd0f91e94f1caec6"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "60944fb0e04d27744d75e594712aa9e221049c50a0c38bcb29c8a113081b0251",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a theme night",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a neon-lit photo booth",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a theme night",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a neon-lit photo booth",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c4b7740b33e505b99968cb608d1ca1bc97daa3c643660438a76085a248ecb272"
+}

@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ac884aa896e692eafba407a5b2c273d0b3646b3db0708b8447bec18925448d7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of preparing everything the night before, especially my coffee maker",
+      "type": "value"
+    },
+    {
+      "name": "the idea of planning my route in advance",
+      "type": "value"
+    },
+    {
+      "name": "to look presentable for work",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of preparing everything the night before, especially my coffee maker",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning my route in advance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to look presentable for work",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dc4de9f79dd267e88522b973adf7d170b1b5d30ac756600745451fd8a9a36b54"
+}

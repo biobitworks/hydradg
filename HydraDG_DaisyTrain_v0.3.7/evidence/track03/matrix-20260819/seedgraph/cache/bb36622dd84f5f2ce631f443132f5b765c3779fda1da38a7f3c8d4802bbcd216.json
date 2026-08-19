@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bb36622dd84f5f2ce631f443132f5b765c3779fda1da38a7f3c8d4802bbcd216",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of reflecting on my day through journaling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of reflecting on my day through journaling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3db51be0b9b7b50882f60d21ea735bb2712cfe83a651d8cb5200a28194a498b1"
+}

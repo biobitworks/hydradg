@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c955741cb1f95b73f321c4b266d1cb746464e44ba973914a96639082ffd01ed3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the more upright riding position of the Sirrus",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the more upright riding position of the Sirrus",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "40d04d40417e230e1b58d0e94bd64fbd8d9eb15f1b00e9067fff8f0c4e4bf6cb"
+}

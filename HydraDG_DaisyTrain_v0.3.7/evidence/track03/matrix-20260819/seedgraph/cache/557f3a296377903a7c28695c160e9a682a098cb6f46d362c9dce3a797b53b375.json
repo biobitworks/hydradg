@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "557f3a296377903a7c28695c160e9a682a098cb6f46d362c9dce3a797b53b375",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my time, I was wondering if you could help me track my daily activities and prov",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my time, I was wondering if you could help me track my daily activities and provide some insights on",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d53f051b0595f1945bb847854263bfe95d9aff6f34e0f76f895a3222e7e34428"
+}

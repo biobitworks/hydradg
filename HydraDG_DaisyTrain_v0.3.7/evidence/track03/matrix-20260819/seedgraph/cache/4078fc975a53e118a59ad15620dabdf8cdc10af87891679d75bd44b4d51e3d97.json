@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4078fc975a53e118a59ad15620dabdf8cdc10af87891679d75bd44b4d51e3d97",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wine and dine idea in Tuscany",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wine and dine idea in Tuscany",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7ab96f533b69499c0e6d0fd84d6db80e2e76aabbef89d1ea5a99196a4d6e1ceb"
+}

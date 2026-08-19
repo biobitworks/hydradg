@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "274bc133480859ee249d5b21ee9e06b2c17bcbd0126ad5c3feed755355dab234",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "public transportation or taxis",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "public transportation or taxis",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c5adadb199b7119dc1f5a0e99fca51724a4f0fb1ec321e599e5d79bb30df109"
+}

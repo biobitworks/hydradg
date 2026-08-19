@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "485f4fd18f13e01b85d8d59d6710e41273d1bd8a86767f5df1e756fa093d1a15",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "other types of pastry dough instead of puff pastry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "other types of pastry dough instead of puff pastry",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "78c8af20d9fe299c1f4513e3daae821dff2043e4d805e0b4183fda75f0046620"
+}

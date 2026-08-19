@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "62fb5432a0d7a38455ce982102b0e0c730b9f0c87776deca8badfcd7c537835f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "create\\_async\\_engine from sqlalchemy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "create\\_async\\_engine from sqlalchemy",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6580d62a03c77da792b338ed4a483a3e12d216ea7cd23cd94556afe65e1613b1"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1fdaedb009682850e5238a14080d736989203e6234f8d2a2db64182e5c097b63",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding different protein options and roasted vegetables to my chicke",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding different protein options and roasted vegetables to my chicken and rice bowls",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ff39d23cbc3e80fa7c10b9683e73aeb00e0a20ea47847fcb2dc50d7de0bd1cb0"
+}

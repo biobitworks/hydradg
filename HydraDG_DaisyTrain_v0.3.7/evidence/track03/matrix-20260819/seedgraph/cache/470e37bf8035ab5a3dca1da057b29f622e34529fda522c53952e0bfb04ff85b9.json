@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "470e37bf8035ab5a3dca1da057b29f622e34529fda522c53952e0bfb04ff85b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item, but I'm not sure what to get",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a personalized cutting board",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item, but I'm not sure what to get",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized cutting board",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "38cf8361ebf6b8f61d021c5d30b287e7e1ebfb988a5d3f500573ef034e8c0870"
+}

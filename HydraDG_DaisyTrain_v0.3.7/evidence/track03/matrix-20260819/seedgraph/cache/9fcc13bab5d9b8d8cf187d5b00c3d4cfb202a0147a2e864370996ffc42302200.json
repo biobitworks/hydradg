@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9fcc13bab5d9b8d8cf187d5b00c3d4cfb202a0147a2e864370996ffc42302200",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, but I'm also thinking about the overall aesthetic of my livin",
+      "type": "value"
+    },
+    {
+      "name": "those tips, and I think I'm on the right track with my bookshelf",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, but I'm also thinking about the overall aesthetic of my living room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those tips, and I think I'm on the right track with my bookshelf",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "38165510d8a5d2a29d320d4dadbe9643c82ce83f380cec1ee77517f23ac5bb46"
+}

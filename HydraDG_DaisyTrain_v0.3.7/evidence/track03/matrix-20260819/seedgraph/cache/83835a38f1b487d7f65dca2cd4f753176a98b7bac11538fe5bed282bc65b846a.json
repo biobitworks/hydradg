@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "83835a38f1b487d7f65dca2cd4f753176a98b7bac11538fe5bed282bc65b846a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Concept 2: Tree-Centered Haven",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having some ornamental grasses too, but I'm not sure if they'll grow",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Concept 2: Tree-Centered Haven",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having some ornamental grasses too, but I'm not sure if they'll grow well in the narrow",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca1fc69f194da0189669545cb0f045fd3029b393594b4e46c8a79b8a6febecfe"
+}

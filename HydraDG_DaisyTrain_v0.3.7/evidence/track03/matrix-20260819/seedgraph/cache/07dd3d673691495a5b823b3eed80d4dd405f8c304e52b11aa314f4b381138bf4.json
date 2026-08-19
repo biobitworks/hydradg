@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "07dd3d673691495a5b823b3eed80d4dd405f8c304e52b11aa314f4b381138bf4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions for the LinkedIn headline and summary",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions for the LinkedIn headline and summary",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ec77134dbf5aa6a7c99e91bcd484fcdcd69c8d9e59b158e4c0c80fdd6369ea0d"
+}

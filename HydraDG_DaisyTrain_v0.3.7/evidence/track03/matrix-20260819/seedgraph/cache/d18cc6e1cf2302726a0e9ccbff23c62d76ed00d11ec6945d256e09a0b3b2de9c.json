@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d18cc6e1cf2302726a0e9ccbff23c62d76ed00d11ec6945d256e09a0b3b2de9c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "gnome desktop without interfeering with the running python scripts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "gnome desktop without interfeering with the running python scripts",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "21c67eb475dae505a681d9bf6f8a7613614df7f0449905d7e4638fa1a41c8070"
+}

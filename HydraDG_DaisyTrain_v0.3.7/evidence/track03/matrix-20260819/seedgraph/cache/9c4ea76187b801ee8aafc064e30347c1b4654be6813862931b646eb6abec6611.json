@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9c4ea76187b801ee8aafc064e30347c1b4654be6813862931b646eb6abec6611",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a slim design and being able to store my cards and cash",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a slim design and being able to store my cards and cash",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05ca9eae7f90876e0a4c3de780d34fc680472df8bb06261f390e6ce7d98d8dd5"
+}

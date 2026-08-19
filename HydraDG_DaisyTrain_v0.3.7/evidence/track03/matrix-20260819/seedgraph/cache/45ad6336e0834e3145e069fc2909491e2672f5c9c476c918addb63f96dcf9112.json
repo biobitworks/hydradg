@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "45ad6336e0834e3145e069fc2909491e2672f5c9c476c918addb63f96dcf9112",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas, especially the animated GIFs and before-and-after comparisons",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the animated GIFs and before-and-after comparisons",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2250d6bd9f60fe4cfc9a4be2791442d58f51439905d96efbdcdb8087934e451d"
+}

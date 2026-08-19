@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "023076111be0c7c2c6e41b82e48b1c824d9df87cdd373be0af44b96c3090cb30",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my toast fairly well done, but I hate hard toast, which is what often happens he",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my toast fairly well done, but I hate hard toast, which is what often happens here unless you set it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "038489a26e167fbb4f4d719b9f5732fe0d4a9724a2097b00e7a8e40dc31cd566"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8635ef28efcd8cbcee23e985f2efbd43741be872218049145d8905c7e7a46690",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the smaller compartments the most, just because it's so convenient to have my po",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the smaller compartments the most, just because it's so convenient to have my power bank, earbuds, a",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "53e7651564af093d5253727ed1330ba0d1541b570c1ddd045a5f5ca11ccda254"
+}

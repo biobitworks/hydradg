@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8086586c25db7e92dcf7391fc030553e4dee0707f85928dc312ffd255fda628",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it to buy this tote online and then return it to a physical Nordstrom store if i",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Kate Spade New York Cameron Street Lacey Tote, but it's a bit p",
+      "type": "value"
+    },
+    {
+      "name": "that it's made from high-quality leather and has a classic design",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it to buy this tote online and then return it to a physical Nordstrom store if it doesn't fit me wel",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Kate Spade New York Cameron Street Lacey Tote, but it's a bit pricey for my budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it's made from high-quality leather and has a classic design",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6d8f947895e6529e79eb23fae37a1400de1831c9138816b41016fb3f1275127c"
+}

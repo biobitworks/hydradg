@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bef4b8a1f190619bfdab581de6a271b6af60a6972a050cd908428dbb4bd1dc1b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a structured plan with pace targets",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a structured plan with pace targets",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f82de900d6fbec361cbe941347d04375062af05de14d279596e0037fdafaf57f"
+}

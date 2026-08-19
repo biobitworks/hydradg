@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f5c1c306cbaa034120cb9a0634aa4051bf57d5593ebbd050013971f4adc98595",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the Memory Lane Dinner and the Family Slideshow",
+      "type": "value"
+    },
+    {
+      "name": "that idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Memory Lane Dinner and the Family Slideshow",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b03c51c7b6868c4f763a93229d37eab2b2efd3860a0eb568c0713ad8436f932f"
+}

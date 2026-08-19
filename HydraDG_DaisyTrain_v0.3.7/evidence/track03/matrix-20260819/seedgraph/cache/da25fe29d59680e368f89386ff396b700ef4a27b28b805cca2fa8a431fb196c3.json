@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "da25fe29d59680e368f89386ff396b700ef4a27b28b805cca2fa8a431fb196c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this routine, but I'm worried about waking up at 7:00 am on days with morning me",
+      "type": "value"
+    },
+    {
+      "name": "these tips, but I'm still worried about waking up at 7:00 am consistently",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this routine, but I'm worried about waking up at 7:00 am on days with morning meetings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these tips, but I'm still worried about waking up at 7:00 am consistently",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a698b5d94e6d1292c7b2bf01561fa24a237fc706ab0e8868433f08626851027e"
+}

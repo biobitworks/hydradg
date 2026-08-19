@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6bdc33d3d8f151f7c9711719b9633deadda9c6461d26fd3fc83fce214d528f62",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the monochromatic idea",
+      "type": "value"
+    },
+    {
+      "name": "about this phrase is that it's not too specific or prescriptive",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the monochromatic idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "about this phrase is that it's not too specific or prescriptive",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0a0f3542b1553d30838a4a537b8595606af5df3918f91ecbbad96bb1eacca5b9"
+}

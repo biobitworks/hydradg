@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9d088350fb54a201f1127c29e0a349f0b1be5a013d775553b30cf1fe7aa5c409",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using Wix or Squarespace",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Wix or Squarespace",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1f9a5a058d750c9e90d546cc81f0e0a853ecc4bc79942448b882d97ff9dc302b"
+}

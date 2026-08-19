@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ecc7b06e298fa015186a009ad586fd438635e60d7b3133e59e8f82f0769bd8b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template, it's simple and easy to use",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting a reminder on my phone",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template, it's simple and easy to use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a reminder on my phone",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e2948220ca945de75ad86f5d50bb88846f9ac622bcafd10ee6a5477fa5b7975"
+}

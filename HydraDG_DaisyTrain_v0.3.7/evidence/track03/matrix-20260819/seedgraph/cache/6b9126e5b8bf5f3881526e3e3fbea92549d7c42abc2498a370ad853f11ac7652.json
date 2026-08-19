@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6b9126e5b8bf5f3881526e3e3fbea92549d7c42abc2498a370ad853f11ac7652",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a matching earring or a personalized charm",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a matching earring or a personalized charm",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "63f03b04f5639f9c146d4a149d7cb8379842f27f3ca4acf491ba927c97c0509b"
+}

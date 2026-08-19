@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cb6b7b944b17bcdd4c57d9e81cfaf41bdf4ad3d5c3d358ac5be9b24176043ff0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "277150f4be7f4c913d0119f032d614a40dd18e66b53e848e646390dd5ac7f91f"
+}

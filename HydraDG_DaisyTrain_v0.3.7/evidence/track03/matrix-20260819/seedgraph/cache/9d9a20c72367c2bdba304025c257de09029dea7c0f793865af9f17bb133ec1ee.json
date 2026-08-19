@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9d9a20c72367c2bdba304025c257de09029dea7c0f793865af9f17bb133ec1ee",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of getting productive on the bus",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of getting productive on the bus",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f5ac4e51049bd6b2f5dcdbc939fca6e6f608d5189f4aece7be4cbc05868236ef"
+}

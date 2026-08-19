@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "33bf271ec385f70dec04cfc79a9142b6905e534349d21a4dcaaf4ab5e0f8d730",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the casual day and pet photo contest ideas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using an online registration form and making it easy to share with c",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the casual day and pet photo contest ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using an online registration form and making it easy to share with colleagues, friends",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "404df92d7c27bdf489a4316212af913d0cdc129841faeb46ed915ddde09838be"
+}

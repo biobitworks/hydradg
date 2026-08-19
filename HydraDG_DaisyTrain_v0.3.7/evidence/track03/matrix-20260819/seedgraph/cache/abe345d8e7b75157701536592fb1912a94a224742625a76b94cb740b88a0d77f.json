@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "abe345d8e7b75157701536592fb1912a94a224742625a76b94cb740b88a0d77f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's oil-free and non-comedogenic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's oil-free and non-comedogenic",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2302bd67e10176e8c008a54e4478286cb422405d92c6d1522daeeceb8fc2e17a"
+}

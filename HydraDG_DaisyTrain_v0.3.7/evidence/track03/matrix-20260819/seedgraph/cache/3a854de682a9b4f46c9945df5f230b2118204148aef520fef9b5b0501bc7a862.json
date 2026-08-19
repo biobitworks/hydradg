@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3a854de682a9b4f46c9945df5f230b2118204148aef520fef9b5b0501bc7a862",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a photo contest where people can share their stories about my favori",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a photo contest where people can share their stories about my favorite charity organizat",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7f69780bcf5e5727a92f09372680f40e3c3aa3b33a3436d7543924730a413689"
+}

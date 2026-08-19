@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "604a61e505cea228be53b0eb025268b3ac7da03fcca6981304be2615413f6ecc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of allocating specific times in the morning and evening to stay informe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of allocating specific times in the morning and evening to stay informed",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "927a77d183b1274f7b57fb7ac1009c263eaf2c96226d869fb36c47ab6ddac3e5"
+}

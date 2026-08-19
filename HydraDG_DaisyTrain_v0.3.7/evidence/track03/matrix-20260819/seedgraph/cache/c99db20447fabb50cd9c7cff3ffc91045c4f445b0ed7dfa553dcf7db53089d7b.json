@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c99db20447fabb50cd9c7cff3ffc91045c4f445b0ed7dfa553dcf7db53089d7b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sentence embeddings or word embedding averages to train a classifier",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sentence embeddings or word embedding averages to train a classifier",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ece504c10be328078ece173e7d9e718b33f578c8b291c62db013b44ab6dc34d7"
+}

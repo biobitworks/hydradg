@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "199083652a543f37c6d9fc85c08541ed902ecb0c2f5ef17b0c7f9da67b6ff398",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the customized item idea, I think a monogrammed tote bag would be a great gift",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the customized item idea, I think a monogrammed tote bag would be a great gift",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e8fc6c61b1c6d80656b53e26f15496019cb849a1373e9bc48da2b1fa5d6186ec"
+}

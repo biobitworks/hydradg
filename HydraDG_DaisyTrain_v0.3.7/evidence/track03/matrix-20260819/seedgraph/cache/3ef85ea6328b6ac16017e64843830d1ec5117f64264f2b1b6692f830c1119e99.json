@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ef85ea6328b6ac16017e64843830d1ec5117f64264f2b1b6692f830c1119e99",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the 90012 zip code",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the 90012 zip code",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb8072d2d6cf2e146bd10bb43bdfd914d94197ef3c2c8b3cc704a0911896b3e0"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f48ba231fc2cea951d16849b61e0848ce1e84cc7f8823ef17149c0c89d8224e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Eisenhower Matrix approach, but I'm not sure how to apply it to my tasks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Eisenhower Matrix approach, but I'm not sure how to apply it to my tasks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0394fd45716ad87bed5e79e19ffd0dc12def04d45ce0a10e99e414c8a537bcee"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0e8a94e2dcc0ab53f9e3cc3336838fc32845979e33e8972fae072b7ed99d31db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of organizing by genre, but I'm not sure how to sub-categorize fiction ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of organizing by genre, but I'm not sure how to sub-categorize fiction books",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "439e73f49fae7923b86becc4e96241d4a2818d073474bacca21c551259f8c49a"
+}

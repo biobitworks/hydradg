@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1b68151ca6cf7f448929e381f835c64c5575eac5aecf01926c2830bfa7a5af33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "olive oil for stir-frying or is it best used only for salads",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "olive oil for stir-frying or is it best used only for salads",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "514f4d4f1f2d4d6b5e256e82a5dea88a1690961f81e0e02af4267b14171b22ce"
+}

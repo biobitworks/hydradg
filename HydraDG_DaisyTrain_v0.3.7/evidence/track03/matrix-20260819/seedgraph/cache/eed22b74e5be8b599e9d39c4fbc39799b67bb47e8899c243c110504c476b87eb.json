@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "eed22b74e5be8b599e9d39c4fbc39799b67bb47e8899c243c110504c476b87eb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a specific brand or type",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a specific brand or type",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c41b44d1bb870a2c170a81829c4c1572a7d75b79ea780a165bc1309299f46f4"
+}

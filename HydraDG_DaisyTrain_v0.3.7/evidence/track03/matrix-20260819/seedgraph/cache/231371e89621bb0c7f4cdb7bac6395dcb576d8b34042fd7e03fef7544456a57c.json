@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "231371e89621bb0c7f4cdb7bac6395dcb576d8b34042fd7e03fef7544456a57c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the cozy color scheme idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the cozy color scheme idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9af6022d11260864785a5d961471d2d6c300964b0aff9f7312feee55501f97d7"
+}

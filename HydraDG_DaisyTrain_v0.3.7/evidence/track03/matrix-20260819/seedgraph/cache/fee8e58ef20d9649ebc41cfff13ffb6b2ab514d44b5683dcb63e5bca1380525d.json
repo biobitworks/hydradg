@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fee8e58ef20d9649ebc41cfff13ffb6b2ab514d44b5683dcb63e5bca1380525d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them in the recipe",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Chipotle BBQ Sauce recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them in the recipe",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Chipotle BBQ Sauce recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "84886d609a85a28a8a395106c998ba255e25f6fa9de6d30acbd134ab919526ce"
+}

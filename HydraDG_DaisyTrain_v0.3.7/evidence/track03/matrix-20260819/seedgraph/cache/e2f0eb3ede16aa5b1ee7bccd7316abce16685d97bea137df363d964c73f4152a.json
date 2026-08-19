@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e2f0eb3ede16aa5b1ee7bccd7316abce16685d97bea137df363d964c73f4152a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sleek, modern design of their cases",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sleek, modern design of their cases",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aaf5c61b7b97cbc3e798e3acf858b3ff62da4a9c31e73a523bb4dee8b21d7329"
+}

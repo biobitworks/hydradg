@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3de661390c470f14e381e4060ecadfef44208a33d8a5bd7e963a6cdee6c0abc3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of designating a shelf for items that need to be used up quickly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating a shelf for items that need to be used up quickly",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "74365e9408fb9d6313859a81220c7d3bc893fa7c3d7ca3b019b6d95e8488159c"
+}

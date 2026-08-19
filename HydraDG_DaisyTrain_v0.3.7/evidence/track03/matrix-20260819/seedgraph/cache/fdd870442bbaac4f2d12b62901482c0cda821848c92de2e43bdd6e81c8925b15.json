@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fdd870442bbaac4f2d12b62901482c0cda821848c92de2e43bdd6e81c8925b15",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas, especially the Smokey Negroni and the Cucumber Gimlet",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the Smokey Negroni and the Cucumber Gimlet",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "505b604f2ddcad32fccb0df34c68ce6993a8f0dff174737c1f8a9880830ea665"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "078f3a484629dba8e341ece22a06ede9996c39574f7abb090667a5cd572b670f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the wine and cheese pairing ideas, especially the Sauvignon Blanc and Goat Chees",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the wine and cheese pairing ideas, especially the Sauvignon Blanc and Goat Cheese combination",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "046819ab9d0fce482451e21b10df286a374cfe4acb96ae8904c038a8c7d8fe1b"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "cf99e5e155d3312164403612d4013b29d3bec1327f5c9e449367e06da3bdaa37",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that Sweet & Smoky BBQ Marinade",
+      "type": "value"
+    },
+    {
+      "name": "those ideas, especially the grilled pineapple and smoked bell peppers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that Sweet & Smoky BBQ Marinade",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the grilled pineapple and smoked bell peppers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f73793251fee6105279c715d9dcb01e08244b51beb1ae83bc024af8aaba5118d"
+}

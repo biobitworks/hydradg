@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "afb6de9a1c7361a0f30e2616b79a5646ae18556fea169323f0964d46100412d0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Hootsuite to identify the most engaging types of content across my social media ",
+      "type": "value"
+    },
+    {
+      "name": "Hootsuite to track the performance of my influencer collaborations",
+      "type": "value"
+    },
+    {
+      "name": "Hootsuite to track the performance of my Facebook ads",
+      "type": "value"
+    },
+    {
+      "name": "Hootsuite to track the performance of my Instagram stories and reels",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Hootsuite to identify the most engaging types of content across my social media platforms",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "Hootsuite to track the performance of my influencer collaborations",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "Hootsuite to track the performance of my Facebook ads",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "Hootsuite to track the performance of my Instagram stories and reels",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cdf0b8d1c854ff25b2bfac909132044b50ba3a8002e054d9296e85f9c236bdf0"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac30e484d96c3e3d55b72ae4ef0cc97fb5580e9bc3941150361fd0980c378bc2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this knowledge in my life",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this knowledge in my life",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b2615b5f584bce599cafe487c9f8bf96df4f807b6c9fbcf8a2eccb8d90a85c1c"
+}

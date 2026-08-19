@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "628848ac2e5406ca620345b7ffad7da001dfad8749a921f8a3cc64912e4305ad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this schedule, but I need to make some adjustments since I've already been worki",
+      "type": "value"
+    },
+    {
+      "name": "the idea of dedicating every Sunday to reviewing and revising my work",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this schedule, but I need to make some adjustments since I've already been working on the story in 3",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of dedicating every Sunday to reviewing and revising my work",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "539b534568357b3db6be9af6e583e7ac4e5015ff18ee0a2790954ee9bbc22738"
+}

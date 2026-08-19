@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "85357549d2f752dee2e5cf95cbfbfb022f1d85f9cf50e2a5de772199e6a450be",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Soft Gray and Beige options",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Soft Gray and Beige options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "edaee737636c6e10a716e2fb05a45ebffcd7f770daaf207a8701dca4ca8f523a"
+}

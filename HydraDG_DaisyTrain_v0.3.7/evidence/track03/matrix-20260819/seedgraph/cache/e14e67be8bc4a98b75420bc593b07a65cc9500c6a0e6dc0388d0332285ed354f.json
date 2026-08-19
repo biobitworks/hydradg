@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e14e67be8bc4a98b75420bc593b07a65cc9500c6a0e6dc0388d0332285ed354f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's been making my teeth look a bit whiter over time",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's been making my teeth look a bit whiter over time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8d74c5081acc7f4ecc0801816f97b12b1dc90f0b5ff93b5f0931bd934dc32d41"
+}

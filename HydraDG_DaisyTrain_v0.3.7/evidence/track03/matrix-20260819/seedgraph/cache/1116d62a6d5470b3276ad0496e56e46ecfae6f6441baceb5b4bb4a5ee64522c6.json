@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1116d62a6d5470b3276ad0496e56e46ecfae6f6441baceb5b4bb4a5ee64522c6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gourmet treats and personalized items",
+      "type": "value"
+    },
+    {
+      "name": "the gourmet nut idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gourmet treats and personalized items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the gourmet nut idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "962a65abb377bfcf70b9279686cc1112b45cf3f69eaf094e044ba91329c2c4eb"
+}

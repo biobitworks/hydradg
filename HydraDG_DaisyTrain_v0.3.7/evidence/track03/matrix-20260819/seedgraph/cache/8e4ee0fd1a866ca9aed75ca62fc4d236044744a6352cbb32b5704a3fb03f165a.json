@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "8e4ee0fd1a866ca9aed75ca62fc4d236044744a6352cbb32b5704a3fb03f165a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "railway to host a postgres database for free",
+      "type": "value"
+    },
+    {
+      "name": "for a Railway postgres database like DataGrip or DBeaver",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "railway to host a postgres database for free",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "for a Railway postgres database like DataGrip or DBeaver",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "40769c6b5fdb7b52c6d07d3cddbdf4b76434b87a44c33d36f5910d44ef604e3f"
+}

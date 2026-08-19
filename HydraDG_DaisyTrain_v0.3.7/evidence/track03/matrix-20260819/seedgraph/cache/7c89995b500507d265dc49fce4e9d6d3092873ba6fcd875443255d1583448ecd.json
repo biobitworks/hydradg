@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "7c89995b500507d265dc49fce4e9d6d3092873ba6fcd875443255d1583448ecd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to sleep in a bit later",
+      "type": "value"
+    },
+    {
+      "name": "the flow and movement, and it helps me feel more energized and focused",
+      "type": "value"
+    },
+    {
+      "name": "to take my time in the mornings",
+      "type": "value"
+    },
+    {
+      "name": "the idea of journaling and meditation",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to sleep in a bit later",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the flow and movement, and it helps me feel more energized and focused",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to take my time in the mornings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of journaling and meditation",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1f09d8653e8f742ec4c9afdbd58b97bdf6860012dc52bb4c8eed9652a5586c87"
+}

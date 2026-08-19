@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3a1971b8b964167eeb537c8cf2357584360aab6bec9b2d8608cddd52a01d3bd4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the draft, but I think it's a bit too detailed",
+      "type": "value"
+    },
+    {
+      "name": "these ideas, but I'm not sure which one I should pursue",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the draft, but I think it's a bit too detailed",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas, but I'm not sure which one I should pursue",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "700e85f97afa41c0d95e0cb1f44e90aa5c2890f26b7fee33ba32d31ce0acbd1d"
+}

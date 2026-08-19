@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4891f7fa33b9f96e6c1013e22d34bf3e4920c7a99107d8665b155a988bc676a0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tips and product recommendations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tips and product recommendations",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b889b620883803d0d64f532b373a3652115fb23c256768ce11d0cf3a0b745d35"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "70d497575a538ffc07bffc8488b28124bd4bce18b984846ea2545fbac21ec3a6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those challenges as opportunities for growth and self-discovery",
+      "type": "value"
+    },
+    {
+      "name": "them to make a positive impact",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those challenges as opportunities for growth and self-discovery",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "them to make a positive impact",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2ea9ba30a95d38ebaa4d6fe820198829e9c36379868e7888720825ffcd626ecf"
+}

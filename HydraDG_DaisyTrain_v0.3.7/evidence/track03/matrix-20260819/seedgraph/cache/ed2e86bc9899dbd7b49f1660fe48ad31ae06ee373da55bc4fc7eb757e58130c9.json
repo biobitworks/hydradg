@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ed2e86bc9899dbd7b49f1660fe48ad31ae06ee373da55bc4fc7eb757e58130c9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, but I was thinking of adding a pop of color to my outfit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, but I was thinking of adding a pop of color to my outfit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "029b52b91db0aaefd6c70425d6c50704b5bd78064b844ad7477d0e258fef7242"
+}

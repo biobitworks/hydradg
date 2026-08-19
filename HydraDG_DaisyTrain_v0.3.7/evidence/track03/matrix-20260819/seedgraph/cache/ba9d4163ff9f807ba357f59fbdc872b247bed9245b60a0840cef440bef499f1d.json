@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ba9d4163ff9f807ba357f59fbdc872b247bed9245b60a0840cef440bef499f1d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a calming environment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a calming environment",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b90d2e293dec6bc4ce6d15750f0b716103f44d9f8e4af7d931744dcde620f393"
+}

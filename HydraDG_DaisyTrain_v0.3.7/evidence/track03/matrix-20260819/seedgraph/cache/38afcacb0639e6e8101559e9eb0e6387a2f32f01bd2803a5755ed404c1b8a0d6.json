@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "38afcacb0639e6e8101559e9eb0e6387a2f32f01bd2803a5755ed404c1b8a0d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and when should I add it to the scramble",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using nutritional yeast to give the scramble a cheesy flavor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and when should I add it to the scramble",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using nutritional yeast to give the scramble a cheesy flavor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fb9728661ed2634ed626ed4c2e3dda579a96dd75f41615681b0ed794946813b4"
+}

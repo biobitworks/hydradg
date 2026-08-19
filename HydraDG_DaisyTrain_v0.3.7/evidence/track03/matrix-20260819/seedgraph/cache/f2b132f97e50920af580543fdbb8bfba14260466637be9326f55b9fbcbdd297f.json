@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f2b132f97e50920af580543fdbb8bfba14260466637be9326f55b9fbcbdd297f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to receive notifications on my phone, and I'd like to receive one reminder 30 mi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to receive notifications on my phone, and I'd like to receive one reminder 30 minutes before waking",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ea213fa5b787def343959e81d46748ca88a0e407715e848f7478f43176c835e1"
+}

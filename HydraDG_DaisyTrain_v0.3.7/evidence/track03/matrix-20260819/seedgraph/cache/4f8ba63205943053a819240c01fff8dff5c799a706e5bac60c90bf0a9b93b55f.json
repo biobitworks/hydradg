@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4f8ba63205943053a819240c01fff8dff5c799a706e5bac60c90bf0a9b93b55f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "tele-rehabilitation to teach myself new exercises or techniques or do I need to ",
+      "type": "value"
+    },
+    {
+      "name": "the convenience, but I worry that I'll miss out on the personal connection with ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "tele-rehabilitation to teach myself new exercises or techniques or do I need to have a therapist gui",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the convenience, but I worry that I'll miss out on the personal connection with my therapist",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2fcea7adb9efa916959ac471cc085d2eadc85af2cdd563ca00a3ca5bea01d427"
+}

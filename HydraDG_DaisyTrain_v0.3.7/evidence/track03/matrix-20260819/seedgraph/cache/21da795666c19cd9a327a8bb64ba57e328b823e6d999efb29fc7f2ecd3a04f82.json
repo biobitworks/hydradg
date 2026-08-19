@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "21da795666c19cd9a327a8bb64ba57e328b823e6d999efb29fc7f2ecd3a04f82",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a \"work zone\" and categorizing similar items",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a \"work zone\" and categorizing similar items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dfca394c2a27832d8f4572706f67d67fa82ed71b11cd5b34052c180f0799adcf"
+}

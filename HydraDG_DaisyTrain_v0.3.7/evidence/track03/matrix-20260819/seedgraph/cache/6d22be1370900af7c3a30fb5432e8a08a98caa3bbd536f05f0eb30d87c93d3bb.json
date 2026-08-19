@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6d22be1370900af7c3a30fb5432e8a08a98caa3bbd536f05f0eb30d87c93d3bb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of preparing a \"protein base\" and using leftovers throughout the week",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using the leftover fajita chicken in a quesadilla casserole",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of preparing a \"protein base\" and using leftovers throughout the week",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using the leftover fajita chicken in a quesadilla casserole",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1f8e6772216faba65a80356e8c6549ef5c306cb478be1bb91b439f548fec1406"
+}

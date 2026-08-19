@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ad3d3e0581f91aac58707377cbff0673b3bc0b1076aea345bd88fb5761e3a47b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a physical tree or a digital one",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a physical tree or a digital one",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2e5802ae9de0de7ad491130d594204f44207877d0f0321562c93fbfb18c4572"
+}

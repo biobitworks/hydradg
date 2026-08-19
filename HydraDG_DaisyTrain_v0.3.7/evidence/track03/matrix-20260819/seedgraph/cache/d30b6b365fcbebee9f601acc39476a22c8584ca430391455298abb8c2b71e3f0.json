@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d30b6b365fcbebee9f601acc39476a22c8584ca430391455298abb8c2b71e3f0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the veggie frittata",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the veggie frittata",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "783df9d4dfb1a84c8cac32d90769dbcb702e44281385e9555f524797faeaa731"
+}

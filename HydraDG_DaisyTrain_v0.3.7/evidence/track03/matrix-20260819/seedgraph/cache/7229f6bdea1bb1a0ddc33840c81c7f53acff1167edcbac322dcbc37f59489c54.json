@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7229f6bdea1bb1a0ddc33840c81c7f53acff1167edcbac322dcbc37f59489c54",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a simple formula\u2026",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a simple formula\u2026",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "64276b32604c54341864485ef4a00f97d772e97d057ba0af37e19e1049014198"
+}

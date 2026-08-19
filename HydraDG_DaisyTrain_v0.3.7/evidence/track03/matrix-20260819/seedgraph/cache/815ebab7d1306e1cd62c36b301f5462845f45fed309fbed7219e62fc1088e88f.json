@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "815ebab7d1306e1cd62c36b301f5462845f45fed309fbed7219e62fc1088e88f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "feature films, but I'm not opposed to watching short films or documentaries eith",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "feature films, but I'm not opposed to watching short films or documentaries either",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8113a29b41393171cdff4d39da2433fab33755e63545839aff765e43a59cba2a"
+}

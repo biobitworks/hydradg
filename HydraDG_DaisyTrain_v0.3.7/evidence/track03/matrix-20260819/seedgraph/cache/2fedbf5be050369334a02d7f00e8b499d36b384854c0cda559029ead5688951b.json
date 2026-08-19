@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2fedbf5be050369334a02d7f00e8b499d36b384854c0cda559029ead5688951b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    },
+    {
+      "name": "those tips, and I think they'll help me get back on track",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those tips, and I think they'll help me get back on track",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1a354f8ae57280f1abf8e162390f932d82e60f2b4bdcc85ef8dac6e94b230d73"
+}

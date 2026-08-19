@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "71fce8f7e48a8d6be16a0717620a51f3aee34736a59b8c10a0329731c3b6d1d7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a welcome series",
+      "type": "value"
+    },
+    {
+      "name": "that idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a sustainability series on Instagram, where I can share beh",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a welcome series",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a sustainability series on Instagram, where I can share behind-the-scenes conte",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "01f9ab44ae9b3f0361d2902ad5a8911a24c601e3cf03e84c46adbf488c6b4424"
+}

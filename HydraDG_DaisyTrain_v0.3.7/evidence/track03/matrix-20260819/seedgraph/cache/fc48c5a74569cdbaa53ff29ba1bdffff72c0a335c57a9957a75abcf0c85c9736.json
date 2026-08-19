@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc48c5a74569cdbaa53ff29ba1bdffff72c0a335c57a9957a75abcf0c85c9736",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to call terminal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to call terminal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d364c2bdcf607c22da770937d745e7141d2e45a56072c50ab62284db680b8d42"
+}

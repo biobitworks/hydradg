@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7659c4821606e4363280456480486c115682c5b1202462de28c3d41b357d2a77",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Korean-Style BBQ Chicken and the Spicy Korean Fried Chicken ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Korean-Style BBQ Chicken and the Spicy Korean Fried Chicken ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2aa304a173c33aab3e97bd435909e101354754b06bbaa7dc23034b4f833d61a2"
+}

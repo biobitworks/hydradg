@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6f8d384ebc225c1fa4f2b4090c5e81160f93c41089c9d0504180202c9ae19041",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Petcube Bites 2, especially with the built-in laser toy feature",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Petcube Bites 2, especially with the built-in laser toy feature",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79ebf5dfeb16a3bb534992c8b028a7ddcd1b369a2061237bbfdc2c6978a41e47"
+}

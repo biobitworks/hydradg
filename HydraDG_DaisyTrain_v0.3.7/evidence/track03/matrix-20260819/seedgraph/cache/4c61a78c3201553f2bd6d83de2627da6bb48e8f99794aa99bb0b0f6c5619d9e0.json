@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c61a78c3201553f2bd6d83de2627da6bb48e8f99794aa99bb0b0f6c5619d9e0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to get there about 15 minutes early to warm up",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to get there about 15 minutes early to warm up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a06b9ec3faaf10a6fb86d9a6dbad45f30ac55e592e25c045925c6c96d29281d"
+}

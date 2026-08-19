@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fda8e36102e6f9fd23777dc9770c6b389db061fd39312c295c5b4af41e2d967f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the casual-cool option",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the casual-cool option",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bb871d72c8ff1fe520c18c07e613cc1f64131c17125a2586c085b4a56602e9f6"
+}

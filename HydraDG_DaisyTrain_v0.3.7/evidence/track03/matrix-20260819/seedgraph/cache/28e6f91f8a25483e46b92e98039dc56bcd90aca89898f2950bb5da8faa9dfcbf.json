@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "28e6f91f8a25483e46b92e98039dc56bcd90aca89898f2950bb5da8faa9dfcbf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Fitbit Sense to track my stress levels during exercise, such as when I'm run",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Fitbit Sense to track my stress levels during exercise, such as when I'm running or cycling",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "18920b5cae7113a605fc47fe6a59e6e8083823f1871ab540ce989a8f0b266db1"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e1215285eaf9a39fa899384d8a7389e87fd829960557ab3eb4e13099f751a7d0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template, it's straightforward and professional",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template, it's straightforward and professional",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "60b7f9a5f43767728843a9f4295c329fe6ecee8d8ed7a3b0b6f2ca4b57f8cc92"
+}

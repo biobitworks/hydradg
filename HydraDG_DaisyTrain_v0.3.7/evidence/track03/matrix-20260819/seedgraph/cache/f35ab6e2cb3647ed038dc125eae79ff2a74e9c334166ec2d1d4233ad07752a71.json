@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f35ab6e2cb3647ed038dc125eae79ff2a74e9c334166ec2d1d4233ad07752a71",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a digital album",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a story arc and integrating my college graduation photos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a digital album",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a story arc and integrating my college graduation photos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75ad365dca5e42beb76dbb2a650633406fa3186d8f4cc14d3a19c606866012a5"
+}

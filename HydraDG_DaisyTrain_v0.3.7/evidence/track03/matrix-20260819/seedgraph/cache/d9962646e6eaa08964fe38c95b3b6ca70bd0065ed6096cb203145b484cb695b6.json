@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d9962646e6eaa08964fe38c95b3b6ca70bd0065ed6096cb203145b484cb695b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Taboo and Deception",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Taboo and Deception",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c06e4f8acf570765fe9e45a6168c763f600732950eac608c3b00b3c0ecb6ae16"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a9fef6f5db3b86ad04afc4c05c1be32597353946f121ea83e2f7bec0ee6105a7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to indulge in a bigger coffee break with some breakfast treats on weekends, and ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to indulge in a bigger coffee break with some breakfast treats on weekends, and I'm getting a bit ti",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6b34520a3846c95d690566d334ff05f4eb5ec494b21815a0da04893b60e864be"
+}

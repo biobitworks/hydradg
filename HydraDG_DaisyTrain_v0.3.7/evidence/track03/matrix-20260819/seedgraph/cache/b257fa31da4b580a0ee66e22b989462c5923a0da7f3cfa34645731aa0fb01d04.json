@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b257fa31da4b580a0ee66e22b989462c5923a0da7f3cfa34645731aa0fb01d04",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to provide you with accurate recommendations and answers to your questions based",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to provide you with accurate recommendations and answers to your questions based on the latest data",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "898775c17a96d396bccb072d22d0a346451f3ea3a06f845c2b097d8c0c8de97e"
+}

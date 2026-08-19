@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3790870fdf71a0793cc1caea7865699341cc8067906ba78d16685caa07c90fe",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a glass cleaner and some paper towels, and it only takes a few minutes to get ri",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a glass cleaner and some paper towels, and it only takes a few minutes to get rid of all the streaks",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6495ea339dceb76a7f1fa96d8bcb5166eca85b78ae9928341839da4ef314d517"
+}

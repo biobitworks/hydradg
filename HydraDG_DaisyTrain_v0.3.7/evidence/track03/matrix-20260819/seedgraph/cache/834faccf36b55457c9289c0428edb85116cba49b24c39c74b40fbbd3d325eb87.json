@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "834faccf36b55457c9289c0428edb85116cba49b24c39c74b40fbbd3d325eb87",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to choose from different levels of spiciness",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to choose from different levels of spiciness",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca3455015eb0d90d6830dff57b84ffd01f2277594bac50c73d818b54ceb8664d"
+}

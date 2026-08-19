@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5e976a68cb96e5a33478e4e4730a77106e5a738edb514d58273cc9a9adb08493",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "public transportation at least 30 days in a month",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a morning routine template",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "public transportation at least 30 days in a month",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a morning routine template",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1c367fdb8d08238f2c240b3017c86c36a0626c82838c20658eed34f06a2eda95"
+}

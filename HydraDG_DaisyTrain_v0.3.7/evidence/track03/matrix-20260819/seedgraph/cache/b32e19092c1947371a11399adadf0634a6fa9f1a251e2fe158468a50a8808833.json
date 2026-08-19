@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b32e19092c1947371a11399adadf0634a6fa9f1a251e2fe158468a50a8808833",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Watermelon Basil Margarita",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Watermelon Basil Margarita",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6fee4529974cea5b2e14bb45f56f21963b97ce7c8e8a5493792419d0d5efedc6"
+}

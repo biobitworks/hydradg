@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "2615a770dda88e82c46f46a8e779dccaa0b2d5fdd5be8103d942e53280e1e07a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "sleeping in a bit later on weekends",
+      "type": "value"
+    },
+    {
+      "name": "the yoga or stretching idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of starting small and scaling up as I get more comfortable with the pra",
+      "type": "value"
+    },
+    {
+      "name": "the idea of building and launching successful startups, and I'm curious to learn",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "sleeping in a bit later on weekends",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the yoga or stretching idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of starting small and scaling up as I get more comfortable with the practice",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of building and launching successful startups, and I'm curious to learn more about the fram",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "755d0574ecf4ec0391d85351e41b7af7668e472b3d5d46e9f825d88583cee7f9"
+}

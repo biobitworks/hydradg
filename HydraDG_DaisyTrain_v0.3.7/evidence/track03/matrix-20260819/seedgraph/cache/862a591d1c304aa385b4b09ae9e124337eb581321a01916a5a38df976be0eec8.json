@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "862a591d1c304aa385b4b09ae9e124337eb581321a01916a5a38df976be0eec8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a fast shutter speed or a wide aperture",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a fast shutter speed or a wide aperture",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "46a97d289573e7f7daebb908428038abbeb1ec8776494190f7e67c27b055fe48"
+}

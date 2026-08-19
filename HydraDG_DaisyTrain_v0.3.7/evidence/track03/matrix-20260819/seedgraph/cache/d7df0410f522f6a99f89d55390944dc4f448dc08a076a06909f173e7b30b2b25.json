@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d7df0410f522f6a99f89d55390944dc4f448dc08a076a06909f173e7b30b2b25",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my finger instead",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my finger instead",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "073351b083b22429f8e840d6dcd175802a9c837e62729761943da83de22d0569"
+}

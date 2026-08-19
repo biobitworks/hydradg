@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8d388d3c9f1ba8e40c123091a6819742d205c7ab6e92359f0e192b88350c0b4a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a physical book where I can write down my thoughts and reflec",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a physical book where I can write down my thoughts and reflect on them later",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef423750ce34a2e9e5988a1d801bf98eeed34d6f0a05c51f6fc8db2315e91713"
+}

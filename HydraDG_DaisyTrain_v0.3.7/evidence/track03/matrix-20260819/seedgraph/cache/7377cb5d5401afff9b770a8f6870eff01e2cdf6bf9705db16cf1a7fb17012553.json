@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7377cb5d5401afff9b770a8f6870eff01e2cdf6bf9705db16cf1a7fb17012553",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of layering everything in a jar and adding a simple vinaigrette dressin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of layering everything in a jar and adding a simple vinaigrette dressing",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "78523f0ada17c029945f51b1f73db5e0a24809d7e5b08ebde57e5980e9219b56"
+}

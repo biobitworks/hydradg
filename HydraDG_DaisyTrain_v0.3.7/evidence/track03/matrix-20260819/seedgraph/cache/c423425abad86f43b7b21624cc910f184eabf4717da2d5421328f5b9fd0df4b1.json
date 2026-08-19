@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c423425abad86f43b7b21624cc910f184eabf4717da2d5421328f5b9fd0df4b1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "India",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "India",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9ac6ce41ed17f88589f157f4675eb4dbc3e2749f0a2dde07331e6f1c9ca34753"
+}

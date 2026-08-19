@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4f7d9913074bf88dece876fe6791c27b16a02f43ea2a5a2f73079e6ce82110d5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's a classic choice and it's easy to carry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's a classic choice and it's easy to carry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da36017015f6f24c5bbda08e1a44f587829ddf88373cee3e1f8cc4c145af31a2"
+}

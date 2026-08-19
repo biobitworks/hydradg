@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc46ac658939ff1c801bd2342510ec0f058877f0d0e40d228825092e89553f17",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to meal prep on Sundays, so it would be great if I could make some snacks in adv",
+      "type": "value"
+    },
+    {
+      "name": "the idea of preparing energy balls and trail mix on Sundays",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to meal prep on Sundays, so it would be great if I could make some snacks in advance as well",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of preparing energy balls and trail mix on Sundays",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a39412cf4897073b03e52bd7b4b1ed4ddb8f825ddc6dd9335d879a4d6f547ea"
+}

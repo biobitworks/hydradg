@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "389ca48272d226c79b17ab68ba7faa318c571f6eaae8e2831d27400f863b7877",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the idea of adding some texture with a chunky knit s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the idea of adding some texture with a chunky knit sweater",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "27cf62691fc3a204377c1b8b1a03f4033813d6ee390ac5a6fa7e670fd76e4c9d"
+}

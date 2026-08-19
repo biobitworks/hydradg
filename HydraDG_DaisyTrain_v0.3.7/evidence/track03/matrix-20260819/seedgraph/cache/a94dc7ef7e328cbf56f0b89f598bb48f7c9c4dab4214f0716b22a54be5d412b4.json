@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a94dc7ef7e328cbf56f0b89f598bb48f7c9c4dab4214f0716b22a54be5d412b4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a utensil tray or divider",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a utensil tray or divider",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "adbad51cd6ad4b444d4a72cd56cc213ed6fe1dbd887a2cfc27e434e6c163cb05"
+}

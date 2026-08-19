@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "db2f441d4e0d5a07d8288eed5ead4ddf61bc1ec4ef4295c224dfbcadc8e681b5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating separate boards for different aspects of my world",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating separate boards for different aspects of my world",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "49bb5309cc4af6e87ea33f463707171dee8dbb0208a000eb0d2bb05be796e64d"
+}

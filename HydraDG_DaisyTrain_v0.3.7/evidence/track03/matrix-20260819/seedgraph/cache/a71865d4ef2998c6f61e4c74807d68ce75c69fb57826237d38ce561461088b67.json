@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a71865d4ef2998c6f61e4c74807d68ce75c69fb57826237d38ce561461088b67",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of featuring a \"Member of the Month\" to highlight someone's achievement",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of featuring a \"Member of the Month\" to highlight someone's achievements or experiences",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "67499aa477b0f2301f0d4ea08b0e9524756820f25d18147b3b25637f2b23cf47"
+}

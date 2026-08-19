@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "abbf1284dd567c104a531a6fe1cb3d1557ab3cf4fb714a0ee1349ba91155be1a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this template, thanks",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting up a spreadsheet to track my income and expenses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this template, thanks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up a spreadsheet to track my income and expenses",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0dde1cb70304ed2050a5cdd679e66510e79c7055ac3acd5c6bf30d6e6c8645f9"
+}

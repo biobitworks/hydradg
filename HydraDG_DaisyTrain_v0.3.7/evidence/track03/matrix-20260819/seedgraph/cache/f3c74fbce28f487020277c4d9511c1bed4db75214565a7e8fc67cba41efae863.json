@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3c74fbce28f487020277c4d9511c1bed4db75214565a7e8fc67cba41efae863",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it because it's less crowded",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it because it's less crowded",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "43665b75ce15d1d8fdebb525856707814ce706352747b3a6f9f1b6e366939812"
+}

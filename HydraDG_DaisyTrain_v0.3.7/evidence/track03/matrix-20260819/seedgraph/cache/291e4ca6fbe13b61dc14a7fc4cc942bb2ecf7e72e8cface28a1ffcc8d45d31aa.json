@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "291e4ca6fbe13b61dc14a7fc4cc942bb2ecf7e72e8cface28a1ffcc8d45d31aa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggested schedule, but I think I'll need to adjust the Sunday plan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggested schedule, but I think I'll need to adjust the Sunday plan",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cff42ddc8748f72dec3ba4c5b09a36be1816d701c5e255120de5c6bf1539b839"
+}

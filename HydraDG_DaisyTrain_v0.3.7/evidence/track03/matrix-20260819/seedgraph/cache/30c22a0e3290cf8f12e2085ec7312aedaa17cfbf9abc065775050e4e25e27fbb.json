@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "30c22a0e3290cf8f12e2085ec7312aedaa17cfbf9abc065775050e4e25e27fbb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using grilled chicken",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using grilled chicken",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2e62844258333eeb71ea4fc4a6a133b07a4f037193dc93880a0a9c3f9aded6a7"
+}

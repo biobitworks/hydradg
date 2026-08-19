@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "beae8367daefeb90c1974b0f1c9275069f663630a14d34773f86ae3d4fc49c50",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the step-by-step approach",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the \"Touch Once\" rule and sorting papers into piles",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using file folders with labels and file drawer organizers to separat",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the step-by-step approach",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the \"Touch Once\" rule and sorting papers into piles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using file folders with labels and file drawer organizers to separate my files",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e707830ed9bdb7964ac051ca61e92966fed094d68f7ec802f9c66cc7e3d296f"
+}

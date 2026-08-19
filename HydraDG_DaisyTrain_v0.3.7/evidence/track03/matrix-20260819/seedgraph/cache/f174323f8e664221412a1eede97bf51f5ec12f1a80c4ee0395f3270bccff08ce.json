@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f174323f8e664221412a1eede97bf51f5ec12f1a80c4ee0395f3270bccff08ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "clothes that are both functional and fashionable",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "clothes that are both functional and fashionable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c48cbb3548143ace4f4a66fbefe3bb00da8d242bc7c47c62278c06ff759957f6"
+}

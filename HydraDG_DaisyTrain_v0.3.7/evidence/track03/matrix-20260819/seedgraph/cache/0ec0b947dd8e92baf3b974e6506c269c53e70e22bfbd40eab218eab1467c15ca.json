@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ec0b947dd8e92baf3b974e6506c269c53e70e22bfbd40eab218eab1467c15ca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it to play music, set reminders, and make hands-free calls, but I'm not sure wha",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it to play music, set reminders, and make hands-free calls, but I'm not sure what else it can do",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "581aeeb6e67d4d2addf8d97e560a72a9cb8877ee813da7d2c9bd5c8702c1d586"
+}

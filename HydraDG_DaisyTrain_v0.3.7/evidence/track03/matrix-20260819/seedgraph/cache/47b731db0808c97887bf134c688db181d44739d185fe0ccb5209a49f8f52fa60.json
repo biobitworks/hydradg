@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "47b731db0808c97887bf134c688db181d44739d185fe0ccb5209a49f8f52fa60",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, especially the roasted red pepper dip and the mini caprese sk",
+      "type": "value"
+    },
+    {
+      "name": "those suggestions, especially the water crackers and pita chips",
+      "type": "value"
+    },
+    {
+      "name": "the idea of offering a variety of flavors, so I might also make some sweet quich",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, especially the roasted red pepper dip and the mini caprese skewers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, especially the water crackers and pita chips",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering a variety of flavors, so I might also make some sweet quiches with fruit or cho",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e973bb3f79273dfa4acd791a185e97d27ffe84af9ec50aea6d31f832df8fff81"
+}

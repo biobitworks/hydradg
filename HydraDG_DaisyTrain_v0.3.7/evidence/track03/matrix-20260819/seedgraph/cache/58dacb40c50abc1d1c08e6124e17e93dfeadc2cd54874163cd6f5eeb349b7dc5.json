@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "58dacb40c50abc1d1c08e6124e17e93dfeadc2cd54874163cd6f5eeb349b7dc5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Peanut Butter Banana Boost, but I think I'll substitute the pea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Peanut Butter Banana Boost, but I think I'll substitute the peanut butter with almo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "432139a2846205f79ff3f8394a7cae6f9b16fd9181427401ab85fc76f0e5e367"
+}

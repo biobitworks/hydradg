@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "405441bf4e8f74c027a5cb7fed6009c61da6f9ac08a8966763a63e15820f10c2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of exploring a wider range of topics beyond just psychology",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of exploring a wider range of topics beyond just psychology",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "688e0d3ebfd9b33833c240263d39ccb98b78297bdaa280cd2422dab51c0b74c3"
+}

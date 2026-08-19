@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "36fe007e2cea09a0dba5a5be68366019849650b80f32ff52298ad36c611ad239",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of cooking in bulk and portioning out individual meals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of cooking in bulk and portioning out individual meals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8b6f26d2506090c65f8a4a4dc3add0150b308e63b05bac30b21d8e41af95420a"
+}

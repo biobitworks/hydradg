@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e5ad7ad7fdb3f0d3d376ce8854c50e5938a1b5eb936ca64c18d6fb6ae10acb9c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them to engage my audience better",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them to engage my audience better",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef2e4ecefa057c92f2176000b29704e3d7ddbb4cc4fe6bb70a43dada81fb8e38"
+}

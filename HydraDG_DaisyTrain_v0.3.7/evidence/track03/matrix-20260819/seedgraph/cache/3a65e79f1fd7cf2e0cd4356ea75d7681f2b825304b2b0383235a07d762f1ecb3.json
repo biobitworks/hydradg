@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3a65e79f1fd7cf2e0cd4356ea75d7681f2b825304b2b0383235a07d762f1ecb3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"Guess the Material\" Contest idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"Guess the Material\" Contest idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dab3e27696067d2828bb381ecd96c349708af317d5ec8a86815ea4df9c3b3b8b"
+}

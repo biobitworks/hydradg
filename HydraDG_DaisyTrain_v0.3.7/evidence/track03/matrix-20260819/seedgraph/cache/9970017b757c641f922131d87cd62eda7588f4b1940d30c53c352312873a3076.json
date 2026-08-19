@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9970017b757c641f922131d87cd62eda7588f4b1940d30c53c352312873a3076",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of themed decor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of themed decor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fd3967c96b38f7498817c9310d2f990ba692a857bb4ae559eab0f800f1383480"
+}

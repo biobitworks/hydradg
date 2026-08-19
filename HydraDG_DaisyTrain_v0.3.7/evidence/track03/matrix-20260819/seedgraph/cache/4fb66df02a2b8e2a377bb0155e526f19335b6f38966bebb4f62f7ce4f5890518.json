@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4fb66df02a2b8e2a377bb0155e526f19335b6f38966bebb4f62f7ce4f5890518",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of spiritual curiosity",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of spiritual curiosity",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b637fa0c0b5367c6b3a40222db1ddcdb7ebc83a89f5027a8a3a69f48d2dd4fbf"
+}

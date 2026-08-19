@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f30ff90837eeb331fe1c5d2a5a0ea6f581dfaecceb4ad49429fd125ac5f34b2b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a summer vibe with a specific color scheme and natural elem",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using citrus-themed decor and scented fresh flowers to create a mult",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a summer vibe with a specific color scheme and natural elements",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using citrus-themed decor and scented fresh flowers to create a multisensory experience",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "925ee6311e8f281fbf7f30bb2dd2f118062c64888ad45f03f222327d68812e23"
+}

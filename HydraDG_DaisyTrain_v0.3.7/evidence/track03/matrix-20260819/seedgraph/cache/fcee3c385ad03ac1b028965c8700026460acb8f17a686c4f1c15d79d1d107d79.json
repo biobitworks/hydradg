@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fcee3c385ad03ac1b028965c8700026460acb8f17a686c4f1c15d79d1d107d79",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "12345 zip code",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "12345 zip code",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1aa428eab095c478912f99e76bf80fd54b22127460279797734fbb0e7e25d2dd"
+}

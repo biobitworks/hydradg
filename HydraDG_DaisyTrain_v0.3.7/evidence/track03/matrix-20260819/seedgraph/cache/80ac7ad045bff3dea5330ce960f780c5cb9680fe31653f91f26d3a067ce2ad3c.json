@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "80ac7ad045bff3dea5330ce960f780c5cb9680fe31653f91f26d3a067ce2ad3c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing events by type and using color-coding to differentiate ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing events by type and using color-coding to differentiate between them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4c5ad06c110240c3708445f5fe1efee44a36b8fa4149fc194d2f13fa70ed9f82"
+}

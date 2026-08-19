@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8260f5e9de26742e9c543bd95512918fe1bdac0f32d6787776356f861c43c090",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using wooden crates to create a backdrop",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using wooden crates to create a backdrop",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "93acff7068bd4996a8f501349dd59140192a0b6b33e3d7933a48591c109132a0"
+}

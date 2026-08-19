@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4844fa39f89f6f6ea675811079f578d747ee4fa4b746f4e102a54f3a670ada01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the onesie garland idea, but how can I make it more personalized",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the onesie garland idea, but how can I make it more personalized",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dd5f5e691d0027068c2bc023da98f65483d3d9dfd819edd514fec0e4f8df81aa"
+}

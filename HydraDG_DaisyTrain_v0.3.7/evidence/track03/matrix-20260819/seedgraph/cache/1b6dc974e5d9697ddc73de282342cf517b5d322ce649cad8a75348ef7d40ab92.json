@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1b6dc974e5d9697ddc73de282342cf517b5d322ce649cad8a75348ef7d40ab92",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of energy balls, can you give me some recipes that don't require baking",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Coconut Lime Energy Balls, I'll definitely give those a try",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of energy balls, can you give me some recipes that don't require baking",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Coconut Lime Energy Balls, I'll definitely give those a try",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3845cb3d604f9af6afa50e90cb60e9c841e8cfa72f50163a204cdbb75c931de7"
+}

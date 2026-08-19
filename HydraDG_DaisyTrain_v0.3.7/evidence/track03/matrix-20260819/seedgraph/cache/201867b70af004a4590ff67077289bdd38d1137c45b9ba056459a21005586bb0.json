@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "201867b70af004a4590ff67077289bdd38d1137c45b9ba056459a21005586bb0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tip about preparing myself mentally before starting the task",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using clear storage bins to store seasonal decorations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tip about preparing myself mentally before starting the task",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using clear storage bins to store seasonal decorations",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fcc73eaf43e0337cfe901b8cf17de205e49dcc718b4d8b9d352edf0f39842364"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8a87d93aac8511e0abb2b6c4631c245158c21bf0b41d1f25c289b67190e29816",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the mix of genres and tempos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the mix of genres and tempos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ee67ddd63532c12452c6fb2b6880316d5474e5362dded8bef1acc22d26bc22df"
+}

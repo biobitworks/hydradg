@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f9809779187e5089e031837a134a5f4d177e88129fd8386b5b751a08e28cf78",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the vegan wrap and the lentil soup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the vegan wrap and the lentil soup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6ecd78c7bc0a33328b515d5149442d908b7acabb5db591918a48a2c6f82d333b"
+}

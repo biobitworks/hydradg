@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "559a81e1cc213f0ca7205d940258806a73a3f69de0303d0abb1956d95387a9f3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of floating the furniture",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a soft and textured rug, but I also want something that's easy to cl",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of floating the furniture",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a soft and textured rug, but I also want something that's easy to clean and maintain",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c5c603818509beff8f950957a8d2887797e45d93b0c30fffc2f14055a1d77349"
+}

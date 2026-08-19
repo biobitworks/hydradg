@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ffb42495d4252d8e7aa2110a0fc555549310aa8d4de74c94e2923f9dbf6badac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a clean, professional style for my work",
+      "type": "value"
+    },
+    {
+      "name": "the style you describe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a clean, professional style for my work",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the style you describe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d04bae04715bb0d11ebf80206251d767466147ac1797f12089615cf064e3a065"
+}

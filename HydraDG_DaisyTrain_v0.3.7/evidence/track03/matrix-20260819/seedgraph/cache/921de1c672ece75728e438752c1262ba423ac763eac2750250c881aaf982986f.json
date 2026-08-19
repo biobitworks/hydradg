@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "921de1c672ece75728e438752c1262ba423ac763eac2750250c881aaf982986f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to fly out of O'Hare, and my travel dates are May 10-14",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to fly out of O'Hare, and my travel dates are May 10-14",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3c7437f8f5ab3051952b8e1e6a76881c1646bee32af24d5591e6ef83106b0a89"
+}

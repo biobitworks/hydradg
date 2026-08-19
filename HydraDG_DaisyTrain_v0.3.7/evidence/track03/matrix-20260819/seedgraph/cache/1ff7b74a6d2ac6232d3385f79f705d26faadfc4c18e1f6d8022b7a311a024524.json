@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1ff7b74a6d2ac6232d3385f79f705d26faadfc4c18e1f6d8022b7a311a024524",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a good ol' fashioned pour-over or a well-made cappuccino",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a good ol' fashioned pour-over or a well-made cappuccino",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a53a3fd51679df532bacc978e04506077fa96b1f5f00e406eb4b49d8d58b0f78"
+}

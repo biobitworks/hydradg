@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9f0fdde3f6a8db96f1f423837976e9a5c39798040f6d4e6d7f09ffd3fb47b8af",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "rpm-ostree to generate the file tree and then commit the diffs, or am I missing ",
+      "type": "value"
+    },
+    {
+      "name": "the CoreOs assembler to pull from a remote ostree repo in order to re-use build ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "rpm-ostree to generate the file tree and then commit the diffs, or am I missing something",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the CoreOs assembler to pull from a remote ostree repo in order to re-use build artifacts",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1be2469220e4fcdf0748488388f18c42b7f8123c24c8d54f47d2948604c13847"
+}

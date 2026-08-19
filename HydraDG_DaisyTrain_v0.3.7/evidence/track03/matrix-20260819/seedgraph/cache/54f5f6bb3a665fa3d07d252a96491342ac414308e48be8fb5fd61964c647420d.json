@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "54f5f6bb3a665fa3d07d252a96491342ac414308e48be8fb5fd61964c647420d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of grain bowls and salad jars",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of grain bowls and salad jars",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "06612b91d84669edd982002dbecad527c65d029279c660e520ad53a6f359c6ba"
+}

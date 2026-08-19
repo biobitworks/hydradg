@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "d03c9f501663b130ba7ffa5c7c48f8dd5f7964af29319444acf0e870999dcb30",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the overnight oats idea, but I'm not a big fan of nuts",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding seeds like chia or flaxseeds",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding a cilantro lime dressing to the quinoa and black bean salad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the overnight oats idea, but I'm not a big fan of nuts",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding seeds like chia or flaxseeds",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a cilantro lime dressing to the quinoa and black bean salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "476a367bd264f60c10de15f703228b6877bb4fd28f4ab50e297c07fa74d0decc"
+}

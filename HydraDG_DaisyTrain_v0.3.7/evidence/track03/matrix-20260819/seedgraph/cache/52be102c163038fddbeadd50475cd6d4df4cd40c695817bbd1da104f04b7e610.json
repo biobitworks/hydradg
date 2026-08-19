@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "52be102c163038fddbeadd50475cd6d4df4cd40c695817bbd1da104f04b7e610",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "rooting hormone and what kind of soil is best for this",
+      "type": "value"
+    },
+    {
+      "name": "that it's compact, quiet, and has a built-in humidistat",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "rooting hormone and what kind of soil is best for this",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it's compact, quiet, and has a built-in humidistat",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "63f133012b23a70a4a6a7c55fad86b6a67f40ab410bb068355b3fae0bf3d6042"
+}

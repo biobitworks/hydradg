@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5947d4de7e88a7725e4244023e5a4dc8592bc7db299011ea2308beca5f416a11",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of The Immortalists and The Family Upstairs",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of The Immortalists and The Family Upstairs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a0b6957e22a49a9a846f0a0f74389a1a2691787550f5cabf46fb21ec084bcc76"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac8814fd047459ae14d2450876592e065886b4107de301d4a0563fa7fef19964",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a structured course with assignments and quizzes to help me s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a structured course with assignments and quizzes to help me stay on track",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9249519ecb7347aab14fedf5f814ab356f49dfe38825a78bf6fd50d6ecb1bc9e"
+}

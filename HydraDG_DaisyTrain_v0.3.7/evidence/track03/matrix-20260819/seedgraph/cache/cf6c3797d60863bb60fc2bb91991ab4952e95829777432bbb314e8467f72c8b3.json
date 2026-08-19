@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cf6c3797d60863bb60fc2bb91991ab4952e95829777432bbb314e8467f72c8b3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the 5 research questions you suggest, but could you make them a bit more activis",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the 5 research questions you suggest, but could you make them a bit more activist/critical",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "08a852e1ec9c85214b81e9e3d358d3ed6130b46abf0dba5cc47ad0f9afc4240e"
+}

@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "9daa514a420cc232cd5f754dd1055707d909008c5405e3fb6254497de567cdf2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "up the ingredients I bought on Wednesday when I went to the store at 6 pm",
+      "type": "value"
+    },
+    {
+      "name": "the sandwich ideas, especially the grilled chicken or turkey sandwiches",
+      "type": "value"
+    },
+    {
+      "name": "the ideas for Friday, Saturday, and Sunday",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "up the ingredients I bought on Wednesday when I went to the store at 6 pm",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sandwich ideas, especially the grilled chicken or turkey sandwiches",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the ideas for Friday, Saturday, and Sunday",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "400c34e770978b70764c97732497b86cb971101273899a6fe57b2d853c295390"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fff6b54ed396d0d073084cddae96668696bf724254d3d0680a9f08d87af1d426",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a reclaimed wood coffee table",
+      "type": "value"
+    },
+    {
+      "name": "the idea of succulents",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a reclaimed wood coffee table",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of succulents",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d0829b62f99257d1506c32beff44b6b763784082554cb23868c7fc67cc4cd8fe"
+}

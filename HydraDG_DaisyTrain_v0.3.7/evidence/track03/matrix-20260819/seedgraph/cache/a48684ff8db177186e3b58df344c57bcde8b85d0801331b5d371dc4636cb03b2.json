@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a48684ff8db177186e3b58df344c57bcde8b85d0801331b5d371dc4636cb03b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my credit card or is there another payment method I can use",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my credit card or is there another payment method I can use",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ccb49871daef45a46c427151cbdf24a1b03d83bcd813f71135bf2e41b56b5bc8"
+}

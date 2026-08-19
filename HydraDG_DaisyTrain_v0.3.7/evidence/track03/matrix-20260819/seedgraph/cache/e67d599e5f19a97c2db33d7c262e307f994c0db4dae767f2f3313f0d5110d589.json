@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "e67d599e5f19a97c2db33d7c262e307f994c0db4dae767f2f3313f0d5110d589",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it (online or in-store)",
+      "type": "value"
+    },
+    {
+      "name": "them regularly and I have enough storage space",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a binder or a digital tool to organize them better",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it (online or in-store)",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "them regularly and I have enough storage space",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a binder or a digital tool to organize them better",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4d6fb186b4a842ed562008fdcad8991b2f43356a373dfcd22a0041b3f4c89a37"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f8e9eb537001900cd562af032d87c5e3b997a19ac3b77998ca3bb2b6b3b74a21",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "rechargeable batteries instead of disposable ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "rechargeable batteries instead of disposable ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2952bb36d6a0dfd9d75026c579e52e58c88d079f5f0536fa6a92f7cc4656cf52"
+}

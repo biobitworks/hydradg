@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a0b45b635c1d7484bd70624949c621a1ffa3ba93330c22ff1c5f49e9588d1170",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them before they expire",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them before they expire",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f791959ca63b11e9958dc335313285598f8c875fc9eac65439c15233591cb031"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "222eddc41d85441761608dddc64130a2ec0da1d23aedadf2b4c3172b64b6c31c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a staggered arrangement, but I'm not sure about the frames",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a staggered arrangement, but I'm not sure about the frames",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b01b217c3848d6b9c48338fbb17bc1da0b12ad5066242857dfc350cca51ea32a"
+}

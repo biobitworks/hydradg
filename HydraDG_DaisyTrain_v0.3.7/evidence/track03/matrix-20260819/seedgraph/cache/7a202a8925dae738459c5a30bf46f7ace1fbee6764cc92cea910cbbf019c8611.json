@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a202a8925dae738459c5a30bf46f7ace1fbee6764cc92cea910cbbf019c8611",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "listening to a lot of different types of electronic music, from ambient to techn",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "listening to a lot of different types of electronic music, from ambient to techno",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03d679c108362da898348f5bf686a8c303167268d92e2392ded2fe738dba01dd"
+}

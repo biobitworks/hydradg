@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "860187442a3ee95115bce4e200a036738d2835b4ed3340219f49d219dddf9cc9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of customized jewelry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of customized jewelry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2192cf6200773fd568a0e2ec7e62c45320586ccac9c4e046ce76580b8cb716f4"
+}

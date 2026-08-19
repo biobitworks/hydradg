@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "cd2e35f30e0b5484e62a0322297b5d8a2d0c7d9ffb11cd47e90c22c3c128fe10",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it can automatically organize my travel plans into a single itinerary",
+      "type": "value"
+    },
+    {
+      "name": "to have more control over my travel arrangements and often find better deals whe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it can automatically organize my travel plans into a single itinerary",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to have more control over my travel arrangements and often find better deals when booking individual",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c526adc8192a2cf6c75340cfdd6601cb7cce3dcac30c997eda4975e3881c666a"
+}

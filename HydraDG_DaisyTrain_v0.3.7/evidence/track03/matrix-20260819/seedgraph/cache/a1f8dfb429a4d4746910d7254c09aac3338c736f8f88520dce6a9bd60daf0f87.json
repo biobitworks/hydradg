@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a1f8dfb429a4d4746910d7254c09aac3338c736f8f88520dce6a9bd60daf0f87",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to make on Sundays",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to make on Sundays",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dbaeffc27e167038195199096f6de2b7337c21d01bf9221c9a01bdbefc7cb17e"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "43e9a4e7076bd03dcb2c07a6e6bc6e8852fb682b5c5c2bd6d24ceb43f193a978",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of outdoor yoga",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of outdoor yoga",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2fd751b9d4d0db5fd6f0ea9fb2757ad83ba6751e65c7b78df5dd38dfc76bafbb"
+}

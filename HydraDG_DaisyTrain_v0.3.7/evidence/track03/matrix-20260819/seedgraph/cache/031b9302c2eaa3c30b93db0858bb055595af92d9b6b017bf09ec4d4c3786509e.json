@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "031b9302c2eaa3c30b93db0858bb055595af92d9b6b017bf09ec4d4c3786509e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of serving Japchae with Chana Masala and Falafel",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of serving Japchae with Chana Masala and Falafel",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "94cd1c9e9d4c50456cce5c720a5369405c82aa8ebd4a8087f5bd8712f15e3e51"
+}

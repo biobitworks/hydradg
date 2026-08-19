@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "79980576428798bbc0de9990ab7b317ea6849c04c6a924cb8e84ed0b28fe7205",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to dice it pretty finely so that there's no super large chunks and since I chopp",
+      "type": "value"
+    },
+    {
+      "name": "to cook mine for 18 minutes and then set the top broiler on for the last two min",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to dice it pretty finely so that there's no super large chunks and since I chopped half an onion tod",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to cook mine for 18 minutes and then set the top broiler on for the last two minutes so they get nic",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b60295ef33120820d50612acf4978d803e2837be66a126ea4f37d43954294e9c"
+}

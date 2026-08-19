@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "cb6d62654b9b974b0fe0ec06650de3825f493c73ba0da37be5ca6342adff85d0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "visualization to bring my desires to life",
+      "type": "value"
+    },
+    {
+      "name": "visualization to bring my creative ideas to life",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "visualization to bring my desires to life",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "visualization to bring my creative ideas to life",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4eff1dbf8f82cd703abd500b61e639f6552da511d9492e6b7c81e109980aa164"
+}

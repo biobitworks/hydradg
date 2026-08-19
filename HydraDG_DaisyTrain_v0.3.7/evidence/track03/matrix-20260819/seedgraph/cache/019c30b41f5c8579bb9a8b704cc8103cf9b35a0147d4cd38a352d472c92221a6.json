@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "019c30b41f5c8579bb9a8b704cc8103cf9b35a0147d4cd38a352d472c92221a6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of offering exclusive experiences",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering exclusive experiences",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c2f167e2f64be1c6ca7faf156faf4196f43b307a55d09d1f0cf571808b16aa0b"
+}

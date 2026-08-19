@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d3d456728964b66ea185138d3c9e1ab046b594f3dad3cf58cbd1705c8cded3e1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the DIY scoreboard and the team-themed food",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the DIY scoreboard and the team-themed food",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bbc63b20044cfd4722e5a2c0970b39677f1a8227d1ee5815887149c0ce02cbcf"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "aec655476f12258c911593904b6aa7ad74625194197afb302fefee9aa1ad46dd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a specific voice command to search, like \"Search for [movie name]\" instead of ju",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a specific voice command to search, like \"Search for [movie name]\" instead of just saying \"[movie na",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a3264e7f2c9dbccd8d6aee487e86e8399f63b2bce813570e8d5203c663769b62"
+}

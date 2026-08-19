@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5fd03fb42b76579573c0ca9207a33785bda4e8f67dbcdfabad62ca2ba63364ce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized care package",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized care package",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a90abdb6db6f74230446a485714062a15ec91c682baaec9949743b2e7cab1737"
+}

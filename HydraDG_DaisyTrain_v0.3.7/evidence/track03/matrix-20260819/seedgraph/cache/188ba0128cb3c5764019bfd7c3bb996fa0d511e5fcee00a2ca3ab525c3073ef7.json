@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "188ba0128cb3c5764019bfd7c3bb996fa0d511e5fcee00a2ca3ab525c3073ef7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of starting my day with a clear and focused mind",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of starting my day with a clear and focused mind",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0e75f0b354a536ff84219399f7bc2e52c55271d3c4c79bc2491a1a5415b37df3"
+}

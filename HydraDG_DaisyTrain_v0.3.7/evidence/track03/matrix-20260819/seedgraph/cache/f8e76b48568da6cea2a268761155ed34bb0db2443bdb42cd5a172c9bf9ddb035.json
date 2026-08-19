@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f8e76b48568da6cea2a268761155ed34bb0db2443bdb42cd5a172c9bf9ddb035",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a cheesecloth, nut milk bag, or something else",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a cheesecloth, nut milk bag, or something else",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "22b9db45c8020ca195d75aa0c7a196be7f1b29997c7bd1f993391173262f49f3"
+}

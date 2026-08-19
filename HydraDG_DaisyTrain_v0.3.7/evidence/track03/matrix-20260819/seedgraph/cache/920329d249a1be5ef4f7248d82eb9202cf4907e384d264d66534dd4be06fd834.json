@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "920329d249a1be5ef4f7248d82eb9202cf4907e384d264d66534dd4be06fd834",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "researched hashtags, I get more comments - the same post received 5 comments aft",
+      "type": "value"
+    },
+    {
+      "name": "the idea of planning out my posts in advance, but also leaving some room for spo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "researched hashtags, I get more comments - the same post received 5 comments after I used researched",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning out my posts in advance, but also leaving some room for spontaneity",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e65033cc57c68fdb5e1aa7ba91f4103b633f130eba87e2bd7e73e7045b395ea"
+}

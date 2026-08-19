@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7fd5ec7717cc3b230a678bbceb9eab86a6265c79e8e835441b058b87902aa222",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "exploring off the beaten path",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "exploring off the beaten path",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8564a69bd60403efeba21982188237d3a99bcd0682f630bd23bfd7300284f296"
+}

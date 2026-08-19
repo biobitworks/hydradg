@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b68e38697fc992765ec86a8decf159490f2d3d0b4c5e7a33558150c72f1e3774",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the gym-based social activities idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of trying out a fitness app to find a workout buddy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the gym-based social activities idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of trying out a fitness app to find a workout buddy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a5fa0f30d25fe4d3d5ff1d11cd8eff8c6915d44c9e913ed3f97c572b2b46b596"
+}

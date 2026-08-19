@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "959e99bf96221ac896d3c41a3f28c2c86557a007074bd3c0d2bc05c08a7cd1b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of serving Fresh Fruit Skewers and Bruschetta with Fresh Fruit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of serving Fresh Fruit Skewers and Bruschetta with Fresh Fruit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "beb5dd92b8c80cf2e9fe156cfbd3dc7f9b1373ed776982c940c7796dba59ae77"
+}

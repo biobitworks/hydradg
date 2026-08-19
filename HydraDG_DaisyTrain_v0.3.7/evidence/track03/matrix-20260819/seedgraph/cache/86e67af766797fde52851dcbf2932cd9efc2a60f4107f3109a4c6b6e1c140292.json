@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "86e67af766797fde52851dcbf2932cd9efc2a60f4107f3109a4c6b6e1c140292",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "honey in a homemade hair mask for color-treated hair",
+      "type": "value"
+    },
+    {
+      "name": "this mask on my color-treated hair",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "honey in a homemade hair mask for color-treated hair",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "this mask on my color-treated hair",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c51f3fb63379e39484aacb3052363dbfdcdcee8ae452b8c93d009148774a6347"
+}

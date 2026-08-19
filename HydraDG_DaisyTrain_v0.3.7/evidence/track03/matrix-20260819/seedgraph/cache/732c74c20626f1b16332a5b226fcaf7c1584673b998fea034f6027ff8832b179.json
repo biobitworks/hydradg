@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "732c74c20626f1b16332a5b226fcaf7c1584673b998fea034f6027ff8832b179",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the subtle texture it creates",
+      "type": "value"
+    },
+    {
+      "name": "best",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the subtle texture it creates",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "best",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7667c631deb65ba4afd8f1e8f72f2f9795f9eec6a3bf410d92237b28bf178b24"
+}

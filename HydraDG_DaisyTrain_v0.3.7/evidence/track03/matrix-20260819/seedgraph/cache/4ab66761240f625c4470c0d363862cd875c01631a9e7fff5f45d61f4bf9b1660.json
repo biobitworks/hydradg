@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4ab66761240f625c4470c0d363862cd875c01631a9e7fff5f45d61f4bf9b1660",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to watch French movies with subtitles to practice my listening skills, and it's ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to watch French movies with subtitles to practice my listening skills, and it's a great way to exper",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4952485ee2f139e7fcd09e6521e115f110a08360eb6d51b8ae602aed304e2bb9"
+}

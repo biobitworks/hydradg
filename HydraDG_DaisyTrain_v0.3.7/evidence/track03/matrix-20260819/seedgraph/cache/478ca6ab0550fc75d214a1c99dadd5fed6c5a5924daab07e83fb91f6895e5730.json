@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "478ca6ab0550fc75d214a1c99dadd5fed6c5a5924daab07e83fb91f6895e5730",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a \"sleep-in\" limit and using a \"flexible anchor\" to strike a",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a wake-up routine that I enjoy, so I think I'll try to inco",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a \"sleep-in\" limit and using a \"flexible anchor\" to strike a balance between con",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a wake-up routine that I enjoy, so I think I'll try to incorporate some stretch",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "16e5f92eae01526691ad3ac978ce3e1c3aa8d0bedf374dd153bcd9b92e022446"
+}

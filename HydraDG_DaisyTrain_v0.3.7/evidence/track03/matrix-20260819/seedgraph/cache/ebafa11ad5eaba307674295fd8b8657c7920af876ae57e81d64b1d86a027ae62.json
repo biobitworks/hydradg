@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ebafa11ad5eaba307674295fd8b8657c7920af876ae57e81d64b1d86a027ae62",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this Sweet Heat BBQ Sauce recipe for my chicken breasts, or is it better suited ",
+      "type": "value"
+    },
+    {
+      "name": "this Sweet Heat BBQ Sauce recipe for slow-cooked ribs, or do I need to adjust th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this Sweet Heat BBQ Sauce recipe for my chicken breasts, or is it better suited for ribs or burgers",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "this Sweet Heat BBQ Sauce recipe for slow-cooked ribs, or do I need to adjust the ingredients for a",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8d3114bb62900c02fa87f5938bfc1fb96051fb7361142dd4d020fc3e40f3aeea"
+}

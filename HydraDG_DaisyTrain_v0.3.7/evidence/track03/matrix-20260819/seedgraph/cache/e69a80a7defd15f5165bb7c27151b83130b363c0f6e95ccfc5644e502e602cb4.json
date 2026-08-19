@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e69a80a7defd15f5165bb7c27151b83130b363c0f6e95ccfc5644e502e602cb4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"launching pad\" and the \"one in, one out\" policy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"launching pad\" and the \"one in, one out\" policy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "963ebf894f6feea8a4f4a131dd451e0ea746fd5d04a759540b67b2850dc0a992"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "275d352391c53e087e88834ad03b066a9d53385683c60cbe7dfd287f4f038114",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of velvet pillows in rich hues",
+      "type": "value"
+    },
+    {
+      "name": "best",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of velvet pillows in rich hues",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "best",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "997ef5fc320b7c29800d4ec9fe32ed42d6daa9ca5518204847f941b0476b4eef"
+}

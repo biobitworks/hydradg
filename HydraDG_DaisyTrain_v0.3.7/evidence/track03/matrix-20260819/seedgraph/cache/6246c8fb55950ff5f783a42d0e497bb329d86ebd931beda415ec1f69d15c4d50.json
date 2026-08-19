@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6246c8fb55950ff5f783a42d0e497bb329d86ebd931beda415ec1f69d15c4d50",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a built-in cable, but I'm not sure if I want to pay extra for",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a built-in cable, but I'm not sure if I want to pay extra for it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dbdd77b0a67f289107ebbeb43c16be99ffb49f14220b36eb58a883c28e7369ca"
+}

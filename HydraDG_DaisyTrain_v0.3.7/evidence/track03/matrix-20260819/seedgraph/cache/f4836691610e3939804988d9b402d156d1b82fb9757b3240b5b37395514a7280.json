@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f4836691610e3939804988d9b402d156d1b82fb9757b3240b5b37395514a7280",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the direction you're heading with the content strategy and calendar",
+      "type": "value"
+    },
+    {
+      "name": "the direction you're heading with the \"Marketing 101\" series",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the direction you're heading with the content strategy and calendar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the direction you're heading with the \"Marketing 101\" series",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e9f95500460e9fe2e4bf9af2c302e9f3d543dc12fe929615b5f7197a2e2c3efa"
+}

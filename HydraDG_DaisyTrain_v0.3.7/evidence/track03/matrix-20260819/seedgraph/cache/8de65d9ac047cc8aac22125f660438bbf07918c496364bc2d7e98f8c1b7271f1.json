@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8de65d9ac047cc8aac22125f660438bbf07918c496364bc2d7e98f8c1b7271f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of spiced legumes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of spiced legumes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9e9913352db8cc89286eca53ad7c46bae13c2afc99759295587b48ccfa627de4"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a8f65015c3b455de3b51a7aa8dfdf37cceea082d6ed94a835d41cb2798ea0345",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to run in the morning, and I'm available to run any day of the week",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to run in the morning, and I'm available to run any day of the week",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a22d40fbfe55640352b7a4294f6c31c654ca83593fd8a9fc2aea2c055e3ca2e"
+}

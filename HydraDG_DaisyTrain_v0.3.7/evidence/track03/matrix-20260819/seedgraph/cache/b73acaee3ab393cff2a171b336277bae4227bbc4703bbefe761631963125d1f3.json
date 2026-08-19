@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b73acaee3ab393cff2a171b336277bae4227bbc4703bbefe761631963125d1f3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Korean-Style BBQ Beef Stir-Fry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Korean-Style BBQ Beef Stir-Fry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d163f154f47cdb75b76b13f0664813c04d4cd432902b92e7fd7ed138ac010168"
+}

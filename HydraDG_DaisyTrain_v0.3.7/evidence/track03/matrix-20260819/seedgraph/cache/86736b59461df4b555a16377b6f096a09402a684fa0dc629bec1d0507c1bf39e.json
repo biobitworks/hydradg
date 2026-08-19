@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "86736b59461df4b555a16377b6f096a09402a684fa0dc629bec1d0507c1bf39e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it for other dishes like fried rice or is it only good for making sushi",
+      "type": "value"
+    },
+    {
+      "name": "productivity apps, to-do lists, or planners",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it for other dishes like fried rice or is it only good for making sushi",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "productivity apps, to-do lists, or planners",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "848009a74bdadda1065384ac4a832f9d1dbbd41a4631ce6ff1b2c223d27f71c1"
+}

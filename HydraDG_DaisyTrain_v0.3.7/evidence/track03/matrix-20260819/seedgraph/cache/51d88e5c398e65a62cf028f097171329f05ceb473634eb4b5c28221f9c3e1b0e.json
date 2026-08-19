@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "51d88e5c398e65a62cf028f097171329f05ceb473634eb4b5c28221f9c3e1b0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of focusing on others and finding common ground - that makes sense",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of focusing on others and finding common ground - that makes sense",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4168d4512e42a1201f8cd807f824333d2beb26773fc5d91f6c007b93649a22f4"
+}

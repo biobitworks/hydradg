@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "38b7c6b54cbb4ad36a577710d3bd99812e418ac60f47dfb2f986dd2d68eda934",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and do I need to cook it with the tomato sauce for a long time to get the flavor",
+      "type": "value"
+    },
+    {
+      "name": "the sound of that homemade tomato sauce",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and do I need to cook it with the tomato sauce for a long time to get the flavors infused",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of that homemade tomato sauce",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7b2ebd4ebe1bc5ba06e049a5eb46ec998ea122da0f35a661084481525c0f66c0"
+}

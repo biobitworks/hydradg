@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5e1865b80dd914f53d9793b29f7f7c40339496ffad408bfe82f099a5fc0b123c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"Mental Health Awareness\" captions you provided, especially the first one",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"Mental Health Awareness\" captions you provided, especially the first one",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "78c08679c4c794901352887a0f0493662b7ca1f990f355beec36edb18f51f095"
+}

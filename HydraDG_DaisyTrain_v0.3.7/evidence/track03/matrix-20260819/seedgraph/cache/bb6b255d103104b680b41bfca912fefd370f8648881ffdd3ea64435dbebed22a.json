@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bb6b255d103104b680b41bfca912fefd370f8648881ffdd3ea64435dbebed22a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized jewelry or a fun experience gift",
+      "type": "value"
+    },
+    {
+      "name": "that they have a wide range of designs to choose from",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized jewelry or a fun experience gift",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that they have a wide range of designs to choose from",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "67e10b1ec5ea301b5a6c2745091a1ffc913224fa142dc332e9a7f3032cee0d9d"
+}

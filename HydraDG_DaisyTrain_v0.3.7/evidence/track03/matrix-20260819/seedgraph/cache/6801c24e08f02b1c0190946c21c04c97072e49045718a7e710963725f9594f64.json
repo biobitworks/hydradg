@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "6801c24e08f02b1c0190946c21c04c97072e49045718a7e710963725f9594f64",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the warm and natural look it can bring to the room",
+      "type": "value"
+    },
+    {
+      "name": "the classic look it gives and it seems durable enough",
+      "type": "value"
+    },
+    {
+      "name": "the idea of enhancing the natural color and grain of the oak wood",
+      "type": "value"
+    },
+    {
+      "name": "the warm and inviting atmosphere it creates, and it seems like a classic choice ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the warm and natural look it can bring to the room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the classic look it gives and it seems durable enough",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of enhancing the natural color and grain of the oak wood",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the warm and inviting atmosphere it creates, and it seems like a classic choice for a traditional li",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b47db34416e3882b9bbafbdfa24e20e6019cae3de13b7480816c4992883e0429"
+}

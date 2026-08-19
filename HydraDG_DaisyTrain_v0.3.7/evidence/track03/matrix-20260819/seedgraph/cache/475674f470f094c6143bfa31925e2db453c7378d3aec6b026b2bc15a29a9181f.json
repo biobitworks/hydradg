@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "475674f470f094c6143bfa31925e2db453c7378d3aec6b026b2bc15a29a9181f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my laptop to do a walk-through and check the signal strength as I move around th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my laptop to do a walk-through and check the signal strength as I move around the house",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "143981ad14decb1a1b14950d73183be7865d6916ba4fe34836b33bcf89f52026"
+}

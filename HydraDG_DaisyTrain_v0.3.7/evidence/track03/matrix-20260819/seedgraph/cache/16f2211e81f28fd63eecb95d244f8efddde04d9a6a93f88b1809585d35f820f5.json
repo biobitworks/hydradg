@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "16f2211e81f28fd63eecb95d244f8efddde04d9a6a93f88b1809585d35f820f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the kimchi deviled eggs and hummus with pita bread as appetizers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the kimchi deviled eggs and hummus with pita bread as appetizers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7559f0298a28b43f865de3339a2c95d58bf670ff3e923a8ad0b8c73d9a19b131"
+}

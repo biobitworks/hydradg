@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f678733ebff1e3fc184e7c4ec2adfbf2ebf7a0536cb170af45b1caa6e9a0636",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing by genre and project-based",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing by genre and project-based",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0979d8669af444436990e78e5beaef1e3895298003167d8f7c6b50b95932214b"
+}

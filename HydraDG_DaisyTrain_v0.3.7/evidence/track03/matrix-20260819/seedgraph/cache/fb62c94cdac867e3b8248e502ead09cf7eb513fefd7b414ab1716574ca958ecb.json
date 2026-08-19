@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "fb62c94cdac867e3b8248e502ead09cf7eb513fefd7b414ab1716574ca958ecb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the routine, but I was thinking of including some time for breakfast in my morni",
+      "type": "value"
+    },
+    {
+      "name": "the revised routine, but I'm thinking of making some changes to my yoga practice",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a theme-based practice, focusing on core strength or flexib",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the routine, but I was thinking of including some time for breakfast in my morning routine as well",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the revised routine, but I'm thinking of making some changes to my yoga practice",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a theme-based practice, focusing on core strength or flexibility",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d369f545f22a58e6c8c2e61eef290f443e19f6eaa7a0e5e799e52b64cc53c7c0"
+}

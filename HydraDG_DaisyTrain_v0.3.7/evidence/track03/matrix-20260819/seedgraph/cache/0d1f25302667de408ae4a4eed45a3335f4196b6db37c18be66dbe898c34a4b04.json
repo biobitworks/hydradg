@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0d1f25302667de408ae4a4eed45a3335f4196b6db37c18be66dbe898c34a4b04",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to let go of",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to let go of",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5c401a15510263aee052a736644167bb3e896e40fc19772d22c49698bf17e24a"
+}

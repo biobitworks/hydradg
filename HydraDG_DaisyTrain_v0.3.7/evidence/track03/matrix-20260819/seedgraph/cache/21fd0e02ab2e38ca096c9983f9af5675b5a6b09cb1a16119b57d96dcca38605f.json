@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "21fd0e02ab2e38ca096c9983f9af5675b5a6b09cb1a16119b57d96dcca38605f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of writing about my experience with the clothing brand's campaign",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of writing about my experience with the clothing brand's campaign",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cc65ec34aefc86267031e519c994a0d82cea5a031912b11b61bc65d81cc54109"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2107e457e669d2a11a7f97741848ff938583a0db089a978fb4e2b6d1f9b19c1f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the soft, earthy look it has",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the soft, earthy look it has",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f8a2783b1796166cafe3f11665c732cd765898ff6b1082fd449549dad2773b19"
+}

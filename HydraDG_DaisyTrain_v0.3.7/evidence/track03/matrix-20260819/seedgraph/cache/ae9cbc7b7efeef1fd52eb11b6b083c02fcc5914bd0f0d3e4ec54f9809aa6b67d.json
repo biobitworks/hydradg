@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ae9cbc7b7efeef1fd52eb11b6b083c02fcc5914bd0f0d3e4ec54f9809aa6b67d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a cookbook and a kitchen gadget",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a cookbook and a kitchen gadget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ae5d8a5f41ea4b9e0360fb6291ed89b01a52cee802a89428df01f135031e2c65"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "02e03d32e93afb4e3c55e917dbe3dd73c6c0cf92cceda9aa863ba416644557e7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a gallery wall and using a rotating display",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a visual triangle and playing with scale to create contrast",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a gallery wall and using a rotating display",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a visual triangle and playing with scale to create contrast",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "610ec69cf0887a27fe8d90447f862c89a1ef34e3793b4012122052fabb7ced55"
+}

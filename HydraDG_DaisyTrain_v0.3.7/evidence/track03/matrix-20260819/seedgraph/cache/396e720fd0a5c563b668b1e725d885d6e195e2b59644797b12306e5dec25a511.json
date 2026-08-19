@@ -1,0 +1,48 @@
+{
+  "cache_hit": false,
+  "cache_key": "396e720fd0a5c563b668b1e725d885d6e195e2b59644797b12306e5dec25a511",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Madagascar beans I used in my sister's birthday cake",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the Vanilla Bean Cr\u00e8me Br\u00fbl\u00e9e French Toast, but I'm not sure about t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Madagascar beans I used in my sister's birthday cake",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Madagascar beans I used in my sister's birthday cake",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Vanilla Bean Cr\u00e8me Br\u00fbl\u00e9e French Toast, but I'm not sure about the caramelized sugar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e32e6b53e2d357be76bb039dbb499b223504a1fef6d031f1e41b985586883fee"
+}

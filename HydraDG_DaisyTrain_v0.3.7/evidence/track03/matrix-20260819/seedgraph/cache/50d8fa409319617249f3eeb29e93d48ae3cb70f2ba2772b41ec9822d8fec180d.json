@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "50d8fa409319617249f3eeb29e93d48ae3cb70f2ba2772b41ec9822d8fec180d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to manage my chronic pain my own way",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to manage my chronic pain my own way",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d380df3adb24ff11bfef8010109833ed083228a0d67aeb299f504102ea8ff3fc"
+}

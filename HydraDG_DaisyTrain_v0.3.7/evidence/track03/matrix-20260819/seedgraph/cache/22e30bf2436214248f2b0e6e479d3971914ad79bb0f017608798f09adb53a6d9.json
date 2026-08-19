@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "22e30bf2436214248f2b0e6e479d3971914ad79bb0f017608798f09adb53a6d9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the warm, natural look it gives to the kitchen",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the warm, natural look it gives to the kitchen",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d66310024ee45e4891506af7fa0ab72f0f8639dd360647ca784c456f8061fd88"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5df07894ff0b2e70433a53f8644fbf664c58dc41a5422cb0edbb35b204590b0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city, about 10 miles away from my previous place",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city, about 10 miles away from my previous place",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c49f74e5949aec539bedf609acde4eb4356f8e006b9e050b5efbd3306fd782b7"
+}

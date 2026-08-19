@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1bc6ef6b15b1c54914d081faaa8ae74547b61f35b1f3d29ba6517e8261a18df9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the one about productivity hacks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the one about productivity hacks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c6550a2efa9c1ea0b7ced37be196b09109f0d402697a81016704e305865e7b74"
+}

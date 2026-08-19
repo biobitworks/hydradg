@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5865bd2980fa2be15c3f2fa52ae4fe958d1088ebef9319d49fad7d4080875992",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of infusing my water with fruits or herbs - it'll make drinking water m",
+      "type": "value"
+    },
+    {
+      "name": "the idea of following along with a gentle and encouraging instructor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of infusing my water with fruits or herbs - it'll make drinking water more enjoyable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of following along with a gentle and encouraging instructor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f11da5c5d95a77c21191fcd1d7b85822c8dea9ef53ed9824f6e2c190c63b52a"
+}

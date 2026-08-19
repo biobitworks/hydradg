@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6e8599dfc545241824f1a7213f6191385545234208080028adf4c3a2e53e4fb4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to look good too, but I feel like there's a balance, you know",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to look good too, but I feel like there's a balance, you know",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "00dd7cf923f0958caf2091c893bf5b2ccca339d90fed1a5feb370f2f68f07df2"
+}

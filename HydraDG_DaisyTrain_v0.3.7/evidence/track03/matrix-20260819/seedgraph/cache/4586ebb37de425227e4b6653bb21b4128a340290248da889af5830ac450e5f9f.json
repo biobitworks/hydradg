@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4586ebb37de425227e4b6653bb21b4128a340290248da889af5830ac450e5f9f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Memory Thief\" and \"The Royal Affair\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Memory Thief\" and \"The Royal Affair\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a83c0e255e2eddf9d3a5741d4723abf6ed7906e86a8eafbd7c5124c2cbf6faa"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "259ccdaa22331f54189d3540d26fbebec61f6849b18f68a47c2cf465eaeb6c7e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a hybrid bike",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a hybrid bike",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dc6133fac951dc001d4d2700603764936380479032b81ff6223c43d335b831e1"
+}

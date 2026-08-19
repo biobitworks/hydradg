@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ffbf1fdda71f4fd9fbc1ba0fc2ee50b6b5a0d0a72ffd4649330d09054a19f32",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the brand Whisker Delights and I like that they're made from pure chicken breast",
+      "type": "value"
+    },
+    {
+      "name": "that they're made from pure chicken breast, but I want to try something new",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the brand Whisker Delights and I like that they're made from pure chicken breast, but I want to try",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that they're made from pure chicken breast, but I want to try something new",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7aefe6afd71f163139e0c0e317c8afda3c0730880efc0d71d1bbcc44565c490b"
+}

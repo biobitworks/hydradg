@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2e250f3f816f84c113242c430128fbfcf706fd49f4fd6a4b8beeb804a2386c75",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "algorithms to analyze and understand natural language input",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "algorithms to analyze and understand natural language input",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "acf18aa58de867c3b6d4c924e978a498c9ab1d8dc1954ac81fab72a848e5ab5c"
+}

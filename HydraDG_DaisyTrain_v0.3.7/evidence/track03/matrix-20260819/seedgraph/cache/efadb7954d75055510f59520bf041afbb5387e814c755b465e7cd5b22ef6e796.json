@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "efadb7954d75055510f59520bf041afbb5387e814c755b465e7cd5b22ef6e796",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "mountains and beaches which place shall i stay in bali",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "mountains and beaches which place shall i stay in bali",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8b0a0d505dff82b2c04db8c7e02e6c2dffb9f617d79f685e1dea165899c9d847"
+}

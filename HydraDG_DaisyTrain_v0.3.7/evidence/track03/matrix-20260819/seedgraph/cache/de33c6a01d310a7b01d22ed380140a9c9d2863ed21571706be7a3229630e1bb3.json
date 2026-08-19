@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "de33c6a01d310a7b01d22ed380140a9c9d2863ed21571706be7a3229630e1bb3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to say that i approached to someone on linkedin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to say that i approached to someone on linkedin",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "696adcf7c8f66b563bfd9b0501dcae8a9d10437581ca89604923968d7054b11a"
+}

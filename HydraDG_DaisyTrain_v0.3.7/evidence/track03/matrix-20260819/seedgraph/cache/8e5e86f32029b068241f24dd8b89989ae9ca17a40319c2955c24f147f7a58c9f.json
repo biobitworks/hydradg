@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8e5e86f32029b068241f24dd8b89989ae9ca17a40319c2955c24f147f7a58c9f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "strawberry ice cream",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "strawberry ice cream",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "378b68baa6c7dc05f5be3360fa19d93f26963958a6f1fac9b75a70333e1b014d"
+}

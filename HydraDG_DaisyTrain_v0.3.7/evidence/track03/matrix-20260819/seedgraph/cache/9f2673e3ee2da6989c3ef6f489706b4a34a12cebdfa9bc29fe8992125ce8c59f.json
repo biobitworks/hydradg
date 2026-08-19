@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9f2673e3ee2da6989c3ef6f489706b4a34a12cebdfa9bc29fe8992125ce8c59f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having all my health data in one place, and the integration with my ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having all my health data in one place, and the integration with my Fitbit Charge 4 will",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "250fd2c42988be39287afe352325a63e226fa7dd7a2a039628270444c6e74189"
+}

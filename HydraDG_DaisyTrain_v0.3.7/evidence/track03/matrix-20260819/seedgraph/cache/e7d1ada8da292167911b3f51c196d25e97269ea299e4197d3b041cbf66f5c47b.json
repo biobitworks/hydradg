@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e7d1ada8da292167911b3f51c196d25e97269ea299e4197d3b041cbf66f5c47b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh herbs instead of dried ones, and do I need to adjust the amount used",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using spices in my cookies",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh herbs instead of dried ones, and do I need to adjust the amount used",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using spices in my cookies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6320a3c30ccb6c62dfabc86fef3a28f4d48e845a5ebcc80cee0be4c407537bd3"
+}

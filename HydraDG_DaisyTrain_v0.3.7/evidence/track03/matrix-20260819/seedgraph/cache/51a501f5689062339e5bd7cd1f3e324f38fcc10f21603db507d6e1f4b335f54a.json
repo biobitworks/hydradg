@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "51a501f5689062339e5bd7cd1f3e324f38fcc10f21603db507d6e1f4b335f54a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the watch to create a route beforehand and follow it during the run",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the watch to create a route beforehand and follow it during the run",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ea5aef3f87bac75fb2f0b99e64cfef9121e438da1eee604f88c9acdd5a2b78d9"
+}

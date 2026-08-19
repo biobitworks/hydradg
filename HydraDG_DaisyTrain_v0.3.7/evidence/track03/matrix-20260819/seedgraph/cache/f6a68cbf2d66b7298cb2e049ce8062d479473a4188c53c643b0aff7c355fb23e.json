@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6a68cbf2d66b7298cb2e049ce8062d479473a4188c53c643b0aff7c355fb23e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a coffee-themed prize bundle",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a user-generated content campaign",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a coffee-themed prize bundle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a user-generated content campaign",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2e5dc925ea99b0ad9df044e6579c2fd72693a4990be36d54431cc05eda2c7518"
+}

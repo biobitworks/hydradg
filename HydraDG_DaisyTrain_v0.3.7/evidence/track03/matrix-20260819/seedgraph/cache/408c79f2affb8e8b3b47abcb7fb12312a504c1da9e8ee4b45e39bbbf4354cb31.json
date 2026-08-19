@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "408c79f2affb8e8b3b47abcb7fb12312a504c1da9e8ee4b45e39bbbf4354cb31",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating tutorials on specific analytics tools, especially since my ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a tutorial on Google Analytics",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating tutorials on specific analytics tools, especially since my audience seems to be",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a tutorial on Google Analytics",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d439368c3f1e95727cf44c62f5e684a48e12ae384e608f6885c6296974ef8ee8"
+}

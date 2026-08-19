@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "65dc6da3fa8f5c6df5cb419327093ee6662341e722cca7425f91b77afe23ee12",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the food bank volunteer and neighborhood clean-up",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the food bank volunteer and neighborhood clean-up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2829bca42b2aa8b6451d6a47f8e52cad0df7613b255c5a98e9707c2723ccf1eb"
+}

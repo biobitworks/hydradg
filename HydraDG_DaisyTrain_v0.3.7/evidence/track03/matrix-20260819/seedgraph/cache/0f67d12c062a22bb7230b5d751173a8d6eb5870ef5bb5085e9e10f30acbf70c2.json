@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0f67d12c062a22bb7230b5d751173a8d6eb5870ef5bb5085e9e10f30acbf70c2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the walk/run idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a pet costume contest",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the walk/run idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a pet costume contest",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "643bdc4e36841ad4774fe3f492f110264edbeee4816f57194484631955a68b4f"
+}

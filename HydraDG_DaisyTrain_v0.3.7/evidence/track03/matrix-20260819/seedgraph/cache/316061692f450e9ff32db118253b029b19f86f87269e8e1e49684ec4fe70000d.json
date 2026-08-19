@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "316061692f450e9ff32db118253b029b19f86f87269e8e1e49684ec4fe70000d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa salad jars idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa salad jars idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1143fdf7a471217a54375d9c991ff0ed88586a67ee0af0764d9819131ebe8c50"
+}

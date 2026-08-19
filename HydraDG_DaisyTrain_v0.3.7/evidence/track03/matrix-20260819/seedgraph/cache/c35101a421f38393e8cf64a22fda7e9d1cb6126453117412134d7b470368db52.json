@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c35101a421f38393e8cf64a22fda7e9d1cb6126453117412134d7b470368db52",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the breakfast bowl idea, especially since I already have quinoa on ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of linking it to an existing habit, so I'll try to take my multivitamin",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the lentil soup and the roasted vegetable and quinoa salad jars",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the breakfast bowl idea, especially since I already have quinoa on hand",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of linking it to an existing habit, so I'll try to take my multivitamin with my breakfast",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the lentil soup and the roasted vegetable and quinoa salad jars",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "85810b314b0a8dc2d0b91d98789e12e15daff989b770ed104ad78765332b930d"
+}

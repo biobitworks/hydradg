@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ca088771a58aad261b4904d1beffdac924ade60c8c5e5b982e6e82ce0ebc5570",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of this plan, but I'm a bit concerned about the morning routine part",
+      "type": "value"
+    },
+    {
+      "name": "these ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of this plan, but I'm a bit concerned about the morning routine part",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bced91e411ee60f31f59e0b7cbf4987ab2a7d79d7e4d00461d274ca507cde7ae"
+}

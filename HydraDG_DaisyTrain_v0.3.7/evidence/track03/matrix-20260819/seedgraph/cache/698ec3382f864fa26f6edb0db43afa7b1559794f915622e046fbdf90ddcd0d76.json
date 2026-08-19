@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "698ec3382f864fa26f6edb0db43afa7b1559794f915622e046fbdf90ddcd0d76",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my Balance Rewards points on sale items or items with digital coupons",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my Balance Rewards points on sale items or items with digital coupons",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b983f7c3ec05e1db3acf32617abfd68835dfebf91ac6d0cb686333a6b8f2c4a4"
+}

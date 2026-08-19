@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "037da0de336073745b4e35861197d95686927b5ad8514f3052fca56c11b13acf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the objective part of the questioins",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the objective part of the questioins",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "965c1adcb67f1846caa748fee9aa96e15333c0e44d4142ae02eba8c976f67011"
+}

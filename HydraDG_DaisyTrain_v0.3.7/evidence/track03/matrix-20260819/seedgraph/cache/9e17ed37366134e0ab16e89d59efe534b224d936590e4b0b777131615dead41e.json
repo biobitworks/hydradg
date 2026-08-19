@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9e17ed37366134e0ab16e89d59efe534b224d936590e4b0b777131615dead41e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Scandinavian Minimalism style",
+      "type": "value"
+    },
+    {
+      "name": "the idea of woven baskets and natural textiles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Scandinavian Minimalism style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of woven baskets and natural textiles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e75a86a6a6a75a9e0ae3d83756a0de8d563d10d6e6313d91bc82b83c13f31164"
+}

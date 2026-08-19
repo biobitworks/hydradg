@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b151eb9d812c3416b31848774ae711f370810c638c9994d517a9f3440ab4a020",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "natural and organic products, and I don't have a specific brand in mind",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "natural and organic products, and I don't have a specific brand in mind",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a82d4e2e4ef22cc5f5180ed8f1159e408e6901900637b0e50895dd4d709d0985"
+}

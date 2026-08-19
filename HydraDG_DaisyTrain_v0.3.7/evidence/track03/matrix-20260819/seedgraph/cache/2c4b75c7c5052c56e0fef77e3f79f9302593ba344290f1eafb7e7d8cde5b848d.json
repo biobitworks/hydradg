@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2c4b75c7c5052c56e0fef77e3f79f9302593ba344290f1eafb7e7d8cde5b848d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a habit tracker app to keep track of my daily and weekly tasks, as well as my me",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a habit tracker app to keep track of my daily and weekly tasks, as well as my meditation and exercis",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3a10cb5e26946978159ad21c24730078c34758888bd38b446aee76093ec57b00"
+}

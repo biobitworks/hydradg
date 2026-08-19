@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "691e01d9f76dad93dbc1d4fb141b463140db0c07246ca0c2f081d8757d1c273d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Anker Wireless Charger, can you tell me more about its compatibility with my",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Anker Wireless Charger, can you tell me more about its compatibility with my phone",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a5a3546c2143b77edad9f5e4aee7106f988f49dbdd72b416600dcbfe12d85953"
+}

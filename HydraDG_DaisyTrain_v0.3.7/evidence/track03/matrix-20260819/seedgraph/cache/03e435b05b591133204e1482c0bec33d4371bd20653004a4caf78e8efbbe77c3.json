@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03e435b05b591133204e1482c0bec33d4371bd20653004a4caf78e8efbbe77c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "routes with low-traffic roads or bike paths, and I don't mind exploring new neig",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "routes with low-traffic roads or bike paths, and I don't mind exploring new neighborhoods",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a2b8d86a68694f6a5b40af2c5fd6bb0aecdeaeb3bbded6d3f346f87c1195b750"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "22feaead42f7ffe9ce56a6044a6eb907f01e83dbe02e0abb864af20876db199a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "[city name]",
+      "type": "value"
+    },
+    {
+      "name": "the idea of tracking my progress and rewarding myself for milestones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "[city name]",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my progress and rewarding myself for milestones",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bb8f139948dea9f993b1de2510ae8b9f931dc3ca5d77b384400b4d735d8bcaa8"
+}

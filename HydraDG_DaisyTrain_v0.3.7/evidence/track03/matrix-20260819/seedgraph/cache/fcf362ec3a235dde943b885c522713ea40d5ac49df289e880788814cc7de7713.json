@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fcf362ec3a235dde943b885c522713ea40d5ac49df289e880788814cc7de7713",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of task lighting",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of task lighting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d51ac1301eca5ef4e77abb4671f75513d1a642634cb92710c4605ac7c8309102"
+}

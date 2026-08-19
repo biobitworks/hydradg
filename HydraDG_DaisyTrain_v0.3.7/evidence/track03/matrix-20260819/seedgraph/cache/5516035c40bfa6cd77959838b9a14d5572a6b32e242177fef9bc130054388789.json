@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5516035c40bfa6cd77959838b9a14d5572a6b32e242177fef9bc130054388789",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the chicken Caesar wraps and the stuffed peppers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the chicken Caesar wraps and the stuffed peppers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2f604dca9b6cc3046aa212529880614eb2d54a818e11b94ecc0a72f407f2d610"
+}

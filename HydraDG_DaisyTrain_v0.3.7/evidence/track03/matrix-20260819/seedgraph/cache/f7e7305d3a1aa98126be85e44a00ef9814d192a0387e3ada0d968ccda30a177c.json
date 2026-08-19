@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f7e7305d3a1aa98126be85e44a00ef9814d192a0387e3ada0d968ccda30a177c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized photo album or frame",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a cream or beige background to let the fonts and colors stand ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized photo album or frame",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a cream or beige background to let the fonts and colors stand out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "67fdd98a87f1a8279b026345cdc57566fcee52ca8b0f8d87dfa466bc20b3a6b4"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "47c325bfe96b18f2b8ad61977e20affe67386e25c5f6b189c52eaffc062cdf1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a lightweight, whipped texture that absorbs quickly into the skin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a lightweight, whipped texture that absorbs quickly into the skin",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "96e5efd939ec2c25b8f842e15dbd2ef2317f90a0acd40e54551ff286a2d39e08"
+}

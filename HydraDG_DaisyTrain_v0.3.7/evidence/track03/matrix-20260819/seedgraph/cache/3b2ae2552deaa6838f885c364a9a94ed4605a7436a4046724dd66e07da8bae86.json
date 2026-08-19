@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3b2ae2552deaa6838f885c364a9a94ed4605a7436a4046724dd66e07da8bae86",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these woods and I know them like the back of my paw",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these woods and I know them like the back of my paw",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cf032a2534f1738446b8279665a5582dbf6d3d795c2927dfa50d4863efe319a8"
+}

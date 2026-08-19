@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "adc861057774f20963302b19e823476b6940c904350dd29baa2f8b3490668905",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "your suggestions",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a \"no phone zone\" in the morning",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "your suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"no phone zone\" in the morning",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c06c1d69aff9581e801f3dea35ca0feb7f6b5b33d96cd77ded7f4ec551b31f28"
+}

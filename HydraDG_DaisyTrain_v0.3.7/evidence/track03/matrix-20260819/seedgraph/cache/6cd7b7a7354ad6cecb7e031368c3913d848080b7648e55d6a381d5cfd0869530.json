@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6cd7b7a7354ad6cecb7e031368c3913d848080b7648e55d6a381d5cfd0869530",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of genres you've provided",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of genres you've provided",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a391652fa05e10c12e8a24617163c4900ee93ffdd34ec519f8150568c7527d74"
+}

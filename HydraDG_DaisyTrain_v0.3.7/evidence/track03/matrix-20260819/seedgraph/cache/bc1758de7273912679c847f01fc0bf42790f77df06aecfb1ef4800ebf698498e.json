@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc1758de7273912679c847f01fc0bf42790f77df06aecfb1ef4800ebf698498e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the first layout, the conversational circle",
+      "type": "value"
+    },
+    {
+      "name": "the way the revised layout creates a sense of flow between the seating area and ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding some smaller decorative pieces to the bookshelf to balance ou",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the first layout, the conversational circle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the way the revised layout creates a sense of flow between the seating area and the bookshelf",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some smaller decorative pieces to the bookshelf to balance out the room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "280be3337339f15e03ed6608bba8969f266e034e4c1d026416d0b9be21c3131a"
+}

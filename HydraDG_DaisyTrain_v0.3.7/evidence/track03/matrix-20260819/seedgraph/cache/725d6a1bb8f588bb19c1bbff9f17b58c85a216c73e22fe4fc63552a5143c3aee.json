@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "725d6a1bb8f588bb19c1bbff9f17b58c85a216c73e22fe4fc63552a5143c3aee",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to read books about history and different cultures",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to read books about history and different cultures",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "69980ccf16f4039f1765f9e06dda26044803d4e6b8ffea41f22d0a3d03e6033c"
+}

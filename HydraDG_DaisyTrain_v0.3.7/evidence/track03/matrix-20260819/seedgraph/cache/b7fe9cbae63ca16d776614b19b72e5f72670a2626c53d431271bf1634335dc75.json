@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "b7fe9cbae63ca16d776614b19b72e5f72670a2626c53d431271bf1634335dc75",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of planning my day and prioritizing tasks before the meeting",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting a timer to keep myself on track",
+      "type": "value"
+    },
+    {
+      "name": "the revised morning routine, but I'm not sure if I can fit in the morning exerci",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning my day and prioritizing tasks before the meeting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a timer to keep myself on track",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the revised morning routine, but I'm not sure if I can fit in the morning exercise",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "351f8635dc85be6a75e68a0a55d51da436ceead7d5e0ac8a50c1c8eb92b3039a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "17fdc11db08e6f968710f26aebe1fef787b3d8682cf1e6da6ad6bc88fa7636c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using interactive toys and puzzle feeders",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using interactive toys and puzzle feeders",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "002c4e48babf5010da0a8ef49db08dd7640433f22e14ef2d70893ddc9f27747d"
+}

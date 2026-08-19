@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5d72de042c15feec7ea0f5bd88e11ab5eb5e064d8a3f64b30b1e9e5d55fa6121",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa and roasted veggie bowls idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa and roasted veggie bowls idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f79b19f70edd74ab63b78d36ee81951018ab42c8e147e150da0f27bd90d4d56c"
+}

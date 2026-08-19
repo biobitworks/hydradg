@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3b9d0062acec64afc328aa5cd90ba5ef3a59e4f4471fcc161c8e8e253c5e1a12",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of post types and themes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of post types and themes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "751660fbd39b267796aef13ba15e80d85cf38cd715d426fc6b7fb81c42e49bbb"
+}

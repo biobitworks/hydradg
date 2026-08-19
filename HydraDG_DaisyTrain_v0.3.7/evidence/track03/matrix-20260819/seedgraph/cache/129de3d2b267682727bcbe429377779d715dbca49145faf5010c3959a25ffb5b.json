@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "129de3d2b267682727bcbe429377779d715dbca49145faf5010c3959a25ffb5b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the smoothie option",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the smoothie option",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "992b2cfbc29efe35e0aa63cefca428a186fd942602fc023a29d3a89a68b74e88"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "381d1e7c051f385d7219d74130f81a7a9d8d37ad29bc9e3024ae7f1ab2b3b704",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a coupon and a cashback offer from my Amazon Rewards Visa card on the same purch",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a coupon and a cashback offer from my Amazon Rewards Visa card on the same purchase",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e85b35cdb161df24732e263838e4de0f60db1e42e660e0fadff5482ebfa776a0"
+}

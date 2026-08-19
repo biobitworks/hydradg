@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "378b342f332752172c42beeb826271462a13b003d7c8555f41378c9948eba3e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a cloth, brush, or something else",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a cloth, brush, or something else",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "46b058aa44a2968b5287e4cbbbc6c0fa0d017b7ea7ae2a672dfa4330bf30998b"
+}

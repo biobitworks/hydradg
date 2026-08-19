@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "63064457810af7119d7f64b6a69cf31ec3016f53513ed3a334fe9f4d2569cc2c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the caramelized onion and fig bruschetta idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the caramelized onion and fig bruschetta idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7e44ad6f903d3633326950140ef821ec1c026814de8006154468e4c3cb83f8d6"
+}

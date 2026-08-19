@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8a16ac457ff165d3cd6c464fafab7eab853db923a1476b4bc4f896ab9d69bafe",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to plan out my meals for the week",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to plan out my meals for the week",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f17fa782e198c0b2cb7382944c8b0f41361962455e27b19641aa504ce05bc82"
+}

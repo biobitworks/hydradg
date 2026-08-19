@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dad0b3d860d8e43317269519cd59329ee924702869edd0fc4fdf38c860f8db41",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the design",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the design",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75d2484660c1c3b073a1ea4e3482524cc516c38305e21b19b994038375d00409"
+}

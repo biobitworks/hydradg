@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "73d246a16bb740bf6d5f31b978dee878e015b129576371e2b025d909edb345d7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a round mirror with a thin frame",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a round mirror with a thin frame",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5132cc3819f83dab86bc4a3dc10e696240242d8453df0ffe83f0621f1813675b"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b94ac3addab490bba166c28311fe4b4d7cb5bc4019c93f745bd6c94304811a23",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a spreadsheet to create a content calendar",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a master sheet to keep everything organized, but also having ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a spreadsheet to create a content calendar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a master sheet to keep everything organized, but also having separate sheets for",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d42b72c49d5a469da219c85744c17f9b7ae9459e967a8e945e9436c06cf7c5c9"
+}

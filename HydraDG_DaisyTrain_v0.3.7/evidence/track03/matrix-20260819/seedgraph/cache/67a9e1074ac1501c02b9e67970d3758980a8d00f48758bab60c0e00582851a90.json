@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "67a9e1074ac1501c02b9e67970d3758980a8d00f48758bab60c0e00582851a90",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "pyLDAvis, here are the top words that are likely to be represented in each topic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "pyLDAvis, here are the top words that are likely to be represented in each topic",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3e431d676b6d3f8cc1079b414370b156201077addd15553e58f9d0af40a3f953"
+}

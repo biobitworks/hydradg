@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e5ce45af5d21a988d827d95070ef84d1fb7e8a9907ba651531795de98b1aaf22",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggested plan, but I'm wondering if I can fit in my 10-15 minute breaks eve",
+      "type": "value"
+    },
+    {
+      "name": "the revised plan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggested plan, but I'm wondering if I can fit in my 10-15 minute breaks every hour to stretch a",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the revised plan",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bfa92307f84ed1e4e688b2a6fefa64393517d976232a481d913f290f5df91de0"
+}

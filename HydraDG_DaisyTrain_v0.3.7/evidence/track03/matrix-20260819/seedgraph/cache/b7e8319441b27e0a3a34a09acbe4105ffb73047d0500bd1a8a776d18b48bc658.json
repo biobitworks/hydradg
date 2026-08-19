@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b7e8319441b27e0a3a34a09acbe4105ffb73047d0500bd1a8a776d18b48bc658",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of tracking the wear count, it'll be interesting to see which pieces ar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking the wear count, it'll be interesting to see which pieces are my favorites",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2eec4d057292be0182c8279f2d54e9d74bcf08ce1438909a53034e35ace05486"
+}

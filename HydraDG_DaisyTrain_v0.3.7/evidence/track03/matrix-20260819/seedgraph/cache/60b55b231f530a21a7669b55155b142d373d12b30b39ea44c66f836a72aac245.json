@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "60b55b231f530a21a7669b55155b142d373d12b30b39ea44c66f836a72aac245",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Combo 1",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Combo 1",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3e41dae673aa50eb47d7b7a8ae17a5e586b055e903f564df7aba2b25b82a07a0"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3841423e8ce6771f0e09188065861566536c6311ef14616f8a8ffc320b1c4839",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those tips, especially the ones about eating and walking",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those tips, especially the ones about eating and walking",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7b6ef2152cbbec6e7bbe41e0aea337b4962916f7a7b5acc63f4922fe571f2829"
+}

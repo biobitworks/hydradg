@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "eaa817dbf67dbe4a3a5ef2db22334475a6e54d61dd2d9ee6e30b69287b6f5f76",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing my expenses",
+      "type": "value"
+    },
+    {
+      "name": "the idea of meal planning and prep",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing my expenses",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of meal planning and prep",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "67050b7b689414910c0472242db442ec667569f6f4a1521998beda05a51fa6bd"
+}

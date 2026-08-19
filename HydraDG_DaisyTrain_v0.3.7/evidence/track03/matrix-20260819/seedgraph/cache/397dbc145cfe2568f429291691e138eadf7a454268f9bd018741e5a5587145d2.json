@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "397dbc145cfe2568f429291691e138eadf7a454268f9bd018741e5a5587145d2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing and grouping my shoes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and grouping my shoes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "47e62d570f0c51e47d3478eb7b26903510a225dd7b1a9e5a3a9614d2225efbf7"
+}

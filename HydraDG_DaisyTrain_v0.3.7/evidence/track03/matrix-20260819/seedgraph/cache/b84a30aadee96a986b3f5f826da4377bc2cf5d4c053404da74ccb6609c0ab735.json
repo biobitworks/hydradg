@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b84a30aadee96a986b3f5f826da4377bc2cf5d4c053404da74ccb6609c0ab735",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of joining a local group or club",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of joining a local group or club",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e7fcd20c8d1819895170f8f471c931c58bc39fb2c82ef533ff7b08509f48159"
+}

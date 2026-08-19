@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "fce0b156025a20568f5dbe180bfc8a708664d348d70f703f0da45a76960db054",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing and assigning a home for each category",
+      "type": "value"
+    },
+    {
+      "name": "the idea of taking a photo of the book cover and writing down the memory associa",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the Book Memory Wall",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding visual interest with different frame sizes and angles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and assigning a home for each category",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of taking a photo of the book cover and writing down the memory associated with it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Book Memory Wall",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding visual interest with different frame sizes and angles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79786bf509e6f347f2b2532261af1a7a2cca959d05db7ef26587a2eb0d9bf241"
+}

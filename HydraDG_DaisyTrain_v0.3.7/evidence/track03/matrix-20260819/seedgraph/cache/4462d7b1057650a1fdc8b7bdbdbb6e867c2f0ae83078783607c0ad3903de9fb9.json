@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4462d7b1057650a1fdc8b7bdbdbb6e867c2f0ae83078783607c0ad3903de9fb9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Instagram's \"Poll\" feature to ask my audience which type of content they'd like ",
+      "type": "value"
+    },
+    {
+      "name": "these ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Instagram's \"Poll\" feature to ask my audience which type of content they'd like to see more of in th",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1c7b7b63ddb0d62607e2bdb053385735d6fb74e5f6a85b373e3257608f726fc3"
+}

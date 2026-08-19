@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "adb550b88db60e0d33dfb744a9bc1f826b243dda70f5e2d4024a6463e5417b11",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "before recommending a few recipe summaries for me to provide feedback on",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "before recommending a few recipe summaries for me to provide feedback on",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bad7ec0004832387c691d893162a230f2898ddc446667653ce1b0f12076e4d22"
+}

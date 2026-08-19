@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ab39ed56175f1e767609cdacdb960d9a21945bf2fd51a6016d25aba6e70cc5db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating storytelling and games into the activities",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the Great Plant Heist and the Machine Scavenger Hunt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating storytelling and games into the activities",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Great Plant Heist and the Machine Scavenger Hunt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4f0b8a3bf1732ea2ec421d460222b6c3ea3e6d685778ca1064d32a956b45081f"
+}

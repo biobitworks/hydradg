@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f0e1657c62819b48aebc8056986c940e70e8d078d3703a9c8fefeab25761bdd9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "gas or charcoal for grilling",
+      "type": "value"
+    },
+    {
+      "name": "the sound of that coleslaw",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "gas or charcoal for grilling",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of that coleslaw",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "499a693a473a21504d9bb292ca26fec6f91b06cb56f28b7c113599bc4173e774"
+}

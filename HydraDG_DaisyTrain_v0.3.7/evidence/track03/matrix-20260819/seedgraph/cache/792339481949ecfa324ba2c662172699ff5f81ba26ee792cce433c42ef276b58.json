@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "792339481949ecfa324ba2c662172699ff5f81ba26ee792cce433c42ef276b58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a wall-mounted desk to save floor space, and it seems like it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a wall-mounted desk to save floor space, and it seems like it would match well wi",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "48c2a9dc7fd2c9c6ea968314b146efe24c9118e2bd44e60fc701bfa93ab7a419"
+}

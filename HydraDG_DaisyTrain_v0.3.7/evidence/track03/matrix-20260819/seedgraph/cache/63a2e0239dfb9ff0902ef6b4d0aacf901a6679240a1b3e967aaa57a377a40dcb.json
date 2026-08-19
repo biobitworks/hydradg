@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "63a2e0239dfb9ff0902ef6b4d0aacf901a6679240a1b3e967aaa57a377a40dcb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Quinoa and Black Bean Tacos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Quinoa and Black Bean Tacos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "62530b3d7fab651ee4a9a8a0428f35d2da72c866f74350703b34469a271860d2"
+}

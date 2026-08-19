@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f022e99d7134f5e74ce683f2f86298037ec979bf8f12d2ffd9c759e71be3e188",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "LAX, flexible travel dates, one passenger, and I don't mind budget airlines",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "LAX, flexible travel dates, one passenger, and I don't mind budget airlines",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca8e962a21b73ccfbc83694e4bad5681ea6e4be5cafd65768f64dc2659163187"
+}

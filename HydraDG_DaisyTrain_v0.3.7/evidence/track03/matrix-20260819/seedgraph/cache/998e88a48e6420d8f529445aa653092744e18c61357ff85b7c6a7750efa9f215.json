@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "998e88a48e6420d8f529445aa653092744e18c61357ff85b7c6a7750efa9f215",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a limited-time offer",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a limited-time offer",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "af8dc8ad81d5bfc15c8e2225a2b50b85432293444e0816c49856b5916701b7c0"
+}

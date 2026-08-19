@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0748706bae97a1f086216b28df16524e80cde8d42fe53ea8235bd8bec00b204e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the outdoor movie night idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the outdoor movie night idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "81bee8f362c0bb88c7ae509e9621070994290f73e5b56fa683904123342b83a6"
+}

@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "91cc28ccf4a48f8bb111eed1dc44fa06a384cf1cd06888333ecf42e801afbafd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the guided meditation app to help me fall asleep faster and improve the quality ",
+      "type": "value"
+    },
+    {
+      "name": "the guided meditation app during the middle of the night if I wake up and have t",
+      "type": "value"
+    },
+    {
+      "name": "essential oils safely and effectively for sleep",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the guided meditation app to help me fall asleep faster and improve the quality of my sleep",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the guided meditation app during the middle of the night if I wake up and have trouble falling back",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "essential oils safely and effectively for sleep",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "472fafe036304166b7f56ec8c2641da9b86ee5b13fc189c06cd77db6c1b59a1a"
+}

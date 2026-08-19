@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c17f2391c9d7e0f07b5aad947df4aabd035df71444424a6d5dc301efda4e80c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a skincare station",
+      "type": "value"
+    },
+    {
+      "name": "that it's compact and has individual compartments for each product",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a skincare station",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that it's compact and has individual compartments for each product",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da8c7eb0757b5e5bdd5569da88d3a3a9595dc6a6acd3bd63717ec4e4d256a09a"
+}

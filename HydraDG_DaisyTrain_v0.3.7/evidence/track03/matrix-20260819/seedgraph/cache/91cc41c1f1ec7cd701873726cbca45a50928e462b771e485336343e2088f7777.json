@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "91cc41c1f1ec7cd701873726cbca45a50928e462b771e485336343e2088f7777",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and can I add any other ingredients to make it more interesting",
+      "type": "value"
+    },
+    {
+      "name": "the idea of saut\u00e9ed spinach",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and can I add any other ingredients to make it more interesting",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of saut\u00e9ed spinach",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "830833b4444535877ae78c02f1de52dfe89f75b520e90cac03fc1097f937436d"
+}

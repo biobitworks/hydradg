@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "14ff9555211ff4f71e62a99785c18d3d1a2e649da710ddcf714a59b2a015cacb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Taste of Asia theme, but I'm not sure if I want to do a whole menu of Asian ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of fusion cuisine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Taste of Asia theme, but I'm not sure if I want to do a whole menu of Asian dishes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of fusion cuisine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "db66dee75aea2db1f1cb7e85d040377adbd4883da50f6fe3f3c21c259b42017b"
+}

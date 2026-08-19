@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "719c57279619e2c902e39f0828f3e0856c44e67a1699d5ca1e8623c93f837841",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the 30-day rule idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the 30-day rule idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a56460bd98b4aa9d89eea82dcb7160ca15c443feda3d55b214003452e7393afb"
+}

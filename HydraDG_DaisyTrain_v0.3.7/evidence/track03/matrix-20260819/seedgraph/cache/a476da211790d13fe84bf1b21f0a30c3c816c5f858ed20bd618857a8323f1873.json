@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a476da211790d13fe84bf1b21f0a30c3c816c5f858ed20bd618857a8323f1873",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using Georgia and Helvetica together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Georgia and Helvetica together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "11704c2063d6d621ea0091210af115c7982ae69e45c4d1dc4accc52cd5e49b83"
+}

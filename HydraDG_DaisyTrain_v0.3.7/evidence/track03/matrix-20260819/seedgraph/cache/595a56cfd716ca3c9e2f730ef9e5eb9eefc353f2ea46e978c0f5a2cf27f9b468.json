@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "595a56cfd716ca3c9e2f730ef9e5eb9eefc353f2ea46e978c0f5a2cf27f9b468",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa and egg bowls idea, but I'm not a big fan of scrambled eggs",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa and egg bowls idea, but I'm not a big fan of scrambled eggs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5c8419ba99621f464008a8a90cadcdb83e1004de95abfd39a5bc307b1b46e153"
+}

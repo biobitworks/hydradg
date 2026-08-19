@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e643021ed125e0ec9e7121cea79aed3972795fa5f0281926fb6a4d8539272765",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of curating my own feed and discovering new sources",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of curating my own feed and discovering new sources",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e984d289b0755ab9946564ce711c1645be1c59bfd3a957783decc8718faf5ea2"
+}

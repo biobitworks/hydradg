@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8361d2f101db21c3ac8319ec234a14934ffa33fded5793b27b2e8c9ec345ea57",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's a good balance between capacity and portability, and it would be suita",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's a good balance between capacity and portability, and it would be suitable for my daily use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "913dde3900aa0bf5cba38e44922554cc0298dd5426d9aeafdf427e8b51c75651"
+}

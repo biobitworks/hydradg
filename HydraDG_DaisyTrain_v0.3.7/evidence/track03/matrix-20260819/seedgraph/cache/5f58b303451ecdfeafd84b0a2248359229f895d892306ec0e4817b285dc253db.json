@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5f58b303451ecdfeafd84b0a2248359229f895d892306ec0e4817b285dc253db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to switch it up and have a breakfast sandwich with a bagel instead of toast",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to switch it up and have a breakfast sandwich with a bagel instead of toast",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0fa930355e365ffbbf46c41137e894e2721ca1f96e59615bbb58d0c1f1bc4585"
+}

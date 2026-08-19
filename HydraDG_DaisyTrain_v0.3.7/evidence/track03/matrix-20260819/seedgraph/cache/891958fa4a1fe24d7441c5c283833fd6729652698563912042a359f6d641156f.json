@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "891958fa4a1fe24d7441c5c283833fd6729652698563912042a359f6d641156f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these colors in a way that will really pop and capture the energy of the city",
+      "type": "value"
+    },
+    {
+      "name": "the blue-green color to create a sense of atmosphere and mood, and how can I use",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a bold, vibrant color and its split-complementary colors to cr",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these colors in a way that will really pop and capture the energy of the city",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the blue-green color to create a sense of atmosphere and mood, and how can I use the orange-red and",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a bold, vibrant color and its split-complementary colors to create a sense of cont",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3c0c3c68825e32ef0844ccae308b71413c3bbf4b3e9b4664ca2d6e9230192f2"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "148d72cd12ec2fc2a7ff6993a6389d9d93b77555d746a44d2dc5d2d132a07d39",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the draft, but can you suggest some specific areas of marketing expertise I shou",
+      "type": "value"
+    },
+    {
+      "name": "the updated draft",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the draft, but can you suggest some specific areas of marketing expertise I should highlight, given",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the updated draft",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "14fd294a25b71e4fe1bb80d5635f162e9cc648a4a6ffa0a23d886016850bd6a7"
+}

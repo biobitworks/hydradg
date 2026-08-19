@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e16c3bbe51df7aaa5bb9735016c4c164027de91189f61a7b3c45bbe6e7c4db9b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a decorative vase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a decorative vase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03780d9517fec125968d61b9d35aaa8f037672a19d0298bb57d9b84973e07a21"
+}

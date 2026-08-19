@@ -1,0 +1,60 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c8f92313940daad066ab5ab9c463a41e88cd886baed55428f8767632c1e67ca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to sleep in on Saturdays",
+      "type": "value"
+    },
+    {
+      "name": "the suggested schedule, but I'm not sure if I can fit in a morning routine from ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of doing something enjoyable or relaxing on Saturday mornings",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to sleep in on Saturdays",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the suggested schedule, but I'm not sure if I can fit in a morning routine from 9:00 am to 9:30 am",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to sleep in on Saturdays",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of doing something enjoyable or relaxing on Saturday mornings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5079e910d7f84eccc65a1e6ad2932c39b65f55f6078acbaac4934a1e5fe4dc6d"
+}

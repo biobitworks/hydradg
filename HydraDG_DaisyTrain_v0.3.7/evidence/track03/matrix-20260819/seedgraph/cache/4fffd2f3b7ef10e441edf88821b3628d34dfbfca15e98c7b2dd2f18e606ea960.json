@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4fffd2f3b7ef10e441edf88821b3628d34dfbfca15e98c7b2dd2f18e606ea960",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the meditation and exercise ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the meditation and exercise ones",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7609e8a755f2830c3d275b3d8540e6dec71b0c179b18de013118c4499e3349c9"
+}

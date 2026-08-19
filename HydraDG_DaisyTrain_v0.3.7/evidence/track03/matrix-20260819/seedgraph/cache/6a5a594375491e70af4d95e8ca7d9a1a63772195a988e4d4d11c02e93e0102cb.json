@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6a5a594375491e70af4d95e8ca7d9a1a63772195a988e4d4d11c02e93e0102cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the soft fleece lining and the adjustable design",
+      "type": "value"
+    },
+    {
+      "name": "the idea of filling it with treats or peanut butter too, it sounds like a great ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the soft fleece lining and the adjustable design",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of filling it with treats or peanut butter too, it sounds like a great way to keep him occu",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d6c5445bd094d89e8c23989d55eb193bc38580e82e6aed1a331e2accc4ce0643"
+}

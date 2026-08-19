@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "87bd14fca0953d0f3f28f9130aa1f579fc6c2dc22ebea585b712f7ba3c11f93d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "stealth to try and get within grabbing distance of the figure without them notic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "stealth to try and get within grabbing distance of the figure without them noticing me",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a19422f17dff02fb0d512b6b6ad9dd6f4f5cb635a948671875b197ffa18ae933"
+}

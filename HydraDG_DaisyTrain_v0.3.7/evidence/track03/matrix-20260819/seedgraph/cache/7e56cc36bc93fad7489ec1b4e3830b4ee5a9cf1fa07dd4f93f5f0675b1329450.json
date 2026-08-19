@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7e56cc36bc93fad7489ec1b4e3830b4ee5a9cf1fa07dd4f93f5f0675b1329450",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "narrators with a more subtle approach, who can convey emotions without being too",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "narrators with a more subtle approach, who can convey emotions without being too over-the-top",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ae39aad10a6373a69d5f0b02d420147d0e93b34051456a6e5836de4e203f7483"
+}

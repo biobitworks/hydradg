@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3a4e870ce7f870cc669bcaa87458fbc0638c786d957832882f83ecfeaa85e1b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of layering and glazing to achieve a sense of depth",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of layering and glazing to achieve a sense of depth",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dd356b06d1ed2de06005bbde3fedf3282a03759065f7c00e54bc434b2d9d6bed"
+}

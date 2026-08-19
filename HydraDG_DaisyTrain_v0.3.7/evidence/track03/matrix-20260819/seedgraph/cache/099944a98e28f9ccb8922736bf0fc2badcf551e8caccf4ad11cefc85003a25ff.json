@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "099944a98e28f9ccb8922736bf0fc2badcf551e8caccf4ad11cefc85003a25ff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the way you've broken down the tasks into categories",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the way you've broken down the tasks into categories",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aff2bb90952b47ea3813f234accb4b9489bd8218a3ffa84d2832a0c6c946b314"
+}

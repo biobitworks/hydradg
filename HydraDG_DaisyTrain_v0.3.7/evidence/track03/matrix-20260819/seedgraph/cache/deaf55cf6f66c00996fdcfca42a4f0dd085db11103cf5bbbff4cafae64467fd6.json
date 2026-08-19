@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "deaf55cf6f66c00996fdcfca42a4f0dd085db11103cf5bbbff4cafae64467fd6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it very much",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it very much",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d0636b337b69bb871d600e1c6a238d17526e74283df4080664b4b21e08c643f4"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f8ebce7d613fbb4e5fda2e88dec9fd921f46810ed9d9506a64453d705fb16434",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of emphasizing the handmade touch and adding natural elements to my gif",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using natural materials and highlighting the natural ingredients",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of emphasizing the handmade touch and adding natural elements to my gifts",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using natural materials and highlighting the natural ingredients",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "62a54ee3b59ace9816d8a86b26f9c527e5005e4e8e396aee2fe8aff08706bf98"
+}

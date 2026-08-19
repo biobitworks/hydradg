@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c8491708a8ffb1ed9518e1f02f055c51c3cf49bc563bb987c01d813f995ddbef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that one-pot pasta",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that one-pot pasta",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "77311ddea95e65407a16a49764a77a3430df3f32f1c4a2bd6ea15f2aa0dce110"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "27b77ff3a3db97e61eee06e0f666874e9868ab9c6d8616441b8029391e9cd2fb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the floating sectional idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the floating sectional idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4ceb80baa918ff7af3f7b4826ca5bdb086930b653da3665449ffdea9933aee9e"
+}

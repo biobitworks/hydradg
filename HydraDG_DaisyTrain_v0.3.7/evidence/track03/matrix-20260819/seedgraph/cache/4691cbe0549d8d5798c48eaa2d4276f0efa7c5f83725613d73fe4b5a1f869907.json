@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4691cbe0549d8d5798c48eaa2d4276f0efa7c5f83725613d73fe4b5a1f869907",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a lot of different apps and services in my workflow, and I want to make sure Asa",
+      "type": "value"
+    },
+    {
+      "name": "them to track progress and identify areas for improvement",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a lot of different apps and services in my workflow, and I want to make sure Asana can integrate wit",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "them to track progress and identify areas for improvement",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b5a11ff8ce0246902044baeb1f171d6c0c43facd433bc69970884fcc2b4c714d"
+}

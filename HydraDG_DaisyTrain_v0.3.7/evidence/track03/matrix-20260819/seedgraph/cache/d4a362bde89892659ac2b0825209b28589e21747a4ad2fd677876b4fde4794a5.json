@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d4a362bde89892659ac2b0825209b28589e21747a4ad2fd677876b4fde4794a5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that dry rub recipe, I'll have to try it out",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that dry rub recipe, I'll have to try it out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9894e98d6059aa555926737a7caab302fd240a4110bfaecca3e57f0874b7c79f"
+}

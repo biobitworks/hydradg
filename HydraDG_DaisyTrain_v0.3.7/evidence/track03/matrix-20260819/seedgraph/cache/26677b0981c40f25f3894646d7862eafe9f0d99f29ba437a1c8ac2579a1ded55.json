@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "26677b0981c40f25f3894646d7862eafe9f0d99f29ba437a1c8ac2579a1ded55",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating mindfulness exercises into my Sunday routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating mindfulness exercises into my Sunday routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "92d8890acdefd43661a7c69ec63b708d5838e6fad29ffaf2c227a25092f2f44f"
+}

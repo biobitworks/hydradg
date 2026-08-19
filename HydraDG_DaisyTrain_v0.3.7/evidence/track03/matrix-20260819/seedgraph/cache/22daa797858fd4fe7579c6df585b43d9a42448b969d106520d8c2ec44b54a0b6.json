@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "22daa797858fd4fe7579c6df585b43d9a42448b969d106520d8c2ec44b54a0b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized jewelry, but I'm not sure if it's something my mom wo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized jewelry, but I'm not sure if it's something my mom would wear",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5bc572c49c07758b1263557845beb17cfaf0bb2f0d6b3a07c3c6ff37078781ee"
+}

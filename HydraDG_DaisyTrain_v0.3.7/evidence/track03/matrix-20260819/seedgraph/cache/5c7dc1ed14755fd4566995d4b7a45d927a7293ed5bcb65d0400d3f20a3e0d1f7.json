@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5c7dc1ed14755fd4566995d4b7a45d927a7293ed5bcb65d0400d3f20a3e0d1f7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a luxury candle or home fragrance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a luxury candle or home fragrance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3b883b690c5898d40b375f988bc0d567796bb6928eed714236f72da219e42bbf"
+}

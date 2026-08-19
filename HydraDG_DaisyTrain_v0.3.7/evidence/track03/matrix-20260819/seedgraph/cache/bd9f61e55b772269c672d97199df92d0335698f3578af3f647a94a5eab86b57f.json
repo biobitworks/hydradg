@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bd9f61e55b772269c672d97199df92d0335698f3578af3f647a94a5eab86b57f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing the sweater with a skirt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing the sweater with a skirt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "31e8b92a495e1efff1e207713fbd51d98b0734a789ff7835653e38436f300a90"
+}

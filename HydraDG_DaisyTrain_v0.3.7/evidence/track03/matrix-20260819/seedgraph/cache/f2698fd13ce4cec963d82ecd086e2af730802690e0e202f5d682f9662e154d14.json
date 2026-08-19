@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f2698fd13ce4cec963d82ecd086e2af730802690e0e202f5d682f9662e154d14",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to stay active even when I'm traveling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to stay active even when I'm traveling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ecff8b05b88f3ecb9c899985532a542df7f880e21bbcbc5d5c3276a5594aed13"
+}

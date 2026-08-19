@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "59b561ac236e8d735182225e3c7d34dd66605585293a43e74ed02c1347daf823",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a gift card to a local nursery or gardening store",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a gift card to a local nursery or gardening store",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "15179e05c037b1336b69036fda2c246963a8c4ae663c86b99a56c312e5919dd3"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0e9ffa6a30d5c786e9bf7594a196d22325f023ffcd3364eb5ae19fc9fdc711ff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my smartphone and laptop most frequently",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my smartphone and laptop most frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d700fd5c9b0b6464a9cd77fe82921964888fa9a3edfe89936aafc327cc021aba"
+}

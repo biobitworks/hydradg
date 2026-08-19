@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "876e5bf82a79dbc98ece515024da7e8826815afa8392efad3fecb823823a1885",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of designating specific check-in times",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating specific check-in times",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6e9c82579f27faf6c2f9cdca7d940a7b3564e9d1b21a07c3f81d1945b2bd82cd"
+}

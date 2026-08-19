@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "10bc19a18d4b8d03f3f1005be35e14aaf2861207b9d8d15789cf0a378fcd78d7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a knowledge graph and setting SMART goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a knowledge graph and setting SMART goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1b485af878dc748017d252a59f7fe8616d6ec5bafbf0f2727fc20c0570ea697e"
+}

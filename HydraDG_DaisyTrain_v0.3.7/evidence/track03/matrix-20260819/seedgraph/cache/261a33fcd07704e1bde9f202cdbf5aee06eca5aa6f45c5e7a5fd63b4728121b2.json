@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "261a33fcd07704e1bde9f202cdbf5aee06eca5aa6f45c5e7a5fd63b4728121b2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of collaborating with other musicians",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of collaborating with other musicians",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "04bf916e2507db525789d1ac7151700e95017eaa677cc2339fa56eb2a9df231b"
+}

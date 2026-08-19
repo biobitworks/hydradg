@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "26ccd16046b12c0026f704704d8446779968e0382d7de5338715a16d814535ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a coupon binder",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a physical record in my binder, but I also want to be able to",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a coupon binder",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a physical record in my binder, but I also want to be able to easily calculate my",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ea42a90c49bd4c55b3b86f3b324897fafb765740e33e5f8ea5244dd954c2a42d"
+}

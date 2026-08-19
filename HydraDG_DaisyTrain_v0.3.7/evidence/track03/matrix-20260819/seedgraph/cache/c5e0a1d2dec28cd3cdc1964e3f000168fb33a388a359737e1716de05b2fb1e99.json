@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c5e0a1d2dec28cd3cdc1964e3f000168fb33a388a359737e1716de05b2fb1e99",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some texture or interest to my blanket with different stitche",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding an ombre effect to my blanket",
+      "type": "value"
+    },
+    {
+      "name": "the romantic, whimsical feel it gives off",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some texture or interest to my blanket with different stitches or colors",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding an ombre effect to my blanket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the romantic, whimsical feel it gives off",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "22bfa33632ce328947a84f44678a11ff38545b203e969d6fa65ec18c02d24692"
+}

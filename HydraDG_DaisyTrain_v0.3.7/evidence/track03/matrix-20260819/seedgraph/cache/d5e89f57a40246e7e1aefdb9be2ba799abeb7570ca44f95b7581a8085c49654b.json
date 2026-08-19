@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5e89f57a40246e7e1aefdb9be2ba799abeb7570ca44f95b7581a8085c49654b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing and grouping similar yarns together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and grouping similar yarns together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8628f1cf80e80fa35302693798db404f149a9ff9982ebea98e9eb946cb808b55"
+}

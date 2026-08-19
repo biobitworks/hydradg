@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a6af958ab596f6f6dc6a432db1c3431b91011bb9040724b3e4411cc198c25e07",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "any of these price tracking features to track the price of this exact model",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "any of these price tracking features to track the price of this exact model",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d041aa58dcf3bd53a98a9ff459928f3e04e54d610ff260ff5209b5c155a3f528"
+}

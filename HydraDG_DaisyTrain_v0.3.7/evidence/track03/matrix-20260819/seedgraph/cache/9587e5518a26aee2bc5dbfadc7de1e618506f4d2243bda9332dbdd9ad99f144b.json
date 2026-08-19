@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9587e5518a26aee2bc5dbfadc7de1e618506f4d2243bda9332dbdd9ad99f144b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the oat milk now",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the oat milk now",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "380403b8423cde816ceb81894a2a1ccdf783df6029fbf942a44a0bf814b39e3d"
+}

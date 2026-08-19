@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a622816ab2389f13661acea2dc06b54d91aecd63532bd67b7643b9dd6ca1c244",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the decoration ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the decoration ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b0296da6b6597df630c0d6b36e939312f0e7fda6e39fe754d0b2790b14c2d832"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8d6465f959d9c218c2e440486f2d86348b2249adbc711f84667e5991338c16d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my vast knowledge of the financial markets to help people make smart investment ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my vast knowledge of the financial markets to help people make smart investment decisions, and I do",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fbe70c9bcc85cca2b0970054e8cb00658d9c3a9cfd0cd9d91f8c61b197178e68"
+}

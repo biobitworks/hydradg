@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d6ef7f23d0dc7b51fb299f406ef792b72ba21aa2c5980efb1bfae1459a979d47",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the most",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the most",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5b41af1f01fb319279f4c5f7a72e68071f07d3c57c0ff4424b43c78ea7ee1484"
+}

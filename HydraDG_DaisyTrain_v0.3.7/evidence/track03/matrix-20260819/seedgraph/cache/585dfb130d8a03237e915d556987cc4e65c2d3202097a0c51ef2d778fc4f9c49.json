@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "585dfb130d8a03237e915d556987cc4e65c2d3202097a0c51ef2d778fc4f9c49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized party",
+      "type": "value"
+    },
+    {
+      "name": "the ideas, especially the customized menu and cake",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized party",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the customized menu and cake",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0db07ff828914fc52355f324105dc2184e3218acd4d0853b5d8ee03e542b0845"
+}

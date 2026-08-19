@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fa9c8004f8b8404c2ec7648925c0f8c6c5bb3e666de3af06f50c9c8b1a612064",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea conveyed by the verses \"I didn\u2019t do this for you",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea conveyed by the verses \"I didn\u2019t do this for you",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6fa54d8d8773b0d877d1a728807d37074ed1c59df617eb4c152af7208de62a6b"
+}

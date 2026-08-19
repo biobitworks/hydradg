@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b7d297f7b72d31ad26191477329583823af477179b621f80ecc407ace10f6f7f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "working quickly and creating bold colors",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "working quickly and creating bold colors",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2b65fdfc4e82ade4ce07e8ef6d7a72ecc829d88b8bfd300ceaa9baa4c4b000f1"
+}

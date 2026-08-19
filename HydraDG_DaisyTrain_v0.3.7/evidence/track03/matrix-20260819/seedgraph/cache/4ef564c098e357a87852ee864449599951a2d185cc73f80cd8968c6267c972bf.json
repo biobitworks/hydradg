@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4ef564c098e357a87852ee864449599951a2d185cc73f80cd8968c6267c972bf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the engraved pendant",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the engraved pendant",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5c1ad91c53260866da4131bb3d939968bc48acd4852ccffdc09fe54a499dd87c"
+}

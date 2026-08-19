@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "88bd9f06ff64f9e1955530b8b17f60d95982a610b0de2136474de53614614ae8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating plants into the mindfulness space",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating plants into the mindfulness space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "56a178d78870d26b24976a3dae3bff22d0c9e066207bf18b7e28970e08e8836b"
+}

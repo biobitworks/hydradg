@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6942509c1abf1a171a41630800735319d5c3bc74e425a0692e88486272b1e60",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a budget and prioritizing needs over wants",
+      "type": "value"
+    },
+    {
+      "name": "the idea of keeping a spending journal to identify patterns and triggers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a budget and prioritizing needs over wants",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of keeping a spending journal to identify patterns and triggers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bc339f87e7682cc716384ae6553b3fe3b2d31905a495d56c27ee0180b4cfb6e4"
+}

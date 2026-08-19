@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6532d5556456d4a772636842e438d3635d18ff5434db76f526015347880bb967",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a cozy throw blanket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a cozy throw blanket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7c61bd150f022b80bcd5098a906ba738513c081a257c36a10d4766cbcaee6e1f"
+}

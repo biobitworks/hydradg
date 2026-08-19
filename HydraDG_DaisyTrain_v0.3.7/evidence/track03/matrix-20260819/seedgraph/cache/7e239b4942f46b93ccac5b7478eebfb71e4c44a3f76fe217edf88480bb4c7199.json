@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7e239b4942f46b93ccac5b7478eebfb71e4c44a3f76fe217edf88480bb4c7199",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of grouping my magazines into piles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of grouping my magazines into piles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7cb138f61549475cdeab1ada6753afda83a15fc0a0f3b9e192461bfffd2a57e2"
+}

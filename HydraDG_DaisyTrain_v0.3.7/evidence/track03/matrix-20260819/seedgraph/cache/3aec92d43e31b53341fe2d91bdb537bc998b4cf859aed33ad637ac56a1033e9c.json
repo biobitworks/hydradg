@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3aec92d43e31b53341fe2d91bdb537bc998b4cf859aed33ad637ac56a1033e9c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a minimalist design and I'll be using it at home",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a minimalist design and I'll be using it at home",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e731c17eabbfd08cb37abafba28adafc533c3246023e99f1e7bd9b76621611cf"
+}

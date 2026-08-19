@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5d30d04048137f5a49bfc804d9ee915b88bbabd4d35ae2dd143afa033ec603d5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "in the recipe, and should I adjust the amount of lemon zest and juice",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "in the recipe, and should I adjust the amount of lemon zest and juice",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "39e84b149bf32ec847626546e909de7fbbcf350cedeea92ee952ce2317b9a9eb"
+}

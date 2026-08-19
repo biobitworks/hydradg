@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3c453d7db012dac4f2fbcb9842b6f8b1d6281800338226d87cd830bcbe79926f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of collecting pledges along the walk route",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of collecting pledges along the walk route",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1ba3a800175e63f937e9f755134f01a0944ea50b7c9cce84e2e4bc2a30706330"
+}

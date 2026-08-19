@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9e38f7e381b76d7980b3b6aaf0aebbbe2f37f0df4a339d6b32c90f56bea190be",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having some contrast with the dark gray couch",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding some depth to the space without overpowering the throw pillow",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having some contrast with the dark gray couch",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some depth to the space without overpowering the throw pillows",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d63ce290c2851f31c3859a6a60fa0c6e6af11dae4742ef7d072e7e2da5950989"
+}

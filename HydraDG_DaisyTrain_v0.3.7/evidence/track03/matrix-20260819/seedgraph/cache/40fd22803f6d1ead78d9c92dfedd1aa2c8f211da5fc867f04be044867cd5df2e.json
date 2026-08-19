@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40fd22803f6d1ead78d9c92dfedd1aa2c8f211da5fc867f04be044867cd5df2e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using dividers and baskets to separate items and make them easier to",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using dividers and baskets to separate items and make them easier to find",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "013b2a95869abb36779c49a95d524541896b149725816d52d559d0d3293194ac"
+}

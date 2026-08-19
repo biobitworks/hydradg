@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "aaf529b98e264e26be562887d18345a5916c7ecdc317e5d185d4d5db141e13a3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the customized jewelry box idea, but I'm not sure if it's something my mom would",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a homemade cooking dinner, it sounds simple yet romantic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the customized jewelry box idea, but I'm not sure if it's something my mom would like",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a homemade cooking dinner, it sounds simple yet romantic",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "89e08b193b67f65d02892a1457d6a640cd2f53da3ea8ac3db7114ed1673d1c0b"
+}

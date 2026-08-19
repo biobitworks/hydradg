@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "853f023f0209519dfe03f447f0b07ffbe3d103b2833d7bd6f5967a15037ef801",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "books that are engaging and thought-provoking, but still easy to follow",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "books that are engaging and thought-provoking, but still easy to follow",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d415928f23a8ee43ff865a294fde174d554dc2284b019c876c27b67ff752a732"
+}

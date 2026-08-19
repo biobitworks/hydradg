@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "2cfa063e0c7c739bdfba24b3f7f987883b720b0eb47896c90bb84f2dc8d318c7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this post to start a meaningful conversation or discussion",
+      "type": "value"
+    },
+    {
+      "name": "humor or storytelling to bring people together",
+      "type": "value"
+    },
+    {
+      "name": "my time",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this post to start a meaningful conversation or discussion",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "humor or storytelling to bring people together",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "my time",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca23ef841ee4c7802841a2db2551fdb3b4714e246452e5edb5c2a3f088032cd0"
+}

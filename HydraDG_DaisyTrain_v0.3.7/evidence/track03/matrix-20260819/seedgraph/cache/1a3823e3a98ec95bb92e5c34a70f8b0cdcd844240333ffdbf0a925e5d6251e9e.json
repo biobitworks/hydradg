@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1a3823e3a98ec95bb92e5c34a70f8b0cdcd844240333ffdbf0a925e5d6251e9e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a photo album",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a photo album",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0b639746fe0a57e2e8a65402703b82fafea847083c3bcd8af03e937d97a37fda"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "70e5fb481d54dde27698b191998942cedb670eb6480c356c63a4f37df9799c19",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Skagen Ancher, but before I make a decision, can you tell me a ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Skagen Ancher, but before I make a decision, can you tell me a bit more about the q",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05ca3213110dd2101203836d0ea224a0d5b0ad28db660a47bcec97068ceb0fb0"
+}

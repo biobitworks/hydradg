@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b755b1f55ee788042e2a6351abffc653eb5f62a0361ac6b10856ac36bec7cdb8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Songkick to track specific artists and get notified when they're coming to my ar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Songkick to track specific artists and get notified when they're coming to my area",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b503dfbbec1ee1a5cd60baa9979e61458f6d65a817f2bc4ec67769ac204a9fcf"
+}

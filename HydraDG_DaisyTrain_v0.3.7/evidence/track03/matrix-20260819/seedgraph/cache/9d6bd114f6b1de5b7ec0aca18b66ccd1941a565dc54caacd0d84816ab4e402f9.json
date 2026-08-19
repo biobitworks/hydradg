@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9d6bd114f6b1de5b7ec0aca18b66ccd1941a565dc54caacd0d84816ab4e402f9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"Language Learner of the Month\" or \"Native Speaker of the Month\" f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"Language Learner of the Month\" or \"Native Speaker of the Month\" feature, and using so",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cb5ee09578045fbdc92057721f8cf586f8b0bd63569863f6a5105edb926988f4"
+}

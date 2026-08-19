@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a5533586a852693154321b31a09a69fff05f25178c81c238ca74d3e6977376a8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of influencer partnerships and user-generated content campaigns",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of influencer partnerships and user-generated content campaigns",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "53f497680a6e2d96c937382e5d0ea55437288a2afd55ddd6cafd4e5a98d49c88"
+}

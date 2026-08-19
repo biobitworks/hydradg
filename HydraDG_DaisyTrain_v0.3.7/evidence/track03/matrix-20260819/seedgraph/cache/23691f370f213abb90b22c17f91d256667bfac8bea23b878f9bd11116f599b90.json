@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "23691f370f213abb90b22c17f91d256667bfac8bea23b878f9bd11116f599b90",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the quinoa salad with grilled chicken and avocado",
+      "type": "value"
+    },
+    {
+      "name": "the idea of energy balls and trail mix, they seem easy to make and can be custom",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the quinoa salad with grilled chicken and avocado",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of energy balls and trail mix, they seem easy to make and can be customized to my taste",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d1e8d6e988c5af8b1b7300c05aff8bc493490117477fc71b111980ccad28744"
+}

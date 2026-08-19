@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0431350a1f0769f06dafe00db06f8c23480ba9ea6ec44c06eb0997646cd41211",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "more upbeat and energetic music",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "more upbeat and energetic music",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0755a4ccfe4647146a005b64a5d7a53f82c6fd0f2c6f8ad270f6dd54aad7d9f0"
+}

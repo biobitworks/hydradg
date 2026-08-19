@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3c60fe01a6f56443709141f715153fa1c1b1de8a47f615bca5231a8641c72b2f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the low maintenance aspect and the consistent patterns",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the low maintenance aspect and the consistent patterns",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1556357f0e6ca199a6323a194de5d51fa946c0d6032ac914cbf008fce33ed1ea"
+}

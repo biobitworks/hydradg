@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d4952b0761ceb91869d7474f89b3d53b9fb640a55716eb38903d6f7c7120e4f4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of giving personalized tokens or customized candles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of giving personalized tokens or customized candles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2ce95bf0e3e64b24b10165eb0c22f24184eae070b1a8e5c43143b1229b391a15"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6a49c3b45c69ad59b0d7d6cde12a7ef1699a7632f80ce9a15c32ed430dfdd45f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the microwave or is it better to use a double boiler",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the microwave or is it better to use a double boiler",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb5e7784f295f20751564d68aa759277667810f40f66b4e7e4290cd4c8da6427"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f3bbf742eb717f6dce0bbdbe1dfc362865603abb86167a55fc5c2d7488c53ac4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "you to help me 4 ideas for blog articles in my website",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "you to help me 4 ideas for blog articles in my website",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "580c0f119b711b16a1003b775df2bf463d0da8135a42dbbb16ed6b6de8be6b6b"
+}

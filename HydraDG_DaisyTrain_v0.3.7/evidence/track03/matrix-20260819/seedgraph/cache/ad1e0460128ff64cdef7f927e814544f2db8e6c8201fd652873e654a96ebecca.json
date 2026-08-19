@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ad1e0460128ff64cdef7f927e814544f2db8e6c8201fd652873e654a96ebecca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh spinach instead of frozen",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh spinach instead of frozen",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e017975355668b634533cfbb35b9e322c852d8cd9f876358e4e978200cf9b329"
+}

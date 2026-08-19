@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a24a6726a6b9079eaf27e98da3527589b56bbcc255ab5dba7dd4a93c3f01eb36",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "outdoor courts with lighting since we usually play in the evening",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "outdoor courts with lighting since we usually play in the evening",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f7b2e4c1a8aa5fad1a75c2821883e96dcc84734a6c9907ebba6934b3b5eba60b"
+}

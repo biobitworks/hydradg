@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7233302ee05322c2092d902fb1941de207bd6e0a22e2317c76144b9db9f3e3a8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a mobile app",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a mobile app",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "709345bc8e5c62a1d86fd0eac584216deaeb38298f78390842a5b5a425438014"
+}

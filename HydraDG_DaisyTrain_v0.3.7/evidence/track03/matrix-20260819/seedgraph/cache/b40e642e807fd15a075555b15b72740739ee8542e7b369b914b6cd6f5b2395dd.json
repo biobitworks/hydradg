@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b40e642e807fd15a075555b15b72740739ee8542e7b369b914b6cd6f5b2395dd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "\"Sweet Support for the Season\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "\"Sweet Support for the Season\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2e9e2f0784848f4caa82c8e098fe428f40a9e1ace95b79dd65311a0a96081bc0"
+}

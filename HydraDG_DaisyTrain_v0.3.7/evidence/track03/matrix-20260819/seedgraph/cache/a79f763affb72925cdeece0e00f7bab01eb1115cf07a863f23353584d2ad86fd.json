@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a79f763affb72925cdeece0e00f7bab01eb1115cf07a863f23353584d2ad86fd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa salad idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa salad idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fd5c69c26804e8c438c6bd118eac8bb71166ca8b74ea0f789bea27197c2be1be"
+}

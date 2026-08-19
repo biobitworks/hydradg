@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e9bee964a4867db5475b7c5255c79879f0d240157ad228849af86f1e33559cdf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a deep green accent wall, but I'm not sure if it would work with my ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a deep green accent wall, but I'm not sure if it would work with my reclaimed wood bed f",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b204c52ec0f4aa9d0fda973da373c3e8f17aa370585c9b599f837b185fe14613"
+}

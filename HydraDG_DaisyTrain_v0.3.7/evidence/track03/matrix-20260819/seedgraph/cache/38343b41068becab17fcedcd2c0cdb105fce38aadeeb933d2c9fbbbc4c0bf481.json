@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "38343b41068becab17fcedcd2c0cdb105fce38aadeeb933d2c9fbbbc4c0bf481",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a Field of Dreams",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a Field of Dreams",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d815e62ccad4854aec48234f5c8a68eef088fc8bd018d22d28b38182020cc21e"
+}

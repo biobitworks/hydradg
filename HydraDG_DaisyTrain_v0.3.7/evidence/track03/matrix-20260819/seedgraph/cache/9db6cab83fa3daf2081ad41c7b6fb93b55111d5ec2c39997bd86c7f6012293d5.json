@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9db6cab83fa3daf2081ad41c7b6fb93b55111d5ec2c39997bd86c7f6012293d5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of allocating time for personal goals and self-care activities",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of allocating time for personal goals and self-care activities",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b2e971cc101ea7e5fad981ca8615c035bb462e0c1cd82baac37a919ae0ddac0a"
+}

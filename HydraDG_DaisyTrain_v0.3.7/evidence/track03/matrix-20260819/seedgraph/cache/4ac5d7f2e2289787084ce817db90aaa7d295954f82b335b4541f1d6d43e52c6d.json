@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4ac5d7f2e2289787084ce817db90aaa7d295954f82b335b4541f1d6d43e52c6d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "whole milk",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "whole milk",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7177f240d561425dbb096f48f46aaea837907f7c17884130e652d8059e2e3f4e"
+}

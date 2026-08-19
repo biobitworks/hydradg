@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b0df6134b7cf24f7e0e65cde03108510e6c2eaaa61bc34d54e682469b4368f9b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "downtown area, and I'm looking to do a 30-minute jog",
+      "type": "value"
+    },
+    {
+      "name": "to wake up at 7:30 am on Saturdays and fit in a cup of coffee beforehand",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "downtown area, and I'm looking to do a 30-minute jog",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to wake up at 7:30 am on Saturdays and fit in a cup of coffee beforehand",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6bc7e5df13dff0b96724a1b350f6c3dceb41ee29fe79f39e5eadecb030cbd30b"
+}

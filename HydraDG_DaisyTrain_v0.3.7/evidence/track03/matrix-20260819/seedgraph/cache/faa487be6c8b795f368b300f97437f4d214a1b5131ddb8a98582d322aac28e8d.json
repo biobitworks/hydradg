@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "faa487be6c8b795f368b300f97437f4d214a1b5131ddb8a98582d322aac28e8d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item or an experience gift",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item or an experience gift",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "53d039c82d9060940abf7dec6ceee2a8fad1119815b4ee5183a44c33c96418f1"
+}

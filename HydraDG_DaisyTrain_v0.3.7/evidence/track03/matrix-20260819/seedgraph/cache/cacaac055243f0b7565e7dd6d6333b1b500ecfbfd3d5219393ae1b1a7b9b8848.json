@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "cacaac055243f0b7565e7dd6d6333b1b500ecfbfd3d5219393ae1b1a7b9b8848",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially the classic black tie and little black dress ideas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a simple chain necklace",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially the classic black tie and little black dress ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a simple chain necklace",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3ef019d4bf582d1ab64a3647afae291da14a6b9cac7d8f83659f40545930873c"
+}

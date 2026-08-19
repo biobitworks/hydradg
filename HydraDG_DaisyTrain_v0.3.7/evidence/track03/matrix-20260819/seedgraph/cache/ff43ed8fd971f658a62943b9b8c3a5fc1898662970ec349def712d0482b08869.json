@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff43ed8fd971f658a62943b9b8c3a5fc1898662970ec349def712d0482b08869",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Adobe Premiere Pro for video editing, and it can be quite resource-intensive, es",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Adobe Premiere Pro for video editing, and it can be quite resource-intensive, especially when workin",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "db04fa233aef2b8d9a35c6a63f8f988f3110b7a820618d46a503857d8751fda8"
+}

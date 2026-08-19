@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "12beed82b439010dbb22117d337380f64c9fc1207595e46a4bd8c56fb4c8556a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Yummly for recipe inspiration and then import the recipes into Plan to Eat for m",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Yummly for recipe inspiration and then import the recipes into Plan to Eat for meal planning and gro",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fda6a388a7f999741470fb2e9d64efae3833eba4574958a976d19aa8c5646839"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "200f8135e9f36971caea6d42a19305d76964e2457d66e11f626efa5deec199b5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the same tamarind paste I use in my Pad Thai recipe to give it a similar flavor ",
+      "type": "value"
+    },
+    {
+      "name": "my kimchi to be pretty spicy, so I add a generous amount of gochugaru",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the same tamarind paste I use in my Pad Thai recipe to give it a similar flavor profile",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "my kimchi to be pretty spicy, so I add a generous amount of gochugaru",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5b23a565ab98332e60c1441322f600aa828f9551cbdada79c15ac6d55fcccb52"
+}

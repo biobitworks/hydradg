@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4a9d08fe2cbfc9a92d8d9b3e987ceb671eba6c6e92b524947dcd93a30bb569b6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them up before they go bad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them up before they go bad",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5778a32b523f1d4fa78ae36b99b652ba759ed78ca77587813417700e1ff21f72"
+}

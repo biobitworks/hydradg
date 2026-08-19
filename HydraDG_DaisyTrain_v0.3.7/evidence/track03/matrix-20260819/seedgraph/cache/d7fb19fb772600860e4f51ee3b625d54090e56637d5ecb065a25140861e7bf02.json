@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d7fb19fb772600860e4f51ee3b625d54090e56637d5ecb065a25140861e7bf02",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my past road trip experiences to inform my planning for this new trip",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my past road trip experiences to inform my planning for this new trip",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "539c0906e7a6b31fc17495300c0e6429371263b3ad3321d5c30bca9515add06a"
+}

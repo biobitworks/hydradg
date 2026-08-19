@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a34a14c3446815e7b0d22b95d51a36651850682f7caf4e29247c3a58949d8094",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to catch the early morning matches with my coffee and breakfast",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to catch the early morning matches with my coffee and breakfast",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "82ba3fc4c18fe9657242a24cb659e6df1a450344b7a9b7ea284bcf33c94c7ac9"
+}

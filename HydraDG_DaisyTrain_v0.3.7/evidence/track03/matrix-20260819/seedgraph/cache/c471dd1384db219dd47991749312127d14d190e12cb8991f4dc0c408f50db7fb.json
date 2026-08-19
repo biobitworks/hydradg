@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c471dd1384db219dd47991749312127d14d190e12cb8991f4dc0c408f50db7fb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas",
+      "type": "value"
+    },
+    {
+      "name": "this content calendar, but I'd like to add some Instagram Live sessions to reach",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "this content calendar, but I'd like to add some Instagram Live sessions to reach my audience more ca",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0236af7c28b0c88e62cbe9358f73b7f132d12b69318aaad9b6c66649f00442a6"
+}

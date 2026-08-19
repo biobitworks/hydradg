@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "11017ad4fae73110ac94711454df79f15263ffb34fd328c78839c3d84cad691e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "It Like That\"** by Pete Rodriguez - A boogaloo classic that's sure to get the pa",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "It Like That\"** by Pete Rodriguez - A boogaloo classic that's sure to get the party started",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6b71076fbd75b56d6ee5957ba4d654a822dcb576e4b99b2e5da7714a98f0a9a8"
+}

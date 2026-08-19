@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "43ca87f89599256a22387855ca7b217b2b01046f2cc5ce3d21cf67a0db516578",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those tips, especially the one about setting goals and challenges",
+      "type": "value"
+    },
+    {
+      "name": "that training plan, it seems pretty comprehensive",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those tips, especially the one about setting goals and challenges",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that training plan, it seems pretty comprehensive",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8d2b44c06696520ad180590210f9f619f1aed7b2db50dee1b7289abe8e91ea5"
+}

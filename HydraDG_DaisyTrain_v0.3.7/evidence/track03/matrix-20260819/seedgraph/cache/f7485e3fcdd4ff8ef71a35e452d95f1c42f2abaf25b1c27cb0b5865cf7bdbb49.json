@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f7485e3fcdd4ff8ef71a35e452d95f1c42f2abaf25b1c27cb0b5865cf7bdbb49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that one a bit better",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that one a bit better",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6d665b7a4892cff5c8ca6d9fc8226fb942c21497eef9aa73656e1302dba8d36f"
+}

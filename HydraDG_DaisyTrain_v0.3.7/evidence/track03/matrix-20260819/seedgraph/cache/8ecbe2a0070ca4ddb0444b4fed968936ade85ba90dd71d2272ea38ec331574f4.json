@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8ecbe2a0070ca4ddb0444b4fed968936ade85ba90dd71d2272ea38ec331574f4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "at West Elm, it's $400 and has great storage",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "at West Elm, it's $400 and has great storage",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "546ccfd93f1d40226886181cc71bbe0f1a3feb5adb129ac4d82cca5aa3833e49"
+}

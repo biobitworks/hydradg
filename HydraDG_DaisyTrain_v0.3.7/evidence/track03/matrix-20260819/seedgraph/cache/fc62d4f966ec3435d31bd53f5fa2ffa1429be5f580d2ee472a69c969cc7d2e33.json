@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc62d4f966ec3435d31bd53f5fa2ffa1429be5f580d2ee472a69c969cc7d2e33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the floating furniture layout",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a statement piece of art above the sofa",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the floating furniture layout",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a statement piece of art above the sofa",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dbe2e74dfb052900726694991e5a6e370fe174576ecd15650f4e999fd6968dd5"
+}

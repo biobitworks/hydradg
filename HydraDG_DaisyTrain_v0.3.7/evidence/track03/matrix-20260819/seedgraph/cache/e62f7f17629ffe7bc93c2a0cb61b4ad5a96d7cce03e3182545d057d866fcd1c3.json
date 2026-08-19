@@ -1,0 +1,100 @@
+{
+  "cache_hit": false,
+  "cache_key": "e62f7f17629ffe7bc93c2a0cb61b4ad5a96d7cce03e3182545d057d866fcd1c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "I guess I use this on Board Game Geek as a proxy, I proxy other people\u2019s experie",
+      "type": "value"
+    },
+    {
+      "name": "it when it\u2019s new for me",
+      "type": "value"
+    },
+    {
+      "name": "to have kind of a diverse board game",
+      "type": "value"
+    },
+    {
+      "name": "legacy games",
+      "type": "value"
+    },
+    {
+      "name": "village building games",
+      "type": "value"
+    },
+    {
+      "name": "it, I will buy it without checking Board Game Geek",
+      "type": "value"
+    },
+    {
+      "name": "it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "I guess I use this on Board Game Geek as a proxy, I proxy other people\u2019s experiences to be like, wou",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it when it\u2019s new for me",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to have kind of a diverse board game",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "legacy games",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "village building games",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it, I will buy it without checking Board Game Geek",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3bc349cf19240450c25c8744c6069b7129dc6825e31267273eb4dadad38aa605"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "882c0097363c37124d65be876ff0dae2be028cd600054cd6ec77bd9c42cba9b1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item, but I'm not sure what type of item would be sui",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item, but I'm not sure what type of item would be suitable for her",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d046f31d758c0a3e8952443276891b81c8f6f262a97f2f90371980aa6f68832d"
+}

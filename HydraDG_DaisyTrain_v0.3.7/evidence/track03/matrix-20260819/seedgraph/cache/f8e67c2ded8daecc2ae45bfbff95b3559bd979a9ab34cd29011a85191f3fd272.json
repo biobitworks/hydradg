@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f8e67c2ded8daecc2ae45bfbff95b3559bd979a9ab34cd29011a85191f3fd272",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Jungle Adventure theme, but I'm not sure about the games",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Jungle Adventure theme, but I'm not sure about the games",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c8ad0fe1732f75d5f04b78043c87466d8c4d6e8b426901c716f9dd108917990f"
+}

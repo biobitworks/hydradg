@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "45a13b60c4fcf9a841f7659a0d405c167c490b630e3d5d366bde04b35454545e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "oat yogurt in place of non-dairy yogurt in the vegan tikka masala recipe you men",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "oat yogurt in place of non-dairy yogurt in the vegan tikka masala recipe you mentioned earlier",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4bf350445967d2d67b7a32c855b78d9e048a4723b4ff1c55d4887d84d5d0743e"
+}

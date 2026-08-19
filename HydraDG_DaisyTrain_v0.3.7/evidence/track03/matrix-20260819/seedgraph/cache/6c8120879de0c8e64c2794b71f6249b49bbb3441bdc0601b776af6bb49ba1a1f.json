@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6c8120879de0c8e64c2794b71f6249b49bbb3441bdc0601b776af6bb49ba1a1f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Personalized & Sentimental theme",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Personalized & Sentimental theme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "493b9524e161c7e1a4b643484cc59381201f0b46a54f017825f55ff6be619174"
+}

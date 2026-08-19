@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b51a033eab43c7a24476f0dc94771ee767fa5346fe224ff11a2e1904fed0b41a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of supporting a good cause",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of supporting a good cause",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dfb286836f6bdc58809cec5fe7f80f08720b1d6e9ee7e7744afbfe1d63dfce98"
+}

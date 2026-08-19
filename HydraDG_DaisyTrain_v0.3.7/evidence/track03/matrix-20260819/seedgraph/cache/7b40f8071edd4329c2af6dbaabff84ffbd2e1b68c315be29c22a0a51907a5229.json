@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7b40f8071edd4329c2af6dbaabff84ffbd2e1b68c315be29c22a0a51907a5229",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my credit card to top up my Myki card online, or are there other payment options",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my credit card to top up my Myki card online, or are there other payment options available",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fb2f62ce4cd59981b7ac30dcc87bd01f560ab1339146a684fce3ab27d82a7658"
+}

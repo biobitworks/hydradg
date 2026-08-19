@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a7609a07d33a8c24921745ea0db07207569d4dce5f138783026633651edf2c94",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "books that are engaging and easy to follow, but still have some depth to them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "books that are engaging and easy to follow, but still have some depth to them",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "886a2446fbd414a29fc2069a0832ca24118f2228a09e1e512b71d17a3b56fd67"
+}

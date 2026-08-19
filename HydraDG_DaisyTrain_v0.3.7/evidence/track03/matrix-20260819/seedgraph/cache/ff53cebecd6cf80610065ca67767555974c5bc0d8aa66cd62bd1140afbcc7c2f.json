@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff53cebecd6cf80610065ca67767555974c5bc0d8aa66cd62bd1140afbcc7c2f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to adjust my behavior and responses during our language game",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to adjust my behavior and responses during our language game",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "42d4816676d6ed5129fae4bbc684ace5d1067c6c385a19eeb33d6fbb23faa16f"
+}

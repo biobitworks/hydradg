@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "aa68f905db46edb629d9f6e0455757e9a348f8633b452257334599dafafd8e53",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having my utensils organized and within easy reach on my countertop",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having my utensils organized and within easy reach on my countertop",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "23e5999d9bbf41ba4442da928188da8ff2c58ba12e725ef3039151ed5e955aba"
+}

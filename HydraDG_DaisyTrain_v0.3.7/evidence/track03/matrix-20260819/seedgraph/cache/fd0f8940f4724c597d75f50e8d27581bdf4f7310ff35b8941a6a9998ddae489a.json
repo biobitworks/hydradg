@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fd0f8940f4724c597d75f50e8d27581bdf4f7310ff35b8941a6a9998ddae489a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a traditional lecture format in which I present concepts and examples on the boa",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a traditional lecture format in which I present concepts and examples on the board while students ta",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1e5876a0cc1df4b30f0e625edd232830688aa2cc2b363b3a2c1715ba5729d1b0"
+}

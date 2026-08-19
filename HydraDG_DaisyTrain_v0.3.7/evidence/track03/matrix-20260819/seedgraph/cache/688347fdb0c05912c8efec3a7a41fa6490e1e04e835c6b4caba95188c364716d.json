@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "688347fdb0c05912c8efec3a7a41fa6490e1e04e835c6b4caba95188c364716d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it on my cast iron pan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it on my cast iron pan",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "389e0a9ce19d50513ef8629e8ca44c2e602e79ed2662f9923b4b7e6e2b348a6d"
+}

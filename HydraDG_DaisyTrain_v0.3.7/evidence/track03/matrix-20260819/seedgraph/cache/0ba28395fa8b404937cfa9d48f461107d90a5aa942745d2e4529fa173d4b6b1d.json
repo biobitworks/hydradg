@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ba28395fa8b404937cfa9d48f461107d90a5aa942745d2e4529fa173d4b6b1d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized desk accessory",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized desk accessory",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "365395976cb726b26c52350de0b42702ad218d60066f9408a63fed56bf132ea9"
+}

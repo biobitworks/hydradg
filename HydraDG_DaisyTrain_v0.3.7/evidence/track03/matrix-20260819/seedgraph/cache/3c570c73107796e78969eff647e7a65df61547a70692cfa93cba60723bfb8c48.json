@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3c570c73107796e78969eff647e7a65df61547a70692cfa93cba60723bfb8c48",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas, especially the singing lessons and microphone stand",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the singing lessons and microphone stand",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f5568a6cf32abb2c4e08d4bf8c2cabe755e9d5d75606c6a8e0ed875a741bfd04"
+}

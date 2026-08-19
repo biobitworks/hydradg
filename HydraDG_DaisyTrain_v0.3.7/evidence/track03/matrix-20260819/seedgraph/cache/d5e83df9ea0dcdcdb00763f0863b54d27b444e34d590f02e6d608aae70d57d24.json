@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5e83df9ea0dcdcdb00763f0863b54d27b444e34d590f02e6d608aae70d57d24",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the quinoa and black bean bowl idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the quinoa and black bean bowl idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "25cde1c3d118bdd248767869a534e6eb2c34347f13eaeff2371d3fd4e292b031"
+}

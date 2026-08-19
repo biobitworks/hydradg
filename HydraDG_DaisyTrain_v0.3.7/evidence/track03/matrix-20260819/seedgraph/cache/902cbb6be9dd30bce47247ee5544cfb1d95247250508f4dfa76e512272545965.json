@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "902cbb6be9dd30bce47247ee5544cfb1d95247250508f4dfa76e512272545965",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "its sleek design and versatility, and it seems like it would be a great fit for ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "its sleek design and versatility, and it seems like it would be a great fit for my street and travel",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "871afee45003aa4d176856f0834922825d410618ae99890c1ebf2ae94ef43514"
+}

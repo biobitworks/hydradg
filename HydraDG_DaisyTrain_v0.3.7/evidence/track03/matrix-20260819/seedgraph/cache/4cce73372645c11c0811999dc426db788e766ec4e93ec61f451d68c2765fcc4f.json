@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4cce73372645c11c0811999dc426db788e766ec4e93ec61f451d68c2765fcc4f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the full hour",
+      "type": "value"
+    },
+    {
+      "name": "that time to focus on my side project",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the full hour",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that time to focus on my side project",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2749c1e74a8674e797e36c56ca33020809f2c558a30e014c4fa7ec5093c3b1b8"
+}

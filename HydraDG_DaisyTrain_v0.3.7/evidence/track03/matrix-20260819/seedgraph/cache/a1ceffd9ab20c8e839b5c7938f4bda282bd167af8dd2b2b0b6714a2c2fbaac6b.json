@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a1ceffd9ab20c8e839b5c7938f4bda282bd167af8dd2b2b0b6714a2c2fbaac6b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Samsonite Omni PC 4",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Samsonite Omni PC 4",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "27ccdd5403dc60daef75935e14c401808d6838f11e32784de487cb3f0b7b6209"
+}

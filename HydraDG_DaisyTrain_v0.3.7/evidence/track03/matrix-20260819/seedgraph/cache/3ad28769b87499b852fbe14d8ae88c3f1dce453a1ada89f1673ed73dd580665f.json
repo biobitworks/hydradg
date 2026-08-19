@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ad28769b87499b852fbe14d8ae88c3f1dce453a1ada89f1673ed73dd580665f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to swap out depending on my outfit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to swap out depending on my outfit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6bfb036c9ced8c7335e2e27eb61ca925223ab74d8736f801660c8f193e8f644d"
+}

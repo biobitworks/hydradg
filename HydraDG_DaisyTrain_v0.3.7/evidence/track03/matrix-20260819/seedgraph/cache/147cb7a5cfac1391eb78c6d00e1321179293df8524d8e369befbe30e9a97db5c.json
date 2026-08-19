@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "147cb7a5cfac1391eb78c6d00e1321179293df8524d8e369befbe30e9a97db5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the personalized necklace and birthstone jewelry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the personalized necklace and birthstone jewelry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8096e3d0d666cdfbeee35c12e598ad73037582b9e8b809867adbf6831e8048c2"
+}

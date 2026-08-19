@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "39e61ade4eee0d840b30298b63d0e77ba833a4e38e6c655b9c17a5b7c9be9757",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of taking short breaks frequently",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of taking short breaks frequently",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "34b368b017355bd3959512e5b4c2d6a9da04d953d368d376398928f20465dd02"
+}

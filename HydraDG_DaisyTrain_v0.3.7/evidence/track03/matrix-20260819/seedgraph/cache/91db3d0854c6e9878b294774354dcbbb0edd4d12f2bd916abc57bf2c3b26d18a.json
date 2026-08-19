@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "91db3d0854c6e9878b294774354dcbbb0edd4d12f2bd916abc57bf2c3b26d18a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggested schedule, but I think I'll adjust it a bit to fit my own pace and ",
+      "type": "value"
+    },
+    {
+      "name": "those tips, especially the Pomodoro Technique",
+      "type": "value"
+    },
+    {
+      "name": "those ideas, especially the one about using transparencies",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggested schedule, but I think I'll adjust it a bit to fit my own pace and style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those tips, especially the Pomodoro Technique",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the one about using transparencies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "37f11f472f6d2aa2a9412bdac9d9baa56b0148a15e2d2afe416bdb49a2868e97"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "17886817d7370c1180b15ca454cb0caff2150d21c8f56d48cc702e6c3471cb7e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a gourmet food basket",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a customized cheese knife",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a gourmet food basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized cheese knife",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "61d0d9a4cc9374e3737eadf2470ab4022fbd51f861268a0b3674e7bcb9ad1ee1"
+}

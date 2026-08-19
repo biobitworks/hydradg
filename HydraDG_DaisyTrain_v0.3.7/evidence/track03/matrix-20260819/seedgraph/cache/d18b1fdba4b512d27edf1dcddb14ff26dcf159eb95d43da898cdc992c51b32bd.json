@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d18b1fdba4b512d27edf1dcddb14ff26dcf159eb95d43da898cdc992c51b32bd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of that brick workout",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of that brick workout",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aeccec50cf8a3450d0ea63560f0ebda1b2934ea4fd07e8615473b6c1dde88a41"
+}

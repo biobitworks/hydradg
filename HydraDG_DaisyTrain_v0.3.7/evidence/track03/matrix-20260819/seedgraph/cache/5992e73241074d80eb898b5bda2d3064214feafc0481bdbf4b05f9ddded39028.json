@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5992e73241074d80eb898b5bda2d3064214feafc0481bdbf4b05f9ddded39028",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the spreadsheet idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a \"Provenance/Story\" column",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the spreadsheet idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"Provenance/Story\" column",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "078febf627bddbdc20583843dad7d834c30ffa5d6e48526817446a341d86c590"
+}

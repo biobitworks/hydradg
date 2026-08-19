@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a4ea72d8d2571a022699063da3c941b61ff24f1170de181e89b5fe18697bface",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "its simplicity and ease of use, but I'm open to exploring other options with mor",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "its simplicity and ease of use, but I'm open to exploring other options with more features",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c408dfa5440547b56cc11362ff8576972cea1e8223ef87b04b458e331de5b79"
+}

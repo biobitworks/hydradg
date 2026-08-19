@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "27b570d1e3fa158d9236445c714a32380dc5d08df6fd97b2b0659bfcc75c353b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of writing about Instagram Stories",
+      "type": "value"
+    },
+    {
+      "name": "it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of writing about Instagram Stories",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "91282b8f90088822f098e765bebec960db6e3d1d5847a1d38179fb01a76134fd"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "00a5d78fa6a14993dd5d4d0b1535c1fb79a7899968ad390fe3e6fafd20ae7402",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that to backup my files locally and then use a cloud backup service to backup my",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having unlimited data backup for a flat annual fee",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that to backup my files locally and then use a cloud backup service to backup my files online",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having unlimited data backup for a flat annual fee",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0104ae0e8f0d9b08f53ed41cab78d12eee27041d4cd5342fea6b85a1cb0da9db"
+}

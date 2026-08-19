@@ -1,0 +1,10 @@
+{
+  "event_time_local": "2026-08-19T12:04:00-07:00",
+  "private_key_material_included": false,
+  "requested_algorithm": "Ed25519",
+  "required_next_operation": "After canonical binding and append to the local HydraDG FCG, sign the resulting canonical turn/update root on the authorized signing machine, verify it, and append the verification receipt to the project FCG.",
+  "schema": "hydradg.signing_handoff.v1",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "signing_target_sha256": "71df2cc66a542aa22e6e69cac971cd21894a5a29a86fb1f9f4f7c6efa013df8e",
+  "signing_target_type": "chat_handoff_root"
+}

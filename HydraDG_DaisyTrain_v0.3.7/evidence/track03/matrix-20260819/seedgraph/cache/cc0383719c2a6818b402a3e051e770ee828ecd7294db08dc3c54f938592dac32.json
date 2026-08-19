@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cc0383719c2a6818b402a3e051e770ee828ecd7294db08dc3c54f938592dac32",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the pine cones from my backyard pine tree to make crafts or decorations",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the pine cones from my backyard pine tree to make crafts or decorations",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e1cba6e318711b3c6ccdbf97d8e1a313e5507bb536994fe012b5f2f1e8a11f6d"
+}

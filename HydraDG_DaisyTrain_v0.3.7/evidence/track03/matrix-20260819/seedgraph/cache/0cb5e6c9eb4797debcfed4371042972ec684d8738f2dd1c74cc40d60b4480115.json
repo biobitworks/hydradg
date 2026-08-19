@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0cb5e6c9eb4797debcfed4371042972ec684d8738f2dd1c74cc40d60b4480115",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it in place of some of the granulated sugar or add it in addition to the granula",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a stronger, more intense flavor to balance out the spices in the car",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it in place of some of the granulated sugar or add it in addition to the granulated sugar",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a stronger, more intense flavor to balance out the spices in the carrot cake",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "003df7734fb2bf6d557e21228790a560ee27ab6ca12257774f7a4fbda3497091"
+}

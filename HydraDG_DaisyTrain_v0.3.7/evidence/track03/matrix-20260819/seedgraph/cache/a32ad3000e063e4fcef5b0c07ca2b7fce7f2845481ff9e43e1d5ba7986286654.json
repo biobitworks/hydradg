@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a32ad3000e063e4fcef5b0c07ca2b7fce7f2845481ff9e43e1d5ba7986286654",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a Lazy Susan and a door organizer to make the most of my cabin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a Lazy Susan and a door organizer to make the most of my cabinet space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33f5ed81c45bcc857efff24850b93f0fddbbeed167cda304a668f9f6b7071293"
+}

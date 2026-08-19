@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "39699210ed5ab7fe004c591dacefc197d6e7c6ae5161d40d78ffab944d8e4d8a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a custom display case, but I'm on a budget",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a custom display case, but I'm on a budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6c9390daf69cee7a3afdedf658ab307d8251279ac6e6d23165996eb95f04095d"
+}

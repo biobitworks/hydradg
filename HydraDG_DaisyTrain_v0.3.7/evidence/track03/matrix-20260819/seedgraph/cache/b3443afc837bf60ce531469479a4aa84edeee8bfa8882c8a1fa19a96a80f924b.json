@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3443afc837bf60ce531469479a4aa84edeee8bfa8882c8a1fa19a96a80f924b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"2-minute rule\" idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"2-minute rule\" idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2a828dd48d8451c6830222c8184cbb235aba2036201343ea0f0af9d9acdacce6"
+}

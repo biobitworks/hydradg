@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4871ed43fac37f3e127a3bd0c66c41b78ef939e23983b48e74a3166a70ea4dca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sorting into categories",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sorting into categories",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "209cc2c147e7979881978465dd9488a326a076d36c8eebb56aac0329c20bd64b"
+}

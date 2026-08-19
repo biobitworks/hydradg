@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a08a3b2535456f64212276ec6ea4162ff44d10db2d41eadccf6f74c25881bc66",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Rock 'n' Roll Retro Party idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Rock 'n' Roll Retro Party idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "32b0cf2ade86778ec422714fa5c479301824827f91bf842e564ebf1f5e2fab7a"
+}

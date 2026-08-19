@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4731e9af82d9a398ce6ba66e1ad7660e23f52c107d677fba167397587b92206a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the visual approach to task management",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a centralized hub for all my notes and ideas, and Evernote se",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the visual approach to task management",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a centralized hub for all my notes and ideas, and Evernote seems like a great too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7c8cb2783756fa5bba37add9e827fa4f4cf67afc0caac3ea3c1ac349813530e8"
+}

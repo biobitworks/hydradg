@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d3429c236d6cd23b18cb5d72bf8239489707e7d049431ceebd4f64f6d6f628c9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a rooftop restaurant or bar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a rooftop restaurant or bar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0a3f471cccf9a6df5e8eee7b445a5b2e5bebab016b3b47b3508566f26ee7cf9f"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6d53f4156da575da20c25bd9bf27c19d96ccc5b2b2a11c574ff93623c6526b3d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them in my cooking",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them in my cooking",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a664b4c0824df37cebd590fa0c13bb4b88b49d13aa9168375e2d3bccdb42e06d"
+}

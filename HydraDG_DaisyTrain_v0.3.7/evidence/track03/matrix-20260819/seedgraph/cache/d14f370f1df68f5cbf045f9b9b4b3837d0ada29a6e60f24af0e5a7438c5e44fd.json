@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d14f370f1df68f5cbf045f9b9b4b3837d0ada29a6e60f24af0e5a7438c5e44fd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the patterned blouse with dark gray pants",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding some visual interest to my outfit without going overboard",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the patterned blouse with dark gray pants",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some visual interest to my outfit without going overboard",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "742110f79447b480cfd19facc6a1efa5d9b76b66b218f2f62327f872b1536fdf"
+}

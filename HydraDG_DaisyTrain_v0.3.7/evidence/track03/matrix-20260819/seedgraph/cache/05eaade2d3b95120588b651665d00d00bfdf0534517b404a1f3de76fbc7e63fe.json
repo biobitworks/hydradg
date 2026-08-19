@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "05eaade2d3b95120588b651665d00d00bfdf0534517b404a1f3de76fbc7e63fe",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a formula like `=SUMIFS(B:B, MONTH(A:A), MONTH(TODAY()), C:C, \"Clothing\")>400`",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a formula like `=SUMIFS(B:B, MONTH(A:A), MONTH(TODAY()), C:C, \"Clothing\")>400`",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dfe50ab6e8208ff07462ea9378cc135e69313ac199f429859046db1de4d05126"
+}

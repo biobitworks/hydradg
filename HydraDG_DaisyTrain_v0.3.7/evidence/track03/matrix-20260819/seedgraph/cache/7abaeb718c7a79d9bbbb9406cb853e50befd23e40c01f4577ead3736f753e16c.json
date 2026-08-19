@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7abaeb718c7a79d9bbbb9406cb853e50befd23e40c01f4577ead3736f753e16c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it frequently",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it frequently",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f56c3e80dd48feb4e12131e84c9d3206a096a879fb3b2688943bd8329f2988cc"
+}

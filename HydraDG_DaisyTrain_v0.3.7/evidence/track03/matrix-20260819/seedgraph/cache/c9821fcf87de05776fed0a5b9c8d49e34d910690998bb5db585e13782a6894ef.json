@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c9821fcf87de05776fed0a5b9c8d49e34d910690998bb5db585e13782a6894ef",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to listen to something inspiring to wake me up",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to listen to something inspiring to wake me up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2850f9a3c8a6e4cf55fd852a1b1592d7bf9917365c23557f557b0cb24bc0e66"
+}

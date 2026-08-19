@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3b28842ecf84767f763d873492592ee1eac41ffd2b2a03b79d4228687a4f83db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Big Bear Lake Loop and the Alpine Pedal Path",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Big Bear Lake Loop and the Alpine Pedal Path",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "47fd1d0b9a672fc6c28c676f6f5ed5dc97324cb4f7d1c49e49b1b6a7ca4b8395"
+}

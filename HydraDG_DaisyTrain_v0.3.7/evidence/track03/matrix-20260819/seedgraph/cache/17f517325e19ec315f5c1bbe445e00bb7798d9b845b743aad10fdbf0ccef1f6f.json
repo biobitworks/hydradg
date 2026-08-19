@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "17f517325e19ec315f5c1bbe445e00bb7798d9b845b743aad10fdbf0ccef1f6f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "any skincare products with nutmeg oil",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "any skincare products with nutmeg oil",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "24b03e88e68d8287d56a0fb29648d70e47453c4aba6934864677a502042291e7"
+}

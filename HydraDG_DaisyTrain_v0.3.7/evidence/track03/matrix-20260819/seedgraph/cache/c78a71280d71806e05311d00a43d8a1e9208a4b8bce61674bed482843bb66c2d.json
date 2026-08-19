@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c78a71280d71806e05311d00a43d8a1e9208a4b8bce61674bed482843bb66c2d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "cold butter or regular butter for the best results",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "cold butter or regular butter for the best results",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ecf23378b8906815e435fedb8e5cdebccb294d32b25ef3ff4b717fcae91ced5a"
+}

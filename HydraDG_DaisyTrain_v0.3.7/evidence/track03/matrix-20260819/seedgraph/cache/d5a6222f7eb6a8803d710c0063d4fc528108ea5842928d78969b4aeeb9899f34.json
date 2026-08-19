@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5a6222f7eb6a8803d710c0063d4fc528108ea5842928d78969b4aeeb9899f34",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using natural elements and soft lighting to create a cozy atmosphere",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using natural elements and soft lighting to create a cozy atmosphere",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d41a0f92040edf663f9f16f3cd10db78b8f666839dc2fafb643ea95b35eb9e65"
+}

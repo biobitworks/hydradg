@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dbd55777c1bd5819e9c2011a11adef9c8a9a6b457ff2c495a72e12feeb677382",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to do them on Monday, Wednesday, and Friday evenings",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to do them on Monday, Wednesday, and Friday evenings",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f4fa8b7e4f9cd7b5c65db9efdc57670d37bece2eab33341495782701afc8f8d5"
+}

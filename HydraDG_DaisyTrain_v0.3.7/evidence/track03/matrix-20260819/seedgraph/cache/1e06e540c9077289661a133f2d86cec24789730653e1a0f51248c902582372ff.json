@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1e06e540c9077289661a133f2d86cec24789730653e1a0f51248c902582372ff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to prepare them at the same time",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to prepare them at the same time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9d3d8c0b9e3cc91c317e97e663311671c69366effba8a936089ffa7487a64bb4"
+}

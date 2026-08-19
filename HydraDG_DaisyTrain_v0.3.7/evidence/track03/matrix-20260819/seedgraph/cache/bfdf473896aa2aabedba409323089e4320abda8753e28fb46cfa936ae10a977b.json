@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bfdf473896aa2aabedba409323089e4320abda8753e28fb46cfa936ae10a977b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing my boots with a flowy dress, especially the floral one",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing my boots with a flowy dress, especially the floral one",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bc745b998cf94eebd56290d77b318a8b52d87b9aa01d4ccacc7319321f077cc5"
+}

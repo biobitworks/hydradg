@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a749319e0d1431bb85851e2ec34f05df6ff637c664277c01af245b06bc863d51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the rice or quinoa bowls",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the rice or quinoa bowls",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1a5fe4410f23375a6276d42c973798a8fad14d842ab0c71545578651367489e4"
+}

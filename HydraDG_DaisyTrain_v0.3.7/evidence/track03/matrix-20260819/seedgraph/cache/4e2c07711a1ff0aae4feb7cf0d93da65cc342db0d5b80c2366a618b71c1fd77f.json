@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e2c07711a1ff0aae4feb7cf0d93da65cc342db0d5b80c2366a618b71c1fd77f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of hide-and-seek, I've been doing something similar by hiding treats ar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of hide-and-seek, I've been doing something similar by hiding treats around the house",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "54c7e6bcd407f688d773f17cdef25e04b3760c6d1ffee68c0f5fac0e6f56473c"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "21191d093497ce03aa22132cc8631b0b1e58346d23a2f36299a44107142d0ae2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using vertical space and assigning a home for each category of items",
+      "type": "value"
+    },
+    {
+      "name": "to wear on special occasions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using vertical space and assigning a home for each category of items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to wear on special occasions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ecd5bee060700b093f3b4b0b055c17e00abf379fd50004228eccfcb320c28ab3"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4ab2886a62c8d8456e2e61f90bfbd71d11b19f384604adcf1be24e17c65a1148",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of involving everyone in the planning process and prioritizing activiti",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a loose framework and allocating time for each category",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of involving everyone in the planning process and prioritizing activities",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a loose framework and allocating time for each category",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "14d4292cb31e69b45c0c62b54d3f6d5e266d83e97fc86bfe8b5829930091bec9"
+}

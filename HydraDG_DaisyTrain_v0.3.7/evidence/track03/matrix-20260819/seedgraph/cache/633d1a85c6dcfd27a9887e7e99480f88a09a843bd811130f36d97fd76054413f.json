@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "633d1a85c6dcfd27a9887e7e99480f88a09a843bd811130f36d97fd76054413f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the personalized banner and cake cutting ceremony ideas",
+      "type": "value"
+    },
+    {
+      "name": "the options you provided, especially The Social and Fork & Ale",
+      "type": "value"
+    },
+    {
+      "name": "their menu options and the atmosphere sounds perfect for a casual celebration",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the personalized banner and cake cutting ceremony ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the options you provided, especially The Social and Fork & Ale",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "their menu options and the atmosphere sounds perfect for a casual celebration",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8f5155b13d4fc8a660baeadd759896e568a72688efc108d0440eeec2eb50113d"
+}

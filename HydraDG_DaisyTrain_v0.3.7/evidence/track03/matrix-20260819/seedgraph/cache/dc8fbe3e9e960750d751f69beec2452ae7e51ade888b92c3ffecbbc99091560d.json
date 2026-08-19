@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dc8fbe3e9e960750d751f69beec2452ae7e51ade888b92c3ffecbbc99091560d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "oil or butter, and what heat level should I use",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "oil or butter, and what heat level should I use",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "98e6a8382b7d34643436c88505eed02ed983a33d66a6137d0c214bbd3107853d"
+}

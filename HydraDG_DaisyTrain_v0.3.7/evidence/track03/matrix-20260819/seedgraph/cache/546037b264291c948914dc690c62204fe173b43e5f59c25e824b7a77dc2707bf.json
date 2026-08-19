@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "546037b264291c948914dc690c62204fe173b43e5f59c25e824b7a77dc2707bf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "more intimate settings and being close to the stage",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "more intimate settings and being close to the stage",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dae1181e3d954481f02d6d0e60759e3bb173267666e770ca91fb83a21e038882"
+}

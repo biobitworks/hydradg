@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "50f7eb26fe0e9f2b819bd971de723a5c27cbfbebbfe80ca06821f15c8063ea77",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using vertical space and double-hang rods",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using vertical space and double-hang rods",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "120d649420124d1a2748ec8e470f1afb015533d2f7aef62d36dbcbd71f1f92ab"
+}

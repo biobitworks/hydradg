@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "652d89149519eed2b58a8c5222e94d82d957f208b8910e7bf468b92ace9125ca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting up a 30-day rule",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up a 30-day rule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c4f8d8aedfa75fa359955ef586e24168c40e95b4c37dd197858e0a31631943a8"
+}

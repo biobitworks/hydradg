@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "db0a20b17b38b61d5806a3640710881573f4f27d218a02ff9be28f87e37167aa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item, do you think a monogrammed notebook would be so",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item, do you think a monogrammed notebook would be something she'd apprec",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "737ff4bf6dd9443076cc192922ffbd0e9241753b789e0745a17b550b79e0598e"
+}

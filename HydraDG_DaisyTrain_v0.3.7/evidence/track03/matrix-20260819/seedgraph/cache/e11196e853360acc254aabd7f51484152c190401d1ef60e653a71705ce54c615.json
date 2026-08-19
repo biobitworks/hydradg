@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e11196e853360acc254aabd7f51484152c190401d1ef60e653a71705ce54c615",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the roasted chickpeas and veggie sticks with hummus ideas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of nuts and seeds as a coffee pairing",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the roasted chickpeas and veggie sticks with hummus ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of nuts and seeds as a coffee pairing",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2e240df0439e2f446108cf60a6fb328557ee3761ea0c04f25ed95cf936ada744"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "01719d0cde62b64214e91d36c506b0cffe25bfef86c6b437a64309fbe74a86bc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my phone for social media, email, calls, and texts, but not much gaming",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my phone for social media, email, calls, and texts, but not much gaming",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a92639ec56db6dc1ac9440fc3313d7dfa5899ef11851f5015af1f896e5e7a1f9"
+}

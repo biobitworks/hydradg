@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "613d2c39a52bb8efb1ba3fe193ad481660fd07eae1341621d754e59f158d3b02",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a special touch to the photo album",
+      "type": "value"
+    },
+    {
+      "name": "the Classic and Simple style",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a special touch to the photo album",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Classic and Simple style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3794852533edfc89c46274db9afc3cf284488a6be14d9619ba7eae3741c2b0f7"
+}

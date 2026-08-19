@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "06e91dc082992c03e38d923c06bbb3ae7128b70bb2ce1d792e20d1143e14d869",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of structuring my commute time into focused blocks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of structuring my commute time into focused blocks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fad000d91943ed7ef4b5e8f10d2c71288ab419770ebc0721cf83439e85c2b6b2"
+}

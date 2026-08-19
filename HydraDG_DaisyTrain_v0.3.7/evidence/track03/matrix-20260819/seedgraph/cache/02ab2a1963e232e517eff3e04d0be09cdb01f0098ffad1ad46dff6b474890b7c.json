@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "02ab2a1963e232e517eff3e04d0be09cdb01f0098ffad1ad46dff6b474890b7c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the midwest, near a large lake",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the midwest, near a large lake",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "efd3229d2d996332f7d56384bcd4db5dd8dec872c2c8253f130d53936d33a264"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "003bf62020c9e5d83845a6c7b2b10e9e105f6e40d07ee5d89c39516044ff112a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "an app for it",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting reminders for shoe maintenance and cleaning",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "an app for it",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting reminders for shoe maintenance and cleaning",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9033e47d50fbf6c7e5a28bc1cf5eca2c31cdc1a79ae2d545918f26a33be69b0a"
+}

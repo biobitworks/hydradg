@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b5cf9eb88e0ba8e28fdc53bd1b65df3be601f9bb21bf12c3876f56635a29b2ac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a family storytelling session",
+      "type": "value"
+    },
+    {
+      "name": "those questions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a family storytelling session",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those questions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0b56b6da3a075d6cb25ce8b299d5f67e32a8af1559929483e551d83a66caab64"
+}

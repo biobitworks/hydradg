@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6a7ccf430da6446602ec2da2272fd443502f10a372968e10e73c0574a9c18050",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having everything I need for my morning and evening routines in one ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having everything I need for my morning and evening routines in one place, and it seems",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6be41e7c578f33ebbf5bd59b6160e8a53ba330a541ace661be7650a0c22e551f"
+}

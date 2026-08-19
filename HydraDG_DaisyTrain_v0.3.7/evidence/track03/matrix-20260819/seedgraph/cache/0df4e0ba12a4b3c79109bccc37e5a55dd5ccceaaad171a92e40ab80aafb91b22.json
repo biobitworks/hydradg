@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0df4e0ba12a4b3c79109bccc37e5a55dd5ccceaaad171a92e40ab80aafb91b22",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a backpack style, and I'll be carrying my laptop, a tablet, and a water bottle",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a backpack style, and I'll be carrying my laptop, a tablet, and a water bottle",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e975204b81da0f46b5a7ddb1c2173b8035d1f7be8d8dccb8b957c29ddd5c0464"
+}

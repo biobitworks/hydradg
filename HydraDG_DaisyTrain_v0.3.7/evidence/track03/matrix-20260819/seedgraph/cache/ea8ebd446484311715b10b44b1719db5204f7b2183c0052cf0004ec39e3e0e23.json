@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "ea8ebd446484311715b10b44b1719db5204f7b2183c0052cf0004ec39e3e0e23",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of prompts you provided",
+      "type": "value"
+    },
+    {
+      "name": "the idea of warming up with freewriting or exercises before diving into my main ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting specific goals and dedicating time to a specific form, like ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of prompts you provided",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of warming up with freewriting or exercises before diving into my main project",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting specific goals and dedicating time to a specific form, like haikus or free verse",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e0b4aeead57efeafc1997a8cf8e7909c7ddf34a9d8b1a45581d4671ccdefb78"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff8a27b991b05bdc734b8b18f8ea90fd196d4705c961a69985bea31b2b3e494d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33f3d190e03f1200859c4d9558c1aedef758995902b9cc534d40735641f72a97"
+}

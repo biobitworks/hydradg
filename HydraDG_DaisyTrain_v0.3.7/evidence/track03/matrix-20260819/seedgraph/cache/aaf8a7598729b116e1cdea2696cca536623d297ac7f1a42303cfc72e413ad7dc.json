@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "aaf8a7598729b116e1cdea2696cca536623d297ac7f1a42303cfc72e413ad7dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a Reel series, and I think it could be a great way to provi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a Reel series, and I think it could be a great way to provide value to my audie",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ab57908bdfd8db4afdbb0f12e30caeba75401244cff4352e5942ae958f5f2b96"
+}

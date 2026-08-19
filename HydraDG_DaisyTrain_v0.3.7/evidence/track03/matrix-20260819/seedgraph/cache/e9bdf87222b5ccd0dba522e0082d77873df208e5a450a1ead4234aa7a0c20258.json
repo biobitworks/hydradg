@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "e9bdf87222b5ccd0dba522e0082d77873df208e5a450a1ead4234aa7a0c20258",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Sonos app to control the volume and settings of my TV as well, or is it limi",
+      "type": "value"
+    },
+    {
+      "name": "the Sonos app to switch the audio input on my TV, like from HDMI 1 to HDMI 2, or",
+      "type": "value"
+    },
+    {
+      "name": "the Sonos app to customize the sound settings for the Beam, such as adjusting th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Sonos app to control the volume and settings of my TV as well, or is it limited to controlling t",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Sonos app to switch the audio input on my TV, like from HDMI 1 to HDMI 2, or is that still somet",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Sonos app to customize the sound settings for the Beam, such as adjusting the bass or treble lev",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "468e0d69e0d15482f1488856ee5da1e0608510f03806a9f76e5871983b45a7b2"
+}

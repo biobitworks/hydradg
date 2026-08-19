@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "90ca357b35e931d37ac4209eec972818ab13423f7923d8f2e4ea70243817d631",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those tips, but I'm not sure if I have the space for a double rod",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those tips, but I'm not sure if I have the space for a double rod",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "742a2d0879d279491533c407181dd97b625383f6eece6e06c62576763360710c"
+}

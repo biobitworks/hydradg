@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8fc27991c1c12dc8a8a7b45fca91fe9531f1c38e56736d7a2c8d9d876b6bb5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a regular pot or pressure cooker instead",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a regular pot or pressure cooker instead",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "072d12607812030507343d841614b48a95407cb66ecca2fe7b8f405aee4ec743"
+}

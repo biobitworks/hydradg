@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "effdb21e2400916840f02cec890095960aac39303ff6b23fba224ee6cabdfd89",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating natural materials and textures",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating natural materials and textures",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a3c2f634e858a961a8968889aa6bb9526d6bcd31214d632e5f96f3ec092c2102"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2685243b049dd734318d0c0f9dd74532dd832af520abeb9a345b98534107fdc3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "flat routes with minimal traffic, and I'd like to stay within a 10-15 minute dri",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "flat routes with minimal traffic, and I'd like to stay within a 10-15 minute drive from my place",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0fd9016cc41565b2f1b9029fe3f7c5703605589edcd2459439f9b10f5ed5f78e"
+}

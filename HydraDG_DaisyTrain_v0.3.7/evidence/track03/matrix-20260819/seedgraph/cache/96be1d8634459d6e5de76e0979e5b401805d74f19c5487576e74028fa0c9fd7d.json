@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "96be1d8634459d6e5de76e0979e5b401805d74f19c5487576e74028fa0c9fd7d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the vintage glamour theme",
+      "type": "value"
+    },
+    {
+      "name": "the gold and silver theme idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the vintage glamour theme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the gold and silver theme idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5b7d4b1a6165ccf76591a2efe5a4454d6aecc4375e7bc12cf54ae05b20313d5a"
+}

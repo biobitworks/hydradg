@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dea6f26f0d2c9fa66b5727d4786f6362f3607dbcf103d1456c0b20361a7134f9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a general-purpose potting soil with some perlite or sand added to improve draina",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a general-purpose potting soil with some perlite or sand added to improve drainage",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "296b886fa49b675cf956a71030e1e6f3080a24deb047448354303c3cbaa4afb2"
+}

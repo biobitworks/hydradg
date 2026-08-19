@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "eb3f5d1b4ed8a57149e44a0613dca036adce7e4769126bdeaf4c1c9686f215e8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this routine, but can I also get some suggestions on how to improve my sleep hab",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this routine, but can I also get some suggestions on how to improve my sleep habits",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b42023c17aa08d7414dfcf3dee5e6535ac1bccc62f466e84437e96be7a37bf1f"
+}

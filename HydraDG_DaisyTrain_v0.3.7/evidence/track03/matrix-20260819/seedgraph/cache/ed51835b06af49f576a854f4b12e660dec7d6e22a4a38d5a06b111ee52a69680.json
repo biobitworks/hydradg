@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ed51835b06af49f576a854f4b12e660dec7d6e22a4a38d5a06b111ee52a69680",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating sea-inspired motifs into my jewelry line",
+      "type": "value"
+    },
+    {
+      "name": "the idea of balancing the design with a larger shell and a smaller piece of drif",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating sea-inspired motifs into my jewelry line",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of balancing the design with a larger shell and a smaller piece of driftwood",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "db433a3fe1ace3fb5664131b16ad64c0093f65fcd1e31faa365ea8d0e869c0e1"
+}

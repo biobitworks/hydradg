@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4f1d8a01553c4b605450da09cbf27923b85f2c4fbc41c781366a9906e85d9b6e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a timeless piece that can be dressed up or down",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a timeless piece that can be dressed up or down",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8e4f708daa4c007ee440f8fea73e5d28a8a801f1d9065590ab60549e1e23d889"
+}

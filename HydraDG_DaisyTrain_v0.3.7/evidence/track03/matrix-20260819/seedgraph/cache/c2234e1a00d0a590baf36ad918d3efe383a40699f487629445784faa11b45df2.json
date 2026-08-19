@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c2234e1a00d0a590baf36ad918d3efe383a40699f487629445784faa11b45df2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the veggie spring rolls and quinoa stuffed bell peppers",
+      "type": "value"
+    },
+    {
+      "name": "the veggie spring rolls and quinoa stuffed bell peppers too",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the veggie spring rolls and quinoa stuffed bell peppers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the veggie spring rolls and quinoa stuffed bell peppers too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "206242071393d05b31186d000e02f6f818672c0a37adafb5ad735b647797c07c"
+}

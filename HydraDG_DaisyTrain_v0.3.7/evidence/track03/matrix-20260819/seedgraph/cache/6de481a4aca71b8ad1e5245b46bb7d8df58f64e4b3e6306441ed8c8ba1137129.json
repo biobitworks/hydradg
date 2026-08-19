@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6de481a4aca71b8ad1e5245b46bb7d8df58f64e4b3e6306441ed8c8ba1137129",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to make scrambled eggs with spinach and whole wheat toast",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a visual representation of my tasks and being able to move th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to make scrambled eggs with spinach and whole wheat toast",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a visual representation of my tasks and being able to move them across lists as I",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "93c1d94c0ca49c62ff8b1dcd23212d78ac8add19228443db6111bd66dd3ef291"
+}

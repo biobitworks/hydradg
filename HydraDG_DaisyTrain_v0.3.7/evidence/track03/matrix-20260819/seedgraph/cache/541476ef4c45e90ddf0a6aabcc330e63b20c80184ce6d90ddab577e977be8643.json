@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "541476ef4c45e90ddf0a6aabcc330e63b20c80184ce6d90ddab577e977be8643",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that Magic Knight Rayearth challenges traditional gender roles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that Magic Knight Rayearth challenges traditional gender roles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3181501756e778e4991505584136bb973ea829566d0cd1f3a0373b2399cabba6"
+}

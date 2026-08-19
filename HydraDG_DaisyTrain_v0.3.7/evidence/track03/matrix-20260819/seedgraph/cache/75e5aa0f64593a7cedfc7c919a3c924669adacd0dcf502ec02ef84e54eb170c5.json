@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "75e5aa0f64593a7cedfc7c919a3c924669adacd0dcf502ec02ef84e54eb170c5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "some of those ideas, especially the art supplies and building toys",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "some of those ideas, especially the art supplies and building toys",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "74311bb9c1bb4e8ae187bc0263e6f11f8f8499c15b213b820bede059fa09b170"
+}

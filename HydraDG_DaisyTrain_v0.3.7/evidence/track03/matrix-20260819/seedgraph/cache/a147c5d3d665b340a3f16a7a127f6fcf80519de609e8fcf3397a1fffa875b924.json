@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a147c5d3d665b340a3f16a7a127f6fcf80519de609e8fcf3397a1fffa875b924",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a coastal city, so I'm interested in capturing more ocean views and beach scenes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a coastal city, so I'm interested in capturing more ocean views and beach scenes",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5ab5fb4179f97bf811f39e884321cdd76bc216d1d6c1dd0f66b20628803342ef"
+}

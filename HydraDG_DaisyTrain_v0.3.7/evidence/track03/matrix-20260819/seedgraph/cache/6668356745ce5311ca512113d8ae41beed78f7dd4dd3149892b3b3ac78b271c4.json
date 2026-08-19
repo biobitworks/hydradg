@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6668356745ce5311ca512113d8ae41beed78f7dd4dd3149892b3b3ac78b271c4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the treasure-hunting theme",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the treasure-hunting theme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79b5e74f4d24a5c3625ad540a10d3097997f3c7462a4ac4403a9df18a21ef6fb"
+}

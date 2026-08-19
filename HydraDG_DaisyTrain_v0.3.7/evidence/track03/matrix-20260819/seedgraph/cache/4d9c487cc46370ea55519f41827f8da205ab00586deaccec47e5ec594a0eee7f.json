@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4d9c487cc46370ea55519f41827f8da205ab00586deaccec47e5ec594a0eee7f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the minimalist glass vases",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the minimalist glass vases",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cbe36c326172276c405fd5cd41c866ce09162d3608ee798b4dd7b997f7c90777"
+}

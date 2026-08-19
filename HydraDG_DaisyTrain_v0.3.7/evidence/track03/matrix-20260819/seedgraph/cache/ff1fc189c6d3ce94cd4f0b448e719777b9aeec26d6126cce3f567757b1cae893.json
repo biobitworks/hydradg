@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff1fc189c6d3ce94cd4f0b448e719777b9aeec26d6126cce3f567757b1cae893",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of designating a \"home\" for each item",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a desk organizer with compartments",
+      "type": "value"
+    },
+    {
+      "name": "the idea of designating a \"touch once\" zone on my desk",
+      "type": "value"
+    },
+    {
+      "name": "the idea of categorizing and purging my papers, and then creating a filing syste",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating a \"home\" for each item",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a desk organizer with compartments",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating a \"touch once\" zone on my desk",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and purging my papers, and then creating a filing system that works for me",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "34a14ff0e70de33960bb964910925fffab0e0f30add2c831091d1075bad943fa"
+}

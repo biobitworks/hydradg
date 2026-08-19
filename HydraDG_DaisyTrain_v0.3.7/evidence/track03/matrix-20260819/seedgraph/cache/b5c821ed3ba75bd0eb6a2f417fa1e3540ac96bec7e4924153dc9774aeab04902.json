@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b5c821ed3ba75bd0eb6a2f417fa1e3540ac96bec7e4924153dc9774aeab04902",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of those energy balls and protein-rich snacks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of those energy balls and protein-rich snacks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd9c6c876038a7822f5d2d91ac2fb52b8aaeb9775b04f2a1723c092b2cba5fcc"
+}

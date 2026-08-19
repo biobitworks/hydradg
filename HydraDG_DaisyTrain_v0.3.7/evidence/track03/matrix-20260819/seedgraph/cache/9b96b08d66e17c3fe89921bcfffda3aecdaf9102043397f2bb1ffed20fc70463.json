@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "9b96b08d66e17c3fe89921bcfffda3aecdaf9102043397f2bb1ffed20fc70463",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of identifying my triggers and finding a new ritual",
+      "type": "value"
+    },
+    {
+      "name": "it",
+      "type": "value"
+    },
+    {
+      "name": "to scroll through social media or catch up on news",
+      "type": "value"
+    },
+    {
+      "name": "the idea of doing something more intentional during my morning break",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of identifying my triggers and finding a new ritual",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to scroll through social media or catch up on news",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of doing something more intentional during my morning break",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "783245590af20100ada9eba3c68ce058d1f23d64daed500680ebc3b7203e3526"
+}

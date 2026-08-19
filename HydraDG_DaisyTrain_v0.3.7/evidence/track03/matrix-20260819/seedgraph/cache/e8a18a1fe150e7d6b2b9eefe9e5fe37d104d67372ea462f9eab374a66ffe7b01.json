@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e8a18a1fe150e7d6b2b9eefe9e5fe37d104d67372ea462f9eab374a66ffe7b01",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the one-pot pasta idea",
+      "type": "value"
+    },
+    {
+      "name": "the Italian-Style Salad option",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the one-pot pasta idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Italian-Style Salad option",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "35233a9c8b48411fd43279cfa932db4a383e72ab0b47c7f40c322e7613f020ad"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "900d07e8b59d72ee012e541bd258b657fca7d0f8bbc7ad7e653d4ef87bf5abce",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tips, especially the one about setting realistic goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tips, especially the one about setting realistic goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a43e9da77b63c3335ca663f09b14d0bae862d89282400e0e63d14b34badaffa7"
+}

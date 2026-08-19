@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c456740bdacab7b594ce28b9e5fca82624876fef86733b70890834f53551f4fe",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Lightroom or Photoshop for this task",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Lightroom or Photoshop for this task",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a583689ca30a63dcb7f9f2e02bebbdc6e3b1af2b7aa4625d2d5d228c0568e062"
+}

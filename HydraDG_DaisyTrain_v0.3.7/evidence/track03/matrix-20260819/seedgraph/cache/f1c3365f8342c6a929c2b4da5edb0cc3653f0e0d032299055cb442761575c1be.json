@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f1c3365f8342c6a929c2b4da5edb0cc3653f0e0d032299055cb442761575c1be",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of meditation accessories",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of meditation accessories",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "18914202d532d66cc5ff830b8a4aab9d393a457766e1df9d930a0e17fcb0e090"
+}

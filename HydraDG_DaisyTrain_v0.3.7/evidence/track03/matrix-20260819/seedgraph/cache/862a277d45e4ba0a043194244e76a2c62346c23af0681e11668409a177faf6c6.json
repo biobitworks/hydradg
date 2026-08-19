@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "862a277d45e4ba0a043194244e76a2c62346c23af0681e11668409a177faf6c6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to hang with my friends, go out for a drink, and discover new places and things",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to hang with my friends, go out for a drink, and discover new places and things",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "58ba15752e0f1e2dd11b9c9ed76768f8d9f1623b66c15d964207b273bbb2cfda"
+}

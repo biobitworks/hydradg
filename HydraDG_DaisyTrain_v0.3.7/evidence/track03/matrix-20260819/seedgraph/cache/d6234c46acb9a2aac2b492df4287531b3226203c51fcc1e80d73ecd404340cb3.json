@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d6234c46acb9a2aac2b492df4287531b3226203c51fcc1e80d73ecd404340cb3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a decorative tin or container",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a decorative tin or container",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "838c24724bff8a861dccb6e4dae685e05cfadbf54da7cff812ee6f63422eedb3"
+}

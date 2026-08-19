@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f237eb564f3391eeca02676b436de0ae829be3b772052fdadf0456ab4c85b5f2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of asking my Instagram audience for feedback on my video series",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of asking my Instagram audience for feedback on my video series",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0ef259a129dbc5c2dada0246be140bd45c96f942a0bce1465cf7b3e976d3c4c1"
+}

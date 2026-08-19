@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "30fe54a0e4f96648f8c515c120d2549e18b10c4539ed4b0058fcb762d428cd2e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "frozen bell peppers instead of fresh ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "frozen bell peppers instead of fresh ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dac597d5a0fd883a6caa3e3d43072cad9b1a35a4c55b45c2497fee8c6f46c6b6"
+}

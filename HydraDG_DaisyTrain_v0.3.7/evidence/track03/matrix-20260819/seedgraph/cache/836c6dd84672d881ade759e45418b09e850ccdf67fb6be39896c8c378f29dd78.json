@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "836c6dd84672d881ade759e45418b09e850ccdf67fb6be39896c8c378f29dd78",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized paperweight",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized paperweight",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "42f71088edc4a5996bc79990d4c97130acb0ba666d934f2f6c0861ec3a0154f7"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a1c99ac1bc3c07cc8e0b66786db080d1e91cd883714be3cf5399794986523086",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "tools like Todoist and Trello",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "tools like Todoist and Trello",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "84d37b5ffbd7204c5c3535abe4292d3198f75d11eb718b2090904e66558e2e5c"
+}

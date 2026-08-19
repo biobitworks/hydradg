@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "47ec99a190ffb90d93f658f5969970a2f1dccdff7e68c0ba0fd5c7a84ed8034e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the insights from 'Sapiens' to better understand myself and make intentional cha",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the insights from 'Sapiens' to better understand myself and make intentional changes to my habits an",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a206d2eac4eded55628b70839bb25338f7bbf52a53fee51018d6b923f9bde9b"
+}

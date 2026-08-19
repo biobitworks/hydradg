@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "698b047453322651a3f0fb3b502df60cb2194fd182813f2aea3aa47313e4369c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to brew my morning coffee, but I've been thinking of getting a tea infuser for m",
+      "type": "value"
+    },
+    {
+      "name": "that they're easy to clean and flexible",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to brew my morning coffee, but I've been thinking of getting a tea infuser for my afternoon tea sess",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that they're easy to clean and flexible",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "766acadf905d27a06752ec0c2ebca74848d681a69f41cd394ebfd5c01216a7b5"
+}

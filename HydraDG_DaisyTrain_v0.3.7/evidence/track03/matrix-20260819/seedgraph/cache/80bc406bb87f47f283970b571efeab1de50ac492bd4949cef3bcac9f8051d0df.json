@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "80bc406bb87f47f283970b571efeab1de50ac492bd4949cef3bcac9f8051d0df",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of layered lighting",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of layered lighting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e390640234be9b19a55981370115c8e75f386bab9be94a5a55f3a72f6b0379cd"
+}

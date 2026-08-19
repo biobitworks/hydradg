@@ -1,0 +1,36 @@
+{
+  "cache_hit": false,
+  "cache_key": "709c9a4110ac8f05ff702935ec6a40cd094f905254c57bfcd458aa94da0fa623",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"question\" sticker",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"question\" sticker",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the \"question\" sticker",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca0cc6f40ace7e302d3a73f5aebd477b15d18c2a2b54f9319a755a65c3bd540a"
+}

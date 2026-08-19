@@ -1,0 +1,47 @@
+{
+  "claim_ceiling": "VIDEO_FINALIZATION_HANDOFF_ONLY",
+  "event": "VIDEO_READY_FINALIZATION_PACKAGE",
+  "event_time_local": "2026-08-19T14:42:00-07:00",
+  "human_capture": {
+    "file": "custody/CURRENT_HUMAN_REQUEST.txt",
+    "sha256": "501232c80cdbfb536f885b78db6498c198fe20a60870f4a75551f3c017ac62b6",
+    "state": "EXACT_SEPARATELY_TYPED_REQUEST_CAPTURE",
+    "supporting_execution_log_state": "DIRECTLY_SUPPLIED_IN_CURRENT_TURN_NOT_REHASHED_AS_SEPARATE_LOCAL_FILE"
+  },
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "AI",
+      "evidence_class": "AI_DERIVED_EXECUTION_PROMPT",
+      "file": "prompts/VIDEO_READY_MASTER_PROMPT.md",
+      "sha256": "9bc91407555f2967ed38a209f36c0d560fe66d6db93452c23dacd48a95d5b8a7"
+    },
+    {
+      "actor": "AI",
+      "evidence_class": "AI_DERIVED_GATE_SCRIPT",
+      "file": "scripts/video_ready_gate.sh",
+      "sha256": "aa3a738652f877f672e3bf8dc9e4afe3958a5fedcb7684f6d73f2f6b25c068f3"
+    },
+    {
+      "actor": "AI",
+      "evidence_class": "AI_DERIVED_VIDEO_SCRIPT",
+      "file": "docs/VIDEO_SCRIPT_90S.md",
+      "sha256": "c799dde6f6b769992cfeda1d714e4077f9dd896cd52de7687b78e0ffd64d942b"
+    }
+  ],
+  "project_fcg_append_state": "PENDING_LOCAL_PROJECT",
+  "schema": "hydradg.turn_custody.v0.3.0",
+  "shell_syntax_checks": {
+    "scripts/start_video_stack.sh": {
+      "exit_code": 0,
+      "stderr": ""
+    },
+    "scripts/video_ready_gate.sh": {
+      "exit_code": 0,
+      "stderr": ""
+    }
+  },
+  "signature_algorithm_expected": "Ed25519",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "turn_root_sha256": "3c22a719d42d29121f5a2523057789f4ba83e80ee4ffcaf6d51cb6de64780340"
+}

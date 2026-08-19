@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c865928ed7b3d3fde36314d3aa0a22695d40488ba18bab213a8c94e83d961449",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a structured schedule, and I'd like to minimize procrastination and social media",
+      "type": "value"
+    },
+    {
+      "name": "winding down by 9:30 pm to prepare for a good night's sleep",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a structured schedule, and I'd like to minimize procrastination and social media usage",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "winding down by 9:30 pm to prepare for a good night's sleep",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2d39cd2cb3ac06c076755007d4be7b1085140b4bfe6471e6ddbf20e3b36149bb"
+}

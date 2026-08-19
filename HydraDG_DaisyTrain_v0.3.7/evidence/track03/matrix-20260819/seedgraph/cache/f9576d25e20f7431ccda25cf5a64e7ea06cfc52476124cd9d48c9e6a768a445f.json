@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f9576d25e20f7431ccda25cf5a64e7ea06cfc52476124cd9d48c9e6a768a445f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to customize it to fit my needs and style",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to customize it to fit my needs and style",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fdab2c9716682be958bf4e74dfee0779fef0ea818dbaee2c2ab9a81989eb0fbf"
+}

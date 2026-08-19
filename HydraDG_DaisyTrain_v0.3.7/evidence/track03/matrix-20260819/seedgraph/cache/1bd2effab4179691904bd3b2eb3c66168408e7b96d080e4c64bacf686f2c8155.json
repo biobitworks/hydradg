@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1bd2effab4179691904bd3b2eb3c66168408e7b96d080e4c64bacf686f2c8155",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of dedicating specific times of the day for each task",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of dedicating specific times of the day for each task",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6077a88411c70549bd4243b6347010e59302572ec1810dc48f179fcced5ce45c"
+}

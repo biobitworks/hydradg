@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ada7c887a77421ddb893d170b77111ef8900f3f84e3256a0d3900246b6b1072d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "paved roads with some rolling hills",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "paved roads with some rolling hills",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca5e5034d5b9f56792b1dd3921833219832e7911a208b33a05e6ab8b17709f14"
+}

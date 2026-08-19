@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3a0256cd46cd03876e7468eccba27bd818c71bd51c024be51bd72ad124bb19f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it,\" Samantha said, nodding",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it,\" Samantha said, nodding",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "059706dadbe17156551bf6426f8edd648e958f5b8a3ecc9c11cfab0d0a142793"
+}

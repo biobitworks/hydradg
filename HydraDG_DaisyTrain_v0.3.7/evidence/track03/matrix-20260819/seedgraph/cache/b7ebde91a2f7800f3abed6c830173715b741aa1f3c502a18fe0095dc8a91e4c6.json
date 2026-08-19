@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b7ebde91a2f7800f3abed6c830173715b741aa1f3c502a18fe0095dc8a91e4c6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of choosing a specific theme or focus for the meetup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of choosing a specific theme or focus for the meetup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "68f25c015c131a457393482d6032304745883a6e865918c8f72b3d4aea9ef0cf"
+}

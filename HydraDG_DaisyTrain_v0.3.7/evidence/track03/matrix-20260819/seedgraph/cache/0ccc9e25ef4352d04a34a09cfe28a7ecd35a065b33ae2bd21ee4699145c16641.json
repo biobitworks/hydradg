@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ccc9e25ef4352d04a34a09cfe28a7ecd35a065b33ae2bd21ee4699145c16641",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a hassle-free experience and not having to worry about the te",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a hassle-free experience and not having to worry about the technical aspects too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f808ac38fc09a5bbf34ad8bb308ce42f4c7dd121f701d9ea238e599da20d67bb"
+}

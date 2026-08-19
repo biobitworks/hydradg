@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fed1871ee7e4844e597b083d2dc1a6dd1b7af4adf1e2a1c4847aaf0885c81266",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "frozen sweet potatoes instead of fresh ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "frozen sweet potatoes instead of fresh ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0872b62541799422075dd5ac3cf6cac42e8736c77bb878ca09b7de4a9f50d3f9"
+}

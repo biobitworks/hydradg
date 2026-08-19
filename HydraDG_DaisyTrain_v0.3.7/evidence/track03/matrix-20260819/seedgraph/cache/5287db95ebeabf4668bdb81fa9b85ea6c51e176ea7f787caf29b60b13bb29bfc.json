@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5287db95ebeabf4668bdb81fa9b85ea6c51e176ea7f787caf29b60b13bb29bfc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a receipt management app",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a receipt management app",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e67cd9e0725e46d7746438d3e05baa2cc41709b9a4b6c3c7ef81a0303b699f9c"
+}

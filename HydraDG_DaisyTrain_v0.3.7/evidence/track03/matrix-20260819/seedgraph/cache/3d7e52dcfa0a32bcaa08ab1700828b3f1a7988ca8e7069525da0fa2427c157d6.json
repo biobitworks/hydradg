@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3d7e52dcfa0a32bcaa08ab1700828b3f1a7988ca8e7069525da0fa2427c157d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to believe that I'm up on things other people aren't",
+      "type": "value"
+    },
+    {
+      "name": "I like feeling like I'm adding songs that other people might not know",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to believe that I'm up on things other people aren't",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "I like feeling like I'm adding songs that other people might not know",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "297a9f3f2e41d4e5906249cbbd3d25f89c28de2fa853f93b0fddfb949d67b9ae"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "356c67b591cd1d8cad605a1bd51facd514fc0846b852ab2a16385956c6324b11",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of serving bruschetta as an appetizer",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of serving bruschetta as an appetizer",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da6a2d5d5de093a82739ca2e84d9f879a22228ee653b191e8003b9a57914db1e"
+}

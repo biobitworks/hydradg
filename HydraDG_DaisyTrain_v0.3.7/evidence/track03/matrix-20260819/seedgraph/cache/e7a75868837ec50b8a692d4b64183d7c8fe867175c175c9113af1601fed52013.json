@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e7a75868837ec50b8a692d4b64183d7c8fe867175c175c9113af1601fed52013",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the certified copy for all the certifications I need to update, or do I need to ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the certified copy for all the certifications I need to update, or do I need to get multiple copies",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "60781a9bd0cc377eff27bd4baa7e43b5e450320f895ce927836eea30a1995d5a"
+}

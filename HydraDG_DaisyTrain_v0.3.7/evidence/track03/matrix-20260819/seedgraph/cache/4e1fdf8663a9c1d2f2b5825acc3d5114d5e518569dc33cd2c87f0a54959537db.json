@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e1fdf8663a9c1d2f2b5825acc3d5114d5e518569dc33cd2c87f0a54959537db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "petroleum jelly on my lips instead of lip balm",
+      "type": "value"
+    },
+    {
+      "name": "butter instead of lip balm",
+      "type": "value"
+    },
+    {
+      "name": "toothpaste on my lips to exfoliate them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "petroleum jelly on my lips instead of lip balm",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "butter instead of lip balm",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "toothpaste on my lips to exfoliate them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3540d50d59090036f3abf73cdf753637f28e60bad0a7261ea0e016804e404de0"
+}

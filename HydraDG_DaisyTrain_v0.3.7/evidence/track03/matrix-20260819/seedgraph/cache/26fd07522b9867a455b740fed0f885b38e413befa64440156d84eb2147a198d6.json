@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "26fd07522b9867a455b740fed0f885b38e413befa64440156d84eb2147a198d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "ongoing shows, and I don't mind if it's a bit intense",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "ongoing shows, and I don't mind if it's a bit intense",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9f94cdae9a221369df59ef57e82e51bedddde23785e7514cc918bb8109ca8874"
+}

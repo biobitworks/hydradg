@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a614d48e4cb257769abb45b796f44bf941c508404d027146fbbfe697c07575ab",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep things light-hearted and relaxing in the evening, so I'm wondering if th",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep things light-hearted and relaxing in the evening, so I'm wondering if the show's tone will f",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e79695729c8eb61bb5816eb1264c9459152b8c89504b04f89261f5fb77ba38a6"
+}

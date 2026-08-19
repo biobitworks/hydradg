@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "911bf4c8a946f0ad1c551c54948e40eaac33be87b34753ead7ce395f6095b4c5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing by occasion",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing by occasion",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c6f246c5cd4c0903ba8fb035df44e6c6dce7d17383fae93813855211f158387d"
+}

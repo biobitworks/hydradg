@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cecbaa1de825dc105fb8e251255e6e1ed321e67a1381b5a00fa87e45e046e442",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the options you provided, especially West Elm since I've had a good experience w",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the options you provided, especially West Elm since I've had a good experience with them when I boug",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6398e31a50f99dd199ff48b4d69d49faaf15c49c567737eac0681ac37018f972"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4feaeb86ec2bfd658a015d88be1ddf26c55fc16b25662a500e49d7187497e94f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to explore on my own and at my own pace",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to explore on my own and at my own pace",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cb93e9927ea9195bff205a5d7c4e101eb7cc77a7da7febd5f3e0d9d68eeb1d03"
+}

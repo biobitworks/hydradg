@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c07efe5b1ec52ef80d2adf510bd0fe4dfa6523c2f7d84bc554fb641473553e2d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the stockholm syndrome aspect to the worm becoming loyal to Jareth after being t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the stockholm syndrome aspect to the worm becoming loyal to Jareth after being transformed by him",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eef7cc075c08bc38e692e367ca7430236275ed2b5d6febf514352106fce2b0e8"
+}

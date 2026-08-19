@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4fb21856d2ddb6472d44a6aa093fe92968470bcbcf126ab6aa2f8e0a160ee808",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how she's not just a passive listener, but an active participant in uncovering E",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how she's not just a passive listener, but an active participant in uncovering Evelyn's secrets and",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8c68b077ea58338811a7596682dbfd1677773777854a0c546b35aec06ff3518b"
+}

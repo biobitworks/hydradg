@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9381bea9c4de8329dab949cdd8192463681d5e4d8a8cf1b0aa4a6a2d2ad8edc3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep my outfits pretty simple and classic, so nothing too flashy",
+      "type": "value"
+    },
+    {
+      "name": "it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep my outfits pretty simple and classic, so nothing too flashy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "be27d9aa48c4def39eaa75ef090d1806e6409017b68c0bae8263451179aa01f9"
+}

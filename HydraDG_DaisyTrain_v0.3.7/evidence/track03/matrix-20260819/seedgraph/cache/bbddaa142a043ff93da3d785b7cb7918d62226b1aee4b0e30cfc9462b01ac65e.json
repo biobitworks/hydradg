@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bbddaa142a043ff93da3d785b7cb7918d62226b1aee4b0e30cfc9462b01ac65e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the personalized garden stone idea",
+      "type": "value"
+    },
+    {
+      "name": "the \"Blossoming with Love, [Mom's Name]\" quote",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the personalized garden stone idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the \"Blossoming with Love, [Mom's Name]\" quote",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e9cdc73b0bcb06aeb37af494317a130e6ff286d21b13ee54925736419a3c70ec"
+}

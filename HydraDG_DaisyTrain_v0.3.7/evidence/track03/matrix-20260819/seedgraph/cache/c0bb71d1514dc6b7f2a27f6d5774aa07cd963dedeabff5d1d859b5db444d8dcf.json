@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c0bb71d1514dc6b7f2a27f6d5774aa07cd963dedeabff5d1d859b5db444d8dcf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of celebrating small wins and mixing up my yoga routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of celebrating small wins and mixing up my yoga routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a82aa8262d78c4052458a3e34806f84bf79ad75e903d1872bc254d8163b874d"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "095acf135a3af5de80ff347aba4a4da4dece24424d77a11985b9d89b4eabfa59",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of their lemon soap",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of their lemon soap",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e66ac73d1099c87665e7c4f8496f90289437c819247cd201f84e5ac45166ba59"
+}

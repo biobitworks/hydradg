@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ec58ac3308267ac6f439c50fb18cb836c463175de4a8ce86c756613ddfab7450",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Grilled Portobello Mushroom and Oaxaca Cheese filling",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding some crunch and freshness to my tacos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Grilled Portobello Mushroom and Oaxaca Cheese filling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some crunch and freshness to my tacos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1ba5692fc090696bba11c84f4f1e1dc05a35c1f6be569c9856e3095bdbf6644c"
+}

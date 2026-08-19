@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9809cb6a0b67635eb78181e49f6bf4c7a825ced14939dad37f418883440382fd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a seasonal theme, but I'm not sure how to incorporate it with my pro",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the Harvest Gift Baskets",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a seasonal theme, but I'm not sure how to incorporate it with my products",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Harvest Gift Baskets",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d66d90715e25eb07607c94521a78a0d60f428dd0d39878ca9e76410e0907bc27"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "78d63cc47f93c083fdb578dd09f2f3f4a63307ae14dd75bab68d583299b944ea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to go with the flow",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to go with the flow",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "abca2e109b8c59ce95b66c3eb8c341b2d007094f78c341507e755bdf82c188a4"
+}

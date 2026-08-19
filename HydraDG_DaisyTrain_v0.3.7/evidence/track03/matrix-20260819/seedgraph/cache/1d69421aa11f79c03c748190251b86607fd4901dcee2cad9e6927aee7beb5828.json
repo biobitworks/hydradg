@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1d69421aa11f79c03c748190251b86607fd4901dcee2cad9e6927aee7beb5828",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a spreadsheet to track my cashback earnings",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a spreadsheet to track my cashback earnings",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e3bfee0a81e2a29e49f52f1b341a526af4bd51b4ab8a8dbc12f16db7448649f7"
+}

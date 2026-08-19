@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "77d612bd71df481e179c885042a6c282ed6d0fd68922005da6cc12afc980724b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tips, but I'm not sure about my current budget",
+      "type": "value"
+    },
+    {
+      "name": "the idea of being able to plan my meals and make a list before I shop online, it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tips, but I'm not sure about my current budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to plan my meals and make a list before I shop online, it will definitely hel",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "311eccdf0f7c68f08c9d7dd4fef126d1c736386ff7bd762252f4820e4da61f4a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "07a90b59f21133720f5c00e4c94bdd9f56494567d21d9d64b6eab64cd83f0ae2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this homemade teriyaki sauce as a marinade for chicken or salmon before grilling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this homemade teriyaki sauce as a marinade for chicken or salmon before grilling or pan-frying",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4c0d054926fbd673659d98dee001488adea63b243e6ae160a4c0eee3e54a60d4"
+}

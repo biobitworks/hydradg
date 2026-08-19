@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a164e472df35304c011475f7b664cfa8a0c8fe7a691a50a86c5e253312ff817c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how the story is unfolding and the characters are pretty interesting",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how the story is unfolding and the characters are pretty interesting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bd1ac20b940612da7442d3002851da56104b734b9a665c9e2276d82687fe9afa"
+}

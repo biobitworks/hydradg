@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "21c9494ef0be9a54c794ef10711e721d1709c4b836dca85b9a55bf94a579b194",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the winter wonderland idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the winter wonderland idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0bd9078b6ac7352b1fbfb5bb75a976cbec197b9eb5a9aaf113f9ec5e97211d6b"
+}

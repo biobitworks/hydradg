@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "14d13b528fa71ebd0588288201a870dcf4b3558279ee4445d6b21270856a6818",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the draft, but I think I need to add some specific details about the tripod mode",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the draft, but I think I need to add some specific details about the tripod model and its features",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "65b239961cbea9e60a3a7160a570c5a5a01cc98e66034a654ffa414816a6e91a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "397ac655d262db5c2ea9afb13ecd3115f4fc8277330a793ff0a3b470a5db6866",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "and my strategies for creating engaging content",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "and my strategies for creating engaging content",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "495cc383795db1a7e876b977f8a1b45baa2a5d8ef29f57ffa357016226cf9f62"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6eb843672209d824bc08c6526d97a8de95d1847a4eca541ab81d9637f20d50a3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    },
+    {
+      "name": "the combination of vanilla and sandalwood",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the combination of vanilla and sandalwood",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d4d773f1e96c4edbafcea1e37aa48c0ace0207ce3b80b52a44abfecdf5e05d92"
+}

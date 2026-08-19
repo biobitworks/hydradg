@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6732dc390a8b55ee9d34d40f09c8cd18a6f06b7d72f544c91d3b6c6c36935768",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of painting vintage items",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of painting vintage items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "336cba7fea1d3e0ce0fbf83bb7ad8a206ab153349c7ccc3244a407659344e110"
+}

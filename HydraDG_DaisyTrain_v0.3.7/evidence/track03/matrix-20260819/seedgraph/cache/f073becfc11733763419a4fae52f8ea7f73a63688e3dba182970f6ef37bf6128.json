@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "f073becfc11733763419a4fae52f8ea7f73a63688e3dba182970f6ef37bf6128",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them to overcome challenges",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a morning routine to set the tone for the day",
+      "type": "value"
+    },
+    {
+      "name": "those strategies",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them to overcome challenges",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a morning routine to set the tone for the day",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those strategies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3dd167624202f420deba842c32d59cb916dd472ceb6aff855937970cd1de84c3"
+}

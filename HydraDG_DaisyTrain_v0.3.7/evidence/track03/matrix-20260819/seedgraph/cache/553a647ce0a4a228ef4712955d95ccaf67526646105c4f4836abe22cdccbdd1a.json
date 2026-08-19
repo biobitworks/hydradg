@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "553a647ce0a4a228ef4712955d95ccaf67526646105c4f4836abe22cdccbdd1a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "most about living in Tokyo is the convenience and the fact that there's always s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "most about living in Tokyo is the convenience and the fact that there's always something to do",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c811ecc8e5afb7fe3114862e17e02bbf83fe52c85dd01e7c6c8dddbb0ecdc67a"
+}

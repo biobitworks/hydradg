@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "282495f718fe12961a41c3f9b0c942d426ff5a0aad564b52c6b270dec7f9e719",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of workouts you've suggested",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of workouts you've suggested",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2dd2ab351ad3dd6dea90058a8d4d8f319a3a782173ac42cfd4cd178aec98ff94"
+}

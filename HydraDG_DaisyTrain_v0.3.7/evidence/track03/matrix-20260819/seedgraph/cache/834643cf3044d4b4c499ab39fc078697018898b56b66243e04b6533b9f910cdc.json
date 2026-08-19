@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "834643cf3044d4b4c499ab39fc078697018898b56b66243e04b6533b9f910cdc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them to negotiate with the seller",
+      "type": "value"
+    },
+    {
+      "name": "in my request",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them to negotiate with the seller",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "in my request",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7c5658db20c68daac056d70e9e3d1670eec8af1eea25db61f7147d546beb046b"
+}

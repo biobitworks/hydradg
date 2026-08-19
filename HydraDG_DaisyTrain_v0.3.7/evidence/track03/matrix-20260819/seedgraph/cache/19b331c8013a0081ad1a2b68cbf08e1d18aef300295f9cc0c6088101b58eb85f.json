@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "19b331c8013a0081ad1a2b68cbf08e1d18aef300295f9cc0c6088101b58eb85f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of bringing a comfort item, it might help me feel more connected to my ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of bringing a comfort item, it might help me feel more connected to my grandmother while I'",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7bc0bf0a1f895075699824b9895c711b9073254877d7caa0acd076f09c1a2c69"
+}

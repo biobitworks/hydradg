@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9553bcb638c392833af389ede175ffdb2560099f8a1708709f379d39ae4ee4ad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to make DIY cat toys",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to make DIY cat toys",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f8023aabdd9fb0241e576f68a4f1dc887d207a425b639b5d85329be38756ff10"
+}

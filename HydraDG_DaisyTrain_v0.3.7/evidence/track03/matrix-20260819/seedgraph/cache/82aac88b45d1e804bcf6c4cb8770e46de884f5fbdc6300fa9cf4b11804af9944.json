@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "82aac88b45d1e804bcf6c4cb8770e46de884f5fbdc6300fa9cf4b11804af9944",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating short walks into my daily routine",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the Scavenger Hunt route",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding more nature-themed items to the list",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating short walks into my daily routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the Scavenger Hunt route",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding more nature-themed items to the list",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e2d0ab1f8101f217b8017ef1fb39a547502dde3d00a68a4a7aa81bb906079aea"
+}

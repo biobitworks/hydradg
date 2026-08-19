@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "78f30e75b49fd5df597ab9c74a1cc88b774e74cdc3e2acdc443cd776ca8ff92b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having control over my data",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having control over my data",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0c68fa41f1c2a8e362892fabb68711376a26ccdac2307197c126f5728d4aa5eb"
+}

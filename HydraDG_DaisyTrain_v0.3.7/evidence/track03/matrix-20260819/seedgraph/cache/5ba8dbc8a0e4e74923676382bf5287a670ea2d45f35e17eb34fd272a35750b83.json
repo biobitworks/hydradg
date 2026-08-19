@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "5ba8dbc8a0e4e74923676382bf5287a670ea2d45f35e17eb34fd272a35750b83",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these topic ideas",
+      "type": "value"
+    },
+    {
+      "name": "these ideas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using an image that demonstrates the impact of typography on design ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these topic ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using an image that demonstrates the impact of typography on design for Facebook, and cr",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8000097baff12e72e8a326a0291e10ef29a4597055d2bdd72620b1a12c3311fe"
+}

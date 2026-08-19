@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "7e24ddb0269dcfa20dedf6082164d25d378b374f431619bced33809470e10312",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of exploring abstract expressions",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a limited palette",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a bold and bright palette",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of exploring abstract expressions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a limited palette",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a bold and bright palette",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df173aae5255cb3da051d92dc7dafc04e334953fdff23a51e7ec6ddcbd707ae5"
+}

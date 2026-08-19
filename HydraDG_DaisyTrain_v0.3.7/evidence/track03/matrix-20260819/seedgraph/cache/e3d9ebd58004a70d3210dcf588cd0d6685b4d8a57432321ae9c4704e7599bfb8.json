@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3d9ebd58004a70d3210dcf588cd0d6685b4d8a57432321ae9c4704e7599bfb8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a tangible record of my thoughts and reflections",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a tangible record of my thoughts and reflections",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8ca7f708572270bb1572a6980044afa4070b7f89a98b564416a3c796eff2795"
+}

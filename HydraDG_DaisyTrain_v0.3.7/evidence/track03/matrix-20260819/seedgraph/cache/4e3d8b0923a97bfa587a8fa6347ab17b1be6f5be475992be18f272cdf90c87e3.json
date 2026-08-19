@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e3d8b0923a97bfa587a8fa6347ab17b1be6f5be475992be18f272cdf90c87e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating interval training into my spin classes, but I'm not su",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating interval training into my spin classes, but I'm not sure if I'll be able t",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f4dffc39e359593aec5797e15bd2c12c8c298e20626b0e411b6578535bf6cdf6"
+}

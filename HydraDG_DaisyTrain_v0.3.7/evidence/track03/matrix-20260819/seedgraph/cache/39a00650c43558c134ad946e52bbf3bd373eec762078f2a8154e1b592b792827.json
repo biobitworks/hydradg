@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "39a00650c43558c134ad946e52bbf3bd373eec762078f2a8154e1b592b792827",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the avocado sauce",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the avocado sauce",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a398ea3dac29672f453def670bb0622fdc98cb0113480d3276f6f226f7e3cc29"
+}

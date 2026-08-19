@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "d6cc2cb3e6ac050b52cbd0af8a7db7cf74e3d292abf77686c0962f066ad709d8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the one-pot pasta and chicken fajitas",
+      "type": "value"
+    },
+    {
+      "name": "the idea of categorizing tasks into must-do, should-do, and nice-to-do",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a conducive environment and minimizing distractions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the one-pot pasta and chicken fajitas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing tasks into must-do, should-do, and nice-to-do",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a conducive environment and minimizing distractions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "46201c0dc766af26c3c3b0d71f707ab90eb487dddbe8cf24cae5a15ed91fbcdf"
+}

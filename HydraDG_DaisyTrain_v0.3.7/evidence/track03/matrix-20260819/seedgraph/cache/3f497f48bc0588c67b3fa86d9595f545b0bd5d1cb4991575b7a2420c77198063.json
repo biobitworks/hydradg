@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3f497f48bc0588c67b3fa86d9595f545b0bd5d1cb4991575b7a2420c77198063",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of under-cabinet lighting, but I'm not sure what type of bulbs I should",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of under-cabinet lighting, but I'm not sure what type of bulbs I should use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "29cef1c9b66754fccbe5761c481f1826f53aedc9ae89b68f7d2b2c4ade8cf3f2"
+}

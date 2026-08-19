@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "eba430fdc60eff96f9502fe176bf0f8e961fb9cec5d8d133d435a4b3132e49a0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this spreadsheet to set financial goals for myself, like saving up for a big pur",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this spreadsheet to set financial goals for myself, like saving up for a big purchase or paying off",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c143f30af7cb7a061bfc3dce71d12b068063b1b483694b426fa89506bfbae40c"
+}

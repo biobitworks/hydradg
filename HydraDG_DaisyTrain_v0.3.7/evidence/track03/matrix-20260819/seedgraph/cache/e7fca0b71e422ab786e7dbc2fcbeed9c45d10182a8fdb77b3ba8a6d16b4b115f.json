@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e7fca0b71e422ab786e7dbc2fcbeed9c45d10182a8fdb77b3ba8a6d16b4b115f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using shelf dividers to separate my figures by franchise",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using shelf dividers to separate my figures by franchise",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "813014688a6d797d18bfb8a42eed59058ec37f5a5ed807aed104c9d7161e6bf5"
+}

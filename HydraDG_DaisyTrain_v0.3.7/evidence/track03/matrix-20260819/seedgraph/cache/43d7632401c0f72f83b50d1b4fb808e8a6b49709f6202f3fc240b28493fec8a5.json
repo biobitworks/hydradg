@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "43d7632401c0f72f83b50d1b4fb808e8a6b49709f6202f3fc240b28493fec8a5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized mug, but I'm not sure how much I can afford",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized mug, but I'm not sure how much I can afford",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "11f2cdc225e3ac6f97a861d407654d7489c44c59d1fc044393eb83943a36d335"
+}

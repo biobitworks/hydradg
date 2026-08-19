@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1d5613157a6b08e820b17b84b715b9c415074059dc6e8867ee75c63328bc5d7c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sending out a survey to get everyone's input",
+      "type": "value"
+    },
+    {
+      "name": "the idea of renting a private villa or a large house",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sending out a survey to get everyone's input",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of renting a private villa or a large house",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0e121a99d2ac08f59cfd55e7d8fc35bb4fd2256dfce1b20104d5816851e68381"
+}

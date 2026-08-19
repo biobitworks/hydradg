@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a4e2360309260f2112d38260224b656ef49ea69ccc2dedc84d253b0992be5f84",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "ones that take place during the day or early evening",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "ones that take place during the day or early evening",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "68ac6f460093574cb2afe3909349339e404f2cdfa23c474ce6843a7b51f58f0c"
+}

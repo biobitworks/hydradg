@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a94eccf1eca07ad39d7a0fd58f533eba44947d74198bd61ae58918435c54475b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a separate living space, but I'm concerned about the addition",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a separate living space, but I'm concerned about the additional costs and mainten",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df06d21f3863da8e2f5821b421aaef6ab39bc8395f0d81493ee9718d6e00d7a7"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7ffce1db4ec592747b6f34293f2012c0b6bc99439aed3ae9582ebd5482399e02",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a warm white color temperature",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a warm white color temperature",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "549607998c0957bb4f72439977e1098db311dcb4f8e3b9f6dc41155782aa6173"
+}

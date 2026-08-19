@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5675709733d21a3d66bcc36b727fb36778f288bb0110da0824e17f36a9910fd3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using the Pomodoro Technique",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using the Pomodoro Technique",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "25028593dc324d01dfc711b465d9a40b27c453b1c567888df1d352578772f8cc"
+}

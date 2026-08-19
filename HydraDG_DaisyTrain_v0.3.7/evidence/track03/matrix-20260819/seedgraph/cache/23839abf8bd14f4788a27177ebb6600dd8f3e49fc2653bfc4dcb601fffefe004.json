@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "23839abf8bd14f4788a27177ebb6600dd8f3e49fc2653bfc4dcb601fffefe004",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of seasonal treats",
+      "type": "value"
+    },
+    {
+      "name": "the idea of asking a question in the caption",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of seasonal treats",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of asking a question in the caption",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "50bc99c5db68e85c7d525a6677745c2a79cf3a890877dff385ee638a22e4d0c2"
+}

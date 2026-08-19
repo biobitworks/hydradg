@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "44c58c6bbcebb809201538894aa051eb4bf7f4daa6d61abbf524a72bb6355999",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the parfait party idea, but can you suggest some other granola options that have",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the parfait party idea, but can you suggest some other granola options that have less packaging",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "29213f8890d6968cde04e04fd6814c524c95984fbf2a6ab88786dda2b2ac2c39"
+}

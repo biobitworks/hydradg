@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "cdfcbc690ee456a463105e697070637dc414356aef0719960aa1725e2bb34cc0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "IFTTT applets to also automate the brightness of my smart bulbs, not just the co",
+      "type": "value"
+    },
+    {
+      "name": "IFTTT applets to automate both the color temperature and brightness of my smart ",
+      "type": "value"
+    },
+    {
+      "name": "IFTTT to automate my smart speaker with voice assistant to announce the weather ",
+      "type": "value"
+    },
+    {
+      "name": "IFTTT to automate my smart speaker with voice assistant to play my favorite musi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "IFTTT applets to also automate the brightness of my smart bulbs, not just the color temperature",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "IFTTT applets to automate both the color temperature and brightness of my smart bulbs simultaneously",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "IFTTT to automate my smart speaker with voice assistant to announce the weather forecast or news upd",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "IFTTT to automate my smart speaker with voice assistant to play my favorite music playlist or radio",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "01a912be37acd83351020596e8b404c788821f03b6ea34acf2c8d29a92c299e0"
+}

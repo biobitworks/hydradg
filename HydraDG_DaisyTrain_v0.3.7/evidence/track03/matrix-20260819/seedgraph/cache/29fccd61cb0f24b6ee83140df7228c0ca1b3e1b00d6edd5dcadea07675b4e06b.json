@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "29fccd61cb0f24b6ee83140df7228c0ca1b3e1b00d6edd5dcadea07675b4e06b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a separate data structure to store the metadata",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a separate data structure to store the metadata",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f8f7efb595b367149f2617005afcf9e70832d6afe80d245cc19ea8344b95188"
+}

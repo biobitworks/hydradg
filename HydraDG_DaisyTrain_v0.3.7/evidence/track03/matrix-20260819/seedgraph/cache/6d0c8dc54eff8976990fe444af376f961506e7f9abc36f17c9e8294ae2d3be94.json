@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6d0c8dc54eff8976990fe444af376f961506e7f9abc36f17c9e8294ae2d3be94",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of reframing negative thoughts and focusing on the present",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of reframing negative thoughts and focusing on the present",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36456cb6edf0d09daa756df4761158c11a2a0a78869dd362f7ba2d9d5d77ed7c"
+}

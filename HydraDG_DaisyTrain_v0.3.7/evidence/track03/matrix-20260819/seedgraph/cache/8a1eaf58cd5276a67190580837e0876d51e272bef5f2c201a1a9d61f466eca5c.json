@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8a1eaf58cd5276a67190580837e0876d51e272bef5f2c201a1a9d61f466eca5c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of listening to podcasts or audiobooks during my walks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of listening to podcasts or audiobooks during my walks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "522953e5184470d8470d9cc51a932554df334c6408a11bbfe926a91fe617ff8c"
+}

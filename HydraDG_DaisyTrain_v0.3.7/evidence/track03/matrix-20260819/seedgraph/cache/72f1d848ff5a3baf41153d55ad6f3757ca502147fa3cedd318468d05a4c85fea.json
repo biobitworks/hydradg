@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "72f1d848ff5a3baf41153d55ad6f3757ca502147fa3cedd318468d05a4c85fea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of combining physical movement with mindfulness",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of combining physical movement with mindfulness",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d2613e41a46a09074f3cc20c7d0c2d0acddbeabc1f333d02a0d14316a0330403"
+}

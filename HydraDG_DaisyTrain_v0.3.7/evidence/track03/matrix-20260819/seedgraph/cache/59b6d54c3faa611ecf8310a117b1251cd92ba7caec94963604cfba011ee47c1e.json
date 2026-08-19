@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "59b6d54c3faa611ecf8310a117b1251cd92ba7caec94963604cfba011ee47c1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Marina DeBris' work, can you tell me more about her creative proces",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Marina DeBris' work, can you tell me more about her creative process and how she source",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "42d4c616c2879948c65cf03592543cacc68da4877a519933b05340c8855f45cc"
+}

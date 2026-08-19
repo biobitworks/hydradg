@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0e96fc20bb16943f15a9338929e3fdafc11f7275a094158c394f7b5cd16113df",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of volunteer roles available, and the perks sound great (free 3-day ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of volunteer roles available, and the perks sound great (free 3-day pass, meals, and a t",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1cfaac56dfb53457c3ec95adc9d1d217b196a7b3313bcf4c00f24ce0f102be78"
+}

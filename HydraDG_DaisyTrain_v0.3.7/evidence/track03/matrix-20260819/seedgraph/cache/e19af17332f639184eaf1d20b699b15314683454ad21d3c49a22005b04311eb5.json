@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e19af17332f639184eaf1d20b699b15314683454ad21d3c49a22005b04311eb5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Sustainable and Eco-Friendly Design, I've been trying to reduce my ",
+      "type": "value"
+    },
+    {
+      "name": "those bookshelf organization ideas, especially the rainbow effect",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Sustainable and Eco-Friendly Design, I've been trying to reduce my carbon footprint lat",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those bookshelf organization ideas, especially the rainbow effect",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4857b20688c43c177dbd0131ee06b97981b71db224748d70400aa34c329d1274"
+}

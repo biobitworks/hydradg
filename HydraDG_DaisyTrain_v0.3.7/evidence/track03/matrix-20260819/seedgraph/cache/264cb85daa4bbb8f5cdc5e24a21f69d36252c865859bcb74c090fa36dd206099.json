@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "264cb85daa4bbb8f5cdc5e24a21f69d36252c865859bcb74c090fa36dd206099",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a lemon-herb naan and the lemon-ginger dipping sauce for the sushi",
+      "type": "value"
+    },
+    {
+      "name": "the idea of grilled portobello mushrooms and carrot-ginger tempura bits",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a lemon-herb naan and the lemon-ginger dipping sauce for the sushi",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of grilled portobello mushrooms and carrot-ginger tempura bits",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05eaab82ae00519f4b118b7b3767fdfd2bf7233abc1eff8e88912cb1fdcd5ede"
+}

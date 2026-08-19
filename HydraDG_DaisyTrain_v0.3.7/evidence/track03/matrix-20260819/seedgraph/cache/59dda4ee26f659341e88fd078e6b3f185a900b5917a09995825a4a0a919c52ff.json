@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "59dda4ee26f659341e88fd078e6b3f185a900b5917a09995825a4a0a919c52ff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially Hip-Hop and Salsa, since I've already had some exper",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a beginner's class and an advanced class",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially Hip-Hop and Salsa, since I've already had some experience with them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a beginner's class and an advanced class",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "17685120304954de5c32afcd0866f4274da4f1d96b115208cb10211a6e7a65bc"
+}

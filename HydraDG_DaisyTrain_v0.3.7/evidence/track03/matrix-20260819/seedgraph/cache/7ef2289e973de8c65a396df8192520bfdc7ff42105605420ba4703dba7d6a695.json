@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7ef2289e973de8c65a396df8192520bfdc7ff42105605420ba4703dba7d6a695",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "any type of lightbulbs as grow lights for my indoor plants",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "any type of lightbulbs as grow lights for my indoor plants",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4de0561191c5e94d47eeabf3aa3f34c3028882885e17ab2c320413da9a7e1eee"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "562f16df50d40d5bda382148b08096ed52fb65e0061ab1cf80c89e0bb02d8e92",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the inspiration or motivation from this book to fuel my goals or passions",
+      "type": "value"
+    },
+    {
+      "name": "these reflection prompts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the inspiration or motivation from this book to fuel my goals or passions",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these reflection prompts",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3d236f728581c21b24c1d70da7772729ff4d308d72f833c03bd44e2860c65215"
+}

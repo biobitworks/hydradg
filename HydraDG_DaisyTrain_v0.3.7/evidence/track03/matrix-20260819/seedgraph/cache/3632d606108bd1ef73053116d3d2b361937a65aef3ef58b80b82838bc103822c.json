@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3632d606108bd1ef73053116d3d2b361937a65aef3ef58b80b82838bc103822c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of buying a monthly pass",
+      "type": "value"
+    },
+    {
+      "name": "the convenience of taking the train and it's pretty direct, so I think I'll stic",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of buying a monthly pass",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the convenience of taking the train and it's pretty direct, so I think I'll stick with that for now",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "28e8ae95ce202828cbabfa7395492fcf9c622f7b03483d26b5c2651eb372bc9e"
+}

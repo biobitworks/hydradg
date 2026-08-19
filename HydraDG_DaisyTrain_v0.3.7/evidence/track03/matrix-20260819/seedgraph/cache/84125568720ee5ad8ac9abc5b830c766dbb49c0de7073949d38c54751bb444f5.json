@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "84125568720ee5ad8ac9abc5b830c766dbb49c0de7073949d38c54751bb444f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of infusing tequila with ancho chili peppers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of infusing tequila with ancho chili peppers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9248bb1a2adb2ac2efd780104ff5687f9c52560d971fcba528a68c27451ee266"
+}

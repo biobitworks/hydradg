@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "57cfc80af80efdd8d01ab4d7c780b511361d899f4ff2e90766e0fc7243bbbb1a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "new pieces",
+      "type": "value"
+    },
+    {
+      "name": "modern and minimalist styles, and I prefer new pieces",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "new pieces",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "modern and minimalist styles, and I prefer new pieces",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1d98cf9b34cca06d873b16e6f322c1e97c80900dcdc430e9a46165de4572f7cc"
+}

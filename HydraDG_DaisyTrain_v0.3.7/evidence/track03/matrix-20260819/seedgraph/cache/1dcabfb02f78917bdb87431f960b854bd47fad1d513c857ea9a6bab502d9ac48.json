@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1dcabfb02f78917bdb87431f960b854bd47fad1d513c857ea9a6bab502d9ac48",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template and ideas you provided, but I was thinking of something more specif",
+      "type": "value"
+    },
+    {
+      "name": "the ideas, but I was thinking of something more concise",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template and ideas you provided, but I was thinking of something more specific to our brand's cu",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the ideas, but I was thinking of something more concise",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5d15c0e885d4839d41b93c90a64b8eb141009e3cf13f6559e509affc73a4c280"
+}

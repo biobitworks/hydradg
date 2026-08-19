@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bddd1aeb8210512720f8f10e428ab1dabee6be933e7fe3257a139139ff98bae5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Simple Tote Bag",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Simple Tote Bag",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3236cbb3db3142c2cf849c4aaf8800106ddd2f2fe49270d34a4fcef8440f7b69"
+}

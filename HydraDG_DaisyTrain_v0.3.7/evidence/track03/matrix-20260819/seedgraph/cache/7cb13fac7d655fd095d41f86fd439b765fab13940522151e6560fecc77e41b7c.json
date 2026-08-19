@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7cb13fac7d655fd095d41f86fd439b765fab13940522151e6560fecc77e41b7c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a slower shutter speed or a faster one",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a slower shutter speed or a faster one",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "37290bc7edeeff738f9781cf4a94714dd7ab6b35d84f5aec01bc2cc62d43673c"
+}

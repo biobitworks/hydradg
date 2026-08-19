@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cb674a2bb0ab855889aff24afe4b7b5e190e2f27ab50cf2b0dd0562731a57ed8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "their earthy flavor and they're pretty easy to find",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "their earthy flavor and they're pretty easy to find",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "742534e461106cc4303f6106da94a41e4f4f144a7825fe38760d5e306c20546c"
+}

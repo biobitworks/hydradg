@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "7cf506da44aa7acdc24b0272566ccc5f5ddae3d27a9904edf980d0c5ce053ec5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sample schedule, but I think I need to adjust the morning routine on Mondays",
+      "type": "value"
+    },
+    {
+      "name": "the revised schedule, but I think I should also block out time for my workouts a",
+      "type": "value"
+    },
+    {
+      "name": "to take a relaxing walk on Sundays around 8:00 pm",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sample schedule, but I think I need to adjust the morning routine on Mondays and Thursdays since",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the revised schedule, but I think I should also block out time for my workouts and walks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to take a relaxing walk on Sundays around 8:00 pm",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c510f887609032e01f7342d87dd85647053f70a6674b9cad9368baff40064e1b"
+}

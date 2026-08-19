@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fff12aaa46e7a1abbf64ebe725ddb4701d1dfba7bbb575f789b014aa633283c7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the train-themed treats idea, especially the \"Railway Rails\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the train-themed treats idea, especially the \"Railway Rails\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4ee234c6a4a82d36cdb0bf5d3bd42e394b74489437b4574547ea977d92c3a572"
+}

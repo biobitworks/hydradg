@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f36b66805ddfa6804d6ae7d8ba70af50e52992f21bc8e9f53e708320cc98ccea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the Q&A sessions and sneak peeks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the Q&A sessions and sneak peeks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7182d7c32fba438b0b3d4d373ac441339c66d3c0a88dfb25920594a6bb30f8e7"
+}

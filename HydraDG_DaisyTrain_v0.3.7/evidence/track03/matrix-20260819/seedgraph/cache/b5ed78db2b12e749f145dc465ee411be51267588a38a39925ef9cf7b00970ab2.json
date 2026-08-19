@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b5ed78db2b12e749f145dc465ee411be51267588a38a39925ef9cf7b00970ab2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these ideas, especially the scrambled eggs one",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these ideas, especially the scrambled eggs one",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1471478ae05ed708be6c5d1bb3560cff6c712cf37fcd5980e61384ec17fd35d8"
+}

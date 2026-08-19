@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7cf3442da81024688286d053d20b72f3ffed7cc5c8aa9cd9c14677c4f4bf4bb0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the seasonal inspiration prompts, especially the one about writing a character s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the seasonal inspiration prompts, especially the one about writing a character sketch of a person wh",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "26c2e9c63a4d8833eceb9b0ec8b1a68f750d31dc0bfe379b2a812248faae4a26"
+}

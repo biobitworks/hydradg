@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "433dd411e094f2351af878e534c52f2c31da5d981ddf67b2212ce89b67fc10a9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting up a cozy game area",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting up a cozy game area",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c46891340e0723571c41353962212675a888e3096a28e920f1b9bd074b3edf4e"
+}

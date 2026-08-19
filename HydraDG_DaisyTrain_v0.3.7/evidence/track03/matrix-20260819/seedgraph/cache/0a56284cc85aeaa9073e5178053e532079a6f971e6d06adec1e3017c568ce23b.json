@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0a56284cc85aeaa9073e5178053e532079a6f971e6d06adec1e3017c568ce23b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a scavenger hunt, but I'm worried it might be a bit too complicated ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the office supply scavenger hunt, it seems easy to organize and it's",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a scavenger hunt, but I'm worried it might be a bit too complicated to organize",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the office supply scavenger hunt, it seems easy to organize and it's something that ever",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6b2aece8f7448d0a5933d8b8b252521ca287e95c01d7fbe709af78b0f1c6061c"
+}

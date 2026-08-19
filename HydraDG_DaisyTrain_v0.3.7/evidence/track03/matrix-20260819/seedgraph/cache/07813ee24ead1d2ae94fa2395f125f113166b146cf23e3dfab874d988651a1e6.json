@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "07813ee24ead1d2ae94fa2395f125f113166b146cf23e3dfab874d988651a1e6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the features and the price point seems reasonable",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the features and the price point seems reasonable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6dc2cf0937dcfc24e81299c664ea287026ffd09f9a1af569a3ad92efbde4bca9"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "702588c9b808ca7bd3184c99f4375a7adf70f7d42100bd802af56be296dd9b8c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep it simple with a mixture of soy sauce, tamari, and a bit of sesame oil f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep it simple with a mixture of soy sauce, tamari, and a bit of sesame oil for flavor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "42415105a87a9469e6e7ca6d4c548cbd727c73effeed0d14810ac1d4ee8ff7ea"
+}

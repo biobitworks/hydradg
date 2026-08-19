@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c0ac6f765b02ab5d4ba43e205c54cd6942f56aaf92fb97d81e4a6a834306b4d8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a habit-tracking app to help me incorporate those techniques into my daily routi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a habit-tracking app to help me incorporate those techniques into my daily routine",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cf9699ef4b82f66cff657e39b7bde3690342bb8bbb2d72d32070317705098ebd"
+}

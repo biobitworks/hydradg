@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "25632b1ff1ee7419c635c4c4b2c893cd359feea693fe1d4cc7552a57fe9047f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these apps to track my runs indoors on a treadmill",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these apps to track my runs indoors on a treadmill",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "05a9775a4b1e7d48281e9797528f63ebbc62626f0700d33ba7eb1d28d657b3ba"
+}

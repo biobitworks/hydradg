@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a17ea8fa27ec61bbec3fc8ac4a86ad056a05b0077eec0053cd12e9edc1645e1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a glass-fronted wooden case, it sounds elegant and sophisticated",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a glass-fronted wooden case, it sounds elegant and sophisticated",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df4ac94226102a3ab78ddbb5310b1a374ba0bb4cf7c346d1a669ba69c694e523"
+}

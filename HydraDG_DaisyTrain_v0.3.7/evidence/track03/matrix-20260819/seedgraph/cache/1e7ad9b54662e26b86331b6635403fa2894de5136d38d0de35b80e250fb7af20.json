@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1e7ad9b54662e26b86331b6635403fa2894de5136d38d0de35b80e250fb7af20",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a predominantly Latinx community",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a predominantly Latinx community",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aea5df6ced773511e1763f5c62d7be6386f5d592c5ae2a04fa935cd9de01744d"
+}

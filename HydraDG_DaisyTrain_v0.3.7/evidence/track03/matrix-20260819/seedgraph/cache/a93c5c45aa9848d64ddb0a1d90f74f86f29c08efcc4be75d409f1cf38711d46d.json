@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a93c5c45aa9848d64ddb0a1d90f74f86f29c08efcc4be75d409f1cf38711d46d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a plant that can help purify the air and has some medicinal b",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a plant that can help purify the air and has some medicinal benefits",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "03129f183dc8956a97cdf52ecd9bef2d82545d9e86593f469b2aed91c5a6c9bd"
+}

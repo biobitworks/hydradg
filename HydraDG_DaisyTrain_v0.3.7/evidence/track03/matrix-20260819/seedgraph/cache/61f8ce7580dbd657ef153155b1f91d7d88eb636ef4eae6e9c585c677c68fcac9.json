@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "61f8ce7580dbd657ef153155b1f91d7d88eb636ef4eae6e9c585c677c68fcac9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these apps to create a customized practice for my specific goals, such as improv",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these apps to create a customized practice for my specific goals, such as improving my handstand pra",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9de274fd021aa87dbb6732d1fe0577dd588d7c203ef714e63f3653804eb567cd"
+}

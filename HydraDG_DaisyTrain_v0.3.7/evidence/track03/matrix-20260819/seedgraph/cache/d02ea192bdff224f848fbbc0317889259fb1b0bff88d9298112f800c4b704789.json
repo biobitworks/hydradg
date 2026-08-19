@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d02ea192bdff224f848fbbc0317889259fb1b0bff88d9298112f800c4b704789",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Todoist to help me maintain this habit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Todoist to help me maintain this habit",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "253b6bdb795df5c8d212b0efc513c6527093079ef22f7c317d78f25337e28424"
+}

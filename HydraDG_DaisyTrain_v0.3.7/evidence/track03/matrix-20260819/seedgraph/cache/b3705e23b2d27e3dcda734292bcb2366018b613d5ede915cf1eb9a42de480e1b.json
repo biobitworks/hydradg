@@ -1,0 +1,36 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3705e23b2d27e3dcda734292bcb2366018b613d5ede915cf1eb9a42de480e1b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of visualizing my project as boards, lists, and cards",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of visualizing my project as boards, lists, and cards",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of visualizing my project as boards, lists, and cards",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4cbdfe73388b08bf72d63e791b060cc8d0d79869826cd2a733ebd0eea831c024"
+}

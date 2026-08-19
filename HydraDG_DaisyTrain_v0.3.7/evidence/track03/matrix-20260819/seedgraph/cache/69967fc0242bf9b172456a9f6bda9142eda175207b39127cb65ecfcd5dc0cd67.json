@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "69967fc0242bf9b172456a9f6bda9142eda175207b39127cb65ecfcd5dc0cd67",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the post ideas and schedule you've suggested",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the post ideas and schedule you've suggested",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d7ba7a1b48d40ed64590d21cf025a2981db550023d1bf8d5709c3b96b39f7ea9"
+}

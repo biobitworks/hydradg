@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "60fb4c1dbf437da5405b236b83a4a83811523f20d3e1240ed2c0d9cc643be5f9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for a big pot of chili that serves 8-10 people",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for a big pot of chili that serves 8-10 people",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2da68c42aaed9e374267ca153b0869bb0854bf54831bd7d667f2482faf383ec6"
+}

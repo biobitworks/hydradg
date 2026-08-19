@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "09040a791215b8b0379f7693185aa55bf961be52ed65c051628776081b0445aa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of those ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "060af0c25947036659c410c2c02579ac5eb3981735aed213872c4d9185f069b2"
+}

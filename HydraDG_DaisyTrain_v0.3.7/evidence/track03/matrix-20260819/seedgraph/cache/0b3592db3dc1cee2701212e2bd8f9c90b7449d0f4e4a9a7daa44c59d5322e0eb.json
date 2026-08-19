@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0b3592db3dc1cee2701212e2bd8f9c90b7449d0f4e4a9a7daa44c59d5322e0eb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those tips, especially the one about grouping similar products together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those tips, especially the one about grouping similar products together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "241319180d4a3cbc0e7e72e9fcf81e3adf038437b993a9b690094f15ed817437"
+}

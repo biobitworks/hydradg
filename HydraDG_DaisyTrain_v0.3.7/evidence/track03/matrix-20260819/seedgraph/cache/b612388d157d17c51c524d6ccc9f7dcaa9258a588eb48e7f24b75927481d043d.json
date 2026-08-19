@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b612388d157d17c51c524d6ccc9f7dcaa9258a588eb48e7f24b75927481d043d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template, but can you help me add a column for the purchase price and date",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template, but can you help me add a column for the purchase price and date",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ac654747fcab8553da752fd7a93582a1848bc3f2ae5a360e196f1738e4dc228a"
+}

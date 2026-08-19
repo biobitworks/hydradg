@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a7c3e8abd133eaa86cf3bc1aeb5e4e8e78f8e3f87e243e3cc9ad3cfd47325e33",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the flexibility of creating my own schedule and focusing on the wineries that in",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the flexibility of creating my own schedule and focusing on the wineries that interest me most",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "41919829feee00e47d9ff45353eedca6bdd5b6b73df9bccea02b4ce6eefac4ce"
+}

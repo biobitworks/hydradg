@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "12643fd4a2f70179424ae993e87bf2f130deb8d2ca6ca16cf65316853d297740",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of a customized item",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a balance between natural appearance and added protection",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of a customized item",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a balance between natural appearance and added protection",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "601bb26a290f029b8ef18c9ed24bfa0cae2c12b9191d49c0907160aed07d1218"
+}

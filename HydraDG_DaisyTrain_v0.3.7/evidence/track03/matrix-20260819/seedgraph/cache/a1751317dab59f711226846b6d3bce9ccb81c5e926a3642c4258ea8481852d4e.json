@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "a1751317dab59f711226846b6d3bce9ccb81c5e926a3642c4258ea8481852d4e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a dessert board with a variety of sweet treats",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a focal point on the dessert board",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a graduation cap cake as the centerpiece",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a dessert board with a variety of sweet treats",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a focal point on the dessert board",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a graduation cap cake as the centerpiece",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5f3db091d91e909f47b6f705772013e3ae46360634d3fa08b1c838dddf60f3d7"
+}

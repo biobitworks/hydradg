@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc016627e499bfca10ba44c85a26f105c2b4a7520273829323f0457cf02b1e56",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of working in short, focused intervals with regular breaks",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of working in short, focused intervals with regular breaks",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b9d9a705ec8cf8d449b584a4cb450a99d6cb578b19472da76f278c38aa320bc9"
+}

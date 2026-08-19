@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fd7822827953b8e83bd285c6e200f5b715859245ade0ee3970d5016d4533b511",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a late-night feeding for my Neon Tetras",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a late-night feeding for my Neon Tetras",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e2d558ef08892dc39ea62f476ece4382aeed60be0e4c320eb70777c67079f479"
+}

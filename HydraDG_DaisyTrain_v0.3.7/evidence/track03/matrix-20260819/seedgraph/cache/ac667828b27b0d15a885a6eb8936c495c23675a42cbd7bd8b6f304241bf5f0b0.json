@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac667828b27b0d15a885a6eb8936c495c23675a42cbd7bd8b6f304241bf5f0b0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of trying out different marinades",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of trying out different marinades",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "603a954316a24fdb473171cda0a2cca3fded03553522e0f9fee243ad1eed94bd"
+}

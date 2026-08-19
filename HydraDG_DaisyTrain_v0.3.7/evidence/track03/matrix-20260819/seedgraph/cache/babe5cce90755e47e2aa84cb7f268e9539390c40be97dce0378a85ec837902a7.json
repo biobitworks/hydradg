@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "babe5cce90755e47e2aa84cb7f268e9539390c40be97dce0378a85ec837902a7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a grapefruit-flavored one or something else like Cointreau or Grand Marnier",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a grapefruit-flavored one or something else like Cointreau or Grand Marnier",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b2fd28d5a2ec6ee6e31310341cd385cbdf9fac6d795c58acff04c57c2d992b92"
+}

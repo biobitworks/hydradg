@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1f241a3d7b74866f23ac92f05d400235dc6a0f32d78f01e73c40c46015d90fb7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of tracking my expenses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my expenses",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df3e9030a9ecbefec58d11e42971dd27b87a6c65866a592fe18c1310f98fe46e"
+}

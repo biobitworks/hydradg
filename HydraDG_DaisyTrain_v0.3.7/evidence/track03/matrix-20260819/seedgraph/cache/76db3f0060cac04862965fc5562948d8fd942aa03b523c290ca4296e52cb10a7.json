@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "76db3f0060cac04862965fc5562948d8fd942aa03b523c290ca4296e52cb10a7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a gentle wake-up and a consistent morning routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a gentle wake-up and a consistent morning routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8025194f6eb26c7155511445b9cc53722c19a94994ba4706f25718370e14d6bd"
+}

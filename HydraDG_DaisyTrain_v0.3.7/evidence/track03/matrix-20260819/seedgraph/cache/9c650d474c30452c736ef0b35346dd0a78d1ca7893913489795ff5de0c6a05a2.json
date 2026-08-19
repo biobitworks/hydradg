@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9c650d474c30452c736ef0b35346dd0a78d1ca7893913489795ff5de0c6a05a2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that gift card on my next purchase",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that gift card on my next purchase",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0adc48354d2d6b7d8c61c37e20af7d11054674c07a9ce1335ddc9cea44ec42cf"
+}

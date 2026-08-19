@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8664315db0122e593a65bbac20b930e0e63ff827df1d01f0783086a1b25980d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the eco-friendly aspect and the soft-grip handle sounds comfortable",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the eco-friendly aspect and the soft-grip handle sounds comfortable",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "42cae6fd10c60bb08a745da900763a47dcc5c7187122a6e23aa12ef16049f459"
+}

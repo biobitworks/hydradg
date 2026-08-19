@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d5c0baa3e25ebb515e114a2ff4b9757e1c1ea0c9d9e82050c47435ff3b3ebb74",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of investing in timeless pieces and looking for alternative brands",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of investing in timeless pieces and looking for alternative brands",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aa56deb5fe6074db37d555917f55f2c5774e7c831285f14898d955c51d5ee3f3"
+}

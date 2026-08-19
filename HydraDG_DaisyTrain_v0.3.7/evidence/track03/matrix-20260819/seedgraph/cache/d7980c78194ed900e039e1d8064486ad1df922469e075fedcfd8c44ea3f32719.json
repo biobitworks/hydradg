@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d7980c78194ed900e039e1d8064486ad1df922469e075fedcfd8c44ea3f32719",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of offering free samples of my soaps and candles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering free samples of my soaps and candles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ce2ef5fa0a172d8999bb31ae8b18aadcc5c4e8977e80237cedc140827ae63e7b"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d24b9600db0d3f1870412d773d66c203499317490d33d171a94b05b031c52060",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the parfait idea, but I'm not a big fan of granola",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the parfait idea, but I'm not a big fan of granola",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5920ec8b03d87fdaa9c638304d5d0565a884f60dcfaaf4bef301e3450ab685f7"
+}

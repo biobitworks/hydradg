@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cddf36784eae140c49266a92c2e48583b009d2b42e52f71fc8c43e9311987014",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety of options",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety of options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9df92c1e6454ac8fc61ff5e39f407953154e16fd5427e74276bb5bfc3db6673f"
+}

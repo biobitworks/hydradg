@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d598d15cf627a4176d944ec5dd5ae05cb43e268a58a0c58789ec4bb8e3dcdc9b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Saffron Gin Fizz and the Cardamom-Rose Old Fashioned",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Saffron Gin Fizz and the Cardamom-Rose Old Fashioned",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "736ee8b3b087a2c580707ee932dfe0173cf885da636bc19043992aca91a11033"
+}

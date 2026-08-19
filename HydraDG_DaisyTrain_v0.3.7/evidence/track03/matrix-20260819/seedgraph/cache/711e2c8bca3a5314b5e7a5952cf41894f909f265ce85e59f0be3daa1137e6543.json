@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "711e2c8bca3a5314b5e7a5952cf41894f909f265ce85e59f0be3daa1137e6543",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using Instagram to showcase my upcycled jewelry",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Instagram to showcase my upcycled jewelry",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4b5155dda99dd809890d28b7d7879e4153b990b0c95da7669346c811ef3178a7"
+}

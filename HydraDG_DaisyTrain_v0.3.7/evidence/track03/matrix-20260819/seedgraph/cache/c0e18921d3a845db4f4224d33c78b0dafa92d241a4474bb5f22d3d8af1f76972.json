@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c0e18921d3a845db4f4224d33c78b0dafa92d241a4474bb5f22d3d8af1f76972",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of protein-rich snack balls, can you give me a simple recipe to make th",
+      "type": "value"
+    },
+    {
+      "name": "the idea of garlic roasted vegetables, can you give me some specific recipe sugg",
+      "type": "value"
+    },
+    {
+      "name": "the idea of garlic roasted broccoli, I'll definitely give it a try",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of protein-rich snack balls, can you give me a simple recipe to make them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of garlic roasted vegetables, can you give me some specific recipe suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of garlic roasted broccoli, I'll definitely give it a try",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c468f27a4ceaac095bbe710d6dd886f717152a41e49f32c7119b235488ee5236"
+}

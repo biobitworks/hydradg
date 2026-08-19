@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c27cb07bfea0fbcde0f4961ef2544b9288c845859b25e3e13d17936ee7f587b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the lunchtime meetup groups idea",
+      "type": "value"
+    },
+    {
+      "name": "those tips",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the lunchtime meetup groups idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those tips",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "61e87e9ec7f6bd1e39c69e94122ae0767ebd1a6d4ab2cbe72ca521d56498840b"
+}

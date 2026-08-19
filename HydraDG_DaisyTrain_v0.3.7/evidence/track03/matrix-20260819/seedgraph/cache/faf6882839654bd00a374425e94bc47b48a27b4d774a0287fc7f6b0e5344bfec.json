@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "faf6882839654bd00a374425e94bc47b48a27b4d774a0287fc7f6b0e5344bfec",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of scheduling social media time and treating it as a task",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a \"pre-scrolling ritual\" to signal to my brain that I'm abo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of scheduling social media time and treating it as a task",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a \"pre-scrolling ritual\" to signal to my brain that I'm about to engage in a fo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2799eb52d62b27154476aa8525541325f8fd5aff95a1d5755510840a2794681a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1536a6c9e18cb628c5f9fdb9465c608070865ab6f92297af9bf2888805602606",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep up with the latest fashion trends, but I also don't want to look like I'",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep up with the latest fashion trends, but I also don't want to look like I'm trying too hard",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f90651f95a663da5200b67fa29eeebfb5567c9c0c2a6125a6eaf353703751749"
+}

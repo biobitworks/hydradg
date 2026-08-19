@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "789225b977079e56e089d700963117cb729366c9c3c348d67d80cef768036808",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of keeping everything in one place, and I can use collections and smart",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of keeping everything in one place, and I can use collections and smart collections to furt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "022b6f5e6344fba5fa1b63a7153f84f979b171490e53e4aceba36595154f6473"
+}

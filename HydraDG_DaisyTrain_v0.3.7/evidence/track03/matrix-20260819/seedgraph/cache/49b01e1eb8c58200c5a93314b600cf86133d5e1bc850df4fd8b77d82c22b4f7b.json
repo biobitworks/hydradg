@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "49b01e1eb8c58200c5a93314b600cf86133d5e1bc850df4fd8b77d82c22b4f7b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "data and research to craft headlines that speak to my target audience and make t",
+      "type": "value"
+    },
+    {
+      "name": "the same one across all platforms",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "data and research to craft headlines that speak to my target audience and make them want to read mor",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the same one across all platforms",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "232af5fbb231758d4527ba139d2243ed14a485ed4b2b62c8aa72ddadb26f5b71"
+}

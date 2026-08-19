@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "ef031467f9f04e45810e215f893d1ef3e0a0cc2b2ef1907587cfe65bfd65f90d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a spreadsheet to track my spending, though",
+      "type": "value"
+    },
+    {
+      "name": "the idea of tracking my spending by category",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a clear picture of my total spending and the cash back reward",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a spreadsheet to track my spending, though",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my spending by category",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a clear picture of my total spending and the cash back rewards I've earned",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "25fad51fad1551fdbe22115c293bc77a2c114bcdc21433384411957906b6b135"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5d4731c51a48c3a97a39bd251b1500f0c8e2d1e4b2a38814893c992a02e7b659",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "social media to make informed investment decisions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "social media to make informed investment decisions",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "11fee45a9fa3e44fed4957d2dff3a5607b1c3c7e1a2e563502b2982c27b50bef"
+}

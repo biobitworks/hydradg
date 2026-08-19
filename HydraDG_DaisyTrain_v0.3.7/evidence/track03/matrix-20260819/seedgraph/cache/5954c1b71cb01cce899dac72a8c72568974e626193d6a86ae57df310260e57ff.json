@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5954c1b71cb01cce899dac72a8c72568974e626193d6a86ae57df310260e57ff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Avocado Toast with Poached Eggs",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Avocado Toast with Poached Eggs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bc818bb2a79f03333fe94ecf2a5bb02f0cd6aa0bab1bae5fa99402f843a1f759"
+}

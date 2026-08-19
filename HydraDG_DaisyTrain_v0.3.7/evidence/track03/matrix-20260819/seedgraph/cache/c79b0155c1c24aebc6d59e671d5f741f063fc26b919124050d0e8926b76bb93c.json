@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c79b0155c1c24aebc6d59e671d5f741f063fc26b919124050d0e8926b76bb93c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "spicy side dishes",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "spicy side dishes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "27172bc1a3086e06d5e42eabeb61e871dd32677e11872a07fc44af805323eec5"
+}

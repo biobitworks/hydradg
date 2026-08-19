@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40afcaaf3feeda5d6da69dc9cafd10acfbdc66dc4866edab56f4b966a57a1df2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those recipe ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those recipe ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d453a3505ed47c666a7789befa8f8efcf4977b9767f76e30a102aedb7ca98d47"
+}

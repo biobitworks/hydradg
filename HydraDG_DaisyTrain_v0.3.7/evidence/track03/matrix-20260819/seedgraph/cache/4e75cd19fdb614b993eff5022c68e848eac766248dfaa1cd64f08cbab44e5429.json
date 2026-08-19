@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4e75cd19fdb614b993eff5022c68e848eac766248dfaa1cd64f08cbab44e5429",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the clean lines and the fact that it has ball-bearing glides",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the clean lines and the fact that it has ball-bearing glides",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eab7f3bb684f51ec83e8962647fa349c2e76bcdcf3dcfcd21ddd65acb6de6bc2"
+}

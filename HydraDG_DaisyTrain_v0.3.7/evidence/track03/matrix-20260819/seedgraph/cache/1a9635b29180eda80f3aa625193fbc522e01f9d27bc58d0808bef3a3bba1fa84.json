@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1a9635b29180eda80f3aa625193fbc522e01f9d27bc58d0808bef3a3bba1fa84",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it i do it two days a week um and it's funny because i get when i do it i get st",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it i do it two days a week um and it's funny because i get when i do it i get stronger i mean it rea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "dc43f18677cd7f1f6512b56b8f80260eeb4f7c819cd1bd31998a382c129f9176"
+}

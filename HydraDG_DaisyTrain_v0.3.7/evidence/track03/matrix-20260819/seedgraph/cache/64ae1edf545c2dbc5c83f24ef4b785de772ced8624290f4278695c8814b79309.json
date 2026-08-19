@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "64ae1edf545c2dbc5c83f24ef4b785de772ced8624290f4278695c8814b79309",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this recipe, but I have a lot of mango at home",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this recipe, but I have a lot of mango at home",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a8e421a901e92d392260e63771f7f49d2a3f7afa1b5b339777c8dab078ae308d"
+}

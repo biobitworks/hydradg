@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0eb326f10b3e204139d71f7ea028b89ecc856ae66ae5ee7a7a90c9f8ce501918",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the overnight oats idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the overnight oats idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "de0587765cb40708e6fe0715e6635ca2a97804dc5211490d93fd671e8e1154a9"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2281e88bf44135dbc4e240b2cfb9da8269732b6efe3650a4d2ee1d2dbd0e8c4b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of dividing it into introduction, problem statement, analysis, solution",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of dividing it into introduction, problem statement, analysis, solution, implementation, an",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "53540e73ddefa4f254a2e98eb0f5aa3004a0f8e999e05f010d4d89be9322ad7d"
+}

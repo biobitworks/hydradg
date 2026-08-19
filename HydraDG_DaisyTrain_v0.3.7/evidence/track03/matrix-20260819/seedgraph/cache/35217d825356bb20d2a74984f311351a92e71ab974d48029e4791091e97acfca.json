@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "35217d825356bb20d2a74984f311351a92e71ab974d48029e4791091e97acfca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of including a biography and photos of my grandmother",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of including a biography and photos of my grandmother",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "19f312d468692f541b9553e57d2c9c3ba75daa466be74b7678e0f6984d6e9246"
+}

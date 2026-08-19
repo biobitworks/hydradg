@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d497a23a71c542bdfdbb419639e50685801ec68b4b7bf88cd08196c757dd317e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "lavender and vanilla",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "lavender and vanilla",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "15ce490f10f4e4f0b811836df0e5893043532629679d65d7bd328e5653c6e54e"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "125136394e44f15cb98e6e591d272bff42160fe3236c5247cfaf3753a0d010be",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "other types of nuts instead of pine nuts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "other types of nuts instead of pine nuts",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "daeb48610b31afea5db0a1f9a35fc2e40d08d67dce092d3fd8c3cf6220f12ed7"
+}

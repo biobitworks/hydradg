@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7150f021a1b49ea5c511694017120e495cc3e207781cb080085c4012addb3a1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a focal point, like my signed jersey, and building the disp",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a focal point, like my signed jersey, and building the display around it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e872a305d20c0374ea37119d1bce85da0441aa150e6a274e4ebff9dab4306d38"
+}

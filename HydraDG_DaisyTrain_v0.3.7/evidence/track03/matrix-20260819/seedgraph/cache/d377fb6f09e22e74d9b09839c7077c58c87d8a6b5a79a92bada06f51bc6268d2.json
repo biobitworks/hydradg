@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d377fb6f09e22e74d9b09839c7077c58c87d8a6b5a79a92bada06f51bc6268d2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the bodyweight circuit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the bodyweight circuit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3c0d8f981c2925553b5a248433432a453fd6e61e3f25ebdfb48d95bfdde70365"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d3d6502ab46ad4762f3fa9f58dc5beb015d9d934d32acfc0205c492530e1ec1f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the organic cotton onesie and baby blanket set idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the organic cotton onesie and baby blanket set idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "237c4e535550bca82eac2f9e667eac46a5b94685b3824a1883d95ef420beaae9"
+}

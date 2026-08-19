@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "776af21b4688e68a1877958c0b2fd14cbe4370f4f25080f92e2ad9ad7e0fe2df",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "diamond-encrusted frets on my bass guitar for added bling and playability",
+      "type": "value"
+    },
+    {
+      "name": "plastic frets on my bass guitar instead of metal ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "diamond-encrusted frets on my bass guitar for added bling and playability",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "plastic frets on my bass guitar instead of metal ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "464dac12ee1d9feb3603d8188d73531521e1e11b574025cf05abd739fe8d7a6b"
+}

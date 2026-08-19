@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ae5b528acb601cd5277a2b0fe2c5a57af889e3e6f57a264d2b0680f81f660994",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "glue, tape, or something else to attach the memorabilia",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "glue, tape, or something else to attach the memorabilia",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c3efa9dbf5834fd5b3827694877a1f2a53ed7f4c7323d2dfede7ddc92a285b9e"
+}

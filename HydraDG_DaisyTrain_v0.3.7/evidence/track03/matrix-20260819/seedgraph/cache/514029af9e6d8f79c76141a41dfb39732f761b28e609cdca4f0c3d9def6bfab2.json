@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "514029af9e6d8f79c76141a41dfb39732f761b28e609cdca4f0c3d9def6bfab2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of playing as an investigator and gathering clues to solve the mystery",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of playing as an investigator and gathering clues to solve the mystery",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cefbe86363e7744e48df4c3b33b400525c84d7a970bb541ce1fe0d7977b1508e"
+}

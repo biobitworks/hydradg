@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b57d452e242e2dee1c575b1475e28604619f62bad8e3429e8396bc86ece836e0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for my bike rides",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for my bike rides",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e87bfca85164a94f21fe43b40f31546f2d717a14a777955356e6c3201c27aa34"
+}

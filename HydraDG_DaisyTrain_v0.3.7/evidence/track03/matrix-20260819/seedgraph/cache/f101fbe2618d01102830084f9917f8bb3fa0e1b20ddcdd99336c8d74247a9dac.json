@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f101fbe2618d01102830084f9917f8bb3fa0e1b20ddcdd99336c8d74247a9dac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to work \u2013 sitting, standing, or a combination of both",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to work \u2013 sitting, standing, or a combination of both",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9d5ce8a5affc0d4da4244a206f94dcacbef17b9702b236738262b4e19ff0bdf1"
+}

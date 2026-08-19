@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "25337407d43a0b10aec32cc7a5b91b84059dde6a79c22cf1d03a0f5f200a238f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "daily, so it'll be convenient to have them easily accessible",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Red Lentil Soup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "daily, so it'll be convenient to have them easily accessible",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Red Lentil Soup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75aa956cbf4d4358bfb508740b87d9babd1857104bf42e7d88ee0e9060607197"
+}

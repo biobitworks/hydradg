@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "800c387f4cfdecc2f65b855eca6cc7fa40ca292a9c7ace7dc0a38e03e9d77954",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a dimmer-compatible pendant light",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a dimmer-compatible pendant light",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d52d4bf3db2cfc6171081d9c4c0be1dc1005eca34fc408b1102e63fe59a158ba"
+}

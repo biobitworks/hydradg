@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9445f633f1f5cc96226f53d38112435d8c48753ceb1046a8a6279e36b741b053",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "NS3 to quickly simulate the backhaul network for a 5G environment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "NS3 to quickly simulate the backhaul network for a 5G environment",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7a44c8cc08023c94a18379d70d367886648a06cfc1bcf9dac28a274072416f62"
+}

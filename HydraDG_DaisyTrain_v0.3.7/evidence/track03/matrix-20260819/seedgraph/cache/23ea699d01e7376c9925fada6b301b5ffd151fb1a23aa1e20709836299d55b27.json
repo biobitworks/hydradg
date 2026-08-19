@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "23ea699d01e7376c9925fada6b301b5ffd151fb1a23aa1e20709836299d55b27",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the breakdown of the budget and the suggestions for reducing transportation cost",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the breakdown of the budget and the suggestions for reducing transportation costs",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3a2ff78b657e61e3813438023a9961a9c1bb387390303dbe1ea64185867043f0"
+}

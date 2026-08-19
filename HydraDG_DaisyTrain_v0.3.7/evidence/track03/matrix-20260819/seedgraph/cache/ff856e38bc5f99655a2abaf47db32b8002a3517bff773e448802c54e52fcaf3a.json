@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ff856e38bc5f99655a2abaf47db32b8002a3517bff773e448802c54e52fcaf3a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a geometric pattern art piece",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a geometric pattern art piece",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d1dd68edd67889e2478f36ae1d87adffa12a8850f507747fb55e135f3f5caada"
+}

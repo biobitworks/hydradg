@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fc6b5031a611500a0ddb8a891ca90640c411d1ed262290e768a3cf0a3dfef153",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to learn from the comfort of my own kitchen",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to learn from the comfort of my own kitchen",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "50e10338ff0886bea7fe49adda8796cee80ef8763c151d1fd367824fa6014ec1"
+}

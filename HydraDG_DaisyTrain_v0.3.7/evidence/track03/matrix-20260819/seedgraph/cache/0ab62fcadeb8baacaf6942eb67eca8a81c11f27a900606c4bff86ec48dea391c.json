@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ab62fcadeb8baacaf6942eb67eca8a81c11f27a900606c4bff86ec48dea391c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Korean BBQ-style burgers and the grilled pineapple and jalape\u00f1o skewers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Korean BBQ-style burgers and the grilled pineapple and jalape\u00f1o skewers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "359ae672f726b4d19a55e212b60b8f35b838c629965549bf730027ed5333341f"
+}

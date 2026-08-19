@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b3423d129dbc173e7821c4f0e8dff46adeea30a76ddbdafd1ff869e27f5fd593",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of eco-friendly recycled plastic and low maintenance",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of eco-friendly recycled plastic and low maintenance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "001ac14c7d07ed44245434ee0bf5f251d5de5a51b2d016b66770147a62be0be8"
+}

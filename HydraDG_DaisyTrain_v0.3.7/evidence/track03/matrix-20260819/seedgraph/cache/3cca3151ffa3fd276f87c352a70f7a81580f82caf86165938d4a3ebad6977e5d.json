@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3cca3151ffa3fd276f87c352a70f7a81580f82caf86165938d4a3ebad6977e5d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the quinoa and black bean chili",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Low-Sugar Berry Bliss Smoothie Recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the quinoa and black bean chili",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Low-Sugar Berry Bliss Smoothie Recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6d0da77f22ebe30f41022b37d666b931b71d4f34fb9a89837438525c12821a86"
+}

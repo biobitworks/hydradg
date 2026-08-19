@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "259499c3f1a4709d77cba997eb664006ddd3e0a693eb9ed5a74f01bf8b2c5719",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of those no-bake energy balls",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of those no-bake energy balls",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6677b6f0b414f53c6db6c4c933883907117476a60579d3b7159d32c310a78345"
+}

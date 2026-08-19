@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "hydradg.local_model_output.v1",
+  "type": "object",
+  "required": [
+    "mechanism_label",
+    "expected_direction_next_run",
+    "supporting_evidence",
+    "counterevidence",
+    "next_falsification_test",
+    "abstain",
+    "claim_ceiling"
+  ],
+  "properties": {
+    "mechanism_label": {
+      "type": "string"
+    },
+    "expected_direction_next_run": {
+      "type": "object",
+      "additionalProperties": {
+        "enum": [
+          "UP",
+          "DOWN",
+          "STABLE",
+          "UNKNOWN"
+        ]
+      }
+    },
+    "supporting_evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "counterevidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "next_falsification_test": {
+      "type": "string"
+    },
+    "abstain": {
+      "type": "boolean"
+    },
+    "claim_ceiling": {
+      "const": "PROBABILISTIC_MODEL_OUTPUT_ONLY"
+    }
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5b4f920bae7b9a37c154a8a8ff17c196b9ff6d02dcf377fb75de7a0e84eecea2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "frozen cherries for this recipe or do I need to use fresh cherries",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "frozen cherries for this recipe or do I need to use fresh cherries",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2c9790862808a2d07aeb009303d8db6e4f6c060ffb5fb233602966c4e84bccd8"
+}

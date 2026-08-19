@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "71ca7d52f8a4faf429cce25d0fccbffa90beaa4ecfe46add16a6c50f63621657",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a garden stone or plaque",
+      "type": "value"
+    },
+    {
+      "name": "those ideas for the inscription",
+      "type": "value"
+    },
+    {
+      "name": "the idea of \"Forever in my heart\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a garden stone or plaque",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas for the inscription",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of \"Forever in my heart\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bb0ec2b1a3c8114e6179b3301ba86c2214e0cfa0daac6314c49d0723a80da34c"
+}

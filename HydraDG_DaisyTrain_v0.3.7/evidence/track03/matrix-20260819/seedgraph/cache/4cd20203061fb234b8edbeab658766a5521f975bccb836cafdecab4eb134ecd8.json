@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4cd20203061fb234b8edbeab658766a5521f975bccb836cafdecab4eb134ecd8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a customizable and organized space to track my reading progre",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a customizable and organized space to track my reading progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f2d25fa4c9cd83902625c4aa8d53b25e369713d6e5f2de92d301063da0d45233"
+}

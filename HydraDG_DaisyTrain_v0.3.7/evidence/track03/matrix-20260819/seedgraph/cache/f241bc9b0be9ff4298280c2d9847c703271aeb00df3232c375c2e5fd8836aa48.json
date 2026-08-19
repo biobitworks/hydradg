@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f241bc9b0be9ff4298280c2d9847c703271aeb00df3232c375c2e5fd8836aa48",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a savory flavor to balance out the sweetness of the peas and carrots",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a savory flavor to balance out the sweetness of the peas and carrots",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "40e519afa20a232263af72901bfdef29f2556896793c2a04aec2857324505058"
+}

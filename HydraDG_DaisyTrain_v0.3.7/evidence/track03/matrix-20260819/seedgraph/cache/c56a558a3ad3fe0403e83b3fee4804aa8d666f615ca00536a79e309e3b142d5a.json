@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c56a558a3ad3fe0403e83b3fee4804aa8d666f615ca00536a79e309e3b142d5a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "baking soda and vinegar regularly as a maintenance routine to prevent clogs, or ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "baking soda and vinegar regularly as a maintenance routine to prevent clogs, or would that be overdo",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1276722ff04d9cf783565ca5ed75f6b808f5967c981dc2a10b29b3c5798dfefb"
+}

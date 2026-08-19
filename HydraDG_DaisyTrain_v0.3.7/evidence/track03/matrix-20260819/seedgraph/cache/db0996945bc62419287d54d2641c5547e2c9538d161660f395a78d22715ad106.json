@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "db0996945bc62419287d54d2641c5547e2c9538d161660f395a78d22715ad106",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a plan to follow, but I also want to be able to adjust it as ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a plan to follow, but I also want to be able to adjust it as needed based on how",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6fc7e2e66a6efb54674cf5bd18653ebf04e8ff5aac84652fa53ecab5217253d2"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "352e3e006b6d09fbb688dbf70cc85087a7a35dcdb9c35ece1552f39b66897d68",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using baskets or bins to store my yarn",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using baskets or bins to store my yarn",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ec60c676e71c37008e14b96329ebd00b7be49cc1c727016ee076bb43b3a6fdb5"
+}

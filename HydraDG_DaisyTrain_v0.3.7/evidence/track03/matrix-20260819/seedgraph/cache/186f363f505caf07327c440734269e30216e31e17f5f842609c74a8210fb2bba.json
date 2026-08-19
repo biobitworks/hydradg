@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "186f363f505caf07327c440734269e30216e31e17f5f842609c74a8210fb2bba",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to Move It\" by Reel 2 Real ft",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to Move It\" by Reel 2 Real ft",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bac196f84e6773fac3edd82d7a11856b711b6ae23cd4f33a6be4bafc710855ae"
+}

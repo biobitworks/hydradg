@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "954c15414329c98441f956bb748f5e2985f66835ab6454589fec98a877290e1d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my banana bread a bit less sweet than usual",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my banana bread a bit less sweet than usual",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f5133057011f72d851c1d7dab63f1efa10133ac5fe5f279c08ed7b89ea9583c9"
+}

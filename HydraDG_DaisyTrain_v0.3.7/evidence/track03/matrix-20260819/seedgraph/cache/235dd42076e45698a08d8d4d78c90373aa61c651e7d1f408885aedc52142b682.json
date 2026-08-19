@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "235dd42076e45698a08d8d4d78c90373aa61c651e7d1f408885aedc52142b682",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a pre-writing routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a pre-writing routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "74e388397a65bb510b4039c3b0d43c7bcaceb567c74b41db6cd6531043432913"
+}

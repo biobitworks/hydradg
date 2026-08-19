@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "970a2d292ce8f045da0a64a5b04358743e67019d935946f4e974c7ab531a32e7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Athleisure Chic idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Athleisure Chic idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a1c4caf53880f8df309c6761d384db12a4bc7f12e5d82f2e22915a78f2a58b34"
+}

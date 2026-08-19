@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "95b8485c166f969761743a8d8b471053027d22871b5066810d611b3549a82d0c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "running on a trail near my place",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "running on a trail near my place",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7c37d4413d481b16992cd01cebf5641407a7541bccd93dd73fd4ba2277105025"
+}

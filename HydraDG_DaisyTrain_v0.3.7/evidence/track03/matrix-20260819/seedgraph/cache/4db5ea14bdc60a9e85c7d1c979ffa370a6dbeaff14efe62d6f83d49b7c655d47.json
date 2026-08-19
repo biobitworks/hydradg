@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4db5ea14bdc60a9e85c7d1c979ffa370a6dbeaff14efe62d6f83d49b7c655d47",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the personalized necklace idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the personalized necklace idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "08cf74729568114d71f083a602a64eb52e9f4117390ace21c57e9a4bb8fcaa97"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9cad47e71f6f0003c49267cbd056451fd203c14deacd34668a2602d55b5401d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using dividers or compartments",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using dividers or compartments",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "519b50bcc0d3e54b53ff4897e748efa4f9836ddcb7e19d9985c904386f91766f"
+}

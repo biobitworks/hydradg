@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5f4c35a874fd7665214ee5cbcdba242a505fa8b13d2ea68cee648a0c7e48d6c4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a coupon app or a digital note system to keep track of my coup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a coupon app or a digital note system to keep track of my coupons",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "75afb56d5d35926a7fb3cf360422542b2380e60905945314a3cf7bd02dfc8eb7"
+}

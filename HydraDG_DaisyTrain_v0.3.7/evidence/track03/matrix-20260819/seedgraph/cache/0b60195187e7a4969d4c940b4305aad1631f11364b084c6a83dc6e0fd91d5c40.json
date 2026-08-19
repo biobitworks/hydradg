@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0b60195187e7a4969d4c940b4305aad1631f11364b084c6a83dc6e0fd91d5c40",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to rate movies and write reviews, as well as follow frien",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to rate movies and write reviews, as well as follow friends and see what they",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a69bdd23009008554535d0edb9dbefab35d468681c37304eb4ed472417957086"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "c73e9c4ea960c96fa0e1790db9b0872b601ee141fefedc362a9fb5079333fed5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of capturing a specific type of landscape, like mountains or waterfalls",
+      "type": "value"
+    },
+    {
+      "name": "the idea of experimenting with different angles, lighting conditions, and compos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of capturing a specific type of landscape, like mountains or waterfalls, or trying to get s",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of experimenting with different angles, lighting conditions, and composition techniques to",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a383bccfa3dfff690d2004378d5c286d16a9966628e2f3b2547eeb519e46d2d0"
+}

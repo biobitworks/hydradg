@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "40a22a79fb0e695986eba2ab82fd0f4d07ddab3c6c2131696678424c35556a73",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of offering a \"charity combo\" bundle",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering a \"charity combo\" bundle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1df23c1f29c04f3637a065651e8fa3f1feac3779652124a647e05f8be0a2cc7a"
+}

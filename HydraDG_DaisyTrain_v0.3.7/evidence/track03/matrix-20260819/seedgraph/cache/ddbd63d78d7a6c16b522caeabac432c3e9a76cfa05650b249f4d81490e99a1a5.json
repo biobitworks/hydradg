@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ddbd63d78d7a6c16b522caeabac432c3e9a76cfa05650b249f4d81490e99a1a5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to customize the fit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to customize the fit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4e973edb3250b561d7383d48c47703d19d0af135f8a81f6a26d2586fcc8b53c8"
+}

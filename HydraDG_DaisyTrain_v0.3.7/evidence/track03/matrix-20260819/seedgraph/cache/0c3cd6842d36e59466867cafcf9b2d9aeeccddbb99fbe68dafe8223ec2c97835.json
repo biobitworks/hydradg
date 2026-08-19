@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0c3cd6842d36e59466867cafcf9b2d9aeeccddbb99fbe68dafe8223ec2c97835",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the variety in this meal plan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the variety in this meal plan",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6004f010a63353aa300a18feff5707b07ef5c1aeb307c3261bf7423414334175"
+}

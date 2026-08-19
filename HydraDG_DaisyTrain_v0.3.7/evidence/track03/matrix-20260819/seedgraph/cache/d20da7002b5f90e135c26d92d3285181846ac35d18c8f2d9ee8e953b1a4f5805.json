@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d20da7002b5f90e135c26d92d3285181846ac35d18c8f2d9ee8e953b1a4f5805",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a daily intention",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a daily intention",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bc1d60800d4b66f89cb5a0ec49923bc8174d65211f4f1bc68455825f0ac85de8"
+}

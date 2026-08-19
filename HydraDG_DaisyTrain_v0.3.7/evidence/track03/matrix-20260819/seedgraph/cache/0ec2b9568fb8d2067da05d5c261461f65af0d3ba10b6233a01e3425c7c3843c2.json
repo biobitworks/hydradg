@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ec2b9568fb8d2067da05d5c261461f65af0d3ba10b6233a01e3425c7c3843c2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them every Tuesday",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them every Tuesday",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "86dba233ce3c77d30dd48df9b7444c2851fa7d8b806dcef6487b6be4e7570987"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2e93117c8eecd5f8546e8eaf1e9c1259ebc93b405bafa8b231f6bbf14ad9f57e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "almond milk instead of coconut milk in my soup to make it creamy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "almond milk instead of coconut milk in my soup to make it creamy",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "985919dd43570615584e8955a3e4ba4dac6c20e12373ef89f568749be61d8ade"
+}

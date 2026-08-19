@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d707e826900a20535a7acf04c38547dca49930d805a4baf8a747919111a6772b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of one-pot pasta with tomato sauce, vegetables, and lean ground turkey",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of one-pot pasta with tomato sauce, vegetables, and lean ground turkey",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a30e52862086dec172b099454b5673e376eba1cb51b4e837926e4c7b88ff22eb"
+}

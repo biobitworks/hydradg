@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fcb0d790511651bd41e9d897509057f606a8b3e0840e6c603725f9e269bc472c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding cultural activities to make the event more engaging",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding cultural activities to make the event more engaging",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d808b3d54c949aa1b27643b174607145af5a6fb3804a9907efd35d5846bd596d"
+}

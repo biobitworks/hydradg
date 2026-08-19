@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8702244045765df7d3ca1f2296c954f2c4b6e5bc2f8ac6626ae13c0a8d6b1147",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"Electric Whispers\"",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"Electric Whispers\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4ee88d57756bf56c0805d5c6d1185e7f75569d07a5dce5bd361fc7b28440ae39"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "eff4e68d2149351f4487b3bf9e55155297d5ae9983638e91db9ecca925a39527",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "in the pan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "in the pan",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "066951bfaa15019dc68c3867ef3c56e88158c31554a4d60030c6b3a1730dd087"
+}

@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "a077408876ee25895369fcd08c07115a86e5ab5f69bb1253d7e789b366c6fc08",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my yoga app's tracking features to track my progress, or are there other ways to",
+      "type": "value"
+    },
+    {
+      "name": "journaling to track my morning practice and see if it's making a difference in m",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting SMART goals, but I'm not sure how to quantify my progress",
+      "type": "value"
+    },
+    {
+      "name": "the idea of tracking my progress through journaling and self-assessment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my yoga app's tracking features to track my progress, or are there other ways to measure my success",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "journaling to track my morning practice and see if it's making a difference in my overall energy and",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting SMART goals, but I'm not sure how to quantify my progress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of tracking my progress through journaling and self-assessment",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "681551b0cc3f11722f73d561b30c56201effdaa3100235e40594525d4916eea7"
+}

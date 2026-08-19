@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7980a8cf128e92e4b1d4f06a795daa2bbf4e7ecee6159a258da8a2f0ed5c3da8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a different type of paint and highlighting to achieve a more realistic finish",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a different type of paint and highlighting to achieve a more realistic finish",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f59118d2ee4ce8f8817eb2fd76d8c6f8f86bf7a2c2670876da1665c9b3a8e06f"
+}

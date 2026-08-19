@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b9920c1d94b09f80b949e57a6299038b96f729e2bc4dbc9700526e5be06492e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a **Multiverse Madness** theme",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a **Multiverse Madness** theme",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "248a2772c51cbfcf5570e5aa17d858c6657000eaf08e1516622dbb078969638b"
+}

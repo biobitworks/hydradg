@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e0a9f13138af115ae4b731a10d6664da2e6ad15419f8641056f8a00daee820e7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to work at different cafes and parks around Tokyo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to work at different cafes and parks around Tokyo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "af7b4aee00d87db91b773109d679e23b090296233b79b08075941ae96cc7ecd0"
+}

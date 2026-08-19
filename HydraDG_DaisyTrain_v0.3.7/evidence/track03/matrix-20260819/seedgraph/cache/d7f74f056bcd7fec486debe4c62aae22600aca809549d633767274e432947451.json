@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d7f74f056bcd7fec486debe4c62aae22600aca809549d633767274e432947451",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of allocating my most important tasks to Mondays and Tuesdays",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a digital tool that can sync across multiple devices",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of allocating my most important tasks to Mondays and Tuesdays",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a digital tool that can sync across multiple devices",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "55aa800c69496a72f64549c909689f51e81134ace60db5fe80b1704588f66c2c"
+}

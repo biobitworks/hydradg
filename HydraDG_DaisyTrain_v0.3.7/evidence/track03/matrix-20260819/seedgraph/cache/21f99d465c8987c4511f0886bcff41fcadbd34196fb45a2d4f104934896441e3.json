@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "21f99d465c8987c4511f0886bcff41fcadbd34196fb45a2d4f104934896441e3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of doing leg raises while brushing my teeth - it's a great way to multi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of doing leg raises while brushing my teeth - it's a great way to multitask",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d17498ffad86381f140e166701df2f507087eb02b386acd26fb774cbc9557b63"
+}

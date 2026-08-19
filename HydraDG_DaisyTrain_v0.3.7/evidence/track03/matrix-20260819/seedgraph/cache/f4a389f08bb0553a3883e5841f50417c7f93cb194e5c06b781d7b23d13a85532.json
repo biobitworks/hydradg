@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f4a389f08bb0553a3883e5841f50417c7f93cb194e5c06b781d7b23d13a85532",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "books with a lot of images",
+      "type": "value"
+    },
+    {
+      "name": "the sound of \"The Kinfolk Home\" and \"The New Bohemians\" - they seem like they'd ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "books with a lot of images",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Kinfolk Home\" and \"The New Bohemians\" - they seem like they'd be great for getting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1888f4a43eed793e8fa91835d81c359c43faa970fab9bec1997e24b73a6234b5"
+}

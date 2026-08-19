@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "72d68e07a1310ef7450258d655fd48f7e78e2e3a4a3d558c82c1134fd4a4fba5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the neutral color palette idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of incorporating natural elements into my bedroom",
+      "type": "value"
+    },
+    {
+      "name": "the idea of keeping the design simple and understated to let the oak dresser fro",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the neutral color palette idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating natural elements into my bedroom",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of keeping the design simple and understated to let the oak dresser from Henry at 'The Vint",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f3dd6da5617fff6735ac49a37869db8d9949d0839af15a67a6151a06b36a5eb4"
+}

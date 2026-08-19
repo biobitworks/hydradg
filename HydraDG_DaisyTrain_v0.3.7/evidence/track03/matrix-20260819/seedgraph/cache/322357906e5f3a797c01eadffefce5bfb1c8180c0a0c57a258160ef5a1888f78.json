@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "322357906e5f3a797c01eadffefce5bfb1c8180c0a0c57a258160ef5a1888f78",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of surprise gestures",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of surprise gestures",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cf776d94ffbf2874e14ed882500248c07030154b691d0f2b2348f290fd591bfb"
+}

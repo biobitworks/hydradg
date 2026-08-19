@@ -1,0 +1,56 @@
+{
+  "cache_hit": false,
+  "cache_key": "153ce8d2cbcc75abfeb3d7f65564ed5fff4e650d798726ced77d2a31cfdf1fb5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "both the metamask and the trust wallet i like trust wallet the best reason why i",
+      "type": "value"
+    },
+    {
+      "name": "trust wallet the best reason why i think it is faster than metamask, i can easil",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "both the metamask and the trust wallet i like trust wallet the best reason why i think it is faster",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "both the metamask and the trust wallet i like trust wallet the best reason why i think it is faster",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "trust wallet the best reason why i think it is faster than metamask, i can easily be restoring multi",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "trust wallet the best reason why i think it is faster than metamask, i can easily be restoring multi",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d9ebc533a728882ee86b79bc5524c3211ceaf543b615e3318ee094ea9b67b0fb"
+}

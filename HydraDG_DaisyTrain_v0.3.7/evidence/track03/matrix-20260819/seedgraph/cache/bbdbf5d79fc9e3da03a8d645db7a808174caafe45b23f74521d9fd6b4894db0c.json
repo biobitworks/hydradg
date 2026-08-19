@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bbdbf5d79fc9e3da03a8d645db7a808174caafe45b23f74521d9fd6b4894db0c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of joining a club or group aligned with my interests",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a writing group",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of joining a club or group aligned with my interests",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a writing group",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "73315ac4af3f35b2df50795306b081b71818927186b80b2050d6be5249b4ece9"
+}

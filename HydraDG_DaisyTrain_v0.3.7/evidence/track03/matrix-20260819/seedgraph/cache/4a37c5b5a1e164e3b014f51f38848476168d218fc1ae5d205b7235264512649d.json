@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4a37c5b5a1e164e3b014f51f38848476168d218fc1ae5d205b7235264512649d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, especially Radiolab since I've already started listening to it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, especially Radiolab since I've already started listening to it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1f9a7c7e5b5f6dad0779391d4fe82fdb58f556dab8b55a2160314fdfcf90a7e8"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1b5c2a81ac888e343a96601dfe9dd718a992343146d95c90105dfcb8df6c80d9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "an existing dex's liquidity pool",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "an existing dex's liquidity pool",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7db7145221ff2b8f6419c836b81467977cb74ce444629b98011cc52a606e4e86"
+}

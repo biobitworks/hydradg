@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "47131715ff1e1a3a3001c4189808bce1851489749b1f631dfc2d08e55688d420",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "salesforce over workday add in knowledge of company policies, naviagting the KB ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "salesforce over workday add in knowledge of company policies, naviagting the KB system, and cronos",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7def1949b54c8c4b39098157dab9dc46452c558624538f2fa0af9a2d6f4c93c9"
+}

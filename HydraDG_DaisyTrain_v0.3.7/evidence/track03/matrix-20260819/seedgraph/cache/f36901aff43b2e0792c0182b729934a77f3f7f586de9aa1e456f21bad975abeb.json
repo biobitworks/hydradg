@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "f36901aff43b2e0792c0182b729934a77f3f7f586de9aa1e456f21bad975abeb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Ulysses to create a mind map or outline of my city, and if so, how would I go ab",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a detailed map of the Lost City",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using Ulysses to create a mind map or outline of my Lost City",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Ulysses to create a mind map or outline of my city, and if so, how would I go about doing that",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a detailed map of the Lost City",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Ulysses to create a mind map or outline of my Lost City",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0302b7c85da38bc86cbdce38c05e855119d48e2f6df0d6489fefdb10d799595b"
+}

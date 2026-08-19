@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7f32cca5d2af99d3c91ddb3e99789fa883a76d21baafc98b19451ff3735e84be",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of their small plates and charcuterie boards",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of their small plates and charcuterie boards",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fdd56835d6ef82f4c82fe81bad2e2dcf5a12a9cca9999e2027e0a371259fa927"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d831b1061d68b76f25be2b00c03ffca1f303f1fbeec7e1d443671caa7c1ae6b0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city, so I'm open to attending an event at a nearby arena or stadium",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city, so I'm open to attending an event at a nearby arena or stadium",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "55dc1c36c783b55998b937f8c8d969008928146e8a0bbe2abc5b83b6a28aeb6e"
+}

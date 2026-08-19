@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fee3535a2e12abbdeb25a3d4f9f8b821261fa7d38b104149a17ed9f6ef205981",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my food spicy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my food spicy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "074868f6d375a16734bdcaf8098f1a23b36707297abc558f01be6f10e7d2c67a"
+}

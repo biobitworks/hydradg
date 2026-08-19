@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "ba2c5443ccf919d45e9470dde1b569ac245e247b440e2efc3fee1e9582873f77",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a granular or liquid fertilizer",
+      "type": "value"
+    },
+    {
+      "name": "a weed killer or try to remove them manually",
+      "type": "value"
+    },
+    {
+      "name": "a string trimmer or a lawn edger",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a granular or liquid fertilizer",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a weed killer or try to remove them manually",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a string trimmer or a lawn edger",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ca76efff5876361b4f0fa9b57e9455cf2f2e093f7bb50ca666f686eb3febf7f0"
+}

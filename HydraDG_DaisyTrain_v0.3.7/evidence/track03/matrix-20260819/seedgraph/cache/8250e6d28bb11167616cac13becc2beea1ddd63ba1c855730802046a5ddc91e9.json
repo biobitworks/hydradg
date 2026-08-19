@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "8250e6d28bb11167616cac13becc2beea1ddd63ba1c855730802046a5ddc91e9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sharing my personal story and issuing fundraising challenges",
+      "type": "value"
+    },
+    {
+      "name": "the idea of sharing a personal story, and the example you provided is inspiring",
+      "type": "value"
+    },
+    {
+      "name": "the idea of sharing training updates, and I think it will help create a sense of",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a countdown series and using urgent language to encourage p",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing my personal story and issuing fundraising challenges",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing a personal story, and the example you provided is inspiring",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing training updates, and I think it will help create a sense of accountability and",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a countdown series and using urgent language to encourage people to donate befo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "785ad4ae50d4df42a029159b0270e41a14b6ed05c6d4b8770001add92f2d98db"
+}

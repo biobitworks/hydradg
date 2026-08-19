@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b9013883abef3f108688451d00af23f1d37338ddcc390bd8d1a1171ce8ac8c6b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a stylized water droplet as the app's logo, and the design considera",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a combination of uppercase and lowercase letters to create vis",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a stylized water droplet as the app's logo, and the design considerations you mentioned",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a combination of uppercase and lowercase letters to create visual hierarchy and em",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da8cab84d06b636e568ac408b0c2be0d01fbc2ebe29e756ab2c542b96c602a94"
+}

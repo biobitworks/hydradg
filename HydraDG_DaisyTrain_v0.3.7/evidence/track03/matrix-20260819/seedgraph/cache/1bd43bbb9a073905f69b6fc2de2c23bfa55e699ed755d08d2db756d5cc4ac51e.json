@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1bd43bbb9a073905f69b6fc2de2c23bfa55e699ed755d08d2db756d5cc4ac51e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it to create a shared album with my nephew so he can access the graduation photo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it to create a shared album with my nephew so he can access the graduation photos I want to share wi",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "caf6ed809c5a70db380a74e0dd8520fa5d2471ba72be70c3aed82b6f1cb6cdac"
+}

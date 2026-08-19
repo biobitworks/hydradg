@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "93ae23d4d467fd594a55359575c609da1b48f03aeab07b40bb1785ddcc067787",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a roasted chicken or pork, but I'm not sure what type of sides to se",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a roasted chicken or pork, but I'm not sure what type of sides to serve with it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "60ba140c021c6fd36cdb2a0edf68a5a4c2ee1c23a033f4c486bb61af854bea98"
+}

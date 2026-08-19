@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "daf302856997ca4ddde4e45ad33bc85a8847a3141e523fdd9101b1d93ef1ae5e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some nuts or seeds to my quinoa and roasted veggies",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some nuts or seeds to my quinoa and roasted veggies",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "977b4905a2e2185b21cc581e87b2d89b0f8cbd08217b60c26a8ef84f2b239399"
+}

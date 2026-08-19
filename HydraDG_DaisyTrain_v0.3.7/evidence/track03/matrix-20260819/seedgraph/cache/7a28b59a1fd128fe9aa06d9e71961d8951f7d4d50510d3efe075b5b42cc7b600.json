@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a28b59a1fd128fe9aa06d9e71961d8951f7d4d50510d3efe075b5b42cc7b600",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a \"Snack Stadium\" with a variety of options",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a \"Snack Stadium\" with a variety of options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "14594dfe1f21cc88db26c56566cd303377afe07ee982177c471b244761eb427b"
+}

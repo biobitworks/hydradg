@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e760f76e15f6aaa69096fb05fa7d3800144e2012b54c2429d4965702b20c5187",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my shirt, Mama",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my shirt, Mama",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7ba754d393058ed2154d0e1cc14ee95cf190e2e27b5d08bc6e2f378dd5538f1c"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "46c436b0f0dc0efabefaea77d95796c0ddcadb695fb995bd13c8031bc2215ea6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized keychain",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized keychain",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "10d047a10dc5ddd9d30a2d439d794eee092cff310b8e62415fa941c6db57cb10"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e9aaec2a92cf552ab41395ec51e30dbf366dae0b6cd2ed14bc75f24b480e1e6d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it a lot for social media, email, and texting, and lately, I've been using a new",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it a lot for social media, email, and texting, and lately, I've been using a new app that I think mi",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0f5a08161194c06543950bcc69900e02bb3d232b1176a9631ef174ff68ffe6b1"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "01ee2b2a588c7455321db0556dce205222bc3cad6e87e81a6ce278d3eeaaef86",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing by trip, and I think I'll use some of those smaller box",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing by trip, and I think I'll use some of those smaller boxes within a larger c",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "540464439bed1a647494d64fe40303c6776387cc596ba0b90e8aa71f8056b65e"
+}

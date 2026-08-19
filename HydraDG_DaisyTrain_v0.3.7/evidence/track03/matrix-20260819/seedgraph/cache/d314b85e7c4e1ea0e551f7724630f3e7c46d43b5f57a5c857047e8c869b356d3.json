@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "d314b85e7c4e1ea0e551f7724630f3e7c46d43b5f57a5c857047e8c869b356d3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the ideas, especially the gourmet coffee or tea basket",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a customized phone case",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the ideas, especially the gourmet coffee or tea basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized phone case",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cb6c8dc49a644fc82c68039a93701e765dabd6bfdf97a5aa844e0be62b6b9c56"
+}

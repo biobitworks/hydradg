@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "34369ed10938a7ae195355df0cb948865f9e42289454eb4a911d765b412338b9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "you to act as a consultant who is good at apparel business start-up",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "you to act as a consultant who is good at apparel business start-up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2280d4f5b0074c540241946f2ab79ccb9054c2e4eccb245a25e5e8f648ff8549"
+}

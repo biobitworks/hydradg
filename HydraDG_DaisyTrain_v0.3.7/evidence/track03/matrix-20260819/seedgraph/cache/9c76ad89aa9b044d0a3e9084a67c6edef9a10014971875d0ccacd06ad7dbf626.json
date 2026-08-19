@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9c76ad89aa9b044d0a3e9084a67c6edef9a10014971875d0ccacd06ad7dbf626",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the seeds, the pod, or the whole bean",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the seeds, the pod, or the whole bean",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ef9d852c53868e49f3d0a101e0c35113f5070a8d4cebedcd7e3c9f0f88a5fe3d"
+}

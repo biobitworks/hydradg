@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "95c8edb8a3426b0b65bdaae90287ef40f592395de4d2b9e0316889e23abb9bdd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of allocating my disposable income into categories",
+      "type": "value"
+    },
+    {
+      "name": "the breakdown, but I think I need to allocate more towards debt repayment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of allocating my disposable income into categories",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the breakdown, but I think I need to allocate more towards debt repayment",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e85fdbfe5d327777a7a1e320b8d83299369009419b1f42458ac0f9ab0196618b"
+}

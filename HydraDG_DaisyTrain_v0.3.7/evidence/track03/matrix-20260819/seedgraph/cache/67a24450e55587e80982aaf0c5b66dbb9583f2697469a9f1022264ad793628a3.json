@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "67a24450e55587e80982aaf0c5b66dbb9583f2697469a9f1022264ad793628a3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Mexican Street Corn idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Mexican Street Corn idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8c790650baa5a415432753241d986684c2a6039f84413afca27c0bbebc75550c"
+}

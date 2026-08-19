@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0313b2720778b3bbf1cf6bb347c21adaa50a97beb2103c22032d5e63ab0de1a5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a pegboard, thanks for the suggestions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a pegboard, thanks for the suggestions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "177aa32a05d7f333249ee3b9f1bcd67174da77c71cd13b1dd6ce98cdbc1ff423"
+}

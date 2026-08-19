@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c38e7decdb763381b6fe0bdade0fad0ff42a718eef8826b42d3b32f42fdabdc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the process of taking raw ingredients and turning them into something delicious",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the process of taking raw ingredients and turning them into something delicious",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ba27270fcf9916676b1eda19bc97117f1e9d98451dfa19464971f1831d384ffc"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "14505760589f2d5eabb62d7a234060135eb840fdaf528371fd6fe603ab4da307",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a brush or my fingers, and where exactly should I apply it on my face",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a brush or my fingers, and where exactly should I apply it on my face",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "adecfebb87c13616ffbb765d760259b79acb2100ca874c6d47228fa08e89d417"
+}

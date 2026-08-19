@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "b136d567ab3c1406103118f4a32eaebfcba94b829137cf639d9018cb84b4d372",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the countdown idea",
+      "type": "value"
+    },
+    {
+      "name": "the caption for 24 hours to go",
+      "type": "value"
+    },
+    {
+      "name": "the first caption idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the countdown idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the caption for 24 hours to go",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the first caption idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "32d660a19b13bd558b886caf337fb37e5c40ca3f29154e76f251ad3439c9e84e"
+}

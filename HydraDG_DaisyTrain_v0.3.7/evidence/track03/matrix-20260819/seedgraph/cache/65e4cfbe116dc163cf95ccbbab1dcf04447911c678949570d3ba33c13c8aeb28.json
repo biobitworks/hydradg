@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "65e4cfbe116dc163cf95ccbbab1dcf04447911c678949570d3ba33c13c8aeb28",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "pandas shift() function to add t+1 feature sideway",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "pandas shift() function to add t+1 feature sideway",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4c74d1b29f73b44be8dbe2e315c99f498cffc4385a694aab642948553bd2fcc7"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ae1936b84a4eb93cb0411909a65af9e01eb3161cc9b8ec5139ee45f779171271",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "regular body lotion as a substitute for sunscreen on my sensitive skin",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "regular body lotion as a substitute for sunscreen on my sensitive skin",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "23038ca54d3677d84ff8b39ad4b8c1a67e308b591dd4766798449c21eada6c18"
+}

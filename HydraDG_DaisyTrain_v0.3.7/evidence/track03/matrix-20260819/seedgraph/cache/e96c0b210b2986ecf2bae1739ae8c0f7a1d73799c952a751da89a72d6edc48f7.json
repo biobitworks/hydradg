@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e96c0b210b2986ecf2bae1739ae8c0f7a1d73799c952a751da89a72d6edc48f7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "other types of peppers instead of jalapenos",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "other types of peppers instead of jalapenos",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9a1d410137ccd8e6cad517adb605cd18a83c86fdb808d0a0f2aba3e067faf388"
+}

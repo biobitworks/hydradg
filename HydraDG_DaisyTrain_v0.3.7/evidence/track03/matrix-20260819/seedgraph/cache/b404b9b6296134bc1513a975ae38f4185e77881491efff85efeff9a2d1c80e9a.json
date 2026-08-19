@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b404b9b6296134bc1513a975ae38f4185e77881491efff85efeff9a2d1c80e9a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized banner and a memory lane with photos from her career",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized banner and a memory lane with photos from her career",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb24c9c02faaee2ecdc15a8ee8ae2481ea0996864f7a356477b9539f79ce1404"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a8ef13e00f50a782e50e5df4530ac950cbe9fff51648489d956a9a5d89f0dc0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a memory box",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a memory box",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "325dac97d3cc9fa54e48ae7dc2a09cd25b238766230fedb4fb2f5c1e753c77a8"
+}

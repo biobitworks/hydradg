@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8226ff9d3ec4fdd9b541379a87744c882537806b6658138756b324f5efd53049",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of veggie sticks with hummus and fresh fruit skewers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of veggie sticks with hummus and fresh fruit skewers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "59825305f6171f92280d9054ff7de8f3d320514f645e142380bce8fe5c7c63d3"
+}

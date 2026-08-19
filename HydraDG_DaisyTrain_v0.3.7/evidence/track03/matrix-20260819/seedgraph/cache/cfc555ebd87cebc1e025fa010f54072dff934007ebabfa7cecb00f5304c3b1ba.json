@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "cfc555ebd87cebc1e025fa010f54072dff934007ebabfa7cecb00f5304c3b1ba",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a gourmet food basket",
+      "type": "value"
+    },
+    {
+      "name": "the idea of including truffle oil in the basket",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a gourmet food basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of including truffle oil in the basket",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "18f992f9debb9a784ba0aa175a150b51c8b682eb74f2fda7681509e2aa9b3599"
+}

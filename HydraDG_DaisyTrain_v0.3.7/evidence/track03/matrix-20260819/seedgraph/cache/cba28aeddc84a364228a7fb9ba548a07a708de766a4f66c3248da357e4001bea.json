@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cba28aeddc84a364228a7fb9ba548a07a708de766a4f66c3248da357e4001bea",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of this recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of this recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36ba350054a069c434e558a532b6e5779d23a87b93e74135e869656a0f2fa880"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "269dbf3525b91f3e17ed7429bafdf0371f0e2797d8a4632053375baa95fbd018",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a modern bistro with a fun atmosphere",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a modern bistro with a fun atmosphere",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1aa55ec796075f9dc1dfeb9489298a6f531b28b02704b0cfe71adfd7d40ea9e0"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cd2548e75b4b2bce9ad35d6206da92cbc97ac1efc9974d90693fc86cadc44a0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the recipe, but I was thinking of making it a bit more savory",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the recipe, but I was thinking of making it a bit more savory",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "beae3f6c490b43cff092eed706831db26cae648ee9a582dfbaacca41550a8fdc"
+}

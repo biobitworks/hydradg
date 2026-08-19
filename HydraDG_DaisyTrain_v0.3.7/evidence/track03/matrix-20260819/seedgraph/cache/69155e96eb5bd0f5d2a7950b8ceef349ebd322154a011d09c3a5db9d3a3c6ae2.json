@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "69155e96eb5bd0f5d2a7950b8ceef349ebd322154a011d09c3a5db9d3a3c6ae2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for the Lemon Parsley Quinoa Bowl",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for the Lemon Parsley Quinoa Bowl",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9455c28e3fc348aef7ff474644673788dc022650276c69a5027d693b28c5f815"
+}

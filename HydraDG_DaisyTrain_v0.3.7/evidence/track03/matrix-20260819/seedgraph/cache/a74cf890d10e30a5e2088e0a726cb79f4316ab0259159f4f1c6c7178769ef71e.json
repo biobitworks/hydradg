@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a74cf890d10e30a5e2088e0a726cb79f4316ab0259159f4f1c6c7178769ef71e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the same organic fertilizer I'm using for my other plants",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the same organic fertilizer I'm using for my other plants",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd33aa63f1f4acefaff4ccce26edca65c9aac12d4716c7640409ec187fdd9dc7"
+}

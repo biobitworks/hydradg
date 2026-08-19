@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0a50e6c3da1bdfa8ee580d2e033649bc10119452ad4fafbc2bac9b2c5afdfe5e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "VR regularly",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "VR regularly",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "462d53e7f7f102b1c1b7d77fc12e9320b002924908601af1013d22a1677503f4"
+}

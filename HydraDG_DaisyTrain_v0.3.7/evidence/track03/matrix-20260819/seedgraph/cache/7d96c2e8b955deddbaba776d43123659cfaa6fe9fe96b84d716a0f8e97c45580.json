@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7d96c2e8b955deddbaba776d43123659cfaa6fe9fe96b84d716a0f8e97c45580",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "egg wash before the breading process",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "egg wash before the breading process",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5674e338ee7c5ce3a7e2ac86c6506cb409cbe2b098ca319b963a43ce218ff4c2"
+}

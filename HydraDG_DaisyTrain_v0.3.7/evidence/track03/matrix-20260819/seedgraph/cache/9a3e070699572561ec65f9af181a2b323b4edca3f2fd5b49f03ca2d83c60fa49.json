@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9a3e070699572561ec65f9af181a2b323b4edca3f2fd5b49f03ca2d83c60fa49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the trail mix parfait and hummus sandwich",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the trail mix parfait and hummus sandwich",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "652e09e313d08be4fa0380690bfdfc03796ddb764dc62960ef05d45102fe7d1a"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6dfacb4c2a8f9a99f12c5924aaa9691ef26a05e858b4341aba3e6ae0bb1f9306",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's a starting point of course some of the lyrics are super corny I will a",
+      "type": "value"
+    },
+    {
+      "name": "that that it's giving a full range of those types of exercises most people know ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's a starting point of course some of the lyrics are super corny I will admit a lot of the ti",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that that it's giving a full range of those types of exercises most people know what a push-up is bu",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "72ea03fa9f1a598cfd4d8a4e444d0f17aa55378faff00b5bc56ac0c4f1b29d01"
+}

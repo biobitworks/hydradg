@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bea34c893e7cff7025cd105f585cb772063551f60318fbdc5f443acc5bf7ec00",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a tornado-prone area",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a tornado-prone area",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "097e2cd3303c9028e518c7302b2d0d75ece638e2f10eca733431bd1db1597e2d"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c184e1feebb842d0fa551de063d367ccf6e38650fdac9e9e8cbb02d7efdfb062",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of getting a fun mug",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of getting a fun mug",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6ea6373fcfd8a417a420569f86867bed0670bebab974ab3b8305f8e74e1bc40f"
+}

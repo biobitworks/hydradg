@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2eaa50f37d39d0022b15bee141860393f85c2761660c45c839e71cde48deb11b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the team-building game ideas, especially the \"Two Truths and a Lie\" game",
+      "type": "value"
+    },
+    {
+      "name": "the prize and reward ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the team-building game ideas, especially the \"Two Truths and a Lie\" game",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the prize and reward ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "aa654e4f436ad9d5bad6babea74e66d4786d63b1c952c1dce3a744c5991d8598"
+}

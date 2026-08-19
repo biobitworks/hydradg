@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "25f98f8838f0da946063c716ae30a093c30cebcf566d51ae2686c813e90f6b15",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of categorizing and assigning a home to each group of items",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of categorizing and assigning a home to each group of items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a05f1b600943f12f6eedfffb8b7b356d64c4bc20f6f9cb23d93b6137a3f6b268"
+}

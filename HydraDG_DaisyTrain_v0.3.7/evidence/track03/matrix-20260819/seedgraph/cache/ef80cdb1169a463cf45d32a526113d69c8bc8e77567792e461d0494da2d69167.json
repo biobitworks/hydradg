@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ef80cdb1169a463cf45d32a526113d69c8bc8e77567792e461d0494da2d69167",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "any type of apple cider, or is there a specific one you recommend",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "any type of apple cider, or is there a specific one you recommend",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3ebb2922cd1ad9cfdffb44e7114c0184b14f0c15960c63af55617adc18021bf7"
+}

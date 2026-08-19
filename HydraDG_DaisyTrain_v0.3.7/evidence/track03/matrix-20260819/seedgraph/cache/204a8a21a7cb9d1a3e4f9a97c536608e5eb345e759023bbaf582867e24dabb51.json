@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "204a8a21a7cb9d1a3e4f9a97c536608e5eb345e759023bbaf582867e24dabb51",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that you're willing to take ownership of the email campaign and ensure it doesn'",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that you're willing to take ownership of the email campaign and ensure it doesn't impact the social",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9bebf708655ef2b1e73c1ffdf83644fd8fdc7ceb43b36a584c12d720f674fa22"
+}

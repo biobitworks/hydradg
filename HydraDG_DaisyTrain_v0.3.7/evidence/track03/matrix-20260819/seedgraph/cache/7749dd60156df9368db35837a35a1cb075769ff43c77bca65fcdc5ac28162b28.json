@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7749dd60156df9368db35837a35a1cb075769ff43c77bca65fcdc5ac28162b28",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a jewelry inventory",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a jewelry inventory",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "612fe92747f45619aaafbb6c0bba9a96bbaf5b4b6c031361ffe9d81149817671"
+}

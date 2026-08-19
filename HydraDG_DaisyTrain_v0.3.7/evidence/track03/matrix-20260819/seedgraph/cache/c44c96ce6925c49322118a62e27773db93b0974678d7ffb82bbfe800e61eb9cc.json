@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c44c96ce6925c49322118a62e27773db93b0974678d7ffb82bbfe800e61eb9cc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Quinoa Salad Jars and Lentil Soup",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Quinoa Salad Jars and Lentil Soup",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "16ea9adef3a9864ee96209f2c0f8300ddc4da786c37f4595a145a5c45887870a"
+}

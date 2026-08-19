@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "80666daf5ba80d38318a8dc7ffcc667563b568cb7fe225095c6309554d89b8cf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the princess party idea, but I'm not sure if Olivia would like it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the princess party idea, but I'm not sure if Olivia would like it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e82bcd1e2a7d3d94da32a6d1b05666e00c6cfd1073f965e7367bed9aaf3afdce"
+}

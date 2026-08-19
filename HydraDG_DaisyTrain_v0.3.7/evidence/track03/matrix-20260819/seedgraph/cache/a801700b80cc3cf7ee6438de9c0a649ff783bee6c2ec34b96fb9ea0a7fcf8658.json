@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a801700b80cc3cf7ee6438de9c0a649ff783bee6c2ec34b96fb9ea0a7fcf8658",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those suggestions, but I'm concerned about the complexity level of some of the g",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those suggestions, but I'm concerned about the complexity level of some of the games",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2b9d7e91bdf60ce0cc6e905659413ba37c5378b0158e9d6a2748ee17ce613b80"
+}

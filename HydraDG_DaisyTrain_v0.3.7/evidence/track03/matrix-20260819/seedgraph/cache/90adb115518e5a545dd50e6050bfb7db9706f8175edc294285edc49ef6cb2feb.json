@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "90adb115518e5a545dd50e6050bfb7db9706f8175edc294285edc49ef6cb2feb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "some of those ideas, especially the personalized book club subscription and the ",
+      "type": "value"
+    },
+    {
+      "name": "that idea of combining the two gifts",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "some of those ideas, especially the personalized book club subscription and the literary walking tou",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "that idea of combining the two gifts",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "37d6104ade18216a3ca23d6c4773e0760f420ba3811de84995eb74a577cf933a"
+}

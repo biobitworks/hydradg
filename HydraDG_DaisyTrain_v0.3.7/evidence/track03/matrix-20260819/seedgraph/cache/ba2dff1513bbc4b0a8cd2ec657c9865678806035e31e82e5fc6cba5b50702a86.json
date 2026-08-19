@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ba2dff1513bbc4b0a8cd2ec657c9865678806035e31e82e5fc6cba5b50702a86",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of making a big batch of something and portioning it out for the week",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of making a big batch of something and portioning it out for the week",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "97e090eb92bd873ea8d79984c35e75186d6832b2db88f8a260db2c2587ec5e79"
+}

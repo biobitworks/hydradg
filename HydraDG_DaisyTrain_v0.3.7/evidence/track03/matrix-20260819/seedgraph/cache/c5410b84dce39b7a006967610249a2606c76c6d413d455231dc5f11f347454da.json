@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c5410b84dce39b7a006967610249a2606c76c6d413d455231dc5f11f347454da",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of mixing solo and group activities",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of mixing solo and group activities",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ffd5fce1b9dc075c58971ae3b0966b7a22eb399868d36bb00dfaf3e440efdacf"
+}

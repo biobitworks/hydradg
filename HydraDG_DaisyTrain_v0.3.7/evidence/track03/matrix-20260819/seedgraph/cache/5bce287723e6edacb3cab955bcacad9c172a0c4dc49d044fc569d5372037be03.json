@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5bce287723e6edacb3cab955bcacad9c172a0c4dc49d044fc569d5372037be03",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "novels",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "novels",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c06a5f3cc59d1d90e695b3b83684d559f616e5452b0dcab6ae032d33d35c913a"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "66d85bbfa4698d778f6234e601217e854d35b56766ce93ee1bf46eeea0985844",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Strength Training Circuit",
+      "type": "value"
+    },
+    {
+      "name": "the template, but I think I'll need to adjust it a bit to fit my schedule",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Strength Training Circuit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the template, but I think I'll need to adjust it a bit to fit my schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7a80c98baaa44af10a59d368f8d793048e53e4dcb9c2a1c4ecc311d4510ba675"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce89e6a03c7640238ed154364866d029b15b67afe3c177fb16a05746b1ef415b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of sharing a tip or recommendation",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of sharing a tip or recommendation",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2ce522d01212cc23f45178187e81ccf1e3b0d0db74a71aa20600583a8306c20a"
+}

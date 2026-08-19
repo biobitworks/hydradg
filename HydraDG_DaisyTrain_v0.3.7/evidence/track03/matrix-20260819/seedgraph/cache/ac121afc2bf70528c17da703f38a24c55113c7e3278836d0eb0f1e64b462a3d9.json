@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ac121afc2bf70528c17da703f38a24c55113c7e3278836d0eb0f1e64b462a3d9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a heat lamp to maintain the soil temperature for my cloves during the colder mon",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a heat lamp to maintain the soil temperature for my cloves during the colder months",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0688021edc1f48ebcf101eadd15f78273e19dca748e0fd16baa5d835de92a2d7"
+}

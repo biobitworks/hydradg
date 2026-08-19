@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c2b9d15e9d71965090188d45a7fda151ed2ededf3ad6389a6ebd73f9f2740ba5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gradual adjustment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gradual adjustment",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "847fe4ea4f84940070475f6240ff9bda32569be31da152b14ad6269f06c21e82"
+}

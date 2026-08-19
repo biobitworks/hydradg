@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "2e19d08bdef141ecb1e9a891e6c2bf716a238c701dbdddfc8a9eef7fbfb984c4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to let go of, and what would I like to hold onto",
+      "type": "value"
+    },
+    {
+      "name": "to manifest in my life, and what steps can I take to make it happen",
+      "type": "value"
+    },
+    {
+      "name": "to learn or explore in the next month/year/decade",
+      "type": "value"
+    },
+    {
+      "name": "to be remembered for",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to let go of, and what would I like to hold onto",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to manifest in my life, and what steps can I take to make it happen",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to learn or explore in the next month/year/decade",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to be remembered for",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "686856badee2aeb7d3f11c161ae8f31674736e1b620a5ea19c9f944871e27039"
+}

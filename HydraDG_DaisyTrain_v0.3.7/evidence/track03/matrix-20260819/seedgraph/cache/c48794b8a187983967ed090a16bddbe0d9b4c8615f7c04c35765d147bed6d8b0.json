@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "c48794b8a187983967ed090a16bddbe0d9b4c8615f7c04c35765d147bed6d8b0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the collaborative mural idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of dividing the kids into smaller teams to work on different sections",
+      "type": "value"
+    },
+    {
+      "name": "the idea of assigning roles within each team",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the collaborative mural idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of dividing the kids into smaller teams to work on different sections",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of assigning roles within each team",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "422448390cfcdbd8a5d211d38ed80372d467d1f94603b45d3452f42d6c9130d8"
+}

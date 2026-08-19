@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c4ba45523f10d8b560d63adc602fe8f6f2325879f25f786507e326ff5ac3eb0e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it when you're in a stew",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it when you're in a stew",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d4f5dffd6f5c7ebb7e706bf53ad1380f4f5d40900bebdf9daa86d443f0131554"
+}

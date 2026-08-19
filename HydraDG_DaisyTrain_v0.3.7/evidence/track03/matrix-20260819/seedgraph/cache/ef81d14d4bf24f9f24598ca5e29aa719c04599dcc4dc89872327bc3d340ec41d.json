@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ef81d14d4bf24f9f24598ca5e29aa719c04599dcc4dc89872327bc3d340ec41d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the family dinner party idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a vase that holds sentimental value, like one that belonged to",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the family dinner party idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a vase that holds sentimental value, like one that belonged to my grandmother",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4c62e9b27aac3e19f502e3ff0c40d2a4fb226162c817bf74fd07b18bd0768c08"
+}

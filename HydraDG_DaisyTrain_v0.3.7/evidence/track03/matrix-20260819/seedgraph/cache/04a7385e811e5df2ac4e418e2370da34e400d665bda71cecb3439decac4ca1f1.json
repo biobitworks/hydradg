@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "04a7385e811e5df2ac4e418e2370da34e400d665bda71cecb3439decac4ca1f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it mostly for web browsing, watching videos, and working on documents",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it mostly for web browsing, watching videos, and working on documents",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5e94ca86d4ca1c046d29d44e4379597867d01e66b2690fe7552c3ddb91901079"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7b4ada25052397e08ffc6e50a925ea161eee4219924da9cab20eec958c7d5481",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating plants into my office",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating plants into my office",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e8c78ef24b13932be9a51c2cd539c0674b52a070e77b8648ab447e7229e6f9b1"
+}

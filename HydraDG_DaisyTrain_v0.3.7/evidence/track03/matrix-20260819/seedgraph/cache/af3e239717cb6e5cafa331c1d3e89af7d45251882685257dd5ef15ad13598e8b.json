@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "af3e239717cb6e5cafa331c1d3e89af7d45251882685257dd5ef15ad13598e8b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "celestial word",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "celestial word",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6a3ed2c9d6c4ccd73f0fc821efbb80bcc11377d266fc02aab0a595f00a7f8a00"
+}

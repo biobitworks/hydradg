@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0ea6e3bb70a219ac1ac22c521d3c01010f818e72f769b1c0aa0bb90b9f35b482",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using WordPress",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using alliteration and wordplay in my domain name",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using WordPress",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using alliteration and wordplay in my domain name",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d13df03d34e8a029cd97f25a577080ec5ba2af616a63e39b73f7bee21fe4139d"
+}

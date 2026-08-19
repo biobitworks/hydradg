@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7903cbb8743264584c45bb80fed2f275902ea41db07c06f502243f464b03b8ac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding relaxation techniques to my routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding relaxation techniques to my routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a191df3e7f908462cc2055410e843714e42d3831f86925d87fc2e8c096b4b373"
+}

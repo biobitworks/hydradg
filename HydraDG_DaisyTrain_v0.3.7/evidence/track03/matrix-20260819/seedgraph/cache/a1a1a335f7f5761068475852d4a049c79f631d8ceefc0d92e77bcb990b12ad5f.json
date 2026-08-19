@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a1a1a335f7f5761068475852d4a049c79f631d8ceefc0d92e77bcb990b12ad5f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding a blazer or cardigan to elevate the look",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a blazer or cardigan to elevate the look",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "afda2b94868041dd490b22580c452c3471bd5eaf47b48df470f934231b5c5b57"
+}

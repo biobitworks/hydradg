@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "98b1e034a1e8e393348ad8dbd2e918b6095ed31dcd6d36c571ad9b71beaed94f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to adjust the brightness and warmth of the light to creat",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to adjust the brightness and warmth of the light to create a cozy atmosphere",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "22977c04457e208a647c06cc54dd8c775a03b835372b2351892b84ed894918a8"
+}

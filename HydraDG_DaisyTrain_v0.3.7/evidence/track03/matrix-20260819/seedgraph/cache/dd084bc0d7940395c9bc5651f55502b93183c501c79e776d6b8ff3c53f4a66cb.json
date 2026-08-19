@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dd084bc0d7940395c9bc5651f55502b93183c501c79e776d6b8ff3c53f4a66cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the outdoor games idea, maybe we can do a giant Jenga game or something similar",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the outdoor games idea, maybe we can do a giant Jenga game or something similar",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c75a825b0e9abcd583dd2fdf0d8ebd14d6204753db5dd93dd48821232d636831"
+}

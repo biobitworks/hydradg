@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc7996ee7c11e7a5d68711745012d878b20179c37a1d5ed366de27c85bae1d94",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to see what's inside without having to dig through them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to see what's inside without having to dig through them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b10689afa8612700b82cd9171e5437daefe21a01b0524658741bf4f218a9a4c7"
+}

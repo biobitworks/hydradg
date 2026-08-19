@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "be1085f3945695967dfbea89d8ce9ba25b54e31fda670190b25f651477a57efd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Chicken Fajitas idea, but I'm not sure what kind of peppers I should use",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Chicken Fajitas idea, but I'm not sure what kind of peppers I should use",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cd79f743d5574c83939a74cc639cd2f2ef5d299c816d9e85c2f8532c0e819f66"
+}

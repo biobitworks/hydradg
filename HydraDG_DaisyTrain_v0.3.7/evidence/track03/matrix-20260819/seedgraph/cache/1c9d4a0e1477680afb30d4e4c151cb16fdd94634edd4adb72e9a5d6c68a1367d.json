@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c9d4a0e1477680afb30d4e4c151cb16fdd94634edd4adb72e9a5d6c68a1367d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breaking down the goal into smaller ones, like taking 5,000 steps by",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breaking down the goal into smaller ones, like taking 5,000 steps by lunchtime and then",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8a3aaa79814b837cc2e289cebab99287e6d7d6096e22b41ce3743dec630478c3"
+}

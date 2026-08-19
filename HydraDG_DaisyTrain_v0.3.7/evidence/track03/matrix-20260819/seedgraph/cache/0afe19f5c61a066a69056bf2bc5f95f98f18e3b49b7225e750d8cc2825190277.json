@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0afe19f5c61a066a69056bf2bc5f95f98f18e3b49b7225e750d8cc2825190277",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a birthstone necklace",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a solitaire pendant",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a birthstone necklace",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a solitaire pendant",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d820b1f3e189ce2363978214fd2a960f4bd0a86195b68abec769b58ddc29fd65"
+}

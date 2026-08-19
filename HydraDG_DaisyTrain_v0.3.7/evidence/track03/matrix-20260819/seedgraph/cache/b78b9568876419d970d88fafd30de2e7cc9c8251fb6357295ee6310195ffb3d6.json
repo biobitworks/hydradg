@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b78b9568876419d970d88fafd30de2e7cc9c8251fb6357295ee6310195ffb3d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized picture frame",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a gift journal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized picture frame",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a gift journal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "61f822044a60e55be906988adca07db8211e6a1663d22d3dbcd1de2ffd78bad0"
+}

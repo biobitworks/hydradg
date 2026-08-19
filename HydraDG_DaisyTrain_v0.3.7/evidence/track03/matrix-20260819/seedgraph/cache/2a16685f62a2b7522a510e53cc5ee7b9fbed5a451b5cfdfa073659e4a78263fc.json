@@ -1,0 +1,136 @@
+{
+  "cache_hit": false,
+  "cache_key": "2a16685f62a2b7522a510e53cc5ee7b9fbed5a451b5cfdfa073659e4a78263fc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "offline as I like to try and feel the clothes before making a purchase",
+      "type": "value"
+    },
+    {
+      "name": "offline as I can try the clothes before making a purchase",
+      "type": "value"
+    },
+    {
+      "name": "to shop online",
+      "type": "value"
+    },
+    {
+      "name": "buying electronics offline",
+      "type": "value"
+    },
+    {
+      "name": "buying online because there are too many options available and apps offer huge d",
+      "type": "value"
+    },
+    {
+      "name": "Online only cos of the insane variety it offers sitting at home",
+      "type": "value"
+    },
+    {
+      "name": "both depending on the type of purchase and occasion for purchase",
+      "type": "value"
+    },
+    {
+      "name": "online mode d\u01b0e to the Ease of buying, availability of choices, ease of comparis",
+      "type": "value"
+    },
+    {
+      "name": "to try and feel the clothes before making a purchase",
+      "type": "value"
+    },
+    {
+      "name": "wearing one pieces, baggy jeans, sweaters, hoodies etc, the goal is to be able t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "offline as I like to try and feel the clothes before making a purchase",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "offline as I can try the clothes before making a purchase",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to shop online",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "buying electronics offline",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "buying online because there are too many options available and apps offer huge discounts too",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "Online only cos of the insane variety it offers sitting at home",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "both depending on the type of purchase and occasion for purchase",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "online mode d\u01b0e to the Ease of buying, availability of choices, ease of comparison and that there is",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to try and feel the clothes before making a purchase",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "wearing one pieces, baggy jeans, sweaters, hoodies etc, the goal is to be able to dress for any occa",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c062ba1a6232cfeb92affa98a1eb45b74ac19857fe58f1fe79f9f3d44fcc12cc"
+}

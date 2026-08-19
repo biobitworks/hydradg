@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4a827a6c99ec843a409fdbec678581d4b55fd5c0b3e6e0b9589de680b2a6d01f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the combination of honey and smoked paprika",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the combination of honey and smoked paprika",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a91f5264c19cfe11aa2409227ec1e99df478272bcdebcc782af90450eb3c2686"
+}

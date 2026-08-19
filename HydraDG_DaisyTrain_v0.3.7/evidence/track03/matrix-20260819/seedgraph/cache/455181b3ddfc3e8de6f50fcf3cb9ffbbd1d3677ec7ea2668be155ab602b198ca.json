@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "455181b3ddfc3e8de6f50fcf3cb9ffbbd1d3677ec7ea2668be155ab602b198ca",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a combination of time management techniques, such as creating to-do lists and se",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a combination of time management techniques, such as creating to-do lists and setting priorities",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "983e140033b6cc2ef321733dc72366741093d40a45993f823acf70aedced3781"
+}

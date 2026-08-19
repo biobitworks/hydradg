@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f57e19bce281a330a176ad5ab653be1a8eac694161f594969afe328992f47626",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of getting her a relaxing essential oil diffuser",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of getting her a relaxing essential oil diffuser",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7515fa46cdb066d832e3300f56a297d684478a770ba6e08656bb647107a7bb92"
+}

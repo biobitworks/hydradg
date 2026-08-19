@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "43728996883371301e9759b9b3f1de51cce5eb1a0f8159f4401680cb8c7a7edc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized plaque or trophy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized plaque or trophy",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "484b47e66deb421f40757b4d38000e5c9d23431eef0748612fabaf5beb37e67a"
+}

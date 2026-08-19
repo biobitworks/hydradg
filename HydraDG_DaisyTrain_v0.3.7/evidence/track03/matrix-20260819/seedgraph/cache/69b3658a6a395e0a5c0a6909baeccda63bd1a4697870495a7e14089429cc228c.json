@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "69b3658a6a395e0a5c0a6909baeccda63bd1a4697870495a7e14089429cc228c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the cascara latte",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the cascara latte",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f056de18fbeac80d6406409ff8d1b80640d6444f008ccd43f5ef99c8db73e9f3"
+}

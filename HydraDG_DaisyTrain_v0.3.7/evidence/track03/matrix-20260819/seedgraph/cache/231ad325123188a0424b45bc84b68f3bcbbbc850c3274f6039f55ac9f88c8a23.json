@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "231ad325123188a0424b45bc84b68f3bcbbbc850c3274f6039f55ac9f88c8a23",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding some earthy tones and greenery accents",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some earthy tones and greenery accents",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b12a11ba0ce70f4dbc104f4bb7f47549e62901889ee11418d4ea7d3f8e5effab"
+}

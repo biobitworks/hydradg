@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b2c1c7032868f55f13916fc6b4ad14e851d05d9fd43fa38e522d971a4832c1ed",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "your idea of having segments that repeat themselves like \"science corder\" or \"re",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "your idea of having segments that repeat themselves like \"science corder\" or \"recruiting frenzy\" whe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9beddeb9ce77137807c6e5c1542a5a40e80175e9eb129adfb816ce1eff08ee99"
+}

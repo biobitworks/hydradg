@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "121de81c871ebf6ce147ce5579addbcb5a16b97c89c22d94799394a3a94c6b76",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of hiring a dog walker or sitter, do you have any recommendations for f",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of hiring a dog walker or sitter, do you have any recommendations for finding a good one in",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "316612a170d75d775daa0e4c5f88087f84f2eb0348de55c4ab7ecee275396eee"
+}

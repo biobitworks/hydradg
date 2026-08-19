@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f697d580e1c0375075e230ac5b25ba5ec8342735df406a49175d78acd349443e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a cozy atmosphere, nothing too loud or crowded",
+      "type": "value"
+    },
+    {
+      "name": "The Cozy Cup, I'll have to check it out next time",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a cozy atmosphere, nothing too loud or crowded",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "The Cozy Cup, I'll have to check it out next time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4dc7f680f8011724fd92d53c0f1cda60d47ab0a80ef7f9bc137f5ebbc02c75f0"
+}

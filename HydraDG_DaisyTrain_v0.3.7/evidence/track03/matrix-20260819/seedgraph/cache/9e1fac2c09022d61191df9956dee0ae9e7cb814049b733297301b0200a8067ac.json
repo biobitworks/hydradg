@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9e1fac2c09022d61191df9956dee0ae9e7cb814049b733297301b0200a8067ac",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how museums offer a chance to learn something new, appreciate beautiful art, and",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how museums offer a chance to learn something new, appreciate beautiful art, and even have a sense o",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3adec4ee501a3d31b9ddb59f1711b1854d9f5bc38a7def313fcdc5604cebee5b"
+}

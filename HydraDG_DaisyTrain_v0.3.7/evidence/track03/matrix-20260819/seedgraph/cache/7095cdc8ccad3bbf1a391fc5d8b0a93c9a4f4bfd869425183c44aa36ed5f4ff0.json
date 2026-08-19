@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "7095cdc8ccad3bbf1a391fc5d8b0a93c9a4f4bfd869425183c44aa36ed5f4ff0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a pumpkin patch setup around my display, but I'm worried it",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a mini pumpkin pyramid, but I'm not sure if it will complem",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a pumpkin patch setup around my display, but I'm worried it might take up too m",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a mini pumpkin pyramid, but I'm not sure if it will complement my new display m",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8853479dc1650f98a75f85f676e5b01c73e5de355a0d84dd563fd38399363044"
+}

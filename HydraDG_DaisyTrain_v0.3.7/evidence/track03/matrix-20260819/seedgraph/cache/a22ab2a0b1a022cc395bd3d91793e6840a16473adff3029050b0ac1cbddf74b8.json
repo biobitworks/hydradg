@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a22ab2a0b1a022cc395bd3d91793e6840a16473adff3029050b0ac1cbddf74b8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a letter from the university or my accommodation provider as proof of address",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a letter from the university or my accommodation provider as proof of address",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f5efddcba1af4573fada09556cc5662e67e597118e326fe70e18d6f476a38fcb"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b8a9d46aaea286cb547eb226a5c21fed28f3e38b0f122e948b967aa8d3a34fc1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the warm brunette and chestnut brown options",
+      "type": "value"
+    },
+    {
+      "name": "the idea of blending my grey hairs with the rest of my dark brown hair",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the warm brunette and chestnut brown options",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of blending my grey hairs with the rest of my dark brown hair",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "363077ffc11d8f4279523c0b4ab120f524884e28afaa610c5aad6ff4e9050d8c"
+}

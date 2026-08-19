@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "850607db078cf3128c047b297e332ed35098180cc6aef236b3a71c973d686485",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "weekends",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "weekends",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "49b0288476b82f1d83554068c5aee57502168ed10f28186ffee2ce809bea5255"
+}

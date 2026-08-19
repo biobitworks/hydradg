@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a261ea255fd43901520d086dff599f034bc30f1039c2437d277afcc6caffbe5f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breakfast burritos and muffins",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breakfast burritos and muffins",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "34d6ef8699fc77d16cc9c3df27a06a1b8be2a2dd66a02e1329e069563ac9c5e9"
+}

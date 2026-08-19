@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "55d2f8f2f5bbbccf03122d6c72b70a3f8a1b3a743c6fdfb07a3d5ac3f98b3ac5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the subtle effect it seems to achieve",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the subtle effect it seems to achieve",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d4d74ef583dafd4e0fc511a6b5466118a915c4b51c67f3710967bada63c09ce5"
+}

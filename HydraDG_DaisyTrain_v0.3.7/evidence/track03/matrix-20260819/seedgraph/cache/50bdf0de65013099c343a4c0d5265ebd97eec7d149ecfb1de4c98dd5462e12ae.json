@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "50bdf0de65013099c343a4c0d5265ebd97eec7d149ecfb1de4c98dd5462e12ae",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "practicing at home rather than going to a studio",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "practicing at home rather than going to a studio",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "65ed0389eca38be9d215c4a115c737d8f5902d5383cfce0acb40bca1f744f582"
+}

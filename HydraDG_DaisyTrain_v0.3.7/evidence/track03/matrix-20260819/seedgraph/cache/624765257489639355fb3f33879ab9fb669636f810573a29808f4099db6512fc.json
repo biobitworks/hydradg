@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "624765257489639355fb3f33879ab9fb669636f810573a29808f4099db6512fc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the right hashtags",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the right hashtags",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "832a96a90f8bf5e0ba7c68e324cb3707a802b8011386460e471d41c2c2dbf5c8"
+}

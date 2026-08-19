@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "829907214ea62a91887a0cd5a066531c6b25f40a23d2305f705ca999e9c77a1d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a ML or deep learning algorithm",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a ML or deep learning algorithm",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "54c7384534e78a3335cc47fa61f5f6c1c1b3d97809dfe58e43fbde6def25d348"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9641f77ad19e7147e2912111505d1cd0d5d27b6a4b9d992bb3be50628bee01f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the spa day at home idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the spa day at home idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "62a1b369605ddf368d5f0a0f779fcf8e9380fd8aa0843f05d6f623398c43494c"
+}

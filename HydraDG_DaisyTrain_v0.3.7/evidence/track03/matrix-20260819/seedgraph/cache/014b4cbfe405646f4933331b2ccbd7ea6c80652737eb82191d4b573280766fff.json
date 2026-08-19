@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "014b4cbfe405646f4933331b2ccbd7ea6c80652737eb82191d4b573280766fff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "in my bathroom, not just for my own health but also for the environment",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "in my bathroom, not just for my own health but also for the environment",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7ecc6c049207f3e9f62aa1385d2e64e280aabc3bdd01aa070ee482a78a189a83"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "787390903a781eb8cf3b8ba1e91139188eaa6e5fa192dcd0f929aeb49b5ea94c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of hosting a small gathering",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of hosting a small gathering",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "525c58458b621079b5de377b4333c368ebdb9f5ca9450c0037a7558322c10ec3"
+}

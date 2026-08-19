@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "18a779a218eaeaa87679f5bf5acd3e97db8af71d8190efcf25e498afd9bfea71",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "an electric toothbrush or a manual one",
+      "type": "value"
+    },
+    {
+      "name": "it separately",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "an electric toothbrush or a manual one",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it separately",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f4a982e0cf02d1089abc63b9586908c82001d8f5d149f2aac59ea22229ec47c7"
+}

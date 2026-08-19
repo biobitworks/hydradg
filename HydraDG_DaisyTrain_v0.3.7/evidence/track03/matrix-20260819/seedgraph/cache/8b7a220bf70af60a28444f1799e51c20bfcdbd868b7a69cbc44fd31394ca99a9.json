@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8b7a220bf70af60a28444f1799e51c20bfcdbd868b7a69cbc44fd31394ca99a9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Moonlit Waves idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Moonlit Waves idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7f0bdada17a44cb09738033667274a07a95f4f7ebdfb9266f864f628ca5d434e"
+}

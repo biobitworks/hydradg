@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "184a560014d48e5f619652262ecbebc3d2aca9a6e5ec403b12207b36fb8a1975",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Walgreens digital coupons",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Walgreens digital coupons",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "69400c1ae25afcec342b09b918ac1cf8528c33a2cda60276a03c8f0bb527a9d8"
+}

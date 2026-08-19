@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a024f8bbb7862677b7d7e3f790b1db9eef0d8cc143dae9c0adb5c2bda57ad761",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using vertical space, but I'm not sure what kind of storage units wo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using vertical space, but I'm not sure what kind of storage units would work best for my",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a4c72e26ebb6cc10cd4375896751f5728beeabafb8551dc32017890a3df55f9d"
+}

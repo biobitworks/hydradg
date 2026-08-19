@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "958cc3a77d69a16dbd63af7d5ef02b37e1dba1173be67d5f44029d9d410e0648",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a coupon binder and categorizing them by expiration date an",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a coupon binder and categorizing them by expiration date and store",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3cd46058e39e14853d1178f2a4112376cbfb60fd213f18daf31c350fb1a0b50d"
+}

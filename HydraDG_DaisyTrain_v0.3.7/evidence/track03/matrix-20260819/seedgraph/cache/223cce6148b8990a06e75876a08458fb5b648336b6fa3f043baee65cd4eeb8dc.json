@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "223cce6148b8990a06e75876a08458fb5b648336b6fa3f043baee65cd4eeb8dc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the mashed veggie bowls and soups ideas, those sound really comforting",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the mashed veggie bowls and soups ideas, those sound really comforting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "279282a05760dc0500ae16dad6efdc1e40451d0855973491662d26ec0ca22685"
+}

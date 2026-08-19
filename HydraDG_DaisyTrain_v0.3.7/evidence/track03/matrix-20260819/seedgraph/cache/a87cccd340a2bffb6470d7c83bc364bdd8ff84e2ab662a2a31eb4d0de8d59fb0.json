@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a87cccd340a2bffb6470d7c83bc364bdd8ff84e2ab662a2a31eb4d0de8d59fb0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the leftover beef as is, or saut\u00e9 it again with some onions and mushrooms to giv",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the leftover beef as is, or saut\u00e9 it again with some onions and mushrooms to give it more flavor",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c67944078b4459b229c1a6a421cd7928eb6c0f6dbb79d0ab8ea05541dc0aab84"
+}

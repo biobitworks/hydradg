@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fd360cfeca8a15950ed30c8d3bc4c632d5448b5b74cafa7ac1e6b3896ad3bdde",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a light color scheme, and my mom actually gave me some decorating ad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a light color scheme, and my mom actually gave me some decorating advice when she came o",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6b5577d40111416155e9e75710c5d33796dcdd3f657cb560074b6d98768f2e35"
+}

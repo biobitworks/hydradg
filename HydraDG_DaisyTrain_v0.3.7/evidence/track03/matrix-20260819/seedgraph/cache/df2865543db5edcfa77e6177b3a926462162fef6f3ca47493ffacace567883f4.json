@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "df2865543db5edcfa77e6177b3a926462162fef6f3ca47493ffacace567883f4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the editor to write my document and the compiler to turn it into a PDF",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having all the features in one place",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the editor to write my document and the compiler to turn it into a PDF",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having all the features in one place",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0439b5ea5e400f1e0edd7cb748b9656587a52fa4ddc360ce0d905df459e9b0e2"
+}

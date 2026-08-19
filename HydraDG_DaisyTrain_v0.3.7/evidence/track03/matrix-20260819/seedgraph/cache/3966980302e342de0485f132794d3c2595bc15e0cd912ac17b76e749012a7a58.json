@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3966980302e342de0485f132794d3c2595bc15e0cd912ac17b76e749012a7a58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "authors with more descriptive writing styles",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "authors with more descriptive writing styles",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a301cc2e0d8d581941993d09b64dc38b38c8b749b5469ee89727a01524cfacd5"
+}

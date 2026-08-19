@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "64a95a1befdc50cd8a761ed45b56e87c22024777a8c5117e9df9fee52287324a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of repurposing my content from YouTube to Twitter",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of repurposing my content from YouTube to Twitter",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1fe3865f5fdc5980ec1bf4a517d9d8169405023ba8d5963ed3cf8f8ed195e8d0"
+}

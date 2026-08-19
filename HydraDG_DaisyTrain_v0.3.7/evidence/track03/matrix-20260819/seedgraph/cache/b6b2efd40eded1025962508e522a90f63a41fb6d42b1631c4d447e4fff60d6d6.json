@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "b6b2efd40eded1025962508e522a90f63a41fb6d42b1631c4d447e4fff60d6d6",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the decoration ideas, especially the Bikini Bottom backdrop and Elsa's Ice Palac",
+      "type": "value"
+    },
+    {
+      "name": "the ideas for party favors, especially the Krabby Patty keychains and snowflake ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the decoration ideas, especially the Bikini Bottom backdrop and Elsa's Ice Palace backdrop",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the ideas for party favors, especially the Krabby Patty keychains and snowflake wands",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "376984fe928563aeca380f1ad1b5755c442f7abe4c554dbb3ee4e0e54c8e6404"
+}

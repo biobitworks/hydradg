@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e4106e23418cf0400ea7b80350b0dff6fdf5e7e03eab88aadd60dfe147d3135d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using Instagram Stories to share my writing process, and I think I'l",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Instagram Stories to share my writing process, and I think I'll start by posting s",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8fcbd81154f786b1811b3b4aca2becf721837984e51d61e253aa963d223f7a5f"
+}

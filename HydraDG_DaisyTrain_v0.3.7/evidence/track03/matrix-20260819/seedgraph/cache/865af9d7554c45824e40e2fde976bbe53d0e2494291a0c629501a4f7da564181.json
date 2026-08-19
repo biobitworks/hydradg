@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "865af9d7554c45824e40e2fde976bbe53d0e2494291a0c629501a4f7da564181",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Pesto Pasta Primavera",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Pesto Pasta Primavera",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9c9c15527d6536c8bf46117d4197ac1b8f5fd0cb9f611a45eb68f7f3a96d0f8b"
+}

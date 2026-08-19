@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1e094dda7f04f722a5a2459b11b52e749916f052a1f46928e24cad350672408e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the treasure hunt idea",
+      "type": "value"
+    },
+    {
+      "name": "the pirate theme idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the treasure hunt idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the pirate theme idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5ce1e001c412176dd03d6728b8271670b6756f7ac9341d6dfd709f2fcf7e9879"
+}

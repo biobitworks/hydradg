@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "667ae346e3dec8b4bddcbf9e3b61b3b57c45885f89e3161b33d3c3da3d86f8c3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the recommended route",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the recommended route",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "842bd59f2695e1d51e2f7750a455ddb61d93489f64c1795d42372d1cb99c5eef"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b723eb3aa54e0c7b62329d03fafd084b48b340c3defd8128beb771ccff605293",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of roasted chickpeas and vegan energy chews",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of roasted chickpeas and vegan energy chews",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "71c06fdf6415ce1f3b883b492b28e6a283d5dfad11cb28cc62cd837972032a03"
+}

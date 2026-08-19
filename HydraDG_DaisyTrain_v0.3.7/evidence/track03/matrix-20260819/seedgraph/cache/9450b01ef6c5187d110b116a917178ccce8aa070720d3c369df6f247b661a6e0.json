@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9450b01ef6c5187d110b116a917178ccce8aa070720d3c369df6f247b661a6e0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Zagg Rugged Book with other devices, like my new Samsung Galaxy S22 Ultra sm",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Zagg Rugged Book with other devices, like my new Samsung Galaxy S22 Ultra smartphone that I got",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d906cda0d1dfd064ea8003f17ff5b50d4126f6c4ac76af0551021b2b49cdb9bc"
+}

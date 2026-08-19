@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7a5b5f98bb6346527fac4790bdb2a576f620f24ad792c5c35ceb989a26edbc60",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "acrylics, and I'm pretty happy with them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "acrylics, and I'm pretty happy with them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "26e1344059a38e68a6d7e33a9a1e623c2bda93022119a29b6f478385f2198f86"
+}

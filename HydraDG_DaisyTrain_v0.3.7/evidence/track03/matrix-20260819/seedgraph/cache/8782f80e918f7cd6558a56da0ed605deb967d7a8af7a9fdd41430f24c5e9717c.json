@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8782f80e918f7cd6558a56da0ed605deb967d7a8af7a9fdd41430f24c5e9717c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a focal point on my bookshelf, and I'm thinking of using my",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a focal point on my bookshelf, and I'm thinking of using my mom's armchair as a",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "da7527d279154f5468abbb8a4af5de0b734431af752c7be9867ae7292d96e684"
+}

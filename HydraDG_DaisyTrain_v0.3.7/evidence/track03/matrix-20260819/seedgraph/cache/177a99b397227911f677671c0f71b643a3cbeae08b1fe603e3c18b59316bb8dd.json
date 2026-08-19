@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "177a99b397227911f677671c0f71b643a3cbeae08b1fe603e3c18b59316bb8dd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of grouping similar cameras together and using risers to add some heigh",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of grouping similar cameras together and using risers to add some height variation",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fe5cb82af18c9b5ba69cf7e6c2c85bc46402cb4f60dcd7b02cd5e16c8fb54978"
+}

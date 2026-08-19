@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "78df65d3c088dba226dfa1d57713a80ebb6f58bea20559295cf70d896604b94e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of incorporating dark, rich colors into the design",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating dark, rich colors into the design",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "23fbc66a8b4b45b39873ea4c83231102d55f3ba7166242999165970506a4c23d"
+}

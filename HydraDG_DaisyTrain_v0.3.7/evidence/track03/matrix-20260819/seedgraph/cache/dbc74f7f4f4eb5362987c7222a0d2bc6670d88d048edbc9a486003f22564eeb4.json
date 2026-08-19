@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dbc74f7f4f4eb5362987c7222a0d2bc6670d88d048edbc9a486003f22564eeb4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "for the Yakitori",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "for the Yakitori",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f5020dcd8db3a98cff4c85c1067e53d593be8d86a70b110323ebbd47d4c1a786"
+}

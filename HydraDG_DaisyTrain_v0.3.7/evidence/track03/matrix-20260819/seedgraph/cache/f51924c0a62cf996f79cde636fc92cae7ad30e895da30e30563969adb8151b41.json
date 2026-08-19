@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f51924c0a62cf996f79cde636fc92cae7ad30e895da30e30563969adb8151b41",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of playing a tank hero and providing protection for my team",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of playing a tank hero and providing protection for my team",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "20c67af71700ce541e4f8570c9c736884043d52f97918030d86970b0643f59fd"
+}

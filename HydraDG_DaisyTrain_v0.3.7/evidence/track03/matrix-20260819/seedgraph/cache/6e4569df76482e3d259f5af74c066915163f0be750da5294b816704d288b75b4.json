@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6e4569df76482e3d259f5af74c066915163f0be750da5294b816704d288b75b4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of tiered pricing, and I think I'll go with the simple tiered pricing s",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of tiered pricing, and I think I'll go with the simple tiered pricing structure",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "917eeaa13fd687e897b673f08f0e12dd8a08cb8c0fbcd61bd23e376b2245dca3"
+}

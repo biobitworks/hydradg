@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "da40da496110a27cdd048cbb1d5355feb97684b0c89514268d093ed08de096db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "ground ginger instead",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "ground ginger instead",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9ebc4e91056d0b3c8b4bf5ca177ab1498524d8ff0f2e38d2ccbf0f811c6b3e4d"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "78cba1ac0633f94e512ab7a9af3d5abe4f1d12a6e82062f4d125bb4e3ce93dd2",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of pairing it with distressed denim jeans, but I'm not sure if it's a b",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding a blazer to dress up the outfit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of pairing it with distressed denim jeans, but I'm not sure if it's a bit too casual",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding a blazer to dress up the outfit",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "39aa13bb6f599444a3e6aac969a3e9f8e0219e9955005122e4279d484a3e9e4e"
+}

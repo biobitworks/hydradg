@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "a83cd281ab57fe73519944287b39f1467cf576da1bb1e6e8c9588ba664c3f43a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to go by Sam",
+      "type": "value"
+    },
+    {
+      "name": "issuing invoices, those are great",
+      "type": "value"
+    },
+    {
+      "name": "working 8 to 5, but only on week days",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to go by Sam",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "issuing invoices, those are great",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "working 8 to 5, but only on week days",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d8969b73bce6d9fffe5bc4722f6e0052ec0ac4f3cf15e1e4321e44f406a83a62"
+}

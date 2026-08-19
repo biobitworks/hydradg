@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "2c9234a6cbcf39c6d9e67f67d05217ba8f71434ce68ab57428296506b7ed5356",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of hiking",
+      "type": "value"
+    },
+    {
+      "name": "the Berry Creek Falls Loop trail",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of hiking",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the Berry Creek Falls Loop trail",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b6737646d0e72de6dac2c748ebd8d07b9a0528b4496ea4410f19525a6c7b41ae"
+}

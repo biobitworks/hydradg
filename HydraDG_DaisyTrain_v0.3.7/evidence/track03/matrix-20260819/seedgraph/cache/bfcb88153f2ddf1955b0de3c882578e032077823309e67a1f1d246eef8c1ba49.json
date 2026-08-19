@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bfcb88153f2ddf1955b0de3c882578e032077823309e67a1f1d246eef8c1ba49",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the features of my Samsung smartwatch, especially the sleep and heart rate track",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the features of my Samsung smartwatch, especially the sleep and heart rate tracking, so something si",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3a2f120c9d22d8e62414d583ef65d865b63dd46d889ab1e32a5f38f145eada0"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e3df908d6b522ddf26749bf5dd3bb61ff8a0dbf0a8d66e60a1dc9d2e3ae2eadf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a tray or container to corral small items",
+      "type": "value"
+    },
+    {
+      "name": "the warm, luxurious look it adds to the space",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a tray or container to corral small items",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the warm, luxurious look it adds to the space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "abff68418756a88aedb6b4ed5d34b6952a6de26b7d51eb999bf00e9a9fc33701"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "0b960b0d839a370c4002e9577a4ba5efaffe1974b961731c279bc3d824b1eb89",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a mixture of water and white vinegar in a spray bottle, which seems to be doing ",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using plate dividers and a tiered storage system",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a mixture of water and white vinegar in a spray bottle, which seems to be doing the trick",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using plate dividers and a tiered storage system",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "eb07b8b4dcb8af930f86ecbdede6b00218c7acfdeda32178e6b89fdb65023d8e"
+}

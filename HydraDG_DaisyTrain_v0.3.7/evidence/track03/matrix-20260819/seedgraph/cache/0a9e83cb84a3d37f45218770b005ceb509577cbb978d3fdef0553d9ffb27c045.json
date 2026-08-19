@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0a9e83cb84a3d37f45218770b005ceb509577cbb978d3fdef0553d9ffb27c045",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Chicago, I'm open to any diet that's healthy and nutritious, I'm looking for mea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Chicago, I'm open to any diet that's healthy and nutritious, I'm looking for meals that can help wit",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "69c5f122f7fdf772eee6c51839f1c22aabd87154eca220748b1c5503510b5e46"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "72431521615347b295f60ca7b25d36f9555e9de2391d571bf8584688d90b38ad",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "tea tree oil to treat scars or dark spots on my skin",
+      "type": "value"
+    },
+    {
+      "name": "tea tree oil as a natural insect repellent",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "tea tree oil to treat scars or dark spots on my skin",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "tea tree oil as a natural insect repellent",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "82f17a48a173a66cc72fb2f56da9a71e2c1086909869035e80d577afceba74d2"
+}

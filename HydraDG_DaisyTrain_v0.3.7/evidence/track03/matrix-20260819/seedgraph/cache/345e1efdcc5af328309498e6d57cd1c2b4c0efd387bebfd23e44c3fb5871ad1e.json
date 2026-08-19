@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "345e1efdcc5af328309498e6d57cd1c2b4c0efd387bebfd23e44c3fb5871ad1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tip about setting new goals",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tip about setting new goals",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "303c53b5ffb99fd41798e4814daa496c1e22bd1d7fb308dc4e442614bcf003e6"
+}

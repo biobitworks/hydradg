@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ca5142ee6fbd73148d3ea4930210da215f3e3855163f14c0a667b6c4c38f90c7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Spinach and Strawberry Salad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Spinach and Strawberry Salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c646dcc96ee8937cad5b5a886d4c6894381b6e10f438d613d0eb5f23fd019ceb"
+}

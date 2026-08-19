@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e85c16d5d3cbd9999a6554e1317fb45ddec24c79f2b66a7917b383963f56c64e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Discover Weekly feature, which recommends new podcasts based on my listening",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Discover Weekly feature, which recommends new podcasts based on my listening history",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "250ef12d39a04fddf8a7877ed912357a05f3ef87c62831b7649949d33704b445"
+}

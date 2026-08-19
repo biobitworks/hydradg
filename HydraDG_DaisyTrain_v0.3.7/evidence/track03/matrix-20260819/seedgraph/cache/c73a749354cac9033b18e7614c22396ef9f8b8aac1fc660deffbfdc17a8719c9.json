@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c73a749354cac9033b18e7614c22396ef9f8b8aac1fc660deffbfdc17a8719c9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Korean-Style Fried Chicken, can you give me a simple recipe for",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Korean-Style Fried Chicken, can you give me a simple recipe for the marinade and th",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bfed77983cae71d03812f33929559ae92527e4789619125aa2cbabb104aad9ba"
+}

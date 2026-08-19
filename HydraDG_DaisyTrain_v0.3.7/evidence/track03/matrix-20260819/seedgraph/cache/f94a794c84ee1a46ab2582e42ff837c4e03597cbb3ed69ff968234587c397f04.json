@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f94a794c84ee1a46ab2582e42ff837c4e03597cbb3ed69ff968234587c397f04",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Vintage Garden Party idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Vintage Garden Party idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7aa37419c0d0846e3e3a943f341ffdb04f3b60da756d1da93a64db2fcdcc756e"
+}

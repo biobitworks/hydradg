@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c0135ecefb3e6a03320bc6485dfa6dcef88bed8fd8280e8b968bc0d8c01f7edf",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the suggestions, but I'm not sure about the prices",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the suggestions, but I'm not sure about the prices",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f303a65a08af3fb109f933788600f2b26d7d07501118abb764400f1d8db31648"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f6446bb1e33a60e92c25a072def45af3cc9e0fad91362e0ab0944ed0c3343c8a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"Trends\" feature to track the performance of a specific hashtag, like #March",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"Trends\" feature to track the performance of a specific hashtag, like #MarchMentalHealth, over t",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "80d5697199065a274678ce7e34e756d5b9b28b169ff8b8aa3d6a9e1b0850b927"
+}

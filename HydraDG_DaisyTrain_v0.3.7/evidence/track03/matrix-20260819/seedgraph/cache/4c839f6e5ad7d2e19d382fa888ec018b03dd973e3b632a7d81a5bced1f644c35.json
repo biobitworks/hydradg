@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c839f6e5ad7d2e19d382fa888ec018b03dd973e3b632a7d81a5bced1f644c35",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the outdoor scavenger hunt idea",
+      "type": "value"
+    },
+    {
+      "name": "the idea of incorporating physical challenges into the scavenger hunt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the outdoor scavenger hunt idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of incorporating physical challenges into the scavenger hunt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "96aed1ac98ac250b84e05bb598884fca374e0f44a7f9a158ae4d2758c795edf5"
+}

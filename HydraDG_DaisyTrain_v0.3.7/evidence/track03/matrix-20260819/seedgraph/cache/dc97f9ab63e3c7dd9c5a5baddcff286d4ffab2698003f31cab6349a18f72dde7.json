@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "dc97f9ab63e3c7dd9c5a5baddcff286d4ffab2698003f31cab6349a18f72dde7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the summer theme idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the summer theme idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e7ab0d8d161e41f063b513219fee05ec36608bbbfa1c88e4aabd0360050255a3"
+}

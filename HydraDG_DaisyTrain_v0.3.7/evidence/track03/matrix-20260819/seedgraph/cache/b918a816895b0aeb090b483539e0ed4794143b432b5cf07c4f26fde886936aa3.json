@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "b918a816895b0aeb090b483539e0ed4794143b432b5cf07c4f26fde886936aa3",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a combination of bags, boards, and top-loaders to keep my comics in great condit",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a combination of bags, boards, and top-loaders to keep my comics in great condition",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9a5f285e4caeee599d773ea57f2456a57116452f7d90e955f4f2ae90dad1e3d5"
+}

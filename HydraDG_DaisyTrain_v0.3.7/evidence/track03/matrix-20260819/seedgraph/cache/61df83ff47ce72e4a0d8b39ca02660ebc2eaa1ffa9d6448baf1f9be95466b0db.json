@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "61df83ff47ce72e4a0d8b39ca02660ebc2eaa1ffa9d6448baf1f9be95466b0db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a label and want to use this to fine tune GPT-3 to evntually write marketing cop",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a label and want to use this to fine tune GPT-3 to evntually write marketing copy)",
+      "polarity": "affirmed",
+      "predicate": "works_at",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ab6c7d2bdcf6d7c71d2ecf30c88173221a2ef2f554cc8631f4822e3d0df69b32"
+}

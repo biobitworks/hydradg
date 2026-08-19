@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "12cffe2d46888ab981485a1ad4552f9495fe77a87142c5c1bf8e69166aa26fb8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a statement piece of art",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a statement piece of art",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e8f1f7545886b99526ad8554c6bbdb89698fddf34baacf8e6eb2193c5fb04748"
+}

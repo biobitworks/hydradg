@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "22857276d6efef12146515ca7d45013578af50feada58db9965046a5c0c267cb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of visualizing my tasks and progress on a board",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of visualizing my tasks and progress on a board",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1b9ba888fd84fadbdbe84d287612566dbf3f9bf3aae04b6eed86f635051e677a"
+}

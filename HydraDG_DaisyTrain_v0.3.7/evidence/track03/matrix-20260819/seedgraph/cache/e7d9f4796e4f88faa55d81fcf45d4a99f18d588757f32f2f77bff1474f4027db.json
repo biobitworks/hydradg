@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e7d9f4796e4f88faa55d81fcf45d4a99f18d588757f32f2f77bff1474f4027db",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the Sonos Beam, but I'm not sure if it's worth the price",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the Sonos Beam, but I'm not sure if it's worth the price",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "36aa91c916691abb456927f8fd28a8385dfba700a5746c9bbf77387b1d604178"
+}

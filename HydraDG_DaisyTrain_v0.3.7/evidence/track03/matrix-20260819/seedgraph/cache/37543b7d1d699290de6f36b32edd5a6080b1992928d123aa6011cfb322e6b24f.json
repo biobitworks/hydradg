@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "37543b7d1d699290de6f36b32edd5a6080b1992928d123aa6011cfb322e6b24f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of planning engaging content and interacting with my audience in real-t",
+      "type": "value"
+    },
+    {
+      "name": "the idea of keeping an ideas journal and repurposing existing content",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of planning engaging content and interacting with my audience in real-time",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of keeping an ideas journal and repurposing existing content",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c49607a939e34bd41a1a0bdca30b763db2e31b1d559f0651407c9dd334435f75"
+}

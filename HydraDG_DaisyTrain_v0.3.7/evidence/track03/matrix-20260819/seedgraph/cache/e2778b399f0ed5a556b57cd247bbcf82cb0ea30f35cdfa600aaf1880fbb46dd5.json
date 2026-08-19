@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e2778b399f0ed5a556b57cd247bbcf82cb0ea30f35cdfa600aaf1880fbb46dd5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the chicken and vegetable broth, it seems like a perfect option",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the chicken and vegetable broth, it seems like a perfect option",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "3e0d5d5ac42cbcfbf4663ca5e6ef7eec14941a51600622689de76a441e8aca75"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6222c6c145e4dcbd900135984f94d65bd00a0dd493c65281efe5e2405acfa379",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the recipe, but I was thinking of using up some leftover vegetables I have aroun",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the recipe, but I was thinking of using up some leftover vegetables I have around",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "5eaf44ed331b6b939476e96a4748afd36d270ce2816a2afc38c826a5dfaeda18"
+}

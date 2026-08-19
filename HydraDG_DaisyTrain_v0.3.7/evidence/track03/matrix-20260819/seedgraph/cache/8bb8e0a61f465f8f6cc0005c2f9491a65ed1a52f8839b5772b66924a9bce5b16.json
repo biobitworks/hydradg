@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "8bb8e0a61f465f8f6cc0005c2f9491a65ed1a52f8839b5772b66924a9bce5b16",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them and are they safe to use for an extended period of time",
+      "type": "value"
+    },
+    {
+      "name": "saline nasal sprays",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them and are they safe to use for an extended period of time",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "saline nasal sprays",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d6d1813303d75ccdab1f2dcf48778446732859e5ddc31f01fa4d49a740f257b5"
+}

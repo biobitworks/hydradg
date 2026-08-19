@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5f54348bcd57924b2f43d1847f3a0b5182eb4faede2a416d3b260aff0a918db7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this routine, but I'm concerned that I might need more time to wake up",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this routine, but I'm concerned that I might need more time to wake up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "69c6730d918b66df0c885b5bf4b80c2b011a4da363629e3bce339ab6c389b309"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "52d921d0951ff7cbf28297375820fc1746c2e6ff1c6849e351d871aa56f3a4d7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a conversational circle",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a conversational circle",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "16b33ea2f18c472a6fb5739ed3ab025cbdb4f3ed3cd29c9336085770c740224b"
+}

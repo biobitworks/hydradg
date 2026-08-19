@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ae8bd13e3b9c0d312c8df5323f0a80c64ca85a13b7c18cdbedb5b8079e77d651",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a hair dryer to dry my feet after soaking them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a hair dryer to dry my feet after soaking them",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d82781067fd9d46d6d434fb2739389159be78b33e0d9415b117624a9131dca64"
+}

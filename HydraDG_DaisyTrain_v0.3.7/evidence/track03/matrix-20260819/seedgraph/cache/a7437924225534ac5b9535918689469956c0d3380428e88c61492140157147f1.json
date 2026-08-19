@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a7437924225534ac5b9535918689469956c0d3380428e88c61492140157147f1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Method Squirt + Mop Glass Cleaner",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Method Squirt + Mop Glass Cleaner",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "58f9d35baf0b267708163b6ea4b3d87ef89951c9d3b00c62bbc6b3b8981f4c40"
+}

@@ -1,0 +1,36 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce48c465be3aae95b38c4ce94abd54b3bbb1d941bda85e5d5403681da64883f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "them to enhance my reports and dashboards",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "them to enhance my reports and dashboards",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "them to enhance my reports and dashboards",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "765e30d70a5af227952a447a721c57fe14b5cc299a2598bbfe5559d20d55c2bb"
+}

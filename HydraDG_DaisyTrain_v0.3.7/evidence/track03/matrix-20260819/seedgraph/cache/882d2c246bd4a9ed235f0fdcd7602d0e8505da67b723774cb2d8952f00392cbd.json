@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "882d2c246bd4a9ed235f0fdcd7602d0e8505da67b723774cb2d8952f00392cbd",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the options you provided, but I'm not sure about the fabric choices",
+      "type": "value"
+    },
+    {
+      "name": "the idea of adding some warmth and coziness to the space without overwhelming it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the options you provided, but I'm not sure about the fabric choices",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding some warmth and coziness to the space without overwhelming it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1a4ef821872e68764c987a4df71f566916504a5a948e3f93d491767b80fc1101"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "5464272d056ee25fe9106acc1cb623ed56f8cc628b517c662b7b1399266cb9a4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the sweet potato and black bean salad",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the sweet potato and black bean salad",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c6ad8200667f371e0894523a426a54100e2d09be29bfdc4c8f90626b2817d08e"
+}

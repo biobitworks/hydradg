@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "431af7400384a17da52ec106efaa5c31df2c896129394961b7527173de1c27e9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a customized mug or tea infuser, since my mom loves tea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a customized mug or tea infuser, since my mom loves tea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6a91b6b02059e475e91756f7977edb18db650784c4a75629a0187097d27ead51"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "ba9de57c916d3c4d5c7587792f7849b09f4519b12a7599f52e7d2d7057b42566",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of optimizing my title and tags, but I'm not sure how to do that effect",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having a specific theme for my weekly streams, like \"Photoshop Frida",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of optimizing my title and tags, but I'm not sure how to do that effectively",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a specific theme for my weekly streams, like \"Photoshop Fridays\" or \"Creative Cor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8be762e474c1ecdacdadc749f6ac5536609c24e406b2a0253d500dc601226859"
+}

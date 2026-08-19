@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6b2bc8347c75fce5a33bcb2ac3f586bedff1e465dc7ac4b0b4393062b8ab144a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "fresh tomatoes instead of canned tomatoes",
+      "type": "value"
+    },
+    {
+      "name": "your product/service",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "fresh tomatoes instead of canned tomatoes",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "your product/service",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "312c1b5d5bff228f2905b16d38e039f616b70e6a8430e808ddf67b7a83f5d72d"
+}

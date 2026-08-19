@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c668364da4cb2ba8bf4ee8d494386705f16f1e716a1fa22ba51e2b10450599df",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of adding nuts and seeds to my oatmeal",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of adding nuts and seeds to my oatmeal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7738f900e5467e5990b2d59cb082a212bc908a149eed23e90443b3633888789f"
+}

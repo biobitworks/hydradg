@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "22f5863edf7c8bd8662185feabad47836257946944d3e4393d294ed80d76d19f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a more minimalist design, so a standard microfiber pouch will work just fine for",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a more minimalist design, so a standard microfiber pouch will work just fine for me",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9cdef7e1fd9ff654bfeaba8a8dc6e343f18ee14fe367ec721185508ab57ae36d"
+}

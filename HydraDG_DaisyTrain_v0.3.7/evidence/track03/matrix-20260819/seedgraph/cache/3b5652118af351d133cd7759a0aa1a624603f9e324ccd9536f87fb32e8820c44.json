@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3b5652118af351d133cd7759a0aa1a624603f9e324ccd9536f87fb32e8820c44",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it straight from the freezer",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it straight from the freezer",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "fa4b63dad02ca4d245173d36e319f1e966807c51280c1269a38bfa81d0ab0f45"
+}

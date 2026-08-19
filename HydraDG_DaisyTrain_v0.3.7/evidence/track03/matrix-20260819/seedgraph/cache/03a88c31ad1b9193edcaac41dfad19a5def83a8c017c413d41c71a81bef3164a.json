@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03a88c31ad1b9193edcaac41dfad19a5def83a8c017c413d41c71a81bef3164a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of building train routes across a map of Europe, and the added complexi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of building train routes across a map of Europe, and the added complexity of engine-buildin",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c7faebbba6d9718132582bcd3ebe3c0002146b047e94b0b613eb911a6faee8ea"
+}

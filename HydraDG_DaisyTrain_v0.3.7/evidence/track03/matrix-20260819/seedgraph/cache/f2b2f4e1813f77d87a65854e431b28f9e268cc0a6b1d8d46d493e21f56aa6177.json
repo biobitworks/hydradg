@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f2b2f4e1813f77d87a65854e431b28f9e268cc0a6b1d8d46d493e21f56aa6177",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to grab herbal tea from in the afternoons",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to grab herbal tea from in the afternoons",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "581bb79814d9b44946ff30e81c0148c9a4122cbf09eb711f651c9c376887ebfa"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2d99b48b5db9667a56a2a429661647e10c1541ed898f16f54f587071a2ee9707",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep it simple, so I usually just add some sliced banana and a sprinkle of ci",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep it simple, so I usually just add some sliced banana and a sprinkle of cinnamon to my oatmeal",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "50548f5207707054017c0a909515379085eba71104e0213aa3db116ba9220cde"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "6122029e231fa46dda3d44479a6f74ed2f1fbd66d15135bc6528ef155d25ea1f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a rustic and cozy feel, with earthy tones like brown and green",
+      "type": "value"
+    },
+    {
+      "name": "the idea of the jam jar and candle icon, and the earthy tones will definitely gi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a rustic and cozy feel, with earthy tones like brown and green",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of the jam jar and candle icon, and the earthy tones will definitely give it a cozy feel",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "8b729912510807e57f98e44f6e0138c4bc3ac8dbcdb7abfa76a20cb897de5f13"
+}

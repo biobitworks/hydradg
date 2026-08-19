@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "73c73db7b8045fd6cbe4dd9d5bb83d78674c98571f7c7f4dd1909859b1250301",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to stay within a budget",
+      "type": "value"
+    },
+    {
+      "name": "the wine and cheese gift set idea",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to stay within a budget",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the wine and cheese gift set idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d810fa7de4176e4c6b048591ced884b574c8c814d7be09e8b558871bd12f8612"
+}

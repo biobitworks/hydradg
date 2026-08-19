@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "36d01bc7b6d10814df0fbdb84addbf14384b862164bb1137bd8fd0274fe5d461",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to reserve Sundays for relaxation and errands",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to reserve Sundays for relaxation and errands",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f2df853f5f41180a23eb1fdd3b2ede1ef5d39e89510fa9fa4c22b97f5e1fc6ce"
+}

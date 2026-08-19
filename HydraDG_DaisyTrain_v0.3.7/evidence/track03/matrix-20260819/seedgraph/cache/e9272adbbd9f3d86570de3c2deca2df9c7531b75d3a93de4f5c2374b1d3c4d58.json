@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e9272adbbd9f3d86570de3c2deca2df9c7531b75d3a93de4f5c2374b1d3c4d58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "these apps to scan business cards of people I've already met, or is it more mean",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "these apps to scan business cards of people I've already met, or is it more meant for new contacts",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "4a7addc152dbeda3b2f785526ef750b1160367b5698dc1398c5e7659dbcac476"
+}

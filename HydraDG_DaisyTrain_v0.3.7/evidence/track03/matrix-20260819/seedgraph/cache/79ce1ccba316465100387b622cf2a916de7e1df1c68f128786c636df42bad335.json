@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "79ce1ccba316465100387b622cf2a916de7e1df1c68f128786c636df42bad335",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of involving everyone in the planning process",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of involving everyone in the planning process",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e061f69dbc5a71b0a65299f7bf71b679b5b5796361f0c32796be7262115026b9"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "65c4d8a96779d25e396428ad3c551b03188036a6a7d6fd7ffb948b4c5190ac7e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it allows me to plan meals, make grocery lists, and keep track of my recipe",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it allows me to plan meals, make grocery lists, and keep track of my recipes and leftovers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "bfa0c18411247f311b879996b06f5267253ebaa9fa9f630bff19163cb9554a3c"
+}

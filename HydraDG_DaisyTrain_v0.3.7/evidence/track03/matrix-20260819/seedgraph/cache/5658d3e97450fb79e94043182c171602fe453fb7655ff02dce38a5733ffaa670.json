@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "5658d3e97450fb79e94043182c171602fe453fb7655ff02dce38a5733ffaa670",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of Crash Course and CGP Grey, I've actually already started watching s",
+      "type": "value"
+    },
+    {
+      "name": "to Make Stuff**: This channel is hosted by a maker and DIY enthusiast who shares",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of Crash Course and CGP Grey, I've actually already started watching some of their videos",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to Make Stuff**: This channel is hosted by a maker and DIY enthusiast who shares projects on woodwor",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b5eeed3a66dee1730744b6720fecf3e9c3281b0811184a0cb9a8abeb189c8d39"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "39b3cedc101e61ff04703b8cd1d339a630fb50ddf6ea91e51dfd117f42fc6d74",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "one over the other",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "one over the other",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "331c292da39acecbf544fec2daa0b7f4dd7f577d8bed495f4507aa8b977bd68d"
+}

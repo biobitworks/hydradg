@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a7b9e5da961a182d2e31c8551613152aa50380484afa2650ccb3457c179fab23",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to keep track of when I wear my shoes and when I need to clean or maintain them",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to keep track of when I wear my shoes and when I need to clean or maintain them",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "79dc129cb86b536321c2d84cf4dfa61d8cc76cf6806e86fc1f213855435d5ca4"
+}

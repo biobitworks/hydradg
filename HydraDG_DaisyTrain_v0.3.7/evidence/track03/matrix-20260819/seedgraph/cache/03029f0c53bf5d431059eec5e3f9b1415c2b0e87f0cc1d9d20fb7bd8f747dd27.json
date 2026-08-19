@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "03029f0c53bf5d431059eec5e3f9b1415c2b0e87f0cc1d9d20fb7bd8f747dd27",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the tempo run because it gives me a chance to develop muscle endurance in additi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the tempo run because it gives me a chance to develop muscle endurance in addition to cardio",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e1889bfcf2478601dc0cd9a0168d83ebcc3b12a183e4d32bb0113e8ee7507924"
+}

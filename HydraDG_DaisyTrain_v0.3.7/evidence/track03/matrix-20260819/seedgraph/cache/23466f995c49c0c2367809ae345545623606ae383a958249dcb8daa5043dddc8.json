@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "23466f995c49c0c2367809ae345545623606ae383a958249dcb8daa5043dddc8",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it as a standalone product or do I need to mix it with other ingredients",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it as a standalone product or do I need to mix it with other ingredients",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f1b04c5a1d98bec1e14aa44521030b1ef238bb1eb1a23b33c52e0518959c1d9f"
+}

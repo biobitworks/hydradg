@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a0f82b4d94469c2d827b9ca6238b3cbce39f67aeb15f439198e1a1e9a2da7dc0",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a beauty class or workshop",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a beauty class or workshop",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b901dcc4d422d84d955e7c25b14ea27848b700344de9d5c8dd9b444315355685"
+}

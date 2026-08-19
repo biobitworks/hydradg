@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0886adfdec9757c685e96f58c9ee9a9de33cb3d4f9d5f77a5555df4513e3ca1f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "it as much as my old favorite",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "it as much as my old favorite",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d3531ffa804b425fa88c0f363f3a0d6b1c53f728f4105897bc249ac191e058d3"
+}

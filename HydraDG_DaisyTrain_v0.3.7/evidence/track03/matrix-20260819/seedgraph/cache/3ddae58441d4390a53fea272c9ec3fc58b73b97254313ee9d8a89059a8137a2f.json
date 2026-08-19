@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3ddae58441d4390a53fea272c9ec3fc58b73b97254313ee9d8a89059a8137a2f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of \"The Family Upstairs\" and \"The Night Circus\"",
+      "type": "value"
+    },
+    {
+      "name": "it",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of \"The Family Upstairs\" and \"The Night Circus\"",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "it",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cb374094dfafe127da5bff04ce3670898c1b23eeac1e11743e75f121350c333e"
+}

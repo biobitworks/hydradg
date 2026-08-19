@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "e0fcccdfeca97661c9024b9bbf279af4aa01f0b7efdb08554b0aa820c57ef16e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "frequently like coffee creamer, pasta, and skincare products",
+      "type": "value"
+    },
+    {
+      "name": "the sound of the Strawberry Basil Cheesecake, but I'm not sure if my guests will",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "frequently like coffee creamer, pasta, and skincare products",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Strawberry Basil Cheesecake, but I'm not sure if my guests will like the basil flav",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c3c84131e866029170433ae8853ec43eb362436487138b496b3b5e090982f032"
+}

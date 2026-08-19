@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc6d818be49d0c96c1a2ee83eadae07ba95bbcafd6e1df25f80fb611e1594bff",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using blind resumes and job simulations to reduce bias in hiring",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using blind resumes and job simulations to reduce bias in hiring",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "25c6d5f2169da9b93aca6739b3907ea0921661efff41aea3fffa602d8620d475"
+}

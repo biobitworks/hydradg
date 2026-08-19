@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0e51e8cd488d144b920f34bfb37bf7ce0ef852c4ad9fe5fbe4a4f04f4e346201",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "about Yoga Studio is that it allows you to create your own custom classes and sa",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "about Yoga Studio is that it allows you to create your own custom classes and save them for future p",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b2df8af16396edf966366657c7286884cb6189ce43c5679574b0714621892d52"
+}

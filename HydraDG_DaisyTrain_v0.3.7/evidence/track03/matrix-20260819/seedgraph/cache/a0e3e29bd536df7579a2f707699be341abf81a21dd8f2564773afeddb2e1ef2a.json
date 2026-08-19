@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a0e3e29bd536df7579a2f707699be341abf81a21dd8f2564773afeddb2e1ef2a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the indoor herb garden and the cookbook by her favorite chef",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the indoor herb garden and the cookbook by her favorite chef",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "cdd0bed56c73f16e771d6f614893e0911f996e8f81c9d58cf58aa510f0383cc3"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "68fe5d7f8977e5dd7653f3a758599374fa531b51aa630674d6861d160b1bc9a1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of scheduling regular pantry maintenance",
+      "type": "value"
+    },
+    {
+      "name": "the idea of designating zones and using vertical space to maximize storage",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of scheduling regular pantry maintenance",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of designating zones and using vertical space to maximize storage",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "1fab6c41d31809752f7b30e75d7489e7ccd6726e55ed1f863d0b684640cdc245"
+}

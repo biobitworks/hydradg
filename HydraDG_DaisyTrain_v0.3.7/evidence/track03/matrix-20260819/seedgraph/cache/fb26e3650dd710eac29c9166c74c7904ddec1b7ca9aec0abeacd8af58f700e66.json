@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "fb26e3650dd710eac29c9166c74c7904ddec1b7ca9aec0abeacd8af58f700e66",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the template, but I think I'd prefer a digital option",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the template, but I think I'd prefer a digital option",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "64cf7f2a50d74e6aa5f45f0bbbd98b2681e7e2798cd1a3452a33c6336b29aaf9"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "021e73af8333337c791c6573262b01b1d4668a8c672922d4bbf0b5c9398911c1",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a personalized item, especially the engraved MIT-themed plaque",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a personalized item, especially the engraved MIT-themed plaque",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "41723eb54c02cec511f3b1ae385a716311783251d3b428cf3be053c29789ae06"
+}

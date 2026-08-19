@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "60efdeadfb71c1e72dad6f3e79444d71db19865edfeec9328a4f8d9806190dbc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of The Way-High Jean in a mid-wash",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of The Way-High Jean in a mid-wash",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "33fb1a23232cf6ea919d8aea352e8c70e1c9759b63ccf4874e48790443a007f9"
+}

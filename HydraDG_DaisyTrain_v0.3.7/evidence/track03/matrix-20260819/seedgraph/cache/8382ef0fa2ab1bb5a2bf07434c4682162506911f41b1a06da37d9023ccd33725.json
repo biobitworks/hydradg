@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8382ef0fa2ab1bb5a2bf07434c4682162506911f41b1a06da37d9023ccd33725",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a slim wallet",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a slim wallet",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "091a7c390b8318ce68c7dbd74c84558965108781974e09d7de3ac91b57a0cab5"
+}

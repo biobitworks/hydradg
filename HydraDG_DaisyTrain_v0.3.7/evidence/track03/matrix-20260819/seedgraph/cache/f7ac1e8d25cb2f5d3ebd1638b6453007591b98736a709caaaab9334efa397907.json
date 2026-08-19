@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "f7ac1e8d25cb2f5d3ebd1638b6453007591b98736a709caaaab9334efa397907",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a branded hashtag to track the conversations and create a sens",
+      "type": "value"
+    },
+    {
+      "name": "how it's straightforward and encourages people to speak up about their mental he",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a branded hashtag to track the conversations and create a sense of community",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "how it's straightforward and encourages people to speak up about their mental health struggles",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d5699f530bf88abb79bb13da2b5d353dee7044a222ca13f4318268b141767abc"
+}

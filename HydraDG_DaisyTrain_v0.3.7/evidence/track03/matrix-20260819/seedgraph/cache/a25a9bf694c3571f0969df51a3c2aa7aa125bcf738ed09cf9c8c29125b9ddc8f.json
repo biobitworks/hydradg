@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a25a9bf694c3571f0969df51a3c2aa7aa125bcf738ed09cf9c8c29125b9ddc8f",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to get a head start, so I wake up at 6:00 AM",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to get a head start, so I wake up at 6:00 AM",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "68608992ac5fe2fb2800bd6f7051f0a9ca8d96e5b67d3d2f6a0b67eff551d2c8"
+}

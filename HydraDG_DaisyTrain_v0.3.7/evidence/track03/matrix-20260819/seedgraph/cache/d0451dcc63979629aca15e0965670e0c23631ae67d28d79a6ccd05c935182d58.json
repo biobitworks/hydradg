@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d0451dcc63979629aca15e0965670e0c23631ae67d28d79a6ccd05c935182d58",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of using a closet organizer system and maximizing my vertical space",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a closet organizer system and maximizing my vertical space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d1194989d14169fbd4b34e303b49e97f6029b6e563010bd99a94adb72647ade6"
+}

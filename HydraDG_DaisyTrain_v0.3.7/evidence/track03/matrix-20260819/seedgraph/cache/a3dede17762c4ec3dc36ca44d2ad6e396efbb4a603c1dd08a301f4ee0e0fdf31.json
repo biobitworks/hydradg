@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a3dede17762c4ec3dc36ca44d2ad6e396efbb4a603c1dd08a301f4ee0e0fdf31",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of including gratitude for challenges",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of including gratitude for challenges",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6991b50492381b731609fde5dc023e02e76d4b9343529dff8b58e51213226754"
+}

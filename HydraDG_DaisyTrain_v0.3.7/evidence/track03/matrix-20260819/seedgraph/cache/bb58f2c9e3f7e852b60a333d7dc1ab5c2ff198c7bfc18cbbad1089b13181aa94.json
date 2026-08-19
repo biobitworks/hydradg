@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bb58f2c9e3f7e852b60a333d7dc1ab5c2ff198c7bfc18cbbad1089b13181aa94",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, but I was actually thinking of wearing my new boots with the distre",
+      "type": "value"
+    },
+    {
+      "name": "those ideas",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, but I was actually thinking of wearing my new boots with the distressed denim jeans I g",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f17ce85414bfa629b11fdfff5ac3ef859d28ec522582b19d15aa14648d8581d3"
+}

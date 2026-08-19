@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "55f90a0360abd8b5c6bba4b25e41b2fab73ff16356b80daf3f452b424ca20d81",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of offering a bulk discount, but I'm not sure if 10% off for 3 or more ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of offering a bulk discount, but I'm not sure if 10% off for 3 or more items is the right t",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "a7ca52a07845ce36453fa5421e50e711031e544e6baaa1d89c219bd4d5b831cf"
+}

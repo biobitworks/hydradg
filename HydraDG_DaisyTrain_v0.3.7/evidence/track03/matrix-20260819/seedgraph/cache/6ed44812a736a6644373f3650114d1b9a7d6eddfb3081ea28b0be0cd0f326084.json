@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6ed44812a736a6644373f3650114d1b9a7d6eddfb3081ea28b0be0cd0f326084",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of gradual adjustment and establishing a consistent sleep schedule",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of gradual adjustment and establishing a consistent sleep schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "df2ee5962fe80da766fadc529dd3be1d365d1c1c94e66885096c1f8c4adac737"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "289db8428123e26d598fa6e2c8dab8fb5899709dbe767c1f27f851c15055d864",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a subtle pattern, but I'm not sure if I want to go with something bo",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a subtle pattern, but I'm not sure if I want to go with something bold",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d438dd0b9890e3c8daa8ccdd9bfd57a673b8babf99f92db0f83e98ba5442ad97"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3bac2bb2630b114d9ccd3577fb596e1d75238013f052e20b2a291636dcb9021e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to support local businesses and get a more personalized service",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to support local businesses and get a more personalized service",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "44be791ef05ad93d0d126c60f6c9c9c96095c713170ea21921b79080ffa086fd"
+}

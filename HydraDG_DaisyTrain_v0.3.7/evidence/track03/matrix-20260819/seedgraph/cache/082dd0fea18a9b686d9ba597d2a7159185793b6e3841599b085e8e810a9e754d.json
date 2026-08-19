@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "082dd0fea18a9b686d9ba597d2a7159185793b6e3841599b085e8e810a9e754d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to watch them in sequence, so it makes sense to keep them together",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to watch them in sequence, so it makes sense to keep them together",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2096ed620cc24c34233d704a3978531e06a5755b4cf4c3766ab25054fd7cf0f4"
+}

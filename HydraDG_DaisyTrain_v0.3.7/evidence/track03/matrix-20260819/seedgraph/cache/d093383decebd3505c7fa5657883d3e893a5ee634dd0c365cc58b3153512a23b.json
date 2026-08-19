@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "d093383decebd3505c7fa5657883d3e893a5ee634dd0c365cc58b3153512a23b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the structured approach to creating a training plan",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the structured approach to creating a training plan",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f01094acad6c69cf1e2cdb6873ee7bb9ea4124276a2bb40b3a255ea049473e07"
+}

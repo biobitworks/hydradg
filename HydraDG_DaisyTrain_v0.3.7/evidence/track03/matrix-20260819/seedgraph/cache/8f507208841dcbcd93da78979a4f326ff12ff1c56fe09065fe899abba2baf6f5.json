@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f507208841dcbcd93da78979a4f326ff12ff1c56fe09065fe899abba2baf6f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "those ideas, especially the scrambled egg muffins",
+      "type": "value"
+    },
+    {
+      "name": "the energy balls and trail mix ideas",
+      "type": "value"
+    },
+    {
+      "name": "those ideas, especially the one-pot pasta with vegetables",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the scrambled egg muffins",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the energy balls and trail mix ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "those ideas, especially the one-pot pasta with vegetables",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9c3cd36742c15f39e897e4417a814a945b5d6375cd6e6b5e3f756d1df04a6c80"
+}

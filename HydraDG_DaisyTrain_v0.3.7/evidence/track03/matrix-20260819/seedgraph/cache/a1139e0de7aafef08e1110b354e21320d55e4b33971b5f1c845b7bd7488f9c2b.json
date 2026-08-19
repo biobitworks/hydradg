@@ -1,0 +1,100 @@
+{
+  "cache_hit": false,
+  "cache_key": "a1139e0de7aafef08e1110b354e21320d55e4b33971b5f1c845b7bd7488f9c2b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "to shop online",
+      "type": "value"
+    },
+    {
+      "name": "buying electronics offline",
+      "type": "value"
+    },
+    {
+      "name": "buying online because there are too many options available and apps offer huge d",
+      "type": "value"
+    },
+    {
+      "name": "Online only cos of the insane variety it offers sitting at home",
+      "type": "value"
+    },
+    {
+      "name": "both depending on the type of purchase and occasion for purchase",
+      "type": "value"
+    },
+    {
+      "name": "online mode d\u01b0e to the Ease of buying, availability of choices, ease of comparis",
+      "type": "value"
+    },
+    {
+      "name": "wearing one pieces, baggy jeans, sweaters, hoodies etc, the goal is to be able t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "to shop online",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "buying electronics offline",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "buying online because there are too many options available and apps offer huge discounts too",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "Online only cos of the insane variety it offers sitting at home",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "both depending on the type of purchase and occasion for purchase",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "online mode d\u01b0e to the Ease of buying, availability of choices, ease of comparison and that there is",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "wearing one pieces, baggy jeans, sweaters, hoodies etc, the goal is to be able to dress for any occa",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "571e9ab5014f1d6ed0204714db2ea67a2d608442631b72d246c7f2915b6f811b"
+}

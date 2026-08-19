@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9ba44ac78205a1799bb3a689c7e1c39a3d43b8da0f169418286629af48fed816",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the room",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the room",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "92a73381ebb0a33c5ad0c855fe56d2d34213f2d1a3605331b79f43144e4a4ea7"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "41769f1bdca18522df2ec85e36bd4d51dc6b4eca8227069b045828bcb1e1a124",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the \"counterpart\" prompt",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the \"counterpart\" prompt",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6095eb40141f6a87c9467a08a6d92f8c5906e1d01b82e512008f9b22c47e6856"
+}

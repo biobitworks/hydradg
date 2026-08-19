@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "4c6618d7f608160751b5e7df6ab3b01cd45648915c17722e07c6e81f5252fe7b",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it has a database of 20,000 plants, that's really impressive",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it has a database of 20,000 plants, that's really impressive",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "44cabd7704dcaace694f2a586f2f09f351e8c5cd1fd2df0de79e1270d741fdcd"
+}

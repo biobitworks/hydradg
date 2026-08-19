@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "e77afc0f1cef9d08ee1aa13c1c50ad381d09ec3dc6f125b04a416013df5f394d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the city, and I'm looking for a casual, relaxed atmosphere",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the city, and I'm looking for a casual, relaxed atmosphere",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9c05b69dd0e5cf524f33146e552d85aa053665d167c1811fa830d4822030cacf"
+}

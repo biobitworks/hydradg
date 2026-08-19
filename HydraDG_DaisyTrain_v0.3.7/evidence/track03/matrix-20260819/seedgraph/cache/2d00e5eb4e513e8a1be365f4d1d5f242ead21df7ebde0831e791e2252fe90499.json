@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "2d00e5eb4e513e8a1be365f4d1d5f242ead21df7ebde0831e791e2252fe90499",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a slouchy hat with ribbing, but I'm not sure what yarn weight and fi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a slouchy hat with ribbing, but I'm not sure what yarn weight and fiber content I used f",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "de2904b4323b4559386819d24124a27471b7273925167e3fd53e51953af7d223"
+}

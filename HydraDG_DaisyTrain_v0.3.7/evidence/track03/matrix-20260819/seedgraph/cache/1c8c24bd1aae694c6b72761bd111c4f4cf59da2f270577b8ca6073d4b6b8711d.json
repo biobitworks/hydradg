@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c8c24bd1aae694c6b72761bd111c4f4cf59da2f270577b8ca6073d4b6b8711d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of a minimalist, low-profile coffee table that won't visually clutter t",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of a minimalist, low-profile coffee table that won't visually clutter the room",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "c3a78889fb46c9fa5b7dec89cf7705e0b7526bc77fe45c218940257b05ce6c11"
+}

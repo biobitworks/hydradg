@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "351382d9a544405637efd6918d781201efad0eeb128600dc2840b938c94fbb24",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of ornate gold frames, they sound like they would really make the poste",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of ornate gold frames, they sound like they would really make the posters stand out",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2281813aca901cfa134cfe4d068d94a2e93f482156b350d2193c06f8193fcc6a"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3313b46d56f16ece57a31d3fa4aa2712fd166619c940319e51b4aef6f02d90b7",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of being able to upgrade individual components in the future",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of being able to upgrade individual components in the future",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "9ca4d349a66dbf17c13c7f6c82c127280219eff1925f7c062d06d5a986bda043"
+}

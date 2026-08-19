@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "ce6093d4444f265cbeb3b25054dc1a067bb025e36876e5ef3e6c1af2fbd1e5f4",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of rolling my necklaces to prevent tangling",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of rolling my necklaces to prevent tangling",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "87ac9725c83bc1e6558179bd8aae6abf5d01939420c6ce40ceedf00151bd8667"
+}

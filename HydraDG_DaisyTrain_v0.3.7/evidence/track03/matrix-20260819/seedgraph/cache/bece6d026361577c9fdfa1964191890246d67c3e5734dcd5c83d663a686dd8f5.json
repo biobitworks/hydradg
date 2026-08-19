@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "bece6d026361577c9fdfa1964191890246d67c3e5734dcd5c83d663a686dd8f5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a brush, a pouring technique, or something else",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a brush, a pouring technique, or something else",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f597f5a891e394636f857579f2032d7a6c88251de885da09ea02e738714c8898"
+}

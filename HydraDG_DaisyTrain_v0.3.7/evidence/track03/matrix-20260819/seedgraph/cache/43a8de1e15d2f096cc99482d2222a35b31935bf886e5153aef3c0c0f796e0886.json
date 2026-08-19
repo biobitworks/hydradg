@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "43a8de1e15d2f096cc99482d2222a35b31935bf886e5153aef3c0c0f796e0886",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the caption idea \"Holding onto grudges is like wearing a heavy coat - it's time ",
+      "type": "value"
+    },
+    {
+      "name": "the image suggestion of a person walking away from a dark background towards a b",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the caption idea \"Holding onto grudges is like wearing a heavy coat - it's time to shed the weight o",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the image suggestion of a person walking away from a dark background towards a bright horizon",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f0036ada0cd97d8981b8f937a7be7d1f4f24cf4f0a34aa1a7f5216a537da345e"
+}

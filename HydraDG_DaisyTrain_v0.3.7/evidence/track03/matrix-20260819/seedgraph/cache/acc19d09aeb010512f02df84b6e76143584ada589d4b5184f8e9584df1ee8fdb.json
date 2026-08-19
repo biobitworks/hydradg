@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "acc19d09aeb010512f02df84b6e76143584ada589d4b5184f8e9584df1ee8fdb",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "this item regularly",
+      "type": "value"
+    },
+    {
+      "name": "the idea of focusing on experiences too",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "this item regularly",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of focusing on experiences too",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "7739dbb459cb768ccdf0ed90ddf285de260f4b77982b193983ec7b01317d1468"
+}

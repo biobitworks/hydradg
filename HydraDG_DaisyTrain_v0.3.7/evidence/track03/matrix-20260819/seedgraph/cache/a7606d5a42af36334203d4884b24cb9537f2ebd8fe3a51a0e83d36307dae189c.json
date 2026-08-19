@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a7606d5a42af36334203d4884b24cb9537f2ebd8fe3a51a0e83d36307dae189c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of the stackable containers",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of the stackable containers",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "14e105cba84f80e293744b89e36ddee4d536c9c64231b9b121d69f1ffb2d5528"
+}

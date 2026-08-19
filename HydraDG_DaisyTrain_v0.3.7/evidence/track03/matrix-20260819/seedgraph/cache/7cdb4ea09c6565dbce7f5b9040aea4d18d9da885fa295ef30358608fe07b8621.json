@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7cdb4ea09c6565dbce7f5b9040aea4d18d9da885fa295ef30358608fe07b8621",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the schedule, but I'm worried about my productivity slump between 2 pm and 4 pm",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the schedule, but I'm worried about my productivity slump between 2 pm and 4 pm",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d61d0e6cdef2c99db8d4bf274142b75a3ee2ba63d74e65f34e04c6608263ede"
+}

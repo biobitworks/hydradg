@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9f725adebd9cf84bf9fb20efbfe00e2821ae31d766a101d80cde27edc2d2343c",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that to set realistic goals for myself",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that to set realistic goals for myself",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0a77f147e9025bafa128e305df440c3361445b25eb8f220bedee341d9eaf10c7"
+}

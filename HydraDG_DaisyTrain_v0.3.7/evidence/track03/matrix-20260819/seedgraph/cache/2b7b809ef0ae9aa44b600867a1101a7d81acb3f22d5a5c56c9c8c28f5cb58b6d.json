@@ -1,0 +1,64 @@
+{
+  "cache_hit": false,
+  "cache_key": "2b7b809ef0ae9aa44b600867a1101a7d81acb3f22d5a5c56c9c8c28f5cb58b6d",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a platform like Canva to design the book, and then export it as a PDF to share w",
+      "type": "value"
+    },
+    {
+      "name": "the idea of creating a digital recipe book and adding stories and context to the",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using a consistent design theme and adding images and photos to make",
+      "type": "value"
+    },
+    {
+      "name": "the idea of using Canva to design the digital recipe book",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a platform like Canva to design the book, and then export it as a PDF to share with my family",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a digital recipe book and adding stories and context to the recipes",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using a consistent design theme and adding images and photos to make the digital recipe",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of using Canva to design the digital recipe book",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "41a8075a32f854a39a710f9bd9fddcaa70b0cbca9943221cf6687e25c671b0fc"
+}

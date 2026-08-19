@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "3dce492de0af5e40e9e04472d34b703ef538d89485ad9b69a4f29bec93c0ffcc",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the sound of the Pocono Mountains option, Woodloch Pines Resort",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the sound of the Pocono Mountains option, Woodloch Pines Resort",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e93d7fafbfb3003a458cd00580d610ac0068b675ba8d197e19da3b0d45cbc395"
+}

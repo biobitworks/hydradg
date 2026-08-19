@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "1c355da986efdf353bf5351ae763ba0d4cca73103d37846dd5b1c263e46c2cfa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of setting a consistent wake-up time, but I'm worried about the days wh",
+      "type": "value"
+    },
+    {
+      "name": "the idea of setting a tiered wake-up schedule",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a consistent wake-up time, but I'm worried about the days when I need to wake up",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of setting a tiered wake-up schedule",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "77b68d09d47b7ec8abf08741bd2cf618dcb8cf54d003c35130f89916570421d7"
+}

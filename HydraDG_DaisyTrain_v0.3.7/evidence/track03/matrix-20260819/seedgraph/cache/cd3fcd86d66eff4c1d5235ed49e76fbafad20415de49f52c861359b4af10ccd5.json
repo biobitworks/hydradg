@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "cd3fcd86d66eff4c1d5235ed49e76fbafad20415de49f52c861359b4af10ccd5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of unlimited listening",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of unlimited listening",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "f9fd4d48d6dec51cd30c87ae493ed678da8bbb74da5dd905fd66c8fc485fe966"
+}

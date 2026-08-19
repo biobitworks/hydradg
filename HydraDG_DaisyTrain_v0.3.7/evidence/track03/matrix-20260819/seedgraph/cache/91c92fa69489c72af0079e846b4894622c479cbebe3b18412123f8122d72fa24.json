@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "91c92fa69489c72af0079e846b4894622c479cbebe3b18412123f8122d72fa24",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a 30-minute buffer in the morning",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a 30-minute buffer in the morning",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "81f2448d45b28328e486f8bb81b5ac7af0e9f9428d0a862de15c67fa2fbc657f"
+}

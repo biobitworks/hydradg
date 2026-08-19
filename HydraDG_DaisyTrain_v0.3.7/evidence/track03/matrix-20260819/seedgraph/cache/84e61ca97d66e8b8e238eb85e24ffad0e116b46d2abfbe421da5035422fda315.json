@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "84e61ca97d66e8b8e238eb85e24ffad0e116b46d2abfbe421da5035422fda315",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "at West Elm",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "at West Elm",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "e02a33a73dd21d580675ce575f8f33c74c2caf815369fd3e0e94c706c0493740"
+}

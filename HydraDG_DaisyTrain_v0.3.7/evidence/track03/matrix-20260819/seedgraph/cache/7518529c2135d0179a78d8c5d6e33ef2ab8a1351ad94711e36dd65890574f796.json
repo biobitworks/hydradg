@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "7518529c2135d0179a78d8c5d6e33ef2ab8a1351ad94711e36dd65890574f796",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of having a tea leaf reader, too - that will add a nice touch of whimsy",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of having a tea leaf reader, too - that will add a nice touch of whimsy to the party",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "466367b40ad85113f1786b460b0700606c24a841ad80fb291705848a91a86cba"
+}

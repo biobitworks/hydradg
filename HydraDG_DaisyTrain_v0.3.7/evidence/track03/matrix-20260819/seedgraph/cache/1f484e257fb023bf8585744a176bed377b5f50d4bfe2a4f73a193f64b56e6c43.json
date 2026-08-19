@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "1f484e257fb023bf8585744a176bed377b5f50d4bfe2a4f73a193f64b56e6c43",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a wake-up routine",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a wake-up routine",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b399c724a55aa58447ff4d35c864d053f62aa5201b88c063ea3f52c35dc5937b"
+}

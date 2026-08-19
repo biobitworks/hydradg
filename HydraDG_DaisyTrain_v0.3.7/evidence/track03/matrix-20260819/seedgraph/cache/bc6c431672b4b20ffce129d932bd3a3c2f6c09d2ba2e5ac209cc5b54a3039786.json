@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "bc6c431672b4b20ffce129d932bd3a3c2f6c09d2ba2e5ac209cc5b54a3039786",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "that it's dedicated to recipe management and has features like tagging and searc",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a digital journaling app that allows me to add photos, audio, and vi",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "that it's dedicated to recipe management and has features like tagging and searching",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a digital journaling app that allows me to add photos, audio, and video to the entries",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "24933c5a4272a9b02acff2ecf076f29dae3568398cfe9cdb0c0a88b0577ad4fc"
+}

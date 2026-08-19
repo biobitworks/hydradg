@@ -1,0 +1,160 @@
+{
+  "cache_hit": false,
+  "cache_key": "b2b37377d68a8f8d9789f26fd2b45c917fdb461b886dde30f77bc3bef887ffaa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "an apartment",
+      "type": "value"
+    },
+    {
+      "name": "a small appartement so there is no space for a workshop and place to keep tools",
+      "type": "value"
+    },
+    {
+      "name": "the products I previously purchased",
+      "type": "value"
+    },
+    {
+      "name": "crafting and have very little space for tools",
+      "type": "value"
+    },
+    {
+      "name": "the idea of having the bench with me, and am mostly doing small work anyway",
+      "type": "value"
+    },
+    {
+      "name": "crafting",
+      "type": "value"
+    },
+    {
+      "name": "the idea of a group of smaller tools",
+      "type": "value"
+    },
+    {
+      "name": "crafting and need some versatile tools",
+      "type": "value"
+    },
+    {
+      "name": "to tinker with handheld device mods, but stink at fabrication- part of which I d",
+      "type": "value"
+    },
+    {
+      "name": "tools",
+      "type": "value"
+    },
+    {
+      "name": "to make stuff for tabletop gaming",
+      "type": "value"
+    },
+    {
+      "name": "the small scale tooling for models and miniatures",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "an apartment",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "a small appartement so there is no space for a workshop and place to keep tools",
+      "polarity": "affirmed",
+      "predicate": "lives_in",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the products I previously purchased",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "crafting and have very little space for tools",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of having the bench with me, and am mostly doing small work anyway",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "crafting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of a group of smaller tools",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "crafting and need some versatile tools",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to tinker with handheld device mods, but stink at fabrication- part of which I dont have tools to wo",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "tools",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "to make stuff for tabletop gaming",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the small scale tooling for models and miniatures",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "399c5d9464bffd9d4a08d9831163e6cc3ab903ca7f21beef61153d16166960e6"
+}

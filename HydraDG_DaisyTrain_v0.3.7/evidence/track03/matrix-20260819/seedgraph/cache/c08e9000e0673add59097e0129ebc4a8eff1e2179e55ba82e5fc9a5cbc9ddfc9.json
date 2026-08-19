@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "c08e9000e0673add59097e0129ebc4a8eff1e2179e55ba82e5fc9a5cbc9ddfc9",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of creating a hierarchical folder structure and using subfolders for sp",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of creating a hierarchical folder structure and using subfolders for specific activities or",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "842df696e825a43b281eda980b3398fee1d971ec99e2997dccb0a689ef3f4e99"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "9e586a1f7921d2ad3558751a971133bbbb5937f629431fd24b01971b7e632825",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "classes that focus on stress relief and relaxation",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "classes that focus on stress relief and relaxation",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "14d9c90e32c0eb39615a2ff4e73b62bc2896d953a621cd0ae55913cf5aec9836"
+}

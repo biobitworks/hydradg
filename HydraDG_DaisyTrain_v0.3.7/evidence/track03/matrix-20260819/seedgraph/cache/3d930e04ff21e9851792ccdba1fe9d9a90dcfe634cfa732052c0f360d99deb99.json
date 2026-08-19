@@ -1,0 +1,52 @@
+{
+  "cache_hit": false,
+  "cache_key": "3d930e04ff21e9851792ccdba1fe9d9a90dcfe634cfa732052c0f360d99deb99",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "up some of the ingredients I already have on hand",
+      "type": "value"
+    },
+    {
+      "name": "these recipe ideas",
+      "type": "value"
+    },
+    {
+      "name": "these ideas for using up the strawberries and blueberries",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "up some of the ingredients I already have on hand",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these recipe ideas",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "these ideas for using up the strawberries and blueberries",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "80a15fd624f36d0b3dc4ecfd69578bb2a4d9dfd15d0fe826bf642d1385d20a32"
+}

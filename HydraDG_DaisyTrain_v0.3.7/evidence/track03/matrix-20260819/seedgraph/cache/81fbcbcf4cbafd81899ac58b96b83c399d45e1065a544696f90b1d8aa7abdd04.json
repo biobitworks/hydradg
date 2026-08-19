@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "81fbcbcf4cbafd81899ac58b96b83c399d45e1065a544696f90b1d8aa7abdd04",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "Trello's labeling system to categorize and prioritize my cards",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "Trello's labeling system to categorize and prioritize my cards",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "82add4c04028f2dc2370b7f03aa98fda749f49b339cb3becb27814605f978dc3"
+}

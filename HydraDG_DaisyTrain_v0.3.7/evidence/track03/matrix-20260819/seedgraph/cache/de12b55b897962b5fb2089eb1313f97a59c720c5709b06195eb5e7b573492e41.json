@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "de12b55b897962b5fb2089eb1313f97a59c720c5709b06195eb5e7b573492e41",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "morning classes on the weekends and evening classes on weekdays",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "morning classes on the weekends and evening classes on weekdays",
+      "polarity": "affirmed",
+      "predicate": "prefers",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "ae6a5e488ab406e615f6ee93a0e968a7b1463c7968f51d8763828d0d29e29799"
+}

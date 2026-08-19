@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "8f0eb08a2a50b597618f9c2db0cf669c2e7656c91b27d1c52cfe01e1b640e667",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "canned tomatoes instead of fresh ones",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "canned tomatoes instead of fresh ones",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "97bbf3be7c0ef65f360c29b6fe4b9f57ca67e4795aef1be3d31cc261d5f85685"
+}

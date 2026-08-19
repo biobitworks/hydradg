@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "0a35ce34cabdcea38394acf87bbe1c4dacd16c5a204163ac6fbe975666582f1e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "a Canon EOS Rebel camera and a few prime lenses",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "a Canon EOS Rebel camera and a few prime lenses",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "6004410b62bc4b1dd0a9386fb09b2e2a1b2cd48a2669a854bbfa2c8e91278ed8"
+}

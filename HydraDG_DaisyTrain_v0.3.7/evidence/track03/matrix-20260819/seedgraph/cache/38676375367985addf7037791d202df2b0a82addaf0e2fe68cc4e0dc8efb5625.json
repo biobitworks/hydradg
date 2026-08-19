@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "38676375367985addf7037791d202df2b0a82addaf0e2fe68cc4e0dc8efb5625",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of breakfast or snack prep, I've been skipping breakfast lately due to ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of breakfast or snack prep, I've been skipping breakfast lately due to time constraints",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "78a4011002e7ae3b8907dcbc8f52ae80e8082d56d6ff866cbac1ca5858c3674d"
+}

@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "3d40c8a4b997876decc7cdc5832a71a0c865b411567de788192a047ad73a194a",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the \"Morning Routine Series\" idea",
+      "type": "value"
+    },
+    {
+      "name": "the captions",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the \"Morning Routine Series\" idea",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the captions",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "0d2fcf56fb0fe3612aff9f44d332017e63974eb089fd4fd34afa6cbd7d4126cf"
+}

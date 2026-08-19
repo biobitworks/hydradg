@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "274f3fbf46155d002b11641cbdde5036cf7dbd1944f09d28805f9f45d3af692e",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the idea of raised beds and using vertical space",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the idea of raised beds and using vertical space",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "b9c180f4fc1b66a5c7d4fe3cd0e497321bccc56c403c3660df0058e7354725da"
+}

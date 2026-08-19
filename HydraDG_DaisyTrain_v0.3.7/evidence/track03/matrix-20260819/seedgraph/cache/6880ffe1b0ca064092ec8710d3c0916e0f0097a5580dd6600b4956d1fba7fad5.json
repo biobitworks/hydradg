@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "6880ffe1b0ca064092ec8710d3c0916e0f0097a5580dd6600b4956d1fba7fad5",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "how they make me feel more relaxed and centered, especially after a long day of ",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "how they make me feel more relaxed and centered, especially after a long day of work and commuting",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "82fc620a2fa94e2e9c353c86b2d13eba19372432b552bd7e453ebfef36a68b22"
+}

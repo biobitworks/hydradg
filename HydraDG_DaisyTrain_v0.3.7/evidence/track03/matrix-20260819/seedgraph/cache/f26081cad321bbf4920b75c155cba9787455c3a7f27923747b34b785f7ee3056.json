@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "f26081cad321bbf4920b75c155cba9787455c3a7f27923747b34b785f7ee3056",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the way the lessons are structured",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the way the lessons are structured",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "946302100f9c381046da9646dc2a8ce90e8edd305545ebed02c5000cf86c4701"
+}

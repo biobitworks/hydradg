@@ -1,0 +1,40 @@
+{
+  "cache_hit": false,
+  "cache_key": "9074b2a5c308ab415eba2d1260ca883e7a0908a15c905127bfcdcf48bd243fba",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "the structure and the ideas you've provided",
+      "type": "value"
+    },
+    {
+      "name": "the idea of #FitnessWith[YourName] and #FitFam[YourName]",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "the structure and the ideas you've provided",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    },
+    {
+      "confidence": 0.55,
+      "object": "the idea of #FitnessWith[YourName] and #FitFam[YourName]",
+      "polarity": "affirmed",
+      "predicate": "likes",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "2cb4cf8cdb87ecbd8890a1ba0e67f1a95a2e13fe51aac2db6231ba5ab7ebdb96"
+}

@@ -1,0 +1,28 @@
+{
+  "cache_hit": false,
+  "cache_key": "a3eeae68c7ffc2e3c783e1b218c41d15a5f42437f897726e8b48258975a011fa",
+  "entities": [
+    {
+      "name": "user",
+      "type": "person"
+    },
+    {
+      "name": "my Omron blood pressure monitor in the morning to keep tabs on my readings",
+      "type": "value"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_HEURISTIC_EXTRACTION",
+  "extractor": "heuristic_v2",
+  "facts": [
+    {
+      "confidence": 0.55,
+      "object": "my Omron blood pressure monitor in the morning to keep tabs on my readings",
+      "polarity": "affirmed",
+      "predicate": "uses",
+      "subject": "user",
+      "valid_time": ""
+    }
+  ],
+  "seedgraph_state": "DETERMINISTIC_MATERIALIZED",
+  "source_sha256": "d9f1b4cf4e01a8ff1da997a0cd2b2b60baef7ba7f23f6cbb0b60aaaa3f43d0b8"
+}
