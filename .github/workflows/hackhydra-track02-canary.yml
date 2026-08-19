@@ -1,5 +1,9 @@
 name: HackHydra Track02 HydraBlast canary
 
+concurrency:
+  group: hackhydra-track02-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   pull_request:
     branches: [main]
@@ -21,20 +25,17 @@ jobs:
       PKG: HydraDG_DaisyTrain_v0.3.7
     steps:
       - uses: actions/checkout@v4
-
       - name: Static checks
         run: |
           python -m py_compile \
             "$PKG/scripts/best_use_typed_graph.py" \
             "$PKG/scripts/track02_hydrablast_canary.py"
-
       - name: Install HydraDB prerequisites
         run: |
           sudo apt-get update
           sudo apt-get install -y build-essential clang libclang-dev cmake pkg-config libcypher-parser-dev libgraphblas-dev curl git python3
           rustup update stable
           rustup default stable
-
       - name: Pin and build HydraDB
         run: |
           git clone https://github.com/hydra-db/hydradb.git /tmp/hydradb
@@ -42,7 +43,6 @@ jobs:
           test "$(git -C /tmp/hydradb rev-parse HEAD)" = "$HYDRADB_PIN"
           cd /tmp/hydradb
           cargo build --locked --features server-runtime --bin graph-node
-
       - name: Start pinned HydraDB
         run: |
           mkdir -p /tmp/hydra-store /tmp/hydra-cache "$RUNNER_TEMP/track02"
@@ -75,7 +75,6 @@ jobs:
           done
           tail -200 "$RUNNER_TEMP/track02/hydradb.log"
           exit 1
-
       - name: Run HydraBlast canary
         run: |
           python "$PKG/scripts/track02_hydrablast_canary.py" \
@@ -83,7 +82,6 @@ jobs:
             --out "$RUNNER_TEMP/track02/hydrablast_canary.json"
           cat "$RUNNER_TEMP/track02/hydrablast_canary.json"
           sha256sum "$RUNNER_TEMP/track02/hydrablast_canary.json" > "$RUNNER_TEMP/track02/SHA256SUMS.txt"
-
       - name: Preserve Track 02 evidence
         if: always()
         uses: actions/upload-artifact@v4
