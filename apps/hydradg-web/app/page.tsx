@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+import ContextIcebergHero from "@/components/ContextIcebergHero";
 import { buildSiteFcg } from "@/lib/siteFcg";
 
 const tracks = [
@@ -37,25 +38,27 @@ export default function Home() {
 
   return (
     <main>
-      <header className="hero" id="top">
-        <div>
-          <p className="eyebrow">Hack Hydra 2026 · graph state with evidence paths</p>
-          <h1>See what changed. Trace why. Test the repair.</h1>
+      <header className="hero" id="top" style={{ alignItems: "stretch", flexWrap: "wrap" }}>
+        <div style={{ flex: "1 1 430px", alignSelf: "flex-end", minWidth: 0 }}>
+          <p className="eyebrow">Hack Hydra 2026 · live fractal custody field</p>
+          <h1 style={{ fontSize: "clamp(48px, 6.6vw, 102px)" }}>See the context move.</h1>
           <p className="lede">
-            HydraDG uses HydraDB to represent changing memory, identity and dependency state as typed graph relationships.
-            FCO/FCG preserves the source and transformation route behind each derived state so a change can be inspected instead of silently overwritten.
+            HydraDG turns chain of custody into a navigable state field: rotate the FCG in x/y/z, scrub time,
+            watch each object&apos;s context cloud widen as its distribution drifts, and trace every visible change back
+            to its source, transformation and claim ceiling.
           </p>
           <div className="actions">
             <Link className="primary" href="/judge">Try the guided demo</Link>
-            <Link className="secondary" href="/demo">Submission overview</Link>
+            <Link className="secondary" href="/graph">Open full 4D FCG</Link>
             <Link className="secondary" href="/evidence">See the results</Link>
           </div>
+          <div className="actions">
+            <span className="pill pillGood">local HydraDB · executed</span>
+            <span className="pill pillGood">LongMemEval · 500 cases</span>
+            <span className="pill pillMuted">release site · deployment pending</span>
+          </div>
         </div>
-        <div className="heroStatus" aria-label="Project status">
-          <span className="pill pillGood">local HydraDB · executed</span>
-          <span className="pill pillGood">LongMemEval · 500 cases</span>
-          <span className="pill pillMuted">release site · deployment pending</span>
-        </div>
+        <ContextIcebergHero />
       </header>
 
       <section className="computeSection" id="demo">
@@ -101,14 +104,19 @@ export default function Home() {
       </section>
 
       <section className="computeSection" id="iceberg">
-        <span className="sectionNumber">03 / TIP OF THE ICEBERG</span>
-        <h2 className="displayTitle">Simple on the surface. Full custody underneath.</h2>
+        <span className="sectionNumber">03 / CONTEXT ICEBERG</span>
+        <h2 className="displayTitle">A heat map of change, with the receipts underneath.</h2>
+        <p className="sectionLead">
+          The hero treats the FCG as a spacetime field instead of a linear status bar. Every visible FCO can carry a context envelope: halo width encodes Cloud Drift magnitude, hue encodes the direction of ΔG*, and time exposes when that state entered the chain. Neither color nor size is an accuracy verdict.
+        </p>
         <div className="grid threeCol">
-          <article className="panel"><p className="eyebrow">Hot · now</p><h2>Current state</h2><p className="muted">The answer, recent change and recovery status are visible first.</p></article>
-          <article className="panel"><p className="eyebrow">Warm · context</p><h2>Graph relationships</h2><p className="muted">Experiment, typed edges, perturbation path and result status appear when the visitor asks why.</p></article>
-          <article className="panel"><p className="eyebrow">Cold · retained</p><h2>Evidence memory</h2><p className="muted">FCO identities, FCG edges, SeedGraph custody, HydraDB state, receipts and historical counterevidence remain addressable.</p></article>
+          <article className="panel"><p className="eyebrow">Tip · current</p><h2>ΔG* + Cloud Drift</h2><p className="muted">Two compact signals summarize direction and redistribution magnitude without collapsing retrieval outcomes into the same score.</p></article>
+          <article className="panel"><p className="eyebrow">Waterline · change</p><h2>Object-level clouds</h2><p className="muted">Atoms, evidence, seeds, state snapshots and future FCG object classes can inherit or publish their own drift envelope.</p></article>
+          <article className="panel"><p className="eyebrow">Deep · custody</p><h2>Source to claim</h2><p className="muted">FCO identities, FCG edges, SeedGraph custody, HydraDB projection roots, hashes, signatures and null history remain addressable below the visualization.</p></article>
         </div>
-        <p className="small muted note">Hot/cold and iceberg language is a presentation metaphor. Application-defined ΔG* is analogous terminology only and is not physical Gibbs free energy.</p>
+        <p className="small muted note">
+          ΔG* is an application-defined dimensionless information-state abstraction, not physical Gibbs free energy. Cloud Drift is 100×Jensen-Shannon divergence against a frozen reference distribution. Accuracy and recall remain separate empirical outcomes.
+        </p>
       </section>
 
       <section className="computeSection" id="tracks">
