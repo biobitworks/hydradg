@@ -1,0 +1,96 @@
+{
+  "$id": "hydradg.ollarma_structured_prediction.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "additionalProperties": false,
+  "properties": {
+    "abstain": {
+      "type": "boolean"
+    },
+    "claim_ceiling": {
+      "const": "PROBABILISTIC_MODEL_OUTPUT_ONLY"
+    },
+    "counterevidence": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    },
+    "expected_direction_next_run": {
+      "additionalProperties": false,
+      "properties": {
+        "delta_g_star": {
+          "enum": [
+            "UP",
+            "DOWN",
+            "STABLE",
+            "UNKNOWN"
+          ]
+        },
+        "hit_at_k": {
+          "enum": [
+            "UP",
+            "DOWN",
+            "STABLE",
+            "UNKNOWN"
+          ]
+        },
+        "recall_at_k": {
+          "enum": [
+            "UP",
+            "DOWN",
+            "STABLE",
+            "UNKNOWN"
+          ]
+        },
+        "retrieval_cloud_drift": {
+          "enum": [
+            "UP",
+            "DOWN",
+            "STABLE",
+            "UNKNOWN"
+          ]
+        }
+      },
+      "required": [
+        "delta_g_star",
+        "retrieval_cloud_drift",
+        "hit_at_k",
+        "recall_at_k"
+      ],
+      "type": "object"
+    },
+    "mechanism_label": {
+      "type": "string"
+    },
+    "next_falsification_test": {
+      "type": "string"
+    },
+    "probabilities": {
+      "additionalProperties": {
+        "maximum": 1,
+        "minimum": 0,
+        "type": "number"
+      },
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "supporting_metrics": {
+      "items": {
+        "type": "string"
+      },
+      "type": "array"
+    }
+  },
+  "required": [
+    "mechanism_label",
+    "expected_direction_next_run",
+    "supporting_metrics",
+    "counterevidence",
+    "next_falsification_test",
+    "abstain",
+    "claim_ceiling"
+  ],
+  "type": "object"
+}

@@ -1,0 +1,32 @@
+{
+  "drift": {
+    "retrieval": "RetrievalCloudDrift = 100 \u00d7 JSD(frozen retrieved-context distribution || frozen retrieval reference)",
+    "rule": "Do not redefine StructuralCloudDrift after observing K5/K10.",
+    "structural": "CloudDrift = 100 \u00d7 JSD(frozen structural context distribution || frozen reference)"
+  },
+  "expected_longmemeval_bytes": 277383467,
+  "expected_longmemeval_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "modes": {
+    "full": "agent-supervised end-to-end local appliance and release verification",
+    "mock": "offline orchestration/self-test only",
+    "verify": "read-only local verification; no git reconciliation or scientific rerun"
+  },
+  "next_prospective_run": {
+    "candidate": "K15",
+    "one_variable_change": "K depth only",
+    "state": "PREREGISTER_AND_VERIFY_PRIOR_PREDICTION_ROOT_BEFORE_EXECUTION"
+  },
+  "project_root": "/Users/byron/projects/active/hydradg",
+  "release_branch": "hack-hydra/submission-eligible-20260819",
+  "schema": "hydradg.e2e_plan.v1",
+  "scientific_claim_corrections": {
+    "k5_k10_g_association": "Aggregate K5\u2192K10 deltas are descriptive; H0_GA remains inference-pending until paired/per-case or multi-condition evidence is tested.",
+    "model_agreement": "Exact agreement may be reported. Cohen kappa is reported only if category variation makes it defined and informative.",
+    "model_superiority": "No superiority claim until prospective held-out predictions are scored and compared against each other and a preregistered null predictor."
+  },
+  "services": {
+    "best_use": "http://127.0.0.1:8787",
+    "ollarma_http": "http://127.0.0.1:11434",
+    "web": "http://127.0.0.1:3010"
+  }
+}

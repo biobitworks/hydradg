@@ -1,0 +1,70 @@
+exit_code=0
+turn_root_sha256=809950619ae0e834ca365c6506b9f367441bb485a3106465ec0818b82aaa4839
+manifest_sha256=aef6b08a5e358b48ec1cd1414108c8e1c53b2f26814ad6b2f08bf98728bf3ea3
+package_pytest_exit_code=0
+mock_model_runner_exit_code=0
+
+hash_verification_stdout:
+README.md: OK
+configs/approved_models.json: OK
+configs/e2e_plan.json: OK
+configs/retrieval_cloud_vocab.json: OK
+custody/CURRENT_HUMAN_TURN.txt: OK
+custody/SIGNING_HANDOFF.json: OK
+custody/TURN_CUSTODY.json: OK
+docs/E2E_ACCEPTANCE_CHECKLIST.md: OK
+docs/PACKAGE_STATUS.md: OK
+docs/PACKAGE_TEST_OUTPUT.txt: OK
+docs/mock-run/model-replay.json: OK
+docs/mock-run/model-run-console.txt: OK
+mock/mock_ollama_server.py: OK
+mock/sample_diagnostic_packet.json: OK
+prompts/ANTIGRAVITY_GEMINI_E2E_MASTER_PROMPT.md: OK
+references/ANTIGRAVITY_GEMINI_NEXT_DAISY_CHAIN_V3.md: OK
+references/CONTEXT_ICEBERG_SCORE_SPEC.md: OK
+references/ICEBERG_OLLARMA_DUAL_MODEL_PROTOCOL.md: OK
+references/LOCAL_MODEL_EFFICIENCY_FRONTIER_PROTOCOL.md: OK
+references/MAGICSTUDIOBOX_LOCAL_APPLIANCE_ARCHITECTURE.md: OK
+references/REFERENCE_MANIFEST.json: OK
+references/RELEASE_WATCH_PARALLEL_SAFE_WORK_PROMPT.md: OK
+references/TOTAL_ATOMIZATION_README.md: OK
+schemas/e2e_receipt.schema.json: OK
+schemas/ollarma_prediction.schema.json: OK
+scripts/00_preflight.zsh: OK
+scripts/__pycache__/e2e_lib.cpython-313.pyc: OK
+scripts/e2e_lib.py: OK
+scripts/run_approved_models.py: OK
+scripts/run_e2e.sh: OK
+scripts/verify_iceberg_receipts.py: OK
+scripts/verify_local_apis.py: OK
+tests/.pytest_cache/.gitignore: OK
+tests/.pytest_cache/CACHEDIR.TAG: OK
+tests/.pytest_cache/README.md: OK
+tests/.pytest_cache/v/cache/nodeids: OK
+tests/__pycache__/test_e2e_lib.cpython-313-pytest-9.0.2.pyc: OK
+tests/test_e2e_lib.py: OK
+verify_hashes.sh: OK
+
+hash_verification_stderr:
+
+pytest:
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m                                                                     [100%][0m
+[32m[32m[1m4 passed[0m[32m in 0.09s[0m[0m
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+
+mock_model_runner:
+STATE=PASS STAGE=APPROVED_MODEL_REPLAY OUTPUT=/mnt/data/hydradg_antigravity_gemini_e2e_v1/docs/mock-run/model-replay.json
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 772, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/connection.py", line 37, in get_or_create_client
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/daemon.py", line 124, in start_daemon
+TimeoutError: Timed out waiting for artifact tool daemon socket. Set ARTIFACT_TOOL_RPC_DAEMON_STARTUP_TIMEOUT_S=<seconds> to increase the limit.
+

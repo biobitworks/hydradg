@@ -1,0 +1,15 @@
+{
+  "buckets": [
+    "relevant_rank_1_5",
+    "relevant_rank_6_10",
+    "relevant_rank_gt_10",
+    "irrelevant_rank_1_5",
+    "irrelevant_rank_6_10",
+    "contradiction_or_supersession",
+    "other_graph_evidence",
+    "abstention"
+  ],
+  "claim_ceiling": "VOCABULARY_CONFIGURATION_ONLY",
+  "schema": "hydradg.retrieval_cloud_vocab.v1",
+  "state": "PROPOSED_FREEZE_BEFORE_NEXT_RUN"
+}

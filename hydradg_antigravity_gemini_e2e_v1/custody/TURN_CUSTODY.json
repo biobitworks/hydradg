@@ -1,0 +1,35 @@
+{
+  "canonical_binding_state": "PENDING_LOCAL_PROJECT",
+  "claim_ceiling": "E2E_EXECUTION_PACKAGE_AND_OFFLINE_HARNESS_VERIFICATION_ONLY",
+  "event": "ANTIGRAVITY_GEMINI_END_TO_END_PACKAGE",
+  "event_time_local": "2026-08-19T13:15:00-07:00",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "HUMAN",
+      "bytes": 114,
+      "evidence_class": "DIRECTLY_SUPPLIED_TEXT",
+      "file": "custody/CURRENT_HUMAN_TURN.txt",
+      "file_sha256": "4711737f5354b84e7e07819dbec911790e7d8e843754eadcc07e0480bddd74ac"
+    },
+    {
+      "actor": "AI",
+      "bytes": 7247,
+      "evidence_class": "AI_DERIVED_EXECUTION_PROMPT",
+      "file": "prompts/ANTIGRAVITY_GEMINI_E2E_MASTER_PROMPT.md",
+      "file_sha256": "0e9af63166a3d7583712aaedf9b1c0c855f483e195f7fbcedb9c83c1a7d49f3e"
+    },
+    {
+      "actor": "AI",
+      "bytes": 1119,
+      "evidence_class": "AI_DERIVED_PACKAGE_STATUS",
+      "file": "docs/PACKAGE_STATUS.md",
+      "file_sha256": "43c066dca6408c4bcec3fcce79afb9b96e606424347c9a2a78bc1d5554517253"
+    }
+  ],
+  "project_fcg_append_state": "PENDING_LOCAL_PROJECT",
+  "schema": "hydradg.turn_custody.v0.3.0",
+  "signature_algorithm_expected": "Ed25519",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "turn_root_sha256": "809950619ae0e834ca365c6506b9f367441bb485a3106465ec0818b82aaa4839"
+}

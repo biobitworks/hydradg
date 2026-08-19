@@ -256,8 +256,7 @@ def main() -> None:
     parser.add_argument("--receipts", default=str(base.Path.home() / ".local/share/hydradg-best-use/receipts/server_events.jsonl"))
     args = parser.parse_args()
 
-    base.State = ReleaseState
-    server = base.app(args)
+    server = base.ThreadingHTTPServer((args.bind, args.port), base.app(args))
     print(f"HydraDG Best Use release server http://{args.bind}:{args.port}", flush=True)
     server.serve_forever()
 

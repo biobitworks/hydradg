@@ -1,0 +1,17 @@
+{
+  "schema": "hydradg.retrieval_cloud_vocab.v1",
+  "name": "Frozen 8-Bucket Retrieval Cloud Vocabulary",
+  "buckets": [
+    "rank_top1",
+    "rank_top3",
+    "rank_top5",
+    "rank_top10",
+    "evidence_path_direct",
+    "evidence_path_expanded",
+    "question_single_session",
+    "question_multi_session_temporal"
+  ],
+  "claim_ceiling": "FROZEN_VOCABULARY_SPECIFICATION_ONLY",
+  "signature_state": "NOT_SIGNED",
+  "timestamp_utc": "2026-08-19T13:22:00Z"
+}

@@ -1,0 +1,40 @@
+{
+  "$id": "hydradg.e2e_receipt.v1",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "artifacts": {
+      "type": "object"
+    },
+    "claim_ceiling": {
+      "type": "string"
+    },
+    "gates": {
+      "type": "object"
+    },
+    "merkle_state": {
+      "type": "string"
+    },
+    "mode": {
+      "enum": [
+        "mock",
+        "verify",
+        "full"
+      ]
+    },
+    "schema": {
+      "const": "hydradg.e2e_receipt.v1"
+    },
+    "signature_state": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "schema",
+    "mode",
+    "gates",
+    "claim_ceiling",
+    "signature_state",
+    "merkle_state"
+  ],
+  "type": "object"
+}

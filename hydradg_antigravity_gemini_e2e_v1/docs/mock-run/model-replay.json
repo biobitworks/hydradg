@@ -1,0 +1,273 @@
+{
+  "base_url": "http://127.0.0.1:18434",
+  "claim_ceiling": "MODEL_REPLAY_STABILITY_ONLY",
+  "installed_models": [
+    "qwen2.5-coder:7b",
+    "qwen2.5:7b"
+  ],
+  "models": {
+    "M1": {
+      "exact_label_stability": true,
+      "mechanism_labels": [
+        "DEPTH_RECOVERY",
+        "DEPTH_RECOVERY",
+        "DEPTH_RECOVERY"
+      ],
+      "model": "qwen2.5-coder:7b",
+      "repeats": [
+        {
+          "elapsed_seconds": 0.0010950565338134766,
+          "mode": "JSON_SCHEMA",
+          "model": "qwen2.5-coder:7b",
+          "ollama_metrics": {
+            "eval_count": 50,
+            "eval_duration": 5000000,
+            "prompt_eval_count": 100,
+            "prompt_eval_duration": 1000000,
+            "total_duration": 7000000
+          },
+          "parsed": {
+            "abstain": false,
+            "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT_ONLY",
+            "counterevidence": [
+              "structural_cloud_drift"
+            ],
+            "expected_direction_next_run": {
+              "delta_g_star": "DOWN",
+              "hit_at_k": "UP",
+              "recall_at_k": "UP",
+              "retrieval_cloud_drift": "UP"
+            },
+            "mechanism_label": "DEPTH_RECOVERY",
+            "next_falsification_test": "Freeze K15 preregistration and compare prospective prediction to held-out result.",
+            "probabilities": {
+              "recall_down": 0.15,
+              "recall_stable": 0.25,
+              "recall_up": 0.6
+            },
+            "supporting_metrics": [
+              "delta_recall_at_k",
+              "delta_hit_at_k"
+            ]
+          },
+          "parsed_response_sha256": "3cbceda4e723e15be06c6c7f759d81a545d8e1a306ec17676805db83c2028a9a",
+          "prompt_sha256": "03658b4ee55f31f7123e9f76431e658ffef8c0c99bc157835f0ee7b87c4b7d84",
+          "raw_response_sha256": "cb8c0d038eee88a2b95ee99206af1a8e1830d971b81e90b75ac86ab36b755eb0",
+          "request_sha256": "b46730c6ea8f272b4d9ebca7ca85a57b559bd9b076bb2a16071063b46165ecb5"
+        },
+        {
+          "elapsed_seconds": 0.00048732757568359375,
+          "mode": "JSON_SCHEMA",
+          "model": "qwen2.5-coder:7b",
+          "ollama_metrics": {
+            "eval_count": 50,
+            "eval_duration": 5000000,
+            "prompt_eval_count": 100,
+            "prompt_eval_duration": 1000000,
+            "total_duration": 7000000
+          },
+          "parsed": {
+            "abstain": false,
+            "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT_ONLY",
+            "counterevidence": [
+              "structural_cloud_drift"
+            ],
+            "expected_direction_next_run": {
+              "delta_g_star": "DOWN",
+              "hit_at_k": "UP",
+              "recall_at_k": "UP",
+              "retrieval_cloud_drift": "UP"
+            },
+            "mechanism_label": "DEPTH_RECOVERY",
+            "next_falsification_test": "Freeze K15 preregistration and compare prospective prediction to held-out result.",
+            "probabilities": {
+              "recall_down": 0.15,
+              "recall_stable": 0.25,
+              "recall_up": 0.6
+            },
+            "supporting_metrics": [
+              "delta_recall_at_k",
+              "delta_hit_at_k"
+            ]
+          },
+          "parsed_response_sha256": "3cbceda4e723e15be06c6c7f759d81a545d8e1a306ec17676805db83c2028a9a",
+          "prompt_sha256": "03658b4ee55f31f7123e9f76431e658ffef8c0c99bc157835f0ee7b87c4b7d84",
+          "raw_response_sha256": "cb8c0d038eee88a2b95ee99206af1a8e1830d971b81e90b75ac86ab36b755eb0",
+          "request_sha256": "b46730c6ea8f272b4d9ebca7ca85a57b559bd9b076bb2a16071063b46165ecb5"
+        },
+        {
+          "elapsed_seconds": 0.0004215240478515625,
+          "mode": "JSON_SCHEMA",
+          "model": "qwen2.5-coder:7b",
+          "ollama_metrics": {
+            "eval_count": 50,
+            "eval_duration": 5000000,
+            "prompt_eval_count": 100,
+            "prompt_eval_duration": 1000000,
+            "total_duration": 7000000
+          },
+          "parsed": {
+            "abstain": false,
+            "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT_ONLY",
+            "counterevidence": [
+              "structural_cloud_drift"
+            ],
+            "expected_direction_next_run": {
+              "delta_g_star": "DOWN",
+              "hit_at_k": "UP",
+              "recall_at_k": "UP",
+              "retrieval_cloud_drift": "UP"
+            },
+            "mechanism_label": "DEPTH_RECOVERY",
+            "next_falsification_test": "Freeze K15 preregistration and compare prospective prediction to held-out result.",
+            "probabilities": {
+              "recall_down": 0.15,
+              "recall_stable": 0.25,
+              "recall_up": 0.6
+            },
+            "supporting_metrics": [
+              "delta_recall_at_k",
+              "delta_hit_at_k"
+            ]
+          },
+          "parsed_response_sha256": "3cbceda4e723e15be06c6c7f759d81a545d8e1a306ec17676805db83c2028a9a",
+          "prompt_sha256": "03658b4ee55f31f7123e9f76431e658ffef8c0c99bc157835f0ee7b87c4b7d84",
+          "raw_response_sha256": "cb8c0d038eee88a2b95ee99206af1a8e1830d971b81e90b75ac86ab36b755eb0",
+          "request_sha256": "b46730c6ea8f272b4d9ebca7ca85a57b559bd9b076bb2a16071063b46165ecb5"
+        }
+      ]
+    },
+    "M2": {
+      "exact_label_stability": true,
+      "mechanism_labels": [
+        "DEPTH_RECOVERY",
+        "DEPTH_RECOVERY",
+        "DEPTH_RECOVERY"
+      ],
+      "model": "qwen2.5:7b",
+      "repeats": [
+        {
+          "elapsed_seconds": 0.0003993511199951172,
+          "mode": "JSON_SCHEMA",
+          "model": "qwen2.5:7b",
+          "ollama_metrics": {
+            "eval_count": 50,
+            "eval_duration": 5000000,
+            "prompt_eval_count": 100,
+            "prompt_eval_duration": 1000000,
+            "total_duration": 7000000
+          },
+          "parsed": {
+            "abstain": false,
+            "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT_ONLY",
+            "counterevidence": [
+              "structural_cloud_drift"
+            ],
+            "expected_direction_next_run": {
+              "delta_g_star": "DOWN",
+              "hit_at_k": "UP",
+              "recall_at_k": "UP",
+              "retrieval_cloud_drift": "UP"
+            },
+            "mechanism_label": "DEPTH_RECOVERY",
+            "next_falsification_test": "Freeze K15 preregistration and compare prospective prediction to held-out result.",
+            "probabilities": {
+              "recall_down": 0.15,
+              "recall_stable": 0.25,
+              "recall_up": 0.6
+            },
+            "supporting_metrics": [
+              "delta_recall_at_k",
+              "delta_hit_at_k"
+            ]
+          },
+          "parsed_response_sha256": "3cbceda4e723e15be06c6c7f759d81a545d8e1a306ec17676805db83c2028a9a",
+          "prompt_sha256": "03658b4ee55f31f7123e9f76431e658ffef8c0c99bc157835f0ee7b87c4b7d84",
+          "raw_response_sha256": "0991a22fd111e2a18b3a8640875bc2aa3cdf882b35b2787add03a28df4a24209",
+          "request_sha256": "0397982e81be714f5f282632b352be36150920912ab3c56fb27358f1f5890c9b"
+        },
+        {
+          "elapsed_seconds": 0.00036978721618652344,
+          "mode": "JSON_SCHEMA",
+          "model": "qwen2.5:7b",
+          "ollama_metrics": {
+            "eval_count": 50,
+            "eval_duration": 5000000,
+            "prompt_eval_count": 100,
+            "prompt_eval_duration": 1000000,
+            "total_duration": 7000000
+          },
+          "parsed": {
+            "abstain": false,
+            "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT_ONLY",
+            "counterevidence": [
+              "structural_cloud_drift"
+            ],
+            "expected_direction_next_run": {
+              "delta_g_star": "DOWN",
+              "hit_at_k": "UP",
+              "recall_at_k": "UP",
+              "retrieval_cloud_drift": "UP"
+            },
+            "mechanism_label": "DEPTH_RECOVERY",
+            "next_falsification_test": "Freeze K15 preregistration and compare prospective prediction to held-out result.",
+            "probabilities": {
+              "recall_down": 0.15,
+              "recall_stable": 0.25,
+              "recall_up": 0.6
+            },
+            "supporting_metrics": [
+              "delta_recall_at_k",
+              "delta_hit_at_k"
+            ]
+          },
+          "parsed_response_sha256": "3cbceda4e723e15be06c6c7f759d81a545d8e1a306ec17676805db83c2028a9a",
+          "prompt_sha256": "03658b4ee55f31f7123e9f76431e658ffef8c0c99bc157835f0ee7b87c4b7d84",
+          "raw_response_sha256": "0991a22fd111e2a18b3a8640875bc2aa3cdf882b35b2787add03a28df4a24209",
+          "request_sha256": "0397982e81be714f5f282632b352be36150920912ab3c56fb27358f1f5890c9b"
+        },
+        {
+          "elapsed_seconds": 0.00033974647521972656,
+          "mode": "JSON_SCHEMA",
+          "model": "qwen2.5:7b",
+          "ollama_metrics": {
+            "eval_count": 50,
+            "eval_duration": 5000000,
+            "prompt_eval_count": 100,
+            "prompt_eval_duration": 1000000,
+            "total_duration": 7000000
+          },
+          "parsed": {
+            "abstain": false,
+            "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT_ONLY",
+            "counterevidence": [
+              "structural_cloud_drift"
+            ],
+            "expected_direction_next_run": {
+              "delta_g_star": "DOWN",
+              "hit_at_k": "UP",
+              "recall_at_k": "UP",
+              "retrieval_cloud_drift": "UP"
+            },
+            "mechanism_label": "DEPTH_RECOVERY",
+            "next_falsification_test": "Freeze K15 preregistration and compare prospective prediction to held-out result.",
+            "probabilities": {
+              "recall_down": 0.15,
+              "recall_stable": 0.25,
+              "recall_up": 0.6
+            },
+            "supporting_metrics": [
+              "delta_recall_at_k",
+              "delta_hit_at_k"
+            ]
+          },
+          "parsed_response_sha256": "3cbceda4e723e15be06c6c7f759d81a545d8e1a306ec17676805db83c2028a9a",
+          "prompt_sha256": "03658b4ee55f31f7123e9f76431e658ffef8c0c99bc157835f0ee7b87c4b7d84",
+          "raw_response_sha256": "0991a22fd111e2a18b3a8640875bc2aa3cdf882b35b2787add03a28df4a24209",
+          "request_sha256": "0397982e81be714f5f282632b352be36150920912ab3c56fb27358f1f5890c9b"
+        }
+      ]
+    }
+  },
+  "schema": "hydradg.approved_model_replay.v1"
+}

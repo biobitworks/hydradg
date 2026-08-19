@@ -1,0 +1,41 @@
+{
+  "approved": [
+    {
+      "id": "M1",
+      "model": "qwen2.5-coder:7b",
+      "repeats": 3,
+      "role": "code_and_mechanistic_reference",
+      "state": "APPROVED_CURRENT"
+    },
+    {
+      "id": "M2",
+      "model": "qwen2.5:7b",
+      "repeats": 3,
+      "role": "general_mechanistic_reference",
+      "state": "APPROVED_CURRENT"
+    }
+  ],
+  "bridge_label": "Ollarma",
+  "challengers_not_approved": [
+    {
+      "model": "qwen3:0.6b",
+      "state": "ADMISSION_CANARY_REQUIRED"
+    },
+    {
+      "model": "qwen3:1.7b",
+      "state": "ADMISSION_CANARY_REQUIRED"
+    },
+    {
+      "model": "qwen3:4b",
+      "state": "ADMISSION_CANARY_REQUIRED"
+    }
+  ],
+  "claim_ceiling": "MODEL_ADMISSION_CONFIGURATION_ONLY",
+  "http_api": {
+    "base_url": "http://127.0.0.1:11434",
+    "browser_exposure": "FORBIDDEN_DIRECT",
+    "compatibility": "Ollama API",
+    "server_side_only": true
+  },
+  "schema": "hydradg.approved_local_models.v1"
+}

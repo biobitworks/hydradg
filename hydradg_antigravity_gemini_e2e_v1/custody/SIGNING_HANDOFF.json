@@ -1,0 +1,10 @@
+{
+  "event_time_local": "2026-08-19T13:15:00-07:00",
+  "private_key_material_included": false,
+  "requested_algorithm": "Ed25519",
+  "required_next_operation": "After canonical local FCO/FCG binding and append, sign the resulting canonical turn/update root with the authorized HydraDG Ed25519 private key, verify it, and append the signature receipt.",
+  "schema": "hydradg.signing_handoff.v1",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "signing_target_sha256": "809950619ae0e834ca365c6506b9f367441bb485a3106465ec0818b82aaa4839",
+  "signing_target_type": "turn_root_sha256"
+}
