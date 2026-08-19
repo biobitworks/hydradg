@@ -108,7 +108,13 @@ export default function GraphPage() {
     );
   }, [data, query]);
 
-  const currentMetric = data?.timeline.find((state) => state.t === time) || null;
+  const activeMetric = useMemo(() => {
+    if (selected) {
+      const nodeMetric = data?.timeline.find((state) => state.t === selected.t);
+      if (nodeMetric) return nodeMetric;
+    }
+    return data?.timeline.find((state) => state.t === time) || null;
+  }, [data, selected, time]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -160,14 +166,6 @@ export default function GraphPage() {
       context.stroke();
     }
 
-    const heat = currentMetric
-      ? heatMode === "mutation"
-        ? currentMetric.mutation_distance
-        : heatMode === "restoration"
-          ? currentMetric.restoration_gain
-          : Math.min(1, Math.abs(currentMetric.delta_g_star))
-      : 0;
-
     const ordered = [...visible].sort(
       (a, b) => (projected.get(a.id)?.depth || 0) - (projected.get(b.id)?.depth || 0),
     );
@@ -177,23 +175,37 @@ export default function GraphPage() {
       if (!point) continue;
       const isMatch = matching.has(node.id);
       const isSelected = selectedId === node.id;
-      const radius = isSelected ? 10 : node.label === "StateSnapshot" ? 9 : 6;
+      const radius = isSelected ? 11 : node.label === "StateSnapshot" ? 9 : 7;
+
+      const nodeMetric = data.timeline.find((state) => state.t === node.t);
+      const nodeHeat = nodeMetric
+        ? heatMode === "mutation"
+          ? nodeMetric.mutation_distance
+          : heatMode === "restoration"
+            ? nodeMetric.restoration_gain
+            : Math.min(1, Math.abs(nodeMetric.delta_g_star))
+        : 0;
+
       const hue = heatMode === "restoration" ? 145 : heatMode === "delta" ? 275 : 18;
-      const saturation = Math.round(35 + heat * 60);
-      const lightness = Math.round(60 - heat * 18);
-      context.globalAlpha = isMatch ? 0.95 : 0.12;
-      context.fillStyle = node.label === "StateSnapshot" ? `hsl(${hue} ${saturation}% ${lightness}%)` : "#d9e2ea";
+      const saturation = Math.round(40 + nodeHeat * 55);
+      const lightness = Math.round(65 - nodeHeat * 25);
+
+      context.globalAlpha = isSelected ? 1.0 : isMatch ? 0.90 : 0.20;
+      context.fillStyle = isSelected
+        ? `hsl(${hue} 95% 55%)`
+        : `hsl(${hue} ${saturation}% ${lightness}%)`;
       context.beginPath();
       context.arc(point.px, point.py, radius, 0, Math.PI * 2);
       context.fill();
+
       if (isSelected) {
         context.strokeStyle = "#ffffff";
-        context.lineWidth = 2;
+        context.lineWidth = 2.5;
         context.stroke();
       }
       if (isMatch && (isSelected || node.label === "StateSnapshot")) {
-        context.globalAlpha = 0.9;
-        context.fillStyle = "#d8e0e8";
+        context.globalAlpha = 0.95;
+        context.fillStyle = "#ffffff";
         context.font = "11px ui-monospace, SFMono-Regular, Menlo, monospace";
         context.fillText(`${node.label} · t${node.t}`, point.px + 12, point.py - 8);
       }
@@ -201,7 +213,7 @@ export default function GraphPage() {
     }
     context.globalAlpha = 1;
     projectedRef.current = clickTargets;
-  }, [data, time, yaw, pitch, zoom, matching, selectedId, heatMode, currentMetric]);
+  }, [data, time, yaw, pitch, zoom, matching, selectedId, heatMode]);
 
   function onPointerDown(event: PointerEvent<HTMLCanvasElement>) {
     event.currentTarget.setPointerCapture(event.pointerId);
@@ -230,7 +242,13 @@ export default function GraphPage() {
       .map((point) => ({ point, distance: Math.hypot(point.px - x, point.py - y) }))
       .filter(({ distance }) => distance <= 16)
       .sort((a, b) => a.distance - b.distance)[0];
-    if (hit) setSelectedId(hit.point.id);
+    if (hit) {
+      setSelectedId(hit.point.id);
+      const clicked = data?.scene.nodes.find((node) => node.id === hit.point.id);
+      if (clicked && typeof clicked.t === "number") {
+        setTime(clicked.t);
+      }
+    }
   }
 
   function onWheel(event: WheelEvent<HTMLCanvasElement>) {
@@ -322,7 +340,7 @@ export default function GraphPage() {
             onWheel={onWheel}
           />
           <label style={{ marginTop: 14 }}>
-            Time / graph state: t{time} — {currentMetric?.label || "loading"}
+            Time / graph state: t{time} — {activeMetric?.label || "loading"}
             <input type="range" min={0} max={2} step={1} value={time} onChange={(event) => setTime(Number(event.target.value))} />
           </label>
         </article>
@@ -331,12 +349,12 @@ export default function GraphPage() {
           <p className="eyebrow">Information-state heat layer</p>
           <h2>Mutation → restoration</h2>
           <div className="metrics" style={{ gridTemplateColumns: "repeat(2, minmax(0,1fr))" }}>
-            <div className="metric"><span className="metricLabel">Shannon H</span><strong>{currentMetric?.shannon_entropy.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">G*</span><strong>{currentMetric?.g_star.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">ΔG*</span><strong>{currentMetric?.delta_g_star.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">Mutation</span><strong>{currentMetric?.mutation_distance.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">Restoration</span><strong>{currentMetric?.restoration_gain.toFixed(3) ?? "—"}</strong></div>
-            <div className="metric"><span className="metricLabel">U* burden</span><strong>{currentMetric?.burden.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric"><span className="metricLabel">Shannon H</span><strong>{activeMetric?.shannon_entropy.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric"><span className="metricLabel">G*</span><strong>{activeMetric?.g_star.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric"><span className="metricLabel">ΔG*</span><strong>{activeMetric?.delta_g_star.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric"><span className="metricLabel">Mutation</span><strong>{activeMetric?.mutation_distance.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric"><span className="metricLabel">Restoration</span><strong>{activeMetric?.restoration_gain.toFixed(3) ?? "—"}</strong></div>
+            <div className="metric"><span className="metricLabel">U* burden</span><strong>{activeMetric?.burden.toFixed(3) ?? "—"}</strong></div>
           </div>
           <p className="small muted note">
             H is Shannon entropy. G* and ΔG* are dimensionless information-state abstractions inspired by
