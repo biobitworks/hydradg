@@ -4,9 +4,10 @@ on:
   push:
     branches:
       - hack-hydra/judge-lab-golden-path-20260819
+      - hack-hydra/submission-eligible-20260819
   pull_request:
     branches:
-      - hack-hydra/webapp-mvp-20260818
+      - main
   workflow_dispatch:
 
 jobs:
@@ -38,7 +39,7 @@ jobs:
       - name: Public route and API smoke
         run: |
           set -euo pipefail
-          for path in / /demo /judge /graph /evidence /eligibility; do
+          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03; do
             code="$(curl -sS -o /tmp/body -w '%{http_code}' "http://127.0.0.1:3000${path}")"
             echo "$path -> $code"
             test "$code" = "200"
@@ -56,6 +57,18 @@ jobs:
           console.log('custody checkpoint PASS', j.merkle.root_sha256);
           NODE
 
+          curl -fsS http://127.0.0.1:3000/api/site-fcg > /tmp/site-fcg.json
+          node - <<'NODE'
+          const fs = require('fs');
+          const j = JSON.parse(fs.readFileSync('/tmp/site-fcg.json','utf8'));
+          if (j.schema !== 'hydradg.site_fcg.v1') throw new Error('site FCG schema mismatch');
+          if (!Array.isArray(j.nodes) || j.nodes.length < 9) throw new Error('site FCO nodes missing');
+          if (!Array.isArray(j.edges) || j.edges.length < 10) throw new Error('site FCG edges missing');
+          if (j.merkle_state !== 'NOT_MERKLE_COMMITTED') throw new Error('site Merkle boundary lost');
+          for (const n of j.nodes) if (!/^fco:[0-9a-f]{64}$/.test(n.id || '')) throw new Error('invalid SiteSection FCO id');
+          console.log('site FCG PASS', j.artifact.id);
+          NODE
+
           live_code="$(curl -sS -o /tmp/live.json -w '%{http_code}' http://127.0.0.1:3000/api/live)"
           test "$live_code" = "503"
           node -e "const j=require('/tmp/live.json'); if(j.configured!==false) throw Error('live fail-closed mismatch')"
@@ -63,7 +76,7 @@ jobs:
           cloud_code="$(curl -sS -o /tmp/cloud.json -w '%{http_code}' http://127.0.0.1:3000/api/hydradb-cloud)"
           test "$cloud_code" = "503"
           node -e "const j=require('/tmp/cloud.json'); if(j.configured!==false || j.secret_disclosure!=='API_KEY_VALUE_NEVER_RETURNED') throw Error('cloud fail-closed mismatch')"
-      - name: Verify judge labels and navigation
+      - name: Verify judge and release copy
         run: |
           curl -fsS http://127.0.0.1:3000/judge > /tmp/judge.html
           grep -q 'HydraDG golden path' /tmp/judge.html
@@ -71,6 +84,14 @@ jobs:
           grep -q 'LIVE REAL DATA' /tmp/judge.html
           grep -q 'HYDRADB COOKBOOK API' /tmp/judge.html
           grep -q 'Atom → FCO → FCG → Merkle checkpoint' /tmp/judge.html
+
+          curl -fsS http://127.0.0.1:3000/ > /tmp/home.html
+          grep -q 'Memory that can show its work' /tmp/home.html
+          grep -q 'Three distinct graph problems' /tmp/home.html
+
+          curl -fsS http://127.0.0.1:3000/track03 > /tmp/track03.html
+          grep -q 'No positive signal' /tmp/track03.html
+          grep -q 'bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324' /tmp/track03.html
       - name: Server log on failure
         if: failure()
         run: cat /tmp/hydradg-web.log || true
