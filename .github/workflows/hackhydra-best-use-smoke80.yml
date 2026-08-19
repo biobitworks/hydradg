@@ -1,127 +1,28 @@
-name: HackHydra Best Use smoke80
+name: HackHydra Best Use v1 smoke80 (archived)
 
+# Historical v1 workflow. The live run is preserved as Actions run 32206301823
+# and the failure is documented in:
+# HydraDG_DaisyTrain_v0.3.7/eval/best_use_reference/HYDRADB_CI_FAILURE_20260819.md
+#
+# v1 is manual-only because it intentionally retains the superseded session
+# identity rule that HydraDB rejected. Active structural CI is v2.
 on:
-  pull_request:
-    branches: [main, hackhydra/best-use-stats-20260818]
-    paths:
-      - '.github/workflows/hackhydra-best-use-smoke80.yml'
-      - 'HydraDG_DaisyTrain_v0.3.7/scripts/run_best_use_longmemeval.py'
-      - 'HydraDG_DaisyTrain_v0.3.7/scripts/analyze_best_use_ablation.py'
-      - 'HydraDG_DaisyTrain_v0.3.7/scripts/build_longmemeval_smoke80.py'
-      - 'HydraDG_DaisyTrain_v0.3.7/eval/best_use_ci_trigger.txt'
   workflow_dispatch:
 
 permissions:
   contents: read
 
 jobs:
-  best-use-smoke80:
+  archived-v1:
     runs-on: ubuntu-24.04
-    timeout-minutes: 45
-    env:
-      HYDRADB_PIN: 6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219
-      PKG: HydraDG_DaisyTrain_v0.3.7
     steps:
       - uses: actions/checkout@v4
-
-      - name: Install HydraDB native prerequisites
+      - name: Explain archived state
         run: |
-          sudo apt-get update
-          sudo apt-get install -y build-essential clang libclang-dev cmake pkg-config libcypher-parser-dev libgraphblas-dev curl git python3
-          rustup update stable
-          rustup default stable
-          rustc --version
-          cargo --version
-          pkg-config --modversion libcypher-parser || pkg-config --modversion cypher-parser
-
-      - name: Pin and build HydraDB
-        run: |
-          git clone https://github.com/hydra-db/hydradb.git /tmp/hydradb
-          git -C /tmp/hydradb checkout --detach "$HYDRADB_PIN"
-          test "$(git -C /tmp/hydradb rev-parse HEAD)" = "$HYDRADB_PIN"
-          cd /tmp/hydradb
-          cargo build --locked --features server-runtime --bin graph-node
-
-      - name: Start pinned local HydraDB
-        run: |
-          mkdir -p /tmp/hydra-store /tmp/hydra-cache "$RUNNER_TEMP/best-use"
-          printf '%s\n' 'hackhydra-ci-local-development-token' > "$RUNNER_TEMP/best-use/auth-token"
-          chmod 600 "$RUNNER_TEMP/best-use/auth-token"
-          cd /tmp/hydradb
-          nohup env \
-            CLOUD_PROVIDER=local \
-            LOCAL_PATH=/tmp/hydra-store \
-            GRAPH_NAMESPACE=default \
-            GRAPH_ID=default \
-            GRAPH_CELL_ID=cell-0 \
-            GRAPH_CELLS=cell-0 \
-            GRAPH_NODE_ID=node-0 \
-            GRAPH_BOLT_NODE_ADDRESSES=node-0=127.0.0.1:7687 \
-            GRAPH_ADVERTISED_BOLT_ADDR=127.0.0.1:7687 \
-            GRAPH_DATA_CACHE_DIR=/tmp/hydra-cache \
-            GRAPH_AUTH_TOKEN_FILE="$RUNNER_TEMP/best-use/auth-token" \
-            GRAPH_ALLOW_PLAINTEXT=true \
-            RUST_MIN_STACK=33554432 \
-            ./target/debug/graph-node > "$RUNNER_TEMP/best-use/hydradb.log" 2>&1 &
-          echo $! > "$RUNNER_TEMP/best-use/hydradb.pid"
-          for i in $(seq 1 90); do
-            if curl -fsS http://127.0.0.1:8443/healthz >/dev/null; then
-              echo HYDRADB_HEALTH=PASS
-              exit 0
-            fi
-            if ! kill -0 "$(cat "$RUNNER_TEMP/best-use/hydradb.pid")" 2>/dev/null; then
-              tail -200 "$RUNNER_TEMP/best-use/hydradb.log"
-              exit 1
-            fi
-            sleep 2
-          done
-          tail -200 "$RUNNER_TEMP/best-use/hydradb.log"
-          exit 1
-
-      - name: Download official cleaned LongMemEval-S and build deterministic smoke80
-        run: |
-          mkdir -p "$RUNNER_TEMP/best-use/data" "$RUNNER_TEMP/best-use/eval"
-          curl -fL --retry 3 \
-            https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned/resolve/main/longmemeval_s_cleaned.json \
-            -o "$RUNNER_TEMP/best-use/data/longmemeval_s_cleaned.json"
-          sha256sum "$RUNNER_TEMP/best-use/data/longmemeval_s_cleaned.json" | tee "$RUNNER_TEMP/best-use/data/SHA256.txt"
-          python "$PKG/scripts/build_longmemeval_smoke80.py" \
-            "$RUNNER_TEMP/best-use/data/longmemeval_s_cleaned.json" \
-            --out "$RUNNER_TEMP/best-use/data/longmemeval_smoke80.json" \
-            --manifest "$RUNNER_TEMP/best-use/eval/longmemeval_smoke80_manifest.json" \
-            --n 80
-
-      - name: Run A/B/C/D graph-native retrieval ablation
-        run: |
-          python "$PKG/scripts/run_best_use_longmemeval.py" \
-            "$RUNNER_TEMP/best-use/data/longmemeval_smoke80.json" \
-            --token-file "$RUNNER_TEMP/best-use/auth-token" \
-            --out "$RUNNER_TEMP/best-use/eval/best_use_smoke80_cases.jsonl" \
-            --k 10
-
-      - name: Run paired statistical analysis
-        run: |
-          python "$PKG/scripts/analyze_best_use_ablation.py" \
-            "$RUNNER_TEMP/best-use/eval/best_use_smoke80_cases.jsonl" \
-            --out "$RUNNER_TEMP/best-use/eval/best_use_smoke80_stats.json" \
-            --expected-n 80 \
-            --bootstrap 5000
-          sha256sum \
-            "$RUNNER_TEMP/best-use/eval/longmemeval_smoke80_manifest.json" \
-            "$RUNNER_TEMP/best-use/eval/best_use_smoke80_cases.jsonl" \
-            "$RUNNER_TEMP/best-use/eval/best_use_smoke80_cases.jsonl.receipt.json" \
-            "$RUNNER_TEMP/best-use/eval/best_use_smoke80_stats.json" \
-            | tee "$RUNNER_TEMP/best-use/eval/SHA256SUMS.txt"
-          cat "$RUNNER_TEMP/best-use/eval/best_use_smoke80_stats.json"
-
-      - name: Preserve bounded evaluation evidence
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: hackhydra-best-use-smoke80
-          path: |
-            ${{ runner.temp }}/best-use/eval/
-            ${{ runner.temp }}/best-use/data/SHA256.txt
-            ${{ runner.temp }}/best-use/hydradb.log
-          if-no-files-found: warn
-          retention-days: 14
+          cat <<'EOF'
+          This workflow is preserved only as a historical v1 entrypoint.
+          Known live failure: GitHub Actions run 32206301823.
+          Earliest divergent dependency: Session vertex identity omitted occurrence_position.
+          Active live-HydraDB gate: hackhydra-best-use-v2-structural.yml.
+          EOF
+          test -f HydraDG_DaisyTrain_v0.3.7/eval/best_use_reference/HYDRADB_CI_FAILURE_20260819.md
