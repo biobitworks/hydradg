@@ -16,3 +16,11 @@ __pycache__/
 *.secret
 secrets/
 private_keys/
+
+# large evaluation datasets & model checkpoints (>100MB)
+*.raw.json
+*.pt
+*.bin
+modal_runs_v*
+eval/vithia_overnight/
+
