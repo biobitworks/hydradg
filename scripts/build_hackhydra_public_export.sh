@@ -70,6 +70,18 @@ for f in \
   THIRD_PARTY_NOTICES.md \
   docs/HACK_HYDRA_ELIGIBILITY_AUDIT_20260819.md \
   docs/PUBLIC_EXPORT_MANIFEST_20260819.md \
+  docs/PROJECT_FCG_UPDATE_20260819.md \
+  docs/PROJECT_FCG_CHANGELOG_20260819.json \
+  docs/WHY_FCG_UPDATED_20260819.md \
+  docs/KNOWLEDGE_LINK_CONTRACT_20260819.md \
+  docs/WEBSITE_MVP_AND_FALLBACK_20260819.md \
+  docs/LIVE_AND_STATIC_RELEASE_POLICY_20260819.md \
+  docs/MVP_RELEASE_DELIVERABLES_20260819.md \
+  docs/TURN_HASHING_POLICY_20260819.md \
+  docs/HASHING_PROOF_20260819.md \
+  docs/HASH_PROOF_CURRENT_PASS_20260819.md \
+  docs/CONTEXT_ICEBERG_4D_RELEASE_WATCH_20260819.md \
+  schemas/context_iceberg_state.schema.json \
   handoff/SUBMISSION_TASKS_20260819.md \
   handoff/RELEASE_EXECUTION_LEDGER_20260819.md
   do copy_file "$f"; done
@@ -79,6 +91,9 @@ copy_tree apps/hydradg-web
 progress 36 COPY_RELEASE_TOOLS
 for f in \
   scripts/check_hydradg_web_links.py \
+  scripts/check_static_fallback.py \
+  scripts/check_term_knowledge_coverage.py \
+  scripts/hash_release_artifacts.py \
   scripts/run_hackhydra_release_batches_magicstudio.sh \
   scripts/build_hackhydra_public_export.sh
   do copy_file "$f"; done
