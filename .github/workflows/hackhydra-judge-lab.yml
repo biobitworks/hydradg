@@ -69,6 +69,13 @@ jobs:
           console.log('site FCG PASS', j.artifact.id);
           NODE
 
+          fco_id="$(node -e "const j=require('/tmp/site-fcg.json'); process.stdout.write(j.nodes[0].id)")"
+          fco_code="$(curl -sS -o /tmp/fco.html -w '%{http_code}' "http://127.0.0.1:3000/fco/${fco_id}")"
+          echo "/fco/<site-section> -> $fco_code"
+          test "$fco_code" = "200"
+          grep -Fq 'FCO inspector' /tmp/fco.html
+          grep -Fq "$fco_id" /tmp/fco.html
+
           live_code="$(curl -sS -o /tmp/live.json -w '%{http_code}' http://127.0.0.1:3000/api/live)"
           test "$live_code" = "503"
           node -e "const j=require('/tmp/live.json'); if(j.configured!==false) throw Error('live fail-closed mismatch')"
@@ -78,20 +85,32 @@ jobs:
           node -e "const j=require('/tmp/cloud.json'); if(j.configured!==false || j.secret_disclosure!=='API_KEY_VALUE_NEVER_RETURNED') throw Error('cloud fail-closed mismatch')"
       - name: Verify judge and release copy
         run: |
+          set -euo pipefail
+          assert_contains() {
+            local file="$1"
+            local needle="$2"
+            local label="$3"
+            if ! grep -Fq "$needle" "$file"; then
+              echo "ASSERTION_FAILED=$label"
+              echo "NEEDLE=$needle"
+              exit 1
+            fi
+            echo "ASSERTION_PASS=$label"
+          }
+
           curl -fsS http://127.0.0.1:3000/judge > /tmp/judge.html
-          grep -q 'HydraDG golden path' /tmp/judge.html
-          grep -q 'DEMO CONTROL' /tmp/judge.html
-          grep -q 'LIVE REAL DATA' /tmp/judge.html
-          grep -q 'HYDRADB COOKBOOK API' /tmp/judge.html
-          grep -q 'Atom → FCO → FCG → Merkle checkpoint' /tmp/judge.html
+          assert_contains /tmp/judge.html 'HydraDG golden path' judge-title
+          assert_contains /tmp/judge.html 'DEMO CONTROL' judge-demo-mode
+          assert_contains /tmp/judge.html 'LIVE REAL DATA' judge-live-mode
+          assert_contains /tmp/judge.html 'HYDRADB COOKBOOK API' judge-cloud-mode
 
           curl -fsS http://127.0.0.1:3000/ > /tmp/home.html
-          grep -q 'Memory that can show its work' /tmp/home.html
-          grep -q 'Three distinct graph problems' /tmp/home.html
+          assert_contains /tmp/home.html 'Memory that can show its work' home-title
+          assert_contains /tmp/home.html 'Three distinct graph problems' home-track-summary
 
           curl -fsS http://127.0.0.1:3000/track03 > /tmp/track03.html
-          grep -q 'No positive signal' /tmp/track03.html
-          grep -q 'bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324' /tmp/track03.html
+          assert_contains /tmp/track03.html 'FULL500 COMPLETE' track03-executed-state
+          assert_contains /tmp/track03.html 'bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324' track03-result-hash
       - name: Server log on failure
         if: failure()
         run: cat /tmp/hydradg-web.log || true
