@@ -1,0 +1,18 @@
+{
+  "approved_models": [
+    "qwen2.5-coder:7b",
+    "qwen2.5:7b"
+  ],
+  "best_use": "http://127.0.0.1:8787",
+  "claim_ceiling": "LOCAL_PRIVATE_END_TO_END_DEMO_ONLY",
+  "required_iceberg_source_state": "LIVE_CUSTODY_ARTIFACT",
+  "required_routes": [
+    "/",
+    "/judge",
+    "/graph",
+    "/evidence",
+    "/api/iceberg"
+  ],
+  "schema": "hydradg.video_ready_config.v1",
+  "site": "http://127.0.0.1:3010"
+}

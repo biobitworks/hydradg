@@ -1,0 +1,37 @@
+{
+  "claim_ceiling": "CHROME_CAPTURE_AND_TOY_DRM_FREE_SEAL_MECHANISM_ONLY",
+  "event": "CHROME_SCREENSHOT_AND_TOY_DRM_FREE_SEAL_FINALIZER",
+  "event_time_local": "2026-08-19T14:51:00-07:00",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "HUMAN",
+      "bytes": 210,
+      "evidence_class": "DIRECTLY_SUPPLIED_TEXT",
+      "file": "custody/CURRENT_HUMAN_REQUEST_V2.txt",
+      "file_sha256": "3206f77b626b9a4655d8df519b403b147e8cf0249f07d148fa840b61385d8418"
+    },
+    {
+      "actor": "AI",
+      "evidence_class": "AI_DERIVED_BROWSER_CAPTURE_SCRIPT",
+      "file": "scripts/capture_chrome_screenshots.sh",
+      "file_sha256": "187e2cc43b837b1cb31d7b173b5fd4dea98f7b36ae60052d92b1b08746cf13cc"
+    },
+    {
+      "actor": "AI_TOOL",
+      "claim_ceiling": "TOY_DRM_FREE_SIGNATURE_MECHANISM_ONLY_NO_AUTHENTICITY",
+      "evidence_class": "ACTUAL_CRYPTOGRAPHIC_OPERATION",
+      "operation": "Ed25519 toy package seal sign+verify",
+      "security_semantics": "NO_AUTHENTICITY_ANYONE_CAN_REPRODUCE_OR_FORGE",
+      "toy_seal_root_sha256": "aa5b0894b49da6d00b716982626f47c1e33ee4e593beb7badb7f84612e80eab3",
+      "verification_state": "VERIFIED_WITH_PUBLICLY_DISTRIBUTED_TOY_KEY"
+    }
+  ],
+  "project_fcg_append_state": "PENDING_LOCAL_PROJECT_FOR_THIS_CHAT_TURN",
+  "real_project_signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "schema": "hydradg.turn_custody.v0.3.0",
+  "toy_private_key_distribution_state": "INTENTIONALLY_PUBLIC_AND_DISTRIBUTED_THROUGH_TOY_FCO_FCG",
+  "toy_signature_authenticity_state": "NOT_ESTABLISHED",
+  "toy_signature_state": "VERIFIED_WITH_PUBLICLY_DISTRIBUTED_TOY_KEY",
+  "turn_root_sha256": "3b80aeac079a400c5e1f63b4912608fd782f856e0285d0b4bff925fd48b5a744"
+}

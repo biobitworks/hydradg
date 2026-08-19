@@ -1,0 +1,34 @@
+hash_exit_code=0
+manifest_sha256=ae9270c180d9cb990baae678e904fb8fb431b0696363a4b93263180feefbcedc
+turn_root_sha256=a2bb38fb274f48cd87da897d723a232c1f0604b01a9f71e83d82f2d80a5cc769
+toy_seal_root_sha256=8d1b595e632e3a69623b003f11eefd9c28623b8c2395b25a317222a5dc9986fc
+syntax={"scripts/capture_chrome_screenshots.sh": 0, "scripts/run_tonight_recording_gate.sh": 0}
+
+README.md: OK
+configs/video_ready.json: OK
+custody/CURRENT_HUMAN_REQUEST.txt: OK
+custody/CURRENT_HUMAN_REQUEST_V2.txt: OK
+custody/CURRENT_HUMAN_REQUEST_V3.txt: OK
+custody/SIGNING_HANDOFF.json: OK
+custody/SIGNING_HANDOFF_V2.json: OK
+custody/TURN_CUSTODY.json: OK
+custody/TURN_CUSTODY_V2.json: OK
+custody/TURN_CUSTODY_V3.json: OK
+docs/TONIGHT_RECORDING_AUTHORITY_V3.md: OK
+docs/VIDEO_CLAIM_BOUNDARIES.md: OK
+docs/VIDEO_SCRIPT_90S.md: OK
+fcg/TOY_SEAL_FCG_EDGES.jsonl: OK
+fcg/TOY_SEAL_FCO_BUNDLE.jsonl: OK
+prompts/ANTIGRAVITY_GEMINI_FINAL_TONIGHT_PROMPT_V3.md: OK
+prompts/VIDEO_READY_MASTER_PROMPT.md: OK
+scripts/capture_chrome_screenshots.sh: OK
+scripts/run_tonight_recording_gate.sh: OK
+scripts/start_video_stack.sh: OK
+scripts/verify_toy_seal.py: OK
+scripts/video_ready_gate.sh: OK
+toy_seal/TOY_DEMO_ED25519_PRIVATE_KEY.pem: OK
+toy_seal/TOY_DEMO_ED25519_PUBLIC_KEY.pem: OK
+toy_seal/TOY_DRM_FREE_SEAL_POLICY.md: OK
+toy_seal/TOY_PACKAGE_SEAL.json: OK
+toy_seal/TOY_SEAL_VERIFICATION.json: OK
+verify_hashes.sh: OK
