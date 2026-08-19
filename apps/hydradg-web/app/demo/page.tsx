@@ -24,6 +24,7 @@ export default function DemoPage() {
     <main>
       <nav>
         <a href="/">MVP</a>
+        <a href="/evidence">Recorded evidence</a>
         <a href="/graph">4D FCG</a>
         <a href="/eligibility">Submission custody</a>
       </nav>
@@ -34,7 +35,8 @@ export default function DemoPage() {
           <h1>HydraDG demo</h1>
           <p className="lede">
             Stable submission landing page for the deterministic backend proof, interactive 4D FCG,
-            and final pitch video. The video can change without changing this URL.
+            recorded benchmark evidence, and final pitch video. The video and final full500 receipt can
+            change without changing this URL.
           </p>
         </div>
       </header>
@@ -53,9 +55,10 @@ export default function DemoPage() {
               {busy ? "Loading…" : "Load deterministic fixture"}
             </button>
             <a className="secondary" href="/graph">Explore 4D FCG</a>
+            <a className="secondary" href="/evidence">Inspect evidence ledger</a>
             <a className="secondary" href="/">Open query console</a>
           </div>
-          <pre className="result">{result ? JSON.stringify(result, null, 2) : "Fixture receipt appears here."}</pre>
+          <pre className="result">{result ? JSON.stringify(result, null, 2) : "Fixture receipt appears here when a graph backend is configured."}</pre>
         </article>
 
         <article className="panel">
@@ -75,9 +78,10 @@ export default function DemoPage() {
           <h2>Three-minute path</h2>
         </div>
         <div className="flow mono">
-          <span>load fixture</span><b>→</b><span>4D state field</span><b>→</b>
-          <span>current state</span><b>→</b><span>history</span><b>→</b>
-          <span>provenance</span><b>→</b><span>custody/signature state</span>
+          <span>recorded evidence</span><b>→</b><span>load fixture</span><b>→</b>
+          <span>4D state field</span><b>→</b><span>current state</span><b>→</b>
+          <span>history</span><b>→</b><span>provenance</span><b>→</b>
+          <span>custody / claim ceiling</span>
         </div>
       </section>
     </main>
