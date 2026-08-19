@@ -135,9 +135,7 @@ start_hydra() {
 resolve_dataset() {
   FULL_DATA="${LONGMEMEVAL_DATA:-}"
   if [[ -n "$FULL_DATA" && ! -f "$FULL_DATA" ]]; then fail "LONGMEMEVAL_DATA not found: $FULL_DATA"; fi
-  if [[ -z "$FULL_DATA" ]]; then
-    FULL_DATA="$DATADIR/$LONGMEMEVAL_HF_FILE"
-  fi
+  if [[ -z "$FULL_DATA" ]]; then FULL_DATA="$DATADIR/$LONGMEMEVAL_HF_FILE"; fi
 
   if [[ ! -f "$FULL_DATA" || $(wc -c < "$FULL_DATA") -lt 200000000 ]]; then
     say "[data] downloading official cleaned LongMemEval-S repo=$LONGMEMEVAL_HF_REPO revision=$LONGMEMEVAL_HF_REVISION"
@@ -180,8 +178,10 @@ start_server() {
     say "[server] already running pid=$(cat "$SERVER_PID")"
     return
   fi
+  local server_script="$SCRIPT_DIR/best_use_local_server_hackhydra.py"
+  [[ -f "$server_script" ]] || fail "missing release server: $server_script"
   local args=(
-    "$SCRIPT_DIR/best_use_local_server.py"
+    "$server_script"
     --data "$SMOKE_DATA"
     --token-file "$AUTH"
     --bind "$SERVER_BIND"
@@ -213,8 +213,9 @@ write_receipt() {
   python3 - "$tmp" "$status_json" "$commit" "$branch" "$timestamp" "$FULL_SHA" "$SMOKE_SHA" <<'PY'
 import hashlib,json,sys
 out,status,commit,branch,ts,full_sha,smoke_sha=sys.argv[1:]
+status_obj=json.loads(status)
 obj={
-  "schema":"hydradg.best_use_magicstudio_startup.v2",
+  "schema":"hydradg.best_use_magicstudio_startup.v3",
   "timestamp_unix":int(ts),
   "hydradg_commit":commit,
   "hydradg_branch":branch,
@@ -222,9 +223,10 @@ obj={
   "longmemeval_source":"HUGGING_FACE_DATASET_REPOSITORY",
   "longmemeval_source_sha256":full_sha,
   "smoke80_sha256":smoke_sha,
-  "default_extractor":json.loads(status).get("default_extractor"),
-  "ollarma_health":json.loads(status).get("ollarma",{}).get("ok") and "PASS" or "UNAVAILABLE",
-  "server_url":json.loads(status).get("server_url"),
+  "default_extractor":status_obj.get("default_extractor"),
+  "ollarma_health":"PASS" if status_obj.get("ollarma",{}).get("ok") else "UNAVAILABLE",
+  "server_url":f"http://127.0.0.1:8787",
+  "live_perturbation_writer":"ONE_ROW_UNWIND_MERGE_SET_COMPATIBLE_WITH_PINNED_RUNTIME",
   "claim_ceiling":"LOCAL_TEST_SURFACE_READY",
   "signature_state":"NOT_SIGNED",
   "merkle_state":"NOT_MERKLE_COMMITTED",
