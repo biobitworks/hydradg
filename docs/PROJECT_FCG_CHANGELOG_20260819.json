@@ -1,7 +1,7 @@
 {
   "schema": "hydradg.project_fcg_changelog.v1",
   "date": "2026-08-19",
-  "reason": "Expand project custody from scientific graph state to dataset atomization, website knowledge objects, release transformations, live deployment state, and static fallback artifacts.",
+  "reason": "Expand project custody from scientific graph state to dataset atomization, website knowledge objects, release transformations, live deployment state, static fallback artifacts, and the read-only 4D Context Iceberg projection used to navigate drift through time.",
   "added_object_classes": [
     "WebsiteKnowledgeObject",
     "ReleaseStatus",
@@ -9,22 +9,35 @@
     "PublicExportArtifact",
     "DatasetAtomizationReceipt",
     "SeedGraphAdmissionReceipt",
-    "HydraDBProjectionReceipt"
+    "HydraDBProjectionReceipt",
+    "ContextDriftObservation",
+    "ContextIcebergProjection"
   ],
   "added_dependency_routes": [
     "source_or_dataset->exact_identity->seedgraph_intake->structural_atomization->fco->fcg->hydradb_projection->experiment->result->website_artifact",
+    "reference_state+current_state+frozen_scorer_config->context_drift_observation->read_only_context_iceberg_projection",
+    "canonical_custody->canonical_fcg->hydradb_projection->iceberg_state_artifact->local_ui",
     "release_candidate->public_export->live_vercel_or_static_fallback->video->submission"
   ],
   "presentation_model": {
-    "name": "TIP_OF_ICEBERG_HOT_TO_COLD",
+    "name": "CONTEXT_ICEBERG_4D_V1",
+    "navigation_dimensions": ["x", "y", "z", "time"],
+    "tip": ["delta_g_star", "cloud_drift_0_100"],
+    "node_cloud_size": "CLOUD_DRIFT_MAGNITUDE",
+    "node_cloud_hue": "SIGNED_DELTA_G_STAR_DIRECTION_NOT_CORRECTNESS",
     "hot": "current state and recent/live explanation",
-    "warm": "experiment and graph relationships",
+    "warm": "experiment, local drift envelopes, relationships and first divergence",
     "cold": "retained hashes, FCO/FCG, SeedGraph custody, HydraDB state, receipts and counterevidence",
-    "thermodynamic_claim": "METAPHOR_ONLY"
+    "thermodynamic_claim": "METAPHOR_AND_DIMENSIONLESS_INFORMATION_STATE_ONLY",
+    "ui_source_of_truth": false,
+    "live_state_contract": "schemas/context_iceberg_state.schema.json",
+    "live_state_environment_pointer": "HYDRADG_ICEBERG_STATE_PATH"
   },
   "claim_boundaries": {
     "signature_state": "NOT_SIGNED",
     "live_merkle_state": "NOT_MERKLE_COMMITTED",
-    "delta_g_state": "APPLICATION_DEFINED_INFORMATION_STATE_METRIC_NOT_PHYSICAL_GIBBS_FREE_ENERGY"
+    "delta_g_state": "APPLICATION_DEFINED_INFORMATION_STATE_METRIC_NOT_PHYSICAL_GIBBS_FREE_ENERGY",
+    "cloud_drift_state": "100_X_BASE2_JENSEN_SHANNON_DIVERGENCE_FROM_FROZEN_REFERENCE",
+    "node_halo_state": "CONTEXT_ENVELOPE_NOT_CAUSAL_ATTRIBUTION_UNLESS_SEPARATELY_ESTABLISHED"
   }
 }
