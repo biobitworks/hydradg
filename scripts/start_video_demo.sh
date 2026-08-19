@@ -3,9 +3,15 @@ set -euo pipefail
 
 ROOT="${HYDRADG_ROOT:-/Users/byron/projects/active/hydradg}"
 PORT="${HYDRADG_VIDEO_PORT:-3012}"
+REQUESTED_MODE="${HYDRADG_VIDEO_MODE:-auto}"
 PID_FILE="${HYDRADG_VIDEO_PID_FILE:-$HOME/.local/share/hydradg-video-demo.pid}"
 LOG_FILE="${HYDRADG_VIDEO_LOG_FILE:-$HOME/.local/share/hydradg-video-demo.log}"
 mkdir -p "$(dirname "$PID_FILE")"
+
+case "$REQUESTED_MODE" in
+  auto|live|static) ;;
+  *) echo "STOP: HYDRADG_VIDEO_MODE must be auto|live|static"; exit 10 ;;
+esac
 
 stop_old() {
   if [[ -s "$PID_FILE" ]]; then
@@ -18,7 +24,22 @@ stop_old
 
 cd "$ROOT"
 
-if [[ -f apps/hydradg-web/.next/BUILD_ID ]]; then
+if [[ "$REQUESTED_MODE" = "live" ]] && [[ ! -f apps/hydradg-web/.next/BUILD_ID ]]; then
+  echo "STOP: live mode requested but no completed Next.js build is present"
+  exit 11
+fi
+
+if [[ "$REQUESTED_MODE" = "static" ]]; then
+  USE_LIVE=0
+elif [[ "$REQUESTED_MODE" = "live" ]]; then
+  USE_LIVE=1
+elif [[ -f apps/hydradg-web/.next/BUILD_ID ]]; then
+  USE_LIVE=1
+else
+  USE_LIVE=0
+fi
+
+if [[ "$USE_LIVE" = "1" ]]; then
   cd apps/hydradg-web
   nohup npm run start -- -p "$PORT" > "$LOG_FILE" 2>&1 &
   echo $! > "$PID_FILE"
