@@ -1,7 +1,7 @@
 export type DistributionState = {
   t: number;
   label: string;
-  distribution: number[];
+  distribution: readonly number[];
   g_star: number;
   delta_g_star: number;
 };
@@ -11,7 +11,7 @@ export type IcebergState<T extends DistributionState = DistributionState> = T & 
   cloud_drift_0_100: number;
 };
 
-function normalize(values: number[]) {
+function normalize(values: readonly number[]) {
   if (!values.length || values.some((value) => !Number.isFinite(value) || value < 0)) {
     throw new Error("context distribution must contain finite non-negative values");
   }
@@ -20,11 +20,11 @@ function normalize(values: number[]) {
   return values.map((value) => value / total);
 }
 
-function pad(values: number[], length: number) {
+function pad(values: readonly number[], length: number) {
   return Array.from({ length }, (_, index) => values[index] ?? 0);
 }
 
-function klBase2(left: number[], right: number[]) {
+function klBase2(left: readonly number[], right: readonly number[]) {
   return left.reduce((sum, value, index) => {
     if (value === 0) return sum;
     const denominator = right[index];
@@ -33,7 +33,7 @@ function klBase2(left: number[], right: number[]) {
   }, 0);
 }
 
-export function jensenShannonDivergence(leftValues: number[], rightValues: number[]) {
+export function jensenShannonDivergence(leftValues: readonly number[], rightValues: readonly number[]) {
   const width = Math.max(leftValues.length, rightValues.length);
   const left = normalize(pad(leftValues, width));
   const right = normalize(pad(rightValues, width));
@@ -43,7 +43,7 @@ export function jensenShannonDivergence(leftValues: number[], rightValues: numbe
   return Math.max(0, Math.min(1, result));
 }
 
-export function addContextIcebergScores<T extends DistributionState>(timeline: T[]): Array<IcebergState<T>> {
+export function addContextIcebergScores<T extends DistributionState>(timeline: readonly T[]): Array<IcebergState<T>> {
   if (!timeline.length) return [];
   const reference = timeline[0].distribution;
   return timeline.map((state) => {
