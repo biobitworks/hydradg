@@ -2,12 +2,13 @@ name: HackHydra Best Use smoke80
 
 on:
   pull_request:
-    branches: [main]
+    branches: [main, hackhydra/best-use-stats-20260818]
     paths:
       - '.github/workflows/hackhydra-best-use-smoke80.yml'
       - 'HydraDG_DaisyTrain_v0.3.7/scripts/run_best_use_longmemeval.py'
       - 'HydraDG_DaisyTrain_v0.3.7/scripts/analyze_best_use_ablation.py'
       - 'HydraDG_DaisyTrain_v0.3.7/scripts/build_longmemeval_smoke80.py'
+      - 'HydraDG_DaisyTrain_v0.3.7/eval/best_use_ci_trigger.txt'
   workflow_dispatch:
 
 permissions:
