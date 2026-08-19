@@ -1,4 +1,5 @@
 import { makeFcoNode } from "@/lib/fco";
+import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
 
 const SECTION_SPECS = [
   { route: "/", label: "HydraDG", role: "project-entry-and-context-iceberg", claim: "APPLICATION_OVERVIEW_AND_READ_ONLY_DRIFT_VISUALIZATION" },
@@ -13,6 +14,7 @@ const SECTION_SPECS = [
 ] as const;
 
 export function buildSiteFcg() {
+  const knowledge = buildKnowledgeProjection();
   const nodes = SECTION_SPECS.map((spec) =>
     makeFcoNode("SiteSection", {
       ...spec,
@@ -54,6 +56,10 @@ export function buildSiteFcg() {
     project: "HydraDG",
     section_fco_ids: nodes.map((node) => node.id),
     edge_count: edges.length,
+    knowledge_root_fco_id: knowledge.root.id,
+    knowledge_term_fco_count: knowledge.nodes.length,
+    knowledge_api: "/api/knowledge",
+    knowledge_hydradb_projection_state: knowledge.hydradb_projection_state,
     representation: "APPLICATION_LEVEL_FCO_FCG",
     presentation_projection: {
       name: "CONTEXT_ICEBERG_4D_V1",
@@ -61,7 +67,7 @@ export function buildSiteFcg() {
       delta_g_star_semantics: "DIRECTION_ONLY_NOT_ACCURACY",
       cloud_drift_semantics: "MAGNITUDE_100X_JENSEN_SHANNON_DIVERGENCE",
       hero_api: "/api/iceberg",
-      live_state_contract: "HYDRADG_ICEBERG_STATE_PATH_READ_ONLY",
+      live_state_contract: "HYDRADG_ICEBERG_STATE_PATH_READ_ONLY_RECEIPT_OWNED_SCORES",
     },
     claim_ceiling: "WEBSITE_NAVIGATION_AND_CUSTODY_REPRESENTATION_ONLY",
     signature_state: "NOT_SIGNED",
@@ -73,6 +79,8 @@ export function buildSiteFcg() {
     artifact,
     nodes,
     edges,
+    knowledge_root: knowledge.root,
+    knowledge_projection_state: knowledge.hydradb_projection_state,
     claim_ceiling: "WEBSITE_NAVIGATION_AND_CUSTODY_REPRESENTATION_ONLY",
     signature_state: "NOT_SIGNED",
     merkle_state: "NOT_MERKLE_COMMITTED",

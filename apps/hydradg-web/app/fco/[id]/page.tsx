@@ -2,6 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 
 import { buildDemoFixture } from "@/lib/demoFixture";
+import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
 import { buildSiteFcg } from "@/lib/siteFcg";
 
 type Edge = { source: string; relation: string; target: string };
@@ -10,13 +11,15 @@ type NodeRow = { id: string; type: string; payload: Record<string, unknown>; obj
 function catalog() {
   const fixture = buildDemoFixture();
   const site = buildSiteFcg();
+  const knowledge = buildKnowledgeProjection();
   const fixtureNodes: NodeRow[] = fixture.nodes.map(([, node]) => node);
   const fixtureEdges: Edge[] = fixture.edges.map(([source, relation, target]) => ({ source, relation, target }));
-  const nodes = [...fixtureNodes, ...site.nodes, site.artifact];
+  const nodes = [...fixtureNodes, ...site.nodes, site.artifact, ...knowledge.nodes, knowledge.root];
   const edges: Edge[] = [
     ...fixtureEdges,
     ...site.edges.map((edge) => ({ source: edge.source, relation: edge.relation, target: edge.target })),
     ...site.nodes.map((node) => ({ source: node.id, relation: "PART_OF_SITE_ARTIFACT", target: site.artifact.id })),
+    ...knowledge.nodes.map((node) => ({ source: node.id, relation: "PART_OF_KNOWLEDGE_INDEX", target: knowledge.root.id })),
   ];
   return { nodes, edges };
 }
@@ -102,7 +105,7 @@ export default async function FcoPage({ params }: { params: Promise<{ id: string
         <span className="sectionNumber">04 / BOUNDARY</span>
         <h2 className="displayTitle">A navigable route is not a verification stamp.</h2>
         <p className="sectionLead">
-          This page recomputes deterministic fixture/site FCO identities from application metadata. It does not establish live HydraDB Merkle commitment, author signature, independent replication, or universal truth of the payload.
+          This page recomputes deterministic fixture/site/website-knowledge FCO identities from application metadata. Website knowledge remains an application projection until an isolated HydraDB write/read receipt exists. This page does not establish live HydraDB Merkle commitment, author signature, independent replication, or universal truth of the payload.
         </p>
         <div className="actions">
           <Link className="secondary" href="/graph">4D FCG</Link>

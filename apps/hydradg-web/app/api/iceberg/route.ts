@@ -1,3 +1,4 @@
+import { createHash } from "node:crypto";
 import { readFile } from "node:fs/promises";
 
 import { NextResponse } from "next/server";
@@ -24,6 +25,17 @@ type SceneNode = {
   };
 };
 
+type TimelineState = {
+  t: number;
+  label: string;
+  distribution: readonly number[];
+  g_star: number;
+  delta_g_star: number;
+  js_divergence?: number;
+  cloud_drift_0_100?: number;
+  [key: string]: unknown;
+};
+
 type LiveIcebergPayload = {
   schema?: string;
   source_state?: string;
@@ -32,21 +44,14 @@ type LiveIcebergPayload = {
   hydradb_projection_root?: string | null;
   signature_state?: string;
   merkle_state?: string;
-  timeline: ReadonlyArray<{
-    t: number;
-    label: string;
-    distribution: readonly number[];
-    g_star: number;
-    delta_g_star: number;
-    [key: string]: unknown;
-  }>;
+  timeline: ReadonlyArray<TimelineState>;
   scene: {
     nodes: ReadonlyArray<SceneNode>;
     links: ReadonlyArray<{ source: string; target: string; relation: string }>;
   };
 };
 
-function validatePayload(payload: LiveIcebergPayload) {
+function validateStructure(payload: LiveIcebergPayload) {
   if (!payload || !Array.isArray(payload.timeline) || !payload.timeline.length) {
     throw new Error("iceberg state requires a non-empty timeline");
   }
@@ -63,11 +68,26 @@ function validatePayload(payload: LiveIcebergPayload) {
   }
 }
 
-function enrich(payload: LiveIcebergPayload) {
-  validatePayload(payload);
-  const timeline = addContextIcebergScores(payload.timeline);
-  const byTime = new Map(timeline.map((state) => [state.t, state]));
-  const scene = {
+function validateFrozenLiveScores(payload: LiveIcebergPayload) {
+  validateStructure(payload);
+  for (const state of payload.timeline) {
+    if (!Number.isFinite(state.js_divergence) || !Number.isFinite(state.cloud_drift_0_100)) {
+      throw new Error("live iceberg timeline requires receipt-owned js_divergence and cloud_drift_0_100");
+    }
+    const js = Number(state.js_divergence);
+    const drift = Number(state.cloud_drift_0_100);
+    if (js < 0 || js > 1 || drift < 0 || drift > 100) {
+      throw new Error("live iceberg drift scores are outside declared bounds");
+    }
+    if (Math.abs(drift - js * 100) > 1e-8) {
+      throw new Error("live iceberg CloudDrift is inconsistent with 100 × JSD");
+    }
+  }
+}
+
+function inheritNodeScores(payload: LiveIcebergPayload) {
+  const byTime = new Map(payload.timeline.map((state) => [state.t, state]));
+  return {
     ...payload.scene,
     nodes: payload.scene.nodes.map((node) => {
       const inherited = byTime.get(node.t);
@@ -81,12 +101,12 @@ function enrich(payload: LiveIcebergPayload) {
       };
     }),
   };
-  return { ...payload, timeline, scene };
 }
 
 function demoPayload(): LiveIcebergPayload {
   const fixture = buildDemoFixture();
-  return {
+  const timeline = addContextIcebergScores(fixture.timeline);
+  const payload: LiveIcebergPayload = {
     schema: "hydradg.context_iceberg.ui.v1",
     source_state: "DETERMINISTIC_SYNTHETIC_TEST_FIXTURE",
     claim_ceiling: "SYNTHETIC_INFORMATION_STATE_VISUALIZATION_ONLY",
@@ -94,32 +114,47 @@ function demoPayload(): LiveIcebergPayload {
     hydradb_projection_root: null,
     signature_state: "NOT_SIGNED",
     merkle_state: "NOT_MERKLE_COMMITTED",
-    timeline: fixture.timeline,
+    timeline,
     scene: fixture.scene,
   };
+  return { ...payload, scene: inheritNodeScores(payload) };
 }
 
 async function loadLivePayload(path: string) {
-  const raw = await readFile(path, "utf8");
-  const parsed = JSON.parse(raw) as LiveIcebergPayload;
-  return enrich({
+  const bytes = await readFile(path);
+  const parsed = JSON.parse(bytes.toString("utf8")) as LiveIcebergPayload;
+  validateFrozenLiveScores(parsed);
+  const payload: LiveIcebergPayload = {
     ...parsed,
     schema: parsed.schema || "hydradg.context_iceberg.ui.v1",
-    source_state: parsed.source_state || "LIVE_CUSTODY_ARTIFACT",
-  });
+    source_state: parsed.source_state || "LIVE_CANONICAL_CUSTODY_ARTIFACT",
+  };
+  return {
+    ...payload,
+    scene: inheritNodeScores(payload),
+    artifact_sha256: createHash("sha256").update(bytes).digest("hex"),
+    score_provenance: "RECEIPT_OWNED_READ_ONLY",
+    local_path_disclosure: "NOT_INCLUDED",
+  };
 }
 
 export async function GET() {
   try {
     const statePath = process.env.HYDRADG_ICEBERG_STATE_PATH?.trim();
-    const payload = statePath ? await loadLivePayload(statePath) : enrich(demoPayload());
+    const payload = statePath
+      ? await loadLivePayload(statePath)
+      : {
+          ...demoPayload(),
+          score_provenance: "DETERMINISTIC_SYNTHETIC_UI_CONTROL",
+        };
     return NextResponse.json(
       {
         ...payload,
         refreshed_at: new Date().toISOString(),
         operational_note: "refreshed_at is operational metadata and is not part of the scientific identity",
+        release_watch_boundary: "LIVE_SCORES_ARE_READ_FROM_THE_FROZEN_ARTIFACT_RELEASE_WATCH_DOES_NOT_CHOOSE_GIBBS_WEIGHTS",
       },
-      { headers: { "Cache-Control": "no-store, max-age=0" } },
+      { headers: { "Cache-Control": "no-store, max-age=0", "X-HydraDG-Read-Only": "true" } },
     );
   } catch (error) {
     const message = error instanceof Error ? error.message : String(error);
@@ -129,7 +164,7 @@ export async function GET() {
         source_state: "BLOCKED_INVALID_ICEBERG_STATE",
         claim_ceiling: "NO_VISUALIZATION_CLAIM",
       },
-      { status: 500, headers: { "Cache-Control": "no-store, max-age=0" } },
+      { status: 500, headers: { "Cache-Control": "no-store, max-age=0", "X-HydraDG-Read-Only": "true" } },
     );
   }
 }
