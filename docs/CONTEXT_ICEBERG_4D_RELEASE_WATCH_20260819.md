@@ -40,6 +40,27 @@ with base-2 Jensen-Shannon divergence, bounded to `[0, 100]` after scaling.
 
 The Release Watch code **does not select or change G* weights**.
 
+### Gibbs / information-theory lineage
+
+The primary upstream reference for using Gibbs-free-energy language as an information/inference quantity is:
+
+> Torsten A. Enßlin and Cornelius Weig. **Inference with minimal Gibbs free energy in information field theory.** *Physical Review E* 82, 051112 (2010). DOI: `10.1103/PhysRevE.82.051112`. arXiv: `1004.2868`.
+
+Enßlin & Weig connect information field theory to a minimal Gibbs-free-energy principle and information/cross-information objectives. HydraDG uses that work as **conceptual/mathematical lineage for the Gibbs-information analogy**, not as evidence that HydraDG's application-defined `G*` is thermodynamic Gibbs free energy or the paper's objective verbatim.
+
+HydraDG's current `G*` / `ΔG*` therefore has the following claim boundary:
+
+- **supported analogy:** information-state/free-energy constructions can combine entropy/information terms and an energy/cost-like term;
+- **HydraDG-specific deterministic transform:** the exact `G*` scorer, burden terms, weights, buckets, and reference state are project-defined/preregistered objects;
+- **not established:** physical units, thermodynamic work, biological kcal/mol, or accuracy improvement from lower `G*`.
+
+Separate references govern separate pieces of the display:
+
+- Shannon (1948) → Shannon entropy;
+- Lin (1991) → Jensen-Shannon divergence / Cloud Drift lane;
+- Enßlin & Weig (2010) → Gibbs-information-field inference lineage;
+- Friston (2010) → secondary variational/free-energy background, not a substitute for the Enßlin & Weig source.
+
 ## Object-level interpretation
 
 `context_drift` is allowed on every scene node, regardless of FCO level:
