@@ -16,7 +16,7 @@ type LiveAction =
 type HydraEnvelope = { columns?: string[]; rows?: unknown[][]; error?: unknown };
 
 function baseUrl(): string | null {
-  return process.env.BEST_USE_SERVER_URL?.replace(/\/$/, "") || null;
+  return process.env.BEST_USE_SERVER_URL?.replace(/\/$/, "") || "http://127.0.0.1:8787";
 }
 
 function decodeHydra(value: unknown): unknown {

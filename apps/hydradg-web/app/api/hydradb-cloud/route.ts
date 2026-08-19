@@ -115,6 +115,20 @@ export async function POST(request: NextRequest) {
     const body = (await request.json()) as Record<string, unknown> & { action?: CloudAction };
     const action = body.action;
 
+    if (!config().apiKey) {
+      return NextResponse.json({
+        status: "DEMO_COOKBOOK_PREVIEW_MODE",
+        action: action || "unknown",
+        note: "HYDRADB_API_KEY is not configured. Displaying deterministic HydraDB Cloud API contract preview.",
+        preview_data: {
+          tenant_id: body.tenant_id || "demo-tenant",
+          sub_tenant_id: body.sub_tenant_id || "hydradg-judge-demo",
+          result: "SUCCESS",
+          claim_ceiling: "DEMO_COOKBOOK_PREVIEW_ONLY"
+        }
+      });
+    }
+
     if (action === "tenant_ids") {
       return NextResponse.json(await hydra("/tenants/tenant_ids", "GET"));
     }
