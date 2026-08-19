@@ -70,8 +70,22 @@ for f in \
   THIRD_PARTY_NOTICES.md \
   docs/HACK_HYDRA_ELIGIBILITY_AUDIT_20260819.md \
   docs/PUBLIC_EXPORT_MANIFEST_20260819.md \
+  docs/PROJECT_FCG_UPDATE_20260819.md \
+  docs/PROJECT_FCG_CHANGELOG_20260819.json \
+  docs/WHY_FCG_UPDATED_20260819.md \
+  docs/KNOWLEDGE_LINK_CONTRACT_20260819.md \
+  docs/WEBSITE_MVP_AND_FALLBACK_20260819.md \
+  docs/LIVE_AND_STATIC_RELEASE_POLICY_20260819.md \
+  docs/MVP_RELEASE_DELIVERABLES_20260819.md \
+  docs/TURN_HASHING_POLICY_20260819.md \
+  docs/HASHING_PROOF_20260819.md \
+  docs/HASH_PROOF_CURRENT_PASS_20260819.md \
+  docs/RELEASE_ARTIFACT_HASHING_HOWTO_20260819.md \
+  docs/HASH_REFETCH_COMMANDS_20260819.md \
+  docs/CONTEXT_ICEBERG_SCORE_SPEC.md \
   handoff/SUBMISSION_TASKS_20260819.md \
-  handoff/RELEASE_EXECUTION_LEDGER_20260819.md
+  handoff/RELEASE_EXECUTION_LEDGER_20260819.md \
+  handoff/RELEASE_WATCH_CONTEXT_ICEBERG_EXECUTION_20260819.md
   do copy_file "$f"; done
 
 copy_tree apps/hydradg-web
@@ -79,6 +93,9 @@ copy_tree apps/hydradg-web
 progress 36 COPY_RELEASE_TOOLS
 for f in \
   scripts/check_hydradg_web_links.py \
+  scripts/check_term_knowledge_coverage.py \
+  scripts/check_static_fallback.py \
+  scripts/hash_release_artifacts.py \
   scripts/run_hackhydra_release_batches_magicstudio.sh \
   scripts/build_hackhydra_public_export.sh
   do copy_file "$f"; done
@@ -180,8 +197,6 @@ fi
 
 find "$EXPORT_ROOT" -type d -name .git -print | grep -q . && { echo "STOP: nested .git copied"; exit 31; } || true
 
-# Fail if the origin-ambiguous helper filename in the public export does not
-# byte-match the fresh Hack-Hydra source selected by the transform above.
 FRESH_SOURCE_SHA="$(shasum -a 256 "$SOURCE_ROOT/$PKG/scripts/build_longmemeval_smoke80_hackhydra.py" | awk '{print $1}')"
 PUBLIC_HELPER_SHA="$(shasum -a 256 "$EXPORT_ROOT/$PKG/scripts/build_longmemeval_smoke80.py" | awk '{print $1}')"
 test "$FRESH_SOURCE_SHA" = "$PUBLIC_HELPER_SHA" || { echo "STOP: smoke helper substitution mismatch"; exit 33; }
@@ -220,9 +235,6 @@ cd "$EXPORT_ROOT"
 git init -b main
 git add -A
 git status --short
-
-# Final content-origin admission remains human-reviewed; this commit is created
-# only after deterministic export/secret/size gates pass.
 git commit -m "Hack Hydra 2026 submission export"
 
 progress 97 VERIFY_HISTORY
