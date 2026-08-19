@@ -21,17 +21,35 @@ Do not claim:
 - that lower delta-G* means better accuracy;
 - that an inherited per-node halo means that node caused the full state-level drift.
 
-## 1. Video readiness gate
+## 1. Isolate the video build from active Daisy work
 
-From the reconciliation branch:
+Do **not** switch or hard-reset the active scientific checkout. Create/update the dedicated video worktree instead:
 
 ```bash
 cd /Users/byron/projects/active/hydradg
-git fetch origin
-git switch hack-hydra/context-iceberg-reconcile-20260819
-git pull --ff-only origin hack-hydra/context-iceberg-reconcile-20260819
+bash scripts/prepare_video_worktree.sh
+```
+
+Required output:
+
+```text
+VIDEO_WORKTREE_READY=YES
+```
+
+The helper checks out the exact remote reconciliation branch in detached mode under:
+
+```text
+/Users/byron/projects/active/hydradg-video
+```
+
+without changing the active HydraDG worktree.
+
+## 2. Video readiness gate
+
+```bash
+VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
 command -v gitleaks >/dev/null 2>&1 || brew install gitleaks
-bash scripts/video_ready_gate.sh
+HYDRADG_ROOT="$VIDEO_ROOT" bash "$VIDEO_ROOT/scripts/video_ready_gate.sh"
 ```
 
 Record the live local application after:
@@ -40,22 +58,24 @@ Record the live local application after:
 VIDEO_READY_LIVE=YES
 ```
 
-If this gate fails only because the live Next.js build cannot be made green tonight, do not invent a pass. Run the static checks directly and use the fallback only when they pass:
+If this gate fails only because the live Next.js build cannot be made green tonight, do not invent a pass. Run the static check in the video worktree and use the fallback only if it passes:
 
 ```bash
+VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
+cd "$VIDEO_ROOT"
 python3 scripts/check_static_fallback.py
-bash scripts/start_video_demo.sh
+HYDRADG_ROOT="$VIDEO_ROOT" bash scripts/start_video_demo.sh
 ```
 
 If the launcher reports `VIDEO_DEMO_MODE=STATIC_FALLBACK`, describe it as an offline presentation fallback, not as a running live HydraDB experiment.
 
-## 2. Start the recording surface
+## 3. Start the recording surface
 
 After a successful live gate:
 
 ```bash
-cd /Users/byron/projects/active/hydradg
-bash scripts/start_video_demo.sh
+VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
+HYDRADG_ROOT="$VIDEO_ROOT" bash "$VIDEO_ROOT/scripts/start_video_demo.sh"
 ```
 
 Preferred output:
@@ -70,7 +90,7 @@ Fallback output:
 VIDEO_DEMO_MODE=STATIC_FALLBACK
 ```
 
-## 3. Recording route
+## 4. Recording route
 
 Preferred live route order:
 
@@ -83,7 +103,7 @@ Preferred live route order:
 
 Do not spend recording time on every track page.
 
-## 4. 100-second narration
+## 5. 100-second narration
 
 ### 0-15 seconds — problem
 
@@ -113,7 +133,7 @@ If the UI says deterministic synthetic fixture, add:
 
 "So the product is not a leaderboard claim. It is a governed memory experiment: change state, observe the first divergence, preserve custody, test recovery, and keep positive, null, negative and abstaining results in the same graph."
 
-## 5. Recording checklist
+## 6. Recording checklist
 
 Before pressing record:
 - browser zoom 90-100%;
@@ -124,7 +144,7 @@ Before pressing record:
 - verify the top of `/` states whether the Iceberg source is synthetic or live;
 - keep the video focused on one path rather than browsing every page.
 
-## 6. Minimum acceptable recording
+## 7. Minimum acceptable recording
 
 The video is acceptable for the MVP if it clearly shows:
 - HydraDG homepage/value proposition;
