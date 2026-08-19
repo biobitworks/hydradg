@@ -26,20 +26,36 @@ const evidence = [
     href: "/track03",
   },
   {
-    label: "Track 02 HydraBlast",
-    status: "CANARY EXECUTION IN PROGRESS",
+    label: "Track 03 live poison → antidote release path",
+    status: "IMPLEMENTED · FRESH EXECUTION RECEIPT PENDING",
     detail:
-      "Fresh Hack Hydra code compares a deterministic Python reverse dependency closure against live HydraDB for reference, poison, partial-repair and full-repair states. The first CI attempt exposed an unsupported standalone MERGE+SET request shape and was retained as a failure before repair.",
+      "The release server now resolves both original prepared Facts and subsequently injected live Facts, allowing the judge sequence original → normal → poison → antidote to preserve all SUPERSEDED_BY edges rather than failing when the antidote targets the poison vertex. The release batch runner must execute and retain the fresh v1 golden-path receipt before this card can become PASS.",
+    ceiling: "LIVE_HYDRADB_FCG_GOLDEN_PATH_STATE_TRANSITION_ONLY_NOT_RETRIEVAL_SUPERIORITY",
+    href: "/judge",
+  },
+  {
+    label: "Track 02 HydraBlast",
+    status: "IMPLEMENTED · EXECUTION PENDING",
+    detail:
+      "Fresh Hack Hydra code compares a deterministic Python reverse dependency closure against live HydraDB for reference, poison, partial-repair and full-repair states. Current release-head GitHub Actions jobs terminate before any recorded steps/logs/artifacts, so the canary is not called failed or passed until an actually executing environment produces its receipt.",
     ceiling: "SYNTHETIC_TRACK02_STRUCTURAL_CANARY_ONLY_NOT_REAL_NPM_EXPOSURE",
     href: "/track02",
   },
   {
     label: "Track 01 HydraOntology",
-    status: "CANARY EXECUTION IN PROGRESS",
+    status: "IMPLEMENTED · EXECUTION PENDING",
     detail:
-      "Fresh Hack Hydra code tests whether removing and restoring a RESOLVES_TO identity edge changes the evidence set exactly as a deterministic reference mapping predicts. EnterpriseRAG-Bench and HERB performance remains unclaimed until real dataset pull and benchmark receipts exist.",
+      "Fresh Hack Hydra code tests whether removing and restoring a RESOLVES_TO identity edge changes the evidence set exactly as a deterministic reference mapping predicts. Current release-head GitHub Actions jobs terminate before recorded steps; EnterpriseRAG-Bench and HERB performance remains unclaimed until real dataset pull and benchmark receipts exist.",
     ceiling: "SYNTHETIC_TRACK01_STRUCTURAL_CANARY_ONLY_NOT_ENTERPRISERAG_OR_HERB_PERFORMANCE",
     href: "/track01",
+  },
+  {
+    label: "GitHub Actions release-head gate",
+    status: "EXTERNAL RUNNER START BLOCKER",
+    detail:
+      "Release-head workflows are marked failure, but the connected GitHub run records expose no executed job steps, logs or artifacts; a Judge Lab rerun reproduced the same zero-step condition. This is classified as GITHUB_ACTIONS_RUNNER_START_FAILURE / CAUSE_NOT_ESTABLISHED, not as an application test failure or CI pass.",
+    ceiling: "EXTERNAL_CI_RUNNER_STATE_ONLY",
+    href: "/eligibility",
   },
   {
     label: "ECA-EXT80 prior-work companion",
@@ -66,7 +82,7 @@ export default function EvidencePage() {
           <p className="eyebrow">Hack Hydra 2026 · evidence ledger</p>
           <h1>Results without claim inflation.</h1>
           <p className="lede">
-            Positive, negative, failed and pending executions remain separate custody objects. The full500 run is now executed and its negative/neutral retrieval result is part of the judge-facing story rather than being overwritten.
+            Positive, negative, failed, blocked and pending executions remain separate custody objects. The full500 run is executed; Track 01/02 and the fresh live poison→antidote release path remain execution-gated until actual receipts exist.
           </p>
         </div>
         <div className="heroStatus">
