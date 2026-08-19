@@ -37,6 +37,14 @@ copy_file() {
   cp -p "$SOURCE_ROOT/$rel" "$EXPORT_ROOT/$rel"
 }
 
+copy_as() {
+  local src="$1"
+  local dst="$2"
+  test -f "$SOURCE_ROOT/$src" || { echo "STOP: missing allowlisted source $src"; exit 22; }
+  mkdir -p "$EXPORT_ROOT/$(dirname "$dst")"
+  cp -p "$SOURCE_ROOT/$src" "$EXPORT_ROOT/$dst"
+}
+
 copy_tree() {
   local rel="$1"
   test -d "$SOURCE_ROOT/$rel" || { echo "STOP: missing allowlisted directory $rel"; exit 21; }
@@ -98,6 +106,14 @@ for f in \
   "$PKG/scripts/track02_hydrablast_canary.py"
   do copy_file "$f"; done
 
+# Eligibility substitution: the private working tree may contain an older helper
+# named build_longmemeval_smoke80.py whose source origin is not admitted. The
+# public tree receives ONLY the fresh Hack-Hydra implementation, copied under
+# the launcher-compatible filename.
+copy_as \
+  "$PKG/scripts/build_longmemeval_smoke80_hackhydra.py" \
+  "$PKG/scripts/build_longmemeval_smoke80.py"
+
 progress 55 COPY_CI
 for f in \
   .github/workflows/hackhydra-best-use-v2-structural.yml \
@@ -114,6 +130,13 @@ cat > "$EXPORT_ROOT/PUBLIC_EXPORT_RECEIPT.json" <<EOF
   "source_branch": "$SOURCE_BRANCH",
   "source_commit": "$SOURCE_SHA",
   "transform": "PUBLIC_EXPORT_v1_EXPLICIT_ALLOWLIST",
+  "eligibility_substitutions": [
+    {
+      "source": "$PKG/scripts/build_longmemeval_smoke80_hackhydra.py",
+      "public_path": "$PKG/scripts/build_longmemeval_smoke80.py",
+      "reason": "replace origin-ambiguous participant helper with fresh Hack-Hydra implementation"
+    }
+  ],
   "evidence_class": "DETERMINISTIC_LOCAL_FILE_SELECTION_PENDING_FINAL_REVIEW",
   "claim_ceiling": "FRESH_HISTORY_EXPORT_IDENTITY_AND_SELECTION_ONLY",
   "signature_state": "NOT_SIGNED",
@@ -156,6 +179,12 @@ if [ -n "$BAD_PATHS" ]; then
 fi
 
 find "$EXPORT_ROOT" -type d -name .git -print | grep -q . && { echo "STOP: nested .git copied"; exit 31; } || true
+
+# Fail if the origin-ambiguous helper filename in the public export does not
+# byte-match the fresh Hack-Hydra source selected by the transform above.
+FRESH_SOURCE_SHA="$(shasum -a 256 "$SOURCE_ROOT/$PKG/scripts/build_longmemeval_smoke80_hackhydra.py" | awk '{print $1}')"
+PUBLIC_HELPER_SHA="$(shasum -a 256 "$EXPORT_ROOT/$PKG/scripts/build_longmemeval_smoke80.py" | awk '{print $1}')"
+test "$FRESH_SOURCE_SHA" = "$PUBLIC_HELPER_SHA" || { echo "STOP: smoke helper substitution mismatch"; exit 33; }
 
 progress 74 SIZE_GATE
 while IFS= read -r -d '' f; do
