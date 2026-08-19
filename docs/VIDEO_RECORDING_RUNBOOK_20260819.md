@@ -45,7 +45,7 @@ The helper checks out the exact remote reconciliation branch in detached mode un
 
 without changing the active HydraDG worktree.
 
-## 2. Video readiness gate
+## 2. Preferred live video gate
 
 ```bash
 VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
@@ -53,43 +53,55 @@ command -v gitleaks >/dev/null 2>&1 || brew install gitleaks
 HYDRADG_ROOT="$VIDEO_ROOT" bash "$VIDEO_ROOT/scripts/video_ready_gate.sh"
 ```
 
-Record the live local application after:
+Record the live local application only after:
 
 ```text
 VIDEO_READY_LIVE=YES
 ```
 
-If this gate fails only because the live Next.js path cannot be made green tonight, do not invent a pass. Run the static check in the video worktree and use the fallback only if it passes:
-
-```bash
-VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
-cd "$VIDEO_ROOT"
-python3 scripts/check_static_fallback.py
-HYDRADG_ROOT="$VIDEO_ROOT" HYDRADG_VIDEO_MODE=static bash scripts/start_video_demo.sh
-```
-
-If the launcher reports `VIDEO_DEMO_MODE=STATIC_FALLBACK`, describe it as an offline presentation fallback, not as a running live HydraDB experiment.
-
-## 3. Start the recording surface
-
-After a successful live gate:
+Then start it explicitly in live mode:
 
 ```bash
 VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
 HYDRADG_ROOT="$VIDEO_ROOT" HYDRADG_VIDEO_MODE=live bash "$VIDEO_ROOT/scripts/start_video_demo.sh"
 ```
 
-Preferred output:
+Expected:
 
 ```text
 VIDEO_DEMO_MODE=LIVE_LOCAL_NEXTJS
 ```
 
-Fallback output:
+## 3. Independent static contingency
+
+If the live gate does not pass, do not infer that the fallback is safe. Run its own gate:
+
+```bash
+VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
+HYDRADG_ROOT="$VIDEO_ROOT" bash "$VIDEO_ROOT/scripts/static_video_gate.sh"
+```
+
+Only after:
+
+```text
+STATIC_VIDEO_READY=YES
+```
+
+start the fallback explicitly:
+
+```bash
+VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
+HYDRADG_ROOT="$VIDEO_ROOT" HYDRADG_VIDEO_MODE=static bash "$VIDEO_ROOT/scripts/start_video_demo.sh"
+```
+
+Expected:
 
 ```text
 VIDEO_DEMO_MODE=STATIC_FALLBACK
+VIDEO_CLAIM_NOTE=STATIC_PRESENTATION_FALLBACK_NO_LIVE_HYDRADB_CONTROL
 ```
+
+Describe it as an offline presentation fallback, not as a running live HydraDB experiment.
 
 ## 4. Recording route
 
@@ -101,6 +113,8 @@ Preferred live route order:
 4. `/graph` — rotate/scrub the 4D FCG.
 5. `/knowledge` — open one project term and follow its FCO/source route.
 6. `/eligibility` — close on explicit claim/signature/Merkle boundaries.
+
+For the static fallback, follow the single-page section order instead.
 
 Do not spend recording time on every track page.
 
@@ -117,6 +131,10 @@ Do not spend recording time on every track page.
 If the UI says deterministic synthetic fixture, add:
 
 "This hero is currently using the deterministic demonstration fixture; the same read-only contract accepts validated Daisy state receipts."
+
+If using the static fallback instead, say:
+
+"This is the self-contained presentation fallback. It shows the same evidence story, but I am not claiming these controls are connected to a live HydraDB process in this browser."
 
 ### 35-55 seconds — golden path
 
