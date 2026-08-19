@@ -2,6 +2,8 @@
 
 import { PointerEvent, WheelEvent, useEffect, useMemo, useRef, useState } from "react";
 
+import { KNOWLEDGE_TERMS, knowledgeTerm } from "@/lib/knowledgeLinks";
+
 type SceneNode = {
   id: string;
   label: string;
@@ -37,6 +39,10 @@ type FixtureResponse = {
 
 type Projected = { id: string; px: number; py: number; depth: number };
 
+function fcoHash(id: string) {
+  return id.startsWith("fco:") && /^[0-9a-f]{64}$/i.test(id.slice(4)) ? id.slice(4) : "";
+}
+
 export default function GraphPage() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
   const projectedRef = useRef<Projected[]>([]);
@@ -51,6 +57,15 @@ export default function GraphPage() {
   const [unlocked, setUnlocked] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState("");
   const [heatMode, setHeatMode] = useState<"mutation" | "restoration" | "delta">("mutation");
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get("q");
+    const node = params.get("node");
+    if (q) setQuery(q);
+    if (node) setSelectedId(node);
+  }, []);
 
   useEffect(() => {
     fetch("/api/query", {
@@ -71,6 +86,17 @@ export default function GraphPage() {
     () => data?.scene.nodes.find((node) => node.id === selectedId) || null,
     [data, selectedId],
   );
+
+  const selectedHash = selected ? fcoHash(selected.id) : "";
+  const selectedTerm = selected ? knowledgeTerm(selected.label) : undefined;
+  const selectedLinks = useMemo(
+    () => data?.scene.links.filter((link) => link.source === selectedId || link.target === selectedId) || [],
+    [data, selectedId],
+  );
+  const selectedSourceRef = typeof selected?.payload.source_ref === "string" ? selected.payload.source_ref : "";
+  const selectedSourceNode = selectedSourceRef && data
+    ? data.scene.nodes.find((node) => node.id === selectedSourceRef) || null
+    : null;
 
   const matching = useMemo(() => {
     const needle = query.trim().toLowerCase();
@@ -238,6 +264,9 @@ export default function GraphPage() {
     <main>
       <nav>
         <a href="/">MVP</a>
+        <a href="/judge">Judge Lab</a>
+        <a href="/graph">4D FCG</a>
+        <a href="/knowledge">Knowledge</a>
         <a href="/demo">Demo + video</a>
         <a href="/eligibility">Submission custody</a>
       </nav>
@@ -254,6 +283,15 @@ export default function GraphPage() {
       </header>
 
       {error ? <section className="panel"><strong>Graph unavailable:</strong> {error}</section> : null}
+
+      <section className="panel">
+        <p className="eyebrow">Linked terminology</p>
+        <div className="actions">
+          {KNOWLEDGE_TERMS.map((item) => (
+            <a className="secondary" href={`/knowledge#${item.slug}`} key={item.slug}>{item.term}</a>
+          ))}
+        </div>
+      </section>
 
       <section className="grid twoCol">
         <article className="panel">
@@ -310,8 +348,19 @@ export default function GraphPage() {
             <h3>{selected?.label || "Select a node"}</h3>
             {selected ? (
               <>
+                <div className="actions">
+                  {selectedTerm ? <a className="secondary" href={`/knowledge#${selectedTerm.slug}`}>How to: {selectedTerm.term}</a> : null}
+                  <a className="secondary" href={`/graph?node=${encodeURIComponent(selected.id)}`}>Permalink</a>
+                  {selectedHash ? <a className="secondary" href={`/evidence?sha=${selectedHash}`}>Evidence by hash</a> : null}
+                </div>
                 <p className="mono small compact">{selected.id}</p>
+                {selectedHash ? <p className="small muted">SHA-256 → <a className="mono compact" href={`/evidence?sha=${selectedHash}`}>{selectedHash}</a></p> : null}
                 <p className="small muted">t={selected.t} · access={selected.access}</p>
+                {selectedSourceNode ? (
+                  <p className="small muted">source_ref → <button className="secondary" onClick={() => setSelectedId(selectedSourceNode.id)}>{selectedSourceNode.label}</button></p>
+                ) : selectedSourceRef.startsWith("http") ? (
+                  <p className="small muted">source_ref → <a href={selectedSourceRef} target="_blank" rel="noreferrer">upstream source ↗</a></p>
+                ) : selectedSourceRef ? <p className="mono small compact">source_ref={selectedSourceRef}</p> : null}
                 {selected.access === "toy-locked" ? (
                   <button className="secondary" onClick={toggleToyLock}>
                     {unlocked.has(selected.id) ? "Lock toy key" : "Unlock with toy key"}
@@ -321,6 +370,24 @@ export default function GraphPage() {
                 <pre className="result">
                   {payloadVisible ? JSON.stringify(selected.payload, null, 2) : "TOY_LOCKED — payload hidden in UI only. This is not production cryptography."}
                 </pre>
+                {selectedLinks.length ? (
+                  <div>
+                    <p className="eyebrow">Connected FCG edges</p>
+                    <ul>
+                      {selectedLinks.map((link, index) => {
+                        const outgoing = link.source === selected.id;
+                        const otherId = outgoing ? link.target : link.source;
+                        const other = data?.scene.nodes.find((node) => node.id === otherId);
+                        return (
+                          <li key={`${link.source}-${link.relation}-${link.target}-${index}`}>
+                            <span className="mono small">{outgoing ? "→" : "←"} {link.relation} </span>
+                            <button className="secondary" onClick={() => setSelectedId(otherId)}>{other?.label || otherId.slice(0, 20)}</button>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                ) : null}
               </>
             ) : <div className="result empty">Click a node to inspect its FCO payload.</div>}
           </div>
