@@ -77,6 +77,7 @@ for f in \
   docs/WEBSITE_MVP_AND_FALLBACK_20260819.md \
   docs/LIVE_AND_STATIC_RELEASE_POLICY_20260819.md \
   docs/MVP_RELEASE_DELIVERABLES_20260819.md \
+  docs/VIDEO_RECORDING_RUNBOOK_20260819.md \
   docs/TURN_HASHING_POLICY_20260819.md \
   docs/HASHING_PROOF_20260819.md \
   docs/HASH_PROOF_CURRENT_PASS_20260819.md \
@@ -94,6 +95,9 @@ for f in \
   scripts/check_static_fallback.py \
   scripts/check_term_knowledge_coverage.py \
   scripts/hash_release_artifacts.py \
+  scripts/run_release_watch_parallel_safe.sh \
+  scripts/video_ready_gate.sh \
+  scripts/start_video_demo.sh \
   scripts/run_hackhydra_release_batches_magicstudio.sh \
   scripts/build_hackhydra_public_export.sh
   do copy_file "$f"; done
