@@ -1,69 +1,63 @@
 import Link from "next/link";
 
+import { RELEASE_STATUS } from "@/lib/releaseStatus";
+
 const evidence = [
   {
     label: "Live HydraDB structural conformance",
     status: "PASS",
-    detail:
-      "Pinned HydraDB built and executed the v2 typed-memory structural suite. Seven declared invariants passed: duplicate-session identity separation, exact case membership, context-scoped entity identity, supersession construction, contradiction construction, supersession traversal, and contradiction traversal.",
+    detail: "Pinned HydraDB executed the v2 typed-memory structural suite. Seven declared invariants passed across exact case membership, identity, supersession and contradiction construction/traversal.",
     ceiling: "SYNTHETIC_STRUCTURAL_CONFORMANCE_ONLY",
-    href: "/track03",
-  },
-  {
-    label: "LongMemEval v1 lexical graph calibration",
-    status: "NEGATIVE RESULT PRESERVED",
-    detail:
-      "At K=3, flat BM25 retrieved 75/77 non-abstention cases while naive graph expansion retrieved 68/77. Exact McNemar p=0.015625; the graph design was rejected rather than hidden.",
-    ceiling: "REFERENCE_GRAPH_DESIGN_CALIBRATION_ONLY",
     href: "/track03",
   },
   {
     label: "LongMemEval full500 typed-memory ablation",
     status: "EXECUTED · NEGATIVE/NEUTRAL",
-    detail:
-      "500 cases were materialized into live pinned HydraDB; 470 cases had retrieval ground truth. The paired analysis returned NO_POSITIVE_HIT_RATE_SIGNAL for B, C, or D relative to A at the tested route. This is a retrieval ablation, not end-to-end QA.",
+    detail: "500 cases were materialized into live pinned HydraDB; 470 cases had retrieval ground truth. B, C and D returned NO_POSITIVE_HIT_RATE_SIGNAL relative to A at the tested route.",
     ceiling: "LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA",
     href: "/track03",
   },
   {
+    label: "Core Track 01/03 dataset acquisition",
+    status: "DOWNLOADED · HASHED",
+    detail: "EnterpriseRAG-Bench, HERB, LongMemEval cleaned, LongMemEval-V2 core and BEAM have local acquisition identities/manifests recorded. Download identity does not establish benchmark performance or full atomization.",
+    ceiling: "LOCAL_DATASET_BYTE_IDENTITIES_AFTER_DOWNLOAD_ONLY",
+    href: "/track01",
+  },
+  {
+    label: "Total dataset atomization + FCO/FCG projection",
+    status: "IMPLEMENTED · CORPUS EXECUTION PENDING",
+    detail: "The release branch contains record-level atomization, SeedGraph bundle admission and full FCO/FCG-to-HydraDB projection tooling. Do not call the downloaded corpora FULL_STRUCTURAL_ATOMIZATION until the completeness/projection receipts execute.",
+    ceiling: "IMPLEMENTATION_STATE_ONLY_NOT_FULL_CORPUS_ATOMIZATION",
+    href: "/track01",
+  },
+  {
     label: "Track 03 live poison → antidote release path",
     status: "IMPLEMENTED · FRESH EXECUTION RECEIPT PENDING",
-    detail:
-      "The release server now resolves both original prepared Facts and subsequently injected live Facts, allowing the judge sequence original → normal → poison → antidote to preserve all SUPERSEDED_BY edges rather than failing when the antidote targets the poison vertex. The release batch runner must execute and retain the fresh v1 golden-path receipt before this card can become PASS.",
+    detail: "The release server resolves original and injected live Facts so the judge sequence can preserve SUPERSEDED_BY history through poison and antidote. A fresh release receipt remains required before PASS.",
     ceiling: "LIVE_HYDRADB_FCG_GOLDEN_PATH_STATE_TRANSITION_ONLY_NOT_RETRIEVAL_SUPERIORITY",
     href: "/judge",
   },
   {
     label: "Track 02 HydraBlast",
-    status: "IMPLEMENTED · EXECUTION PENDING",
-    detail:
-      "Fresh Hack Hydra code compares a deterministic Python reverse dependency closure against live HydraDB for reference, poison, partial-repair and full-repair states. Current release-head GitHub Actions jobs terminate before any recorded steps/logs/artifacts, so the canary is not called failed or passed until an actually executing environment produces its receipt.",
+    status: RELEASE_STATUS.tracks.track02.synthetic_canary,
+    detail: "Fresh Hack Hydra code compares deterministic Python reverse dependency closure with HydraDB across reference, poison, partial-repair and full-repair states. Public PASS remains receipt-gated.",
     ceiling: "SYNTHETIC_TRACK02_STRUCTURAL_CANARY_ONLY_NOT_REAL_NPM_EXPOSURE",
     href: "/track02",
   },
   {
     label: "Track 01 HydraOntology",
-    status: "IMPLEMENTED · EXECUTION PENDING",
-    detail:
-      "Fresh Hack Hydra code tests whether removing and restoring a RESOLVES_TO identity edge changes the evidence set exactly as a deterministic reference mapping predicts. Current release-head GitHub Actions jobs terminate before recorded steps; EnterpriseRAG-Bench and HERB performance remains unclaimed until real dataset pull and benchmark receipts exist.",
+    status: RELEASE_STATUS.tracks.track01.synthetic_canary,
+    detail: "Track 01 source datasets are downloaded and hash-identified. The synthetic identity canary exists, while public PASS and real EnterpriseRAG/HERB claims remain receipt/evaluation gated.",
     ceiling: "SYNTHETIC_TRACK01_STRUCTURAL_CANARY_ONLY_NOT_ENTERPRISERAG_OR_HERB_PERFORMANCE",
     href: "/track01",
   },
   {
-    label: "GitHub Actions release-head gate",
-    status: "EXTERNAL RUNNER START BLOCKER",
-    detail:
-      "Release-head workflows are marked failure, but the connected GitHub run records expose no executed job steps, logs or artifacts; a Judge Lab rerun reproduced the same zero-step condition. This is classified as GITHUB_ACTIONS_RUNNER_START_FAILURE / CAUSE_NOT_ESTABLISHED, not as an application test failure or CI pass.",
-    ceiling: "EXTERNAL_CI_RUNNER_STATE_ONLY",
-    href: "/eligibility",
-  },
-  {
-    label: "ECA-EXT80 prior-work companion",
-    status: "REFERENCE ONLY FOR HACKATHON ELIGIBILITY",
-    detail:
-      "Pre-hackathon perturbation/recovery work may inform the method or be cited as prior evidence, but participant-authored implementation written before August 12 is excluded from the Hack Hydra submission code under the official build-window rule.",
-    ceiling: "PRIOR_WORK_REFERENCE_NOT_HACKATHON_IMPLEMENTATION",
-    href: "/eligibility",
+    label: "Release hosting",
+    status: "BACKUP IMPLEMENTED · RELEASE VERCEL PENDING",
+    detail: "The connected Vercel project has a READY production deployment from an older branch. The current release branch is not yet the live production surface. A standalone static fallback artifact now preserves the judge story without requiring Vercel or a live backend.",
+    ceiling: "ARTIFACT_DELIVERY_STATE_ONLY",
+    href: "/demo",
   },
 ];
 
@@ -81,95 +75,23 @@ export default function EvidencePage() {
         <div>
           <p className="eyebrow">Hack Hydra 2026 · evidence ledger</p>
           <h1>Results without claim inflation.</h1>
-          <p className="lede">
-            Positive, negative, failed, blocked and pending executions remain separate custody objects. The full500 run is executed; Track 01/02 and the fresh live poison→antidote release path remain execution-gated until actual receipts exist.
-          </p>
+          <p className="lede">Positive, negative, failed, blocked and pending executions remain separate custody objects. Follow any result downward from the public statement to its source identity, transformation, receipt and claim ceiling.</p>
         </div>
-        <div className="heroStatus">
-          <span className="pill pillGood">FULL500 RECEIPT RETAINED</span>
-          <span className="pill pillMuted">NOT SIGNED</span>
-          <span className="pill pillMuted">NOT LIVE-MERKLE-COMMITTED</span>
-        </div>
+        <div className="heroStatus"><span className="pill pillGood">FULL500 RECEIPT RETAINED</span><span className="pill pillMuted">NOT SIGNED</span><span className="pill pillMuted">NOT LIVE-MERKLE-COMMITTED</span></div>
       </header>
 
       <section className="metrics" aria-label="Submission evidence status">
-        <article className="metric">
-          <span className="metricLabel">Structural gate</span>
-          <strong>7/7</strong>
-          <span className="small muted">declared live HydraDB invariants</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Primary real dataset</span>
-          <strong>500 cases</strong>
-          <span className="small muted">LongMemEval-S full500</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Scored retrieval cases</span>
-          <strong>470</strong>
-          <span className="small muted">ground truth used only for evaluation</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Decision</span>
-          <strong>No positive signal</strong>
-          <span className="small muted">B/C/D hit-rate comparison</span>
-        </article>
+        <article className="metric"><span className="metricLabel">Structural gate</span><strong>7/7</strong><span className="small muted">declared live HydraDB invariants</span></article>
+        <article className="metric"><span className="metricLabel">Primary real dataset</span><strong>500 cases</strong><span className="small muted">LongMemEval-S full500</span></article>
+        <article className="metric"><span className="metricLabel">Core datasets</span><strong>5 acquired</strong><span className="small muted">hash-identified local bytes</span></article>
+        <article className="metric"><span className="metricLabel">Decision</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate comparison</span></article>
       </section>
 
-      <section className="computeSection">
-        <span className="sectionNumber">01 / EVIDENCE OBJECTS</span>
-        <h2 className="displayTitle">Every state stays visible.</h2>
-        <div className="grid twoCol">
-          {evidence.map((item) => (
-            <article className="panel" key={item.label}>
-              <p className="eyebrow">{item.status}</p>
-              <h2>{item.label}</h2>
-              <p className="muted">{item.detail}</p>
-              <p className="mono small compact">claim_ceiling={item.ceiling}</p>
-              <div className="actions"><Link className="secondary" href={item.href}>Follow evidence path</Link></div>
-            </article>
-          ))}
-        </div>
-      </section>
+      <section className="computeSection"><span className="sectionNumber">01 / EVIDENCE OBJECTS</span><h2 className="displayTitle">Every state stays visible.</h2><div className="grid twoCol">{evidence.map((item) => <article className="panel" key={item.label}><p className="eyebrow">{item.status}</p><h2>{item.label}</h2><p className="muted">{item.detail}</p><p className="mono small compact">claim_ceiling={item.ceiling}</p><div className="actions"><Link className="secondary" href={item.href}>Follow evidence path</Link></div></article>)}</div></section>
 
-      <section className="computeSection">
-        <span className="sectionNumber">02 / FULL500 IDENTITIES</span>
-        <h2 className="displayTitle">Hashes link the retained result objects.</h2>
-        <div className="stack">
-          {hashes.map(([label, hash]) => (
-            <div className="panel" key={label}>
-              <p className="eyebrow">{label}</p>
-              <p className="mono compact">{hash}</p>
-            </div>
-          ))}
-        </div>
-        <p className="small muted note">A SHA-256 value establishes byte/object identity for the retained artifact. It does not establish correctness or independent verification.</p>
-      </section>
+      <section className="computeSection"><span className="sectionNumber">02 / FULL500 IDENTITIES</span><h2 className="displayTitle">Hashes link retained result objects.</h2><div className="stack">{hashes.map(([label, hash]) => <div className="panel" key={label}><p className="eyebrow">{label}</p><p className="mono compact">{hash}</p></div>)}</div><p className="small muted note">A SHA-256 value establishes byte/object identity for the retained artifact. It does not establish correctness or independent verification.</p></section>
 
-      <section className="computeSection">
-        <span className="sectionNumber">03 / MECHANICAL SCIENTIFIC METHOD</span>
-        <h2 className="displayTitle">How a result becomes admissible.</h2>
-        <div className="flow mono">
-          <span>freeze source</span><b>→</b><span>reference graph</span><b>→</b>
-          <span>perturb / query</span><b>→</b><span>measure</span><b>→</b>
-          <span>first divergence</span><b>→</b><span>recovery / ablation</span><b>→</b>
-          <span>statistics</span><b>→</b><span>bounded claim</span>
-        </div>
-        <p className="small muted note">
-          FCO/FCG preserves source → transformation → derived evidence → claim lineage. A graph path establishes the declared dependency route under the executed system; it does not make the underlying claim universally true.
-        </p>
-      </section>
-
-      <section className="computeSection">
-        <span className="sectionNumber">04 / BEST USE OF HYDRADB</span>
-        <h2 className="displayTitle">The graph-native question.</h2>
-        <p className="sectionLead">
-          Given a changing memory state, return the current non-superseded evidence path, reconstruct the contradictory history that produced it, and show which upstream dependency changed.
-        </p>
-        <div className="flow mono">
-          <span>Session</span><b>→</b><span>Fact</span><b>→</b><span>Entity</span><b>→</b>
-          <span>SUPERSEDED_BY</span><b>→</b><span>current Fact</span><b>→</b><span>provenance path</span>
-        </div>
-      </section>
+      <section className="computeSection"><span className="sectionNumber">03 / PROJECT FCG</span><h2 className="displayTitle">Source → transformation → evidence → claim → artifact.</h2><div className="flow mono"><span>source bytes</span><b>→</b><span>SeedGraph / transform</span><b>→</b><span>FCO/FCG</span><b>→</b><span>HydraDB / evaluation</span><b>→</b><span>website artifact</span></div><div className="actions"><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a><a className="secondary" href="/backup/hydradg.html">Open offline artifact</a></div></section>
     </main>
   );
 }
