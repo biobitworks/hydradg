@@ -98,6 +98,7 @@ for f in \
   scripts/run_release_watch_parallel_safe.sh \
   scripts/prepare_video_worktree.sh \
   scripts/video_ready_gate.sh \
+  scripts/static_video_gate.sh \
   scripts/start_video_demo.sh \
   scripts/run_hackhydra_release_batches_magicstudio.sh \
   scripts/build_hackhydra_public_export.sh
