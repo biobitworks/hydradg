@@ -32,6 +32,7 @@ The export builder copies only:
 - `LICENSE`
 - `THIRD_PARTY_NOTICES.md`
 - `docs/HACK_HYDRA_ELIGIBILITY_AUDIT_20260819.md`
+- `docs/PUBLIC_EXPORT_MANIFEST_20260819.md`
 - `handoff/SUBMISSION_TASKS_20260819.md`
 - `handoff/RELEASE_EXECUTION_LEDGER_20260819.md`
 
@@ -58,8 +59,16 @@ Only the explicit `HydraDG_DaisyTrain_v0.3.7` files below:
 - `scripts/run_best_use_longmemeval.py`
 - `scripts/run_best_use_typed_longmemeval.py`
 - `scripts/run_submission_daisy_track03.sh`
+- `scripts/run_track03_live_golden_path.py`
 - `scripts/track01_hydraontology_canary.py`
 - `scripts/track02_hydrablast_canary.py`
+
+### Release verification / public-boundary tooling
+- `scripts/check_hydradg_web_links.py`
+- `scripts/run_hackhydra_release_batches_magicstudio.sh`
+- `scripts/build_hackhydra_public_export.sh`
+
+These are Hack-Hydra-specific release tools. The batch runner creates local execution receipts; the export builder creates a fresh-history public tree but does not itself publish it.
 
 ### CI recipes
 - `.github/workflows/hackhydra-best-use-v2-structural.yml`
