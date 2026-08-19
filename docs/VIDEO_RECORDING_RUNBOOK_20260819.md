@@ -27,7 +27,8 @@ Do **not** switch or hard-reset the active scientific checkout. Create/update th
 
 ```bash
 cd /Users/byron/projects/active/hydradg
-bash scripts/prepare_video_worktree.sh
+git fetch origin hack-hydra/context-iceberg-reconcile-20260819
+git show origin/hack-hydra/context-iceberg-reconcile-20260819:scripts/prepare_video_worktree.sh | bash
 ```
 
 Required output:
@@ -58,13 +59,13 @@ Record the live local application after:
 VIDEO_READY_LIVE=YES
 ```
 
-If this gate fails only because the live Next.js build cannot be made green tonight, do not invent a pass. Run the static check in the video worktree and use the fallback only if it passes:
+If this gate fails only because the live Next.js path cannot be made green tonight, do not invent a pass. Run the static check in the video worktree and use the fallback only if it passes:
 
 ```bash
 VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
 cd "$VIDEO_ROOT"
 python3 scripts/check_static_fallback.py
-HYDRADG_ROOT="$VIDEO_ROOT" bash scripts/start_video_demo.sh
+HYDRADG_ROOT="$VIDEO_ROOT" HYDRADG_VIDEO_MODE=static bash scripts/start_video_demo.sh
 ```
 
 If the launcher reports `VIDEO_DEMO_MODE=STATIC_FALLBACK`, describe it as an offline presentation fallback, not as a running live HydraDB experiment.
@@ -75,7 +76,7 @@ After a successful live gate:
 
 ```bash
 VIDEO_ROOT=/Users/byron/projects/active/hydradg-video
-HYDRADG_ROOT="$VIDEO_ROOT" bash "$VIDEO_ROOT/scripts/start_video_demo.sh"
+HYDRADG_ROOT="$VIDEO_ROOT" HYDRADG_VIDEO_MODE=live bash "$VIDEO_ROOT/scripts/start_video_demo.sh"
 ```
 
 Preferred output:
