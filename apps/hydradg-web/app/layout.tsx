@@ -1,21 +1,18 @@
 import type { Metadata } from "next";
-import Link from "next/link";
+
+import SiteNav from "@/components/SiteNav";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "HydraDG — Custody-Aware Memory Graph",
-  description: "Hack Hydra Track 03 web application for temporal memory, provenance, divergence, and recovery.",
+  title: "HydraDG — Verifiable Graph Memory",
+  description: "Hack Hydra 2026: graph-native memory, ontology and dependency experiments with explicit FCO/FCG evidence custody.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <body>
-        <nav aria-label="HydraDG">
-          <Link href="/">HydraDG</Link>
-          {" · "}
-          <Link href="/eligibility">Submission custody</Link>
-        </nav>
+        <SiteNav />
         {children}
       </body>
     </html>
