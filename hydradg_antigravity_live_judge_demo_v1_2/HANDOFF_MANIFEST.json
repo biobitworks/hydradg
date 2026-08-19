@@ -1,0 +1,25 @@
+{
+  "claim_ceiling": "LIVE_JUDGE_DEMO_NAVIGATION_AND_PRESENTATION_HANDOFF_ONLY",
+  "metric_contract_sha256": "b37881012e11d3358104420fbda5d40c8b08fdbf09b9b5db0d2dc66bdeaa427f",
+  "navigation_contract_sha256": "39fd6ca03cfcaa805127b6e7a5d78a1b8ed21351bf25fc927fbae6030c4c3b08",
+  "prompt_sha256": "f07fe9ed81a46c0c79856cf666eff441c70999f60da47183233dd791d6aa2e98",
+  "required_navigation_gates": [
+    "live_nav_complete",
+    "static_nav_complete",
+    "live_to_static_click",
+    "static_to_live_click",
+    "judge_flow_no_manual_url_entry",
+    "judge_flow_no_browser_back_required",
+    "presenter_flow_no_dead_end"
+  ],
+  "required_retrieval_metrics": [
+    "hit_at_k",
+    "recall_at_k",
+    "delta_hit_at_k",
+    "delta_recall_at_k"
+  ],
+  "schema": "hydradg.live_judge_demo_handoff.v1.2",
+  "shotlist_sha256": "6870544cc17b5ab5330c30da526e9f4e4bd69ef36d3cc065057a2e5c622e8d89",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "video_click_sheet_sha256": "04375cc2aa8fcab6d8200b541b56ffb142d54519542393458e682b51208a2586"
+}

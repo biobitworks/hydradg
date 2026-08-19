@@ -1,0 +1,14 @@
+{
+  "claim_ceiling": "LIVE_JUDGE_DEMO_HANDOFF_AND_RETRIEVAL_METRIC_DISPLAY_ONLY",
+  "metric_contract_sha256": "b37881012e11d3358104420fbda5d40c8b08fdbf09b9b5db0d2dc66bdeaa427f",
+  "prompt_sha256": "03aa2f8b1b9732db38c7c26c6d306b7e80042874b631eebef34553f11ea7fd53",
+  "required_retrieval_metrics": [
+    "hit_at_k",
+    "recall_at_k",
+    "delta_hit_at_k",
+    "delta_recall_at_k"
+  ],
+  "schema": "hydradg.live_judge_demo_handoff.v1.1",
+  "shotlist_sha256": "724c926d10dedbb95e550b391c80fec0ef5033fccd5a711e97425e1ebdeba18d",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION"
+}

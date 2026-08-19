@@ -1,0 +1,32 @@
+{
+  "claim_ceiling": "LIVE_JUDGE_DEMO_KB_HOWTO_AND_PRESENTATION_HANDOFF_ONLY",
+  "how_to_guide_sha256": "a98d6be6f272ef9673d0ec96657736f5660e5c8bbb04a56af450a5f2b26f9c91",
+  "kb_howto_contract_sha256": "d4b92472dde0d2904a7f87ade0abe179e7440a8ca2a1b094abf43b909bb5b1f0",
+  "knowledge_base_guide_sha256": "f2ada507c6b5ab3e6b04ba236e9331bc78489cba7aec9de4b1b905d6871008d3",
+  "metric_contract_sha256": "b37881012e11d3358104420fbda5d40c8b08fdbf09b9b5db0d2dc66bdeaa427f",
+  "navigation_contract_sha256": "39fd6ca03cfcaa805127b6e7a5d78a1b8ed21351bf25fc927fbae6030c4c3b08",
+  "prompt_sha256": "174715f4f643106124e928c8d3b1a743da58ec519293c96dfa80e6a86bc24e5e",
+  "required_navigation_gates": [
+    "live_nav_complete",
+    "static_nav_complete",
+    "live_to_static_click",
+    "static_to_live_click",
+    "judge_flow_no_manual_url_entry",
+    "judge_flow_no_browser_back_required",
+    "presenter_flow_no_dead_end"
+  ],
+  "required_retrieval_metrics": [
+    "hit_at_k",
+    "recall_at_k",
+    "delta_hit_at_k",
+    "delta_recall_at_k"
+  ],
+  "required_routes": [
+    "/knowledge",
+    "/how-to"
+  ],
+  "schema": "hydradg.live_judge_demo_handoff.v1.3",
+  "shotlist_sha256": "6870544cc17b5ab5330c30da526e9f4e4bd69ef36d3cc065057a2e5c622e8d89",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "video_click_sheet_sha256": "04375cc2aa8fcab6d8200b541b56ffb142d54519542393458e682b51208a2586"
+}
