@@ -1,0 +1,83 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hydradg.local/schemas/dataset_adapter.schema.json",
+  "title": "HydraDG Dataset Adapter Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "dataset_id",
+    "track",
+    "source_repository",
+    "source_revision",
+    "source_manifest_sha256",
+    "license_declared_upstream",
+    "evaluation_role",
+    "training_allowed",
+    "adapter_version",
+    "seedgraph_projection",
+    "fco_projection",
+    "fcg_projection",
+    "hydradb_projection",
+    "evaluation"
+  ],
+  "properties": {
+    "dataset_id": {"type": "string", "minLength": 1},
+    "track": {"enum": ["01", "02", "03"]},
+    "source_repository": {"type": "string", "minLength": 1},
+    "source_revision": {"type": "string", "minLength": 1},
+    "source_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "license_declared_upstream": {"type": "string", "minLength": 1},
+    "evaluation_role": {"enum": ["EVAL", "REPLAY", "CANARY"]},
+    "training_allowed": {"type": "boolean"},
+    "source_format": {"type": "array", "items": {"type": "string"}},
+    "adapter_version": {"type": "string", "minLength": 1},
+    "seedgraph_projection": {
+      "type": "object",
+      "required": ["source_hash_matches", "source_hash_total"],
+      "properties": {
+        "receipt_path": {"type": ["string", "null"]},
+        "seed_ids": {"type": "array", "items": {"type": "string"}},
+        "source_hash_matches": {"type": "integer", "minimum": 0},
+        "source_hash_total": {"type": "integer", "minimum": 0}
+      }
+    },
+    "fco_projection": {
+      "type": "object",
+      "required": ["objects", "claim_ceiling"],
+      "properties": {
+        "objects": {"type": "array"},
+        "claim_ceiling": {"type": "string", "minLength": 1}
+      }
+    },
+    "fcg_projection": {
+      "type": "object",
+      "required": ["edges", "orphan_count"],
+      "properties": {
+        "edges": {"type": "array"},
+        "orphan_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "hydradb_projection": {
+      "type": "object",
+      "required": ["namespace"],
+      "properties": {
+        "namespace": {"type": "string", "minLength": 1},
+        "receipt_path": {"type": ["string", "null"]}
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "required": ["baseline", "treatment", "metrics", "decision"],
+      "properties": {
+        "baseline": {"type": "string"},
+        "treatment": {"type": "string"},
+        "metrics": {"type": "object"},
+        "decision": {"type": "string"}
+      }
+    },
+    "claim_ceiling": {"type": "string"},
+    "signature_state": {"type": "string"},
+    "merkle_state": {"type": "string"},
+    "cfmo_state": {"type": "string"}
+  }
+}
