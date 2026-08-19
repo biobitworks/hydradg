@@ -68,7 +68,14 @@ for f in \
 
 copy_tree apps/hydradg-web
 
-progress 38 COPY_TRACK_CODE
+progress 36 COPY_RELEASE_TOOLS
+for f in \
+  scripts/check_hydradg_web_links.py \
+  scripts/run_hackhydra_release_batches_magicstudio.sh \
+  scripts/build_hackhydra_public_export.sh
+  do copy_file "$f"; done
+
+progress 45 COPY_TRACK_CODE
 PKG="HydraDG_DaisyTrain_v0.3.7"
 for f in \
   "$PKG/BEST_USE_MAGICSTUDIO.md" \
@@ -86,11 +93,12 @@ for f in \
   "$PKG/scripts/run_best_use_longmemeval.py" \
   "$PKG/scripts/run_best_use_typed_longmemeval.py" \
   "$PKG/scripts/run_submission_daisy_track03.sh" \
+  "$PKG/scripts/run_track03_live_golden_path.py" \
   "$PKG/scripts/track01_hydraontology_canary.py" \
   "$PKG/scripts/track02_hydrablast_canary.py"
   do copy_file "$f"; done
 
-progress 48 COPY_CI
+progress 55 COPY_CI
 for f in \
   .github/workflows/hackhydra-best-use-v2-structural.yml \
   .github/workflows/hackhydra-judge-lab.yml \
@@ -98,7 +106,7 @@ for f in \
   .github/workflows/hackhydra-track02-canary.yml
   do copy_file "$f"; done
 
-progress 55 WRITE_EXPORT_METADATA
+progress 61 WRITE_EXPORT_METADATA
 cat > "$EXPORT_ROOT/PUBLIC_EXPORT_RECEIPT.json" <<EOF
 {
   "schema": "hydradg.public_export_receipt.v1",
@@ -136,7 +144,7 @@ __pycache__/
 *.safetensors
 EOF
 
-progress 63 HARD_EXCLUSION_GATE
+progress 68 HARD_EXCLUSION_GATE
 BAD_PATHS="$(find "$EXPORT_ROOT" -type f \( \
   -name '.env' -o -name '.env.local' -o -name '*.pem' -o -name '*.key' -o \
   -name '*.p12' -o -name '*.pfx' -o -name '*.secret' -o -name '*.pt' -o \
@@ -149,7 +157,7 @@ fi
 
 find "$EXPORT_ROOT" -type d -name .git -print | grep -q . && { echo "STOP: nested .git copied"; exit 31; } || true
 
-progress 70 SIZE_GATE
+progress 74 SIZE_GATE
 while IFS= read -r -d '' f; do
   bytes="$(stat -f %z "$f" 2>/dev/null || stat -c %s "$f")"
   if [ "$bytes" -gt 50000000 ]; then
@@ -158,7 +166,7 @@ while IFS= read -r -d '' f; do
   fi
 done < <(find "$EXPORT_ROOT" -type f -print0)
 
-progress 76 SECRET_SCAN
+progress 80 SECRET_SCAN
 if ! command -v gitleaks >/dev/null 2>&1; then
   echo "STOP: gitleaks is required before public publication"
   echo "Install on macOS: brew install gitleaks"
@@ -169,16 +177,16 @@ fi
   gitleaks dir --redact=100 --no-banner .
 )
 
-progress 83 HASH_EXPORT
+progress 86 HASH_EXPORT
 (
   cd "$EXPORT_ROOT"
-  find . -type f ! -path './.git/*' ! -name 'PUBLIC_EXPORT_SHA256SUMS.txt' -print0 \
+  find . -type f ! -path './.git/*' ! -name 'PUBLIC_EXPORT_SHA256SUMS.txt' ! -name 'PUBLIC_EXPORT_MANIFEST_SHA256.txt' -print0 \
     | LC_ALL=C sort -z \
     | xargs -0 shasum -a 256 > PUBLIC_EXPORT_SHA256SUMS.txt
   shasum -a 256 PUBLIC_EXPORT_SHA256SUMS.txt | tee PUBLIC_EXPORT_MANIFEST_SHA256.txt
 )
 
-progress 90 FRESH_GIT
+progress 92 FRESH_GIT
 cd "$EXPORT_ROOT"
 git init -b main
 git add -A
@@ -188,7 +196,7 @@ git status --short
 # only after deterministic export/secret/size gates pass.
 git commit -m "Hack Hydra 2026 submission export"
 
-progress 96 VERIFY_HISTORY
+progress 97 VERIFY_HISTORY
 COUNT="$(git rev-list --count HEAD)"
 test "$COUNT" = "1" || { echo "STOP: export history is not fresh"; exit 50; }
 EXPORT_SHA="$(git rev-parse HEAD)"
