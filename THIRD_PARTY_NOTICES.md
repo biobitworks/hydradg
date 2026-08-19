@@ -18,10 +18,10 @@ HydraDG's MIT License applies to original Hack Hydra participant-authored implem
 - Template page: https://v0.app/templates/compute-the-platform-to-build-ship-ai-agents-Auw4otwlr20
 - Public preview: https://v0-compute-11.vercel.app/
 - User-supplied source archive SHA-256: `b363081debc07af517cea73ed53b682b840a9e4c52e6658e7d35f18ca9922e4c`
-- Observed archive file count after extraction: 111
+- Direct archive extraction observed in the 2026-08-19 release audit: **102 files**
 - Role: visual/layout template input
 - HydraDG reuse: presentation grammar only; unrelated template product claims, marketing content and service logic are not part of the HydraDG implementation.
-- License/terms: upstream terms remain controlling; this notice is attribution, not a legal opinion or relicensing statement.
+- License/terms: no standalone LICENSE file was present in the supplied archive during this audit. Upstream template/service terms therefore remain controlling; this notice is attribution, not a legal opinion or relicensing statement.
 
 ## Track 01 datasets
 
@@ -30,14 +30,18 @@ HydraDG's MIT License applies to original Hack Hydra participant-authored implem
 - Hugging Face: `onyx-dot-app/EnterpriseRAG-Bench`
 - Declared upstream license: MIT
 - Role: primary Track 01 benchmark
+- Upstream availability/metadata: independently observed on Hugging Face during the 2026-08-19 release audit.
 - Dataset bytes: stored outside the public Git repository by default.
+- Current local acquisition state: **NO COMPLETED LOCAL PULL RECEIPT ADMITTED YET**.
 
 ### HERB
 
 - Hugging Face: `Salesforce/HERB`
 - Declared upstream license: CC-BY-NC-4.0
 - Role: heterogeneous enterprise stress/replication lane
+- Upstream availability/metadata: independently observed on Hugging Face during the 2026-08-19 release audit.
 - Dataset bytes: remain outside the public Git repository by default; public redistribution is not implied by this repository.
+- Current local acquisition state: **NO COMPLETED LOCAL PULL RECEIPT ADMITTED YET**.
 
 ## Track 03 datasets
 
@@ -48,20 +52,23 @@ HydraDG's MIT License applies to original Hack Hydra participant-authored implem
 - Role: primary executed Track 03 benchmark
 - Exact source object used by the retained full500 run: `longmemeval_s_cleaned.json`
 - Retained source SHA-256: `d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442`
+- Current execution state: full500 completed; negative/neutral retrieval-ablation result retained under its declared claim ceiling.
 
 ### LongMemEval-V2
 
 - Hugging Face: `xiaowu0162/longmemeval-v2`
 - Declared upstream license: Apache-2.0
-- Role: planned independent agent-memory stress lane
-- Current local acquisition state: no completed pull receipt has yet been admitted into the submission evidence ledger.
+- Role: independent agent-memory stress lane
+- Upstream availability/metadata: independently observed on Hugging Face during the 2026-08-19 release audit.
+- Current local acquisition state: **NO COMPLETED LOCAL PULL RECEIPT ADMITTED YET**.
 
 ### BEAM
 
 - Hugging Face: `Mohammadta/BEAM`
 - Declared upstream license: CC-BY-SA-4.0
-- Role: planned long-context scale/falsification lane
-- Current local acquisition state: no completed pull receipt has yet been admitted into the submission evidence ledger.
+- Role: long-context scale/falsification lane
+- Upstream availability/metadata: independently observed on Hugging Face during the 2026-08-19 release audit.
+- Current local acquisition state: **NO COMPLETED LOCAL PULL RECEIPT ADMITTED YET**.
 
 ### BEAM-10M
 
@@ -79,7 +86,9 @@ Track 02A is designed to use real package/dependency/advisory evidence after its
 - OSV/GitHub Advisory Database
 - real repository lockfiles
 
-No real package exposure or vulnerability result is claimed merely from naming these sources. Each executed snapshot requires its own source/version/byte or API-response custody receipt.
+The post-August-12 HydraBlast canary implementation exists and compares a deterministic Python reverse-transitive-closure oracle with HydraDB traversal over a synthetic package graph. Its claim ceiling is `SYNTHETIC_TRACK02_STRUCTURAL_CANARY_ONLY_NOT_REAL_NPM_EXPOSURE`.
+
+No real package exposure or vulnerability result is claimed merely from naming these sources. Each executed real-data snapshot requires its own source/version/byte or API-response custody receipt.
 
 ## Prior Byron/FCO/FCG research
 
