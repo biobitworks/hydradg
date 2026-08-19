@@ -137,11 +137,16 @@ async function upsertEdge(srcFcoId: string, relation: string, dstFcoId: string) 
 }
 
 async function loadDemoFixture() {
-  if (!graphConfigured()) throw new Error("graph backend is not configured");
   const fixture = buildDemoFixture();
-  for (const [label, node] of fixture.nodes) await upsertNode(label, node);
   const edgeIds: string[] = [];
-  for (const [src, relation, dst] of fixture.edges) edgeIds.push(await upsertEdge(src, relation, dst));
+  if (graphConfigured()) {
+    try {
+      for (const [label, node] of fixture.nodes) await upsertNode(label, node);
+      for (const [src, relation, dst] of fixture.edges) edgeIds.push(await upsertEdge(src, relation, dst));
+    } catch {
+      // HydraDB graph write optional for local demo fallback
+    }
+  }
   return {
     fixture_state: "DETERMINISTIC_SYNTHETIC_TEST_FIXTURE",
     claim_ceiling: "DEMO_FIXTURE_ONLY",
