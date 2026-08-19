@@ -29,14 +29,10 @@ def sha256_json(obj: object) -> str:
 
 def stable_id(kind: str, *parts: object) -> int:
     raw = kind + "|" + "|".join(map(str, parts))
-    # 52-bit positive integer: exactly representable by JS and accepted by the
-    # existing HydraDG numeric-address adapter. Full SHA identity is retained in
-    # the receipt; this integer is only a traversal/storage address.
     return int(hashlib.sha256(raw.encode()).hexdigest()[:13], 16) or 1
 
 
 def fixture() -> dict:
-    """Four related states: reference, poison, partial repair, full repair."""
     base = {
         "services": ["service-alpha", "service-beta"],
         "roots": {"service-alpha": "app-a@1.0.0", "service-beta": "app-b@1.0.0"},
@@ -147,8 +143,8 @@ def write_state(hydra: HydraHTTP, state_name: str, spec: dict, full: dict) -> di
         {"rows": package_rows},
     )
     hydra.query(
-        "MERGE (a {id:$id}) SET a:Advisory, a.name=$name, a.state=$state",
-        {"id": advisory_id, "name": full["advisory"], "state": state_name},
+        "UNWIND $rows AS row MERGE (a {id: row.id}) SET a:Advisory, a.name=row.name, a.state=row.state",
+        {"rows": [{"id": advisory_id, "name": full["advisory"], "state": state_name}]},
     )
 
     ids = {row["name"]: row["id"] for row in package_rows}
