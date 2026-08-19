@@ -3,7 +3,8 @@ set -euo pipefail
 
 # Hack Hydra Best Use v2 — explicit macOS dependency bootstrap.
 # Installs only build prerequisites documented by the pinned HydraDB README,
-# then delegates to best_use_magicstudio.sh. It never reads project/provider secrets.
+# configures Homebrew native header/libclang discovery for Rust bindgen, then
+# delegates to best_use_magicstudio.sh. It never reads project/provider secrets.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LAUNCHER="$SCRIPT_DIR/best_use_magicstudio.sh"
@@ -44,6 +45,20 @@ if ! brew list --versions cleishm/neo4j/libcypher-parser >/dev/null 2>&1; then
 else
   say "[bootstrap] present: cleishm/neo4j/libcypher-parser"
 fi
+
+# libcypher-parser-sys links the library through pkg-config but its bindgen step
+# still needs the Homebrew include path explicitly on macOS. Bindgen supports
+# BINDGEN_EXTRA_CLANG_ARGS for this purpose. Homebrew llvm is keg-only, so also
+# point clang-sys at its libclang directory without overriding a caller-supplied
+# LIBCLANG_PATH.
+CYPHER_PREFIX="$(brew --prefix cleishm/neo4j/libcypher-parser)"
+LLVM_PREFIX="$(brew --prefix llvm)"
+CYPHER_HEADER="$CYPHER_PREFIX/include/cypher-parser.h"
+[[ -f "$CYPHER_HEADER" ]] || fail "cypher-parser header missing after install: $CYPHER_HEADER"
+export BINDGEN_EXTRA_CLANG_ARGS="-I$CYPHER_PREFIX/include${BINDGEN_EXTRA_CLANG_ARGS:+ $BINDGEN_EXTRA_CLANG_ARGS}"
+export LIBCLANG_PATH="${LIBCLANG_PATH:-$LLVM_PREFIX/lib}"
+say "[bootstrap] bindgen include: $CYPHER_PREFIX/include"
+say "[bootstrap] libclang path: $LIBCLANG_PATH"
 
 # Rust's official installation route. HydraDB requires Rust >=1.91 and pins stable.
 if ! have rustup && ! have cargo; then
