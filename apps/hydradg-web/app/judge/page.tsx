@@ -1,49 +1,69 @@
-import JudgeLab from "./JudgeLab";
+import PublicBackendStatus from "@/components/PublicBackendStatus";
 
-import { buildDemoFixture } from "@/lib/demoFixture";
-import { makeFcoNode } from "@/lib/fco";
-import { computeMerkleCheckpoint } from "@/lib/merkle";
+const STATES = [
+  {
+    label: "Reference",
+    relation: "CURRENT",
+    body: "Begin with one declared current fact and its source/evidence path.",
+    why: "Establish the frozen comparison state before any perturbation.",
+  },
+  {
+    label: "Poison",
+    relation: "CONTRADICTS / SUPERSEDED_BY",
+    body: "Introduce a controlled conflicting state while retaining the predecessor and its provenance.",
+    why: "Expose the first divergent relationship without overwriting history.",
+  },
+  {
+    label: "Antidote",
+    relation: "RESTORES / CURRENT",
+    body: "Represent recovery as a new state while the perturbation remains traversable.",
+    why: "Test restoration without deleting counterevidence.",
+  },
+] as const;
 
 export default function JudgePage() {
-  const fixture = buildDemoFixture();
-  const merkle = computeMerkleCheckpoint(
-    fixture.nodes.map(([, node]) => ({ id: node.id, sha256: node.object_sha256 })),
-  );
-  const checkpointFco = makeFcoNode("MerkleCheckpoint", {
-    algorithm: merkle.algorithm,
-    ordering: merkle.ordering,
-    odd_leaf_rule: merkle.odd_leaf_rule,
-    leaf_count: merkle.leaf_count,
-    root_sha256: merkle.root_sha256,
-    subject_key: fixture.subject_key,
-    evidence_class: "DETERMINISTIC_TRANSFORM_OF_FIXTURE_FCO_IDENTITIES",
-    claim_ceiling: "DETERMINISTIC_FIXTURE_MERKLE_CHECKPOINT_ONLY",
-    signature_state: "NOT_SIGNED",
-    hydradb_persistence_state: "NOT_WRITTEN_BY_PAGE_RENDER",
-  });
-  const goldenPath = [
-    fixture.ids.source,
-    fixture.ids.evidence_v2,
-    fixture.ids.atom_v2,
-    fixture.ids.seed_v2,
-    fixture.ids.snapshot_restoration,
-    fixture.ids.seed_classification,
-    checkpointFco.id,
-  ];
-  const custody = {
-    merkle,
-    checkpoint_fco: checkpointFco,
-    golden_path: goldenPath,
-    golden_path_semantics: [
-      "Source",
-      "Evidence",
-      "KnowledgeAtom",
-      "SeedOfTruth",
-      "StateSnapshot",
-      "ClassificationReceipt",
-      "MerkleCheckpoint",
-    ],
-  };
+  return (
+    <main>
+      <header className="hero">
+        <div>
+          <p className="eyebrow">Judge Demo · public read-only walkthrough</p>
+          <h1>Change state. Keep the history.</h1>
+          <p className="lede">
+            HydraDG models reference → poison → antidote as explicit graph state transitions. The hosted judge surface is read-only; local mutation controls remain on magicSTUDIObox.
+          </p>
+        </div>
+      </header>
 
-  return <JudgeLab fixture={fixture} custody={custody} />;
+      <PublicBackendStatus />
+
+      <section className="computeSection">
+        <span className="sectionNumber">01 / GOLDEN PATH</span>
+        <h2 className="displayTitle">Reference → poison → antidote.</h2>
+        <div className="grid threeCol">
+          {STATES.map((state, index) => (
+            <article className="panel" key={state.label}>
+              <p className="eyebrow">0{index + 1} · {state.relation}</p>
+              <h2>{state.label}</h2>
+              <p>{state.body}</p>
+              <p className="small muted"><strong>Why:</strong> {state.why}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      <section className="computeSection">
+        <span className="sectionNumber">02 / WHAT TO CLICK NEXT</span>
+        <h2 className="displayTitle">Follow the evidence, not a sales claim.</h2>
+        <div className="actions">
+          <a className="primary" href="/track03">See Executed Result</a>
+          <a className="secondary" href="/graph">Trace One Result</a>
+          <a className="secondary" href="/knowledge">Need a term? Open Knowledge Base</a>
+          <a className="secondary" href="/backup/hydradg.html">Open Static Fallback</a>
+        </div>
+        <p className="small muted note">
+          This page demonstrates the state-transition contract. It does not claim that clicking these presentation states mutates the public HydraDB tenant.
+        </p>
+      </section>
+    </main>
+  );
 }
