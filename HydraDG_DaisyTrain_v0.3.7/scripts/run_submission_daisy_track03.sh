@@ -3,9 +3,9 @@ set -euo pipefail
 [[ -f "$HOME/.cargo/env" ]] && source "$HOME/.cargo/env"
 
 # Hack Hydra submission-critical Daisy: Track 03 real-data evidence.
-# Scope is intentionally frozen to LongMemEval-S full500 after the live HydraDB
-# structural gate. This is an execution train; it does not imply scientific
-# dependence among other FCO/FCG evidence lanes.
+# Scope is frozen to LongMemEval-S full500 after the live HydraDB structural gate.
+# Data hydration is from the public upstream dataset, not an older participant
+# package directory, so the final Hack Hydra tree can remain eligibility-clean.
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PKG="$(cd "$SCRIPT_DIR/.." && pwd)"
@@ -14,8 +14,6 @@ RUNTIME="${BEST_USE_RUNTIME:-$HOME/.local/share/hydradg-best-use}"
 EVALDIR="$RUNTIME/eval/submission_track03"
 RECEIPTDIR="$RUNTIME/receipts"
 DATA="$RUNTIME/data/longmemeval_s_cleaned.json"
-REPO_DATA_REL="HydraDG_DaisyTrain_v0.3.6/data/longmemeval_s_cleaned.json"
-REPO_DATA="$REPO/$REPO_DATA_REL"
 AUTH="$RUNTIME/hydradb-auth-token"
 EXTRACTOR="${BEST_USE_EXTRACTOR:-heuristic}"
 K="${BEST_USE_K:-5}"
@@ -27,6 +25,9 @@ STATS="$EVALDIR/longmemeval_full500_k${K}_${EXTRACTOR}_stats.json"
 RECEIPT="$RECEIPTDIR/submission_track03_full500_receipt.json"
 LOG="$EVALDIR/submission_track03.log"
 EXPECTED_SHA="d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+HF_REPO="xiaowu0162/longmemeval-cleaned"
+HF_FILE="longmemeval_s_cleaned.json"
+HF_REVISION="${LONGMEMEVAL_HF_REVISION:-main}"
 
 mkdir -p "$EVALDIR" "$RECEIPTDIR" "$RUNTIME/data"
 
@@ -51,25 +52,34 @@ hydrate_full_data() {
     return 0
   fi
 
-  [[ -f "$REPO_DATA" ]] || fail "pinned LongMemEval LFS path missing: $REPO_DATA"
+  TMP="$DATA.tmp.$$"
+  rm -f "$TMP"
+  say "[daisy] hydrating LongMemEval full500 from Hugging Face repo=$HF_REPO revision=$HF_REVISION"
 
-  if head -n 1 "$REPO_DATA" 2>/dev/null | grep -q '^version https://git-lfs.github.com/spec/v1'; then
-    have git || fail "git required to hydrate LongMemEval LFS object"
-    have git-lfs || have git || true
-    say "[daisy] hydrating LongMemEval full500 from Git LFS"
-    git -C "$REPO" lfs pull --include="$REPO_DATA_REL" --exclude="" 2>&1 | tee -a "$LOG"
+  if have hf; then
+    HFDIR="$RUNTIME/data/hf-longmemeval-cleaned"
+    mkdir -p "$HFDIR"
+    hf download "$HF_REPO" --repo-type dataset --revision "$HF_REVISION" --local-dir "$HFDIR" "$HF_FILE" 2>&1 | tee -a "$LOG"
+    cp "$HFDIR/$HF_FILE" "$TMP"
+  elif have uvx; then
+    HFDIR="$RUNTIME/data/hf-longmemeval-cleaned"
+    mkdir -p "$HFDIR"
+    uvx --from huggingface_hub hf download "$HF_REPO" --repo-type dataset --revision "$HF_REVISION" --local-dir "$HFDIR" "$HF_FILE" 2>&1 | tee -a "$LOG"
+    cp "$HFDIR/$HF_FILE" "$TMP"
+  elif have curl; then
+    # Hugging Face resolve URL; final SHA gate prevents silent source drift.
+    curl -fL --retry 4 --retry-delay 2 \
+      "https://huggingface.co/datasets/${HF_REPO}/resolve/${HF_REVISION}/${HF_FILE}?download=true" \
+      -o "$TMP" 2>&1 | tee -a "$LOG"
+  else
+    fail "need hf, uvx, or curl to hydrate LongMemEval"
   fi
 
-  [[ -s "$REPO_DATA" ]] || fail "LongMemEval repository source is empty after LFS hydration"
-  REPO_SHA="$(sha256_file "$REPO_DATA")"
-  [[ "$REPO_SHA" == "$EXPECTED_SHA" ]] || fail "repository LongMemEval SHA mismatch after hydration: $REPO_SHA"
-
-  TMP="$DATA.tmp.$$"
-  cp "$REPO_DATA" "$TMP"
+  [[ -s "$TMP" ]] || fail "downloaded LongMemEval object is empty"
+  GOT="$(sha256_file "$TMP")"
+  [[ "$GOT" == "$EXPECTED_SHA" ]] || fail "LongMemEval source SHA mismatch: got=$GOT expected=$EXPECTED_SHA"
   mv "$TMP" "$DATA"
-  DATA_SHA="$(sha256_file "$DATA")"
-  [[ "$DATA_SHA" == "$EXPECTED_SHA" ]] || fail "runtime LongMemEval SHA mismatch after copy: $DATA_SHA"
-  say "[daisy] full500 data hydrated sha256=$DATA_SHA bytes=$(wc -c < "$DATA" | tr -d ' ')"
+  say "[daisy] full500 data hydrated sha256=$GOT bytes=$(wc -c < "$DATA" | tr -d ' ')"
 }
 
 : > "$LOG"
@@ -81,13 +91,9 @@ say "[daisy] claim ceiling during execution: EXECUTION_IN_PROGRESS"
 [[ -f "$RUNNER" ]] || fail "missing runner: $RUNNER"
 [[ -f "$ANALYZER" ]] || fail "missing analyzer: $ANALYZER"
 
-# This performs dependency checks, builds/starts the exact pinned HydraDB node,
-# validates the official LongMemEval SHA, and requires the structural suite to pass.
 say "[daisy] CAR 5/structural gate: starting pinned HydraDB"
 bash "$BOOTSTRAP" start 2>&1 | tee -a "$LOG"
 
-# The full500 object is intentionally a Git LFS research artifact. Bootstrap only
-# guarantees the runtime and smoke data, so hydrate the exact pinned full source here.
 hydrate_full_data
 
 [[ -f "$DATA" ]] || fail "full LongMemEval data not found after hydration: $DATA"
@@ -119,19 +125,22 @@ STRUCT="$RUNTIME/eval/structural_suite.json"
 STRUCT_SHA="UNRESOLVED"
 [[ -s "$STRUCT" ]] && STRUCT_SHA="$(sha256_file "$STRUCT")"
 
-python3 - "$RECEIPT" "$REPO" "$FULL_SHA" "$OUT" "$OUT_SHA" "$STATS" "$STATS_SHA" "$STRUCT_SHA" "$EXTRACTOR" "$K" <<'PY'
+python3 - "$RECEIPT" "$REPO" "$FULL_SHA" "$OUT" "$OUT_SHA" "$STATS" "$STATS_SHA" "$STRUCT_SHA" "$EXTRACTOR" "$K" "$HF_REPO" "$HF_REVISION" <<'PY'
 import hashlib,json,subprocess,sys,time
-(out,repo,data_sha,result_path,result_sha,stats_path,stats_sha,struct_sha,extractor,k)=sys.argv[1:]
+(out,repo,data_sha,result_path,result_sha,stats_path,stats_sha,struct_sha,extractor,k,hf_repo,hf_revision)=sys.argv[1:]
 def git(*args):
     try:
         return subprocess.check_output(["git","-C",repo,*args],text=True).strip()
     except Exception:
         return "UNRESOLVED"
 obj={
-  "schema":"hydradg.submission_track03_full500.v1",
+  "schema":"hydradg.submission_track03_full500.v2",
   "timestamp_unix":int(time.time()),
   "hydradg_commit":git("rev-parse","HEAD"),
   "hydradg_branch":git("branch","--show-current"),
+  "longmemeval_source":"HUGGING_FACE_DATASET_REPOSITORY",
+  "longmemeval_repo_id":hf_repo,
+  "longmemeval_requested_revision":hf_revision,
   "longmemeval_source_sha256":data_sha,
   "extractor":extractor,
   "k":int(k),

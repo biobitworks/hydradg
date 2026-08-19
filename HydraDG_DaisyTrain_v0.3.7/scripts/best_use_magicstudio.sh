@@ -28,6 +28,10 @@ HYDRA_ENDPOINT="http://127.0.0.1:8443/v1/graphs/default/query"
 HYDRA_HEALTH="http://127.0.0.1:8443/healthz"
 HYDRA_PID="$RUNTIME/hydradb.pid"
 SERVER_PID="$RUNTIME/best_use_server.pid"
+EXPECTED_LONGMEMEVAL_SHA="d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+LONGMEMEVAL_HF_REPO="xiaowu0162/longmemeval-cleaned"
+LONGMEMEVAL_HF_FILE="longmemeval_s_cleaned.json"
+LONGMEMEVAL_HF_REVISION="${LONGMEMEVAL_HF_REVISION:-main}"
 
 mkdir -p "$RUNTIME" "$STORE" "$CACHE" "$LOGDIR" "$EVALDIR" "$DATADIR" "$RECEIPTDIR"
 
@@ -132,23 +136,23 @@ start_hydra() {
 resolve_dataset() {
   FULL_DATA="${LONGMEMEVAL_DATA:-}"
   if [[ -n "$FULL_DATA" && ! -f "$FULL_DATA" ]]; then fail "LONGMEMEVAL_DATA not found: $FULL_DATA"; fi
-  if [[ -z "$FULL_DATA" ]]; then
-    local candidate="$REPO/HydraDG_DaisyTrain_v0.3.6/data/longmemeval_s_cleaned.json"
-    if [[ -f "$candidate" && $(wc -c < "$candidate") -gt 200000000 ]]; then FULL_DATA="$candidate"; fi
+  if [[ -z "$FULL_DATA" ]]; then FULL_DATA="$DATADIR/$LONGMEMEVAL_HF_FILE"; fi
+
+  if [[ ! -f "$FULL_DATA" || $(wc -c < "$FULL_DATA") -lt 200000000 ]]; then
+    say "[data] downloading official cleaned LongMemEval-S repo=$LONGMEMEVAL_HF_REPO revision=$LONGMEMEVAL_HF_REVISION"
+    local tmp="$FULL_DATA.tmp.$$"
+    curl -fL --retry 4 --retry-delay 2 \
+      "https://huggingface.co/datasets/${LONGMEMEVAL_HF_REPO}/resolve/${LONGMEMEVAL_HF_REVISION}/${LONGMEMEVAL_HF_FILE}?download=true" \
+      -o "$tmp"
+    [[ -s "$tmp" ]] || fail "LongMemEval download is empty"
+    local downloaded_sha
+    downloaded_sha="$(sha256_file "$tmp")"
+    [[ "$downloaded_sha" == "$EXPECTED_LONGMEMEVAL_SHA" ]] || fail "LongMemEval source SHA mismatch: $downloaded_sha"
+    mv "$tmp" "$FULL_DATA"
   fi
-  if [[ -z "$FULL_DATA" ]]; then
-    FULL_DATA="$DATADIR/longmemeval_s_cleaned.json"
-    if [[ ! -f "$FULL_DATA" || $(wc -c < "$FULL_DATA") -lt 200000000 ]]; then
-      say "[data] downloading official cleaned LongMemEval-S"
-      curl -fL --retry 3 \
-        https://huggingface.co/datasets/xiaowu0162/longmemeval-cleaned/resolve/main/longmemeval_s_cleaned.json \
-        -o "$FULL_DATA.tmp"
-      mv "$FULL_DATA.tmp" "$FULL_DATA"
-    fi
-  fi
+
   FULL_SHA="$(sha256_file "$FULL_DATA")"
-  local expected="d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
-  [[ "$FULL_SHA" == "$expected" ]] || fail "LongMemEval source SHA mismatch: $FULL_SHA"
+  [[ "$FULL_SHA" == "$EXPECTED_LONGMEMEVAL_SHA" ]] || fail "LongMemEval source SHA mismatch: $FULL_SHA"
   SMOKE_DATA="$DATADIR/longmemeval_smoke80.json"
   SMOKE_MANIFEST="$EVALDIR/longmemeval_smoke80_manifest.json"
   if [[ ! -f "$SMOKE_DATA" ]]; then
@@ -175,92 +179,74 @@ start_server() {
     say "[server] already running pid=$(cat "$SERVER_PID")"
     return
   fi
+  local server_script="$SCRIPT_DIR/best_use_local_server_hackhydra.py"
+  [[ -f "$server_script" ]] || fail "missing release server: $server_script"
   local args=(
-    "$SCRIPT_DIR/best_use_local_server.py"
+    "$server_script"
     --data "$SMOKE_DATA"
     --token-file "$AUTH"
-    --endpoint "$HYDRA_ENDPOINT"
-    --ollarma-url "$OLLARMA_URL"
-    --extractor "$DEFAULT_EXTRACTOR"
-    --cache-dir "$RUNTIME/extraction-cache"
-    --receipts "$RECEIPTDIR/server_receipts.jsonl"
     --bind "$SERVER_BIND"
     --port "$SERVER_PORT"
+    --default-extractor "$DEFAULT_EXTRACTOR"
+    --ollarma-url "$OLLARMA_URL"
   )
   [[ -n "$MODEL" ]] && args+=(--model "$MODEL")
   say "[server] starting http://$SERVER_BIND:$SERVER_PORT"
   nohup python3 "${args[@]}" > "$LOGDIR/best_use_server.log" 2>&1 &
   echo $! > "$SERVER_PID"
-  for _ in $(seq 1 30); do
-    if curl -fsS "http://127.0.0.1:$SERVER_PORT/health" >/dev/null 2>&1; then return; fi
-    pid_alive "$SERVER_PID" || { tail -100 "$LOGDIR/best_use_server.log" >&2; fail "local test server exited"; }
+  for _ in $(seq 1 45); do
+    if curl -fsS "http://$SERVER_BIND:$SERVER_PORT/health" >/dev/null 2>&1; then return; fi
+    pid_alive "$SERVER_PID" || { tail -100 "$LOGDIR/best_use_server.log" >&2; fail "Best Use server exited"; }
     sleep 1
   done
   tail -100 "$LOGDIR/best_use_server.log" >&2
-  fail "local test server health timeout"
+  fail "Best Use server health timeout"
 }
 
-write_start_receipt() {
-  python3 - "$RECEIPTDIR/startup_receipt.json" "$HYDRADB_PIN" "$FULL_SHA" "$SMOKE_SHA" "$SERVER_PORT" "$(ollarma_health)" "$DEFAULT_EXTRACTOR" "$REPO" <<'PY'
-import hashlib,json,subprocess,sys,time
-out,pin,full_sha,smoke_sha,port,ollarma,extractor,repo=sys.argv[1:]
-def git(*a):
-    try:return subprocess.check_output(["git","-C",repo,*a],text=True).strip()
-    except Exception:return "UNRESOLVED"
+write_receipt() {
+  local status_json="$1"
+  local commit branch timestamp tmp out
+  commit="$(git -C "$REPO" rev-parse HEAD 2>/dev/null || echo UNRESOLVED)"
+  branch="$(git -C "$REPO" branch --show-current 2>/dev/null || echo UNRESOLVED)"
+  timestamp="$(date +%s)"
+  out="$RECEIPTDIR/magicstudio_startup.json"
+  tmp="$out.tmp.$$"
+  python3 - "$tmp" "$status_json" "$commit" "$branch" "$timestamp" "$FULL_SHA" "$SMOKE_SHA" <<'PY'
+import hashlib,json,sys
+out,status,commit,branch,ts,full_sha,smoke_sha=sys.argv[1:]
+status_obj=json.loads(status)
 obj={
- "schema":"hydradg.best_use_magicstudio_startup.v2",
- "timestamp_unix":int(time.time()),
- "hydradg_commit":git("rev-parse","HEAD"),
- "hydradg_branch":git("branch","--show-current"),
- "hydradb_pin":pin,
- "longmemeval_source_sha256":full_sha,
- "smoke80_sha256":smoke_sha,
- "server_url":f"http://127.0.0.1:{port}",
- "ollarma_health":ollarma,
- "default_extractor":extractor,
- "token_disclosure":"NOT_INCLUDED",
- "claim_ceiling":"LOCAL_TEST_SURFACE_READY",
- "signature_state":"NOT_SIGNED",
- "merkle_state":"NOT_MERKLE_COMMITTED"
+  "schema":"hydradg.best_use_magicstudio_startup.v3",
+  "timestamp_unix":int(ts),
+  "hydradg_commit":commit,
+  "hydradg_branch":branch,
+  "hydradb_pin":"6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
+  "longmemeval_source":"HUGGING_FACE_DATASET_REPOSITORY",
+  "longmemeval_source_sha256":full_sha,
+  "smoke80_sha256":smoke_sha,
+  "default_extractor":status_obj.get("default_extractor"),
+  "ollarma_health":"PASS" if status_obj.get("ollarma",{}).get("ok") else "UNAVAILABLE",
+  "server_url":f"http://127.0.0.1:8787",
+  "live_perturbation_writer":"ONE_ROW_UNWIND_MERGE_SET_COMPATIBLE_WITH_PINNED_RUNTIME",
+  "claim_ceiling":"LOCAL_TEST_SURFACE_READY",
+  "signature_state":"NOT_SIGNED",
+  "merkle_state":"NOT_MERKLE_COMMITTED",
+  "token_disclosure":"NOT_INCLUDED"
 }
-raw=json.dumps(obj,sort_keys=True,separators=(",",":")).encode();obj["receipt_sha256"]=hashlib.sha256(raw).hexdigest()
-open(out,"w").write(json.dumps(obj,indent=2,sort_keys=True)+"\n")
-print(json.dumps(obj,indent=2,sort_keys=True))
+raw=json.dumps(obj,sort_keys=True,separators=(",",":")).encode()
+obj["receipt_sha256"]=hashlib.sha256(raw).hexdigest()
+with open(out,"w") as f: json.dump(obj,f,indent=2,sort_keys=True);f.write("\n")
 PY
+  mv "$tmp" "$out"
+  cat "$out"
 }
 
 status() {
-  say "HydraDB: $(curl -fsS --max-time 2 "$HYDRA_HEALTH" >/dev/null 2>&1 && echo UP || echo DOWN)"
-  say "Best Use server: $(curl -fsS --max-time 2 "http://127.0.0.1:$SERVER_PORT/health" >/dev/null 2>&1 && echo UP || echo DOWN)"
-  say "Ollarma: $(ollarma_health)"
-  [[ -f "$HYDRA_PID" ]] && say "HydraDB PID file: $(cat "$HYDRA_PID")"
-  [[ -f "$SERVER_PID" ]] && say "Server PID file: $(cat "$SERVER_PID")"
-  say "Runtime: $RUNTIME"
-}
-
-stop() {
-  if pid_alive "$SERVER_PID"; then kill "$(cat "$SERVER_PID")" || true; fi
-  if pid_alive "$HYDRA_PID"; then kill "$(cat "$HYDRA_PID")" || true; fi
-  rm -f "$SERVER_PID" "$HYDRA_PID"
-  say "Stopped managed Best Use server and HydraDB. Runtime data preserved at $RUNTIME"
-}
-
-smoke() {
-  curl -fsS "http://127.0.0.1:$SERVER_PORT/health" | python3 -m json.tool
-  curl -fsS "http://127.0.0.1:$SERVER_PORT/cases?limit=3" | python3 -m json.tool
-}
-
-start_all() {
-  preflight
-  prepare_hydradb
-  prepare_token
-  start_hydra
-  resolve_dataset
-  run_structural
-  start_server
-  write_start_receipt
-  say ""
-  say "READY: http://127.0.0.1:$SERVER_PORT/"
+  local status_json
+  status_json="$(curl -fsS "http://$SERVER_BIND:$SERVER_PORT/health")"
+  printf '%s\n' "$status_json" | python3 -m json.tool
+  write_receipt "$status_json"
+  say "READY: http://$SERVER_BIND:$SERVER_PORT/"
   say "Default extractor: $DEFAULT_EXTRACTOR"
   say "Ollarma: $(ollarma_health) (optional; choose extractor=ollarma in UI/API when PASS)"
   say "Logs: $LOGDIR"
@@ -268,12 +254,31 @@ start_all() {
   say "From magicPRObox: ssh -N -L 18787:127.0.0.1:$SERVER_PORT magicstudio"
 }
 
-case "${1:-start}" in
-  start) start_all ;;
-  status) status ;;
-  stop) stop ;;
-  smoke) smoke ;;
-  structural) preflight; prepare_hydradb; prepare_token; start_hydra; run_structural ;;
-  restart) stop; start_all ;;
-  *) echo "usage: $0 {start|status|stop|smoke|structural|restart}" >&2; exit 2 ;;
-esac
+stop_all() {
+  for pf in "$SERVER_PID" "$HYDRA_PID"; do
+    if pid_alive "$pf"; then kill "$(cat "$pf")" || true; fi
+    rm -f "$pf"
+  done
+}
+
+main() {
+  local command="${1:-start}"
+  case "$command" in
+    start)
+      preflight
+      prepare_hydradb
+      prepare_token
+      start_hydra
+      resolve_dataset
+      run_structural
+      start_server
+      status
+      ;;
+    status) status ;;
+    stop) stop_all ;;
+    restart) stop_all; main start ;;
+    *) fail "usage: $0 {start|status|stop|restart}" ;;
+  esac
+}
+
+main "$@"

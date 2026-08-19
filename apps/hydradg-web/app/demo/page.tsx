@@ -1,88 +1,63 @@
-"use client";
-
-import { useState } from "react";
+import Link from "next/link";
 
 export default function DemoPage() {
-  const [result, setResult] = useState<unknown>(null);
-  const [busy, setBusy] = useState(false);
-
-  async function loadFixture() {
-    setBusy(true);
-    try {
-      const response = await fetch("/api/query", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "fixture" }),
-      });
-      setResult(await response.json());
-    } finally {
-      setBusy(false);
-    }
-  }
-
   return (
     <main>
-      <nav>
-        <a href="/">MVP</a>
-        <a href="/evidence">Recorded evidence</a>
-        <a href="/graph">4D FCG</a>
-        <a href="/eligibility">Submission custody</a>
-      </nav>
-
       <header className="hero">
         <div>
-          <p className="eyebrow">Hack Hydra 2026 · Track 03 demo</p>
-          <h1>HydraDG demo</h1>
+          <p className="eyebrow">Hack Hydra 2026 · submission overview</p>
+          <h1>HydraDG in three minutes.</h1>
           <p className="lede">
-            Stable submission landing page for the deterministic backend proof, interactive 4D FCG,
-            recorded benchmark evidence, and final pitch video. The video and final full500 receipt can
-            change without changing this URL.
+            See what changed, trace the dependency that changed, and test whether a repair restores the declared current state while the divergent history remains visible.
           </p>
+          <div className="actions">
+            <Link className="primary" href="/judge">Try the interactive demo</Link>
+            <a className="secondary" href="/backup/hydradg.html">Open offline fallback</a>
+          </div>
+        </div>
+        <div className="heroStatus">
+          <span className="pill pillGood">FULL500 RESULT RETAINED</span>
+          <span className="pill pillWarn">FINAL VIDEO PENDING</span>
         </div>
       </header>
 
-      <section className="grid twoCol">
-        <article className="panel">
-          <p className="eyebrow">Working fixture</p>
-          <h2>Reference → mutation → restoration</h2>
-          <p className="muted">
-            The fixture writes claim-bounded FCO/FCG objects to HydraDB: source → evidence → atom →
-            Seed of Truth plus three StateSnapshot FCOs. It preserves temporal supersession,
-            provenance, and deterministic information-state metrics.
-          </p>
-          <div className="actions">
-            <button className="primary" onClick={loadFixture} disabled={busy}>
-              {busy ? "Loading…" : "Load deterministic fixture"}
-            </button>
-            <a className="secondary" href="/graph">Explore 4D FCG</a>
-            <a className="secondary" href="/evidence">Inspect evidence ledger</a>
-            <a className="secondary" href="/">Open query console</a>
-          </div>
-          <pre className="result">{result ? JSON.stringify(result, null, 2) : "Fixture receipt appears here when a graph backend is configured."}</pre>
-        </article>
-
-        <article className="panel">
-          <p className="eyebrow">3-minute submission video</p>
-          <h2>Video slot</h2>
-          <p className="muted">
-            The required YouTube link will be added here only after the backend, graph, custody,
-            and demo sequence pass end-to-end testing.
-          </p>
-          <div className="result empty">FINAL_YOUTUBE_URL_PENDING</div>
-        </article>
+      <section className="computeSection">
+        <span className="sectionNumber">01 / WHAT IT DOES</span>
+        <h2 className="displayTitle">Reference → poison → antidote.</h2>
+        <div className="grid threeCol">
+          <article className="panel"><p className="eyebrow">Reference</p><h2>Show current state.</h2><p className="muted">Read a fact with its source/session evidence path.</p></article>
+          <article className="panel"><p className="eyebrow">Poison</p><h2>Change one dependency.</h2><p className="muted">Preserve the prior fact and create explicit supersession/contradiction history.</p></article>
+          <article className="panel"><p className="eyebrow">Antidote</p><h2>Restore without erasing.</h2><p className="muted">Return to the declared reference state while retaining the perturbation as evidence.</p></article>
+        </div>
       </section>
 
-      <section className="panel architecture">
-        <div>
-          <p className="eyebrow">Judge flow</p>
-          <h2>Three-minute path</h2>
+      <section className="computeSection">
+        <span className="sectionNumber">02 / EXECUTED EVIDENCE</span>
+        <h2 className="displayTitle">A null result is still a result.</h2>
+        <p className="sectionLead">The completed LongMemEval-S full500 retrieval ablation materialized the graph in pinned local HydraDB and returned no positive B/C/D hit-rate signal over the flat baseline at the tested configuration.</p>
+        <div className="metrics">
+          <article className="metric"><span className="metricLabel">Cases</span><strong>500</strong></article>
+          <article className="metric"><span className="metricLabel">Sessions</span><strong>23,867</strong></article>
+          <article className="metric"><span className="metricLabel">Facts</span><strong>3,506</strong></article>
+          <article className="metric"><span className="metricLabel">Decision</span><strong>No positive signal</strong></article>
         </div>
-        <div className="flow mono">
-          <span>recorded evidence</span><b>→</b><span>load fixture</span><b>→</b>
-          <span>4D state field</span><b>→</b><span>current state</span><b>→</b>
-          <span>history</span><b>→</b><span>provenance</span><b>→</b>
-          <span>custody / claim ceiling</span>
+        <div className="actions"><Link className="secondary" href="/evidence">Follow the evidence</Link><Link className="secondary" href="/track03">Open Track 03</Link></div>
+      </section>
+
+      <section className="computeSection">
+        <span className="sectionNumber">03 / VIDEO</span>
+        <h2 className="displayTitle">Final recording slot.</h2>
+        <div className="panel">
+          <p className="eyebrow">Submission video</p>
+          <h2>FINAL_YOUTUBE_URL_PENDING</h2>
+          <p className="muted">Record only after the current release build, public-link audit and fresh golden-path receipt are green. The static fallback can be recorded if Vercel promotion remains blocked.</p>
         </div>
+      </section>
+
+      <section className="computeSection">
+        <span className="sectionNumber">04 / JUDGE PATH</span>
+        <h2 className="displayTitle">Surface first. Evidence underneath.</h2>
+        <div className="flow mono"><span>problem</span><b>→</b><span>golden path</span><b>→</b><span>executed result</span><b>→</b><span>graph explorer</span><b>→</b><span>FCO/FCG evidence</span></div>
       </section>
     </main>
   );

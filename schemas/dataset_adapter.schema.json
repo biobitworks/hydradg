@@ -1,0 +1,121 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hydradg.local/schemas/dataset_adapter.schema.json",
+  "title": "HydraDG Dataset Adapter Record",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "dataset_id",
+    "track",
+    "source_repository",
+    "source_revision",
+    "source_manifest_sha256",
+    "license_declared_upstream",
+    "evaluation_role",
+    "training_allowed",
+    "adapter_version",
+    "seedgraph_source_admission",
+    "atomization",
+    "seedgraph_atom_bundle_admission",
+    "fco_projection",
+    "fcg_projection",
+    "hydradb_projection",
+    "evaluation"
+  ],
+  "properties": {
+    "dataset_id": {"type": "string", "minLength": 1},
+    "track": {"enum": ["01", "02", "03"]},
+    "source_repository": {"type": "string", "minLength": 1},
+    "source_revision": {"type": "string", "minLength": 1},
+    "source_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "license_declared_upstream": {"type": "string", "minLength": 1},
+    "evaluation_role": {"enum": ["EVAL", "REPLAY", "CANARY"]},
+    "training_allowed": {"type": "boolean"},
+    "source_format": {"type": "array", "items": {"type": "string"}},
+    "adapter_version": {"type": "string", "minLength": 1},
+    "seedgraph_source_admission": {
+      "type": "object",
+      "required": ["receipts", "source_hash_matches", "source_hash_total"],
+      "properties": {
+        "receipts": {"type": "array"},
+        "source_hash_matches": {"type": "integer", "minimum": 0},
+        "source_hash_total": {"type": "integer", "minimum": 0}
+      }
+    },
+    "atomization": {
+      "type": "object",
+      "required": [
+        "source_files_total",
+        "source_files_byte_bound",
+        "structured_records_total",
+        "structured_records_atomized",
+        "opaque_blob_files",
+        "field_leaves_total",
+        "orphan_count",
+        "atom_set_merkle_root",
+        "deterministic_payload_sha256"
+      ],
+      "properties": {
+        "source_files_total": {"type": "integer", "minimum": 0},
+        "source_files_byte_bound": {"type": "integer", "minimum": 0},
+        "structured_records_total": {"type": "integer", "minimum": 0},
+        "structured_records_atomized": {"type": "integer", "minimum": 0},
+        "opaque_blob_files": {"type": "integer", "minimum": 0},
+        "field_leaves_total": {"type": "integer", "minimum": 0},
+        "orphan_count": {"type": "integer", "minimum": 0},
+        "atom_set_merkle_root": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "deterministic_payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "seedgraph_atom_bundle_admission": {
+      "type": "object",
+      "required": ["bundle_manifest_sha256", "receipt"],
+      "properties": {
+        "bundle_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "receipt": {"type": ["string", "object", "null"]}
+      }
+    },
+    "fco_projection": {
+      "type": "object",
+      "required": ["object_count", "claim_ceiling"],
+      "properties": {
+        "object_count": {"type": "integer", "minimum": 0},
+        "claim_ceiling": {"type": "string", "minLength": 1}
+      }
+    },
+    "fcg_projection": {
+      "type": "object",
+      "required": ["edge_count", "orphan_count"],
+      "properties": {
+        "edge_count": {"type": "integer", "minimum": 0},
+        "orphan_count": {"type": "integer", "minimum": 0}
+      }
+    },
+    "hydradb_projection": {
+      "type": "object",
+      "required": ["namespace", "objects_expected", "objects_projected", "edges_expected", "edges_projected"],
+      "properties": {
+        "namespace": {"type": "string", "minLength": 1},
+        "objects_expected": {"type": "integer", "minimum": 0},
+        "objects_projected": {"type": "integer", "minimum": 0},
+        "edges_expected": {"type": "integer", "minimum": 0},
+        "edges_projected": {"type": "integer", "minimum": 0},
+        "receipt_path": {"type": ["string", "null"]}
+      }
+    },
+    "evaluation": {
+      "type": "object",
+      "required": ["baseline", "treatment", "metrics", "decision"],
+      "properties": {
+        "baseline": {"type": "string"},
+        "treatment": {"type": "string"},
+        "metrics": {"type": "object"},
+        "decision": {"type": "string"}
+      }
+    },
+    "claim_ceiling": {"type": "string"},
+    "signature_state": {"type": "string"},
+    "merkle_state": {"type": "string"},
+    "cfmo_state": {"type": "string"}
+  }
+}

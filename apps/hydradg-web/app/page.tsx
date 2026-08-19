@@ -1,294 +1,164 @@
-"use client";
+import Link from "next/link";
 
-import { FormEvent, useEffect, useMemo, useState } from "react";
+import ContextIcebergHero from "@/components/ContextIcebergHero";
+import { buildSiteFcg } from "@/lib/siteFcg";
 
-type Status = {
-  graph: { backend: string; configured: boolean; reachable: boolean; error: string | null };
-  providers: Record<string, boolean>;
-  hydradb_pin: { repository: string; commit: string; claim_ceiling: string };
-  sources: Array<{ name: string; url: string; status: string; role: string }>;
-};
-
-type QueryAction = "memory" | "current" | "history" | "provenance";
-type FixtureReceipt = {
-  subject_key?: string;
-  ids?: Record<string, string>;
-  [key: string]: unknown;
-};
-
-function StatusPill({ ok, children }: { ok: boolean; children: React.ReactNode }) {
-  return <span className={`pill ${ok ? "pillGood" : "pillMuted"}`}>{children}</span>;
-}
+const tracks = [
+  {
+    n: "01",
+    href: "/track01",
+    title: "Identity",
+    internal: "HydraOntology",
+    subtitle: "Enterprise context + ontology",
+    body: "When aliases or conflicting records resolve differently, what downstream evidence changes?",
+    status: "DATA DOWNLOADED · REAL INGESTION PENDING",
+  },
+  {
+    n: "02",
+    href: "/track02",
+    title: "Blast radius",
+    internal: "HydraBlast",
+    subtitle: "Repos, dependencies + code as graphs",
+    body: "Given a vulnerable dependency, what services are exposed and does a patch remove every affected path?",
+    status: "SYNTHETIC CANARY IMPLEMENTED",
+  },
+  {
+    n: "03",
+    href: "/track03",
+    title: "Memory",
+    internal: "HydraMemory",
+    subtitle: "Memory + context retrieval",
+    body: "After updates and contradictions, which fact is current and which source/session supports it?",
+    status: "FULL500 EXECUTED",
+  },
+] as const;
 
 export default function Home() {
-  const [status, setStatus] = useState<Status | null>(null);
-  const [action, setAction] = useState<QueryAction>("memory");
-  const [term, setTerm] = useState("");
-  const [queryResult, setQueryResult] = useState<unknown>(null);
-  const [queryBusy, setQueryBusy] = useState(false);
-  const [fixture, setFixture] = useState<FixtureReceipt | null>(null);
-  const [fixtureBusy, setFixtureBusy] = useState(false);
-  const [exaTerm, setExaTerm] = useState("");
-  const [exaIngest, setExaIngest] = useState(true);
-  const [exaResult, setExaResult] = useState<unknown>(null);
-  const [exaBusy, setExaBusy] = useState(false);
-
-  useEffect(() => {
-    fetch("/api/status", { cache: "no-store" })
-      .then((response) => response.json())
-      .then(setStatus)
-      .catch((error) => setQueryResult({ error: String(error) }));
-  }, []);
-
-  const providerEntries = useMemo(() => Object.entries(status?.providers || {}), [status]);
-
-  async function loadFixture() {
-    setFixtureBusy(true);
-    try {
-      const response = await fetch("/api/query", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "fixture" }),
-      });
-      const data = (await response.json()) as { fixture?: FixtureReceipt; error?: string };
-      setFixture(data.fixture || data);
-      if (data.fixture?.subject_key) {
-        setAction("current");
-        setTerm(data.fixture.subject_key);
-      }
-    } finally {
-      setFixtureBusy(false);
-    }
-  }
-
-  function chooseFixtureId(key: string, nextAction: QueryAction) {
-    const id = fixture?.ids?.[key];
-    if (!id) return;
-    setAction(nextAction);
-    setTerm(id);
-  }
-
-  async function submitGraph(event: FormEvent) {
-    event.preventDefault();
-    setQueryBusy(true);
-    setQueryResult(null);
-    try {
-      const payload =
-        action === "memory"
-          ? { action, term }
-          : action === "current"
-            ? { action, subject_key: term }
-            : { action, id: term };
-      const response = await fetch("/api/query", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      setQueryResult(await response.json());
-    } finally {
-      setQueryBusy(false);
-    }
-  }
-
-  async function submitExa(event: FormEvent) {
-    event.preventDefault();
-    setExaBusy(true);
-    setExaResult(null);
-    try {
-      const response = await fetch("/api/query", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ action: "exa", term: exaTerm, ingest: exaIngest }),
-      });
-      setExaResult(await response.json());
-    } finally {
-      setExaBusy(false);
-    }
-  }
+  const site = buildSiteFcg();
 
   return (
     <main>
-      <nav>
-        <a href="/demo">Demo + video</a>
-        <a href="/eligibility">Submission custody</a>
-      </nav>
-
-      <header className="hero">
-        <div>
-          <p className="eyebrow">Hack Hydra · Track 03 — Memory + Context Retrieval</p>
-          <h1>HydraDG</h1>
+      <header className="hero" id="top" style={{ alignItems: "stretch", flexWrap: "wrap" }}>
+        <div style={{ flex: "1 1 430px", alignSelf: "flex-end", minWidth: 0 }}>
+          <p className="eyebrow">Hack Hydra 2026 · live fractal custody field</p>
+          <h1 style={{ fontSize: "clamp(48px, 6.6vw, 102px)" }}>See the context move.</h1>
           <p className="lede">
-            Custody-aware persistent memory: retrieve the current state, reconstruct history,
-            traverse provenance, and show exactly where evidence changed.
+            HydraDG turns chain of custody into a navigable state field: rotate the FCG in x/y/z, scrub time,
+            watch each object&apos;s context cloud widen as its distribution drifts, and trace every visible change back
+            to its source, transformation and claim ceiling.
           </p>
+          <div className="actions">
+            <Link className="primary" href="/judge">Try the guided demo</Link>
+            <Link className="secondary" href="/graph">Open full 4D FCG</Link>
+            <Link className="secondary" href="/evidence">See the results</Link>
+          </div>
+          <div className="actions">
+            <span className="pill pillGood">local HydraDB · executed</span>
+            <span className="pill pillGood">LongMemEval · 500 cases</span>
+            <span className="pill pillMuted">release site · deployment pending</span>
+          </div>
         </div>
-        <div className="heroStatus">
-          <StatusPill ok={Boolean(status?.graph.reachable)}>
-            graph {status?.graph.reachable ? "online" : "offline"}
-          </StatusPill>
-          <span className="mono small">{status?.graph.backend || "loading"}</span>
-        </div>
+        <ContextIcebergHero />
       </header>
 
-      <section className="metrics" aria-label="Runtime status">
-        <article className="metric">
-          <span className="metricLabel">Graph</span>
-          <strong>{status?.graph.reachable ? "Reachable" : status?.graph.configured ? "Configured" : "Unconfigured"}</strong>
-          <span className="small muted">HydraDB HTTP or Neo4j-compatible Bolt</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">HydraDB pin</span>
-          <strong className="mono compact">{status?.hydradb_pin.commit.slice(0, 12) || "loading"}</strong>
-          <span className="small muted">source revision pin</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Custody</span>
-          <strong>SHA-256 FCO/FCG</strong>
-          <span className="small muted">claim ceilings preserved</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Temporal memory</span>
-          <strong>Current + history</strong>
-          <span className="small muted">append-only supersession fixture</span>
-        </article>
-      </section>
-
-      <section className="panel architecture">
-        <div className="panelHead">
-          <div>
-            <p className="eyebrow">Deterministic end-to-end fixture</p>
-            <h2>Seed the complete graph path</h2>
-          </div>
-          <StatusPill ok={Boolean(status?.graph.reachable)}>HydraDB required</StatusPill>
-        </div>
-        <p className="muted">
-          Loads two synthetic temporal states with source → evidence → atom → Seed of Truth lineage.
-          The fixture is explicitly claim-bounded and its Anticube adapter remains fail-closed until a
-          public contract is pinned.
+      <section className="computeSection" id="demo">
+        <span className="sectionNumber">01 / THE DEMO</span>
+        <h2 className="displayTitle">Reference → poison → antidote.</h2>
+        <p className="sectionLead">
+          Start with one current fact. Change it. HydraDG preserves the prior state and the graph relationship that changed. Restore the valid state without deleting the perturbation history.
         </p>
-        <div className="actions">
-          <button className="primary" onClick={loadFixture} disabled={fixtureBusy || !status?.graph.reachable}>
-            {fixtureBusy ? "Loading…" : "Load deterministic fixture"}
-          </button>
-          <button className="secondary" onClick={() => chooseFixtureId("seed_v1", "history")} disabled={!fixture?.ids?.seed_v1}>
-            Trace seed history
-          </button>
-          <button className="secondary" onClick={() => chooseFixtureId("seed_v2", "provenance")} disabled={!fixture?.ids?.seed_v2}>
-            Trace current provenance
-          </button>
+        <div className="grid threeCol">
+          <article className="panel">
+            <p className="eyebrow">Reference</p>
+            <h2>Read the current state.</h2>
+            <p className="muted">Show the fact and the source/session path that supports it.</p>
+          </article>
+          <article className="panel">
+            <p className="eyebrow">Poison</p>
+            <h2>Change one fact.</h2>
+            <p className="muted">Retain the old fact and add explicit SUPERSEDED_BY / CONTRADICTS relationships.</p>
+          </article>
+          <article className="panel">
+            <p className="eyebrow">Antidote</p>
+            <h2>Restore without erasing.</h2>
+            <p className="muted">Recover the declared current state while the divergent history remains inspectable.</p>
+          </article>
         </div>
-        <ResultBox value={fixture} empty="Load the fixture to get deterministic object IDs and FCG edge receipts." />
+        <div className="actions"><Link className="primary" href="/judge">Run Judge Lab</Link></div>
       </section>
 
-      <section className="grid twoCol">
-        <article className="panel">
-          <div className="panelHead">
-            <div>
-              <p className="eyebrow">Memory graph</p>
-              <h2>Explore state and lineage</h2>
-            </div>
-            <StatusPill ok={Boolean(status?.graph.reachable)}>live query</StatusPill>
-          </div>
-
-          <div className="tabs" role="tablist" aria-label="Graph query mode">
-            {(["memory", "current", "history", "provenance"] as QueryAction[]).map((mode) => (
-              <button key={mode} type="button" className={action === mode ? "tab active" : "tab"} onClick={() => setAction(mode)}>
-                {mode}
-              </button>
-            ))}
-          </div>
-
-          <form onSubmit={submitGraph} className="stack">
-            <label>
-              {action === "memory" ? "Text or exact FCO id" : action === "current" ? "Subject key" : "Exact FCO id"}
-              <input
-                value={term}
-                onChange={(event) => setTerm(event.target.value)}
-                placeholder={action === "current" ? "hydradg.demo.memory" : action === "memory" ? "demo state" : "fco:…"}
-                required
-              />
-            </label>
-            <button className="primary" disabled={queryBusy || !term.trim() || !status?.graph.reachable}>
-              {queryBusy ? "Querying…" : action === "memory" ? "Search memory" : action === "current" ? "Get current state" : `Trace ${action}`}
-            </button>
-          </form>
-
-          <ResultBox value={queryResult} empty="Query results appear here." />
-        </article>
-
-        <article className="panel">
-          <div className="panelHead">
-            <div>
-              <p className="eyebrow">External evidence</p>
-              <h2>Retrieve → hash → admit</h2>
-            </div>
-            <StatusPill ok={Boolean(status?.providers.exa)}>Exa</StatusPill>
-          </div>
-          <p className="muted">
-            URL mode uses Exa Contents; query mode uses Exa Search. External retrieval is optional
-            and remains separate from the deterministic HydraDB fixture.
-          </p>
-          <form onSubmit={submitExa} className="stack">
-            <label>
-              Query or URL
-              <textarea rows={4} value={exaTerm} onChange={(event) => setExaTerm(event.target.value)} placeholder="Public source URL or research query" required />
-            </label>
-            <label className="checkRow">
-              <input type="checkbox" checked={exaIngest} onChange={(event) => setExaIngest(event.target.checked)} />
-              Admit retrieved evidence to FCO/FCG graph
-            </label>
-            <button className="primary" disabled={exaBusy || !exaTerm.trim() || !status?.providers.exa}>
-              {exaBusy ? "Retrieving…" : exaIngest ? "Retrieve and admit" : "Retrieve only"}
-            </button>
-          </form>
-          <ResultBox value={exaResult} empty="External retrieval results appear here." />
-        </article>
+      <section className="metrics" aria-label="Recorded execution state">
+        <article className="metric"><span className="metricLabel">Cases</span><strong>500</strong><span className="small muted">LongMemEval-S full500</span></article>
+        <article className="metric"><span className="metricLabel">Sessions</span><strong>23,867</strong><span className="small muted">typed temporal state</span></article>
+        <article className="metric"><span className="metricLabel">Result</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate advantage not established</span></article>
+        <article className="metric"><span className="metricLabel">Website custody</span><strong>{site.nodes.length} FCO sections</strong><span className="small muted">{site.edges.length} application-level FCG edges</span></article>
       </section>
 
-      <section className="grid twoCol">
-        <article className="panel">
-          <p className="eyebrow">Execution providers</p>
-          <h2>Bounded compute adapters</h2>
-          <div className="providerList">
-            {providerEntries.map(([name, configured]) => (
-              <div className="provider" key={name}>
-                <strong>{name}</strong>
-                <StatusPill ok={configured}>{configured ? "configured" : "optional / unconfigured"}</StatusPill>
+      <section className="computeSection" id="result">
+        <span className="sectionNumber">02 / WHAT WE FOUND</span>
+        <h2 className="displayTitle">The graph ran. The tested retrieval advantage did not appear.</h2>
+        <p className="sectionLead">
+          HydraDG constructed and queried the typed LongMemEval graph, but the completed full500 ablation did not establish a positive B/C/D hit-rate signal over the flat route at the tested configuration. That null/negative evidence is retained instead of optimized away.
+        </p>
+        <div className="actions"><Link className="secondary" href="/evidence">Open evidence ledger</Link><Link className="secondary" href="/track03">Open Track 03 result</Link></div>
+      </section>
+
+      <section className="computeSection" id="iceberg">
+        <span className="sectionNumber">03 / CONTEXT ICEBERG</span>
+        <h2 className="displayTitle">A heat map of change, with the receipts underneath.</h2>
+        <p className="sectionLead">
+          The hero treats the FCG as a spacetime field instead of a linear status bar. Every visible FCO can carry a context envelope: halo width encodes Cloud Drift magnitude, hue encodes the direction of ΔG*, and time exposes when that state entered the chain. Neither color nor size is an accuracy verdict.
+        </p>
+        <div className="grid threeCol">
+          <article className="panel"><p className="eyebrow">Tip · current</p><h2>ΔG* + Cloud Drift</h2><p className="muted">Two compact signals summarize direction and redistribution magnitude without collapsing retrieval outcomes into the same score.</p></article>
+          <article className="panel"><p className="eyebrow">Waterline · change</p><h2>Object-level clouds</h2><p className="muted">Atoms, evidence, seeds, state snapshots and future FCG object classes can inherit or publish their own drift envelope.</p></article>
+          <article className="panel"><p className="eyebrow">Deep · custody</p><h2>Source to claim</h2><p className="muted">FCO identities, FCG edges, SeedGraph custody, HydraDB projection roots, hashes, signatures and null history remain addressable below the visualization.</p></article>
+        </div>
+        <p className="small muted note">
+          ΔG* is an application-defined dimensionless information-state abstraction, not physical Gibbs free energy. Cloud Drift is 100×Jensen-Shannon divergence against a frozen reference distribution. Accuracy and recall remain separate empirical outcomes.
+        </p>
+      </section>
+
+      <section className="computeSection" id="tracks">
+        <span className="sectionNumber">04 / EXPERIMENTS</span>
+        <h2 className="displayTitle">One custody spine. Three graph problems.</h2>
+        <div className="routeGrid" style={{ marginTop: 30 }}>
+          {tracks.map((track) => (
+            <Link key={track.href} href={track.href} className="routeCard">
+              <div>
+                <p className="eyebrow">Track {track.n} · {track.status}</p>
+                <h3>{track.title}</h3>
+                <p className="small muted">{track.internal} · {track.subtitle}</p>
+                <p>{track.body}</p>
               </div>
-            ))}
-          </div>
-          <p className="small muted note">Provider presence is not treated as proof of a successful live call.</p>
-        </article>
-
-        <article className="panel">
-          <p className="eyebrow">Source registry</p>
-          <h2>Inputs and unresolved evidence</h2>
-          <div className="sourceList">
-            {(status?.sources || []).map((source) => (
-              <a href={source.url} target="_blank" rel="noreferrer" className="source" key={source.url}>
-                <div><strong>{source.name}</strong><p className="small muted">{source.role}</p></div>
-                <span className={`sourceStatus ${source.status === "verified-doc" ? "verified" : "unresolved"}`}>{source.status}</span>
-              </a>
-            ))}
-          </div>
-        </article>
-      </section>
-
-      <section className="panel architecture">
-        <div>
-          <p className="eyebrow">MVP path</p>
-          <h2>Evidence becomes queryable memory without losing lineage</h2>
-        </div>
-        <div className="flow mono">
-          <span>source</span><b>→</b><span>evidence</span><b>→</b><span>atom</span><b>→</b>
-          <span>Seed of Truth</span><b>→</b><span>temporal state</span><b>→</b><span>HydraDB query</span>
+              <span className="routeArrow" aria-hidden="true">↗</span>
+            </Link>
+          ))}
         </div>
       </section>
+
+      <section className="computeSection" id="fcg">
+        <span className="sectionNumber">05 / DEEP DIVE</span>
+        <h2 className="displayTitle">Every unfamiliar object should resolve backward.</h2>
+        <p className="sectionLead">
+          A term, entity, hash or result should not be an isolated label. It should link to a knowledge object, its FCO/FCG relationships, the source/version or executed receipt, and the claim ceiling that bounds what it means.
+        </p>
+        <div className="fcgRail" style={{ marginTop: 30 }}>
+          {[["01", "Term / Hash"],["02", "FCO"],["03", "FCG edge"],["04", "Source"],["05", "Claim ceiling"]].map(([n, label]) => (
+            <div className="fcgStep" key={label}><span className="sectionNumber">{n}</span><strong>{label}</strong></div>
+          ))}
+        </div>
+        <div className="actions"><Link className="secondary" href="/graph">Open Graph Explorer</Link><Link className="secondary" href="/knowledge">Resolve terminology</Link><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a></div>
+      </section>
+
+      <section className="computeSection" id="fallback">
+        <span className="sectionNumber">06 / RELEASE CONTINUITY</span>
+        <h2 className="displayTitle">The story survives a hosting failure.</h2>
+        <p className="sectionLead">If the current release cannot be promoted to Vercel in time, the repository contains a self-contained static judge artifact with the same golden path, executed result and claim boundaries.</p>
+        <div className="actions"><a className="secondary" href="/backup/hydradg.html">Open static fallback</a><Link className="secondary" href="/eligibility">Release custody</Link></div>
+      </section>
+
+      <footer className="computeSection"><p className="eyebrow">Claim boundary</p><p className="small muted">A SHA-256 digest establishes byte/object identity only. Website lineage does not establish scientific correctness. Current project signature state remains NOT_SIGNED and live HydraDB state remains NOT_MERKLE_COMMITTED unless explicit later operations establish otherwise.</p></footer>
     </main>
   );
-}
-
-function ResultBox({ value, empty }: { value: unknown; empty: string }) {
-  if (value === null) return <div className="result empty">{empty}</div>;
-  return <pre className="result">{JSON.stringify(value, null, 2)}</pre>;
 }
