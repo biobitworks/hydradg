@@ -3,6 +3,7 @@ import { NextRequest, NextResponse } from "next/server";
 export const runtime = "nodejs";
 
 type CloudAction =
+  | "tenant_ids"
   | "status"
   | "monitor"
   | "list"
@@ -23,7 +24,7 @@ function config() {
 
 async function hydra(path: string, method: "GET" | "POST", body?: unknown) {
   const cfg = config();
-  if (!cfg.apiKey || !cfg.tenantId) throw new Error("HYDRADB_API_KEY and HYDRADB_TENANT_ID are required");
+  if (!cfg.apiKey) throw new Error("HYDRADB_API_KEY is required");
 
   let lastError: Error | null = null;
   for (let attempt = 1; attempt <= 3; attempt += 1) {
@@ -53,30 +54,46 @@ async function hydra(path: string, method: "GET" | "POST", body?: unknown) {
 
 function scope(body: Record<string, unknown>) {
   const cfg = config();
+  const tenantId = String(body.tenant_id || cfg.tenantId || "").trim();
+  if (!tenantId) throw new Error("tenant_id is required for this operation");
   return {
-    tenant_id: cfg.tenantId,
+    tenant_id: tenantId,
     sub_tenant_id: String(body.sub_tenant_id || cfg.subTenantId || ""),
   };
 }
 
 export async function GET() {
   const cfg = config();
-  if (!cfg.apiKey || !cfg.tenantId) {
+  if (!cfg.apiKey) {
     return NextResponse.json(
       {
         configured: false,
         base_url: cfg.baseUrl,
-        required: ["HYDRADB_API_KEY", "HYDRADB_TENANT_ID"],
-        optional: ["HYDRADB_SUB_TENANT_ID", "HYDRADB_API_URL"],
+        required: ["HYDRADB_API_KEY"],
+        optional: ["HYDRADB_TENANT_ID", "HYDRADB_SUB_TENANT_ID", "HYDRADB_API_URL"],
         secret_disclosure: "API_KEY_VALUE_NEVER_RETURNED",
       },
       { status: 503 },
     );
   }
+
   try {
+    if (!cfg.tenantId) {
+      const tenantIds = await hydra("/tenants/tenant_ids", "GET");
+      return NextResponse.json({
+        configured: true,
+        tenant_configured: false,
+        tenant_ids: tenantIds,
+        base_url: cfg.baseUrl,
+        key_present: true,
+        key_value_disclosed: false,
+        claim_ceiling: "HYDRADB_CLOUD_KEY_AND_TENANT_DISCOVERY_ONLY",
+      });
+    }
     const status = await hydra(`/tenants/infra/status?tenant_id=${encodeURIComponent(cfg.tenantId)}`, "GET");
     return NextResponse.json({
       configured: true,
+      tenant_configured: true,
       tenant_id: cfg.tenantId,
       sub_tenant_id: cfg.subTenantId,
       base_url: cfg.baseUrl,
@@ -96,15 +113,18 @@ export async function GET() {
 export async function POST(request: NextRequest) {
   try {
     const body = (await request.json()) as Record<string, unknown> & { action?: CloudAction };
-    const cfg = config();
     const action = body.action;
-    const scoped = scope(body);
 
+    if (action === "tenant_ids") {
+      return NextResponse.json(await hydra("/tenants/tenant_ids", "GET"));
+    }
+
+    const scoped = scope(body);
     if (action === "status") {
-      return NextResponse.json(await hydra(`/tenants/infra/status?tenant_id=${encodeURIComponent(cfg.tenantId)}`, "GET"));
+      return NextResponse.json(await hydra(`/tenants/infra/status?tenant_id=${encodeURIComponent(scoped.tenant_id)}`, "GET"));
     }
     if (action === "monitor") {
-      return NextResponse.json(await hydra(`/tenants/monitor?tenant_id=${encodeURIComponent(cfg.tenantId)}`, "GET"));
+      return NextResponse.json(await hydra(`/tenants/monitor?tenant_id=${encodeURIComponent(scoped.tenant_id)}`, "GET"));
     }
     if (action === "list") {
       return NextResponse.json(
@@ -167,7 +187,7 @@ export async function POST(request: NextRequest) {
     if (action === "relations") {
       const sourceId = String(body.source_id || "").trim();
       if (!sourceId) return NextResponse.json({ error: "source_id is required" }, { status: 400 });
-      const params = new URLSearchParams({ tenant_id: cfg.tenantId, source_id: sourceId });
+      const params = new URLSearchParams({ tenant_id: scoped.tenant_id, source_id: sourceId });
       if (scoped.sub_tenant_id) params.set("sub_tenant_id", scoped.sub_tenant_id);
       return NextResponse.json(await hydra(`/list/graph_relations_by_id?${params.toString()}`, "GET"));
     }
