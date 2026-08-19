@@ -1,5 +1,9 @@
 name: HackHydra Judge Lab
 
+concurrency:
+  group: hackhydra-judge-${{ github.ref }}
+  cancel-in-progress: true
+
 on:
   push:
     branches:
@@ -44,7 +48,6 @@ jobs:
             echo "$path -> $code"
             test "$code" = "200"
           done
-
           curl -fsS http://127.0.0.1:3000/api/custody > /tmp/custody.json
           node - <<'NODE'
           const fs = require('fs');
@@ -56,7 +59,6 @@ jobs:
           if (!Array.isArray(j.golden_path) || j.golden_path.length < 6) throw new Error('golden path missing');
           console.log('custody checkpoint PASS', j.merkle.root_sha256);
           NODE
-
           curl -fsS http://127.0.0.1:3000/api/site-fcg > /tmp/site-fcg.json
           node - <<'NODE'
           const fs = require('fs');
@@ -68,18 +70,15 @@ jobs:
           for (const n of j.nodes) if (!/^fco:[0-9a-f]{64}$/.test(n.id || '')) throw new Error('invalid SiteSection FCO id');
           console.log('site FCG PASS', j.artifact.id);
           NODE
-
           fco_id="$(node -e "const j=require('/tmp/site-fcg.json'); process.stdout.write(j.nodes[0].id)")"
           fco_code="$(curl -sS -o /tmp/fco.html -w '%{http_code}' "http://127.0.0.1:3000/fco/${fco_id}")"
           echo "/fco/<site-section> -> $fco_code"
           test "$fco_code" = "200"
           grep -Fq 'FCO inspector' /tmp/fco.html
           grep -Fq "$fco_id" /tmp/fco.html
-
           live_code="$(curl -sS -o /tmp/live.json -w '%{http_code}' http://127.0.0.1:3000/api/live)"
           test "$live_code" = "503"
           node -e "const j=require('/tmp/live.json'); if(j.configured!==false) throw Error('live fail-closed mismatch')"
-
           cloud_code="$(curl -sS -o /tmp/cloud.json -w '%{http_code}' http://127.0.0.1:3000/api/hydradb-cloud)"
           test "$cloud_code" = "503"
           node -e "const j=require('/tmp/cloud.json'); if(j.configured!==false || j.secret_disclosure!=='API_KEY_VALUE_NEVER_RETURNED') throw Error('cloud fail-closed mismatch')"
@@ -97,17 +96,14 @@ jobs:
             fi
             echo "ASSERTION_PASS=$label"
           }
-
           curl -fsS http://127.0.0.1:3000/judge > /tmp/judge.html
           assert_contains /tmp/judge.html 'HydraDG golden path' judge-title
           assert_contains /tmp/judge.html 'DEMO CONTROL' judge-demo-mode
           assert_contains /tmp/judge.html 'LIVE REAL DATA' judge-live-mode
           assert_contains /tmp/judge.html 'HYDRADB COOKBOOK API' judge-cloud-mode
-
           curl -fsS http://127.0.0.1:3000/ > /tmp/home.html
           assert_contains /tmp/home.html 'Memory that can show its work' home-title
           assert_contains /tmp/home.html 'Three distinct graph problems' home-track-summary
-
           curl -fsS http://127.0.0.1:3000/track03 > /tmp/track03.html
           assert_contains /tmp/track03.html 'FULL500 COMPLETE' track03-executed-state
           assert_contains /tmp/track03.html 'bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324' track03-result-hash
