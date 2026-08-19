@@ -15,7 +15,13 @@ DEFAULT_PATHS = [
     "docs/PROJECT_FCG_UPDATE_20260819.md",
     "docs/WEBSITE_MVP_AND_FALLBACK_20260819.md",
     "docs/PROJECT_FCG_CHANGELOG_20260819.json",
+    "docs/CONTEXT_ICEBERG_4D_RELEASE_WATCH_20260819.md",
     "docs/HASHING_PROOF_20260819.md",
+    "schemas/context_iceberg_state.schema.json",
+    "apps/hydradg-web/lib/contextIceberg.ts",
+    "apps/hydradg-web/components/ContextIcebergHero.tsx",
+    "apps/hydradg-web/app/api/iceberg/route.ts",
+    "apps/hydradg-web/app/page.tsx",
     "apps/hydradg-web/public/backup/hydradg.html",
 ]
 
