@@ -1,9 +1,10 @@
 import { makeFcoNode } from "@/lib/fco";
+import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
 
 const SECTION_SPECS = [
   { route: "/", label: "HydraDG", role: "project-entry", claim: "APPLICATION_OVERVIEW" },
   { route: "/judge", label: "Judge Lab", role: "interactive-golden-path", claim: "DEMO_AND_LOCAL_EXECUTION_SURFACE" },
-  { route: "/graph", label: "4D FCG", role: "custody-graph-visualization", claim: "EVIDENCE_LINKED_VISUALIZATION" },
+  { route: "/graph", label: "Context Iceberg / 4D FCG", role: "context-drift-and-custody-visualization", claim: "CONTEXT_DRIFT_AND_CUSTODY_VISUALIZATION_CONTRACT" },
   { route: "/knowledge", label: "Knowledge", role: "terminology-and-how-to", claim: "DOCUMENTATION_AND_SOURCE_NAVIGATION" },
   { route: "/evidence", label: "Evidence", role: "receipt-and-result-index", claim: "EVIDENCE_STATUS_INDEX" },
   { route: "/track01", label: "Track 01", role: "enterprise-context-ontology", claim: "TRACK01_IMPLEMENTATION_STATUS" },
@@ -13,6 +14,7 @@ const SECTION_SPECS = [
 ] as const;
 
 export function buildSiteFcg() {
+  const knowledge = buildKnowledgeProjection();
   const nodes = SECTION_SPECS.map((spec) =>
     makeFcoNode("SiteSection", {
       ...spec,
@@ -30,9 +32,12 @@ export function buildSiteFcg() {
     ["/", "NAVIGATES_TO", "/track01"],
     ["/", "NAVIGATES_TO", "/track02"],
     ["/", "NAVIGATES_TO", "/track03"],
+    ["/", "VISUALIZES_WITH", "/graph"],
     ["/judge", "EXPLAINS_WITH", "/knowledge"],
     ["/judge", "VISUALIZES_WITH", "/graph"],
     ["/judge", "SUPPORTED_BY", "/evidence"],
+    ["/graph", "EXPLAINS_WITH", "/knowledge"],
+    ["/graph", "SUPPORTED_BY", "/evidence"],
     ["/track01", "SUPPORTED_BY", "/evidence"],
     ["/track02", "SUPPORTED_BY", "/evidence"],
     ["/track03", "SUPPORTED_BY", "/evidence"],
@@ -53,6 +58,10 @@ export function buildSiteFcg() {
     project: "HydraDG",
     section_fco_ids: nodes.map((node) => node.id),
     edge_count: edges.length,
+    knowledge_root_fco_id: knowledge.root.id,
+    knowledge_term_fco_count: knowledge.nodes.length,
+    knowledge_api: "/api/knowledge",
+    context_iceberg_api: "/api/math/current",
     representation: "APPLICATION_LEVEL_FCO_FCG",
     claim_ceiling: "WEBSITE_NAVIGATION_AND_CUSTODY_REPRESENTATION_ONLY",
     signature_state: "NOT_SIGNED",
@@ -60,10 +69,13 @@ export function buildSiteFcg() {
   });
 
   return {
-    schema: "hydradg.site_fcg.v1",
+    schema: "hydradg.site_fcg.v2",
     artifact,
     nodes,
     edges,
+    knowledge_root: knowledge.root,
+    knowledge_projection_state: knowledge.hydradb_projection_state,
+    context_iceberg_projection_state: "READ_ONLY_API_CONTRACT_IMPLEMENTED_SCORE_RECEIPT_OPTIONAL",
     claim_ceiling: "WEBSITE_NAVIGATION_AND_CUSTODY_REPRESENTATION_ONLY",
     signature_state: "NOT_SIGNED",
     merkle_state: "NOT_MERKLE_COMMITTED",
