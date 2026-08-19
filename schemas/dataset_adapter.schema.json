@@ -14,7 +14,9 @@
     "evaluation_role",
     "training_allowed",
     "adapter_version",
-    "seedgraph_projection",
+    "seedgraph_source_admission",
+    "atomization",
+    "seedgraph_atom_bundle_admission",
     "fco_projection",
     "fcg_projection",
     "hydradb_projection",
@@ -31,37 +33,73 @@
     "training_allowed": {"type": "boolean"},
     "source_format": {"type": "array", "items": {"type": "string"}},
     "adapter_version": {"type": "string", "minLength": 1},
-    "seedgraph_projection": {
+    "seedgraph_source_admission": {
       "type": "object",
-      "required": ["source_hash_matches", "source_hash_total"],
+      "required": ["receipts", "source_hash_matches", "source_hash_total"],
       "properties": {
-        "receipt_path": {"type": ["string", "null"]},
-        "seed_ids": {"type": "array", "items": {"type": "string"}},
+        "receipts": {"type": "array"},
         "source_hash_matches": {"type": "integer", "minimum": 0},
         "source_hash_total": {"type": "integer", "minimum": 0}
       }
     },
+    "atomization": {
+      "type": "object",
+      "required": [
+        "source_files_total",
+        "source_files_byte_bound",
+        "structured_records_total",
+        "structured_records_atomized",
+        "opaque_blob_files",
+        "field_leaves_total",
+        "orphan_count",
+        "atom_set_merkle_root",
+        "deterministic_payload_sha256"
+      ],
+      "properties": {
+        "source_files_total": {"type": "integer", "minimum": 0},
+        "source_files_byte_bound": {"type": "integer", "minimum": 0},
+        "structured_records_total": {"type": "integer", "minimum": 0},
+        "structured_records_atomized": {"type": "integer", "minimum": 0},
+        "opaque_blob_files": {"type": "integer", "minimum": 0},
+        "field_leaves_total": {"type": "integer", "minimum": 0},
+        "orphan_count": {"type": "integer", "minimum": 0},
+        "atom_set_merkle_root": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "deterministic_payload_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"}
+      }
+    },
+    "seedgraph_atom_bundle_admission": {
+      "type": "object",
+      "required": ["bundle_manifest_sha256", "receipt"],
+      "properties": {
+        "bundle_manifest_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "receipt": {"type": ["string", "object", "null"]}
+      }
+    },
     "fco_projection": {
       "type": "object",
-      "required": ["objects", "claim_ceiling"],
+      "required": ["object_count", "claim_ceiling"],
       "properties": {
-        "objects": {"type": "array"},
+        "object_count": {"type": "integer", "minimum": 0},
         "claim_ceiling": {"type": "string", "minLength": 1}
       }
     },
     "fcg_projection": {
       "type": "object",
-      "required": ["edges", "orphan_count"],
+      "required": ["edge_count", "orphan_count"],
       "properties": {
-        "edges": {"type": "array"},
+        "edge_count": {"type": "integer", "minimum": 0},
         "orphan_count": {"type": "integer", "minimum": 0}
       }
     },
     "hydradb_projection": {
       "type": "object",
-      "required": ["namespace"],
+      "required": ["namespace", "objects_expected", "objects_projected", "edges_expected", "edges_projected"],
       "properties": {
         "namespace": {"type": "string", "minLength": 1},
+        "objects_expected": {"type": "integer", "minimum": 0},
+        "objects_projected": {"type": "integer", "minimum": 0},
+        "edges_expected": {"type": "integer", "minimum": 0},
+        "edges_projected": {"type": "integer", "minimum": 0},
         "receipt_path": {"type": ["string", "null"]}
       }
     },
