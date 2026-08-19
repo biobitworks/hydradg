@@ -1,0 +1,42 @@
+{
+  "schema": "hydradg.context_drift_incident.v1",
+  "incident_id": "CTX-DRIFT-20260818-HYDRADB-LESSWRONG",
+  "timestamp_declared_date": "2026-08-18",
+  "status": "CONFIRMED_BY_USER",
+  "incident_class": "CONVERSATION_AND_WORKSTREAM_ROUTE_CONFUSION",
+  "intended_workstream": "HydraDG / Hack Hydra Track 03",
+  "confused_with_workstream": "LessWrong article development",
+  "affected_surfaces": [
+    "conversation routing",
+    "execution instructions",
+    "repository/path assumptions",
+    "turn custody enforcement"
+  ],
+  "known_unaffected_evidence": [
+    "biobitworks/hydradb-hackhydra main baseline remains pinned to 6a2fbb192f37f51a93690a2ae2d2f5e27e6e4219",
+    "magicPRObox HydraDB mirror initialization completed successfully",
+    "no evidence in this incident record that the upstream HydraDB baseline commit was modified"
+  ],
+  "earliest_divergent_dependency": {
+    "class": "CONTEXT_ENVELOPE_NOT_ENFORCED_AT_TURN_START",
+    "description": "The active conversation/workstream identity was not checked as a first-class dependency before continuing repository and infrastructure instructions."
+  },
+  "contributing_factors": [
+    "HydraDG, HydraDB, LessWrong, FCO/FCG and remote-work tasks were active in adjacent conversations",
+    "commands referenced similar repositories and local paths",
+    "the assistant did not consistently require a context tuple check before every substantive turn",
+    "in-turn SHA-256 custody was inconsistently enforced; some historical footer claims were not recomputed with a tool and therefore must remain UNVERIFIED_PREVIOUS_TURN_HASH_CLAIM"
+  ],
+  "recovery_controls": [
+    "CONTEXT_ROUTE_GATE",
+    "pull-before-work and push-after-work Git checkpoints",
+    "explicit repository/branch/host/path tuple",
+    "turn FCO hashing with claim-ceiling downgrade when hashing is missing",
+    "stop-on-context-mismatch before write or execution actions"
+  ],
+  "scientific_interpretation": "This incident is a real workflow perturbation example: a context-routing error changed the action path before the underlying project objective changed. It is suitable as a bounded HydraDG Track 03 first-divergence/recovery example, not as evidence that HydraDB itself caused or prevented the error.",
+  "claim_ceiling": "CONVERSATION_REPORTED_AND_REPOSITORY_EVIDENCED_WORKFLOW_INCIDENT",
+  "hydradb_ingestion_state": "NOT_YET_INGESTED_INTO_PINNED_HYDRADB",
+  "signature_state": "NOT_SIGNED_BY_THIS_RECORD",
+  "mmr_state": "APPEND_PENDING"
+}
