@@ -1,13 +1,15 @@
 import Link from "next/link";
 
-const NAV = [
-  ["Judge", "/judge"],
-  ["4D FCG", "/graph"],
+const PRIMARY_NAV = [
+  ["Overview", "/"],
+  ["Demo", "/demo"],
+  ["Results", "/evidence"],
+  ["Experiments", "/#tracks"],
+] as const;
+
+const SECONDARY_NAV = [
+  ["Graph Explorer", "/graph"],
   ["Knowledge", "/knowledge"],
-  ["Evidence", "/evidence"],
-  ["Track 01", "/track01"],
-  ["Track 02", "/track02"],
-  ["Track 03", "/track03"],
   ["Eligibility", "/eligibility"],
 ] as const;
 
@@ -19,12 +21,20 @@ export default function SiteNav() {
           <span className="siteBrandName">HydraDG</span>
           <span className="siteBrandMark">FCG</span>
         </Link>
-        <div className="siteNavLinks">
-          {NAV.map(([label, href]) => (
+        <div className="siteNavLinks" aria-label="Primary navigation">
+          {PRIMARY_NAV.map(([label, href]) => (
             <Link key={href} href={href}>{label}</Link>
           ))}
+          <details className="siteNavMore">
+            <summary>Deep dive</summary>
+            <div className="siteNavMoreMenu">
+              {SECONDARY_NAV.map(([label, href]) => (
+                <Link key={href} href={href}>{label}</Link>
+              ))}
+            </div>
+          </details>
         </div>
-        <Link className="siteNavCta" href="/judge">Run judge path</Link>
+        <Link className="siteNavCta" href="/judge">Try the demo</Link>
       </nav>
     </header>
   );
