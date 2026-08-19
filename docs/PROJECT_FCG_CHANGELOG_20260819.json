@@ -1,0 +1,30 @@
+{
+  "schema": "hydradg.project_fcg_changelog.v1",
+  "date": "2026-08-19",
+  "reason": "Expand project custody from scientific graph state to dataset atomization, website knowledge objects, release transformations, live deployment state, and static fallback artifacts.",
+  "added_object_classes": [
+    "WebsiteKnowledgeObject",
+    "ReleaseStatus",
+    "StaticFallbackArtifact",
+    "PublicExportArtifact",
+    "DatasetAtomizationReceipt",
+    "SeedGraphAdmissionReceipt",
+    "HydraDBProjectionReceipt"
+  ],
+  "added_dependency_routes": [
+    "source_or_dataset->exact_identity->seedgraph_intake->structural_atomization->fco->fcg->hydradb_projection->experiment->result->website_artifact",
+    "release_candidate->public_export->live_vercel_or_static_fallback->video->submission"
+  ],
+  "presentation_model": {
+    "name": "TIP_OF_ICEBERG_HOT_TO_COLD",
+    "hot": "current state and recent/live explanation",
+    "warm": "experiment and graph relationships",
+    "cold": "retained hashes, FCO/FCG, SeedGraph custody, HydraDB state, receipts and counterevidence",
+    "thermodynamic_claim": "METAPHOR_ONLY"
+  },
+  "claim_boundaries": {
+    "signature_state": "NOT_SIGNED",
+    "live_merkle_state": "NOT_MERKLE_COMMITTED",
+    "delta_g_state": "APPLICATION_DEFINED_INFORMATION_STATE_METRIC_NOT_PHYSICAL_GIBBS_FREE_ENERGY"
+  }
+}
