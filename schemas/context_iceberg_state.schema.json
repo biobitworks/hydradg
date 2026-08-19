@@ -1,0 +1,91 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hydradg.local/schemas/context_iceberg_state.schema.json",
+  "title": "HydraDG Context Iceberg UI State",
+  "type": "object",
+  "required": ["timeline", "scene", "claim_ceiling", "signature_state", "merkle_state"],
+  "properties": {
+    "schema": { "const": "hydradg.context_iceberg.ui.v1" },
+    "source_state": { "type": "string" },
+    "claim_ceiling": { "type": "string" },
+    "project_fcg_root": { "type": ["string", "null"] },
+    "hydradb_projection_root": { "type": ["string", "null"] },
+    "signature_state": { "type": "string" },
+    "merkle_state": { "type": "string" },
+    "timeline": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["t", "label", "distribution", "g_star", "delta_g_star"],
+        "properties": {
+          "t": { "type": "integer", "minimum": 0 },
+          "label": { "type": "string", "minLength": 1 },
+          "distribution": {
+            "type": "array",
+            "minItems": 1,
+            "items": { "type": "number", "minimum": 0 }
+          },
+          "g_star": { "type": "number" },
+          "delta_g_star": { "type": "number" },
+          "delta_hit_at_k": { "type": ["number", "null"] },
+          "delta_recall_at_k": { "type": ["number", "null"] },
+          "shannon_entropy": { "type": ["number", "null"] },
+          "normalized_entropy": { "type": ["number", "null"] },
+          "mutation_distance": { "type": ["number", "null"] },
+          "restoration_gain": { "type": ["number", "null"] },
+          "burden": { "type": ["number", "null"] }
+        },
+        "additionalProperties": true
+      }
+    },
+    "scene": {
+      "type": "object",
+      "required": ["nodes", "links"],
+      "properties": {
+        "nodes": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "x", "y", "z", "t"],
+            "properties": {
+              "id": { "type": "string", "minLength": 1 },
+              "label": { "type": "string", "minLength": 1 },
+              "x": { "type": "number" },
+              "y": { "type": "number" },
+              "z": { "type": "number" },
+              "t": { "type": "integer", "minimum": 0 },
+              "access": { "type": "string" },
+              "payload": { "type": "object" },
+              "context_drift": {
+                "type": "object",
+                "properties": {
+                  "cloud_drift_0_100": { "type": "number", "minimum": 0, "maximum": 100 },
+                  "delta_g_star": { "type": "number" },
+                  "scope": { "type": "string" }
+                },
+                "additionalProperties": false
+              }
+            },
+            "additionalProperties": true
+          }
+        },
+        "links": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["source", "target", "relation"],
+            "properties": {
+              "source": { "type": "string" },
+              "target": { "type": "string" },
+              "relation": { "type": "string" }
+            },
+            "additionalProperties": false
+          }
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": true
+}
