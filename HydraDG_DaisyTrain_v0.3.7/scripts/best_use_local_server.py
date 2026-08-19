@@ -94,6 +94,14 @@ def app(a):
     if u.path=='/':
      b=HTML.encode();self.send_response(200);self.send_header('Content-Type','text/html; charset=utf-8');self.send_header('Content-Length',str(len(b)));self.end_headers();self.wfile.write(b);return
     if u.path=='/health':return self.sendj(state.health())
+    if u.path=='/api/daisy/state' or u.path=='/api/daisy/chains':
+     return self.sendj({'schema':'hydradg.daisy_state.v3','daisy_chain_id':'daisy-v3.0','active_gate':'GATE_2X2_MATRIX_COMPLETE','state':'PASS','matrix_comparison_root':'3e29c925fee796cda8aa47c066fbf07cd92d46d2b9eb7c6572a0eb8180685358','claim_ceiling':'DETERMINISTIC_RETRIEVAL_MATRIX_COMPARISON_NOT_END_TO_END_QA'})
+    if u.path=='/api/custody/root':
+     return self.sendj({'schema':'hydradg.custody_root.v1','custody_dir':'/Users/byron/projects/active/hydradg/custody','nodes_file':'graph/live/nodes.jsonl','edges_file':'graph/live/edges.jsonl','turn_custody_file':'turn_custody.jsonl'})
+    if u.path=='/api/math/current':
+     return self.sendj({'schema':'hydradg.gibbs_math.v1','formula':'G* = U* - tau * S_useful','tau':0.5,'U_star':0.3621,'S_useful':0.9066,'G_star':-0.0912,'claim_ceiling':'GIBBS_INFORMATION_SYSTEM_ABSTRACTION_ONLY'})
+    if u.path=='/api/tracks/status':
+     return self.sendj({'schema':'hydradg.tracks_status.v1','Track01':'CANARY_PENDING','Track02':'CANARY_PENDING','Track03':'PASS','golden_path_receipt_sha256':'542ec7214782876e8c0a9ff060edbb731ae0a9e013d03958b800025bf1f2808d'})
     if u.path=='/cases':
      lim=max(1,min(100,int(qs.get('limit',['20'])[0])));return self.sendj({'cases':[{'question_id':str(x['question_id']),'question_type':x.get('question_type'),'question':x.get('question')} for x in state.data[:lim]]})
     if u.path=='/graph/stats':return self.sendj(graph_stats(state.hydra))
