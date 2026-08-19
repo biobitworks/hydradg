@@ -1,40 +1,30 @@
 import Link from "next/link";
 
-const PRIMARY_NAV = [
+const NAV = [
   ["Overview", "/"],
-  ["Demo", "/demo"],
-  ["Results", "/evidence"],
-  ["Experiments", "/#tracks"],
-] as const;
-
-const SECONDARY_NAV = [
-  ["Graph Explorer", "/graph"],
+  ["Judge Demo", "/judge"],
+  ["Results", "/track03"],
+  ["Graph", "/graph"],
   ["Knowledge", "/knowledge"],
+  ["How to Use", "/how-to"],
   ["Eligibility", "/eligibility"],
 ] as const;
 
 export default function SiteNav() {
   return (
     <header className="siteNavShell">
-      <nav className="siteNav" aria-label="HydraDG primary navigation">
+      <nav className="siteNav" aria-label="HydraDG judge navigation">
         <Link className="siteBrand" href="/" aria-label="HydraDG home">
           <span className="siteBrandName">HydraDG</span>
           <span className="siteBrandMark">FCG</span>
         </Link>
-        <div className="siteNavLinks" aria-label="Primary navigation">
-          {PRIMARY_NAV.map(([label, href]) => (
+        <div className="siteNavLinks" aria-label="Judge navigation">
+          {NAV.map(([label, href]) => (
             <Link key={href} href={href}>{label}</Link>
           ))}
-          <details className="siteNavMore">
-            <summary>Deep dive</summary>
-            <div className="siteNavMoreMenu">
-              {SECONDARY_NAV.map(([label, href]) => (
-                <Link key={href} href={href}>{label}</Link>
-              ))}
-            </div>
-          </details>
+          <a href="/backup/hydradg.html">Static Fallback</a>
         </div>
-        <Link className="siteNavCta" href="/judge">Try the demo</Link>
+        <Link className="siteNavCta" href="/judge">Start walkthrough</Link>
       </nav>
     </header>
   );
