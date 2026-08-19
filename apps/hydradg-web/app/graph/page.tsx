@@ -373,12 +373,63 @@ export default function GraphPage() {
                 </div>
                 <p className="mono small compact">{selected.id}</p>
                 {selectedHash ? <p className="small muted">SHA-256 → <a className="mono compact" href={`/evidence?sha=${selectedHash}`}>{selectedHash}</a></p> : null}
-                <p className="small muted">t={selected.t} · access={selected.access}</p>
+                <p className="small muted">t={selected.t} · access={selected.access} · label={selected.label}</p>
+
+                {/* Node-Level Contextual Information State */}
+                <div className="panel" style={{ marginTop: 12, background: "rgba(255,255,255,0.02)", border: "1px solid var(--line)" }}>
+                  <p className="eyebrow">Node Contextual Information State (t{selected.t})</p>
+                  <div className="metrics" style={{ gridTemplateColumns: "repeat(3, minmax(0,1fr))", marginTop: 8 }}>
+                    <div className="metric">
+                      <span className="metricLabel">Node G*</span>
+                      <strong>{((typeof selected.payload.g_star === "number" ? selected.payload.g_star : activeMetric?.g_star) ?? 0).toFixed(3)}</strong>
+                    </div>
+                    <div className="metric">
+                      <span className="metricLabel">Node Shannon H</span>
+                      <strong>{((typeof selected.payload.shannon_entropy_bits === "number" ? selected.payload.shannon_entropy_bits : activeMetric?.shannon_entropy) ?? 0).toFixed(3)}</strong>
+                    </div>
+                    <div className="metric">
+                      <span className="metricLabel">FCG Degree</span>
+                      <strong>{selectedLinks.length} edges</strong>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Side-by-Side Node Comparison */}
+                <div className="panel" style={{ marginTop: 12, background: "rgba(255,255,255,0.02)", border: "1px solid var(--line)" }}>
+                  <p className="eyebrow">Compare Node Context (Delta vs Reference t0)</p>
+                  {(() => {
+                    const refMetric = data?.timeline[0];
+                    const nodeG = (typeof selected.payload.g_star === "number" ? selected.payload.g_star : activeMetric?.g_star) ?? 0;
+                    const refG = refMetric?.g_star ?? 0;
+                    const dG = nodeG - refG;
+
+                    const nodeH = (typeof selected.payload.shannon_entropy_bits === "number" ? selected.payload.shannon_entropy_bits : activeMetric?.shannon_entropy) ?? 0;
+                    const refH = refMetric?.shannon_entropy ?? 0;
+                    const dH = nodeH - refH;
+
+                    return (
+                      <div className="metrics" style={{ gridTemplateColumns: "repeat(2, minmax(0,1fr))", marginTop: 8 }}>
+                        <div className="metric">
+                          <span className="metricLabel">ΔG* vs t0</span>
+                          <strong style={{ color: dG < 0 ? "#4caf50" : dG > 0 ? "#ff9800" : "#d8e0e8" }}>
+                            {dG >= 0 ? "+" : ""}{dG.toFixed(3)}
+                          </strong>
+                        </div>
+                        <div className="metric">
+                          <span className="metricLabel">ΔH vs t0</span>
+                          <strong>{dH >= 0 ? "+" : ""}{dH.toFixed(3)}</strong>
+                        </div>
+                      </div>
+                    );
+                  })()}
+                </div>
+
                 {selectedSourceNode ? (
-                  <p className="small muted">source_ref → <button className="secondary" onClick={() => setSelectedId(selectedSourceNode.id)}>{selectedSourceNode.label}</button></p>
+                  <p className="small muted" style={{ marginTop: 12 }}>source_ref → <button className="secondary" onClick={() => { setSelectedId(selectedSourceNode.id); setTime(selectedSourceNode.t); }}>{selectedSourceNode.label}</button></p>
                 ) : selectedSourceRef.startsWith("http") ? (
-                  <p className="small muted">source_ref → <a href={selectedSourceRef} target="_blank" rel="noreferrer">upstream source ↗</a></p>
-                ) : selectedSourceRef ? <p className="mono small compact">source_ref={selectedSourceRef}</p> : null}
+                  <p className="small muted" style={{ marginTop: 12 }}>source_ref → <a href={selectedSourceRef} target="_blank" rel="noreferrer">upstream source ↗</a></p>
+                ) : selectedSourceRef ? <p className="mono small compact" style={{ marginTop: 12 }}>source_ref={selectedSourceRef}</p> : null}
+
                 {selected.access === "toy-locked" ? (
                   <button className="secondary" onClick={toggleToyLock}>
                     {unlocked.has(selected.id) ? "Lock toy key" : "Unlock with toy key"}
@@ -399,7 +450,7 @@ export default function GraphPage() {
                         return (
                           <li key={`${link.source}-${link.relation}-${link.target}-${index}`}>
                             <span className="mono small">{outgoing ? "→" : "←"} {link.relation} </span>
-                            <button className="secondary" onClick={() => setSelectedId(otherId)}>{other?.label || otherId.slice(0, 20)}</button>
+                            <button className="secondary" onClick={() => { setSelectedId(otherId); if (other) setTime(other.t); }}>{other?.label || otherId.slice(0, 20)}</button>
                           </li>
                         );
                       })}
@@ -407,7 +458,7 @@ export default function GraphPage() {
                   </div>
                 ) : null}
               </>
-            ) : <div className="result empty">Click a node to inspect its FCO payload.</div>}
+            ) : <div className="result empty">Click a node to inspect its FCO payload & contextual information state.</div>}
           </div>
         </article>
       </section>
