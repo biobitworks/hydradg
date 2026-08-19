@@ -54,11 +54,17 @@ python3 -m py_compile \
   "$PKG/scripts/track01_hydraontology_canary.py" \
   "$PKG/scripts/track02_hydrablast_canary.py" \
   "$PKG/scripts/run_track03_live_golden_path.py" \
-  "$ROOT/scripts/check_hydradg_web_links.py"
+  "$ROOT/scripts/check_hydradg_web_links.py" \
+  "$ROOT/scripts/check_static_fallback.py" \
+  "$ROOT/scripts/check_term_knowledge_coverage.py" \
+  "$ROOT/scripts/hash_release_artifacts.py"
 bash -n "$PKG/scripts/best_use_magicstudio.sh"
 bash -n "$PKG/scripts/bootstrap_best_use_magicstudio.sh"
 bash -n "$PKG/scripts/pull_track01_track03_datasets.sh"
 bash -n "$ROOT/scripts/build_hackhydra_public_export.sh"
+python3 "$ROOT/scripts/check_term_knowledge_coverage.py"
+python3 "$ROOT/scripts/check_static_fallback.py"
+python3 "$ROOT/scripts/hash_release_artifacts.py" --out "$RUN_DIR/release_artifact_hashes.json"
 
 echo "STATIC_CHECKS=PASS"
 
@@ -139,16 +145,29 @@ python3 "$ROOT/scripts/check_hydradg_web_links.py" "${LINK_ARGS[@]}"
 
 curl -fsS "$WEB_URL/api/site-fcg" > "$RUN_DIR/site_fcg.json"
 curl -fsS "$WEB_URL/api/custody" > "$RUN_DIR/fixture_custody.json"
-python3 - "$RUN_DIR/site_fcg.json" "$RUN_DIR/fixture_custody.json" <<'PY'
-import json,re,sys
-site=json.load(open(sys.argv[1])); custody=json.load(open(sys.argv[2]))
+curl -fsS "$WEB_URL/api/iceberg" > "$RUN_DIR/context_iceberg.json"
+python3 - "$RUN_DIR/site_fcg.json" "$RUN_DIR/fixture_custody.json" "$RUN_DIR/context_iceberg.json" <<'PY'
+import json,math,re,sys
+site=json.load(open(sys.argv[1])); custody=json.load(open(sys.argv[2])); iceberg=json.load(open(sys.argv[3]))
 assert site["schema"]=="hydradg.site_fcg.v1"
 assert len(site["nodes"])>=9 and len(site["edges"])>=10
 assert all(re.fullmatch(r"fco:[0-9a-f]{64}",n["id"]) for n in site["nodes"])
 assert site["merkle_state"]=="NOT_MERKLE_COMMITTED"
 assert custody["claim_ceiling"]=="DETERMINISTIC_FIXTURE_MERKLE_CHECKPOINT_ONLY"
 assert custody["live_merkle_state"]=="NOT_ESTABLISHED_BY_THIS_ROUTE"
+assert iceberg["source_state"] in {"DETERMINISTIC_SYNTHETIC_TEST_FIXTURE","LIVE_CUSTODY_ARTIFACT"}, iceberg
+assert iceberg["timeline"], iceberg
+assert abs(float(iceberg["timeline"][0]["cloud_drift_0_100"])) < 1e-9, iceberg["timeline"][0]
+for state in iceberg["timeline"]:
+    cloud=float(state["cloud_drift_0_100"])
+    js=float(state["js_divergence"])
+    assert math.isfinite(cloud) and 0.0 <= cloud <= 100.0, state
+    assert math.isfinite(js) and 0.0 <= js <= 1.0, state
+    assert abs(cloud - 100.0*js) < 1e-8, state
+assert iceberg["scene"]["nodes"], iceberg
+assert all("context_drift" in node for node in iceberg["scene"]["nodes"]), iceberg
 print("WEBSITE_FCG=PASS",site["artifact"]["id"])
+print("CONTEXT_ICEBERG=PASS",iceberg["source_state"],len(iceberg["scene"]["nodes"]))
 PY
 
 progress 90 SECURITY_GATE
@@ -186,6 +205,7 @@ obj={
    "web_build":"PASS",
    "internal_link_audit":"PASS",
    "website_fcg":"PASS",
+   "website_context_iceberg":"PASS",
    "secret_scan":"PASS"
  },
  "claim_ceiling":"LOCAL_RELEASE_EXECUTION_GATES_ONLY",
