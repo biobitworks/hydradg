@@ -1,59 +1,68 @@
 # COMPUTE template integration
 
-Design reference:
+## Exact upstream template object
 
-- v0 template: `COMPUTE - The Platform to Build & Ship AI Agents`
-- author: `kerroudj`
+The user supplied the actual template source archive during Hack Hydra:
+
+- filename: `compute-the-platform-to-build-and-ship-ai-agents.zip`
+- template: `COMPUTE - The Platform to Build & Ship AI Agents`
+- original template author/page attribution: `kerroudj` / v0
 - public template page: `https://v0.app/templates/compute-the-platform-to-build-ship-ai-agents-Auw4otwlr20`
 - public preview: `https://v0-compute-11.vercel.app/`
-- observed template update date: 2026-03-31
+- archive SHA-256 observed from the supplied bytes: `b363081debc07af517cea73ed53b682b840a9e4c52e6658e7d35f18ca9922e4c`
+- archive file count observed after extraction: 111
 
-## Current integration state
+Current custody state:
 
-`DESIGN_REFERENCE_CAPTURED / EXACT_V0_SOURCE_NOT_IMPORTED`
+`EXACT_USER_SUPPLIED_TEMPLATE_BYTES_AVAILABLE / HASHED / TRANSFORMATION_IN_PROGRESS`
 
-The connected Vercel project named `compute-the-platform-to-build` currently has no deployment. The Vercel project record therefore does not provide a deployed source tree that can be pulled into `apps/hydradg-web` through the current Vercel integration.
+Hashing establishes the byte identity of the supplied archive. It does not establish authorship, license interpretation, security, or correctness of the template.
 
-Do not describe the current HydraDG web app as an exact copy/fork of the COMPUTE template.
+## What was reused
 
-## Design mapping
+HydraDG ports the template's presentation grammar rather than importing its unrelated product claims or service logic:
 
-The public COMPUTE preview uses a strong sequence that maps well to HydraDG:
+- floating translucent navigation shell;
+- near-black monochrome palette;
+- large editorial display typography;
+- wide 1400px content frame;
+- numbered sections;
+- sparse grid-based metrics and capability cards;
+- process-oriented section sequencing;
+- restrained rounded CTA treatment.
 
-1. large minimal hero
-2. headline metrics
-3. numbered capabilities
-4. define/deploy/monitor process
-5. infrastructure/state visualization
-6. live metrics
-7. integrations
-8. security / auditability
-9. developer surface
-10. final action
+The HydraDG implementation intentionally does **not** copy the template's agent-commerce claims, fabricated product metrics, background marketing video, pricing, testimonials, or third-party application logic.
 
-HydraDG adaptation:
+The current HydraDG package also avoids importing the template's full Tailwind/shadcn/Radix dependency tree merely for styling. The visual transformation is implemented in the existing app CSS and route components so the pre-existing Hack Hydra graph behavior stays inspectable.
 
-1. **Hero** — HydraDG: temporal graph memory with FCO/FCG custody
-2. **Metrics** — current dataset, graph state, fixture Merkle checkpoint, claim boundary
-3. **Capabilities** — Track 01 ontology / Track 03 memory / Best Use custody overlay
-4. **Process** — source → graph → retrieve → perturb → classify → recover
-5. **Infrastructure** — local pinned HydraDB + Ollarma + optional hosted HydraDB conformance
-6. **Live metrics** — A/B/C/D retrieval, current-state traversal, FCG delta counts
-7. **Integrations** — HydraDB, Hugging Face datasets, GitHub, Ollarma, Vercel
-8. **Security** — local tokens stay local; hashes/signatures/claim ceilings are separate evidence layers
-9. **Developer** — Judge Lab APIs, data pull scripts, reproducibility receipts
-10. **Action** — run deterministic control, then live real-data golden path
+## HydraDG transformation
 
-## Exact-source import route
+Template structure → HydraDG function:
 
-If the v0 workspace exposes **Add to Codebase**, use the generated v0/shadcn command from that authenticated workspace in `apps/hydradg-web`. Do not invent a project token or component ID.
+1. Hero → Hack Hydra thesis and current evidence state.
+2. Metrics → pinned HydraDB / executed benchmark / FCG surface state.
+3. Capabilities → three distinct track routes.
+4. Process → source → evidence → transformation → claim → artifact.
+5. Infrastructure → local pinned HydraDB and bounded adapters.
+6. Live metrics → actual executed denominators and receipts only.
+7. Integrations → source/dataset/dependency boundaries.
+8. Security → claim ceilings, secret handling, eligibility custody.
+9. Developer surface → Judge Lab, 4D FCG, APIs and reproducibility routes.
+10. Action → run judge path / inspect evidence.
 
-Typical v0 route:
+## Website-as-FCG implementation
 
-```bash
-cd /Users/byron/projects/active/hydradg/apps/hydradg-web
-npx v0@latest init
-# Then use the exact Add-to-Codebase command produced by the authenticated v0 workspace.
-```
+The website itself now has an application-level FCO/FCG representation:
 
-Any exact template import should be a separate commit so the transformation from upstream template → HydraDG adaptation remains auditable.
+- `lib/siteFcg.ts` creates a content-addressed `SiteSection` FCO for every major route;
+- route/support relationships are explicit FCG edges;
+- `/api/site-fcg` exposes the application graph;
+- the site artifact explicitly reports `NOT_SIGNED` and `NOT_MERKLE_COMMITTED`.
+
+This is a navigation/custody representation. It is not a live HydraDB graph commitment and does not verify the scientific claims shown on the pages.
+
+## Hack Hydra eligibility boundary
+
+The template predates August 12, 2026, but the official Hack Hydra rules permit pre-existing templates/frameworks/dependencies when attributed. HydraDG-specific code, data adapters, graph schemas, evidence copy and tests are maintained as participant Hack Hydra work under the Aug 12–20 window.
+
+Final public README must retain this attribution and the exact archive SHA-256 above.
