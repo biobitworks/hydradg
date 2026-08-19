@@ -102,6 +102,12 @@ def app(a):
      return self.sendj({'schema':'hydradg.gibbs_math.v1','formula':'G* = U* - tau * S_useful','tau':0.5,'U_star':0.3621,'S_useful':0.9066,'G_star':-0.0912,'claim_ceiling':'GIBBS_INFORMATION_SYSTEM_ABSTRACTION_ONLY'})
     if u.path=='/api/tracks/status':
      return self.sendj({'schema':'hydradg.tracks_status.v1','Track01':'CANARY_PENDING','Track02':'CANARY_PENDING','Track03':'PASS','golden_path_receipt_sha256':'542ec7214782876e8c0a9ff060edbb731ae0a9e013d03958b800025bf1f2808d'})
+    if u.path=='/api/iceberg/headline':
+     return self.sendj({'schema':'hydradg.iceberg_headline.v1','headline':{'delta_G_star':'-0.05','cloud_drift':'0 / 100','accuracy_delta':'+2.6%','recall_delta':'+7.7%'},'claim_ceiling':'CONTEXT_DRIFT_DIAGNOSTIC_ONLY'})
+    if u.path=='/api/iceberg/full':
+     return self.sendj({'schema':'hydradg.iceberg_full.v1','G_star_ref':-0.2669,'G_star_treat':-0.3216,'delta_G_star':-0.0547,'cloud_drift_0_100':0.0,'js_divergence':0.0,'total_variation_distance':0.0,'delta_hit_at_k':0.0255,'delta_session_recall_at_k':0.0767,'delta_evidence_path_coverage':-0.1228})
+    if u.path=='/api/models/comparison':
+     return self.sendj({'schema':'hydradg.models_comparison.v1','model1':'qwen2.5-coder:7b','model2':'qwen2.5:7b','cohen_kappa':1.0,'directional_agreement':True,'m1_consensus':'DEPTH_RECOVERY','m2_consensus':'DEPTH_RECOVERY','claim_ceiling':'PROSPECTIVE_MODEL_PREDICTION_EVALUATION_ONLY'})
     if u.path=='/cases':
      lim=max(1,min(100,int(qs.get('limit',['20'])[0])));return self.sendj({'cases':[{'question_id':str(x['question_id']),'question_type':x.get('question_type'),'question':x.get('question')} for x in state.data[:lim]]})
     if u.path=='/graph/stats':return self.sendj(graph_stats(state.hydra))

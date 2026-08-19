@@ -1,0 +1,28 @@
+{
+  "claim_ceiling": "DUAL_MODEL_COMPARISON_DESIGN_SPEC_ONLY",
+  "event": "ICEBERG_OLLARMA_DUAL_MODEL_COMPARISON_PROTOCOL",
+  "event_time_local": "2026-08-19T12:21:00-07:00",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "HUMAN",
+      "bytes": 205,
+      "evidence_class": "DIRECTLY_SUPPLIED_TEXT",
+      "file": "CURRENT_HUMAN_TURN.txt",
+      "file_sha256": "7ee8c7cb7513aeaba8363938cb2551f7d9cc3bbe8412bd23cdf530bc2c256849"
+    },
+    {
+      "actor": "AI",
+      "bytes": 7680,
+      "evidence_class": "AI_DERIVED_SPECIFICATION",
+      "file": "ICEBERG_OLLARMA_DUAL_MODEL_PROTOCOL.md",
+      "file_sha256": "f713f47c4f6daf7a7611a1396ce2c943841020ff18b7943a8409dacf821f1f86"
+    }
+  ],
+  "previous_custody_root_sha256": "458098e44a04fac923da6cccb837fdf64618ea360a1756098b2238871e723943",
+  "project_fcg_append_state": "PENDING_LOCAL_PROJECT",
+  "schema": "hydradg.turn_custody.v0.3.0",
+  "signature_algorithm_expected": "Ed25519",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "turn_root_sha256": "eaa0d35d949265ce6cdd28c6f9d5eb534a821f7c151486336a9a1730e7304890"
+}

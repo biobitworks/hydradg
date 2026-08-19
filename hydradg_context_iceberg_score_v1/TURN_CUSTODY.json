@@ -1,0 +1,28 @@
+{
+  "claim_ceiling": "CONTEXT_DRIFT_SCORE_DESIGN_SPEC_ONLY",
+  "event": "CONTEXT_ICEBERG_DRIFT_SCORE_SPEC",
+  "event_time_local": "2026-08-19T12:15:00-07:00",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "objects": [
+    {
+      "actor": "HUMAN",
+      "bytes": 223,
+      "evidence_class": "DIRECTLY_SUPPLIED_TEXT",
+      "file": "CURRENT_HUMAN_TURN.txt",
+      "file_sha256": "b949eaacbc99681ddb57b044589f70954125671056e3f6efd23a4b83c80317eb"
+    },
+    {
+      "actor": "AI",
+      "bytes": 5984,
+      "evidence_class": "AI_DERIVED_SPECIFICATION",
+      "file": "CONTEXT_ICEBERG_SCORE_SPEC.md",
+      "file_sha256": "dd581b77d7e9ae20d10d169ddfb83ec371fb2ecb1c0b312266614d7d6845d49c"
+    }
+  ],
+  "previous_custody_root_sha256": "64228c0cbcbd940ca0393c1c63ff44e9804b6020ea9ec9a97dd19a759b230e0e",
+  "project_fcg_append_state": "PENDING_LOCAL_PROJECT",
+  "schema": "hydradg.turn_custody.v0.3.0",
+  "signature_algorithm_expected": "Ed25519",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "turn_root_sha256": "458098e44a04fac923da6cccb837fdf64618ea360a1756098b2238871e723943"
+}
