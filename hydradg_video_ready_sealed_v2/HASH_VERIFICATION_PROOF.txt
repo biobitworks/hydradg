@@ -1,0 +1,43 @@
+hash_exit_code=0
+toy_seal_exit_code=0
+manifest_sha256=0a1417900f1545922b56ed5d5769f3b781fc2f0b500e06f993ee7329761121a1
+turn_root_v2_sha256=3b80aeac079a400c5e1f63b4912608fd782f856e0285d0b4bff925fd48b5a744
+toy_seal_root_sha256=aa5b0894b49da6d00b716982626f47c1e33ee4e593beb7badb7f84612e80eab3
+
+TOY_SEAL_SIGNATURE=PASS
+AUTHENTICITY=NOT_ESTABLISHED_BY_TOY_KEY
+PRIVATE_KEY_DISCLOSURE=INTENTIONAL
+Spreadsheet runtime warmup failed during python startup
+Traceback (most recent call last):
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/patches/warm_spreadsheet_runtime_on_startup.py", line 26, in warm_spreadsheet_runtime_on_startup
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 785, in warm_spreadsheet_runtime
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 720, in _warm_feature_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/spreadsheet_warmup.py", line 704, in _warm_collaboration_flows
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/generated/interface/models.py", line 32317, in hydrate_crdt_from_proto
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/remote.py", line 749, in __call__
+  File "/tmp/tmp.L2TH2Y5coc/artifact_tool_v2-2.8.22/artifact_tool/rpc/client.py", line 150, in call
+artifact_tool.rpc.client.RemoteError: hydrateCrdtFromProto requires an empty collaborative document.
+
+README.md: OK
+configs/video_ready.json: OK
+custody/CURRENT_HUMAN_REQUEST.txt: OK
+custody/CURRENT_HUMAN_REQUEST_V2.txt: OK
+custody/SIGNING_HANDOFF.json: OK
+custody/SIGNING_HANDOFF_V2.json: OK
+custody/TURN_CUSTODY.json: OK
+custody/TURN_CUSTODY_V2.json: OK
+docs/VIDEO_CLAIM_BOUNDARIES.md: OK
+docs/VIDEO_SCRIPT_90S.md: OK
+fcg/TOY_SEAL_FCG_EDGES.jsonl: OK
+fcg/TOY_SEAL_FCO_BUNDLE.jsonl: OK
+prompts/VIDEO_READY_MASTER_PROMPT.md: OK
+scripts/capture_chrome_screenshots.sh: OK
+scripts/start_video_stack.sh: OK
+scripts/verify_toy_seal.py: OK
+scripts/video_ready_gate.sh: OK
+toy_seal/TOY_DEMO_ED25519_PRIVATE_KEY.pem: OK
+toy_seal/TOY_DEMO_ED25519_PUBLIC_KEY.pem: OK
+toy_seal/TOY_DRM_FREE_SEAL_POLICY.md: OK
+toy_seal/TOY_PACKAGE_SEAL.json: OK
+toy_seal/TOY_SEAL_VERIFICATION.json: OK
+verify_hashes.sh: OK
