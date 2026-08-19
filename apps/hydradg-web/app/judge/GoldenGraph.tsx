@@ -2,6 +2,8 @@
 
 import { PointerEvent, WheelEvent, useEffect, useMemo, useRef, useState } from "react";
 
+import { knowledgeTerm } from "@/lib/knowledgeLinks";
+
 type SceneNode = {
   id: string;
   label: string;
@@ -24,6 +26,10 @@ type Custody = {
 
 type Props = { fixture: Fixture; custody: Custody };
 type Projected = { id: string; px: number; py: number; depth: number };
+
+function fcoHash(id: string) {
+  return id.startsWith("fco:") && /^[0-9a-f]{64}$/i.test(id.slice(4)) ? id.slice(4) : "";
+}
 
 export default function GoldenGraph({ fixture, custody }: Props) {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
@@ -53,6 +59,14 @@ export default function GoldenGraph({ fixture, custody }: Props) {
   }, [fixture.scene.nodes, custody.checkpoint_fco]);
 
   const selected = useMemo(() => nodes.find((node) => node.id === selectedId) || null, [nodes, selectedId]);
+  const selectedHash = selected ? fcoHash(selected.id) : "";
+  const selectedTerm = selected ? knowledgeTerm(selected.label) : undefined;
+  const selectedLinks = useMemo(
+    () => fixture.scene.links.filter((link) => link.source === selectedId || link.target === selectedId),
+    [fixture.scene.links, selectedId],
+  );
+  const selectedSourceRef = typeof selected?.payload.source_ref === "string" ? selected.payload.source_ref : "";
+  const selectedSourceNode = selectedSourceRef ? nodes.find((node) => node.id === selectedSourceRef) || null : null;
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -218,25 +232,74 @@ export default function GoldenGraph({ fixture, custody }: Props) {
       <div className="stack">
         <div className="metric">
           <span className="metricLabel">Fixture Merkle root</span>
-          <strong className="mono compact">{custody.merkle.root_sha256}</strong>
+          <a className="mono compact" href={`/evidence?sha=${custody.merkle.root_sha256}`}>
+            {custody.merkle.root_sha256}
+          </a>
           <span className="small muted">{custody.merkle.leaf_count} FCO leaves · {custody.merkle.ordering} · {custody.merkle.odd_leaf_rule}</span>
         </div>
         <div className="panel">
           <p className="eyebrow">Selected custody object</p>
           <h3>{selected?.label || "Select a node"}</h3>
-          <p className="mono small compact">{selected?.id || "—"}</p>
-          <pre className="result">{selected ? JSON.stringify(selected.payload, null, 2) : "No node selected."}</pre>
+          {selected ? (
+            <>
+              <div className="actions">
+                {selectedTerm ? <a className="secondary" href={`/knowledge#${selectedTerm.slug}`}>How to: {selectedTerm.term}</a> : null}
+                <a className="secondary" href={`/graph?node=${encodeURIComponent(selected.id)}`}>Open in 4D FCG</a>
+              </div>
+              <p className="small muted">FCO ID</p>
+              <a className="mono small compact" href={selectedHash ? `/evidence?sha=${selectedHash}` : "/evidence"}>{selected.id}</a>
+              {selectedHash ? (
+                <p className="small muted">
+                  SHA-256 → <a href={`/evidence?sha=${selectedHash}`} className="mono compact">{selectedHash}</a>
+                </p>
+              ) : null}
+              {selectedSourceNode ? (
+                <p className="small muted">
+                  source_ref → <button className="secondary" type="button" onClick={() => setSelectedId(selectedSourceNode.id)}>{selectedSourceNode.label}</button>
+                </p>
+              ) : selectedSourceRef.startsWith("http") ? (
+                <p className="small muted">source_ref → <a href={selectedSourceRef} target="_blank" rel="noreferrer">upstream source ↗</a></p>
+              ) : selectedSourceRef ? (
+                <p className="small muted mono compact">source_ref={selectedSourceRef}</p>
+              ) : null}
+              <pre className="result">{JSON.stringify(selected.payload, null, 2)}</pre>
+              {selectedLinks.length ? (
+                <div>
+                  <p className="eyebrow">Connected FCG edges</p>
+                  <ul>
+                    {selectedLinks.map((link, index) => {
+                      const outgoing = link.source === selected.id;
+                      const otherId = outgoing ? link.target : link.source;
+                      const other = nodes.find((node) => node.id === otherId);
+                      return (
+                        <li key={`${link.source}-${link.relation}-${link.target}-${index}`}>
+                          <span className="mono small">{outgoing ? "→" : "←"} {link.relation} </span>
+                          <button className="secondary" type="button" onClick={() => setSelectedId(otherId)}>
+                            {other?.label || otherId.slice(0, 20)}
+                          </button>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </div>
+              ) : null}
+            </>
+          ) : <p className="mono small compact">—</p>}
         </div>
         <div className="panel">
           <p className="eyebrow">Golden pathway</p>
           <ol>
-            {custody.golden_path_semantics.map((label, index) => (
-              <li key={`${label}-${index}`}>
-                <button className="secondary" type="button" onClick={() => setSelectedId(custody.golden_path[index])}>
-                  {index + 1}. {label}
-                </button>
-              </li>
-            ))}
+            {custody.golden_path_semantics.map((label, index) => {
+              const term = knowledgeTerm(label);
+              return (
+                <li key={`${label}-${index}`}>
+                  <button className="secondary" type="button" onClick={() => setSelectedId(custody.golden_path[index])}>
+                    {index + 1}. {label}
+                  </button>
+                  {term ? <a className="small" href={`/knowledge#${term.slug}`} style={{ marginLeft: 8 }}>how-to ↗</a> : null}
+                </li>
+              );
+            })}
           </ol>
         </div>
       </div>
