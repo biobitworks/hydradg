@@ -1,7 +1,7 @@
 import { makeFcoNode } from "@/lib/fco";
 
 const SECTION_SPECS = [
-  { route: "/", label: "HydraDG", role: "project-entry", claim: "APPLICATION_OVERVIEW" },
+  { route: "/", label: "HydraDG", role: "project-entry-and-context-iceberg", claim: "APPLICATION_OVERVIEW_AND_READ_ONLY_DRIFT_VISUALIZATION" },
   { route: "/judge", label: "Judge Lab", role: "interactive-golden-path", claim: "DEMO_AND_LOCAL_EXECUTION_SURFACE" },
   { route: "/graph", label: "4D FCG", role: "custody-graph-visualization", claim: "EVIDENCE_LINKED_VISUALIZATION" },
   { route: "/knowledge", label: "Knowledge", role: "terminology-and-how-to", claim: "DOCUMENTATION_AND_SOURCE_NAVIGATION" },
@@ -27,6 +27,7 @@ export function buildSiteFcg() {
 
   const edgeSpecs = [
     ["/", "NAVIGATES_TO", "/judge"],
+    ["/", "VISUALIZES_WITH", "/graph"],
     ["/", "NAVIGATES_TO", "/track01"],
     ["/", "NAVIGATES_TO", "/track02"],
     ["/", "NAVIGATES_TO", "/track03"],
@@ -54,6 +55,14 @@ export function buildSiteFcg() {
     section_fco_ids: nodes.map((node) => node.id),
     edge_count: edges.length,
     representation: "APPLICATION_LEVEL_FCO_FCG",
+    presentation_projection: {
+      name: "CONTEXT_ICEBERG_4D_V1",
+      source_order: "CANONICAL_CUSTODY_TO_FCG_TO_HYDRADB_PROJECTION_TO_UI",
+      delta_g_star_semantics: "DIRECTION_ONLY_NOT_ACCURACY",
+      cloud_drift_semantics: "MAGNITUDE_100X_JENSEN_SHANNON_DIVERGENCE",
+      hero_api: "/api/iceberg",
+      live_state_contract: "HYDRADG_ICEBERG_STATE_PATH_READ_ONLY",
+    },
     claim_ceiling: "WEBSITE_NAVIGATION_AND_CUSTODY_REPRESENTATION_ONLY",
     signature_state: "NOT_SIGNED",
     merkle_state: "NOT_MERKLE_COMMITTED",
