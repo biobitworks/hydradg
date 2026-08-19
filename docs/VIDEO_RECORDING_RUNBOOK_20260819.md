@@ -30,18 +30,28 @@ cd /Users/byron/projects/active/hydradg
 git fetch origin
 git switch hack-hydra/context-iceberg-reconcile-20260819
 git pull --ff-only origin hack-hydra/context-iceberg-reconcile-20260819
+command -v gitleaks >/dev/null 2>&1 || brew install gitleaks
 bash scripts/video_ready_gate.sh
 ```
 
-Record only after:
+Record the live local application after:
 
 ```text
 VIDEO_READY_LIVE=YES
 ```
 
-If the live gate is blocked but the static-fallback checker passes, the static artifact remains an acceptable presentation contingency. It must be described as an offline presentation fallback, not as a running live HydraDB experiment.
+If this gate fails only because the live Next.js build cannot be made green tonight, do not invent a pass. Run the static checks directly and use the fallback only when they pass:
+
+```bash
+python3 scripts/check_static_fallback.py
+bash scripts/start_video_demo.sh
+```
+
+If the launcher reports `VIDEO_DEMO_MODE=STATIC_FALLBACK`, describe it as an offline presentation fallback, not as a running live HydraDB experiment.
 
 ## 2. Start the recording surface
+
+After a successful live gate:
 
 ```bash
 cd /Users/byron/projects/active/hydradg
