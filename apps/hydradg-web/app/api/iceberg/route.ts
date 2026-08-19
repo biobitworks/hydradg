@@ -32,17 +32,17 @@ type LiveIcebergPayload = {
   hydradb_projection_root?: string | null;
   signature_state?: string;
   merkle_state?: string;
-  timeline: Array<{
+  timeline: ReadonlyArray<{
     t: number;
     label: string;
-    distribution: number[];
+    distribution: readonly number[];
     g_star: number;
     delta_g_star: number;
     [key: string]: unknown;
   }>;
   scene: {
-    nodes: SceneNode[];
-    links: Array<{ source: string; target: string; relation: string }>;
+    nodes: ReadonlyArray<SceneNode>;
+    links: ReadonlyArray<{ source: string; target: string; relation: string }>;
   };
 };
 
