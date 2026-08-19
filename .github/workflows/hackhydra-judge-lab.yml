@@ -4,6 +4,9 @@ on:
   push:
     branches:
       - hack-hydra/judge-lab-golden-path-20260819
+  pull_request:
+    branches:
+      - hack-hydra/webapp-mvp-20260818
   workflow_dispatch:
 
 jobs:
