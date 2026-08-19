@@ -4,7 +4,10 @@ from __future__ import annotations
 import argparse,hashlib,json,threading,time,urllib.parse
 from http.server import BaseHTTPRequestHandler,ThreadingHTTPServer
 from pathlib import Path
-from best_use_typed_graph import HydraHTTP,OllarmaExtractor,evaluate_retrieval,graph_stats,hydra_health,ingest_typed_case,prepare_typed_case,rank_method
+from best_use_typed_graph import (
+    HydraHTTP,OllarmaExtractor,clean,evaluate_retrieval,graph_stats,hydra_health,
+    ingest_typed_case,norm,prepare_typed_case,rank_method,stable_id,
+)
 
 def chash(obj):return hashlib.sha256(json.dumps(obj,sort_keys=True,separators=(',',':'),ensure_ascii=False).encode()).hexdigest()
 class Receipts:
@@ -30,7 +33,53 @@ class State:
    if key in self.loaded:return self.loaded[key]
    case=self.by[qid];p=prepare_typed_case(case,mode,self.cache,self.ollarma if mode=='ollarma' else None);g=ingest_typed_case(self.hydra,p);self.loaded[key]=(p,g);return p,g
  def health(self):return {'schema':'hydradg.best_use_server_health.v2','hydradb':hydra_health(),'ollarma':self.ollarma.health(),'dataset_rows':len(self.data),'dataset_sha256':self.data_sha,'loaded_graphs':len(self.loaded),'default_extractor':self.default,'claim_ceiling':'LOCAL_TEST_SURFACE_HEALTH_ONLY'}
-HTML='''<!doctype html><meta charset="utf-8"><title>HydraDG Best Use v2</title><style>body{font:14px system-ui;background:#0e1116;color:#e8edf2;max-width:1100px;margin:30px auto}input,select,button,textarea{background:#171d25;color:#e8edf2;border:1px solid #3b4655;padding:8px;margin:4px}textarea{width:98%;height:80px}pre{white-space:pre-wrap;background:#121720;padding:14px;border:1px solid #2c3541}button{cursor:pointer}</style><h1>HydraDG — Best Use v2</h1><p>Typed memory graph: Session → Entity/Fact → SUPERSEDED_BY / CONTRADICTS.</p><div><button onclick="get('/health')">Health</button><button onclick="get('/graph/stats')">Graph stats</button><button onclick="get('/cases?limit=20')">Cases</button></div><div><input id=qid placeholder="question_id"><select id=ext><option>heuristic</option><option>ollarma</option><option>none</option></select><button onclick="post('/case/load',{question_id:qid.value,extractor:ext.value})">Load case</button></div><div><textarea id=q placeholder="optional query override"></textarea><select id=m><option>A</option><option>B</option><option>C</option><option>D</option></select><input id=k value=5 size=3><button onclick="post('/retrieve',{question_id:qid.value,question:q.value,method:m.value,k:+k.value,extractor:ext.value})">Retrieve</button></div><pre id=o>Ready.</pre><script>async function get(u){show(await fetch(u).then(r=>r.json()))}async function post(u,b){show(await fetch(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b)}).then(r=>r.json()))}function show(x){o.textContent=JSON.stringify(x,null,2)}</script>'''
+ def live_stats(self):
+  out={}
+  for label in ('Perturbation','ClassificationEvent','FCGDelta'):
+   try:
+    vals=HydraHTTP.projected(self.hydra.query(f'MATCH (n:{label}) RETURN count(n) AS count'),'count');out[label]=int(vals[0]) if vals else 0
+   except Exception as e:out[label]={'error':str(e)[:200]}
+  return out
+ def recent_classifications(self,limit=20):
+  limit=max(1,min(100,int(limit)))
+  return self.hydra.query(
+   f'MATCH (c:ClassificationEvent) RETURN c.id AS id, c.qid AS qid, c.identity_class AS identity_class, c.safety_class AS safety_class, c.decision AS decision, c.observed_at AS observed_at, c.delta_sha256 AS delta_sha256 LIMIT {limit}'
+  )
+ def perturb(self,req):
+  qid=str(req.get('question_id','')).strip();mode=str(req.get('extractor') or self.default)
+  if qid not in self.by:raise ValueError('unknown question_id')
+  p,_=self.prep(qid,mode)
+  target=req.get('target_fact_vertex')
+  subject=clean(req.get('subject'),80);predicate=clean(req.get('predicate'),80);new_object=clean(req.get('object'),160)
+  candidates=[]
+  for row in p['fact_rows']:
+   if target is not None and str(row.get('vertex'))==str(target):candidates.append(row);continue
+   if subject and predicate and norm(row.get('subject'))==norm(subject) and norm(row.get('predicate'))==norm(predicate):candidates.append(row)
+  if not candidates:raise ValueError('no matching source fact; load the case and provide target_fact_vertex or matching subject/predicate')
+  old=max(candidates,key=lambda r:int(r.get('position',0)))
+  if not new_object:raise ValueError('object is required')
+  subject=clean(old.get('subject'),80);predicate=clean(old.get('predicate'),80)
+  identity=str(req.get('identity_class') or 'UNKNOWN').upper();safety=str(req.get('safety_class') or 'UNKNOWN').upper()
+  if identity not in {'SELF','NONSELF','UNKNOWN'}:raise ValueError('identity_class must be SELF/NONSELF/UNKNOWN')
+  if safety not in {'SAFE','NONSAFE','UNKNOWN'}:raise ValueError('safety_class must be SAFE/NONSAFE/UNKNOWN')
+  decision='ADMIT' if safety=='SAFE' else ('QUARANTINE' if safety=='NONSAFE' else 'CHALLENGE')
+  observed=time.strftime('%Y-%m-%dT%H:%M:%SZ',time.gmtime())
+  event_payload={'qid':qid,'source_fact_vertex':int(old['vertex']),'subject':subject,'predicate':predicate,'old_object':clean(old.get('object'),160),'new_object':new_object,'identity_class':identity,'safety_class':safety,'decision':decision,'observed_at':observed,'operator_scope':'HACK_HYDRA_DEMO_DECLARATION'}
+  event_sha=chash(event_payload)
+  new_vertex=stable_id('live_fact_update',qid,event_sha)
+  perturb_vertex=stable_id('perturbation',qid,event_sha)
+  class_vertex=stable_id('classification_event',qid,event_sha)
+  delta_payload={'before_fact_vertex':int(old['vertex']),'after_fact_vertex':new_vertex,'perturbation_vertex':perturb_vertex,'classification_vertex':class_vertex,'event_sha256':event_sha}
+  delta_sha=chash(delta_payload);delta_vertex=stable_id('fcg_delta',qid,delta_sha)
+  self.hydra.query('MERGE (n {id: $id}) SET n:Fact, n.qid = $qid, n.subject = $subject, n.predicate = $predicate, n.object = $object, n.polarity = $polarity, n.valid_time = $valid_time, n.confidence_bp = $confidence_bp, n.position = $position, n.source_session_vertex = $source_session_vertex, n.source_sha256 = $source_sha256, n.evidence_class = $evidence_class, n.observed_at = $observed_at',{'id':new_vertex,'qid':qid,'subject':subject,'predicate':predicate,'object':new_object,'polarity':'affirmed','valid_time':observed,'confidence_bp':10000,'position':int(old.get('position',0))+1,'source_session_vertex':int(old.get('source_session_vertex',0)),'source_sha256':event_sha,'evidence_class':'LIVE_OPERATOR_PERTURBATION','observed_at':observed})
+  self.hydra.query('MERGE (n {id: $id}) SET n:Perturbation, n.qid = $qid, n.event_sha256 = $event_sha256, n.observed_at = $observed_at, n.kind = $kind, n.claim_ceiling = $claim_ceiling',{'id':perturb_vertex,'qid':qid,'event_sha256':event_sha,'observed_at':observed,'kind':'FACT_VALUE_UPDATE','claim_ceiling':'LIVE_DEMO_PERTURBATION_ONLY'})
+  self.hydra.query('MERGE (n {id: $id}) SET n:ClassificationEvent, n.qid = $qid, n.identity_class = $identity_class, n.safety_class = $safety_class, n.decision = $decision, n.observed_at = $observed_at, n.delta_sha256 = $delta_sha256, n.claim_ceiling = $claim_ceiling',{'id':class_vertex,'qid':qid,'identity_class':identity,'safety_class':safety,'decision':decision,'observed_at':observed,'delta_sha256':delta_sha,'claim_ceiling':'OPERATOR_DECLARED_ANTICUBE_CLASSIFICATION_ONLY'})
+  self.hydra.query('MERGE (n {id: $id}) SET n:FCGDelta, n.qid = $qid, n.delta_sha256 = $delta_sha256, n.event_sha256 = $event_sha256, n.observed_at = $observed_at, n.claim_ceiling = $claim_ceiling',{'id':delta_vertex,'qid':qid,'delta_sha256':delta_sha,'event_sha256':event_sha,'observed_at':observed,'claim_ceiling':'HASHED_GRAPH_DELTA_IDENTITY_ONLY'})
+  edges=[(int(old['vertex']),'SUPERSEDED_BY',new_vertex),(perturb_vertex,'TARGETS',int(old['vertex'])),(perturb_vertex,'PRODUCES',new_vertex),(class_vertex,'CLASSIFIES',new_vertex),(delta_vertex,'RECORDS',perturb_vertex)]
+  if norm(old.get('object'))!=norm(new_object):edges.extend([(int(old['vertex']),'CONTRADICTS',new_vertex),(new_vertex,'CONTRADICTS',int(old['vertex']))])
+  for src,rel,dst in edges:self.hydra.query(f'MATCH (a {{id: $src}}), (b {{id: $dst}}) MERGE (a)-[:{rel}]->(b)',{'src':src,'dst':dst})
+  return {'schema':'hydradg.live_fcg_delta.v1','question_id':qid,'extractor':mode,'before':old,'after':{'vertex':new_vertex,'subject':subject,'predicate':predicate,'object':new_object,'observed_at':observed},'perturbation':{'vertex':perturb_vertex,'event_sha256':event_sha},'fcg_delta':{'vertex':delta_vertex,'delta_sha256':delta_sha},'anticube':{'vertex':class_vertex,'identity_class':identity,'safety_class':safety,'decision':decision,'scope':'OPERATOR_DECLARED_HACKATHON_DEMO_POLICY'},'edges':[{'src':src,'rel':rel,'dst':dst} for src,rel,dst in edges],'claim_ceiling':'LIVE_HYDRADB_FCG_PERTURBATION_DEMO_ONLY','signature_state':'NOT_SIGNED','merkle_state':'NOT_MERKLE_COMMITTED'}
+HTML='''<!doctype html><meta charset="utf-8"><title>HydraDG Best Use v2</title><style>body{font:14px system-ui;background:#0e1116;color:#e8edf2;max-width:1100px;margin:30px auto}input,select,button,textarea{background:#171d25;color:#e8edf2;border:1px solid #3b4655;padding:8px;margin:4px}textarea{width:98%;height:80px}pre{white-space:pre-wrap;background:#121720;padding:14px;border:1px solid #2c3541}button{cursor:pointer}.panel{border:1px solid #2c3541;padding:12px;margin:12px 0}</style><h1>HydraDG — Best Use v2</h1><p>Typed memory graph: Session → Entity/Fact → SUPERSEDED_BY / CONTRADICTS → FCGDelta → Anticube ClassificationEvent.</p><div><button onclick="get('/health')">Health</button><button onclick="get('/graph/stats')">Graph stats</button><button onclick="get('/live/stats')">Live FCG stats</button><button onclick="get('/cases?limit=20')">Cases</button></div><div class=panel><h3>1. Load real benchmark case</h3><input id=qid placeholder="question_id"><select id=ext><option>heuristic</option><option>ollarma</option><option>none</option></select><button onclick="post('/case/load',{question_id:qid.value,extractor:ext.value})">Load case</button></div><div class=panel><h3>2. Retrieve</h3><textarea id=q placeholder="optional query override"></textarea><select id=m><option>A</option><option>B</option><option>C</option><option>D</option></select><input id=k value=5 size=3><button onclick="post('/retrieve',{question_id:qid.value,question:q.value,method:m.value,k:+k.value,extractor:ext.value})">Retrieve</button></div><div class=panel><h3>3. Perturb one real Fact → FCG delta → Anticube</h3><input id=fv placeholder="target fact vertex"><input id=obj placeholder="new fact object"><select id=ident><option>SELF</option><option>NONSELF</option><option selected>UNKNOWN</option></select><select id=safe><option>SAFE</option><option>NONSAFE</option><option selected>UNKNOWN</option></select><button onclick="post('/live/perturb',{question_id:qid.value,target_fact_vertex:fv.value,object:obj.value,identity_class:ident.value,safety_class:safe.value,extractor:ext.value})">Apply live perturbation</button><button onclick="get('/live/recent?limit=20')">Recent classifications</button><p>Anticube fields are operator-declared for this bounded demo. They are not universal safety judgments.</p></div><pre id=o>Ready.</pre><script>async function get(u){show(await fetch(u).then(r=>r.json()))}async function post(u,b){show(await fetch(u,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify(b)}).then(r=>r.json()))}function show(x){o.textContent=JSON.stringify(x,null,2)}</script>'''
 def app(a):
  state=State(a)
  class H(BaseHTTPRequestHandler):
@@ -48,6 +97,8 @@ def app(a):
     if u.path=='/cases':
      lim=max(1,min(100,int(qs.get('limit',['20'])[0])));return self.sendj({'cases':[{'question_id':str(x['question_id']),'question_type':x.get('question_type'),'question':x.get('question')} for x in state.data[:lim]]})
     if u.path=='/graph/stats':return self.sendj(graph_stats(state.hydra))
+    if u.path=='/live/stats':return self.sendj({'live':state.live_stats(),'claim_ceiling':'LIVE_DEMO_COUNTS_ONLY'})
+    if u.path=='/live/recent':return self.sendj(state.recent_classifications(qs.get('limit',['20'])[0]))
     return self.sendj({'error':'not found'},404)
    except Exception as e:return self.sendj({'error':str(e)},500)
   def do_POST(self):
@@ -64,6 +115,8 @@ def app(a):
      p,g=state.prep(qid,mode);question=str(req.get('question') or state.by[qid].get('question',''));chosen,reasons,lat,cov=rank_method(p,state.hydra,method,question,k);ret,hit,rec=evaluate_retrieval(chosen,p,k)
      items=[{'session_id':p['sids'][i],'position':i,'vertex':p['vids'][i],'reasons':reasons.get(i,[]),'preview':p['texts'][i][:500]} for i in chosen]
      res={'question_id':qid,'method':method,'k':k,'extractor':mode,'retrieved_session_ids':ret,'hit_at_k':hit,'session_recall_at_k':rec,'latency_ms':lat,'evidence_path_coverage':cov,'items':items,'graph':g,'claim_ceiling':'RETRIEVAL_INSPECTION_ONLY'};state.receipts.add('retrieve',req,res,'RETRIEVAL_INSPECTION_ONLY');return self.sendj(res)
+    if self.path=='/live/perturb':
+     res=state.perturb(req);receipt=state.receipts.add('live_fcg_perturbation',req,res,'LIVE_HYDRADB_FCG_PERTURBATION_DEMO_ONLY');res['server_receipt']=receipt;return self.sendj(res)
     if self.path=='/extract':
      mode=str(req.get('extractor') or state.default);text=str(req.get('text',''))
      if not text:return self.sendj({'error':'text required'},400)
