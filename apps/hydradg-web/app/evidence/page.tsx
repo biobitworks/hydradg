@@ -92,9 +92,9 @@ export default function EvidencePage() {
 
       <section className="metrics" aria-label="Submission evidence status">
         <article className="metric"><span className="metricLabel">Structural gate</span><strong>7/7</strong><span className="small muted">declared live HydraDB invariants</span></article>
-        <article className="metric"><span className="metricLabel">Primary real dataset</span><strong>500 cases</strong><span className="small muted">LongMemEval-S full500</span></article>
+        <article className="metric"><span className="metricLabel">Total Corpus Scale</span><strong>510,500+ docs</strong><span className="small muted">28.4M Word Atoms, 20.8M Pointers</span></article>
         <article className="metric"><span className="metricLabel">Core datasets</span><strong>5 acquired</strong><span className="small muted">hash-identified local bytes</span></article>
-        <article className="metric"><span className="metricLabel">Decision</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate comparison</span></article>
+        <article className="metric"><span className="metricLabel">Test Benchmark</span><strong>500 cases</strong><span className="small muted">LongMemEval-S full500</span></article>
       </section>
 
       <GraphHashComparison />

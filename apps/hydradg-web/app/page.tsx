@@ -31,10 +31,10 @@ export default function Home() {
       </header>
 
       <section className="metrics curatedMetrics" aria-label="Recorded execution state">
-        <article className="metric"><span className="metricLabel">Cases</span><strong>500</strong><span className="small muted">LongMemEval-S full500</span></article>
-        <article className="metric"><span className="metricLabel">Sessions</span><strong>23,867</strong><span className="small muted">typed temporal state</span></article>
-        <article className="metric"><span className="metricLabel">Result</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate advantage not established</span></article>
-        <article className="metric"><span className="metricLabel">Presentation</span><strong>Current</strong><span className="small muted">{CURRENT_PRESENTATION.label}</span></article>
+        <article className="metric"><span className="metricLabel">Word Leaf Atoms</span><strong>28,458,677</strong><span className="small muted">8.99M Unique Keys (68.4% Dedup)</span></article>
+        <article className="metric"><span className="metricLabel">Corpus Documents</span><strong>510,500+</strong><span className="small muted">EnterpriseRAG, HERB, LongMem</span></article>
+        <article className="metric"><span className="metricLabel">Spatiotemporal Pointers</span><strong>20,818,956</strong><span className="small muted">Space-time pointer FCOs</span></article>
+        <article className="metric"><span className="metricLabel">Test Benchmark</span><strong>500 Cases</strong><span className="small muted">LongMemEval full500 (23.8k sessions)</span></article>
       </section>
 
       <section className="computeSection curatedSection" id="demo">
