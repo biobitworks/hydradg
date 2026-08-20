@@ -164,7 +164,7 @@ export const HUGGINGFACE_MODELS: readonly HuggingFaceModelCard[] = [
     task: "Fractal Custody & Vithia Field Memory Optimization",
     license: "CC-BY-NC-ND-4.0",
     knowledge_fco_id: "fco:huggingface_fco_vithia_fmo_076_canonical_model",
-    description: "Official publication model weights and companion FCG execution weights for HydraDG.",
+    description: "Official comparison baseline model trained on the Vitalogy and FCO repository folders, evaluated against the decomposed Vitalogy FCG graph.",
   },
   {
     id: "hydradg-vithia-cfmo-v1",
@@ -173,7 +173,7 @@ export const HUGGINGFACE_MODELS: readonly HuggingFaceModelCard[] = [
     task: "Context Field Memory Optimization / FCG Traversal",
     license: "CC-BY-NC-ND-4.0",
     knowledge_fco_id: "fco:f9d8af4c6aca40241dddb6b2a459ce0eaceb4663f6ac50d23e336f140172b707",
-    description: "Pinned model identity record for Track 03 LongMemEval FCG graph traversal experiment.",
+    description: "Comparison model from Vitalogy and FCO repos, evaluated on decomposed Vitalogy FCG graph traversal.",
   },
   {
     id: "hydradg-anticube-classifier",
