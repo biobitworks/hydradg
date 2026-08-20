@@ -4,6 +4,7 @@ const GOLDEN_PATH = [
   ["HOME", "/"],
   ["CHANGE STATE", "/judge"],
   ["READ RESULT", "/track03"],
+  ["WHY HYDRADB", "/best-use"],
   ["TRACE FCO", "/graph"],
   ["MODELS USED", "/models"],
   ["VERIFY CUSTODY", "/custody"],
