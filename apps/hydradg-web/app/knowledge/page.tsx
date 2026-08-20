@@ -33,10 +33,10 @@ export default function KnowledgePage() {
       </header>
 
       <section className="metrics">
-        <div className="metric"><span className="metricLabel">Knowledge terms</span><strong>{KNOWLEDGE_TERMS.length}</strong></div>
-        <div className="metric"><span className="metricLabel">Preprints &amp; DOIs</span><strong>{PREPRINTS.length}</strong></div>
-        <div className="metric"><span className="metricLabel">HF Models</span><strong>{HUGGINGFACE_MODELS.length}</strong></div>
-        <div className="metric"><span className="metricLabel">Demos &amp; Projects</span><strong>{HACKATHON_AND_COMMUNITY_PROJECTS.length}</strong></div>
+        <div className="metric"><span className="metricLabel">Word / Token Atoms</span><strong>28,458,677</strong><span className="small muted">Level 0 field leaf hashes</span></div>
+        <div className="metric"><span className="metricLabel">Sentence / Record Atoms</span><strong>3,214,299</strong><span className="small muted">Level 1 Merkle roots</span></div>
+        <div className="metric"><span className="metricLabel">Preprints &amp; DOIs</span><strong>{PREPRINTS.length}</strong><span className="small muted">Versioned publications</span></div>
+        <div className="metric"><span className="metricLabel">Container FCOs</span><strong>503</strong><span className="small muted">Top-level FCG wrappers</span></div>
       </section>
 
       {/* Preprints & Hugging Face Models Section */}
