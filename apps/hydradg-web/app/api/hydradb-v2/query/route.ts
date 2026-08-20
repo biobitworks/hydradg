@@ -35,17 +35,21 @@ export async function POST(request: NextRequest) {
       alpha: body.alpha ?? "auto",
       recency_bias: body.recency_bias ?? 0.2,
       graph_context: body.graph_context !== false,
+      query_apps: body.query_apps !== false,
     };
     if (requestedCollection) payload.collection = requestedCollection;
+    if (typeof body.connector_id === "string" && body.connector_id.trim()) payload.connector_id = body.connector_id.trim();
+    if (typeof body.resource_id === "string" && body.resource_id.trim()) payload.resource_id = body.resource_id.trim();
 
     const response = await hostedHydraDBRequest("/query", "POST", payload);
     return NextResponse.json({
       configured: true,
       database: cfg.database,
       collection: requestedCollection || null,
+      query_apps: payload.query_apps,
       hydradb: response.data,
       secret_disclosure: "HYDRADB_CREDENTIAL_VALUES_NEVER_RETURNED",
-      claim_ceiling: "HYDRADB_V2_QUERY_AND_GRAPH_CONTEXT_READBACK_ONLY",
+      claim_ceiling: "HYDRADB_V2_QUERY_GRAPH_CONTEXT_AND_CONNECTOR_READBACK_ONLY",
     });
   } catch (error) {
     return NextResponse.json(
