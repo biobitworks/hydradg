@@ -22,7 +22,7 @@ claim ceiling
 supersession state
 ```
 
-A SHA-256 digest establishes identity/fixity of the declared bytes. It does not by itself establish authorship, truth, scientific validity, signature verification, or Merkle/MMR commitment.
+A SHA-256 digest establishes identity/fixity of the declared bytes. It does not by itself establish authorship, truth, scientific validity, signature verification, Merkle/MMR commitment, or current license authority.
 
 ## 2. Version 1 public preprint
 
@@ -31,7 +31,7 @@ A SHA-256 digest establishes identity/fixity of the declared bytes. It does not 
 **DOI:** `10.5281/zenodo.21210575`  
 **Public record date:** 2026-07-05
 
-The public Zenodo record is the external bibliographic authority for the DOI/version/file listing. The publication handoff/manifest is the project-side authority for SHA-256 identities because Zenodo's visible file listing exposes MD5 rather than the project's SHA-256 manifest.
+The public Zenodo record is the external bibliographic authority for the DOI/version/file listing. Project publication manifests/handoffs preserve SHA-256 identities and historical custody state. Where historical handoff metadata conflicts with a later authoritative metadata correction, the historical value remains evidence of the prior state but does not remain current authority.
 
 ### v1 object identities
 
@@ -47,11 +47,28 @@ The public Zenodo record is the external bibliographic authority for the DOI/ver
 | signed FCG root | prefix `741d12de...` in public record/handoff | signed publication graph root | Graph/signature lineage; not a file hash |
 | public-key SHA-256 fingerprint | `f496a067808026d45fbbad785bf83c6acd66429c2d257d246cc103c6d7ff460d` | signing-key fingerprint | Verify the publication-signing key identity, not manuscript bytes |
 
-### Supersession note
+### Supersession notes
 
 The canonical v1 publication handoff explicitly supersedes an older upload instruction that carried the pre-signing identities `d9608acd...`, `9308b43c...`, `ac6ed957...`, and `06aa9427...`. Those values are historical evidence and should remain preserved, but must not be promoted as the current signed-build/public-upload identities.
 
 A second `0da582ac...` full digest previously appearing only in conversational summaries was **not located in the publication manifests audited for this document**. It is therefore `UNRESOLVED_SUMMARY_ONLY` and must not be cited as an exact object identity unless its source manifest or exact bytes are recovered.
+
+The v1 handoff also contains a historical `CC BY 4.0` license field. That field is now classified as:
+
+```text
+SUPERSEDED_METADATA_ERROR
+```
+
+The authoritative corrected license for the FCO/FCG research publication is:
+
+```text
+CC BY-NC-ND 4.0
+CURRENT_AUTHORITATIVE_METADATA
+```
+
+The historical handoff must remain preserved as evidence of the metadata error. It must **not** be interpreted as a valid version-specific licensing exception and must not be rewritten in place.
+
+Because this is a metadata correction rather than a change to the historical publication/package bytes, the correction does **not** itself change or require recomputation of the PDF SHA-256, package SHA-256, `paper_cid`, signed FCG root, or public-key fingerprint listed above.
 
 ## 3. Version 3 public preprint
 
@@ -71,11 +88,12 @@ HydraDG should preserve these distinctions from the FCO/FCG publications and cur
 1. **Custody is not correctness.** A valid lineage can preserve a wrong claim.
 2. **Hash identity is not scientific verification.** A digest can bind/reidentify bytes; the stronger recompute-or-reject admission rule requires the named computation/evidence conditions.
 3. **FCO identity is not producer identity.** Authorship/origin requires the applicable signature/witness layer.
-4. **A project signature is not inherited from a cited preprint.** The v1 publication may have its own signed FCG while HydraDG's project/turn signature remains pending unless a HydraDG signature receipt exists.
+4. **A project signature is not inherited from a cited preprint.** A publication may have its own signed FCG while HydraDG's project/turn signature remains pending unless a HydraDG signature receipt exists.
 5. **Merkle/MMR roots are not ordinary file hashes.** Keep content digests, Merkle roots, MMR state, and signed graph roots typed separately.
 6. **FCG is a governed custody/provenance graph.** Do not globally describe the complete HydraDG application graph as a DAG merely because a particular content-addressed evidence structure is acyclic; HydraDG also carries temporal inverse, contradiction, and supersession relations.
 7. **Historical objects are preserved, not silently overwritten.** Corrections/successors should be explicit graph objects/relations.
 8. **Probabilistic model output has a smaller claim ceiling than deterministic recomputation.** Preserve the exact realized model input/output/configuration; do not label a stochastic output mathematically inevitable.
+9. **Metadata correction does not imply byte mutation.** Do not recompute historical content hashes merely because authoritative external metadata changed.
 
 ## 5. HydraDG-specific citation partition
 
@@ -97,18 +115,49 @@ LongMemEval source + HydraDG experiment receipts
 
 HydraDG's `G*` remains an **application-defined dimensionless diagnostic**, not physical Gibbs free energy and not a direct reproduction of Ensslin & Weig's functional.
 
-## 6. Licensing is version-specific
+## 6. Authoritative licensing correction
 
-Do not apply a later repository-level content license retroactively to a deposited publication version. The v1 publication handoff records **CC BY 4.0** for the manuscript. Repository-native research content may use a different declared license, but already-published/deposited versions retain the rights grant attached to those versions.
+The authoritative licensing invariant for the FCO/FCG research publications and designated Byron P. Lee / Biobitworks research content is:
 
-See [`LICENSING.md`](../LICENSING.md) for the repository policy and the individual publication record for the license applicable to that deposited version.
+```text
+CC BY-NC-ND 4.0
+```
+
+Any earlier FCO/FCG `CC BY 4.0` entry is retained only as a hash-preserved historical metadata object with state:
+
+```text
+SUPERSEDED_METADATA_ERROR
+```
+
+It is **not** a valid version-specific exception.
+
+Correct custody treatment:
+
+```text
+original publication bytes / package
+        |
+        +--> original handoff metadata
+        |      license = CC BY 4.0
+        |      state = SUPERSEDED_METADATA_ERROR
+        |
+        +--> corrected authoritative metadata
+               license = CC BY-NC-ND 4.0
+               state = CURRENT_AUTHORITATIVE_METADATA
+                       |
+                       v
+              downstream repository metadata
+```
+
+Corrections are made through successor commits/metadata records, not history rewriting or force-pushing altered historical objects.
+
+See [`LICENSING.md`](../LICENSING.md) for repository scope. Third-party material continues to retain its upstream rights.
 
 ## 7. Current HydraDG custody status of this mapping
 
-This document is a **deterministic documentation correction/source-lineage map** based on externally retrieved publication metadata plus project publication manifests/handoffs. Its presence in Git does not itself mean the mapping has been signed, Merkle/MMR committed, or canonically appended to the local project FCG.
+This document is a **deterministic documentation correction/source-lineage map** based on project publication manifests/handoffs plus the authoritative licensing correction supplied for this project. Its presence in Git does not itself mean the mapping has been signed, Merkle/MMR committed, independently verified, or canonically appended to the local project FCG.
 
 Claim ceiling:
 
 ```text
-PUBLICATION_SOURCE_LINEAGE_AND_IDENTIFIER_DISAMBIGUATION_ONLY
+PUBLICATION_SOURCE_LINEAGE_IDENTIFIER_DISAMBIGUATION_AND_METADATA_SUPERSESSION_ONLY
 ```
