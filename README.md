@@ -226,6 +226,7 @@ It scans complete Git history and fails on any finding. A historical or partial 
 
 - `apps/hydradg-web/` — website and API source
 - `HydraDG_DaisyTrain_v0.3.7/` — Track 03 evaluation/reproduction tooling
+- `archive/` — historical plans, intermediate DaisyTrain packages, and past evaluation runs
 - `custody/` — public-safe FCO/FCG and verification receipts
 - `custody/graph/live/` — canonical public graph snapshot
 - `docs/` — architecture, component, reproduction, and claim-boundary documentation
