@@ -1,0 +1,52 @@
+{
+  "id": "fco:527736a0e8da9cee769201969f67c455b79dce882b08467a60077c69deb287c2",
+  "identity_algorithm": "SHA-256",
+  "identity_scope": "RFC8785-LIKE_SORTED_COMPACT_JSON_OF_PAYLOAD_AS_RECORDED_BY_RELEASE_TOOLING",
+  "payload_sha256": "527736a0e8da9cee769201969f67c455b79dce882b08467a60077c69deb287c2",
+  "payload": {
+    "schema": "hydradg.release_fco.v1",
+    "project": "HydraDG",
+    "event": "JUDGE_GOLDEN_PATH_ACCESSIBILITY_CRYPTO_TRANSPARENCY_RELEASE",
+    "created_at": "2026-08-20T20:02:00Z",
+    "human_instruction_sha256": "338ef7159f8b83b50028d0812e43c891194b01fdf3be161b311d1cf3255ed021",
+    "base_git_sha": "73c20c13da27c2410007347eb68ded6180abbeb8",
+    "evidence_classes": [
+      "DIRECT_HUMAN_INSTRUCTION",
+      "GITHUB_REPOSITORY_STATE",
+      "EXTERNAL_HACKATHON_RULES",
+      "EXTERNAL_HUGGINGFACE_MODEL_METADATA",
+      "EXTERNAL_ZENODO_PUBLICATION_METADATA",
+      "DETERMINISTIC_UI_TRANSFORMATION"
+    ],
+    "changes": [
+      "persistent_linked_golden_path",
+      "global_accessible_navigation",
+      "static_fallback_navigation",
+      "global_license_citation_model_footer",
+      "model_involvement_transparency",
+      "cryptographic_signing_scope_transparency",
+      "track01_track02_track03_judge_lenses"
+    ],
+    "claim_ceiling": "WEBSITE_JUDGE_UX_AND_CUSTODY_STATUS_DOCUMENTATION_ONLY",
+    "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+    "merkle_state": "NOT_PROJECT_COMMITTED"
+  },
+  "fcg_edges": [
+    {"relation": "DERIVED_FROM", "target": "human_instruction_sha256:338ef7159f8b83b50028d0812e43c891194b01fdf3be161b311d1cf3255ed021"},
+    {"relation": "SUCCESSOR_OF", "target": "git:73c20c13da27c2410007347eb68ded6180abbeb8"},
+    {"relation": "CITES", "target": "doi:10.5281/zenodo.21210575"},
+    {"relation": "CITES", "target": "doi:10.5281/zenodo.21420906"},
+    {"relation": "CITES", "target": "doi:10.5281/zenodo.21829929"},
+    {"relation": "CITES", "target": "doi:10.5281/zenodo.21830287"},
+    {"relation": "CITES", "target": "doi:10.5281/zenodo.21830361"},
+    {"relation": "CITES", "target": "doi:10.5281/zenodo.21830386"},
+    {"relation": "REFERENCES_MODEL_CARD", "target": "hf:biobitworks/fco-vithia-fmo-076"},
+    {"relation": "REFERENCES_MODEL_CARD", "target": "hf:Qwen/Qwen2.5-7B-Instruct"},
+    {"relation": "REFERENCES_MODEL_CARD", "target": "hf:Qwen/Qwen2.5-Coder-7B-Instruct"},
+    {"relation": "REFERENCES_MODEL_CARD", "target": "hf:EleutherAI/pythia-14m"}
+  ],
+  "verification_state": "CONTENT_HASH_RECOMPUTED_LOCALLY_FOR_PAYLOAD_ONLY",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "merkle_state": "NOT_PROJECT_COMMITTED",
+  "note": "This release FCO records provenance and claim boundaries. Its hash does not constitute a digital signature, scientific verification, or project Merkle/MMR commitment."
+}

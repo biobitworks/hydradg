@@ -1,12 +1,14 @@
 import type { Metadata } from "next";
 
-import ReleaseStamp from "@/components/ReleaseStamp";
+import GoldenPathRail from "@/components/GoldenPathRail";
+import SiteFooter from "@/components/SiteFooter";
 import SiteNav from "@/components/SiteNav";
 import "./globals.css";
+import "./judge-accessibility.css";
 
 export const metadata: Metadata = {
   title: "HydraDG — Verifiable Graph Memory",
-  description: "Hack Hydra 2026: graph-native memory, ontology and dependency experiments with explicit FCO/FCG evidence custody.",
+  description: "Hack Hydra 2026: graph-native governed memory on HydraDB with explicit FCO/FCG custody, model boundaries and retained null evidence.",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
@@ -14,8 +16,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <SiteNav />
-        {children}
-        <ReleaseStamp />
+        <GoldenPathRail />
+        <div id="main-content" tabIndex={-1}>{children}</div>
+        <SiteFooter />
       </body>
     </html>
   );
