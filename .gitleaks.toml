@@ -1,41 +1,57 @@
-title = "HydraDG release Gitleaks policy"
+title = "HydraDG release secret-scan false-positive policy"
 
 [extend]
 useDefault = true
 
-# These are narrow, provenance-reviewed false-positive paths only. The default
-# Gitleaks rules remain enabled for the rest of repository history.
-#
-# SeedGraph cache objects are content/custody hashes stored under cache_key.
-[[allowlists]]
-description = "SeedGraph content-addressed cache identifiers"
-paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/evidence/track03/matrix-20260819/seedgraph/cache/''']
+# Extend the built-in generic-api-key rule with reviewed false-positive exceptions.
+# Gitleaks documents [[rules.allowlists]] as the rule-specific mechanism; each
+# exception below requires BOTH the exact/narrow path and a known match form.
+[[rules]]
+id = "generic-api-key"
 
-# This vendored runtime contains upstream model/test identifiers such as
-# key_sha256 and tokenizer/model symbols; it is third-party dependency material.
-[[allowlists]]
-description = "Vendored Vithia runtime dependency false positives"
-paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/eval/vithia_runtime/deps/''']
+[[rules.allowlists]]
+description = "Deterministic SeedGraph cache SHA-256 identifiers"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/evidence/track03/matrix-20260819/seedgraph/cache/[0-9a-f]{64}\.json$''']
+regexes = ['''cache_key"\s*:\s*"[0-9a-f]{64}"''']
 
-# Toy seal artifacts intentionally disclose their toy Ed25519 private key and
-# explicitly carry a no-authenticity claim ceiling. They are demonstration
-# fixtures, not project authentication credentials.
-[[allowlists]]
-description = "Intentionally public toy seal demonstration fixtures"
+[[rules.allowlists]]
+description = "Intentionally public toy DRM-free signature key objects only"
+condition = "AND"
+regexTarget = "match"
 paths = [
-  '''^hydradg_video_ready_sealed_v2/(fcg|toy_seal)/''',
-  '''^hydradg_video_final_reconciled_v3/(fcg|toy_seal)/'''
+  '''^hydradg_video_final_reconciled_v3/(?:fcg/TOY_SEAL_(?:FCO_BUNDLE|FCG_EDGES)\.jsonl|toy_seal/TOY_PACKAGE_SEAL\.json)$''',
+  '''^hydradg_video_ready_sealed_v2/(?:fcg/TOY_SEAL_(?:FCO_BUNDLE|FCG_EDGES)\.jsonl|toy_seal/TOY_PACKAGE_SEAL\.json)$'''
 ]
+regexes = ['''(?:toykey:|toy_private_key_b64|ToyKeyDisclosureFCO)''']
 
-# Generated SHA-256 manifest values are integrity identifiers, not API keys.
-[[allowlists]]
-description = "Generated SHA-256 manifest"
+[[rules.allowlists]]
+description = "Vendored upstream source identifier false positives"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/eval/vithia_runtime/deps/''']
+regexes = ['''(?:AutoTokenizer,|key_sha256"\s*:|key_layer,|num_keypoints_0,|new_num_tokens,|key\.dtype\s*==)''']
+
+[[rules.allowlists]]
+description = "Upstream Transformers sandboxed-CI staging token fixture"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/eval/vithia_runtime/deps/transformers/testing_utils\.py$''']
+regexes = ['''TOKEN\s*=\s*"hf_[A-Za-z0-9]+"''']
+
+[[rules.allowlists]]
+description = "Historical LOW_TOKEN_POLICY SHA-256 manifest entry"
+condition = "AND"
+regexTarget = "match"
 paths = ['''^antigravity_hydradg_low_token/SHA256SUMS\.json$''']
+regexes = ['''LOW_TOKEN_POLICY\.json"\s*:\s*"[0-9a-f]{64}"''']
 
-# Historical Modal CLI output exposed an ak-* token ID, not the as-* token
-# secret required for authentication. Modal documents these as separate values.
-# Keep this exception exact to the single historical log; do not allowlist logs
-# generally.
-[[allowlists]]
-description = "Historical Modal token ID metadata (not token secret)"
+# Modal distinguishes the ak-* token ID from the separate as-* token secret.
+# This exception is exact to one historical log and does not allowlist as-*.
+[[rules.allowlists]]
+description = "Historical Modal API token identifier only; not token secret"
+condition = "AND"
+regexTarget = "match"
 paths = ['''^HydraDG_DaisyTrain_v0\.3\.3/logs/20260817_081811_ECA_RETRY_2\.log$''']
+regexes = ['''Token:\s+ak-[A-Za-z0-9_-]+''']

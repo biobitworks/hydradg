@@ -8,16 +8,16 @@
 - **Judge / release branch:** `main`
 - **Repository visibility:** **PUBLIC — verified through GitHub repository metadata during final review**
 - **Custody-repair checkpoint:** `5ac81968ba5bdd5d7e71a1ff29deabeb416b7182`
-- **Final tested release commit:** the exact `main` HEAD containing this document after the final post-merge gates pass; resolve it with `git rev-parse HEAD` or the GitHub Actions run metadata. A Git commit cannot embed its own final SHA without changing that SHA.
-- **Pre-merge release-gate candidate:** `cc7043d20fafced4623c109bd7baab3ecf9f1d35` — PR merge-ref Judge Lab and reviewed full-history Gitleaks gates passed before this documentation update; this is provenance, not the final release SHA.
+- **Last exact `main` SHA before this final attestation update:** `224940532ade9709a7c8793d0862d01dec1349c3`
+- **Final tested release commit:** the exact `main` HEAD produced by merging this finalization change and passing both post-merge Judge Lab and full-history Gitleaks. A Git commit cannot embed its own final SHA without changing that SHA; the frozen release ref/Actions metadata is authoritative for the final digest.
 - **Demo video URL:** https://youtu.be/7EDb6q-loPA
-- **Demo video verification:** URL present; duration and unauthenticated accessibility require external verification before human submission
+- **Demo video verification:** **PASS — USER_ATTESTED_COMPLETE on 2026-08-19 PT**
 - **Superseded demo video URL:** https://youtu.be/tKWRmYZ3HCs
-- **Submission form:** PENDING_HUMAN_SUBMISSION
+- **Submission form:** **PASS — USER_ATTESTED_SUBMITTED on 2026-08-19 PT**
 
 `main` is the public judge-facing authority. Historical release branches and draft PRs are provenance/history only unless an older receipt explicitly names them.
 
-A complete submission requires the public repository, the qualifying demo video, and the human submission form. The local interactive product can be used to record the video; a public live website is not required by the repository's supplied submission checklist.
+The submitter has attested that the qualifying demo video and human submission form are complete. That attestation is directly supplied human evidence; it is not represented here as an independently reproduced form receipt.
 
 ---
 
@@ -196,7 +196,7 @@ Hash identity is not scientific correctness. Provenance is not independent repli
 
 ### Full-history secret-scan policy
 
-Gitleaks keeps its built-in default rules enabled. The repository `.gitleaks.toml` contains only narrow path-specific exceptions for provenance-reviewed non-secret material: content-addressed SeedGraph cache identifiers, vendored dependency/test identifiers, explicitly non-authenticating toy-seal fixtures with intentionally disclosed toy keys, generated SHA-256 manifests, and one historical Modal `ak-*` token ID record. Modal documents `ak-*` as the token ID and a separate `as-*` value as the token secret; the exception is exact to that historical file and does not allowlist logs generally.
+Gitleaks keeps its built-in default rules enabled. The repository `.gitleaks.toml` contains only provenance-reviewed exceptions. Each exception is constrained to the applicable detector plus both a narrow path and a specific reviewed non-secret content/match form. Covered classes are content-addressed SeedGraph cache identifiers, reviewed vendored dependency/test identifiers, explicitly non-authenticating toy-seal fixtures with intentionally disclosed toy keys, one generated SHA-256 manifest form, and one historical Modal `ak-*` token-ID line. The policy does not globally allowlist logs, tokens, secrets, `.env` files, API-key patterns, or the Modal `as-*` secret prefix.
 
 A Gitleaks PASS therefore means **zero findings outside those reviewed exceptions under the pinned scanner/configuration**. It does not establish that no secret could exist under every possible detector.
 
@@ -218,32 +218,29 @@ FULL_HISTORY_GITLEAKS=PASS
 LICENSING_CONSISTENCY=PASS
 ```
 
-A historical CI run or secret scan cannot establish these gates for a newer SHA. Pull-request merge-ref gates are admission evidence; after merge, both Judge Lab and Gitleaks must pass again on the actual `main` commit before that SHA is frozen.
+A historical CI run or secret scan cannot establish these gates for a newer SHA. Pull-request/head gates are admission evidence; after merge, both Judge Lab and Gitleaks must pass again on the actual `main` commit before that SHA is frozen.
 
 ---
 
 ## 10. Required Submission Status
 
-| Required deliverable | Current status | Completion evidence required |
+| Required deliverable | Current status | Evidence basis |
 |---|---|---|
-| Public GitHub repository | **PASS — public `biobitworks/hydradg`, default branch `main`** | recheck at final freeze |
-| Pre-merge repository release gates | **PASS on candidate before this documentation update** | final candidate rerun after this change |
+| Public GitHub repository | **PASS — public `biobitworks/hydradg`, default branch `main`** | GitHub repository metadata / final freeze recheck |
+| Finalization-branch repository gates | **PENDING** | Judge Lab + full-history Gitleaks on the exact finalization head |
 | Exact final-main repository release gates | **PENDING** | post-merge Judge Lab + Gitleaks on actual final `main` SHA |
-| Demo video ≤ 3 minutes | **URL PRESENT — external verification pending** | duration ≤ 3:00 + unauthenticated access |
-| Submission form | **PENDING — human submission required** | submitted-form confirmation/receipt |
+| Demo video | **PASS — USER_ATTESTED_COMPLETE** | directly supplied submitter attestation, 2026-08-19 PT |
+| Submission form | **PASS — USER_ATTESTED_SUBMITTED** | directly supplied submitter attestation, 2026-08-19 PT |
 
-`SUBMISSION_READY=YES` only when the exact-head release gates, qualifying video, and human submission requirements have actual completion evidence.
+`SUBMISSION_READY=YES` only when the exact final `main` SHA passes both repository release workflows. Video/form completion is already human-attested.
 
 ---
 
 ## 11. Final Human Attestations
 
-Before submitting, confirm:
+Directly supplied human attestation on 2026-08-19 PT:
 
-- final team roster and roles;
-- originality/reuse disclosure;
-- one-submission-per-team-member rule;
-- final links work without the submitter's authenticated session;
-- claims match their evidence ceilings;
-- rules/code-of-conduct confirmation;
-- repository, video, and form were all submitted before the deadline.
+- qualifying demo video: **complete**;
+- Hack Hydra submission form: **submitted/complete**.
+
+Other human attestations remain bounded to what was actually supplied or recorded. Repository review does not independently establish team-roster accuracy, originality/reuse disclosures, one-submission-per-team-member compliance, or rules/code-of-conduct acceptance unless the corresponding submission record is available.
