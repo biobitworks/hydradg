@@ -3,7 +3,8 @@
 [![Hack Hydra 2026](https://img.shields.io/badge/Hack%20Hydra-2026-blue.svg)](https://github.com/biobitworks/hydradg)
 [![Track 03](https://img.shields.io/badge/Track%2003-Memory%20%2B%20Context%20Retrieval-green.svg)](https://github.com/biobitworks/hydradg)
 [![HydraDB](https://img.shields.io/badge/HydraDB-Graph%20Projection-orange.svg)](https://hydradb.com)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![Software License: Apache-2.0](https://img.shields.io/badge/Software-Apache--2.0-yellow.svg)](LICENSE)
+[![Research Content: CC BY-NC-ND 4.0](https://img.shields.io/badge/Research%20Content-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSING.md)
 
 HydraDG is a governed memory and context engine built on **HydraDB** for **Hack Hydra 2026 — Track 03: Memory + Context Retrieval**. It preserves evolving state, provenance, contradictions, supersession, recovery, null results, and claim boundaries as an inspectable graph instead of silently overwriting context.
 
@@ -215,12 +216,14 @@ A historical or partial scan is not enough to call the repository clean. The exa
 - `schemas/` — state/data schemas
 - `scripts/` — projection, verification, release, and reproduction tooling
 - `SUBMISSION.md` — Hack Hydra submission scope
-- `LICENSE` / `THIRD_PARTY_NOTICES.md` — licensing and third-party notices
+- `LICENSE` / `LICENSING.md` / `THIRD_PARTY_NOTICES.md` — licensing and third-party notices
 
 ---
 
-## License
+## Licensing
 
-HydraDG participant-authored software in this repository is released under the **MIT License**. See [`LICENSE`](LICENSE).
+HydraDG participant-authored **software and reproducibility tooling** are licensed under the **Apache License, Version 2.0**. See [`LICENSE`](LICENSE).
 
-Third-party software, datasets, templates, papers, APIs, and services retain their own licenses and terms. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). Their presence or citation here does not relicense them under MIT.
+Byron P. Lee / Biobitworks authored **preprints, manuscripts, narrative research text, publication-style figures, and explicitly designated research-content artifacts** are licensed under **CC BY-NC-ND 4.0** unless an artifact states otherwise. See [`LICENSING.md`](LICENSING.md).
+
+Third-party software, datasets, templates, papers, APIs, models, and services retain their own licenses and terms. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). Neither HydraDG license relicenses those upstream materials.
