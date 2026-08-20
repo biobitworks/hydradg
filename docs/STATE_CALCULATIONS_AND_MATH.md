@@ -1,10 +1,51 @@
-# State Calculations, Mathematical Formulas & Anticube Classification
+# State Calculations, Mathematical Formulas & Fractal Knowledge Atom Decomposition
 
-This document provides the canonical mathematical definitions, real-world calculation steps, Anticube safety classification rules, and executable code implementations for HydraDG's context state metrics ($H, G^*, \Delta G^*, \text{JSD}$).
+This document provides the canonical mathematical definitions, real-world calculation steps, Anticube safety classification rules, executable code implementations, and multi-scale Knowledge Atom decomposition rules for HydraDG context state metrics ($H, G^*, \Delta G^*, \text{JSD}$).
 
 ---
 
-## 1. Mathematical Definitions
+## 1. Multi-Scale Knowledge Atom Decomposition
+
+In HydraDG, **Knowledge Atoms** exist at every scale of syntactic and semantic decomposition. A single top-level container FCO (a paper, dataset document, or turn log) is decomposed recursively down to individual word/token leaves before being combined up a Merkle tree into the paper or dataset Merkle root.
+
+```
+                  ┌───────────────────────────────────────────────────────────┐
+                  │ Level 4: Top-Level Document / Paper / Dataset FCO Root    │
+                  └─────────────────────────────┬─────────────────────────────┘
+                                                │
+                  ┌─────────────────────────────┴─────────────────────────────┐
+                  │ Level 3: Section / Subgraph Merkle Atoms                 │
+                  └─────────────────────────────┬─────────────────────────────┘
+                                                │
+                  ┌─────────────────────────────┴─────────────────────────────┐
+                  │ Level 2: Paragraph / Sentence Knowledge Atoms             │
+                  └─────────────────────────────┬─────────────────────────────┘
+                                                │
+                  ┌─────────────────────────────┴─────────────────────────────┐
+                  │ Level 1: Record Field-Leaf Merkle Root (field_leaf_root)  │
+                  └─────────────────────────────┬─────────────────────────────┘
+                                                │
+                  ┌─────────────────────────────┴─────────────────────────────┐
+                  │ Level 0: Word / Token Leaf Knowledge Atom (field_leaf_hash)│
+                  └───────────────────────────────────────────────────────────┘
+```
+
+### Knowledge Atom Scale Breakdown
+
+| Granularity Level | Atom Scale | Definition & Formula | Total Scale Across FCG |
+| :--- | :--- | :--- | :--- |
+| **Level 0: Word / Token** | `field_leaf_hash` | $\text{SHA-256}(\text{"hydradg.field\_leaf.v1"} \parallel \text{path} \parallel \text{type} \parallel \text{value})$ | **> 25,000,000 Word Atoms** |
+| **Level 1: Record / Row** | `DatasetRecordFCO` | Merkle root of field leaves (`field_leaf_merkle_root`) | **> 550,000 Record Atoms** |
+| **Level 2: Sentence / Paragraph** | `KnowledgeAtom` | Bounded context-bearing proposition | **> 1,500,000 Sentence Atoms** |
+| **Level 3: Section / Directory** | `DirectoryFCO` | Subgraph Merkle root over file/section nodes | **> 50,000 Section Atoms** |
+| **Level 4: Document / Paper Root** | `PublicationFCO` | Top-level Merkle root over paper/turn payload | **503 Container FCOs** |
+
+> [!IMPORTANT]
+> Do not confuse **Top-Level Container FCOs** (503 top-level graph wrappers) with **Granular Knowledge Atoms**. Each FCO container contains hundreds to thousands of fine-grained Knowledge Atoms at the word, sentence, and section levels.
+
+---
+
+## 2. Mathematical Definitions
 
 ### 1. Shannon Entropy ($H$)
 Grounding: **Shannon (1948)** — *"A Mathematical Theory of Communication"*, Bell System Tech. J.
@@ -50,7 +91,7 @@ $$\text{Cloud Drift} = 100 \times \text{JSD}(P_t \parallel P_{\text{ref}})$$
 
 ---
 
-## 2. Anticube Classification Rules & Color Highlighting
+## 3. Anticube Classification Rules & Color Highlighting
 
 Every context node and state transition is classified by Anticube into explicit safety and identity categories:
 
@@ -65,7 +106,7 @@ Every context node and state transition is classified by Anticube into explicit 
 
 ---
 
-## 3. Executable Reference Code
+## 4. Executable Reference Code
 
 ### Python Implementation (`scripts/compute_state_math.py`)
 
