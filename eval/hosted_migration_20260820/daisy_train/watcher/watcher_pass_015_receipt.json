@@ -1,0 +1,25 @@
+{
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "bridge_status": "ACTIVE",
+  "claim_ceiling": "OLLAMA_BRIDGE_WATCHER_DAISY_TRAIN_STEP_COMPLETED",
+  "context_energy_metrics": {
+    "delta_g_star": 0.0466,
+    "g_star_diagnostic": 0.5683,
+    "shannon_entropy_bits": 1.3238,
+    "u_star_burden": 0.8
+  },
+  "information_energy_savings": {
+    "flops_saved": 525000000000000,
+    "tokens_processed": 37500,
+    "watt_hours_saved": 1.46
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "ollama_endpoint": "http://127.0.0.1:11434",
+  "schema": "hydradg.ollama_bridge_watcher_receipt.v1",
+  "signature_hash": "6dbbbeb00f5dcd65d441c8fce120302037af9d6ace04bb0d4ecfaf322337fcdc",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T19:36:08Z",
+  "timestamp_unix": 1787254568,
+  "watcher_iteration": 15
+}
