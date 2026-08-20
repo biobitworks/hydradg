@@ -1,17 +1,21 @@
 {
-  "claim_ceiling": "LOCAL_HYDRADB_GRAPH_WRITEBACK_EXECUTION_ONLY",
-  "hydradb_endpoint": "http://127.0.0.1:8443/v1/graphs/hydradg/query",
+  "claim_ceiling": "LOCAL_HYDRADB_PROJECTION_ACCOUNTING_ONLY_NOT_MUTATED",
+  "hydradb_endpoint": "http://127.0.0.1:8443",
   "license": "CC-BY-NC-ND-4.0",
   "namespace": "hydradg-local-custody",
-  "schema": "hydradg.local_hydradb_writeback_receipt.v1",
-  "writeback_sha256": "e2cd1a1b35f7df56034c2198c2146d81c2fc9fc06816f98ef40c04d145d09455",
-  "writeback_status": "PASS",
-  "writeback_summary": {
-    "container_fcos_written": 503,
-    "conversation_turn_fcos_written": 653,
-    "spatiotemporal_pointers_written": 20818956,
-    "total_fcg_relations_written": 20820262,
-    "total_hydradb_fco_nodes_written": 20820112
+  "node_counts": {
+    "container_fcos": 503,
+    "conversation_turn_fcos": 653,
+    "mutated_fco_nodes": 0,
+    "projected_fcg_relations": 20820262,
+    "projected_fco_nodes": 20820112,
+    "spatiotemporal_pointer_fcos": 20818956
   },
-  "writeback_timestamp_unix": 1787253995
+  "readback_verification_state": "NOT_PERFORMED_LOCAL_SERVER_OFFLINE",
+  "schema": "hydradg.local_hydradb_writeback_receipt.v2",
+  "status": "PASS_PROJECTION_ACCOUNTING",
+  "writeback_digest_sha256": "3d784d7acc9786883308e696e6f2d284d1f6a01c9c9147c08a8bad51983f057c",
+  "writeback_state": "PROJECTION_ACCOUNTING_ONLY_LOCAL_SERVER_OFFLINE",
+  "writeback_timestamp_iso": "2026-08-20T20:57:30Z",
+  "writeback_timestamp_unix": 1787259450
 }
