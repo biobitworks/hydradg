@@ -5,6 +5,9 @@ on:
     branches:
       - hack-hydra/public-product-final-20260819
       - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 permissions:
