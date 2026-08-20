@@ -2,7 +2,6 @@ import Link from "next/link";
 
 import ContextIcebergHeroV2 from "@/components/ContextIcebergHeroV2";
 import PublicBackendStatus from "@/components/PublicBackendStatus";
-import { CURRENT_PRESENTATION } from "@/lib/presentationLineage";
 import { RELEASE_TIMEPOINTS } from "@/lib/releaseTimepoints";
 
 export default function Home() {
@@ -18,13 +17,15 @@ export default function Home() {
           </p>
           <div className="actions">
             <Link className="primary" href="/judge">Start judge walkthrough</Link>
+            <Link className="secondary" href="/best-use">Why HydraDB · show the math</Link>
             <Link className="secondary" href="/graph">Open 4D FCG</Link>
             <Link className="secondary" href="/how-to">How to use</Link>
           </div>
           <div className="curatedStatusRow">
             <span className="statusLine"><span className="statusDot good" />LongMemEval full500 executed</span>
-            <span className="statusLine"><span className="statusDot good" />Hosted canonical FCG readback receipt recorded</span>
             <span className="statusLine"><span className="statusDot good" />One SHA-256 identity per canonical FCO</span>
+            <span className="statusLine"><span className="statusDot good" />Historical hosted 36-FCO/24-edge readback retained</span>
+            <span className="statusLine"><span className="statusDot" />Expanded SeedGraph/local/hosted parity not established</span>
           </div>
         </div>
         <div className="curatedHeroViz"><ContextIcebergHeroV2 /></div>
@@ -36,7 +37,21 @@ export default function Home() {
         <article className="metric"><span className="metricLabel">Cases</span><strong>500</strong><span className="small muted">LongMemEval-S full500</span></article>
         <article className="metric"><span className="metricLabel">Sessions</span><strong>23,867</strong><span className="small muted">typed temporal state</span></article>
         <article className="metric"><span className="metricLabel">Result</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate advantage not established</span></article>
-        <article className="metric"><span className="metricLabel">Presentation</span><strong>Current</strong><span className="small muted">{CURRENT_PRESENTATION.label}</span></article>
+        <article className="metric"><span className="metricLabel">Identity reuse</span><strong>65.730975%</strong><span className="small muted">retained word+sentence accounting · 20,818,956 duplicate occurrences</span></article>
+      </section>
+
+      <section className="computeSection curatedSection" id="scale-economics">
+        <div className="curatedSectionHead">
+          <div><span className="sectionNumber">00 / BEST USE OF HYDRADB</span><h2 className="displayTitle">Store identity once. Traverse context many times.</h2></div>
+          <Link className="primary" href="/best-use">Show deterministic math</Link>
+        </div>
+        <p className="sectionLead">
+          Retained accounting gives 31,672,976 word+sentence occurrences, 10,854,020 unique keys and 20,818,956 duplicate occurrences. The deterministic calculator reproduces 65.730975% combined identity reuse from a hashed input and hashed calculation contract. Whole-corpus download-byte savings remain NOT_MEASURED until a complete {`{path,size_bytes,sha256}`} manifest exists.
+        </p>
+        <div className="curatedEvidenceGrid">
+          <article className="panel"><p className="eyebrow">Deterministic chain</p><h2>Input hash → contract hash → receipt hash.</h2><p className="muted">Same inputs and versioned arithmetic must reproduce the same receipt. A mismatch becomes failure evidence instead of inheriting a green value.</p></article>
+          <article className="panel"><p className="eyebrow">Theoretical compute lane</p><h2>2.91465384×10¹⁷ FLOPs</h2><p className="muted">Hypothetical dense 7B one-token-per-duplicate-atom scenario; 0.809626 Wh theoretical equivalent under the declared efficiency assumption. Measured energy remains null.</p></article>
+        </div>
       </section>
 
       <section className="computeSection curatedSection" id="demo">
@@ -96,6 +111,7 @@ export default function Home() {
         <p className="sectionLead">The final judge path emphasizes Track 03 while preserving the shared custody spine used by the broader HydraDG track experiments.</p>
         <div className="routeGrid curatedRouteGrid">
           <Link href="/judge" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Reference → poison → antidote with exact calculations.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/best-use" className="routeCard"><div><p className="eyebrow">Deterministic</p><h3>Why HydraDB</h3><p>Identity reuse, theoretical compute and fail-closed calculation hashes.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/track03" className="routeCard"><div><p className="eyebrow">Executed</p><h3>Results</h3><p>Full500 graph, retrieval result, hashes and claim ceiling.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/graph" className="routeCard"><div><p className="eyebrow">Interactive</p><h3>4D FCG</h3><p>Violet reference, orange poison, blue antidote; inspect one FCO hash.</p></div><span className="routeArrow">↗</span></Link>
         </div>
