@@ -50,6 +50,39 @@ export default function HowToPage() {
         </article>
       </section>
 
+      <section className="computeSection" id="hosted-hydradb">
+        <p className="eyebrow">Hosted path · GitHub → HydraDB → Vercel</p>
+        <h2 className="displayTitle">Connect once. Query the indexed graph from the judge site.</h2>
+        <p className="sectionLead">
+          The hosted demo uses HydraDB as a server-side context service. The API key never reaches the browser. The canonical FCO/FCG remains the custody source of truth; hosted HydraDB is a queryable projection and connector-backed source index.
+        </p>
+        <div className="grid twoCol">
+          <article className="panel">
+            <p className="eyebrow">A · Connect source</p>
+            <h2>GitHub repository → database hydradg</h2>
+            <p className="muted">In HydraDB, create or select the database <code>hydradg</code>, add the GitHub connector, authorize the repository, and let indexing reach a terminal ready state. Record whether the connector uses the default collection or an explicit collection.</p>
+          </article>
+          <article className="panel">
+            <p className="eyebrow">B · Configure Vercel</p>
+            <h2>Server-side HydraDB credentials</h2>
+            <p className="muted">Set <code>HYDRA_DB_API_KEY</code>, <code>HYDRADB_DATABASE=hydradg</code>, and <code>HYDRADB_API_URL=https://api.hydradb.com</code>. Set <code>HYDRADB_COLLECTION</code> only if the connector/import was explicitly scoped to that collection.</p>
+          </article>
+          <article className="panel">
+            <p className="eyebrow">C · Prove readback</p>
+            <h2>Query with graph context</h2>
+            <p className="muted">The server calls HydraDB v2 with <code>API-Version: 2</code>, the same database/collection scope used at ingestion, and <code>graph_context=true</code>. A successful readback establishes hosted connectivity and returned context only—not scientific correctness.</p>
+          </article>
+          <article className="panel">
+            <p className="eyebrow">D · Compare local → hosted</p>
+            <h2>Separate custody parity from service drift</h2>
+            <p className="muted">For the same canonical FCG, FCO/edge/root identity and backend-independent Context Iceberg inputs should remain unchanged. Retrieval ranking, latency, returned graph paths, Hit@K and Recall@K are measured separately as hosted-service deltas.</p>
+          </article>
+        </div>
+        <div className="actions">
+          <a className="secondary" href="/api/graph/status">Check hosted HydraDB status</a>
+        </div>
+      </section>
+
       <section className="panel architecture">
         <p className="eyebrow">Fallback</p>
         <h2>Live → static → live</h2>
@@ -71,6 +104,7 @@ export default function HowToPage() {
           <li>Hit@K is retrieval hit rate, not end-to-end QA accuracy.</li>
           <li>Recall@K is an empirical retrieval outcome.</li>
           <li>HydraDB is the queryable projection; FCO/FCG is the canonical custody/provenance layer.</li>
+          <li>A local → hosted backend move does not by itself imply a context-state change.</li>
         </ul>
       </section>
     </main>
