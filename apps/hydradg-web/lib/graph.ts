@@ -18,8 +18,8 @@ async function runHydraDbHttp(
 ): Promise<GraphRow[]> {
   const baseUrl = process.env.HYDRADB_HTTP_URL?.replace(/\/$/, "");
   const token = process.env.HYDRADB_AUTH_TOKEN;
-  const graphId = process.env.HYDRADB_GRAPH_ID || "default";
-  const namespace = process.env.HYDRADB_GRAPH_NAMESPACE || "default";
+  const graphId = process.env.HYDRADB_GRAPH_ID || "hydradg-judge-repro";
+  const namespace = process.env.HYDRADB_GRAPH_NAMESPACE || "hydradg-judge-repro";
   const cellId = process.env.HYDRADB_CELL_ID || "cell-0";
 
   if (!baseUrl || !token) throw new Error("HydraDB HTTP backend is not configured");
