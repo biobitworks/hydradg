@@ -193,6 +193,47 @@ Cloud Drift is separately derived from Jensen-Shannon divergence and should not 
 
 ---
 
+## Hydra metaphor: persistence through regeneration
+
+The project name also supports a biological metaphor grounded in the freshwater *Hydra* polyp: tentacles around the mouth/hypostome, a persistent body column, lateral budding, regeneration after injury, and a basal disc anchoring the organism.
+
+```text
+              evidence      memory      provenance      contradiction
+                   \           |            |               /
+                    \      \    |    /       |        /     /
+                     \      \   |   /        |       /     /
+                      \      \  |  /         |      /     /
+                       \      \ | /          |     /     /
+                        \    .-( )-.          |    /     /
+                         \  / MOUTH \_________|___/     /
+                          \/HYPOSTOME\              ___/
+                          /\____│____/\
+                                │
+                         ╭──────┴──────╮
+     SENESCENCE / DRIFT  │  BODY       │  MAINTENANCE
+     ΔG* > 0 ──────────► │  COLUMN     │ ◄── ΔG* ≈ 0
+     Cloud Drift ↑       │  identity   │
+                         │  + custody  │
+                         │        o────┼──╮
+                         │       / BUD │  │ REJUVENATION
+                         │      (______)  │ repair / successor
+                         │          └─────┘
+                         ╰──────┬──────╯
+                                │
+                          ______│______
+                         /  BASAL DISC  \
+                        /_______________\
+                           CUSTODY ROOT
+
+         reference → divergence / poison → repair / antidote → persistence
+```
+
+The intended claim is **not** that HydraDG is literally immortal or that `G*` is organismal thermodynamics. The metaphor is that persistence comes from detecting divergence, retaining the damaged/history state, regenerating a valid current state, and continuing without breaking custody.
+
+The expanded text figure, biological mapping, `G*` boundary, and claim ceiling are in [`docs/IMMORTAL_HYDRA_TEXT_FIGURE.md`](docs/IMMORTAL_HYDRA_TEXT_FIGURE.md).
+
+---
+
 ## FCO/FCG custody
 
 **FCO = Fractal Custody Object.**  
