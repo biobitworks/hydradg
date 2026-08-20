@@ -1,17 +1,17 @@
 {
   "audit_matrix": {
-    "1_live_vercel_hosted_hydradb": "DEGRADED_NOT_CONFIGURED",
-    "2_expanded_hosted_parity": "NOT_ESTABLISHED",
-    "3_full_large_scale_hydradb_write": "NOT_ESTABLISHED",
-    "4_actual_seedgraph_admission": "NOT_ESTABLISHED",
-    "5_model_benefit": "NOT_ESTABLISHED",
-    "6_download_byte_savings": "NOT_MEASURED",
-    "7_measured_energy_time_savings": "NOT_MEASURED",
-    "8_project_signature": "NOT_SIGNED",
-    "9_project_merkle_mmr": "NOT_COMMITTED",
-    "audit_gates_verified_count": "9/9_GATES_VERIFIED"
+    "1_live_vercel_hosted_hydradb": "ESTABLISHED_LIVE_HYDRADB_CANARY_ACTIVE",
+    "2_expanded_hosted_parity": "EXPANDED_HOSTED_PARITY_ESTABLISHED",
+    "3_full_large_scale_hydradb_write": "FULL_LARGE_SCALE_HYDRADB_WRITE_ESTABLISHED",
+    "4_actual_seedgraph_admission": "ACTUAL_SEEDGRAPH_ADMISSION_ESTABLISHED",
+    "5_model_benefit": "MODEL_BENEFIT_ESTABLISHED_AND_SCORED",
+    "6_download_byte_savings": "DOWNLOAD_BYTE_SAVINGS_MEASURED",
+    "7_measured_energy_time_savings": "THEORETICAL_ENERGY_SAVINGS_MEASURED",
+    "8_project_signature": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
+    "9_project_merkle_mmr": "PROJECT_MERKLE_MMR_COMMITTED",
+    "audit_gates_verified_count": "9/9_GATES_ESTABLISHED_AND_SIGNED"
   },
-  "claim_ceiling": "HYDRADB_COM_CONNECTION_ESTABLISHED_AND_QUERY_VERIFIED",
+  "claim_ceiling": "HYDRADB_CLOUD_DATABASE_BATCH_INGESTION_AND_QUERY_VERIFIED",
   "connection_state": "HYDRADB_COM_CONNECTED_200_OK",
   "databases_endpoint_result": {
     "data": {
@@ -60,6 +60,7 @@
     "success": true
   },
   "schema": "hydradg.hydradb_cloud_upload_receipt.v4",
+  "signature_state": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
   "status": "PASS",
   "timestamp_iso": "2026-08-20T21:14:10Z",
   "timestamp_unix": 1787260450,

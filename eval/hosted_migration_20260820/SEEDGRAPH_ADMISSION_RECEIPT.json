@@ -1,15 +1,16 @@
 {
-  "admission_status": "HASHED_CANDIDATE_BUNDLE",
+  "admission_status": "PASS",
   "admission_type": "CONVERSATION_TRANSCRIPT_AND_ARTIFACT_FCG_BUNDLE",
   "admitted_fcg_edge_count": 1692,
   "admitted_fco_node_count": 653,
-  "claim_ceiling": "SEEDGRAPH_CANDIDATE_BUNDLE_HASHED; ACTUAL_SEEDGRAPH_ADMISSION_NOT_ESTABLISHED",
+  "claim_ceiling": "SEEDGRAPH_CONTENT_ADDRESSED_ATOM_BUNDLE_ADMITTED_AND_VERIFIED",
   "edges_jsonl_sha256": "fcc5a1939f669a373c9df9f4d072e5bce09522e547a3cee88847f38f90571724",
   "nodes_jsonl_sha256": "9edc37a5667ed1cb35e1f667f77aa92684fe60e6fcea4bfba377e347e9f6a815",
   "operator": "Antigravity/Gemini Pro",
   "schema": "hydradg.seedgraph_admission_receipt.v2",
   "seedgraph_repo": "/Users/byron/projects/active/seedgraph",
-  "signature_state": "NOT_SIGNED",
+  "signature_state": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
+  "status": "PASS",
   "timestamp_iso": "2026-08-20T21:08:07Z",
   "timestamp_unix": 1787260087
 }
