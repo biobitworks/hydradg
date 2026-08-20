@@ -5,6 +5,34 @@
 
 ---
 
+## 📌 Executive Pacing & Time Points Summary
+
+### 🕒 Video Section Spacing & Duration Breakdown
+| Time Window | Duration | Page / Screen | Key Visual Focus | Primary Narration Objective |
+| :--- | :--- | :--- | :--- | :--- |
+| **0:00 – 0:20** | **20s** | [`/`](http://127.0.0.1:3012/) | 4D Context Iceberg Hero | Problem Statement: State overwrite vs 4D governed custody. |
+| **0:20 – 0:55** | **35s** | [`/graph`](http://127.0.0.1:3012/graph) | Interactive 4D Canvas & Time Slider | Scrub $t0 \to t1 \to t2$, rotate 3D spatial field, inspect $H$/$G^*$ halos. |
+| **0:55 – 1:25** | **30s** | [`/judge`](http://127.0.0.1:3012/judge) | Golden Path Judge Lab | Execute $t0$ Reference $\to$ $t1$ Poison $\to$ $t2$ Antidote sequence. |
+| **0:25 – 1:55** | **30s** | [`/track03`](http://127.0.0.1:3012/track03) | Executed LongMemEval Benchmark | 500 cases / 23,867 sessions & preservation of null/negative baseline. |
+| **1:55 – 2:20** | **25s** | [`/evidence`](http://127.0.0.1:3012/evidence) & [`/knowledge`](http://127.0.0.1:3012/knowledge) | Lineage Trace & Citations | Enßlin & Weig 2010 ($G^*$) & Lin 1991 ($JSD$) academic grounding. |
+| **2:20 – 2:40** | **20s** | [`/eligibility`](http://127.0.0.1:3012/eligibility) | Submission Custody | Mandatory closing sentence & governed experiment claim boundary. |
+
+### ⏳ Time Points Breakdown ($t0 \to t1 \to t2$)
+- **$t0$ Reference Baseline** (<span style="color:#10b981">**Green**</span>):
+  - *Status*: `SELF · SAFE · ADMIT`
+  - *Entropy $H$*: `0.412 bits` | *$G^*$ Diagnostic*: `-0.061` | *$\Delta G^*$*: `0.000`
+  - *Meaning*: Baseline un-perturbed knowledge basin before any state change.
+- **$t1$ Poison Perturbation** (<span style="color:#ef4444">**Red**</span>):
+  - *Status*: `NONSELF · NONSAFE · QUARANTINE`
+  - *Entropy $H$*: `1.119 bits ↗` | *$G^*$ Diagnostic*: `+0.573 ↗` | *$\Delta G^*$*: `+0.634 ↗`
+  - *Meaning*: Non-safe state divergence; creates explicit `SUPERSEDED_BY` & `CONTRADICTS` graph edges in HydraDB.
+- **$t2$ Antidote Restoration** (<span style="color:#06b6d4">**Cyan / Green**</span>):
+  - *Status*: `SELF · RESTORED · ADMIT`
+  - *Entropy $H$*: `0.580 bits ↘` | *$G^*$ Diagnostic*: `+0.120 ↘` | *$\Delta G^*$*: `-0.453 🟢`
+  - *Meaning*: Recovery bound; declared current state is restored while retaining poison history in graph lineage.
+
+---
+
 ## ⏱️ Section-by-Section Timing & Click Sequence
 
 ```mermaid
