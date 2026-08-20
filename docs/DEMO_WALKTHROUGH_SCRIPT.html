@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HydraDG — 2:40 Video & Judge Demo Walkthrough Script</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown-dark.min.css">
+<script type="module">
+  import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@10/dist/mermaid.esm.min.mjs';
+  mermaid.initialize({ startOnLoad: true, theme: 'dark' });
+</script>
+<style>
+  body {
+    box-sizing: border-box;
+    min-width: 200px;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 45px;
+    background-color: #0d1117;
+    color: #c9d1d9;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .mermaid {
+    background: #161b22;
+    padding: 16px;
+    border-radius: 8px;
+    margin: 20px 0;
+    text-align: center;
+  }
+  blockquote {
+    border-left: 4px solid #238636;
+    background: #161b22;
+    padding: 12px 16px;
+    border-radius: 0 6px 6px 0;
+  }
+  .badge {
+    display: inline-block;
+    padding: 4px 8px;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 12px;
+    background: #238636;
+    color: #fff;
+  }
+</style>
+</head>
+<body class="markdown-body">
+
+<h1>HydraDG — Video & Judge Demo Walkthrough Script (2:40 Target)</h1>
+
+<blockquote>
+  <p><strong>Recording Setup</strong>: Screen resolution <strong>1920x1080 (16:9 full screen)</strong>. Open local application surface: <a href="http://127.0.0.1:3012/">http://127.0.0.1:3012/</a>.<br>
+  <strong>Time Limit</strong>: Keep total video duration under 3 minutes (recommended <strong>2:20–2:40</strong>).</p>
+</blockquote>
+
+<hr>
+
+<h2>⏱️ Section-by-Section Timing &amp; Click Sequence</h2>
+
+<div class="mermaid">
+timeline
+    title 2:40 Video Walkthrough Flow
+    0:00 - 0:20 : 1. Problem & Hero Overview
+                : Open http://127.0.0.1:3012/
+                : Highlight live 4D Context Iceberg
+    0:20 - 0:55 : 2. Interactive 4D State Field
+                : Open /graph
+                : Rotate x/y/z, scrub time t0->t2, click heat tabs
+    0:55 - 1:25 : 3. Golden Path Judge Lab
+                : Open /judge
+                : Click Load Fixture -> Inject Poison -> Antidote
+    1:25 - 1:55 : 4. Executed Track 03 Evidence
+                : Open /track03
+                : Show 500 cases / 23,867 sessions & null baseline
+    1:55 - 2:20 : 5. Deep FCO Lineage & KB
+                : Open /evidence & /knowledge
+                : Trace FCO source -> atom -> claim ceiling & citations
+    2:20 - 2:40 : 6. Claim Boundary & Closing
+                : Show eligibility & conclusion
+</div>
+
+<hr>
+
+<h3>1. Problem &amp; Hero Overview <span class="badge">0:00 – 0:20</span></h3>
+<ul>
+  <li><strong>URL / Screen</strong>: <a href="http://127.0.0.1:3012/">http://127.0.0.1:3012/</a></li>
+  <li><strong>Action</strong>: Hover cursor over the interactive 4D Context Iceberg hero on the home page.</li>
+  <li><strong>Narration Cue</strong>:
+    <blockquote><em>"Long-lived AI memory systems often flatten or overwrite state updates. When a fact changes, prior context and null evidence disappear. HydraDG turns chain of custody into a navigable, governed 4D state field."</em></blockquote>
+  </li>
+</ul>
+
+<h3>2. Interactive 4D State Field &amp; Context Iceberg <span class="badge">0:20 – 0:55</span></h3>
+<ul>
+  <li><strong>URL / Screen</strong>: Click <strong>"Open full 4D FCG"</strong> or navigate to <a href="http://127.0.0.1:3012/graph">http://127.0.0.1:3012/graph</a>.</li>
+  <li><strong>Actions</strong>:
+    <ol>
+      <li>Click and drag on the 3D canvas to rotate spatial dimensions (<i>x · y · z</i>).</li>
+      <li>Drag the <strong>Time slider</strong> from <i>t0 → t1 → t2</i>.</li>
+      <li>Click the heat layer tabs: <code>mutation</code>, <code>restoration</code>, and <code>|ΔG*|</code>.</li>
+      <li>Click on node <code>StateSnapshot · t1</code> (<code>mutation</code>).</li>
+    </ol>
+  </li>
+  <li><strong>Narration Cue</strong>:
+    <blockquote><em>"Here on the 4D canvas, we rotate spatial dimensions and scrub history from reference to mutation to restoration. Hovering or clicking a node reveals its node-level Shannon entropy H, G*, and relative ΔG* delta against baseline t0, without collapsing accuracy into a single arbitrary score."</em></blockquote>
+  </li>
+</ul>
+
+<h3>3. Golden Path: Reference → Poison → Antidote <span class="badge">0:55 – 1:25</span></h3>
+<ul>
+  <li><strong>URL / Screen</strong>: Click <strong>"Try the guided demo"</strong> or navigate to <a href="http://127.0.0.1:3012/judge">http://127.0.0.1:3012/judge</a>.</li>
+  <li><strong>Actions</strong>:
+    <ol>
+      <li><strong>Step 1</strong>: Click <strong>"Load deterministic fixture"</strong>.</li>
+      <li><strong>Step 2</strong>: Click <strong>"Refresh cases"</strong> → select case <code>gpt4_4edbafa2</code> → click <strong>"Load case into HydraDB"</strong>.</li>
+      <li><strong>Step 3</strong>: Click <strong>"Run retrieval"</strong>.</li>
+      <li><strong>Step 4</strong>: Click <strong>"Inject poison"</strong> → note <code>SUPERSEDED_BY</code> &amp; <code>CONTRADICTS</code> graph edges.</li>
+      <li><strong>Step 4</strong>: Click <strong>"Apply antidote"</strong> → verify reference recovery without erasing divergent history.</li>
+    </ol>
+  </li>
+  <li><strong>Narration Cue</strong>:
+    <blockquote><em>"In Judge Lab, we start with a reference fact, inject a non-safe poison perturbation, and observe how HydraDG creates explicit SUPERSEDED_BY and CONTRADICTS edges. When antidote restoration is applied, the declared current state recovers while the divergent history remains fully inspectable."</em></blockquote>
+  </li>
+</ul>
+
+<h3>4. Executed Track 03 Evidence &amp; Benchmark Preservation <span class="badge">1:25 – 1:55</span></h3>
+<ul>
+  <li><strong>URL / Screen</strong>: Navigate to <a href="http://127.0.0.1:3012/track03">http://127.0.0.1:3012/track03</a>.</li>
+  <li><strong>Actions</strong>: Highlight the executed metrics table (<strong>500 cases / 23,867 sessions / 4,776 entities / 3,506 facts</strong>). Point out <code>Hit@5</code> and <code>Recall@5</code> columns.</li>
+  <li><strong>Narration Cue</strong>:
+    <blockquote><em>"Across 500 LongMemEval benchmark cases and 23,867 sessions, HydraDG constructed and queried the typed temporal graph. Crucially, the completed ablation showed that graph-native routes did not outperform the flat baseline at the tested configuration. Rather than optimizing away this null result, HydraDG preserves null and negative evidence as governed custody."</em></blockquote>
+  </li>
+</ul>
+
+<h3>5. Deep FCO Lineage &amp; Knowledge Base Citations <span class="badge">1:55 – 2:20</span></h3>
+<ul>
+  <li><strong>URL / Screen</strong>: Navigate to <a href="http://127.0.0.1:3012/evidence">http://127.0.0.1:3012/evidence</a> and <a href="http://127.0.0.1:3012/knowledge">http://127.0.0.1:3012/knowledge</a>.</li>
+  <li><strong>Actions</strong>:
+    <ol>
+      <li>Click an FCO node to view SHA-256 hash, evidence class, and claim ceiling.</li>
+      <li>In Knowledge Base, highlight the <strong>Enßlin &amp; Weig (2010)</strong> citation for <i>G*</i> and <strong>Lin (1991)</strong> citation for <i>JSD</i> Cloud Drift.</li>
+    </ol>
+  </li>
+  <li><strong>Narration Cue</strong>:
+    <blockquote><em>"Every result resolves backward from claim to evidence, transformation, and source FCO. G* is grounded as an application-defined dimensionless diagnostic, citing Enßlin &amp; Weig 2010 for its theoretical free-energy analogy, and Lin 1991 for Jensen-Shannon Cloud Drift."</em></blockquote>
+  </li>
+</ul>
+
+<h3>6. Claim Boundary &amp; Closing Statement <span class="badge">2:20 – 2:40</span></h3>
+<ul>
+  <li><strong>URL / Screen</strong>: Navigate to <a href="http://127.0.0.1:3012/eligibility">http://127.0.0.1:3012/eligibility</a> or return to Home page.</li>
+  <li><strong>Actions</strong>: Show submission custody status: <code>PUBLIC_GITHUB=PASS</code>, <code>SUBMISSION_READY=YES</code>.</li>
+  <li><strong>Closing Sentence (Mandatory)</strong>:
+    <blockquote style="border-left-color: #d29922;"><em>"HydraDG is not a leaderboard claim. It is a governed memory experiment: change state, observe the first divergence, preserve custody, test recovery, and keep positive, null, negative, and abstaining results in the same graph."</em></blockquote>
+  </li>
+</ul>
+
+<hr>
+
+<h3>📋 Key Checklist Before Hitting Record</h3>
+<ul>
+  <li>✅ Local Next.js server active on <code>http://127.0.0.1:3012/</code></li>
+  <li>✅ Local Best-Use server active on <code>http://127.0.0.1:8787/</code></li>
+  <li>✅ Browser in full-screen 1920x1080 resolution (Google Chrome)</li>
+  <li>✅ All 4 steps in <code>/judge</code> tested and responsive</li>
+</ul>
+
+</body>
+</html>
