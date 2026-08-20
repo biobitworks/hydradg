@@ -18,6 +18,8 @@ on:
 jobs:
   build-and-smoke:
     runs-on: ubuntu-latest
+    env:
+      HYDRADG_RELEASE_GIT_SHA: ${{ github.event.pull_request.head.sha || github.sha }}
     defaults:
       run:
         working-directory: apps/hydradg-web
@@ -33,6 +35,7 @@ jobs:
           expected="${{ github.event.pull_request.head.sha || github.sha }}"
           echo "TESTED_SHA=$actual"
           test "$actual" = "$expected"
+          test "$HYDRADG_RELEASE_GIT_SHA" = "$actual"
       - uses: actions/setup-node@v4
         with:
           node-version: 24
@@ -68,7 +71,7 @@ jobs:
       - name: Public route and API smoke
         run: |
           set -euo pipefail
-          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03 /how-to /backup/hydradg.html; do
+          for path in / /demo /judge /graph /knowledge /evidence /eligibility /evolution /results/context-vs-entropy /track01 /track02 /track03 /how-to /backup/hydradg.html; do
             code="$(curl -sS -o /tmp/body -w '%{http_code}' "http://127.0.0.1:3000${path}")"
             echo "$path -> $code"
             test "$code" = "200"
@@ -89,10 +92,15 @@ jobs:
           const fs = require('fs');
           const j = JSON.parse(fs.readFileSync('/tmp/site-fcg.json','utf8'));
           if (j.schema !== 'hydradg.site_fcg.v1') throw new Error('site FCG schema mismatch');
-          if (!Array.isArray(j.nodes) || j.nodes.length < 9) throw new Error('site FCO nodes missing');
-          if (!Array.isArray(j.edges) || j.edges.length < 10) throw new Error('site FCG edges missing');
+          if (!Array.isArray(j.nodes) || j.nodes.length < 10) throw new Error('site FCO nodes missing');
+          if (!Array.isArray(j.edges) || j.edges.length < 15) throw new Error('site FCG edges missing');
           if (j.merkle_state !== 'NOT_MERKLE_COMMITTED') throw new Error('site Merkle boundary lost');
-          for (const n of j.nodes) if (!/^fco:[0-9a-f]{64}$/.test(n.id || '')) throw new Error('invalid SiteSection FCO id');
+          for (const n of j.nodes) {
+            if (!/^fco:[0-9a-f]{64}$/.test(n.id || '')) throw new Error('invalid SiteSection FCO id');
+            if (n.id !== `fco:${n.object_sha256}`) throw new Error('site FCO id/hash mismatch');
+          }
+          const colors = j.artifact?.payload?.presentation_projection?.state_colors || {};
+          if (colors.reference_normal !== 'VIOLET' || colors.poison_mutation !== 'ORANGE' || colors.antidote_restoration !== 'BLUE') throw new Error('state color contract missing');
           console.log('site FCG PASS', j.artifact.id);
           NODE
           fco_id="$(node -e "const j=require('/tmp/site-fcg.json'); process.stdout.write(j.nodes[0].id)")"
@@ -107,7 +115,36 @@ jobs:
           cloud_code="$(curl -sS -o /tmp/cloud.json -w '%{http_code}' http://127.0.0.1:3000/api/hydradb-cloud)"
           test "$cloud_code" = "503"
           node -e "const j=require('/tmp/cloud.json'); if(j.configured!==false || j.secret_disclosure!=='API_KEY_VALUE_NEVER_RETURNED') throw Error('cloud fail-closed mismatch')"
-      - name: Verify judge and release copy
+          v2_code="$(curl -sS -o /tmp/v2.json -w '%{http_code}' -H 'content-type: application/json' -d '{"query":"FCO","query_apps":true,"graph_context":true}' http://127.0.0.1:3000/api/hydradb-v2/query)"
+          test "$v2_code" = "503"
+          node -e "const j=require('/tmp/v2.json'); if(j.configured!==false || j.secret_disclosure!=='HYDRADB_CREDENTIAL_VALUES_NEVER_RETURNED') throw Error('v2 fail-closed mismatch')"
+      - name: Verify exact release FCO and deployed-version contract
+        run: |
+          set -euo pipefail
+          curl -fsS http://127.0.0.1:3000/api/release > /tmp/release.json
+          node - <<'NODE'
+          const fs = require('fs');
+          const { execSync } = require('child_process');
+          const j = JSON.parse(fs.readFileSync('/tmp/release.json','utf8'));
+          const expected = execSync('git rev-parse HEAD', { encoding: 'utf8' }).trim();
+          if (j.schema !== 'hydradg.website_release.v1') throw new Error('release schema mismatch');
+          if (j.git_sha !== expected) throw new Error(`release SHA mismatch ${j.git_sha} != ${expected}`);
+          if (!j.version.includes(expected.slice(0,12))) throw new Error('version does not bind exact SHA');
+          if (j.fco_identity_validation?.status !== 'PASS') throw new Error('FCO identity validation not PASS');
+          if ((j.fco_identity_validation?.problems || []).length !== 0) throw new Error('FCO identity problems present');
+          const fco = j.release_fco;
+          if (!fco || fco.id !== `fco:${fco.object_sha256}` || !/^[0-9a-f]{64}$/.test(fco.object_sha256 || '')) throw new Error('release FCO identity mismatch');
+          if (fco.payload?.deployed_git_sha !== expected) throw new Error('release FCO payload SHA mismatch');
+          if (j.signature_state !== 'NOT_SIGNED') throw new Error('signature boundary changed');
+          if (j.merkle_state !== 'NOT_MERKLE_COMMITTED') throw new Error('merkle boundary changed');
+          console.log('release FCO PASS', j.version, fco.id);
+          NODE
+          release_id="$(node -e "const j=require('/tmp/release.json'); process.stdout.write(j.release_fco.id)")"
+          release_code="$(curl -sS -o /tmp/release-fco.html -w '%{http_code}' "http://127.0.0.1:3000/fco/${release_id}")"
+          test "$release_code" = "200"
+          grep -Fq "$release_id" /tmp/release-fco.html
+          grep -Fq 'HASH IDENTITY PASS' /tmp/release-fco.html
+      - name: Verify judge, heatmap, KB, and result copy
         run: |
           set -euo pipefail
           assert_contains() {
@@ -127,13 +164,40 @@ jobs:
           assert_contains /tmp/judge.html 'Poison' judge-poison
           assert_contains /tmp/judge.html 'Antidote' judge-antidote
           assert_contains /tmp/judge.html 'public read-only walkthrough' judge-read-only-boundary
+          assert_contains /tmp/judge.html 'T3_HOSTED_MIGRATION' judge-t3
+          assert_contains /tmp/judge.html 'T4_CONTEXT_VS_ENTROPY' judge-t4
+          assert_contains /tmp/judge.html 'T5_FINAL_JUDGE_RELEASE' judge-t5
           curl -fsS http://127.0.0.1:3000/ > /tmp/home.html
           assert_contains /tmp/home.html 'See the context move.' home-title
           assert_contains /tmp/home.html 'One custody spine. Three graph problems.' home-track-summary
+          assert_contains /tmp/home.html 'Violet' home-reference-color
+          assert_contains /tmp/home.html 'Orange' home-poison-color
+          assert_contains /tmp/home.html 'Blue' home-antidote-color
           curl -fsS http://127.0.0.1:3000/track03 > /tmp/track03.html
           assert_contains /tmp/track03.html 'FULL500 COMPLETE' track03-executed-state
           assert_contains /tmp/track03.html 'NO POSITIVE B/C/D HIT-RATE SIGNAL' track03-null-result
           assert_contains /tmp/track03.html 'bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324' track03-result-hash
+          assert_contains /tmp/track03.html '0.9638297872' track03-route-a-hit
+          assert_contains /tmp/track03.html '0.9065957447' track03-route-a-recall
+          curl -fsS http://127.0.0.1:3000/knowledge > /tmp/knowledge.html
+          assert_contains /tmp/knowledge.html 'G* = U* - 0.35 × Hnorm' kb-gstar-formula
+          assert_contains /tmp/knowledge.html 'Mutation distance' kb-mutation
+          assert_contains /tmp/knowledge.html 'total-variation distance' kb-tv-contract
+          assert_contains /tmp/knowledge.html 'KnowledgeAtom' kb-atom
+          assert_contains /tmp/knowledge.html 'SeedOfTruth' kb-seed
+          curl -fsS http://127.0.0.1:3000/graph > /tmp/graph.html
+          assert_contains /tmp/graph.html 'Reference / normal' graph-reference
+          assert_contains /tmp/graph.html 'Poison / mutation' graph-poison
+          assert_contains /tmp/graph.html 'Antidote / restoration' graph-antidote
+          assert_contains /tmp/graph.html 'KnowledgeAtom' graph-atom-link
+          assert_contains /tmp/graph.html 'SeedOfTruth' graph-seed-link
+          curl -fsS http://127.0.0.1:3000/demo > /tmp/demo.html
+          assert_contains /tmp/demo.html 'FINAL VIDEO RECORDED' demo-video-state
+          if grep -Fq 'FINAL VIDEO PENDING' /tmp/demo.html; then echo 'STALE_VIDEO_PENDING=FAIL'; exit 1; fi
+          curl -fsS http://127.0.0.1:3000/results/context-vs-entropy > /tmp/context.html
+          assert_contains /tmp/context.html '18,555' context-classified
+          assert_contains /tmp/context.html '12 abstentions' context-abstentions
+          if grep -Fq '99.94% of false positives' /tmp/context.html; then echo 'CLAIM_INFLATION=FAIL'; exit 1; fi
       - name: Server log on failure
         if: failure()
         run: cat /tmp/hydradg-web.log || true

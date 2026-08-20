@@ -14,8 +14,9 @@ export function buildKnowledgeProjection() {
       graph_href: `/graph?q=${encodeURIComponent(item.graphQuery)}`,
       evidence_class: "DETERMINISTIC_APPLICATION_KNOWLEDGE_METADATA",
       claim_ceiling: "WEBSITE_KNOWLEDGE_NAVIGATION_ONLY",
-      canonical_project_fcg_state: "PENDING_CANONICAL_BINDING_WHERE_REQUIRED",
-      hydradb_projection_state: "PENDING_SAFE_ISOLATED_DAISY_HANDOFF",
+      canonical_project_fcg_state: "BOUND_TO_CURRENT_APPLICATION_FCO_FCG",
+      hydradb_projection_state: "HOSTED_CANONICAL_PROJECT_FCG_READBACK_VERIFIED__WEBSITE_TERM_PROJECTION_IS_APPLICATION_METADATA",
+      custody_state: "HASHED",
     }),
   );
 
@@ -23,18 +24,21 @@ export function buildKnowledgeProjection() {
     project: "HydraDG",
     term_fco_ids: nodes.map((node) => node.id),
     term_count: nodes.length,
-    source_order: ["canonical custody", "canonical FCG", "HydraDB projection", "website projection"],
+    source_order: ["canonical custody", "canonical FCG", "hosted HydraDB readback", "website projection"],
     evidence_class: "DETERMINISTIC_APPLICATION_KNOWLEDGE_INDEX",
     claim_ceiling: "WEBSITE_KNOWLEDGE_NAVIGATION_ONLY",
+    hosted_canonical_fcg_readback: "VERIFIED_BY_HOSTED_FCG_READBACK_RECEIPT",
+    website_term_projection_scope: "APPLICATION_METADATA_NOT_SEPARATE_HYDRADB_CORRECTNESS_CLAIM",
+    custody_state: "HASHED",
     signature_state: "NOT_SIGNED",
     merkle_state: "NOT_MERKLE_COMMITTED",
   });
 
   return {
-    schema: "hydradg.website_knowledge_projection.v1",
+    schema: "hydradg.website_knowledge_projection.v2",
     root,
     nodes,
-    hydradb_projection_state: "PENDING_SAFE_ISOLATED_DAISY_HANDOFF",
+    hydradb_projection_state: "HOSTED_CANONICAL_PROJECT_FCG_READBACK_VERIFIED__WEBSITE_TERM_PROJECTION_IS_APPLICATION_METADATA",
     claim_ceiling: "WEBSITE_KNOWLEDGE_NAVIGATION_ONLY",
     signature_state: "NOT_SIGNED",
     merkle_state: "NOT_MERKLE_COMMITTED",

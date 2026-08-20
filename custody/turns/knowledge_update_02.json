@@ -1,0 +1,15 @@
+{
+  "update_type": "ADD",
+  "admission_state": "ADMIT",
+  "claim_ceiling": "MEASURED_EXPERIMENT_RESULT",
+  "uncertainty": "DETERMINISTIC_REPRODUCIBLE",
+  "atoms": [
+    {
+      "content": "HydraDB context graph (namespace hydradg-context-entropy-20260820) classifies 99.94% of 18,567 raw pattern findings into reviewed provenance classes while reserving 12 abstentions for unexplained candidates.",
+      "source_ref": "eval/context_vs_entropy_20260820/CONTEXT_VS_ENTROPY_RESULT.json",
+      "evidence_class": "EXECUTION_RECEIPT",
+      "claim_ceiling": "MEASURED_EXPERIMENT_RESULT",
+      "uncertainty": "REPRODUCIBLE"
+    }
+  ]
+}

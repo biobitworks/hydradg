@@ -1,0 +1,77 @@
+{
+  "claim_boundary": "T0..T2 are synthetic fixture metrics with declared distributions. T3..T5 are real project/release states; scalar G*/delta_G*/Cloud Drift is NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION unless a governed distribution is separately declared.",
+  "schema": "hydradg.fcg_timepoints.v2",
+  "release_sha_binding": "VERCEL_GIT_COMMIT_SHA_AT_DEPLOYMENT_AND_WEBSITE_RELEASE_FCO",
+  "timepoints": [
+    {
+      "burden": 0.08,
+      "classification": "SYNTHETIC_FIXTURE",
+      "distribution": [0.88, 0.08, 0.04],
+      "label": "T0 Reference / Normal",
+      "metrics": {"G_star": -0.06123, "cloud_drift": 0.0, "delta_G_star": 0.0},
+      "score_state": "MEASURED",
+      "timepoint_id": "T0_REFERENCE"
+    },
+    {
+      "burden": 0.82,
+      "classification": "SYNTHETIC_FIXTURE",
+      "distribution": [0.18, 0.72, 0.1],
+      "label": "T1 Poison / Mutation",
+      "metrics": {"G_star": 0.572956, "cloud_drift": 40.3629, "delta_G_star": 0.634186},
+      "score_state": "MEASURED",
+      "timepoint_id": "T1_MUTATION"
+    },
+    {
+      "burden": 0.2,
+      "classification": "SYNTHETIC_FIXTURE",
+      "distribution": [0.76, 0.14, 0.1],
+      "label": "T2 Antidote / Restoration",
+      "metrics": {"G_star": -0.027496, "cloud_drift": 1.8729, "delta_G_star": -0.600452},
+      "score_state": "MEASURED",
+      "timepoint_id": "T2_RESTORATION"
+    },
+    {
+      "classification": "PRODUCTION_RELEASE_STATE",
+      "label": "T3 Hosted HydraDB v2 Migration",
+      "score_state": "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION",
+      "state_snapshot": {
+        "canonical_content_hash_delta": 0,
+        "canonical_edge_delta": 0,
+        "canonical_fco_set_delta": 0,
+        "collection": "default",
+        "database": "hydradg",
+        "migration_parity": "PASS",
+        "observed_at": "2026-08-20T14:40:00Z",
+        "receipt_source_git_sha": "247dd401a280107f0138c44158aefedf153c6102"
+      },
+      "timepoint_id": "T3_HOSTED_MIGRATION"
+    },
+    {
+      "classification": "PRODUCTION_EXPERIMENT_STATE",
+      "label": "T4 Context vs Entropy",
+      "score_state": "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION",
+      "state_snapshot": {
+        "abstention_count": 12,
+        "classification_coverage_percent": 99.9354,
+        "classified_findings": 18555,
+        "modal_token_preservation": "REVOKED_HISTORICAL_CREDENTIAL",
+        "observed_at": "2026-08-20T13:45:00Z",
+        "raw_findings": 18567,
+        "experiment_commit_sha": "620591853fbec7167fcb900fa78942fd944707b5"
+      },
+      "timepoint_id": "T4_CONTEXT_VS_ENTROPY"
+    },
+    {
+      "classification": "PRODUCTION_JUDGE_RELEASE_STATE",
+      "label": "T5 Final Judge Release",
+      "score_state": "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION",
+      "state_snapshot": {
+        "integration_branch": "hack-hydra/final-hosted-fcg-display-green-20260820",
+        "deployed_git_sha_binding": "VERCEL_GIT_COMMIT_SHA",
+        "release_fco_binding": "/api/release",
+        "release_gate_contract": "EXACT_DEPLOYED_SHA_MUST_BE_GREEN_BEFORE_PRODUCTION_PROMOTION"
+      },
+      "timepoint_id": "T5_FINAL_JUDGE_RELEASE"
+    }
+  ]
+}
