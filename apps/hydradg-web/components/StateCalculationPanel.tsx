@@ -43,6 +43,23 @@ function signed(value: number, digits = 6) {
   return `${value >= 0 ? "+" : ""}${value.toFixed(digits)}`;
 }
 
+export function AnticubePanel({ anticube }: { anticube: AnticubeConsideration }) {
+  const anticubeHasReceipt = Boolean(anticube.receiptId);
+  return (
+    <div style={{ marginTop: 10, border: anticubeHasReceipt ? "1px solid rgba(246,200,95,0.65)" : "1px solid rgba(216,224,232,0.28)", background: anticubeHasReceipt ? "rgba(246,200,95,0.08)" : "rgba(216,224,232,0.04)", borderRadius: 9, padding: "10px 12px" }}>
+      <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+        <strong><KnowledgeTermLink slug="anticube">Anticube consideration</KnowledgeTermLink></strong>
+        <span className={anticubeHasReceipt ? "pill pillWarn" : "pill pillMuted"}>{anticube.status}</span>
+      </div>
+      <p className="small muted">{anticube.note}</p>
+      {anticube.receiptId ? <p className="mono small compact">receipt={anticube.receiptId}</p> : null}
+      {anticube.classifierState ? <p className="mono small compact">classifier_state={anticube.classifierState}</p> : null}
+      {anticube.claimCeiling ? <p className="mono small compact">claim_ceiling={anticube.claimCeiling}</p> : null}
+      {anticube.receiptId ? <Link className="secondary" href={`/fco/${encodeURIComponent(anticube.receiptId)}`}>Open ClassificationReceipt</Link> : <Link className="secondary" href="/knowledge#anticube">Why UNKNOWN is retained</Link>}
+    </div>
+  );
+}
+
 export default function StateCalculationPanel({
   state,
   scope,
@@ -53,7 +70,6 @@ export default function StateCalculationPanel({
   anticube: AnticubeConsideration;
 }) {
   const visual = STATE_VISUALS[state.t] || { name: state.label, color: "#d8e0e8", hue: 0, meaning: "Declared state" };
-  const anticubeHasReceipt = Boolean(anticube.receiptId);
 
   return (
     <section aria-label="Selected node state calculations" style={{ marginTop: 14 }}>
@@ -77,17 +93,7 @@ export default function StateCalculationPanel({
         <div style={metricBox(visual.color)}><span className="metricLabel"><KnowledgeTermLink slug="restoration-gain">Restoration gain</KnowledgeTermLink></span><strong>{state.restoration_gain.toFixed(6)}</strong></div>
       </div>
 
-      <div style={{ marginTop: 10, border: anticubeHasReceipt ? "1px solid rgba(246,200,95,0.65)" : "1px solid rgba(216,224,232,0.28)", background: anticubeHasReceipt ? "rgba(246,200,95,0.08)" : "rgba(216,224,232,0.04)", borderRadius: 9, padding: "10px 12px" }}>
-        <div style={{ display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
-          <strong><KnowledgeTermLink slug="anticube">Anticube consideration</KnowledgeTermLink></strong>
-          <span className={anticubeHasReceipt ? "pill pillWarn" : "pill pillMuted"}>{anticube.status}</span>
-        </div>
-        <p className="small muted">{anticube.note}</p>
-        {anticube.receiptId ? <p className="mono small compact">receipt={anticube.receiptId}</p> : null}
-        {anticube.classifierState ? <p className="mono small compact">classifier_state={anticube.classifierState}</p> : null}
-        {anticube.claimCeiling ? <p className="mono small compact">claim_ceiling={anticube.claimCeiling}</p> : null}
-        {anticube.receiptId ? <Link className="secondary" href={`/fco/${encodeURIComponent(anticube.receiptId)}`}>Open ClassificationReceipt</Link> : <Link className="secondary" href="/knowledge#anticube">Why UNKNOWN is retained</Link>}
-      </div>
+      <AnticubePanel anticube={anticube} />
     </section>
   );
 }
