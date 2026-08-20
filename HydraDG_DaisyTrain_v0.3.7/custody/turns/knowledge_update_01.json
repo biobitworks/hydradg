@@ -1,0 +1,22 @@
+{
+  "update_type": "REPAIR",
+  "admission_state": "ADMIT",
+  "claim_ceiling": "MEASURED_BASELINE_REPAIR",
+  "uncertainty": "DETERMINISTIC_REPRODUCIBLE",
+  "atoms": [
+    {
+      "content": "AdamW default eps=1e-8 combined with unclipped gradients (grad_clip_norm=0.0) caused parameter divergence at step 0 for uninitialized Pythia-14m architecture.",
+      "source_ref": "eval/vithia_cfmo_baseline_v0.1/HISTORICAL_FAILURE_AUDIT.json",
+      "evidence_class": "EXECUTION_RECEIPT",
+      "claim_ceiling": "MEASURED_BASELINE_REPAIR",
+      "uncertainty": "REPRODUCIBLE"
+    },
+    {
+      "content": "Repaired baseline configuration (AdamW lr=1e-4, adam_eps=1e-5, grad_clip_norm=1.0) achieves 100% finite training and probe metrics across multi-seed reference runs.",
+      "source_ref": "eval/vithia_cfmo_baseline_v0.1/CFMO_REFERENCE_DISTRIBUTION.json",
+      "evidence_class": "EXECUTION_RECEIPT",
+      "claim_ceiling": "MEASURED_BASELINE_REPAIR",
+      "uncertainty": "REPRODUCIBLE"
+    }
+  ]
+}

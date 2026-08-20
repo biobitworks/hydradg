@@ -1,0 +1,25 @@
+{
+  "authorship": "LOCAL_MODEL_HYPOTHESIS",
+  "claim_boundary": "LOCAL_MODEL_HYPOTHESIS only. Strictly non-load-bearing. Cannot declare scientific validity or alter empirical findings.",
+  "hypothesis_text": "<think>User message: \"You are acting as a local model reviewer (ANTIGENIC_CHALLENGER_REVIEWER) inspecting Pythia-14m training baseline experiments. HISTORICAL FAILURE AUDIT: ... Provide a concise 3-bullet technical evaluation comparing the historical failure with the repaired CFMO reference distribution, and state whether the repaired baseline is suitable for future ablation studies.\"\n\nWe need to produce answer in bullet points that compare historical failure vs repaired baseline distribution. We have details:\n\n- Historical Failure Audit:\n   - Failure ID: VITHIA-OVERNIGHT-01\n   - Classification: PRESERVED_NEGATIVE_CONTROL\n   - Step 0 Loss: 10.853618621826172\n   - First non-finite step: Step 1 (Loss = NaN)\n   - Failure Cause: At step 0, loss evaluated to 10.8536, but probe forward pass produced NaN logits. At step 1 after AdamW optimizer step, loss became NaN. Unclipped gradients and high initial learning rate (3e-4) on uninitialized pythia-14m architecture caused numerical overflow in attention logits.\n\n- CFMO Reference Distribution:\n   - Included runs: 5 reference runs\n   - Baseline Repair: AdamW lr=0.0001, eps=1e-05, grad_clip_norm=1.0\n   - All observables finite: True\n   - Initial Loss Mean: 10.8481\n   - Final Loss Mean: 10.8726 (std: 0.0236)\n\nWe need to provide a concise 3-bullet technical evaluation comparing historical failure with repaired CFMO reference distribution, and state whether the repaired baseline is suitable for future ablation studies.\n\nLet's produce answer in bullet points:\n\nBullet point 1: Compare initial loss values: Historical failure had step 0 loss of ~10.8536; reference distribution has initial loss mean of 10.8481 which is similar. But historical failure produced NaN logits at step 1 due to unclipped gradients and high learning rate, while repaired baseline uses lower learning rate (0.0001 vs 3e-4) and gradient clipping norm=1.0.\n\nBullet point 2: Numerical stability: Historical failure encountered numerical overflow in attention logits leading to non-finite values; the repaired CFMO reference distribution shows all observables finite across runs, indicating improved numerical stability due to lower learning rate and gradient clipping.\n\nBullet point 3: Suit",
+  "load_bearing": false,
+  "model_metadata": {
+    "details": {
+      "families": [
+        "phi3"
+      ],
+      "family": "phi3",
+      "format": "gguf",
+      "parameter_size": "14.7B",
+      "parent_model": "",
+      "quantization_level": "Q4_K_M"
+    },
+    "digest": "47e2630ccbcd361abcc9f90d8e8a5ada92583e4d5f9359192130372b42132315",
+    "endpoint": "http://127.0.0.1:11434",
+    "model_tag": "phi4-reasoning:14b",
+    "provider": "ollama",
+    "size_bytes": 11117503233
+  },
+  "reviewer_role": "ANTIGENIC_CHALLENGER_REVIEWER",
+  "schema": "hydradg.local_model_hypothesis_review.v1"
+}

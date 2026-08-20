@@ -1,0 +1,57 @@
+{
+  "ablation_matrices": [
+    {
+      "description": "Varying random generator seed across 10 trials while holding hyperparameter baseline fixed.",
+      "matrix_id": "MX-01-SEED-PERTURBATION",
+      "values": [
+        101,
+        102,
+        103,
+        104,
+        105,
+        106,
+        107,
+        108,
+        109,
+        110
+      ],
+      "varied_parameter": "seed"
+    },
+    {
+      "description": "Injecting single token perturbations at step t=10 and t=20 to measure distance from reference loss basin.",
+      "matrix_id": "MX-02-TOKEN-ATOM-ABLATION",
+      "values": [
+        {
+          "delta": 1,
+          "step": 10
+        },
+        {
+          "delta": 5,
+          "step": 20
+        }
+      ],
+      "varied_parameter": "token_perturbation"
+    }
+  ],
+  "admission_gates": {
+    "all_observables_finite_required": true,
+    "max_loss_deviation_sigmas": 3.0,
+    "reference_basin_comparison_required": true
+  },
+  "claim_boundary": "PREPARED_UNEXECUTED experiment specification only. DO NOT EXECUTE until human operator issues explicit execution authorization.",
+  "execution_status": "PREPARED_UNEXECUTED",
+  "experiment_id": "FMO-EXP-037-VITHIA-SEEDGRAPH-ABLATION-PREP",
+  "frozen_baseline_configuration": {
+    "adam_eps": 1e-05,
+    "batch": 2,
+    "grad_clip_norm": 1.0,
+    "lr": 0.0001,
+    "model_architecture": "EleutherAI/pythia-14m",
+    "seq": 128,
+    "steps": 24
+  },
+  "objective": "Evaluate Pythia-14m baseline stability and convergence under controlled seed/atom perturbations against the bounded CFMO reference distribution.",
+  "parent_reference_basin": "CFMO_REF_DIST_VITHIA_PYTHIA14M_v0.1",
+  "preregistration_ts_utc": "2026-08-20T13:15:00Z",
+  "schema": "hydradg.vithia_ablation_experiment_spec.v1"
+}

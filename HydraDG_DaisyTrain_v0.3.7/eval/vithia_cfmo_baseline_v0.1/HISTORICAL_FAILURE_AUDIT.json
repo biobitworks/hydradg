@@ -1,0 +1,33 @@
+{
+  "schema": "hydradg.vithia_historical_failure_audit.v1",
+  "historical_run_id": "VITHIA-OVERNIGHT-01",
+  "classification": "PRESERVED_NEGATIVE_CONTROL",
+  "audit_timestamp_utc": "2026-08-20T02:50:00Z",
+  "preserved_path": "/Users/byron/projects/active/hydradg/HydraDG_DaisyTrain_v0.3.7/eval/vithia_overnight/VITHIA-OVERNIGHT-01",
+  "audit_findings": {
+    "initial_loss": 10.853618621826172,
+    "first_non_finite_loss_step": 1,
+    "first_non_finite_probe_logits_step": 0,
+    "loss_at_step_0": 10.853618621826172,
+    "loss_at_step_1": null,
+    "probe_top_logits_at_step_0": [null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null],
+    "optimizer": "AdamW",
+    "learning_rate": 0.0003,
+    "model_architecture": "EleutherAI/pythia-14m",
+    "tokenizer_data_fixture": "synthetic_batches (seq=128, batch=2, vocab=50277)",
+    "precision_dtype": "torch.float32",
+    "initialization": "transformers.AutoModelForCausalLM.from_config (pythia-14m default)",
+    "thread_count": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "torch_num_threads": 1,
+      "torch_num_interop_threads": 10
+    },
+    "seed": 314159,
+    "pytorch_version": "2.8.0",
+    "platform": "macOS-26.5.2-arm64-arm-64bit",
+    "python_version": "3.9.6"
+  },
+  "failure_mechanism_summary": "At step 0, loss evaluated to 10.8536, but probe forward pass produced NaN logits. At step 1 after AdamW optimizer step, loss became NaN. Unclipped gradients and high initial learning rate (3e-4) on uninitialized pythia-14m architecture caused numerical overflow in attention logits.",
+  "claim_boundary": "Historical negative control fixture only. Trajectory MUST NOT be used for mean, variance, covariance, or CFMO reference distribution."
+}

@@ -1,0 +1,34 @@
+{
+  "schema": "hydradg.fco_fcg_turn_keys.v1",
+  "session_key": "session_20260819_vithia",
+  "turn_index": 1,
+  "turn_keys": {
+    "agent_id": "fco:16b0be36ad4f6f00fccad1110be6c776a13219989c9c4d92701e7db73e5d6d30",
+    "model_id": "fco:3eae2cf8546a601bbc59d56c8bd6aa2a7c165eab994e8e2484124d26ba906ce6",
+    "session_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+    "turn_id": "fco:0f63d48a6ff8918d761df757bbddb060db17bb80dfd3974459d3bb99f6bcca4f",
+    "input_artifact_id": "fco:cca473d2ddd24ac61cb48e313a359b6135c2020c4be3b295be097b6cc7293b12",
+    "output_artifact_id": "fco:75718745dff330636ff61b0a8f5b38c6237eff3b49370d2c44849124c3da9044",
+    "invocation_id": "fco:dc50a4a8d1499981a2390ff606d4d5eb83ed714d4c31f984f04830929248ee4d",
+    "tool_action_id": "fco:d89f3023d87de348ccfdad8e822b7e353177e8ae9893e4c2a66637a46b3f448c",
+    "knowledge_update_id": "fco:d173eb48a914fc4b3e4954ea2d3f26f0201e89f63282dc8646fa05030beb8bcf",
+    "admission_decision_id": "fco:2d4009ed4c38ca0f931696e084d6c896caf5f227404df7cdc7c147d6c9450cb5"
+  },
+  "primary_local_model": {
+    "model_tag": "qwen2.5-coder:7b",
+    "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "role": "PRIMARY_LOG_AND_RESULT_REVIEWER",
+    "review_artifact": "eval/vithia_cfmo_baseline_v0.1/review_qwen2.5_coder.json"
+  },
+  "challenger_local_model": {
+    "model_tag": "phi4-reasoning:14b",
+    "digest": "47e2630ccbcd361abcc9f90d8e8a5ada92583e4d5f9359192130372b42132315",
+    "role": "ANTIGENIC_CHALLENGER_REVIEWER",
+    "review_artifact": "eval/vithia_cfmo_baseline_v0.1/review_phi4_reasoning.json"
+  },
+  "custody_journal": {
+    "nodes_jsonl_sha256": "55839505c8b4db25214951c946056dc7a152e8ccaafa5443c98a2bb1b45078e0",
+    "edges_jsonl_sha256": "ae26a68d851056079ec0a7a3976befe0959e5c893d79bb13b9138e54fc0dac39",
+    "status": "PASS"
+  }
+}
