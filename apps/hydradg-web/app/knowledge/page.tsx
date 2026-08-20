@@ -1,3 +1,5 @@
+import Breadcrumbs from "@/components/Breadcrumbs";
+import { AUTHOR_AUTHORITY, HUGGINGFACE_MODELS, PREPRINTS } from "@/lib/huggingfaceAndPreprints";
 import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
 import { KNOWLEDGE_TERMS } from "@/lib/knowledgeLinks";
 
@@ -6,6 +8,14 @@ export default function KnowledgePage() {
 
   return (
     <main>
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Knowledge Base" },
+        ]}
+        summaryText="Resolve unfamiliar terms, academic preprints, Hugging Face models, and DOIs backward to their underlying Knowledge Atom FCOs."
+      />
+
       <header className="hero">
         <div>
           <p className="eyebrow">HydraDG · linked terminology + custody</p>
@@ -13,22 +23,68 @@ export default function KnowledgePage() {
           <p className="lede">
             Project-specific terms are navigation objects, not decorative labels. Each declared term resolves to a definition,
             operational meaning, graph search, deterministic website Knowledge FCO, and upstream source/receipt when one exists.
-            HydraDB KB projection remains gated until Daisy hands Release Watch a safe isolated state.
           </p>
-          <div className="actions"><a className="primary" href="/api/knowledge">Open knowledge API</a><a className="secondary" href="/#iceberg">Context Iceberg</a></div>
+          <div className="actions">
+            <a className="primary" href="/api/knowledge">Open Knowledge API</a>
+            <a className="secondary" href="https://huggingface.co/biobitworks" target="_blank" rel="noreferrer">Hugging Face Org ↗</a>
+            <a className="secondary" href={AUTHOR_AUTHORITY.orcid} target="_blank" rel="noreferrer">ORCID ↗</a>
+          </div>
         </div>
       </header>
 
       <section className="metrics">
         <div className="metric"><span className="metricLabel">Knowledge terms</span><strong>{KNOWLEDGE_TERMS.length}</strong></div>
-        <div className="metric"><span className="metricLabel">Knowledge root</span><strong className="mono small compact">{knowledge.root.object_sha256.slice(0, 18)}…</strong></div>
-        <div className="metric"><span className="metricLabel">HydraDB KB</span><strong className="small">READY & LINKED</strong></div>
+        <div className="metric"><span className="metricLabel">Preprints &amp; DOIs</span><strong>{PREPRINTS.length}</strong></div>
+        <div className="metric"><span className="metricLabel">HF Models</span><strong>{HUGGINGFACE_MODELS.length}</strong></div>
         <div className="metric"><span className="metricLabel">Claim boundary</span><strong className="small">navigation ≠ correctness</strong></div>
       </section>
 
+      {/* Preprints & Hugging Face Models Section */}
+      <section className="computeSection">
+        <span className="sectionNumber">01 / PREPRINTS &amp; HUGGING FACE MODELS</span>
+        <h2 className="displayTitle">Canonical publication DOIs &amp; Hugging Face weights.</h2>
+        <div className="grid twoCol">
+          {PREPRINTS.map((paper) => (
+            <article className="panel" key={paper.id} style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
+              <div className="panelHead">
+                <div>
+                  <span className="pill pillGood" style={{ marginBottom: "0.25rem" }}>Publication Preprint</span>
+                  <h3 style={{ marginTop: "0.25rem" }}>{paper.title}</h3>
+                </div>
+              </div>
+              <p className="small muted">{paper.authors} · {paper.journal_or_arxiv}</p>
+              <p className="small">{paper.summary}</p>
+              <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>knowledge_fco={paper.knowledge_fco_id}</p>
+              <div className="actions" style={{ marginTop: "0.75rem" }}>
+                <a className="primary" href={paper.doi_or_url} target="_blank" rel="noreferrer">Open DOI ↗</a>
+                <a className="secondary" href={`/fco/${encodeURIComponent(paper.knowledge_fco_id)}`}>Inspect Knowledge Atom FCO ↗</a>
+              </div>
+            </article>
+          ))}
+
+          {HUGGINGFACE_MODELS.map((model) => (
+            <article className="panel" key={model.id} style={{ border: "1px solid rgba(96, 165, 250, 0.3)", background: "rgba(96, 165, 250, 0.03)" }}>
+              <div className="panelHead">
+                <div>
+                  <span className="pill pillGood" style={{ marginBottom: "0.25rem" }}>Hugging Face Model</span>
+                  <h3 style={{ marginTop: "0.25rem" }}>{model.model_name}</h3>
+                </div>
+              </div>
+              <p className="small muted">Task: {model.task} · License: {model.license}</p>
+              <p className="small">{model.description}</p>
+              <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>knowledge_fco={model.knowledge_fco_id}</p>
+              <div className="actions" style={{ marginTop: "0.75rem" }}>
+                <a className="primary" href={model.hf_repo_url} target="_blank" rel="noreferrer">Open Hugging Face Repo ↗</a>
+                <a className="secondary" href={`/fco/${encodeURIComponent(model.knowledge_fco_id)}`}>Inspect Knowledge Atom FCO ↗</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
       <section className="panel" style={{ background: "rgba(16, 185, 129, 0.05)", border: "2px solid #10b981", borderRadius: "10px", padding: "1.25rem", margin: "1.5rem 0" }}>
-        <p className="eyebrow" style={{ color: "#10b981", fontWeight: "bold" }}>Academic Foundations & Citations (Video Demo 1:55–2:20)</p>
-        <h2>G* Free-Energy & Jensen-Shannon Cloud Drift Lineage</h2>
+        <p className="eyebrow" style={{ color: "#10b981", fontWeight: "bold" }}>Academic Foundations &amp; Citations (Video Demo 1:55–2:20)</p>
+        <h2>G* Free-Energy &amp; Jensen-Shannon Cloud Drift Lineage</h2>
         
         <div className="grid twoCol" style={{ marginTop: "1rem", gap: "1rem" }}>
           <div style={{ padding: "1rem", borderRadius: "8px", background: "rgba(0,0,0,0.3)", border: "1px solid rgba(255,255,255,0.1)" }}>
@@ -66,7 +122,7 @@ export default function KnowledgePage() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">01 / TERMINOLOGY MATRIX</span>
+        <span className="sectionNumber">02 / TERMINOLOGY MATRIX</span>
         <h2 className="displayTitle">Term → Knowledge FCO → FCG query → source.</h2>
         <div className="stack">
           {KNOWLEDGE_TERMS.map((item, index) => {
@@ -92,7 +148,7 @@ export default function KnowledgePage() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">02 / RESOLUTION RULE</span>
+        <span className="sectionNumber">03 / RESOLUTION RULE</span>
         <h2 className="displayTitle">The UI is a projection, not custody truth.</h2>
         <div className="flow mono"><span>source / receipt</span><b>→</b><span>canonical custody</span><b>→</b><span>canonical FCG</span><b>→</b><span>HydraDB projection</span><b>→</b><span>website Knowledge FCO</span></div>
         <p className="small muted note">The website FCO projection is deterministic application metadata. HydraDB projection is not claimed until an isolated post-Daisy write/read receipt exists. A digest or graph path does not establish scientific correctness by itself.</p>
