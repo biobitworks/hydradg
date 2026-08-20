@@ -1,0 +1,38 @@
+{
+  "deepseek-r1:14b": {
+    "h0_interaction_retained": true,
+    "h0_m_k10_retained": true,
+    "h0_m_k5_retained": true,
+    "interaction_delta": 0.0,
+    "k10_hit_at_k": 0.976,
+    "k10_hit_delta_vs_control": -0.0020000000000000018,
+    "k10_mcnemar_p_value": 0.9999999989503827,
+    "k5_hit_at_k": 0.94,
+    "k5_hit_delta_vs_control": -0.0020000000000000018,
+    "k5_mcnemar_p_value": 0.9999999989503827
+  },
+  "qwen2.5-coder:7b": {
+    "h0_interaction_retained": true,
+    "h0_m_k10_retained": true,
+    "h0_m_k5_retained": true,
+    "interaction_delta": 0.0,
+    "k10_hit_at_k": 0.974,
+    "k10_hit_delta_vs_control": -0.0040000000000000036,
+    "k10_mcnemar_p_value": 0.8311704714925764,
+    "k5_hit_at_k": 0.938,
+    "k5_hit_delta_vs_control": -0.0040000000000000036,
+    "k5_mcnemar_p_value": 0.8936946015981432
+  },
+  "qwen2.5:7b": {
+    "h0_interaction_retained": true,
+    "h0_m_k10_retained": true,
+    "h0_m_k5_retained": true,
+    "interaction_delta": -1.1102230246251565e-16,
+    "k10_hit_at_k": 0.972,
+    "k10_hit_delta_vs_control": -0.006000000000000005,
+    "k10_mcnemar_p_value": 0.676657395674608,
+    "k5_hit_at_k": 0.936,
+    "k5_hit_delta_vs_control": -0.005999999999999894,
+    "k5_mcnemar_p_value": 0.7910816268724202
+  }
+}
