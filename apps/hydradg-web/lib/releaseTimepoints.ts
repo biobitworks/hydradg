@@ -9,6 +9,7 @@ export type ReleaseTimepoint = {
   delta_g_star?: number;
   cloud_drift?: number;
   score_state: "MEASURED" | "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION";
+  project_measurements?: readonly { label: string; value: string; state: "PASS" | "MEASURED" | "RUNTIME" }[];
   evidence: string;
 };
 
@@ -58,7 +59,13 @@ export const RELEASE_TIMEPOINTS: readonly ReleaseTimepoint[] = [
     classification: "PRODUCTION_RELEASE_STATE",
     color: "#7fd1b9",
     score_state: "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION",
-    evidence: "Hosted parity receipt: 36 canonical FCOs, 24 edges, zero canonical set/edge/content-hash delta.",
+    project_measurements: [
+      { label: "Canonical FCO set", value: "36 local = 36 hosted · delta 0 (0.0000%)", state: "PASS" },
+      { label: "Canonical edge set", value: "24 local = 24 hosted · delta 0 (0.0000%)", state: "PASS" },
+      { label: "Canonical content hashes", value: "delta 0 (0.0000%)", state: "PASS" },
+      { label: "FCO + edge roots", value: "local roots = hosted readback roots", state: "PASS" },
+    ],
+    evidence: "Hosted parity receipt: 36 canonical FCOs, 24 edges, zero canonical set/edge/content-hash delta. Runtime backend/collection/query traceability is tested separately.",
   },
   {
     id: "T4_CONTEXT_VS_ENTROPY",
@@ -66,7 +73,12 @@ export const RELEASE_TIMEPOINTS: readonly ReleaseTimepoint[] = [
     classification: "PRODUCTION_EXPERIMENT_STATE",
     color: "#f6c85f",
     score_state: "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION",
-    evidence: "18,567 raw findings; 18,555 context-classified; 12 abstentions; 99.9354% coverage.",
+    project_measurements: [
+      { label: "Context-classified", value: "18,555 / 18,567 = 99.935369%", state: "MEASURED" },
+      { label: "Abstentions", value: "12 / 18,567 = 0.064631%", state: "MEASURED" },
+      { label: "Category-sum invariant", value: "18,428 + 126 + 1 + 12 = 18,567", state: "PASS" },
+    ],
+    evidence: "18,567 raw findings; 18,555 context-classified; 12 abstentions. This contextual second stage does not replace Gitleaks.",
   },
   {
     id: "T5_FINAL_JUDGE_RELEASE",
@@ -74,6 +86,11 @@ export const RELEASE_TIMEPOINTS: readonly ReleaseTimepoint[] = [
     classification: "PRODUCTION_JUDGE_RELEASE_STATE",
     color: "#d8e0e8",
     score_state: "NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION",
+    project_measurements: [
+      { label: "Deployed Git SHA", value: "resolved from the exact Vercel/Git release at runtime", state: "RUNTIME" },
+      { label: "WebsiteRelease FCO", value: "id must equal fco:<object_sha256>", state: "RUNTIME" },
+      { label: "Canonical FCO identity gate", value: "validated by /api/release on the deployed release", state: "RUNTIME" },
+    ],
     evidence: "Exact deployed Git SHA and WebsiteRelease FCO are resolved at build/runtime; no scalar G*/Cloud Drift is fabricated without a declared distribution.",
   },
 ] as const;
