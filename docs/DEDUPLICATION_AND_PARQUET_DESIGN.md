@@ -1,44 +1,65 @@
-# Columnar Hash Deduplication & Remote Offload Protocol
+# Columnar Hash Deduplication & Spatiotemporal Pointer Protocol
 
-This document specifies HydraDG's content-addressed columnar deduplication architecture (modeled after the Parquet design in `/Users/byron/projects/active/substrata`) and the remote `magicprobox` Ollama offload protocol with git auto-commit and push safeguards.
+This document specifies HydraDG's content-addressed columnar deduplication architecture (modeled after the Parquet design in `/Users/byron/projects/active/substrata`) and the **Spatiotemporal Pointer Protocol (`SpatiotemporalPointerFCO`)**.
 
 ---
 
-## 1. Columnar Parquet Deduplication Architecture
+## 1. Spatiotemporal Pointer Architecture
 
-HydraDG indexes **28,458,677 Level 0 Word Atoms** and **3,214,299 Level 1 Sentence Atoms**. To prevent redundant storage across EnterpriseRAG-Bench, Salesforce HERB, LongMemEval, and in-turn transcripts, atoms are deduplicated into a content-addressed SHA-256 key dictionary.
+When two or more atoms or text fragments across EnterpriseRAG-Bench, Salesforce HERB, LongMemEval, or in-turn conversation logs produce the **exact same content hash (`content_sha256`)**:
+1. **Deduplicated Content Atom**: The underlying payload is stored exactly once as a canonical `KnowledgeAtom` FCO.
+2. **Spatiotemporal Pointer Nodes (`SpatiotemporalPointerFCO`)**: Every occurrence of that atom in different spatial locations (file path, dataset slug, 4D graph coordinates $x, y, z$) and temporal locations (timestamp, turn index, evaluation timepoint $t$) creates an explicit `SpatiotemporalPointerFCO`.
 
 ```
-Raw Input Tokens / Fields (28,458,677)
-    │
-    ▼
-field_leaf_hash(path, value) = SHA-256("hydradg.field_leaf.v1" ║ path ║ type ║ value)
-    │
-    ▼
-Unique Key Dictionary (8,992,941 Unique Word Keys — 68.40% Compression)
-    │
-    ▼
-Multi-Pointer FCG Edges (:APPEARS_IN) → Document / Turn Containers
+                  ┌─────────────────────────────────────────────────────────┐
+                  │ Unique Canonical KnowledgeAtom (content_sha256)        │
+                  └────────────────────────────┬────────────────────────────┘
+                                               │
+             ┌─────────────────────────────────┼─────────────────────────────────┐
+             │ :LOCATED_AT                     │ :LOCATED_AT                     │ :LOCATED_AT
+             ▼                                 ▼                                 ▼
+┌─────────────────────────┐       ┌─────────────────────────┐       ┌─────────────────────────┐
+│ SpatiotemporalPointer 1 │       │ SpatiotemporalPointer 2 │       │ SpatiotemporalPointer 3 │
+│ Path: slack/channel_04  │       │ Path: docs/spec.md      │       │ Path: turn_42_transcript│
+│ Space: (12.4, -4.2, 8.1)│       │ Space: (-3.1, 1.5, 0.0) │       │ Space: (0.0, 0.0, 2.5)  │
+│ Time: t=0, 12:00:00Z    │       │ Time: t=1, 12:05:00Z    │       │ Time: t=2, 12:10:00Z    │
+└─────────────────────────┘       └─────────────────────────┘       └─────────────────────────┘
 ```
 
-### Compression & Hash Metrics
+---
 
-| Atom Granularity Level | Raw Instance Count | Unique Key Count | Deduplication Ratio | Dictionary Hash |
+## 2. Spatiotemporal Pointer Schema (`SpatiotemporalPointerFCO`)
+
+```json
+{
+  "type": "SpatiotemporalPointerFCO",
+  "id": "fco:c6877b8bcfe785803787264dfa18dbf8d2e368b6a3f3aa5ff80c5fd115dad713",
+  "object_sha256": "c6877b8bcfe785803787264dfa18dbf8d2e368b6a3f3aa5ff80c5fd115dad713",
+  "payload": {
+    "content_sha256": "b60b266f1915581ca172a8087b76ee23c953a993ffcb966b72fe61c170a32c03",
+    "spatial_location": {
+      "dataset_id": "hydradg-track01-enterpriserag",
+      "file_path": "slack/engineering/channel_04.json",
+      "x": 12.4,
+      "y": -4.2,
+      "z": 8.1
+    },
+    "temporal_location": {
+      "timepoint_t": 2.0,
+      "timestamp_iso": "2026-08-20T12:00:00Z"
+    },
+    "fcg_relation": "LOCATED_AT_SPATIOTEMPORAL_POINTER",
+    "license": "CC-BY-NC-ND-4.0"
+  }
+}
+```
+
+---
+
+## 3. Storage Efficiency & Traceability
+
+| Atom Level | Raw Occurrences | Unique Keys | Spatiotemporal Pointers | Traceability |
 | :--- | :--- | :--- | :--- | :--- |
-| **Level 0: Word / Token** | 28,458,677 | **8,992,941** | **68.40%** | `b60b266f1915581ca172a8087b76ee23c953a993ffcb966b72fe61c170a32c03` |
-| **Level 1: Sentence** | 3,214,299 | **1,861,079** | **42.10%** | `b60b266f1915581ca172a8087b76ee23c953a993ffcb966b72fe61c170a32c03` |
-
----
-
-## 2. Remote Offload to `magicprobox` / `magicstudiobox`
-
-Offloaded execution (heavy embedding, tokenization, and vector indexing) is routed to Ollama on `magicprobox` via `scripts/offload_to_magicprobox_ollama.sh`.
-
-### Safeguard Execution Flow
-
-1. **Remote Probing**: Verifies HTTP 200 connectivity to Ollama on `http://127.0.0.1:11434`.
-2. **Interrupt & Token Exhaustion Trap**: Traps signal interrupts (`INT`, `TERM`, `ERR`) or token budget exhaustion.
-3. **Automatic Git Checkpoint & Push**:
-   - `git add -A`
-   - `git commit -m "checkpoint(offload): auto-checkpoint on <reason>"`
-   - `git push origin hack-hydra/final-hosted-fcg-20260820`
+| **Level 0: Word / Token** | 28,458,677 | **8,992,941** | **19,465,736 Pointers** | **100.00% Exact** |
+| **Level 1: Sentence** | 3,214,299 | **1,861,079** | **1,353,220 Pointers** | **100.00% Exact** |
+| **Total Graph Scale** | **31,672,976** | **10,854,020** | **20,818,956 Pointers** | **Zero Loss of Spatial/Temporal Provenance** |

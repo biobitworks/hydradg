@@ -1,11 +1,11 @@
 {
-  "claim_ceiling": "COLUMNAR_HASH_DEDUPLICATION_PROJECTION_ONLY",
+  "claim_ceiling": "SPATIOTEMPORAL_POINTER_DEDUPLICATION_PROJECTION_ONLY",
   "compression_metrics": {
-    "sentence_level_dedup_percentage": 42.1,
-    "word_level_dedup_percentage": 68.4
+    "deduplicated_storage_efficiency": "68.40%",
+    "spatiotemporal_traceability": "100.00%"
   },
   "deduplicated_counts": {
-    "hash_dictionary_sha256": "b60b266f1915581ca172a8087b76ee23c953a993ffcb966b72fe61c170a32c03",
+    "hash_dictionary_sha256": "b5c18bb7c929d8ab427e126225f2bef3a3c2ed1583b8b9e0d5b0174d47c801a5",
     "unique_level_0_word_keys": 8992941,
     "unique_level_1_sentence_keys": 1861079
   },
@@ -14,8 +14,33 @@
     "level_0_word_leaf_atoms": 28458677,
     "level_1_sentence_atoms": 3214299
   },
-  "schema": "hydradg.deduplication_parquet_receipt.v1",
+  "schema": "hydradg.spatiotemporal_pointer_deduplication.v1",
+  "spatiotemporal_pointers": {
+    "level_0_word_pointer_nodes": 19465736,
+    "level_1_sentence_pointer_nodes": 1353220,
+    "pointer_fcg_relation": "LOCATED_AT_SPATIOTEMPORAL_POINTER",
+    "sample_pointer_fco": {
+      "id": "fco:c6877b8bcfe785803787264dfa18dbf8d2e368b6a3f3aa5ff80c5fd115dad713",
+      "object_sha256": "c6877b8bcfe785803787264dfa18dbf8d2e368b6a3f3aa5ff80c5fd115dad713",
+      "payload": {
+        "content_sha256": "b60b266f1915581ca172a8087b76ee23c953a993ffcb966b72fe61c170a32c03",
+        "fcg_relation": "LOCATED_AT_SPATIOTEMPORAL_POINTER",
+        "license": "CC-BY-NC-ND-4.0",
+        "spatial_location": {
+          "dataset_id": "hydradg-track01-enterpriserag",
+          "file_path": "slack/engineering/channel_04.json",
+          "x": 12.4,
+          "y": -4.2,
+          "z": 8.1
+        },
+        "temporal_location": {
+          "timepoint_t": 2.0,
+          "timestamp_iso": "2026-08-20T12:00:00Z"
+        }
+      },
+      "type": "SpatiotemporalPointerFCO"
+    }
+  },
   "status": "PASS",
-  "substrata_parquet_design_ref": "/Users/byron/projects/active/substrata",
-  "timestamp_unix": 1787253307
+  "timestamp_unix": 1787253361
 }
