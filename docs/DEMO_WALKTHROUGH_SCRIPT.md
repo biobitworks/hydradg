@@ -1,129 +1,117 @@
-# HydraDG — Video & Judge Demo Walkthrough Script (2:40 Target)
+# HydraDG — Replacement Golden-Path Video Script
 
-> **Recording Setup**: Screen resolution **1920x1080 (16:9 full screen)**. Open local application surface: [http://127.0.0.1:3012/](http://127.0.0.1:3012/).
-> **Time Limit**: Keep total video duration under 3 minutes (recommended **2:20–2:40**).
+Target: **2:20–2:40**, maximum under 3 minutes.
 
----
+Recording format: **1920×1080, 16:9, browser full-screen**.
 
-## 📌 Executive Pacing & Time Points Summary
+Primary recording surface: the current pinned judge backup deployment at commit `60120da604f3bb6f30edfadc1d609018089beaef`.
 
-### 🕒 Video Section Spacing & Duration Breakdown
-| Time Window | Duration | Page / Screen | Key Visual Focus | Primary Narration Objective |
-| :--- | :--- | :--- | :--- | :--- |
-| **0:00 – 0:20** | **20s** | [`/`](http://127.0.0.1:3012/) | 4D Context Iceberg Hero | Problem Statement: State overwrite vs 4D governed custody. |
-| **0:20 – 0:55** | **35s** | [`/graph`](http://127.0.0.1:3012/graph) | Interactive 4D Canvas & Time Slider | Scrub $t0 \to t1 \to t2$, rotate 3D spatial field, inspect $H$/$G^*$ halos. |
-| **0:55 – 1:25** | **30s** | [`/judge`](http://127.0.0.1:3012/judge) | Golden Path Judge Lab | Execute $t0$ Reference $\to$ $t1$ Poison $\to$ $t2$ Antidote sequence. |
-| **0:25 – 1:55** | **30s** | [`/track03`](http://127.0.0.1:3012/track03) | Executed LongMemEval Benchmark | 500 cases / 23,867 sessions & preservation of null/negative baseline. |
-| **1:55 – 2:20** | **25s** | [`/evidence`](http://127.0.0.1:3012/evidence) & [`/knowledge`](http://127.0.0.1:3012/knowledge) | Lineage Trace & Citations | Enßlin & Weig 2010 ($G^*$) & Lin 1991 ($JSD$) academic grounding. |
-| **2:20 – 2:40** | **20s** | [`/eligibility`](http://127.0.0.1:3012/eligibility) | Submission Custody | Mandatory closing sentence & governed experiment claim boundary. |
+Open the temporary judge-access URL once to establish the Vercel preview session:
 
-### ⏳ Time Points Breakdown ($t0 \to t1 \to t2$)
-- **$t0$ Reference Baseline** (<span style="color:#10b981">**Green**</span>):
-  - *Status*: `SELF · SAFE · ADMIT`
-  - *Entropy $H$*: `0.412 bits` | *$G^*$ Diagnostic*: `-0.061` | *$\Delta G^*$*: `0.000`
-  - *Meaning*: Baseline un-perturbed knowledge basin before any state change.
-- **$t1$ Poison Perturbation** (<span style="color:#ef4444">**Red**</span>):
-  - *Status*: `NONSELF · NONSAFE · QUARANTINE`
-  - *Entropy $H$*: `1.119 bits ↗` | *$G^*$ Diagnostic*: `+0.573 ↗` | *$\Delta G^*$*: `+0.634 ↗`
-  - *Meaning*: Non-safe state divergence; creates explicit `SUPERSEDED_BY` & `CONTRADICTS` graph edges in HydraDB.
-- **$t2$ Antidote Restoration** (<span style="color:#06b6d4">**Cyan / Green**</span>):
-  - *Status*: `SELF · RESTORED · ADMIT`
-  - *Entropy $H$*: `0.580 bits ↘` | *$G^*$ Diagnostic*: `+0.120 ↘` | *$\Delta G^*$*: `-0.453 🟢`
-  - *Meaning*: Recovery bound; declared current state is restored while retaining poison history in graph lineage.
+`https://hydradg-4u209xn67-biobitworks.vercel.app/?_vercel_share=B5GJZ77ZGBvnnTPP3G6xalyCEs4vzYMT`
 
----
+Temporary share access expires **2026-08-21 21:16 UTC / 14:16 PDT**. If it has expired, use the production site after redeployment or generate a fresh share URL for the same pinned preview.
 
-## ⏱️ Section-by-Section Timing & Click Sequence
+Local fallback for recording: `http://127.0.0.1:3012/`.
 
-```mermaid
-timeline
-    title 2:40 Video Walkthrough Flow
-    0:00 - 0:20 : 1. Problem & Hero Overview
-                : Open http://127.0.0.1:3012/
-                : Highlight live 4D Context Iceberg
-    0:20 - 0:55 : 2. Interactive 4D State Field
-                : Open /graph
-                : Rotate x/y/z, scrub time t0->t2, click heat tabs
-    0:55 - 1:25 : 3. Golden Path Judge Lab
-                : Open /judge
-                : Click Load Fixture -> Inject Poison -> Antidote
-    1:25 - 1:55 : 4. Executed Track 03 Evidence
-                : Open /track03
-                : Show 500 cases / 23,867 sessions & null baseline
-    1:55 - 2:20 : 5. Deep FCO Lineage & KB
-                : Open /evidence & /knowledge
-                : Trace FCO source -> atom -> claim ceiling & citations
-    2:20 - 2:40 : 6. Claim Boundary & Closing
-                : Show eligibility & conclusion
-```
+## Recording rule
 
----
+The video should show the executed evidence and current claim boundaries exactly as rendered. Do **not** claim hosted canonical parity while the BYOG readback is still indexing/pending. Do **not** call any Git commit signed unless a verified signature exists.
 
-### 1. Problem & Hero Overview (0:00 – 0:20)
-- **URL / Screen**: [http://127.0.0.1:3012/](http://127.0.0.1:3012/)
-- **Action**: Hover cursor over the interactive 4D Context Iceberg hero on the home page.
-- **Narration Cue**:
-  > *"Long-lived AI memory systems often flatten or overwrite state updates. When a fact changes, prior context and null evidence disappear. HydraDG turns chain of custody into a navigable, governed 4D state field."*
+## Golden-path pacing
 
----
+| Time | Screen | What to show |
+|---|---|---|
+| 0:00–0:15 | `/` | Problem and governed-context thesis |
+| 0:15–0:55 | `/judge` | Reference → Poison → Antidote |
+| 0:55–1:25 | `/track03` then `/eligibility` | Executed null result + K=5/10/100 matrix |
+| 1:25–1:45 | `/atom-heatmap` | Local vs hosted FCO status; indexing/readback boundary |
+| 1:45–2:10 | `/evidence` and `/knowledge` | FCO/FCG lineage, source, transformation, evidence, claim ceiling |
+| 2:10–2:35 | `/eligibility` | Final governed chain, 0/9 Holm result, closing sentence |
 
-### 2. Interactive 4D State Field & Context Iceberg (0:20 – 0:55)
-- **URL / Screen**: Click **"Open full 4D FCG"** or navigate to [http://127.0.0.1:3012/graph](http://127.0.0.1:3012/graph).
-- **Actions**:
-  1. Click and drag on the 3D canvas to rotate spatial dimensions ($x \cdot y \cdot z$).
-  2. Drag the **Time slider** from $t0 \to t1 \to t2$.
-  3. Click the heat layer tabs: `mutation`, `restoration`, and `|ΔG*|`.
-  4. Click on node `StateSnapshot · t1` (`mutation`).
-- **Narration Cue**:
-  > *"Here on the 4D canvas, we rotate spatial dimensions and scrub history from reference to mutation to restoration. Hovering or clicking a node reveals its node-level Shannon entropy H, G*, and relative ΔG* delta against baseline t0, without collapsing accuracy into a single arbitrary score."*
+## 1. Home — problem and thesis (0:00–0:15)
 
----
+Action:
+- Start at `/`.
+- Keep the cursor near the Context Iceberg / governed state visualization.
 
-### 3. Golden Path: Reference → Poison → Antidote (0:55 – 1:25)
-- **URL / Screen**: Click **"Try the guided demo"** or navigate to [http://127.0.0.1:3012/judge](http://127.0.0.1:3012/judge).
-- **Verbatim Action Sequence**:
-  - **Tab 1 (`1 · DEMO CONTROL`)**:
-    - **Step 1**: Click **"Load reference fixture (t0)"** $\to$ observe green reference state (`t0 · SELF · SAFE · ADMIT`), $H=0.412$, $G^*=-0.061$.
-    - Click **"Simulate poison (t1)"** $\to$ observe red perturbation heat (`t1 · NONSELF · NONSAFE · QUARANTINE`), $H=1.119 \uparrow$, $G^*=+0.573 \uparrow$, $\Delta G^*=+0.634 \uparrow$.
-    - Click **"Apply antidote (t2)"** $\to$ observe cyan restoration state (`t2 · SELF · RESTORED · ADMIT`), $H=0.580 \downarrow$, $G^*=+0.120 \downarrow$, Restoration gain $=0.580 \text{ 🟢}$.
-  - **Tab 2 (`2 · LIVE REAL DATA`)**:
-    - **Step 2**: Click **"Refresh cases"** $\to$ select case `gpt4_4edbafa2` $\to$ click **"Load case into HydraDB"**.
-    - **Step 3**: Click **"Run retrieval"**.
-    - **Step 4**: Click **"Inject poison"** $\to$ note `SUPERSEDED_BY` & `CONTRADICTS` graph edges.
-    - **Step 4**: Click **"Apply antidote"** $\to$ verify reference recovery without erasing divergent history.
-- **Narration Cue**:
-  > *"In Judge Lab, we switch between t0 reference, t1 poison, and t2 antidote. The active heat layer displays color-coded Shannon entropy H, free energy diagnostic G*, and information burden over time, citing Shannon 1948, Friston 2010, and Lin 1991. Applying antidote restores the declared state while preserving divergent history."*
+Narration:
 
----
+> Long-lived AI memory can silently overwrite changing facts and erase the evidence that came before. HydraDG uses HydraDB plus Fractal Custody Objects and Graphs to keep state changes, contradictions, provenance, and null results navigable instead of flattening them.
 
-### 4. Executed Track 03 Evidence & Benchmark Preservation (1:25 – 1:55)
-- **URL / Screen**: Navigate to [http://127.0.0.1:3012/track03](http://127.0.0.1:3012/track03).
-- **Actions**: Highlight the executed metrics table (**500 cases / 23,867 sessions / 4,776 entities / 3,506 facts**). Point out `Hit@5` and `Recall@5` columns.
-- **Narration Cue**:
-  > *"Across 500 LongMemEval benchmark cases and 23,867 sessions, HydraDG constructed and queried the typed temporal graph. Crucially, the completed ablation showed that graph-native routes did not outperform the flat baseline at the tested configuration. Rather than optimizing away this null result, HydraDG preserves null and negative evidence as governed custody."*
+## 2. Judge Lab — Reference → Poison → Antidote (0:15–0:55)
 
----
+Action:
+- Open `/judge`.
+- Load the reference state.
+- Trigger the poison/mutation state.
+- Apply the antidote/restoration state.
+- Pause briefly on each color/state transition.
 
-### 5. Deep FCO Lineage & Knowledge Base Citations (1:55 – 2:20)
-- **URL / Screen**: Navigate to [http://127.0.0.1:3012/evidence](http://127.0.0.1:3012/evidence) and [http://127.0.0.1:3012/knowledge](http://127.0.0.1:3012/knowledge).
-- **Actions**:
-  1. Click an FCO node to view SHA-256 hash, evidence class, and claim ceiling.
-  2. In Knowledge Base, highlight the **Enßlin & Weig (2010)** citation for $G^*$ and **Lin (1991)** citation for $JSD$ Cloud Drift.
-- **Narration Cue**:
-  > *"Every result resolves backward from claim to evidence, transformation, and source FCO. G* is grounded as an application-defined dimensionless diagnostic, citing Enßlin & Weig 2010 for its theoretical free-energy analogy, and Lin 1991 for Jensen-Shannon Cloud Drift."*
+Narration:
 
----
+> This is the golden path. We start from a governed reference state, introduce a controlled poison or contradictory state, and then apply an antidote. HydraDG changes the declared current state without deleting the divergent history. The graph retains supersession, contradiction, and provenance so we can identify where a bad dependency entered and whether recovery actually occurred.
 
-### 6. Claim Boundary & Closing Statement (2:20 – 2:40)
-- **URL / Screen**: Navigate to [http://127.0.0.1:3012/eligibility](http://127.0.0.1:3012/eligibility) or return to Home page.
-- **Actions**: Show submission custody status: `PUBLIC_GITHUB=PASS`, `SUBMISSION_READY=YES`.
-- **Closing Sentence (Mandatory)**:
-  > *"HydraDG is not a leaderboard claim. It is a governed memory experiment: change state, observe the first divergence, preserve custody, test recovery, and keep positive, null, negative, and abstaining results in the same graph."*
+If H, G*, ΔG*, or Cloud Drift values are visible, describe them as **state diagnostics**. Do not imply that lower G* means better retrieval accuracy.
 
----
+## 3. Executed evidence — Track 03 and Daisy matrix (0:55–1:25)
 
-### 📋 Key Checklist Before Hitting Record
-- ✅ Local Next.js server active on `http://127.0.0.1:3012/`
-- ✅ Local Best-Use server active on `http://127.0.0.1:8787/`
-- ✅ Browser in full-screen 1920x1080 resolution (Google Chrome)
-- ✅ All 4 steps in `/judge` tested and responsive
+Action:
+- Open `/track03`.
+- Show the LongMemEval execution scale and the historical K=5 comparison.
+- Move to `/eligibility`.
+- Show the cross-track K=5/10/100 Daisy Train matrix and the Holm result.
+
+Narration:
+
+> On LongMemEval, the graph was actually constructed and queried. The original K=5 ablation did not establish a positive graph-route Hit@5 advantage over the flat reference route. We then expanded the evaluation across three datasets, three model lanes, and K equals 5, 10, and 100. At the co-primary K=10 family, zero of nine model-versus-control tests were significant after Holm-Bonferroni correction. The claim ceiling is therefore NO_MODEL_BENEFIT_OBSERVED.
+
+Optional, if clearly visible and time allows:
+
+> The secondary depth analysis shows that retrieval can improve as K increases, with saturation or dilution at high depth. That is a depth observation, not a model-superiority result.
+
+## 4. Atom heat map — local vs hosted state (1:25–1:45)
+
+Action:
+- Open `/atom-heatmap`.
+- Show canonical FCO IDs and local/hosted status columns.
+- Pause on the hosted status legend or representative rows.
+
+Narration:
+
+> This view compares the canonical local FCO identities with their hosted HydraDB projection. The upload has been accepted, but the current canonical 653-object and 1,692-edge readback is still bounded by indexing and parity verification. HydraDG displays that uncertainty instead of turning an accepted upload into a false parity claim.
+
+Do not say `653/653` or `1692/1692` unless the current page and receipt actually establish those values at recording time.
+
+## 5. Evidence and knowledge — trace one claim backward (1:45–2:10)
+
+Action:
+- Open `/evidence`.
+- Select one FCO or evidence item if the UI supports it.
+- Show hash/evidence class/claim ceiling.
+- Open `/knowledge` and show source citations.
+
+Narration:
+
+> Every material result can resolve backward from the claim to derived evidence, transformation, and source custody object. SHA-256 gives content identity where recorded; it is not the same thing as a signature. G-star is an application-defined dimensionless information-state diagnostic, while Jensen-Shannon divergence is used separately for Cloud Drift.
+
+## 6. Eligibility — closing claim boundary (2:10–2:35)
+
+Action:
+- Return to `/eligibility`.
+- Show the governed chain from Atom → Seed → FCO → FCG → HydraDB → experiments → claim ceiling.
+- Point to the `0 / 9` Holm result and `NO_MODEL_BENEFIT_OBSERVED`.
+
+Closing sentence:
+
+> HydraDG is not a leaderboard claim. It is a governed memory experiment: change state, find the first divergence, preserve custody, test recovery, and keep positive, null, negative, and abstaining evidence in the same graph.
+
+## Before recording
+
+- Confirm the preview or production site loads without an unexpected login prompt.
+- Test `/judge`, `/track03`, `/eligibility`, `/atom-heatmap`, `/evidence`, and `/knowledge` immediately before recording.
+- Close unrelated tabs and notifications.
+- Use 100% browser zoom unless labels are unreadable.
+- Do not show API keys, `.env` files, terminal secrets, or Vercel environment values.
+- Keep the repository visible only if useful; the video should prioritize the product and executed evidence.
+- After upload, replace `PENDING_USER_RECORDING_AND_UPLOAD` in `SUBMISSION.md` and `docs/RESUBMISSION_COPY_20260820.md` with the actual video URL only after verifying it opens publicly.

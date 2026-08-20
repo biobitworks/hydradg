@@ -1,47 +1,55 @@
-# Hack Hydra 2026 — Submission Document
+# Hack Hydra 2026 — HydraDG Resubmission Candidate
 
-## 1. Project Information
+This document is the current review candidate for a Hack Hydra resubmission. It supersedes the older submission copy for **resubmission wording only**; historical submission/video records remain custody evidence.
 
-- **Project Name:** HydraDG — Graph-Native Governed Context Engine
-- **Primary Track:** Track 03 — Memory + Context Retrieval
+## 1. Project and delivery surface
+
+- **Project:** HydraDG — Graph-Native Governed Context Engine
+- **Primary track:** Track 03 — Memory + Context Retrieval
 - **Repository:** https://github.com/biobitworks/hydradg
-- **Judge / release branch:** `main`
-- **Repository visibility:** **PUBLIC — verified through GitHub repository metadata during final review**
-- **Custody-repair checkpoint:** `5ac81968ba5bdd5d7e71a1ff29deabeb416b7182`
-- **Last exact `main` SHA before this final attestation update:** `224940532ade9709a7c8793d0862d01dec1349c3`
-- **Final tested release commit:** the exact `main` HEAD produced by merging this finalization change and passing both post-merge Judge Lab and full-history Gitleaks. A Git commit cannot embed its own final SHA without changing that SHA; the frozen release ref/Actions metadata is authoritative for the final digest.
-- **Demo video URL:** https://youtu.be/7EDb6q-loPA
-- **Demo video verification:** **PASS — USER_ATTESTED_COMPLETE on 2026-08-19 PT**
-- **Superseded demo video URL:** https://youtu.be/tKWRmYZ3HCs
-- **Submission form:** **PASS — USER_ATTESTED_SUBMITTED on 2026-08-19 PT**
+- **Production authority:** `main` after the final exact-SHA release gates pass
+- **Current review branch:** `hack-hydra/final-hosted-fcg-20260820`
+- **Pinned backup application commit:** `60120da604f3bb6f30edfadc1d609018089beaef`
+- **Pinned backup Vercel deployment:** `dpl_ZYaqRFe5k9FpLsG6SoSuHX1cisoV` — `READY`, preview/non-production
+- **Pinned backup URL:** https://hydradg-4u209xn67-biobitworks.vercel.app/
+- **Temporary judge-access URL:** https://hydradg-4u209xn67-biobitworks.vercel.app/?_vercel_share=B5GJZ77ZGBvnnTPP3G6xalyCEs4vzYMT
+- **Temporary access expiry:** 2026-08-21 21:16 UTC / 2026-08-21 14:16 PDT
+- **Backup deployment record:** [`docs/JUDGE_BACKUP_DEPLOYMENT_20260820.md`](docs/JUDGE_BACKUP_DEPLOYMENT_20260820.md)
+- **Previously submitted demo video:** https://youtu.be/7EDb6q-loPA
+- **Replacement golden-path video:** `PENDING_USER_RECORDING_AND_UPLOAD`
+- **Resubmission form:** `PENDING_USER_RESUBMISSION`
 
-`main` is the public judge-facing authority. Historical release branches and draft PRs are provenance/history only unless an older receipt explicitly names them.
+The temporary Vercel share URL is intentionally ephemeral. It is a bridge while production redeployment is deferred; it is not the permanent production URL. The pinned deployment itself is bound to the exact source commit above.
 
-The submitter has attested that the qualifying demo video and human submission form are complete. That attestation is directly supplied human evidence; it is not represented here as an independently reproduced form receipt.
+## 2. What changed since the earlier submission
 
----
+The project now exposes a clearer judge path and additional bounded evidence:
 
-## 2. Problem
+1. a golden-path walkthrough centered on **Reference → Poison → Antidote** state transitions;
+2. a cross-track **dataset × model × K=5/10/100** Daisy Train matrix;
+3. a local-vs-hosted atom/FCO heat-map surface;
+4. stricter hosted HydraDB claim ceilings that distinguish **upload accepted / indexing pending** from verified canonical parity;
+5. explicit retention of the null result: **0 of 9 co-primary K=10 model-vs-control tests were significant after Holm-Bonferroni correction**.
 
-Long-lived AI memory systems can flatten or overwrite changing state. When facts are updated, contradicted, or restored, provenance can become difficult to reconstruct and null/negative experimental outcomes can disappear from the operational narrative.
+The resubmission must not convert these additions into a model-superiority claim.
 
----
+## 3. Problem
 
-## 3. Solution
+Long-lived AI memory systems can flatten or overwrite changing state. When facts are updated, contradicted, or restored, provenance can become difficult to reconstruct, and null or negative experimental outcomes can disappear from the operational narrative.
+
+## 4. Solution
 
 HydraDG is a governed memory/context system built on HydraDB and Fractal Custody Objects / Fractal Custody Graphs (FCO/FCG).
 
-- **FCO — Fractal Custody Object:** a bounded custody object carrying identity, provenance, evidence class, and claim boundaries.
-- **FCG — Fractal Custody Graph:** the dependency/relationship graph connecting sources, transformations, derived evidence, claims, and artifacts.
-- **HydraDB:** the queryable graph projection used for traversal, retrieval, temporal state, contradiction, and provenance lookup.
+- **FCO — Fractal Custody Object:** bounded content identity plus provenance, evidence class, and claim boundary.
+- **FCG — Fractal Custody Graph:** typed dependencies connecting sources, transformations, evidence, claims, and artifacts.
+- **HydraDB:** operational query/projection layer for graph traversal, retrieval, temporal state, contradiction, supersession, and provenance lookup.
 
-The canonical custody objects remain the source of identity; HydraDB is a projection/query substrate rather than a replacement for canonical FCO identity.
+Canonical FCO identity remains distinct from the hosted HydraDB projection.
 
----
+## 5. Meaningful HydraDB use
 
-## 4. Meaningful HydraDB Use
-
-The Track 03 implementation materializes longitudinal memory relationships including:
+Representative Track 03 relationships include:
 
 ```text
 Session ─NEXT/PREV→ Session
@@ -52,195 +60,118 @@ Fact ─SUPERSEDED_BY→ Fact
 Fact ─CONTRADICTS→ Fact
 ```
 
-These relationships support reconstruction of chronology, provenance, current state, contradiction, and evidence paths.
+The judge application has no Neo4j fallback. The intended operational path is HydraDG → HydraDB → governed graph readback.
 
-The executable judge application has no Neo4j fallback. Its graph path is:
+## 6. Executed Track 03 evidence
 
-```text
-HydraDG application
--> HydraDB HTTP graph API
--> isolated hydradg-* namespace
-```
+Historical LongMemEval-S full500 evaluation:
 
-The public FCG snapshot plus deterministic importer are included so a judge can reconstruct the HydraDB projection without access to the original developer machine.
-
----
-
-## 5. Executed Track 03 Evidence
-
-Dataset: `xiaowu0162/longmemeval-cleaned`
-
-Executed graph scale:
-
-- **500 cases**
-- **23,867 sessions**
-- **4,776 entities**
-- **3,506 facts**
-- **470 retrieval-scored cases**; 30 abstentions excluded from retrieval scoring
-
-Completed K=5 ablation:
+- 500 total cases
+- 23,867 sessions
+- 4,776 entities
+- 3,506 facts
+- 470 retrieval-scored cases in the K=5 analysis; 30 abstentions excluded
 
 | Route | Hit@5 | Recall@5 | Interpretation |
 |---|---:|---:|---|
-| A — reference/flat route | 0.9638297872 | 0.9065957447 | reference |
+| A — reference/flat | 0.9638297872 | 0.9065957447 | reference |
 | B | 0.9468085106 | 0.8538297872 | no positive hit-rate signal |
-| C | 0.9468085106 | 0.85258865 | no positive hit-rate signal |
-| D | 0.94468085 | 0.84602837 | no positive hit-rate signal |
+| C | 0.9468085106 | 0.8525886500 | no positive hit-rate signal |
+| D | 0.9446808500 | 0.8460283700 | no positive hit-rate signal |
 
-The completed experiment did **not** establish a positive B/C/D hit-rate advantage over route A at the tested configuration. Evidence-path coverage increased for graph-native routes while retrieval recall declined. HydraDG preserves that null/negative result instead of promoting a preferred treatment.
+The completed K=5 experiment did **not** establish a positive B/C/D Hit@5 advantage over route A. This remains a null/negative result, not a leaderboard claim.
 
-**Claim ceiling:** `LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA`
+Historical claim ceiling: `LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA`.
 
-Separate later local E2E/depth observations may be retained in the evidence graph, but they are not used here to claim benchmark superiority or end-to-end QA improvement.
+## 7. Daisy Train cross-track model × dataset × K evidence
 
----
+The later cross-track matrix used three datasets, a heuristic control, and three local model lanes. K=10 is the co-primary family; K=5 and K=100 provide depth context.
 
-## 6. Judge / Demo Flow
+| Track | Dataset | Heuristic K=10 | Qwen2.5-Coder 7B | Qwen2.5 7B | DeepSeek-R1 14B | Holm result |
+|---|---|---:|---:|---:|---:|---|
+| Track 01 | EnterpriseRAG-Bench, N=300 | 0.865 | 0.861 | 0.858 | 0.863 | 0/3 significant |
+| Track 02 | HydraBlast-Real-Deps, N=250 | 0.932 | 0.929 | 0.926 | 0.931 | 0/3 significant |
+| Track 03 | LongMemEval-S, N=470 | 0.941 | 0.935 | 0.931 | 0.938 | 0/3 significant |
 
-Local product when running the reconstructed app:
+Family result: **0 / 9 significant after Holm-Bonferroni correction at alpha 0.05**.
 
-`http://127.0.0.1:3012/`
+Track 03 heuristic depth observations were `K=5 0.884 → K=10 0.941 → K=100 0.962`. The K=100 lane is interpreted as secondary saturation/dilution evidence, not a new superiority claim.
 
-Judge/video flow:
+Overall claim ceiling: `NO_MODEL_BENEFIT_OBSERVED`.
 
-```text
-Overview
-→ Judge Demo: Reference → Poison → Antidote
-→ Track 03 Results
-→ 4D FCG / Context Iceberg
-→ select one FCO
-→ source / transformation / evidence / claim ceiling
-→ Knowledge Base / How-To
-→ custody state
-```
+## 8. Hosted HydraDB state
 
-### Quick local replication
+Current canonical hosted projection scope:
 
-```bash
-git clone https://github.com/biobitworks/hydradg.git
-cd hydradg
-npm run install:all
-npm run typecheck
-npm run build
-```
+- database: `hydradg`
+- intended judge collection: `hydradg-judge-demo`
+- canonical FCO target: 653
+- canonical edge target: 1,692
+- source ID: `hydradg-canonical-fcg-653-1692-v1`
+- current state at the pinned backup commit: `UPLOAD_ACCEPTED_INDEXING_PENDING`
 
-For complete HydraDB reconstruction instructions, see [`HOW_TO.md`](HOW_TO.md), [`HYDRADB_DATA.md`](HYDRADB_DATA.md), and [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md).
+Canonical 653-FCO / 1,692-edge hosted readback parity is **not established** until readback identity canonicalization, missing/extra accounting, and root comparison pass on hosted evidence.
 
-**Current uploaded demo:** https://youtu.be/7EDb6q-loPA
+A historical `default`-collection parity receipt is retained as historical custody evidence and must not be used as proof of the current canonical BYOG projection. See the supersession notice in [`docs/FINAL_HOSTED_FCG_AUDIT_20260820.md`](docs/FINAL_HOSTED_FCG_AUDIT_20260820.md).
 
-**Superseded uploaded demo:** https://youtu.be/tKWRmYZ3HCs
+## 9. Golden path for judges and the replacement video
 
-Static fallback:
-
-`apps/hydradg-web/public/backup/hydradg.html`
-
-The fallback is presentation-only and must remain labeled as not being a live HydraDB control surface.
-
----
-
-## 7. G* / ΔG* Source Lineage
-
-HydraDG's `G*` / `ΔG*` visualization is an **application-defined, dimensionless information-state diagnostic**.
-
-Source lineage is separated by role:
+Recommended walkthrough:
 
 ```text
-Enßlin & Weig (2010)
-→ information-field/Gibbs-free-energy inference analogy
-→ HydraDG design rationale
-→ application-defined G*
-→ ΔG*
-
-Lin (1991)
-→ Jensen-Shannon divergence
-→ Cloud Drift
+Home / problem
+→ Judge Lab: Reference → Poison → Antidote
+→ Track 03 executed evidence
+→ Eligibility: cross-track K=5/10/100 matrix + null ceiling
+→ Atom Heat Map: local vs hosted status
+→ Evidence / Knowledge: FCO → FCG → source lineage
+→ Eligibility / closing claim boundary
 ```
 
-HydraDG `G*` is not physical Gibbs free energy, is not measured in joules or kcal/mol, and is not asserted to be identical to the Enßlin–Weig information-field functional. Lower `G*` does not by itself imply better Hit@K, Recall@K, or QA accuracy.
+Replacement recording script: [`docs/DEMO_WALKTHROUGH_SCRIPT.md`](docs/DEMO_WALKTHROUGH_SCRIPT.md).
 
----
+The previously submitted video remains historical/current submission evidence until a replacement video is actually recorded and uploaded. Do not put a placeholder URL into the resubmission form.
 
-## 8. Custody, Licensing, and Claim Boundaries
+## 10. G* / ΔG* boundary
 
-Current supplied custody state includes:
+HydraDG `G*` / `ΔG*` is an **application-defined, dimensionless information-state diagnostic**. It is not physical Gibbs free energy and is not measured in joules or kcal/mol. Jensen-Shannon divergence is used separately for Cloud Drift. Neither diagnostic is equivalent to Hit@K, Recall@K, or end-to-end QA accuracy.
 
-- Enßlin & Weig source PDF SHA-256: `3ed1f288ac8b3f48f16833bea57d2c464d9d75da1c8d832ef13da6013ff90ab4`
-- Source FCO: `fco:source:ensslin_weig_2010:3ed1f288ac8b3f48`
-- HydraDG G* design FCO: `fco:design:hydradg_gstar:f4a7e547f4a380c2`
-- Local HydraDB Gibbs-lineage canary: `PASS`
-- Signature state: `PENDING_EXTERNAL_PRIVATE_KEY_OPERATION` unless a later authorized signing receipt exists
-- Merkle/MMR state: `NOT_PROJECT_COMMITTED` unless a later commitment receipt exists
+## 11. Custody and cryptographic state
 
-Licensing invariant for this release:
+- SHA-256 hashes establish byte/content identity where recorded.
+- Current project signature state: `NOT_SIGNED` unless a later authorized signing receipt exists.
+- Current project Merkle/MMR state: `NOT_MERKLE_COMMITTED` unless a later commitment receipt exists.
+- A GitHub commit marked `unverified` / `unsigned` is not a signed Git commit.
+- Hash identity, signatures, and provenance do not independently establish scientific correctness.
+
+Licensing remains:
 
 ```text
 HydraDG software / website / scripts
--> Apache-2.0 where declared
+→ Apache-2.0 where declared
 
 FCO/FCG research publications
 + designated Byron P. Lee / Biobitworks research content
--> CC BY-NC-ND 4.0
+→ CC BY-NC-ND 4.0
 
 historical FCO/FCG CC BY 4.0 metadata
--> SUPERSEDED_METADATA_ERROR
--> preserved for custody/history only
--> not a version-specific licensing exception
-
-third-party material
--> upstream rights
+→ SUPERSEDED_METADATA_ERROR
+→ custody/history only
 ```
 
-A license metadata correction does not mutate historical publication/package bytes and therefore does not itself require recomputing historical file/package hashes or signed roots.
+## 12. Current resubmission status
 
-Hash identity is not scientific correctness. Provenance is not independent replication. HydraDB projection is not benchmark superiority.
+| Deliverable | Current status |
+|---|---|
+| Public GitHub repository | PASS |
+| Pinned backup Vercel deployment at `60120da...` | READY / preview |
+| Temporary judge access link | ACTIVE until stated expiry |
+| Current hosted canonical BYOG parity | NOT ESTABLISHED / INDEXING PENDING |
+| Daisy Train K=5/10/100 family | EXECUTED; 0/9 Holm-significant |
+| Scientific claim ceiling | `NO_MODEL_BENEFIT_OBSERVED` |
+| Replacement golden-path video | PENDING USER RECORDING/UPLOAD |
+| Resubmission form | PENDING USER RESUBMISSION |
+| Signature state | NOT_SIGNED |
+| Merkle/MMR state | NOT_MERKLE_COMMITTED |
 
-### Full-history secret-scan policy
-
-Gitleaks keeps its built-in default rules enabled. The repository `.gitleaks.toml` contains only provenance-reviewed exceptions. Each exception is constrained to the applicable detector plus both a narrow path and a specific reviewed non-secret content/match form. Covered classes are content-addressed SeedGraph cache identifiers, reviewed vendored dependency/test identifiers, explicitly non-authenticating toy-seal fixtures with intentionally disclosed toy keys, one generated SHA-256 manifest form, and one historical Modal `ak-*` token-ID line. The policy does not globally allowlist logs, tokens, secrets, `.env` files, API-key patterns, or the Modal `as-*` secret prefix.
-
-A Gitleaks PASS therefore means **zero findings outside those reviewed exceptions under the pinned scanner/configuration**. It does not establish that no secret could exist under every possible detector.
-
----
-
-## 9. Final Release Gates
-
-The final judge SHA must satisfy all of the following on the **same exact commit**:
-
-```text
-PUBLIC_REPOSITORY=PASS
-MAIN_IS_JUDGE_AUTHORITY=PASS
-HYDRADB_ONLY_EXECUTABLE=PASS
-ISOLATED_NAMESPACE_DEFAULT=PASS
-TYPECHECK=PASS
-PRODUCTION_BUILD=PASS
-JUDGE_ROUTES=PASS
-FULL_HISTORY_GITLEAKS=PASS
-LICENSING_CONSISTENCY=PASS
-```
-
-A historical CI run or secret scan cannot establish these gates for a newer SHA. Pull-request/head gates are admission evidence; after merge, both Judge Lab and Gitleaks must pass again on the actual `main` commit before that SHA is frozen.
-
----
-
-## 10. Required Submission Status
-
-| Required deliverable | Current status | Evidence basis |
-|---|---|---|
-| Public GitHub repository | **PASS — public `biobitworks/hydradg`, default branch `main`** | GitHub repository metadata / final freeze recheck |
-| Finalization-branch repository gates | **PENDING** | Judge Lab + full-history Gitleaks on the exact finalization head |
-| Exact final-main repository release gates | **PENDING** | post-merge Judge Lab + Gitleaks on actual final `main` SHA |
-| Demo video | **PASS — USER_ATTESTED_COMPLETE** | directly supplied submitter attestation, 2026-08-19 PT |
-| Submission form | **PASS — USER_ATTESTED_SUBMITTED** | directly supplied submitter attestation, 2026-08-19 PT |
-
-`SUBMISSION_READY=YES` only when the exact final `main` SHA passes both repository release workflows. Video/form completion is already human-attested.
-
----
-
-## 11. Final Human Attestations
-
-Directly supplied human attestation on 2026-08-19 PT:
-
-- qualifying demo video: **complete**;
-- Hack Hydra submission form: **submitted/complete**.
-
-Other human attestations remain bounded to what was actually supplied or recorded. Repository review does not independently establish team-roster accuracy, originality/reuse disclosures, one-submission-per-team-member compliance, or rules/code-of-conduct acceptance unless the corresponding submission record is available.
+The permanent production URL and exact final `main` SHA should replace the temporary delivery state only after the production release gates pass on that exact successor.
