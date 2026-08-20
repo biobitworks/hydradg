@@ -108,7 +108,7 @@ Every context node and state transition is classified by Anticube into explicit 
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | `🟢 t0 Reference` | `SELF` | `SAFE` | `ADMIT` | `#10b981` (Green) | Baseline state ($H=0.412$, $G^*=-0.061$, Drift$=0.0$) |
 | `⚠️ t1 Poison` | `NONSELF` | `NONSAFE` | `QUARANTINE` | `#ef4444` (Red) | High burden perturbation ($H=1.119$, $G^*=+0.573$, Drift$=40.36$) |
-| `🔵 t2 Antidote` | `SELF` | `RESTORED` | `ADMIT` | `#06b6d4` (Cyan) | State restoration ($H=0.580$, $G^*=+0.120$, Drift$=1.87$) |
+| `🔵 t2 Antidote` | `SELF` | `RESTORED` | `ADMIT` | `#06b6d4` (Cyan) | State restoration ($H=0.580$, $G^*=-0.027496$, Drift$=1.87$) |
 
 ---
 
