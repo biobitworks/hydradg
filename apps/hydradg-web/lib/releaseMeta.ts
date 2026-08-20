@@ -11,8 +11,8 @@ export const HOSTED_COLLECTION = "default";
 function deployedGitSha() {
   return (
     process.env.VERCEL_GIT_COMMIT_SHA ||
-    process.env.GITHUB_SHA ||
     process.env.HYDRADG_RELEASE_GIT_SHA ||
+    process.env.GITHUB_SHA ||
     "LOCAL_UNRESOLVED"
   );
 }
