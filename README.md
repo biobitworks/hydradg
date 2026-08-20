@@ -1,14 +1,10 @@
 # HydraDG — Graph-Native Governed Context Engine
 
-[![Hack Hydra 2026](https://img.shields.io/badge/Hack%20Hydra-2026-blue.svg)](https://github.com/biobitworks/hydradg)
-[![Track 03](https://img.shields.io/badge/Track%2003-Memory%20%2B%20Context%20Retrieval-green.svg)](https://github.com/biobitworks/hydradg)
-[![HydraDB](https://img.shields.io/badge/HydraDB-Graph%20Projection-orange.svg)](https://hydradb.com)
-[![Software License: Apache-2.0](https://img.shields.io/badge/Software-Apache--2.0-yellow.svg)](LICENSE)
-[![Research Content: CC BY-NC-ND 4.0](https://img.shields.io/badge/Research%20Content-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSING.md)
+HydraDG is a governed memory and context engine built **only on HydraDB** for **Hack Hydra 2026 — Track 03: Memory + Context Retrieval**. It preserves evolving state, provenance, contradictions, supersession, recovery, null results, and claim boundaries as an inspectable graph instead of silently overwriting context.
 
-HydraDG is a governed memory and context engine built on **HydraDB** for **Hack Hydra 2026 — Track 03: Memory + Context Retrieval**. It preserves evolving state, provenance, contradictions, supersession, recovery, null results, and claim boundaries as an inspectable graph instead of silently overwriting context.
-
-**Current demo video:** https://youtu.be/7EDb6q-loPA
+**Demo video:** https://youtu.be/7EDb6q-loPA  
+**Submission track:** Track 03 — Memory + Context Retrieval  
+**Graph backend:** HydraDB only
 
 ---
 
@@ -17,10 +13,16 @@ HydraDG is a governed memory and context engine built on **HydraDB** for **Hack 
 If you have three minutes:
 
 1. Watch the demo video above.
-2. Read [`SUBMISSION.md`](SUBMISSION.md) for the bounded Track 03 submission claim.
+2. Read [`SUBMISSION.md`](SUBMISSION.md) for the bounded submission claim.
 3. Use [`HOW_TO.md`](HOW_TO.md) or [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md) to rebuild the HydraDB graph and website on a clean machine.
 4. Inspect the canonical public FCG snapshot in [`custody/graph/live/`](custody/graph/live/).
-5. Inspect [`docs/COMPONENT_MAP.md`](docs/COMPONENT_MAP.md) to see what each component does, why it exists, and its claim boundary.
+5. Inspect [`docs/COMPONENT_MAP.md`](docs/COMPONENT_MAP.md) for component purpose, inputs, outputs, and claim boundaries.
+
+There is **no Neo4j fallback** in the judge application. The executable graph path is:
+
+```text
+HydraDG application -> HydraDB HTTP graph API -> isolated HydraDB namespace
+```
 
 ---
 
@@ -31,7 +33,7 @@ Long-lived AI memory systems can flatten or overwrite changing context. Once fac
 - what is current;
 - what was believed before;
 - which source supports each state;
-- where a stale or poisoned fact first entered the dependency chain;
+- where a stale or poisoned fact first entered a dependency chain;
 - whether a contradiction was superseded or merely hidden;
 - whether null and negative experimental results were preserved.
 
@@ -43,17 +45,17 @@ HydraDG makes those transitions explicit and queryable.
 
 - **HydraDB graph/query projection** for temporal state, provenance, contradiction, supersession, and evidence-path traversal.
 - **Fractal Custody Objects (FCOs)** and a **Fractal Custody Graph (FCG)** for source -> transformation -> evidence -> claim -> artifact lineage.
-- **4D Context Iceberg / FCG visualization** with graph-space interaction plus time.
-- **Reference -> Poison -> Antidote** state-transition workflow that keeps historical and contradictory states instead of deleting them.
-- **Track 03 LongMemEval-S full500 retrieval evaluation** with explicit null/negative-result retention.
-- **Knowledge Base** linking concepts, mathematical lineage, evidence, and claim ceilings.
-- **Reproduction bundle** containing website source, canonical FCG JSONL, HydraDB import/projection tools, environment template, custody receipts, and security gates.
+- **4D Context Iceberg / FCG visualization** using a browser canvas plus time controls.
+- **Reference -> Poison -> Antidote** state transitions that preserve prior and contradictory states rather than deleting them.
+- **Track 03 LongMemEval-S full500 retrieval evaluation** with explicit retention of null/negative outcomes.
+- **Knowledge Base** linking project concepts and mathematical lineage to evidence and claim ceilings.
+- **Reproduction bundle** containing the website source, canonical FCG JSONL, HydraDB projection/import tooling, environment template, custody receipts, and security gates.
 
 ---
 
 ## HydraDB is load-bearing
 
-HydraDB is the queryable graph projection layer used to traverse governed longitudinal state. Example typed relationships include:
+HydraDB is the queryable graph projection layer used to traverse governed longitudinal state. Representative relationships include:
 
 ```text
 Session -> NEXT/PREV -> Session
@@ -64,42 +66,58 @@ Fact -> SUPERSEDED_BY -> Fact
 Fact -> CONTRADICTS -> Fact
 ```
 
-The FCO/FCG layer preserves canonical identity, provenance, evidence class, and claim boundaries. **HydraDB is a projection of that custody state, not the canonical identity store.**
+The FCO/FCG layer preserves canonical identity, provenance, evidence class, and claim boundaries. **HydraDB is the operational graph/query backend for the submission.**
+
+Judge-facing configuration is under:
+
+```text
+apps/hydradg-web/.env.example
+apps/hydradg-web/lib/graph.ts
+apps/hydradg-web/package.json
+apps/hydradg-web/package-lock.json
+```
+
+Those files are intended to contain the HydraDB path only.
 
 ---
 
-## Reproduce the database and website from scratch
+## Reproduce the HydraDB database and website from scratch
 
-The portable reconstruction inputs are in this repository:
+Portable reconstruction inputs:
 
 ```text
 apps/hydradg-web/                  complete Next.js / React website source
-apps/hydradg-web/.env.example      environment template
+apps/hydradg-web/.env.example      HydraDB environment template
 apps/hydradg-web/package-lock.json pinned web dependency resolution
 custody/graph/live/nodes.jsonl     canonical public FCG nodes
 custody/graph/live/edges.jsonl     canonical public FCG edges
 scripts/project_fcg_snapshot_to_hydradb.py
                                     deterministic FCG -> HydraDB importer
 scripts/project_website_knowledge_to_hydradb.py
-                                    Knowledge FCO projection helper
-HOW_TO.md / docs/JUDGE_REPRODUCE_FROM_SCRATCH.md
-                                    complete clean-machine walkthrough
+                                    knowledge-FCO projection helper
+HOW_TO.md                          judge-oriented setup path
+docs/JUDGE_REPRODUCE_FROM_SCRATCH.md
+                                    clean-machine reconstruction guide
+HYDRADB_DATA.md                    graph/data specification
 .github/workflows/gitleaks-release.yml
                                     fail-closed full-history secret scan
 ```
 
-The HydraDB database is distributed in **portable canonical form**—the graph node/edge snapshot plus deterministic projection tooling—rather than as a machine-specific database directory. A judge can create a fresh isolated HydraDB namespace, import the snapshot, and verify graph counts plus the expected FCG-root readback.
+The HydraDB state is distributed in **portable canonical form**—the graph node/edge snapshot plus deterministic projection tooling—rather than as an opaque machine-specific database directory. A judge can create a fresh isolated HydraDB namespace, import the snapshot, and verify node/edge counts plus the expected FCG-root readback.
 
-### Minimal web build
+### Web build
 
 ```bash
 git clone https://github.com/biobitworks/hydradg.git
-cd hydradg
-npm install
-npm run dev
+cd hydradg/apps/hydradg-web
+cp .env.example .env.local
+npm ci
+npm run typecheck
+npm run build
+npm run start -- -p 3012
 ```
 
-For comprehensive replication and database setup details, see [`HOW_TO.md`](HOW_TO.md) and [`HYDRADB_DATA.md`](HYDRADB_DATA.md).
+For the HydraDB-backed reconstruction, configure the isolated HydraDB namespace first using [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md).
 
 ---
 
@@ -107,9 +125,7 @@ For comprehensive replication and database setup details, see [`HOW_TO.md`](HOW_
 
 - [`custody/graph/live/nodes.jsonl`](custody/graph/live/nodes.jsonl)
 - [`custody/graph/live/edges.jsonl`](custody/graph/live/edges.jsonl)
-- **Data Manual**: Detailed specification in [`HYDRADB_DATA.md`](HYDRADB_DATA.md).
-- **Node Schemas**: `HydraDG_DaisyTrain_v0.3.1/hydra/schema_nodes.json` (`Session`, `Fact`, `Entity`, `KnowledgeAtom`).
-- **Edge Schemas**: `HydraDG_DaisyTrain_v0.3.1/hydra/schema_edges.json` (`NEXT`, `ASSERTS`, `DERIVED_FROM`, `ABOUT`, `SUPERSEDES`, `CONTRADICTS`).
+- [`HYDRADB_DATA.md`](HYDRADB_DATA.md)
 
 Executed Track 03 experiment root used as a readback canary:
 
@@ -117,7 +133,7 @@ Executed Track 03 experiment root used as a readback canary:
 experiment:fa170ab51cdfba46f9a24979c9be9b90fdc4ccedcdb292f313aa4439a92b08d8
 ```
 
-The importer at [`scripts/project_fcg_snapshot_to_hydradb.py`](scripts/project_fcg_snapshot_to_hydradb.py) validates the JSONL, writes only to an isolated `hydradg-*` namespace, performs readback count checks, and verifies this root is present.
+The importer at [`scripts/project_fcg_snapshot_to_hydradb.py`](scripts/project_fcg_snapshot_to_hydradb.py) validates the JSONL, writes only to an isolated `hydradg-*` namespace, performs readback count checks, and verifies the expected root is present.
 
 ---
 
@@ -169,7 +185,7 @@ HydraDG uses an application-defined, dimensionless information-state diagnostic 
 
 The information-theoretic Gibbs/free-energy analogy is linked to:
 
-**Ensslin & Weig (2010)** — _Inference with minimal Gibbs free energy in information field theory_, Physical Review E 82, 051112, DOI `10.1103/PhysRevE.82.051112`.
+**Enßlin & Weig (2010)** — *Inference with minimal Gibbs free energy in information field theory*, Physical Review E 82, 051112, DOI `10.1103/PhysRevE.82.051112`.
 
 HydraDG's `G*` is **not physical Gibbs free energy**, is not measured in joules or kcal/mol, and lower `G*` does not automatically imply better Hit@K, Recall@K, or QA performance.
 
@@ -186,28 +202,23 @@ Material source, transformation, derived-evidence, claim, and artifact relations
 
 A hash does not imply a signature. A signature does not imply a Merkle/MMR commitment. Neither implies scientific verification unless the corresponding operation and evidence exist.
 
-- **Submission Summary**: [`SUBMISSION.md`](SUBMISSION.md)
-- **Demo Video URL**: [https://youtu.be/7EDb6q-loPA](https://youtu.be/7EDb6q-loPA)
-- **Repository**: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg)
-- **Release Branch**: `hack-hydra/public-product-final-20260819`
-
 ---
 
 ## Security gate
 
-Before publication, scan the exact release history:
+Before publication, the exact judge commit must pass:
 
 ```bash
 gitleaks git --redact=100 --no-banner .
 ```
 
-The release branch also contains a fail-closed GitHub Actions workflow:
+The fail-closed workflow is:
 
 ```text
 .github/workflows/gitleaks-release.yml
 ```
 
-A historical or partial scan is not enough to call the repository clean. The exact release commit must pass the current scan.
+It scans complete Git history and fails on any finding. A historical or partial scan is not enough to call the final repository clean.
 
 ---
 
@@ -219,9 +230,8 @@ A historical or partial scan is not enough to call the repository clean. The exa
 - `custody/graph/live/` — canonical public graph snapshot
 - `docs/` — architecture, component, reproduction, and claim-boundary documentation
 - `schemas/` — state/data schemas
-- `scripts/` — projection, verification, release, and reproduction tooling
+- `scripts/` — HydraDB projection, verification, release, and reproduction tooling
 - `SUBMISSION.md` — Hack Hydra submission scope
-- `LICENSE` / `LICENSING.md` / `THIRD_PARTY_NOTICES.md` — licensing and third-party notices
 
 ---
 
@@ -231,8 +241,8 @@ A historical or partial scan is not enough to call the repository clean. The exa
 |---|---|
 | **HydraDG software / website / scripts** | **Apache License, Version 2.0** ([`LICENSE`](LICENSE)) |
 | **Byron P. Lee / Biobitworks preprints / manuscripts / authored research content** | **CC BY-NC-ND 4.0** ([`LICENSING.md`](LICENSING.md)) |
-| **HydraDB** | **Upstream HydraDB License** |
-| **LongMemEval / other datasets** | **Respective Upstream Dataset Licenses** |
-| **External papers / templates / APIs** | **Respective Upstream Rights** |
+| **HydraDB** | **Upstream HydraDB license** |
+| **LongMemEval / other datasets** | **Respective upstream dataset licenses** |
+| **External papers / templates / APIs** | **Respective upstream rights** |
 
-For complete licensing details, see [`LICENSING.md`](LICENSING.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+See [`LICENSING.md`](LICENSING.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for scope and third-party attribution.
