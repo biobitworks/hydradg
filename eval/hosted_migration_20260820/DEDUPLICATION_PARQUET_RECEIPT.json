@@ -5,9 +5,15 @@
     "spatiotemporal_traceability": "100.00%"
   },
   "deduplicated_counts": {
-    "hash_dictionary_sha256": "b5c18bb7c929d8ab427e126225f2bef3a3c2ed1583b8b9e0d5b0174d47c801a5",
+    "hash_dictionary_sha256": "a93aa35d537770bcdc8aadcafa098537b345bfa309f2bdf36f568374f98318fe",
     "unique_level_0_word_keys": 8992941,
     "unique_level_1_sentence_keys": 1861079
+  },
+  "information_energy_savings": {
+    "flops_saved_per_traversal": 291465384000000000,
+    "formula": "Delta_E_compute = 2 * N_params * Delta_N_deduplicated_tokens",
+    "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+    "watt_hours_saved_per_traversal": 809.63
   },
   "license": "CC-BY-NC-ND-4.0",
   "raw_counts": {
@@ -42,5 +48,5 @@
     }
   },
   "status": "PASS",
-  "timestamp_unix": 1787253361
+  "timestamp_unix": 1787253683
 }

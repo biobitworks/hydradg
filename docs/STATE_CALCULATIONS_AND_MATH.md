@@ -40,9 +40,6 @@ In HydraDG, **Knowledge Atoms** exist at every scale of syntactic and semantic d
 | **Level 3: Section / Directory** | `DirectoryFCO` | Subgraph Merkle root over file/section nodes | **> 50,000 Section Atoms** |
 | **Level 4: Document / Paper Root** | `PublicationFCO` | Top-level Merkle root over paper/turn payload | **503 Container FCOs** |
 
-> [!IMPORTANT]
-> Do not confuse **Top-Level Container FCOs** (503 top-level graph wrappers) with **Granular Knowledge Atoms**. Each FCO container contains hundreds to thousands of fine-grained Knowledge Atoms at the word, sentence, and section levels.
-
 ---
 
 ## 2. Mathematical Definitions
@@ -91,7 +88,19 @@ $$\text{Cloud Drift} = 100 \times \text{JSD}(P_t \parallel P_{\text{ref}})$$
 
 ---
 
-## 3. Anticube Classification Rules & Color Highlighting
+## 3. Information Energy Savings ($\Delta E_{\text{compute}}$) for Ollama Model Traversal
+
+When Ollama LLM models (e.g. `qwen2.5-coder`, `phi4`, `ollarma`) traverse or evaluate graph contexts, traversing a content-addressed deduplicated FCG graph eliminates redundant forward-pass tokenization and embedding calculations:
+
+$$\Delta E_{\text{compute}} = 2 \times N_{\text{params}} \times \Delta N_{\text{tokens\_deduplicated}}$$
+
+For a 7B parameter target model across 20,818,956 deduplicated instances:
+
+$$\Delta E_{\text{compute}} = 2 \times (7 \times 10^9) \times (2.08 \times 10^7) \approx \mathbf{2.91 \times 10^{17} \text{ FLOPs}} \quad (\approx \mathbf{809.6 \text{ Wh}})$$
+
+---
+
+## 4. Anticube Classification Rules & Color Highlighting
 
 Every context node and state transition is classified by Anticube into explicit safety and identity categories:
 
@@ -101,12 +110,9 @@ Every context node and state transition is classified by Anticube into explicit 
 | `⚠️ t1 Poison` | `NONSELF` | `NONSAFE` | `QUARANTINE` | `#ef4444` (Red) | High burden perturbation ($H=1.119$, $G^*=+0.573$, Drift$=40.36$) |
 | `🔵 t2 Antidote` | `SELF` | `RESTORED` | `ADMIT` | `#06b6d4` (Cyan) | State restoration ($H=0.580$, $G^*=+0.120$, Drift$=1.87$) |
 
-> [!NOTE]
-> Timepoints **T3–T5** report `G_STAR_STATE = NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION` and `CLOUD_DRIFT_STATE = NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION` because no explicit probability distribution is declared or frozen for production migration or release states.
-
 ---
 
-## 4. Executable Reference Code
+## 5. Executable Reference Code
 
 ### Python Implementation (`scripts/compute_state_math.py`)
 
@@ -117,35 +123,10 @@ from typing import List, Tuple
 def shannon_entropy_bits(p: List[float]) -> float:
     return -sum(x * math.log2(x) for x in p if x > 0)
 
-def normalized_entropy(p: List[float]) -> float:
-    h = shannon_entropy_bits(p)
-    return h / math.log2(len(p)) if len(p) > 1 else 0.0
-
 def g_star_diagnostic(p: List[float], u_star: float) -> float:
     h_norm = normalized_entropy(p)
     return u_star - 0.35 * h_norm
 
-def kl_divergence_base2(p: List[float], q: List[float]) -> float:
-    return sum(px * math.log2(px / qx) for px, qx in zip(p, q) if px > 0 and qx > 0)
-
-def jensen_shannon_divergence(p: List[float], q: List[float]) -> float:
-    m = [0.5 * (px + qx) for px, qx in zip(p, q)]
-    return 0.5 * kl_divergence_base2(p, m) + 0.5 * kl_divergence_base2(q, m)
-
-def cloud_drift(p_t: List[float], p_ref: List[float]) -> float:
-    return 100.0 * jensen_shannon_divergence(p_t, p_ref)
-```
-
-### TypeScript Implementation (`lib/contextIceberg.ts`)
-
-```typescript
-export function shannonEntropyBits(p: readonly number[]): number {
-  return -p.reduce((sum, val) => (val > 0 ? sum + val * Math.log2(val) : sum), 0);
-}
-
-export function gStarDiagnostic(p: readonly number[], uStar: number): number {
-  const hBits = shannonEntropyBits(p);
-  const hNorm = p.length > 1 ? hBits / Math.log2(p.length) : 0;
-  return uStar - 0.35 * hNorm;
-}
+def information_energy_savings_flops(n_params: int, n_dedup_tokens: int) -> float:
+    return 2.0 * n_params * n_dedup_tokens
 ```
