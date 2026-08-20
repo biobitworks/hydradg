@@ -1,0 +1,111 @@
+{
+  "api_version": "2",
+  "collection": "default",
+  "database": "hydradg",
+  "query_execution": {
+    "edge_count_returned": 24,
+    "node_count_returned": 36,
+    "root_hash_match": true
+  },
+  "readback_status": "SUCCESS",
+  "readback_timestamp_utc": "2026-08-20T14:40:05Z",
+  "sample_edges": [
+    {
+      "dst": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "id": "fcg:dc13d3b41e145d7d13bb2a75d5cdc73e539aa4d620724613661ea04bebde2732",
+      "payload": {},
+      "rel": "HAS_SESSION",
+      "src": "fco:16b0be36ad4f6f00fccad1110be6c776a13219989c9c4d92701e7db73e5d6d30"
+    },
+    {
+      "dst": "fco:3eae2cf8546a601bbc59d56c8bd6aa2a7c165eab994e8e2484124d26ba906ce6",
+      "id": "fcg:7965bef315f4332d13a8576b59ee6f109ae2bc6f80dcea3398edc38591d22205",
+      "payload": {},
+      "rel": "USES_MODEL",
+      "src": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5"
+    },
+    {
+      "dst": "fco:0f63d48a6ff8918d761df757bbddb060db17bb80dfd3974459d3bb99f6bcca4f",
+      "id": "fcg:26d7b62291cd28c97545ecd43069aec67ce12e049ef720f830e6d2a5b28b9e00",
+      "payload": {},
+      "rel": "HAS_TURN",
+      "src": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5"
+    },
+    {
+      "dst": "fco:cca473d2ddd24ac61cb48e313a359b6135c2020c4be3b295be097b6cc7293b12",
+      "id": "fcg:8fd3b78d18412ba0fce0758d9220b342d7413959f228fee5e7bf9d82b9dba7e8",
+      "payload": {},
+      "rel": "DERIVED_FROM",
+      "src": "fco:0f63d48a6ff8918d761df757bbddb060db17bb80dfd3974459d3bb99f6bcca4f"
+    },
+    {
+      "dst": "fco:75718745dff330636ff61b0a8f5b38c6237eff3b49370d2c44849124c3da9044",
+      "id": "fcg:e4682302c889a9e823624d4b7c2b60019a7086c0b10dddc10f6c9d45f7470648",
+      "payload": {},
+      "rel": "PRODUCED",
+      "src": "fco:0f63d48a6ff8918d761df757bbddb060db17bb80dfd3974459d3bb99f6bcca4f"
+    }
+  ],
+  "sample_nodes": [
+    {
+      "id": "fco:c4cafe689b31b3045493124bff77f03688eb18a7efbfa48a3c961204fa4d2b93",
+      "object_sha256": "c4cafe689b31b3045493124bff77f03688eb18a7efbfa48a3c961204fa4d2b93",
+      "payload": {
+        "agent_key": "chatgpt-hydradg",
+        "authorship": "AI_AGENT",
+        "claim_ceiling": "AGENT_IDENTITY_RECORD",
+        "custody_state": "HASHED",
+        "role": "AI assistant for HydraDG project",
+        "runtime": "ChatGPT"
+      },
+      "type": "Agent"
+    },
+    {
+      "id": "fco:f9d8af4c6aca40241dddb6b2a459ce0eaceb4663f6ac50d23e336f140172b707",
+      "object_sha256": "f9d8af4c6aca40241dddb6b2a459ce0eaceb4663f6ac50d23e336f140172b707",
+      "payload": {
+        "claim_ceiling": "MODEL_IDENTITY_RECORD",
+        "custody_state": "HASHED",
+        "model_key": "openai-gpt-5.6-sol",
+        "model_name": "GPT-5.6 Sol",
+        "provider": "OpenAI",
+        "version_or_digest": "UNRESOLVED"
+      },
+      "type": "Model"
+    },
+    {
+      "id": "fco:83c45863fe77edd960a15f3ae2817a62abca2a98b0a14a110e8932ebd76726cb",
+      "object_sha256": "83c45863fe77edd960a15f3ae2817a62abca2a98b0a14a110e8932ebd76726cb",
+      "payload": {
+        "agent_key": "chatgpt-hydradg",
+        "claim_ceiling": "SESSION_PROVENANCE",
+        "custody_state": "HASHED",
+        "session_key": "chatgpt-hydradg-live-2026-08-18"
+      },
+      "type": "AgentSession"
+    },
+    {
+      "id": "fco:5af9f056eda3eec066a490eebca5507693400973a5f7d2ffd6f042b4f15c9b9b",
+      "object_sha256": "5af9f056eda3eec066a490eebca5507693400973a5f7d2ffd6f042b4f15c9b9b",
+      "payload": {
+        "bytes": 470,
+        "path": "HydraDG_DaisyTrain_v0.3.7/custody/live/turns/input_e60ac57bdc2ec306bab2ab304833290ce5a04a2b2cd0b17d457696229c8f504f.txt",
+        "role": "TURN_INPUT",
+        "sha256": "e60ac57bdc2ec306bab2ab304833290ce5a04a2b2cd0b17d457696229c8f504f"
+      },
+      "type": "Artifact"
+    },
+    {
+      "id": "fco:42c3f5a8842347c8c28d913e36e19a033eb5a42339f858ba55ed5e4c14e95081",
+      "object_sha256": "42c3f5a8842347c8c28d913e36e19a033eb5a42339f858ba55ed5e4c14e95081",
+      "payload": {
+        "bytes": 914,
+        "path": "HydraDG_DaisyTrain_v0.3.7/custody/live/turns/output_4c66ba777a4143ba28ae85709b70bb57cd3421ec200afc9afe457d284360da46.txt",
+        "role": "TURN_OUTPUT",
+        "sha256": "4c66ba777a4143ba28ae85709b70bb57cd3421ec200afc9afe457d284360da46"
+      },
+      "type": "Artifact"
+    }
+  ],
+  "schema": "hydradg.hosted_fcg_readback.v1"
+}

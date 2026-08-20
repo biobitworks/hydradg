@@ -1,0 +1,15 @@
+{
+  "update_type": "ADD",
+  "admission_state": "ADMIT",
+  "claim_ceiling": "INTEGRATED_RELEASE_VERIFICATION",
+  "uncertainty": "DETERMINISTIC_REPRODUCIBLE",
+  "atoms": [
+    {
+      "content": "Final integrated Hack Hydra release branch hack-hydra/final-hosted-fcg-20260820 reconciles curated Vercel judge UI, Context vs Entropy secret experiment, hosted HydraDB v2 parity (0 delta), reference link audit (100% coverage), and FCG timepoints T0..T5 with 100% release gate PASS.",
+      "source_ref": "docs/FINAL_HOSTED_FCG_AUDIT_20260820.md",
+      "evidence_class": "RELEASE_AUDIT_RECEIPT",
+      "claim_ceiling": "INTEGRATED_RELEASE_VERIFICATION",
+      "uncertainty": "REPRODUCIBLE"
+    }
+  ]
+}

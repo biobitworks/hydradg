@@ -3,12 +3,14 @@ import Link from "next/link";
 const PRIMARY_NAV = [
   ["Overview", "/"],
   ["Judge", "/judge"],
+  ["Context vs Entropy", "/results/context-vs-entropy"],
   ["Results", "/track03"],
   ["Graph", "/graph"],
 ] as const;
 
 const DEEP_NAV = [
   ["Knowledge", "/knowledge"],
+  ["Evidence", "/evidence"],
   ["How to Use", "/how-to"],
   ["Evolution", "/evolution"],
   ["Eligibility", "/eligibility"],

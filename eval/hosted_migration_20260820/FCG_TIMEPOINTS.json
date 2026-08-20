@@ -1,0 +1,106 @@
+{
+  "claim_boundary": "Synthetic fixture metrics (T0..T2) apply strictly to declared synthetic fixtures. Production timepoints (T3..T5) record SCORE_STATE=UNAVAILABLE_PENDING_DECLARED_DISTRIBUTION without fabricating G*/delta_G*.",
+  "git_sha": "247dd401a280107f0138c44158aefedf153c6102",
+  "schema": "hydradg.fcg_timepoints.v1",
+  "timepoints": [
+    {
+      "burden": 0.08,
+      "classification": "SYNTHETIC_FIXTURE",
+      "distribution": [
+        0.88,
+        0.08,
+        0.04
+      ],
+      "label": "T0 Reference State",
+      "metrics": {
+        "G_star": -0.06123,
+        "cloud_drift": 0.0,
+        "delta_G_star": 0.0
+      },
+      "note": "Frozen comparison baseline before any perturbation.",
+      "timepoint_id": "T0_REFERENCE"
+    },
+    {
+      "burden": 0.82,
+      "classification": "SYNTHETIC_FIXTURE",
+      "distribution": [
+        0.18,
+        0.72,
+        0.1
+      ],
+      "label": "T1 Mutation / Poison State",
+      "metrics": {
+        "G_star": 0.572956,
+        "cloud_drift": 40.3629,
+        "delta_G_star": 0.634186
+      },
+      "note": "Controlled conflicting state exposing divergent relationship.",
+      "timepoint_id": "T1_MUTATION"
+    },
+    {
+      "burden": 0.2,
+      "classification": "SYNTHETIC_FIXTURE",
+      "distribution": [
+        0.76,
+        0.14,
+        0.1
+      ],
+      "label": "T2 Restoration / Antidote State",
+      "metrics": {
+        "G_star": -0.027496,
+        "cloud_drift": 1.8729,
+        "delta_G_star": -0.600452
+      },
+      "note": "Recovery state proving history retention without erasing counterevidence.",
+      "timepoint_id": "T2_RESTORATION"
+    },
+    {
+      "classification": "PRODUCTION_RELEASE_STATE",
+      "label": "T3 Hosted HydraDB v2 Migration",
+      "note": "Local HydraDB to hosted HydraDB/Vercel state transition.",
+      "score_state": "SCORE_STATE=UNAVAILABLE_PENDING_DECLARED_DISTRIBUTION",
+      "state_snapshot": {
+        "canonical_content_hash_delta": 0,
+        "canonical_edge_delta": 0,
+        "canonical_fco_set_delta": 0,
+        "collection": "default",
+        "database": "hydradg",
+        "migration_parity": "PASS",
+        "observed_at": "2026-08-20T14:40:00Z",
+        "source_git_sha": "247dd401a280107f0138c44158aefedf153c6102"
+      },
+      "timepoint_id": "T3_HOSTED_MIGRATION"
+    },
+    {
+      "classification": "PRODUCTION_EXPERIMENT_STATE",
+      "label": "T4 Context vs. Entropy Secret Experiment",
+      "note": "Full-history Gitleaks raw intake and HydraDB context classification.",
+      "score_state": "SCORE_STATE=UNAVAILABLE_PENDING_DECLARED_DISTRIBUTION",
+      "state_snapshot": {
+        "abstention_count": 12,
+        "classification_coverage_percent": 99.9354,
+        "classified_findings": 18555,
+        "modal_token_preservation": "REVOKED_HISTORICAL_CREDENTIAL",
+        "observed_at": "2026-08-20T13:45:00Z",
+        "raw_findings": 18567,
+        "source_git_sha": "247dd401a280107f0138c44158aefedf153c6102"
+      },
+      "timepoint_id": "T4_CONTEXT_VS_ENTROPY"
+    },
+    {
+      "classification": "PRODUCTION_JUDGE_RELEASE_STATE",
+      "label": "T5 Final Hosted FCG Judge Release",
+      "note": "Integrated judge-reviewable release.",
+      "score_state": "SCORE_STATE=UNAVAILABLE_PENDING_DECLARED_DISTRIBUTION",
+      "state_snapshot": {
+        "integration_branch": "hack-hydra/final-hosted-fcg-20260820",
+        "observed_at": "2026-08-20T14:42:00Z",
+        "release_gate_status": "ALL_20_GATES_PASS",
+        "source_git_sha": "247dd401a280107f0138c44158aefedf153c6102",
+        "vercel_deployment_identity": "Vercel / Hack Hydra 2026"
+      },
+      "timepoint_id": "T5_FINAL_JUDGE_RELEASE"
+    }
+  ],
+  "timestamp_utc": "2026-08-20T14:42:00Z"
+}

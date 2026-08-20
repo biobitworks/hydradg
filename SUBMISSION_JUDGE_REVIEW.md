@@ -6,7 +6,7 @@
 - **Primary track:** Track 03 — Memory + Context Retrieval
 - **Public repository:** https://github.com/biobitworks/hydradg
 - **Demo video:** https://youtu.be/7EDb6q-loPA
-- **Vercel judge app:** `PENDING_PUBLIC_PROMOTION_AFTER_HOSTED_HYDRADB_READBACK`
+- **Final integration branch:** `hack-hydra/final-hosted-fcg-20260820`
 - **Current curated Vercel branch alias:** https://hydradg-git-hack-hydra-curated-vercel-lineag-4ff6ad-biobitworks.vercel.app
 - **Curated deployment commit:** `3ff1245d8a7bb5f49e60d30f3005c2ed9127a475`
 
@@ -52,12 +52,15 @@ Recommended review order:
 
 1. `/` — Overview / Context Iceberg
 2. `/judge` — Reference -> Poison -> Antidote walkthrough
-3. `/track03` — bounded Track 03 results
-4. `/graph` — FCG/context graph exploration
-5. `/knowledge` — project terminology and claim boundaries
-6. `/how-to` — judge/reproduction guide
-7. `/eligibility` — submission and evidence boundaries
-8. `/backup/hydradg.html` — static emergency fallback
+3. `/results/context-vs-entropy` — Context vs Entropy Secret Benchmark (99.94% coverage)
+4. `/track03` — bounded Track 03 results
+5. `/graph` — FCG/context graph exploration
+6. `/knowledge` — project terminology and claim boundaries
+7. `/evidence` — custody evidence ledger
+8. `/eligibility` — submission and evidence boundaries
+9. `/how-to` — judge/reproduction guide
+10. `/evolution` — presentation supersession lineage
+11. `/backup/hydradg.html` — static emergency fallback
 
 ## Current hosted-deployment gate
 
