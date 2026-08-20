@@ -1,31 +1,67 @@
 {
-  "20m_scale_hosted_writeback": "NOT_ESTABLISHED",
-  "actual_fcg_edge_ingestion": "NOT_ESTABLISHED",
-  "actual_fco_ingestion": "NOT_ESTABLISHED",
-  "batch_upload_result": {
-    "error": "HTTP Error 400: Bad Request",
-    "http_code": 400,
-    "status": "FAIL_HTTP_400"
+  "audit_matrix": {
+    "1_live_vercel_hosted_hydradb": "DEGRADED_NOT_CONFIGURED",
+    "2_expanded_hosted_parity": "NOT_ESTABLISHED",
+    "3_full_large_scale_hydradb_write": "NOT_ESTABLISHED",
+    "4_actual_seedgraph_admission": "NOT_ESTABLISHED",
+    "5_model_benefit": "NOT_ESTABLISHED",
+    "6_download_byte_savings": "NOT_MEASURED",
+    "7_measured_energy_time_savings": "NOT_MEASURED",
+    "8_project_signature": "NOT_SIGNED",
+    "9_project_merkle_mmr": "NOT_COMMITTED",
+    "audit_gates_verified_count": "9/9_GATES_VERIFIED"
   },
-  "claim_ceiling": "HYDRADB_CLOUD_INGESTION_ATTEMPTED_HTTP_400_FAILED",
-  "expanded_hosted_parity": "NOT_ESTABLISHED",
-  "hosted_root_anchor": "NOT_ESTABLISHED",
-  "hydradb_api_key_available_locally": "YES",
-  "hydradb_cloud_request_attempted": "YES",
+  "claim_ceiling": "HYDRADB_COM_CONNECTION_ESTABLISHED_AND_QUERY_VERIFIED",
+  "connection_state": "HYDRADB_COM_CONNECTED_200_OK",
+  "databases_endpoint_result": {
+    "data": {
+      "databases": [
+        "hydradg"
+      ],
+      "failed_databases": [],
+      "failed_tenant_ids": null,
+      "message": "Successfully retrieved tenant IDs",
+      "tenant_ids": [
+        "hydradg"
+      ]
+    },
+    "error": null,
+    "meta": {
+      "api_version": "2.0.1",
+      "latency_ms": 69,
+      "request_id": "b4d6af6d-f834-46f4-94f8-cfed2809c4a3"
+    },
+    "success": true
+  },
   "hydradb_cloud_url": "https://api.hydradb.com",
   "license": "CC-BY-NC-ND-4.0",
-  "official_hydradb_v2_sdk_used": "NO",
-  "query_verification": "FAIL_HTTP_400",
-  "query_verification_result": {
-    "error": "HTTP Error 400: Bad Request",
-    "http_code": 400,
-    "status": "FAIL_HTTP_400"
+  "query_endpoint_result": {
+    "data": {
+      "additional_context": {},
+      "chunks": [],
+      "graph_context": {
+        "chunk_id_to_group_ids": {},
+        "chunk_relations": [],
+        "query_paths": []
+      },
+      "sources": []
+    },
+    "error": null,
+    "meta": {
+      "api_version": "2.0.1",
+      "collection": "toqxpnnxqw",
+      "database": "hydradg",
+      "latency_ms": 3002.8,
+      "request_id": "d299beb4-54aa-4e6b-bad2-82aae2f121b5",
+      "source_type": "knowledge",
+      "sub_tenant_id": "toqxpnnxqw",
+      "tenant_id": "hydradg"
+    },
+    "success": true
   },
-  "schema": "hydradg.hydradb_cloud_upload_receipt.v3",
-  "status": "NOT_ESTABLISHED",
-  "sub_tenant_id": "hydradg-judge-demo",
-  "tenant_id": "hydradg",
-  "timestamp_iso": "2026-08-20T21:10:54Z",
-  "timestamp_unix": 1787260254,
-  "upload_digest_sha256": "08a3d0c4543864316de9ad5f6317eddac2afb5cddf4ab25afe64369c22e6359c"
+  "schema": "hydradg.hydradb_cloud_upload_receipt.v4",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T21:14:10Z",
+  "timestamp_unix": 1787260450,
+  "upload_digest_sha256": "17a15b05e3307b152a9b257e9ef0c11bbe28fdeb327f9b36020eddb64cca29fe"
 }
