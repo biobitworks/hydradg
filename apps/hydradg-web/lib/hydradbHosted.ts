@@ -1,7 +1,7 @@
 export type HostedHydraDBConfig = {
   apiKey: string;
-  tenantId: string;
-  subTenantId: string;
+  database: string;
+  collection: string;
   baseUrl: string;
   canarySourceId: string;
 };
@@ -9,8 +9,18 @@ export type HostedHydraDBConfig = {
 export function hostedHydraDBConfig(): HostedHydraDBConfig {
   return {
     apiKey: process.env.HYDRA_DB_API_KEY || process.env.HYDRADB_API_KEY || "",
-    tenantId: process.env.HYDRADB_TENANT_ID || process.env.HYDRA_DB_TENANT_ID || "",
-    subTenantId: process.env.HYDRADB_SUB_TENANT_ID || process.env.HYDRA_DB_SUB_TENANT_ID || "hydradg-judge-demo",
+    database:
+      process.env.HYDRADB_DATABASE ||
+      process.env.HYDRA_DB_DATABASE ||
+      process.env.HYDRADB_TENANT_ID ||
+      process.env.HYDRA_DB_TENANT_ID ||
+      "",
+    collection:
+      process.env.HYDRADB_COLLECTION ||
+      process.env.HYDRA_DB_COLLECTION ||
+      process.env.HYDRADB_SUB_TENANT_ID ||
+      process.env.HYDRA_DB_SUB_TENANT_ID ||
+      "",
     baseUrl: (process.env.HYDRADB_API_URL || "https://api.hydradb.com").replace(/\/$/, ""),
     canarySourceId: process.env.HYDRADG_PUBLIC_CANARY_SOURCE_ID || "",
   };
@@ -27,6 +37,7 @@ export async function hostedHydraDBRequest(path: string, method: "GET" | "POST" 
         method,
         headers: {
           Authorization: `Bearer ${cfg.apiKey}`,
+          "API-Version": "2",
           ...(method === "POST" ? { "Content-Type": "application/json" } : {}),
         },
         body: method === "POST" ? JSON.stringify(body || {}) : undefined,
@@ -36,7 +47,7 @@ export async function hostedHydraDBRequest(path: string, method: "GET" | "POST" 
       const data = await response.json().catch(() => ({ status: response.status }));
       if (response.ok) return { status: response.status, data };
 
-      const message = data?.detail?.message || data?.message || `HydraDB hosted API request failed (${response.status})`;
+      const message = data?.error?.message || data?.detail?.message || data?.message || `HydraDB hosted API request failed (${response.status})`;
       if (![429, 500, 503].includes(response.status) || attempt === 3) throw new Error(message);
       await new Promise((resolve) => setTimeout(resolve, 2 ** attempt * 500));
     } catch (error) {
@@ -52,38 +63,45 @@ export async function hostedHydraDBStatus() {
   if (!cfg.apiKey) {
     return {
       configured: false as const,
-      tenant_configured: Boolean(cfg.tenantId),
+      database_configured: Boolean(cfg.database),
+      collection: cfg.collection || null,
       base_url: cfg.baseUrl,
       required: ["HYDRA_DB_API_KEY"],
-      optional: ["HYDRADB_TENANT_ID", "HYDRADB_SUB_TENANT_ID", "HYDRADB_API_URL", "HYDRADG_PUBLIC_CANARY_SOURCE_ID"],
+      optional: ["HYDRADB_DATABASE", "HYDRADB_COLLECTION", "HYDRADB_API_URL", "HYDRADG_PUBLIC_CANARY_SOURCE_ID"],
+      compatibility_aliases: ["HYDRADB_TENANT_ID", "HYDRADB_SUB_TENANT_ID"],
       key_value_disclosed: false,
     };
   }
 
-  if (!cfg.tenantId) {
-    const tenantIds = await hostedHydraDBRequest("/tenants/tenant_ids");
+  if (!cfg.database) {
+    const databases = await hostedHydraDBRequest("/databases");
+    const available = (databases.data as any)?.data?.databases;
     return {
       configured: true as const,
-      tenant_configured: false,
+      database_configured: false,
+      collection: cfg.collection || null,
       base_url: cfg.baseUrl,
       key_present: true,
       key_value_disclosed: false,
-      tenant_ids_available: Array.isArray((tenantIds.data as any)?.tenant_ids)
-        ? (tenantIds.data as any).tenant_ids.length
-        : null,
-      claim_ceiling: "HYDRADB_HOSTED_KEY_AND_TENANT_DISCOVERY_ONLY",
+      databases_available: Array.isArray(available) ? available.length : null,
+      claim_ceiling: "HYDRADB_HOSTED_KEY_AND_DATABASE_DISCOVERY_ONLY",
     };
   }
 
-  const status = await hostedHydraDBRequest(`/tenants/infra/status?tenant_id=${encodeURIComponent(cfg.tenantId)}`);
+  const status = await hostedHydraDBRequest(`/databases/status?database=${encodeURIComponent(cfg.database)}`);
   let traceability: Record<string, unknown> = {
     state: "CANARY_SOURCE_NOT_CONFIGURED",
   };
 
   if (cfg.canarySourceId) {
-    const params = new URLSearchParams({ tenant_id: cfg.tenantId, source_id: cfg.canarySourceId });
-    if (cfg.subTenantId) params.set("sub_tenant_id", cfg.subTenantId);
-    const relations = await hostedHydraDBRequest(`/list/graph_relations_by_id?${params.toString()}`);
+    const params = new URLSearchParams({
+      database: cfg.database,
+      id: cfg.canarySourceId,
+      limit: "500",
+      type: "knowledge",
+    });
+    if (cfg.collection) params.set("collection", cfg.collection);
+    const relations = await hostedHydraDBRequest(`/context/relations?${params.toString()}`);
     traceability = {
       state: "READBACK_REQUEST_SUCCEEDED",
       source_id: cfg.canarySourceId,
@@ -94,15 +112,15 @@ export async function hostedHydraDBStatus() {
 
   return {
     configured: true as const,
-    tenant_configured: true,
-    tenant_id: cfg.tenantId,
-    sub_tenant_id: cfg.subTenantId,
+    database_configured: true,
+    database: cfg.database,
+    collection: cfg.collection || null,
     base_url: cfg.baseUrl,
     key_present: true,
     key_value_disclosed: false,
-    tenant_status_http: status.status,
-    tenant_status: status.data,
+    database_status_http: status.status,
+    database_status: status.data,
     traceability,
-    claim_ceiling: "REMOTE_HYDRADB_CONNECTIVITY_AND_OPTIONAL_CANARY_READBACK_ONLY",
+    claim_ceiling: "REMOTE_HYDRADB_V2_CONNECTIVITY_AND_OPTIONAL_CANARY_READBACK_ONLY",
   };
 }

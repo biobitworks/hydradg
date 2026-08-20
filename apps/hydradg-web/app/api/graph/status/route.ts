@@ -9,11 +9,11 @@ export async function GET() {
   try {
     const status = await hostedHydraDBStatus();
     const traceability = (status as any).traceability?.state;
-    const configured = status.configured === true && (status as any).tenant_configured === true;
+    const configured = status.configured === true && (status as any).database_configured === true;
     return NextResponse.json(
       {
         configured,
-        backend: configured ? "HYDRADB_REMOTE_API" : "NOT_CONFIGURED",
+        backend: configured ? "HYDRADB_REMOTE_API_V2" : "NOT_CONFIGURED",
         environment: "PUBLIC",
         source_state: configured ? "REMOTE_HYDRADB_PUBLIC_FCG" : "NO_REMOTE_HYDRADB_STATE",
         hydradb_traceability_canary:
@@ -31,7 +31,7 @@ export async function GET() {
     return NextResponse.json(
       {
         configured: false,
-        backend: "HYDRADB_REMOTE_API",
+        backend: "HYDRADB_REMOTE_API_V2",
         environment: "PUBLIC",
         hydradb_traceability_canary: "FAIL",
         error: error instanceof Error ? error.message : String(error),

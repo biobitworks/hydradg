@@ -1,12 +1,16 @@
 import Link from "next/link";
 
-const NAV = [
+const PRIMARY_NAV = [
   ["Overview", "/"],
-  ["Judge Demo", "/judge"],
+  ["Judge", "/judge"],
   ["Results", "/track03"],
   ["Graph", "/graph"],
+] as const;
+
+const DEEP_NAV = [
   ["Knowledge", "/knowledge"],
   ["How to Use", "/how-to"],
+  ["Evolution", "/evolution"],
   ["Eligibility", "/eligibility"],
 ] as const;
 
@@ -19,10 +23,16 @@ export default function SiteNav() {
           <span className="siteBrandMark">FCG</span>
         </Link>
         <div className="siteNavLinks" aria-label="Judge navigation">
-          {NAV.map(([label, href]) => (
+          {PRIMARY_NAV.map(([label, href]) => (
             <Link key={href} href={href}>{label}</Link>
           ))}
-          <a href="/backup/hydradg.html">Static Fallback</a>
+          <details className="siteNavMore">
+            <summary>Deep dive</summary>
+            <div className="siteNavMoreMenu">
+              {DEEP_NAV.map(([label, href]) => <Link key={href} href={href}>{label}</Link>)}
+              <a href="/backup/hydradg.html">Static fallback</a>
+            </div>
+          </details>
         </div>
         <Link className="siteNavCta" href="/judge">Start walkthrough</Link>
       </nav>
