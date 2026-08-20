@@ -285,10 +285,10 @@ It scans complete Git history and fails on any finding. A historical or partial 
 | Category | Licensing Scope |
 |---|---|
 | **HydraDG software / website / scripts** | **Apache License, Version 2.0** ([`LICENSE`](LICENSE)) |
-| **Repository-native Byron P. Lee / Biobitworks research content** | **Version/object-specific; CC BY-NC-ND 4.0 where explicitly designated** ([`LICENSING.md`](LICENSING.md)) |
-| **Previously deposited preprints / manuscripts** | **License attached to the exact deposited version; do not retroactively narrow it** ([`LICENSING.md`](LICENSING.md)) |
+| **FCO/FCG research publications + designated Byron P. Lee / Biobitworks research content** | **CC BY-NC-ND 4.0** ([`LICENSING.md`](LICENSING.md)) |
+| **Earlier FCO/FCG `CC BY 4.0` metadata** | **Superseded metadata error; historical custody evidence only, not a licensing exception** ([`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md)) |
 | **HydraDB** | **Upstream HydraDB license** |
 | **LongMemEval / other datasets** | **Respective upstream dataset licenses** |
 | **External papers / templates / APIs** | **Respective upstream rights** |
 
-See [`LICENSING.md`](LICENSING.md), [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for scope, versioned publication identity, and third-party attribution.
+See [`LICENSING.md`](LICENSING.md), [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for scope, publication identity, supersession treatment, and third-party attribution.

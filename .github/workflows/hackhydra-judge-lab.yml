@@ -7,6 +7,7 @@ concurrency:
 on:
   push:
     branches:
+      - main
       - hack-hydra/judge-lab-golden-path-20260819
       - hack-hydra/submission-eligible-20260819
   pull_request:
@@ -43,7 +44,7 @@ jobs:
       - name: Public route and API smoke
         run: |
           set -euo pipefail
-          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03; do
+          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03 /how-to /backup/hydradg.html; do
             code="$(curl -sS -o /tmp/body -w '%{http_code}' "http://127.0.0.1:3000${path}")"
             echo "$path -> $code"
             test "$code" = "200"
@@ -78,7 +79,7 @@ jobs:
           grep -Fq "$fco_id" /tmp/fco.html
           live_code="$(curl -sS -o /tmp/live.json -w '%{http_code}' http://127.0.0.1:3000/api/live)"
           test "$live_code" = "503"
-          node -e "const j=require('/tmp/live.json'); if(j.configured!==false) throw Error('live fail-closed mismatch')"
+          node -e "const j=require('/tmp/live.json'); if(j.configured!==false || j.mode!=='PUBLIC_FIXTURE_ONLY') throw Error('live fail-closed mismatch')"
           cloud_code="$(curl -sS -o /tmp/cloud.json -w '%{http_code}' http://127.0.0.1:3000/api/hydradb-cloud)"
           test "$cloud_code" = "503"
           node -e "const j=require('/tmp/cloud.json'); if(j.configured!==false || j.secret_disclosure!=='API_KEY_VALUE_NEVER_RETURNED') throw Error('cloud fail-closed mismatch')"
@@ -97,15 +98,17 @@ jobs:
             echo "ASSERTION_PASS=$label"
           }
           curl -fsS http://127.0.0.1:3000/judge > /tmp/judge.html
-          assert_contains /tmp/judge.html 'HydraDG golden path' judge-title
-          assert_contains /tmp/judge.html 'DEMO CONTROL' judge-demo-mode
-          assert_contains /tmp/judge.html 'LIVE REAL DATA' judge-live-mode
-          assert_contains /tmp/judge.html 'HYDRADB COOKBOOK API' judge-cloud-mode
+          assert_contains /tmp/judge.html 'Change state. Keep the history.' judge-title
+          assert_contains /tmp/judge.html 'Reference' judge-reference
+          assert_contains /tmp/judge.html 'Poison' judge-poison
+          assert_contains /tmp/judge.html 'Antidote' judge-antidote
+          assert_contains /tmp/judge.html 'public read-only walkthrough' judge-read-only-boundary
           curl -fsS http://127.0.0.1:3000/ > /tmp/home.html
-          assert_contains /tmp/home.html 'Memory that can show its work' home-title
-          assert_contains /tmp/home.html 'Three distinct graph problems' home-track-summary
+          assert_contains /tmp/home.html 'See the context move.' home-title
+          assert_contains /tmp/home.html 'One custody spine. Three graph problems.' home-track-summary
           curl -fsS http://127.0.0.1:3000/track03 > /tmp/track03.html
           assert_contains /tmp/track03.html 'FULL500 COMPLETE' track03-executed-state
+          assert_contains /tmp/track03.html 'NO POSITIVE B/C/D HIT-RATE SIGNAL' track03-null-result
           assert_contains /tmp/track03.html 'bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324' track03-result-hash
       - name: Server log on failure
         if: failure()

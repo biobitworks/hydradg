@@ -5,15 +5,18 @@
 - **Project Name:** HydraDG — Graph-Native Governed Context Engine
 - **Primary Track:** Track 03 — Memory + Context Retrieval
 - **Repository:** https://github.com/biobitworks/hydradg
-- **Release Branch:** `hack-hydra/public-product-final-20260819`
+- **Judge / release branch:** `main`
+- **Repository visibility:** **PUBLIC — verified through GitHub repository metadata during final review**
 - **Custody-repair checkpoint:** `5ac81968ba5bdd5d7e71a1ff29deabeb416b7182`
-- **Final public-release commit:** PENDING_FINAL_FREEZE
+- **Final tested release commit:** `PENDING_EXACT_HEAD_GATE` — replace with the exact `main` SHA after build/typecheck/route/Gitleaks gates complete
 - **Demo video URL:** https://youtu.be/7EDb6q-loPA
-- **Demo video verification:** updated URL supplied by project owner; duration and unauthenticated accessibility still require independent confirmation
+- **Demo video verification:** URL present; duration and unauthenticated accessibility require external verification before human submission
 - **Superseded demo video URL:** https://youtu.be/tKWRmYZ3HCs
 - **Submission form:** PENDING_HUMAN_SUBMISSION
 
-A complete submission requires three items: a public GitHub repository, a demo video of 3 minutes or less, and the submission form. The local interactive product is used to record the video; a public live website is not required for the supplied submission requirement.
+`main` is the public judge-facing authority. Historical release branches and draft PRs are provenance/history only unless an older receipt explicitly names them.
+
+A complete submission requires the public repository, the qualifying demo video, and the human submission form. The local interactive product can be used to record the video; a public live website is not required by the repository's supplied submission checklist.
 
 ---
 
@@ -50,7 +53,15 @@ Fact ─CONTRADICTS→ Fact
 
 These relationships support reconstruction of chronology, provenance, current state, contradiction, and evidence paths.
 
-The local submission demo uses the pinned local HydraDB integration. Hosted HydraDB/Vercel deployment is optional and is not required for the supplied submission requirement.
+The executable judge application has no Neo4j fallback. Its graph path is:
+
+```text
+HydraDG application
+-> HydraDB HTTP graph API
+-> isolated hydradg-* namespace
+```
+
+The public FCG snapshot plus deterministic importer are included so a judge can reconstruct the HydraDB projection without access to the original developer machine.
 
 ---
 
@@ -83,9 +94,9 @@ Separate later local E2E/depth observations may be retained in the evidence grap
 
 ---
 
-## 6. Local Demo Used for the Video
+## 6. Judge / Demo Flow
 
-Local product:
+Local product when running the reconstructed app:
 
 `http://127.0.0.1:3012/`
 
@@ -102,25 +113,27 @@ Overview
 → custody state
 ```
 
-The demo is powered by the local HydraDB test server or built-in fixture. The recording must show the working local product; judges do not need network access to the local URL.
+### Quick local replication
 
-### Quick Local Replication Instructions
 ```bash
+git clone https://github.com/biobitworks/hydradg.git
+cd hydradg
 npm run install:all
-npm run dev # launches local Next.js website at http://localhost:3000
+npm run typecheck
+npm run build
 ```
 
-For complete step-by-step replication instructions, see [`HOW_TO.md`](HOW_TO.md) and [`HYDRADB_DATA.md`](HYDRADB_DATA.md).
+For complete HydraDB reconstruction instructions, see [`HOW_TO.md`](HOW_TO.md), [`HYDRADB_DATA.md`](HYDRADB_DATA.md), and [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md).
 
 **Current uploaded demo:** https://youtu.be/7EDb6q-loPA
 
 **Superseded uploaded demo:** https://youtu.be/tKWRmYZ3HCs
 
-Static local fallback:
+Static fallback:
 
-`http://127.0.0.1:3012/backup/hydradg.html`
+`apps/hydradg-web/public/backup/hydradg.html`
 
-The fallback must remain labeled `STATIC FALLBACK — NOT LIVE HYDRADB`.
+The fallback is presentation-only and must remain labeled as not being a live HydraDB control surface.
 
 ---
 
@@ -144,11 +157,9 @@ Lin (1991)
 
 HydraDG `G*` is not physical Gibbs free energy, is not measured in joules or kcal/mol, and is not asserted to be identical to the Enßlin–Weig information-field functional. Lower `G*` does not by itself imply better Hit@K, Recall@K, or QA accuracy.
 
-The custody-repair branch contains the Enßlin–Weig source FCO, atomized source claims, the separate HydraDG design FCO, and the local HydraDB lineage canary receipt.
-
 ---
 
-## 8. Custody and Claim Boundaries
+## 8. Custody, Licensing, and Claim Boundaries
 
 Current supplied custody state includes:
 
@@ -159,23 +170,65 @@ Current supplied custody state includes:
 - Signature state: `PENDING_EXTERNAL_PRIVATE_KEY_OPERATION` unless a later authorized signing receipt exists
 - Merkle/MMR state: `NOT_PROJECT_COMMITTED` unless a later commitment receipt exists
 
+Licensing invariant for this release:
+
+```text
+HydraDG software / website / scripts
+-> Apache-2.0 where declared
+
+FCO/FCG research publications
++ designated Byron P. Lee / Biobitworks research content
+-> CC BY-NC-ND 4.0
+
+historical FCO/FCG CC BY 4.0 metadata
+-> SUPERSEDED_METADATA_ERROR
+-> preserved for custody/history only
+-> not a version-specific licensing exception
+
+third-party material
+-> upstream rights
+```
+
+A license metadata correction does not mutate historical publication/package bytes and therefore does not itself require recomputing historical file/package hashes or signed roots.
+
 Hash identity is not scientific correctness. Provenance is not independent replication. HydraDB projection is not benchmark superiority.
 
 ---
 
-## 9. Required Submission Status
+## 9. Final Release Gates
 
-| Required deliverable | Current status | Completion evidence required |
-|---|---|---|
-| Public GitHub repository | **PENDING — repository visibility must be verified public** | unauthenticated public repository access |
-| Demo video ≤ 3 minutes | **UPDATED URL PROVIDED — verification pending** | duration ≤ 3:00 + unauthenticated access to https://youtu.be/7EDb6q-loPA |
-| Submission form | **PENDING — human submission required** | submitted-form confirmation/receipt |
+The final judge SHA must satisfy all of the following on the **same exact commit**:
 
-`SUBMISSION_READY=YES` only when all three required deliverables have actual completion evidence.
+```text
+PUBLIC_REPOSITORY=PASS
+MAIN_IS_JUDGE_AUTHORITY=PASS
+HYDRADB_ONLY_EXECUTABLE=PASS
+ISOLATED_NAMESPACE_DEFAULT=PASS
+TYPECHECK=PASS
+PRODUCTION_BUILD=PASS
+JUDGE_ROUTES=PASS
+FULL_HISTORY_GITLEAKS=PASS
+LICENSING_CONSISTENCY=PASS
+```
+
+A historical CI run or secret scan cannot establish these gates for a newer SHA.
 
 ---
 
-## 10. Final Human Attestations
+## 10. Required Submission Status
+
+| Required deliverable | Current status | Completion evidence required |
+|---|---|---|
+| Public GitHub repository | **PASS — public `biobitworks/hydradg`, default branch `main`** | recheck at final freeze |
+| Exact-head repository release gates | **PENDING** | build/typecheck/routes/Gitleaks on exact final `main` SHA |
+| Demo video ≤ 3 minutes | **URL PRESENT — external verification pending** | duration ≤ 3:00 + unauthenticated access |
+| Submission form | **PENDING — human submission required** | submitted-form confirmation/receipt |
+
+`SUBMISSION_READY=YES` only when the exact-head release gates, qualifying video, and human submission requirements have actual completion evidence.
+
+---
+
+## 11. Final Human Attestations
 
 Before submitting, confirm:
 
