@@ -23,6 +23,16 @@ jobs:
         working-directory: apps/hydradg-web
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha || github.sha }}
+      - name: Assert exact tested SHA
+        working-directory: .
+        run: |
+          set -euo pipefail
+          actual="$(git rev-parse HEAD)"
+          expected="${{ github.event.pull_request.head.sha || github.sha }}"
+          echo "TESTED_SHA=$actual"
+          test "$actual" = "$expected"
       - uses: actions/setup-node@v4
         with:
           node-version: 24
