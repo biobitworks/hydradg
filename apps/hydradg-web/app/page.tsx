@@ -11,7 +11,7 @@ export default function Home() {
       <header className="hero curatedHero" id="top">
         <div className="curatedHeroCopy">
           <p className="eyebrow">Hack Hydra 2026 · Track 03 · HydraDG</p>
-          <h1>See what changed. Trace why.</h1>
+          <h1>See the context move.</h1>
           <p className="lede">
             HydraDG keeps changing memory as a traversable custody graph: current state, prior state, contradiction,
             supersession, source, and claim ceiling remain linked instead of collapsing into one answer.
@@ -92,7 +92,8 @@ export default function Home() {
 
       <section className="computeSection curatedSection" id="explore">
         <span className="sectionNumber">04 / EXPLORE</span>
-        <h2 className="displayTitle">Judge path, then custody deep dive.</h2>
+        <h2 className="displayTitle">One custody spine. Three graph problems.</h2>
+        <p className="sectionLead">The final judge path emphasizes Track 03 while preserving the shared custody spine used by the broader HydraDG track experiments.</p>
         <div className="routeGrid curatedRouteGrid">
           <Link href="/judge" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Reference → poison → antidote with exact calculations.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/track03" className="routeCard"><div><p className="eyebrow">Executed</p><h3>Results</h3><p>Full500 graph, retrieval result, hashes and claim ceiling.</p></div><span className="routeArrow">↗</span></Link>
