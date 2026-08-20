@@ -86,7 +86,7 @@ export function buildSiteFcg() {
   });
 
   return {
-    schema: "hydradg.site_fcg.v2",
+    schema: "hydradg.site_fcg.v1",
     artifact,
     nodes,
     edges,
