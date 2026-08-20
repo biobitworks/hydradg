@@ -1,6 +1,6 @@
 # Third-party notices and external evidence sources
 
-HydraDG's MIT License applies to original Hack Hydra participant-authored implementation in this repository. It does not relicense third-party code, datasets, templates, APIs, papers or services listed below.
+HydraDG participant-authored **software and reproducibility tooling** are licensed under the Apache License, Version 2.0 unless otherwise stated. Byron P. Lee / Biobitworks authored **preprints, manuscripts, narrative research text, publication-style figures, and explicitly designated research-content artifacts** are licensed under CC BY-NC-ND 4.0 unless an individual artifact states otherwise. See `LICENSE` and `LICENSING.md` for scope. Neither license relicenses third-party code, datasets, templates, APIs, papers, models, or services listed below.
 
 ## HydraDB
 
