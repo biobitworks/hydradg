@@ -57,15 +57,15 @@ export default function KnowledgePage() {
             <p className="small muted"><em>Inference with minimal Gibbs free energy in information field theory.</em></p>
             <p className="small">Design-rationale lineage only; it does not define the exact HydraDG G* equation.</p>
             <div className="actions">
-              <a className="secondary" href="https://doi.org/10.1103/PhysRevE.82.051112" target="_blank" rel="noreferrer">DOI ↗</a>
-              <a className="secondary" href="/fco/fco:source:ensslin_weig_2010:3ed1f288ac8b3f48f4bf239f15a133fcdca36cd2ad8d3a9bb73a3f5a0be5349e">Source FCO</a>
+              <a className="secondary" href="https://doi.org/10.1103/PhysRevE.82.051112" target="_blank" rel="noreferrer">Authoritative DOI ↗</a>
+              <a className="secondary" href="#g-star">Internal G* Knowledge FCO</a>
             </div>
           </article>
           <article>
             <h3>Lin (1991)</h3>
             <p className="small muted"><em>Divergence measures based on the Shannon entropy.</em></p>
             <p className="small">Jensen-Shannon divergence source lineage for Cloud Drift = 100 × JSD.</p>
-            <div className="actions"><a className="secondary" href="#jensen-shannon-divergence">Open JSD term</a></div>
+            <div className="actions"><a className="secondary" href="#jensen-shannon-divergence">Internal JSD Knowledge FCO</a></div>
           </article>
         </div>
       </section>
@@ -101,7 +101,7 @@ export default function KnowledgePage() {
         <span className="sectionNumber">02 / RESOLUTION RULE</span>
         <h2 className="displayTitle">The UI is a projection, not custody truth.</h2>
         <div className="flow mono"><span>source / receipt</span><b>→</b><span>canonical custody</span><b>→</b><span>canonical FCG</span><b>→</b><span>hosted HydraDB readback</span><b>→</b><span>website Knowledge FCO</span></div>
-        <p className="small muted note">Each website FCO has one canonical SHA-256 identity. A digest or graph path does not establish scientific correctness by itself.</p>
+        <p className="small muted note">Each website FCO has one canonical SHA-256 identity. External academic links are source references; the internal Knowledge FCO is the website's custody-resolved navigation object. A digest or graph path does not establish scientific correctness by itself.</p>
       </section>
     </main>
   );
