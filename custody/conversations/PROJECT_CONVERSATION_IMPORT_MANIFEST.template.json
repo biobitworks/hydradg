@@ -1,0 +1,90 @@
+{
+  "schema": "hydradg.project_conversation_import_manifest.v1",
+  "project": "HydraDG / Hack Hydra 2026",
+  "generated_for": "final custody import",
+  "exact_raw_export_required": true,
+  "normalization_is_not_raw_evidence": true,
+  "hash_algorithm": "SHA-256",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "license_policy": {
+    "byron_human_authored_designated_research_content": "CC-BY-NC-ND-4.0",
+    "hydradg_software_and_reproducibility_tooling": "Apache-2.0",
+    "third_party_and_tool_material": "UPSTREAM_RIGHTS_OR_SEPARATE_NOTICE",
+    "historical_cc_by_4_0_fco_fcg_metadata": "SUPERSEDED_METADATA_ERROR"
+  },
+  "known_project_conversations": [
+    {
+      "title": "Hack Hydra Track 03",
+      "date": "2026-08-16",
+      "scope": "Track 03 design, poison/antidote experiments, HydraDB memory/context graph, rules and evaluation planning",
+      "raw_transcript_state": "RAW_EXPORT_REQUIRED"
+    },
+    {
+      "title": "Run HydraDB Evaluation",
+      "date": "2026-08-18",
+      "scope": "HydraDB database hydradg setup, local test server, Daisy training wiring, GitHub/Vercel/HydraDB integration",
+      "raw_transcript_state": "RAW_EXPORT_REQUIRED"
+    },
+    {
+      "title": "Continue Hashing Update FCG",
+      "date": "2026-08-18",
+      "scope": "turn-level FCO/FCG hashing, provenance and API/infrastructure integration references",
+      "raw_transcript_state": "RAW_EXPORT_REQUIRED"
+    },
+    {
+      "title": "GitHub Actions blocker needs human action",
+      "date": "2026-08-19",
+      "scope": "release approval, licensing, env isolation, SUBMISSION accuracy, build/typecheck/routes and full-history Gitleaks",
+      "raw_transcript_state": "RAW_EXPORT_REQUIRED"
+    },
+    {
+      "title": "Daisy Train Next Steps",
+      "date": "2026-08-19",
+      "scope": "full500 Daisy results, negative/null result preservation, deterministic repeated scientific-method evaluation",
+      "raw_transcript_state": "RAW_EXPORT_REQUIRED"
+    },
+    {
+      "title": "HydraDG Judge Watch",
+      "date": "2026-08-19",
+      "scope": "final judge release, authoritative licensing, public deployment and exact-SHA freeze",
+      "raw_transcript_state": "RAW_EXPORT_REQUIRED"
+    },
+    {
+      "title": "HydraDG final hosted / Vercel / FCG verification",
+      "date": "2026-08-20",
+      "scope": "hosted HydraDB wiring, T3-T5 migration metrics, website release FCO, graph comparison, claim/link/term navigation",
+      "raw_transcript_state": "CURRENT_CONVERSATION_EXPORT_REQUIRED_FOR_BYTE_EXACT_IMPORT"
+    }
+  ],
+  "known_file_evidence_anchors": [
+    {
+      "date": "2026-08-18",
+      "description": "initial HydraDG/HydraDB setup, upstream pin and Track 03 repository synchronization"
+    },
+    {
+      "date": "2026-08-19",
+      "description": "website/release status, Track 03 terminology, knowledge-to-FCO-to-FCG linkage and conservative release gates"
+    },
+    {
+      "date": "2026-08-20",
+      "description": "independent final production verification, exact release identity, public routes and hosted HydraDB truthfulness"
+    }
+  ],
+  "per_conversation_required_fields": [
+    "raw_path",
+    "raw_file_sha256",
+    "normalized_jsonl_path",
+    "normalized_sha256",
+    "conversation_fco_id",
+    "turn_count",
+    "first_observed_at",
+    "last_observed_at",
+    "human_turn_count",
+    "ai_turn_count",
+    "tool_turn_count",
+    "license_and_rights_map",
+    "claim_ceiling"
+  ],
+  "claim_ceiling": "CONVERSATION_CUSTODY_AND_PROVENANCE_ONLY_NOT_INDEPENDENT_TRUTH_VERIFICATION"
+}
