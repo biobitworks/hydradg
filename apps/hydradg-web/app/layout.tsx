@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 
+import JudgeBreadcrumbs from "@/components/JudgeBreadcrumbs";
 import ReleaseStamp from "@/components/ReleaseStamp";
 import SiteNav from "@/components/SiteNav";
 import "./globals.css";
@@ -14,6 +15,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
     <html lang="en">
       <body>
         <SiteNav />
+        <JudgeBreadcrumbs />
         {children}
         <ReleaseStamp />
       </body>
