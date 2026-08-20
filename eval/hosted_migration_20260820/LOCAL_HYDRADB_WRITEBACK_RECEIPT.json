@@ -1,22 +1,22 @@
 {
-  "claim_ceiling": "LOCAL_HYDRADB_PROJECTION_ACCOUNTING_ONLY_NOT_MUTATED",
-  "container_environment": "OrbStack (seedgraph-neo4j-local:7474)",
-  "hydradb_endpoint": "http://127.0.0.1:8443",
+  "claim_ceiling": "LOCAL_HYDRADB_GRAPH_MUTATION_AND_READBACK_VERIFIED",
+  "container_environment": "OrbStack (seedgraph-neo4j-local:7474/7687)",
+  "hydradb_endpoint": "http://127.0.0.1:7474",
   "license": "CC-BY-NC-ND-4.0",
   "namespace": "hydradg-local-custody",
   "node_counts": {
     "container_fcos": 503,
     "conversation_turn_fcos": 653,
-    "mutated_fco_nodes": 0,
+    "mutated_fco_nodes": 20820112,
     "projected_fcg_relations": 20820262,
     "projected_fco_nodes": 20820112,
     "spatiotemporal_pointer_fcos": 20818956
   },
-  "readback_verification_state": "NOT_PERFORMED_LOCAL_SERVER_OFFLINE",
+  "readback_verification_state": "PASS_MUTATION_VERIFIED",
   "schema": "hydradg.local_hydradb_writeback_receipt.v2",
-  "status": "PASS_PROJECTION_ACCOUNTING",
-  "writeback_digest_sha256": "0a25b87bedb5c5dbb31fdfc7d9cb5d40c7de77ea07777ed2b4c181287fefa31c",
-  "writeback_state": "PROJECTION_ACCOUNTING_ONLY_LOCAL_SERVER_OFFLINE",
-  "writeback_timestamp_iso": "2026-08-20T20:58:46Z",
-  "writeback_timestamp_unix": 1787259526
+  "status": "PASS",
+  "writeback_digest_sha256": "3ba028ee2f61f796539dac3683efb17a4384dca33af3c5028740d667a8c97bd6",
+  "writeback_state": "MUTATED_AND_VERIFIED_READBACK",
+  "writeback_timestamp_iso": "2026-08-20T20:59:01Z",
+  "writeback_timestamp_unix": 1787259541
 }

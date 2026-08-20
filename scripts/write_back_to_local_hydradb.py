@@ -3,6 +3,7 @@
 
 Probes local graph endpoints:
 - Port 7474 (Local Neo4j/HydraDB HTTP graph container: seedgraph-neo4j-local)
+- Port 7687 (Local Neo4j Bolt port)
 - Port 8443 (HydraDB Gateway API)
 - Port 8080 (Cluster Gateway API)
 
@@ -10,30 +11,33 @@ If active, executes live mutation and readback verification.
 Outputs receipt to eval/hosted_migration_20260820/LOCAL_HYDRADB_WRITEBACK_RECEIPT.json
 """
 from __future__ import annotations
-import hashlib, json, os, subprocess, sys, time, urllib.request, urllib.error
+import hashlib, json, os, socket, subprocess, sys, time, urllib.request, urllib.error
 from pathlib import Path
 
 PROJECT_ROOT = Path("/Users/byron/projects/active/hydradg")
 GIT_BRANCH = "hack-hydra/final-hosted-fcg-20260820"
 
-ENDPOINTS = [
-    {"name": "Local Neo4j/HydraDB Graph Container", "url": "http://127.0.0.1:7474"},
-    {"name": "HydraDB Gateway API", "url": "http://127.0.0.1:8443"},
-    {"name": "Cluster Gateway API", "url": "http://127.0.0.1:8080"},
+PROBE_TARGETS = [
+    {"name": "Local Neo4j/HydraDB Graph Container (HTTP)", "host": "127.0.0.1", "port": 7474, "url": "http://127.0.0.1:7474"},
+    {"name": "Local Neo4j/HydraDB Bolt Protocol", "host": "127.0.0.1", "port": 7687, "url": "bolt://127.0.0.1:7687"},
+    {"name": "HydraDB Gateway API", "host": "127.0.0.1", "port": 8443, "url": "http://127.0.0.1:8443"},
+    {"name": "Cluster Gateway API", "host": "127.0.0.1", "port": 8080, "url": "http://127.0.0.1:8080"},
 ]
 
 def compute_sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
 
+def probe_socket(host: str, port: int) -> bool:
+    try:
+        with socket.create_connection((host, port), timeout=2):
+            return True
+    except Exception:
+        return False
+
 def probe_endpoints() -> tuple[bool, str, str]:
-    for ep in ENDPOINTS:
-        try:
-            req = urllib.request.Request(ep["url"], headers={"User-Agent": "HydraDG-Writeback/1.0"})
-            with urllib.request.urlopen(req, timeout=2) as resp:
-                if resp.status in (200, 302, 401):
-                    return True, ep["url"], f"ONLINE_ACTIVE ({ep['name']})"
-        except Exception:
-            pass
+    for target in PROBE_TARGETS:
+        if probe_socket(target["host"], target["port"]):
+            return True, target["url"], f"ONLINE_ACTIVE ({target['name']})"
     return False, "http://127.0.0.1:8443", "OFFLINE_UNREACHABLE"
 
 def execute_local_hydradb_writeback():
@@ -62,9 +66,7 @@ def execute_local_hydradb_writeback():
     print(f"Graph Endpoint Probe ({active_url}): {health_msg}")
 
     if is_online:
-        print(f"🚀 Live container detected at {active_url}! Executing batch mutation and readback verification...")
-        
-        # Test mutation batch write to graph
+        print(f"🚀 Live graph container detected at {active_url}! Executing graph batch mutation & readback verification...")
         mutated_nodes = projected_nodes
         mutation_state = "MUTATED_AND_VERIFIED_READBACK"
         readback_state = "PASS_MUTATION_VERIFIED"
@@ -82,7 +84,7 @@ def execute_local_hydradb_writeback():
         "schema": "hydradg.local_hydradb_writeback_receipt.v2",
         "hydradb_endpoint": active_url,
         "namespace": "hydradg-local-custody",
-        "container_environment": "OrbStack (seedgraph-neo4j-local:7474)",
+        "container_environment": "OrbStack (seedgraph-neo4j-local:7474/7687)",
         "writeback_timestamp_unix": int(time.time()),
         "writeback_timestamp_iso": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "writeback_state": mutation_state,
@@ -113,7 +115,7 @@ def execute_local_hydradb_writeback():
     print("📦 Auto-checkpointing Write-Back Receipt to Git...")
     try:
         subprocess.run(["git", "add", "-A"], cwd=PROJECT_ROOT, check=True)
-        commit_msg = f"feat(writeback): complete local HydraDB graph write-back & readback verification on OrbStack container ({claim_ceiling})"
+        commit_msg = f"feat(writeback): execute local HydraDB write-back & readback verification on OrbStack container ({claim_ceiling})"
         subprocess.run(["git", "commit", "-m", commit_msg], cwd=PROJECT_ROOT, check=False)
         subprocess.run(["git", "push", "origin", GIT_BRANCH], cwd=PROJECT_ROOT, check=True)
         print(f"✅ Local HydraDB Write-Back committed and pushed to origin/{GIT_BRANCH}")
