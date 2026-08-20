@@ -5,75 +5,58 @@ type HashRow = {
   hash: string;
   github_graph: string;
   project_fcg: string;
-  status: "IDENTICAL" | "UNIQUE_TO_GITHUB" | "UNIQUE_TO_PROJECT";
+  status: "HISTORICAL_MATCH" | "PRESENT" | "RECONCILIATION_REQUIRED" | "NOT_ESTABLISHED";
 };
 
 const COMPARISON_ROWS: readonly HashRow[] = [
   {
-    label: "Live Ingested FCG Merkle Root (Updated)",
-    hash: "eb054317f1d65b2482fcc09a5acd5ebef9d159c103da573274adbb86007358e1",
-    github_graph: "Ingested via app_source=github",
-    project_fcg: "Live turn-ingested Merkle Root (444 FCOs)",
-    status: "IDENTICAL",
-  },
-  {
-    label: "Baseline T3 FCO Root Hash",
+    label: "Historical T3 bounded FCO root",
     hash: "d38c6cd8318fbfd1eb47d2064b0b2d72e5c5018ef69c1c90e3d5688ab1429ec1",
-    github_graph: "PRESENT (60 projection nodes)",
-    project_fcg: "SUPERSEDED_BY (Historical T3 baseline)",
-    status: "IDENTICAL",
+    github_graph: "Retained historical hosted projection/readback scope",
+    project_fcg: "36 canonical FCO scope · SUPERSEDED_BY later project states",
+    status: "HISTORICAL_MATCH",
   },
   {
-    label: "Canonical Edge Root Hash",
+    label: "Historical T3 24-edge root",
     hash: "7297d87808a51bddcc4584387f10c79571bc66fe89a3339024890b5d77084fab",
-    github_graph: "PRESENT (24 canonical edges)",
-    project_fcg: "PRESENT (24 local edges)",
-    status: "IDENTICAL",
+    github_graph: "Retained historical hosted projection/readback scope",
+    project_fcg: "24 canonical edge scope only",
+    status: "HISTORICAL_MATCH",
   },
   {
-    label: "Agent Identity FCO",
-    hash: "c4cafe689b31b3045493124bff77f03688eb18a7efbfa48a3c961204fa4d2b93",
-    github_graph: "Ingested via app_source=github",
-    project_fcg: "Canonical custody node",
-    status: "IDENTICAL",
+    label: "Expanded project FCG computed root",
+    hash: "bb0adb5a6453a6493e51363f33e7782b3d79dd82b27ceb8678173ce53f1ce72b",
+    github_graph: "Expanded hosted/root comparison not independently established",
+    project_fcg: "Retained computed scope: 653 FCO nodes / 1,692 edges",
+    status: "RECONCILIATION_REQUIRED",
   },
   {
-    label: "Model Identity FCO",
-    hash: "f9d8af4c6aca40241dddb6b2a459ce0eaceb4663f6ac50d23e336f140172b707",
-    github_graph: "Ingested via app_source=github",
-    project_fcg: "Canonical custody node",
-    status: "IDENTICAL",
+    label: "Deterministic information-savings receipt",
+    hash: "8d60ab68f989e88aec9446fc06739d2c52f4af911b673af058889c9f52afdf36",
+    github_graph: "Repository artifact present via GitHub connector source lane",
+    project_fcg: "Scale-economics evidence receipt; expanded hosted FCO readback not established",
+    status: "PRESENT",
   },
   {
-    label: "Session Identity FCO",
-    hash: "83c45863fe77edd960a15f3ae2817a62abca2a98b0a14a110e8932ebd76726cb",
-    github_graph: "Ingested via app_source=github",
-    project_fcg: "Canonical custody node",
-    status: "IDENTICAL",
-  },
-  {
-    label: "Canary Source FCO",
+    label: "Public canary source identity",
     hash: "303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-    github_graph: "Ingested & linked (/context/relations)",
-    project_fcg: "Canonical readback canary",
-    status: "IDENTICAL",
-  },
-  {
-    label: "Release FCO (T5)",
-    hash: "e5c3e391eb722d097b9dcc9c249cf27abf68d5d093a43f81fc2ae95b274414f4",
-    github_graph: "Deploys to Vercel (SHA 3c0509eced37)",
-    project_fcg: "T5 Final Release Manifest",
-    status: "IDENTICAL",
+    github_graph: "Repository identity retained",
+    project_fcg: "Canonical custody/readback canary identity",
+    status: "PRESENT",
   },
 ];
+
+function statusClass(status: HashRow["status"]) {
+  return status === "HISTORICAL_MATCH" || status === "PRESENT" ? "pill pillGood" : "pill pillMuted";
+}
 
 export default function GraphHashComparison() {
   return (
     <section className="panel" aria-label="GitHub Graph vs Project FCG Comparison">
       <div className="panelHead">
         <div>
-          <p className="eyebrow">Graph Reconciliation · GitHub Repo in HydraDB vs Project FCG</p>
-          <h2>Unique vs. Identical SHA-256 Hashes</h2>
+          <p className="eyebrow">Graph reconciliation · scoped, not flattened</p>
+          <h2>GitHub connector graph vs canonical project FCG</h2>
         </div>
         <a
           className="secondary"
@@ -85,19 +68,20 @@ export default function GraphHashComparison() {
         </a>
       </div>
       <p className="muted">
-        Reconciles the hosted GitHub graph in HydraDB (<code>app_source=github</code>) with HydraDG&apos;s canonical project FCG graph.
-        Identical roots establish 0 content hash delta across projection layers.
+        The GitHub connector graph and the canonical project FCG are related projections, not the same graph.
+        Historical 36-FCO/24-edge parity remains retained for its bounded T3 scope. The expanded conversation/project FCG
+        must earn a new hosted comparison/readback receipt; it cannot inherit the historical green state.
       </p>
 
       <div className="tableWrap" style={{ overflowX: "auto", margin: "1rem 0" }}>
         <table className="small" style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
           <thead>
             <tr style={{ borderBottom: "2px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.02)" }}>
-              <th style={{ padding: "8px" }}>Entity</th>
-              <th style={{ padding: "8px" }}>SHA-256 Identity / Hash</th>
-              <th style={{ padding: "8px" }}>GitHub Graph (HydraDB)</th>
-              <th style={{ padding: "8px" }}>Project FCG Graph</th>
-              <th style={{ padding: "8px" }}>Match Status</th>
+              <th style={{ padding: "8px" }}>Scope / entity</th>
+              <th style={{ padding: "8px" }}>SHA-256 / root</th>
+              <th style={{ padding: "8px" }}>GitHub graph / hosted lane</th>
+              <th style={{ padding: "8px" }}>Canonical project FCG</th>
+              <th style={{ padding: "8px" }}>State</th>
             </tr>
           </thead>
           <tbody>
@@ -107,16 +91,15 @@ export default function GraphHashComparison() {
                 <td style={{ padding: "8px" }}><span className="mono small">{row.hash.slice(0, 20)}…</span></td>
                 <td style={{ padding: "8px" }}>{row.github_graph}</td>
                 <td style={{ padding: "8px" }}>{row.project_fcg}</td>
-                <td style={{ padding: "8px" }}>
-                  <span className="pill pillGood" style={{ fontSize: "11px", fontWeight: "bold" }}>{row.status}</span>
-                </td>
+                <td style={{ padding: "8px" }}><span className={statusClass(row.status)} style={{ fontSize: "11px", fontWeight: "bold" }}>{row.status}</span></td>
               </tr>
             ))}
           </tbody>
         </table>
       </div>
       <p className="small muted note">
-        Fractal design structure: Each FCO object has a root hash $\rightarrow$ local FCG has a root hash $\rightarrow$ hosted HydraDB has a database root hash. Identity parity is maintained at every scale.
+        Fractal custody means lower-level roots can become evidence inside higher-level FCOs while retaining explicit scope,
+        ordering and provenance. A computed root is not automatically a Merkle commitment; project state remains NOT_MERKLE_COMMITTED unless an actual commitment operation is recorded.
       </p>
     </section>
   );
