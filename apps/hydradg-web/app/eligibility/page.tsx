@@ -12,7 +12,7 @@ const GOVERNED_CHAIN = [
   ["4. First-Class Graph (FCG)", "TYPED DEPENDENCY GRAPH", "Explicit directed relationships (PRECEDES, DERIVED_FROM, CONTRADICTS) among FCOs.", "1,692_EDGES"],
   ["5. Hyper-FCG / Time Layer", "TIME-INDEXED GRAPH VIEW", "Versioned temporal snapshots tracking Context Drift (JSD), Hnorm, and G* movement over time.", "ESTABLISHED_MATH"],
   ["6. CFMO / MMR", "PLANNED SCALABLE PROOF", "Context-Free Model Optimization & Merkle Mountain Range commitment structures.", "PLANNED / NOT_ESTABLISHED"],
-  ["7. HydraDB BYOG Projection", "OPERATIONAL QUERY LAYER", "Canonical FCG graph_payload projected into hosted HydraDB database `hydradg` collection `hydradg-judge-demo`.", "1,692/1,692_BYOG_PARITY"],
+  ["7. HydraDB BYOG Projection", "OPERATIONAL QUERY LAYER", "Canonical FCG graph_payload projected into hosted HydraDB database `hydradg` collection `hydradg-judge-demo`.", "UPLOAD_ACCEPTED_INDEXING_PENDING"],
   ["8. K=5 / K=10 / K=100 Matrix", "RETRIEVAL DEPTH EXPERIMENTS", "Cross-track retrieval ablation testing whether model extractors improve performance over heuristic control.", "EXECUTED_R1_R2_R3_PASS"],
   ["9. Final Claim Ceiling", "STRICT NULL-PRESERVING CEILING", "All 9 Holm-Bonferroni co-primary tests retained null (p > 0.05); graph depth helps, model extractions do not.", "NO_MODEL_BENEFIT_OBSERVED"],
 ] as const;
@@ -53,7 +53,7 @@ export default function EligibilityPage() {
         <p style={{ color: "#334155", fontSize: "1rem", maxWidth: "800px", lineHeight: "1.6", background: "#f8fafc", padding: "1rem", borderRadius: "8px", borderLeft: "4px solid #0284c7" }}>
           “HydraDG demonstrates a governed context graph where 31.67M contextual occurrences collapse to
           10.85M canonical identities with 65.73% identity reuse, while provenance and temporal relationships
-          remain explicit. The canonical FCG is projected into HydraDB through BYOG with exact 1,692-edge hosted parity.
+          remain explicit. The canonical FCG is projected into HydraDB through BYOG with upload accepted (indexing pending readback).
           K=5/10/100 experiments then test how much graph context different models actually need, rather than assuming
           bigger context or bigger models are better.”
         </p>
