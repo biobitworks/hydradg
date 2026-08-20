@@ -227,8 +227,12 @@ A historical or partial scan is not enough to call the repository clean. The exa
 
 ## Licensing
 
-HydraDG participant-authored **software and reproducibility tooling** are licensed under the **Apache License, Version 2.0**. See [`LICENSE`](LICENSE).
+| Category | Licensing Scope |
+|---|---|
+| **HydraDG software / website / scripts** | **Apache License, Version 2.0** ([`LICENSE`](LICENSE)) |
+| **Byron P. Lee / Biobitworks preprints / manuscripts / authored research content** | **CC BY-NC-ND 4.0** ([`LICENSING.md`](LICENSING.md)) |
+| **HydraDB** | **Upstream HydraDB License** |
+| **LongMemEval / other datasets** | **Respective Upstream Dataset Licenses** |
+| **External papers / templates / APIs** | **Respective Upstream Rights** |
 
-Byron P. Lee / Biobitworks authored **preprints, manuscripts, narrative research text, publication-style figures, and explicitly designated research-content artifacts** are licensed under **CC BY-NC-ND 4.0** unless an artifact states otherwise. See [`LICENSING.md`](LICENSING.md).
-
-Third-party software, datasets, templates, papers, APIs, models, and services retain their own licenses and terms. See [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md). Neither HydraDG license relicenses those upstream materials.
+For complete licensing details, see [`LICENSING.md`](LICENSING.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
