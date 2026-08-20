@@ -1,10 +1,11 @@
 #!/usr/bin/env python3
-"""Complete Repository & Conversation Ingestion Script into SeedGraph FCO nodes.
+"""Complete Repository & Conversation Ingestion Script into SeedGraph FCO nodes with Merkle Root computation.
 
 - Ingests Antigravity transcript logs & brain artifacts (implementation_plan.md, walkthrough.md)
 - Ingests all evaluation receipts in eval/hosted_migration_20260820/ & HydraDG_DaisyTrain_v0.3.7/eval/
 - Ingests all project turn files in HydraDG_DaisyTrain_v0.3.7/custody/live/turns/
 - Computes content SHA-256 digests and Gemini signature hashes
+- Calculates the NEW updated Merkle Root Hash for the FCG graph as new turns are added
 - Outputs complete unified FCO index to eval/hosted_migration_20260820/CONVERSATION_TURNS_FCO.jsonl
 """
 from __future__ import annotations
@@ -28,6 +29,19 @@ def make_fco_node(type_name: str, payload: dict) -> dict:
         "object_sha256": object_sha256,
         "payload": payload,
     }
+
+def merkle_root_hex(leaves: list[str]) -> str:
+    level = [bytes.fromhex(x) for x in leaves if len(x) == 64]
+    if not level:
+        return compute_sha256(b"hydradg.empty_merkle.v1")
+    while len(level) > 1:
+        if len(level) % 2:
+            level.append(level[-1])
+        nxt = []
+        for i in range(0, len(level), 2):
+            nxt.append(hashlib.sha256(b"hydradg.merkle.node.v1\0" + level[i] + level[i + 1]).digest())
+        level = nxt
+    return level[0].hex()
 
 def ingest_complete_repository():
     print(f"=== Complete SeedGraph FCO Repository Ingestion (Conv ID: {CONVERSATION_ID}) ===")
@@ -101,7 +115,7 @@ def ingest_complete_repository():
     for edir in eval_dirs:
         if edir.exists():
             for json_file in sorted(edir.rglob("*.json")):
-                if json_file.name == "CONVERSATION_TURNS_FCO.jsonl":
+                if json_file.name in ("CONVERSATION_TURNS_FCO.jsonl", "UPDATED_FCG_MERKLE_ROOT.json"):
                     continue
                 content_bytes = json_file.read_bytes()
                 sha256_hash = compute_sha256(content_bytes)
@@ -139,20 +153,42 @@ def ingest_complete_repository():
             turns_count += 1
     print(f"Ingested {turns_count} project turn files.")
 
-    # 5. Create Session Master Root
+    # 5. Calculate Updated FCG Merkle Root
+    leaf_shas = sorted([node["object_sha256"] for node in fco_nodes])
+    updated_fcg_merkle_root = merkle_root_hex(leaf_shas)
+
+    # 6. Create Session Master Root
     session_payload = {
         "conversation_id": CONVERSATION_ID,
         "agent_identity": "Antigravity/Gemini Pro",
         "total_fco_nodes": len(fco_nodes),
         "seedgraph_admitted": True,
         "hydradb_ingest_source": "app_source=github",
+        "fcg_merkle_root": updated_fcg_merkle_root,
         "license": "CC-BY-NC-ND-4.0",
     }
     session_node = make_fco_node("SessionConversationFCO", session_payload)
     add_node(session_node)
-    print(f"Created Session Master Root FCO: {session_node['id']}")
 
-    # 6. Save Complete Unified Output
+    # Re-calculate final root including master node
+    final_shas = sorted([node["object_sha256"] for node in fco_nodes])
+    final_fcg_root = merkle_root_hex(final_shas)
+
+    print(f"\n=======================================================")
+    print(f"UPDATED FCG MERKLE ROOT: {final_fcg_root}")
+    print(f"=======================================================\n")
+
+    # Save Merkle Root Receipt
+    merkle_receipt = {
+        "schema": "hydradg.updated_fcg_merkle_root.v1",
+        "conversation_id": CONVERSATION_ID,
+        "total_fco_nodes": len(fco_nodes),
+        "updated_fcg_merkle_root": final_fcg_root,
+        "baseline_t3_root": "d38c6cd8318fbfd1eb47d2064b0b2d72e5c5018ef69c1c90e3d5688ab1429ec1",
+        "merkle_evolution_state": "UPDATED_UPON_NEW_TURN_INGESTION",
+        "license": "CC-BY-NC-ND-4.0",
+    }
+
     out_dir = PROJECT_ROOT / "eval" / "hosted_migration_20260820"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_jsonl = out_dir / "CONVERSATION_TURNS_FCO.jsonl"
@@ -160,7 +196,9 @@ def ingest_complete_repository():
         for node in fco_nodes:
             f.write(json.dumps(node) + "\n")
 
-    print(f"Saved total {len(fco_nodes)} FCO nodes to {out_jsonl}")
+    out_merkle = out_dir / "UPDATED_FCG_MERKLE_ROOT.json"
+    out_merkle.write_text(json.dumps(merkle_receipt, indent=2, sort_keys=True) + "\n")
+    print(f"Saved receipt to {out_merkle}")
 
 if __name__ == "__main__":
     ingest_complete_repository()

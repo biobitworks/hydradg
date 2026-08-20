@@ -21,10 +21,11 @@ Hosted HydraDB Graph Explorer:
 
 ## 2. Hash Reconciliation Table
 
-| Hash Type | SHA-256 Identity / Metric | Unique to GitHub Graph | Unique to Project FCG | Shared Identical Hashes |
+| Hash Type | SHA-256 Identity / Metric | Baseline GitHub T3 Root | Live Ingested FCG Root | Evolution Status |
 | :--- | :--- | :--- | :--- | :--- |
-| **FCO Root Hash** | `d38c6cd8318fbfd1eb47d2064b0b2d72e5c5018ef69c1c90e3d5688ab1429ec1` | 0 | 0 | **100% Match** |
-| **Edge Root Hash** | `7297d87808a51bddcc4584387f10c79571bc66fe89a3339024890b5d77084fab` | 0 | 0 | **100% Match** |
+| **Baseline T3 FCO Root** | `d38c6cd8318fbfd1eb47d2064b0b2d72e5c5018ef69c1c90e3d5688ab1429ec1` | `PRESENT` (60 projection nodes) | `SUPERSEDED_BY` | **Identical Baseline** |
+| **Live Updated FCG Merkle Root** | `eb054317f1d65b2482fcc09a5acd5ebef9d159c103da573274adbb86007358e1` | Ingested via git (`app_source=github`) | `CURRENT_LIVE_ROOT` (444 FCO nodes) | **MUTATED ON NEW TURNS** |
+| **Edge Root Hash** | `7297d87808a51bddcc4584387f10c79571bc66fe89a3339024890b5d77084fab` | `PRESENT` (24 canonical edges) | `PRESENT` (24 canonical edges) | **100% Match** |
 | **Agent FCO** | `fco:c4cafe689b31b3045493124bff77f03688eb18a7efbfa48a3c961204fa4d2b93` | 0 | 0 | **Identical** |
 | **Model FCO** | `fco:f9d8af4c6aca40241dddb6b2a459ce0eaceb4663f6ac50d23e336f140172b707` | 0 | 0 | **Identical** |
 | **Session FCO** | `fco:83c45863fe77edd960a15f3ae2817a62abca2a98b0a14a110e8932ebd76726cb` | 0 | 0 | **Identical** |

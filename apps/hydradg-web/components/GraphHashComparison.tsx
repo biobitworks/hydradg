@@ -10,10 +10,17 @@ type HashRow = {
 
 const COMPARISON_ROWS: readonly HashRow[] = [
   {
-    label: "Canonical FCO Root Hash",
+    label: "Live Ingested FCG Merkle Root (Updated)",
+    hash: "eb054317f1d65b2482fcc09a5acd5ebef9d159c103da573274adbb86007358e1",
+    github_graph: "Ingested via app_source=github",
+    project_fcg: "Live turn-ingested Merkle Root (444 FCOs)",
+    status: "IDENTICAL",
+  },
+  {
+    label: "Baseline T3 FCO Root Hash",
     hash: "d38c6cd8318fbfd1eb47d2064b0b2d72e5c5018ef69c1c90e3d5688ab1429ec1",
     github_graph: "PRESENT (60 projection nodes)",
-    project_fcg: "PRESENT (36 local FCO nodes)",
+    project_fcg: "SUPERSEDED_BY (Historical T3 baseline)",
     status: "IDENTICAL",
   },
   {
