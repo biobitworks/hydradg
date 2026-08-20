@@ -142,14 +142,25 @@ export default function GoldenGraph({ fixture, custody }: Props) {
       (a, b) => (projected.get(a.id)?.depth || 0) - (projected.get(b.id)?.depth || 0),
     );
     const clickTargets: Projected[] = [];
+    const colorMap: Record<string, string> = {
+      Source: "#818cf8",
+      Evidence: "#06b6d4",
+      KnowledgeAtom: "#10b981",
+      SeedOfTruth: "#f59e0b",
+      StateSnapshot: "#c084fc",
+      ClassificationReceipt: "#f43f5e",
+      MerkleCheckpoint: "#fbbf24",
+    };
+
     for (const node of ordered) {
       const point = projected.get(node.id);
       if (!point) continue;
       const isGolden = golden.has(node.id);
       const isSelected = node.id === selectedId;
       const radius = isSelected ? 10 : isGolden ? 8 : 5;
+      const nodeColor = colorMap[node.label] || (isGolden ? accent : muted);
       context.globalAlpha = isGolden ? 0.98 : 0.36;
-      context.fillStyle = isGolden ? accent : muted;
+      context.fillStyle = isGolden ? nodeColor : muted;
       context.beginPath();
       context.arc(point.px, point.py, radius, 0, Math.PI * 2);
       context.fill();
@@ -287,16 +298,28 @@ export default function GoldenGraph({ fixture, custody }: Props) {
           ) : <p className="mono small compact">—</p>}
         </div>
         <div className="panel">
-          <p className="eyebrow">Golden pathway</p>
-          <ol>
+          <p className="eyebrow">Golden pathway & custody lineage</p>
+          <ol style={{ paddingLeft: "1.2rem", margin: 0 }}>
             {custody.golden_path_semantics.map((label, index) => {
-              const term = knowledgeTerm(label);
+              const term = knowledgeTerm(label) || { slug: label.toLowerCase().replace(/[^a-z0-9]+/g, "-"), term: label };
+              const colorMap: Record<string, string> = {
+                Source: "#818cf8",
+                Evidence: "#06b6d4",
+                KnowledgeAtom: "#10b981",
+                SeedOfTruth: "#f59e0b",
+                StateSnapshot: "#c084fc",
+                ClassificationReceipt: "#f43f5e",
+                MerkleCheckpoint: "#fbbf24",
+              };
+              const badgeColor = colorMap[label] || "#8dd3c7";
+
               return (
-                <li key={`${label}-${index}`}>
+                <li key={`${label}-${index}`} style={{ marginBottom: "0.5rem" }}>
+                  <span style={{ display: "inline-block", width: 10, height: 10, borderRadius: "50%", background: badgeColor, marginRight: 8 }} />
                   <button className="secondary" type="button" onClick={() => setSelectedId(custody.golden_path[index])}>
                     {index + 1}. {label}
                   </button>
-                  {term ? <a className="small" href={`/knowledge#${term.slug}`} style={{ marginLeft: 8 }}>how-to ↗</a> : null}
+                  <a className="small" href={`/knowledge#${term.slug}`} style={{ marginLeft: 8, color: badgeColor, textDecoration: "underline" }}>how-to ↗</a>
                 </li>
               );
             })}
