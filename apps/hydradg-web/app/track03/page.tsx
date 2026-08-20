@@ -22,7 +22,7 @@ export default function Track03Page() {
           <p className="lede">A real LongMemEval-S full500 run materialized temporal sessions, facts, entities, supersession and contradiction in pinned HydraDB, then compared A/B/C/D retrieval.</p>
           <div className="actions"><Link className="primary" href="/judge">Judge walkthrough</Link><Link className="secondary" href="/graph">Inspect 4D FCG</Link><Link className="secondary" href="/how-to">How to use</Link></div>
         </div>
-        <div className="heroStatus"><span className="pill pillGood">FULL500 COMPLETE</span><span className="pill pillWarn">NO POSITIVE B/C/D HIT@5 SIGNAL</span></div>
+        <div className="heroStatus"><span className="pill pillGood">FULL500 COMPLETE</span><span className="pill pillWarn">NO POSITIVE B/C/D HIT-RATE SIGNAL</span></div>
       </header>
 
       <section className="metrics">
