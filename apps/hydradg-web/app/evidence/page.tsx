@@ -91,7 +91,35 @@ export default function EvidencePage() {
 
       <section className="computeSection"><span className="sectionNumber">02 / FULL500 IDENTITIES</span><h2 className="displayTitle">Hashes link retained result objects.</h2><div className="stack">{hashes.map(([label, hash]) => <div className="panel" key={label}><p className="eyebrow">{label}</p><p className="mono compact">{hash}</p></div>)}</div><p className="small muted note">A SHA-256 value establishes byte/object identity for the retained artifact. It does not establish correctness or independent verification.</p></section>
 
-      <section className="computeSection"><span className="sectionNumber">03 / PROJECT FCG</span><h2 className="displayTitle">Source → transformation → evidence → claim → artifact.</h2><div className="flow mono"><span>source bytes</span><b>→</b><span>SeedGraph / transform</span><b>→</b><span>FCO/FCG</span><b>→</b><span>HydraDB / evaluation</span><b>→</b><span>website artifact</span></div><div className="actions"><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a><a className="secondary" href="/backup/hydradg.html">Open offline artifact</a></div></section>
+      <section className="computeSection">
+        <span className="sectionNumber">03 / DEEP FCO LINEAGE INSPECTOR</span>
+        <h2 className="displayTitle">Source paper FCO → Evidence transform → Claim ceiling.</h2>
+        <div className="grid twoCol">
+          <article className="panel" style={{ border: "2px solid #818cf8", background: "rgba(129, 140, 248, 0.05)" }}>
+            <span className="pill pillGood">SOURCE PAPER FCO</span>
+            <h3 style={{ marginTop: "0.5rem" }}>Enßlin &amp; Weig (2010) Paper FCO</h3>
+            <p className="small muted">Source paper establishing the Gibbs free energy analogy for Information Field Theory.</p>
+            <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>fco:source:ensslin_weig_2010:3ed1f288ac8b3f48f4bf239f15a133fcdca36cd2ad8d3a9bb73a3f5a0be5349e</p>
+            <p className="small"><strong>Evidence Class:</strong> ACADEMIC_LITERATURE_SOURCE<br /><strong>Claim Ceiling:</strong> THEORETICAL_FREE_ENERGY_ANALOGY_ONLY</p>
+            <div className="actions">
+              <Link className="secondary" href="/fco/fco:source:ensslin_weig_2010:3ed1f288ac8b3f48f4bf239f15a133fcdca36cd2ad8d3a9bb73a3f5a0be5349e">Inspect FCO Node ↗</Link>
+            </div>
+          </article>
+
+          <article className="panel" style={{ border: "2px solid #10b981", background: "rgba(16, 185, 129, 0.05)" }}>
+            <span className="pill pillGood">DESIGN &amp; METRIC FCO</span>
+            <h3 style={{ marginTop: "0.5rem" }}>HydraDG G* Diagnostic Specification</h3>
+            <p className="small muted">Governed specification FCO defining G* = U* - Shannon H burden equation.</p>
+            <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>fco:design:hydradg_gstar:f4a7e547f4a380c2e391bd7622998a44b93198e35cf91bc1c278e90a618c7c94</p>
+            <p className="small"><strong>Evidence Class:</strong> APPLICATION_SPECIFICATION_DESIGN<br /><strong>Claim Ceiling:</strong> GOVERNED_STATE_FIELD_DIAGNOSTIC_ONLY</p>
+            <div className="actions">
+              <Link className="secondary" href="/fco/fco:design:hydradg_gstar:f4a7e547f4a380c2e391bd7622998a44b93198e35cf91bc1c278e90a618c7c94">Inspect FCO Node ↗</Link>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section className="computeSection"><span className="sectionNumber">04 / PROJECT FCG</span><h2 className="displayTitle">Source → transformation → evidence → claim → artifact.</h2><div className="flow mono"><span>source bytes</span><b>→</b><span>SeedGraph / transform</span><b>→</b><span>FCO/FCG</span><b>→</b><span>HydraDB / evaluation</span><b>→</b><span>website artifact</span></div><div className="actions"><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a><a className="secondary" href="/backup/hydradg.html">Open offline artifact</a></div></section>
     </main>
   );
 }
