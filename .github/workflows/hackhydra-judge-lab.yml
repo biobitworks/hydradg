@@ -28,6 +28,20 @@ jobs:
           node-version: 24
           cache: npm
           cache-dependency-path: apps/hydradg-web/package-lock.json
+      - name: Verify HydraDB-only isolated defaults
+        run: |
+          set -euo pipefail
+          grep -Fq 'GRAPH_BACKEND=hydradb-http' .env.example
+          grep -Fq 'HYDRADB_GRAPH_ID=hydradg-judge-repro' .env.example
+          grep -Fq 'HYDRADB_GRAPH_NAMESPACE=hydradg-judge-repro' .env.example
+          grep -Fq 'process.env.HYDRADB_GRAPH_ID || "hydradg-judge-repro"' lib/graph.ts
+          grep -Fq 'process.env.HYDRADB_GRAPH_NAMESPACE || "hydradg-judge-repro"' lib/graph.ts
+          if grep -Eiq 'neo4j-driver|NEO4J_' package.json .env.example lib/graph.ts; then
+            echo 'HYDRADB_ONLY_EXECUTABLE=FAIL'
+            exit 1
+          fi
+          echo 'HYDRADB_ONLY_EXECUTABLE=PASS'
+          echo 'ISOLATED_NAMESPACE_DEFAULT=PASS'
       - run: npm ci
       - run: npm run typecheck
       - run: npm run build
