@@ -9,6 +9,7 @@ import {
   useState,
 } from "react";
 
+import StateCalculationPanel, { AnticubeConsideration, STATE_VISUALS } from "@/components/StateCalculationPanel";
 import { addContextIcebergScores } from "@/lib/contextIceberg";
 import { knowledgeTerm } from "@/lib/knowledgeLinks";
 
@@ -47,14 +48,7 @@ type FixtureResponse = {
 };
 
 type Projected = { id: string; px: number; py: number; depth: number };
-
 type HeatMode = "mutation" | "restoration" | "delta";
-
-const STATE_VISUALS: Record<number, { name: string; color: string; hue: number; meaning: string }> = {
-  0: { name: "Reference / normal", color: "#b69cff", hue: 265, meaning: "Frozen comparison state" },
-  1: { name: "Poison / mutation", color: "#ff8a3d", hue: 18, meaning: "Controlled perturbation" },
-  2: { name: "Antidote / restoration", color: "#5aa9ff", hue: 215, meaning: "Recovery with history retained" },
-};
 
 function fcoHash(id: string) {
   return id.startsWith("fco:") && /^[0-9a-f]{64}$/i.test(id.slice(4)) ? id.slice(4) : "";
@@ -64,6 +58,34 @@ function metricHeat(metric: ReturnType<typeof addContextIcebergScores<Timeline>>
   if (mode === "mutation") return metric.mutation_distance;
   if (mode === "restoration") return metric.restoration_gain;
   return Math.min(1, Math.abs(metric.delta_g_star));
+}
+
+function anticubeConsideration(selected: SceneNode | null, data: FixtureResponse["fixture"] | null): AnticubeConsideration {
+  if (!selected || !data) return { status: "UNKNOWN / NOT_EVALUATED", note: "Select an FCO to inspect whether an Anticube ClassificationReceipt exists." };
+  const receipt = selected.label === "ClassificationReceipt"
+    ? selected
+    : data.scene.nodes.find((candidate) => candidate.label === "ClassificationReceipt" && String(candidate.payload.subject_id || "") === selected.id);
+
+  if (!receipt) {
+    return {
+      status: "UNKNOWN / NOT_EVALUATED",
+      note: "No ClassificationReceipt is attached to this FCO in the bounded demo graph. No SELF/NONSELF or SAFE/NONSAFE class is inferred from its state, label, or color.",
+    };
+  }
+
+  const classifierState = String(receipt.payload.classifier_state || "UNKNOWN");
+  const claimCeiling = String(receipt.payload.claim_ceiling || "UNDECLARED");
+  const executed = claimCeiling !== "CLASSIFICATION_NOT_EXECUTED" && !classifierState.includes("PENDING");
+  const recorded = String(receipt.payload.classification || receipt.payload.anticube_classification || "");
+  return {
+    status: executed && recorded ? recorded : "UNKNOWN / NOT_EXECUTED",
+    receiptId: receipt.id,
+    classifierState,
+    claimCeiling,
+    note: executed
+      ? "An explicit Anticube classification receipt is attached; inspect the receipt before reusing the classification."
+      : "Anticube was considered through an explicit ClassificationReceipt, but the fixture records classification as not executed. HydraDG therefore retains UNKNOWN instead of inferring safety from Reference/Poison/Antidote state labels.",
+  };
 }
 
 export default function GraphPage() {
@@ -109,11 +131,13 @@ export default function GraphPage() {
   const maxTime = timeline.length ? Math.max(...timeline.map((state) => state.t)) : 2;
   const current = timeline.find((state) => state.t === time) || null;
   const selected = data?.scene.nodes.find((node) => node.id === selectedId) || null;
+  const selectedState = selected ? timeline.find((state) => state.t === selected.t) || null : null;
   const selectedHash = selected ? fcoHash(selected.id) : "";
   const selectedTerm = selected ? knowledgeTerm(selected.label) : undefined;
   const selectedLinks = selected && data
     ? data.scene.links.filter((link) => link.source === selected.id || link.target === selected.id)
     : [];
+  const selectedAnticube = anticubeConsideration(selected, data);
 
   const matching = useMemo(() => {
     if (!data) return new Set<string>();
@@ -260,10 +284,11 @@ export default function GraphPage() {
         <div>
           <p className="eyebrow">4D Fractal Custody Graph</p>
           <h1>Reference, poison and antidote stay distinguishable.</h1>
-          <p className="lede">Rotate x/y/z, scrub time, inspect one FCO, and follow its single SHA-256 identity into the custody graph.</p>
+          <p className="lede">Rotate x/y/z, scrub time, click one FCO, and inspect its state calculations, classification color, Anticube consideration, canonical SHA-256 identity, and graph relationships together.</p>
           <div className="actions">
             <a className="secondary" href="/how-to">How to use</a>
             <a className="secondary" href="/knowledge">Knowledge Base</a>
+            <a className="secondary" href="/track-fit">Why Graph? + math</a>
             <a className="secondary" href="/graph?q=KnowledgeAtom">KnowledgeAtom</a>
             <a className="secondary" href="/graph?q=SeedOfTruth">SeedOfTruth</a>
           </div>
@@ -278,12 +303,12 @@ export default function GraphPage() {
           {Object.entries(STATE_VISUALS).map(([key, state]) => (
             <article key={key} className="panel">
               <div style={{ width: 20, height: 20, borderRadius: "50%", background: state.color, marginBottom: 8 }} aria-hidden="true" />
-              <strong>t{key} · {state.name}</strong>
+              <strong style={{ color: state.color }}>t{key} · {state.name}</strong>
               <p className="small muted">{state.meaning}</p>
             </article>
           ))}
         </div>
-        <p className="small muted note">Color identifies declared state. Heat intensity is selected separately below. Neither color nor heat is an accuracy verdict.</p>
+        <p className="small muted note">Color identifies declared Reference/Poison/Antidote state. Heat intensity is selected separately. Anticube SELF/NONSELF × SAFE/NONSAFE classification is an independent receipt-based lane and is never inferred from these colors.</p>
       </section>
 
       <section className="grid twoCol">
@@ -320,10 +345,14 @@ export default function GraphPage() {
               </div>
               <p className="mono small compact">{selected.id}</p>
               <p className="mono small compact">object_sha256={selectedHash || "noncanonical-demo-id"}</p>
-              <p className="small muted">state={STATE_VISUALS[selected.t]?.name || `t${selected.t}`} · context scope=STATE_INHERITED · FCG degree={selectedLinks.length}</p>
-              <pre className="result">{selected.access === "public" ? JSON.stringify(selected.payload, null, 2) : "TOY_LOCKED — demonstration payload intentionally hidden; not production cryptography."}</pre>
+              <p className="small muted">state={STATE_VISUALS[selected.t]?.name || `t${selected.t}`} · context scope={selected.label === "StateSnapshot" ? "OBJECT_STATE_SNAPSHOT" : "STATE_INHERITED"} · FCG degree={selectedLinks.length}</p>
+              {selectedState ? <StateCalculationPanel state={selectedState} scope={selected.label === "StateSnapshot" ? "OBJECT_STATE_SNAPSHOT" : "STATE_INHERITED"} anticube={selectedAnticube} /> : null}
+              <details style={{ marginTop: 14 }}>
+                <summary>Declared FCO payload</summary>
+                <pre className="result">{selected.access === "public" ? JSON.stringify(selected.payload, null, 2) : "TOY_LOCKED — demonstration payload intentionally hidden; not production cryptography."}</pre>
+              </details>
             </>
-          ) : <div className="result empty">Click a node. Every canonical FCO inspector shows one FCO ID and one matching object SHA-256.</div>}
+          ) : <div className="result empty">Click a node. The inspector will show state math, classification color, Anticube consideration, one FCO ID and one matching object SHA-256.</div>}
         </article>
       </section>
 
@@ -334,28 +363,33 @@ export default function GraphPage() {
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
             <thead><tr><th align="left">State</th><th>H</th><th>G*</th><th>ΔG*</th><th>Cloud Drift</th><th>TV mutation</th><th>Restoration gain</th><th>U*</th></tr></thead>
             <tbody>
-              {timeline.map((state) => (
-                <tr key={state.t}>
-                  <td><strong style={{ color: STATE_VISUALS[state.t]?.color }}>{STATE_VISUALS[state.t]?.name || state.label}</strong></td>
-                  <td align="center">{state.shannon_entropy.toFixed(4)}</td>
-                  <td align="center">{state.g_star.toFixed(6)}</td>
-                  <td align="center">{state.delta_g_star >= 0 ? "+" : ""}{state.delta_g_star.toFixed(6)}</td>
-                  <td align="center">{state.cloud_drift_0_100.toFixed(4)}</td>
-                  <td align="center">{state.mutation_distance.toFixed(4)}</td>
-                  <td align="center">{state.restoration_gain.toFixed(4)}</td>
-                  <td align="center">{state.burden.toFixed(2)}</td>
-                </tr>
-              ))}
+              {timeline.map((state) => {
+                const color = STATE_VISUALS[state.t]?.color || "#d8e0e8";
+                const valueStyle = { color, fontWeight: 700, background: `${color}12` } as const;
+                return (
+                  <tr key={state.t} style={{ borderLeft: `3px solid ${color}` }}>
+                    <td><strong style={{ color }}>{STATE_VISUALS[state.t]?.name || state.label}</strong></td>
+                    <td align="center" style={valueStyle}>{state.shannon_entropy.toFixed(4)}</td>
+                    <td align="center" style={valueStyle}>{state.g_star.toFixed(6)}</td>
+                    <td align="center" style={valueStyle}>{state.delta_g_star >= 0 ? "+" : ""}{state.delta_g_star.toFixed(6)}</td>
+                    <td align="center" style={valueStyle}>{state.cloud_drift_0_100.toFixed(4)}</td>
+                    <td align="center" style={valueStyle}>{state.mutation_distance.toFixed(4)}</td>
+                    <td align="center" style={valueStyle}>{state.restoration_gain.toFixed(4)}</td>
+                    <td align="center" style={valueStyle}>{state.burden.toFixed(2)}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
-        <p className="small muted note">T0–T2 are synthetic fixture calculations. T3–T5 are project/release states and are shown on the Judge/Evolution pages with scalar score state N/A when no distribution is declared; HydraDG does not copy T2 scores forward.</p>
+        <p className="small muted note">T0–T2 are synthetic distribution-state calculations. T3–T5 use migration/experiment/release measurements instead of copying the T2 scalar forward; see Why Graph? and Evolution for those measured production lanes.</p>
       </section>
 
       <section className="panel architecture">
         <p className="eyebrow">Claim boundary</p>
         <h2>Visualization is evidence-linked, not evidence-generating.</h2>
-        <p className="muted">G* = U* - 0.35 × Hnorm. Cloud Drift = 100 × base-2 JSD. Mutation distance and restoration gain use the separate total-variation lane. None of these is physical Gibbs free energy or an end-to-end QA score.</p>
+        <p className="muted">G* = U* - 0.35 × Hnorm. Cloud Drift = 100 × base-2 JSD. Mutation distance and restoration gain use the separate total-variation lane. Anticube classification is receipt-based and separate. None of these is physical Gibbs free energy or an end-to-end QA score.</p>
+        <div className="actions"><a className="secondary" href="/knowledge#g-star">KB: G*</a><a className="secondary" href="/knowledge#cloud-drift">KB: Cloud Drift</a><a className="secondary" href="/knowledge#anticube">KB: Anticube</a><a className="secondary" href="/track-fit">Show the project math</a></div>
       </section>
     </main>
   );
