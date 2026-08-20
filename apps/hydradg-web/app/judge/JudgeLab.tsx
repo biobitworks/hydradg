@@ -128,12 +128,16 @@ export default function JudgeLab({ fixture, custody }: Props) {
 
   async function perturb(kind: "normal" | "poison" | "antidote") {
     setGuideId("perturb");
-    if (!selectedFact) {
-      setOutput({ error: "Load a case and select a Fact first." });
+    const target = lastInjectedVertex || selectedFactVertex || String(facts[0]?.vertex || "");
+    if (!target) {
+      setOutput({ error: "Load a case first to perform perturbation/antidote operations." });
       return;
     }
-    const target = kind === "antidote" && lastInjectedVertex ? lastInjectedVertex : selectedFactVertex;
-    const object = kind === "normal" ? originalObject : kind === "poison" ? poisonObject : originalObject;
+    const targetFact = facts.find((f) => String(f.vertex) === target) || selectedFact || facts[0] || null;
+    const origObj = targetFact ? String(targetFact.object || "") : originalObject;
+    const poisObj = targetFact ? `POISON::${String(targetFact.object || "alternate-state")}` : poisonObject;
+
+    const object = kind === "normal" ? origObj : kind === "poison" ? poisObj : origObj;
     const identity = kind === "normal" ? "SELF" : "NONSELF";
     const safety = kind === "poison" ? "NONSAFE" : "SAFE";
     const result = await run(kind, () =>
@@ -152,16 +156,17 @@ export default function JudgeLab({ fixture, custody }: Props) {
 
   async function currentState() {
     setGuideId("current");
-    if (!selectedFact) {
-      setOutput({ error: "Load a case and select a Fact first." });
+    const targetFact = selectedFact || facts[0];
+    if (!targetFact) {
+      setOutput({ error: "Load a case first." });
       return;
     }
     await run("current", () =>
       postJson("/api/live", {
         action: "current",
         question_id: questionId,
-        subject: selectedFact.subject,
-        predicate: selectedFact.predicate,
+        subject: targetFact.subject,
+        predicate: targetFact.predicate,
       }),
     );
   }
@@ -230,6 +235,8 @@ export default function JudgeLab({ fixture, custody }: Props) {
             <p className="muted">Reference → perturbation → restoration, with content-addressed FCOs and a recomputed fixture Merkle checkpoint.</p>
             <div className="actions">
               <button className="primary" type="button" disabled={Boolean(busy)} onClick={loadFixture}>Load deterministic fixture</button>
+              <button className="secondary" type="button" disabled={Boolean(busy)} onClick={() => run("poison_fixture", () => postJson("/api/query", { action: "fixture", mode: "poison" }))}>Simulate poison (t1)</button>
+              <button className="secondary" type="button" disabled={Boolean(busy)} onClick={() => run("antidote_fixture", () => postJson("/api/query", { action: "fixture", mode: "antidote" }))}>Apply antidote (t2)</button>
               <a className="secondary" href="/api/custody">Open custody JSON</a>
             </div>
           </article>
@@ -285,15 +292,15 @@ export default function JudgeLab({ fixture, custody }: Props) {
                 {facts.length ? facts.map((fact) => <option key={String(fact.vertex)} value={String(fact.vertex)}>{String(fact.vertex)} · {String(fact.subject)} / {String(fact.predicate)} / {String(fact.object)}</option>) : <option value="">Load a case first</option>}
               </select>
             </label>
-            <p className="small mono">subject={String(selectedFact?.subject || "—")} · predicate={String(selectedFact?.predicate || "—")}</p>
+            <p className="small mono">subject={String(selectedFact?.subject || facts[0]?.subject || "—")} · predicate={String(selectedFact?.predicate || facts[0]?.predicate || "—")}</p>
             <label>Poison object
               <input value={poisonObject} onChange={(event) => setPoisonObject(event.target.value)} placeholder="POISON::alternate state" />
               <span className="small muted">Example: POISON::{originalObject || "original-object"}</span>
             </label>
             <div className="actions">
-              <button className="secondary" type="button" onClick={() => perturb("normal")} disabled={!selectedFact || Boolean(busy)}>Normal control</button>
-              <button className="primary" type="button" onClick={() => perturb("poison")} disabled={!selectedFact || Boolean(busy)}>Inject poison</button>
-              <button className="secondary" type="button" onClick={() => perturb("antidote")} disabled={!lastInjectedVertex || Boolean(busy)}>Apply antidote</button>
+              <button className="secondary" type="button" onClick={() => perturb("normal")} disabled={Boolean(busy)}>Normal control</button>
+              <button className="primary" type="button" onClick={() => perturb("poison")} disabled={Boolean(busy)}>Inject poison</button>
+              <button className="secondary" type="button" onClick={() => perturb("antidote")} disabled={Boolean(busy)}>Apply antidote</button>
             </div>
             <p className="small muted">Anticube labels here are operator-declared for the bounded demo; they are not universal safety judgments.</p>
           </article>

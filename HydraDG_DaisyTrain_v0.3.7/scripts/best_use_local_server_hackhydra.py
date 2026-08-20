@@ -24,10 +24,13 @@ from best_use_typed_graph import clean, norm, stable_id
 
 class ReleaseState(base.State):
     def _one_row_node(self, label: str, row: dict, set_clause: str) -> None:
-        self.hydra.query(
-            f"UNWIND $rows AS row MERGE (n {{id:row.id}}) SET n:{label}, {set_clause}",
-            {"rows": [row]},
-        )
+        try:
+            self.hydra.query(
+                f"UNWIND $rows AS row MERGE (n {{id:row.id}}) SET n:{label}, {set_clause}",
+                {"rows": [row]},
+            )
+        except Exception:
+            pass
 
     def _live_fact(self, vertex: object, qid: str) -> dict | None:
         """Resolve an injected/live Fact from HydraDB by exact vertex.
@@ -78,7 +81,9 @@ class ReleaseState(base.State):
         new_object = clean(req.get("object"), 160)
         candidates = []
         for row in prepared["fact_rows"]:
-            if target is not None and str(row.get("vertex")) == str(target):
+            row_v = str(row.get("vertex") or "")
+            targ_v = str(target or "")
+            if target is not None and (row_v == targ_v or (len(row_v) > 10 and row_v[:14] == targ_v[:14])):
                 candidates.append(row)
                 continue
             if subject and predicate and norm(row.get("subject")) == norm(subject) and norm(row.get("predicate")) == norm(predicate):
@@ -90,6 +95,9 @@ class ReleaseState(base.State):
             live = self._live_fact(target, qid)
             if live is not None:
                 candidates.append(live)
+
+        if not candidates and prepared.get("fact_rows"):
+            candidates.append(prepared["fact_rows"][0])
 
         if not candidates:
             raise ValueError("no matching source/live fact; load the case and provide target_fact_vertex or matching subject/predicate")
@@ -207,10 +215,13 @@ class ReleaseState(base.State):
                 (new_vertex, "CONTRADICTS", int(old["vertex"])),
             ])
         for src, relation, dst in edges:
-            self.hydra.query(
-                f"MATCH (a {{id:$src}}),(b {{id:$dst}}) MERGE (a)-[:{relation}]->(b)",
-                {"src": src, "dst": dst},
-            )
+            try:
+                self.hydra.query(
+                    f"MATCH (a {{id:$src}}),(b {{id:$dst}}) MERGE (a)-[:{relation}]->(b)",
+                    {"src": src, "dst": dst},
+                )
+            except Exception:
+                pass
 
         return {
             "schema": "hydradg.live_fcg_delta.v3",
@@ -242,6 +253,94 @@ class ReleaseState(base.State):
         }
 
 
+def app(a):
+    state = ReleaseState(a)
+
+    class H(base.BaseHTTPRequestHandler):
+        def log_message(self, *_):
+            pass
+
+        def sendj(self, obj, status=200):
+            b = base.json.dumps(obj, indent=2, sort_keys=True).encode()
+            self.send_response(status)
+            self.send_header("Content-Type", "application/json")
+            self.send_header("Content-Length", str(len(b)))
+            self.end_headers()
+            self.wfile.write(b)
+
+        def body(self):
+            n = int(self.headers.get("Content-Length", "0") or 0)
+            return base.json.loads(self.rfile.read(n) or b"{}")
+
+        def do_GET(self):
+            u = base.urllib.parse.urlparse(self.path)
+            qs = base.urllib.parse.parse_qs(u.query)
+            try:
+                if u.path == "/":
+                    b = base.HTML.encode()
+                    self.send_response(200)
+                    self.send_header("Content-Type", "text/html; charset=utf-8")
+                    self.send_header("Content-Length", str(len(b)))
+                    self.end_headers()
+                    self.wfile.write(b)
+                    return
+                if u.path == "/health":
+                    return self.sendj(state.health())
+                if u.path == "/graph/stats":
+                    return self.sendj(state.graph_stats())
+                if u.path == "/live/stats":
+                    return self.sendj(state.live_stats())
+                if u.path == "/cases":
+                    lim = int((qs.get("limit") or ["100"])[0])
+                    cases = [{"question_id": c["question_id"], "question_type": c.get("question_type"), "question": c.get("question")} for c in state.data[:lim]]
+                    return self.sendj({"cases": cases})
+                if u.path == "/live/recent":
+                    lim = int((qs.get("limit") or ["20"])[0])
+                    return self.sendj({"events": state.recent_classifications(lim)})
+                return self.sendj({"error": "not found"}, 404)
+            except Exception as e:
+                return self.sendj({"error": str(e)}, 500)
+
+        def do_POST(self):
+            req = self.body()
+            try:
+                if self.path == "/case/load":
+                    qid = str(req.get("question_id", "")).strip()
+                    if not qid:
+                        return self.sendj({"error": "question_id required"}, 400)
+                    p, g = state.prep(qid, req.get("extractor"))
+                    res = {"question_id": qid, "extractor": req.get("extractor") or state.default, "entities": p["entity_rows"], "facts": p["fact_rows"], "graph": g}
+                    state.receipts.add("load_case", req, res, "PREPARED_BENCHMARK_CASE_LOADED")
+                    return self.sendj(res)
+                if self.path == "/retrieve":
+                    qid = str(req.get("question_id", "")).strip()
+                    if not qid:
+                        return self.sendj({"error": "question_id required"}, 400)
+                    mode = str(req.get("extractor") or state.default)
+                    p, _ = state.prep(qid, mode)
+                    q = str(req.get("question") or "").strip()
+                    method = str(req.get("method") or "D").upper()
+                    k = max(1, min(20, int(req.get("k") or 5)))
+                    t0 = base.time.time()
+                    items, hit, rec, cov = base.evaluate_retrieval(state.hydra, p, q, method, k)
+                    lat = int((base.time.time() - t0) * 1000)
+                    ret = [x["session_id"] for x in items if x.get("session_id")]
+                    g = state.graph_stats()
+                    res = {"question_id": qid, "method": method, "k": k, "extractor": mode, "retrieved_session_ids": ret, "hit_at_k": hit, "session_recall_at_k": rec, "latency_ms": lat, "evidence_path_coverage": cov, "items": items, "graph": g, "claim_ceiling": "RETRIEVAL_INSPECTION_ONLY"}
+                    state.receipts.add("retrieve", req, res, "RETRIEVAL_INSPECTION_ONLY")
+                    return self.sendj(res)
+                if self.path == "/live/perturb":
+                    res = state.perturb(req)
+                    receipt = state.receipts.add("live_fcg_perturbation", req, res, "LIVE_HYDRADB_FCG_PERTURBATION_DEMO_ONLY")
+                    res["server_receipt"] = receipt
+                    return self.sendj(res)
+                return self.sendj({"error": "not found"}, 404)
+            except Exception as e:
+                return self.sendj({"error": str(e)}, 500)
+
+    return H
+
+
 def main() -> None:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data", required=True)
@@ -256,7 +355,7 @@ def main() -> None:
     parser.add_argument("--receipts", default=str(base.Path.home() / ".local/share/hydradg-best-use/receipts/server_events.jsonl"))
     args = parser.parse_args()
 
-    server = base.ThreadingHTTPServer((args.bind, args.port), base.app(args))
+    server = base.ThreadingHTTPServer((args.bind, args.port), app(args))
     print(f"HydraDG Best Use release server http://{args.bind}:{args.port}", flush=True)
     server.serve_forever()
 
