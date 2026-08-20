@@ -40,8 +40,10 @@ jobs:
         run: |
           set -uo pipefail
           mkdir -p security-artifacts
+          git config diff.renameLimit 10000
           set +e
           gitleaks git \
+            --config .gitleaks.toml \
             --redact=100 \
             --no-banner \
             --report-format json \
