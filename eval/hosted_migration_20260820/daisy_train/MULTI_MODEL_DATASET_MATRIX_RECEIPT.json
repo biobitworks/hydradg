@@ -1,0 +1,1520 @@
+{
+  "aggregate_energy_savings": {
+    "total_flops_saved": 1614398308000000000,
+    "total_watt_hours_saved": 4484.45
+  },
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "MULTI_MODEL_MULTI_DATASET_MATRIX_COMPARISON_COMPLETED",
+  "license": "CC-BY-NC-ND-4.0",
+  "matrix_cells": [
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 1,
+      "cell_signature_hash": "77a04f8c210d77b4b81b2f2feacf2b43b9af6a9d9512d4dc05c3aa9afefe09bf",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0077,
+        "g_star_diagnostic": -0.1154,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.205
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 2,
+      "cell_signature_hash": "41497b4356754584165d952aace6a2ccc8cb9b6670ba3740ccf24496aec9156b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.016,
+        "g_star_diagnostic": -0.1071,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.21
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 106704000000000000,
+        "watt_hours_saved": 296.4
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 3,
+      "cell_signature_hash": "d5456bb9db65c412737efca61d52cfa78904965a35bc6fc1150ee7ff9478d292",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0249,
+        "g_star_diagnostic": -0.0982,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.215
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 4,
+      "cell_signature_hash": "bfc917ab3b23b7e43307074ba5fa08f2f06afbbfd01ffe61f0685e558e009d9f",
+      "context_energy_metrics": {
+        "delta_g_star": 0.02,
+        "g_star_diagnostic": -0.1031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.22
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 497952000000000000,
+        "watt_hours_saved": 1383.2
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 5,
+      "cell_signature_hash": "65c31a68d5402f88fc3d6193a6e5f6adf515ece7419f488a1316fbcd4ab91627",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0277,
+        "g_star_diagnostic": -0.0954,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.225
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 6,
+      "cell_signature_hash": "47c4e6f62d7baf0e51b69eee2ed4a5cdcf15622a90feca63dacb278bae66897a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.036,
+        "g_star_diagnostic": -0.0871,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.23
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 7,
+      "cell_signature_hash": "b4bda2c0b3b1a9dd79443e3a95417e84daeb7183a6a1fa2a4229f519bb8cb19b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0449,
+        "g_star_diagnostic": -0.0782,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.235
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 4924800000000000,
+        "watt_hours_saved": 13.68
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 8,
+      "cell_signature_hash": "9be9e54ba731c515555ff1139ad04b4533efbc5a9ceca57bb4d794f02f2de748",
+      "context_energy_metrics": {
+        "delta_g_star": 0.04,
+        "g_star_diagnostic": -0.0831,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.24
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 9,
+      "cell_signature_hash": "2295206d97f0d873fdda92f97462c35e10e4be53744eb63704a548c1bcae3079",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0477,
+        "g_star_diagnostic": -0.0754,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.245
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 10,
+      "cell_signature_hash": "a6eaa0b942511ab052130bf2e79f81dbfb0dda5b4d620fb10b752de70abc6163",
+      "context_energy_metrics": {
+        "delta_g_star": 0.056,
+        "g_star_diagnostic": -0.0671,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.25
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 11,
+      "cell_signature_hash": "bd3af9ef4133aeb5a66fd2b8b4592fc560955d3f86541dc26b63aff375f6c014",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0649,
+        "g_star_diagnostic": -0.0582,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.255
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 12,
+      "cell_signature_hash": "0aa1eb35ac75fc3a258f4ad5bf22556f8d1de4c7490b32e81c22c937499c64c4",
+      "context_energy_metrics": {
+        "delta_g_star": 0.06,
+        "g_star_diagnostic": -0.0631,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.26
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 2462400000000000,
+        "watt_hours_saved": 6.84
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 13,
+      "cell_signature_hash": "230c9cdd3186f702cae6e8e3d2f1984cf0a3ca5d3756bf7760b8f08624d2d35b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0677,
+        "g_star_diagnostic": -0.0554,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.265
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 14,
+      "cell_signature_hash": "e29ff371934f03a28ff42ef4555ce7430c651ea40398519365f796c5cc97ecc7",
+      "context_energy_metrics": {
+        "delta_g_star": 0.076,
+        "g_star_diagnostic": -0.0471,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.27
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 15,
+      "cell_signature_hash": "a5d0e1ad82b3f91c9db975ed612aa30d1d55abc314297651e892f545e91c9ff3",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0849,
+        "g_star_diagnostic": -0.0382,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.275
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 16,
+      "cell_signature_hash": "722e7f15f505f5be13b5849cad8115399e41da93c271346669c1bad0802d8f5b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.08,
+        "g_star_diagnostic": -0.0431,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.28
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 17,
+      "cell_signature_hash": "507139829b82ac1c35aa29235ce4998a653f9956ae3dc0700ad0dd32130cad41",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0877,
+        "g_star_diagnostic": -0.0354,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.285
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 1436400000000000,
+        "watt_hours_saved": 3.99
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 18,
+      "cell_signature_hash": "c4faaf15970935931a279a62abdae3e417536a66d1efafc875149afd86d9cdec",
+      "context_energy_metrics": {
+        "delta_g_star": 0.096,
+        "g_star_diagnostic": -0.0271,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.29
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 19,
+      "cell_signature_hash": "4362009f0591f1768324c24f6f94d1df661b1151972a90a0eaac7acc9bf7e934",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1049,
+        "g_star_diagnostic": -0.0182,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.295
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 6703200000000000,
+        "watt_hours_saved": 18.62
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 20,
+      "cell_signature_hash": "0762d212185287a0a90b8a04246931384c55adb087243a535ddb970e8201bc15",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1,
+        "g_star_diagnostic": -0.0231,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.3
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 21,
+      "cell_signature_hash": "51e7c78da38ff48e0fc4d5b9b8b2b31be898dcc9027f93650e6d60e09fda5697",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1077,
+        "g_star_diagnostic": -0.0154,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.305
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 22,
+      "cell_signature_hash": "041771570758e53acbec03de661104ee4161f6f8311eebecb2980737d1ed8d64",
+      "context_energy_metrics": {
+        "delta_g_star": 0.116,
+        "g_star_diagnostic": -0.0071,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.31
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 1990440000000000,
+        "watt_hours_saved": 5.53
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 23,
+      "cell_signature_hash": "5b3772e1c5f94626bcb43eef81ba84a21f6518e9dfa596926a038fb2c03268dd",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1249,
+        "g_star_diagnostic": 0.0018,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.315
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 24,
+      "cell_signature_hash": "3d2e3fd1edce7ef6102d107a07450241ef013194e57d8169f553edfb2813ada0",
+      "context_energy_metrics": {
+        "delta_g_star": 0.12,
+        "g_star_diagnostic": -0.0031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.32
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 9288720000000000,
+        "watt_hours_saved": 25.8
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 25,
+      "cell_signature_hash": "bcbe9166e7f9220e7ed977e0d39c9cd09b515e4367cc8c6d60c833ab206d2da0",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1277,
+        "g_star_diagnostic": 0.0046,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.325
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 26,
+      "cell_signature_hash": "b23816c3d667aaf89d594631f1cd00eccda3e08ab08eb85b38ac44300e43e59e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.136,
+        "g_star_diagnostic": 0.0129,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.33
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 27,
+      "cell_signature_hash": "4c6585d25cf4671d82618cd28f26a6ba87ac352b8486f6c88f162ef04093a638",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1449,
+        "g_star_diagnostic": 0.0218,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.335
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 738720000000000,
+        "watt_hours_saved": 2.05
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 28,
+      "cell_signature_hash": "780a89dab461f1d8f50002a9d37dd4cb8b53458eca075122f12ff659956a5319",
+      "context_energy_metrics": {
+        "delta_g_star": 0.14,
+        "g_star_diagnostic": 0.0169,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.34
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 29,
+      "cell_signature_hash": "ff072090de046d28603ebc10e41834a8fef6b8346a041a66870c3a42db920898",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1477,
+        "g_star_diagnostic": 0.0246,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.345
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 3447360000000000,
+        "watt_hours_saved": 9.58
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 30,
+      "cell_signature_hash": "cf20ecc5010853e248742adc85fccfc4193e23619e539379ce324b2103fafefa",
+      "context_energy_metrics": {
+        "delta_g_star": 0.156,
+        "g_star_diagnostic": 0.0329,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.35
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 31,
+      "cell_signature_hash": "607b7963480b626a1fb0304d82d4e8f7fb794ec2730915e1c22b16157e3763bf",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1649,
+        "g_star_diagnostic": 0.0418,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.355
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 32,
+      "cell_signature_hash": "4b5d9fdc43497e6022881c032926269b6790e85cc19235f8692eb390ca43e1b9",
+      "context_energy_metrics": {
+        "delta_g_star": 0.16,
+        "g_star_diagnostic": 0.0369,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.36
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 574560000000000,
+        "watt_hours_saved": 1.6
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 33,
+      "cell_signature_hash": "99308017a2a83081013ef3681eb8c568d013a8b390d2d1bc84f11ceedbbe35a6",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1677,
+        "g_star_diagnostic": 0.0446,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.365
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 34,
+      "cell_signature_hash": "2546751594e7e34710e52f21366269c5325df110f300f1e2cd5a1c2a920586cb",
+      "context_energy_metrics": {
+        "delta_g_star": 0.176,
+        "g_star_diagnostic": 0.0529,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.37
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 2681280000000000,
+        "watt_hours_saved": 7.45
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 35,
+      "cell_signature_hash": "5df3cfd4b7983a5eb65d02e616521da38faad5bb095c3bbac848d851cc5b68de",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1849,
+        "g_star_diagnostic": 0.0618,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.375
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 36,
+      "cell_signature_hash": "483559ec774dd9f4045fc28653f5a90f3615e18bfa411f3d51f24434347873b6",
+      "context_energy_metrics": {
+        "delta_g_star": 0.18,
+        "g_star_diagnostic": 0.0569,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.38
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 37,
+      "cell_signature_hash": "ed6f321f13911554a2f5f6bfe3a71db30c694c3ce0b3ba5e53e447ef53fae322",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1877,
+        "g_star_diagnostic": 0.0646,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.385
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 207978000000000,
+        "watt_hours_saved": 0.58
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 38,
+      "cell_signature_hash": "92fc06232e5b88356132164fe0bba41dc76327102efc5f5f01a542c9bb9655ec",
+      "context_energy_metrics": {
+        "delta_g_star": 0.196,
+        "g_star_diagnostic": 0.0729,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.39
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 39,
+      "cell_signature_hash": "4c01e9866d858e3d7cd85b495d04f122fed037b08a633b405aed6e433c99bc6a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2049,
+        "g_star_diagnostic": 0.0818,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.395
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 970564000000000,
+        "watt_hours_saved": 2.7
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 40,
+      "cell_signature_hash": "d7a558d2566103249cb5deddeb6493ef5586e6ede363efe1b3eb99691f8e9b3e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2,
+        "g_star_diagnostic": 0.0769,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.4
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 41,
+      "cell_signature_hash": "7ea8db9610be4b75f9c5a2a63661e39312e7a2dba6017033a3c4cf5df23edfdf",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2077,
+        "g_star_diagnostic": 0.0846,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.405
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 42,
+      "cell_signature_hash": "054504981b3262c82e938c3ffeb85be6d08e38cf965cbf04fe07f886ddc1950e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.216,
+        "g_star_diagnostic": 0.0929,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.41
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 4924800000000000,
+        "watt_hours_saved": 13.68
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 43,
+      "cell_signature_hash": "78158901f28fed8dbaaa3f55f5cc05e5d66c5bfc2ac314f19baed61ea17a0aae",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2249,
+        "g_star_diagnostic": 0.1018,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.415
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 44,
+      "cell_signature_hash": "9da8f52e821a11431b078cabd4242ecd34709ffbfc2d1d71377017f75abe71e3",
+      "context_energy_metrics": {
+        "delta_g_star": 0.22,
+        "g_star_diagnostic": 0.0969,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.42
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 45,
+      "cell_signature_hash": "5b7b236718da10892d68d6b0c76228b5c7e65e7edbe6571fa23202173005a84f",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2277,
+        "g_star_diagnostic": 0.1046,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.425
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 46,
+      "cell_signature_hash": "669397917c6199c7f79f2844da2bd6f58de269db93b821adb8f8fcbc8d5777fe",
+      "context_energy_metrics": {
+        "delta_g_star": 0.236,
+        "g_star_diagnostic": 0.1129,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.43
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 47,
+      "cell_signature_hash": "665f1352e102793a9a136c64bfac4fc35c81bad024897c8a12a10e7ce79c2c0e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2449,
+        "g_star_diagnostic": 0.1218,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.435
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 3488400000000000,
+        "watt_hours_saved": 9.69
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 48,
+      "cell_signature_hash": "8ab2a85375cf4ecbfd5504ae060221aeaeaf0f69d5cf254bc67b14f67669e56d",
+      "context_energy_metrics": {
+        "delta_g_star": 0.24,
+        "g_star_diagnostic": 0.1169,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.44
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 49,
+      "cell_signature_hash": "e04153507b64413245a9313a300fcbda7785bdbe5bfc2c5b166aabd1de5625dd",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2477,
+        "g_star_diagnostic": 0.1246,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.445
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 16279200000000000,
+        "watt_hours_saved": 45.22
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 50,
+      "cell_signature_hash": "f10aac424a55a490e535fd74e65e30603911d008cba3741d07d8a62d78ec3af2",
+      "context_energy_metrics": {
+        "delta_g_star": 0.256,
+        "g_star_diagnostic": 0.1329,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.45
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    }
+  ],
+  "matrix_dimensions": {
+    "dataset_count": 10,
+    "model_count": 5,
+    "total_cells": 50
+  },
+  "schema": "hydradg.multi_model_dataset_matrix_receipt.v1",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "status": "PASS",
+  "timestamp_unix": 1787254181
+}
