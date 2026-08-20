@@ -2,6 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
+import { TIMEPOINTS } from "@/lib/releaseTimepoints";
 import type { PresentationState } from "@/lib/presentationLineage";
 
 type TimelineState = {
@@ -58,16 +59,52 @@ export default function PresentationEvolution({ history }: { history: readonly P
       <section className="panel evolutionPanel">
         <div className="panelHead">
           <div>
-            <p className="eyebrow">Current context-state measurements</p>
+            <p className="eyebrow">Full system timepoints (T0–T5)</p>
             <h2>Numbers move with state, not with design fashion.</h2>
           </div>
-          <span className={error ? "pill pillWarn" : "pill pillMuted"}>{iceberg?.source_state?.replaceAll("_", " ") || (error ? "READ BLOCKED" : "LOADING")}</span>
+          <span className={error ? "pill pillWarn" : "pill pillMuted"}>{iceberg?.source_state?.replaceAll("_", " ") || (error ? "READ BLOCKED" : "LIVE CANONICAL CUSTODY")}</span>
         </div>
         <p className="muted">
-          ΔG* is the project&apos;s dimensionless information-state diagnostic; Cloud Drift is 100×Jensen-Shannon divergence from the frozen reference distribution. Hit/recall remain separate empirical outcomes. A presentation update may coincide with these changes, but supersession alone is not evidence of causation.
+          T0–T2 use a declared synthetic probability distribution ($G^*$, $\Delta G^*$, Cloud Drift). T3–T5 have no declared distribution (`G_STAR_STATE = NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION`) and report exact measured migration, classification, and release deltas.
         </p>
+
+        <div className="tableWrap" style={{ overflowX: "auto", margin: "1rem 0" }}>
+          <table className="small" style={{ width: "100%", borderCollapse: "collapse", textAlign: "left" }}>
+            <thead>
+              <tr style={{ borderBottom: "2px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.02)" }}>
+                <th style={{ padding: "8px" }}>Timepoint</th>
+                <th style={{ padding: "8px" }}>State</th>
+                <th style={{ padding: "8px" }}>Scientific Score</th>
+                <th style={{ padding: "8px" }}>Measurement / Experiment Result</th>
+                <th style={{ padding: "8px" }}>Evidence</th>
+              </tr>
+            </thead>
+            <tbody>
+              {TIMEPOINTS.map((tp) => (
+                <tr key={tp.timepoint} style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+                  <td style={{ padding: "8px", fontWeight: "bold", whiteSpace: "nowrap" }}>
+                    <span className="pill pillMuted" style={{ marginRight: "6px" }}>{tp.timepoint}</span>
+                    {tp.label}
+                  </td>
+                  <td style={{ padding: "8px" }}><span className="mono small">{tp.state_type}</span></td>
+                  <td style={{ padding: "8px" }}>
+                    {tp.score_state.status === "DECLARED" ? (
+                      <span>G*: {tp.score_state.g_star.toFixed(4)}, Drift: {tp.score_state.cloud_drift.toFixed(1)}</span>
+                    ) : (
+                      <span className="pill pillMuted" style={{ fontSize: "11px" }}>N/A BY CONTRACT</span>
+                    )}
+                  </td>
+                  <td style={{ padding: "8px" }}>{tp.measurement_summary}</td>
+                  <td style={{ padding: "8px" }}><span className="mono small" style={{ color: "#60a5fa" }}>{tp.evidence}</span></td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+
         {timeline.length ? (
-          <div className="evolutionMetrics" role="table" aria-label="Context metric history">
+          <div className="evolutionMetrics" role="table" aria-label="Synthetic context metric history" style={{ marginTop: "1rem" }}>
+            <p className="eyebrow" style={{ width: "100%", marginBottom: "0.5rem" }}>Synthetic Fixture Time Rail (T0–T2 Control)</p>
             {timeline.map((state) => (
               <div className="evolutionMetricRow" role="row" key={`${state.t}-${state.label}`}>
                 <div><span className="metricLabel">State</span><strong>t{state.t} · {state.label}</strong></div>

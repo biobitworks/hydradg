@@ -24,7 +24,7 @@ export default function Home() {
           <div className="curatedStatusRow">
             <span className="statusLine"><span className="statusDot good" />LongMemEval full500 executed</span>
             <span className="statusLine"><span className="statusDot good" />HydraDB graph path executed locally</span>
-            <span className="statusLine"><span className="statusDot warn" />Hosted HydraDB readback requires deployment configuration</span>
+            <span className="statusLine"><span className="statusDot good" />Hosted HydraDB remote API v2 parity PASS</span>
           </div>
         </div>
         <div className="curatedHeroViz"><ContextIcebergHero /></div>

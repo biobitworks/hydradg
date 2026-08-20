@@ -99,12 +99,13 @@ export default function HowToPage() {
         <p className="eyebrow">Interpretation rules</p>
         <h2>Keep diagnostics, outcomes and custody separate</h2>
         <ul>
-          <li>Cloud Drift measures context-distribution change; it is not accuracy.</li>
-          <li>ΔG* is a dimensionless information-state abstraction; it is not physical Gibbs free energy.</li>
+          <li>Cloud Drift measures context-distribution change for declared synthetic distributions (T0–T2); it is not accuracy.</li>
+          <li>ΔG* is a dimensionless information-state diagnostic; it is not physical Gibbs free energy.</li>
+          <li>Timepoints T3–T5 currently have no declared probability distribution (`G_STAR_STATE = NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION`, `CLOUD_DRIFT_STATE = NOT_APPLICABLE_NO_DECLARED_DISTRIBUTION`).</li>
+          <li>For T3 hosted migration: Canonical custody identity was preserved across migration, but runtime/project context changed because deployment location, database indexing, timestamps, and query service changed.</li>
           <li>Hit@K is retrieval hit rate, not end-to-end QA accuracy.</li>
           <li>Recall@K is an empirical retrieval outcome.</li>
           <li>HydraDB is the queryable projection; FCO/FCG is the canonical custody/provenance layer.</li>
-          <li>A local → hosted backend move does not by itself imply a context-state change.</li>
         </ul>
       </section>
     </main>

@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
+import GraphHashComparison from "@/components/GraphHashComparison";
 import { RELEASE_STATUS } from "@/lib/releaseStatus";
 
 const evidence = [
@@ -71,6 +73,14 @@ const hashes = [
 export default function EvidencePage() {
   return (
     <main>
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "Evidence Ledger" },
+        ]}
+        summaryText="Inspect executed results, hash reconciliation, claim ceilings, and deep FCO lineage without claim inflation."
+      />
+
       <header className="hero">
         <div>
           <p className="eyebrow">Hack Hydra 2026 · evidence ledger</p>
@@ -86,6 +96,8 @@ export default function EvidencePage() {
         <article className="metric"><span className="metricLabel">Core datasets</span><strong>5 acquired</strong><span className="small muted">hash-identified local bytes</span></article>
         <article className="metric"><span className="metricLabel">Decision</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate comparison</span></article>
       </section>
+
+      <GraphHashComparison />
 
       <section className="computeSection"><span className="sectionNumber">01 / EVIDENCE OBJECTS</span><h2 className="displayTitle">Every state stays visible.</h2><div className="grid twoCol">{evidence.map((item) => <article className="panel" key={item.label}><p className="eyebrow">{item.status}</p><h2>{item.label}</h2><p className="muted">{item.detail}</p><p className="mono small compact">claim_ceiling={item.ceiling}</p><div className="actions"><Link className="secondary" href={item.href}>Follow evidence path</Link></div></article>)}</div></section>
 

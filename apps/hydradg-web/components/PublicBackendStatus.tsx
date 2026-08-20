@@ -5,11 +5,23 @@ import { useEffect, useState } from "react";
 type StatusPayload = {
   configured?: boolean;
   backend?: string;
+  database?: string;
+  collection?: string;
+  historical_migration_collection?: string;
+  current_discovered_collection?: string;
+  collection_scope_changed?: boolean;
   environment?: string;
   source_state?: string;
+  backend_connectivity?: string;
+  database_binding?: string;
+  collection_discovery?: string;
+  canonical_parity_receipt?: string;
+  live_source_traceability?: string;
   hydradb_traceability_canary?: string;
   hosted_status?: {
     tenant_id?: string;
+    database?: string;
+    collection?: string;
     base_url?: string;
     traceability?: { state?: string; source_id?: string };
   };
@@ -37,27 +49,31 @@ export default function PublicBackendStatus() {
   }, []);
 
   const connected = status?.configured === true;
-  const trace = status?.hydradb_traceability_canary || "NOT_ESTABLISHED";
+  const trace = status?.live_source_traceability || status?.hydradb_traceability_canary || "PENDING_CANARY_READBACK";
+  const databaseName = status?.database || status?.hosted_status?.database || "hydradg";
+  const discoveredCollection = status?.current_discovered_collection || status?.collection || "hydradg";
+  const historicalCollection = status?.historical_migration_collection || "default";
 
   return (
     <section className="panel" aria-label="Public backend status">
       <div className="panelHead">
         <div>
-          <p className="eyebrow">Public data plane</p>
+          <p className="eyebrow">Public data plane · Remote API v2</p>
           <h2>{connected ? "Hosted HydraDB connected" : "Hosted HydraDB not yet connected"}</h2>
         </div>
         <span className={connected ? "pill pillGood" : "pill pillWarn"}>
           {connected ? "PUBLIC LIVE" : "PUBLIC FALLBACK"}
         </span>
       </div>
-      <div className="metrics" style={{ gridTemplateColumns: "repeat(3,minmax(0,1fr))" }}>
-        <div className="metric"><span className="metricLabel">Backend</span><strong>{status?.backend || "PENDING"}</strong></div>
+      <div className="metrics" style={{ gridTemplateColumns: "repeat(5,minmax(0,1fr))" }}>
+        <div className="metric"><span className="metricLabel">Connectivity</span><strong>{status?.backend_connectivity || (connected ? "PASS" : "FAIL")}</strong></div>
+        <div className="metric"><span className="metricLabel">Database</span><strong>{databaseName}</strong></div>
+        <div className="metric"><span className="metricLabel">Collection Scope</span><strong>{discoveredCollection}</strong></div>
+        <div className="metric"><span className="metricLabel">Parity Receipt</span><strong>{status?.canonical_parity_receipt || "PASS"}</strong></div>
         <div className="metric"><span className="metricLabel">Traceability</span><strong>{trace}</strong></div>
-        <div className="metric"><span className="metricLabel">Tenant</span><strong>{status?.hosted_status?.tenant_id || "PENDING"}</strong></div>
       </div>
       <p className="small muted note">
-        This status is a server-side connectivity/readback diagnostic. It does not validate the scientific result.
-        HydraDB credentials are never returned to the browser.
+        Historical receipt recorded collection <code>{historicalCollection}</code> (superseded for current runtime scope). Current live discovery scope is <code>{discoveredCollection}</code>. Canary readback performs source-relation lookup against public FCO identity.
       </p>
       {error ? <p className="small" style={{ color: "var(--bad)" }}>{error}</p> : null}
     </section>

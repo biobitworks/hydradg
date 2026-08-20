@@ -2,6 +2,7 @@
 
 import { PointerEvent, WheelEvent, useEffect, useMemo, useRef, useState } from "react";
 
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { KNOWLEDGE_TERMS, knowledgeTerm } from "@/lib/knowledgeLinks";
 
 type SceneNode = {
@@ -280,6 +281,14 @@ export default function GraphPage() {
 
   return (
     <main>
+      <Breadcrumbs
+        items={[
+          { label: "Home", href: "/" },
+          { label: "4D FCG Graph Explorer" },
+        ]}
+        summaryText="Rotate 3D spatial dimensions, scrub time t0..t2, click any FCO node to inspect state calculations (H, G*, ΔG*), and follow graph dependency edges."
+      />
+
       <nav>
         <a href="/">MVP</a>
         <a href="/judge">Judge Lab</a>
