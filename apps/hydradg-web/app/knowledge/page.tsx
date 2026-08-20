@@ -1,5 +1,5 @@
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { AUTHOR_AUTHORITY, HUGGINGFACE_MODELS, PREPRINTS } from "@/lib/huggingfaceAndPreprints";
+import { AUTHOR_AUTHORITY, HACKATHON_AND_COMMUNITY_PROJECTS, HUGGINGFACE_MODELS, PREPRINTS } from "@/lib/huggingfaceAndPreprints";
 import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
 import { KNOWLEDGE_TERMS } from "@/lib/knowledgeLinks";
 
@@ -13,7 +13,7 @@ export default function KnowledgePage() {
           { label: "Home", href: "/" },
           { label: "Knowledge Base" },
         ]}
-        summaryText="Resolve unfamiliar terms, academic preprints, Hugging Face models, and DOIs backward to their underlying Knowledge Atom FCOs."
+        summaryText="Resolve unfamiliar terms, academic preprints, versioned DOIs, Hugging Face models, and hackathon demos backward to their underlying Knowledge Atom FCOs."
       />
 
       <header className="hero">
@@ -36,19 +36,20 @@ export default function KnowledgePage() {
         <div className="metric"><span className="metricLabel">Knowledge terms</span><strong>{KNOWLEDGE_TERMS.length}</strong></div>
         <div className="metric"><span className="metricLabel">Preprints &amp; DOIs</span><strong>{PREPRINTS.length}</strong></div>
         <div className="metric"><span className="metricLabel">HF Models</span><strong>{HUGGINGFACE_MODELS.length}</strong></div>
-        <div className="metric"><span className="metricLabel">Claim boundary</span><strong className="small">navigation ≠ correctness</strong></div>
+        <div className="metric"><span className="metricLabel">Demos &amp; Projects</span><strong>{HACKATHON_AND_COMMUNITY_PROJECTS.length}</strong></div>
       </section>
 
       {/* Preprints & Hugging Face Models Section */}
       <section className="computeSection">
-        <span className="sectionNumber">01 / PREPRINTS &amp; HUGGING FACE MODELS</span>
-        <h2 className="displayTitle">Canonical publication DOIs &amp; Hugging Face weights.</h2>
+        <span className="sectionNumber">01 / PREPRINTS, DOIS &amp; HUGGING FACE MODELS</span>
+        <h2 className="displayTitle">Canonical publication DOIs (with versions) &amp; Hugging Face weights.</h2>
         <div className="grid twoCol">
           {PREPRINTS.map((paper) => (
             <article className="panel" key={paper.id} style={{ border: "1px solid rgba(255,255,255,0.1)" }}>
               <div className="panelHead">
                 <div>
                   <span className="pill pillGood" style={{ marginBottom: "0.25rem" }}>Publication Preprint</span>
+                  {paper.version_note && <span className="pill pillMuted" style={{ marginLeft: "0.5rem" }}>{paper.version_note}</span>}
                   <h3 style={{ marginTop: "0.25rem" }}>{paper.title}</h3>
                 </div>
               </div>
@@ -56,7 +57,7 @@ export default function KnowledgePage() {
               <p className="small">{paper.summary}</p>
               <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>knowledge_fco={paper.knowledge_fco_id}</p>
               <div className="actions" style={{ marginTop: "0.75rem" }}>
-                <a className="primary" href={paper.doi_or_url} target="_blank" rel="noreferrer">Open DOI ↗</a>
+                <a className="primary" href={paper.doi_or_url} target="_blank" rel="noreferrer">Open DOI ({paper.doi_or_url.replace("https://doi.org/", "")}) ↗</a>
                 <a className="secondary" href={`/fco/${encodeURIComponent(paper.knowledge_fco_id)}`}>Inspect Knowledge Atom FCO ↗</a>
               </div>
             </article>
@@ -76,6 +77,24 @@ export default function KnowledgePage() {
               <div className="actions" style={{ marginTop: "0.75rem" }}>
                 <a className="primary" href={model.hf_repo_url} target="_blank" rel="noreferrer">Open Hugging Face Repo ↗</a>
                 <a className="secondary" href={`/fco/${encodeURIComponent(model.knowledge_fco_id)}`}>Inspect Knowledge Atom FCO ↗</a>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* Hackathon Demos & Community Projects Section */}
+      <section className="computeSection">
+        <span className="sectionNumber">02 / HACKATHON DEMOS &amp; COMMUNITY PROJECTS</span>
+        <h2 className="displayTitle">Live demo surfaces &amp; project links.</h2>
+        <div className="grid twoCol">
+          {HACKATHON_AND_COMMUNITY_PROJECTS.map((proj) => (
+            <article className="panel" key={proj.url} style={{ border: "1px solid rgba(255,255,255,0.08)" }}>
+              <span className="pill pillMuted">{proj.category}</span>
+              <h3 style={{ marginTop: "0.5rem" }}>{proj.name}</h3>
+              <p className="small muted">{proj.description}</p>
+              <div className="actions" style={{ marginTop: "0.75rem" }}>
+                <a className="secondary" href={proj.url} target="_blank" rel="noreferrer">Open Site ↗</a>
               </div>
             </article>
           ))}
@@ -122,7 +141,7 @@ export default function KnowledgePage() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">02 / TERMINOLOGY MATRIX</span>
+        <span className="sectionNumber">03 / TERMINOLOGY MATRIX</span>
         <h2 className="displayTitle">Term → Knowledge FCO → FCG query → source.</h2>
         <div className="stack">
           {KNOWLEDGE_TERMS.map((item, index) => {
@@ -148,7 +167,7 @@ export default function KnowledgePage() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">03 / RESOLUTION RULE</span>
+        <span className="sectionNumber">04 / RESOLUTION RULE</span>
         <h2 className="displayTitle">The UI is a projection, not custody truth.</h2>
         <div className="flow mono"><span>source / receipt</span><b>→</b><span>canonical custody</span><b>→</b><span>canonical FCG</span><b>→</b><span>HydraDB projection</span><b>→</b><span>website Knowledge FCO</span></div>
         <p className="small muted note">The website FCO projection is deterministic application metadata. HydraDB projection is not claimed until an isolated post-Daisy write/read receipt exists. A digest or graph path does not establish scientific correctness by itself.</p>

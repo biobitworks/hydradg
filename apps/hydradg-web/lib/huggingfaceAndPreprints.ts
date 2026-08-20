@@ -4,6 +4,7 @@ export type PreprintedPaper = {
   authors: string;
   journal_or_arxiv: string;
   doi_or_url: string;
+  version_note?: string;
   knowledge_fco_id: string;
   summary: string;
 };
@@ -18,13 +19,21 @@ export type HuggingFaceModelCard = {
   description: string;
 };
 
+export type CommunityProject = {
+  name: string;
+  url: string;
+  category: "Community" | "Hackathon Demo" | "Active Event" | "My Project" | "Previous Work";
+  description: string;
+};
+
 export const PREPRINTS: readonly PreprintedPaper[] = [
   {
     id: "zenodo-21829929",
     title: "Fractal Custody Objects — v4/v5 publication-version package with Vithia companion evidence",
     authors: "Lee, Byron",
-    journal_or_arxiv: "Zenodo / BioBitWorks (2026)",
+    journal_or_arxiv: "Zenodo / BioBitWorks (Aug 2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21829929",
+    version_note: "Publication Version v4/v5 Package",
     knowledge_fco_id: "fco:zenodo_21829929_fractal_custody_objects_v4_v5",
     summary: "Publication-version package establishing Fractal Custody Objects, FCG roots, and Vithia companion execution evidence.",
   },
@@ -32,8 +41,9 @@ export const PREPRINTS: readonly PreprintedPaper[] = [
     id: "zenodo-21830287",
     title: "Custody-Verified Classification of AI Model Outputs in a Self/Non-Self × Safe/Unsafe Matrix",
     authors: "Lee, Byron",
-    journal_or_arxiv: "Zenodo / BioBitWorks (2026)",
+    journal_or_arxiv: "Zenodo / BioBitWorks (Aug 2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21830287",
+    version_note: "August 2026 Release Version",
     knowledge_fco_id: "fco:zenodo_21830287_custody_verified_anticube_matrix",
     summary: "Grounding for Anticube classification matrix mapping model outputs across Self/Non-Self and Safe/Unsafe categories.",
   },
@@ -41,17 +51,19 @@ export const PREPRINTS: readonly PreprintedPaper[] = [
     id: "zenodo-21830361",
     title: "The Shadow Dogma: hypothesis and governed computational evidence package for fragment-inheritance aging models",
     authors: "Lee, Byron",
-    journal_or_arxiv: "Zenodo / BioBitWorks (2026)",
+    journal_or_arxiv: "Zenodo / BioBitWorks (Aug 2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21830361",
+    version_note: "August 2026 Evidence Release",
     knowledge_fco_id: "fco:zenodo_21830361_shadow_dogma_aging_evidence",
     summary: "Governed computational evidence package for fragment-inheritance aging models.",
   },
   {
     id: "zenodo-21830386",
-    title: "XenoDisorder: bounded PTM-aware disorder scoring with exact modified-row evidence",
+    title: "XenoDisorder: bounded PTM-aware disorder scoring with exact modified-row evidence and a standalone local software surface",
     authors: "Lee, Byron",
-    journal_or_arxiv: "Zenodo / BioBitWorks (2026)",
+    journal_or_arxiv: "Zenodo / BioBitWorks (Aug 2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21830386",
+    version_note: "August 2026 Package Release",
     knowledge_fco_id: "fco:zenodo_21830386_xenodisorder_ptm_scoring",
     summary: "PTM-aware protein disorder scoring surface with exact modified-row evidence tracking.",
   },
@@ -61,6 +73,7 @@ export const PREPRINTS: readonly PreprintedPaper[] = [
     authors: "Lee, Byron",
     journal_or_arxiv: "Zenodo (2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21210575",
+    version_note: "Protocol Specification v1",
     knowledge_fco_id: "fco:zenodo_21210575_governed_pipeline_protocol",
     summary: "Data pipeline governance and cryptographic hash verification rules.",
   },
@@ -70,6 +83,7 @@ export const PREPRINTS: readonly PreprintedPaper[] = [
     authors: "Lee, Byron",
     journal_or_arxiv: "Zenodo (2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21421298",
+    version_note: "Architecture Release",
     knowledge_fco_id: "fco:zenodo_21421298_hydradb_context_iceberg",
     summary: "Graph memory model and Context Iceberg visualization layers.",
   },
@@ -79,8 +93,39 @@ export const PREPRINTS: readonly PreprintedPaper[] = [
     authors: "Lee, Byron",
     journal_or_arxiv: "Zenodo (2026)",
     doi_or_url: "https://doi.org/10.5281/zenodo.21421000",
+    version_note: "Companion Verification Protocol",
     knowledge_fco_id: "fco:zenodo_21421000_vithia_model_verification",
     summary: "Model verification protocol and turn log execution receipts.",
+  },
+  {
+    id: "zenodo-21382831",
+    title: "BioBridge Pipeline & Custody Verification Foundations",
+    authors: "Lee, Byron",
+    journal_or_arxiv: "Zenodo (2026)",
+    doi_or_url: "https://doi.org/10.5281/zenodo.21382831",
+    version_note: "BioBridge Baseline Version",
+    knowledge_fco_id: "fco:zenodo_21382831_biobridge_foundations",
+    summary: "Foundational verification methods for bio-computational execution chains.",
+  },
+  {
+    id: "zenodo-18109862",
+    title: "Self/Non-Self Context Perturbation Dynamics in Graph Memory",
+    authors: "Lee, Byron",
+    journal_or_arxiv: "Zenodo (2025)",
+    doi_or_url: "https://doi.org/10.5281/zenodo.18109862",
+    version_note: "Early Dynamics Release",
+    knowledge_fco_id: "fco:zenodo_18109862_context_perturbation_dynamics",
+    summary: "Initial formulation of self/non-self context dynamics under memory perturbations.",
+  },
+  {
+    id: "zenodo-17992450",
+    title: "Fractal Knowledge Representation in Bio-AI Systems",
+    authors: "Lee, Byron",
+    journal_or_arxiv: "Zenodo (2025)",
+    doi_or_url: "https://doi.org/10.5281/zenodo.17992450",
+    version_note: "Initial Concept Preprint",
+    knowledge_fco_id: "fco:zenodo_17992450_fractal_knowledge_representation",
+    summary: "Foundational preprint establishing fractal structures for content-addressed knowledge trees.",
   },
   {
     id: "ensslin-weig-2010",
@@ -139,6 +184,22 @@ export const HUGGINGFACE_MODELS: readonly HuggingFaceModelCard[] = [
     knowledge_fco_id: "fco:atom_classification_anticube_receipt_v1",
     description: "Anticube classifier model assigning SAFE/ADMIT vs NONSAFE/QUARANTINE labels to graph edges.",
   },
+] as const;
+
+export const HACKATHON_AND_COMMUNITY_PROJECTS: readonly CommunityProject[] = [
+  { name: "Glasswork", url: "https://glasswork.butterbase.dev/#demo", category: "Hackathon Demo", description: "Glasswork interactive demo surface." },
+  { name: "BioBridge Pipeline", url: "https://biobridge-pipeline.kylon.app/final-demo", category: "Hackathon Demo", description: "BioBridge pipeline final demo." },
+  { name: "VoiceWorks", url: "https://voiceworks-ygitm4zl.sauna.new", category: "Hackathon Demo", description: "VoiceWorks interactive web app." },
+  { name: "BioCustody", url: "https://biocustody-n6iqdjsn.sauna.new", category: "Hackathon Demo", description: "BioCustody verification demo." },
+  { name: "FoldSense AI Studio", url: "https://foldsense.ai.studio/", category: "Hackathon Demo", description: "FoldSense protein structural AI environment." },
+  { name: "Cellico.Bio", url: "https://cellico.bio/", category: "My Project", description: "Building Bio x AI and Bay Area community lab infrastructure." },
+  { name: "Infinite Velocity", url: "https://infinitevelocity.bioviz.tech/", category: "My Project", description: "BioViz visualization platform." },
+  { name: "BioViz Tech", url: "https://bioviz.tech/", category: "My Project", description: "Bio-computational rendering and analytics." },
+  { name: "BioViz Luma", url: "https://luma.com/bioviz", category: "Active Event", description: "BioViz events on Luma." },
+  { name: "Biopunk S26 Showcase", url: "https://luma.com/biopunk-s26-showcase", category: "Active Event", description: "Biopunk Summer 2026 Showcase." },
+  { name: "Biopunk Fireside Chat", url: "https://luma.com/biopunk-fireside-chat", category: "Active Event", description: "Biopunk Fireside Chat event." },
+  { name: "Edison Scientific", url: "https://edisonscientific.com/", category: "Previous Work", description: "Scientific platform development." },
+  { name: "Walter Lab (UCSF)", url: "https://walterlab.ucsf.edu/", category: "Previous Work", description: "UCSF Walter Lab research." },
 ] as const;
 
 export const AUTHOR_AUTHORITY = {
