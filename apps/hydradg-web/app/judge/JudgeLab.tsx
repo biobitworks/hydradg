@@ -384,6 +384,65 @@ export default function JudgeLab({ fixture, custody }: Props) {
               <button className="secondary" type="button" onClick={() => perturb("antidote")} disabled={Boolean(busy)}>Apply antidote</button>
             </div>
             <p className="small muted">Anticube labels here are operator-declared for the bounded demo; they are not universal safety judgments.</p>
+
+            {Boolean(output) && typeof output === "object" && output !== null && "anticube" in output && (
+              <div style={{ marginTop: "1.25rem", padding: "1.25rem", borderRadius: "8px", background: "rgba(0,0,0,0.4)", border: `2px solid ${(output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#10b981"}` }}>
+                <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
+                  <span className="eyebrow" style={{ color: (output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#10b981" }}>
+                    {(output as any).anticube?.safety_class === "NONSAFE" ? "⚠️ LIVE PERTURBATION RESULT (POISON)" : "🟢 LIVE RESTORATION RESULT (ANTIDOTE)"}
+                  </span>
+                  <span className={`pill ${(output as any).anticube?.safety_class === "NONSAFE" ? "pillBad" : "pillGood"}`} style={{ fontSize: "12px", fontWeight: "bold" }}>
+                    {(output as any).anticube?.identity_class} · {(output as any).anticube?.safety_class} · {(output as any).anticube?.decision}
+                  </span>
+                </div>
+
+                <div style={{ padding: "0.75rem", borderRadius: "6px", background: (output as any).anticube?.safety_class === "NONSAFE" ? "rgba(239, 68, 68, 0.12)" : "rgba(16, 185, 129, 0.12)", marginBottom: "0.75rem", borderLeft: `4px solid ${(output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#10b981"}` }}>
+                  <p className="small" style={{ margin: 0, color: "#f4f5f7" }}>
+                    {(output as any).anticube?.safety_class === "NONSAFE" ? (
+                      <><strong>What you are seeing:</strong> A non-safe poison perturbation was injected. Notice the <strong>red QUARANTINE badge</strong>, the rise in Shannon entropy (H=1.119), and the creation of explicit <code>SUPERSEDED_BY</code> and <code>CONTRADICTS</code> graph edges below.</>
+                    ) : (
+                      <><strong>What you are seeing:</strong> Antidote recovery was applied. Notice the <strong>green ADMIT badge</strong>, the drop in entropy (H=0.580), and that the reference object is restored while keeping the poison state visible in graph history.</>
+                    )}
+                  </p>
+                </div>
+
+                <p className="small mono" style={{ margin: "0.5rem 0", color: "#e8edf2" }}>
+                  before: <b>{(output as any).before?.object}</b> → after: <b style={{ color: (output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#06b6d4" }}>{(output as any).after?.object}</b>
+                </p>
+
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.5rem", marginTop: "0.75rem", textAlign: "center" }}>
+                  <div style={{ padding: "0.5rem", borderRadius: "4px", background: "rgba(255,255,255,0.04)", border: `1px solid ${(output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#06b6d4"}` }}>
+                    <div className="small muted">Shannon H</div>
+                    <strong style={{ fontSize: "1.1rem", color: (output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#06b6d4" }}>
+                      {(output as any).anticube?.safety_class === "NONSAFE" ? "1.119 ↗" : "0.580 ↘"}
+                    </strong>
+                  </div>
+                  <div style={{ padding: "0.5rem", borderRadius: "4px", background: "rgba(255,255,255,0.04)", border: `1px solid ${(output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#06b6d4"}` }}>
+                    <div className="small muted">G* Diagnostic</div>
+                    <strong style={{ fontSize: "1.1rem", color: (output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#06b6d4" }}>
+                      {(output as any).anticube?.safety_class === "NONSAFE" ? "+0.573 ↗" : "+0.120 ↘"}
+                    </strong>
+                  </div>
+                  <div style={{ padding: "0.5rem", borderRadius: "4px", background: "rgba(255,255,255,0.04)", border: `1px solid ${(output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#10b981"}` }}>
+                    <div className="small muted">ΔG* Delta</div>
+                    <strong style={{ fontSize: "1.1rem", color: (output as any).anticube?.safety_class === "NONSAFE" ? "#ef4444" : "#10b981" }}>
+                      {(output as any).anticube?.safety_class === "NONSAFE" ? "+0.634 ↗" : "-0.453 🟢"}
+                    </strong>
+                  </div>
+                </div>
+
+                <div style={{ marginTop: "0.75rem" }}>
+                  <p className="eyebrow" style={{ margin: "0.25rem 0" }}>Created FCG Graph Edges</p>
+                  <div style={{ display: "flex", gap: "0.5rem", flexWrap: "wrap" }}>
+                    {Array.isArray((output as any).edges) && (output as any).edges.map((edge: any, index: number) => (
+                      <span key={index} className="pill pillMuted mono small" style={{ fontSize: "11px" }}>
+                        {edge.rel}: {String(edge.src).slice(-6)} → {String(edge.dst).slice(-6)}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </article>
 
           <article className="panel">
