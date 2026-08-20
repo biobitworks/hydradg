@@ -1,0 +1,21 @@
+{
+  "claim_ceiling": "COLUMNAR_HASH_DEDUPLICATION_PROJECTION_ONLY",
+  "compression_metrics": {
+    "sentence_level_dedup_percentage": 42.1,
+    "word_level_dedup_percentage": 68.4
+  },
+  "deduplicated_counts": {
+    "hash_dictionary_sha256": "b60b266f1915581ca172a8087b76ee23c953a993ffcb966b72fe61c170a32c03",
+    "unique_level_0_word_keys": 8992941,
+    "unique_level_1_sentence_keys": 1861079
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "raw_counts": {
+    "level_0_word_leaf_atoms": 28458677,
+    "level_1_sentence_atoms": 3214299
+  },
+  "schema": "hydradg.deduplication_parquet_receipt.v1",
+  "status": "PASS",
+  "substrata_parquet_design_ref": "/Users/byron/projects/active/substrata",
+  "timestamp_unix": 1787253307
+}

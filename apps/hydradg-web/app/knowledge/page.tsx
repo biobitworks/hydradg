@@ -33,8 +33,8 @@ export default function KnowledgePage() {
       </header>
 
       <section className="metrics">
-        <div className="metric"><span className="metricLabel">Word / Token Atoms</span><strong>28,458,677</strong><span className="small muted">Level 0 field leaf hashes</span></div>
-        <div className="metric"><span className="metricLabel">Sentence / Record Atoms</span><strong>3,214,299</strong><span className="small muted">Level 1 Merkle roots</span></div>
+        <div className="metric"><span className="metricLabel">Word / Token Atoms</span><strong>28,458,677</strong><span className="small muted">8,992,941 Unique Keys (68.4% Dedup)</span></div>
+        <div className="metric"><span className="metricLabel">Sentence / Record Atoms</span><strong>3,214,299</strong><span className="small muted">1,861,079 Unique Keys (42.1% Dedup)</span></div>
         <div className="metric"><span className="metricLabel">Preprints &amp; DOIs</span><strong>{PREPRINTS.length}</strong><span className="small muted">Versioned publications</span></div>
         <div className="metric"><span className="metricLabel">Container FCOs</span><strong>503</strong><span className="small muted">Top-level FCG wrappers</span></div>
       </section>
