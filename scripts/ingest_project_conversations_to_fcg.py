@@ -1,12 +1,11 @@
 #!/usr/bin/env python3
 """Complete Repository & Conversation Ingestion Script into SeedGraph FCO nodes with Merkle Root computation.
 
-- Ingests Antigravity transcript logs & brain artifacts (implementation_plan.md, walkthrough.md)
-- Ingests all evaluation receipts in eval/hosted_migration_20260820/ & HydraDG_DaisyTrain_v0.3.7/eval/
-- Ingests all project turn files in HydraDG_DaisyTrain_v0.3.7/custody/live/turns/
-- Computes content SHA-256 digests and Gemini signature hashes
-- Calculates the NEW updated Merkle Root Hash for the FCG graph as new turns are added
-- Outputs complete unified FCO index to eval/hosted_migration_20260820/CONVERSATION_TURNS_FCO.jsonl
+Gaps Resolved:
+1. Renamed gemini_signature_hash -> gemini_provenance_hash with signature_state = "NOT_SIGNED"
+2. Turn role separation (USER_INPUT, MODEL/PLANNER_RESPONSE, SYSTEM/TOOL_CALL)
+3. Session Root Commitment (ordered_turn_fco_root_sha256, artifact_fco_root_sha256, turn_count, artifact_count, atomization_state = "PENDING")
+4. FCG Edge Topology generation (HAS_TURN, NEXT, DERIVED_FROM, HAS_ARTIFACT) written to CONVERSATION_TURNS_EDGES.jsonl
 """
 from __future__ import annotations
 import hashlib, json, os, sys
@@ -43,9 +42,18 @@ def merkle_root_hex(leaves: list[str]) -> str:
         level = nxt
     return level[0].hex()
 
+def determine_turn_role(step_type: str, step_data: dict) -> tuple[str, str]:
+    if step_type == "USER_INPUT":
+        return "HUMAN_USER", "USER_INPUT"
+    elif step_type in ("PLANNER_RESPONSE", "MODEL"):
+        return "AI_AGENT", "MODEL"
+    else:
+        return "SYSTEM", "TOOL_CALL"
+
 def ingest_complete_repository():
     print(f"=== Complete SeedGraph FCO Repository Ingestion (Conv ID: {CONVERSATION_ID}) ===")
     fco_nodes = []
+    fcg_edges = []
     seen_ids = set()
 
     def add_node(node: dict):
@@ -53,31 +61,50 @@ def ingest_complete_repository():
             seen_ids.add(node["id"])
             fco_nodes.append(node)
 
+    def add_edge(src: str, rel: str, dst: str):
+        fcg_edges.append({"src": src, "rel": rel, "dst": dst})
+
+    # Master Conversation Source Node
+    source_payload = {
+        "conversation_id": CONVERSATION_ID,
+        "agent_identity": "Antigravity/Gemini Pro",
+        "provenance": "Antigravity Local Brain Logs",
+        "license": "CC-BY-NC-ND-4.0",
+    }
+    source_fco = make_fco_node("ConversationSourceFCO", source_payload)
+    add_node(source_fco)
+
     # 1. Parse Brain Artifacts
+    artifact_ids = []
     if ANTIGRAVITY_BRAIN_DIR.exists():
         for md_file in sorted(ANTIGRAVITY_BRAIN_DIR.glob("*.md")):
             content_bytes = md_file.read_bytes()
             sha256_hash = compute_sha256(content_bytes)
-            gemini_sig = compute_sha256(f"Gemini-Pro:{CONVERSATION_ID}:{md_file.name}:{sha256_hash}".encode("utf-8"))
+            gemini_prov = compute_sha256(f"Gemini-Pro:{CONVERSATION_ID}:{md_file.name}:{sha256_hash}".encode("utf-8"))
 
             payload = {
                 "artifact_name": md_file.name,
                 "conversation_id": CONVERSATION_ID,
                 "agent_identity": "Antigravity/Gemini Pro",
                 "content_sha256": sha256_hash,
-                "gemini_signature_hash": gemini_sig,
+                "gemini_provenance_hash": gemini_prov,
+                "signature_state": "NOT_SIGNED",
                 "seedgraph_admitted": True,
                 "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
                 "license": "CC-BY-NC-ND-4.0",
                 "bytes": len(content_bytes),
             }
-            add_node(make_fco_node("BrainArtifactFCO", payload))
+            art_node = make_fco_node("BrainArtifactFCO", payload)
+            add_node(art_node)
+            artifact_ids.append(art_node["id"])
+            add_edge(art_node["id"], "DERIVED_FROM", source_fco["id"])
             print(f"Ingested Brain Artifact: {md_file.name}")
 
     # 2. Parse Transcript Logs
+    turn_ids = []
+    prev_turn_id = None
     if TRANSCRIPT_LOG.exists():
         print(f"Reading transcript log from {TRANSCRIPT_LOG}...")
-        turn_count = 0
         with TRANSCRIPT_LOG.open("r", encoding="utf-8") as f:
             for line_idx, line in enumerate(f):
                 if not line.strip():
@@ -87,24 +114,38 @@ def ingest_complete_repository():
                     step_bytes = line.encode("utf-8")
                     sha256_hash = compute_sha256(step_bytes)
                     step_type = step_data.get("type", "UNKNOWN")
-                    gemini_sig = compute_sha256(f"Gemini:{CONVERSATION_ID}:step_{line_idx}:{sha256_hash}".encode("utf-8"))
+                    actor_role, role_kind = determine_turn_role(step_type, step_data)
+                    gemini_prov = compute_sha256(f"Gemini:{CONVERSATION_ID}:step_{line_idx}:{sha256_hash}".encode("utf-8"))
 
                     payload = {
                         "step_index": line_idx,
                         "conversation_id": CONVERSATION_ID,
                         "step_type": step_type,
-                        "agent_identity": "Antigravity/Gemini Pro",
+                        "actor_role": actor_role,
+                        "role_kind": role_kind,
+                        "agent_identity": "Antigravity/Gemini Pro" if actor_role == "AI_AGENT" else actor_role,
                         "content_sha256": sha256_hash,
-                        "gemini_signature_hash": gemini_sig,
+                        "gemini_provenance_hash": gemini_prov,
+                        "signature_state": "NOT_SIGNED",
                         "seedgraph_admitted": True,
                         "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
                         "license": "CC-BY-NC-ND-4.0",
                     }
-                    add_node(make_fco_node("InTurnReceiptFCO", payload))
-                    turn_count += 1
+                    turn_node = make_fco_node("InTurnReceiptFCO", payload)
+                    add_node(turn_node)
+                    turn_ids.append(turn_node["id"])
+                    
+                    add_edge(turn_node["id"], "DERIVED_FROM", source_fco["id"])
+                    if prev_turn_id:
+                        add_edge(prev_turn_id, "NEXT", turn_node["id"])
+                    prev_turn_id = turn_node["id"]
                 except Exception as err:
                     print(f"Warning parsing line {line_idx}: {err}")
-        print(f"Ingested {turn_count} transcript turn steps.")
+        print(f"Ingested {len(turn_ids)} transcript turn steps.")
+
+    # Compute Root Commitments over Ordered Turns & Artifacts
+    ordered_turn_fco_root_sha256 = compute_sha256("\n".join(turn_ids).encode("utf-8"))
+    artifact_fco_root_sha256 = compute_sha256("\n".join(artifact_ids).encode("utf-8"))
 
     # 3. Parse Evaluation Receipts & Manifests
     eval_dirs = [
@@ -115,7 +156,7 @@ def ingest_complete_repository():
     for edir in eval_dirs:
         if edir.exists():
             for json_file in sorted(edir.rglob("*.json")):
-                if json_file.name in ("CONVERSATION_TURNS_FCO.jsonl", "UPDATED_FCG_MERKLE_ROOT.json"):
+                if json_file.name in ("CONVERSATION_TURNS_FCO.jsonl", "CONVERSATION_TURNS_EDGES.jsonl", "UPDATED_FCG_MERKLE_ROOT.json"):
                     continue
                 content_bytes = json_file.read_bytes()
                 sha256_hash = compute_sha256(content_bytes)
@@ -132,36 +173,20 @@ def ingest_complete_repository():
                 eval_count += 1
     print(f"Ingested {eval_count} evaluation receipt files.")
 
-    # 4. Parse Project Turn Files
-    turns_dir = PROJECT_ROOT / "HydraDG_DaisyTrain_v0.3.7" / "custody" / "live" / "turns"
-    turns_count = 0
-    if turns_dir.exists():
-        for turn_file in sorted(turns_dir.glob("*.txt")):
-            content_bytes = turn_file.read_bytes()
-            sha256_hash = compute_sha256(content_bytes)
-            role = "TURN_INPUT" if "input" in turn_file.name else "TURN_OUTPUT"
-            payload = {
-                "turn_filename": turn_file.name,
-                "role": role,
-                "content_sha256": sha256_hash,
-                "seedgraph_admitted": True,
-                "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
-                "license": "CC-BY-NC-ND-4.0",
-                "bytes": len(content_bytes),
-            }
-            add_node(make_fco_node("ProjectTurnFCO", payload))
-            turns_count += 1
-    print(f"Ingested {turns_count} project turn files.")
-
-    # 5. Calculate Updated FCG Merkle Root
+    # 4. Create Session Master Root with Root Commitment
     leaf_shas = sorted([node["object_sha256"] for node in fco_nodes])
     updated_fcg_merkle_root = merkle_root_hex(leaf_shas)
 
-    # 6. Create Session Master Root
     session_payload = {
         "conversation_id": CONVERSATION_ID,
         "agent_identity": "Antigravity/Gemini Pro",
         "total_fco_nodes": len(fco_nodes),
+        "turn_count": len(turn_ids),
+        "artifact_count": len(artifact_ids),
+        "ordered_turn_fco_root_sha256": ordered_turn_fco_root_sha256,
+        "artifact_fco_root_sha256": artifact_fco_root_sha256,
+        "atomization_state": "PENDING",
+        "signature_state": "NOT_SIGNED",
         "seedgraph_admitted": True,
         "hydradb_ingest_source": "app_source=github",
         "fcg_merkle_root": updated_fcg_merkle_root,
@@ -170,20 +195,27 @@ def ingest_complete_repository():
     session_node = make_fco_node("SessionConversationFCO", session_payload)
     add_node(session_node)
 
-    # Re-calculate final root including master node
+    for tid in turn_ids:
+        add_edge(session_node["id"], "HAS_TURN", tid)
+    for aid in artifact_ids:
+        add_edge(session_node["id"], "HAS_ARTIFACT", aid)
+
     final_shas = sorted([node["object_sha256"] for node in fco_nodes])
     final_fcg_root = merkle_root_hex(final_shas)
 
     print(f"\n=======================================================")
     print(f"UPDATED FCG MERKLE ROOT: {final_fcg_root}")
+    print(f"Ordered Turn FCO Root SHA: {ordered_turn_fco_root_sha256}")
     print(f"=======================================================\n")
 
-    # Save Merkle Root Receipt
     merkle_receipt = {
         "schema": "hydradg.updated_fcg_merkle_root.v1",
         "conversation_id": CONVERSATION_ID,
         "total_fco_nodes": len(fco_nodes),
+        "total_fcg_edges": len(fcg_edges),
         "updated_fcg_merkle_root": final_fcg_root,
+        "ordered_turn_fco_root_sha256": ordered_turn_fco_root_sha256,
+        "artifact_fco_root_sha256": artifact_fco_root_sha256,
         "baseline_t3_root": "d38c6cd8318fbfd1eb47d2064b0b2d72e5c5018ef69c1c90e3d5688ab1429ec1",
         "merkle_evolution_state": "UPDATED_UPON_NEW_TURN_INGESTION",
         "license": "CC-BY-NC-ND-4.0",
@@ -196,8 +228,15 @@ def ingest_complete_repository():
         for node in fco_nodes:
             f.write(json.dumps(node) + "\n")
 
+    out_edges = out_dir / "CONVERSATION_TURNS_EDGES.jsonl"
+    with out_edges.open("w", encoding="utf-8") as f:
+        for edge in fcg_edges:
+            f.write(json.dumps(edge) + "\n")
+
     out_merkle = out_dir / "UPDATED_FCG_MERKLE_ROOT.json"
     out_merkle.write_text(json.dumps(merkle_receipt, indent=2, sort_keys=True) + "\n")
+    print(f"Saved nodes to {out_jsonl}")
+    print(f"Saved edges ({len(fcg_edges)} edges) to {out_edges}")
     print(f"Saved receipt to {out_merkle}")
 
 if __name__ == "__main__":
