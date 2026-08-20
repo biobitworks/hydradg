@@ -1,0 +1,173 @@
+{
+  "claim_ceiling": "CONTEXT_DRIFT_DIAGNOSTIC_ONLY",
+  "hydradb_projection_root": "projected_nodes=9,projected_edges=8",
+  "hydradb_traceability_canary": "PASS",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "project_fcg_root": "experiment:fa170ab51cdfba46f9a24979c9be9b90fdc4ccedcdb292f313aa4439a92b08d8",
+  "scene": {
+    "links": [
+      {
+        "relation": "EVALUATED_ON",
+        "source": "node_source_longmemeval",
+        "target": "node_matrix_2x2"
+      },
+      {
+        "relation": "PROPOSED_HYPOTHESIS",
+        "source": "node_matrix_2x2",
+        "target": "node_m1_qwen25_coder"
+      },
+      {
+        "relation": "PROPOSED_HYPOTHESIS",
+        "source": "node_matrix_2x2",
+        "target": "node_m2_qwen25"
+      }
+    ],
+    "nodes": [
+      {
+        "access": "PUBLIC_BENCHMARK",
+        "context_drift": {
+          "cloud_drift_0_100": 0.0,
+          "delta_g_star": 0.0,
+          "scope": "STATE_INHERITED"
+        },
+        "id": "node_source_longmemeval",
+        "label": "LongMemEval full500 Source",
+        "payload": {
+          "bytes": 277383467,
+          "sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+        },
+        "t": 0,
+        "x": 0.0,
+        "y": 10.0,
+        "z": 0.0
+      },
+      {
+        "access": "DETERMINISTIC_REPLICATE_MATRIX",
+        "context_drift": {
+          "cloud_drift_0_100": 0.0,
+          "delta_g_star": -0.0547,
+          "scope": "STATE_INHERITED"
+        },
+        "id": "node_matrix_2x2",
+        "label": "2x2 RAW vs SeedGraph Matrix",
+        "payload": {
+          "comparison_root": "3e29c925fee796cda8aa47c066fbf07cd92d46d2b9eb7c6572a0eb8180685358"
+        },
+        "t": 1,
+        "x": -5.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      {
+        "access": "PROBABILISTIC_MODEL_OUTPUT",
+        "context_drift": {
+          "cloud_drift_0_100": 0.0,
+          "delta_g_star": -0.0779,
+          "scope": "STATE_INHERITED"
+        },
+        "id": "node_m1_qwen25_coder",
+        "label": "Model M1 (qwen2.5-coder:7b)",
+        "payload": {
+          "consensus": "DEPTH_RECOVERY",
+          "forecast": "LOWER_G_STAR"
+        },
+        "t": 2,
+        "x": 5.0,
+        "y": -5.0,
+        "z": 0.0
+      },
+      {
+        "access": "PROBABILISTIC_MODEL_OUTPUT",
+        "context_drift": {
+          "cloud_drift_0_100": 0.0,
+          "delta_g_star": -0.0779,
+          "scope": "STATE_INHERITED"
+        },
+        "id": "node_m2_qwen25",
+        "label": "Model M2 (qwen2.5:7b)",
+        "payload": {
+          "consensus": "DEPTH_RECOVERY",
+          "forecast": "LOWER_G_STAR"
+        },
+        "t": 2,
+        "x": 10.0,
+        "y": -5.0,
+        "z": 0.0
+      }
+    ]
+  },
+  "schema": "hydradg.context_iceberg.ui.v1",
+  "signature_state": "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION",
+  "source_state": "LIVE_CUSTODY_ARTIFACT",
+  "timeline": [
+    {
+      "burden": 0.0,
+      "delta_g_star": 0.0,
+      "delta_hit_at_k": 0.0,
+      "delta_recall_at_k": 0.0,
+      "distribution": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "g_star": -0.2669,
+      "label": "RAW K=5 Reference",
+      "mutation_distance": 0.0,
+      "normalized_entropy": 1.0,
+      "restoration_gain": 0.0,
+      "shannon_entropy": 3.0,
+      "t": 0
+    },
+    {
+      "burden": 0.1228,
+      "delta_g_star": -0.0547,
+      "delta_hit_at_k": 0.0255,
+      "delta_recall_at_k": 0.0767,
+      "distribution": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "g_star": -0.3216,
+      "label": "RAW K=10 Matrix Run",
+      "mutation_distance": 0.0,
+      "normalized_entropy": 1.0,
+      "restoration_gain": 0.0767,
+      "shannon_entropy": 3.0,
+      "t": 1
+    },
+    {
+      "burden": 0.1958,
+      "delta_g_star": -0.0779,
+      "delta_hit_at_k": 0.0404,
+      "delta_recall_at_k": 0.1122,
+      "distribution": [
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125,
+        0.125
+      ],
+      "g_star": -0.3448,
+      "label": "Prospective K=15 Held-Out Run",
+      "mutation_distance": 0.0,
+      "normalized_entropy": 1.0,
+      "restoration_gain": 0.1122,
+      "shannon_entropy": 3.0,
+      "t": 2
+    }
+  ]
+}
