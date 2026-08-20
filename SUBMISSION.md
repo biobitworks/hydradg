@@ -8,7 +8,8 @@
 - **Judge / release branch:** `main`
 - **Repository visibility:** **PUBLIC — verified through GitHub repository metadata during final review**
 - **Custody-repair checkpoint:** `5ac81968ba5bdd5d7e71a1ff29deabeb416b7182`
-- **Final tested release commit:** `PENDING_EXACT_HEAD_GATE` — replace with the exact `main` SHA after build/typecheck/route/Gitleaks gates complete
+- **Final tested release commit:** the exact `main` HEAD containing this document after the final post-merge gates pass; resolve it with `git rev-parse HEAD` or the GitHub Actions run metadata. A Git commit cannot embed its own final SHA without changing that SHA.
+- **Pre-merge release-gate candidate:** `cc7043d20fafced4623c109bd7baab3ecf9f1d35` — PR merge-ref Judge Lab and reviewed full-history Gitleaks gates passed before this documentation update; this is provenance, not the final release SHA.
 - **Demo video URL:** https://youtu.be/7EDb6q-loPA
 - **Demo video verification:** URL present; duration and unauthenticated accessibility require external verification before human submission
 - **Superseded demo video URL:** https://youtu.be/tKWRmYZ3HCs
@@ -193,6 +194,12 @@ A license metadata correction does not mutate historical publication/package byt
 
 Hash identity is not scientific correctness. Provenance is not independent replication. HydraDB projection is not benchmark superiority.
 
+### Full-history secret-scan policy
+
+Gitleaks keeps its built-in default rules enabled. The repository `.gitleaks.toml` contains only narrow path-specific exceptions for provenance-reviewed non-secret material: content-addressed SeedGraph cache identifiers, vendored dependency/test identifiers, explicitly non-authenticating toy-seal fixtures with intentionally disclosed toy keys, generated SHA-256 manifests, and one historical Modal `ak-*` token ID record. Modal documents `ak-*` as the token ID and a separate `as-*` value as the token secret; the exception is exact to that historical file and does not allowlist logs generally.
+
+A Gitleaks PASS therefore means **zero findings outside those reviewed exceptions under the pinned scanner/configuration**. It does not establish that no secret could exist under every possible detector.
+
 ---
 
 ## 9. Final Release Gates
@@ -211,7 +218,7 @@ FULL_HISTORY_GITLEAKS=PASS
 LICENSING_CONSISTENCY=PASS
 ```
 
-A historical CI run or secret scan cannot establish these gates for a newer SHA.
+A historical CI run or secret scan cannot establish these gates for a newer SHA. Pull-request merge-ref gates are admission evidence; after merge, both Judge Lab and Gitleaks must pass again on the actual `main` commit before that SHA is frozen.
 
 ---
 
@@ -220,7 +227,8 @@ A historical CI run or secret scan cannot establish these gates for a newer SHA.
 | Required deliverable | Current status | Completion evidence required |
 |---|---|---|
 | Public GitHub repository | **PASS — public `biobitworks/hydradg`, default branch `main`** | recheck at final freeze |
-| Exact-head repository release gates | **PENDING** | build/typecheck/routes/Gitleaks on exact final `main` SHA |
+| Pre-merge repository release gates | **PASS on candidate before this documentation update** | final candidate rerun after this change |
+| Exact final-main repository release gates | **PENDING** | post-merge Judge Lab + Gitleaks on actual final `main` SHA |
 | Demo video ≤ 3 minutes | **URL PRESENT — external verification pending** | duration ≤ 3:00 + unauthenticated access |
 | Submission form | **PENDING — human submission required** | submitted-form confirmation/receipt |
 
