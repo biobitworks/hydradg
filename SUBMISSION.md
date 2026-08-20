@@ -1,26 +1,42 @@
-# Hack Hydra 2026 — Official Submission Document
+# Hack Hydra 2026 — Submission Document
 
 ## 1. Project Information
-- **Project Name**: HydraDG — Graph-Native Governed Context Engine
-- **Track**: Track 03 (HydraMemory / Memory + Context Retrieval) & Track 01 (HydraOntology) & Track 02 (HydraBlast)
-- **Repository**: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg)
-- **Release Branch**: `hack-hydra/public-product-final-20260819`
-- **Release Commit**: `25326727165f0d3f6eefac54425fa1e7042dea8f`
+
+- **Project Name:** HydraDG — Graph-Native Governed Context Engine
+- **Primary Track:** Track 03 — Memory + Context Retrieval
+- **Repository:** https://github.com/biobitworks/hydradg
+- **Release Branch:** `hack-hydra/public-product-final-20260819`
+- **Custody-repair checkpoint:** `5ac81968ba5bdd5d7e71a1ff29deabeb416b7182`
+- **Final public-release commit:** PENDING_FINAL_FREEZE
+- **Demo video URL:** PENDING_UPLOAD
+- **Submission form:** PENDING_HUMAN_SUBMISSION
+
+A complete submission requires three items: a public GitHub repository, a demo video of 3 minutes or less, and the submission form. The local interactive product is used to record the video; a public live website is not required for the supplied submission requirement.
 
 ---
 
-## 2. Problem Statement
-Ordinary AI memory and context retrieval systems overwrite, flatten, or silently mutate historical state over time. When context updates occur, un-governed systems obscure contradictions, lose provenance, and swallow negative or null experimental outcomes.
+## 2. Problem
+
+Long-lived AI memory systems can flatten or overwrite changing state. When facts are updated, contradicted, or restored, provenance can become difficult to reconstruct and null/negative experimental outcomes can disappear from the operational narrative.
 
 ---
 
-## 3. Solution Overview
-HydraDG introduces a governed context engine built on top of **HydraDB**. Immutable evidence units are stored as **First-Class Objects (FCOs)** in a directed acyclic **First-Class Graph (FCG)** custody graph. Every state change preserves complete historical provenance, supersession edges, contradiction links, and experimental outcomes.
+## 3. Solution
+
+HydraDG is a governed memory/context system built on HydraDB and Fractal Custody Objects / Fractal Custody Graphs (FCO/FCG).
+
+- **FCO — Fractal Custody Object:** a bounded custody object carrying identity, provenance, evidence class, and claim boundaries.
+- **FCG — Fractal Custody Graph:** the dependency/relationship graph connecting sources, transformations, derived evidence, claims, and artifacts.
+- **HydraDB:** the queryable graph projection used for traversal, retrieval, temporal state, contradiction, and provenance lookup.
+
+The canonical custody objects remain the source of identity; HydraDB is a projection/query substrate rather than a replacement for canonical FCO identity.
 
 ---
 
-## 4. Meaningful HydraDB Usage
-HydraDB is the load-bearing query, vector, and relational projection substrate behind HydraDG. It executes real-time graph traversals across:
+## 4. Meaningful HydraDB Use
+
+The Track 03 implementation materializes longitudinal memory relationships including:
+
 ```text
 Session ─NEXT/PREV→ Session
 Session ─ASSERTS→ Fact
@@ -29,27 +45,130 @@ Fact ─ABOUT→ Entity
 Fact ─SUPERSEDED_BY→ Fact
 Fact ─CONTRADICTS→ Fact
 ```
-Without HydraDB, the system loses the traversable relationship state used to reconstruct chronology, provenance, current state, contradiction, and blast radius.
+
+These relationships support reconstruction of chronology, provenance, current state, contradiction, and evidence paths.
+
+The local submission demo uses the pinned local HydraDB integration. Hosted HydraDB/Vercel deployment is optional and is not required for the supplied submission requirement.
 
 ---
 
-## 5. Measured Results (Track 03 Benchmark)
-- **Dataset**: `xiaowu0162/longmemeval-cleaned` (500 full cases, 23,867 sessions, 4,776 entities, 3,506 facts).
-- **Determinism Gate**: 100% bit-for-bit replicate equality across $2 \times 2$ matrix cells ($H_{0,\text{rep}}$ PASS).
-- **Prospective Depth ($K=15$)**: $G^* = -0.3448$, $\text{Hit}@15 = 0.9851$, $\text{Recall}@15 = 0.9582$ ($\Delta \text{Recall} = +11.2\text{ pp}$).
-- **Claim Discipline**: Original full500 negative/neutral retrieval baseline preserved without claim inflation.
+## 5. Executed Track 03 Evidence
+
+Dataset: `xiaowu0162/longmemeval-cleaned`
+
+Executed graph scale:
+
+- **500 cases**
+- **23,867 sessions**
+- **4,776 entities**
+- **3,506 facts**
+- **470 retrieval-scored cases**; 30 abstentions excluded from retrieval scoring
+
+Completed K=5 ablation:
+
+| Route | Hit@5 | Recall@5 | Interpretation |
+|---|---:|---:|---|
+| A — reference/flat route | 0.9638297872 | 0.9065957447 | reference |
+| B | 0.9468085106 | 0.8538297872 | no positive hit-rate signal |
+| C | 0.9468085106 | 0.85258865 | no positive hit-rate signal |
+| D | 0.94468085 | 0.84602837 | no positive hit-rate signal |
+
+The completed experiment did **not** establish a positive B/C/D hit-rate advantage over route A at the tested configuration. Evidence-path coverage increased for graph-native routes while retrieval recall declined. HydraDG preserves that null/negative result instead of promoting a preferred treatment.
+
+**Claim ceiling:** `LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA`
+
+Separate later local E2E/depth observations may be retained in the evidence graph, but they are not used here to claim benchmark superiority or end-to-end QA improvement.
 
 ---
 
-## 6. Live Product & Judge Walkthrough
-- **Local / Developer Demo**: `http://127.0.0.1:3012/`
-- **Judge Flow**: `/` (Overview) $\to$ `/judge` (Poison/Antidote) $\to$ `/track03` (Results) $\to$ `/graph` (Lineage) $\to$ `/evidence` (FCO Inspector) $\to$ `/knowledge` (KB) $\to$ `/how-to` (Guide) $\to$ `/eligibility` (Custody)
-- **Static Presentation Fallback**: `http://127.0.0.1:3012/backup/hydradg.html`
+## 6. Local Demo Used for the Video
+
+Local product:
+
+`http://127.0.0.1:3012/`
+
+Judge/video flow:
+
+```text
+Overview
+→ Judge Demo: Reference → Poison → Antidote
+→ Track 03 Results
+→ 4D FCG / Context Iceberg
+→ select one FCO
+→ source / transformation / evidence / claim ceiling
+→ Knowledge Base / How-To
+→ custody state
+```
+
+The demo is powered by the local HydraDB test server. The recording must show the working local product; judges do not need network access to the local URL.
+
+Static local fallback:
+
+`http://127.0.0.1:3012/backup/hydradg.html`
+
+The fallback must remain labeled `STATIC FALLBACK — NOT LIVE HYDRADB`.
 
 ---
 
-## 7. Custody Roots & Claim Boundaries
-- **Project FCG Root**: `experiment:fa170ab51cdfba46f9a24979c9be9b90fdc4ccedcdb292f313aa4439a92b08d8`
-- **HydraDB Projection Root**: `projected_nodes=9,projected_edges=8`
-- **Chrome Screenshot Manifest SHA-256**: `55adcc1df04dd8e9a6a1fdc7b24f0654e8f3a68dd005c09e25d49425f79d7734`
-- **Claim Ceiling**: `PUBLIC_PRODUCT_DEPLOYMENT_AND_HYDRADB_TRACEABILITY_ONLY`
+## 7. G* / ΔG* Source Lineage
+
+HydraDG's `G*` / `ΔG*` visualization is an **application-defined, dimensionless information-state diagnostic**.
+
+Source lineage is separated by role:
+
+```text
+Enßlin & Weig (2010)
+→ information-field/Gibbs-free-energy inference analogy
+→ HydraDG design rationale
+→ application-defined G*
+→ ΔG*
+
+Lin (1991)
+→ Jensen-Shannon divergence
+→ Cloud Drift
+```
+
+HydraDG `G*` is not physical Gibbs free energy, is not measured in joules or kcal/mol, and is not asserted to be identical to the Enßlin–Weig information-field functional. Lower `G*` does not by itself imply better Hit@K, Recall@K, or QA accuracy.
+
+The custody-repair branch contains the Enßlin–Weig source FCO, atomized source claims, the separate HydraDG design FCO, and the local HydraDB lineage canary receipt.
+
+---
+
+## 8. Custody and Claim Boundaries
+
+Current supplied custody state includes:
+
+- Enßlin & Weig source PDF SHA-256: `3ed1f288ac8b3f48f16833bea57d2c464d9d75da1c8d832ef13da6013ff90ab4`
+- Source FCO: `fco:source:ensslin_weig_2010:3ed1f288ac8b3f48`
+- HydraDG G* design FCO: `fco:design:hydradg_gstar:f4a7e547f4a380c2`
+- Local HydraDB Gibbs-lineage canary: `PASS`
+- Signature state: `PENDING_EXTERNAL_PRIVATE_KEY_OPERATION` unless a later authorized signing receipt exists
+- Merkle/MMR state: `NOT_PROJECT_COMMITTED` unless a later commitment receipt exists
+
+Hash identity is not scientific correctness. Provenance is not independent replication. HydraDB projection is not benchmark superiority.
+
+---
+
+## 9. Required Submission Status
+
+| Required deliverable | Current status | Completion evidence required |
+|---|---|---|
+| Public GitHub repository | **PENDING — repository visibility must be verified public** | unauthenticated public repository access |
+| Demo video ≤ 3 minutes | **PENDING — recording/upload required** | final video URL + duration check |
+| Submission form | **PENDING — human submission required** | submitted-form confirmation/receipt |
+
+`SUBMISSION_READY=YES` only when all three required deliverables have actual completion evidence.
+
+---
+
+## 10. Final Human Attestations
+
+Before submitting, confirm:
+
+- final team roster and roles;
+- originality/reuse disclosure;
+- one-submission-per-team-member rule;
+- final links work without the submitter's authenticated session;
+- claims match their evidence ceilings;
+- rules/code-of-conduct confirmation;
+- repository, video, and form were all submitted before the deadline.
