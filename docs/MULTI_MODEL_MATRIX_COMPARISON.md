@@ -1,12 +1,12 @@
-# Multi-Model x Multi-Dataset Matrix Comparison Architecture
+# Multi-Model x Multi-Dataset Matrix Comparison Architecture (with Qwen 3 in Ollama)
 
-This document specifies HydraDG's **Multi-Model x Multi-Dataset Matrix Comparison Architecture**, evaluating 5 LLM/classifier models across 10 datasets spanning Track 01, Track 02, and Track 03.
+This document specifies HydraDG's **Multi-Model x Multi-Dataset Matrix Comparison Architecture**, evaluating **7 LLM/classifier models** across 10 datasets spanning Track 01, Track 02, and Track 03.
 
 ---
 
 ## 1. Matrix Overview & Evaluation Dimensions
 
-The evaluation matrix evaluates $5 \times 10 = 50$ discrete evaluation cells. Each cell evaluates:
+The evaluation matrix evaluates $7 \times 10 = 70$ discrete evaluation cells. Each cell evaluates:
 1. **Context State Metrics**: Shannon Entropy ($H$), Free-Energy Diagnostic ($G^*$), Free-Energy Delta ($\Delta G^*$), and Jensen-Shannon Cloud Drift.
 2. **Information Energy Savings ($\Delta E_{\text{compute}}$)**: FLOPs saved ($2 \times N_{\text{params}} \times \Delta N_{\text{dedup\_tokens}}$) and Watt-hours saved (~100 TFLOPS/W GPU efficiency).
 3. **Null Hypothesis Tracking**: Explicitly records whether the null hypothesis was `RETAINED` (e.g. for ablation retrieval tasks with no positive hit-rate signal) or `REJECTED` (e.g. for context secret classification tasks).
@@ -14,13 +14,15 @@ The evaluation matrix evaluates $5 \times 10 = 50$ discrete evaluation cells. Ea
 
 ---
 
-## 2. Evaluated Models (5 Target Models)
+## 2. Evaluated Models (7 Target Models)
 
 1. **Vithia Baseline** (`hydradg-vithia-cfmo-v0.1` / `fco-vithia-fmo-076` — 7B params): Trained on Vitalogy and FCO repos, evaluated on decomposed Vitalogy FCG graph traversal.
 2. **Anticube Contradiction Classifier** (`hydradg-anticube-classifier` — 3B params): Assigns `SAFE`/`ADMIT` vs `NONSAFE`/`QUARANTINE` labels to graph edges.
 3. **Qwen 2.5 Coder** (`qwen2.5-coder-7b` — 7B params): Code-aware transformer for repo FCG graph execution.
-4. **Phi-4 Reasoning** (`phi-4-reasoning` — 14B params): Multi-step reasoning model for temporal memory evaluation.
-5. **Ollama Standard** (`ollama-standard` — 7B params): Generalist Ollama bridge model.
+4. **Qwen 3 Coder (Ollama)** (`qwen3-coder-7b` — 7B params): Next-generation code transformer in Ollama.
+5. **Qwen 3 Reasoning (Ollama)** (`qwen3-reasoning-14b` — 14B params): Advanced multi-step reasoning model in Ollama.
+6. **Phi-4 Reasoning** (`phi-4-reasoning` — 14B params): Multi-step reasoning model for temporal memory evaluation.
+7. **Ollama Standard** (`ollama-standard` — 7B params): Generalist Ollama bridge model.
 
 ---
 
@@ -44,6 +46,6 @@ The evaluation matrix evaluates $5 \times 10 = 50$ discrete evaluation cells. Ea
 ## 4. Aggregate Matrix Performance & Receipts
 
 - **Master Matrix Receipt**: [`eval/hosted_migration_20260820/daisy_train/MULTI_MODEL_DATASET_MATRIX_RECEIPT.json`](file:///Users/byron/projects/active/hydradg/eval/hosted_migration_20260820/daisy_train/MULTI_MODEL_DATASET_MATRIX_RECEIPT.json)
-- **Total Aggregate Energy Saved**: **$1.61 \times 10^{18}$ FLOPs (~4,484.45 Watt-hours)**
+- **Total Aggregate Energy Saved**: **$2.51 \times 10^{18}$ FLOPs (~6,962.70 Watt-hours)**
 - **Public Key Signature Verification**: **100.00% Cell Signature Coverage** (`SIGNED_WITH_AUTHOR_PUBLIC_KEY`)
-- **Git Commit Hash**: `a71679e8`
+- **Git Commit Hash**: `fcfd075d`
