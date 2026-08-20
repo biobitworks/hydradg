@@ -1,12 +1,12 @@
 # HydraDG Licensing & Scope Declaration
 
-HydraDG separates software licensing from research-content licensing and preserves upstream/deposited rights **per exact object and version**.
+HydraDG separates software licensing, designated Byron P. Lee / Biobitworks research-content licensing, and third-party rights. License metadata is part of custody lineage, but it is not interchangeable with file identity, signatures, FCG roots, or scientific verification.
 
 | Category | Licensing Scope |
 |---|---|
 | **HydraDG software / website / scripts** | **Apache License, Version 2.0** ([`LICENSE`](LICENSE)) |
-| **Repository-native Byron P. Lee / Biobitworks research content not already governed by a deposited-version license** | **CC BY-NC-ND 4.0 where explicitly designated** |
-| **Previously deposited preprints / manuscripts** | **Version-specific license attached to that deposited object/record; do not retroactively narrow it** |
+| **FCO/FCG research publications and designated Byron P. Lee / Biobitworks research content** | **CC BY-NC-ND 4.0** |
+| **Earlier FCO/FCG `CC BY 4.0` references** | **SUPERSEDED_METADATA_ERROR — historical custody evidence only; not a valid version-specific exception** |
 | **HydraDB** | **Upstream HydraDB license** |
 | **LongMemEval / other datasets** | **Respective upstream dataset licenses** |
 | **External papers / templates / APIs** | **Respective upstream rights** |
@@ -17,35 +17,43 @@ Participant-authored software in this repository—including the Next.js applica
 
 See [`LICENSE`](LICENSE).
 
-## 2. Research content — preserve the license of the exact version
+## 2. FCO/FCG research content — CC BY-NC-ND 4.0
 
-Repository-native Byron P. Lee / Biobitworks narrative research text, publication-style figures, and explicitly designated research-content artifacts may be released under **CC BY-NC-ND 4.0** where that license is attached to the relevant repository object.
+The authoritative license for the FCO/FCG research publications and designated Byron P. Lee / Biobitworks research content is **CC BY-NC-ND 4.0**.
 
-That repository policy does **not** retroactively alter a license already granted on an earlier deposited/publication version.
+An earlier FCO v1 publication handoff recorded `CC BY 4.0`. That field is now treated as a **superseded historical metadata error**, not as a valid version-specific licensing exception. The historical handoff remains preserved as custody evidence of the error; it is not silently rewritten.
 
-For example, the canonical project handoff for **Fractal Custody Objects v1**, DOI `10.5281/zenodo.21210575`, records **CC BY 4.0** for the manuscript. That deposited v1 object should therefore be cited and reused under the rights attached to that version rather than under a later blanket repository label.
-
-Because publication versions can have different file sets, hashes, signatures, and rights, always bind:
+Canonical correction lineage:
 
 ```text
-publication/version
--> DOI / record
--> exact file or package identity
--> applicable deposited license
+original publication/package bytes
+        |
+        +--> historical handoff metadata
+        |      license = CC BY 4.0
+        |      state = SUPERSEDED_METADATA_ERROR
+        |
+        +--> corrected authoritative metadata
+               license = CC BY-NC-ND 4.0
+               state = CURRENT_AUTHORITATIVE_METADATA
+                       |
+                       v
+              downstream repository metadata
 ```
 
-See [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md) for the current FCO/FCG identifier/version map.
+The metadata correction does **not** change historical file bytes. Therefore an unchanged PDF SHA-256, package SHA-256, `paper_cid`, signed FCG root, public-key fingerprint, or other byte/root identity must not be recomputed merely because external license metadata was corrected.
+
+See [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md) for the identifier/version map and supersession treatment.
 
 ## 3. Software license does not absorb research or third-party content
 
 The Apache-2.0 repository software license does not relicense:
 
-- deposited preprint/manuscript content governed by its own version-specific rights;
+- FCO/FCG research publications or designated Byron P. Lee / Biobitworks research content governed by CC BY-NC-ND 4.0;
 - upstream HydraDB code or services;
 - LongMemEval or other third-party datasets;
 - external papers, figures, templates, APIs, or other third-party material.
 
-Likewise, a Creative Commons research-content license does not alter the Apache-2.0 grant on HydraDG software.
+Likewise, CC BY-NC-ND 4.0 on designated research content does not alter the Apache-2.0 grant on HydraDG software.
 
 ## 4. Upstream and third-party rights
 
@@ -57,4 +65,24 @@ For third-party details, see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
 
 ## 5. Custody boundary
 
-A license statement is metadata governing permitted use; it is not interchangeable with an FCO hash, signature, FCG root, DOI, or scientific-verification state. Where a rights statement materially affects a released object, the exact license/version should be represented in that object's lineage rather than inferred from repository-wide prose.
+A license statement is rights metadata. It is not an FCO hash, signature, FCG root, DOI, Merkle/MMR commitment, or scientific-verification result.
+
+Corrections to license metadata must be represented as successor/supersession records. Do not rewrite a historical hash-bound or signed object and then claim it always contained the corrected value.
+
+Current invariant:
+
+```text
+FCO/FCG research publications
++ designated Byron P. Lee / Biobitworks research content
+-> CC BY-NC-ND 4.0
+
+historical FCO/FCG CC BY 4.0 metadata
+-> SUPERSEDED_METADATA_ERROR
+-> preserved for custody/history only
+
+HydraDG software
+-> Apache-2.0 where declared
+
+third-party material
+-> upstream rights
+```
