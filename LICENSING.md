@@ -1,37 +1,60 @@
 # HydraDG Licensing & Scope Declaration
 
-HydraDG uses distinct licenses for software code vs research content and preserves all upstream rights:
+HydraDG separates software licensing from research-content licensing and preserves upstream/deposited rights **per exact object and version**.
 
 | Category | Licensing Scope |
 |---|---|
 | **HydraDG software / website / scripts** | **Apache License, Version 2.0** ([`LICENSE`](LICENSE)) |
-| **Byron P. Lee / Biobitworks preprints / manuscripts / authored research content** | **CC BY-NC-ND 4.0** ([`https://creativecommons.org/licenses/by-nc-nd/4.0/`](https://creativecommons.org/licenses/by-nc-nd/4.0/)) |
-| **HydraDB** | **Upstream HydraDB License** |
-| **LongMemEval / other datasets** | **Respective Upstream Dataset Licenses** |
-| **External papers / templates / APIs** | **Respective Upstream Rights** |
+| **Repository-native Byron P. Lee / Biobitworks research content not already governed by a deposited-version license** | **CC BY-NC-ND 4.0 where explicitly designated** |
+| **Previously deposited preprints / manuscripts** | **Version-specific license attached to that deposited object/record; do not retroactively narrow it** |
+| **HydraDB** | **Upstream HydraDB license** |
+| **LongMemEval / other datasets** | **Respective upstream dataset licenses** |
+| **External papers / templates / APIs** | **Respective upstream rights** |
 
----
+## 1. Software and reproducibility tooling — Apache-2.0
 
-## 1. Software and Reproducibility Tooling — Apache-2.0
+Participant-authored software in this repository—including the Next.js application, TypeScript/Python utilities, shell scripts, build configuration, GitHub Actions workflows, and software schemas—is licensed under the **Apache License, Version 2.0** unless a file or third-party notice states otherwise.
 
-All participant-authored software, Next.js web components, TypeScript code, Python utilities, shell scripts, build configurations, GitHub Actions workflows, and schemas in this repository are licensed under the **Apache License, Version 2.0** (`Apache-2.0`).
+See [`LICENSE`](LICENSE).
 
-See [`LICENSE`](LICENSE) for full terms.
+## 2. Research content — preserve the license of the exact version
 
----
+Repository-native Byron P. Lee / Biobitworks narrative research text, publication-style figures, and explicitly designated research-content artifacts may be released under **CC BY-NC-ND 4.0** where that license is attached to the relevant repository object.
 
-## 2. Research Content & Manuscripts — CC BY-NC-ND 4.0
+That repository policy does **not** retroactively alter a license already granted on an earlier deposited/publication version.
 
-Byron P. Lee / Biobitworks authored preprints, manuscripts, narrative research text, publication-style figures, and explicitly designated research-content artifacts are licensed under the **Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License** (`CC BY-NC-ND 4.0`).
+For example, the canonical project handoff for **Fractal Custody Objects v1**, DOI `10.5281/zenodo.21210575`, records **CC BY 4.0** for the manuscript. That deposited v1 object should therefore be cited and reused under the rights attached to that version rather than under a later blanket repository label.
 
-This content license does **not** restrict or modify the Apache-2.0 license on software code and reproducibility tooling.
+Because publication versions can have different file sets, hashes, signatures, and rights, always bind:
 
----
+```text
+publication/version
+-> DOI / record
+-> exact file or package identity
+-> applicable deposited license
+```
 
-## 3. Upstream & Third-Party Rights
+See [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md) for the current FCO/FCG identifier/version map.
 
-- **HydraDB**: Subject to the upstream HydraDB license and terms of service.
-- **LongMemEval & Datasets**: Subject to their respective upstream dataset licenses (e.g., `xiaowu0162/longmemeval-cleaned`).
-- **External Papers, APIs & Templates**: Retain their respective upstream licenses and terms.
+## 3. Software license does not absorb research or third-party content
 
-For complete third-party details, see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+The Apache-2.0 repository software license does not relicense:
+
+- deposited preprint/manuscript content governed by its own version-specific rights;
+- upstream HydraDB code or services;
+- LongMemEval or other third-party datasets;
+- external papers, figures, templates, APIs, or other third-party material.
+
+Likewise, a Creative Commons research-content license does not alter the Apache-2.0 grant on HydraDG software.
+
+## 4. Upstream and third-party rights
+
+- **HydraDB:** subject to the upstream HydraDB license and applicable terms.
+- **LongMemEval and other datasets:** subject to their respective upstream dataset licenses.
+- **External papers, APIs, templates, and figures:** retain their respective upstream rights.
+
+For third-party details, see [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md).
+
+## 5. Custody boundary
+
+A license statement is metadata governing permitted use; it is not interchangeable with an FCO hash, signature, FCG root, DOI, or scientific-verification state. Where a rights statement materially affects a released object, the exact license/version should be represented in that object's lineage rather than inferred from repository-wide prose.
