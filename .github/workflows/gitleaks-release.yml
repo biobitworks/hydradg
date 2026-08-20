@@ -36,12 +36,15 @@ jobs:
         run: |
           set -uo pipefail
           mkdir -p security-artifacts
+          # Preserve exhaustive rename analysis for this unusually large history.
+          git config diff.renameLimit 20000
           set +e
           docker run --rm \
             -v "$PWD:/repo" \
             -w /repo \
             ghcr.io/gitleaks/gitleaks:v8.28.0 \
             git \
+            --config /repo/.gitleaks.toml \
             --redact=100 \
             --no-banner \
             --report-format json \
