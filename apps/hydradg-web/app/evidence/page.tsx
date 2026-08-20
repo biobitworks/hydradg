@@ -1,125 +1,112 @@
 import Link from "next/link";
 
-import { RELEASE_STATUS } from "@/lib/releaseStatus";
+import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
+import { RELEASE_TIMEPOINTS } from "@/lib/releaseTimepoints";
 
-const evidence = [
-  {
-    label: "Live HydraDB structural conformance",
-    status: "PASS",
-    detail: "Pinned HydraDB executed the v2 typed-memory structural suite. Seven declared invariants passed across exact case membership, identity, supersession and contradiction construction/traversal.",
-    ceiling: "SYNTHETIC_STRUCTURAL_CONFORMANCE_ONLY",
-    href: "/track03",
-  },
+const EVIDENCE = [
   {
     label: "LongMemEval full500 typed-memory ablation",
-    status: "EXECUTED · NEGATIVE/NEUTRAL",
-    detail: "500 cases were materialized into live pinned HydraDB; 470 cases had retrieval ground truth. B, C and D returned NO_POSITIVE_HIT_RATE_SIGNAL relative to A at the tested route.",
+    status: "PASS · EXECUTED · NEGATIVE/NEUTRAL RESULT RETAINED",
+    detail: "500 cases; 23,867 sessions; 4,776 entities; 3,506 facts; 470 retrieval-scored and 30 abstentions. B/C/D did not establish a positive Hit@5 advantage over A at K=5.",
     ceiling: "LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA",
     href: "/track03",
   },
   {
-    label: "Core Track 01/03 dataset acquisition",
-    status: "DOWNLOADED · HASHED",
-    detail: "EnterpriseRAG-Bench, HERB, LongMemEval cleaned, LongMemEval-V2 core and BEAM have local acquisition identities/manifests recorded. Download identity does not establish benchmark performance or full atomization.",
-    ceiling: "LOCAL_DATASET_BYTE_IDENTITIES_AFTER_DOWNLOAD_ONLY",
-    href: "/track01",
+    label: "Context vs Entropy classification",
+    status: "PASS · EXECUTED",
+    detail: "18,567 raw findings; 18,555 context-classified; 12 abstentions; 99.9354% classification coverage. The historical Modal item remains USER_ATTESTED_REVOKED and provider_verified=false.",
+    ceiling: "CONTEXT_AWARE_SECOND_STAGE_CLASSIFICATION_NOT_GITLEAKS_REPLACEMENT",
+    href: "/results/context-vs-entropy",
   },
   {
-    label: "Total dataset atomization + FCO/FCG projection",
-    status: "IMPLEMENTED · CORPUS EXECUTION PENDING",
-    detail: "The release branch contains record-level atomization, SeedGraph bundle admission and full FCO/FCG-to-HydraDB projection tooling. Do not call the downloaded corpora FULL_STRUCTURAL_ATOMIZATION until the completeness/projection receipts execute.",
-    ceiling: "IMPLEMENTATION_STATE_ONLY_NOT_FULL_CORPUS_ATOMIZATION",
-    href: "/track01",
+    label: "Hosted canonical FCG projection/readback",
+    status: "PASS · RECEIPT RETAINED",
+    detail: "The retained hosted-migration receipt records database hydradg, collection default, 36 canonical FCOs, 24 canonical edges, root match and zero canonical FCO/edge/content-hash delta for the projected graph scope.",
+    ceiling: "HOSTED_PROJECTION_AND_READBACK_SCOPE_ONLY",
+    href: "/how-to#hosted-hydradb",
   },
   {
-    label: "Track 03 live poison → antidote release path",
-    status: "IMPLEMENTED · FRESH EXECUTION RECEIPT PENDING",
-    detail: "The release server resolves original and injected live Facts so the judge sequence can preserve SUPERSEDED_BY history through poison and antidote. A fresh release receipt remains required before PASS.",
-    ceiling: "LIVE_HYDRADB_FCG_GOLDEN_PATH_STATE_TRANSITION_ONLY_NOT_RETRIEVAL_SUPERIORITY",
-    href: "/judge",
+    label: "Website FCO identity contract",
+    status: "PASS · DETERMINISTIC",
+    detail: "Website, Knowledge and release FCOs are content-addressed as fco:<object_sha256>. The deployed /api/release endpoint verifies one canonical 64-hex SHA-256 identity per FCO and rejects conflicting duplicate IDs in its bounded catalog.",
+    ceiling: "OBJECT_IDENTITY_NOT_SCIENTIFIC_CORRECTNESS",
+    href: "/api/release",
   },
   {
-    label: "Track 02 HydraBlast",
-    status: RELEASE_STATUS.tracks.track02.synthetic_canary,
-    detail: "Fresh Hack Hydra code compares deterministic Python reverse dependency closure with HydraDB across reference, poison, partial-repair and full-repair states. Public PASS remains receipt-gated.",
-    ceiling: "SYNTHETIC_TRACK02_STRUCTURAL_CANARY_ONLY_NOT_REAL_NPM_EXPOSURE",
-    href: "/track02",
+    label: "Reference → poison → antidote visualization",
+    status: "PASS · DECLARED SYNTHETIC FIXTURE",
+    detail: "Violet reference/normal, orange poison/mutation and blue antidote/restoration are explicit state colors. G*, ΔG*, Cloud Drift, total-variation mutation distance and restoration gain remain separately labeled calculations.",
+    ceiling: "SYNTHETIC_INFORMATION_STATE_VISUALIZATION_ONLY",
+    href: "/graph",
   },
-  {
-    label: "Track 01 HydraOntology",
-    status: RELEASE_STATUS.tracks.track01.synthetic_canary,
-    detail: "Track 01 source datasets are downloaded and hash-identified. The synthetic identity canary exists, while public PASS and real EnterpriseRAG/HERB claims remain receipt/evaluation gated.",
-    ceiling: "SYNTHETIC_TRACK01_STRUCTURAL_CANARY_ONLY_NOT_ENTERPRISERAG_OR_HERB_PERFORMANCE",
-    href: "/track01",
-  },
-  {
-    label: "Release hosting",
-    status: "BACKUP IMPLEMENTED · RELEASE VERCEL PENDING",
-    detail: "The connected Vercel project has a READY production deployment from an older branch. The current release branch is not yet the live production surface. A standalone static fallback artifact now preserves the judge story without requiring Vercel or a live backend.",
-    ceiling: "ARTIFACT_DELIVERY_STATE_ONLY",
-    href: "/demo",
-  },
-];
+] as const;
 
 const hashes = [
   ["LongMemEval source", "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"],
   ["full500 result", "bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324"],
   ["full500 statistics", "8dcf57f5ac60418d16d3c945ad678b4d17b557b9425fededbd6684add7cff7cc"],
   ["full500 receipt", "21a29046de961e252372d06fd85d98db767b900982f90421cc720dfb85069365"],
+  ["Context-vs-Entropy result artifact", "512be8de14feb8512b5dcb7724df740bc2f027946f9250859f91d37e984d5e91"],
 ] as const;
 
 export default function EvidencePage() {
+  const knowledge = buildKnowledgeProjection();
+  const gStarIndex = knowledge.nodes.findIndex((node) => node.payload.slug === "g-star");
+  const jsdIndex = knowledge.nodes.findIndex((node) => node.payload.slug === "jensen-shannon-divergence");
+  const gStar = gStarIndex >= 0 ? knowledge.nodes[gStarIndex] : null;
+  const jsd = jsdIndex >= 0 ? knowledge.nodes[jsdIndex] : null;
+
   return (
     <main>
       <header className="hero">
         <div>
           <p className="eyebrow">Hack Hydra 2026 · evidence ledger</p>
-          <h1>Results without claim inflation.</h1>
-          <p className="lede">Positive, negative, failed, blocked and pending executions remain separate custody objects. Follow any result downward from the public statement to its source identity, transformation, receipt and claim ceiling.</p>
+          <h1>Executed evidence, bounded claims, no hidden nulls.</h1>
+          <p className="lede">The judge ledger contains executed results, retained negative/null evidence, canonical object identities and explicit N/A states where a scalar is not defined. It does not convert unexecuted work into a green badge.</p>
+          <div className="actions"><Link className="primary" href="/judge">Judge walkthrough</Link><Link className="secondary" href="/how-to">How to use</Link><Link className="secondary" href="/knowledge">Knowledge Base</Link></div>
         </div>
-        <div className="heroStatus"><span className="pill pillGood">FULL500 RECEIPT RETAINED</span><span className="pill pillMuted">NOT SIGNED</span><span className="pill pillMuted">NOT LIVE-MERKLE-COMMITTED</span></div>
+        <div className="heroStatus"><span className="pill pillGood">FULL500 RETAINED</span><span className="pill pillGood">HOSTED READBACK RECEIPT</span><span className="pill pillMuted">NOT_SIGNED</span><span className="pill pillMuted">NOT_MERKLE_COMMITTED</span></div>
       </header>
 
       <section className="metrics" aria-label="Submission evidence status">
-        <article className="metric"><span className="metricLabel">Structural gate</span><strong>7/7</strong><span className="small muted">declared live HydraDB invariants</span></article>
-        <article className="metric"><span className="metricLabel">Primary real dataset</span><strong>500 cases</strong><span className="small muted">LongMemEval-S full500</span></article>
-        <article className="metric"><span className="metricLabel">Core datasets</span><strong>5 acquired</strong><span className="small muted">hash-identified local bytes</span></article>
-        <article className="metric"><span className="metricLabel">Decision</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate comparison</span></article>
+        <article className="metric"><span className="metricLabel">Track 03</span><strong>500 cases</strong><span className="small muted">470 scored · 30 abstentions</span></article>
+        <article className="metric"><span className="metricLabel">Context/Entropy</span><strong>99.9354%</strong><span className="small muted">18,555 / 18,567 classified</span></article>
+        <article className="metric"><span className="metricLabel">Hosted parity</span><strong>0 canonical delta</strong><span className="small muted">retained projection scope</span></article>
+        <article className="metric"><span className="metricLabel">Track 03 decision</span><strong>No positive signal</strong><span className="small muted">B/C/D vs A Hit@5</span></article>
       </section>
 
-      <section className="computeSection"><span className="sectionNumber">01 / EVIDENCE OBJECTS</span><h2 className="displayTitle">Every state stays visible.</h2><div className="grid twoCol">{evidence.map((item) => <article className="panel" key={item.label}><p className="eyebrow">{item.status}</p><h2>{item.label}</h2><p className="muted">{item.detail}</p><p className="mono small compact">claim_ceiling={item.ceiling}</p><div className="actions"><Link className="secondary" href={item.href}>Follow evidence path</Link></div></article>)}</div></section>
+      <section className="computeSection"><span className="sectionNumber">01 / EVIDENCE OBJECTS</span><h2 className="displayTitle">Every judge-facing state has a declared evidence class.</h2><div className="grid twoCol">{EVIDENCE.map((item) => <article className="panel" key={item.label}><p className="eyebrow">{item.status}</p><h2>{item.label}</h2><p className="muted">{item.detail}</p><p className="mono small compact">claim_ceiling={item.ceiling}</p><div className="actions"><Link className="secondary" href={item.href}>Follow evidence path</Link></div></article>)}</div></section>
 
-      <section className="computeSection"><span className="sectionNumber">02 / FULL500 IDENTITIES</span><h2 className="displayTitle">Hashes link retained result objects.</h2><div className="stack">{hashes.map(([label, hash]) => <div className="panel" key={label}><p className="eyebrow">{label}</p><p className="mono compact">{hash}</p></div>)}</div><p className="small muted note">A SHA-256 value establishes byte/object identity for the retained artifact. It does not establish correctness or independent verification.</p></section>
+      <section className="computeSection"><span className="sectionNumber">02 / RETAINED IDENTITIES</span><h2 className="displayTitle">Hashes link exact retained artifacts.</h2><div className="stack">{hashes.map(([label, hash]) => <div className="panel" key={label}><p className="eyebrow">{label}</p><p className="mono compact">{hash}</p></div>)}</div><p className="small muted note">A SHA-256 establishes byte/object identity for the retained artifact. It does not establish correctness or independent verification.</p></section>
 
       <section className="computeSection">
-        <span className="sectionNumber">03 / DEEP FCO LINEAGE INSPECTOR</span>
-        <h2 className="displayTitle">Source paper FCO → Evidence transform → Claim ceiling.</h2>
+        <span className="sectionNumber">03 / GOVERNED THEORY + METRIC NAVIGATION</span>
+        <h2 className="displayTitle">Academic source → internal Knowledge FCO → exact scorer contract.</h2>
         <div className="grid twoCol">
-          <article className="panel" style={{ border: "2px solid #818cf8", background: "rgba(129, 140, 248, 0.05)" }}>
-            <span className="pill pillGood">SOURCE PAPER FCO</span>
-            <h3 style={{ marginTop: "0.5rem" }}>Enßlin &amp; Weig (2010) Paper FCO</h3>
-            <p className="small muted">Source paper establishing the Gibbs free energy analogy for Information Field Theory.</p>
-            <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>fco:source:ensslin_weig_2010:3ed1f288ac8b3f48f4bf239f15a133fcdca36cd2ad8d3a9bb73a3f5a0be5349e</p>
-            <p className="small"><strong>Evidence Class:</strong> ACADEMIC_LITERATURE_SOURCE<br /><strong>Claim Ceiling:</strong> THEORETICAL_FREE_ENERGY_ANALOGY_ONLY</p>
-            <div className="actions">
-              <Link className="secondary" href="/fco/fco:source:ensslin_weig_2010:3ed1f288ac8b3f48f4bf239f15a133fcdca36cd2ad8d3a9bb73a3f5a0be5349e">Inspect FCO Node ↗</Link>
-            </div>
+          <article className="panel">
+            <p className="eyebrow">G* design rationale</p>
+            <h3>Enßlin &amp; Weig (2010) → HydraDG G* Knowledge FCO</h3>
+            <p className="small muted">The paper is design-rationale lineage for an information/free-energy analogy; it does not define HydraDG's exact synthetic-fixture equation.</p>
+            {gStar ? <><p className="mono small compact">{gStar.id}</p><p className="mono small compact">object_sha256={gStar.object_sha256}</p><div className="actions"><Link className="secondary" href={`/fco/${encodeURIComponent(gStar.id)}`}>Inspect canonical Knowledge FCO</Link><a className="secondary" href="https://doi.org/10.1103/PhysRevE.82.051112" target="_blank" rel="noreferrer">Authoritative DOI ↗</a></div></> : null}
           </article>
-
-          <article className="panel" style={{ border: "2px solid #10b981", background: "rgba(16, 185, 129, 0.05)" }}>
-            <span className="pill pillGood">DESIGN &amp; METRIC FCO</span>
-            <h3 style={{ marginTop: "0.5rem" }}>HydraDG G* Diagnostic Specification</h3>
-            <p className="small muted">Governed specification FCO defining G* = U* - Shannon H burden equation.</p>
-            <p className="mono small compact" style={{ overflowWrap: "anywhere" }}>fco:design:hydradg_gstar:f4a7e547f4a380c2e391bd7622998a44b93198e35cf91bc1c278e90a618c7c94</p>
-            <p className="small"><strong>Evidence Class:</strong> APPLICATION_SPECIFICATION_DESIGN<br /><strong>Claim Ceiling:</strong> GOVERNED_STATE_FIELD_DIAGNOSTIC_ONLY</p>
-            <div className="actions">
-              <Link className="secondary" href="/fco/fco:design:hydradg_gstar:f4a7e547f4a380c2e391bd7622998a44b93198e35cf91bc1c278e90a618c7c94">Inspect FCO Node ↗</Link>
-            </div>
+          <article className="panel">
+            <p className="eyebrow">Cloud Drift source lineage</p>
+            <h3>Lin (1991) → JSD Knowledge FCO</h3>
+            <p className="small muted">Cloud Drift is 100 × base-2 Jensen-Shannon divergence from the frozen reference distribution.</p>
+            {jsd ? <><p className="mono small compact">{jsd.id}</p><p className="mono small compact">object_sha256={jsd.object_sha256}</p><div className="actions"><Link className="secondary" href={`/fco/${encodeURIComponent(jsd.id)}`}>Inspect canonical Knowledge FCO</Link><Link className="secondary" href="/knowledge#jensen-shannon-divergence">Open KB term</Link></div></> : null}
           </article>
         </div>
       </section>
 
-      <section className="computeSection"><span className="sectionNumber">04 / PROJECT FCG</span><h2 className="displayTitle">Source → transformation → evidence → claim → artifact.</h2><div className="flow mono"><span>source bytes</span><b>→</b><span>SeedGraph / transform</span><b>→</b><span>FCO/FCG</span><b>→</b><span>HydraDB / evaluation</span><b>→</b><span>website artifact</span></div><div className="actions"><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a><a className="secondary" href="/backup/hydradg.html">Open offline artifact</a></div></section>
+      <section className="computeSection">
+        <span className="sectionNumber">04 / T3–T5 SCORE BOUNDARY</span>
+        <h2 className="displayTitle">N/A is data when the scorer inputs do not exist.</h2>
+        <div className="grid threeCol">
+          {RELEASE_TIMEPOINTS.slice(3).map((point) => <article className="panel" key={point.id}><p className="eyebrow">{point.id}</p><h3>{point.label}</h3><p><strong>Scalar context score: N/A</strong></p><p className="small muted">Reason: no governed state distribution is declared for this project/release timepoint. {point.evidence}</p></article>)}
+        </div>
+      </section>
+
+      <section className="computeSection"><span className="sectionNumber">05 / PROJECT FCG</span><h2 className="displayTitle">Source → transformation → evidence → claim → artifact.</h2><div className="flow mono"><span>source bytes</span><b>→</b><span>SeedGraph / transform</span><b>→</b><span>KnowledgeAtom</span><b>→</b><span>SeedOfTruth</span><b>→</b><span>FCO/FCG</span><b>→</b><span>HydraDB projection</span><b>→</b><span>website artifact</span></div><div className="actions"><a className="secondary" href="/api/site-fcg">Site FCG JSON</a><a className="secondary" href="/api/release">Release JSON</a><Link className="secondary" href="/graph?q=KnowledgeAtom">Atoms</Link><Link className="secondary" href="/graph?q=SeedOfTruth">Seeds</Link></div></section>
     </main>
   );
 }
