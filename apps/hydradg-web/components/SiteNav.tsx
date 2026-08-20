@@ -6,12 +6,16 @@ const PRIMARY_NAV = [
   ["Context vs Entropy", "/results/context-vs-entropy"],
   ["Results", "/track03"],
   ["Graph", "/graph"],
+  ["Why Graph?", "/track-fit"],
 ] as const;
 
 const DEEP_NAV = [
   ["Knowledge", "/knowledge"],
   ["Evidence", "/evidence"],
   ["How to Use", "/how-to"],
+  ["Track 01", "/track01"],
+  ["Track 02", "/track02"],
+  ["Track 03", "/track03"],
   ["Evolution", "/evolution"],
   ["Eligibility", "/eligibility"],
 ] as const;
@@ -36,7 +40,7 @@ export default function SiteNav() {
             </div>
           </details>
         </div>
-        <Link className="siteNavCta" href="/judge">Start walkthrough</Link>
+        <Link className="siteNavCta" href="/track-fit">Final judge step</Link>
       </nav>
     </header>
   );
