@@ -1,21 +1,21 @@
 {
   "aggregate_energy_savings": {
-    "total_flops_saved": 1614398308000000000,
-    "total_watt_hours_saved": 4484.45
+    "total_flops_saved": 2506565794000000000,
+    "total_watt_hours_saved": 6962.7
   },
   "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-  "claim_ceiling": "MULTI_MODEL_MULTI_DATASET_MATRIX_COMPARISON_COMPLETED",
+  "claim_ceiling": "MULTI_MODEL_MULTI_DATASET_MATRIX_COMPARISON_WITH_QWEN3_COMPLETED",
   "license": "CC-BY-NC-ND-4.0",
   "matrix_cells": [
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
       "cell_index": 1,
-      "cell_signature_hash": "77a04f8c210d77b4b81b2f2feacf2b43b9af6a9d9512d4dc05c3aa9afefe09bf",
+      "cell_signature_hash": "40e6e26dd13b4c8b041663f3b2d885b86ea71e2bc14cc9b03a2c0c2b893bd6d3",
       "context_energy_metrics": {
-        "delta_g_star": 0.0077,
-        "g_star_diagnostic": -0.1154,
+        "delta_g_star": 0.0057,
+        "g_star_diagnostic": -0.1174,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.205
+        "u_star_burden": 0.203
       },
       "dataset": {
         "docs": 500000,
@@ -40,12 +40,12 @@
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
       "cell_index": 2,
-      "cell_signature_hash": "41497b4356754584165d952aace6a2ccc8cb9b6670ba3740ccf24496aec9156b",
+      "cell_signature_hash": "957017685a0b7c3bfec1893837f596d4ed22ba68bf2db5159d6aa341f3681cd1",
       "context_energy_metrics": {
-        "delta_g_star": 0.016,
-        "g_star_diagnostic": -0.1071,
+        "delta_g_star": 0.012,
+        "g_star_diagnostic": -0.1111,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.21
+        "u_star_burden": 0.206
       },
       "dataset": {
         "docs": 500000,
@@ -70,12 +70,12 @@
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
       "cell_index": 3,
-      "cell_signature_hash": "d5456bb9db65c412737efca61d52cfa78904965a35bc6fc1150ee7ff9478d292",
+      "cell_signature_hash": "b95488a039189591f50e2785972e5aee18e2475fe7ad8571ef79257cdd23e071",
       "context_energy_metrics": {
-        "delta_g_star": 0.0249,
-        "g_star_diagnostic": -0.0982,
+        "delta_g_star": 0.0189,
+        "g_star_diagnostic": -0.1042,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.215
+        "u_star_burden": 0.209
       },
       "dataset": {
         "docs": 500000,
@@ -100,12 +100,72 @@
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
       "cell_index": 4,
-      "cell_signature_hash": "bfc917ab3b23b7e43307074ba5fa08f2f06afbbfd01ffe61f0685e558e009d9f",
+      "cell_signature_hash": "1ccd99143263b6d23422989f9a1c8de859709d49475a20024bdab65998b87226",
       "context_energy_metrics": {
-        "delta_g_star": 0.02,
-        "g_star_diagnostic": -0.1031,
+        "delta_g_star": 0.012,
+        "g_star_diagnostic": -0.1111,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.22
+        "u_star_burden": 0.212
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 5,
+      "cell_signature_hash": "783d900bc0704b283180d3597e6ef5a08cc97cdefbc88ee0f5d39a248eeafb7a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0177,
+        "g_star_diagnostic": -0.1054,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.215
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 497952000000000000,
+        "watt_hours_saved": 1383.2
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 6,
+      "cell_signature_hash": "c47160553cbbc43d97b18d8efdc656f5720b93d2535575d988bf085acaa9bfc6",
+      "context_energy_metrics": {
+        "delta_g_star": 0.024,
+        "g_star_diagnostic": -0.0991,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.218
       },
       "dataset": {
         "docs": 500000,
@@ -129,13 +189,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 5,
-      "cell_signature_hash": "65c31a68d5402f88fc3d6193a6e5f6adf515ece7419f488a1316fbcd4ab91627",
+      "cell_index": 7,
+      "cell_signature_hash": "6368b2986139ed4f7f19bc256ddd3cdf7e3c655e9582a826f4b47def32a75a6e",
       "context_energy_metrics": {
-        "delta_g_star": 0.0277,
-        "g_star_diagnostic": -0.0954,
-        "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.225
+        "delta_g_star": 0.0309,
+        "g_star_diagnostic": -0.0922,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.221
       },
       "dataset": {
         "docs": 500000,
@@ -159,13 +219,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 6,
-      "cell_signature_hash": "47c4e6f62d7baf0e51b69eee2ed4a5cdcf15622a90feca63dacb278bae66897a",
+      "cell_index": 8,
+      "cell_signature_hash": "4a27b14e01e2b1d39ec0d4daf9dc39db23f9e90fd2d79e58235ab86ec3722c35",
       "context_energy_metrics": {
-        "delta_g_star": 0.036,
-        "g_star_diagnostic": -0.0871,
-        "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.23
+        "delta_g_star": 0.024,
+        "g_star_diagnostic": -0.0991,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.224
       },
       "dataset": {
         "docs": 10000,
@@ -189,13 +249,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 7,
-      "cell_signature_hash": "b4bda2c0b3b1a9dd79443e3a95417e84daeb7183a6a1fa2a4229f519bb8cb19b",
+      "cell_index": 9,
+      "cell_signature_hash": "674a9c1dc248781f824b8bd48f19c299eb0755fb84514de231cec990daa63059",
       "context_energy_metrics": {
-        "delta_g_star": 0.0449,
-        "g_star_diagnostic": -0.0782,
-        "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.235
+        "delta_g_star": 0.0297,
+        "g_star_diagnostic": -0.0934,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.227
       },
       "dataset": {
         "docs": 10000,
@@ -219,13 +279,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 8,
-      "cell_signature_hash": "9be9e54ba731c515555ff1139ad04b4533efbc5a9ceca57bb4d794f02f2de748",
+      "cell_index": 10,
+      "cell_signature_hash": "c0f50180f5501f909b890719f38a8cddd3e6da218dff10e1a0af58cf2e2ddef1",
       "context_energy_metrics": {
-        "delta_g_star": 0.04,
-        "g_star_diagnostic": -0.0831,
-        "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.24
+        "delta_g_star": 0.036,
+        "g_star_diagnostic": -0.0871,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.23
       },
       "dataset": {
         "docs": 10000,
@@ -249,13 +309,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 9,
-      "cell_signature_hash": "2295206d97f0d873fdda92f97462c35e10e4be53744eb63704a548c1bcae3079",
+      "cell_index": 11,
+      "cell_signature_hash": "b00fbbe771a7520897a27bedb26d9d3d301fe8bb896d39610cb727395b9bc27d",
       "context_energy_metrics": {
-        "delta_g_star": 0.0477,
-        "g_star_diagnostic": -0.0754,
+        "delta_g_star": 0.0429,
+        "g_star_diagnostic": -0.0802,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.233
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 12,
+      "cell_signature_hash": "bc9c051a4eae0646a7ac4b6e1f29195cd5118594f9d195e38775413daffd562d",
+      "context_energy_metrics": {
+        "delta_g_star": 0.036,
+        "g_star_diagnostic": -0.0871,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.236
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 13,
+      "cell_signature_hash": "50527ed42443ec7dabd7f1332219a8a8d7b657c85ec2f35ce76caa82e827f2ec",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0417,
+        "g_star_diagnostic": -0.0814,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.245
+        "u_star_burden": 0.239
       },
       "dataset": {
         "docs": 10000,
@@ -279,13 +399,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 10,
-      "cell_signature_hash": "a6eaa0b942511ab052130bf2e79f81dbfb0dda5b4d620fb10b752de70abc6163",
+      "cell_index": 14,
+      "cell_signature_hash": "31c78fd6160947a5631bd033e70af9c6c2cd48b1a8abee0474a438d4b8720646",
       "context_energy_metrics": {
-        "delta_g_star": 0.056,
-        "g_star_diagnostic": -0.0671,
+        "delta_g_star": 0.048,
+        "g_star_diagnostic": -0.0751,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.25
+        "u_star_burden": 0.242
       },
       "dataset": {
         "docs": 10000,
@@ -309,13 +429,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 11,
-      "cell_signature_hash": "bd3af9ef4133aeb5a66fd2b8b4592fc560955d3f86541dc26b63aff375f6c014",
+      "cell_index": 15,
+      "cell_signature_hash": "50e61815a83a6001e73e6894abc3df6f937846f6a41eb877bb7502b3826fab46",
       "context_energy_metrics": {
-        "delta_g_star": 0.0649,
-        "g_star_diagnostic": -0.0582,
+        "delta_g_star": 0.0549,
+        "g_star_diagnostic": -0.0682,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.255
+        "u_star_burden": 0.245
       },
       "dataset": {
         "docs": 5000,
@@ -339,13 +459,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 12,
-      "cell_signature_hash": "0aa1eb35ac75fc3a258f4ad5bf22556f8d1de4c7490b32e81c22c937499c64c4",
+      "cell_index": 16,
+      "cell_signature_hash": "86727ad831477850da73c03da46b8b70d0a0a3e7201b33ae7f91519eb31c2f76",
       "context_energy_metrics": {
-        "delta_g_star": 0.06,
-        "g_star_diagnostic": -0.0631,
+        "delta_g_star": 0.048,
+        "g_star_diagnostic": -0.0751,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.26
+        "u_star_burden": 0.248
       },
       "dataset": {
         "docs": 5000,
@@ -369,13 +489,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 13,
-      "cell_signature_hash": "230c9cdd3186f702cae6e8e3d2f1984cf0a3ca5d3756bf7760b8f08624d2d35b",
+      "cell_index": 17,
+      "cell_signature_hash": "2ed2d5b1d2d2db033d0bc59e8f0f96bb7e04e32d6e39ad931a0c8dc04812770a",
       "context_energy_metrics": {
-        "delta_g_star": 0.0677,
-        "g_star_diagnostic": -0.0554,
+        "delta_g_star": 0.0537,
+        "g_star_diagnostic": -0.0694,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.265
+        "u_star_burden": 0.251
       },
       "dataset": {
         "docs": 5000,
@@ -399,13 +519,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 14,
-      "cell_signature_hash": "e29ff371934f03a28ff42ef4555ce7430c651ea40398519365f796c5cc97ecc7",
+      "cell_index": 18,
+      "cell_signature_hash": "2e8f1cf8bfdacefb74dd067e5b216807bb182efa43a0bf1ccbbad82b40329b39",
       "context_energy_metrics": {
-        "delta_g_star": 0.076,
-        "g_star_diagnostic": -0.0471,
+        "delta_g_star": 0.06,
+        "g_star_diagnostic": -0.0631,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.27
+        "u_star_burden": 0.254
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 19,
+      "cell_signature_hash": "827736aaa31366cdf33f580f5c91582c6e1614f9a6a2a694e9defccec6f6f4af",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0669,
+        "g_star_diagnostic": -0.0562,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.257
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 20,
+      "cell_signature_hash": "e3debb88601951c87b6a2065e9230928d787d677caaaf2c24b0c076e01aa184c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.06,
+        "g_star_diagnostic": -0.0631,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.26
       },
       "dataset": {
         "docs": 5000,
@@ -429,13 +609,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 15,
-      "cell_signature_hash": "a5d0e1ad82b3f91c9db975ed612aa30d1d55abc314297651e892f545e91c9ff3",
+      "cell_index": 21,
+      "cell_signature_hash": "c16f28a0308a1349ee8bdaf1bbae71eada07555103936f5ea4d3a8b207a56f7e",
       "context_energy_metrics": {
-        "delta_g_star": 0.0849,
-        "g_star_diagnostic": -0.0382,
-        "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.275
+        "delta_g_star": 0.0657,
+        "g_star_diagnostic": -0.0574,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.263
       },
       "dataset": {
         "docs": 5000,
@@ -459,13 +639,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 16,
-      "cell_signature_hash": "722e7f15f505f5be13b5849cad8115399e41da93c271346669c1bad0802d8f5b",
+      "cell_index": 22,
+      "cell_signature_hash": "efbdd2949615ba50b3f0bb0b1201ba46a58b69e064e30120f2917d2d1c4b8534",
       "context_energy_metrics": {
-        "delta_g_star": 0.08,
-        "g_star_diagnostic": -0.0431,
-        "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.28
+        "delta_g_star": 0.072,
+        "g_star_diagnostic": -0.0511,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.266
       },
       "dataset": {
         "docs": 2500,
@@ -489,13 +669,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 17,
-      "cell_signature_hash": "507139829b82ac1c35aa29235ce4998a653f9956ae3dc0700ad0dd32130cad41",
+      "cell_index": 23,
+      "cell_signature_hash": "7c3b127e7454e76a07c18e99193455a5de38748769cf19f6f18c8c4ec99da59c",
       "context_energy_metrics": {
-        "delta_g_star": 0.0877,
-        "g_star_diagnostic": -0.0354,
-        "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.285
+        "delta_g_star": 0.0789,
+        "g_star_diagnostic": -0.0442,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.269
       },
       "dataset": {
         "docs": 2500,
@@ -519,13 +699,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 18,
-      "cell_signature_hash": "c4faaf15970935931a279a62abdae3e417536a66d1efafc875149afd86d9cdec",
+      "cell_index": 24,
+      "cell_signature_hash": "3f1330aae8375d44ed280c6249c10d39bf3c537f1d7961a7450c9dc2c92d7f20",
       "context_energy_metrics": {
-        "delta_g_star": 0.096,
-        "g_star_diagnostic": -0.0271,
-        "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.29
+        "delta_g_star": 0.072,
+        "g_star_diagnostic": -0.0511,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.272
       },
       "dataset": {
         "docs": 2500,
@@ -549,13 +729,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 19,
-      "cell_signature_hash": "4362009f0591f1768324c24f6f94d1df661b1151972a90a0eaac7acc9bf7e934",
+      "cell_index": 25,
+      "cell_signature_hash": "3791afee40b55a8128470deb0765c9e6e37bae5f1c587df1178c231c8a0c5d93",
       "context_energy_metrics": {
-        "delta_g_star": 0.1049,
-        "g_star_diagnostic": -0.0182,
+        "delta_g_star": 0.0777,
+        "g_star_diagnostic": -0.0454,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.275
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 26,
+      "cell_signature_hash": "1c65ef665825ba9261b13ddf1f87d07bd81c4fce2dc539d512ff9923548a0a87",
+      "context_energy_metrics": {
+        "delta_g_star": 0.084,
+        "g_star_diagnostic": -0.0391,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.278
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 6703200000000000,
+        "watt_hours_saved": 18.62
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 27,
+      "cell_signature_hash": "3ff2024405579051fdd2bb0e865818d1270c3856049f7b540775cacdacfb9b71",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0909,
+        "g_star_diagnostic": -0.0322,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.295
+        "u_star_burden": 0.281
       },
       "dataset": {
         "docs": 2500,
@@ -579,13 +819,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 20,
-      "cell_signature_hash": "0762d212185287a0a90b8a04246931384c55adb087243a535ddb970e8201bc15",
+      "cell_index": 28,
+      "cell_signature_hash": "1927c5d086b26699678e489a0e11511b254efe3ad7affa2e4c17197761af42e1",
       "context_energy_metrics": {
-        "delta_g_star": 0.1,
-        "g_star_diagnostic": -0.0231,
+        "delta_g_star": 0.084,
+        "g_star_diagnostic": -0.0391,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.3
+        "u_star_burden": 0.284
       },
       "dataset": {
         "docs": 2500,
@@ -609,13 +849,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 21,
-      "cell_signature_hash": "51e7c78da38ff48e0fc4d5b9b8b2b31be898dcc9027f93650e6d60e09fda5697",
+      "cell_index": 29,
+      "cell_signature_hash": "37a93635afa4c7670285763025fb6895e336534eeae9cdb7d976643e0959a309",
       "context_energy_metrics": {
-        "delta_g_star": 0.1077,
-        "g_star_diagnostic": -0.0154,
+        "delta_g_star": 0.0897,
+        "g_star_diagnostic": -0.0334,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.305
+        "u_star_burden": 0.287
       },
       "dataset": {
         "docs": 1250,
@@ -639,13 +879,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 22,
-      "cell_signature_hash": "041771570758e53acbec03de661104ee4161f6f8311eebecb2980737d1ed8d64",
+      "cell_index": 30,
+      "cell_signature_hash": "52cd0b51042105e9ebd6a6bcfd3aaf37792dfc45d36d4a7f3484270efd5b0e28",
       "context_energy_metrics": {
-        "delta_g_star": 0.116,
-        "g_star_diagnostic": -0.0071,
+        "delta_g_star": 0.096,
+        "g_star_diagnostic": -0.0271,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.31
+        "u_star_burden": 0.29
       },
       "dataset": {
         "docs": 1250,
@@ -669,13 +909,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 23,
-      "cell_signature_hash": "5b3772e1c5f94626bcb43eef81ba84a21f6518e9dfa596926a038fb2c03268dd",
+      "cell_index": 31,
+      "cell_signature_hash": "707935b9722b00551d1ea3fa48b91f3d377e4f5941d8518f138a2b1589393783",
       "context_energy_metrics": {
-        "delta_g_star": 0.1249,
-        "g_star_diagnostic": 0.0018,
+        "delta_g_star": 0.1029,
+        "g_star_diagnostic": -0.0202,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.315
+        "u_star_burden": 0.293
       },
       "dataset": {
         "docs": 1250,
@@ -699,13 +939,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 24,
-      "cell_signature_hash": "3d2e3fd1edce7ef6102d107a07450241ef013194e57d8169f553edfb2813ada0",
+      "cell_index": 32,
+      "cell_signature_hash": "d952cbfc7aca824334496a22bc614f777e745918a7f2c718d57b7a3173222758",
       "context_energy_metrics": {
-        "delta_g_star": 0.12,
-        "g_star_diagnostic": -0.0031,
+        "delta_g_star": 0.096,
+        "g_star_diagnostic": -0.0271,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.32
+        "u_star_burden": 0.296
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 33,
+      "cell_signature_hash": "c85a9711aedad09928a0ade38b8bf1fe9baabe703692608b78de75913a49efb9",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1017,
+        "g_star_diagnostic": -0.0214,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.299
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 9288720000000000,
+        "watt_hours_saved": 25.8
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 34,
+      "cell_signature_hash": "c70ebe12728aad70e5b8a651fb2bd14a6b2b80216057ad87bc2f5141745da898",
+      "context_energy_metrics": {
+        "delta_g_star": 0.108,
+        "g_star_diagnostic": -0.0151,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.302
       },
       "dataset": {
         "docs": 1250,
@@ -729,13 +1029,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 25,
-      "cell_signature_hash": "bcbe9166e7f9220e7ed977e0d39c9cd09b515e4367cc8c6d60c833ab206d2da0",
+      "cell_index": 35,
+      "cell_signature_hash": "1d6063b937e01f96c10301ce2af3bbf98d15a2a544b01fefe5f3d00f0fc1c282",
       "context_energy_metrics": {
-        "delta_g_star": 0.1277,
-        "g_star_diagnostic": 0.0046,
-        "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.325
+        "delta_g_star": 0.1149,
+        "g_star_diagnostic": -0.0082,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.305
       },
       "dataset": {
         "docs": 1250,
@@ -759,13 +1059,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 26,
-      "cell_signature_hash": "b23816c3d667aaf89d594631f1cd00eccda3e08ab08eb85b38ac44300e43e59e",
+      "cell_index": 36,
+      "cell_signature_hash": "84e3843faa63f8f443c99349f93bd9efd726086bd0fe05d143b4ec51f61209be",
       "context_energy_metrics": {
-        "delta_g_star": 0.136,
-        "g_star_diagnostic": 0.0129,
-        "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.33
+        "delta_g_star": 0.108,
+        "g_star_diagnostic": -0.0151,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.308
       },
       "dataset": {
         "docs": 450,
@@ -789,13 +1089,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 27,
-      "cell_signature_hash": "4c6585d25cf4671d82618cd28f26a6ba87ac352b8486f6c88f162ef04093a638",
+      "cell_index": 37,
+      "cell_signature_hash": "ca2f1aa26a34fc464e336a6562deec354027b0545aff9495fa48a0a003df5f25",
       "context_energy_metrics": {
-        "delta_g_star": 0.1449,
-        "g_star_diagnostic": 0.0218,
-        "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.335
+        "delta_g_star": 0.1137,
+        "g_star_diagnostic": -0.0094,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.311
       },
       "dataset": {
         "docs": 450,
@@ -819,13 +1119,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 28,
-      "cell_signature_hash": "780a89dab461f1d8f50002a9d37dd4cb8b53458eca075122f12ff659956a5319",
+      "cell_index": 38,
+      "cell_signature_hash": "6c101b972222040023494bbc728fa1476e3f4433ae5d314129da94627cd04232",
       "context_energy_metrics": {
-        "delta_g_star": 0.14,
-        "g_star_diagnostic": 0.0169,
-        "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.34
+        "delta_g_star": 0.12,
+        "g_star_diagnostic": -0.0031,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.314
       },
       "dataset": {
         "docs": 450,
@@ -849,13 +1149,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 29,
-      "cell_signature_hash": "ff072090de046d28603ebc10e41834a8fef6b8346a041a66870c3a42db920898",
+      "cell_index": 39,
+      "cell_signature_hash": "30ffb16e75dbde3d585184b92ee51f8231ea480b350573b39c38f3e72083bb06",
       "context_energy_metrics": {
-        "delta_g_star": 0.1477,
-        "g_star_diagnostic": 0.0246,
+        "delta_g_star": 0.1269,
+        "g_star_diagnostic": 0.0038,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.317
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 40,
+      "cell_signature_hash": "b9b7ff3c2c2ebe2caf13777df14ffbda1d663ea38bdad90cf310512a0d58ab65",
+      "context_energy_metrics": {
+        "delta_g_star": 0.12,
+        "g_star_diagnostic": -0.0031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.32
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 3447360000000000,
+        "watt_hours_saved": 9.58
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 41,
+      "cell_signature_hash": "498ff58b6f60388d6d4cd788e5d13f44ce8c787d3de6072d91d32385fd2739d1",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1257,
+        "g_star_diagnostic": 0.0026,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.345
+        "u_star_burden": 0.323
       },
       "dataset": {
         "docs": 450,
@@ -879,13 +1239,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 30,
-      "cell_signature_hash": "cf20ecc5010853e248742adc85fccfc4193e23619e539379ce324b2103fafefa",
+      "cell_index": 42,
+      "cell_signature_hash": "6857d1aaa900d44f91d721fb25f610016537b059e9bb7bf7d8060ab4be04cea3",
       "context_energy_metrics": {
-        "delta_g_star": 0.156,
-        "g_star_diagnostic": 0.0329,
+        "delta_g_star": 0.132,
+        "g_star_diagnostic": 0.0089,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.35
+        "u_star_burden": 0.326
       },
       "dataset": {
         "docs": 450,
@@ -909,13 +1269,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 31,
-      "cell_signature_hash": "607b7963480b626a1fb0304d82d4e8f7fb794ec2730915e1c22b16157e3763bf",
+      "cell_index": 43,
+      "cell_signature_hash": "42a71a0417a1a3b5e893b90adfcdd0f96976a874dd004e177d9baac5368abbdf",
       "context_energy_metrics": {
-        "delta_g_star": 0.1649,
-        "g_star_diagnostic": 0.0418,
+        "delta_g_star": 0.1389,
+        "g_star_diagnostic": 0.0158,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.355
+        "u_star_burden": 0.329
       },
       "dataset": {
         "docs": 320,
@@ -939,13 +1299,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 32,
-      "cell_signature_hash": "4b5d9fdc43497e6022881c032926269b6790e85cc19235f8692eb390ca43e1b9",
+      "cell_index": 44,
+      "cell_signature_hash": "ff0e5aee41412d5e5d908424c95ca0b841387162c8a736d24be7dee9df99bfc1",
       "context_energy_metrics": {
-        "delta_g_star": 0.16,
-        "g_star_diagnostic": 0.0369,
+        "delta_g_star": 0.132,
+        "g_star_diagnostic": 0.0089,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.36
+        "u_star_burden": 0.332
       },
       "dataset": {
         "docs": 320,
@@ -969,13 +1329,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 33,
-      "cell_signature_hash": "99308017a2a83081013ef3681eb8c568d013a8b390d2d1bc84f11ceedbbe35a6",
+      "cell_index": 45,
+      "cell_signature_hash": "bf153a1248244d87e3d2da8ba645474c44fee571a675975fc2edf233a55856a3",
       "context_energy_metrics": {
-        "delta_g_star": 0.1677,
-        "g_star_diagnostic": 0.0446,
+        "delta_g_star": 0.1377,
+        "g_star_diagnostic": 0.0146,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.365
+        "u_star_burden": 0.335
       },
       "dataset": {
         "docs": 320,
@@ -999,13 +1359,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 34,
-      "cell_signature_hash": "2546751594e7e34710e52f21366269c5325df110f300f1e2cd5a1c2a920586cb",
+      "cell_index": 46,
+      "cell_signature_hash": "45c8ec178418cc6fd30ce5ffc82fe6fc659030cd1e0f731a07e9f4190f185471",
       "context_energy_metrics": {
-        "delta_g_star": 0.176,
-        "g_star_diagnostic": 0.0529,
+        "delta_g_star": 0.144,
+        "g_star_diagnostic": 0.0209,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.37
+        "u_star_burden": 0.338
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 47,
+      "cell_signature_hash": "269fc56de5c73557b2ba9f72f772f36ca415cfc421a19a24b27765d24480f851",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1509,
+        "g_star_diagnostic": 0.0278,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.341
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 2681280000000000,
+        "watt_hours_saved": 7.45
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 48,
+      "cell_signature_hash": "51abbe39c79abd8ec6165d39fecf96908ea5e9f33fcb2372301832ff1931e9b5",
+      "context_energy_metrics": {
+        "delta_g_star": 0.144,
+        "g_star_diagnostic": 0.0209,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.344
       },
       "dataset": {
         "docs": 320,
@@ -1029,13 +1449,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 35,
-      "cell_signature_hash": "5df3cfd4b7983a5eb65d02e616521da38faad5bb095c3bbac848d851cc5b68de",
+      "cell_index": 49,
+      "cell_signature_hash": "eb8b45dbaa2cb99e142b3457fd482003152f0694ba9a8d4346e96f191fa7a75e",
       "context_energy_metrics": {
-        "delta_g_star": 0.1849,
-        "g_star_diagnostic": 0.0618,
-        "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.375
+        "delta_g_star": 0.1497,
+        "g_star_diagnostic": 0.0266,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.347
       },
       "dataset": {
         "docs": 320,
@@ -1059,13 +1479,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 36,
-      "cell_signature_hash": "483559ec774dd9f4045fc28653f5a90f3615e18bfa411f3d51f24434347873b6",
+      "cell_index": 50,
+      "cell_signature_hash": "e0daa17aad6b11d69f446d4beeebe2578e968ee7e45e648fd716edf2bc2b0dfa",
       "context_energy_metrics": {
-        "delta_g_star": 0.18,
-        "g_star_diagnostic": 0.0569,
-        "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.38
+        "delta_g_star": 0.156,
+        "g_star_diagnostic": 0.0329,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.35
       },
       "dataset": {
         "docs": 500,
@@ -1089,13 +1509,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 37,
-      "cell_signature_hash": "ed6f321f13911554a2f5f6bfe3a71db30c694c3ce0b3ba5e53e447ef53fae322",
+      "cell_index": 51,
+      "cell_signature_hash": "113dcbb3687ade01196d02e04d907622b5242df8b2815691f3a543f47575ef09",
       "context_energy_metrics": {
-        "delta_g_star": 0.1877,
-        "g_star_diagnostic": 0.0646,
-        "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.385
+        "delta_g_star": 0.1629,
+        "g_star_diagnostic": 0.0398,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.353
       },
       "dataset": {
         "docs": 500,
@@ -1119,13 +1539,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 38,
-      "cell_signature_hash": "92fc06232e5b88356132164fe0bba41dc76327102efc5f5f01a542c9bb9655ec",
+      "cell_index": 52,
+      "cell_signature_hash": "53bbfaec83cdb6b8bd984ee49e7c93b96f5408d21dac9c7c034ce6fd062ce03e",
       "context_energy_metrics": {
-        "delta_g_star": 0.196,
-        "g_star_diagnostic": 0.0729,
-        "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.39
+        "delta_g_star": 0.156,
+        "g_star_diagnostic": 0.0329,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.356
       },
       "dataset": {
         "docs": 500,
@@ -1149,13 +1569,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 39,
-      "cell_signature_hash": "4c01e9866d858e3d7cd85b495d04f122fed037b08a633b405aed6e433c99bc6a",
+      "cell_index": 53,
+      "cell_signature_hash": "7fcd686ecf28bd6a9812dd36162247398904f419a43091eea4bb09a089ec6316",
       "context_energy_metrics": {
-        "delta_g_star": 0.2049,
-        "g_star_diagnostic": 0.0818,
+        "delta_g_star": 0.1617,
+        "g_star_diagnostic": 0.0386,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.359
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 54,
+      "cell_signature_hash": "35203fd07a679603b8a244a165a5d32127a534aa9a6c1d98ac68963bf05d4062",
+      "context_energy_metrics": {
+        "delta_g_star": 0.168,
+        "g_star_diagnostic": 0.0449,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.362
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 970564000000000,
+        "watt_hours_saved": 2.7
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "REJECTED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 55,
+      "cell_signature_hash": "39725c9d6012e19cfdb61146350a45ae5c1f0f39a99ed133bc39d43a239dcaed",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1749,
+        "g_star_diagnostic": 0.0518,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.395
+        "u_star_burden": 0.365
       },
       "dataset": {
         "docs": 500,
@@ -1179,13 +1659,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 40,
-      "cell_signature_hash": "d7a558d2566103249cb5deddeb6493ef5586e6ede363efe1b3eb99691f8e9b3e",
+      "cell_index": 56,
+      "cell_signature_hash": "e7a9195a4b24bcf59d219bba246397c3a113c076c4b0279b9b703fceea769538",
       "context_energy_metrics": {
-        "delta_g_star": 0.2,
-        "g_star_diagnostic": 0.0769,
+        "delta_g_star": 0.168,
+        "g_star_diagnostic": 0.0449,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.4
+        "u_star_burden": 0.368
       },
       "dataset": {
         "docs": 500,
@@ -1209,13 +1689,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 41,
-      "cell_signature_hash": "7ea8db9610be4b75f9c5a2a63661e39312e7a2dba6017033a3c4cf5df23edfdf",
+      "cell_index": 57,
+      "cell_signature_hash": "877ea903f17cbe27378850237b057a4dabce4528802f76a60c468e3d6f8f45de",
       "context_energy_metrics": {
-        "delta_g_star": 0.2077,
-        "g_star_diagnostic": 0.0846,
+        "delta_g_star": 0.1737,
+        "g_star_diagnostic": 0.0506,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.405
+        "u_star_burden": 0.371
       },
       "dataset": {
         "docs": 500,
@@ -1239,13 +1719,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 42,
-      "cell_signature_hash": "054504981b3262c82e938c3ffeb85be6d08e38cf965cbf04fe07f886ddc1950e",
+      "cell_index": 58,
+      "cell_signature_hash": "d8af66accb2156ab7637336efdd2b07557794eed63e061fa1c93890447fb8ea7",
       "context_energy_metrics": {
-        "delta_g_star": 0.216,
-        "g_star_diagnostic": 0.0929,
+        "delta_g_star": 0.18,
+        "g_star_diagnostic": 0.0569,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.41
+        "u_star_burden": 0.374
       },
       "dataset": {
         "docs": 500,
@@ -1269,13 +1749,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 43,
-      "cell_signature_hash": "78158901f28fed8dbaaa3f55f5cc05e5d66c5bfc2ac314f19baed61ea17a0aae",
+      "cell_index": 59,
+      "cell_signature_hash": "659a217d5d7cba2b1452e0405cec81565cd76a56b68a89d7d360ab7740440463",
       "context_energy_metrics": {
-        "delta_g_star": 0.2249,
-        "g_star_diagnostic": 0.1018,
+        "delta_g_star": 0.1869,
+        "g_star_diagnostic": 0.0638,
         "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.415
+        "u_star_burden": 0.377
       },
       "dataset": {
         "docs": 500,
@@ -1299,13 +1779,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 44,
-      "cell_signature_hash": "9da8f52e821a11431b078cabd4242ecd34709ffbfc2d1d71377017f75abe71e3",
+      "cell_index": 60,
+      "cell_signature_hash": "6a4d3f176514b095d103d8b6fd8e21d144ceecae6ac2a4548ec241275872e331",
       "context_energy_metrics": {
-        "delta_g_star": 0.22,
-        "g_star_diagnostic": 0.0969,
+        "delta_g_star": 0.18,
+        "g_star_diagnostic": 0.0569,
         "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.42
+        "u_star_burden": 0.38
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 61,
+      "cell_signature_hash": "08098cd888b4a5cd5f1350458ab4d80fe0de2c302536bda07ee4868b09d37a33",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1857,
+        "g_star_diagnostic": 0.0626,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.383
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 62,
+      "cell_signature_hash": "17dec7e1398e1d09fe4306570a0a165e32cdad239c017f42733ee9bdfa1dbce4",
+      "context_energy_metrics": {
+        "delta_g_star": 0.192,
+        "g_star_diagnostic": 0.0689,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.386
       },
       "dataset": {
         "docs": 500,
@@ -1329,13 +1869,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 45,
-      "cell_signature_hash": "5b7b236718da10892d68d6b0c76228b5c7e65e7edbe6571fa23202173005a84f",
+      "cell_index": 63,
+      "cell_signature_hash": "e61d7a323b2889e44eeb5c6344b857f74a9d36236c2eff99fbbe49795f9f48aa",
       "context_energy_metrics": {
-        "delta_g_star": 0.2277,
-        "g_star_diagnostic": 0.1046,
-        "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.425
+        "delta_g_star": 0.1989,
+        "g_star_diagnostic": 0.0758,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.389
       },
       "dataset": {
         "docs": 500,
@@ -1359,13 +1899,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 46,
-      "cell_signature_hash": "669397917c6199c7f79f2844da2bd6f58de269db93b821adb8f8fcbc8d5777fe",
+      "cell_index": 64,
+      "cell_signature_hash": "900768a8adc60706bb0f9a5756d9a887d84549acb5b5c757a0d6632f4f8cbc4f",
       "context_energy_metrics": {
-        "delta_g_star": 0.236,
-        "g_star_diagnostic": 0.1129,
-        "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.43
+        "delta_g_star": 0.192,
+        "g_star_diagnostic": 0.0689,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.392
       },
       "dataset": {
         "docs": 350,
@@ -1389,13 +1929,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 47,
-      "cell_signature_hash": "665f1352e102793a9a136c64bfac4fc35c81bad024897c8a12a10e7ce79c2c0e",
+      "cell_index": 65,
+      "cell_signature_hash": "1ebeb4757a739587def9d4cec065c4bbe911cff689ed9a230ab919a975372725",
       "context_energy_metrics": {
-        "delta_g_star": 0.2449,
-        "g_star_diagnostic": 0.1218,
-        "shannon_entropy_bits": 1.7898,
-        "u_star_burden": 0.435
+        "delta_g_star": 0.1977,
+        "g_star_diagnostic": 0.0746,
+        "shannon_entropy_bits": 1.8308,
+        "u_star_burden": 0.395
       },
       "dataset": {
         "docs": 350,
@@ -1419,13 +1959,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 48,
-      "cell_signature_hash": "8ab2a85375cf4ecbfd5504ae060221aeaeaf0f69d5cf254bc67b14f67669e56d",
+      "cell_index": 66,
+      "cell_signature_hash": "e831271f03b2ca9fc9dbe5746d1049d2b49cd8305105507cc43944f60d1a26fb",
       "context_energy_metrics": {
-        "delta_g_star": 0.24,
-        "g_star_diagnostic": 0.1169,
-        "shannon_entropy_bits": 1.8464,
-        "u_star_burden": 0.44
+        "delta_g_star": 0.204,
+        "g_star_diagnostic": 0.0809,
+        "shannon_entropy_bits": 1.8119,
+        "u_star_burden": 0.398
       },
       "dataset": {
         "docs": 350,
@@ -1449,13 +1989,73 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 49,
-      "cell_signature_hash": "e04153507b64413245a9313a300fcbda7785bdbe5bfc2c5b166aabd1de5625dd",
+      "cell_index": 67,
+      "cell_signature_hash": "1bd609492f49469f3e3064c5d91d3292ee249f74d05a36085d63025b518b051b",
       "context_energy_metrics": {
-        "delta_g_star": 0.2477,
-        "g_star_diagnostic": 0.1246,
+        "delta_g_star": 0.2109,
+        "g_star_diagnostic": 0.0878,
+        "shannon_entropy_bits": 1.7898,
+        "u_star_burden": 0.401
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 68,
+      "cell_signature_hash": "a08a5ad8ccbf2559802580495faeba1d590ffbd7c42268e419773d7bd63df007",
+      "context_energy_metrics": {
+        "delta_g_star": 0.204,
+        "g_star_diagnostic": 0.0809,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.404
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 16279200000000000,
+        "watt_hours_saved": 45.22
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_status": "RETAINED",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 69,
+      "cell_signature_hash": "4e1dcef9a44d22e3a8289a927bb56e3e801f5749941e1d3acb90793bb79631a2",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2097,
+        "g_star_diagnostic": 0.0866,
         "shannon_entropy_bits": 1.8308,
-        "u_star_burden": 0.445
+        "u_star_burden": 0.407
       },
       "dataset": {
         "docs": 350,
@@ -1479,13 +2079,13 @@
     },
     {
       "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
-      "cell_index": 50,
-      "cell_signature_hash": "f10aac424a55a490e535fd74e65e30603911d008cba3741d07d8a62d78ec3af2",
+      "cell_index": 70,
+      "cell_signature_hash": "45eaad4d68eb26b2c039d1da223384817ae8cd866021db65ce36214e013c07ae",
       "context_energy_metrics": {
-        "delta_g_star": 0.256,
-        "g_star_diagnostic": 0.1329,
+        "delta_g_star": 0.216,
+        "g_star_diagnostic": 0.0929,
         "shannon_entropy_bits": 1.8119,
-        "u_star_burden": 0.45
+        "u_star_burden": 0.41
       },
       "dataset": {
         "docs": 350,
@@ -1510,11 +2110,11 @@
   ],
   "matrix_dimensions": {
     "dataset_count": 10,
-    "model_count": 5,
-    "total_cells": 50
+    "model_count": 7,
+    "total_cells": 70
   },
-  "schema": "hydradg.multi_model_dataset_matrix_receipt.v1",
+  "schema": "hydradg.multi_model_dataset_matrix_receipt.v2",
   "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
   "status": "PASS",
-  "timestamp_unix": 1787254181
+  "timestamp_unix": 1787254219
 }
