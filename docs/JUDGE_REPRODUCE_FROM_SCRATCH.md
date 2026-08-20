@@ -53,15 +53,12 @@ HydraDB is an upstream dependency and is not vendored into this repository. Use 
 ```bash
 git clone https://github.com/biobitworks/hydradg.git
 cd hydradg
+git switch main
 ```
 
-For pre-publication review, the authoritative release branch is:
+For the current public Hack Hydra submission, **`main` is the judge-facing authority**. Historical release branches remain provenance/history and should not be substituted for `main` unless a specific historical receipt explicitly names one.
 
-```bash
-git checkout hack-hydra/public-product-final-20260819
-```
-
-Once `main` is fast-forwarded for submission, judges can remain on `main`.
+If exact byte-for-byte reproduction of a later tagged/frozen release is required, use the commit SHA recorded by that release receipt rather than an informal branch name.
 
 ## 4. Inspect the canonical FCG snapshot
 
@@ -202,6 +199,8 @@ A successful reconstruction should let you inspect:
 - Track 03 null/negative result preservation;
 - FCO/FCG provenance and claim boundaries;
 - the Ensslin & Weig -> HydraDG G* lineage with the explicit nonphysical boundary.
+
+For FCO/FCG publication/package identifier distinctions, see [`FCO_FCG_SOURCE_LINEAGE.md`](FCO_FCG_SOURCE_LINEAGE.md).
 
 ## 10. Reproduce the full Track 03 evaluation (optional, slower)
 
