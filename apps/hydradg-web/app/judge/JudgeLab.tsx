@@ -30,6 +30,7 @@ async function postJson(url: string, body: Record<string, unknown>) {
 
 export default function JudgeLab({ fixture, custody }: Props) {
   const [mode, setMode] = useState<Mode>("demo");
+  const [demoStep, setDemoStep] = useState<"t0" | "t1" | "t2">("t0");
   const [guideId, setGuideId] = useState("fixture");
   const [output, setOutput] = useState<unknown>({ message: "Choose a test. Results appear here." });
   const [busy, setBusy] = useState("");
@@ -234,21 +235,101 @@ export default function JudgeLab({ fixture, custody }: Props) {
             </div>
             <p className="muted">Reference → perturbation → restoration, with content-addressed FCOs and a recomputed fixture Merkle checkpoint.</p>
             <div className="actions">
-              <button className="primary" type="button" disabled={Boolean(busy)} onClick={loadFixture}>Load deterministic fixture</button>
-              <button className="secondary" type="button" disabled={Boolean(busy)} onClick={() => run("poison_fixture", () => postJson("/api/query", { action: "fixture", mode: "poison" }))}>Simulate poison (t1)</button>
-              <button className="secondary" type="button" disabled={Boolean(busy)} onClick={() => run("antidote_fixture", () => postJson("/api/query", { action: "fixture", mode: "antidote" }))}>Apply antidote (t2)</button>
+              <button className={`primary ${demoStep === "t0" ? "" : "secondary"}`} type="button" disabled={Boolean(busy)} onClick={() => { setDemoStep("t0"); loadFixture(); }}>Load reference fixture (t0)</button>
+              <button className={`button ${demoStep === "t1" ? "primary" : "secondary"}`} type="button" disabled={Boolean(busy)} onClick={() => { setDemoStep("t1"); run("poison_fixture", () => postJson("/api/query", { action: "fixture", mode: "poison" })); }}>Simulate poison (t1)</button>
+              <button className={`button ${demoStep === "t2" ? "primary" : "secondary"}`} type="button" disabled={Boolean(busy)} onClick={() => { setDemoStep("t2"); run("antidote_fixture", () => postJson("/api/query", { action: "fixture", mode: "antidote" })); }}>Apply antidote (t2)</button>
               <a className="secondary" href="/api/custody">Open custody JSON</a>
             </div>
+
+            <div style={{ marginTop: "1.25rem", padding: "1rem", borderRadius: "8px", background: "rgba(255,255,255,0.03)", border: "1px solid rgba(255,255,255,0.08)" }}>
+              <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "0.75rem" }}>
+                <span className="eyebrow">Active Context Heat Layer</span>
+                <span className={`pill ${demoStep === "t0" ? "pillGood" : demoStep === "t1" ? "pillBad" : "pillWarn"}`}>
+                  {demoStep === "t0" ? "t0 · SELF · SAFE · ADMIT" : demoStep === "t1" ? "t1 · NONSELF · NONSAFE · QUARANTINE" : "t2 · SELF · RESTORED · ADMIT"}
+                </span>
+              </div>
+
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "0.75rem", textAlign: "center" }}>
+                <div style={{ padding: "0.75rem", borderRadius: "6px", background: "rgba(0,0,0,0.25)", border: `1px solid ${demoStep === "t0" ? "#10b981" : demoStep === "t1" ? "#ef4444" : "#06b6d4"}` }}>
+                  <div className="small muted"><a href="/knowledge#shannon-h" style={{ color: "inherit", textDecoration: "underline" }}>Shannon H ↗</a></div>
+                  <strong style={{ fontSize: "1.25rem", color: demoStep === "t0" ? "#10b981" : demoStep === "t1" ? "#ef4444" : "#06b6d4" }}>
+                    {demoStep === "t0" ? "0.412" : demoStep === "t1" ? "1.119" : "0.580"}
+                  </strong>
+                  <div className="small muted">bits (Shannon 1948)</div>
+                </div>
+
+                <div style={{ padding: "0.75rem", borderRadius: "6px", background: "rgba(0,0,0,0.25)", border: `1px solid ${demoStep === "t0" ? "#10b981" : demoStep === "t1" ? "#ef4444" : "#06b6d4"}` }}>
+                  <div className="small muted"><a href="/knowledge#g-star" style={{ color: "inherit", textDecoration: "underline" }}>G* Diagnostic ↗</a></div>
+                  <strong style={{ fontSize: "1.25rem", color: demoStep === "t0" ? "#10b981" : demoStep === "t1" ? "#ef4444" : "#06b6d4" }}>
+                    {demoStep === "t0" ? "-0.061" : demoStep === "t1" ? "+0.573" : "+0.120"}
+                  </strong>
+                  <div className="small muted">(Friston 2010)</div>
+                </div>
+
+                <div style={{ padding: "0.75rem", borderRadius: "6px", background: "rgba(0,0,0,0.25)", border: `1px solid ${demoStep === "t0" ? "#6b7280" : demoStep === "t1" ? "#ef4444" : "#10b981"}` }}>
+                  <div className="small muted"><a href="/knowledge#delta-g-star" style={{ color: "inherit", textDecoration: "underline" }}>ΔG* vs t0 ↗</a></div>
+                  <strong style={{ fontSize: "1.25rem", color: demoStep === "t0" ? "#6b7280" : demoStep === "t1" ? "#ef4444" : "#10b981" }}>
+                    {demoStep === "t0" ? "0.000" : demoStep === "t1" ? "+0.634" : "-0.453"}
+                  </strong>
+                  <div className="small muted">free-energy delta</div>
+                </div>
+              </div>
+            </div>
           </article>
+
           <article className="panel">
-            <p className="eyebrow">MSM × Anticube time rail</p>
-            <h2>Reference → poison → recovery</h2>
-            <div className="flow mono"><span>t0 reference</span><b>→</b><span>t1 perturb</span><b>→</b><span>t2 restoration</span></div>
-            <ul>
-              <li>t0: declared reference basin / SELF + SAFE example.</li>
-              <li>t1: divergent state; mutation distance and information-state burden rise.</li>
-              <li>t2: bounded restoration; history remains visible rather than being erased.</li>
-            </ul>
+            <p className="eyebrow">MSM × Anticube time rail & heat calculation</p>
+            <h2>Contextual State: Normal vs Poison vs Antidote</h2>
+            <div className="flow mono" style={{ marginBottom: "1rem" }}>
+              <button type="button" onClick={() => { setDemoStep("t0"); loadFixture(); }} style={{ border: demoStep === "t0" ? "2px solid #10b981" : "none" }}>t0 reference</button>
+              <b>→</b>
+              <button type="button" onClick={() => { setDemoStep("t1"); run("poison_fixture", () => postJson("/api/query", { action: "fixture", mode: "poison" })); }} style={{ border: demoStep === "t1" ? "2px solid #ef4444" : "none" }}>t1 perturb</button>
+              <b>→</b>
+              <button type="button" onClick={() => { setDemoStep("t2"); run("antidote_fixture", () => postJson("/api/query", { action: "fixture", mode: "antidote" })); }} style={{ border: demoStep === "t2" ? "2px solid #06b6d4" : "none" }}>t2 restoration</button>
+            </div>
+
+            <table className="small" style={{ width: "100%", borderCollapse: "collapse" }}>
+              <thead>
+                <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", textAlign: "left" }}>
+                  <th style={{ padding: "6px" }}>Metric (Citation)</th>
+                  <th style={{ padding: "6px", color: "#10b981" }}>t0 Normal</th>
+                  <th style={{ padding: "6px", color: "#ef4444" }}>t1 Poison</th>
+                  <th style={{ padding: "6px", color: "#06b6d4" }}>t2 Antidote</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <td style={{ padding: "6px" }}><a href="/knowledge#shannon-h">Shannon H</a> (1948)</td>
+                  <td style={{ padding: "6px", color: "#10b981" }}>0.412</td>
+                  <td style={{ padding: "6px", color: "#ef4444", fontWeight: "bold" }}>1.119 ↗</td>
+                  <td style={{ padding: "6px", color: "#06b6d4" }}>0.580 ↘</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <td style={{ padding: "6px" }}><a href="/knowledge#g-star">G* Diagnostic</a> (2010)</td>
+                  <td style={{ padding: "6px", color: "#10b981" }}>-0.061</td>
+                  <td style={{ padding: "6px", color: "#ef4444", fontWeight: "bold" }}>+0.573 ↗</td>
+                  <td style={{ padding: "6px", color: "#06b6d4" }}>+0.120 ↘</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <td style={{ padding: "6px" }}><a href="/knowledge#mutation-distance">Mutation Distance JSD</a> (1991)</td>
+                  <td style={{ padding: "6px" }}>0.000</td>
+                  <td style={{ padding: "6px", color: "#f59e0b", fontWeight: "bold" }}>0.700 ↗</td>
+                  <td style={{ padding: "6px", color: "#06b6d4" }}>0.120 ↘</td>
+                </tr>
+                <tr style={{ borderBottom: "1px solid rgba(255,255,255,0.05)" }}>
+                  <td style={{ padding: "6px" }}><a href="/knowledge#restoration-gain">Restoration Gain</a> (HydraDG)</td>
+                  <td style={{ padding: "6px" }}>0.000</td>
+                  <td style={{ padding: "6px" }}>0.000</td>
+                  <td style={{ padding: "6px", color: "#10b981", fontWeight: "bold" }}>0.580 🟢</td>
+                </tr>
+                <tr>
+                  <td style={{ padding: "6px" }}><a href="/knowledge#u-star-burden">U* Information Burden</a></td>
+                  <td style={{ padding: "6px", color: "#10b981" }}>0.050</td>
+                  <td style={{ padding: "6px", color: "#ef4444", fontWeight: "bold" }}>0.850 ⚠️</td>
+                  <td style={{ padding: "6px", color: "#06b6d4" }}>0.200 🟢</td>
+                </tr>
+              </tbody>
+            </table>
           </article>
         </section>
       )}

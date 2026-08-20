@@ -55,14 +55,16 @@ timeline
 - **URL / Screen**: Click **"Try the guided demo"** or navigate to [http://127.0.0.1:3012/judge](http://127.0.0.1:3012/judge).
 - **Verbatim Action Sequence**:
   - **Tab 1 (`1 · DEMO CONTROL`)**:
-    - **Step 1**: Click **"Load deterministic fixture"**.
+    - **Step 1**: Click **"Load reference fixture (t0)"** $\to$ observe green reference state (`t0 · SELF · SAFE · ADMIT`), $H=0.412$, $G^*=-0.061$.
+    - Click **"Simulate poison (t1)"** $\to$ observe red perturbation heat (`t1 · NONSELF · NONSAFE · QUARANTINE`), $H=1.119 \uparrow$, $G^*=+0.573 \uparrow$, $\Delta G^*=+0.634 \uparrow$.
+    - Click **"Apply antidote (t2)"** $\to$ observe cyan restoration state (`t2 · SELF · RESTORED · ADMIT`), $H=0.580 \downarrow$, $G^*=+0.120 \downarrow$, Restoration gain $=0.580 \text{ 🟢}$.
   - **Tab 2 (`2 · LIVE REAL DATA`)**:
     - **Step 2**: Click **"Refresh cases"** $\to$ select case `gpt4_4edbafa2` $\to$ click **"Load case into HydraDB"**.
     - **Step 3**: Click **"Run retrieval"**.
     - **Step 4**: Click **"Inject poison"** $\to$ note `SUPERSEDED_BY` & `CONTRADICTS` graph edges.
     - **Step 4**: Click **"Apply antidote"** $\to$ verify reference recovery without erasing divergent history.
 - **Narration Cue**:
-  > *"In Judge Lab, we start with a reference fact, inject a non-safe poison perturbation, and observe how HydraDG creates explicit SUPERSEDED_BY and CONTRADICTS edges. When antidote restoration is applied, the declared current state recovers while the divergent history remains fully inspectable."*
+  > *"In Judge Lab, we switch between t0 reference, t1 poison, and t2 antidote. The active heat layer displays color-coded Shannon entropy H, free energy diagnostic G*, and information burden over time, citing Shannon 1948, Friston 2010, and Lin 1991. Applying antidote restores the declared state while preserving divergent history."*
 
 ---
 

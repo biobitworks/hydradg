@@ -113,7 +113,9 @@ timeline
     <ul>
       <li><strong>Tab 1 (<code>1 · DEMO CONTROL</code>)</strong>:
         <ul>
-          <li><strong>Step 1</strong>: Click <strong>"Load deterministic fixture"</strong>.</li>
+          <li><strong>Step 1</strong>: Click <strong>"Load reference fixture (t0)"</strong> → observe green reference state (<code>t0 · SELF · SAFE · ADMIT</code>), <i>H=0.412</i>, <i>G*=-0.061</i>.</li>
+          <li>Click <strong>"Simulate poison (t1)"</strong> → observe red perturbation heat (<code>t1 · NONSELF · NONSAFE · QUARANTINE</code>), <i>H=1.119 ↗</i>, <i>G*=+0.573 ↗</i>, <i>ΔG*=+0.634 ↗</i>.</li>
+          <li>Click <strong>"Apply antidote (t2)"</strong> → observe cyan restoration state (<code>t2 · SELF · RESTORED · ADMIT</code>), <i>H=0.580 ↘</i>, <i>G*=+0.120 ↘</i>, Restoration gain = 0.580 🟢.</li>
         </ul>
       </li>
       <li><strong>Tab 2 (<code>2 · LIVE REAL DATA</code>)</strong>:
@@ -127,7 +129,7 @@ timeline
     </ul>
   </li>
   <li><strong>Narration Cue</strong>:
-    <blockquote><em>"In Judge Lab, we start with a reference fact, inject a non-safe poison perturbation, and observe how HydraDG creates explicit SUPERSEDED_BY and CONTRADICTS edges. When antidote restoration is applied, the declared current state recovers while the divergent history remains fully inspectable."</em></blockquote>
+    <blockquote><em>"In Judge Lab, we switch between t0 reference, t1 poison, and t2 antidote. The active heat layer displays color-coded Shannon entropy H, free energy diagnostic G*, and information burden over time, citing Shannon 1948, Friston 2010, and Lin 1991. Applying antidote restores the declared state while preserving divergent history."</em></blockquote>
   </li>
 </ul>
 
