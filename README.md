@@ -17,6 +17,7 @@ If you have three minutes:
 3. Use [`HOW_TO.md`](HOW_TO.md) or [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md) to rebuild the HydraDB graph and website on a clean machine.
 4. Inspect the canonical public FCG snapshot in [`custody/graph/live/`](custody/graph/live/).
 5. Inspect [`docs/COMPONENT_MAP.md`](docs/COMPONENT_MAP.md) for component purpose, inputs, outputs, and claim boundaries.
+6. Inspect [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md) for versioned preprint/package/hash/signature boundaries.
 
 There is **no Neo4j fallback** in the judge application. The executable graph path is:
 
@@ -241,6 +242,8 @@ The expanded text figure, biological mapping, `G*` boundary, and claim ceiling a
 
 Material source, transformation, derived-evidence, claim, and artifact relationships are kept explicitly separate where the project custody model applies. Public-safe custody receipts are under [`custody/`](custody/).
 
+Publication/package identities are versioned and typed; a DOI, PDF SHA-256, package SHA-256, `paper_cid`, FCG root, signature, and Merkle/MMR root must not be collapsed into one generic "preprint hash." See [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md).
+
 A hash does not imply a signature. A signature does not imply a Merkle/MMR commitment. Neither implies scientific verification unless the corresponding operation and evidence exist.
 
 ---
@@ -270,7 +273,7 @@ It scans complete Git history and fails on any finding. A historical or partial 
 - `archive/` — historical plans, intermediate DaisyTrain packages, and past evaluation runs
 - `custody/` — public-safe FCO/FCG and verification receipts
 - `custody/graph/live/` — canonical public graph snapshot
-- `docs/` — architecture, component, reproduction, and claim-boundary documentation
+- `docs/` — architecture, component, reproduction, source-lineage, and claim-boundary documentation
 - `schemas/` — state/data schemas
 - `scripts/` — HydraDB projection, verification, release, and reproduction tooling
 - `SUBMISSION.md` — Hack Hydra submission scope
@@ -282,9 +285,10 @@ It scans complete Git history and fails on any finding. A historical or partial 
 | Category | Licensing Scope |
 |---|---|
 | **HydraDG software / website / scripts** | **Apache License, Version 2.0** ([`LICENSE`](LICENSE)) |
-| **Byron P. Lee / Biobitworks preprints / manuscripts / authored research content** | **CC BY-NC-ND 4.0** ([`LICENSING.md`](LICENSING.md)) |
+| **Repository-native Byron P. Lee / Biobitworks research content** | **Version/object-specific; CC BY-NC-ND 4.0 where explicitly designated** ([`LICENSING.md`](LICENSING.md)) |
+| **Previously deposited preprints / manuscripts** | **License attached to the exact deposited version; do not retroactively narrow it** ([`LICENSING.md`](LICENSING.md)) |
 | **HydraDB** | **Upstream HydraDB license** |
 | **LongMemEval / other datasets** | **Respective upstream dataset licenses** |
 | **External papers / templates / APIs** | **Respective upstream rights** |
 
-See [`LICENSING.md`](LICENSING.md) and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for scope and third-party attribution.
+See [`LICENSING.md`](LICENSING.md), [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for scope, versioned publication identity, and third-party attribution.
