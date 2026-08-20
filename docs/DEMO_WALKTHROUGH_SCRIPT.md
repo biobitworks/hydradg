@@ -1,117 +1,113 @@
 # HydraDG — Replacement Golden-Path Video Script
 
-Target: **2:20–2:40**, maximum under 3 minutes.
+**Status:** PREVIEW STAGED / REAL LOCAL MODEL MATRIX CURRENTLY RUNNING.
 
-Recording format: **1920×1080, 16:9, browser full-screen**.
+Do not record the final replacement submission video until the real local-model receipts are stable. The preview may be reviewed now, but it intentionally shows `CURRENTLY_RUNNING` instead of provisional expanded scores.
 
-Primary recording surface: the current pinned judge backup deployment at commit `60120da604f3bb6f30edfadc1d609018089beaef`.
+Target final video: **2:20–2:40**, under 3 minutes.
 
-Open the temporary judge-access URL once to establish the Vercel preview session:
-
-`https://hydradg-4u209xn67-biobitworks.vercel.app/?_vercel_share=B5GJZ77ZGBvnnTPP3G6xalyCEs4vzYMT`
-
-Temporary share access expires **2026-08-21 21:16 UTC / 14:16 PDT**. If it has expired, use the production site after redeployment or generate a fresh share URL for the same pinned preview.
-
-Local fallback for recording: `http://127.0.0.1:3012/`.
-
-## Recording rule
-
-The video should show the executed evidence and current claim boundaries exactly as rendered. Do **not** claim hosted canonical parity while the BYOG readback is still indexing/pending. Do **not** call any Git commit signed unless a verified signature exists.
-
-## Golden-path pacing
+## Preview walkthrough while experiments run
 
 | Time | Screen | What to show |
 |---|---|---|
-| 0:00–0:15 | `/` | Problem and governed-context thesis |
-| 0:15–0:55 | `/judge` | Reference → Poison → Antidote |
-| 0:55–1:25 | `/track03` then `/eligibility` | Executed null result + K=5/10/100 matrix |
-| 1:25–1:45 | `/atom-heatmap` | Local vs hosted FCO status; indexing/readback boundary |
-| 1:45–2:10 | `/evidence` and `/knowledge` | FCO/FCG lineage, source, transformation, evidence, claim ceiling |
-| 2:10–2:35 | `/eligibility` | Final governed chain, 0/9 Holm result, closing sentence |
+| 0:00–0:15 | `/` | Problem, governed-context thesis, running experiment status |
+| 0:15–0:50 | `/judge` | Reference → Poison → Antidote |
+| 0:50–1:20 | `/real-local-matrix` | 10 Ollama lanes × 3 datasets × K=5/10/100, every expanded result `CURRENTLY_RUNNING`; separate Vithia lane |
+| 1:20–1:40 | `/track03` | Historical full500 K=5 baseline only |
+| 1:40–1:58 | `/atom-heatmap` | Hosted indexing/readback boundary |
+| 1:58–2:20 | `/evidence` / `/knowledge` | FCO/FCG lineage |
+| 2:20–2:35 | `/eligibility` | Running family + historical baseline + bounded closing |
 
-## 1. Home — problem and thesis (0:00–0:15)
+## Recording rule
 
-Action:
-- Start at `/`.
-- Keep the cursor near the Context Iceberg / governed state visualization.
+The final video should be recorded only after the running matrix page has been populated from real receipts.
 
-Narration:
+Until then:
 
-> Long-lived AI memory can silently overwrite changing facts and erase the evidence that came before. HydraDG uses HydraDB plus Fractal Custody Objects and Graphs to keep state changes, contradictions, provenance, and null results navigable instead of flattening them.
+- do not narrate a final model ranking;
+- do not narrate `0/9` or any other corrected family result as current expanded evidence;
+- do not claim a K=100 saturation/dilution result unless the real depth receipts establish it;
+- do not claim hosted 653/653 or 1,692/1,692 parity while readback remains pending;
+- keep the old full500 result explicitly labeled historical baseline.
 
-## 2. Judge Lab — Reference → Poison → Antidote (0:15–0:55)
+## 1. Home
 
-Action:
-- Open `/judge`.
-- Load the reference state.
-- Trigger the poison/mutation state.
-- Apply the antidote/restoration state.
-- Pause briefly on each color/state transition.
+Preview narration:
 
-Narration:
+> HydraDG keeps changing memory as a governed graph rather than flattening it into one current answer. The golden path preserves reference, contradiction, restoration, and provenance. The expanded empirical program is now running across local models, datasets, and retrieval depths, and this preview intentionally withholds numerical conclusions until the execution receipts exist.
 
-> This is the golden path. We start from a governed reference state, introduce a controlled poison or contradictory state, and then apply an antidote. HydraDG changes the declared current state without deleting the divergent history. The graph retains supersession, contradiction, and provenance so we can identify where a bad dependency entered and whether recovery actually occurred.
-
-If H, G*, ΔG*, or Cloud Drift values are visible, describe them as **state diagnostics**. Do not imply that lower G* means better retrieval accuracy.
-
-## 3. Executed evidence — Track 03 and Daisy matrix (0:55–1:25)
-
-Action:
-- Open `/track03`.
-- Show the LongMemEval execution scale and the historical K=5 comparison.
-- Move to `/eligibility`.
-- Show the cross-track K=5/10/100 Daisy Train matrix and the Holm result.
+## 2. Judge Lab — Reference → Poison → Antidote
 
 Narration:
 
-> On LongMemEval, the graph was actually constructed and queried. The original K=5 ablation did not establish a positive graph-route Hit@5 advantage over the flat reference route. We then expanded the evaluation across three datasets, three model lanes, and K equals 5, 10, and 100. At the co-primary K=10 family, zero of nine model-versus-control tests were significant after Holm-Bonferroni correction. The claim ceiling is therefore NO_MODEL_BENEFIT_OBSERVED.
+> We begin with a governed reference state, introduce a controlled contradictory state, and then apply a restoration. HydraDG changes the declared current state without deleting the divergent history, preserving supersession, contradiction, and provenance in the graph.
 
-Optional, if clearly visible and time allows:
+If H, G*, ΔG*, or Cloud Drift appear, call them state diagnostics, not accuracy scores.
 
-> The secondary depth analysis shows that retrieval can improve as K increases, with saturation or dilution at high depth. That is a depth observation, not a model-superiority result.
+## 3. Real Local Model Matrix
 
-## 4. Atom heat map — local vs hosted state (1:25–1:45)
+Open `/real-local-matrix`.
 
-Action:
-- Open `/atom-heatmap`.
-- Show canonical FCO IDs and local/hosted status columns.
-- Pause on the hosted status legend or representative rows.
+Show:
+
+- ten local Ollama text-model lanes;
+- EnterpriseRAG-Bench;
+- HydraBlast-Real-Deps;
+- LongMemEval-S-full500;
+- K=5;
+- K=10 co-primary;
+- K=100;
+- separate Vithia/Pythia-14m family;
+- every expanded result marked `CURRENTLY_RUNNING`.
+
+Preview narration:
+
+> This is the experiment now running on magicstudiobox. Ten local Ollama text-model lanes are being evaluated across three benchmark families at K equals 5, 10, and 100, with Vithia kept as a separate perturbation family. Every numerical result stays marked currently running until its model output, FCO/FCG lineage, deterministic replay, and statistical receipt are stable.
+
+For the **final** video, replace this narration with the exact result summary produced by the completed receipts.
+
+## 4. Historical Track 03 baseline
+
+Open `/track03`.
 
 Narration:
 
-> This view compares the canonical local FCO identities with their hosted HydraDB projection. The upload has been accepted, but the current canonical 653-object and 1,692-edge readback is still bounded by indexing and parity verification. HydraDG displays that uncertainty instead of turning an accepted upload into a false parity claim.
+> This earlier LongMemEval full500 K=5 ablation remains our historical baseline. It did not establish a positive B, C, or D Hit-at-5 advantage over the flat reference route at that tested configuration. We preserve it rather than erase it, but it is no longer used as the headline for the broader experimental program.
 
-Do not say `653/653` or `1692/1692` unless the current page and receipt actually establish those values at recording time.
+## 5. Hosted projection
 
-## 5. Evidence and knowledge — trace one claim backward (1:45–2:10)
-
-Action:
-- Open `/evidence`.
-- Select one FCO or evidence item if the UI supports it.
-- Show hash/evidence class/claim ceiling.
-- Open `/knowledge` and show source citations.
+Open `/atom-heatmap`.
 
 Narration:
 
-> Every material result can resolve backward from the claim to derived evidence, transformation, and source custody object. SHA-256 gives content identity where recorded; it is not the same thing as a signature. G-star is an application-defined dimensionless information-state diagnostic, while Jensen-Shannon divergence is used separately for Cloud Drift.
+> Canonical local FCO identity is separate from the hosted HydraDB projection. Upload has been accepted, while canonical hosted readback remains bounded by indexing and parity verification.
 
-## 6. Eligibility — closing claim boundary (2:10–2:35)
+## 6. Evidence lineage
 
-Action:
-- Return to `/eligibility`.
-- Show the governed chain from Atom → Seed → FCO → FCG → HydraDB → experiments → claim ceiling.
-- Point to the `0 / 9` Holm result and `NO_MODEL_BENEFIT_OBSERVED`.
+Open `/evidence` and `/knowledge`.
 
-Closing sentence:
+Narration:
 
-> HydraDG is not a leaderboard claim. It is a governed memory experiment: change state, find the first divergence, preserve custody, test recovery, and keep positive, null, negative, and abstaining evidence in the same graph.
+> Results resolve backward through source, transformation, model output, parsed evidence, claim, and artifact custody. Hashes establish identity where recorded; they are not signatures or scientific verification by themselves.
 
-## Before recording
+## 7. Closing
 
-- Confirm the preview or production site loads without an unexpected login prompt.
-- Test `/judge`, `/track03`, `/eligibility`, `/atom-heatmap`, `/evidence`, and `/knowledge` immediately before recording.
-- Close unrelated tabs and notifications.
-- Use 100% browser zoom unless labels are unreadable.
-- Do not show API keys, `.env` files, terminal secrets, or Vercel environment values.
-- Keep the repository visible only if useful; the video should prioritize the product and executed evidence.
-- After upload, replace `PENDING_USER_RECORDING_AND_UPLOAD` in `SUBMISSION.md` and `docs/RESUBMISSION_COPY_20260820.md` with the actual video URL only after verifying it opens publicly.
+Open `/eligibility`.
+
+Preview closing:
+
+> HydraDG is not preselecting the result. The expanded model-by-dataset-by-depth family is running now, the earlier null result remains visible as historical evidence, and the final claim ceiling will be derived from the completed receipts.
+
+Final closing after results:
+
+> HydraDG is a governed memory experiment: change state, find the first divergence, preserve custody, test recovery, and keep positive, null, negative, failed, and abstaining evidence in the same graph.
+
+## Before final recording
+
+- Wait for the real local-model matrix to complete.
+- Confirm the `/real-local-matrix` page has receipt-backed values rather than `CURRENTLY_RUNNING`.
+- Confirm the statistical correction was recomputed from the actual completed primary family.
+- Update `SUBMISSION.md` and `docs/RESUBMISSION_COPY_20260820.md`.
+- Verify the public preview/production URL.
+- Never expose API keys or `.env` contents.
+- Keep signature state `NOT_SIGNED` and Merkle state `NOT_MERKLE_COMMITTED` unless later operations establish otherwise.
