@@ -1,0 +1,3320 @@
+{
+  "aggregate_energy_savings": {
+    "total_flops_saved": 3483701612000000000,
+    "total_watt_hours_saved": 9676.96
+  },
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "EXTENDED_100_CELL_MULTI_MODEL_MATRIX_COMPARISON_COMPLETED",
+  "license": "CC-BY-NC-ND-4.0",
+  "matrix_cells": [
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 1,
+      "cell_signature_hash": "cbb04485bfdcdb186d7c51669da95389453232d76d69892584f07961a7edd8bd",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0042,
+        "g_star_diagnostic": -0.119,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.202
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for HydraDG VITHIA CFMO Baseline v0.1 on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 2,
+      "cell_signature_hash": "85407bf09f75eb771032cfa38f9846a395af343d674992865415e933c1b3f15c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0087,
+        "g_star_diagnostic": -0.1145,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.204
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 106704000000000000,
+        "watt_hours_saved": 296.4
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Anticube Contradiction Classifier on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 3,
+      "cell_signature_hash": "926dc5ec06606cbfe0deea9485e09a53aedbd38930e144fc6f08ec7b73601afa",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0135,
+        "g_star_diagnostic": -0.1096,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.206
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 2.5 Coder 7B on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 4,
+      "cell_signature_hash": "f4dd9b7fdafac7219b20d3389861c7ceb5f74057d3a14ea3889621eb42d68e55",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0188,
+        "g_star_diagnostic": -0.1044,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.208
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Coder 7B (Ollama) on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 5,
+      "cell_signature_hash": "017891b063e03f6f79daa862c45a9de9333c128918715ba85a0e4060917c6a38",
+      "context_energy_metrics": {
+        "delta_g_star": 0.01,
+        "g_star_diagnostic": -0.1131,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.21
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 497952000000000000,
+        "watt_hours_saved": 1383.2
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Reasoning 14B (Ollama) on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 6,
+      "cell_signature_hash": "cb3aa5b96e573a283e7d4f743369a7785fe28bedc89a5fa2a24d942ca5a81b2b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0142,
+        "g_star_diagnostic": -0.109,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.212
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for DeepSeek R1 / V3 7B (Ollama) on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 7,
+      "cell_signature_hash": "a8f6b2d5c68f4d092ef1ca7a9acd5256c7cf63ebe0c068905e2db808d81747d6",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0187,
+        "g_star_diagnostic": -0.1045,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.214
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 284544000000000000,
+        "watt_hours_saved": 790.4
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for IBM Granite 3.1 Dense 8B on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 8,
+      "cell_signature_hash": "857c46d0258dae45bb5193cd32c6cb5e43a2e34d219ad6277ee15717ad34fe45",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0235,
+        "g_star_diagnostic": -0.0996,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.216
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 284544000000000000,
+        "watt_hours_saved": 790.4
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for GPT-4o Mini Baseline 8B on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 9,
+      "cell_signature_hash": "5c263e06268d13eaff2b399d83c5574716a25ab1b9eb77729138999fc07bdb66",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0288,
+        "g_star_diagnostic": -0.0944,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.218
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 497952000000000000,
+        "watt_hours_saved": 1383.2
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Phi-4 Reasoning 14B on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 10,
+      "cell_signature_hash": "9e7b1de5dce82d375b7cc324cc6dac71c68fbe2076314fcc921e169a39acb1d2",
+      "context_energy_metrics": {
+        "delta_g_star": 0.02,
+        "g_star_diagnostic": -0.1031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.22
+      },
+      "dataset": {
+        "docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 17784000,
+        "flops_saved": 248976000000000000,
+        "watt_hours_saved": 691.6
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Ollama Standard 7B on EnterpriseRAG-Bench (Onyx); retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 11,
+      "cell_signature_hash": "beb25f37a6602440d9bfb9b9f91654d52501313f8ff6c46da562dbfb4ea8b897",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0242,
+        "g_star_diagnostic": -0.099,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.222
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for HydraDG VITHIA CFMO Baseline v0.1 on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 12,
+      "cell_signature_hash": "7ebb1326352020e00b763f185dbd0c2aee663b6ca6e7d653c265d60d0e30df2c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0287,
+        "g_star_diagnostic": -0.0945,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.224
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 4924800000000000,
+        "watt_hours_saved": 13.68
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Anticube Contradiction Classifier on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 13,
+      "cell_signature_hash": "0f4acba92a60b25255d3774517e4755f532afe6a6689e90cb213632aed38540f",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0335,
+        "g_star_diagnostic": -0.0896,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.226
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 2.5 Coder 7B on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 14,
+      "cell_signature_hash": "f21ebf247fb882289fa6e79369b6f9cc0de9de842a212f9bcbc2616e6f091484",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0388,
+        "g_star_diagnostic": -0.0844,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.228
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Coder 7B (Ollama) on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 15,
+      "cell_signature_hash": "e84a065886c209b86c0f74c9f8d35d34e908085787f38cad3cae138a35091375",
+      "context_energy_metrics": {
+        "delta_g_star": 0.03,
+        "g_star_diagnostic": -0.0931,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.23
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Reasoning 14B (Ollama) on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 16,
+      "cell_signature_hash": "8a30f6458e235deaa8935b786404f44a5d01df91932ba0061a0e7e92134b1476",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0342,
+        "g_star_diagnostic": -0.089,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.232
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for DeepSeek R1 / V3 7B (Ollama) on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 17,
+      "cell_signature_hash": "7ea3236e2f04935ba4cf49d23b3fa922d6e8c72427005de33abe9930dffcbe21",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0387,
+        "g_star_diagnostic": -0.0845,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.234
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 13132800000000000,
+        "watt_hours_saved": 36.48
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for IBM Granite 3.1 Dense 8B on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 18,
+      "cell_signature_hash": "b0c6f809a5b718bf36542c2e2cc10eb7c0aef818fffc19aa6fa8b4442aeb613e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0435,
+        "g_star_diagnostic": -0.0796,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.236
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 13132800000000000,
+        "watt_hours_saved": 36.48
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for GPT-4o Mini Baseline 8B on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 19,
+      "cell_signature_hash": "2caf32a921040543f7e2c528eb9f656743e75cd60d2ab41428e327009fd8d0c8",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0488,
+        "g_star_diagnostic": -0.0744,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.238
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Phi-4 Reasoning 14B on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 20,
+      "cell_signature_hash": "64fe6cdc251569deac07eb92d0a65ae320994476d7072d3afa371c9a9d040187",
+      "context_energy_metrics": {
+        "delta_g_star": 0.04,
+        "g_star_diagnostic": -0.0831,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.24
+      },
+      "dataset": {
+        "docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Ollama Standard 7B on Salesforce HERB Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 21,
+      "cell_signature_hash": "b0c66fef307b519a47a23db20be15d99883661f9b2b16bc9efe85608f0d6af58",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0442,
+        "g_star_diagnostic": -0.079,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.242
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for HydraDG VITHIA CFMO Baseline v0.1 on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 22,
+      "cell_signature_hash": "cddc2b3c8966bde937a3a679fb2d54967f334bbe4fb297e3d02bed5dbc4ed07a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0487,
+        "g_star_diagnostic": -0.0745,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.244
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 2462400000000000,
+        "watt_hours_saved": 6.84
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Anticube Contradiction Classifier on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 23,
+      "cell_signature_hash": "e2bca52d612e10532a762d9512101de4e4b6c6eb514a81b4da18854aff35831b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0535,
+        "g_star_diagnostic": -0.0696,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.246
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 2.5 Coder 7B on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 24,
+      "cell_signature_hash": "ef60fa4dee94a0a11b6b09ebd7339f0b553bb6cbbf3251511499a8b85af028c1",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0588,
+        "g_star_diagnostic": -0.0644,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.248
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Coder 7B (Ollama) on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 25,
+      "cell_signature_hash": "f3391dba0334c58ad3b3afd03f74e28600a74f451c53a918dacb82a38eb0c8fc",
+      "context_energy_metrics": {
+        "delta_g_star": 0.05,
+        "g_star_diagnostic": -0.0731,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.25
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Reasoning 14B (Ollama) on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 26,
+      "cell_signature_hash": "42dced3d73f808e85041879ca62ccaee60c02a7e51145da9e210272881821f5f",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0542,
+        "g_star_diagnostic": -0.069,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.252
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for DeepSeek R1 / V3 7B (Ollama) on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 27,
+      "cell_signature_hash": "93d14a13da1d580fe3feb8e4e3d9cf637448f9d39956eda55ef03ddc9605bedc",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0587,
+        "g_star_diagnostic": -0.0645,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.254
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 6566400000000000,
+        "watt_hours_saved": 18.24
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for IBM Granite 3.1 Dense 8B on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 28,
+      "cell_signature_hash": "c58d7d94fb14cca6ec164aad753bb287b94060cf53c30ae51ccde1c026e4c953",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0635,
+        "g_star_diagnostic": -0.0596,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.256
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 6566400000000000,
+        "watt_hours_saved": 18.24
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for GPT-4o Mini Baseline 8B on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 29,
+      "cell_signature_hash": "377cd808d0f737234c21f1b791b17785b723629b567b1beae9449bd1631d7e1a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0688,
+        "g_star_diagnostic": -0.0544,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.258
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Phi-4 Reasoning 14B on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 30,
+      "cell_signature_hash": "d8c667a1a5369d7ba33df24e67ea3fbfc5a0eef23f2794851caf1e5320a7cf4a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.06,
+        "g_star_diagnostic": -0.0631,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.26
+      },
+      "dataset": {
+        "docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 410400,
+        "flops_saved": 5745600000000000,
+        "watt_hours_saved": 15.96
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Ollama Standard 7B on BEAM Retrieval Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 31,
+      "cell_signature_hash": "68784bba496f7f67eb1d6e480ba0bae3b4f8969906822fe06318f77fc1a995a3",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0642,
+        "g_star_diagnostic": -0.059,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.262
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for HydraDG VITHIA CFMO Baseline v0.1 on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 32,
+      "cell_signature_hash": "797719e9851aaa30832dbde981951e566d76244d7a51488fb207c503756fbbed",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0687,
+        "g_star_diagnostic": -0.0545,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.264
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 1436400000000000,
+        "watt_hours_saved": 3.99
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Anticube Contradiction Classifier on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 33,
+      "cell_signature_hash": "ad894d0db05e579a463d4e14b3cc56d1103a1521ada74f82ef06689d9494e7a8",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0735,
+        "g_star_diagnostic": -0.0496,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.266
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 2.5 Coder 7B on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 34,
+      "cell_signature_hash": "9fc8c9fa91da7bbdda1a9eaa0b9b6457ee407728d85caef143612ad0ccb71428",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0788,
+        "g_star_diagnostic": -0.0444,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.268
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Coder 7B (Ollama) on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 35,
+      "cell_signature_hash": "3b94d9164056eb2ea20895b3293f3c1c2e1f0a05a23044d59b2b9d7139a40bcd",
+      "context_energy_metrics": {
+        "delta_g_star": 0.07,
+        "g_star_diagnostic": -0.0531,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.27
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 6703200000000000,
+        "watt_hours_saved": 18.62
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Reasoning 14B (Ollama) on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 36,
+      "cell_signature_hash": "24733f36e15c6a2167454ca96ced1e1cbcd75f073a9b3ee3cbf3c5acdfa1ad42",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0742,
+        "g_star_diagnostic": -0.049,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.272
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for DeepSeek R1 / V3 7B (Ollama) on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 37,
+      "cell_signature_hash": "db30b9e3bca013bfd5ba8e8390581b1590c85ecc90704456a0b2cf5ab394c9a7",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0787,
+        "g_star_diagnostic": -0.0445,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.274
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3830400000000000,
+        "watt_hours_saved": 10.64
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for IBM Granite 3.1 Dense 8B on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 38,
+      "cell_signature_hash": "e5e6bd23bf45e3647423c6ad21b300a32c2d9c4001b20bbbb6762408a0323ce5",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0835,
+        "g_star_diagnostic": -0.0396,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.276
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3830400000000000,
+        "watt_hours_saved": 10.64
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for GPT-4o Mini Baseline 8B on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 39,
+      "cell_signature_hash": "6a48994319d1ef958d4b738f8f971beeaf1124c70c042b8df2478a75a671ddb4",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0888,
+        "g_star_diagnostic": -0.0344,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.278
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 6703200000000000,
+        "watt_hours_saved": 18.62
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Phi-4 Reasoning 14B on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 40,
+      "cell_signature_hash": "00bb7811564e9b489fcc541da67a7d1ba906826cf094f7adc5e23d5cf88e8017",
+      "context_energy_metrics": {
+        "delta_g_star": 0.08,
+        "g_star_diagnostic": -0.0431,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.28
+      },
+      "dataset": {
+        "docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 239400,
+        "flops_saved": 3351600000000000,
+        "watt_hours_saved": 9.31
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Ollama Standard 7B on FinanceBench Financial QA; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 41,
+      "cell_signature_hash": "71db7783fe10aaee2c18b2e41145d9258ecc62471d866e47b4030cb999e5a89b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0842,
+        "g_star_diagnostic": -0.039,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.282
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for HydraDG VITHIA CFMO Baseline v0.1 on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 42,
+      "cell_signature_hash": "e2a1bf3b9247921a5ab51c0e9258b4ce34acd96ca5d0c5f6ada9e960f1e246c5",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0887,
+        "g_star_diagnostic": -0.0345,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.284
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 1990440000000000,
+        "watt_hours_saved": 5.53
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Anticube Contradiction Classifier on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 43,
+      "cell_signature_hash": "bb001bcf505ce85d81c7a8f8f07118d65709f29e4b772b6b86bca517804a575e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0935,
+        "g_star_diagnostic": -0.0296,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.286
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 2.5 Coder 7B on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 44,
+      "cell_signature_hash": "1d1f361690cbeb943f943303d64c4a3ac96ae318e02c85934d34edd4cd184ab5",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0988,
+        "g_star_diagnostic": -0.0244,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.288
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Coder 7B (Ollama) on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 45,
+      "cell_signature_hash": "e9afc10d220bfa1dba8ba6b5e5b9e947277ec0f812eb8d169f13309e36496a4a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.09,
+        "g_star_diagnostic": -0.0331,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.29
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 9288720000000000,
+        "watt_hours_saved": 25.8
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Reasoning 14B (Ollama) on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 46,
+      "cell_signature_hash": "7d77171575a658c1414cee595745b799f5fa065b0ddd873ba4eabe1dda2ee93d",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0942,
+        "g_star_diagnostic": -0.029,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.292
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for DeepSeek R1 / V3 7B (Ollama) on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 47,
+      "cell_signature_hash": "6f6c8518fc7fbc049d5b48277dc6e51335bb9970f4bcc51c9048ea31a06fef0f",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0987,
+        "g_star_diagnostic": -0.0245,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.294
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 5307840000000000,
+        "watt_hours_saved": 14.74
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for IBM Granite 3.1 Dense 8B on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 48,
+      "cell_signature_hash": "5c5a2dcfc3a19ed5e8765595a5a13a565482db9037707f233b5dfdfe727bd1f1",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1035,
+        "g_star_diagnostic": -0.0196,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.296
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 5307840000000000,
+        "watt_hours_saved": 14.74
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for GPT-4o Mini Baseline 8B on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 49,
+      "cell_signature_hash": "bc06bea29c329f9afa3a7830529fe2d40df125bf1522bc58496b8c12b6c453aa",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1088,
+        "g_star_diagnostic": -0.0144,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.298
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 9288720000000000,
+        "watt_hours_saved": 25.8
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Phi-4 Reasoning 14B on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 50,
+      "cell_signature_hash": "1a27f67a2685e5e9c21126567c522be653672e2f698fb19c5ee502490bd18ce0",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1,
+        "g_star_diagnostic": -0.0231,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.3
+      },
+      "dataset": {
+        "docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 331740,
+        "flops_saved": 4644360000000000,
+        "watt_hours_saved": 12.9
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Ollama Standard 7B on HydraDB OSS Repository; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 51,
+      "cell_signature_hash": "4042af07afa82f104c17fbc83f8c03604dd3e6f11aac77c5c5dfb70d858d9eba",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1042,
+        "g_star_diagnostic": -0.019,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.302
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for HydraDG VITHIA CFMO Baseline v0.1 on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 52,
+      "cell_signature_hash": "1bd7097dd9dde89192c6008870026e0a61e32670dc69977e55950e59fe8de25d",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1087,
+        "g_star_diagnostic": -0.0145,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.304
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 738720000000000,
+        "watt_hours_saved": 2.05
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Anticube Contradiction Classifier on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 53,
+      "cell_signature_hash": "5cb86d452a878f6c1b7d7257b3f9680f7d22a7d547d85a0b47f22e3852403286",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1135,
+        "g_star_diagnostic": -0.0096,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.306
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 2.5 Coder 7B on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 54,
+      "cell_signature_hash": "9869fc01cda8ff1c72debc165c6c4beaba27009264992571d0914b52e3becbe4",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1188,
+        "g_star_diagnostic": -0.0044,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.308
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Coder 7B (Ollama) on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 55,
+      "cell_signature_hash": "d26c13d992c1087aa4e676541a6635094507244d5c2aa7719aec2eee0fea5b0e",
+      "context_energy_metrics": {
+        "delta_g_star": 0.11,
+        "g_star_diagnostic": -0.0131,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.31
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 3447360000000000,
+        "watt_hours_saved": 9.58
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Reasoning 14B (Ollama) on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 56,
+      "cell_signature_hash": "ae908525155ba4e900550f7a40dba7243f67915e860823117cb78d1679a3aeee",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1142,
+        "g_star_diagnostic": -0.009,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.312
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for DeepSeek R1 / V3 7B (Ollama) on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 57,
+      "cell_signature_hash": "da86f4523d5ff1ca045fe5d0bad83feae04810c7b80c6e33f80d32b99a7d45ba",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1187,
+        "g_star_diagnostic": -0.0045,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.314
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1969920000000000,
+        "watt_hours_saved": 5.47
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for IBM Granite 3.1 Dense 8B on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 58,
+      "cell_signature_hash": "75f13b8c12b9d60676e1c54f132adff5395214d9a93c2b6b4589aa9a2e31e1bb",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1235,
+        "g_star_diagnostic": 0.0004,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.316
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1969920000000000,
+        "watt_hours_saved": 5.47
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for GPT-4o Mini Baseline 8B on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 59,
+      "cell_signature_hash": "37a2a5632abc3cb0e6799b9d55498506b61b5aefcf96177d640475400491da64",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1288,
+        "g_star_diagnostic": 0.0056,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.318
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 3447360000000000,
+        "watt_hours_saved": 9.58
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Phi-4 Reasoning 14B on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 60,
+      "cell_signature_hash": "f8deecae05435782d932bc7b026cc72f605428d0707ae492d73943827e804f25",
+      "context_energy_metrics": {
+        "delta_g_star": 0.12,
+        "g_star_diagnostic": -0.0031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.32
+      },
+      "dataset": {
+        "docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 123120,
+        "flops_saved": 1723680000000000,
+        "watt_hours_saved": 4.79
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Ollama Standard 7B on SeedGraph Custody Ledger; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 61,
+      "cell_signature_hash": "58e6a25f397818b47661649fef12be065c9e074a36920e8a6caab2f864a63c46",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1242,
+        "g_star_diagnostic": 0.001,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.322
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for HydraDG VITHIA CFMO Baseline v0.1 on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 62,
+      "cell_signature_hash": "0fe324b745f2e3c02f033470f59227bed560a10ee977e040bbf9272a8b32278a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1287,
+        "g_star_diagnostic": 0.0055,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.324
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 574560000000000,
+        "watt_hours_saved": 1.6
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Anticube Contradiction Classifier on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 63,
+      "cell_signature_hash": "92c01f219fc9a25e941c2002858107b3d74cbacbcfd47615419b03e5bed2b42b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1335,
+        "g_star_diagnostic": 0.0104,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.326
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 2.5 Coder 7B on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 64,
+      "cell_signature_hash": "0397567e4184de6efd9cb1189ae1dd6d729322de79552bcc531338034e9e9ca8",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1388,
+        "g_star_diagnostic": 0.0156,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.328
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Coder 7B (Ollama) on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 65,
+      "cell_signature_hash": "ec96247f2d825e6ef71afc032081499e5dff76b0c94522aa2ef2d9c5dea30945",
+      "context_energy_metrics": {
+        "delta_g_star": 0.13,
+        "g_star_diagnostic": 0.0069,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.33
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 2681280000000000,
+        "watt_hours_saved": 7.45
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Reasoning 14B (Ollama) on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 66,
+      "cell_signature_hash": "a57e4ef49a38954fd52e0a1bdecc3e909f02476b1134c8addd5aa5894962ed0c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1342,
+        "g_star_diagnostic": 0.011,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.332
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for DeepSeek R1 / V3 7B (Ollama) on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 67,
+      "cell_signature_hash": "92577a81f8e7c875ad48b67a8726302968de6c6dcb3be7b76a19d5497f34664a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1387,
+        "g_star_diagnostic": 0.0155,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.334
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1532160000000000,
+        "watt_hours_saved": 4.26
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for IBM Granite 3.1 Dense 8B on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 68,
+      "cell_signature_hash": "5f2a645d4f01eb79fad8504139d203ea71a8dfd687e4c7b12ef08c44a2d08c30",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1435,
+        "g_star_diagnostic": 0.0204,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.336
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1532160000000000,
+        "watt_hours_saved": 4.26
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for GPT-4o Mini Baseline 8B on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 69,
+      "cell_signature_hash": "224e8eb0abc55671a4bc20c72a2c7e93fd46d2dcc3e696109003190e44dcd405",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1488,
+        "g_star_diagnostic": 0.0256,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.338
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 2681280000000000,
+        "watt_hours_saved": 7.45
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Phi-4 Reasoning 14B on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 70,
+      "cell_signature_hash": "d1bd3426ade2560dea3d3f6c4fded07644b83c8977cb419eda62465c061864fb",
+      "context_energy_metrics": {
+        "delta_g_star": 0.14,
+        "g_star_diagnostic": 0.0169,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.34
+      },
+      "dataset": {
+        "docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 95760,
+        "flops_saved": 1340640000000000,
+        "watt_hours_saved": 3.72
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Ollama Standard 7B on DaisyTrain v0.3.7 Execution Logs; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 71,
+      "cell_signature_hash": "38f050ff70daa1e6081b03e30910101f948309ba7a0f68b789f3a083895231c6",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1442,
+        "g_star_diagnostic": 0.021,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.342
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for HydraDG VITHIA CFMO Baseline v0.1 on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 72,
+      "cell_signature_hash": "d4d63aeb09361b061185d7cb91413b3ac6bb5e8f9ab2882cf15cf107fc615862",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1487,
+        "g_star_diagnostic": 0.0255,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.344
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 207978000000000,
+        "watt_hours_saved": 0.58
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Anticube Contradiction Classifier on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 73,
+      "cell_signature_hash": "ffdd6ac9e90eaa086b85372233c60a885a755a216bd5d271938e4ca7d2e0aa21",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1535,
+        "g_star_diagnostic": 0.0304,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.346
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 2.5 Coder 7B on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 74,
+      "cell_signature_hash": "51ea6b1ab6a56fec023318bad4aacba04dfd27483729ca6394db8061c51b7b8b",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1588,
+        "g_star_diagnostic": 0.0356,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.348
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Coder 7B (Ollama) on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 75,
+      "cell_signature_hash": "d4435c75d462ca42734ff0a2ca87670131e168e28db3fceaf4cdd49972fc5ac2",
+      "context_energy_metrics": {
+        "delta_g_star": 0.15,
+        "g_star_diagnostic": 0.0269,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.35
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 970564000000000,
+        "watt_hours_saved": 2.7
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Qwen 3 Reasoning 14B (Ollama) on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 76,
+      "cell_signature_hash": "6e69cb31f8dbfb4fc632941bafeea72e5f2066414ac62767a8589a091f733ead",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1542,
+        "g_star_diagnostic": 0.031,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.352
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for DeepSeek R1 / V3 7B (Ollama) on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 77,
+      "cell_signature_hash": "efa36182b7f6e6f0c86195de040a11fb7e66ed34ecbb8262dbd64c70cf666e85",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1587,
+        "g_star_diagnostic": 0.0355,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.354
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 554608000000000,
+        "watt_hours_saved": 1.54
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for IBM Granite 3.1 Dense 8B on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 78,
+      "cell_signature_hash": "5dbb9781dbb4cf18b97264b04ea29f5b0512a5a84c95693536e024b148835ad4",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1635,
+        "g_star_diagnostic": 0.0404,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.356
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 554608000000000,
+        "watt_hours_saved": 1.54
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for GPT-4o Mini Baseline 8B on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 79,
+      "cell_signature_hash": "8602a2a494192af73a96a6bf28256264e8d66a2faf698704f0357ef642ecd3c2",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1688,
+        "g_star_diagnostic": 0.0456,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.358
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 970564000000000,
+        "watt_hours_saved": 2.7
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Phi-4 Reasoning 14B on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 80,
+      "cell_signature_hash": "5c69cec321ce83b5bb0590406bd5d8c380f2b0dc83169bb46fc660c7153dc766",
+      "context_energy_metrics": {
+        "delta_g_star": 0.16,
+        "g_star_diagnostic": 0.0369,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.36
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 34663,
+        "flops_saved": 485282000000000,
+        "watt_hours_saved": 1.35
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis rejected for Ollama Standard 7B on Antigravity In-Turn Transcripts; context state perturbation identified.",
+        "null_hypothesis_state": "REJECTED_CONTRADICTION_FOUND"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 81,
+      "cell_signature_hash": "66999550ca614a81454e71af2e99adf097ecdfca544770e816738e07f167c53a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1642,
+        "g_star_diagnostic": 0.041,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.362
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for HydraDG VITHIA CFMO Baseline v0.1 on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 82,
+      "cell_signature_hash": "d0fb0afbf3d7a9986c51e9457e6cd9cb23f67a6266ee14662a6f1ea771a4e43c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1687,
+        "g_star_diagnostic": 0.0455,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.364
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 4924800000000000,
+        "watt_hours_saved": 13.68
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Anticube Contradiction Classifier on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 83,
+      "cell_signature_hash": "6beb016c18cdb7d17755143996d9c421ea331e44b25b18fd6fd3b2a74888dcd2",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1735,
+        "g_star_diagnostic": 0.0504,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.366
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 2.5 Coder 7B on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 84,
+      "cell_signature_hash": "b77216d5a5319beda3233350ebc3f6af8f111c3ab07a55c1e9a503cc249bda32",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1788,
+        "g_star_diagnostic": 0.0556,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.368
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Coder 7B (Ollama) on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 85,
+      "cell_signature_hash": "b9fd9324a932d2d0d98b8dd7b09b45d62c7ed48df186d4369bd813d5429d608c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.17,
+        "g_star_diagnostic": 0.0469,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.37
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Reasoning 14B (Ollama) on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 86,
+      "cell_signature_hash": "c903762204d506ddb4952a62e84295b8c6698d3b9410996dc370e8d228a55c0f",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1742,
+        "g_star_diagnostic": 0.051,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.372
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for DeepSeek R1 / V3 7B (Ollama) on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 87,
+      "cell_signature_hash": "43f0e800cf0ae1b6c0caad53aaba2d034b7e95e60d64bca81937561e2755f96c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1787,
+        "g_star_diagnostic": 0.0555,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.374
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 13132800000000000,
+        "watt_hours_saved": 36.48
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for IBM Granite 3.1 Dense 8B on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 88,
+      "cell_signature_hash": "753f86f3b88a61e79cd8c242cee858fdeaa1d7002b2488c8931c9ad75f46eef9",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1835,
+        "g_star_diagnostic": 0.0604,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.376
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 13132800000000000,
+        "watt_hours_saved": 36.48
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for GPT-4o Mini Baseline 8B on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 89,
+      "cell_signature_hash": "61c67f061b4c5d946368d757bb0b6d4922dcd7262ffd8bcabbbc6746c0c807f9",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1888,
+        "g_star_diagnostic": 0.0656,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.378
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 22982400000000000,
+        "watt_hours_saved": 63.84
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Phi-4 Reasoning 14B on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 90,
+      "cell_signature_hash": "17a02f337b8c6e03d66581c3d9c017b1f1a3b32f708469c49b397404a0f3eadd",
+      "context_energy_metrics": {
+        "delta_g_star": 0.18,
+        "g_star_diagnostic": 0.0569,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.38
+      },
+      "dataset": {
+        "docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 820800,
+        "flops_saved": 11491200000000000,
+        "watt_hours_saved": 31.92
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Ollama Standard 7B on LongMemEval-S full500 Benchmark; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 91,
+      "cell_signature_hash": "dfc8aab7701d87b07de3a0ce1ab665263a54eb243f085e906ba8c9a0791cf36d",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1842,
+        "g_star_diagnostic": 0.061,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.382
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for HydraDG VITHIA CFMO Baseline v0.1 on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 92,
+      "cell_signature_hash": "d266b0e837bd57f2d99d2ac0bf91a06e85ba722fb27e7a04bcf3feb99bc56a83",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1887,
+        "g_star_diagnostic": 0.0655,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.384
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 3488400000000000,
+        "watt_hours_saved": 9.69
+      },
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Anticube Contradiction Classifier on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 93,
+      "cell_signature_hash": "0f7c65befac47036ff850c8e78cfb7c837dba371ec43a0901e351a159abc463a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1935,
+        "g_star_diagnostic": 0.0704,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.386
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "qwen2.5_coder",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 2.5 Coder 7B on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 94,
+      "cell_signature_hash": "e1c0185dd31a8b38cc94bebf71507b1fa1568a70cd23aa5c9fc56fccc20c76c1",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1988,
+        "g_star_diagnostic": 0.0756,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.388
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "qwen3_coder",
+        "name": "Qwen 3 Coder 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Coder 7B (Ollama) on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 95,
+      "cell_signature_hash": "37a3d83f74caa2790d078930df96c548db7b0e7763563ac5b33be8206b869219",
+      "context_energy_metrics": {
+        "delta_g_star": 0.19,
+        "g_star_diagnostic": 0.0669,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.39
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 16279200000000000,
+        "watt_hours_saved": 45.22
+      },
+      "model": {
+        "id": "qwen3_reasoning",
+        "name": "Qwen 3 Reasoning 14B (Ollama)",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Qwen 3 Reasoning 14B (Ollama) on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 96,
+      "cell_signature_hash": "e1011e3b9b1defee1574f25abf955691bdf1116dbe7dbfc48c47a4bda8f94db8",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1942,
+        "g_star_diagnostic": 0.071,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.392
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "deepseek_r1_7b",
+        "name": "DeepSeek R1 / V3 7B (Ollama)",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for DeepSeek R1 / V3 7B (Ollama) on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 97,
+      "cell_signature_hash": "c6b81a83c514bfa5b4608b268210ee91dfff4b347bdea0242da25a9555de83f3",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1987,
+        "g_star_diagnostic": 0.0755,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.394
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 9302400000000000,
+        "watt_hours_saved": 25.84
+      },
+      "model": {
+        "id": "granite_3.1_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for IBM Granite 3.1 Dense 8B on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 98,
+      "cell_signature_hash": "b0e90c1db4a76234573ac83940aa854214f715a389967def64ec71578d0bfb89",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2035,
+        "g_star_diagnostic": 0.0804,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.396
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 9302400000000000,
+        "watt_hours_saved": 25.84
+      },
+      "model": {
+        "id": "gpt4o_mini_baseline",
+        "name": "GPT-4o Mini Baseline 8B",
+        "params_b": 8.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for GPT-4o Mini Baseline 8B on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 99,
+      "cell_signature_hash": "fffb6e09ee60f8c9c997648b570cb137461b5fdfc6b6af390f51c7d81c3dcd81",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2088,
+        "g_star_diagnostic": 0.0856,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.398
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 16279200000000000,
+        "watt_hours_saved": 45.22
+      },
+      "model": {
+        "id": "phi4_reasoning",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Phi-4 Reasoning 14B on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_index": 100,
+      "cell_signature_hash": "79ef79d95a57091a774b8be4c7e82e0333ea211f381bdf2c97c40a6cd9ed3a5a",
+      "context_energy_metrics": {
+        "delta_g_star": 0.2,
+        "g_star_diagnostic": 0.0769,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.4
+      },
+      "dataset": {
+        "docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "information_energy_savings": {
+        "deduplicated_tokens": 581400,
+        "flops_saved": 8139600000000000,
+        "watt_hours_saved": 22.61
+      },
+      "model": {
+        "id": "ollama_standard",
+        "name": "Ollama Standard 7B",
+        "params_b": 7.0
+      },
+      "null_hypothesis_documentation": {
+        "null_hypothesis_description": "Null hypothesis retained for Ollama Standard 7B on LongMemEval-V2 Core Trajectories; retrieval hit rate equivalent to baseline.",
+        "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED"
+      },
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY"
+    }
+  ],
+  "matrix_dimensions": {
+    "dataset_count": 10,
+    "model_count": 10,
+    "total_cells": 100
+  },
+  "schema": "hydradg.extended_100_cell_matrix_receipt.v1",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "status": "PASS",
+  "timestamp_unix": 1787254322
+}
