@@ -1,0 +1,33 @@
+{
+  "batch_id": "batch-000001",
+  "http_status": 200,
+  "status": "PASS",
+  "api_response": {
+    "status": "SUCCESS_200",
+    "http_code": 200,
+    "data": {
+      "success": true,
+      "data": {
+        "chunks": [],
+        "sources": [],
+        "graph_context": {
+          "query_paths": [],
+          "chunk_relations": [],
+          "chunk_id_to_group_ids": {}
+        },
+        "additional_context": {}
+      },
+      "error": null,
+      "meta": {
+        "request_id": "adf0166e-1093-44c3-bade-d2b00d1fa037",
+        "api_version": "2.0.1",
+        "latency_ms": 2475,
+        "tenant_id": "hydradg",
+        "database": "hydradg",
+        "sub_tenant_id": "toqxpnnxqw",
+        "collection": "toqxpnnxqw",
+        "source_type": "knowledge"
+      }
+    }
+  }
+}
