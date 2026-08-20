@@ -1,6 +1,6 @@
 # Third-party notices and external evidence sources
 
-HydraDG participant-authored **software and reproducibility tooling** are licensed under the Apache License, Version 2.0 unless otherwise stated. Byron P. Lee / Biobitworks authored **preprints, manuscripts, narrative research text, publication-style figures, and explicitly designated research-content artifacts** are licensed under CC BY-NC-ND 4.0 unless an individual artifact states otherwise. See `LICENSE` and `LICENSING.md` for scope. Neither license relicenses third-party code, datasets, templates, APIs, papers, models, or services listed below.
+HydraDG participant-authored **software and reproducibility tooling** are licensed under the Apache License, Version 2.0 unless otherwise stated. FCO/FCG research publications and designated Byron P. Lee / Biobitworks **preprints, manuscripts, narrative research text, publication-style figures, and research-content artifacts** are governed by **CC BY-NC-ND 4.0** as declared in `LICENSING.md`. Any earlier `CC BY 4.0` reference for the FCO/FCG Zenodo publication is a **superseded metadata error preserved only for custody/history**, not a valid licensing exception. Neither license relicenses third-party code, datasets, templates, APIs, papers, models, or services listed below.
 
 ## HydraDB
 
