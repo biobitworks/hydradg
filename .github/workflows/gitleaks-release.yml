@@ -23,13 +23,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Install Gitleaks v8.28.0
+      - name: Pull pinned Gitleaks v8.28.0
         shell: bash
         run: |
           set -euo pipefail
-          curl -sSfL https://raw.githubusercontent.com/gitleaks/gitleaks/master/scripts/install.sh \
-            | sudo sh -s -- -b /usr/local/bin v8.28.0
-          gitleaks version
+          docker pull ghcr.io/gitleaks/gitleaks:v8.28.0
+          docker run --rm ghcr.io/gitleaks/gitleaks:v8.28.0 version
 
       - name: Scan exact repository history
         id: scan
@@ -38,11 +37,15 @@ jobs:
           set -uo pipefail
           mkdir -p security-artifacts
           set +e
-          gitleaks git \
+          docker run --rm \
+            -v "$PWD:/repo" \
+            -w /repo \
+            ghcr.io/gitleaks/gitleaks:v8.28.0 \
+            git \
             --redact=100 \
             --no-banner \
             --report-format json \
-            --report-path security-artifacts/gitleaks-release.json \
+            --report-path /repo/security-artifacts/gitleaks-release.json \
             .
           status=$?
           set -e
