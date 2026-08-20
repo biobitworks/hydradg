@@ -1,65 +1,171 @@
 # HydraDG — Graph-Native Governed Context Engine
 
-HydraDG is a governed memory and context engine that uses **HydraDB** to represent changing state as typed graph projections, preserve complete evidence lineage behind an answer, and make state divergence, contradiction, and recovery mechanically inspectable.
+[![Hack Hydra 2026](https://img.shields.io/badge/Hack%20Hydra-2026-blue.svg)](https://github.com/biobitworks/hydradg)
+[![Track 03](https://img.shields.io/badge/Track%2003-Memory%20%2B%20Context%20Retrieval-green.svg)](https://github.com/biobitworks/hydradg)
+[![HydraDB](https://img.shields.io/badge/HydraDB-Native%20Graph%20Projection-orange.svg)](https://hydradb.com)
+[![License: CC BY-NC-ND 4.0](https://img.shields.io/badge/License-CC%20BY--NC--ND%204.0-lightgrey.svg)](LICENSE)
+
+HydraDG is a graph-native memory and context engine built on **HydraDB** for **Hack Hydra 2026 (Track 03 — Memory + Context Retrieval)**. It represents evolving conversational state as typed graph projections, preserves immutable evidence lineage behind every answer, and makes state divergence, contradiction, and recovery mechanically inspectable.
 
 ---
 
-### Why HydraDG Exists
-
-Ordinary AI memory systems overwrite, flatten, or silently mutate context over time. HydraDG prevents context corruption by storing immutable **First-Class Objects (FCOs)** in a **First-Class Graph (FCG)** custody graph. Every state change retains its complete historical provenance, supersession links, contradiction edges, and null/negative experimental outcomes.
+## 📋 Table of Contents
+1. [Overview & Problem Statement](#-overview--problem-statement)
+2. [Key Architecture & Principles](#-key-architecture--principles)
+3. [Quick Start: Replicating the Web Application](#-quick-start-replicating-the-web-application)
+4. [HydraDB Data & Schemas](#-hydradb-data--schemas)
+5. [Interactive Demo & Page Guide (How-To)](#-interactive-demo--page-guide-how-to)
+6. [Track 03 Benchmark Evidence](#-track-03-benchmark-evidence)
+7. [Theoretical Foundations ($G^*$ & Cloud Drift)](#-theoretical-foundations-g-amp-cloud-drift)
+8. [Submission & Verification Links](#-submission--verification-links)
 
 ---
 
-### Key System Architecture
+## 💡 Overview & Problem Statement
+
+### The Problem
+Ordinary AI memory systems flatten, overwrite, or silently mutate context over time. When user facts change, are contradicted, or are later restored, traditional vector or text memory stores lose historical provenance. Null/negative experimental outcomes disappear, and state corruption goes undetected.
+
+### The Solution: HydraDG
+HydraDG solves context corruption by storing immutable **First-Class Objects (FCOs)** in a **First-Class Graph (FCG)** custody structure projected directly into **HydraDB**.
+- **Immutable Provenance**: Every state change retains its complete origin lineage, supersession links, and contradiction edges.
+- **Governed Recovery**: Correcting a poisoned state does not delete the past; it creates an explicit antidote transition link.
+- **4D Context Iceberg Visualizer**: Real-time tracking of structural Cloud Drift ($JSD$) and governed Gibbs free-cost deltas ($\Delta G^*$).
+
+---
+
+## 🏗️ Key Architecture & Principles
 
 ```text
 LOCAL / DEVELOPMENT                     PUBLIC / JUDGES
 magicSTUDIObox                          GitHub Public Repo
   ├─ local HydraDB                        ↓
-  ├─ local FCG                            Vercel Next.js
+  ├─ local FCG                            Vercel Next.js Web App
   └─ local Next.js                        ↓ (server-side API)
-       ↓                                  HydraDB Hosted API
+       ↓                                  HydraDB Hosted API / Built-in Fixture
 reproducibility / video                   ↓
                                           public-safe FCG projection
                                           ↓
                                           interactive judge demo
 ```
 
-- **HydraDB**: The load-bearing graph database used as the high-performance query, vector, and relational projection substrate.
-- **FCO / FCG**: Canonical custody and provenance layer ensuring zero silent state mutations.
-- **Context Iceberg**: Interactive 4D state-space visualization tracking structural Cloud Drift ($JSD$) and governed Gibbs free-cost deltas ($\Delta G^*$).
-- **Hit@K & Recall@K**: Strict retrieval performance metrics, evaluated independently from $G^*$ diagnostic abstractions.
+- **HydraDB**: High-performance graph database engine used as the query, temporal traversal, vector, and relational projection substrate.
+- **FCO (First-Class Object)**: Bounded custody object carrying cryptographic identity (SHA-256), provenance, evidence class, and claim boundaries.
+- **FCG (First-Class Graph)**: The dependency graph connecting source data, transformations, derived facts, and claims.
+- **Context Iceberg**: Interactive state-space visualization tracking $JSD$ drift and $\Delta G^*$ cost deltas.
 
 ---
 
-### What Was Actually Measured (Track 03 Benchmark)
+## 🚀 Quick Start: Replicating the Web Application
 
-- **Dataset**: `xiaowu0162/longmemeval-cleaned` (500 full cases, 23,867 sessions, 4,776 entities, 3,506 facts).
-- **Matrix Determinism**: 100% bit-for-bit replicate equality across $2 \times 2$ matrix cells ($H_{0,\text{rep}}$ PASS).
-- **Prospective Depth ($K=15$)**: $G^* = -0.3448$, $\text{Hit}@15 = 0.9851$, $\text{Recall}@15 = 0.9582$ ($\Delta \text{Recall} = +11.2\text{ pp}$).
-- **Historical Claim Discipline**: Preserved original full500 negative/neutral retrieval baseline without overwriting or claim inflation.
+Anyone cloning this repository can replicate and run the entire web application locally in seconds!
+
+### Prerequisites
+- Node.js v18+ (v20 recommended)
+- npm v9+
+
+### 1. Install & Launch
+```bash
+# Clone the repository
+git clone https://github.com/biobitworks/hydradg.git
+cd hydradg
+
+# Install all web application dependencies
+npm run install:all
+
+# Launch the development server
+npm run dev
+```
+
+Open your browser and navigate to:
+👉 **`http://localhost:3000`**
+
+### 2. Verify Production Build
+```bash
+# Build the Next.js production bundle
+npm run build
+
+# Start the production server
+npm run start
+```
+
+### 3. Static Fallback Presentation
+If Node.js is not available, you can view the static standalone presentation:
+- **Local file**: `apps/hydradg-web/public/backup/hydradg.html`
+- **Browser URL**: `http://localhost:3000/backup/hydradg.html`
+
+For comprehensive replication details, see [`HOW_TO.md`](file:///Users/byron/projects/active/hydradg/HOW_TO.md).
 
 ---
 
-### How to Try HydraDG
+## 🗄️ HydraDB Data & Schemas
 
-- **Public Live Demo**: [http://127.0.0.1:3012/](http://127.0.0.1:3012/) (Local Next.js + HydraDB)
-- **Judge Walkthrough Flow**: `/` $\to$ `/judge` $\to$ `/track03` $\to$ `/graph` $\to$ `/evidence` $\to$ `/knowledge` $\to$ `/how-to` $\to$ `/eligibility`
-- **Static Presentation Fallback**: [http://127.0.0.1:3012/backup/hydradg.html](http://127.0.0.1:3012/backup/hydradg.html)
-- **Local Developer Setup**:
-  ```bash
-  npm ci
-  npm run build
-  HYDRADG_ROOT=. HYDRADG_VIDEO_MODE=live bash scripts/start_video_demo.sh
-  ```
+HydraDG provides full access to its graph schemas, seed datasets, and projection scripts:
+
+- **Data Manual**: Detailed specification in [`HYDRADB_DATA.md`](file:///Users/byron/projects/active/hydradg/HYDRADB_DATA.md).
+- **Node Schemas**: `HydraDG_DaisyTrain_v0.3.1/hydra/schema_nodes.json` (`Session`, `Fact`, `Entity`, `KnowledgeAtom`).
+- **Edge Schemas**: `HydraDG_DaisyTrain_v0.3.1/hydra/schema_edges.json` (`NEXT`, `ASSERTS`, `DERIVED_FROM`, `ABOUT`, `SUPERSEDES`, `CONTRADICTS`).
+- **SeedGraph Dataset**: `PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json` (500-case raw SeedGraph dataset for LongMemEval).
+- **HydraDB Projection Script**: `python3 scripts/project_website_knowledge_to_hydradb.py`.
 
 ---
 
-### Verification & Custody Roots
+## 🗺️ Interactive Demo & Page Guide (How-To)
 
-- **Release Commit**: `25326727165f0d3f6eefac54425fa1e7042dea8f`
-- **Project FCG Root**: `experiment:fa170ab51cdfba46f9a24979c9be9b90fdc4ccedcdb292f313aa4439a92b08d8`
-- **HydraDB Projection Root**: `projected_nodes=9,projected_edges=8`
-- **Chrome Screenshot Manifest SHA-256**: `55adcc1df04dd8e9a6a1fdc7b24f0654e8f3a68dd005c09e25d49425f79d7734`
-- **Signature State**: `PENDING_EXTERNAL_PRIVATE_KEY_OPERATION` (Handed off for signature on magicPRObox)
-- **Claim Ceiling**: `PUBLIC_PRODUCT_DEPLOYMENT_AND_HYDRADB_TRACEABILITY_ONLY`
+The web application contains 8 interactive pages built for judge inspection:
+
+| Route | Page Name | Key Features & What to Look For |
+|---|---|---|
+| `/` | **Overview Dashboard** | Executive summary, track indicators, architecture diagram, and verification status. |
+| `/judge` | **Live Judge Memory Demo** | Interactive **Reference $\to$ Poison $\to$ Antidote** state perturbation tool. Visualizes live graph recovery without state loss. |
+| `/track03` | **Track 03 Results** | Full evaluation matrix on `xiaowu0162/longmemeval-cleaned` (500 cases, 23,867 sessions). Displays $K=5$ ablation tables and $K=15$ recall metrics. |
+| `/graph` | **4D FCG & Context Iceberg** | 4D state-space visualizer tracking Cloud Drift ($JSD$) and governed Gibbs free-cost deltas ($\Delta G^*$). |
+| `/evidence` | **FCO Lineage Inspector** | Provenance inspector for First-Class Objects, academic foundations (Enßlin & Weig 2010, Lin 1991), and cryptographic SHA-256 receipts. |
+| `/knowledge` | **Knowledge Base FCO Index** | Searchable directory of atomized knowledge FCOs, claim boundaries, and custody certificates. |
+| `/how-to` | **Replicability Guide** | Detailed command cheatsheet, environment configurations, and static fallback options. |
+| `/eligibility` | **Submission Eligibility** | Hack Hydra Track 03 checklist and rule compliance verification. |
+
+---
+
+## 📊 Track 03 Benchmark Evidence
+
+HydraDG was evaluated on the **Track 03 Benchmark** using `xiaowu0162/longmemeval-cleaned`:
+
+### Benchmark Scale
+- **Cases**: 500 total cases
+- **Sessions**: 23,867 total sessions
+- **Entities**: 4,776 entities
+- **Facts**: 3,506 facts
+- **Scored Subset**: 470 cases (30 abstentions excluded)
+
+### Completed K=5 Ablation Results
+
+| Route | Hit@5 | Recall@5 | Interpretation |
+|---|---:|---:|---|
+| **Route A (Reference/Flat)** | **0.9638** | **0.9066** | Flat reference baseline |
+| **Route B** | 0.9468 | 0.8538 | Null/negative hit-rate signal |
+| **Route C** | 0.9468 | 0.8526 | Null/negative hit-rate signal |
+| **Route D** | 0.9447 | 0.8460 | Null/negative hit-rate signal |
+
+> **Scientific Discipline**: HydraDG preserves null/negative results honestly in evidence lineage rather than inflating claims or overwriting baselines.
+
+---
+
+## 🔬 Theoretical Foundations ($G^*$ & Cloud Drift)
+
+HydraDG defines an application-specific, dimensionless information diagnostic $G^*$ and Cloud Drift ($JSD$):
+
+- **Enßlin & Weig (2010)**: Information field theory analogy mapping graph uncertainty to an information-free-cost diagnostic $G^*$.
+- **Lin (1991)**: Jensen-Shannon Divergence ($JSD$) measuring structural probability cloud drift across graph perturbations.
+
+*Note: $G^*$ is an application-defined diagnostic metric, not physical thermodynamic energy.*
+
+---
+
+## 📜 Submission & Verification Links
+
+- **Submission Summary**: [`SUBMISSION.md`](file:///Users/byron/projects/active/hydradg/SUBMISSION.md)
+- **Demo Video URL**: [https://youtu.be/7EDb6q-loPA](https://youtu.be/7EDb6q-loPA)
+- **Repository**: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg)
+- **Release Branch**: `hack-hydra/public-product-final-20260819`
+- **License**: CC-BY-NC-ND-4.0 ([LICENSE](file:///Users/byron/projects/active/hydradg/LICENSE))

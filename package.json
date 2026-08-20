@@ -1,0 +1,24 @@
+{
+  "name": "hydradg",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HydraDG — Graph-Native Governed Context Engine for Hack Hydra 2026",
+  "scripts": {
+    "dev": "npm --prefix apps/hydradg-web run dev",
+    "build": "npm --prefix apps/hydradg-web run build",
+    "start": "npm --prefix apps/hydradg-web run start",
+    "typecheck": "npm --prefix apps/hydradg-web run typecheck",
+    "install:all": "npm --prefix apps/hydradg-web install"
+  },
+  "keywords": [
+    "hydradb",
+    "graph-database",
+    "ai-memory",
+    "context-engine",
+    "fco",
+    "fcg",
+    "hack-hydra-2026"
+  ],
+  "author": "BioBitWorks",
+  "license": "CC-BY-NC-ND-4.0"
+}

@@ -102,7 +102,15 @@ Overview
 → custody state
 ```
 
-The demo is powered by the local HydraDB test server. The recording must show the working local product; judges do not need network access to the local URL.
+The demo is powered by the local HydraDB test server or built-in fixture. The recording must show the working local product; judges do not need network access to the local URL.
+
+### Quick Local Replication Instructions
+```bash
+npm run install:all
+npm run dev # launches local Next.js website at http://localhost:3000
+```
+
+For complete step-by-step replication instructions, see [`HOW_TO.md`](file:///Users/byron/projects/active/hydradg/HOW_TO.md) and [`HYDRADB_DATA.md`](file:///Users/byron/projects/active/hydradg/HYDRADB_DATA.md).
 
 **Current uploaded demo:** https://youtu.be/7EDb6q-loPA
 
