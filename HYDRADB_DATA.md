@@ -1,100 +1,163 @@
-# HydraDB Data, Schemas & FCO Provenance Manual
+# HydraDB Data, Schemas & FCO/FCG Provenance Manual
 
-This document details the **HydraDB** graph datasets, schemas, First-Class Object (FCO) data models, and projection pipelines used in **HydraDG**.
+This document describes the **HydraDB** graph projection used by **HydraDG**, the portable public graph snapshot, current schema files, and the boundary between canonical custody and the operational query backend.
 
----
+**FCO = Fractal Custody Object.**  
+**FCG = Fractal Custody Graph.**
 
-## 1. Overview of HydraDB Data Architecture
-
-HydraDG separates **immutable custody** from **queryable graph projection**:
+## 1. Architecture
 
 ```text
-CANONICAL CUSTODY LAYER                  HYDRADB GRAPH PROJECTION LAYER
-Fractal Custody Objects (FCOs)           HydraDB Nodes & Relational Edges
-  ├─ fco_id (SHA-256)                      ├─ (Session:HydraDG)
-  ├─ custody_state                         ├─ (Fact:HydraDG)
-  ├─ evidence_class                        ├─ (Entity:HydraDG)
-  └─ claim_ceiling                         └─ (KnowledgeAtom:HydraDG)
+CANONICAL / PORTABLE CUSTODY                 OPERATIONAL HYDRADB PROJECTION
+custody/graph/live/nodes.jsonl               HydraDB graph nodes
+custody/graph/live/edges.jsonl               HydraDB typed relationships
+FCO identity + evidence class       ->       query/traversal/readback
+claim ceiling + source lineage               isolated graph namespace
 ```
 
-HydraDB acts as the high-performance graph database engine used for:
-1. **Temporal State Traversal**: Moving forward/backward along `Session -[:NEXT]-> Session` timelines.
-2. **Provenance & Evidence Lookup**: Tracing `Fact -[:DERIVED_FROM]-> Session` lineage.
-3. **Contradiction & Supersession Querying**: Identifying `Fact -[:SUPERSEDES]-> Fact` and `Fact -[:CONTRADICTS]-> Fact` relationships without deleting historical nodes.
-4. **Vector & Relational Projections**: Searching embeddings alongside strict graph constraints.
+HydraDB is load-bearing for the submission's graph/query path: it supports temporal traversal, provenance lookup, contradiction/supersession traversal, and reconstruction of the public FCO/FCG projection. The repository does not require a machine-specific HydraDB database directory to reproduce the public state.
 
----
+## 2. Portable reconstruction inputs
 
-## 2. Included Datasets & Location in Repository
+| Artifact | Purpose |
+|---|---|
+| `custody/graph/live/nodes.jsonl` | Public canonical FCG node snapshot used by the reproduction importer |
+| `custody/graph/live/edges.jsonl` | Public canonical FCG edge snapshot used by the reproduction importer |
+| `scripts/project_fcg_snapshot_to_hydradb.py` | Fail-closed FCG -> HydraDB importer and readback verifier |
+| `HydraDG_DaisyTrain_v0.3.7/hydra/schema_nodes.json` | Current Track 03 node schema definitions |
+| `HydraDG_DaisyTrain_v0.3.7/hydra/schema_edges.json` | Current Track 03 edge schema definitions |
+| `PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json` | Preregistered matrix design, source identity, null hypotheses, and claim boundary; **not the 277 MB source dataset itself** |
+| `custody/website_knowledge_fco_projection.json` | Public website/knowledge projection input where present |
 
-| Dataset / Artifact File | Description | Location in Repo |
-|---|---|---|
-| `PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json` | 500-case raw SeedGraph dataset for LongMemEval Track 03 benchmarking. | Root directory |
-| `hydra/schema_nodes.json` | Node definitions for HydraDB graph projection (Session, Fact, Entity, KnowledgeAtom). | `HydraDG_DaisyTrain_v0.3.1/hydra/schema_nodes.json` |
-| `hydra/schema_edges.json` | Edge relationship definitions for HydraDB graph projection (NEXT, PREV, ASSERTS, DERIVED_FROM, ABOUT, SUPERSEDES, CONTRADICTS). | `HydraDG_DaisyTrain_v0.3.1/hydra/schema_edges.json` |
-| `website_knowledge_fco_projection.json` | Atomized FCO Knowledge projection dataset powering `/knowledge` and `/evidence`. | `custody/` & `HydraDG_DaisyTrain_v0.3.1/eval/` |
-| `DAISY_STATE.json` | Local Daisy train state and execution custody checkpoint. | Root directory |
+The original LongMemEval source is governed separately by its exact source identity and dataset rights. Do not infer that the compact preregistration JSON is a copy of the full source dataset.
 
----
+## 3. Representative graph semantics
 
-## 3. HydraDB Schema Specification
+Representative relationships used by the Track 03 memory model include:
 
-### Node Labels
-
-```json
-{
-  "labels": [
-    "Session",
-    "Fact",
-    "Entity",
-    "KnowledgeAtom",
-    "HydraDGKnowledgeFCO"
-  ]
-}
+```text
+Session -> NEXT/PREV -> Session
+Session -> ASSERTS -> Fact
+Fact -> DERIVED_FROM -> Session
+Fact -> ABOUT -> Entity
+Fact -> SUPERSEDES / SUPERSEDED_BY -> Fact   # use the predicate present in the relevant frozen artifact
+Fact -> CONTRADICTS -> Fact
 ```
 
-### Edge Types
+The public FCG snapshot may also contain project-level provenance/custody object types beyond the benchmark's Session/Fact/Entity model. The importer preserves each public node payload and the edge predicate actually present in the JSONL rather than silently rewriting the graph into a different ontology.
 
-- **`NEXT` / `PREV`**: Connects sequential user/agent sessions chronologically.
-- **`ASSERTS`**: Connects a `Session` to a `Fact` asserted within it.
-- **`DERIVED_FROM`**: Connects a `Fact` back to its origin `Session`.
-- **`ABOUT`**: Connects a `Fact` to the target `Entity` it describes.
-- **`SUPERSEDES`**: Connects a newer `Fact` to an older `Fact` it replaces.
-- **`CONTRADICTS`**: Edge between conflicting facts asserted across sessions.
+## 4. Current schema files
 
----
+```text
+HydraDG_DaisyTrain_v0.3.7/hydra/schema_nodes.json
+HydraDG_DaisyTrain_v0.3.7/hydra/schema_edges.json
+```
 
-## 4. Replicating & Loading Data into HydraDB
+Older DaisyTrain versions are historical evidence and should not be treated as the current judge schema unless a specific historical receipt references them.
 
-### Method A: Out-of-the-Box Local Web App (Fixtures)
-The web application includes self-contained built-in fixtures (`apps/hydradg-web/lib/demoFixture.ts`) that instantiate the graph state in memory automatically when launched via `npm run dev`.
+## 5. Recreate the public FCG in HydraDB
 
-### Method B: Live Local / Hosted HydraDB Instance
-To project the repository knowledge base into a local or remote HydraDB instance:
+Prerequisites:
 
-1. Configure environment variables in `apps/hydradg-web/.env.local`:
-   ```ini
-   GRAPH_BACKEND=hydradb-http
-   HYDRADB_HTTP_URL=http://127.0.0.1:8443
-   HYDRADB_GRAPH_ID=default
-   HYDRADB_GRAPH_NAMESPACE=hydradg-demo
-   HYDRADB_CELL_ID=cell-0
-   ```
+- official Hack Hydra / HydraDB local graph environment or compatible HydraDB graph endpoint;
+- bearer token stored outside Git;
+- isolated namespace beginning with `hydradg-`.
 
-2. Execute the projection script:
-   ```bash
-   python3 scripts/project_website_knowledge_to_hydradb.py \
-     --knowledge-json custody/website_knowledge_fco_projection.json \
-     --namespace hydradg-release-kb-demo \
-     --allow-write \
-     --out custody/hydradb_knowledge_projection_receipt.json
-   ```
+Example local contract:
 
----
+```text
+HTTP base:  http://127.0.0.1:8443
+Graph ID:   default
+Cell ID:    cell-0
+Namespace:  hydradg-judge-repro
+```
 
-## 5. Summary of Track 03 Dataset Benchmarks
+Store the token outside the repository:
 
-- **Evaluated Dataset**: `xiaowu0162/longmemeval-cleaned`
-- **Total Cases**: 500 cases (23,867 sessions, 4,776 entities, 3,506 facts)
-- **Scored Subset**: 470 retrieval-scored cases (30 abstentions excluded)
-- **Matrix Replicability**: 100% bit-for-bit replicate equality across $2 \times 2$ execution matrix.
+```bash
+mkdir -p ~/.local/share/hydradg-repro
+printf '%s' "$HYDRADB_AUTH_TOKEN" > ~/.local/share/hydradg-repro/hydradb-auth-token
+chmod 600 ~/.local/share/hydradg-repro/hydradb-auth-token
+```
+
+Run the importer from repository root:
+
+```bash
+python3 scripts/project_fcg_snapshot_to_hydradb.py \
+  --nodes custody/graph/live/nodes.jsonl \
+  --edges custody/graph/live/edges.jsonl \
+  --endpoint http://127.0.0.1:8443/v1/graphs/default/query \
+  --token-file ~/.local/share/hydradg-repro/hydradb-auth-token \
+  --namespace hydradg-judge-repro \
+  --allow-write \
+  --out repro/receipts/HYDRADB_FCG_IMPORT_RECEIPT.json
+```
+
+Expected terminal state:
+
+```text
+HYDRADB_FCG_IMPORT=PASS
+```
+
+The importer fails closed on malformed JSONL, duplicate node IDs, missing edge endpoints, unsafe predicate tokens, shared/default namespaces, node/edge count mismatch, or failure to read back the expected Track 03 experiment root.
+
+The expected readback canary currently encoded by the importer is:
+
+```text
+experiment:fa170ab51cdfba46f9a24979c9be9b90fdc4ccedcdb292f313aa4439a92b08d8
+```
+
+## 6. Connect the website
+
+Copy the environment template:
+
+```bash
+cd apps/hydradg-web
+cp .env.example .env.local
+```
+
+Set at minimum:
+
+```dotenv
+GRAPH_BACKEND=hydradb-http
+HYDRADB_HTTP_URL=http://127.0.0.1:8443
+HYDRADB_GRAPH_ID=default
+HYDRADB_GRAPH_NAMESPACE=hydradg-judge-repro
+HYDRADB_CELL_ID=cell-0
+HYDRADB_AUTH_TOKEN=<local token; never commit>
+```
+
+Build and run:
+
+```bash
+npm ci
+npm run typecheck
+npm run build
+npm run start -- -p 3012
+```
+
+For the complete sequence, use [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md).
+
+## 7. Track 03 evidence boundary
+
+The historical full500 retrieval evidence records:
+
+- 500 total cases;
+- 23,867 sessions;
+- 4,776 entities;
+- 3,506 facts;
+- 470 retrieval-scored cases with 30 abstentions excluded under the frozen analysis rule.
+
+The bounded submission conclusion is that the completed historical K=5 B/C/D treatments did **not** establish a positive Hit@5 advantage over the A/reference route. Hit@K and Recall@K are retrieval metrics, not end-to-end QA accuracy.
+
+Do not promote later matrix, replication, K-depth, or other claims unless the corresponding current receipt is cited and its claim ceiling permits that statement.
+
+## 8. Security and custody boundaries
+
+- Tokens and `.env.local` are local-only and must not be committed.
+- A SHA-256 digest establishes byte identity, not authorship or scientific validity.
+- A successful HydraDB projection/readback establishes reproduction of the public graph projection, not independent scientific replication of every upstream experiment.
+- Real signing and Merkle/MMR status must be taken from the corresponding receipts; do not infer them from hashes.
+- The exact publication commit must pass the current secret scan before it is described as secret-clean.
+
+See [`HOW_TO.md`](HOW_TO.md), [`SUBMISSION.md`](SUBMISSION.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for operator, submission, and rights boundaries.
