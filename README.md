@@ -94,7 +94,7 @@ If Node.js is not available, you can view the static standalone presentation:
 - **Local file**: `apps/hydradg-web/public/backup/hydradg.html`
 - **Browser URL**: `http://localhost:3000/backup/hydradg.html`
 
-For comprehensive replication details, see [`HOW_TO.md`](file:///Users/byron/projects/active/hydradg/HOW_TO.md).
+For comprehensive replication details, see [`HOW_TO.md`](HOW_TO.md).
 
 ---
 
@@ -102,7 +102,7 @@ For comprehensive replication details, see [`HOW_TO.md`](file:///Users/byron/pro
 
 HydraDG provides full access to its graph schemas, seed datasets, and projection scripts:
 
-- **Data Manual**: Detailed specification in [`HYDRADB_DATA.md`](file:///Users/byron/projects/active/hydradg/HYDRADB_DATA.md).
+- **Data Manual**: Detailed specification in [`HYDRADB_DATA.md`](HYDRADB_DATA.md).
 - **Node Schemas**: `HydraDG_DaisyTrain_v0.3.1/hydra/schema_nodes.json` (`Session`, `Fact`, `Entity`, `KnowledgeAtom`).
 - **Edge Schemas**: `HydraDG_DaisyTrain_v0.3.1/hydra/schema_edges.json` (`NEXT`, `ASSERTS`, `DERIVED_FROM`, `ABOUT`, `SUPERSEDES`, `CONTRADICTS`).
 - **SeedGraph Dataset**: `PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json` (500-case raw SeedGraph dataset for LongMemEval).
@@ -164,8 +164,8 @@ HydraDG defines an application-specific, dimensionless information diagnostic $G
 
 ## 📜 Submission & Verification Links
 
-- **Submission Summary**: [`SUBMISSION.md`](file:///Users/byron/projects/active/hydradg/SUBMISSION.md)
+- **Submission Summary**: [`SUBMISSION.md`](SUBMISSION.md)
 - **Demo Video URL**: [https://youtu.be/7EDb6q-loPA](https://youtu.be/7EDb6q-loPA)
 - **Repository**: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg)
 - **Release Branch**: `hack-hydra/public-product-final-20260819`
-- **License**: CC-BY-NC-ND-4.0 ([LICENSE](file:///Users/byron/projects/active/hydradg/LICENSE))
+- **License**: CC-BY-NC-ND-4.0 ([LICENSE](LICENSE))

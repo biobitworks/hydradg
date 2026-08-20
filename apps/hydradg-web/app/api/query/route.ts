@@ -85,18 +85,12 @@ async function upsertNode(label: string, node: ReturnType<typeof makeFcoNode>) {
   const existingFcoId = typeof existing[0]?.fco_id === "string" ? existing[0].fco_id : "";
   if (existingFcoId && existingFcoId !== node.id) throw new Error(`HydraDB numeric-address collision for ${node.id}`);
 
-  if (graphBackend() === "hydradb-http") {
-    await stage(`materialize-node:${label}:${node.id}`, () =>
-      runGraph(
-        `MERGE (root:HydraDGIndex {id: $root})-[:INDEXES_FCO]->(n:${label} {id: $id})`,
-        { root: HYDRADG_INDEX_VERTEX, id: row.vertex },
-      ),
-    );
-    await setNodeProperties(label, row);
-    return;
-  }
-
-  await stage(`neo4j-merge-node:${label}:${node.id}`, () => runGraph(`MERGE (n:${label} {id: $id})`, { id: row.vertex }));
+  await stage(`materialize-node:${label}:${node.id}`, () =>
+    runGraph(
+      `MERGE (root:HydraDGIndex {id: $root})-[:INDEXES_FCO]->(n:${label} {id: $id})`,
+      { root: HYDRADG_INDEX_VERTEX, id: row.vertex },
+    ),
+  );
   await setNodeProperties(label, row);
 }
 
@@ -108,21 +102,12 @@ async function upsertEdge(srcFcoId: string, relation: string, dstFcoId: string) 
   const src = hydraNumericId(srcFcoId);
   const dst = hydraNumericId(dstFcoId);
 
-  if (graphBackend() === "hydradb-http") {
-    await stage(`materialize-edge:${relation}:${fcgId}`, () =>
-      runGraph(
-        `MERGE (a {id: $src})-[r:${relation} {id: $edge_id}]->(b {id: $dst})`,
-        { src, dst, edge_id: edgeId },
-      ),
-    );
-  } else {
-    await stage(`neo4j-materialize-edge:${relation}:${fcgId}`, () =>
-      runGraph(
-        `MATCH (a {id: $src}), (b {id: $dst}) MERGE (a)-[r:${relation} {id: $edge_id}]->(b)`,
-        { src, dst, edge_id: edgeId },
-      ),
-    );
-  }
+  await stage(`materialize-edge:${relation}:${fcgId}`, () =>
+    runGraph(
+      `MERGE (a {id: $src})-[r:${relation} {id: $edge_id}]->(b {id: $dst})`,
+      { src, dst, edge_id: edgeId },
+    ),
+  );
 
   await stage(`set-edge-properties:${relation}:${fcgId}`, () =>
     runGraph(

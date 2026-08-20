@@ -122,4 +122,4 @@ bash scripts/release_gate.sh
 
 ## 5. Contact & Support
 
-For questions regarding submission replication or dataset access, see [SUBMISSION.md](file:///Users/byron/projects/active/hydradg/SUBMISSION.md) or open an issue on the GitHub repository: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg).
+For questions regarding submission replication or dataset access, see [SUBMISSION.md](SUBMISSION.md) or open an issue on the GitHub repository: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg).

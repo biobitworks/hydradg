@@ -110,7 +110,7 @@ npm run install:all
 npm run dev # launches local Next.js website at http://localhost:3000
 ```
 
-For complete step-by-step replication instructions, see [`HOW_TO.md`](file:///Users/byron/projects/active/hydradg/HOW_TO.md) and [`HYDRADB_DATA.md`](file:///Users/byron/projects/active/hydradg/HYDRADB_DATA.md).
+For complete step-by-step replication instructions, see [`HOW_TO.md`](HOW_TO.md) and [`HYDRADB_DATA.md`](HYDRADB_DATA.md).
 
 **Current uploaded demo:** https://youtu.be/7EDb6q-loPA
 
