@@ -1,11 +1,15 @@
 import Link from "next/link";
 
 import ContextIcebergHeroV2 from "@/components/ContextIcebergHeroV2";
+import KnowledgeTermLink from "@/components/KnowledgeTermLink";
 import PublicBackendStatus from "@/components/PublicBackendStatus";
-import { CURRENT_PRESENTATION } from "@/lib/presentationLineage";
+import { buildReleaseManifest } from "@/lib/releaseMeta";
 import { RELEASE_TIMEPOINTS } from "@/lib/releaseTimepoints";
 
 export default function Home() {
+  const release = buildReleaseManifest();
+  const canonicalFcos = release.fco_identity_validation.unique_fco_count;
+
   return (
     <main>
       <header className="hero curatedHero" id="top">
@@ -13,12 +17,12 @@ export default function Home() {
           <p className="eyebrow">Hack Hydra 2026 · Track 03 · HydraDG</p>
           <h1>See the context move.</h1>
           <p className="lede">
-            HydraDG keeps changing memory as a traversable custody graph: current state, prior state, contradiction,
-            supersession, source, and claim ceiling remain linked instead of collapsing into one answer.
+            HydraDG keeps changing memory as a traversable <KnowledgeTermLink slug="fcg">custody graph</KnowledgeTermLink>: <KnowledgeTermLink slug="current-state">current state</KnowledgeTermLink>, prior state, <KnowledgeTermLink slug="contradicts">contradiction</KnowledgeTermLink>, <KnowledgeTermLink slug="superseded-by">supersession</KnowledgeTermLink>, source, and <KnowledgeTermLink slug="claim-ceiling">claim ceiling</KnowledgeTermLink> remain linked instead of collapsing into one answer.
           </p>
           <div className="actions">
             <Link className="primary" href="/judge">Start judge walkthrough</Link>
             <Link className="secondary" href="/graph">Open 4D FCG</Link>
+            <Link className="secondary" href="/track-fit">Why Graph? + math</Link>
             <Link className="secondary" href="/how-to">How to use</Link>
           </div>
           <div className="curatedStatusRow">
@@ -32,11 +36,11 @@ export default function Home() {
 
       <PublicBackendStatus />
 
-      <section className="metrics curatedMetrics" aria-label="Recorded execution state">
-        <article className="metric"><span className="metricLabel">Cases</span><strong>500</strong><span className="small muted">LongMemEval-S full500</span></article>
-        <article className="metric"><span className="metricLabel">Sessions</span><strong>23,867</strong><span className="small muted">typed temporal state</span></article>
-        <article className="metric"><span className="metricLabel">Result</span><strong>No positive signal</strong><span className="small muted">B/C/D hit-rate advantage not established</span></article>
-        <article className="metric"><span className="metricLabel">Presentation</span><strong>Current</strong><span className="small muted">{CURRENT_PRESENTATION.label}</span></article>
+      <section className="metrics curatedMetrics" aria-label="Newest recorded project measurements">
+        <article className="metric"><span className="metricLabel">Hosted FCG</span><strong>36 FCOs</strong><span className="small muted">24 edges · canonical parity PASS</span></article>
+        <article className="metric"><span className="metricLabel">Context classified</span><strong>18,555 / 18,567</strong><span className="small muted">99.9354% · 12 abstentions</span></article>
+        <article className="metric"><span className="metricLabel">Track 03</span><strong>500 cases</strong><span className="small muted">23,867 temporal sessions</span></article>
+        <article className="metric"><span className="metricLabel">Release identity</span><strong>{canonicalFcos} FCOs</strong><span className="small muted">one canonical SHA-256 each · PASS</span></article>
       </section>
 
       <section className="computeSection curatedSection" id="demo">
@@ -63,31 +67,31 @@ export default function Home() {
         <h2 className="displayTitle">The graph worked. The tested retrieval advantage did not appear.</h2>
         <p className="sectionLead">The completed full500 ablation constructed and queried the typed graph but did not establish a positive B/C/D hit-rate signal over the flat route at the tested configuration. HydraDG retains that null/negative evidence instead of optimizing it away.</p>
         <div className="curatedEvidenceGrid">
-          <article className="panel"><p className="eyebrow">Scientific ceiling</p><h2>Retrieval ablation only.</h2><p className="muted">Not an end-to-end LongMemEval QA improvement claim. Hash identity is not correctness.</p></article>
+          <article className="panel"><p className="eyebrow">Scientific ceiling</p><h2>Retrieval ablation only.</h2><p className="muted">Not an end-to-end LongMemEval QA improvement claim. <KnowledgeTermLink slug="fco">Hash identity</KnowledgeTermLink> is not correctness.</p></article>
           <article className="panel"><p className="eyebrow">Custody boundary</p><h2>History stays visible.</h2><p className="muted">Negative, null, superseded and restored states remain first-class graph objects rather than being deleted.</p></article>
         </div>
-        <div className="actions"><Link className="secondary" href="/track03">Open Track 03 result</Link><Link className="secondary" href="/results/context-vs-entropy">Context vs Entropy</Link><Link className="secondary" href="/evidence">Evidence ledger</Link></div>
+        <div className="actions"><Link className="secondary" href="/track03">Open Track 03 result</Link><Link className="secondary" href="/results/context-vs-entropy">Context vs Entropy</Link><Link className="secondary" href="/evidence">Evidence ledger</Link><Link className="secondary" href="/track-fit">Show the math</Link></div>
       </section>
 
       <section className="computeSection curatedSection" id="time-space">
         <span className="sectionNumber">03 / TIME + SPACE FCG</span>
-        <h2 className="displayTitle">Scientific state and release state are not collapsed into one score.</h2>
+        <h2 className="displayTitle">Scientific distribution scores and production measurements are separate lanes.</h2>
         <div style={{ overflowX: "auto" }}>
           <table style={{ width: "100%", borderCollapse: "collapse" }}>
-            <thead><tr><th align="left">Timepoint</th><th align="left">Class</th><th align="left">Scalar context score</th><th align="left">Evidence</th></tr></thead>
+            <thead><tr><th align="left">Timepoint</th><th align="left">Class</th><th align="left">Scientific distribution score</th><th align="left">Measured state evidence</th></tr></thead>
             <tbody>
               {RELEASE_TIMEPOINTS.map((point) => (
-                <tr key={point.id}>
+                <tr key={point.id} style={{ borderLeft: `3px solid ${point.color}` }}>
                   <td><strong style={{ color: point.color }}>{point.id} · {point.label}</strong></td>
                   <td>{point.classification}</td>
-                  <td>{point.score_state === "MEASURED" ? `G* ${point.g_star?.toFixed(6)} · ΔG* ${point.delta_g_star?.toFixed(6)} · Drift ${point.cloud_drift?.toFixed(4)}` : "N/A — no declared distribution"}</td>
+                  <td>{point.score_state === "MEASURED" ? `G* ${point.g_star?.toFixed(6)} · ΔG* ${point.delta_g_star?.toFixed(6)} · Drift ${point.cloud_drift?.toFixed(4)}` : "N/A by contract"}</td>
                   <td className="small">{point.evidence}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <p className="small muted note">T3–T5 are real project/release transitions, but HydraDG does not fabricate a G*/Cloud Drift scalar when the required distribution is not declared.</p>
+        <p className="small muted note">T3–T5 do not borrow the T2 G*/Cloud Drift scalar. Their real migration, experiment, release, parity and identity calculations are shown on <Link href="/track-fit">Why Graph? + math</Link> and Evolution.</p>
       </section>
 
       <section className="computeSection curatedSection" id="explore">
@@ -97,7 +101,8 @@ export default function Home() {
         <div className="routeGrid curatedRouteGrid">
           <Link href="/judge" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Reference → poison → antidote with exact calculations.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/track03" className="routeCard"><div><p className="eyebrow">Executed</p><h3>Results</h3><p>Full500 graph, retrieval result, hashes and claim ceiling.</p></div><span className="routeArrow">↗</span></Link>
-          <Link href="/graph" className="routeCard"><div><p className="eyebrow">Interactive</p><h3>4D FCG</h3><p>Violet reference, orange poison, blue antidote; inspect one FCO hash.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/graph" className="routeCard"><div><p className="eyebrow">Interactive</p><h3>4D FCG</h3><p>Click a node for classification-colored state math, FCO hash and Anticube consideration.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/track-fit" className="routeCard"><div><p className="eyebrow">Final judge step</p><h3>Why Graph?</h3><p>Track 01/02/03 fit, real project math, worked examples and graph-native claim boundary.</p></div><span className="routeArrow">↗</span></Link>
         </div>
         <div className="actions">
           <Link className="secondary" href="/knowledge">Knowledge Base</Link>
