@@ -1,0 +1,69 @@
+title = "HydraDG release secret-scan false-positive policy"
+
+[extend]
+useDefault = true
+
+# SeedGraph cache keys are deterministic content-addressed SHA-256 identifiers.
+# This allowlist requires BOTH the exact cache path and the exact cache_key line shape.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Deterministic SeedGraph cache SHA-256 identifiers"
+condition = "AND"
+regexTarget = "line"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/evidence/track03/matrix-20260819/seedgraph/cache/[0-9a-f]{64}\.json$''']
+regexes = ['''"cache_key"\s*:\s*"[0-9a-f]{64}"''']
+
+# These packages deliberately disclose a toy Ed25519 private key as part of a
+# non-authenticating reproducibility demonstration. The real project private key is
+# external and is NOT covered by this allowlist.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Intentionally public toy DRM-free signature key objects only"
+condition = "AND"
+regexTarget = "line"
+paths = [
+  '''^hydradg_video_final_reconciled_v3/(?:fcg/TOY_SEAL_(?:FCO_BUNDLE|FCG_EDGES)\.jsonl|toy_seal/TOY_PACKAGE_SEAL\.json)$''',
+  '''^hydradg_video_ready_sealed_v2/(?:fcg/TOY_SEAL_(?:FCO_BUNDLE|FCG_EDGES)\.jsonl|toy_seal/TOY_PACKAGE_SEAL\.json)$'''
+]
+regexes = ['''(?:toykey:|toy_private_key_b64|ToyKeyDisclosureFCO)''']
+
+# Vendored Transformers/Numpy source triggers the generic-key heuristic on ordinary
+# identifiers such as AutoTokenizer, key_sha256, key_layer, and num_keypoints_0.
+# The condition requires both the vendored dependency path and these known source forms.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Vendored upstream source identifier false positives"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/eval/vithia_runtime/deps/''']
+regexes = ['''(?:AutoTokenizer,|key_sha256"\s*:|key_layer,|num_keypoints_0,|new_num_tokens,|key\.dtype\s*==)''']
+
+# Hugging Face Transformers intentionally ships this staging-only test TOKEN in
+# testing_utils.py. Constrain the exemption to that single upstream file and token form.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Upstream Transformers sandboxed-CI staging token fixture"
+condition = "AND"
+regexTarget = "line"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/eval/vithia_runtime/deps/transformers/testing_utils\.py$''']
+regexes = ['''^TOKEN\s*=\s*"hf_[A-Za-z0-9]+"\s*$''']
+
+# Historical checksum manifest: filename contains the word TOKEN, value is a SHA-256.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Historical LOW_TOKEN_POLICY SHA-256 manifest entry"
+condition = "AND"
+regexTarget = "line"
+paths = ['''^antigravity_hydradg_low_token/SHA256SUMS\.json$''']
+regexes = ['''"LOW_TOKEN_POLICY\.json"\s*:\s*"[0-9a-f]{64}"''']
+
+# Historical Modal log printed an API token ID (ak-...), not the corresponding API
+# token secret (as-...). Modal documents those as distinct prefixes. No as-* value is
+# allowlisted here. Constrain to the exact historical log and ID line shape.
+[[allowlists]]
+targetRules = ["generic-api-key"]
+description = "Historical Modal API token identifier only; not token secret"
+condition = "AND"
+regexTarget = "line"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.3/logs/20260817_081811_ECA_RETRY_2\.log$''']
+regexes = ['''^Token:\s+ak-[A-Za-z0-9_-]+\s*$''']
