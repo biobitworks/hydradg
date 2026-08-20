@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
-"""Ingests Antigravity/Gemini conversation transcripts, turn logs, and brain artifacts into content-addressed SeedGraph FCO nodes.
+"""Complete Repository & Conversation Ingestion Script into SeedGraph FCO nodes.
 
-- Reads transcript.jsonl from /Users/byron/.gemini/antigravity/brain/<conv_id>/.system_generated/logs/
-- Reads brain artifacts (implementation_plan.md, walkthrough.md)
-- Computes SHA-256 digests and Gemini signature hashes
-- Generates AgentTurnFCO & InTurnReceiptFCO nodes
-- Outputs to custody/live/nodes.jsonl, eval/hosted_migration_20260820/CONVERSATION_TURNS_FCO.jsonl, and web fixture
+- Ingests Antigravity transcript logs & brain artifacts (implementation_plan.md, walkthrough.md)
+- Ingests all evaluation receipts in eval/hosted_migration_20260820/ & HydraDG_DaisyTrain_v0.3.7/eval/
+- Ingests all project turn files in HydraDG_DaisyTrain_v0.3.7/custody/live/turns/
+- Computes content SHA-256 digests and Gemini signature hashes
+- Outputs complete unified FCO index to eval/hosted_migration_20260820/CONVERSATION_TURNS_FCO.jsonl
 """
 from __future__ import annotations
 import hashlib, json, os, sys
@@ -29,10 +29,15 @@ def make_fco_node(type_name: str, payload: dict) -> dict:
         "payload": payload,
     }
 
-def ingest_antigravity_conversation():
-    print(f"=== Antigravity Conversation Ingestion (Conv ID: {CONVERSATION_ID}) ===")
+def ingest_complete_repository():
+    print(f"=== Complete SeedGraph FCO Repository Ingestion (Conv ID: {CONVERSATION_ID}) ===")
     fco_nodes = []
-    fco_edges = []
+    seen_ids = set()
+
+    def add_node(node: dict):
+        if node["id"] not in seen_ids:
+            seen_ids.add(node["id"])
+            fco_nodes.append(node)
 
     # 1. Parse Brain Artifacts
     if ANTIGRAVITY_BRAIN_DIR.exists():
@@ -52,9 +57,8 @@ def ingest_antigravity_conversation():
                 "license": "CC-BY-NC-ND-4.0",
                 "bytes": len(content_bytes),
             }
-            node = make_fco_node("BrainArtifactFCO", payload)
-            fco_nodes.append(node)
-            print(f"Ingested Brain Artifact: {md_file.name} -> {node['id']}")
+            add_node(make_fco_node("BrainArtifactFCO", payload))
+            print(f"Ingested Brain Artifact: {md_file.name}")
 
     # 2. Parse Transcript Logs
     if TRANSCRIPT_LOG.exists():
@@ -82,15 +86,60 @@ def ingest_antigravity_conversation():
                         "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
                         "license": "CC-BY-NC-ND-4.0",
                     }
-                    node = make_fco_node("InTurnReceiptFCO", payload)
-                    fco_nodes.append(node)
+                    add_node(make_fco_node("InTurnReceiptFCO", payload))
                     turn_count += 1
                 except Exception as err:
                     print(f"Warning parsing line {line_idx}: {err}")
-
         print(f"Ingested {turn_count} transcript turn steps.")
 
-    # 3. Create Session FCO Root for Conversation
+    # 3. Parse Evaluation Receipts & Manifests
+    eval_dirs = [
+        PROJECT_ROOT / "eval" / "hosted_migration_20260820",
+        PROJECT_ROOT / "HydraDG_DaisyTrain_v0.3.7" / "eval",
+    ]
+    eval_count = 0
+    for edir in eval_dirs:
+        if edir.exists():
+            for json_file in sorted(edir.rglob("*.json")):
+                if json_file.name == "CONVERSATION_TURNS_FCO.jsonl":
+                    continue
+                content_bytes = json_file.read_bytes()
+                sha256_hash = compute_sha256(content_bytes)
+                payload = {
+                    "receipt_name": json_file.name,
+                    "relative_path": str(json_file.relative_to(PROJECT_ROOT)),
+                    "content_sha256": sha256_hash,
+                    "seedgraph_admitted": True,
+                    "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+                    "license": "CC-BY-NC-ND-4.0",
+                    "bytes": len(content_bytes),
+                }
+                add_node(make_fco_node("EvaluationReceiptFCO", payload))
+                eval_count += 1
+    print(f"Ingested {eval_count} evaluation receipt files.")
+
+    # 4. Parse Project Turn Files
+    turns_dir = PROJECT_ROOT / "HydraDG_DaisyTrain_v0.3.7" / "custody" / "live" / "turns"
+    turns_count = 0
+    if turns_dir.exists():
+        for turn_file in sorted(turns_dir.glob("*.txt")):
+            content_bytes = turn_file.read_bytes()
+            sha256_hash = compute_sha256(content_bytes)
+            role = "TURN_INPUT" if "input" in turn_file.name else "TURN_OUTPUT"
+            payload = {
+                "turn_filename": turn_file.name,
+                "role": role,
+                "content_sha256": sha256_hash,
+                "seedgraph_admitted": True,
+                "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+                "license": "CC-BY-NC-ND-4.0",
+                "bytes": len(content_bytes),
+            }
+            add_node(make_fco_node("ProjectTurnFCO", payload))
+            turns_count += 1
+    print(f"Ingested {turns_count} project turn files.")
+
+    # 5. Create Session Master Root
     session_payload = {
         "conversation_id": CONVERSATION_ID,
         "agent_identity": "Antigravity/Gemini Pro",
@@ -100,10 +149,10 @@ def ingest_antigravity_conversation():
         "license": "CC-BY-NC-ND-4.0",
     }
     session_node = make_fco_node("SessionConversationFCO", session_payload)
-    fco_nodes.append(session_node)
-    print(f"Created Session Conversation Root: {session_node['id']}")
+    add_node(session_node)
+    print(f"Created Session Master Root FCO: {session_node['id']}")
 
-    # 4. Save to eval output receipt
+    # 6. Save Complete Unified Output
     out_dir = PROJECT_ROOT / "eval" / "hosted_migration_20260820"
     out_dir.mkdir(parents=True, exist_ok=True)
     out_jsonl = out_dir / "CONVERSATION_TURNS_FCO.jsonl"
@@ -111,7 +160,7 @@ def ingest_antigravity_conversation():
         for node in fco_nodes:
             f.write(json.dumps(node) + "\n")
 
-    print(f"Saved {len(fco_nodes)} FCO turn nodes to {out_jsonl}")
+    print(f"Saved total {len(fco_nodes)} FCO nodes to {out_jsonl}")
 
 if __name__ == "__main__":
-    ingest_antigravity_conversation()
+    ingest_complete_repository()
