@@ -1,0 +1,27 @@
+{
+  "claim_boundary": "Demonstrates context-aware FCO/FCG classification over pattern/entropy findings. Abstentions reserved for unexplained candidates.",
+  "modal_token_preservation": {
+    "evidence_basis": "USER_ATTESTED_REVOKED",
+    "finding_class": "REVOKED_HISTORICAL_CREDENTIAL",
+    "note": "Modal ak-* token ID in historical log; user attested revoked.",
+    "provider_verified": false
+  },
+  "namespace": "hydradg-context-entropy-20260820",
+  "schema": "hydradg.context_vs_entropy_result.v1",
+  "summary": {
+    "CONTEXT_CLASSIFIED_FINDINGS": 18555,
+    "HISTORICAL_REVOKED_CREDENTIALS": 1,
+    "RAW_FINDINGS": 18567,
+    "UNEXPLAINED_SECRET_CANDIDATES": 12,
+    "abstention_count": 12,
+    "classification_breakdown": {
+      "DETERMINISTIC_HASH": 18428,
+      "REVOKED_HISTORICAL_CREDENTIAL": 1,
+      "TOY_NON_AUTHENTICATING_KEY": 126,
+      "UNEXPLAINED_SECRET_CANDIDATE": 12,
+      "VENDORED_TEST_FIXTURE": 0
+    },
+    "classification_coverage_percent": 99.9354
+  },
+  "timestamp_utc": "2026-08-20T13:45:00Z"
+}
