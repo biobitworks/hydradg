@@ -53,12 +53,14 @@ timeline
 
 ### 3. Golden Path: Reference → Poison → Antidote (0:55 – 1:25)
 - **URL / Screen**: Click **"Try the guided demo"** or navigate to [http://127.0.0.1:3012/judge](http://127.0.0.1:3012/judge).
-- **Actions**:
-  1. **Step 1**: Click **"Load deterministic fixture"**.
-  2. **Step 2**: Click **"Refresh cases"** $\to$ select case `gpt4_4edbafa2` $\to$ click **"Load case into HydraDB"**.
-  3. **Step 3**: Click **"Run retrieval"**.
-  4. **Step 4**: Click **"Inject poison"** $\to$ note `SUPERSEDED_BY` & `CONTRADICTS` graph edges.
-  5. **Step 4**: Click **"Apply antidote"** $\to$ verify reference recovery without erasing divergent history.
+- **Verbatim Action Sequence**:
+  - **Tab 1 (`1 · DEMO CONTROL`)**:
+    - **Step 1**: Click **"Load deterministic fixture"**.
+  - **Tab 2 (`2 · LIVE REAL DATA`)**:
+    - **Step 2**: Click **"Refresh cases"** $\to$ select case `gpt4_4edbafa2` $\to$ click **"Load case into HydraDB"**.
+    - **Step 3**: Click **"Run retrieval"**.
+    - **Step 4**: Click **"Inject poison"** $\to$ note `SUPERSEDED_BY` & `CONTRADICTS` graph edges.
+    - **Step 4**: Click **"Apply antidote"** $\to$ verify reference recovery without erasing divergent history.
 - **Narration Cue**:
   > *"In Judge Lab, we start with a reference fact, inject a non-safe poison perturbation, and observe how HydraDG creates explicit SUPERSEDED_BY and CONTRADICTS edges. When antidote restoration is applied, the declared current state recovers while the divergent history remains fully inspectable."*
 

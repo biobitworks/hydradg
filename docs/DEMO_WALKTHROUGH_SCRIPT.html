@@ -109,14 +109,22 @@ timeline
 <h3>3. Golden Path: Reference → Poison → Antidote <span class="badge">0:55 – 1:25</span></h3>
 <ul>
   <li><strong>URL / Screen</strong>: Click <strong>"Try the guided demo"</strong> or navigate to <a href="http://127.0.0.1:3012/judge">http://127.0.0.1:3012/judge</a>.</li>
-  <li><strong>Actions</strong>:
-    <ol>
-      <li><strong>Step 1</strong>: Click <strong>"Load deterministic fixture"</strong>.</li>
-      <li><strong>Step 2</strong>: Click <strong>"Refresh cases"</strong> → select case <code>gpt4_4edbafa2</code> → click <strong>"Load case into HydraDB"</strong>.</li>
-      <li><strong>Step 3</strong>: Click <strong>"Run retrieval"</strong>.</li>
-      <li><strong>Step 4</strong>: Click <strong>"Inject poison"</strong> → note <code>SUPERSEDED_BY</code> &amp; <code>CONTRADICTS</code> graph edges.</li>
-      <li><strong>Step 4</strong>: Click <strong>"Apply antidote"</strong> → verify reference recovery without erasing divergent history.</li>
-    </ol>
+  <li><strong>Verbatim Action Sequence</strong>:
+    <ul>
+      <li><strong>Tab 1 (<code>1 · DEMO CONTROL</code>)</strong>:
+        <ul>
+          <li><strong>Step 1</strong>: Click <strong>"Load deterministic fixture"</strong>.</li>
+        </ul>
+      </li>
+      <li><strong>Tab 2 (<code>2 · LIVE REAL DATA</code>)</strong>:
+        <ul>
+          <li><strong>Step 2</strong>: Click <strong>"Refresh cases"</strong> → select case <code>gpt4_4edbafa2</code> → click <strong>"Load case into HydraDB"</strong>.</li>
+          <li><strong>Step 3</strong>: Click <strong>"Run retrieval"</strong>.</li>
+          <li><strong>Step 4</strong>: Click <strong>"Inject poison"</strong> → note <code>SUPERSEDED_BY</code> &amp; <code>CONTRADICTS</code> graph edges.</li>
+          <li><strong>Step 4</strong>: Click <strong>"Apply antidote"</strong> → verify reference recovery without erasing divergent history.</li>
+        </ul>
+      </li>
+    </ul>
   </li>
   <li><strong>Narration Cue</strong>:
     <blockquote><em>"In Judge Lab, we start with a reference fact, inject a non-safe poison perturbation, and observe how HydraDG creates explicit SUPERSEDED_BY and CONTRADICTS edges. When antidote restoration is applied, the declared current state recovers while the divergent history remains fully inspectable."</em></blockquote>
