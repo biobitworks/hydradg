@@ -1,6 +1,6 @@
 # Hack Hydra 2026 — Resubmission Copy
 
-Use this file as the copy-paste source for the resubmission form. Replace the video placeholder only after the replacement video is uploaded and publicly verified.
+Use this file as the copy-paste source after the real local-model experiment completes. Until then, all expanded result fields remain intentionally marked `CURRENTLY_RUNNING`.
 
 ## Project name
 
@@ -16,98 +16,127 @@ https://github.com/biobitworks/hydradg
 
 ## Temporary judge backup
 
-Pinned preview build:
+Pinned tested preview:
 
 https://hydradg-4u209xn67-biobitworks.vercel.app/
 
-Temporary public judge-access link:
+Temporary judge-access link:
 
 https://hydradg-4u209xn67-biobitworks.vercel.app/?_vercel_share=B5GJZ77ZGBvnnTPP3G6xalyCEs4vzYMT
 
-This share URL expires 2026-08-21 21:16 UTC / 14:16 PDT. It is a temporary bridge while the production site is awaiting redeployment.
-
-Pinned backup source SHA:
+Pinned tested application SHA:
 
 `60120da604f3bb6f30edfadc1d609018089beaef`
 
 ## Demo video
 
-`PENDING_REPLACEMENT_VIDEO_URL`
+`WAIT_FOR_REAL_MATRIX_COMPLETION`
 
-Do not submit the placeholder. Until the replacement is uploaded, the previously submitted video remains:
-
-https://youtu.be/7EDb6q-loPA
+Do not record the final replacement video against provisional numerical values.
 
 ## One-sentence project summary
 
-HydraDG is a HydraDB-backed governed memory system that preserves changing facts, contradictions, provenance, recovery, and null results as a queryable Fractal Custody Graph instead of silently overwriting context.
+HydraDG is a HydraDB-backed governed memory system that preserves changing facts, contradictions, provenance, recovery, and experimental evidence as a queryable Fractal Custody Graph while a real multi-model evaluation tests what retrieval depth and model choice actually change.
 
 ## Short description
 
-HydraDG treats long-lived AI context as a governed graph rather than a flat memory buffer. Fractal Custody Objects preserve bounded content identity, provenance, evidence class, and claim ceilings; Fractal Custody Graph edges preserve how sources, transformations, contradictions, supersession, derived evidence, and claims depend on one another. HydraDB is the operational graph/query layer used to traverse this state over time.
+HydraDG treats long-lived AI context as a governed graph rather than a flat memory buffer. FCOs preserve bounded identity, provenance, evidence class, and claim ceilings; FCG edges preserve sources, transformations, contradictions, supersession, derived evidence, and claims. HydraDB is the operational graph/query layer.
 
-The judge golden path demonstrates a reference state, a controlled poison/contradiction, and an antidote/restoration while retaining the divergent history. The project also includes executed LongMemEval evidence and a cross-track dataset × model × K=5/10/100 Daisy Train. The co-primary K=10 family produced 0 of 9 significant model-vs-control tests after Holm-Bonferroni correction, so the project explicitly retains the claim ceiling `NO_MODEL_BENEFIT_OBSERVED` rather than converting the experiment into a model-superiority claim.
+The judge golden path demonstrates Reference → Poison → Antidote while retaining divergent history. The expanded empirical program is now executing on `magicstudiobox`: ten local Ollama text-model lanes across EnterpriseRAG-Bench, HydraBlast-Real-Deps, and LongMemEval-S-full500 at K=5, K=10, and K=100, plus a separate Vithia/Pythia-14m perturbation family.
+
+Every expanded result is currently:
+
+`CURRENTLY_RUNNING`
+
+No final model ranking, corrected p-value, K-depth conclusion, or expanded claim ceiling should be inserted until the corresponding execution receipts are stable.
+
+## Historical baseline
+
+The earlier LongMemEval full500 K=5 ablation remains valid historical evidence. It constructed and queried the typed graph but did not establish a positive B/C/D Hit@5 advantage over the flat reference route at the tested configuration.
+
+That result is now presented as:
+
+`HISTORICAL_TRACK03_K5_BASELINE`
+
+It is not the final headline of the expanded program.
+
+## Running experimental matrix
+
+Primary Ollama family:
+
+- 10 local text-model lanes from the frozen `magicstudiobox` inventory
+- Track 01: EnterpriseRAG-Bench, N=300
+- Track 02: HydraBlast-Real-Deps, N=250
+- Track 03: LongMemEval-S-full500, 500 total cases
+- K=5: CURRENTLY_RUNNING
+- K=10 co-primary family: CURRENTLY_RUNNING
+- K=100: CURRENTLY_RUNNING
+
+Separate Vithia family:
+
+- repaired Pythia-14m reference basin: historical executed reference
+- seed/atom perturbation experiment: CURRENTLY_RUNNING
+- first-divergence analysis: CURRENTLY_RUNNING
+- final Vithia claim ceiling: PENDING_EXECUTION_RECEIPT
 
 ## Why HydraDB is load-bearing
 
-HydraDB is not used as a decorative storage layer. The submission projects governed FCO/FCG state into HydraDB so the application can query chronology, provenance, contradiction, supersession, current-state selection, and evidence paths. Representative relationships include `NEXT/PREV`, `ASSERTS`, `DERIVED_FROM`, `ABOUT`, `SUPERSEDED_BY`, and `CONTRADICTS`. The judge application has no Neo4j fallback.
+HydraDB supports traversal of chronology, provenance, contradiction, supersession, current-state selection, and evidence paths. Representative relationships include `NEXT/PREV`, `ASSERTS`, `DERIVED_FROM`, `ABOUT`, `SUPERSEDED_BY`, and `CONTRADICTS`. The judge application has no Neo4j fallback.
 
-The current canonical BYOG upload has been accepted, but canonical hosted readback parity for the later 653-FCO / 1,692-edge scope remains bounded as indexing/readback pending. The UI intentionally exposes that uncertainty instead of claiming parity before the hosted readback gate passes.
+The hosted canonical BYOG target remains 653 FCO identities / 1,692 edges in `hydradg-judge-demo`. Upload was accepted, but canonical hosted readback parity remains indexing/readback pending.
 
 ## What changed since the original submission
 
-Since the earlier submission, HydraDG added a clearer golden-path walkthrough, the K=5/10/100 cross-track Daisy Train matrix, an atom-level local-vs-hosted FCO heat map, and stricter hosted-parity claim ceilings. The project now makes the negative result easier for judges to inspect: 0 of 9 co-primary model-vs-control tests were significant after Holm-Bonferroni correction.
+The updated judge surface now foregrounds the real multi-model program rather than repeatedly foregrounding the earliest null experiment. The old full500 K=5 result remains visible as historical baseline evidence, while the new `/real-local-matrix` page stages every model × dataset × K result as `CURRENTLY_RUNNING` until receipt-backed values arrive.
 
-## Judge walkthrough
+## Judge walkthrough during preview
 
-1. Home — problem and governed-context thesis.
+1. Home — governed-context thesis and running-experiment status.
 2. Judge Lab — Reference → Poison → Antidote.
-3. Track 03 — executed LongMemEval evidence and historical K=5 null result.
-4. Eligibility — cross-track K=5/10/100 matrix and `0/9` Holm result.
-5. Atom Heat Map — canonical local FCOs versus hosted status, with indexing/readback boundary.
-6. Evidence / Knowledge — trace a claim back through FCO/FCG lineage and source citations.
-7. Eligibility — final claim ceiling and custody state.
+3. Real Local Model Matrix — all expanded cells marked CURRENTLY_RUNNING.
+4. Historical Track 03 — original full500 K=5 baseline.
+5. Atom Heat Map — local versus hosted status and readback boundary.
+6. Evidence / Knowledge — FCO/FCG lineage.
+7. Eligibility — running family, historical evidence, and claim-boundary synthesis.
 
-## Results / evidence summary
+## Result publication rule
 
-Historical Track 03 LongMemEval full500:
+Do not replace `CURRENTLY_RUNNING` until a result has:
 
-- 500 cases
-- 23,867 sessions
-- 4,776 entities
-- 3,506 facts
-- 470 K=5 retrieval-scored cases, with 30 abstentions excluded
-- graph-native B/C/D routes did not establish a positive Hit@5 advantage over the flat reference route
+- an actual model execution receipt;
+- frozen raw/parsed output hashes;
+- FCO/FCG lineage;
+- deterministic K replay receipts;
+- case-level metrics;
+- family statistics / correction where applicable;
+- explicit failure/abstention accounting.
 
-Later cross-track co-primary K=10 family:
+## Current claim boundary
 
-- Track 01 EnterpriseRAG-Bench, N=300
-- Track 02 HydraBlast-Real-Deps, N=250
-- Track 03 LongMemEval-S, N=470
-- heuristic control plus Qwen2.5-Coder 7B, Qwen2.5 7B, and DeepSeek-R1 14B
-- 9 co-primary model-vs-control tests
-- Holm-Bonferroni significant: `0 / 9`
-- overall claim ceiling: `NO_MODEL_BENEFIT_OBSERVED`
+HydraDG does not preselect the expanded result. The final claim ceiling will be derived from the real matrix after completion.
 
-## Claim boundary
+Current expanded claim state:
 
-HydraDG is not a leaderboard claim and does not claim end-to-end QA superiority. Hit@K and Recall@K are retrieval metrics. `G*` / `ΔG*` is an application-defined dimensionless information-state diagnostic, not physical Gibbs free energy and not an accuracy metric. Jensen-Shannon divergence is used separately for Cloud Drift.
+`PENDING_REAL_MATRIX_RESULTS`
 
-Current cryptographic wording:
+Current hosted canonical parity:
 
-- hashes establish content identity where recorded;
-- signature state is `NOT_SIGNED` unless a later signing receipt exists;
-- Merkle/MMR state is `NOT_MERKLE_COMMITTED` unless a later commitment receipt exists;
-- GitHub/Vercel currently reports the pinned preview source commit as unsigned/unverified.
+`NOT_ESTABLISHED / INDEXING_PENDING`
 
-## Suggested final closing sentence
+Current cryptographic state:
 
-HydraDG is a governed memory experiment: change state, find the first divergence, preserve custody, test recovery, and keep positive, null, negative, and abstaining evidence in the same graph.
+- `SIGNATURE_STATE=NOT_SIGNED`
+- `MERKLE_STATE=NOT_MERKLE_COMMITTED`
+
+## Suggested closing sentence
+
+HydraDG is a governed memory experiment: change state, find the first divergence, preserve custody, test recovery, and keep positive, null, negative, failed, and abstaining evidence in the same graph.
 
 ## Before resubmitting
 
-- Replace `PENDING_REPLACEMENT_VIDEO_URL` with the verified public video URL.
-- Confirm the temporary preview access URL still works; if expired, use the production URL after redeploy or create a fresh share URL.
-- Do not change `NO_MODEL_BENEFIT_OBSERVED` unless new executed evidence justifies a different claim ceiling.
-- Do not state canonical hosted parity unless the 653-FCO / 1,692-edge readback gate actually passes.
-- Prefer the permanent production URL once it is redeployed and smoke-tested.
+- Wait for the real local-model matrix receipts.
+- Replace every `CURRENTLY_RUNNING` field with the exact receipt-backed result.
+- Recompute the statistical family and final claim ceiling from real executed evidence.
+- Update the replacement video script from those results.
+- Record/upload the final video only after the preview shows the completed real matrix.
+- Do not claim hosted canonical parity unless the 653-FCO / 1,692-edge readback gate passes.
