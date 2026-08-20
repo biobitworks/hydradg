@@ -3,12 +3,13 @@ import Link from "next/link";
 const PRIMARY_NAV = [
   ["Overview", "/"],
   ["Judge", "/judge"],
-  ["Context vs Entropy", "/results/context-vs-entropy"],
+  ["Why HydraDB", "/best-use"],
   ["Results", "/track03"],
   ["Graph", "/graph"],
 ] as const;
 
 const DEEP_NAV = [
+  ["Context vs Entropy", "/results/context-vs-entropy"],
   ["Knowledge", "/knowledge"],
   ["Evidence", "/evidence"],
   ["How to Use", "/how-to"],
@@ -36,7 +37,7 @@ export default function SiteNav() {
             </div>
           </details>
         </div>
-        <Link className="siteNavCta" href="/judge">Start walkthrough</Link>
+        <Link className="siteNavCta" href="/best-use">Show the math</Link>
       </nav>
     </header>
   );
