@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import KnowledgeTermLink from "@/components/KnowledgeTermLink";
+import { buildReleaseManifest } from "@/lib/releaseMeta";
 
 const TRACK03 = {
   cases: 500,
@@ -27,6 +28,8 @@ function pp(value: number) {
 }
 
 export default function TrackFitPage() {
+  const release = buildReleaseManifest();
+  const canonicalFcoCount = release.fco_identity_validation.unique_fco_count;
   const coverage = pct(CONTEXT_ENTROPY.classified, CONTEXT_ENTROPY.raw);
   const abstentionRate = pct(CONTEXT_ENTROPY.abstentions, CONTEXT_ENTROPY.raw);
   const bDelta = 100 * (TRACK03.hitB - TRACK03.hitA);
@@ -127,7 +130,7 @@ export default function TrackFitPage() {
           <article className="panel" style={{ background: "rgba(182,156,255,0.07)" }}>
             <p className="eyebrow">Release custody · measured</p>
             <h2>One canonical SHA-256 identity per FCO.</h2>
-            <pre className="result">{`canonical_address = "fco:" + object_sha256\nrelease_gate = every(node.id === canonical_address)\n\ncurrent release manifest:\nunique canonical FCOs = 60\nidentity problems = []\nidentity validation = PASS`}</pre>
+            <pre className="result">{`canonical_address = "fco:" + object_sha256\nrelease_gate = every(node.id === canonical_address)\n\ncurrent release manifest:\nunique canonical FCOs = ${canonicalFcoCount}\nidentity problems = []\nidentity validation = ${release.fco_identity_validation.status}`}</pre>
             <p className="small muted"><KnowledgeTermLink slug="fco">Hash identity</KnowledgeTermLink> establishes retained object identity, not correctness. Signature and Merkle states remain separate.</p>
             <a className="secondary" href="/api/release">Open live release JSON</a>
           </article>
