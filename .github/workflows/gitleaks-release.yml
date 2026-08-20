@@ -1,0 +1,68 @@
+name: HydraDG Gitleaks Release
+
+on:
+  push:
+    branches:
+      - hack-hydra/public-product-final-20260819
+      - main
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gitleaks:
+    name: Full-history secret scan
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout complete history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install Gitleaks v8.28.0
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -sSfL https://raw.githubusercontent.com/gitleaks/gitleaks/master/scripts/install.sh \
+            | sudo sh -s -- -b /usr/local/bin v8.28.0
+          gitleaks version
+
+      - name: Scan exact repository history
+        id: scan
+        shell: bash
+        run: |
+          set -uo pipefail
+          mkdir -p security-artifacts
+          set +e
+          gitleaks git \
+            --redact=100 \
+            --no-banner \
+            --report-format json \
+            --report-path security-artifacts/gitleaks-release.json \
+            .
+          status=$?
+          set -e
+          if [ ! -f security-artifacts/gitleaks-release.json ]; then
+            printf '[]\n' > security-artifacts/gitleaks-release.json
+          fi
+          printf 'exit_code=%s\n' "$status" >> "$GITHUB_OUTPUT"
+          printf 'GITLEAKS_EXIT_CODE=%s\n' "$status"
+
+      - name: Upload redacted Gitleaks report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: hydradg-gitleaks-release-${{ github.sha }}
+          path: security-artifacts/gitleaks-release.json
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Enforce zero findings
+        shell: bash
+        run: |
+          test "${{ steps.scan.outputs.exit_code }}" = "0" || {
+            echo "GITLEAKS_RELEASE=FAIL"
+            exit 1
+          }
+          echo "GITLEAKS_RELEASE=PASS"
