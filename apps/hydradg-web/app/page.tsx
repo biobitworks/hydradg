@@ -1,12 +1,11 @@
 import Link from "next/link";
 
-import ContextIcebergHero from "@/components/ContextIcebergHero";
+import ContextIcebergHeroV2 from "@/components/ContextIcebergHeroV2";
+import PublicBackendStatus from "@/components/PublicBackendStatus";
 import { CURRENT_PRESENTATION } from "@/lib/presentationLineage";
-import { buildSiteFcg } from "@/lib/siteFcg";
+import { RELEASE_TIMEPOINTS } from "@/lib/releaseTimepoints";
 
 export default function Home() {
-  const site = buildSiteFcg();
-
   return (
     <main>
       <header className="hero curatedHero" id="top">
@@ -20,15 +19,18 @@ export default function Home() {
           <div className="actions">
             <Link className="primary" href="/judge">Start judge walkthrough</Link>
             <Link className="secondary" href="/graph">Open 4D FCG</Link>
+            <Link className="secondary" href="/how-to">How to use</Link>
           </div>
           <div className="curatedStatusRow">
             <span className="statusLine"><span className="statusDot good" />LongMemEval full500 executed</span>
-            <span className="statusLine"><span className="statusDot good" />HydraDB graph path executed locally</span>
-            <span className="statusLine"><span className="statusDot warn" />Hosted HydraDB readback requires deployment configuration</span>
+            <span className="statusLine"><span className="statusDot good" />Hosted canonical FCG readback receipt recorded</span>
+            <span className="statusLine"><span className="statusDot good" />One SHA-256 identity per canonical FCO</span>
           </div>
         </div>
-        <div className="curatedHeroViz"><ContextIcebergHero /></div>
+        <div className="curatedHeroViz"><ContextIcebergHeroV2 /></div>
       </header>
+
+      <PublicBackendStatus />
 
       <section className="metrics curatedMetrics" aria-label="Recorded execution state">
         <article className="metric"><span className="metricLabel">Cases</span><strong>500</strong><span className="small muted">LongMemEval-S full500</span></article>
@@ -39,80 +41,72 @@ export default function Home() {
 
       <section className="computeSection curatedSection" id="demo">
         <div className="curatedSectionHead">
-          <div>
-            <span className="sectionNumber">01 / GOLDEN PATH</span>
-            <h2 className="displayTitle">Reference → poison → antidote.</h2>
-          </div>
-          <Link className="secondary" href="/judge">Run it</Link>
+          <div><span className="sectionNumber">01 / GOLDEN PATH</span><h2 className="displayTitle">Reference → poison → antidote.</h2></div>
+          <Link className="secondary" href="/judge">Open table walkthrough</Link>
         </div>
-        <p className="sectionLead">
-          One fact changes. HydraDG preserves the old state, records the relationship that diverged, and restores the declared current state without deleting the perturbation history.
-        </p>
+        <p className="sectionLead">One fact changes. HydraDG preserves the old state, records the relationship that diverged, and restores the declared current state without deleting the perturbation history.</p>
         <div className="storyStrip">
-          <article><span className="storyIndex">01</span><div><strong>Reference</strong><p>Read the current fact and its source/session path.</p></div></article>
-          <article><span className="storyIndex">02</span><div><strong>Poison</strong><p>Add a conflicting state and explicit supersession/contradiction edges.</p></div></article>
-          <article><span className="storyIndex">03</span><div><strong>Antidote</strong><p>Restore the valid state while the divergent history remains inspectable.</p></div></article>
+          <article><span className="storyIndex" style={{ color: "#b69cff" }}>01</span><div><strong>Reference / normal</strong><p>Violet · frozen comparison state.</p></div></article>
+          <article><span className="storyIndex" style={{ color: "#ff8a3d" }}>02</span><div><strong>Poison / mutation</strong><p>Orange · controlled divergent state.</p></div></article>
+          <article><span className="storyIndex" style={{ color: "#5aa9ff" }}>03</span><div><strong>Antidote / restoration</strong><p>Blue · recovery while poison history remains.</p></div></article>
+        </div>
+        <div className="actions">
+          <Link className="secondary" href="/knowledge#knowledge-atom">KnowledgeAtom</Link>
+          <Link className="secondary" href="/knowledge#seed-of-truth">SeedOfTruth</Link>
+          <Link className="secondary" href="/graph?q=KnowledgeAtom">Atoms in graph</Link>
+          <Link className="secondary" href="/graph?q=SeedOfTruth">Seeds in graph</Link>
         </div>
       </section>
 
       <section className="computeSection curatedSection" id="result">
         <span className="sectionNumber">02 / EXECUTED EVIDENCE</span>
         <h2 className="displayTitle">The graph worked. The tested retrieval advantage did not appear.</h2>
-        <p className="sectionLead">
-          The completed full500 ablation constructed and queried the typed graph but did not establish a positive B/C/D hit-rate signal over the flat route at the tested configuration. HydraDG retains that null/negative evidence instead of optimizing it away.
-        </p>
+        <p className="sectionLead">The completed full500 ablation constructed and queried the typed graph but did not establish a positive B/C/D hit-rate signal over the flat route at the tested configuration. HydraDG retains that null/negative evidence instead of optimizing it away.</p>
         <div className="curatedEvidenceGrid">
-          <article className="panel">
-            <p className="eyebrow">Scientific ceiling</p>
-            <h2>Retrieval ablation only.</h2>
-            <p className="muted">Not an end-to-end LongMemEval QA improvement claim. Hash identity is not correctness.</p>
-          </article>
-          <article className="panel">
-            <p className="eyebrow">Custody boundary</p>
-            <h2>History stays visible.</h2>
-            <p className="muted">Negative, null, superseded and restored states remain first-class graph objects rather than being deleted.</p>
-          </article>
+          <article className="panel"><p className="eyebrow">Scientific ceiling</p><h2>Retrieval ablation only.</h2><p className="muted">Not an end-to-end LongMemEval QA improvement claim. Hash identity is not correctness.</p></article>
+          <article className="panel"><p className="eyebrow">Custody boundary</p><h2>History stays visible.</h2><p className="muted">Negative, null, superseded and restored states remain first-class graph objects rather than being deleted.</p></article>
         </div>
-        <div className="actions">
-          <Link className="secondary" href="/track03">Open Track 03 result</Link>
-          <Link className="secondary" href="/evidence">Open evidence ledger</Link>
-        </div>
+        <div className="actions"><Link className="secondary" href="/track03">Open Track 03 result</Link><Link className="secondary" href="/results/context-vs-entropy">Context vs Entropy</Link><Link className="secondary" href="/evidence">Evidence ledger</Link></div>
       </section>
 
-      <section className="computeSection curatedSection" id="evolution">
-        <span className="sectionNumber">03 / PRESENTATION EVOLUTION</span>
-        <h2 className="displayTitle">New views supersede. Old views stay in the graph.</h2>
-        <p className="sectionLead">
-          The Vercel-facing layout is intentionally quieter. Earlier web states remain linked to their exact Git commits and lose only default presentation priority. The Context Iceberg numbers can be scrubbed over time to inspect whether information-state and retrieval measurements changed; they are not retroactive quality scores for the UI.
-        </p>
-        <div className="curatedEvidenceGrid">
-          <article className="panel"><p className="eyebrow">Less noise</p><h2>One story first.</h2><p className="muted">Judge path, executed result and 4D state field are primary; implementation detail moves to dedicated deep-dive routes.</p></article>
-          <article className="panel"><p className="eyebrow">Visible semantics</p><h2>Color means direction.</h2><p className="muted">Warm/cool/violet encode signed ΔG* direction; Cloud Drift controls halo magnitude. Neither is an accuracy verdict.</p></article>
+      <section className="computeSection curatedSection" id="time-space">
+        <span className="sectionNumber">03 / TIME + SPACE FCG</span>
+        <h2 className="displayTitle">Scientific state and release state are not collapsed into one score.</h2>
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse" }}>
+            <thead><tr><th align="left">Timepoint</th><th align="left">Class</th><th align="left">Scalar context score</th><th align="left">Evidence</th></tr></thead>
+            <tbody>
+              {RELEASE_TIMEPOINTS.map((point) => (
+                <tr key={point.id}>
+                  <td><strong style={{ color: point.color }}>{point.id} · {point.label}</strong></td>
+                  <td>{point.classification}</td>
+                  <td>{point.score_state === "MEASURED" ? `G* ${point.g_star?.toFixed(6)} · ΔG* ${point.delta_g_star?.toFixed(6)} · Drift ${point.cloud_drift?.toFixed(4)}` : "N/A — no declared distribution"}</td>
+                  <td className="small">{point.evidence}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
-        <div className="actions"><Link className="primary" href="/evolution">Open version + metric history</Link></div>
+        <p className="small muted note">T3–T5 are real project/release transitions, but HydraDG does not fabricate a G*/Cloud Drift scalar when the required distribution is not declared.</p>
       </section>
 
       <section className="computeSection curatedSection" id="explore">
         <span className="sectionNumber">04 / EXPLORE</span>
-        <h2 className="displayTitle">Three doors, then the deep dive.</h2>
+        <h2 className="displayTitle">Judge path, then custody deep dive.</h2>
         <div className="routeGrid curatedRouteGrid">
-          <Link href="/judge" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Follow the reference → poison → antidote path with bounded claims.</p></div><span className="routeArrow">↗</span></Link>
-          <Link href="/track03" className="routeCard"><div><p className="eyebrow">Executed</p><h3>Results</h3><p>Inspect the full500 graph, retrieval result, hashes and claim ceiling.</p></div><span className="routeArrow">↗</span></Link>
-          <Link href="/graph" className="routeCard"><div><p className="eyebrow">Interactive</p><h3>4D FCG</h3><p>Rotate space, scrub time and inspect context envelopes on graph objects.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/judge" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Reference → poison → antidote with exact calculations.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/track03" className="routeCard"><div><p className="eyebrow">Executed</p><h3>Results</h3><p>Full500 graph, retrieval result, hashes and claim ceiling.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/graph" className="routeCard"><div><p className="eyebrow">Interactive</p><h3>4D FCG</h3><p>Violet reference, orange poison, blue antidote; inspect one FCO hash.</p></div><span className="routeArrow">↗</span></Link>
         </div>
         <div className="actions">
-          <Link className="secondary" href="/knowledge">Knowledge</Link>
+          <Link className="secondary" href="/knowledge">Knowledge Base</Link>
           <Link className="secondary" href="/how-to">How to use</Link>
+          <Link className="secondary" href="/evolution">Version history</Link>
           <Link className="secondary" href="/eligibility">Eligibility</Link>
-          <a className="secondary" href="/backup/hydradg.html">Static fallback</a>
+          <a className="secondary" href="/api/release">Release JSON</a>
           <a className="secondary" href="/api/site-fcg">Site FCG JSON</a>
         </div>
       </section>
-
-      <footer className="computeSection curatedFooter">
-        <div><p className="eyebrow">Website custody</p><p className="small muted">{site.nodes.length} site FCOs · {site.edges.length} application-level FCG edges · presentation lineage retained in GitHub.</p></div>
-        <p className="small muted">SHA-256 establishes retained byte/object identity only. Current project signature state remains NOT_SIGNED and live Merkle state remains NOT_MERKLE_COMMITTED unless later operations establish otherwise.</p>
-      </footer>
     </main>
   );
 }
