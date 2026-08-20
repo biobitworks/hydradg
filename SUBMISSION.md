@@ -8,8 +8,9 @@
 - **Release Branch:** `hack-hydra/public-product-final-20260819`
 - **Custody-repair checkpoint:** `5ac81968ba5bdd5d7e71a1ff29deabeb416b7182`
 - **Final public-release commit:** PENDING_FINAL_FREEZE
-- **Demo video URL:** https://youtu.be/tKWRmYZ3HCs
-- **Demo video verification:** URL supplied by project owner; duration and unauthenticated accessibility still require independent confirmation
+- **Demo video URL:** https://youtu.be/7EDb6q-loPA
+- **Demo video verification:** updated URL supplied by project owner; duration and unauthenticated accessibility still require independent confirmation
+- **Superseded demo video URL:** https://youtu.be/tKWRmYZ3HCs
 - **Submission form:** PENDING_HUMAN_SUBMISSION
 
 A complete submission requires three items: a public GitHub repository, a demo video of 3 minutes or less, and the submission form. The local interactive product is used to record the video; a public live website is not required for the supplied submission requirement.
@@ -103,7 +104,9 @@ Overview
 
 The demo is powered by the local HydraDB test server. The recording must show the working local product; judges do not need network access to the local URL.
 
-**Uploaded demo:** https://youtu.be/tKWRmYZ3HCs
+**Current uploaded demo:** https://youtu.be/7EDb6q-loPA
+
+**Superseded uploaded demo:** https://youtu.be/tKWRmYZ3HCs
 
 Static local fallback:
 
@@ -157,7 +160,7 @@ Hash identity is not scientific correctness. Provenance is not independent repli
 | Required deliverable | Current status | Completion evidence required |
 |---|---|---|
 | Public GitHub repository | **PENDING — repository visibility must be verified public** | unauthenticated public repository access |
-| Demo video ≤ 3 minutes | **URL PROVIDED — verification pending** | duration ≤ 3:00 + unauthenticated access to https://youtu.be/tKWRmYZ3HCs |
+| Demo video ≤ 3 minutes | **UPDATED URL PROVIDED — verification pending** | duration ≤ 3:00 + unauthenticated access to https://youtu.be/7EDb6q-loPA |
 | Submission form | **PENDING — human submission required** | submitted-form confirmation/receipt |
 
 `SUBMISSION_READY=YES` only when all three required deliverables have actual completion evidence.
