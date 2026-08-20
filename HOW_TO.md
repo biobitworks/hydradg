@@ -1,125 +1,196 @@
-# How-To Guide — Replicating HydraDG & HydraDB Context Engine
+# How to Reproduce HydraDG
 
-This guide provides step-by-step instructions for judges, reviewers, and developers to replicate the **HydraDG** web application, inspect the **HydraDB** dataset and schema, run local verifications, and explore the interactive 4D FCG memory engine.
+This is the short judge/operator path for reproducing the **HydraDG** website and its **HydraDB-backed graph projection** from the public repository.
 
----
+For the full clean-machine procedure, use [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md). For graph/data details, use [`HYDRADB_DATA.md`](HYDRADB_DATA.md).
 
-## 1. Quick Start: Replicating the Web Application
+## 1. What is included
 
-The HydraDG web application (`apps/hydradg-web`) is a Next.js 16 app built with React 19 and TypeScript. It includes self-contained mock/fixture data so it runs out-of-the-box without requiring an active external database connection.
+```text
+apps/hydradg-web/                  Next.js / React website source
+apps/hydradg-web/.env.example      HydraDB environment template
+apps/hydradg-web/package-lock.json pinned web dependencies
+custody/graph/live/nodes.jsonl     public canonical FCG node snapshot
+custody/graph/live/edges.jsonl     public canonical FCG edge snapshot
+scripts/project_fcg_snapshot_to_hydradb.py
+                                    fail-closed FCG -> HydraDB importer
+HydraDG_DaisyTrain_v0.3.7/hydra/   current node/edge schema definitions
+PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json
+                                    preregistered Track 03 matrix design
+```
 
-### Prerequisites
-- **Node.js**: v18.0.0 or higher (v20+ recommended)
-- **npm**: v9.0.0 or higher
+**FCO = Fractal Custody Object.**  
+**FCG = Fractal Custody Graph.**
 
-### Installation & Launch
+HydraDB is the operational graph/query backend for the submission. The public JSONL FCG snapshot is the portable reconstruction input; HydraDB is recreated from that snapshot rather than by copying a machine-specific database directory.
+
+## 2. Prerequisites
+
+- Git
+- Python 3.10+
+- Node.js 20+ and npm
+- the official Hack Hydra / HydraDB local graph environment or a compatible HydraDB graph endpoint
+- a HydraDB bearer token
+- an isolated HydraDB namespace beginning with `hydradg-`
+
+HydraDB itself is an upstream dependency and is not vendored into this repository.
+
+## 3. Clone
 
 ```bash
-# 1. Clone the repository
 git clone https://github.com/biobitworks/hydradg.git
 cd hydradg
+```
 
-# 2. Install dependencies (installs web app dependencies)
+For the hackathon submission, **`main` is the judge-facing branch**.
+
+## 4. Fast website-only preview
+
+The website contains deterministic presentation fixtures so reviewers can inspect the UI without writing to HydraDB. This is a presentation path, **not evidence of a live HydraDB reconstruction**.
+
+```bash
 npm run install:all
-
-# 3. Start the development server
+npm run typecheck
+npm run build
 npm run dev
 ```
 
-Open your browser and navigate to:
-👉 **`http://localhost:3000`** (or `http://127.0.0.1:3012` if launched via demo scripts)
+Open the port printed by Next.js, normally `http://localhost:3000`.
 
-### Production Build Verification
+Static emergency fallback:
 
-To test and verify the production build locally:
-
-```bash
-# Build the production bundle
-npm run build
-
-# Start the production server
-npm run start
+```text
+apps/hydradg-web/public/backup/hydradg.html
 ```
 
----
+## 5. Recreate the HydraDB graph
 
-## 2. Navigating the Interactive Web Application
+Start the official HydraDB environment first. The local contract used by the judge guide is:
 
-The web interface features 8 key routes designed for judge inspection:
+```text
+HTTP base:  http://127.0.0.1:8443
+Graph ID:   default
+Cell ID:    cell-0
+Namespace:  hydradg-judge-repro   # example isolated namespace
+```
 
-| Route | Page Title | Description & Functionality |
-|---|---|---|
-| `/` | **Overview / Dashboard** | High-level summary of HydraDG, architecture overview, track selection, and verification seals. |
-| `/judge` | **Live Judge Memory Demo** | Interactive demonstration of **Reference $\to$ Poison $\to$ Antidote** state transitions. Visualizes how poisoned state is corrected without overwriting historical FCO provenance. |
-| `/track03` | **Track 03 Benchmark Results** | Full evaluation metrics on `xiaowu0162/longmemeval-cleaned` (500 cases, 23,867 sessions). Displays K=5 ablation table and K=15 depth metrics. |
-| `/graph` | **4D FCG & Context Iceberg** | Interactive state-space visualizer tracking Cloud Drift ($JSD$) and governed Gibbs free-cost deltas ($\Delta G^*$). |
-| `/evidence` | **FCO Lineage Inspector** | Deep-dive inspector for First-Class Objects (FCOs), mathematical foundations (Enßlin & Weig 2010, Lin 1991), and SHA-256 evidence digests. |
-| `/knowledge` | **Knowledge Base FCO Index** | Searchable knowledge base of atomized FCO nodes, claim boundaries, and custody certificates. |
-| `/how-to` | **Replicability Guide** | On-site replication steps, command cheatsheet, and configuration toggles. |
-| `/eligibility` | **Submission Eligibility** | Formal Track 03 checklist and rule compliance verification. |
-
-### Static Fallback Presentation
-If Node.js is not available, open the static standalone HTML bundle:
-- File path: `apps/hydradg-web/public/backup/hydradg.html`
-- Local URL (when server is running): `http://localhost:3000/backup/hydradg.html`
-
----
-
-## 3. HydraDB Data & Schema Replication
-
-HydraDG uses **HydraDB** as its graph projection, retrieval, and vector query substrate.
-
-### Graph Data Models & Schemas
-
-1. **HydraDB Schema Definitions**:
-   - `HydraDG_DaisyTrain_v0.3.1/hydra/schema_nodes.json`
-   - `HydraDG_DaisyTrain_v0.3.1/hydra/schema_edges.json`
-
-2. **Graph Entity Relationships**:
-   ```text
-   (Session:HydraDG) ──[:NEXT | :PREV]──> (Session:HydraDG)
-   (Session:HydraDG) ──[:ASSERTS]───────> (Fact:HydraDG)
-   (Fact:HydraDG)    ──[:DERIVED_FROM]──> (Session:HydraDG)
-   (Fact:HydraDG)    ──[:ABOUT]─────────> (Entity:HydraDG)
-   (Fact:HydraDG)    ──[:SUPERSEDES]────> (Fact:HydraDG)
-   (Fact:HydraDG)    ──[:CONTRADICTS]───> (Fact:HydraDG)
-   ```
-
-3. **Raw SeedGraph Data**:
-   - `PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json`: Preserved 500-case initial seedgraph dataset for $K=5$ and $K=10$ evaluation tracks.
-
-4. **Projecting Knowledge FCOs into HydraDB**:
-   To project the website knowledge base into a local or hosted HydraDB instance:
-   ```bash
-   python3 scripts/project_website_knowledge_to_hydradb.py \
-     --knowledge-json custody/website_knowledge_fco_projection.json \
-     --namespace hydradg-release-kb-demo \
-     --allow-write \
-     --out custody/hydradb_knowledge_projection_receipt.json
-   ```
-
----
-
-## 4. Benchmark Verification Scripts
-
-You can execute python verification and release gate scripts to validate data integrity:
+Store the token outside Git:
 
 ```bash
-# Check website links and route integrity
+mkdir -p ~/.local/share/hydradg-repro
+printf '%s' "$HYDRADB_AUTH_TOKEN" > ~/.local/share/hydradg-repro/hydradb-auth-token
+chmod 600 ~/.local/share/hydradg-repro/hydradb-auth-token
+```
+
+Then import the public FCG snapshot:
+
+```bash
+python3 scripts/project_fcg_snapshot_to_hydradb.py \
+  --nodes custody/graph/live/nodes.jsonl \
+  --edges custody/graph/live/edges.jsonl \
+  --endpoint http://127.0.0.1:8443/v1/graphs/default/query \
+  --token-file ~/.local/share/hydradg-repro/hydradb-auth-token \
+  --namespace hydradg-judge-repro \
+  --allow-write \
+  --out repro/receipts/HYDRADB_FCG_IMPORT_RECEIPT.json
+```
+
+Expected terminal state:
+
+```text
+HYDRADB_FCG_IMPORT=PASS
+```
+
+The importer checks the JSONL structure, node/edge integrity, isolated namespace, readback counts, and the expected Track 03 FCG-root canary before it reports PASS.
+
+## 6. Connect the website to the reconstructed HydraDB backend
+
+```bash
+cd apps/hydradg-web
+cp .env.example .env.local
+```
+
+Set the HydraDB values in `.env.local`:
+
+```dotenv
+GRAPH_BACKEND=hydradb-http
+HYDRADB_HTTP_URL=http://127.0.0.1:8443
+HYDRADB_GRAPH_ID=default
+HYDRADB_GRAPH_NAMESPACE=hydradg-judge-repro
+HYDRADB_CELL_ID=cell-0
+HYDRADB_AUTH_TOKEN=<local token; never commit>
+```
+
+Then build and run:
+
+```bash
+npm ci
+npm run typecheck
+npm run build
+npm run start -- -p 3012
+```
+
+Open:
+
+```text
+http://127.0.0.1:3012/
+```
+
+## 7. Judge routes
+
+```text
+/                       Overview
+/judge                  Reference -> Poison -> Antidote walkthrough
+/track03                Track 03 retrieval evidence
+/graph                  4D FCG / Context Iceberg
+/evidence               evidence and lineage inspector
+/knowledge              project Knowledge Base
+/how-to                 in-app operator guide
+/eligibility            submission/custody status
+/backup/hydradg.html    static presentation fallback
+```
+
+Hit@K and Recall@K are retrieval metrics, not end-to-end QA accuracy. `G*` / `Delta G*` are application-defined dimensionless information-state diagnostics, not physical Gibbs free energy.
+
+## 8. Current schemas and experiment design
+
+Current HydraDG schema files:
+
+```text
+HydraDG_DaisyTrain_v0.3.7/hydra/schema_nodes.json
+HydraDG_DaisyTrain_v0.3.7/hydra/schema_edges.json
+```
+
+The preregistered RAW vs SeedGraph K5/K10 matrix is:
+
+```text
+PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json
+```
+
+The original LongMemEval dataset bytes are not represented by that small preregistration file; the preregistration records source identity, experimental design, null hypotheses, and claim boundaries.
+
+## 9. Verification and security
+
+Useful local checks:
+
+```bash
 python3 scripts/check_hydradg_web_links.py
-
-# Verify static fallback file sha and content
 python3 scripts/check_static_fallback.py
-
-# Run static video gate check
-bash scripts/static_video_gate.sh
-
-# Run full release gate verification
 bash scripts/release_gate.sh
 ```
 
----
+Final secret scan for a release commit:
 
-## 5. Contact & Support
+```bash
+gitleaks git --redact=100 --no-banner .
+```
 
-For questions regarding submission replication or dataset access, see [SUBMISSION.md](SUBMISSION.md) or open an issue on the GitHub repository: [https://github.com/biobitworks/hydradg](https://github.com/biobitworks/hydradg).
+The fail-closed GitHub workflow is `.github/workflows/gitleaks-release.yml`. A historical scan does not establish that a newer commit is secret-clean.
+
+## 10. What successful reconstruction establishes
+
+A successful import/readback plus website build establishes reproducibility of the **public graph snapshot and application path under the documented HydraDB interface**.
+
+It does not by itself establish benchmark superiority, end-to-end QA improvement, physical thermodynamic meaning for `G*`, a real project signature, a Merkle/MMR commitment, or independent scientific replication of every experiment.
+
+For submission scope and evidence boundaries, see [`SUBMISSION.md`](SUBMISSION.md).
