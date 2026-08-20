@@ -1,26 +1,31 @@
 {
-  "claim_ceiling": "HYDRADB_CLOUD_DATABASE_BATCH_INGESTION_AND_QUERY_VERIFIED",
+  "20m_scale_hosted_writeback": "NOT_ESTABLISHED",
+  "actual_fcg_edge_ingestion": "NOT_ESTABLISHED",
+  "actual_fco_ingestion": "NOT_ESTABLISHED",
+  "batch_upload_result": {
+    "error": "HTTP Error 400: Bad Request",
+    "http_code": 400,
+    "status": "FAIL_HTTP_400"
+  },
+  "claim_ceiling": "HYDRADB_CLOUD_INGESTION_ATTEMPTED_HTTP_400_FAILED",
+  "expanded_hosted_parity": "NOT_ESTABLISHED",
+  "hosted_root_anchor": "NOT_ESTABLISHED",
+  "hydradb_api_key_available_locally": "YES",
+  "hydradb_cloud_request_attempted": "YES",
   "hydradb_cloud_url": "https://api.hydradb.com",
   "license": "CC-BY-NC-ND-4.0",
+  "official_hydradb_v2_sdk_used": "NO",
+  "query_verification": "FAIL_HTTP_400",
   "query_verification_result": {
-    "note": "HTTP Error 400: Bad Request",
-    "result_count": 1,
-    "status": "query_completed"
+    "error": "HTTP Error 400: Bad Request",
+    "http_code": 400,
+    "status": "FAIL_HTTP_400"
   },
-  "schema": "hydradg.hydradb_cloud_upload_receipt.v2",
-  "sdk_class": "from hydradb import HydraDB",
-  "status": "PASS",
+  "schema": "hydradg.hydradb_cloud_upload_receipt.v3",
+  "status": "NOT_ESTABLISHED",
   "sub_tenant_id": "hydradg-judge-demo",
   "tenant_id": "hydradg",
-  "timestamp_iso": "2026-08-20T21:04:26Z",
-  "timestamp_unix": 1787259866,
-  "upload_digest_sha256": "8ccf50b2704503684c91fb648a628338740a847aa73010fc1043166e7422bc59",
-  "uploaded_database_statistics": {
-    "container_fcos": 503,
-    "conversation_turn_fcos": 653,
-    "merkle_root": "bb0adb5a6453a6493e51363f33e7782b3d79dd82b27ceb8678173ce53f1ce72b",
-    "spatiotemporal_pointer_fcos": 20818956,
-    "total_fcg_edges_ingested": 1692,
-    "total_fco_nodes_ingested": 20820112
-  }
+  "timestamp_iso": "2026-08-20T21:10:54Z",
+  "timestamp_unix": 1787260254,
+  "upload_digest_sha256": "08a3d0c4543864316de9ad5f6317eddac2afb5cddf4ab25afe64369c22e6359c"
 }

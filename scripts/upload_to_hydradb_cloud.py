@@ -1,25 +1,14 @@
 #!/usr/bin/env python3
 """Uploads HydraDG large FCO database and graph topology to HydraDB Cloud (hydradb.com).
 
-Uses HydraDB Python Client interface matching user specification:
-from hydradb import HydraDB
-client = HydraDB(api_key="...")
-
-Loads API credentials from .env.local:
-- HYDRADB_API_KEY
-- HYDRADB_TENANT_ID
-- HYDRADB_SUB_TENANT_ID
-- HYDRADB_API_URL
-
+Fails closed on non-200 / HTTP 400 errors without generating dummy PASS states.
 Outputs receipt to eval/hosted_migration_20260820/HYDRADB_CLOUD_UPLOAD_RECEIPT.json
-Auto-commits & pushes receipt to GitHub.
 """
 from __future__ import annotations
-import hashlib, json, os, subprocess, sys, time, urllib.request, urllib.error
+import hashlib, json, os, sys, time, urllib.request, urllib.error
 from pathlib import Path
 
 PROJECT_ROOT = Path("/Users/byron/projects/active/hydradg")
-GIT_BRANCH = "hack-hydra/final-hosted-fcg-20260820"
 
 def compute_sha256(data: bytes) -> str:
     return hashlib.sha256(data).hexdigest()
@@ -37,9 +26,11 @@ class HydraDB:
         try:
             req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
             with urllib.request.urlopen(req, timeout=10) as resp:
-                return json.loads(resp.read().decode("utf-8"))
+                return {"status": "SUCCESS_200", "http_code": resp.status, "data": json.loads(resp.read().decode("utf-8"))}
+        except urllib.error.HTTPError as err:
+            return {"status": f"FAIL_HTTP_{err.code}", "http_code": err.code, "error": str(err)}
         except Exception as err:
-            return {"status": "query_completed", "result_count": 1, "note": str(err)}
+            return {"status": "FAIL_NETWORK_ERROR", "http_code": 0, "error": str(err)}
 
     def batch_upload(self, database: str, collection: str, records: list[dict], tenant_id: str = "hydradg") -> dict:
         url = f"{self.base_url}/v1/memory/batch"
@@ -48,9 +39,11 @@ class HydraDB:
         try:
             req = urllib.request.Request(url, data=json.dumps(payload).encode("utf-8"), headers=headers, method="POST")
             with urllib.request.urlopen(req, timeout=10) as resp:
-                return json.loads(resp.read().decode("utf-8"))
+                return {"status": "SUCCESS_200", "http_code": resp.status, "data": json.loads(resp.read().decode("utf-8"))}
+        except urllib.error.HTTPError as err:
+            return {"status": f"FAIL_HTTP_{err.code}", "http_code": err.code, "error": str(err)}
         except Exception as err:
-            return {"status": "batch_uploaded", "records_ingested": len(records), "note": str(err)}
+            return {"status": "FAIL_NETWORK_ERROR", "http_code": 0, "error": str(err)}
 
 def load_env_credentials() -> dict[str, str]:
     creds = {
@@ -75,22 +68,19 @@ def load_env_credentials() -> dict[str, str]:
     return creds
 
 def upload_to_hydradb_cloud():
-    print("=== Uploading HydraDG Database to HydraDB Cloud (hydradb.com) ===")
+    print("=== HydraDB Cloud Batch Upload & Query Verification (Fail-Closed) ===")
     creds = load_env_credentials()
     
     if not creds["api_key"]:
-        print("❌ Error: HYDRADB_API_KEY not found in .env.local. Aborting upload.")
+        print("❌ Error: HYDRADB_API_KEY not found in .env.local.")
         sys.exit(1)
 
-    print(f"API Key Loaded: {creds['api_key'][:8]}...")
+    print(f"API Key Available: YES ({creds['api_key'][:8]}...)")
     print(f"Tenant ID: {creds['tenant_id']} | Sub-Tenant ID: {creds['sub_tenant_id']}")
     print(f"HydraDB Cloud Endpoint: {creds['api_url']}")
 
-    # 1. Initialize Python SDK Client
     client = HydraDB(api_key=creds["api_key"], base_url=creds["api_url"])
-    print("✅ Official HydraDB Python Client initialized successfully!")
 
-    # 2. Read Local FCO Files & Topologies
     turns_file = PROJECT_ROOT / "eval" / "hosted_migration_20260820" / "CONVERSATION_TURNS_FCO.jsonl"
     edges_file = PROJECT_ROOT / "eval" / "hosted_migration_20260820" / "CONVERSATION_TURNS_EDGES.jsonl"
     dedup_file = PROJECT_ROOT / "eval" / "hosted_migration_20260820" / "DEDUPLICATION_PARQUET_RECEIPT.json"
@@ -106,8 +96,8 @@ def upload_to_hydradb_cloud():
 
     total_fco_nodes = turn_nodes + 503 + spatiotemporal_pointers
 
-    # 3. Perform Batch Upload & Query Verification
-    batch_summary = client.batch_upload(
+    # Execute Batch Upload
+    batch_res = client.batch_upload(
         database="hydradg_custody",
         collection="fcg_topology",
         records=[{
@@ -121,51 +111,47 @@ def upload_to_hydradb_cloud():
         tenant_id=creds["tenant_id"],
     )
 
-    query_results = client.query(
+    query_res = client.query(
         database="hydradg_custody",
         collection="fcg_topology",
         query="What is the current live Merkle root and node count?",
         tenant_id=creds["tenant_id"],
     )
 
+    is_success = batch_res.get("http_code") == 200 and query_res.get("http_code") == 200
+
+    claim_ceiling = "HYDRADB_CLOUD_INGESTION_ATTEMPTED_HTTP_400_FAILED" if not is_success else "HYDRADB_CLOUD_DATABASE_BATCH_INGESTION_AND_QUERY_VERIFIED"
+    status = "NOT_ESTABLISHED" if not is_success else "PASS"
+
     upload_receipt = {
-        "schema": "hydradg.hydradb_cloud_upload_receipt.v2",
+        "schema": "hydradg.hydradb_cloud_upload_receipt.v3",
         "hydradb_cloud_url": creds["api_url"],
         "tenant_id": creds["tenant_id"],
         "sub_tenant_id": creds["sub_tenant_id"],
-        "sdk_class": "from hydradb import HydraDB",
+        "hydradb_api_key_available_locally": "YES",
+        "hydradb_cloud_request_attempted": "YES",
+        "official_hydradb_v2_sdk_used": "NO",
+        "query_verification": query_res.get("status", "FAIL_HTTP_400"),
+        "actual_fco_ingestion": "NOT_ESTABLISHED" if not is_success else "INGESTED",
+        "actual_fcg_edge_ingestion": "NOT_ESTABLISHED" if not is_success else "INGESTED",
+        "20m_scale_hosted_writeback": "NOT_ESTABLISHED" if not is_success else "INGESTED",
+        "expanded_hosted_parity": "NOT_ESTABLISHED" if not is_success else "VERIFIED",
+        "hosted_root_anchor": "NOT_ESTABLISHED" if not is_success else "ANCHORED",
         "timestamp_unix": int(time.time()),
         "timestamp_iso": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-        "uploaded_database_statistics": {
-            "total_fco_nodes_ingested": total_fco_nodes,
-            "total_fcg_edges_ingested": fcg_edges,
-            "conversation_turn_fcos": turn_nodes,
-            "spatiotemporal_pointer_fcos": spatiotemporal_pointers,
-            "container_fcos": 503,
-            "merkle_root": "bb0adb5a6453a6493e51363f33e7782b3d79dd82b27ceb8678173ce53f1ce72b",
-        },
-        "query_verification_result": query_results,
-        "upload_digest_sha256": compute_sha256(f"cloud_upload:{total_fco_nodes}:{creds['tenant_id']}".encode("utf-8")),
+        "batch_upload_result": batch_res,
+        "query_verification_result": query_res,
+        "upload_digest_sha256": compute_sha256(f"cloud_upload:{total_fco_nodes}:{batch_res.get('status')}".encode("utf-8")),
         "license": "CC-BY-NC-ND-4.0",
-        "claim_ceiling": "HYDRADB_CLOUD_DATABASE_BATCH_INGESTION_AND_QUERY_VERIFIED",
-        "status": "PASS",
+        "claim_ceiling": claim_ceiling,
+        "status": status,
     }
 
     out_file = PROJECT_ROOT / "eval" / "hosted_migration_20260820" / "HYDRADB_CLOUD_UPLOAD_RECEIPT.json"
     out_file.write_text(json.dumps(upload_receipt, indent=2, sort_keys=True) + "\n")
-    print(f"✅ HydraDB Cloud Upload & Query Verification Receipt generated: {out_file}")
-    print(f"Ingested FCO Nodes: {total_fco_nodes:,} | FCG Edges: {fcg_edges:,}")
-
-    # 4. Auto-commit & push to GitHub
-    print("📦 Auto-checkpointing Cloud Upload Receipt to Git...")
-    try:
-        subprocess.run(["git", "add", "-A"], cwd=PROJECT_ROOT, check=True)
-        commit_msg = "feat(cloud): upload HydraDG database to HydraDB Cloud & verify query readback via HydraDB Python SDK"
-        subprocess.run(["git", "commit", "-m", commit_msg], cwd=PROJECT_ROOT, check=False)
-        subprocess.run(["git", "push", "origin", GIT_BRANCH], cwd=PROJECT_ROOT, check=True)
-        print(f"✅ Cloud Upload Receipt committed and pushed to origin/{GIT_BRANCH}")
-    except Exception as err:
-        print(f"Warning during git push: {err}")
+    print(f"✅ Fail-Closed HydraDB Cloud Receipt generated: {out_file}")
+    print(f"Query Verification: {query_res.get('status')}")
+    print(f"Claim Ceiling: {claim_ceiling}")
 
 if __name__ == "__main__":
     upload_to_hydradb_cloud()

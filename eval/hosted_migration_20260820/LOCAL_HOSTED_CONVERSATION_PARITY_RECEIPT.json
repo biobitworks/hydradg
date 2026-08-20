@@ -1,15 +1,16 @@
 {
-  "canonical_parity": "PASS",
-  "claim_ceiling": "CONVERSATION_HASH_ANCHORS_SEEDGRAPH_ADMITTED_AND_LOCAL_HOSTED_HYDRADB_PARITY_VERIFIED; SEMANTIC_ATOMIZATION_PENDING",
-  "content_hash_delta_count": 0,
-  "edge_set_delta_count": 0,
-  "fco_set_delta_count": 0,
-  "hosted_edge_count": 1692,
-  "hosted_endpoint_status": "LOCAL_FALLBACK (HTTP Error 404: Not Found)",
-  "hosted_fco_count": 653,
+  "canonical_parity": "NOT_ESTABLISHED",
+  "claim_ceiling": "LOCAL_HOSTED_CONVERSATION_PARITY_NOT_ESTABLISHED",
+  "content_hash_delta_count": null,
+  "edge_set_delta_count": null,
+  "fco_set_delta_count": null,
+  "hosted_edge_count": null,
+  "hosted_endpoint_status": "FAIL_CLOSED (HTTP Error 404: Not Found)",
+  "hosted_fco_count": null,
   "local_edge_count": 1692,
   "local_fco_count": 653,
-  "schema": "hydradg.local_hosted_conversation_parity_receipt.v1",
+  "schema": "hydradg.local_hosted_conversation_parity_receipt.v2",
   "signature_state": "NOT_SIGNED",
-  "timestamp_unix": 1787253995
+  "timestamp_iso": "2026-08-20T21:08:02Z",
+  "timestamp_unix": 1787260082
 }
