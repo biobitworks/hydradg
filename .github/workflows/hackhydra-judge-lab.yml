@@ -7,6 +7,7 @@ concurrency:
 on:
   push:
     branches:
+      - main
       - hack-hydra/judge-lab-golden-path-20260819
       - hack-hydra/submission-eligible-20260819
   pull_request:
@@ -43,7 +44,7 @@ jobs:
       - name: Public route and API smoke
         run: |
           set -euo pipefail
-          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03; do
+          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03 /how-to /backup/hydradg.html; do
             code="$(curl -sS -o /tmp/body -w '%{http_code}' "http://127.0.0.1:3000${path}")"
             echo "$path -> $code"
             test "$code" = "200"
