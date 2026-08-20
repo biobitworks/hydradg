@@ -1,0 +1,41 @@
+title = "HydraDG release Gitleaks policy"
+
+[extend]
+useDefault = true
+
+# These are narrow, provenance-reviewed false-positive paths only. The default
+# Gitleaks rules remain enabled for the rest of repository history.
+#
+# SeedGraph cache objects are content/custody hashes stored under cache_key.
+[[allowlists]]
+description = "SeedGraph content-addressed cache identifiers"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/evidence/track03/matrix-20260819/seedgraph/cache/''']
+
+# This vendored runtime contains upstream model/test identifiers such as
+# key_sha256 and tokenizer/model symbols; it is third-party dependency material.
+[[allowlists]]
+description = "Vendored Vithia runtime dependency false positives"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.7/eval/vithia_runtime/deps/''']
+
+# Toy seal artifacts intentionally disclose their toy Ed25519 private key and
+# explicitly carry a no-authenticity claim ceiling. They are demonstration
+# fixtures, not project authentication credentials.
+[[allowlists]]
+description = "Intentionally public toy seal demonstration fixtures"
+paths = [
+  '''^hydradg_video_ready_sealed_v2/(fcg|toy_seal)/''',
+  '''^hydradg_video_final_reconciled_v3/(fcg|toy_seal)/'''
+]
+
+# Generated SHA-256 manifest values are integrity identifiers, not API keys.
+[[allowlists]]
+description = "Generated SHA-256 manifest"
+paths = ['''^antigravity_hydradg_low_token/SHA256SUMS\.json$''']
+
+# Historical Modal CLI output exposed an ak-* token ID, not the as-* token
+# secret required for authentication. Modal documents these as separate values.
+# Keep this exception exact to the single historical log; do not allowlist logs
+# generally.
+[[allowlists]]
+description = "Historical Modal token ID metadata (not token secret)"
+paths = ['''^HydraDG_DaisyTrain_v0\.3\.3/logs/20260817_081811_ECA_RETRY_2\.log$''']
