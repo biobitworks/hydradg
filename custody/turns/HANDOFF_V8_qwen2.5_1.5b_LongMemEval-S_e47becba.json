@@ -1,0 +1,50 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "qwen2.5:1.5b",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "SUCCESS",
+  "git_commit": "f62e049f8e3a7684b1cd4b649174d68b827f5a19",
+  "handoff_id": "HANDOFF_V8_qwen2.5_1.5b_LongMemEval-S_e47becba",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "LongMemEval-S_e47becba",
+      "sha256": "011cded633c3236ea3be8f3f33ef201d719b80c48df5192c938d320c91ba5e18"
+    }
+  ],
+  "merkle_mmr": {
+    "receipt_sha256": "NOT_PROJECT_COMMITTED",
+    "root": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "qwen2.5:1.5b",
+    "bridge": "OLLARMA",
+    "requested_name": "qwen2.5:1.5b",
+    "runtime_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+    "runtime_name": "qwen2.5:1.5b"
+  },
+  "output_sha256": "f629cdf32b2841a166347cd86774318a70c9a49cbbc9da04f4f9dd8d25b2beaa",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "011cded633c3236ea3be8f3f33ef201d719b80c48df5192c938d320c91ba5e18",
+  "receipt_sha256": "b17c39fbf0f9aef88334ed1486000a09d87b97a075418653863ee851dba1ca34",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "eb2bfb82d8b5f1e8a992ee2772f08f91f6f4749fb35330f6bbc456f5f2b61147",
+  "response_text_bytes": 53,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "algorithm": null,
+    "public_key_id": null,
+    "signature_path": null,
+    "signed_scope": null,
+    "state": "NOT_SIGNED",
+    "verification_receipt_sha256": "NOT_APPLICABLE"
+  },
+  "successful": true,
+  "timestamp_utc": "2026-08-21T17:42:56Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "5f3994858d61606959eb315fd4ff81bd683f83b69ee6366497a955aa2a68f42a"
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "hydradg.model_roster.v1",
+  "version": "8.0.0",
+  "timestamp_utc": "2026-08-21T17:20:00Z",
+  "contract_type": "OLLAMA_MODEL_ROSTER_PREREGISTRATION",
+  "execution_host": "magicSTUDIObox.local",
+  "admitted_models": [
+    {
+      "requested_name": "deepseek-r1:14b",
+      "approved_name": "deepseek-r1:14b",
+      "runtime_name": "deepseek-r1:14b",
+      "runtime_digest": "c333b7232bdb521236694ffbb5f5a6b11cc45d98e9142c73123b670fca400b09",
+      "gen_timeout_seconds": 450
+    },
+    {
+      "requested_name": "qwen2.5-coder:7b",
+      "approved_name": "qwen2.5-coder:7b",
+      "runtime_name": "qwen2.5-coder:7b",
+      "runtime_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "gen_timeout_seconds": 300
+    },
+    {
+      "requested_name": "granite4.1:8b",
+      "approved_name": "granite4.1:8b",
+      "runtime_name": "granite4.1:8b",
+      "runtime_digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+      "gen_timeout_seconds": 300
+    },
+    {
+      "requested_name": "qwen3.5:9b",
+      "approved_name": "qwen3.5:9b",
+      "runtime_name": "qwen3.5:9b",
+      "runtime_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "gen_timeout_seconds": 350
+    },
+    {
+      "requested_name": "qwen3:8b",
+      "approved_name": "qwen3:8b",
+      "runtime_name": "qwen3:8b",
+      "runtime_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "gen_timeout_seconds": 300
+    },
+    {
+      "requested_name": "qwen3:4b",
+      "approved_name": "qwen3:4b",
+      "runtime_name": "qwen3:4b",
+      "runtime_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "gen_timeout_seconds": 300
+    },
+    {
+      "requested_name": "phi4-mini:latest",
+      "approved_name": "phi4-mini:latest",
+      "runtime_name": "phi4-mini:latest",
+      "runtime_digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+      "gen_timeout_seconds": 300
+    },
+    {
+      "requested_name": "qwen2.5:1.5b",
+      "approved_name": "qwen2.5:1.5b",
+      "runtime_name": "qwen2.5:1.5b",
+      "runtime_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+      "gen_timeout_seconds": 300
+    },
+    {
+      "requested_name": "qwen3:1.7b",
+      "approved_name": "qwen3:1.7b",
+      "runtime_name": "qwen3:1.7b",
+      "runtime_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "gen_timeout_seconds": 300
+    }
+  ]
+}
