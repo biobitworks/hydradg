@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+import GoldenPathStep from "@/components/GoldenPathStep";
+
 const EDGES = [
   ["ABOUT", 7012],
   ["ASSERTS", 3506],
@@ -16,15 +18,21 @@ const EDGES = [
 export default function Track03Page() {
   return (
     <main>
+      <GoldenPathStep
+        step={5}
+        summary="Inspect the established historical result. The graph was constructed and queried, but the tested B/C/D routes did not establish a positive Hit@5 advantage over the flat reference at K=5."
+      />
+
       <header className="hero">
         <div>
-          <p className="eyebrow">Track 03 · Memory + Context Retrieval</p>
-          <h1>HydraMemory</h1>
+          <p className="eyebrow">Step 05 of 08 · Results · Track 03 Memory + Context Retrieval</p>
+          <h1>Historical executed result</h1>
           <p className="lede">
-            A real LongMemEval-S full500 run materialized temporal sessions, facts, entities, supersession and contradiction in pinned local HydraDB, then compared A/B/C/D retrieval.
+            LongMemEval-S full500 materialized temporal sessions, facts, entities, supersession and contradiction in pinned local HydraDB, then compared A/B/C/D retrieval. This page preserves the executed null/negative retrieval result without converting it into an end-to-end QA claim.
           </p>
           <div className="actions">
-            <Link className="primary" href="/judge">Run Judge Lab</Link>
+            <Link className="primary" href="/evidence">Next · 06 Evidence →</Link>
+            <Link className="secondary" href="/judge#hydradb-status">← 04 HydraDB</Link>
             <Link className="secondary" href="/graph">Inspect 4D FCG</Link>
           </div>
         </div>
@@ -42,7 +50,7 @@ export default function Track03Page() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">01 / RESULT</span>
+        <span className="sectionNumber">05A / RESULT</span>
         <h2 className="displayTitle">The graph worked. The tested retrieval advantage did not appear.</h2>
         <p className="sectionLead">
           The completed analysis classifies B, C and D as NO_POSITIVE_HIT_RATE_SIGNAL relative to the flat retrieval route at this tested configuration. HydraDG preserves this as a negative/neutral result instead of promoting D because it is more graph-native.
@@ -62,7 +70,7 @@ export default function Track03Page() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">02 / GRAPH</span>
+        <span className="sectionNumber">05B / GRAPH</span>
         <h2 className="displayTitle">What was actually written.</h2>
         <div className="tableWrap">
           <table>
@@ -81,7 +89,7 @@ export default function Track03Page() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">03 / HASHES</span>
+        <span className="sectionNumber">05C / HASHES</span>
         <h2 className="displayTitle">Executed result identities.</h2>
         <div className="stack">
           <div className="panel"><p className="eyebrow">LongMemEval source</p><p className="mono compact">d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442</p></div>
@@ -93,13 +101,14 @@ export default function Track03Page() {
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">04 / NEXT FALSIFICATION</span>
+        <span className="sectionNumber">05D / NEXT FALSIFICATION</span>
         <h2 className="displayTitle">Make the relationship causal.</h2>
         <div className="flow mono">
           <span>baseline retrieval</span><b>→</b><span>poison one Fact</span><b>→</b><span>SUPERSEDED_BY</span><b>→</b><span>changed retrieval</span><b>→</b><span>antidote</span><b>→</b><span>recovery check</span>
         </div>
         <div className="actions">
-          <Link className="primary" href="/judge">Open live perturbation controls</Link>
+          <Link className="primary" href="/evidence">Continue Golden Path · 06 Evidence →</Link>
+          <Link className="secondary" href="/judge#golden-reference">Restart at 01 Reference</Link>
           <Link className="secondary" href="/knowledge">Read the relationship contract</Link>
         </div>
       </section>
