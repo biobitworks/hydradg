@@ -1,0 +1,30 @@
+{
+  "attempt_count": 3,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "FAILED",
+  "failure_reason": "timed out",
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 500,
+  "model_digest": "c333b7232bdb",
+  "model_name": "phi4-reasoning:14b",
+  "parsed_output": "",
+  "parsed_output_sha256": "",
+  "parser_status": "FAILED",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "",
+  "raw_response_bytes": 0,
+  "raw_response_sha256": "",
+  "request_sha256": "418b6de6c3bd466aeef904ae9d0116c32e40423d91a34b2dfc9eff360c4c9455",
+  "scientific_correct": false,
+  "scientific_end": 1787307993.432417,
+  "scientific_start": 1787307633.350218,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 360.082,
+  "warmup_receipt_sha256": "2155890d0b0cd77ccd32c0c40593331c418c1eb5fffb36262a4f8cad5bfe71d7"
+}
