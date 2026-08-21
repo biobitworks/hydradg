@@ -221,8 +221,9 @@ def load_real_datasets() -> dict:
             )
             ref_payload = {"gold_answer": ans_text}
             
-            # Exclude abstentions/empty gold answers (30 cases) to match admitted 470 set
-            if not ans_text or len(ans_text.strip()) == 0 or ans_text.lower() in ("none", "n/a", "null", "abstain"):
+            # Exclude single-session-preference (30 abstention/preference cases) to match admitted 470 set
+            q_type = str(item.get("question_type", ""))
+            if q_type == "single-session-preference" or not ans_text or len(ans_text.strip()) == 0:
                 continue
 
             lme_cases.append({
