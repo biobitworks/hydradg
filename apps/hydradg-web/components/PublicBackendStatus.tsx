@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 
 type StatusPayload = {
@@ -47,9 +48,9 @@ export default function PublicBackendStatus() {
       <div className="panelHead">
         <div>
           <p className="eyebrow">Public data plane</p>
-          <h2>{connected ? "Hosted HydraDB connected" : "Hosted HydraDB not configured on this deployment"}</h2>
+          <h2>{connected ? "Hosted HydraDB connected" : "Hosted HydraDB not connected on this deployment"}</h2>
         </div>
-        <span className={connected ? "pill pillGood" : "pill pillWarn"}>{connected ? "PUBLIC LIVE" : "NO LIVE BACKEND"}</span>
+        <span className={connected ? "pill pillGood" : "pill pillWarn"}>{connected ? "PUBLIC LIVE" : "DEPLOYMENT NOT CONFIGURED"}</span>
       </div>
       <div className="metrics" style={{ gridTemplateColumns: "repeat(4,minmax(0,1fr))" }}>
         <div className="metric"><span className="metricLabel">Backend</span><strong>{status?.backend || "CHECKING"}</strong></div>
@@ -57,8 +58,9 @@ export default function PublicBackendStatus() {
         <div className="metric"><span className="metricLabel">Collection</span><strong>{collection}</strong></div>
         <div className="metric"><span className="metricLabel">Traceability</span><strong>{trace}</strong></div>
       </div>
-      <p className="small muted note">This is a live server-side connectivity/readback diagnostic, separate from the committed hosted-parity receipt and separate from scientific correctness. HydraDB credential values are never returned to the browser.</p>
+      <p className="small muted note">This card is only a live server-side connectivity/readback diagnostic for the current deployment. HydraDG's retained local HydraDB executions, graph use case, deterministic math and bounded hosted receipts are separate evidence objects. Credential values are never returned to the browser.</p>
       {error ? <p className="small" style={{ color: "var(--bad)" }}>{error}</p> : null}
+      {!connected ? <div className="actions"><Link className="primary goldenCta" href="/best-use">Why HydraDB · math · implementation</Link><Link className="secondary" href="/evidence">Open retained evidence</Link></div> : null}
     </section>
   );
 }

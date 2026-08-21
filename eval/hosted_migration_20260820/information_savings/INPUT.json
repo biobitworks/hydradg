@@ -1,0 +1,38 @@
+{
+  "atom_counts": {
+    "sentence": {
+      "raw": 3214299,
+      "unique": 1861079
+    },
+    "word": {
+      "raw": 28458677,
+      "unique": 8992941
+    }
+  },
+  "canonical_parquet": {
+    "compression": "snappy",
+    "sentence_bytes": 751182824,
+    "state": "DECLARED_BY_SOURCE_RECEIPT_NOT_REVERIFIED",
+    "word_bytes": 350290966
+  },
+  "claim_ceiling": "DEDUP_ACCOUNTING_AND_THEORETICAL_COMPUTE_SCENARIO_ONLY_NO_MEASURED_ENERGY_OR_FULL_BYTE_SAVINGS",
+  "compute_scenarios": [
+    {
+      "duplicate_units_basis": "combined_duplicate_word_sentence_atom_instances",
+      "efficiency_flops_per_second_per_watt": "100000000000000",
+      "flops_per_parameter_per_token": 2,
+      "id": "hypothetical_dense_7b_one_token_per_duplicate_atom",
+      "measured_energy_wh": null,
+      "params": 7000000000,
+      "tokens_per_duplicate_atom_assumption": "1"
+    }
+  ],
+  "download_files": [],
+  "license": "CC-BY-NC-ND-4.0",
+  "schema": "hydradg.information_savings_input.v1",
+  "source_commit": "f6c07b76e878426d841f8187119a97cec1a0ed28",
+  "source_receipt": {
+    "path": "eval/hosted_migration_20260820/DEDUPLICATION_PARQUET_RECEIPT.json",
+    "receipt_sha256": "b0cfb34d3b99e2c4b095e8fd46008afe4f682101325cff3a6c7f86a7bbfffe20"
+  }
+}

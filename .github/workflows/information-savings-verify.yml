@@ -1,0 +1,57 @@
+name: HydraDG Information Savings Verify
+
+on:
+  pull_request:
+    paths:
+      - "scripts/calculate_information_savings.py"
+      - "eval/hosted_migration_20260820/information_savings/**"
+      - "eval/track03_k5_k10_20260819/**"
+      - "apps/hydradg-web/app/best-use/**"
+      - "apps/hydradg-web/app/track03/**"
+      - "apps/hydradg-web/app/models/**"
+      - "apps/hydradg-web/components/PublicBackendStatus.tsx"
+      - "docs/BEST_USE_HYDRADB_SCALE_ECONOMICS_PLAN.md"
+  push:
+    branches: [main]
+    paths:
+      - "scripts/calculate_information_savings.py"
+      - "eval/hosted_migration_20260820/information_savings/**"
+      - "eval/track03_k5_k10_20260819/**"
+      - "apps/hydradg-web/app/best-use/**"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Verify deterministic information-savings receipt
+        run: |
+          python -m py_compile scripts/calculate_information_savings.py
+          python scripts/calculate_information_savings.py \
+            --input eval/hosted_migration_20260820/information_savings/INPUT.json \
+            --output eval/hosted_migration_20260820/information_savings/INFORMATION_SAVINGS_RECEIPT_V2.json \
+            --verify
+      - name: Verify retained K5/K10 summary identity and legacy discrepancy
+        run: |
+          python - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+
+          p = Path('eval/track03_k5_k10_20260819/RETAINED_MATRIX_SUMMARY.json')
+          obj = json.loads(p.read_text())
+          declared = obj.pop('summary_sha256')
+          canonical = json.dumps(obj, sort_keys=True, separators=(',', ':'), ensure_ascii=False).encode()
+          actual = hashlib.sha256(canonical).hexdigest()
+          assert actual == declared, (actual, declared)
+
+          legacy = json.loads(Path('eval/hosted_migration_20260820/DEDUPLICATION_PARQUET_RECEIPT.json').read_text())
+          current = json.loads(Path('eval/hosted_migration_20260820/information_savings/INFORMATION_SAVINGS_RECEIPT_V2.json').read_text())
+          assert legacy['information_energy_savings']['watt_hours_saved_per_traversal'] == 809.63
+          assert current['results']['compute_scenarios'][0]['theoretical_energy_equivalent_wh'] == '0.809626'
+          assert current['results']['compute_scenarios'][0]['measured_energy_wh'] is None
+          print('K5_K10_SUMMARY_VERIFY=PASS')
+          print('LEGACY_ENERGY_DISCREPANCY_RETAINED=PASS')
+          PY

@@ -1,0 +1,61 @@
+{
+  "calculation_contract_sha256": "5ab14c2c3b24f1603795bb521b2747f0e475f3a2afd358b4dd19e72eea6b5846",
+  "claim_ceiling": "DEDUP_ACCOUNTING_AND_THEORETICAL_COMPUTE_SCENARIO_ONLY_NO_MEASURED_ENERGY_OR_FULL_BYTE_SAVINGS",
+  "input_sha256": "e32e89eaf2035a6ade0646d3f782b32e0b96e628c13f42cf23d095b911a931b5",
+  "invariants": {
+    "combined_raw_equals_unique_plus_duplicate": true,
+    "download_manifest_fail_closed": true,
+    "measured_energy_not_fabricated": true,
+    "sentence_raw_equals_unique_plus_duplicate": true,
+    "word_raw_equals_unique_plus_duplicate": true
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "receipt_sha256": "8d60ab68f989e88aec9446fc06739d2c52f4af911b673af058889c9f52afdf36",
+  "results": {
+    "canonical_parquet": {
+      "declared_total_bytes": 1101473790,
+      "state": "DECLARED_BY_SOURCE_RECEIPT_NOT_REVERIFIED"
+    },
+    "combined": {
+      "duplicate": 20818956,
+      "raw": 31672976,
+      "reuse_percent": "65.730975",
+      "unique": 10854020
+    },
+    "compute_scenarios": [
+      {
+        "assumed_delta_tokens": 20818956,
+        "energy_measurement_state": "NOT_MEASURED",
+        "id": "hypothetical_dense_7b_one_token_per_duplicate_atom",
+        "measured_energy_wh": null,
+        "scenario_state": "THEORETICAL_ONLY",
+        "theoretical_energy_equivalent_wh": "0.809626",
+        "theoretical_flops_avoided": 291465384000000000
+      }
+    ],
+    "download_byte_savings": {
+      "dedup_ratio_percent": null,
+      "duplicate_download_bytes": null,
+      "raw_download_bytes": null,
+      "state": "NOT_MEASURED",
+      "unique_content_bytes": null
+    },
+    "sentence": {
+      "duplicate": 1353220,
+      "raw": 3214299,
+      "reuse_percent": "42.100004",
+      "unique": 1861079
+    },
+    "word": {
+      "duplicate": 19465736,
+      "raw": 28458677,
+      "reuse_percent": "68.400003",
+      "unique": 8992941
+    }
+  },
+  "schema": "hydradg.information_savings_receipt.v2",
+  "signature_state": "NOT_SIGNED",
+  "source_commit": "f6c07b76e878426d841f8187119a97cec1a0ed28",
+  "status": "PASS_WITH_NOT_MEASURED_LANES"
+}

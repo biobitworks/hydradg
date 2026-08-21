@@ -30,7 +30,7 @@ export default function SiteFooter() {
           <p className="footerHeading">HydraDG</p>
           <p className="small muted">Graph-native governed context on HydraDB. Primary Hack Hydra submission: Track 03 · Memory + Context Retrieval.</p>
           <nav className="footerLinks" aria-label="Footer project navigation">
-            <Link href="/">Home MVP</Link><Link href="/judge">Judge</Link><Link href="/track03">Results</Link><Link href="/graph">Graph</Link><Link href="/models">Models</Link><Link href="/custody">Custody</Link><Link href="/evidence">Evidence</Link><a href="/backup/hydradg.html">Static</a>
+            <Link href="/">Home MVP</Link><Link href="/judge">Judge</Link><Link href="/track03">Results</Link><Link href="/best-use">Why HydraDB</Link><Link href="/graph">Graph</Link><Link href="/models">Models</Link><Link href="/custody">Custody</Link><Link href="/evidence">Evidence</Link><a href="/backup/hydradg.html">Static</a>
           </nav>
         </section>
 
@@ -60,7 +60,7 @@ export default function SiteFooter() {
           <div className="footerLinks stacked">
             {MODEL_CARDS.map(([label, href]) => <a key={href} href={href} rel="noreferrer">{label}</a>)}
           </div>
-          <p className="small muted">Track 03 K=5 used a heuristic extractor with no language model. Local model outputs are a separate probabilistic diagnostic lane.</p>
+          <p className="small muted">Track 03's retained K=5/K=10 deterministic retrieval matrix used no language model. Local model outputs remain a separate probabilistic diagnostic lane; model benefit is not established.</p>
         </section>
       </div>
 
