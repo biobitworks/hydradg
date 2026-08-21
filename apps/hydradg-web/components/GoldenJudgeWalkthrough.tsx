@@ -8,6 +8,10 @@ const STEPS = [
     relation: "CURRENT",
     anchor: "golden-reference",
     body: "Start from the declared current fact and open its source, session, and custody path.",
+    previousHref: null,
+    previousLabel: null,
+    nextHref: "/judge#golden-poison",
+    nextLabel: "02 Poison",
   },
   {
     number: "02",
@@ -16,6 +20,10 @@ const STEPS = [
     relation: "CONTRADICTS / SUPERSEDED_BY",
     anchor: "golden-poison",
     body: "Introduce a controlled conflicting state. HydraDG retains the predecessor and marks the first divergent relationship.",
+    previousHref: "/judge#golden-reference",
+    previousLabel: "01 Reference",
+    nextHref: "/judge#golden-antidote",
+    nextLabel: "03 Antidote",
   },
   {
     number: "03",
@@ -24,6 +32,10 @@ const STEPS = [
     relation: "RESTORES / CURRENT",
     anchor: "golden-antidote",
     body: "Restore the valid current state without deleting the poison, contradiction, provenance, or recovery history.",
+    previousHref: "/judge#golden-poison",
+    previousLabel: "02 Poison",
+    nextHref: "/judge#hydradb-status",
+    nextLabel: "04 HydraDB",
   },
 ] as const;
 
@@ -53,7 +65,7 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
               textTransform: "uppercase",
             }}
           >
-            01 / Judge Walkthrough · Golden Path
+            Golden Path · Steps 01–03 of 08
           </p>
           <h2
             style={{
@@ -69,12 +81,12 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
             Reference → Poison → Antidote
           </h2>
           <p style={{ margin: 0, maxWidth: "850px", color: "#d6c9a3", fontSize: "16px", lineHeight: 1.65 }}>
-            This is the path to follow in the demo and the video. Change one governed fact, find the first divergence, then restore the valid state while the full contradictory history remains traversable.
+            Start here. Change one governed fact, locate the first divergence, then restore the valid state while the full contradictory history remains traversable. Each card tells you exactly where you are and what to click next.
           </p>
         </div>
         {showCta ? (
           <Link
-            href="/judge#golden-path"
+            href="/judge#golden-reference"
             style={{
               display: "inline-flex",
               alignItems: "center",
@@ -89,7 +101,7 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
               whiteSpace: "nowrap",
             }}
           >
-            Start guided walkthrough →
+            Begin · 01 Reference →
           </Link>
         ) : null}
       </div>
@@ -100,13 +112,15 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
             id={step.anchor}
             key={step.number}
             style={{
-              minHeight: "220px",
+              minHeight: "250px",
               padding: "22px",
               scrollMarginTop: "155px",
               border: "1px solid rgba(226,195,117,0.60)",
               borderRadius: "7px",
               background: "rgba(32,27,16,0.72)",
               boxShadow: "0 0 28px rgba(226,195,117,0.055) inset",
+              display: "flex",
+              flexDirection: "column",
             }}
           >
             <div style={{ display: "flex", justifyContent: "space-between", gap: "12px", alignItems: "baseline" }}>
@@ -127,7 +141,7 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
                   letterSpacing: "0.12em",
                 }}
               >
-                {step.label}
+                STEP {step.number} OF 08 · {step.label}
               </span>
             </div>
             <h3
@@ -145,6 +159,16 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
               {step.relation}
             </p>
             <p style={{ margin: 0, color: "#cfc7b2", lineHeight: 1.6 }}>{step.body}</p>
+            <div style={{ display: "flex", gap: "8px", flexWrap: "wrap", marginTop: "auto", paddingTop: "18px" }}>
+              {step.previousHref && step.previousLabel ? (
+                <Link href={step.previousHref} style={{ padding: "8px 10px", borderRadius: "999px", border: "1px solid rgba(226,195,117,0.42)", color: "#d6c9a3", textDecoration: "none", fontWeight: 800, fontSize: "11px" }}>
+                  ← {step.previousLabel}
+                </Link>
+              ) : null}
+              <Link href={step.nextHref} style={{ padding: "8px 11px", borderRadius: "999px", border: "1px solid #e2c375", background: "#e2c375", color: "#17130a", textDecoration: "none", fontWeight: 900, fontSize: "11px" }}>
+                Next · {step.nextLabel} →
+              </Link>
+            </div>
           </article>
         ))}
       </div>
@@ -159,7 +183,7 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
           lineHeight: 1.55,
         }}
       >
-        Recording order: Reference → Poison → Antidote → running real-model matrix → evidence/custody → claim boundary. The walkthrough demonstrates governed state transitions; it does not fabricate hosted parity or experimental scores.
+        Full recording order: 01 Reference → 02 Poison → 03 Antidote → 04 HydraDB → 05 Results → 06 Evidence → 07 Future Work → 08 Claim Boundary. The walkthrough demonstrates governed state transitions; it does not fabricate hosted parity or experimental scores.
       </p>
     </section>
   );
