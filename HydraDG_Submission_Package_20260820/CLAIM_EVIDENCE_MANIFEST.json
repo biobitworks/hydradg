@@ -1,0 +1,70 @@
+{
+  "claims": [
+    {
+      "ceiling": "LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA",
+      "claim": "LongMemEval-S full500 K=5 retrieval ablation preserved; no positive B/C/D Hit@5 advantage over A.",
+      "id": "historical_full500",
+      "state": "EXECUTED"
+    },
+    {
+      "ceiling": "PASS_REQUEST_LEVEL_NOT_CANONICAL_PARITY",
+      "claim": "Hosted HydraDB connectivity/database binding/collection scope and request-level canary readback observed.",
+      "id": "hosted_connectivity",
+      "state": "EXECUTED_OBSERVATION"
+    },
+    {
+      "claim": "Full 653 FCO / 1692 FCG edge parity not yet proven by scoped readback and root comparison.",
+      "id": "expanded_hosted_parity",
+      "state": "NOT_ESTABLISHED"
+    },
+    {
+      "claim": "31672976 retained occurrences -> 10854020 unique keys -> 20818956 duplicate occurrences -> 65.730975% identity reuse.",
+      "id": "identity_reuse",
+      "state": "DETERMINISTIC_ACCOUNTING",
+      "units": "word_and_sentence_occurrence_identity"
+    },
+    {
+      "claim": "Actual serialized database byte savings require frozen byte manifest and edge/metadata overhead accounting.",
+      "id": "storage_savings",
+      "state": "NOT_MEASURED"
+    },
+    {
+      "claim": "7B duplicate-work scenario = 2.91465384e17 FLOPs and 0.809626 Wh theoretical equivalent under stated efficiency assumption.",
+      "id": "energy",
+      "state": "THEORETICAL_ONLY"
+    },
+    {
+      "ceiling": "SECOND_STAGE_CLASSIFICATION_NOT_GITLEAKS_REPLACEMENT",
+      "claim": "18555/18567 findings context-classified; 12 abstentions; 99.9354% coverage.",
+      "id": "context_vs_entropy",
+      "state": "EXECUTED_CLASSIFICATION"
+    },
+    {
+      "claim": "G*, delta G*, Cloud Drift declared for T0-T2 only; N/A where no distribution is frozen.",
+      "id": "gstar",
+      "state": "DECLARED_SYNTHETIC_FIXTURE"
+    },
+    {
+      "claim": "Self/non-self x safe/unsafe classification is a governance signal, not an assumed ranking boost.",
+      "id": "anticube",
+      "state": "FUTURE_PREREGISTERED"
+    },
+    {
+      "claim": "Track error propagation, first divergence, inheritance, recovery and cost across agent/model chains.",
+      "id": "multi_agent",
+      "state": "FUTURE_PREREGISTERED"
+    },
+    {
+      "id": "signature",
+      "state": "NOT_SIGNED"
+    },
+    {
+      "id": "merkle",
+      "state": "NOT_MERKLE_COMMITTED"
+    }
+  ],
+  "generated_date": "2026-08-20",
+  "project": "HydraDG",
+  "review_branch": "hack-hydra/final-hosted-fcg-20260820",
+  "schema": "hydradg.submission_claim_manifest.v1"
+}
