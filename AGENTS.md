@@ -13,9 +13,30 @@ Read and obey, in order:
 5. `SIGNING_AND_KEYS.md` or the canonical signing instructions.
 6. `ANTIGRAVITY_HYDRADG_CUSTODY_REPAIR_IN_TURN_PROTOCOL_V1.md`.
 7. `docs/AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md`.
-8. Current versioned reference implementations.
+8. `docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md`.
+9. Current versioned reference implementations.
 
 If a named authority file is not present in this checkout, do not invent its contents. Resolve the canonical source or record the dependency as unresolved.
+
+## Meta-orchestration: GSD + gsigmad
+
+HydraDG uses Get Shit Done / `gettingsciencedone` for meta-prompting, context engineering, dependency-aware planning and verification, and `gsigmad` for science-governance workflows. Read `docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md` before planning or executing a substantive multi-agent/long-running work unit.
+
+Required structure:
+
+`fresh context -> thin orchestrator -> OFFER -> ACCEPT -> PLAN -> PLAN_CHECK -> EXECUTE -> VERIFY -> SCIENCE_CLOSEOUT -> FCO/FCG custody -> commit/push/sync -> acknowledged handoff`.
+
+Every material work unit must preserve locked user/operator decisions, explicit deferred ideas, dependency needs/creates, role/authority ceiling, expected outputs, verification gates, stop conditions, and single-writer ownership. Use a lease/fencing token for concurrent or long-running lanes so a stale agent cannot write after ownership has moved.
+
+Before execution, the receiving runtime must record a capability snapshot and confirm the expected host/repo/base SHA. If that check fails, stop with `BLOCKED_CAPABILITY` or a host/sync failure; never fall back silently to the current local shell, another model, or another provider.
+
+Validate the orchestration envelope with:
+
+```bash
+python3 scripts/check_orchestration_work_unit.py <work-unit.json>
+```
+
+A gsigmad legacy `signature: SIG-...` field is treated as a deterministic receipt/interaction label only. It does **not** establish a cryptographic signature. Preserve it as `legacy_signature_label`; cryptographic state remains `NOT_SIGNED` unless an actual authorized private-key signing and verification receipt exists.
 
 ## Mandatory handoff rule
 
@@ -92,10 +113,11 @@ Heavy raw model outputs may remain in the verified durable bank with hashes/poin
 Run:
 
 ```bash
+python3 scripts/check_orchestration_work_unit.py <work-unit.json>
 python3 scripts/check_agent_model_handoff_receipt.py <receipt.json> [<receipt2.json> ...]
 ```
 
-A missing required custody field is a hard gate failure for promotion, writeback, release, or claim elevation.
+A missing required orchestration or custody field is a hard gate failure for promotion, writeback, release, or claim elevation.
 
 ## Current repair note
 
