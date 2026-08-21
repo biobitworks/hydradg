@@ -1,4 +1,8 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useEffect, useState } from "react";
 
 const PRIMARY_NAV = [
   ["Overview", "/"],
@@ -28,7 +32,33 @@ const GOLDEN_BREADCRUMBS = [
   ["08 Claim", "/eligibility"],
 ] as const;
 
+function resolveStep(pathname: string, hash: string) {
+  if (pathname === "/track03") return 4;
+  if (pathname === "/evidence") return 5;
+  if (pathname === "/beam-1m") return 6;
+  if (pathname === "/eligibility") return 7;
+  if (pathname === "/judge") {
+    if (hash === "#golden-poison") return 1;
+    if (hash === "#golden-antidote") return 2;
+    if (hash === "#hydradb-status") return 3;
+    return 0;
+  }
+  return -1;
+}
+
 export default function SiteNav() {
+  const pathname = usePathname();
+  const [hash, setHash] = useState("");
+
+  useEffect(() => {
+    const syncHash = () => setHash(window.location.hash);
+    syncHash();
+    window.addEventListener("hashchange", syncHash);
+    return () => window.removeEventListener("hashchange", syncHash);
+  }, [pathname]);
+
+  const activeStep = resolveStep(pathname, hash);
+
   return (
     <header className="siteNavShell">
       <nav className="siteNav" aria-label="HydraDG judge navigation">
@@ -82,23 +112,30 @@ export default function SiteNav() {
         >
           Golden path · 8 steps
         </span>
-        {GOLDEN_BREADCRUMBS.map(([label, href], index) => (
-          <span key={href} style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
-            {index > 0 ? <span style={{ color: "#7f7048" }}>›</span> : null}
-            <Link
-              href={href}
-              style={{
-                color: index < 4 ? "#f2d995" : "#d6c9a3",
-                textDecoration: "none",
-                font: "800 10.5px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace",
-                letterSpacing: "0.02em",
-                padding: "4px 2px",
-              }}
-            >
-              {label}
-            </Link>
-          </span>
-        ))}
+        {GOLDEN_BREADCRUMBS.map(([label, href], index) => {
+          const current = index === activeStep;
+          return (
+            <span key={href} style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
+              {index > 0 ? <span style={{ color: "#7f7048" }}>›</span> : null}
+              <Link
+                href={href}
+                aria-current={current ? "step" : undefined}
+                style={{
+                  color: current ? "#17130a" : index < 4 ? "#f2d995" : "#d6c9a3",
+                  background: current ? "#e2c375" : "transparent",
+                  border: current ? "1px solid #f2d995" : "1px solid transparent",
+                  borderRadius: "999px",
+                  textDecoration: "none",
+                  font: "800 10.5px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace",
+                  letterSpacing: "0.02em",
+                  padding: current ? "5px 8px" : "5px 3px",
+                }}
+              >
+                {current ? `CURRENT · ${label}` : label}
+              </Link>
+            </span>
+          );
+        })}
       </nav>
 
       <style>{`
