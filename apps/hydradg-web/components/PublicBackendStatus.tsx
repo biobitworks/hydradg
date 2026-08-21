@@ -39,7 +39,7 @@ export default function PublicBackendStatus() {
         const payload = (await response.json()) as StatusPayload;
         if (!active) return;
         setStatus(payload);
-        if (!response.ok) setError(payload.error || "Hosted HydraDB is not configured for this deployment.");
+        if (!response.ok) setError(payload.error || "Live hosted HydraDB readback is not configured for this Vercel deployment.");
       })
       .catch((caught) => {
         if (!active) return;
@@ -51,29 +51,36 @@ export default function PublicBackendStatus() {
   const connected = status?.configured === true;
   const trace = status?.live_source_traceability || status?.hydradb_traceability_canary || "PENDING_CANARY_READBACK";
   const databaseName = status?.database || status?.hosted_status?.database || "hydradg";
-  const discoveredCollection = status?.current_discovered_collection || status?.collection || "hydradg";
+  const discoveredCollection = status?.current_discovered_collection || status?.collection || "hydradg-judge-demo";
   const historicalCollection = status?.historical_migration_collection || "default";
+  const parity = status?.canonical_parity_receipt || "NOT_ESTABLISHED";
 
   return (
-    <section className="panel" aria-label="Public backend status">
+    <section className="panel" aria-label="HydraDB execution and hosted connectivity status">
       <div className="panelHead">
         <div>
-          <p className="eyebrow">Public data plane · Remote API v2</p>
-          <h2>{connected ? "Hosted HydraDB connected" : "Hosted HydraDB not yet connected"}</h2>
+          <p className="eyebrow">HydraDB evidence plane · local use + hosted upload + Vercel readback</p>
+          <h2>{connected ? "Hosted HydraDB live readback connected" : "HydraDB used; Vercel live readback not yet wired"}</h2>
         </div>
         <span className={connected ? "pill pillGood" : "pill pillWarn"}>
           {connected ? "PUBLIC LIVE" : "PUBLIC FALLBACK"}
         </span>
       </div>
+
+      <p className="small muted note" style={{ marginTop: 0 }}>
+        HydraDG has used HydraDB in the local/research pipeline and uploaded hosted data. The public Vercel application currently relies on repository-backed artifacts/connectors rather than a live HydraDB API readback. A hosted upload receipt is not the same as live parity or traceability proof.
+      </p>
+
       <div className="metrics" style={{ gridTemplateColumns: "repeat(5,minmax(0,1fr))" }}>
-        <div className="metric"><span className="metricLabel">Connectivity</span><strong>{status?.backend_connectivity || (connected ? "PASS" : "FAIL")}</strong></div>
+        <div className="metric"><span className="metricLabel">Vercel Live Readback</span><strong>{status?.backend_connectivity || (connected ? "PASS" : "NOT_WIRED")}</strong></div>
         <div className="metric"><span className="metricLabel">Database</span><strong>{databaseName}</strong></div>
         <div className="metric"><span className="metricLabel">Collection Scope</span><strong>{discoveredCollection}</strong></div>
-        <div className="metric"><span className="metricLabel">Parity Receipt</span><strong>{status?.canonical_parity_receipt || "PASS"}</strong></div>
+        <div className="metric"><span className="metricLabel">Hosted Parity</span><strong>{parity}</strong></div>
         <div className="metric"><span className="metricLabel">Traceability</span><strong>{trace}</strong></div>
       </div>
+
       <p className="small muted note">
-        Historical receipt recorded collection <code>{historicalCollection}</code> (superseded for current runtime scope). Current live discovery scope is <code>{discoveredCollection}</code>. Canary readback performs source-relation lookup against public FCO identity.
+        Historical receipt recorded collection <code>{historicalCollection}</code>. Current intended hosted scope is <code>{discoveredCollection}</code>. Live parity remains <code>NOT_ESTABLISHED</code> unless a scoped canary readback proves source identity, missing/extra accounting, and root comparison from the deployed application.
       </p>
       {error ? <p className="small" style={{ color: "var(--bad)" }}>{error}</p> : null}
     </section>
