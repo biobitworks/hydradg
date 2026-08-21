@@ -1,0 +1,85 @@
+{
+  "schema": "hydradg.agent_model_handoff.v1",
+  "handoff_id": "CHATGPT_AGENT_MODEL_HANDOFF_POLICY_20260821T0910_PT",
+  "timestamp_utc": "2026-08-21T16:10:00Z",
+  "actor_class": "CHATGPT",
+  "actor_id": "GPT-5.6 Sol",
+  "execution_host": null,
+  "hardware_identity_sha256": "NOT_APPLICABLE",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "git_commit": "ba60cb3387474ff9290d3d02a938048e53778e10",
+  "parent_handoff_sha256": "PENDING_ORIGINAL_TURN_CAPTURE",
+  "input_dependencies": [
+    {
+      "id": "human_directive_20260821T0910_PT",
+      "sha256": "5d95df8c5dd096c977f3fffa604fa800568cd66620757d4c666b3befc64a7904",
+      "evidence_class": "DIRECT_HUMAN_INPUT",
+      "source": "Exact current user directive bytes captured in ChatGPT conversation"
+    },
+    {
+      "id": "hydradg_existing_in_turn_custody_protocol",
+      "sha256": "NOT_AVAILABLE",
+      "evidence_class": "EXTERNALLY_RETRIEVED_GIT_EVIDENCE",
+      "source": "ANTIGRAVITY_HYDRADG_CUSTODY_REPAIR_IN_TURN_PROTOCOL_V1.md; Git blob a93354f37d67c083cd85235a89cb245aaa28c665"
+    },
+    {
+      "id": "ollarma_cross_repo_handoff_pattern",
+      "sha256": "NOT_AVAILABLE",
+      "evidence_class": "EXTERNALLY_RETRIEVED_GIT_EVIDENCE",
+      "source": "biobitworks/ollarma docs/handoff/HANDOFF_gtm-cellico_matrix-classification_20260709.md; Git blob 39b2f747b6a8221e840e51307534f0abb58e288a"
+    },
+    {
+      "id": "ollarma_model_provenance_pattern",
+      "sha256": "NOT_AVAILABLE",
+      "evidence_class": "EXTERNALLY_RETRIEVED_GIT_EVIDENCE",
+      "source": "biobitworks/ollarma src/ollarma/model_provenance.py; Git blob 05407289e2002f5f52dfac0da6754686a49faa63"
+    },
+    {
+      "id": "fco_signing_pattern",
+      "sha256": "NOT_AVAILABLE",
+      "evidence_class": "EXTERNALLY_RETRIEVED_GIT_EVIDENCE",
+      "source": "biobitworks/fractal-custody-objects SIGNING_SETUP.md; Git blob 9dea3ecf6a6aa7867b556003732025bc478c2243"
+    }
+  ],
+  "prompt_sha256": "NOT_APPLICABLE",
+  "request_sha256": "NOT_APPLICABLE",
+  "output_sha256": "NOT_AVAILABLE",
+  "model": null,
+  "fco": {
+    "state": "PENDING_CANONICAL_MATERIALIZATION_ON_PROJECT_HOST",
+    "object_id": null,
+    "receipt_sha256": "NOT_AVAILABLE"
+  },
+  "fcg": {
+    "state": "PENDING_CANONICAL_APPEND_ON_PROJECT_HOST",
+    "root_before": "NOT_AVAILABLE",
+    "root_after": "NOT_AVAILABLE",
+    "append_receipt_sha256": "NOT_AVAILABLE"
+  },
+  "hydradb": {
+    "projection_state": "NOT_YET_PROJECTED",
+    "projection_receipt_sha256": "NOT_AVAILABLE",
+    "readback_state": "NOT_YET_READ_BACK",
+    "readback_receipt_sha256": "NOT_AVAILABLE"
+  },
+  "evidence_class": "AI_GENERATED_GITHUB_POLICY_TRANSFORMATION",
+  "transformation_class": "DETERMINISTIC_POLICY_AUTHORING_FROM_DIRECTIVE_AND_RETRIEVED_REFERENCE_DESIGNS",
+  "claim_ceiling": "CUSTODY_POLICY_AND_GITHUB_NOTATION_ONLY_NOT_PROJECT_HOST_FCO_FCG_VERIFICATION",
+  "signature": {
+    "state": "NOT_SIGNED",
+    "algorithm": null,
+    "public_key_id": null,
+    "signed_scope": null,
+    "signature_path": null,
+    "verification_receipt_sha256": "NOT_APPLICABLE"
+  },
+  "merkle_mmr": {
+    "state": "NOT_PROJECT_COMMITTED",
+    "root": "NOT_PROJECT_COMMITTED",
+    "receipt_sha256": "NOT_PROJECT_COMMITTED"
+  },
+  "next_actor": "ANTIGRAVITY",
+  "next_handoff_state": "RECOMPUTE_NEW_FILE_SHA256_ON_MAGICSTUDIOBOX_VALIDATE_RECEIPT_MATERIALIZE_FCO_APPEND_FCG_PROJECT_HYDRADB_THEN_SYNC_MAGICPRO",
+  "notes": "This receipt records the operator-identified conversation custody gap and the GitHub policy correction. Git blob IDs are preserved as Git object identifiers and are not mislabeled SHA-256. Exact SHA-256 for the newly committed policy artifacts must be recomputed on the project host and appended to canonical FCO/FCG custody. No private-key signing operation occurred in this ChatGPT turn."
+}
