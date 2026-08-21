@@ -1,69 +1,83 @@
 import Link from "next/link";
-import beamPrereg from "@/lib/beam-preregistration.json";
 
 export default function Beam1mPage() {
   const routes = [
-    { id: "Route A", name: "Dense Content Only", hydradb_published: "0.742", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route B", name: "Dense + BM25 Hybrid", hydradb_published: "0.785", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route C", name: "Route B + Sliding-Window Latent Context", hydradb_published: "0.812", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route D", name: "Route C + Adaptive Query Expansion", hydradb_published: "0.834", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route E", name: "Route D + FCG Bounded Graph Traversal", hydradb_published: "0.856", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route F", name: "Route E + Valid-Time / Supersession Filter", hydradb_published: "0.871", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route G", name: "Route F + Reciprocal Rank Fusion", hydradb_published: "0.880", hydradg_measured: "QUEUED", status: "PREPARED" },
-    { id: "Route H", name: "Route G + Full FCO/FCG Custody & Claim-State", hydradb_published: "0.884", hydradg_measured: "QUEUED", status: "PREPARED" },
+    { id: "Route A", name: "Dense Content Only", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route B", name: "Dense + BM25 Hybrid", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route C", name: "Route B + Sliding-Window Latent Context", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route D", name: "Route C + Adaptive Query Expansion", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route E", name: "Route D + FCG Bounded Graph Traversal", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route F", name: "Route E + Valid-Time / Supersession Filter", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route G", name: "Route F + Reranking / Fusion", hydradgMeasured: "QUEUED", status: "PREPARED" },
+    { id: "Route H", name: "Route G + Full FCO/FCG Custody & Claim-State", hydradgMeasured: "QUEUED", status: "PREPARED" },
   ];
 
   return (
-    <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem", fontFamily: "sans-serif" }}>
+    <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem" }}>
       <header style={{ marginBottom: "2.5rem" }}>
-        <p style={{ color: "#d97706", fontWeight: "bold", fontSize: "0.875rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-          Parallel Architecture Preprocessing · BEAM 1M Benchmark Tier
+        <p style={{ color: "#d97706", fontWeight: 800, fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+          Preregistered future experiment · no HydraDG BEAM score yet
         </p>
-        <h1 style={{ fontSize: "2.25rem", fontWeight: "800", color: "#0f172a", marginTop: "0.5rem" }}>
-          BEAM 1M + HydraDB Hybrid Architecture Preprocessing (35 Conversations, 700 Probes)
+        <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.5rem)", margin: "0.5rem 0", lineHeight: 1.02 }}>
+          BEAM 1M Hybrid Architecture Ablation
         </h1>
-        <p style={{ color: "#475569", fontSize: "1.125rem", maxWidth: "800px", lineHeight: "1.6" }}>
-          “BEAM 1M evaluates multi-session contextual memory across 1,000,000 token conversations.
-          HydraDG's parallel preprocessing lane acquires official dataset manifests, implements architecture routes A–H,
-          and preregisters evaluation metrics without running generative inference while local model matrix tasks are active.”
+        <p style={{ maxWidth: "850px", lineHeight: 1.7 }}>
+          HydraDG has frozen the BEAM 1M preprocessing scope at 35 conversations and 700 probes and prepared Routes A–H. Generative inference and HydraDG numerical scoring have not started. Every route remains QUEUED until real execution receipts exist.
         </p>
-        <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
-          <Link href="/eligibility" style={{ background: "#0284c7", color: "#fff", padding: "0.625rem 1.25rem", borderRadius: "6px", textDecoration: "none", fontWeight: "600" }}>
-            ← Back to Eligibility Synthesis
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.25rem" }}>
+          <Link href="/judge#golden-path" style={{ padding: "0.65rem 1rem", border: "1px solid #d4af37", borderRadius: "999px", textDecoration: "none", color: "#d4af37", fontWeight: 800 }}>
+            ← Golden judge path
           </Link>
-          <Link href="/real-matrix" style={{ background: "#e2e8f0", color: "#0f172a", padding: "0.625rem 1.25rem", borderRadius: "6px", textDecoration: "none", fontWeight: "600" }}>
-            Real Local Model Matrix
+          <Link href="/real-local-matrix" style={{ padding: "0.65rem 1rem", border: "1px solid currentColor", borderRadius: "999px", textDecoration: "none" }}>
+            Expanded evidence state
           </Link>
         </div>
       </header>
 
-      {/* Architecture Routes Table */}
+      <section style={{ marginBottom: "2rem", padding: "1.25rem", border: "1px solid rgba(127,127,127,0.35)", borderRadius: "8px" }}>
+        <h2 style={{ marginTop: 0 }}>Published HydraDB reference</h2>
+        <p style={{ marginBottom: "0.5rem", lineHeight: 1.6 }}>
+          HydraDB reports <strong>82% overall on BEAM 1M</strong>, compared with <strong>74% for Hindsight</strong>. This is an external benchmark reference, not a HydraDG measurement and not a route-by-route ablation result.
+        </p>
+        <p style={{ marginBottom: 0, opacity: 0.8 }}>
+          HydraDG will compare its own measured Routes A–H only after the preregistered execution produces receipts.
+        </p>
+      </section>
+
       <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.5rem", fontWeight: "700", color: "#0f172a", borderBottom: "2px solid #e2e8f0", paddingBottom: "0.5rem" }}>
-          Architecture Ablation Routes (Route A → Route H)
-        </h2>
-        <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "1rem", textAlign: "left", fontSize: "0.875rem" }}>
-          <thead>
-            <tr style={{ background: "#f8fafc", borderBottom: "2px solid #e2e8f0" }}>
-              <th style={{ padding: "0.75rem" }}>Route ID</th>
-              <th style={{ padding: "0.75rem" }}>Architecture Description</th>
-              <th style={{ padding: "0.75rem" }}>Published HydraDB Reference Accuracy</th>
-              <th style={{ padding: "0.75rem" }}>HydraDG Measured Accuracy</th>
-              <th style={{ padding: "0.75rem" }}>Pipeline State</th>
-            </tr>
-          </thead>
-          <tbody>
-            {routes.map((r, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid #e2e8f0" }}>
-                <td style={{ padding: "0.75rem", fontWeight: "bold" }}>{r.id}</td>
-                <td style={{ padding: "0.75rem" }}>{r.name}</td>
-                <td style={{ padding: "0.75rem", fontFamily: "monospace", color: "#64748b" }}>{r.hydradb_published} (Reference)</td>
-                <td style={{ padding: "0.75rem", color: "#d97706", fontWeight: "bold" }}>{r.hydradg_measured}</td>
-                <td style={{ padding: "0.75rem", color: "#0284c7", fontWeight: "bold" }}>{r.status}</td>
+        <h2>Architecture routes</h2>
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+            <thead>
+              <tr style={{ borderBottom: "1px solid currentColor", textAlign: "left" }}>
+                <th style={{ padding: "0.8rem" }}>Route</th>
+                <th style={{ padding: "0.8rem" }}>Architecture</th>
+                <th style={{ padding: "0.8rem" }}>HydraDG measured result</th>
+                <th style={{ padding: "0.8rem" }}>State</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {routes.map((route) => (
+                <tr key={route.id} style={{ borderBottom: "1px solid rgba(127,127,127,0.25)" }}>
+                  <td style={{ padding: "0.8rem", fontWeight: 800 }}>{route.id}</td>
+                  <td style={{ padding: "0.8rem" }}>{route.name}</td>
+                  <td style={{ padding: "0.8rem", color: "#d97706", fontWeight: 800 }}>{route.hydradgMeasured}</td>
+                  <td style={{ padding: "0.8rem" }}>{route.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section style={{ padding: "1.25rem", border: "1px solid rgba(212,175,55,0.5)", borderRadius: "8px" }}>
+        <p style={{ color: "#d4af37", fontWeight: 800, fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase", marginTop: 0 }}>
+          Future preregistered hypothesis
+        </p>
+        <h2>Can explicit custody improve difficult memory updates?</h2>
+        <p style={{ lineHeight: 1.7, marginBottom: 0 }}>
+          Future work will test whether explicit FCO supersession, validity, provenance and claim-state edges improve BEAM knowledge-update and contradiction-resolution performance without degrading HydraDB-style temporal reasoning, event ordering or multi-session performance. This hypothesis is future work and is not part of the current submission evidence.
+        </p>
       </section>
     </main>
   );
