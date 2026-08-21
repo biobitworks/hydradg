@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 
+import GoldenPathStep from "@/components/GoldenPathStep";
+
 type StatusPayload = {
   configured?: boolean;
   backend?: string;
@@ -39,7 +41,7 @@ export default function PublicBackendStatus() {
         const payload = (await response.json()) as StatusPayload;
         if (!active) return;
         setStatus(payload);
-        if (!response.ok) setError(payload.error || "Live hosted HydraDB readback is not configured for this Vercel deployment.");
+        if (!response.ok) setError(payload.error || "Live hosted HydraDB readback is not configured for this deployment.");
       })
       .catch((caught) => {
         if (!active) return;
@@ -56,33 +58,41 @@ export default function PublicBackendStatus() {
   const parity = status?.canonical_parity_receipt || "NOT_ESTABLISHED";
 
   return (
-    <section className="panel" aria-label="HydraDB execution and hosted connectivity status">
-      <div className="panelHead">
-        <div>
-          <p className="eyebrow">HydraDB evidence plane · local use + hosted upload + Vercel readback</p>
-          <h2>{connected ? "Hosted HydraDB live readback connected" : "HydraDB used; Vercel live readback not yet wired"}</h2>
+    <section id="hydradb-status" style={{ scrollMarginTop: "155px" }} aria-label="HydraDB execution and hosted connectivity status">
+      <GoldenPathStep
+        step={4}
+        compact
+        summary="Verify that HydraDB is actually reachable and distinguish connectivity/readback from full canonical parity. Request-level traceability may pass while the 653-FCO / 1,692-edge parity gate remains separate."
+      />
+
+      <div className="panel">
+        <div className="panelHead">
+          <div>
+            <p className="eyebrow">Step 04 of 08 · HydraDB evidence plane</p>
+            <h2>{connected ? "Hosted HydraDB live readback connected" : "HydraDB used; live readback not yet wired"}</h2>
+          </div>
+          <span className={connected ? "pill pillGood" : "pill pillWarn"}>
+            {connected ? "CONNECTED" : "FALLBACK"}
+          </span>
         </div>
-        <span className={connected ? "pill pillGood" : "pill pillWarn"}>
-          {connected ? "PUBLIC LIVE" : "PUBLIC FALLBACK"}
-        </span>
+
+        <p className="small muted note" style={{ marginTop: 0 }}>
+          This step answers one question: can the judge surface reach the intended HydraDB data plane? Connectivity, canary traceability, and full graph parity remain distinct evidence claims.
+        </p>
+
+        <div className="metrics" style={{ gridTemplateColumns: "repeat(5,minmax(0,1fr))" }}>
+          <div className="metric"><span className="metricLabel">Live Readback</span><strong>{status?.backend_connectivity || (connected ? "PASS" : "NOT_WIRED")}</strong></div>
+          <div className="metric"><span className="metricLabel">Database</span><strong>{databaseName}</strong></div>
+          <div className="metric"><span className="metricLabel">Collection</span><strong>{discoveredCollection}</strong></div>
+          <div className="metric"><span className="metricLabel">Canonical Parity</span><strong>{parity}</strong></div>
+          <div className="metric"><span className="metricLabel">Canary Traceability</span><strong>{trace}</strong></div>
+        </div>
+
+        <p className="small muted note">
+          Historical receipt scope: <code>{historicalCollection}</code>. Current intended hosted scope: <code>{discoveredCollection}</code>. A successful canary request proves request-level traceability; full parity requires scoped FCO/edge counts, missing/extra accounting, identity mapping, and root comparison.
+        </p>
+        {error ? <p className="small" style={{ color: "var(--bad)" }}>{error}</p> : null}
       </div>
-
-      <p className="small muted note" style={{ marginTop: 0 }}>
-        HydraDG has used HydraDB in the local/research pipeline and uploaded hosted data. The public Vercel application currently relies on repository-backed artifacts/connectors rather than a live HydraDB API readback. A hosted upload receipt is not the same as live parity or traceability proof.
-      </p>
-
-      <div className="metrics" style={{ gridTemplateColumns: "repeat(5,minmax(0,1fr))" }}>
-        <div className="metric"><span className="metricLabel">Vercel Live Readback</span><strong>{status?.backend_connectivity || (connected ? "PASS" : "NOT_WIRED")}</strong></div>
-        <div className="metric"><span className="metricLabel">Database</span><strong>{databaseName}</strong></div>
-        <div className="metric"><span className="metricLabel">Collection Scope</span><strong>{discoveredCollection}</strong></div>
-        <div className="metric"><span className="metricLabel">Hosted Parity</span><strong>{parity}</strong></div>
-        <div className="metric"><span className="metricLabel">Traceability</span><strong>{trace}</strong></div>
-      </div>
-
-      <p className="small muted note">
-        Historical receipt recorded collection <code>{historicalCollection}</code>. Current intended hosted scope is <code>{discoveredCollection}</code>. Live parity remains <code>NOT_ESTABLISHED</code> unless a scoped canary readback proves source identity, missing/extra accounting, and root comparison from the deployed application.
-      </p>
-      {error ? <p className="small" style={{ color: "var(--bad)" }}>{error}</p> : null}
     </section>
   );
 }
