@@ -1,0 +1,37 @@
+{
+  "routes": [
+    {
+      "description": "Dense content retrieval (Vector similarity)",
+      "id": "Route A"
+    },
+    {
+      "description": "Route A + BM25 sparse lexical retrieval",
+      "id": "Route B"
+    },
+    {
+      "description": "Route B + sliding-window contextual enrichment / latent representation",
+      "id": "Route C"
+    },
+    {
+      "description": "Route C + adaptive query expansion",
+      "id": "Route D"
+    },
+    {
+      "description": "Route D + FCG graph entry and bounded traversal",
+      "id": "Route E"
+    },
+    {
+      "description": "Route E + valid-time/current-state/supersession filtering",
+      "id": "Route F"
+    },
+    {
+      "description": "Route F + reranking/fusion (Reciprocal Rank Fusion)",
+      "id": "Route G"
+    },
+    {
+      "description": "Route G + full FCO/FCG custody and claim-state controls (HydraDG Full Path)",
+      "id": "Route H"
+    }
+  ],
+  "schema": "hydradg.beam_architecture_routes.v1"
+}

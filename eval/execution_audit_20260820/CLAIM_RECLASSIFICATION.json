@@ -1,0 +1,21 @@
+{
+  "historical_sha": "9efee94fb68ad5cd7a995900ac0f779686370a6d",
+  "reclassified_claims": [
+    {
+      "claim": "FULL_10_MODEL_DAISY_TRAIN_EXECUTED",
+      "eligibility": "NOT_PRIMARY_EMPIRICAL_EVIDENCE",
+      "new_status": "RECLASSIFIED_DEVELOPMENT_ARTIFACT",
+      "old_status": "PASS",
+      "reason": "Prior treatment matrix contained hard-coded baseline - 0.004 constants"
+    },
+    {
+      "claim": "INDEPENDENT_EVALUATOR_EXPANSION_COMPLETED",
+      "eligibility": "NOT_PRIMARY_EMPIRICAL_EVIDENCE",
+      "new_status": "RECLASSIFIED_DEVELOPMENT_ARTIFACT",
+      "old_status": "PASS",
+      "reason": "Evaluator scores were literal dictionaries without python package invocation receipts"
+    }
+  ],
+  "schema": "hydradg.claim_reclassification.v1",
+  "timestamp_unix": 1787272069
+}
