@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import ContextIcebergHero from "@/components/ContextIcebergHero";
+import GoldenJudgeWalkthrough from "@/components/GoldenJudgeWalkthrough";
 import { buildSiteFcg } from "@/lib/siteFcg";
 
 export default function Home() {
@@ -17,7 +18,7 @@ export default function Home() {
             contradiction, supersession, source and claim ceiling remain linked instead of collapsing into one answer.
           </p>
           <div className="actions">
-            <Link className="primary" href="/judge">Start judge walkthrough</Link>
+            <Link className="primary" href="/judge#golden-path">Start judge walkthrough</Link>
             <Link className="secondary" href="/real-local-matrix">Real model matrix · running</Link>
             <Link className="secondary" href="/best-use">Why HydraDB · show the math</Link>
             <Link className="secondary" href="/graph">Open 4D FCG</Link>
@@ -32,6 +33,8 @@ export default function Home() {
         <div className="curatedHeroViz"><ContextIcebergHero /></div>
       </header>
 
+      <GoldenJudgeWalkthrough />
+
       <section className="metrics curatedMetrics" aria-label="Recorded execution and accounting state">
         <article className="metric"><span className="metricLabel">Identity reuse</span><strong>65.730975%</strong><span className="small muted">31.67M word+sentence occurrences → 10.85M unique keys</span></article>
         <article className="metric"><span className="metricLabel">Expanded experiment</span><strong>CURRENTLY RUNNING</strong><span className="small muted">10 local Ollama text lanes · 3 datasets · K=5/10/100 · plus separate Vithia family</span></article>
@@ -42,7 +45,7 @@ export default function Home() {
       <section className="computeSection curatedSection" id="scale-economics">
         <div className="curatedSectionHead">
           <div>
-            <span className="sectionNumber">01 / BEST USE OF HYDRADB</span>
+            <span className="sectionNumber">02 / BEST USE OF HYDRADB</span>
             <h2 className="displayTitle">One identity. Many contexts. Math that fails closed.</h2>
           </div>
           <Link className="primary" href="/best-use">Show the math</Link>
@@ -53,19 +56,6 @@ export default function Home() {
         <div className="curatedEvidenceGrid">
           <article className="panel"><p className="eyebrow">Deterministic custody</p><h2>Input hash → contract hash → output hash.</h2><p className="muted">The calculator recomputes the same receipt from the same canonical JSON. Hash or arithmetic mismatch is retained as failure evidence.</p></article>
           <article className="panel"><p className="eyebrow">Graph-native economics</p><h2>Reuse content identity; keep contextual edges.</h2><p className="muted">Repeated occurrences can point to a canonical key while preserving distinct file, dataset, time and provenance relationships in the FCG.</p></article>
-        </div>
-      </section>
-
-      <section className="computeSection curatedSection" id="demo">
-        <div className="curatedSectionHead">
-          <div><span className="sectionNumber">02 / GOLDEN PATH</span><h2 className="displayTitle">Reference → poison → antidote.</h2></div>
-          <Link className="secondary" href="/judge">Run it</Link>
-        </div>
-        <p className="sectionLead">One fact changes. HydraDG preserves the old state, records the relationship that diverged, and restores the declared current state without deleting the perturbation history.</p>
-        <div className="storyStrip">
-          <article><span className="storyIndex">01</span><div><strong>Reference</strong><p>Read the current fact and its source/session path.</p></div></article>
-          <article><span className="storyIndex">02</span><div><strong>Poison</strong><p>Add a conflicting state and explicit supersession/contradiction edges.</p></div></article>
-          <article><span className="storyIndex">03</span><div><strong>Antidote</strong><p>Restore the valid state while the divergent history remains inspectable.</p></div></article>
         </div>
       </section>
 
@@ -101,7 +91,7 @@ export default function Home() {
         <span className="sectionNumber">05 / EXPLORE</span>
         <h2 className="displayTitle">Start with the judge path, then inspect the running matrix, graph and math.</h2>
         <div className="routeGrid curatedRouteGrid">
-          <Link href="/judge" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Follow the reference → poison → antidote path with bounded claims.</p></div><span className="routeArrow">↗</span></Link>
+          <Link href="/judge#golden-path" className="routeCard"><div><p className="eyebrow">Guided</p><h3>Judge demo</h3><p>Follow the gold Reference → Poison → Antidote path with bounded claims.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/real-local-matrix" className="routeCard"><div><p className="eyebrow">Running</p><h3>Real local model matrix</h3><p>See every planned model × dataset × K result as CURRENTLY_RUNNING until receipt-backed values land.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/best-use" className="routeCard"><div><p className="eyebrow">Deterministic</p><h3>Why HydraDB</h3><p>Inspect identity reuse, theoretical compute and fail-closed calculation hashes.</p></div><span className="routeArrow">↗</span></Link>
           <Link href="/graph" className="routeCard"><div><p className="eyebrow">Interactive</p><h3>4D FCG</h3><p>Rotate space, scrub time and inspect context envelopes on graph objects.</p></div><span className="routeArrow">↗</span></Link>
