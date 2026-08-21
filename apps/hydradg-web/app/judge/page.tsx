@@ -1,26 +1,6 @@
+import GoldenJudgeWalkthrough from "@/components/GoldenJudgeWalkthrough";
 import PublicBackendStatus from "@/components/PublicBackendStatus";
 import { TIMEPOINTS, TIMEPOINT_FCG_EDGES, getReleaseEvaluationFlags } from "@/lib/releaseTimepoints";
-
-const STATES = [
-  {
-    label: "Reference",
-    relation: "CURRENT",
-    body: "Begin with one declared current fact and its source/evidence path.",
-    why: "Establish the frozen comparison state before any perturbation.",
-  },
-  {
-    label: "Poison",
-    relation: "CONTRADICTS / SUPERSEDED_BY",
-    body: "Introduce a controlled conflicting state while retaining the predecessor and its provenance.",
-    why: "Expose the first divergent relationship without overwriting history.",
-  },
-  {
-    label: "Antidote",
-    relation: "RESTORES / CURRENT",
-    body: "Represent recovery as a new state while the perturbation remains traversable.",
-    why: "Test restoration without deleting counterevidence.",
-  },
-] as const;
 
 export default function JudgePage() {
   const flags = getReleaseEvaluationFlags();
@@ -37,22 +17,9 @@ export default function JudgePage() {
         </div>
       </header>
 
-      <PublicBackendStatus />
+      <GoldenJudgeWalkthrough showCta={false} />
 
-      <section className="computeSection">
-        <span className="sectionNumber">01 / GOLDEN PATH</span>
-        <h2 className="displayTitle">Reference → poison → antidote.</h2>
-        <div className="grid threeCol">
-          {STATES.map((state, index) => (
-            <article className="panel" key={state.label}>
-              <p className="eyebrow">0{index + 1} · {state.relation}</p>
-              <h2>{state.label}</h2>
-              <p>{state.body}</p>
-              <p className="small muted"><strong>Why:</strong> {state.why}</p>
-            </article>
-          ))}
-        </div>
-      </section>
+      <PublicBackendStatus />
 
       <section className="computeSection">
         <span className="sectionNumber">02 / TIMEPOINT EVIDENCE LANES (T0–T5)</span>
@@ -160,7 +127,8 @@ export default function JudgePage() {
         <span className="sectionNumber">03 / WHAT TO CLICK NEXT</span>
         <h2 className="displayTitle">Follow the evidence, not a sales claim.</h2>
         <div className="actions">
-          <a className="primary" href="/track03">See Executed Result</a>
+          <a className="primary" href="/real-local-matrix">See Running Real-Model Matrix</a>
+          <a className="secondary" href="/track03">Historical Track 03 Baseline</a>
           <a className="secondary" href="/graph">Trace One Result</a>
           <a className="secondary" href="/knowledge">Need a term? Open Knowledge Base</a>
           <a className="secondary" href="/backup/hydradg.html">Open Static Fallback</a>
