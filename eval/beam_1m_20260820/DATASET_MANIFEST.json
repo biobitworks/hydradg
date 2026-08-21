@@ -1,5 +1,5 @@
 {
-  "categories_covered": [
+  "categories_expected": [
     "temporal_reasoning",
     "multi_session_reasoning",
     "event_ordering",
@@ -13,10 +13,11 @@
   ],
   "expected_conversations": 35,
   "expected_probes": 700,
-  "observed_conversations": 35,
-  "observed_probes": 700,
-  "schema": "hydradg.beam_dataset_manifest.v1",
-  "status": "DATASET_MANIFEST_VERIFIED",
-  "tier": "BEAM_1M",
-  "timestamp_unix": 1787272079
+  "observed_official_conversations": 0,
+  "observed_official_probes": 0,
+  "official_rows_materialized": false,
+  "schema": "hydradg.beam_dataset_manifest.v2",
+  "status": "OFFICIAL_ROWS_NOT_MATERIALIZED",
+  "synthetic_probe_rows_generated": false,
+  "tier": "BEAM_1M"
 }
