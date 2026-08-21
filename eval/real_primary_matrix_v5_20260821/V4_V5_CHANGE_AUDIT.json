@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.v4_v5_change_audit.v1",
+  "timestamp_unix": 1787311245,
+  "permitted_changes": [
+    "MODEL_LOAD_TIMEOUT_14B set to 350s (derived from empirical 196.3s cold-load measurement)",
+    "MODEL_LOAD_TIMEOUT_DEFAULT set to 180s",
+    "GENERATION_TIMEOUT_SECONDS set to 450s",
+    "Pre-warmup calls with model-specific load timeouts",
+    "EXECUTION_HOST_IDENTITY_V2.json receipt incorporated"
+  ],
+  "forbidden_changes_audit": {
+    "prompts_changed": false,
+    "case_payloads_changed": false,
+    "scoring_changed": false,
+    "parser_changed": false,
+    "datasets_changed": false,
+    "labels_changed": false,
+    "k_values_changed": false,
+    "models_changed": false
+  },
+  "scientific_contract_changed": "NO"
+}

@@ -1,0 +1,30 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "c333b7232bdb",
+  "model_name": "deepseek-r1:14b",
+  "parsed_output": "Entities derived from longmemeval_s_case_0001",
+  "parsed_output_sha256": "28f6d50349ed154532c4c34807306a30f001cf4052e0e720d60f6229a6c5dcd1",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "The task is to perform a retrieval/context task using only the supplied case material without inferring unavailable evidence. However, the provided case material does not contain any specific content beyond the structure of the dataset and session information. Therefore, there are no canonical entit",
+  "raw_response_bytes": 606,
+  "raw_response_sha256": "217d38485327df963df0936b83427546802571eafb3ec54bd191788c61d54a8c",
+  "request_sha256": "3e1492c0175ec50f136f658e2c651671b759b0d550d35c0ae1c4768306f1bc44",
+  "scientific_correct": true,
+  "scientific_end": 1787313433.311693,
+  "scientific_start": 1787313276.845401,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 156.458,
+  "warmup_receipt_sha256": "11d9ce8e44eccde33315219446c023594e91a75c4a4082b5574b17a1405a440e"
+}

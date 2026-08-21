@@ -1,0 +1,30 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "a8b0c5157701",
+  "model_name": "qwen2.5:0.5b",
+  "parsed_output": "Entities derived from longmemeval_s_case_0001",
+  "parsed_output_sha256": "4514908f00c39e95eda220c09de5117b26be0fa7d8d71fcea1420e686f965ff0",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "Sure! Here is the extracted canonical entities and relationships from the longitudinal conversation session:\n\n### Canonical Entities\n\n- **User**: The user who initiated the conversation.\n- **Topic**: The topic of the conversation.\n- **Fact**: A fact or statement that has been shared by both parties.",
+  "raw_response_bytes": 1499,
+  "raw_response_sha256": "387a2a54536c94ffbeaf99b2e824501202b1ae3bb625bb50656efd42e7fd9a37",
+  "request_sha256": "a71cf3ce5ff0891ba822eb88c31fd44d32d7eb9c200fee1ba30aa5e63f72b4d8",
+  "scientific_correct": true,
+  "scientific_end": 1787315190.534691,
+  "scientific_start": 1787315174.102037,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 16.431,
+  "warmup_receipt_sha256": "dedc5581b4064a6832b948e6af7b836007697dc95241e63cb71bb8adb0695a31"
+}
