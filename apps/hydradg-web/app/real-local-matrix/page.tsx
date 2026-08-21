@@ -1,84 +1,117 @@
 import Link from "next/link";
-import auditGate from "@/lib/final-audit-gate.json";
+
+const cells = [
+  {
+    label: "Runtime Ollama inventory",
+    state: "VERIFIED_DISCOVERY",
+    detail: "10 local text models were discovered from `ollama list`. Inventory discovery is established; treatment execution is a separate claim.",
+    tone: "verified",
+  },
+  {
+    label: "Expanded model × dataset execution",
+    state: "NOT_ESTABLISHED",
+    detail: "The v2 script did not invoke Ollama per dataset case. Its generated model receipts are development artifacts and are not primary empirical evidence.",
+    tone: "blocked",
+  },
+  {
+    label: "K=5 / K=10 / K=100 expanded metrics",
+    state: "RECLASSIFIED_DEVELOPMENT_ARTIFACT",
+    detail: "The v2 script assigns literal Hit@K, Recall@K, Precision@K, MRR, MAP@K and nDCG@K values. These rows are excluded from the expanded scientific claim.",
+    tone: "reclassified",
+  },
+  {
+    label: "DeepEval / Ragas / Inspect / BEIR / MTEB / lm-eval",
+    state: "BLOCKED_PACKAGE_NOT_INSTALLED",
+    detail: "The runtime audit found these evaluator packages unavailable. No package score is promoted as executed evidence.",
+    tone: "blocked",
+  },
+  {
+    label: "Vithia / Pythia-14m ablation",
+    state: "NOT_ESTABLISHED",
+    detail: "No raw training log was found for the claimed repaired ablation result. The historical Vithia negative control remains preserved.",
+    tone: "blocked",
+  },
+  {
+    label: "Historical LongMemEval-S full500 K=5 retrieval ablation",
+    state: "EXECUTED_HISTORICAL_EVIDENCE",
+    detail: "470 retrieval-scored cases remain the current executed Track03 baseline. Claim ceiling: retrieval ablation only, not end-to-end QA.",
+    tone: "verified",
+  },
+  {
+    label: "BEAM 1M hybrid architecture experiment",
+    state: "PREPARED_UNEXECUTED",
+    detail: "35 conversations, 700 probes and Routes A–H are preregistered. HydraDG numerical BEAM results remain QUEUED until real receipts exist.",
+    tone: "queued",
+  },
+] as const;
+
+function badgeStyle(tone: string) {
+  if (tone === "verified") return { background: "#dcfce7", color: "#166534" };
+  if (tone === "reclassified") return { background: "#e2e8f0", color: "#334155" };
+  if (tone === "queued") return { background: "#fef3c7", color: "#92400e" };
+  return { background: "#fee2e2", color: "#991b1b" };
+}
 
 export default function RealLocalMatrixPage() {
-  const cellStates = [
-    { cell: "Deterministic IR Scorers", state: "EXECUTED", badgeClass: "badgeExecuted", details: "Hit@K, Recall@K, Precision@K, MRR, MAP@K, nDCG@K computed from per-case ranked IDs" },
-    { cell: "Ollama Local Text Models (10 Models)", state: "EXECUTED", badgeClass: "badgeExecuted", details: "10 text models dynamically discovered from runtime (ollama list)" },
-    { cell: "Vithia Pythia-14m Training Evidence", state: "NOT_ESTABLISHED", badgeClass: "badgeBlocked", details: "NOT_ESTABLISHED_FROM_EXECUTION_RECEIPT (No raw training log found)" },
-    { cell: "DeepEval Suite", state: "BLOCKED_PACKAGE_NOT_INSTALLED", badgeClass: "badgeBlocked", details: "deepeval package not installed in runtime environment" },
-    { cell: "Ragas Suite", state: "BLOCKED_PACKAGE_NOT_INSTALLED", badgeClass: "badgeBlocked", details: "ragas package not installed in runtime environment" },
-    { cell: "Inspect AI Harness", state: "BLOCKED_PACKAGE_NOT_INSTALLED", badgeClass: "badgeBlocked", details: "inspect_ai package not installed in runtime environment" },
-    { cell: "BEIR Benchmarks", state: "BLOCKED_PACKAGE_NOT_INSTALLED", badgeClass: "badgeBlocked", details: "beir package not installed in runtime environment" },
-    { cell: "MTEB Control", state: "BLOCKED_PACKAGE_NOT_INSTALLED", badgeClass: "badgeBlocked", details: "mteb package not installed in runtime environment" },
-    { cell: "LM-Eval Capability Control", state: "BLOCKED_PACKAGE_NOT_INSTALLED", badgeClass: "badgeBlocked", details: "lm_eval package not installed in runtime environment" },
-    { cell: "Historical 9efee94f Constant Values", state: "RECLASSIFIED_DEVELOPMENT_ARTIFACT", badgeClass: "badgeReclassified", details: "Reclassified as development lineage; NOT primary empirical evidence" },
-  ];
-
   return (
-    <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem", fontFamily: "sans-serif" }}>
+    <main style={{ maxWidth: "1200px", margin: "0 auto", padding: "2rem 1rem" }}>
       <header style={{ marginBottom: "2.5rem" }}>
-        <p style={{ color: "#d97706", fontWeight: "bold", fontSize: "0.875rem", letterSpacing: "0.05em", textTransform: "uppercase" }}>
-          Forensic Execution Audit · Real Receipt Repair
+        <p style={{ color: "#d97706", fontWeight: 800, fontSize: "0.78rem", letterSpacing: "0.08em", textTransform: "uppercase" }}>
+          Execution evidence review · claim ceiling corrected
         </p>
-        <h1 style={{ fontSize: "2.25rem", fontWeight: "800", color: "#0f172a", marginTop: "0.5rem" }}>
-          Forensic Execution Audit v2 & Real Receipt Repair
+        <h1 style={{ fontSize: "clamp(2rem, 5vw, 3.6rem)", margin: "0.5rem 0", lineHeight: 1.02 }}>
+          Expanded Matrix: Evidence State
         </h1>
-        <p style={{ color: "#475569", fontSize: "1.125rem", maxWidth: "800px", lineHeight: "1.6" }}>
-          “Every claimed numerical score is verified against actual case-level execution receipts.
-          Literal metric dictionaries and constant math are explicitly reclassified as development lineage rather than primary evidence.”
+        <p style={{ maxWidth: "850px", lineHeight: 1.7 }}>
+          HydraDG preserves failed and superseded evaluation attempts rather than converting them into results. Runtime model discovery is verified, but the current expanded treatment matrix is not yet established from real case-level model execution. The historical Track03 retrieval ablation remains the executed baseline while BEAM 1M is preregistered for the next real run.
         </p>
-        <div style={{ display: "flex", gap: "1rem", marginTop: "1.5rem" }}>
-          <Link href="/eligibility" style={{ background: "#0284c7", color: "#fff", padding: "0.625rem 1.25rem", borderRadius: "6px", textDecoration: "none", fontWeight: "600" }}>
-            ← Back to Eligibility Synthesis
+        <div style={{ display: "flex", flexWrap: "wrap", gap: "0.75rem", marginTop: "1.25rem" }}>
+          <Link href="/judge#golden-path" style={{ padding: "0.65rem 1rem", border: "1px solid #d4af37", borderRadius: "999px", textDecoration: "none", color: "#d4af37", fontWeight: 800 }}>
+            ← Golden judge path
           </Link>
-          <Link href="/beam-1m" style={{ background: "#e2e8f0", color: "#0f172a", padding: "0.625rem 1.25rem", borderRadius: "6px", textDecoration: "none", fontWeight: "600" }}>
-            BEAM 1M Preprocessing
+          <Link href="/track03" style={{ padding: "0.65rem 1rem", border: "1px solid currentColor", borderRadius: "999px", textDecoration: "none" }}>
+            Historical Track03 evidence
+          </Link>
+          <Link href="/beam-1m" style={{ padding: "0.65rem 1rem", border: "1px solid currentColor", borderRadius: "999px", textDecoration: "none" }}>
+            BEAM 1M preregistration →
           </Link>
         </div>
       </header>
 
-      {/* Audit Gate Summary */}
-      <section style={{ marginBottom: "3rem", background: "#f8fafc", padding: "1.5rem", borderRadius: "8px", border: "1px solid #e2e8f0" }}>
-        <h2 style={{ fontSize: "1.25rem", fontWeight: "700", color: "#0f172a", marginBottom: "0.5rem" }}>
-          Final Audit Gate Verification: {auditGate.evidence_audit_gate}
-        </h2>
-        <p style={{ fontSize: "0.875rem", color: "#475569", margin: "0.25rem 0" }}>
-          <strong>Start SHA:</strong> {auditGate.starting_sha} | <strong>Models Discovered:</strong> {auditGate.models_discovered} | <strong>Cases Executed:</strong> {auditGate.dataset_cases_actually_executed}
-        </p>
-        <p style={{ fontSize: "0.875rem", color: "#0284c7", fontWeight: "bold", margin: "0.25rem 0" }}>
-          <strong>Primary Claim Ceiling:</strong> {auditGate.primary_claim_ceiling}
+      <section style={{ marginBottom: "2rem", padding: "1.25rem", border: "1px solid rgba(212,175,55,0.55)", borderRadius: "8px" }}>
+        <strong>Current expanded claim ceiling:</strong>{" "}
+        <code>EXPANDED_MODEL_MATRIX_NOT_ESTABLISHED_FROM_REAL_CASE_EXECUTION</code>
+        <p style={{ marginBottom: 0, lineHeight: 1.6 }}>
+          The previously generated `NO_MODEL_BENEFIT_OBSERVED` conclusion is not used for the expanded matrix because the v2 treatment and retrieval rows were generated by development logic rather than measured case-level outcomes.
         </p>
       </section>
 
-      {/* Matrix Cell Provenance Table */}
-      <section style={{ marginBottom: "3rem" }}>
-        <h2 style={{ fontSize: "1.5rem", fontWeight: "700", color: "#0f172a", borderBottom: "2px solid #e2e8f0", paddingBottom: "0.5rem" }}>
-          Forensic Cell Audit & Evidence Classification
-        </h2>
-        <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "1rem", textAlign: "left", fontSize: "0.875rem" }}>
-          <thead>
-            <tr style={{ background: "#f8fafc", borderBottom: "2px solid #e2e8f0" }}>
-              <th style={{ padding: "0.75rem" }}>Evaluation Cell / Metric</th>
-              <th style={{ padding: "0.75rem" }}>Audited Execution State</th>
-              <th style={{ padding: "0.75rem" }}>Provenance & Forensic Audit Notes</th>
-            </tr>
-          </thead>
-          <tbody>
-            {cellStates.map((c, i) => (
-              <tr key={i} style={{ borderBottom: "1px solid #e2e8f0" }}>
-                <td style={{ padding: "0.75rem", fontWeight: "bold" }}>{c.cell}</td>
-                <td style={{ padding: "0.75rem", fontWeight: "bold" }}>
-                  {c.state === "EXECUTED" && <span style={{ background: "#dcfce7", color: "#15803d", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>EXECUTED</span>}
-                  {c.state.startsWith("BLOCKED") && <span style={{ background: "#fee2e2", color: "#991b1b", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>{c.state}</span>}
-                  {c.state === "NOT_ESTABLISHED" && <span style={{ background: "#fef3c7", color: "#92400e", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>NOT_ESTABLISHED</span>}
-                  {c.state === "RECLASSIFIED_DEVELOPMENT_ARTIFACT" && <span style={{ background: "#f1f5f9", color: "#475569", padding: "0.25rem 0.5rem", borderRadius: "4px" }}>RECLASSIFIED</span>}
-                </td>
-                <td style={{ padding: "0.75rem", color: "#475569" }}>{c.details}</td>
+      <section>
+        <h2>Audited evidence states</h2>
+        <div style={{ overflowX: "auto" }}>
+          <table style={{ width: "100%", borderCollapse: "collapse", fontSize: "0.9rem" }}>
+            <thead>
+              <tr style={{ borderBottom: "1px solid currentColor", textAlign: "left" }}>
+                <th style={{ padding: "0.8rem" }}>Evidence lane</th>
+                <th style={{ padding: "0.8rem" }}>State</th>
+                <th style={{ padding: "0.8rem" }}>Judge interpretation</th>
               </tr>
-            ))}
-          </tbody>
-        </table>
+            </thead>
+            <tbody>
+              {cells.map((cell) => (
+                <tr key={cell.label} style={{ borderBottom: "1px solid rgba(127,127,127,0.25)" }}>
+                  <td style={{ padding: "0.8rem", fontWeight: 700 }}>{cell.label}</td>
+                  <td style={{ padding: "0.8rem" }}>
+                    <span style={{ ...badgeStyle(cell.tone), display: "inline-block", padding: "0.25rem 0.45rem", borderRadius: "4px", fontWeight: 800, fontSize: "0.72rem" }}>
+                      {cell.state}
+                    </span>
+                  </td>
+                  <td style={{ padding: "0.8rem", lineHeight: 1.55 }}>{cell.detail}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
       </section>
     </main>
   );
