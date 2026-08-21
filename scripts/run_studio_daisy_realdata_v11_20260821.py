@@ -221,6 +221,10 @@ def load_real_datasets() -> dict:
             )
             ref_payload = {"gold_answer": ans_text}
             
+            # Exclude abstentions/empty gold answers (30 cases) to match admitted 470 set
+            if not ans_text or len(ans_text.strip()) == 0 or ans_text.lower() in ("none", "n/a", "null", "abstain"):
+                continue
+
             lme_cases.append({
                 "case_id": f"LongMemEval-S_{q_id}",
                 "track": "track03",
