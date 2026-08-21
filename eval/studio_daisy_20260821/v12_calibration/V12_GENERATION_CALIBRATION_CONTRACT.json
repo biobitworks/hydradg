@@ -1,0 +1,35 @@
+{
+  "schema": "hydradg.v12_generation_calibration_contract.v1",
+  "version": "12.0.0",
+  "timestamp_utc": "2026-08-21T19:45:00Z",
+  "contract_type": "RUNTIME_OUTPUT_BUDGET_CALIBRATION",
+  "calibration_prompt_selection_class": "PREVIOUSLY_EXPOSED_DIAGNOSTIC_PROMPTS",
+  "calibration_prompts": [
+    {
+      "id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "track": "track01",
+      "source_path": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/questions/test.parquet"
+    },
+    {
+      "id": "EnterpriseRAG-Bench_qst_0003",
+      "dataset": "EnterpriseRAG-Bench",
+      "track": "track01",
+      "source_path": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/questions/test.parquet"
+    },
+    {
+      "id": "LongMemEval-S_e47becba",
+      "dataset": "LongMemEval-S-full500",
+      "track": "track03",
+      "source_path": "/Users/byron/.local/share/hydradg-datasets/track03/longmemeval-cleaned/longmemeval_s_cleaned.json"
+    }
+  ],
+  "budget_ladder": [512, 1024, 2048, 4096],
+  "generation_parameters": {
+    "temperature": 0.0,
+    "seed": 42,
+    "thinking_mode": "DEFAULT"
+  },
+  "pass_condition_rule": "response_text_bytes > 0 AND done_reason != 'length' AND transport_status == 200",
+  "accuracy_scoring_rule": "ACCURACY_SCORING_UNUSED_FOR_BUDGET_SELECTION"
+}
