@@ -301,7 +301,7 @@ def invoke_scientific_case(
         "model": model_name,
         "prompt": full_prompt,
         "stream": False,
-        "options": {"temperature": 0.0, "seed": 42},
+        "options": {"temperature": 0.0, "seed": 42, "num_predict": 256},
     }
 
     req_bytes = json.dumps(payload).encode("utf-8")
@@ -616,6 +616,20 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    canary_result = run_canary()
-    if canary_result["status"] == "PASS" and args.full:
-        run_full_matrix()
+    if args.full:
+        canary_gate_path = CANARY_DIR / "CANARY_FINAL_GATE.json"
+        if canary_gate_path.exists():
+            try:
+                gate_data = json.loads(canary_gate_path.read_text())
+                if gate_data.get("status") == "PASS":
+                    print("✅ Existing Canary Final Gate reports PASS. Launching Full Matrix directly!")
+                    run_full_matrix()
+                    sys.exit(0)
+            except Exception:
+                pass
+        canary_result = run_canary()
+        if canary_result.get("status") == "PASS":
+            run_full_matrix()
+    else:
+        run_canary()
+
