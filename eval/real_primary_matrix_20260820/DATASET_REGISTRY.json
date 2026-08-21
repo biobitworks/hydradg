@@ -1,0 +1,31 @@
+{
+  "primary_datasets": [
+    {
+      "cases": 300,
+      "id": "EnterpriseRAG-Bench",
+      "sha256": "8f3b21049a0e1b2c",
+      "track": "track01"
+    },
+    {
+      "cases": 250,
+      "id": "HydraBlast-Real-Deps",
+      "sha256": "1c7d92058b4e2f3a",
+      "track": "track02"
+    },
+    {
+      "cases": 470,
+      "id": "LongMemEval-S-full500",
+      "sha256": "4b97a2c1f010e9d8",
+      "track": "track03"
+    }
+  ],
+  "schema": "hydradg.dataset_registry.v2",
+  "secondary_datasets": [
+    {
+      "executable": false,
+      "id": "HERB",
+      "status": "SECONDARY_RIGHTS_GATED"
+    }
+  ],
+  "timestamp_unix": 1787280742
+}

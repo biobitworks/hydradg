@@ -1,0 +1,17 @@
+{
+  "co_primary_tests_count": 30,
+  "control_baseline": "deterministic_heuristic",
+  "correction_method": "Holm-Bonferroni",
+  "evaluable_cases_per_model": 1020,
+  "execution_host": "magicstudiobox",
+  "family_wise_alpha": 0.05,
+  "model_case_executions_expected": 10200,
+  "models_expected": 10,
+  "primary_comparison_depth": 10,
+  "schema": "hydradg.preregistration_primary_matrix.v2",
+  "secondary_depths": [
+    5,
+    100
+  ],
+  "timestamp_unix": 1787280742
+}
