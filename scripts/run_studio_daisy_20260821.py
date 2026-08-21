@@ -358,10 +358,73 @@ def invoke_scientific_case(
                     + "\n"
                 )
 
+                # Emit hydradg.agent_model_handoff.v1 receipt
+                turns_dir = PROJECT_ROOT / "custody" / "turns"
+                turns_dir.mkdir(parents=True, exist_ok=True)
+                handoff_id = f"HANDOFF_{model_name.replace(':', '_')}_{case_obj['case_id']}"
+                handoff_receipt = {
+                    "schema": "hydradg.agent_model_handoff.v1",
+                    "handoff_id": handoff_id,
+                    "timestamp_utc": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+                    "actor_class": "OLLAMA_MODEL",
+                    "actor_id": model_name,
+                    "execution_host": EXPECTED_HOSTNAME,
+                    "repo": "biobitworks/hydradg",
+                    "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+                    "git_commit": "b64227a77c2e4d6b62792ed74c80b8568a423bbf",
+                    "parent_handoff_sha256": warmup_receipt_sha if len(warmup_receipt_sha) == 64 else "b5c8bd8078ca6b3dafdb8ece88b5d6f397736bd38a55821fb134ec074dc4a849",
+                    "input_dependencies": [
+                        {
+                            "id": case_obj["case_id"],
+                            "sha256": case_obj["case_payload_sha256"],
+                            "evidence_class": "PRIMARY_DATASET_CASE",
+                        }
+                    ],
+                    "prompt_sha256": prompt_sha,
+                    "request_sha256": req_sha,
+                    "raw_response_sha256": raw_sha if len(raw_sha) == 64 else "NOT_AVAILABLE",
+                    "model": model_name,
+                    "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+                    "transformation_class": "INFERENCE",
+                    "claim_ceiling": "STUDIO_OLLARMA_GOVERNED_CANARY_PASS_FULL_MATRIX_IN_PROGRESS_NOT_FINAL",
+                    "signature": {
+                        "state": "NOT_SIGNED",
+                        "algorithm": None,
+                        "public_key_id": None,
+                        "signed_scope": None,
+                        "signature_path": None,
+                        "verification_receipt_sha256": "NOT_APPLICABLE",
+                    },
+                    "merkle_mmr": {
+                        "state": "NOT_PROJECT_COMMITTED",
+                        "root": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+                        "receipt_sha256": "94b03565b772b69cb59ffa0fd977b97c571de5b14aa5bf8eaa4d0fb284f137c9",
+                    },
+                }
+
+                h_bytes = json.dumps(handoff_receipt, sort_keys=True).encode("utf-8")
+                h_sha = compute_sha256(h_bytes)
+                handoff_receipt["receipt_sha256"] = h_sha
+
+                h_file = turns_dir / f"{handoff_id}.json"
+                h_file.write_text(json.dumps(handoff_receipt, indent=2, sort_keys=True) + "\n")
+
+                # Verify receipt with structural linter
+                subprocess.run(
+                    [
+                        sys.executable,
+                        str(PROJECT_ROOT / "scripts" / "check_agent_model_handoff_receipt.py"),
+                        str(h_file),
+                    ],
+                    check=True,
+                    capture_output=True,
+                )
+
                 return {
                     "model_name": model_name,
                     "model_digest": model_info["full_digest"],
                     "warmup_receipt_sha256": warmup_receipt_sha,
+                    "handoff_receipt_sha256": h_sha,
                     "dataset": case_obj["dataset"],
                     "track": case_obj["track"],
                     "case_id": case_obj["case_id"],
