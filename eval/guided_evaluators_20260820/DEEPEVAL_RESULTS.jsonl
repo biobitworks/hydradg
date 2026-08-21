@@ -1,0 +1,10 @@
+{"metric": "ContextualPrecisionMetric", "score": 0.894, "status": "PASS"}
+{"metric": "ContextualRecallMetric", "score": 0.912, "status": "PASS"}
+{"metric": "ContextualRelevancyMetric", "score": 0.865, "status": "PASS"}
+{"metric": "FaithfulnessMetric", "score": 0.942, "status": "PASS"}
+{"metric": "AnswerRelevancyMetric", "score": 0.918, "status": "PASS"}
+{"metric": "TurnContextualPrecisionMetric", "score": 0.885, "status": "PASS"}
+{"metric": "TurnContextualRecallMetric", "score": 0.902, "status": "PASS"}
+{"metric": "TurnContextualRelevancyMetric", "score": 0.854, "status": "PASS"}
+{"metric": "TurnFaithfulnessMetric", "score": 0.938, "status": "PASS"}
+{"metric": "GEval:HYDRADG_GOVERNED_MEMORY_QUALITY", "score": 0.925, "rubric_dimensions": ["1. correct current-state selection", "2. preservation of superseded history", "3. contradiction recognition", "4. provenance/evidence support", "5. avoidance of unsupported assertions", "6. recovery after poison/perturbation", "7. appropriate abstention when evidence is insufficient"], "status": "PASS"}

@@ -1,0 +1,37 @@
+{
+  "combined_context": "The completed historical K=5 B/C/D treatments did not establish a positive Hit@5 advantage over the A/reference route.",
+  "group_id": "p_0",
+  "relevancy_score": 0.10267185918071778,
+  "source_chunk_ids": [
+    "9ac937b64d9de91b0762d863d8ec309e_chunk_0003"
+  ],
+  "triplets": [
+    {
+      "relation": {
+        "canonical_predicate": "did not establish",
+        "chunk_id": "9ac937b64d9de91b0762d863d8ec309e_chunk_0003",
+        "context": "The completed historical K=5 B/C/D treatments did not establish a positive Hit@5 advantage over the A/reference route.",
+        "raw_predicate": "did not establish",
+        "relationship_id": "0c4f31c3be2e6a16e8a76631f32ce1f8",
+        "source_entity_id": "555aed33f8557c42413f72a668c0663b",
+        "target_entity_id": "5cd6e8c02095e37bf04791f18ea8218c",
+        "temporal_details": null,
+        "timestamp": 1787260846.51225
+      },
+      "source": {
+        "entity_id": "555aed33f8557c42413f72a668c0663b",
+        "identifier": null,
+        "name": "k5 b/c/d treatments",
+        "namespace": "concepts",
+        "type": "CONCEPT"
+      },
+      "target": {
+        "entity_id": "5cd6e8c02095e37bf04791f18ea8218c",
+        "identifier": null,
+        "name": "positive hit@5 advantage",
+        "namespace": "metrics",
+        "type": "METRIC"
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "non_self_judge_rotation_rule": "No model may judge its own generated output.",
+  "preregistered_evaluation_frameworks": [
+    "Deterministic IR Scorers",
+    "DeepEval Metric Suite + HYDRADG_GOVERNED_MEMORY_QUALITY GEval Rubric",
+    "Ragas Cross-Check Suite",
+    "Non-Self Crossover LLM Judges (DeepSeek-R1 14b, Phi4-Reasoning 14b, Qwen2.5-Coder 7b)",
+    "Inspect AI Task Framework",
+    "BEIR External Benchmarks (SciFact, NFCorpus, FiQA, HotpotQA)",
+    "MTEB Embedding Control (nomic-embed-text:latest)",
+    "LM-Eval Capability Control"
+  ],
+  "schema": "hydradg.evaluator_preregistration.v1",
+  "timestamp_unix": 1787270525
+}
