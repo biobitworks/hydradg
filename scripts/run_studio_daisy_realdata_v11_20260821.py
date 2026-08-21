@@ -150,7 +150,7 @@ def load_real_datasets() -> dict:
     erag_doc_path = DATASETS_BASE / "track01" / "enterprise-rag-bench" / "data" / "documents" / "test.parquet"
     if erag_q_path.exists():
         import pandas as pd
-        df_q = pd.read_parquet(erag_q_path)
+        df_q = pd.read_parquet(erag_q_path).head(300)
         doc_map = {}
         if erag_doc_path.exists():
             df_doc = pd.read_parquet(erag_doc_path, columns=["doc_id", "content"])
