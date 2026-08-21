@@ -1,7 +1,8 @@
 {
+  "execution_state": "PREPARED_UNEXECUTED",
   "routes": [
     {
-      "description": "Dense content retrieval (Vector similarity)",
+      "description": "Dense content retrieval",
       "id": "Route A"
     },
     {
@@ -25,13 +26,13 @@
       "id": "Route F"
     },
     {
-      "description": "Route F + reranking/fusion (Reciprocal Rank Fusion)",
+      "description": "Route F + reranking / evidence fusion",
       "id": "Route G"
     },
     {
-      "description": "Route G + full FCO/FCG custody and claim-state controls (HydraDG Full Path)",
+      "description": "Route G + full FCO/FCG custody and claim-state controls",
       "id": "Route H"
     }
   ],
-  "schema": "hydradg.beam_architecture_routes.v1"
+  "schema": "hydradg.beam_architecture_routes.v2"
 }
