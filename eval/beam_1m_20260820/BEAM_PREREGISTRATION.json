@@ -1,12 +1,19 @@
 {
   "beam_numerical_results_published": false,
-  "conversations_count": 35,
+  "blockers": [
+    "OFFICIAL_BEAM_1M_ROWS_NOT_MATERIALIZED",
+    "OFFICIAL_DATA_REVISION_AND_ROW_HASHES_NOT_FROZEN"
+  ],
+  "expected_conversations_count": 35,
+  "expected_probes_count": 700,
+  "future_multi_agent_experiment": "FUTURE_MULTI_AGENT_ECONOMICS.json",
   "generative_inference_started": false,
-  "preregistration_sha256": "2abc5e80462d523e7803f375c0a094b70c4d81a5d125e95d9ec6dea6c29d2822",
-  "primary_route_comparison": "Route H (HydraDG Full Path) vs Route A (Dense Baseline)",
-  "probes_count": 700,
-  "published_hydradb_reference_accuracy": 0.884,
-  "ready_for_execution": true,
+  "official_rows_materialized": false,
+  "preregistration_sha256": "2ee93a86ead6622cf6dfa0abb0af8fc8111cfcb0b42418265b2398271d2b9014",
+  "primary_route_comparison": "Route H vs Route A after official rows are materialized and frozen",
+  "published_hydradb_reference_accuracy": 0.82,
+  "published_reference_state": "EXTERNAL_REFERENCE_NOT_HYDRADG_RESULT",
+  "ready_for_execution": false,
   "routes_implemented": [
     "Route A",
     "Route B",
@@ -17,8 +24,7 @@
     "Route G",
     "Route H"
   ],
-  "schema": "hydradg.beam_preregistration.v1",
-  "scientific_claim_ceiling": "BEAM_HYBRID_ARCHITECTURE_PREPARED_UNEXECUTED",
-  "tier": "BEAM_1M",
-  "timestamp_unix": 1787272079
+  "schema": "hydradg.beam_preregistration.v2",
+  "scientific_claim_ceiling": "BEAM_PIPELINE_PREPARED_OFFICIAL_ROWS_NOT_MATERIALIZED",
+  "tier": "BEAM_1M"
 }
