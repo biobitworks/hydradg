@@ -1,0 +1,28 @@
+{
+  "schema": "hydradg.scorer_contract_audit.v1",
+  "timestamp_utc": "2026-08-21T20:35:20Z",
+  "track01_scorer": {
+    "TRACK01_SCORER_IDENTITY_GATE": "PASS",
+    "llm_judge_used": false,
+    "smoke_test": {
+      "TRACK01_SCORER_SMOKE_GATE": "PASS",
+      "passed_cases": 5,
+      "samples_evaluated": 5
+    },
+    "type": "EXACT_SUBSTRING_AND_FACTUAL_EXTRACTION_MATCHING"
+  },
+  "track02_scorer": {
+    "SCORER_READY": "BLOCKED",
+    "type": "DEPENDENCY_GRAPH_TRAVERSAL_EXACT"
+  },
+  "track03_scorer": {
+    "TRACK03_SCORER_IDENTITY_GATE": "PASS",
+    "llm_judge_used": false,
+    "smoke_test": {
+      "TRACK03_SCORER_SMOKE_GATE": "PASS",
+      "passed_cases": 5,
+      "samples_evaluated": 5
+    },
+    "type": "NORMALIZED_EXACT_MATCHING"
+  }
+}
