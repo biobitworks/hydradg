@@ -1,10 +1,10 @@
 {
-  "dataset_revision": "beam-1m-v1.0",
+  "claim_ceiling": "SOURCE_IDENTIFIED_ROWS_NOT_YET_MATERIALIZED_OR_HASHED",
   "dataset_tier": "BEAM_1M",
-  "download_timestamp_iso": "2026-08-21T00:27:59Z",
-  "license": "Apache-2.0",
-  "repository_revision": "e4f812a09c",
-  "schema": "hydradg.beam_source_receipt.v1",
-  "source_url": "https://github.com/usecortex/beam-benchmark",
-  "timestamp_unix": 1787272079
+  "official_rows_materialized": false,
+  "revision_state": "PIN_ON_MATERIALIZATION",
+  "schema": "hydradg.beam_source_receipt.v2",
+  "source_repository_license": "MIT",
+  "source_state": "OFFICIAL_SOURCE_IDENTIFIED",
+  "source_url": "https://github.com/mohammadtavakoli78/BEAM"
 }
