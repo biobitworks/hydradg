@@ -1,0 +1,29 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "durable_bank_path": "/Volumes/magicBLACKbox/hydradg/daisy/studio_daisy_20260821/raw/phi4-mini_latest_longmemeval_s_case_0001.json",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "78fad5d182a7",
+  "model_name": "phi4-mini:latest",
+  "parsed_output_sha256": "67db99e93c0443e5d5693d98aeb93d8401e58040d42cd7384da982541d05426f",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response_bytes": 1360,
+  "raw_response_sha256": "518b5c84dbb54e5bbe86226d98617dd5c061f64d6d52c09564e85e519512b533",
+  "request_sha256": "8201fcece5fb752d24133278b2f8fe03c2b8fd69b5a6a30ce2748356319c3f75",
+  "scientific_correct": true,
+  "scientific_end": 1787328126.307946,
+  "scientific_start": 1787328119.545623,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 6.761,
+  "warmup_receipt_sha256": "799d97317edb61466847f470c5cfafd3872d9d05225fd13a0b6f3e29b15a3f75"
+}

@@ -1,0 +1,29 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "durable_bank_path": "/Volumes/magicBLACKbox/hydradg/daisy/studio_daisy_20260821/raw/qwen3.5_9b_longmemeval_s_case_0001.json",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "6488c96fa5fa",
+  "model_name": "qwen3.5:9b",
+  "parsed_output_sha256": "a34a05ec10fefba9b9caa0e30517b1dc4b34e8ce544b560521e36a4b71e567ac",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response_bytes": 841,
+  "raw_response_sha256": "6620f8e6a83dfb1e71b8b84fbf71b257b3a4c836083270fa3941d4ac1adcb7ae",
+  "request_sha256": "2c8a5d6d4dbb31603aacc15ed1ab6d17e0d7e801154fe263671cc469716fba9e",
+  "scientific_correct": true,
+  "scientific_end": 1787328046.3967092,
+  "scientific_start": 1787327954.164923,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 92.229,
+  "warmup_receipt_sha256": "2c2663078e3ab37632ec3728fd8bccaa41e1f46ab050c2d3c2ecc6f4427602a9"
+}

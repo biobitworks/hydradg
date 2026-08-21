@@ -1,0 +1,18 @@
+{
+  "admitted_model_count": 12,
+  "cases_per_model": 1020,
+  "execution_host": "magicSTUDIObox.local",
+  "expected_model_case_slots": 12240,
+  "hardware": "Mac Studio (Mac13,1, Apple M1 Max, 32 GB)",
+  "new_matrix": "Studio/Ollarma provider family",
+  "predecessor_matrix": "historical V3/V4/V5 MacBook environment",
+  "preregistration_sha256": "2c4e56215c189ccdf3e3ae39627a8aebf86ae9d135b92e3596e375937bd1168b",
+  "roster_sha256": "cd7a6a103696629bce7c3164baee6b3a82c3fdcbf33ff95825965a648cafcb69",
+  "schema": "hydradg.studio_ollarma_matrix_preregistration.v1",
+  "timestamp_unix": 1787327801,
+  "tracks": {
+    "track01_enterpriserag_bench": 300,
+    "track02_hydrablast_real_deps": 250,
+    "track03_longmemeval_s": 470
+  }
+}
