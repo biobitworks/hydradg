@@ -6,6 +6,7 @@ const STEPS = [
     label: "REFERENCE",
     title: "Reference",
     relation: "CURRENT",
+    anchor: "golden-reference",
     body: "Start from the declared current fact and open its source, session, and custody path.",
   },
   {
@@ -13,6 +14,7 @@ const STEPS = [
     label: "POISON",
     title: "Poison",
     relation: "CONTRADICTS / SUPERSEDED_BY",
+    anchor: "golden-poison",
     body: "Introduce a controlled conflicting state. HydraDG retains the predecessor and marks the first divergent relationship.",
   },
   {
@@ -20,6 +22,7 @@ const STEPS = [
     label: "ANTIDOTE",
     title: "Antidote",
     relation: "RESTORES / CURRENT",
+    anchor: "golden-antidote",
     body: "Restore the valid current state without deleting the poison, contradiction, provenance, or recovery history.",
   },
 ] as const;
@@ -94,10 +97,12 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
       <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px", marginTop: "24px" }}>
         {STEPS.map((step) => (
           <article
+            id={step.anchor}
             key={step.number}
             style={{
               minHeight: "220px",
               padding: "22px",
+              scrollMarginTop: "155px",
               border: "1px solid rgba(226,195,117,0.60)",
               borderRadius: "7px",
               background: "rgba(32,27,16,0.72)",
