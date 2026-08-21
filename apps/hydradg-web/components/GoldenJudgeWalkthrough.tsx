@@ -50,7 +50,7 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
               textTransform: "uppercase",
             }}
           >
-            Judge Walkthrough · Golden Path
+            01 / Judge Walkthrough · Golden Path
           </p>
           <h2
             style={{
@@ -91,7 +91,7 @@ export default function GoldenJudgeWalkthrough({ showCta = true }: { showCta?: b
         ) : null}
       </div>
 
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, minmax(0, 1fr))", gap: "12px", marginTop: "24px" }}>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "12px", marginTop: "24px" }}>
         {STEPS.map((step) => (
           <article
             key={step.number}
