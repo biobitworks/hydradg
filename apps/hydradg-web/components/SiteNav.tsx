@@ -21,9 +21,11 @@ const GOLDEN_BREADCRUMBS = [
   ["01 Reference", "/judge#golden-reference"],
   ["02 Poison", "/judge#golden-poison"],
   ["03 Antidote", "/judge#golden-antidote"],
-  ["04 Matrix", "/real-local-matrix"],
-  ["05 Evidence", "/evidence"],
-  ["06 Claim", "/eligibility"],
+  ["04 HydraDB", "/judge#hydradb-status"],
+  ["05 Results", "/track03"],
+  ["06 Evidence", "/evidence"],
+  ["07 Future", "/beam-1m"],
+  ["08 Claim", "/eligibility"],
 ] as const;
 
 export default function SiteNav() {
@@ -46,7 +48,7 @@ export default function SiteNav() {
             </div>
           </details>
         </div>
-        <Link className="siteNavCta" href="/best-use">Show the math</Link>
+        <Link className="siteNavCta" href="/judge#golden-reference">Start Golden Path</Link>
       </nav>
 
       <nav
@@ -58,11 +60,11 @@ export default function SiteNav() {
           padding: "8px 12px",
           display: "flex",
           alignItems: "center",
-          gap: "8px",
+          gap: "7px",
           overflowX: "auto",
           border: "1px solid rgba(226,195,117,0.50)",
           borderRadius: "14px",
-          background: "rgba(22,18,10,0.93)",
+          background: "rgba(22,18,10,0.95)",
           backdropFilter: "blur(18px)",
           boxShadow: "0 12px 40px rgba(0,0,0,0.24)",
           scrollbarWidth: "none",
@@ -72,24 +74,25 @@ export default function SiteNav() {
         <span
           style={{
             color: "#e2c375",
-            font: "800 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace",
+            font: "900 10px/1 ui-monospace, SFMono-Regular, Menlo, monospace",
             letterSpacing: "0.13em",
             textTransform: "uppercase",
-            marginRight: "3px",
+            marginRight: "4px",
           }}
         >
-          Golden path
+          Golden path · 8 steps
         </span>
         {GOLDEN_BREADCRUMBS.map(([label, href], index) => (
-          <span key={href} style={{ display: "inline-flex", alignItems: "center", gap: "8px" }}>
+          <span key={href} style={{ display: "inline-flex", alignItems: "center", gap: "7px" }}>
             {index > 0 ? <span style={{ color: "#7f7048" }}>›</span> : null}
             <Link
               href={href}
               style={{
-                color: index < 3 ? "#f2d995" : "#d6c9a3",
+                color: index < 4 ? "#f2d995" : "#d6c9a3",
                 textDecoration: "none",
-                font: "700 11px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace",
-                letterSpacing: "0.03em",
+                font: "800 10.5px/1.2 ui-monospace, SFMono-Regular, Menlo, monospace",
+                letterSpacing: "0.02em",
+                padding: "4px 2px",
               }}
             >
               {label}
