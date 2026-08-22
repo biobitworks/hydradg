@@ -1,0 +1,80 @@
+{
+  "schema": "hydradg.scorer_fixture_audit.v1",
+  "timestamp_utc": "2026-08-22T06:10:08Z",
+  "track01": {
+    "TRACK01_SCORER_FIXTURE_GATE": "PASS",
+    "fixtures": [
+      {
+        "expected_score": 1.0,
+        "input_sha256": "1771e072fce40d65faef48db72a9b50c78c5c4fbb1af97bd5e56102b34799979",
+        "observed": {
+          "exact_match": true,
+          "fact_score": 1.0,
+          "facts_matched": 2,
+          "score": 1.0,
+          "total_facts": 2
+        },
+        "type": "positive"
+      },
+      {
+        "expected_score": 0.0,
+        "input_sha256": "ebeb7029796caa990abab8bc536d5edc938ac8dab997be2a82726289a5969693",
+        "observed": {
+          "exact_match": false,
+          "fact_score": 0.0,
+          "facts_matched": 0,
+          "score": 0.0,
+          "total_facts": 2
+        },
+        "type": "negative"
+      },
+      {
+        "expected_score": 1.0,
+        "input_sha256": "9a68a181495488fd4c56edbbe97af781f68fa9a0047a78481f22e21d42ecbc7b",
+        "observed": {
+          "exact_match": true,
+          "fact_score": 1.0,
+          "facts_matched": 2,
+          "score": 1.0,
+          "total_facts": 2
+        },
+        "type": "normalization"
+      }
+    ]
+  },
+  "track03": {
+    "TRACK03_SCORER_FIXTURE_GATE": "PASS",
+    "fixtures": [
+      {
+        "expected_score": 1.0,
+        "input_sha256": "5dd272b4f316b776a7b8e3d0894b37e1e42be3d5d3b204b8a5836cc50597a6b1",
+        "observed": {
+          "exact_match": true,
+          "score": 1.0,
+          "substring_match": true
+        },
+        "type": "positive"
+      },
+      {
+        "expected_score": 0.0,
+        "input_sha256": "ecc0e7dc084f141b29479058967d0bc07dee25d9690a98ee4e6fdad5168274d7",
+        "observed": {
+          "exact_match": false,
+          "score": 0.0,
+          "substring_match": false
+        },
+        "type": "negative"
+      },
+      {
+        "expected_score": 1.0,
+        "input_sha256": "fcff7ca92628af98b56ed2f645adcb2b576c6c42aee0b8b6dab6fd529eb2cae6",
+        "observed": {
+          "exact_match": true,
+          "score": 1.0,
+          "substring_match": true
+        },
+        "type": "normalization"
+      }
+    ]
+  }
+}

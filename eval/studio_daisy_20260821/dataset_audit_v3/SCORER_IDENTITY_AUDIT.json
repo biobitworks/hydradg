@@ -1,0 +1,34 @@
+{
+  "schema": "hydradg.scorer_identity_audit.v1",
+  "timestamp_utc": "2026-08-22T06:10:08Z",
+  "track01_scorer": {
+    "TRACK01_SCORER_IDENTITY_GATE": "PASS",
+    "file_sha256": "648d3b85198f406648fece7f0c267d24043d3e6e9ae0cfbd843cd1717927d283",
+    "function_identifier": "score_track01_canonical",
+    "git_commit": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+    "parameters": {
+      "fact_threshold": 0.8,
+      "llm_judge": false,
+      "temperature": 0.0
+    },
+    "repository_path": "scripts/run_studio_daisy_realdata_v11_20260821.py"
+  },
+  "track02_scorer": {
+    "TRACK02_SCORER_IDENTITY_GATE": "BLOCKED_SCORER_IMPLEMENTATION_NOT_FROZEN",
+    "file_sha256": "NONE",
+    "function_identifier": "NONE",
+    "git_commit": "NONE",
+    "repository_path": "NONE"
+  },
+  "track03_scorer": {
+    "TRACK03_SCORER_IDENTITY_GATE": "PASS",
+    "file_sha256": "648d3b85198f406648fece7f0c267d24043d3e6e9ae0cfbd843cd1717927d283",
+    "function_identifier": "score_track03_canonical",
+    "git_commit": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+    "parameters": {
+      "llm_judge": false,
+      "normalization": "whitespace_and_lowercase"
+    },
+    "repository_path": "scripts/run_studio_daisy_realdata_v11_20260821.py"
+  }
+}
