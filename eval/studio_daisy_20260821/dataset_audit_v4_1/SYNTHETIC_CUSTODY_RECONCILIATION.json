@@ -1,0 +1,82 @@
+{
+  "BYTE_IDENTITY_AFTER_MOVE_GATE": "PASS",
+  "GIT_SYNTHETIC_CUSTODY_CONTAMINATION_GATE": "PASS",
+  "GIT_TRACKED_SYNTHETIC_HANDOFF_COUNT": 0,
+  "LIVE_CUSTODY_SYNTHETIC_HANDOFF_COUNT": 0,
+  "PRIMARY_CHECKPOINT_REFERENCE_COUNT": 0,
+  "PRIMARY_LEDGER_REFERENCE_COUNT": 0,
+  "PRO_SYNTHETIC_HANDOFFS_FOUND": 1,
+  "QUARANTINED_SYNTHETIC_HANDOFF_COUNT": 10,
+  "STUDIO_SYNTHETIC_HANDOFFS_FOUND": 9,
+  "ZERO_MODEL_CALL_GATE": "PASS",
+  "ZERO_NETWORK_CALL_GATE": "PASS",
+  "executing_host": "magicPRObox.local",
+  "hosts": {
+    "magicPRObox.local": [
+      {
+        "byte_size": 1821,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_syn_01.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicPRObox.local/HANDOFF_V11_deepseek-r1_14b_syn_01.json",
+        "sha256": "632ca1ba8ea4b6b5b2bb3b3fc019cea40034f0da6b154c2aed9292fd64291c8e"
+      }
+    ],
+    "magicSTUDIObox.local": [
+      {
+        "byte_size": 1864,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_01.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_01.json",
+        "sha256": "617f43020a41931c6c8246d2f57272879de5548dbb87f07fdb5a942eaf9c7577"
+      },
+      {
+        "byte_size": 1866,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_02.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_02.json",
+        "sha256": "3a8dac04f47fee621491ab45888a98cb27430100b9ec29d1c589dab517a61c6b"
+      },
+      {
+        "byte_size": 1866,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_03.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_03.json",
+        "sha256": "c4446bd5f6b737d96eb82b60c9c32e4957b192fc48a331e4cd708ac4ce3b9a9e"
+      },
+      {
+        "byte_size": 1864,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_04.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_EnterpriseRAG-Bench_syn_04.json",
+        "sha256": "2d22500c4fa84524700e4b0318694fa1bee5802b7e7c17653457813dfe3b9c16"
+      },
+      {
+        "byte_size": 1851,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_01.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_01.json",
+        "sha256": "cb15c38b512ea0ed524252858e59f1a6a1bc77e25ba00f80da347f5993166635"
+      },
+      {
+        "byte_size": 1853,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_02.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_02.json",
+        "sha256": "79a6b9e136b9225bf8cef8129359ae1b6345c17cfb2ba9560809793bda7c5936"
+      },
+      {
+        "byte_size": 1852,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_03.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_03.json",
+        "sha256": "20c3327f5ae2f7c7fe31484cedb83e7035a2f90811fd0c3ca52658927655ddeb"
+      },
+      {
+        "byte_size": 1851,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_04.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_04.json",
+        "sha256": "3be4a0bc14a3b6944c94d66cb6480ac8c36bed2a2ddf3863acc2cab976d7de92"
+      },
+      {
+        "byte_size": 1853,
+        "filename": "HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_05.json",
+        "quarantine_path": "/Users/byron/projects/active/hydradg/eval/studio_daisy_20260821/dataset_audit_v4/synthetic_fixture_custody/magicSTUDIObox.local/HANDOFF_V11_deepseek-r1_14b_LongMemEval-S_syn_05.json",
+        "sha256": "185df9d9f32f314bf30793e46ef736df9cd9f9d13af013bca10e5e50d1b83f8c"
+      }
+    ]
+  },
+  "schema": "hydradg.synthetic_custody_reconciliation.v1",
+  "timestamp_utc": "2026-08-22T07:53:54Z"
+}
