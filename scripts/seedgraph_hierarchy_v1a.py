@@ -12,7 +12,7 @@ Supersedes the first v1 implementation draft for validation. Important rules:
 """
 from __future__ import annotations
 
-import argparse, hashlib, json, math, re, socket, statistics, time, unicodedata
+import argparse, functools, hashlib, json, math, re, socket, statistics, time, unicodedata
 from collections import defaultdict
 from pathlib import Path
 from typing import Any
@@ -35,6 +35,8 @@ def cjson(x:Any)->bytes:return json.dumps(x,sort_keys=True,separators=(",",":"),
 def norm(s:str)->str:return unicodedata.normalize("NFKC",s)
 def typed_id(kind:str,identity:dict[str,Any])->tuple[str,str]:
     d=sha256_bytes(b"hydradg.seedgraph.object.v1a\0"+cjson({"kind":kind,**identity}));return f"{kind.lower()}:{d}",d
+
+@functools.lru_cache(maxsize=524288)
 def seed_id(key:str)->tuple[str,str]:
     d=sha256_bytes(b"hydradg.seedgraph.seed.v1\0"+key.encode());return f"seed_atom_fco:{d}",d
 
@@ -57,7 +59,7 @@ def seeds(text:str,max_n:int=3)->list[dict[str,Any]]:
     text=norm(text);t=[]
     for m in TOKEN_RE.finditer(text):
         k=m.group(0).lower()
-        if k not in STOPWORDS:t.append((k,m.start(),m.end()))
+        if k not in STOPWORDS and len(k)>1:t.append((k,m.start(),m.end()))
     out=[]
     for n in range(1,max_n+1):
         for i in range(len(t)-n+1):
@@ -69,32 +71,64 @@ def pvar(v:list[float])->float|None:return statistics.pvariance(v) if len(v)>1 e
 
 
 class Builder:
-    def __init__(self,scores:dict[str,dict[str,Any]]):
-        self.nodes={};self.edges=[];self.seed_occ=defaultdict(list);self.seed_key={};self.seed_containers=defaultdict(set)
-        self.questions=[];self.question_seeds=[];self.scores=scores;self.desc_scores=defaultdict(list)
-    def node(self,row):
-        self.nodes.setdefault(row["object_id"],row);return row["object_id"]
-    def edge(self,s,t,r):
-        self.edges.append({"source":s,"target":t,"relation":r,"edge_sha256":sha256_bytes(b"hydradg.seedgraph.edge.v1a\0"+cjson([s,t,r]))})
+    def __init__(self,out_dir:Path,scores:dict[str,dict[str,Any]]):
+        import pyarrow as pa, pyarrow.parquet as pq
+        self.out_dir=out_dir;self.scores=scores;self.seed_occ=defaultdict(list);self.seed_key={};self.seed_containers=defaultdict(set)
+        self.questions=[];self.question_seeds=[];self.desc_scores=defaultdict(list);self.seed_seen=set()
+        self.nodes_schema=pa.schema([("schema",pa.string()),("object_id",pa.string()),("object_sha256",pa.string()),("object_type",pa.string()),("visibility",pa.string()),("depth",pa.int64()),("canonical_key",pa.string()),("source_sha256",pa.string()),("source_pointer_json",pa.string()),("score_bundle_json",pa.string()),("aggregate_scores_json",pa.string()),("metadata_json",pa.string())])
+        self.edges_schema=pa.schema([("source",pa.string()),("target",pa.string()),("relation",pa.string()),("edge_sha256",pa.string())])
+        self.nodes_writer=pq.ParquetWriter(out_dir/"nodes.parquet",self.nodes_schema)
+        self.edges_writer=pq.ParquetWriter(out_dir/"edges.parquet",self.edges_schema)
+        self.node_buf=[];self.edge_buf=[];self.node_count=0;self.edge_count=0
+
+    def _flush_nodes(self):
+        if self.node_buf:
+            import pyarrow as pa
+            self.nodes_writer.write_table(pa.Table.from_pylist(self.node_buf,schema=self.nodes_schema))
+            self.node_count+=len(self.node_buf);self.node_buf.clear()
+
+    def _flush_edges(self):
+        if self.edge_buf:
+            import pyarrow as pa
+            self.edges_writer.write_table(pa.Table.from_pylist(self.edge_buf,schema=self.edges_schema))
+            self.edge_count+=len(self.edge_buf);self.edge_buf.clear()
+
+    def node(self,row:dict[str,Any])->str:
+        self.node_buf.append(row)
+        if len(self.node_buf)>=50000:self._flush_nodes()
+        return row["object_id"]
+
+    def edge(self,s:str,t:str,r:str):
+        self.edge_buf.append({"source":s,"target":t,"relation":r,"edge_sha256":sha256_bytes(b"hydradg.seedgraph.edge.v1a\0"+cjson([s,t,r]))})
+        if len(self.edge_buf)>=50000:self._flush_edges()
+
     def source(self,dataset:str,path:Path,source_sha:str)->str:
         oid=f"source_file_fco:{source_sha}"
         return self.node({"schema":SCHEMA,"object_id":oid,"object_sha256":source_sha,"object_type":"SOURCE_FILE_FCO","visibility":"MODEL_VISIBLE_SAFE","depth":5,"canonical_key":None,"source_sha256":source_sha,"source_pointer_json":json.dumps({"dataset_id":dataset,"source_path":str(path),"source_file_sha256":source_sha},sort_keys=True),"score_bundle_json":"{}","aggregate_scores_json":"{}","metadata_json":json.dumps({"byte_size":path.stat().st_size},sort_keys=True)})
+
     def text_node(self,kind:str,depth:int,parent:str,relation:str,text:str,pointer:dict[str,Any],meta:dict[str,Any])->str:
         content_sha=sha256_bytes(text.encode());oid,objsha=typed_id(kind,{"content_sha256":content_sha,"pointer":pointer,"identity":meta})
         self.node({"schema":SCHEMA,"object_id":oid,"object_sha256":objsha,"object_type":kind,"visibility":"MODEL_VISIBLE","depth":depth,"canonical_key":None,"source_sha256":pointer.get("source_file_sha256"),"source_pointer_json":json.dumps(pointer,sort_keys=True),"score_bundle_json":"{}","aggregate_scores_json":"{}","metadata_json":json.dumps({**meta,"content_sha256":content_sha,"byte_size":len(text.encode())},sort_keys=True)})
         self.edge(oid,parent,relation);return oid
+
     def atoms(self,text:str,sentence:str,pointer:dict[str,Any],ancestors:list[str],container_id:str):
         for o in seeds(text):
             key=o["canonical_key"];sid,ssha=seed_id(key);score=self.scores.get(key,{})
-            self.node({"schema":SCHEMA,"object_id":sid,"object_sha256":ssha,"object_type":"SEED_ATOM_FCO","visibility":"MODEL_VISIBLE","depth":0,"canonical_key":key,"source_sha256":None,"source_pointer_json":"{}","score_bundle_json":json.dumps(score,sort_keys=True),"aggregate_scores_json":"{}","metadata_json":"{}"});self.seed_key[sid]=key
+            if sid not in self.seed_seen:
+                self.seed_seen.add(sid)
+                score_json=json.dumps(score,sort_keys=True) if score else "{}"
+                self.node({"schema":SCHEMA,"object_id":sid,"object_sha256":ssha,"object_type":"SEED_ATOM_FCO","visibility":"MODEL_VISIBLE","depth":0,"canonical_key":key,"source_sha256":None,"source_pointer_json":"{}","score_bundle_json":score_json,"aggregate_scores_json":"{}","metadata_json":"{}"})
+                self.seed_key[sid]=key
             ptr=dict(pointer);base=int(pointer.get("char_start") or 0);ptr["char_start"]=base+o["char_start"];ptr["char_end"]=base+o["char_end"]
             selected=text[o["char_start"]:o["char_end"]];ptr["selected_text_sha256"]=sha256_bytes(selected.encode())
             oid,osha=typed_id("ATOM_OCCURRENCE_FCO",{"seed_atom_id":sid,"sentence_id":sentence,"pointer":ptr})
-            self.node({"schema":SCHEMA,"object_id":oid,"object_sha256":osha,"object_type":"ATOM_OCCURRENCE_FCO","visibility":"MODEL_VISIBLE","depth":0,"canonical_key":key,"source_sha256":ptr.get("source_file_sha256"),"source_pointer_json":json.dumps(ptr,sort_keys=True),"score_bundle_json":json.dumps(score,sort_keys=True),"aggregate_scores_json":"{}","metadata_json":json.dumps({"seed_atom_id":sid,"selected_text_sha256":ptr["selected_text_sha256"]},sort_keys=True)})
+            score_json=json.dumps(score,sort_keys=True) if score else "{}"
+            self.node({"schema":SCHEMA,"object_id":oid,"object_sha256":osha,"object_type":"ATOM_OCCURRENCE_FCO","visibility":"MODEL_VISIBLE","depth":0,"canonical_key":key,"source_sha256":ptr.get("source_file_sha256"),"source_pointer_json":json.dumps(ptr,sort_keys=True),"score_bundle_json":score_json,"aggregate_scores_json":"{}","metadata_json":json.dumps({"seed_atom_id":sid,"selected_text_sha256":ptr["selected_text_sha256"]},sort_keys=True)})
             self.edge(oid,sid,"INSTANCE_OF");self.edge(oid,sentence,"IN_SENTENCE");self.seed_occ[sid].append(oid);self.seed_containers[key].add(container_id)
             val=score.get("context_score")
             if isinstance(val,(int,float)):
                 for x in [sentence,*ancestors]:self.desc_scores[x].append(float(val))
+
     def hierarchy(self,text:str,parent:str,pointer:dict[str,Any],meta:dict[str,Any],container_id:str):
         paras=split_spans(text,PARAGRAPH_BREAK_RE) or [(0,len(text),text)]
         for pi,(a,b,ptext) in enumerate(paras):
@@ -102,14 +136,18 @@ class Builder:
             sents=split_spans(ptext,SENTENCE_BREAK_RE) or [(0,len(ptext),ptext)]
             for si,(s0,s1,stext) in enumerate(sents):
                 aa,bb=a+s0,a+s1;sp=dict(pointer);sp.update({"char_start":aa,"char_end":bb,"selected_text_sha256":sha256_bytes(stext.encode())});sid=self.text_node("SENTENCE_FCO",1,pid,"IN_PARAGRAPH",stext,sp,{**meta,"paragraph_index":pi,"sentence_index":si});self.atoms(stext,sid,sp,[pid,parent],container_id)
+
     def question(self,dataset:str,case_id:str,text:str,pointer:dict[str,Any],stratum:str):
         qid,qsha=typed_id("QUESTION_FCO",{"dataset":dataset,"case_id":case_id,"question_sha256":sha256_bytes(text.encode())})
         self.questions.append({"schema":SCHEMA,"question_fco_id":qid,"object_sha256":qsha,"dataset":dataset,"case_id":case_id,"question_text":text,"question_sha256":sha256_bytes(text.encode()),"stratum":stratum,"visibility":"EVAL_QUERY","source_pointer_json":json.dumps(pointer,sort_keys=True)})
         for o in seeds(text):
             sid,_=seed_id(o["canonical_key"]);oid,osha=typed_id("QUESTION_ATOM_OCCURRENCE_FCO",{"question_fco_id":qid,"seed_atom_id":sid,"char_start":o["char_start"],"char_end":o["char_end"]});self.question_seeds.append({"question_fco_id":qid,"question_atom_occurrence_id":oid,"object_sha256":osha,"seed_atom_id":sid,"canonical_key":o["canonical_key"],"char_start":o["char_start"],"char_end":o["char_end"],"visibility":"EVAL_QUERY"})
+
     def finalize(self):
-        for oid,vals in self.desc_scores.items():
-            if oid in self.nodes:self.nodes[oid]["aggregate_scores_json"]=json.dumps({"context_count":len(vals),"context_mean":sum(vals)/len(vals) if vals else None,"context_variance":pvar(vals),"context_min":min(vals) if vals else None,"context_max":max(vals) if vals else None},sort_keys=True)
+        self._flush_nodes()
+        self._flush_edges()
+        self.nodes_writer.close()
+        self.edges_writer.close()
 
 
 def load_scores(path:Path|None)->tuple[dict[str,dict[str,Any]],str,str|None]:
@@ -141,7 +179,7 @@ def build(a)->dict[str,Any]:
     out=Path(a.output_dir);out.mkdir(parents=True,exist_ok=True);q=Path(a.track01_questions);d=Path(a.track01_documents);l=Path(a.track03_json)
     for p in [q,d,l]:
         if not p.exists():raise FileNotFoundError(p)
-    scores,score_state,score_sha=load_scores(Path(a.atom_scores) if a.atom_scores else None);g=Builder(scores);hs={"track01_questions":sha256_file(q),"track01_documents":sha256_file(d),"track03_json":sha256_file(l)}
+    scores,score_state,score_sha=load_scores(Path(a.atom_scores) if a.atom_scores else None);g=Builder(out,scores);hs={"track01_questions":sha256_file(q),"track01_documents":sha256_file(d),"track03_json":sha256_file(l)}
     sd=g.source("EnterpriseRAG-Bench",d,hs["track01_documents"]);docs=pd.read_parquet(d,columns=["doc_id","content"])
     for _,r in docs.iterrows():
         did,text=str(r.doc_id),str(r.content);ptr={"dataset_id":"EnterpriseRAG-Bench","source_path":str(d),"source_file_sha256":hs["track01_documents"],"storage_kind":"PARQUET","row_key_field":"doc_id","row_key":did,"field_path":"content","char_start":0,"char_end":len(text),"selected_text_sha256":sha256_bytes(text.encode())};dn=g.text_node("DOCUMENT_FCO",3,sd,"IN_SOURCE",text,ptr,{"doc_id":did});g.hierarchy(text,dn,ptr,{"doc_id":did},dn)
@@ -157,16 +195,19 @@ def build(a)->dict[str,Any]:
         sess,sesssha=typed_id("SESSION_FCO",{"case_id":cid,"session_index":si,"projection_sha256":psha});g.node({"schema":SCHEMA,"object_id":sess,"object_sha256":sesssha,"object_type":"SESSION_FCO","visibility":"MODEL_VISIBLE","depth":4,"canonical_key":None,"source_sha256":psha,"source_pointer_json":"{}","score_bundle_json":"{}","aggregate_scores_json":"{}","metadata_json":json.dumps({"case_id":cid,"session_index":si},sort_keys=True)});g.edge(sess,st,"IN_SOURCE")
         for r in sorted(trs,key=lambda x:int(x["turn_index"])):
             text=r["content"];ptr={"dataset_id":"LongMemEval-S-full500","source_path":str(proj),"source_file_sha256":psha,"origin_source_sha256":hs["track03_json"],"storage_kind":"PARQUET","row_key_field":"pointer_key","row_key":r["pointer_key"],"field_path":"content","char_start":0,"char_end":len(text),"selected_text_sha256":r["content_sha256"]};tn=g.text_node("TURN_FCO",3,sess,"IN_SESSION",text,ptr,{"case_id":cid,"session_index":si,"turn_index":int(r["turn_index"]),"role":r["role"]});g.hierarchy(text,tn,ptr,{"case_id":cid,"session_index":si,"turn_index":int(r["turn_index"])},tn)
-    g.finalize();nodes=pd.DataFrame(g.nodes.values());edges=pd.DataFrame(g.edges);idx=[]
+    g.finalize();idx=[]
     for sid,occs in g.seed_occ.items():
         key=g.seed_key[sid];idx.append({"seed_atom_id":sid,"canonical_key":key,"occurrence_count":len(occs),"container_frequency":len(g.seed_containers[key]),"occurrence_ids_json":json.dumps(sorted(occs))})
-    paths={"nodes.parquet":nodes,"edges.parquet":edges,"seed_index.parquet":pd.DataFrame(idx),"questions.parquet":pd.DataFrame(g.questions),"question_seeds.parquet":pd.DataFrame(g.question_seeds)}
-    for name,df in paths.items():df.to_parquet(out/name,index=False)
+    pd.DataFrame(idx).to_parquet(out/"seed_index.parquet",index=False)
+    pd.DataFrame(g.questions).to_parquet(out/"questions.parquet",index=False)
+    pd.DataFrame(g.question_seeds).to_parquet(out/"question_seeds.parquet",index=False)
     # Fail closed if model-visible tables expose known evaluation-only field names.
-    prohibited={"gold_answer","answer_facts","expected_doc_ids","target_answer","eval_reference"};visible_cols=set(nodes.columns)|set(paths["seed_index.parquet"].columns)|set(paths["questions.parquet"].columns)|set(paths["question_seeds.parquet"].columns)
+    prohibited={"gold_answer","answer_facts","expected_doc_ids","target_answer","eval_reference"}
+    visible_cols=set(g.nodes_schema.names)|set(g.edges_schema.names)|set(["seed_atom_id","canonical_key","occurrence_count","container_frequency","occurrence_ids_json"])|set(g.questions[0].keys() if g.questions else [])
     leakage=sorted(prohibited&visible_cols)
     if leakage:raise RuntimeError(f"EVAL_ONLY_COLUMN_LEAKAGE:{leakage}")
-    ah={p.name:sha256_file(p) for p in [out/x for x in paths]+[proj]};receipt={"schema":"hydradg.seedgraph.build_receipt.v1a","execution_host":socket.gethostname(),"source_hashes":hs,"track03_projection_sha256":psha,"atom_score_state":score_state,"atom_score_contract_sha256":score_sha,"artifact_hashes":ah,"counts":{"nodes":len(nodes),"edges":len(edges),"seed_atoms":len(idx),"questions":len(g.questions),"question_seed_occurrences":len(g.question_seeds)},"source_prose_in_nodes_gate":"PASS_METADATA_ONLY","eval_only_column_leakage_gate":"PASS","track01_question_contract":"ORDERED_FIRST_300_SOURCE_ROWS","track03_strata_contract":"PRIMARY_470_PLUS_SECONDARY_30_QUESTION_TYPE_RULE","track02_state":"BLOCKED_REAL_CASE_CONTRACT_NOT_ESTABLISHED","zero_model_calls":True,"zero_network_calls":True,"signature_state":"NOT_SIGNED","merkle_mmr_state":"NOT_COMMITTED","timestamp_utc":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())};receipt["receipt_sha256"]=sha256_bytes(cjson(receipt));(out/"BUILD_RECEIPT.json").write_text(json.dumps(receipt,indent=2,sort_keys=True)+"\n");(out/"SHA256SUMS.txt").write_text("\n".join(f"{v}  {k}" for k,v in sorted(ah.items()))+"\n");return receipt
+    paths=[out/"nodes.parquet",out/"edges.parquet",out/"seed_index.parquet",out/"questions.parquet",out/"question_seeds.parquet"]
+    ah={p.name:sha256_file(p) for p in paths+[proj]};receipt={"schema":"hydradg.seedgraph.build_receipt.v1a","execution_host":socket.gethostname(),"source_hashes":hs,"track03_projection_sha256":psha,"atom_score_state":score_state,"atom_score_contract_sha256":score_sha,"artifact_hashes":ah,"counts":{"nodes":g.node_count,"edges":g.edge_count,"seed_atoms":len(idx),"questions":len(g.questions),"question_seed_occurrences":len(g.question_seeds)},"source_prose_in_nodes_gate":"PASS_METADATA_ONLY","eval_only_column_leakage_gate":"PASS","track01_question_contract":"ORDERED_FIRST_300_SOURCE_ROWS","track03_strata_contract":"PRIMARY_470_PLUS_SECONDARY_30_QUESTION_TYPE_RULE","track02_state":"BLOCKED_REAL_CASE_CONTRACT_NOT_ESTABLISHED","zero_model_calls":True,"zero_network_calls":True,"signature_state":"NOT_SIGNED","merkle_mmr_state":"NOT_COMMITTED","timestamp_utc":time.strftime("%Y-%m-%dT%H:%M:%SZ",time.gmtime())};receipt["receipt_sha256"]=sha256_bytes(cjson(receipt));(out/"BUILD_RECEIPT.json").write_text(json.dumps(receipt,indent=2,sort_keys=True)+"\n");(out/"SHA256SUMS.txt").write_text("\n".join(f"{v}  {k}" for k,v in sorted(ah.items()))+"\n");return receipt
 
 
 def minmax(v:float|None,vals:list[float])->float:
@@ -251,4 +292,5 @@ def query(a)->dict[str,Any]:
 
 def cli():
     p=argparse.ArgumentParser();s=p.add_subparsers(dest="cmd",required=True);b=s.add_parser("build");b.add_argument("--track01-questions",default="/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/questions/test.parquet");b.add_argument("--track01-documents",default="/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/documents/test.parquet");b.add_argument("--track03-json",default="/Users/byron/.local/share/hydradg-datasets/track03/longmemeval-cleaned/longmemeval_s_cleaned.json");b.add_argument("--atom-scores");b.add_argument("--output-dir",required=True);b.add_argument("--require-studio",action="store_true");q=s.add_parser("query");q.add_argument("--index-dir",required=True);g=q.add_mutually_exclusive_group(required=True);g.add_argument("--question-fco-id");g.add_argument("--question-text");q.add_argument("--coverage-target",type=float,default=.80);q.add_argument("--max-nodes",type=int,default=8);q.add_argument("--max-evidence-bytes",type=int,default=32768);q.add_argument("--receipt");a=p.parse_args();r=build(a) if a.cmd=="build" else query(a);print(json.dumps(r,indent=2,sort_keys=True))
+
 if __name__=="__main__":cli()
