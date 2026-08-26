@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import fcntl
 import hashlib
 import json
 import os
@@ -65,25 +66,66 @@ def ensure_runtime() -> None:
         print(f"WARNING_ROOT_FREE_LOW bytes={free_root}", file=sys.stderr)
 
 
+class DeployLockBusy(Exception):
+    """Raised when another deployer already holds the exclusive lock."""
+
+
 class DeployLock:
+    """OS-backed exclusive non-blocking deploy lock (fcntl.flock).
+
+    First writer: LOCK_ACQUIRED and continues.
+    Second writer: raises DeployLockBusy — must exit 0 without mutating
+    release/server/plist/wrapper/Tailscale.
+    """
+
+    def __init__(self) -> None:
+        self._fh = None
+
     def __enter__(self):
         STATE.mkdir(parents=True, exist_ok=True)
-        if LOCK.exists():
-            try:
-                old = int(LOCK.read_text().strip() or "0")
-                os.kill(old, 0)
-                raise SystemExit(f"DEPLOY_LOCKED_BY_PID={old}")
-            except (ProcessLookupError, ValueError, PermissionError):
-                pass
-        LOCK.write_text(str(os.getpid()))
+        self._fh = open(LOCK, "a+", encoding="utf-8")
+        try:
+            fcntl.flock(self._fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except BlockingIOError as exc:
+            self._fh.close()
+            self._fh = None
+            raise DeployLockBusy("LOCK_BUSY") from exc
+        self._fh.seek(0)
+        self._fh.truncate()
+        self._fh.write(f"{os.getpid()}\n")
+        self._fh.flush()
+        print("LOCK_ACQUIRED", flush=True)
         return self
 
     def __exit__(self, *exc):
+        if self._fh is None:
+            return
         try:
-            if LOCK.exists() and LOCK.read_text().strip() == str(os.getpid()):
-                LOCK.unlink()
-        except OSError:
-            pass
+            fcntl.flock(self._fh.fileno(), fcntl.LOCK_UN)
+        finally:
+            try:
+                self._fh.close()
+            except OSError:
+                pass
+            self._fh = None
+
+
+def write_lock_busy_status() -> Path:
+    """Non-mutating status when a second deployer is rejected."""
+    payload = {
+        "schema": "hydradg.studio_test_deploy_lock_busy.v1",
+        "status": "LOCK_BUSY",
+        "pid": os.getpid(),
+        "ts_unix": int(time.time()),
+        "mutated": False,
+        "deploy_writes_plist": False,
+        "deploy_writes_wrapper": False,
+    }
+    RECEIPTS.mkdir(parents=True, exist_ok=True)
+    path = RECEIPTS / f"lock_busy_{os.getpid()}_{int(time.time())}.json"
+    path.write_text(json.dumps(payload, indent=2, sort_keys=True) + "\n")
+    print(f"LOCK_BUSY status={path}", flush=True)
+    return path
 
 
 def resolve_target_sha(repo: Path, sha: str | None) -> str:
@@ -308,47 +350,57 @@ def cmd_check(repo: Path) -> int:
 
 
 def cmd_once(repo: Path, sha: str | None, force: bool) -> int:
+    """Routine deployment. Does NOT rewrite launchd plist, wrappers, or Tailscale.
+
+    Service-config install remains ops/studio-test/install_launchd.sh only.
+    """
     ensure_runtime()
-    with DeployLock():
-        target = resolve_target_sha(repo, sha)
-        current = deployed_sha()
-        if current == target and not force:
-            print(f"NOOP deployed={current}")
-            return 0
-        print(f"DEPLOY_START target={target} previous={current}")
-        release = materialize_release(repo, target)
-        build_web(release)
-        canary_smoke(release)
-        activate(release, target)
-        try:
-            launchctl_kick()
-            wait_local()
-            sh([PYTHON, str(HEALTHCHECK), "--base", "http://127.0.0.1:3000", "--pages-only"])
-            ts = verify_tailscale()
-            if ts != "200":
-                raise RuntimeError(f"tailscale health {ts}")
-        except Exception as exc:
-            print(f"ACTIVATION_FAIL {exc}; rolling back")
+    try:
+        with DeployLock():
+            target = resolve_target_sha(repo, sha)
+            current = deployed_sha()
+            if current == target and not force:
+                print(f"NOOP deployed={current}")
+                return 0
+            print(f"DEPLOY_START target={target} previous={current}")
+            release = materialize_release(repo, target)
+            build_web(release)
+            canary_smoke(release)
+            activate(release, target)
             try:
-                rollback()
-            except Exception as rb:
-                print(f"ROLLBACK_FAIL {rb}")
-            raise
-        receipt = write_receipt(
-            {
-                "schema": "hydradg.studio_test_deploy_receipt.v1",
-                "deployed_sha": target,
-                "previous_sha": current,
-                "release_path": str(release),
-                "service": SERVICE,
-                "localhost_health": "200",
-                "tailscale_health": "200",
-                "signature_state": "NOT_SIGNED",
-                "merkle_mmr_state": "NOT_COMMITTED",
-                "hashes_are_signatures": False,
-            }
-        )
-        print("DEPLOY_OK", target, receipt)
+                launchctl_kick()
+                wait_local()
+                sh([PYTHON, str(HEALTHCHECK), "--base", "http://127.0.0.1:3000", "--pages-only"])
+                ts = verify_tailscale()
+                if ts != "200":
+                    raise RuntimeError(f"tailscale health {ts}")
+            except Exception as exc:
+                print(f"ACTIVATION_FAIL {exc}; rolling back")
+                try:
+                    rollback()
+                except Exception as rb:
+                    print(f"ROLLBACK_FAIL {rb}")
+                raise
+            receipt = write_receipt(
+                {
+                    "schema": "hydradg.studio_test_deploy_receipt.v1",
+                    "deployed_sha": target,
+                    "previous_sha": current,
+                    "release_path": str(release),
+                    "service": SERVICE,
+                    "localhost_health": "200",
+                    "tailscale_health": "200",
+                    "deploy_writes_plist": False,
+                    "deploy_writes_wrapper": False,
+                    "signature_state": "NOT_SIGNED",
+                    "merkle_mmr_state": "NOT_COMMITTED",
+                    "hashes_are_signatures": False,
+                }
+            )
+            print("DEPLOY_OK", target, receipt)
+            return 0
+    except DeployLockBusy:
+        write_lock_busy_status()
         return 0
 
 
