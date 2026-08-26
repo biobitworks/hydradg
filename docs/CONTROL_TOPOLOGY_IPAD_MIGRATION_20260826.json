@@ -1,0 +1,15 @@
+{
+  "schema": "hydradg.control_topology.v1",
+  "reason": "OPERATOR_CONTROLLER_HOST_LOST_REPLACED_BY_IPAD_CONTROL_PLANE",
+  "control_topology_predecessor_sha": "0000000000000000000000000000000000000000",
+  "control_topology_successor_sha": "PENDING_COMMIT",
+  "effective_immediately": {
+    "magicPRObox": "UNAVAILABLE / NOT_REQUIRED_FOR_CURRENT_CONTROL",
+    "iPad Cursor Remote Control": "CONTROLLER PATH / CONTROLLER / REVIEWER / OPERATOR",
+    "iPad iSH + Tailscale": "MANUAL/BREAK-GLASS SSH PATH",
+    "GitHub origin": "synchronization arbiter / DURABLE GIT TRUTH",
+    "magicSTUDIObox.local": "exclusive scientific/model execution host"
+  },
+  "synchronization_invariant": "STUDIO_COMMITTED_HEAD == ORIGIN_HEAD plus independent controller readback from GitHub/iPad",
+  "timestamp_utc": "2026-08-26T06:25:00Z"
+}
