@@ -25,16 +25,25 @@ npm cache + TMPDIR live on magicBLACKbox to protect root disk.
 
 ## Services
 
-| Label | Role |
+| Mechanism | Role |
 | --- | --- |
-| `com.biobitworks.hydradg-test` | Next production server |
-| `com.biobitworks.hydradg-deploy-watcher` | `deploy.py --once` every 60s |
+| `ops/studio-test/bin/hydradg-test-supervise-loop.sh` (nohup) | Next production server on `127.0.0.1:3000` |
+| `com.biobitworks.hydradg-deploy-watcher` (launchd) | `deploy.py --once` every 60s |
 
 Install:
 
 ```bash
 bash ops/studio-test/install_launchd.sh
 ```
+
+Notes:
+- Wrappers live in-repo under `ops/studio-test/bin/` (boot volume).
+- Paths under `/Volumes/magicBLACKbox` in launchd `ProgramArguments` / stdio cause **exit 78**.
+- Builds, releases, npm cache, and TMPDIR stay on magicBLACKbox.
+- On this host, launchd-managed `next start` has been observed to hang without binding
+  `:3000`; the install script therefore defaults web persistence to **nohup supervise**.
+- Cursor agents may be TCC-blocked from writing `~/Library/LaunchAgents`; copy plist
+  templates from Terminal.app if login persistence for the watcher is required.
 
 ## Operator commands
 
@@ -56,9 +65,11 @@ python3 ops/studio-test/healthcheck.py --base https://magicstudiobox.tail0cf9bb.
 launchctl print gui/$(id -u)/com.biobitworks.hydradg-test | head
 launchctl print gui/$(id -u)/com.biobitworks.hydradg-deploy-watcher | head
 
-# Logs
-tail -n 100 /Volumes/magicBLACKbox/hydradg/services/hydradg-test/logs/hydradg-test.out.log
-tail -n 100 /Volumes/magicBLACKbox/hydradg/services/hydradg-test/logs/deploy-watcher.out.log
+# Logs (boot-volume launchd stdio + BLACKBOX app logs)
+tail -n 100 ~/Library/Logs/hydradg-test/hydradg-test.err.log
+tail -n 100 ~/Library/Logs/hydradg-test/deploy-watcher.out.log
+tail -n 100 /Volumes/magicBLACKbox/hydradg/services/hydradg-test/logs/web.err.log
+tail -n 100 /Volumes/magicBLACKbox/hydradg/services/hydradg-test/logs/supervise_web.log
 ```
 
 ## Boundaries

@@ -192,19 +192,61 @@ def activate(release: Path, sha: str) -> None:
     DEPLOYED_SHA_FILE.write_text(sha + "\n")
 
 
-def launchctl_kick() -> None:
+def restart_web_server() -> None:
+    """Restart the studio-test web process after symlink activation.
+
+    Preferred path is launchd KeepAlive for com.biobitworks.hydradg-test.
+    On magicSTUDIObox, launchd-managed next start has been observed to hang
+    without binding :3000, so fall back to the nohup supervise loop in
+    ops/studio-test/bin/hydradg-test-supervise-loop.sh.
+    """
     uid = os.getuid()
-    # bootout/bootstrap is heavier; prefer kickstart -k to restart
+    supervise = SOURCE_REPO_DEFAULT / "ops" / "studio-test" / "bin" / "hydradg-test-supervise-loop.sh"
+    # Always clear stale listeners before restart
+    subprocess.run(["pkill", "-f", "next start -H 127.0.0.1 -p 3000"], check=False)
+    time.sleep(1)
     try:
         sh(["launchctl", "kickstart", "-k", f"gui/{uid}/{SERVICE}"])
+        # If launchd is the hanging path, detect and fall through
+        time.sleep(3)
+        try:
+            with urllib.request.urlopen("http://127.0.0.1:3000/", timeout=2) as resp:
+                if resp.status == 200:
+                    return
+        except Exception:
+            pass
     except RuntimeError:
-        # not loaded yet
-        plist = Path.home() / "Library/LaunchAgents" / f"{SERVICE}.plist"
-        if plist.exists():
-            sh(["launchctl", "bootstrap", f"gui/{uid}", str(plist)])
-            sh(["launchctl", "kickstart", "-k", f"gui/{uid}/{SERVICE}"])
-        else:
-            raise
+        pass
+
+    # Stop prior supervise loop if recorded
+    pid_file = STATE / "supervise.pid"
+    if pid_file.exists():
+        try:
+            os.kill(int(pid_file.read_text().strip()), signal.SIGTERM)
+        except (ProcessLookupError, ValueError, OSError):
+            pass
+    subprocess.run(["pkill", "-f", "hydradg-test-supervise-loop"], check=False)
+    time.sleep(1)
+    if not supervise.exists():
+        raise RuntimeError(f"missing supervise wrapper {supervise}")
+    proc = subprocess.Popen(
+        ["/bin/bash", str(supervise)],
+        stdout=subprocess.DEVNULL,
+        stderr=subprocess.DEVNULL,
+        start_new_session=True,
+        env={
+            **os.environ,
+            "HOME": str(Path.home()),
+            "PATH": "/opt/homebrew/bin:/usr/bin:/bin",
+            "npm_config_cache": str(NPM_CACHE),
+            "TMPDIR": str(TMP),
+        },
+    )
+    pid_file.write_text(str(proc.pid) + "\n")
+
+
+def launchctl_kick() -> None:
+    restart_web_server()
 
 
 def wait_local(timeout: int = 60) -> None:

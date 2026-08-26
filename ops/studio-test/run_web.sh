@@ -1,5 +1,7 @@
 #!/bin/bash
-# launchd wrapper: serve current HydraDG web release on 127.0.0.1:3000 only
+# Serve current HydraDG web release on 127.0.0.1:3000 only.
+# Prefer hydradg-test-supervise.sh for launchd (boot-volume wrapper).
+# This script is mirrored to magicBLACKbox for manual/debug use.
 set -euo pipefail
 RUNTIME="/Volumes/magicBLACKbox/hydradg/services/hydradg-test"
 CURRENT="${RUNTIME}/current"
@@ -21,4 +23,4 @@ if [[ ! -d "$WEB/.next" ]]; then
   exit 1
 fi
 cd "$WEB"
-exec /opt/homebrew/bin/npm run start -- -H 127.0.0.1 -p 3000
+exec /opt/homebrew/bin/node ./node_modules/next/dist/bin/next start -H 127.0.0.1 -p 3000
