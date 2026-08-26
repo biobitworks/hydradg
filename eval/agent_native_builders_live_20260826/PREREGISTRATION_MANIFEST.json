@@ -39,7 +39,13 @@
   "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
   "rubric_template": "eval/agent_native_builders_live_20260826/RUBRIC_SCORECARD_TEMPLATE.json",
   "documentation": "docs/ANB_LIVE_EMPIRICAL_EXPERIMENT_V1.md",
-  "execution_state": "PREREGISTERED_NOT_EXECUTED",
+  "execution_state": "ACCEPTED_PENDING_PLAN",
+  "accepted_at_git_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_work_units": [
+    "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK01_COLD_START_V1_ACCEPT.json",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_ACCEPT.json",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_RUNTYPE_PRODUCT_EVAL_V1_ACCEPT.json"
+  ],
   "submit_allowed": false,
   "merge_to_main_allowed": false,
   "signature_state": "NOT_SIGNED"
