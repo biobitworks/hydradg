@@ -1,0 +1,65 @@
+{
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "work_unit_id": "work_unit:anb_runtype_product_eval_v1_20260826",
+  "phase": "OFFER",
+  "actor": {
+    "actor_class": "HUMAN",
+    "runtime_identity": "byron@magicSTUDIObox.local"
+  },
+  "role_lane": "AGENT_NATIVE_BUILDERS_LIVE_EMPIRICAL_V1",
+  "role_ceiling": "PREREGISTRATION_ONLY_NO_EXECUTION",
+  "writeback_disposition": "CANDIDATE_ONLY_NO_PROMOTION",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "base_git_sha": "2e4522c09922b7c323f8ebecae28aaca9bbc9f6a",
+  "expected_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
+  "input_packet_sha256": "8fc6543687359e9bf80596ade8427199fd3b0467b87999a13e08a6063092270f",
+  "locked_decisions": [
+    "Do not treat scripts/agent_native_builders_runner.py output as empirical evidence",
+    "Synthetic 20-fixture lane preserved as DEVELOPMENT_SYNTHETIC_FIXTURE_SIMULATION",
+    "magicSTUDIObox.local is scientific controller/scorer",
+    "External Runtype/Tenki/model activity is EXTERNAL_PROBABILISTIC_EVIDENCE until receipt-bound",
+    "Do not submit, merge to main, or spend beyond free/event credits",
+    "Do not print or commit sponsor keys"
+  ],
+  "deferred_ideas": [
+    "Final Track 01 vs Track 02 selection until both scorecards computed",
+    "Vercel/studio deploy promotion",
+    "Cotal/SGLang integration"
+  ],
+  "lease": {
+    "lease_id": "lease:anb_live_runtype_eval_20260826",
+    "fencing_token": 1,
+    "single_writer_scope": "eval/agent_native_builders_live_20260826/results/runtype/",
+    "lease_owner": "magicSTUDIObox.local",
+    "lease_state": "OFFERED"
+  },
+  "expected_outputs": [
+    "eval/agent_native_builders_live_20260826/results/runtype/",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_RUNTYPE_PRODUCT_EVAL_V1_ACCEPT.json",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_RUNTYPE_PRODUCT_EVAL_V1_CLOSEOUT.json"
+  ],
+  "verification_gates": [
+    "RUNTYPE_PRODUCT_CREATED",
+    "MCP_SURFACE_AUTHENTICATED",
+    "EVAL_SUITE_CASES_12_TO_20_AS_CODE",
+    "TWO_FROZEN_VARIANTS_COMPARED",
+    "RUNTYPE_EXECUTION_IDS_PRESERVED",
+    "NO_SELECTIVE_RERUNS",
+    "HYDRADG_DETERMINISTIC_GRADE_COMPUTED"
+  ],
+  "stop_conditions": [
+    "PREREGISTRATION_VALIDATED",
+    "OPERATOR_REVIEW_BEFORE_EXECUTION",
+    "EVAL_SUITE_COMPLETE"
+  ],
+  "claim_ceiling": "LIVE_EMPIRICAL_PREREGISTERED_NOT_EXECUTED",
+  "fco_state": "PREREGISTERED",
+  "fcg_state": "NOT_APPENDED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+  "evidence_class": "LIVE_EMPIRICAL_EXPERIMENT_V1",
+  "input_packet_path": "eval/agent_native_builders_live_20260826/input_packets/RUNTYPE_PRODUCT_EVAL_INPUT.json"
+}

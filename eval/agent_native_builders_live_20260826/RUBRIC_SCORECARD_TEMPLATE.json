@@ -1,0 +1,39 @@
+{
+  "schema": "hydradg.anb_live.rubric_scorecard.v1",
+  "status": "TEMPLATE_NOT_SCORED",
+  "base_git_sha": "2e4522c09922b7c323f8ebecae28aaca9bbc9f6a",
+  "scoring_host": "magicSTUDIObox.local",
+  "main_track_selection": "DEFERRED_UNTIL_BOTH_SCORECARDS_COMPLETE",
+  "track01_cold_start": {
+    "track_id": "ANB_TRACK01_COLD_START_V1",
+    "max_points": 100,
+    "criteria": {
+      "cold_start_success": { "max": 30, "score": null, "evidence_refs": [] },
+      "it_runs": { "max": 25, "score": null, "evidence_refs": [] },
+      "surface_quality": { "max": 20, "score": null, "evidence_refs": [] },
+      "lands_in_product": { "max": 15, "score": null, "evidence_refs": [] },
+      "demo": { "max": 10, "score": null, "evidence_refs": [] }
+    },
+    "total_score": null
+  },
+  "track02_resumable_boundary": {
+    "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+    "max_points": 100,
+    "criteria": {
+      "real_work_across_real_boundary": { "max": 30, "score": null, "evidence_refs": [] },
+      "it_runs": { "max": 25, "score": null, "evidence_refs": [] },
+      "coordination_design": { "max": 20, "score": null, "evidence_refs": [] },
+      "lands_in_product": { "max": 15, "score": null, "evidence_refs": [] },
+      "demo": { "max": 10, "score": null, "evidence_refs": [] }
+    },
+    "total_score": null
+  },
+  "runtype_product_eval": {
+    "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+    "note": "Simultaneous sponsor-bounty lane — not used to select main track",
+    "bounty_score": null
+  },
+  "recommended_main_track": null,
+  "recommendation_rationale": null,
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.anb_live.preregistration_manifest.v1",
+  "experiment_id": "ANB_LIVE_EMPIRICAL_EXPERIMENT_V1",
+  "preregistered_at_utc": "2026-08-26T23:30:00Z",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "base_git_sha": "2e4522c09922b7c323f8ebecae28aaca9bbc9f6a",
+  "scientific_controller": "magicSTUDIObox.local",
+  "synthetic_lane_reclassified": "DEVELOPMENT_SYNTHETIC_FIXTURE_SIMULATION",
+  "synthetic_lane_classification": "eval/agent_native_builders_20260826/LANE_CLASSIFICATION.json",
+  "live_lane_path": "eval/agent_native_builders_live_20260826",
+  "work_units": [
+    {
+      "track_id": "ANB_TRACK01_COLD_START_V1",
+      "offer": "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK01_COLD_START_V1_OFFER.json",
+      "offer_sha256": "f5cc61064e627d1dafce5fef2c81a753b13eaa335da41cc5e77d4e4c95eedce2",
+      "input_packet": "eval/agent_native_builders_live_20260826/input_packets/TRACK01_COLD_START_INPUT.json",
+      "input_packet_sha256": "682d4f720e564ea5b340655ba3d2fa29456d4a1bc7b1bd056935c43e5e67ea48",
+      "orchestration_check": "PASS"
+    },
+    {
+      "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+      "offer": "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_OFFER.json",
+      "offer_sha256": "2e4f4f127fdc1403d4ea7f6933d4ce45f8a4102292ffca045cd807e05632f1dd",
+      "input_packet": "eval/agent_native_builders_live_20260826/input_packets/TRACK02_RESUMABLE_BOUNDARY_INPUT.json",
+      "input_packet_sha256": "8a4d3ce3a9006e8321cd257fa653ba956397bc39b5f4403e0b10f57cd547988d",
+      "orchestration_check": "PASS"
+    },
+    {
+      "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+      "offer": "eval/agent_native_builders_live_20260826/work_units/ANB_RUNTYPE_PRODUCT_EVAL_V1_OFFER.json",
+      "offer_sha256": "f5e3cb03c8e6ee5e7cdf9003037d83d4dd978a8143658b58a32bceb8cfda60c8",
+      "input_packet": "eval/agent_native_builders_live_20260826/input_packets/RUNTYPE_PRODUCT_EVAL_INPUT.json",
+      "input_packet_sha256": "8fc6543687359e9bf80596ade8427199fd3b0467b87999a13e08a6063092270f",
+      "orchestration_check": "PASS"
+    }
+  ],
+  "capability_snapshot": "eval/agent_native_builders_live_20260826/CAPABILITY_SNAPSHOT.json",
+  "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
+  "rubric_template": "eval/agent_native_builders_live_20260826/RUBRIC_SCORECARD_TEMPLATE.json",
+  "documentation": "docs/ANB_LIVE_EMPIRICAL_EXPERIMENT_V1.md",
+  "execution_state": "PREREGISTERED_NOT_EXECUTED",
+  "submit_allowed": false,
+  "merge_to_main_allowed": false,
+  "signature_state": "NOT_SIGNED"
+}
