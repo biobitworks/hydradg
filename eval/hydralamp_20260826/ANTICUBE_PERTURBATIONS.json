@@ -1,0 +1,16 @@
+[
+  {"id": "AC-001", "name": "valid_sig_valid_cap", "expected": "ALLOW", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-002", "name": "valid_sig_invalid_cap", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-003", "name": "forged_signature", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-004", "name": "wrong_actor_signature", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-005", "name": "expired_capability", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-006", "name": "revoked_actor", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-007", "name": "replayed_nonce", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-008", "name": "stale_fcg_root", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-009", "name": "public_read", "expected": "ALLOW", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-010", "name": "unauth_private_read", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-011", "name": "valid_proposal", "expected": "QUARANTINE", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-012", "name": "poison_proposal", "expected": "RETAIN_REJECTION", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-013", "name": "unauth_canonical_write", "expected": "DENY", "evidence_class": "PREREGISTERED_ADVERSARIAL"},
+  {"id": "AC-014", "name": "authorized_repair", "expected": "PROMOTE", "evidence_class": "PREREGISTERED_ADVERSARIAL"}
+]

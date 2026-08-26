@@ -1,0 +1,44 @@
+{
+  "schema": "hydradg.sentinel_predecessor_receipt.v1",
+  "receipt_type": "SENTINEL_HISTORICAL_PREDECESSOR",
+  "retrieved_at_utc": "2026-08-26T21:45:00Z",
+  "evidence_class": "LOCATED_FROM_ACCESSIBLE_SOURCE_SET",
+  "SENTINEL_SOURCE_REPO": "biobitworks/antigence",
+  "SENTINEL_SOURCE_PATH": "/Users/byron/projects/active/antigence",
+  "SENTINEL_SOURCE_SHA": "1f12b3c2b2f7df90e11753f74443e4add48d5b46",
+  "SENTINEL_CORE_IMPLEMENTATION_FILES": [
+    "src/antigence/service/sentinel.py",
+    "scripts/sentinel_fco_bridge.py",
+    "src/antigence/escalation/sentinel_route.py",
+    "src/antigence/training/sentinel_labels.py",
+    "src/antigence/security/ingress.py",
+    "web_app/routers/sentinel.py",
+    "web_app/services/ingestion.py",
+    "docs/kb/sentinel.md"
+  ],
+  "SENTINEL_IMPLEMENTATION_DATE": "2026-07-11",
+  "SENTINEL_IMPLEMENTATION_COMMITS": {
+    "service_sentinel_py": "f6ccf1f536a82734cc4a84b4ce4e5533a9322015",
+    "sentinel_fco_bridge_py": "cdc79399310f031495b614bf817feda1f946f77d",
+    "sentinel_route_py": "824e13ae4bb6a64095c343ec510fc589c763de8d"
+  },
+  "SENTINEL_SANDBOX_BOUNDARY": "Host-level FIM over configured projects_root git repos; deterministic git porcelain scan without file-content reads; optional LLM review gated by ANTIGENCE_SENTINEL_LLM_REVIEW; scratchpad/ custody scan (git-tracked OR .planning/scratchpad_ledger.jsonl hash); ingress.py chokepoint for non-self surfaces (model_output, tool_output, etc.) with fail-closed SOURCE_TRUST; Ollarma reserved model qwen3:1.7b boundary (RESERVED_MODEL_ANTIGENCE_SENTINEL). Sentinel does NOT move files into quarantine — disposition is ADMIT or REVIEW queue only.",
+  "SENTINEL_CREDENTIAL_BOUNDARY": "No user password gate. Sensitive-path detection by suffix/fragment only (no secret bytes read). LLM review uses local Ollama via OLLAMA_URL; model reserved in Ollarma fleet. Events append to ~/.antigence/sentinel/events.jsonl and training_data/sentinel_review.jsonl. Bridge outputs ADMIT (label 0) or REVIEW (label null, needs_review) — never auto-malicious.",
+  "SENTINEL_QUARANTINE_BEHAVIOR": "Sentinel itself does not quarantine filesystem objects. Non-safe·self events route to needs_review_candidates.jsonl (REVIEW disposition). Scratchpad unsaved files emit scratchpad_custody events -> HIGH tickets via ingestion.py. HydraLamp successor quarantine applies to federation proposals (separate layer). Mailroom quarantine is recommendation-only per Antigence mailroom docs.",
+  "SENTINEL_LIMITATIONS": [
+    "Deterministic scan only — no file content inspection for FIM signal",
+    "LLM review optional and uses small reserved model; risk_level is metadata not ground truth",
+    "Escalation spine (sentinel_route full reader) marked partial — Next SWE in SENTINEL_ESCALATION.md",
+    "No cross-repo HydraDB namespace isolation test implemented under hydradg",
+    "SENTINEL_RECOVERY_BOUNDARY.md referenced in ontology but absent from antigence checkout (Obsidian mirror only)",
+    "Host FIM is not network federation authorization — orthogonal to HydraLamp signed-capability model"
+  ],
+  "HYDRALAMP_SUCCESSOR_RELATION": "HydraLamp extends federation-layer signed handshake, capability, encrypted FCO, proposal quarantine, and canonical FCG append. Antigence Sentinel remains the host/FIM predecessor; HydraLamp sandbox runs same adversarial fixture family inside/outside defense-in-depth boundary without replacing capability trust root.",
+  "CUSTODY_ARTIFACTS": [
+    "antigence/handoff/from_ollarma/HANDOFF_sentinel_wired_injection_expansion_20260710.md",
+    "ollarma/.planning/decision_log.jsonl (DEC-SENTINEL-ESCALATION)",
+    "overwatch/workspace/meta/antigence_sentinel_events.jsonl"
+  ],
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "HISTORICAL_PREDECESSOR_LOCATOR_ONLY"
+}
