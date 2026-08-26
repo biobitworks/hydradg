@@ -122,3 +122,18 @@ A missing required orchestration or custody field is a hard gate failure for pro
 ## Current repair note
 
 Earlier project conversation turns did not consistently emit the full in-turn receipt sequence. Do not retroactively pretend they did. Recoverable prior material must be marked `RETROACTIVE_CUSTODY_RECONSTRUCTION_FROM_AVAILABLE_RECORD` or `PENDING_ORIGINAL_TURN_CAPTURE` according to the existing repair protocol. From this contract onward, omission is a custody failure rather than an implicit pass.
+
+## Cursor Cloud specific instructions
+
+Scope note: this section is about running the development environment, not the custody contract above. The custody/handoff rules still govern any substantive scientific work unit.
+
+### Primary service: `apps/hydradg-web` (Next.js 16 + React 19 site)
+
+- This is the only runnable application in the repo. The Python scripts under `scripts/` are one-shot custody/projection/verification tools, not long-running services.
+- The startup dependency install (`npm ci` in `apps/hydradg-web`) is handled by the Cloud update script; you do not need to reinstall on a fresh pod.
+- Standard commands are defined in `apps/hydradg-web/package.json` and mirrored by root `package.json` scripts (`npm run dev`, `build`, `start`, `typecheck`, `install:all`). Run web commands from `apps/hydradg-web/` (or use the root `npm --prefix apps/hydradg-web` / root scripts). Dev server listens on port 3000 by default.
+- There is **no lint script**; quality gating is `npm run typecheck` (`tsc --noEmit`). Don't invent an eslint step.
+- The app runs fully without any backend or secrets. When HydraDB / provider env vars are unset, `/api/status` reports `graph.configured=false` / `reachable=false` and all pages render from deterministic presentation fixtures (e.g. `lib/demoFixture.ts`, `/api/iceberg`, `/api/query`). This is expected, not a failure. HydraDB and the API keys in `apps/hydradg-web/.env.example` are optional and only needed for live-backend reconstruction.
+- Interactive core-functionality surface for a quick smoke test: the homepage (`/`) "4D FCG · context iceberg" panel — its time slider drives the reference → mutation → restoration (t0/t1/t2) state transitions and updates ΔG*/Cloud Drift metrics. The full graph view is at `/graph`. The `JudgeLab.tsx` component in `app/judge/` is not wired into any route; `/judge` renders a static walkthrough instead.
+- Gotcha: `next dev`/`next build` (Next 16) regenerate `apps/hydradg-web/next-env.d.ts` (flips `.next/types` ↔ `.next/dev/types` import paths) and auto-generate `apps/hydradg-web/AGENTS.md` + `apps/hydradg-web/CLAUDE.md`. These are framework-generated dev artifacts — leave them uncommitted; do not treat the `next-env.d.ts` diff as a real change.
+- `.gitignore` already excludes `.next/`, `node_modules/`, and `.env*` (except `.env.example`). Put any local HydraDB token/keys in `apps/hydradg-web/.env.local`, never in Git.
