@@ -1,0 +1,122 @@
+name: Studio Test Promote
+
+concurrency:
+  group: studio-test-promote
+  cancel-in-progress: false
+
+on:
+  push:
+    branches:
+      - hack-hydra/agent-native-builders-20260826
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  validate-and-promote:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: apps/hydradg-web
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.sha }}
+
+      - name: Assert exact tested SHA
+        working-directory: .
+        run: |
+          set -euo pipefail
+          actual="$(git rev-parse HEAD)"
+          expected="${{ github.sha }}"
+          echo "CI_TESTED_SHA=$actual"
+          test "$actual" = "$expected"
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: apps/hydradg-web/package-lock.json
+
+      - name: Verify HydraDB-only isolated defaults
+        run: |
+          set -euo pipefail
+          grep -Fq 'GRAPH_BACKEND=hydradb-http' .env.example
+          grep -Fq 'HYDRADB_GRAPH_ID=hydradg-judge-repro' .env.example
+          grep -Fq 'HYDRADB_GRAPH_NAMESPACE=hydradg-judge-repro' .env.example
+          grep -Fq 'process.env.HYDRADB_GRAPH_ID || "hydradg-judge-repro"' lib/graph.ts
+          grep -Fq 'process.env.HYDRADB_GRAPH_NAMESPACE || "hydradg-judge-repro"' lib/graph.ts
+          if grep -Eiq 'neo4j-driver|NEO4J_' package.json .env.example lib/graph.ts; then
+            echo 'HYDRADB_ONLY_EXECUTABLE=FAIL'
+            exit 1
+          fi
+          echo 'HYDRADB_ONLY_EXECUTABLE=PASS'
+
+      - run: npm ci
+      - run: npm run typecheck
+      - run: npm run build
+
+      - name: Start production server
+        run: |
+          nohup npm run start -- -H 127.0.0.1 -p 3000 > /tmp/hydradg-web.log 2>&1 &
+          echo $! > /tmp/hydradg-web.pid
+          for i in {1..40}; do
+            if curl -fsS http://127.0.0.1:3000/ >/dev/null; then exit 0; fi
+            sleep 1
+          done
+          cat /tmp/hydradg-web.log
+          exit 1
+
+      - name: Public route and API smoke
+        run: |
+          set -euo pipefail
+          for path in / /demo /judge /graph /knowledge /evidence /eligibility /track01 /track02 /track03 /how-to /backup/hydradg.html; do
+            code="$(curl -sS -o /tmp/body -w '%{http_code}' "http://127.0.0.1:3000${path}")"
+            echo "$path -> $code"
+            test "$code" = "200"
+          done
+          curl -fsS http://127.0.0.1:3000/api/custody > /tmp/custody.json
+          node - <<'NODE'
+          const fs = require('fs');
+          const j = JSON.parse(fs.readFileSync('/tmp/custody.json','utf8'));
+          if (j.schema !== 'hydradg.fixture_custody_checkpoint.v1') throw new Error('custody schema mismatch');
+          if (!/^[0-9a-f]{64}$/.test(j.merkle?.root_sha256 || '')) throw new Error('invalid merkle root');
+          if (j.claim_ceiling !== 'DETERMINISTIC_FIXTURE_MERKLE_CHECKPOINT_ONLY') throw new Error('claim ceiling mismatch');
+          if (j.live_merkle_state !== 'NOT_ESTABLISHED_BY_THIS_ROUTE') throw new Error('live Merkle boundary lost');
+          if (!Array.isArray(j.golden_path) || j.golden_path.length < 6) throw new Error('golden path missing');
+          console.log('custody checkpoint PASS', j.merkle.root_sha256);
+          NODE
+          curl -fsS http://127.0.0.1:3000/api/site-fcg > /tmp/site-fcg.json
+          node - <<'NODE'
+          const fs = require('fs');
+          const j = JSON.parse(fs.readFileSync('/tmp/site-fcg.json','utf8'));
+          if (j.schema !== 'hydradg.site_fcg.v1') throw new Error('site FCG schema mismatch');
+          if (!Array.isArray(j.nodes) || j.nodes.length < 9) throw new Error('site FCO nodes missing');
+          if (!Array.isArray(j.edges) || j.edges.length < 10) throw new Error('site FCG edges missing');
+          if (j.merkle_state !== 'NOT_MERKLE_COMMITTED') throw new Error('site Merkle boundary lost');
+          for (const n of j.nodes) if (!/^fco:[0-9a-f]{64}$/.test(n.id || '')) throw new Error('invalid SiteSection FCO id');
+          console.log('site FCG PASS', j.artifact.id);
+          NODE
+          live_code="$(curl -sS -o /tmp/live.json -w '%{http_code}' http://127.0.0.1:3000/api/live)"
+          test "$live_code" = "503"
+          node -e "const j=require('/tmp/live.json'); if(j.configured!==false || j.mode!=='PUBLIC_FIXTURE_ONLY') throw Error('live fail-closed mismatch')"
+          cloud_code="$(curl -sS -o /tmp/cloud.json -w '%{http_code}' http://127.0.0.1:3000/api/hydradb-cloud)"
+          test "$cloud_code" = "503"
+          node -e "const j=require('/tmp/cloud.json'); if(j.configured!==false || j.secret_disclosure!=='API_KEY_VALUE_NEVER_RETURNED') throw Error('cloud fail-closed mismatch')"
+
+      - name: Promote deploy/studio-test to exact SHA
+        if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+        working-directory: .
+        run: |
+          set -euo pipefail
+          SHA="$(git rev-parse HEAD)"
+          git fetch origin deploy/studio-test || true
+          git update-ref refs/heads/deploy/studio-test "$SHA"
+          git push origin refs/heads/deploy/studio-test:refs/heads/deploy/studio-test
+          echo "PROMOTED_DEPLOY_SHA=$SHA"
+
+      - name: Server log on failure
+        if: failure()
+        run: cat /tmp/hydradg-web.log || true
