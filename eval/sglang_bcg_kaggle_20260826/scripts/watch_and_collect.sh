@@ -34,11 +34,14 @@ while true; do
     break
   fi
   STATUS_RAW=$("$TOOL_KAGGLE" kernels status "$KERNEL_REF" 2>/dev/null || echo "STATUS_ERROR")
-  ST=$(echo "$STATUS_RAW" | tr -d '"' | tr 'A-Z' 'a-z')
   log "status_raw=$STATUS_RAW"
-  case "$ST" in
-    *complete*) TERMINAL="COMPLETE"; break ;;
-    *error*|*cancel*|*failed*) TERMINAL="FAILED"; break ;;
+  STATE=$(STATUS_RAW_ENV="$STATUS_RAW" python3 -c 'import re,os; raw=os.environ.get("STATUS_RAW_ENV",""); m=re.search(r"KernelWorkerStatus\.([A-Za-z]+)", raw); print((m.group(1) if m else ("STATUS_ERROR" if "STATUS_ERROR" in raw else "UNKNOWN")).upper())')
+  log "parsed_state=$STATE"
+  case "$STATE" in
+    COMPLETE|COMPLETED) TERMINAL="COMPLETE"; break ;;
+    ERROR|CANCEL|CANCELLED|CANCELED|FAILED) TERMINAL="FAILED"; break ;;
+    RUNNING|QUEUED|PENDING|STARTING|UNKNOWN|STATUS_ERROR) ;;
+    *) log "UNRECOGNIZED_STATE=$STATE" ;;
   esac
   sleep "$POLL_S"
 done

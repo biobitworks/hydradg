@@ -26,6 +26,20 @@ if [[ -f "$EXP/receipts/LATEST_RESULTS_DIR.txt" ]]; then
 fi
 log "LATEST_RESULTS_DIR=$LATEST"
 
+# If watcher died early with no collection, restart watch once.
+if [[ -z "$LATEST" ]]; then
+  log "RESTARTING_WATCHER_ONCE"
+  export https_proxy="${HTTPS_PROXY:-http://127.0.0.1:18080}"
+  export http_proxy="$https_proxy" HTTPS_PROXY="$https_proxy" HTTP_PROXY="$https_proxy"
+  export HYDRADG_KAGGLE_CLI="${HYDRADG_KAGGLE_CLI:-$ROOT/.tools/kaggle_venv/bin/kaggle}"
+  export POLL_S="${POLL_S:-60}" MAX_WATCH_S="${MAX_WATCH_S:-7500}"
+  bash "$EXP/scripts/watch_and_collect.sh" >>"$EXP/receipts/watcher_restart.log" 2>&1 || log "WATCH_RESTART_RC=$?"
+  if [[ -f "$EXP/receipts/LATEST_RESULTS_DIR.txt" ]]; then
+    LATEST=$(cat "$EXP/receipts/LATEST_RESULTS_DIR.txt")
+  fi
+  log "LATEST_RESULTS_DIR_AFTER_RESTART=$LATEST"
+fi
+
 # Secret scan bounded result tree (fail closed on literal keys)
 if [[ -n "$LATEST" && -d "$LATEST" ]]; then
   if rg -n "KAGGLE_KEY\s*=\s*'[A-Za-z0-9]{20,}'|BEGIN (RSA |OPENSSH )?PRIVATE KEY" "$LATEST" ; then
