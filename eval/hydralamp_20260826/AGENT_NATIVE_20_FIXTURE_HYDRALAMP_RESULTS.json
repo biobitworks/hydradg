@@ -1,0 +1,209 @@
+{
+  "fixtures": 20,
+  "evidence_class_correct": "20/20",
+  "claim_ceiling_correct": "20/20",
+  "unauthorized_disclosure": "0/20",
+  "pass": true,
+  "results": [
+    {
+      "fixture_id": "ANB-FIX-001",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "DETERMINISTIC_GRAPH_MATCH",
+      "evidence_class_observed": "DETERMINISTIC_GRAPH_MATCH",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-002",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "MULTI_HOP_LINEAGE_MATCH",
+      "evidence_class_observed": "MULTI_HOP_LINEAGE_MATCH",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-003",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "CONTRADICTORY_EVIDENCE_STATE",
+      "evidence_class_observed": "CONTRADICTORY_EVIDENCE_STATE",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-004",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "NULL_RESULT",
+      "evidence_class_observed": "NULL_RESULT",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-005",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "RESTRICTED_DISCLOSURE_QUARANTINE",
+      "evidence_class_observed": "RESTRICTED_DISCLOSURE_QUARANTINE",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-006",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "ABSTENTION_STATE",
+      "evidence_class_observed": "ABSTENTION_STATE",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-007",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "STRATUM_SECONDARY_30_MATCH",
+      "evidence_class_observed": "STRATUM_SECONDARY_30_MATCH",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-008",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "PROPOSED_EXTERNAL_EVIDENCE_QUARANTINED",
+      "evidence_class_observed": "PROPOSED_EXTERNAL_EVIDENCE_QUARANTINED",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-009",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "TAMPERED_EVIDENCE_REJECTED",
+      "evidence_class_observed": "TAMPERED_EVIDENCE_REJECTED",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-010",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "INVALID_POINTER_KEY_FAILURE",
+      "evidence_class_observed": "INVALID_POINTER_KEY_FAILURE",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-011",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "CLAIM_ELEVATION_PREVENTED",
+      "evidence_class_observed": "CLAIM_ELEVATION_PREVENTED",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-012",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "SCORED_GRAPH_MATCH",
+      "evidence_class_observed": "SCORED_GRAPH_MATCH",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-013",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "REDACTED_PII_BOUNDARY",
+      "evidence_class_observed": "REDACTED_PII_BOUNDARY",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-014",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "DISCONNECTED_SUBGRAPH_NULL",
+      "evidence_class_observed": "DISCONNECTED_SUBGRAPH_NULL",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-015",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "MULTI_TURN_SESSION_MATCH",
+      "evidence_class_observed": "MULTI_TURN_SESSION_MATCH",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-016",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "HIGH_ENTROPY_NULL",
+      "evidence_class_observed": "HIGH_ENTROPY_NULL",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-017",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "SCHEMA_PARSER_FAILURE",
+      "evidence_class_observed": "SCHEMA_PARSER_FAILURE",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-018",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "FCG_UNCOMMITTED_STATE_VERIFIED",
+      "evidence_class_observed": "FCG_UNCOMMITTED_STATE_VERIFIED",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-019",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "HANDOFF_RECEIPT_VALIDATED",
+      "evidence_class_observed": "HANDOFF_RECEIPT_VALIDATED",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    },
+    {
+      "fixture_id": "ANB-FIX-020",
+      "treatment": "HYDRALAMP_SIGNED_CAPABILITY",
+      "evidence_class_expected": "RESOURCE_TIMEOUT_STATE",
+      "evidence_class_observed": "RESOURCE_TIMEOUT_STATE",
+      "claim_ceiling_correct": true,
+      "null_preserved": true,
+      "unauthorized_disclosure": false,
+      "receipt_verified": true
+    }
+  ]
+}

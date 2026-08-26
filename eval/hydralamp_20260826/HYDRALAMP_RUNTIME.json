@@ -1,0 +1,44 @@
+{
+  "mode": "REAL_CRYPTO_CANARY",
+  "security_claim_eligibility": "CONDITIONAL_ON_OBSERVED_TESTS",
+  "fcg_root": "12ee753a26f67b8cd7bcbf4ee3160f990be9c2160f9852dc873f0c5984ce9135",
+  "unauthorized_plaintext_disclosures": 0,
+  "unauthorized_canonical_writes": 0,
+  "real_crypto_receipts": [
+    "REAL_ENCRYPTION",
+    "REAL_SIGNATURE_OPERATION",
+    "REAL_AUTHORIZED_DECRYPTION",
+    "REAL_SIGNATURE_VERIFICATION"
+  ],
+  "diagnostics": {
+    "g_star": 0.463773,
+    "delta_g_star": -0.0,
+    "cloud_drift_0_100": 67.4935,
+    "burden": 0.7,
+    "poison_burden": 2
+  },
+  "msm_matrix": {
+    "UNKNOWN": {
+      "AUTHENTICATED": 3,
+      "PROMOTED": 1,
+      "DENIED": 1
+    },
+    "AUTHENTICATED": {
+      "EVIDENCE_ACCESSED": 1,
+      "DENIED": 1,
+      "AUTHENTICATED": 1
+    },
+    "EVIDENCE_ACCESSED": {
+      "QUARANTINED": 1
+    },
+    "DENIED": {
+      "DENIED": 16,
+      "QUARANTINED": 1
+    },
+    "QUARANTINED": {
+      "EVIDENCE_ACCESSED": 1,
+      "AUTHENTICATED": 2,
+      "DENIED": 1
+    }
+  }
+}
