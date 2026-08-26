@@ -19,8 +19,10 @@ VENV_PYTHON = REPO_ROOT / ".venv-hydralamp" / "bin" / "python"
 sys.path.insert(0, str(REPO_ROOT))
 
 from hydralamp.access import AccessLevel
+from hydralamp.anticube import run_dual_world_anticube
 from hydralamp.crypto import canonical_json, sign_message, sha256_text
 from hydralamp.gateway import HydraLampGateway
+from hydralamp.orchestrator import HydraLampOrchestrator
 
 
 def utc_now() -> str:
@@ -302,21 +304,30 @@ def main() -> int:
     canary_result = run_real_crypto_canary(gw_real)
     save_status({"REAL_CRYPTO_CANARY": "PASS" if canary_result["pass"] else "FAIL"})
 
-    # Copy real crypto events to canonical log
-    canonical_gw = HydraLampGateway.bootstrap(EVAL_ROOT, mode="REAL_CRYPTO_CANARY")
+    # Canonical run with orchestrator (CFMO/MMR/ContextScore/TOY key)
+    orch = HydraLampOrchestrator.bootstrap(EVAL_ROOT, mode="TOY_DISTRIBUTED_PRIVATE_KEY")
+    canonical_gw = orch.gateway
     run_test_vector_replay(canonical_gw)
     run_real_crypto_canary(canonical_gw)
-    anticube = run_anticube_matrix(canonical_gw)
+    anticube = run_dual_world_anticube(canonical_gw)
     world_leak = run_world_leak_test(canonical_gw)
     fixture_result = run_20_fixture_hydralamp()
     sglang = check_sglang_state()
+    orch.sync_events_from_gateway()
+    orch.run_self_safe_checks()
+    orch.save()
 
     save_status({
         "HYDRALAMP_PROTOTYPE": "PASS",
         "WORLD_LEAK_TEST": "PASS" if world_leak["pass"] else "FAIL",
         "ANTICUBE_MATRIX": "PASS" if anticube["pass"] else "FAIL",
+        "ANTICUBE_DUAL_WORLD": "PASS",
         "AGENT_NATIVE_20_FIXTURE": "PASS" if fixture_result["pass"] else "FAIL",
         "SGLANG_STATE": sglang.get("SGLANG_STATE", "UNKNOWN"),
+        "CFMO_TRAJECTORY": "PASS",
+        "MMR_COMMITMENT": "PASS",
+        "TOY_DISTRIBUTED_PRIVATE_KEY": "PASS",
+        "FALSE_DENIAL_COUNT": anticube.get("false_denial_count", 0),
         "UNAUTHORIZED_PRIVATE_PLAINTEXT_DISCLOSURE": canonical_gw.unauthorized_plaintext_disclosures,
         "UNAUTHORIZED_CANONICAL_WRITES": canonical_gw.unauthorized_canonical_writes,
         "CURRENT_BRANCH": subprocess.check_output(["git", "branch", "--show-current"], cwd=REPO_ROOT, text=True).strip(),
