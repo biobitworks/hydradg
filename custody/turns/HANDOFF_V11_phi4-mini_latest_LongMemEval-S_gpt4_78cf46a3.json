@@ -1,0 +1,45 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "phi4-mini:latest",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_FULL_MATRIX_IN_PROGRESS_NOT_FINAL",
+  "empty_response_mechanism": "NOT_APPLICABLE",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "SUCCESS",
+  "git_commit": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+  "handoff_id": "HANDOFF_V11_phi4-mini_latest_LongMemEval-S_gpt4_78cf46a3",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "LongMemEval-S_gpt4_78cf46a3",
+      "sha256": "77323236ac433ee7e5cecbe093570cfae3bd6c32bfe9e449244b9c976b46d294"
+    }
+  ],
+  "merkle_mmr": {
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "phi4-mini:latest",
+    "bridge": "OLLARMA",
+    "requested_name": "phi4-mini:latest",
+    "runtime_digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+    "runtime_name": "phi4-mini:latest"
+  },
+  "output_sha256": "0a6d456ac2cbabab5aa22340e96498a71277d4564f11560963dc50bb195aded8",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "77323236ac433ee7e5cecbe093570cfae3bd6c32bfe9e449244b9c976b46d294",
+  "receipt_sha256": "1102053a28f9349d89b10ace291fe01905f61cdf1af5cc0bb4024e6a931d46bb",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "91028c12f674a0a6eca54d791eee4ae02bae384468da7bab87ef953e81edc4a9",
+  "response_text_bytes": 443,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "state": "NOT_SIGNED"
+  },
+  "successful": true,
+  "terminal_state": "SUCCESS_INCORRECT",
+  "timestamp_utc": "2026-08-24T01:42:10Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "91bfabc1add55bf1a6bfc127d5259c1bb282ca243efc657bf48c0fb4d03b899a"
+}

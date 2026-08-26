@@ -1,0 +1,45 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "qwen2.5-coder:7b",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_FULL_MATRIX_IN_PROGRESS_NOT_FINAL",
+  "empty_response_mechanism": "NOT_APPLICABLE",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "SUCCESS",
+  "git_commit": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+  "handoff_id": "HANDOFF_V11_qwen2.5-coder_7b_EnterpriseRAG-Bench_qst_0078",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "EnterpriseRAG-Bench_qst_0078",
+      "sha256": "1d716ff3a7790c308b483f136f65a64bed0dbcdda4b1e9f0ab333301ef680087"
+    }
+  ],
+  "merkle_mmr": {
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "qwen2.5-coder:7b",
+    "bridge": "OLLARMA",
+    "requested_name": "qwen2.5-coder:7b",
+    "runtime_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+    "runtime_name": "qwen2.5-coder:7b"
+  },
+  "output_sha256": "2b81fa44c4ee6514a1fd84c43c930b40f7fc028f382cfca9efd9e8a78a5b9edb",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "1d716ff3a7790c308b483f136f65a64bed0dbcdda4b1e9f0ab333301ef680087",
+  "receipt_sha256": "b3d69d16b7614866f692984a761e473c73c32d62d043a5a3ee74b250cb711cc3",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "681f49f8a08c2373db71754b968cc43fe135cd6e81b17496998dcf0b33f81836",
+  "response_text_bytes": 1189,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "state": "NOT_SIGNED"
+  },
+  "successful": true,
+  "terminal_state": "SUCCESS_CORRECT",
+  "timestamp_utc": "2026-08-22T22:53:19Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "96137df3392f3940d4d72f7e62931673621b347ce7d10d1949583308a631b698"
+}
