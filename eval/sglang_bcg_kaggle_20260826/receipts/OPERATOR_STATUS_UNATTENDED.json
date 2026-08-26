@@ -1,0 +1,30 @@
+{
+  "WORK_UNIT_ID": "HYDRADG_SGLANG_KAGGLE_BCG_STRESS_20260826",
+  "WORK_UNIT_STATE": "KAGGLE_RUNNING_UNATTENDED_WATCH",
+  "PREREGISTRATION_SHA": "c8f7febb8e753105bec0be20693056a55a634283",
+  "BRANCH": "exp/sglang-kaggle-bcg-stress-20260826",
+  "HEAD": "45eec5c9cbe05bd9bdddc93563c700af6be38537",
+  "KAGGLE_AUTH": "PASS",
+  "KAGGLE_GPU_SUBMISSION_AVAILABLE": "YES",
+  "KAGGLE_KERNEL_REF": "biobitworks/hydradg-sglang-bcg-stress-20260826",
+  "KAGGLE_RUN_STATE": "RUNNING",
+  "KERNEL_URL": "https://www.kaggle.com/code/biobitworks/hydradg-sglang-bcg-stress-20260826",
+  "MODEL": "Qwen/Qwen2.5-1.5B-Instruct",
+  "SGLANG_VERSION": "0.5.18",
+  "MAX_GPU_MINUTES": 75,
+  "WATCHER": "detached daemon_pipeline (PPID=1); poll>=60s; finalize on terminal",
+  "DAEMON_PID_FILE": "/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/receipts/daemon_pipeline.pid",
+  "WHEN_DONE_READ": [
+    "/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/receipts/FINAL_REPORT.md",
+    "/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/receipts/FINAL_REPORT.json",
+    "/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/receipts/COLLECTION_RECEIPT.json",
+    "/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/results"
+  ],
+  "NETWORK_NOTE": "en0 AT&T captive portal intercepted GitHub/Kaggle TLS; en1-bound CONNECT proxy :18080 used",
+  "EVIDENCE_STATE": "ENGINEERING_RUNTIME_EVIDENCE_PROVISIONAL",
+  "EXPERIMENT_STATE": "SUCCESSOR_EVAL_ONLY_NOT_DAISY_T00_T12",
+  "HYDRADB_STATE": "NOT_TOUCHED",
+  "CLAIM_CEILING": "ONE_MODEL_ONE_KAGGLE_GPU_RUNTIME_STRESS_ONLY",
+  "NEXT_SAFE_ACTION": "REVIEW_RESULTS_AND_DECIDE_WHETHER_TO_PREREGISTER_DAISY_SGLANG_RUNTIME_SUCCESSOR",
+  "written_utc": "2026-08-26T18:31:40Z"
+}

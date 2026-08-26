@@ -1,0 +1,6 @@
+{
+  "failure_phenotype": "UNKNOWN_FAILURE",
+  "state": "FAILED",
+  "trace_tail": "Traceback (most recent call last):\n  File \"/kaggle/src/script.py\", line 833, in <module>\n    raise SystemExit(main())\n                     ^^^^^^\n  File \"/kaggle/src/script.py\", line 570, in main\n    fixtures, manifest = load_fixtures()\n                         ^^^^^^^^^^^^^^^\n  File \"/kaggle/src/script.py\", line 196, in load_fixtures\n    with fix_path.open(encoding=\"utf-8\") as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1013, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: '/kaggle/src/fixtures.jsonl'\n",
+  "utc": "2026-08-26T18:32:15Z"
+}

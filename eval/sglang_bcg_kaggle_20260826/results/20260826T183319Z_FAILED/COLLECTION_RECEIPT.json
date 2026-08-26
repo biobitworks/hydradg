@@ -1,0 +1,30 @@
+{
+  "artifact_sha256": {
+    "environment.json": "a77b330f2d2414ce616a93aba2ffa34a4d493b47b046c00e08227da4ad528527",
+    "failures.jsonl": "ccd75b41debe5f82ea730e35ba7cc968f776e38e6b40ab68d03ab510cab0213e",
+    "hydradg-sglang-bcg-stress-20260826.log": "0aca26e42639ef06d2d79a21a0982971cbb121520d8a61649404458c1069250f",
+    "install_receipt.json": "aceb7a01da7a8b77e5e134d39b6b933e87044354673ae447ba3a315d21496219",
+    "kaggle_output_pull.log": "ac7a55e1d2038bd428ebfd51a0185daec92361b8fa4218a656f5ca5eb985ac7b",
+    "pip_freeze.txt": "45fd42e20b7f2bc6862b7d003a4ddd990869ad0ccdecc4fd3ed173df180a6cc0",
+    "receipt.json": "a028722f7b1007223c03ad91cf7f6639c01e38e11390e5dde9e9b71f63213977",
+    "sglang_launch_server_help.txt": "2e30d3bf112675c1890159e3d52769556b72fcaa05a87f73d66a730632bf8430"
+  },
+  "claim_ceiling": "ONE_MODEL_ONE_KAGGLE_GPU_RUNTIME_STRESS_ONLY",
+  "collected_utc": "2026-08-26T18:33:22Z",
+  "experiment_id": "SGLANG-BCG-KAGGLE-20260826",
+  "kaggle_kernel_ref": "biobitworks/hydradg-sglang-bcg-stress-20260826",
+  "kaggle_run_state": "FAILED",
+  "output_dir": "/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/results/20260826T183319Z_FAILED",
+  "required_artifacts_present": {
+    "condition_manifest.json": false,
+    "environment.json": true,
+    "failures.jsonl": true,
+    "gpu_telemetry.csv": false,
+    "metrics.jsonl": false,
+    "receipt.json": true,
+    "summary.json": false
+  },
+  "schema": "hydradg.kaggle_collection_receipt.v1",
+  "signature_state": "NOT_SIGNED",
+  "work_unit_id": "HYDRADG_SGLANG_KAGGLE_BCG_STRESS_20260826"
+}

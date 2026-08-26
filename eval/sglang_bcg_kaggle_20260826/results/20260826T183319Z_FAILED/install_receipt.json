@@ -1,0 +1,31 @@
+{
+  "elapsed_s": 283.1925127506256,
+  "logs": [
+    {
+      "cmd": [
+        "/usr/bin/python3",
+        "-m",
+        "pip",
+        "install",
+        "-q",
+        "--upgrade",
+        "pip"
+      ],
+      "rc": 0
+    },
+    {
+      "cmd": [
+        "/usr/bin/python3",
+        "-m",
+        "pip",
+        "install",
+        "-q",
+        "sglang==0.5.18"
+      ],
+      "rc": 0
+    }
+  ],
+  "ok": true,
+  "spec": "sglang==0.5.18",
+  "started_utc": "2026-08-26T18:26:59Z"
+}

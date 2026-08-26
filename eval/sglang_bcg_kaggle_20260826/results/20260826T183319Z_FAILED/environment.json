@@ -1,0 +1,43 @@
+{
+  "CUDA_VERSION": "13.0",
+  "EXPERIMENT_ID": "SGLANG-BCG-KAGGLE-20260826",
+  "GPU_DRIVER": "580.159.04",
+  "GPU_NAME": "Tesla P100-PCIE-16GB",
+  "PYTHON_VERSION": "3.12.13",
+  "SGLANG_COMMIT_IF_SOURCE": "71de97b264b04dcd514cf904003028aefe9775c8",
+  "SGLANG_SOURCE": "pypi",
+  "SGLANG_VERSION": "0.5.18",
+  "TORCH_VERSION": "2.13.0+cu130",
+  "dtype_default": "float16",
+  "gpu_query": {
+    "GPU_DRIVER": "580.159.04",
+    "GPU_NAME": "Tesla P100-PCIE-16GB",
+    "memory_total_mib": 16384.0,
+    "memory_used_mib": 0.0,
+    "utilization_gpu": 0.0
+  },
+  "launch_server_help_flags": {
+    "cuda_graph_backend_decode": true,
+    "cuda_graph_backend_prefill": true,
+    "cuda_graph_max_bs": true,
+    "debug_cuda_graph": true,
+    "raw_matches": [
+      "--cuda-graph-",
+      "--cuda-graph-backend-",
+      "--cuda-graph-backend-decode",
+      "--cuda-graph-backend-prefill",
+      "--cuda-graph-bs",
+      "--cuda-graph-bs-decode",
+      "--cuda-graph-bs-prefill",
+      "--cuda-graph-config",
+      "--cuda-graph-max-bs",
+      "--cuda-graph-max-bs-decode",
+      "--cuda-graph-max-bs-prefill",
+      "--cuda-graph-tc-compiler"
+    ]
+  },
+  "launch_server_help_sha256": "2e30d3bf112675c1890159e3d52769556b72fcaa05a87f73d66a730632bf8430",
+  "pip_freeze_sha256": "45fd42e20b7f2bc6862b7d003a4ddd990869ad0ccdecc4fd3ed173df180a6cc0",
+  "platform": "Linux-6.12.90+-x86_64-with-glibc2.35",
+  "recorded_utc": "2026-08-26T18:32:15Z"
+}

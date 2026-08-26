@@ -1,8 +1,5 @@
-[2026-08-26T18:27:04Z] WATCHER_START kernel=biobitworks/hydradg-sglang-bcg-stress-20260826 poll_s=60 max_watch_s=7500
-[2026-08-26T18:27:05Z] status_raw=biobitworks/hydradg-sglang-bcg-stress-20260826 has status "KernelWorkerStatus.RUNNING"
-[2026-08-26T18:29:00Z] WATCHER_START kernel=biobitworks/hydradg-sglang-bcg-stress-20260826 poll_s=60 max_watch_s=7500
-[2026-08-26T18:29:01Z] status_raw=biobitworks/hydradg-sglang-bcg-stress-20260826 has status "KernelWorkerStatus.RUNNING"
-[2026-08-26T18:29:01Z] parsed_state=RUNNING
++ cd /Users/byron/projects/active/hydradg
++ bash eval/sglang_bcg_kaggle_20260826/scripts/watch_and_collect.sh
 [2026-08-26T18:31:15Z] WATCHER_START kernel=biobitworks/hydradg-sglang-bcg-stress-20260826 poll_s=60 max_watch_s=7500
 [2026-08-26T18:31:16Z] status_raw=biobitworks/hydradg-sglang-bcg-stress-20260826 has status "KernelWorkerStatus.RUNNING"
 [2026-08-26T18:31:16Z] parsed_state=RUNNING
@@ -23,4 +20,25 @@ drwxr-xr-x@  3 byron  staff      96 Aug 26 11:33 ..
 -rw-r--r--@  1 byron  staff   20289 Aug 26 11:33 pip_freeze.txt
 -rw-r--r--@  1 byron  staff     851 Aug 26 11:33 receipt.json
 -rw-r--r--@  1 byron  staff  157251 Aug 26 11:33 sglang_launch_server_help.txt
+{
+  "terminal": "FAILED",
+  "present": {
+    "environment.json": true,
+    "condition_manifest.json": false,
+    "metrics.jsonl": false,
+    "summary.json": false,
+    "failures.jsonl": true,
+    "receipt.json": true,
+    "gpu_telemetry.csv": false
+  },
+  "n_hashed": 8
+}
 [2026-08-26T18:33:22Z] WATCHER_STOP terminal=FAILED out=/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/results/20260826T183319Z_FAILED
++ rc=0
++ echo WATCH_RC=0
+WATCH_RC=0
++ bash eval/sglang_bcg_kaggle_20260826/scripts/finalize_after_collect.sh
+[2026-08-26T18:33:22Z] WAITING_FOR_WATCHER pid=71300
+[2026-08-26T18:33:22Z] WATCHER_EXITED
+[2026-08-26T18:33:22Z] LATEST_RESULTS_DIR=/Users/byron/projects/active/hydradg/eval/sglang_bcg_kaggle_20260826/results/20260826T183319Z_FAILED
+[2026-08-26T18:33:22Z] SECRET_SCAN=PASS

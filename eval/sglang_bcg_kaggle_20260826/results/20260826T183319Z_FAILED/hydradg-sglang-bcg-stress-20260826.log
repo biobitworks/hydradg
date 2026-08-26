@@ -1,0 +1,22 @@
+[{"stream_name":"stderr","time":318.042640162,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":318.042764598,"data":"  File \"/kaggle/src/script.py\", line 833, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":318.042776032,"data":"    raise SystemExit(main())\n"}
+,{"stream_name":"stderr","time":318.04277885,"data":"                     ^^^^^^\n"}
+,{"stream_name":"stderr","time":318.04278119,"data":"  File \"/kaggle/src/script.py\", line 570, in main\n"}
+,{"stream_name":"stderr","time":318.042783656,"data":"    fixtures, manifest = load_fixtures()\n"}
+,{"stream_name":"stderr","time":318.042786013,"data":"                         ^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":318.042788414,"data":"  File \"/kaggle/src/script.py\", line 196, in load_fixtures\n"}
+,{"stream_name":"stderr","time":318.042790913,"data":"    with fix_path.open(encoding=\"utf-8\") as f:\n"}
+,{"stream_name":"stderr","time":318.042793332,"data":"         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":318.042795601,"data":"  File \"/usr/lib/python3.12/pathlib.py\", line 1013, in open\n"}
+,{"stream_name":"stderr","time":318.042798048,"data":"    return io.open(self, mode, buffering, encoding, errors, newline)\n"}
+,{"stream_name":"stderr","time":318.042800353,"data":"           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":318.042802674,"data":"FileNotFoundError: [Errno 2] No such file or directory: '/kaggle/src/fixtures.jsonl'\n"}
+,{"stream_name":"stderr","time":318.042805086,"data":"\n"}
+,{"stream_name":"stderr","time":320.914983522,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":320.915023462,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":321.183555041,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":321.183592365,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":321.976243263,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":323.031254378,"data":"[NbConvertApp] Writing 425221 bytes to __results__.html\n"}
+]
