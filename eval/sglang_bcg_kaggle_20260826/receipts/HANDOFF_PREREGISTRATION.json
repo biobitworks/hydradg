@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.agent_model_handoff.v1",
+  "handoff_id": "handoff:sglang_bcg_kaggle_prereg_20260826",
+  "timestamp_utc": "2026-08-26T18:22:48Z",
+  "actor_class": "OTHER_AGENT",
+  "actor_id": "cursor-composer/hydradg-sglang-bcg-stress",
+  "execution_host": "magicSTUDIObox.local",
+  "hardware_identity_sha256": "77d6febeb690fbada6189fbfd0ab929225c5482358f8766cbbfbd749a0b9d839",
+  "repo": "biobitworks/hydradg",
+  "branch": "exp/sglang-kaggle-bcg-stress-20260826",
+  "git_commit": "71a589a18ef95b6dcce13d04811d8fe2bfdd195f",
+  "parent_handoff_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "input_dependencies": [
+    {
+      "id": "PREREGISTRATION.json",
+      "sha256": "af7337d256040acb1476a6def1bdb6a2c058c65c3e5886bf56b4ee5650a1e136",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "id": "fixtures.jsonl",
+      "sha256": "037c811070ee6b3807c17561ea1bfe715d743dba36378614146d5e7cce6e789e",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    }
+  ],
+  "prompt_sha256": "PENDING_ORIGINAL_TURN_CAPTURE",
+  "request_sha256": "94982ee276d92327dce73bf297ae6b43130d369ebbfe5e6a0937e0ea5ff40b1e",
+  "output_sha256": "accca9aa483bb4806e011d2fb318c6f176731aae82bdf859c4462f2c4c77ef5a",
+  "evidence_class": "ENGINEERING_RUNTIME_STRESS_PREREGISTRATION",
+  "transformation_class": "DETERMINISTIC_PACKAGING",
+  "claim_ceiling": "ONE_MODEL_ONE_KAGGLE_GPU_RUNTIME_STRESS_ONLY",
+  "signature": {
+    "state": "NOT_SIGNED"
+  },
+  "merkle_mmr": {
+    "state": "NOT_PERFORMED",
+    "root": "NOT_APPLICABLE",
+    "receipt_sha256": "NOT_APPLICABLE"
+  },
+  "fco": {
+    "state": "NOT_PROMOTED"
+  },
+  "fcg": {
+    "state": "NOT_APPENDED"
+  },
+  "notes": "HUMAN authorized unattended Kaggle GPU engineering stress after preflight."
+}

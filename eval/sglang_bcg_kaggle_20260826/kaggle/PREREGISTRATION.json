@@ -1,0 +1,102 @@
+{
+  "EXPERIMENT_ID": "SGLANG-BCG-KAGGLE-20260826",
+  "WORK_UNIT_ID": "HYDRADG_SGLANG_KAGGLE_BCG_STRESS_20260826",
+  "CLASSIFICATION": "ENGINEERING_RUNTIME_STRESS_EVAL_ONLY",
+  "SUCCESSOR_OF": "SGLang CUDA-graph information learned 20260826",
+  "PROVISIONAL_UNTIL": "LOCAL_VERIFICATION",
+  "PRIMARY_QUESTION": "Does SGLang breakable CUDA graph for PREFILL alter GPU inference efficiency or runtime failure behavior relative to disabled and tc_piecewise prefill under the same frozen model/workload?",
+  "H0": "Breakable prefill CUDA graph provides no improvement in the preregistered runtime efficiency endpoints relative to the controls.",
+  "H1": "At least one preregistered runtime endpoint differs.",
+  "SCIENTIFIC_MODEL_QUALITY_HYPOTHESIS": "NOT_FORMULATED",
+  "MODEL": "Qwen/Qwen2.5-1.5B-Instruct",
+  "MODEL_SUBSTITUTION_POLICY": "FAIL_CLOSED_NO_SILENT_SUBSTITUTION",
+  "PRECISION_DEFAULT": "float16",
+  "SGLANG_VERSION": "0.5.18",
+  "SGLANG_SOURCE": "pypi",
+  "SGLANG_COMMIT_IF_SOURCE": "71de97b264b04dcd514cf904003028aefe9775c8",
+  "SGLANG_INSTALL_SPEC": "sglang==0.5.18",
+  "EXPECTED_FLAGS": [
+    "--cuda-graph-backend-prefill",
+    "--cuda-graph-backend-decode"
+  ],
+  "FLAG_AUTHORITY": "INSTALLED_PINNED_EXECUTABLE_HELP_IS_AUTHORITATIVE",
+  "CONDITIONS": [
+    {
+      "condition_id": "C0",
+      "name": "EAGER_PREFILL_CONTROL",
+      "prefill_backend": "disabled",
+      "decode_backend": "full"
+    },
+    {
+      "condition_id": "C1",
+      "name": "TORCH_COMPILE_PIECEWISE_CONTROL",
+      "prefill_backend": "tc_piecewise",
+      "decode_backend": "full"
+    },
+    {
+      "condition_id": "C2",
+      "name": "BREAKABLE_CUDA_GRAPH",
+      "prefill_backend": "breakable",
+      "decode_backend": "full"
+    }
+  ],
+  "CORPUS": {
+    "type": "SYNTHETIC_ENGINEERING_FIXTURE",
+    "prompt_lengths_target": [256, 1024, 4096, 8192],
+    "batch_sizes": [1, 2, 4],
+    "max_new_tokens": 64,
+    "repetitions": 3,
+    "cells_expected": 108,
+    "fixtures_sha256": "037c811070ee6b3807c17561ea1bfe715d743dba36378614146d5e7cce6e789e",
+    "manifest_sha256": "4a0cf9daca346105912244980b5f8a1675222879b43aed1db79aae71255a3b02"
+  },
+  "PRIMARY_METRICS": [
+    "server_startup_time_s",
+    "cuda_graph_capture_time_s",
+    "ttft_s",
+    "input_tokens_per_s",
+    "output_tokens_per_s",
+    "request_throughput",
+    "e2e_wall_s",
+    "peak_gpu_memory_bytes",
+    "gpu_utilization_samples",
+    "oom",
+    "timeout",
+    "server_crash",
+    "http_request_error",
+    "empty_output",
+    "generated_token_count",
+    "response_sha256",
+    "OUTPUT_EQUIVALENCE_DIAGNOSTIC"
+  ],
+  "FAILURE_PHENOTYPES": [
+    "PASS",
+    "OOM",
+    "TIMEOUT",
+    "SERVER_CRASH",
+    "CUDA_GRAPH_CAPTURE_FAILURE",
+    "CUDA_GRAPH_REPLAY_FAILURE",
+    "UNSUPPORTED_CONFIGURATION",
+    "REQUEST_ERROR",
+    "EMPTY_OUTPUT",
+    "OUTPUT_MISMATCH",
+    "UNKNOWN_FAILURE",
+    "TIME_BUDGET_EXHAUSTED"
+  ],
+  "MAX_GPU_MINUTES": 75,
+  "NOT": [
+    "Daisy T00-T12 execution",
+    "Studio Daisy train replacement",
+    "model training",
+    "scientific superiority test",
+    "SeedGraph execution",
+    "HydraDB writeback",
+    "claim promotion"
+  ],
+  "CLAIM_CEILING": "ONE_MODEL_ONE_KAGGLE_GPU_RUNTIME_STRESS_ONLY",
+  "EVIDENCE_STATE": "ENGINEERING_RUNTIME_EVIDENCE_PROVISIONAL",
+  "EXPERIMENT_STATE": "SUCCESSOR_EVAL_ONLY_NOT_DAISY_T00_T12",
+  "FCO_STATE": "NOT_PROMOTED_UNLESS_EXISTING_GOVERNANCE_REQUIRES_RECEIPT_ONLY",
+  "FCG_STATE": "NOT_PROMOTED",
+  "HYDRADB_STATE": "NOT_TOUCHED"
+}

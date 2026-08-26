@@ -1,0 +1,51 @@
+{
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "work_unit_id": "HYDRADG_SGLANG_KAGGLE_BCG_STRESS_20260826",
+  "phase": "ACCEPT",
+  "actor": {
+    "actor_class": "CURSOR_AGENT",
+    "runtime_identity": "cursor-agent@magicSTUDIObox.local"
+  },
+  "role_lane": "ENGINEERING_RUNTIME_STRESS_KAGGLE_LANE",
+  "role_ceiling": "ENGINEERING_RUNTIME_STRESS_EVAL_ONLY",
+  "writeback_disposition": "BOUNDED_CANDIDATE_COMMIT_NO_HYDRADB",
+  "repo": "biobitworks/hydradg",
+  "branch": "exp/sglang-kaggle-bcg-stress-20260826",
+  "base_git_sha": "71a589a18ef95b6dcce13d04811d8fe2bfdd195f",
+  "expected_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "4e8c4f0be312d50fcee160df938832ed134d8d422b4d69799bad532b622c0536",
+  "input_packet_sha256": "94982ee276d92327dce73bf297ae6b43130d369ebbfe5e6a0937e0ea5ff40b1e",
+  "lease": {
+    "lease_id": "lease:sglang_bcg_kaggle_20260826",
+    "fencing_token": 1,
+    "single_writer_scope": "eval/sglang_bcg_kaggle_20260826",
+    "lease_owner": "magicSTUDIObox.local",
+    "lease_state": "ACTIVE"
+  },
+  "expected_outputs": [
+    "eval/sglang_bcg_kaggle_20260826/kaggle/PREREGISTRATION.json",
+    "eval/sglang_bcg_kaggle_20260826/results/*/RECOMPUTED_SUMMARY.json",
+    "eval/sglang_bcg_kaggle_20260826/results/*/DAISY_RUNTIME_SUCCESSOR_RECOMMENDATION.json",
+    "eval/sglang_bcg_kaggle_20260826/receipts/COLLECTION_RECEIPT.json"
+  ],
+  "verification_gates": [
+    "PREFLIGHT_PASS",
+    "PREREGISTRATION_ON_ORIGIN_BEFORE_KAGGLE",
+    "ONE_PRIVATE_GPU_KERNEL",
+    "LOCAL_RECOMPUTE_FROM_RAW_METRICS",
+    "NO_HYDRADB_WRITE",
+    "NO_DAISY_T00_T12_LABEL"
+  ],
+  "stop_conditions": [
+    "KAGGLE_TERMINAL_STATE_COLLECTED",
+    "RECOMPUTED_SUMMARY_WRITTEN",
+    "WATCHER_STOPPED",
+    "TIME_BUDGET_OR_COMPLETE"
+  ],
+  "claim_ceiling": "ONE_MODEL_ONE_KAGGLE_GPU_RUNTIME_STRESS_ONLY",
+  "fco_state": "NOT_PROMOTED_UNLESS_EXISTING_GOVERNANCE_REQUIRES_RECEIPT_ONLY",
+  "fcg_state": "NOT_PROMOTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "actual_host": "magicSTUDIObox.local"
+}

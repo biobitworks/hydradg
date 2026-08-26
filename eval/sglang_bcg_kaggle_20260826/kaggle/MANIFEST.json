@@ -1,0 +1,95 @@
+{
+  "batch_sizes": [
+    1,
+    2,
+    4
+  ],
+  "cells_expected": 108,
+  "classification": "ENGINEERING_RUNTIME_STRESS_EVAL_ONLY",
+  "conditions": [
+    {
+      "condition_id": "C0",
+      "decode_backend": "full",
+      "name": "EAGER_PREFILL_CONTROL",
+      "prefill_backend": "disabled"
+    },
+    {
+      "condition_id": "C1",
+      "decode_backend": "full",
+      "name": "TORCH_COMPILE_PIECEWISE_CONTROL",
+      "prefill_backend": "tc_piecewise"
+    },
+    {
+      "condition_id": "C2",
+      "decode_backend": "full",
+      "name": "BREAKABLE_CUDA_GRAPH",
+      "prefill_backend": "breakable"
+    }
+  ],
+  "created_utc": "2026-08-26T18:16:21Z",
+  "daisy_binding": "NOT_DAISY_T00_T12",
+  "experiment_id": "SGLANG-BCG-KAGGLE-20260826",
+  "fixture_rows": 36,
+  "fixtures_sha256": "037c811070ee6b3807c17561ea1bfe715d743dba36378614146d5e7cce6e789e",
+  "hydradb": "NOT_TOUCHED",
+  "label_policy": "SYNTHETIC_ENGINEERING_FIXTURE",
+  "max_gpu_minutes": 75,
+  "max_new_tokens": 64,
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "precision_default": "float16",
+  "prompt_lengths_target": [
+    256,
+    1024,
+    4096,
+    8192
+  ],
+  "replicates": [
+    1,
+    2,
+    3
+  ],
+  "sglang_pin": {
+    "SGLANG_COMMIT_IF_SOURCE": "71de97b264b04dcd514cf904003028aefe9775c8",
+    "SGLANG_SOURCE": "pypi",
+    "SGLANG_VERSION": "0.5.18",
+    "install_spec": "sglang==0.5.18"
+  },
+  "workload_ids": [
+    "WL_P256_B1_R1",
+    "WL_P256_B1_R2",
+    "WL_P256_B1_R3",
+    "WL_P256_B2_R1",
+    "WL_P256_B2_R2",
+    "WL_P256_B2_R3",
+    "WL_P256_B4_R1",
+    "WL_P256_B4_R2",
+    "WL_P256_B4_R3",
+    "WL_P1024_B1_R1",
+    "WL_P1024_B1_R2",
+    "WL_P1024_B1_R3",
+    "WL_P1024_B2_R1",
+    "WL_P1024_B2_R2",
+    "WL_P1024_B2_R3",
+    "WL_P1024_B4_R1",
+    "WL_P1024_B4_R2",
+    "WL_P1024_B4_R3",
+    "WL_P4096_B1_R1",
+    "WL_P4096_B1_R2",
+    "WL_P4096_B1_R3",
+    "WL_P4096_B2_R1",
+    "WL_P4096_B2_R2",
+    "WL_P4096_B2_R3",
+    "WL_P4096_B4_R1",
+    "WL_P4096_B4_R2",
+    "WL_P4096_B4_R3",
+    "WL_P8192_B1_R1",
+    "WL_P8192_B1_R2",
+    "WL_P8192_B1_R3",
+    "WL_P8192_B2_R1",
+    "WL_P8192_B2_R2",
+    "WL_P8192_B2_R3",
+    "WL_P8192_B4_R1",
+    "WL_P8192_B4_R2",
+    "WL_P8192_B4_R3"
+  ]
+}
