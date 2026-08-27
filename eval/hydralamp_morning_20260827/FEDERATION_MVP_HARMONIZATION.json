@@ -1,0 +1,97 @@
+{
+  "schema": "hydradg.hydralamp_federation_mvp_harmonization.v1",
+  "date": "2026-08-27",
+  "integration_repo": "biobitworks/hydradg",
+  "integration_branch": "cursor/hydralamp-morning-goldenpath-20260827",
+  "integration_predecessor_sha": "e7af0e69e80997ef65df613b07cc4e53fba1fdae",
+  "harmonization_plan_commit": "ce397268f5e2ff57f21bc9e5afe9bf6e054d0e64",
+  "standalone_hydralamp": {
+    "repo": "biobitworks/hydralamp",
+    "reference_sha": "9079507d12f1f63730b1fbbb4930689cdc85da4b",
+    "tested_security_candidate_sha": "956493583cd44559ab41c42dbab49d19a81a5889",
+    "mode": "PINNED_IMPLEMENTATION_AND_EVIDENCE_DEPENDENCY",
+    "independent_feature_development_during_submission_sprint": false
+  },
+  "authoritative_mvp_doc": "docs/HYDRALAMP_FEDERATION_MVP_GOLDEN_PATH_20260827.md",
+  "implemented_or_bounded_components": {
+    "fco_fcg": "ACTIVE_CANONICAL_CUSTODY",
+    "seedgraph": "ACTIVE_DETERMINISTIC_ATOMIZATION_BOUNDARY",
+    "hydradb": "PROJECTION_QUERY_ONLY",
+    "anticube": "DIAGNOSTIC_POLICY_INPUT_NO_OMNIBUS_SCORE",
+    "gstar_delta_gstar": "DIMENSIONLESS_DIAGNOSTIC_NOT_AUTHORIZATION_NOT_PHYSICAL_ENERGY",
+    "hydralamp_security_core": "PINNED_STANDALONE_IMPLEMENTATION_EVIDENCE",
+    "ollarma_ollama": "ACTIVE_LOCAL_EXECUTION_AND_HANDOFF_CONTRACT",
+    "antigence_sentinel": "EXISTING_EXTERNAL_OBSERVER_VERIFY_LIVE_STATUS_AT_EXECUTION",
+    "gettingsciencedone": "ACTIVE_EXPERIMENT_PROTOCOL_AND_CLAIM_DISCIPLINE"
+  },
+  "sponsor_surfaces": {
+    "runtype": "LIVE_RUN_REQUIRED_FOR_PASS",
+    "mitosis": "LIVE_RUN_REQUIRED_TO_REPLACE_REPLAY",
+    "cloudflare_os": "LOCAL_GATEKEEPER_CANARY_REQUIRED_FOR_PASS",
+    "cotal": "OPTIONAL_HIGH_VALUE_LIVE_FLEET_AFTER_CORE",
+    "hacker_bob": "FINAL_AFTER_CANDIDATE_FREEZE"
+  },
+  "future_only": {
+    "vithia": {
+      "state": "PROPOSED_FUTURE_EXPERIMENT",
+      "intended_role": "SAFE_SELF_REFERENCE_AND_CONTROLLED_DEVIATION_TRAJECTORY_RESEARCH",
+      "today_authorization_role": "NONE"
+    }
+  },
+  "default_antibody_ladder": [
+    {
+      "rung": "A0_DETERMINISTIC_GATE",
+      "model": null,
+      "role": "SOURCE_HASH_CAPABILITY_AND_ADMISSION_CHECKS"
+    },
+    {
+      "rung": "A1_SCOUT",
+      "model": "qwen2.5:1.5b",
+      "role": "FAST_PROPOSAL_HYPOTHESIS_ONLY"
+    },
+    {
+      "rung": "A2_VERIFIER",
+      "model": "qwen3:1.7b",
+      "role": "INDEPENDENT_EVIDENCE_CHALLENGE"
+    },
+    {
+      "rung": "A3_REPAIR",
+      "model": "qwen2.5-coder:7b",
+      "role": "STRUCTURED_ANTIDOTE_PROPOSAL"
+    },
+    {
+      "rung": "A4_ESCALATION",
+      "model": "RESOLVE_FROM_CURRENT_MODEL_ROSTER_AT_EXECUTION",
+      "role": "ONLY_IF_UNRESOLVED_OUTSIDE_STRICT_20_SECOND_BASELINE"
+    }
+  ],
+  "fixture": {
+    "real_evidence": "LONGMEMEVAL_K5_BOUNDED_RESULT_GRAPH_CONTEXT_ADVANTAGE_NOT_ESTABLISHED",
+    "poison": "HydraDG graph/context retrieval improved K5 over reference.",
+    "poison_class": "SYNTHETIC_TEST_ASSERTION"
+  },
+  "twenty_second_path": [
+    "REFERENCE",
+    "POISON",
+    "DETECT_AND_OPEN_ANTIGENCE_TICKET",
+    "AUTHENTICATED_BUT_DENIED_PRIVATE_REQUEST",
+    "VERIFY",
+    "CONTEXT_DIAGNOSTICS",
+    "ANTIDOTE",
+    "DETERMINISTIC_VERIFY",
+    "RESTORE_AND_CLOSE_TICKET"
+  ],
+  "hard_invariants": {
+    "private_plaintext_leak_bytes_outside_authorized_ephemeral_boundary": 0,
+    "model_visible_private_key_bytes": 0,
+    "unauthorized_private_reads": 0,
+    "unauthorized_canonical_writes": 0,
+    "replay_accepted": 0,
+    "poison_retained": true,
+    "first_divergent_dependency_required": true,
+    "negative_null_failed_timeout_abstention_preserved": true
+  },
+  "claim_ceiling": "HARMONIZED_MVP_PLAN_AND_PINNED_EXISTING_EVIDENCE_ONLY_LIVE_FEDERATION_RUN_NOT_YET_ESTABLISHED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NO_NEW_COMMITMENT_FROM_HARMONIZATION_MANIFEST"
+}
