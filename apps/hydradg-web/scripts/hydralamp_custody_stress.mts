@@ -11,6 +11,7 @@ import * as deltaModNs from "../lib/hydralamp/contextDelta.ts";
 import * as storeModNs from "../lib/hydralamp/store.ts";
 import * as coordModNs from "../lib/hydralamp/coordinator.ts";
 import type { ExperimentRun, FixtureState, HydraLampEvent } from "../lib/hydralamp/types.ts";
+import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "../lib/hydralamp/env.ts";
 
 // tsx may expose CJS interop as .default when the runner is ESM (.mts)
 function unwrap<T extends Record<string, unknown>>(mod: T | { default: T }): T {
@@ -445,7 +446,7 @@ async function runLocalModelOnce() {
   return receipt;
 }
 
-async function uiParityFromLastCore() {
+async function uiParityFromLastCore(runtypeKey: "PRESENT" | "MISSING") {
   // Use latest deterministic run on disk if present
   const runsDir = path.join(OUT, "runs");
   const receipt = {
@@ -458,7 +459,8 @@ async function uiParityFromLastCore() {
     REALTIME_GRAPH_READY: true,
     VIDEO_CORE_READY: "PENDING_OPERATOR_RECORDING",
     VIDEO_LOCAL_MODEL_READY: "PENDING_OPERATOR_RECORDING",
-    VIDEO_LIVE_RUNTYPE_READY: "BLOCKED_KEY_MISSING",
+    VIDEO_LIVE_RUNTYPE_READY:
+      runtypeKey === "MISSING" ? "BLOCKED_KEY_MISSING" : "PENDING_OPERATOR_RECORDING",
     signature_state: "NOT_SIGNED",
     runs_dir_exists: existsSync(runsDir),
   };
@@ -489,17 +491,31 @@ async function main() {
 
   const local = await runLocalModelOnce();
   console.log("local", local.LOCAL_MODEL_GUM_OLLARMA_READY);
-  const ui = await uiParityFromLastCore();
+
+  loadHydraLampServerEnv();
+  const runtypeKey = runtypeApiKeyStatus();
+  const ui = await uiParityFromLastCore(runtypeKey);
 
   const gumPath = path.join(OUT, "GUM_DOCTOR_RECEIPT.json");
   const gum = existsSync(gumPath) ? JSON.parse(readFileSync(gumPath, "utf8")) : { GUM_DOCTOR_STATE: "DEPENDENCY_UNRESOLVED" };
+
+  const invPath = path.join(OUT, "MODEL_INVENTORY.json");
+  const inventory = existsSync(invPath) ? JSON.parse(readFileSync(invPath, "utf8")) : {};
+  const liveReady =
+    runtypeKey === "MISSING"
+      ? "BLOCKED_KEY_MISSING"
+      : inventory.selected_models?.length
+        ? "CONFIGURED"
+        : inventory.runtype_api_key_present
+          ? "CONFIGURED_NO_MODELS"
+          : "KEY_PRESENT_RUN_DISCOVER";
 
   const localServer = {
     schema: "hydralamp.local_server_receipt.v1",
     LOCAL_SERVER_READY: true,
     DETERMINISTIC_FALLBACK_READY: true,
     LOCAL_MODEL_GUM_OLLARMA_READY: Boolean(local.LOCAL_MODEL_GUM_OLLARMA_READY),
-    LIVE_RUNTYPE_READY: "BLOCKED_KEY_MISSING",
+    LIVE_RUNTYPE_READY: liveReady,
     HASH_CHAIN_READY: core.CORE_STRESS === "PASS" && sse.SSE_STRESS === "PASS",
     CONTEXT_DELTA_READY: true,
     REALTIME_GRAPH_READY: true,
@@ -513,12 +529,15 @@ async function main() {
   };
   writeJson("LOCAL_SERVER_RECEIPT.json", localServer);
 
-  // Live blocked receipt refresh
+  // Live Runtype readiness (key from env; inventory may be stale until discover)
   writeJson("LIVE_RUNTYPE_STRESS_RECEIPT.json", {
     schema: "hydralamp.live_runtype_stress_receipt.v1",
-    LIVE_RUNTYPE_READY: "BLOCKED_KEY_MISSING",
-    RUNTYPE_API_KEY: "MISSING",
-    note: "No silent fallback to local/fixture from LIVE_RUNTYPE",
+    LIVE_RUNTYPE_READY: liveReady,
+    RUNTYPE_API_KEY: runtypeKey,
+    note:
+      runtypeKey === "MISSING"
+        ? "No silent fallback to local/fixture from LIVE_RUNTYPE"
+        : "Run scripts/discover_runtype_inventory.mts to refresh MODEL_INVENTORY.json",
     signature_state: "NOT_SIGNED",
   });
 
