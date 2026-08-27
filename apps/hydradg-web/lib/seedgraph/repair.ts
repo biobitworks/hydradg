@@ -105,10 +105,15 @@ export async function repairSeedGraphGaps(req: RepairRequest = {}) {
       gap_id: gap.gap_id,
       outcome: verification.outcome,
       reasons: verification.reasons,
+      admission: verification.admission,
       candidate_fco_id: fco.id,
       candidate_fco_sha256: fco.object_sha256,
       successor_node_id: successorNodeId,
       successor_fcg_appended: successorAppended,
+      source_url: quarantine?.source_url ?? gap.expected_url,
+      request_id: quarantine?.request_id ?? null,
+      retrieved_at: quarantine?.retrieved_at ?? null,
+      raw_sha256: quarantine?.raw_sha256 ?? null,
     });
   }
 
@@ -126,6 +131,9 @@ export async function repairSeedGraphGaps(req: RepairRequest = {}) {
       operation: q.operation,
       evidence_class: q.evidence_class,
       custody_state: q.custody_state,
+      source_url: q.source_url,
+      request_id: q.request_id,
+      retrieved_at: q.retrieved_at,
       raw_sha256: q.raw_sha256,
       result_count: q.result_count,
     })),

@@ -7,7 +7,14 @@ export const GAP_KINDS = [
 
 export type GapKind = (typeof GAP_KINDS)[number];
 
-export const REPAIR_OUTCOMES = ["PASS", "NULL", "NEGATIVE", "ABSTAIN"] as const;
+export const REPAIR_OUTCOMES = [
+  "PASS",
+  "NULL",
+  "NEGATIVE",
+  "ABSTAIN",
+  "ERROR",
+  "TIMEOUT",
+] as const;
 export type RepairOutcome = (typeof REPAIR_OUTCOMES)[number];
 
 export type CanonicalNode = {
@@ -37,12 +44,24 @@ export type SeedGraphGap = {
   notes: string;
 };
 
+export type AdmissionChecks = {
+  schema_check: "PASS" | "FAIL" | "SKIPPED";
+  provenance_check: "PASS" | "FAIL" | "SKIPPED";
+  contradiction_check: "PASS" | "FAIL" | "SKIPPED";
+  authorization_check: "PASS" | "FAIL" | "SKIPPED";
+};
+
 export type RepairVerdict = {
   gap_id: string;
   outcome: RepairOutcome;
   reasons: string[];
+  admission: AdmissionChecks;
   candidate_fco_id: string | null;
   candidate_fco_sha256: string | null;
   successor_node_id: string | null;
   successor_fcg_appended: boolean;
+  source_url: string | null;
+  request_id: string | null;
+  retrieved_at: string | null;
+  raw_sha256: string | null;
 };

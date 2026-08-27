@@ -1,5 +1,6 @@
 import type { ProviderHealthRow } from "./types";
 import { vercelHostingNote } from "./vercelBoundary";
+export { tenkiScaffoldHealth, tenkiScaffoldInfo, TENKI_EXECUTE_GATE } from "./tenki";
 
 /** Scaffold only — do not claim working on Vercel. */
 export function cortexScaffoldHealth(): ProviderHealthRow {
@@ -15,20 +16,6 @@ export function cortexScaffoldHealth(): ProviderHealthRow {
     note:
       "Scaffold only on Vercel. Preserve Studio Cortex trial-lock ERROR (CORTEX_TRIAL_EXPIRED). " +
       vercelHostingNote("Mitosis Cortex / mi CLI"),
-  };
-}
-
-export function tenkiScaffoldHealth(): ProviderHealthRow {
-  return {
-    provider: "Tenki",
-    lane: "SCAFFOLD",
-    secret_state: "NOT_APPLICABLE",
-    config_state: "NOT_APPLICABLE",
-    runtime_state: "SKIPPED",
-    panel_state: "SKIPPED",
-    hosted_on_vercel: false,
-    claim_ceiling: "DETERMINISTIC_TOOL_OUTPUT",
-    note: "Scaffold only. Not claimed working. Not scientific execution authority.",
   };
 }
 

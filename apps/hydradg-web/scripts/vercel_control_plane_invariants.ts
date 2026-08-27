@@ -13,10 +13,12 @@ import { canonicalSnapshotSha256 } from "../lib/seedgraph/canonicalSnapshot";
 import { verifyCandidate } from "../lib/seedgraph/verify";
 import { appendSuccessor, canonicalWriteCount } from "../lib/seedgraph/store";
 import { buildProviderHealth } from "../lib/providers/health";
+import { buildProviderStatus } from "../lib/providers/status";
 import { publicQuarantine, type QuarantineRecord } from "../lib/providers/types";
 import { redactSecrets, DOCUMENTED_SERVER_ENV } from "../lib/providers/secrets";
 import { NOT_HOSTED_ON_VERCEL } from "../lib/providers/vercelBoundary";
 import { cortexScaffoldHealth, tenkiScaffoldHealth, nebiusScaffoldHealth } from "../lib/providers/scaffold";
+import { TENKI_EXECUTE_GATE } from "../lib/providers/tenki";
 
 const ROOT = path.resolve(__dirname, "..");
 
@@ -69,12 +71,18 @@ function testVerifyOutcomes() {
   );
   assert.ok(repairable);
   assert.equal(verifyCandidate(repairable!, null, "BLOCKED").outcome, "ABSTAIN");
-  assert.equal(verifyCandidate(repairable!, null, "ERROR").outcome, "NULL");
+  assert.equal(verifyCandidate(repairable!, null, "ERROR").outcome, "ERROR");
+  assert.equal(verifyCandidate(repairable!, null, "TIMEOUT").outcome, "TIMEOUT");
   assert.equal(
     verifyCandidate(repairable!, fixtureQuarantine({ result_count: 0 }), "NEGATIVE").outcome,
     "NULL",
   );
-  assert.equal(verifyCandidate(repairable!, fixtureQuarantine(), "PASS").outcome, "PASS");
+  const pass = verifyCandidate(repairable!, fixtureQuarantine(), "PASS");
+  assert.equal(pass.outcome, "PASS");
+  assert.equal(pass.admission.schema_check, "PASS");
+  assert.equal(pass.admission.provenance_check, "PASS");
+  assert.equal(pass.admission.contradiction_check, "PASS");
+  assert.equal(pass.admission.authorization_check, "PASS");
 
   const badHash = fixtureQuarantine({ raw_sha256: "0".repeat(64) });
   assert.equal(verifyCandidate(repairable!, badHash, "PASS").outcome, "NEGATIVE");
@@ -132,7 +140,9 @@ async function testHealthConfiguredIsNotPass() {
     assert.equal(row!.panel_state, "SKIPPED");
   }
   assert.equal(cortexScaffoldHealth().panel_state, "SKIPPED");
-  assert.equal(tenkiScaffoldHealth().panel_state, "SKIPPED");
+  const tenki = tenkiScaffoldHealth();
+  assert.ok(tenki.panel_state === "SKIPPED" || tenki.panel_state === "CONFIGURED");
+  assert.notEqual(tenki.panel_state, "PASS");
   assert.equal(nebiusScaffoldHealth().panel_state, "SKIPPED");
 }
 
@@ -152,6 +162,7 @@ function testRedactAndDocumentedEnv() {
     "HYDRADB_DATABASE",
     "HYDRADB_COLLECTION",
     "HYDRADB_API_URL",
+    "TENKI_API_KEY",
   ];
   assert.deepEqual([...DOCUMENTED_SERVER_ENV], expected);
 }
@@ -188,13 +199,36 @@ function testSecretScan() {
   assert.deepEqual(hits, [], hits.join("\n"));
 }
 
+async function testProviderStatusPreserved() {
+  const status = await buildProviderStatus();
+  assert.equal(status.invariant, "CONFIGURED_IS_NOT_PASS");
+  assert.equal(status.preserved_invariants.Tavily, "PASS");
+  assert.equal(status.preserved_invariants.Runtype, "ERROR");
+  assert.match(status.preserved_invariants.Cortex, /CORTEX_TRIAL_EXPIRED/);
+  assert.match(status.preserved_invariants.Daytona, /LIVE_PASS/);
+  assert.equal(status.preserved_studio_receipts.Tavily.live_status, "PASS");
+  assert.equal(status.preserved_studio_receipts.Runtype.live_status, "ERROR");
+  assert.equal(status.preserved_studio_receipts.Cortex.error_code, "CORTEX_TRIAL_EXPIRED");
+  assert.ok(
+    status.preserved_studio_receipts.Daytona.live_status === "LIVE_PASS" ||
+      status.preserved_studio_receipts.Daytona.live_status === "PASS",
+  );
+  assert.equal(TENKI_EXECUTE_GATE.execute_allowed, false);
+  for (const row of status.providers) {
+    if (row.runtime_state === "NOT_PROBED") {
+      assert.notEqual(row.panel_state, "PASS", `${row.provider} rendered PASS from config`);
+    }
+  }
+}
+
 async function main() {
   const tests: Array<[string, () => unknown]> = [
     ["gap detection is deterministic", testGapDeterminism],
-    ["verify outcomes PASS/NULL/NEGATIVE/ABSTAIN", testVerifyOutcomes],
+    ["verify outcomes PASS/NULL/NEGATIVE/ABSTAIN/ERROR/TIMEOUT", testVerifyOutcomes],
     ["successor append never counts as canonical write", testNoCanonicalWrites],
     ["public quarantine strips raw_bytes", testPublicQuarantineStripsRaw],
     ["health CONFIGURED is not PASS", testHealthConfiguredIsNotPass],
+    ["provider status preserves Studio receipts", testProviderStatusPreserved],
     ["redact + documented env", testRedactAndDocumentedEnv],
     ["secret scan of committed-shaped sources", testSecretScan],
   ];
