@@ -94,6 +94,10 @@ export type LaneResult = {
   repair_allowed: boolean | null;
   candidate_root: string | null;
   unauthorized_canonical_writes: number;
+  prompt_hash?: string | null;
+  tool_results_hashes?: string[];
+  fallback_used?: boolean;
+  final_model_status?: string;
 };
 
 export type ExperimentRun = {

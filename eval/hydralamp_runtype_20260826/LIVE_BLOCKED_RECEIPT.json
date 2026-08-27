@@ -1,0 +1,23 @@
+{
+  "schema": "hydralamp.runtype.live_blocked.v1",
+  "recorded_at_utc": "2026-08-27T02:31:45Z",
+  "source_sha_parent": "4944bca0f27289ab63c310f5da35a34d39e2a4f6",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "RUNTYPE_STATE": "NOT_CONFIGURED",
+  "RUNTYPE_API_KEY": "MISSING",
+  "LIVE_CONTROL": "NOT_RUN",
+  "LIVE_INVALID_PROOF": "NOT_RUN",
+  "synthetic_reference_run_preserved": "hlrt_mtauivoj_4ce01c84",
+  "standalone_hydralamp_repo": "ARCHIVED_REFERENCE_ONLY_NOT_ACTIVE",
+  "next_safe_action": "PLACE_RUNTYPE_API_KEY_IN_apps/hydradg-web/.env.local_THEN_RUN_discover_AND_run_live_control_invalid",
+  "claim_ceiling": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "checks": {
+    "TYPECHECK": "PASS",
+    "BUILD": "PASS",
+    "SECRET_SCAN": "PENDING",
+    "RUNTYPE_REAL_EXECUTION": "BLOCKED_KEY_MISSING",
+    "SYNTHETIC_REFERENCE_PRESERVED": "PASS"
+  }
+}

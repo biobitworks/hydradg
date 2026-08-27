@@ -62,8 +62,10 @@ Canonical FCG append first. Projection/readback second. Projection failure does 
 
 ```bash
 cd apps/hydradg-web
-export RUNTYPE_API_KEY=...   # server-side only
-# freeze models into eval/hydralamp_runtype_20260826/MODEL_INVENTORY.json
+# Place key in gitignored .env.local (never commit / never paste into chat):
+# RUNTYPE_API_KEY=
+npx tsx scripts/discover_runtype_inventory.mts
+npx tsx scripts/run_live_control_invalid.mts
 npm run dev
 # open /hydralamp and RUN LIVE EXPERIMENT
 # or /hydralamp?demo=20s
@@ -73,7 +75,10 @@ Without the key:
 
 ```bash
 # UI button SYNTHETIC UI FIXTURE — labeled, not live
+# Live scripts exit with RUNTYPE_STATE=NOT_CONFIGURED
 ```
+
+Active architecture is **inside** `biobitworks/hydradg` (`/hydralamp`). The standalone `biobitworks/hydralamp` repo is archived/reference-only — do not migrate or merge it mechanically.
 
 ## Record video
 

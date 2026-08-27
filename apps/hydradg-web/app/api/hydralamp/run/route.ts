@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { startHydraLampExperiment, runtypeKeyPresent, loadModelInventory } from "@/lib/hydralamp/coordinator";
+import { loadHydraLampServerEnv } from "@/lib/hydralamp/env";
 import type { PerturbationKind } from "@/lib/hydralamp/types";
 
 export const dynamic = "force-dynamic";
@@ -13,6 +14,7 @@ const ALLOWED: PerturbationKind[] = [
 ];
 
 export async function POST(req: Request) {
+  loadHydraLampServerEnv();
   const body = (await req.json().catch(() => ({}))) as {
     perturbation?: string;
     demo_20s?: boolean;
@@ -50,6 +52,7 @@ export async function POST(req: Request) {
 }
 
 export async function GET() {
+  loadHydraLampServerEnv();
   return NextResponse.json({
     runtype_api_key_present: runtypeKeyPresent(),
     inventory: loadModelInventory(),

@@ -3,7 +3,7 @@
   "recorded_at_utc": "2026-08-27T01:31:09Z",
   "BRANCH_CORRECT": "PASS",
   "BASE_SHA_RECORDED": "PASS",
-  "RUNTYPE_REAL_EXECUTION": "NOT_CONFIGURED",
+  "RUNTYPE_REAL_EXECUTION": "BLOCKED_KEY_MISSING",
   "REAL_MODEL_IDENTITY_RECORDED": "FAIL_NO_KEY",
   "REFERENCE_ROOT_REPRODUCIBLE": "PASS",
   "PERTURBATION_ROOT_REPRODUCIBLE": "PASS",
@@ -28,5 +28,5 @@
   "reference_run_id": "hlrt_mtauivoj_4ce01c84",
   "mode": "SYNTHETIC_UI_FIXTURE",
   "claim_ceiling": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN",
-  "note": "Synthetic UI fixture executed end-to-end. Live Runtype blocked on RUNTYPE_API_KEY."
+  "note": "Live-ready path landed. Synthetic reference preserved. Live CONTROL/INVALID_PROOF blocked until RUNTYPE_API_KEY is placed in apps/hydradg-web/.env.local (gitignored)."
 }

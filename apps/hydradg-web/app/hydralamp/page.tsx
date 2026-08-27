@@ -158,6 +158,9 @@ export default function HydraLampLivePage() {
             No fabricated model activity.
           </p>
           {label && <p className="hlBanner">{label}</p>}
+          {mode === "LIVE_RUNTYPE" && (
+            <p className="hlLive">LIVE RUNTYPE — real execution IDs required</p>
+          )}
         </header>
 
         <section className="hlControls">
@@ -319,7 +322,7 @@ function Lane({
         {events.slice(-8).map((e) => (
           <li key={`${e.seq}-${e.type}`}>
             <code style={{ color }}>{e.type}</code> {e.summary}
-            {e.runtype_execution_id ? ` · ${e.runtype_execution_id}` : ""}
+            {e.model_id ? ` · MODEL=${e.model_id}` : ""}{e.runtype_execution_id ? ` · EXECUTION=${e.runtype_execution_id}` : ""}
           </li>
         ))}
         {!events.length && <li style={{ color: "#666" }}>waiting for real events…</li>}

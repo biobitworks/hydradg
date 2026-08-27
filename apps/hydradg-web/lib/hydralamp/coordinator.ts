@@ -11,6 +11,7 @@ import { loadSystemPrompt, materializeState, repoRoot, sha256Text, canonicalJson
 import { verifyLane, summarizeVerifier } from "./verifier";
 import { appendExperimentCustody, tryHydraDbProjection, persistRunArtifacts } from "./custody";
 import { putRun, pushEvent, markDone } from "./store";
+import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "./env";
 import type {
   ExperimentRun,
   HydraLampEvent,
@@ -65,7 +66,7 @@ function parseStructured(text: string): StructuredAgentOutput | null {
 }
 
 export function runtypeKeyPresent(): boolean {
-  return Boolean(process.env.RUNTYPE_API_KEY && process.env.RUNTYPE_API_KEY.trim());
+  return runtypeApiKeyStatus() === "PRESENT";
 }
 
 export function loadModelInventory(): {
@@ -92,7 +93,7 @@ async function runOneLaneLive(params: {
     lane,
     model_id,
     type: "MODEL_ACTIVE",
-    summary: `Model active: ${model_id}`,
+    summary: `LIVE RUNTYPE MODEL=${model_id}`,
   });
 
   try {
@@ -113,6 +114,7 @@ async function runOneLaneLive(params: {
 
     const localTools: Record<string, (args: unknown) => Promise<unknown>> = {};
     const tool_sequence: string[] = [];
+    const tool_results_hashes: string[] = [];
     let repair_requested = false;
     let repair_allowed: boolean | null = null;
     let candidate_root: string | null = null;
@@ -135,6 +137,7 @@ async function runOneLaneLive(params: {
           public_payload: { args: publicSafeArgs(a) },
         });
         const result = executeTool(ctx, schema.name as ToolName, a);
+        tool_results_hashes.push(sha256Text(canonicalJson(result)));
         if (schema.name === "attempt_repair") {
           repair_requested = true;
           repair_allowed = Boolean((result as { allowed?: boolean }).allowed);
@@ -199,6 +202,7 @@ async function runOneLaneLive(params: {
       summary: `Model final: ${structured?.decision || "UNPARSED"}`,
       public_payload: structured || { parse: "FAILED" },
     });
+    const prompt_hash = sha256Text(canonicalJson({ systemPrompt, userPrompt, model_id, cache: false }));
     return {
       lane,
       model_id,
@@ -213,6 +217,10 @@ async function runOneLaneLive(params: {
       repair_allowed,
       candidate_root,
       unauthorized_canonical_writes: 0,
+      prompt_hash,
+      tool_results_hashes,
+      fallback_used: false,
+      final_model_status: structured ? "STRUCTURED_OK" : "UNPARSED_OR_EMPTY",
     };
   } catch (err) {
     const code = (err as { code?: string })?.code || (err as Error).message;
@@ -330,6 +338,7 @@ export async function startHydraLampExperiment(opts: {
   demo_20s?: boolean;
   allow_synthetic_ui_fixture?: boolean;
 }): Promise<ExperimentRun> {
+  loadHydraLampServerEnv();
   const perturbation = opts.perturbation || "INVALID_PROOF";
   const demo_20s = Boolean(opts.demo_20s);
   const m = materializeState(perturbation);
@@ -340,8 +349,11 @@ export async function startHydraLampExperiment(opts: {
   const selected = inventory.selected_models || [];
 
   let mode: ExperimentRun["mode"] = "LIVE_RUNTYPE";
-  if (!keyPresent || selected.length === 0) {
+  if (!keyPresent) {
     mode = opts.allow_synthetic_ui_fixture ? "SYNTHETIC_UI_FIXTURE" : "NOT_CONFIGURED";
+  } else if (selected.length === 0) {
+    // Key present but inventory empty — fail closed; never invent models.
+    mode = "NOT_CONFIGURED";
   }
 
   const run: ExperimentRun = {
