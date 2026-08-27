@@ -1,0 +1,52 @@
+{
+  "schema": "hydradg.immersive_commons.identity_reconciliation.v1",
+  "recorded_at_utc": "2026-08-27T22:05:00Z",
+  "work_unit_id": "HYDRALAMP_IMMERSIVE_COMMONS_FINAL_SUBMISSION_20260827",
+  "evidence_class": {
+    "operator_email_instruction": "DIRECT_HUMAN_EVIDENCE",
+    "immersive_commons_membership": "EXTERNALLY_RETRIEVED_EVIDENCE",
+    "luma_public_page": "EXTERNALLY_RETRIEVED_EVIDENCE",
+    "live_ic_refresh": "BLOCKED_NO_CREDENTIAL"
+  },
+  "LUMA_EMAIL": "byron@biobitworks.com",
+  "LUMA_EMAIL_SOURCE": "DIRECT_HUMAN_EVIDENCE",
+  "LUMA_REGISTRATION_READBACK": {
+    "state": "NOT_AUTHENTICATED",
+    "public_page_url": "https://luma.com/agentnativebuildershackathon",
+    "public_page_observed": "Event Full; Join Waitlist; ticket types require approval",
+    "attendee_email_exposed": false,
+    "note": "Luma does not expose registrant email without signed-in operator session; email parity cannot be verified on Luma side from this host"
+  },
+  "IMMERSIVE_COMMONS_IDENTITY_EMAIL": "byron@biobitworks.com",
+  "IMMERSIVE_COMMONS_IDENTITY_SOURCE": "ic_get_my_membership via authenticated MCP (cached IC_STATUS.json)",
+  "IMMERSIVE_COMMONS_IDENTITY_READBACK_UTC": "cached_from_prior_authenticated_session",
+  "IMMERSIVE_COMMONS_MEMBER_ID": "byron-lee",
+  "IMMERSIVE_COMMONS_USER_ID": "user_3HjSL1yI3KDe7wGhZK6fwFZZmYQ",
+  "IMMERSIVE_COMMONS_DISPLAY_NAME": "Byron Lee",
+  "EMAIL_IDENTITY_PARITY": "PASS",
+  "EMAIL_IDENTITY_PARITY_NOTE": "Operator-instructed Luma email matches Immersive Commons Clerk membership email returned by ic_get_my_membership",
+  "REGISTRATION_STATE": "applied_pending_not_registered",
+  "REGISTRATION_STATE_ASSERTED_PASS": false,
+  "REGISTRATION_STATE_REASON": "ic_hack_me.registered=false; ic_hack_application_status.application.status=applied; decided_at=null",
+  "REGISTRATION_GATE": "FAIL_NOT_REGISTERED",
+  "REGISTRATION_GATE_IDENTITY_MISMATCH": false,
+  "TEAM_GATE": "FAIL_NO_TEAM",
+  "ic_hack_me_cached": {
+    "registered": false,
+    "phase": "OPEN",
+    "role": null,
+    "team": null,
+    "submission": null
+  },
+  "application_id": "a_74a64b4f0be8f50a",
+  "application_status": "applied",
+  "application_decision": "pending_human_review",
+  "live_refresh_blocked": {
+    "reason": "FLOOR10_AGENT_TOKEN absent; ~/.config/immersivecommons/env missing",
+    "secret_value_exposed": false
+  },
+  "EARLIEST_DIVERGENCE": "REGISTRATION_INCOMPLETE_AFTER_IDENTITY_PARITY_PASS",
+  "NEXT_SAFE_ACTION": "Install FLOOR10_AGENT_TOKEN; refresh ic_hack_me; await application approval and team assignment before ic_hack_submit",
+  "claim_ceiling": "IDENTITY_RECONCILIATION_ONLY_NOT_REGISTRATION_COMPLETE",
+  "signature_state": "NOT_SIGNED"
+}
