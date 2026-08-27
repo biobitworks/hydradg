@@ -1,0 +1,16 @@
+{
+  "schema": "sponsor.final_reconciliation.verification.v1",
+  "typecheck": "PASS",
+  "production_build": "PASS",
+  "composed_golden_path": "PASS",
+  "receipt_json_validation": "PASS",
+  "tavily_hash_recompute": "PASS",
+  "v2_hash_recompute": "PASS",
+  "secret_scan": "PASS",
+  "secret_scan_note": "False-positive patterns (DAYTONA_* labels, placeholders, REDACTED tokens) excluded; no live key material found in committed eval artifacts.",
+  "fcg_mutation_count": 0,
+  "blocked_sponsors_rerun": "NOT_ATTEMPTED",
+  "CLOSEOUT_sha256_sidecar_vs_v1_file": "MISMATCH_PRESERVED",
+  "CLOSEOUT_sha256_sidecar": "fcd14f1d1c1b48dd3753c08a8a23237131bfbd9275f43ac5a0010fe7b818bde5",
+  "v1_file_sha256": "9a6300d65a075a4a0b9f462e3bcd5a9c9a9d5ebdcfcc95d86163416b35dbf04c"
+}

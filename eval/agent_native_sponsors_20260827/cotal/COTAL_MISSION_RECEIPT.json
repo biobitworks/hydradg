@@ -2,16 +2,23 @@
   "schema": "sponsor.cotal.mission_receipt.v1",
   "mission_id": "ANB-SP-COTAL-A2A-001",
   "provider": "Cotal",
-  "operation": "a2a_gateway_transaction",
-  "status": "SKIPPED",
-  "discovery_state": "DEFERRED_NONBLOCKING",
-  "gateway_tools_available": [
-    "discover_capabilities",
-    "query_evidence",
-    "propose_external_evidence",
-    "verify_custody_receipt"
+  "operation": "cli_setup_and_gateway_bounded_transaction",
+  "status": "PASS",
+  "discovery_state": "CONFIGURED",
+  "bounded_transaction": "BOUNDED_TX_PASS",
+  "mesh_up": "NOT_ATTEMPTED",
+  "cotal_cli": "PRESENT",
+  "cotal_version": "cotal-ai 0.33.1",
+  "evidence_sources": [
+    "eval/agent_native_sponsors_20260827/cotal/raw/COTAL_SETUP_RAW.txt",
+    "eval/agent_native_sponsors_20260827/cotal/raw/COTAL_STATUS_RAW.txt",
+    "eval/agent_native_sponsors_20260827/cotal/GATEWAY_BOUNDED_TRANSACTION.json"
   ],
-  "bounded_transaction": "NOT_ATTEMPTED",
+  "restoration_note": "Mission receipt reconstructed from raw/gateway after closeout stub overwrote status=SKIPPED.",
+  "fcg_append": "NOT_APPENDED",
   "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
-  "signature_state": "NOT_SIGNED"
+  "signature_state": "NOT_SIGNED",
+  "docs_ref": "https://docs.cotal.ai/",
+  "installer_ref": "https://get.cotal.ai",
+  "recorded_at_utc": "2026-08-27T06:28:40.445094Z"
 }

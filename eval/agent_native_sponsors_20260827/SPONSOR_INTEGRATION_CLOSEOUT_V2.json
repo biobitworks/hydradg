@@ -1,0 +1,229 @@
+{
+  "schema": "sponsor.integration_closeout.v2",
+  "recorded_at_utc": "2026-08-27T06:26:40.398Z",
+  "execution_host": "magicSTUDIObox.local",
+  "predecessor": {
+    "path": "eval/agent_native_sponsors_20260827/SPONSOR_INTEGRATION_CLOSEOUT.json",
+    "schema": "sponsor.integration_closeout.v1",
+    "recorded_at_utc": "2026-08-27T06:12:01.209Z",
+    "sha256": "9a6300d65a075a4a0b9f462e3bcd5a9c9a9d5ebdcfcc95d86163416b35dbf04c",
+    "immutable": true,
+    "note": "v1 closeout treated as historical evidence; not modified.",
+    "file_sha256_verified": "9a6300d65a075a4a0b9f462e3bcd5a9c9a9d5ebdcfcc95d86163416b35dbf04c"
+  },
+  "providers": {
+    "Runtype": {
+      "priority": "P0",
+      "discovery_state": "CONFIGURED",
+      "live_status": "ERROR",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/runtype/RUNTYPE_MISSION_RECEIPT.json",
+      "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+      "earliest_divergence": "runtype_execution_id null / lane ERROR (preserved; not rerun)"
+    },
+    "Tavily": {
+      "priority": "P0",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/tavily/TAVILY_MISSION_RECEIPT.json",
+      "ai_sdk_receipt_path": "eval/agent_native_sponsors_20260827/tavily/TAVILY_AISDK_MISSION_RECEIPT.json",
+      "ai_sdk_status": "PASS",
+      "ai_sdk_package_import": "PASS",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": null
+    },
+    "Cortex": {
+      "priority": "P0",
+      "discovery_state": "CONFIGURED",
+      "live_status": "ERROR",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
+      "CORTEX_MEMORY_ROUNDTRIP": "ERROR",
+      "HYDRADG_RECEIPT_VERIFICATION": "MISS",
+      "auth_state": "PASS",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": "CORTEX_TRIAL_EXPIRED"
+    },
+    "Mitosis Yappy": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "BLOCKED",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/yappy/YAPPY_MISSION_RECEIPT.json",
+      "agents_listed": 0,
+      "auth_state": "PASS",
+      "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+      "earliest_divergence": "MI_NO_AGENTS",
+      "identity_note": "Mitosis Yappy \u2014 distinct from Yappy.biz"
+    },
+    "Yappy.biz": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/yappy_biz/YAPPY_BIZ_API_MISSION_RECEIPT.json",
+      "latest_release": "0.4.20",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": null,
+      "identity_note": "yappy.biz public product API \u2014 distinct from Mitosis Yappy"
+    },
+    "Immersive Commons": {
+      "priority": "P1",
+      "discovery_state": "DISCOVERED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/immersive_commons/IMMERSIVE_COMMONS_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": null
+    },
+    "Cotal": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/cotal/COTAL_MISSION_RECEIPT.json",
+      "bounded_transaction": "BOUNDED_TX_PASS",
+      "mesh_up": "NOT_ATTEMPTED",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null
+    },
+    "AIsa": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/golden_path/AISA_PROPOSAL_RECEIPT.json",
+      "default_model": "qwen-flash",
+      "chat_probe": "PASS",
+      "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+      "earliest_divergence": null
+    },
+    "Hacker Bob": {
+      "priority": "P2",
+      "discovery_state": "DISCOVERED",
+      "live_status": "SKIPPED",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/hacker_bob/HACKER_BOB_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": "scan not executed"
+    },
+    "Tenki": {
+      "priority": "P2",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/tenki/TENKI_SANDBOX_MISSION_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null,
+      "scientific_execution_authority": "magicSTUDIObox.local"
+    },
+    "Nebius": {
+      "priority": "OPTIONAL",
+      "discovery_state": "SKIPPED",
+      "live_status": "SKIPPED",
+      "secret_state": "MISSING",
+      "receipt_path": "eval/agent_native_sponsors_20260827/nebius/NEBIUS_MISSION_RECEIPT.json",
+      "claim_ceiling": "NOT_APPLICABLE",
+      "earliest_divergence": null
+    }
+  },
+  "infrastructure": {
+    "Daytona": {
+      "lane": "INFRASTRUCTURE",
+      "anb_sponsor": false,
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null,
+      "scientific_execution_authority": "magicSTUDIObox.local"
+    }
+  },
+  "golden_path": {
+    "source": "Tavily",
+    "memory": null,
+    "model": "AIsa/qwen-flash",
+    "external_actor": null,
+    "custody": "HydraDG FCO/FCG",
+    "projection": "HydraDB",
+    "composed_status": "PASS",
+    "composed_run_id": "anb_gp_mtb53qww_4ca04a03",
+    "composed_receipt_path": "eval/agent_native_sponsors_20260827/golden_path/COMPOSED_GOLDEN_PATH_RECEIPT.json",
+    "composed_receipt_sha256": "4f96fcedc49ea85b563079f56d22434c17d95501854fb32f569cc1816dd1825d",
+    "notes": [
+      "Tavily CLI=PASS; AI SDK=PASS",
+      "AIsa qwen-flash proposal=PASS",
+      "Cortex=ERROR/CORTEX_TRIAL_EXPIRED",
+      "Mitosis Yappy BLOCKED agents_listed=0",
+      "Runtype=ERROR preserved",
+      "Cotal bounded_tx=BOUNDED_TX_PASS; mesh_up=NOT_ATTEMPTED"
+    ]
+  },
+  "EARLIEST_DIVERGENCE": {
+    "summary": "schema",
+    "items": [
+      {
+        "field": "schema",
+        "predecessor": "sponsor.integration_closeout.v1",
+        "successor": "sponsor.integration_closeout.v2",
+        "reason": "Successor closeout schema version bump; v1 left immutable."
+      },
+      {
+        "field": "providers.AIsa",
+        "successor": "PASS",
+        "reason": "AIsa not present in v1; added after local auth/models/chat verification on qwen-flash."
+      },
+      {
+        "field": "golden_path.composed_run",
+        "predecessor": {
+          "source": "Tavily",
+          "memory": null,
+          "model": null,
+          "external_actor": null,
+          "custody": "HydraDG FCO/FCG",
+          "projection": "HydraDB",
+          "composed_status": "PARTIAL",
+          "notes": [
+            "Tavily extract PASS",
+            "Runtype live ERROR preserved",
+            "Cortex roundtrip ERROR; HydraDG verify MISS (status=ERROR)"
+          ]
+        },
+        "successor": {
+          "run_id": "anb_gp_mtb53qww_4ca04a03",
+          "status": "PASS"
+        },
+        "reason": "V2 adds composed Tavily\u2192AIsa\u2192verify\u2192quarantine golden-path fixture."
+      },
+      {
+        "field": "GOLDEN_PATH_STATE",
+        "predecessor": "PARTIAL_P0",
+        "successor": "PARTIAL_P0_WITH_COMPOSED_FIXTURE",
+        "reason": "Composed fixture added; Cortex/Runtype still non-PASS so overall remains partial."
+      },
+      {
+        "field": "CLOSEOUT.sha256_sidecar",
+        "predecessor": "fcd14f1d1c1b48dd3753c08a8a23237131bfbd9275f43ac5a0010fe7b818bde5",
+        "successor": "preserved_without_rewrite",
+        "reason": "Historical CLOSEOUT.sha256 sidecar does not match immutable v1 file bytes (file sha 9a6300d6\u2026). V2 records mismatch; does not rewrite v1 or its sidecar."
+      }
+    ]
+  },
+  "GOLDEN_PATH_STATE": "PARTIAL_P0_WITH_COMPOSED_FIXTURE",
+  "EVIDENCE_STATE": "EXTERNALLY_RETRIEVED_EVIDENCE_CAPTURED",
+  "EXPERIMENT_STATE": "HYDRALAMP_CLOSEOUT_FROZEN_NO_RERUN",
+  "FCO_STATE": "QUARANTINE_PROPOSALS_ONLY",
+  "FCG_STATE": "CANONICAL_UNCHANGED_BY_SPONSOR_MISSIONS",
+  "fcg_mutation_count": 0,
+  "HYDRADB_STATE": "PROJECTION_LANE_AVAILABLE",
+  "CLAIM_CEILING": "SPONSOR_INTEGRATION_BENCHMARK_ONLY",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "NEXT_SAFE_ACTION": "Unlock Cortex memory plan and/or hire Mitosis agents if those lanes must PASS; do not rewrite Runtype ERROR.",
+  "FINAL_REVIEW_GATE": "V2: Tavily=PASS; AIsa=PASS; Cotal=BOUNDED_TX_PASS; Yappy.biz=PASS; IC=PASS; Tenki=PASS; Daytona=PASS; Cortex=ERROR; MitosisYappy=BLOCKED; Runtype=ERROR preserved",
+  "verification_receipt_path": "eval/agent_native_sponsors_20260827/FINAL_RECONCILIATION_VERIFICATION.json",
+  "branch": "cursor/vercel-control-plane-c66e",
+  "hydralamp_lineage_ancestor": "hack-hydra/hydralamp-20260826"
+}
