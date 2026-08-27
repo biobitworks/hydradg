@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 type ProviderRow = {
   provider: string;
   priority: string;
+  lane?: string;
   panel_state: string;
   discovery_state: string;
   live_status: string;
@@ -73,7 +74,7 @@ export default function SponsorMissionPanel() {
 
   return (
     <section style={{ marginTop: "1.5rem", padding: "1rem", background: "#1a1a1a", borderRadius: 8, color: "#e8e5dc" }}>
-      <h3 style={{ marginTop: 0 }}>Agent Natives Sponsor Missions</h3>
+      <h3 style={{ marginTop: 0 }}>Sponsor / Infrastructure Missions</h3>
       <p style={{ fontSize: "0.9rem", opacity: 0.85 }}>
         GUM Doctor: <code>{data.GUM_DOCTOR_STATE}</code> · Secret injection:{" "}
         <code>{data.SPONSOR_SECRET_INJECTION}</code>
@@ -86,6 +87,7 @@ export default function SponsorMissionPanel() {
         <thead>
           <tr style={{ borderBottom: "1px solid #444", textAlign: "left" }}>
             <th style={{ padding: 6 }}>Provider</th>
+            <th style={{ padding: 6 }}>Lane</th>
             <th style={{ padding: 6 }}>Priority</th>
             <th style={{ padding: 6 }}>State</th>
             <th style={{ padding: 6 }}>Live</th>
@@ -95,6 +97,7 @@ export default function SponsorMissionPanel() {
           {data.providers.map((p) => (
             <tr key={p.provider} style={{ borderBottom: "1px solid #333" }}>
               <td style={{ padding: 6 }}>{p.provider}</td>
+              <td style={{ padding: 6 }}>{p.lane || (p.priority === "INFRASTRUCTURE" ? "INFRASTRUCTURE" : "SPONSOR")}</td>
               <td style={{ padding: 6 }}>{p.priority}</td>
               <td style={{ padding: 6, color: STATE_COLOR[p.panel_state] || "#ccc" }}>{p.panel_state}</td>
               <td style={{ padding: 6, color: STATE_COLOR[p.live_status] || "#ccc" }}>{p.live_status}</td>
@@ -102,6 +105,9 @@ export default function SponsorMissionPanel() {
           ))}
         </tbody>
       </table>
+      <p style={{ fontSize: "0.8rem", opacity: 0.7, marginTop: "0.5rem" }}>
+        Daytona is infrastructure compute, not an Agent Natives sponsor unless official event evidence says otherwise.
+      </p>
 
       <div style={{ marginTop: "1rem", padding: "0.75rem", background: "#252525", borderRadius: 6, fontSize: "0.85rem" }}>
         <strong>Golden path (factual)</strong>

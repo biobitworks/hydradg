@@ -38,6 +38,7 @@ export function loadSponsorCloseout(repoRoot: string) {
 export function buildProviderSummaries(repoRoot: string): SponsorProviderSummary[] {
   const closeout = loadSponsorCloseout(repoRoot);
   const providers = (closeout?.providers as Record<string, Record<string, string>>) || {};
+  const infrastructure = (closeout?.infrastructure as Record<string, Record<string, string>>) || {};
   const order = [
     "Runtype",
     "Tavily",
@@ -49,11 +50,12 @@ export function buildProviderSummaries(repoRoot: string): SponsorProviderSummary
     "Tenki",
     "Nebius",
   ];
-  return order.map((provider) => {
+  const sponsorRows = order.map((provider) => {
     const row = providers[provider] || {};
     return {
       provider,
       priority: (row.priority as SponsorProviderSummary["priority"]) || "P0",
+      lane: "SPONSOR" as const,
       panel_state: panelFromMission(row.live_status, row.discovery_state || "DISCOVERED"),
       discovery_state: (row.discovery_state as SponsorProviderSummary["discovery_state"]) || "DISCOVERED",
       live_status: (row.live_status as SponsorProviderSummary["live_status"]) || "NOT_ATTEMPTED",
@@ -61,6 +63,23 @@ export function buildProviderSummaries(repoRoot: string): SponsorProviderSummary
       receipt_path: row.receipt_path || null,
     };
   });
+  const infraOrder = ["Daytona"];
+  const infraRows = infraOrder.map((provider) => {
+    const row = infrastructure[provider] || {};
+    const live = row.live_status;
+    const discovery = row.discovery_state || "CONFIGURED";
+    return {
+      provider,
+      priority: "INFRASTRUCTURE" as const,
+      lane: "INFRASTRUCTURE" as const,
+      panel_state: panelFromMission(live, discovery),
+      discovery_state: (discovery as SponsorProviderSummary["discovery_state"]) || "CONFIGURED",
+      live_status: (live as SponsorProviderSummary["live_status"]) || "NOT_ATTEMPTED",
+      claim_ceiling: row.claim_ceiling || "DETERMINISTIC_TOOL_OUTPUT",
+      receipt_path: row.receipt_path || null,
+    };
+  });
+  return [...sponsorRows, ...infraRows];
 }
 
 export function buildGoldenPath(repoRoot: string): GoldenPathState {

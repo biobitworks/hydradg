@@ -46,6 +46,7 @@ async function main() {
   );
   const tavilyReceipt = readJson(path.join(evalDir, "tavily", "TAVILY_MISSION_RECEIPT.json"));
   const ic = readJson(path.join(evalDir, "immersive_commons", "IMMERSIVE_COMMONS_MISSION_RECEIPT.json"));
+  const daytona = readJson(path.join(evalDir, "daytona", "DAYTONA_SMOKE_RECEIPT.json"));
 
   // Write blocked/deferred mission stubs
   const blockedMissions = [
@@ -58,8 +59,8 @@ async function main() {
         provider: "Mitosis Cortex",
         operation: "memory_roundtrip",
         status: "BLOCKED",
-        error_code: "MI_CLI_MISSING",
-        error_summary: "mi CLI not on PATH; CONVEX_URL not configured; GUM Doctor secret injection BLOCKED",
+        error_code: "MI_AUTH_MISSING",
+        error_summary: "mi CLI installed (v0.26.0); endpoint https://m.mitosislabs.ai/healthz OK; MI_API_KEY / mi login still required; GUM Doctor secret injection BLOCKED",
         offer_code_metadata: "FREECORTEX",
         offer_is_api_credential: false,
         architectural_boundary: "Cortex is external agent memory; FCG remains canonical HydraDG custody",
@@ -71,6 +72,7 @@ async function main() {
         claim_ceiling: "EXTERNALLY_RETRIEVED_EVIDENCE",
         secret_state: "BLOCKED",
         signature_state: "NOT_SIGNED",
+        docs_ref: "https://mitosislabs.ai/developers/cli/overview",
       },
     },
     {
@@ -82,12 +84,14 @@ async function main() {
         provider: "Mitosis Yappy",
         operation: "external_computer_use_interaction",
         status: "BLOCKED",
-        error_code: "MI_CLI_MISSING",
+        error_code: "MI_AUTH_MISSING",
+        error_summary: "mi CLI installed; auth and office/agent workspace still required",
         offer_code_metadata: "FREEYAPPY",
         offer_is_api_credential: false,
         claim_ceiling: "PROBABILISTIC_MODEL_OUTPUT",
         secret_state: "BLOCKED",
         signature_state: "NOT_SIGNED",
+        docs_ref: "https://mitosislabs.ai/developers/cli/overview",
       },
     },
     {
@@ -197,7 +201,7 @@ async function main() {
   else goldenPathNotes.push("Tavily extract not PASS");
   if (runtypeStatus === "PASS") goldenPathNotes.push("Runtype live PASS");
   else goldenPathNotes.push("Runtype live ERROR preserved");
-  goldenPathNotes.push("Cortex roundtrip BLOCKED (mi CLI missing)");
+  goldenPathNotes.push("Cortex roundtrip BLOCKED (mi auth / MI_API_KEY missing)");
 
   const closeout = {
     schema: "sponsor.integration_closeout.v1",
@@ -227,21 +231,21 @@ async function main() {
       },
       Cortex: {
         priority: "P0",
-        discovery_state: "BLOCKED",
+        discovery_state: "CLI_INSTALLED_AWAITING_AUTH",
         live_status: "BLOCKED",
         secret_state: "BLOCKED",
         receipt_path: "eval/agent_native_sponsors_20260827/cortex/CORTEX_MISSION_RECEIPT.json",
         claim_ceiling: "EXTERNALLY_RETRIEVED_EVIDENCE",
-        earliest_divergence: "mi CLI / CONVEX_URL missing",
+        earliest_divergence: "MI_API_KEY / mi login missing",
       },
       Yappy: {
         priority: "P1",
-        discovery_state: "BLOCKED",
+        discovery_state: "CLI_INSTALLED_AWAITING_AUTH",
         live_status: "BLOCKED",
         secret_state: "BLOCKED",
         receipt_path: "eval/agent_native_sponsors_20260827/yappy/YAPPY_MISSION_RECEIPT.json",
         claim_ceiling: "PROBABILISTIC_MODEL_OUTPUT",
-        earliest_divergence: "mi CLI missing",
+        earliest_divergence: "MI_API_KEY / office workspace missing",
       },
       "Immersive Commons": {
         priority: "P1",
@@ -288,6 +292,19 @@ async function main() {
         receipt_path: "eval/agent_native_sponsors_20260827/nebius/NEBIUS_MISSION_RECEIPT.json",
         claim_ceiling: "NOT_APPLICABLE",
         earliest_divergence: null,
+      },
+    },
+    infrastructure: {
+      Daytona: {
+        lane: "INFRASTRUCTURE",
+        anb_sponsor: false,
+        discovery_state: daytona ? (daytona.status === "PASS" ? "CONFIGURED" : String(daytona.DAYTONA_STATE || "CONFIGURED")) : "CONFIGURED",
+        live_status: daytona?.status === "PASS" ? "PASS" : String(daytona?.status || "NOT_ATTEMPTED"),
+        secret_state: daytona?.secret_state || "PRESENT",
+        receipt_path: "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+        claim_ceiling: "DETERMINISTIC_TOOL_OUTPUT",
+        earliest_divergence: daytona?.status === "PASS" ? null : String(daytona?.error_code || "not_attempted"),
+        scientific_execution_authority: "magicSTUDIObox.local",
       },
     },
     golden_path: {

@@ -97,8 +97,24 @@ export function runtypeApiKeyStatus(): "PRESENT" | "MISSING" {
   return "PRESENT";
 }
 
+export function daytonaApiKeyStatus(): "PRESENT" | "MISSING" | "INVALID_PLACEHOLDER" {
+  loadHydraLampServerEnv();
+  const v = process.env.DAYTONA_API_KEY;
+  if (!v) return "MISSING";
+  if (isRuntypeKeyPlaceholder(v)) return "INVALID_PLACEHOLDER";
+  return "PRESENT";
+}
+
+export function daytonaApiUrl(): string {
+  loadHydraLampServerEnv();
+  const v = (process.env.DAYTONA_API_URL || "").trim();
+  return v || "https://app.daytona.io/api";
+}
+
 /** Default export for tsx .mts scripts (Node 26 CJS interop). */
 export default {
   loadHydraLampServerEnv,
   runtypeApiKeyStatus,
+  daytonaApiKeyStatus,
+  daytonaApiUrl,
 };

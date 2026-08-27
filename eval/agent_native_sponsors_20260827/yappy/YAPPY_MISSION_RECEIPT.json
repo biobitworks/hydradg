@@ -4,10 +4,12 @@
   "provider": "Mitosis Yappy",
   "operation": "external_computer_use_interaction",
   "status": "BLOCKED",
-  "error_code": "MI_CLI_MISSING",
+  "error_code": "MI_AUTH_MISSING",
+  "error_summary": "mi CLI installed; auth and office/agent workspace still required",
   "offer_code_metadata": "FREEYAPPY",
   "offer_is_api_credential": false,
   "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
   "secret_state": "BLOCKED",
-  "signature_state": "NOT_SIGNED"
+  "signature_state": "NOT_SIGNED",
+  "docs_ref": "https://mitosislabs.ai/developers/cli/overview"
 }

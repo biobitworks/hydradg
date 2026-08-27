@@ -49,6 +49,12 @@ export const projectSources: ProjectSource[] = [
     role: "optional isolated sandbox execution",
   },
   {
+    name: "Mitosis CLI",
+    url: "https://mitosislabs.ai/developers/cli/overview",
+    status: "verified-doc",
+    role: "optional Cortex memory / office agents via mi CLI; not canonical FCG",
+  },
+  {
     name: "Modal",
     url: "https://modal.com/docs",
     status: "verified-doc",

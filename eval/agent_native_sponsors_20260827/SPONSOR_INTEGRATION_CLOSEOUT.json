@@ -1,6 +1,6 @@
 {
   "schema": "sponsor.integration_closeout.v1",
-  "recorded_at_utc": "2026-08-27T05:29:26.234Z",
+  "recorded_at_utc": "2026-08-27T05:42:48.227Z",
   "branch": "hack-hydra/hydralamp-20260826",
   "execution_host": "magicSTUDIObox.local",
   "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
@@ -26,21 +26,21 @@
     },
     "Cortex": {
       "priority": "P0",
-      "discovery_state": "BLOCKED",
+      "discovery_state": "CLI_INSTALLED_AWAITING_AUTH",
       "live_status": "BLOCKED",
       "secret_state": "BLOCKED",
       "receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MISSION_RECEIPT.json",
       "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
-      "earliest_divergence": "mi CLI / CONVEX_URL missing"
+      "earliest_divergence": "MI_API_KEY / mi login missing"
     },
     "Yappy": {
       "priority": "P1",
-      "discovery_state": "BLOCKED",
+      "discovery_state": "CLI_INSTALLED_AWAITING_AUTH",
       "live_status": "BLOCKED",
       "secret_state": "BLOCKED",
       "receipt_path": "eval/agent_native_sponsors_20260827/yappy/YAPPY_MISSION_RECEIPT.json",
       "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
-      "earliest_divergence": "mi CLI missing"
+      "earliest_divergence": "MI_API_KEY / office workspace missing"
     },
     "Immersive Commons": {
       "priority": "P1",
@@ -89,6 +89,19 @@
       "earliest_divergence": null
     }
   },
+  "infrastructure": {
+    "Daytona": {
+      "lane": "INFRASTRUCTURE",
+      "anb_sponsor": false,
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null,
+      "scientific_execution_authority": "magicSTUDIObox.local"
+    }
+  },
   "golden_path": {
     "source": "Tavily",
     "memory": null,
@@ -100,7 +113,7 @@
     "notes": [
       "Tavily extract PASS",
       "Runtype live ERROR preserved",
-      "Cortex roundtrip BLOCKED (mi CLI missing)"
+      "Cortex roundtrip BLOCKED (mi auth / MI_API_KEY missing)"
     ]
   },
   "GOLDEN_PATH_STATE": "PARTIAL_BLOCKED",

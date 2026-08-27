@@ -4,8 +4,8 @@
   "provider": "Mitosis Cortex",
   "operation": "memory_roundtrip",
   "status": "BLOCKED",
-  "error_code": "MI_CLI_MISSING",
-  "error_summary": "mi CLI not on PATH; CONVEX_URL not configured; GUM Doctor secret injection BLOCKED",
+  "error_code": "MI_AUTH_MISSING",
+  "error_summary": "mi CLI installed (v0.26.0); endpoint https://m.mitosislabs.ai/healthz OK; MI_API_KEY / mi login still required; GUM Doctor secret injection BLOCKED",
   "offer_code_metadata": "FREECORTEX",
   "offer_is_api_credential": false,
   "architectural_boundary": "Cortex is external agent memory; FCG remains canonical HydraDG custody",
@@ -16,5 +16,6 @@
   "underlying_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
   "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
   "secret_state": "BLOCKED",
-  "signature_state": "NOT_SIGNED"
+  "signature_state": "NOT_SIGNED",
+  "docs_ref": "https://mitosislabs.ai/developers/cli/overview"
 }

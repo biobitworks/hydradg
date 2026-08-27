@@ -52,7 +52,8 @@ export type SponsorMissionResult = {
 
 export type SponsorProviderSummary = {
   provider: string;
-  priority: "P0" | "P1" | "P2" | "OPTIONAL" | "SUBMISSION_ONLY";
+  priority: "P0" | "P1" | "P2" | "OPTIONAL" | "SUBMISSION_ONLY" | "INFRASTRUCTURE";
+  lane?: "SPONSOR" | "INFRASTRUCTURE";
   panel_state: SponsorPanelState;
   discovery_state: SponsorDiscoveryState;
   live_status: SponsorMissionStatus | "NOT_ATTEMPTED";
