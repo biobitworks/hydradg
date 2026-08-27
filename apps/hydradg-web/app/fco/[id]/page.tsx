@@ -6,6 +6,7 @@ import { buildDemoFixture } from "@/lib/demoFixture";
 import { HUGGINGFACE_MODELS, PREPRINTS } from "@/lib/huggingfaceAndPreprints";
 import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
 import { buildSiteFcg } from "@/lib/siteFcg";
+import { buildSubmissionHeroFcoProjection, SUBMISSION_HERO } from "@/lib/submissionHeroFco";
 
 type Edge = { source: string; relation: string; target: string };
 type NodeRow = { id: string; type: string; payload: Record<string, unknown>; object_sha256: string };
@@ -14,14 +15,43 @@ function catalog() {
   const fixture = buildDemoFixture();
   const site = buildSiteFcg();
   const knowledge = buildKnowledgeProjection();
+  const submissionHero = buildSubmissionHeroFcoProjection();
+  const rawHeroMedia: NodeRow = {
+    id: SUBMISSION_HERO.rawMediaFcoId,
+    type: "SubmissionHeroMediaFCO",
+    object_sha256: SUBMISSION_HERO.rawMediaFcoId.slice(4),
+    payload: {
+      capture_id: SUBMISSION_HERO.captureId,
+      image_sha256: SUBMISSION_HERO.sha256,
+      eval_path: SUBMISSION_HERO.evalPath,
+      binding_path: SUBMISSION_HERO.rawMediaBindingPath,
+      evidence_class: "DETERMINISTIC_RAW_MEDIA_BYTES",
+      claim_ceiling: "SUBMISSION_HERO_MATERIALIZATION_BINDING_ONLY",
+      signature_state: "NOT_SIGNED",
+      merkle_state: "NOT_COMMITTED",
+      fcg_append_state: "NOT_APPENDED",
+    },
+  };
   const fixtureNodes: NodeRow[] = fixture.nodes.map(([, node]) => node);
   const fixtureEdges: Edge[] = fixture.edges.map(([source, relation, target]) => ({ source, relation, target }));
-  const nodes = [...fixtureNodes, ...site.nodes, site.artifact, ...knowledge.nodes, knowledge.root];
+  const nodes = [
+    ...fixtureNodes,
+    ...site.nodes,
+    site.artifact,
+    ...knowledge.nodes,
+    knowledge.root,
+    submissionHero.hero,
+    submissionHero.index,
+    rawHeroMedia,
+  ];
   const edges: Edge[] = [
     ...fixtureEdges,
     ...site.edges.map((edge) => ({ source: edge.source, relation: edge.relation, target: edge.target })),
     ...site.nodes.map((node) => ({ source: node.id, relation: "PART_OF_SITE_ARTIFACT", target: site.artifact.id })),
     ...knowledge.nodes.map((node) => ({ source: node.id, relation: "PART_OF_KNOWLEDGE_INDEX", target: knowledge.root.id })),
+    { source: submissionHero.hero.id, relation: "DERIVED_FROM", target: rawHeroMedia.id },
+    { source: submissionHero.hero.id, relation: "INDEXED_BY", target: submissionHero.index.id },
+    { source: submissionHero.index.id, relation: "PART_OF_KNOWLEDGE_INDEX", target: knowledge.root.id },
   ];
   return { nodes, edges };
 }

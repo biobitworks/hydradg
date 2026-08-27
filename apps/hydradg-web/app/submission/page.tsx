@@ -18,11 +18,11 @@ export default function SubmissionPage() {
           <p className="eyebrow">Agent Native Builders · Immersive Commons · HydraLamp</p>
           <h1>Submission custody surface.</h1>
           <p className="lede">
-            Judges can follow the golden path from this hero through hosted Vercel demo, local Studio authority, and hash-bound FCO receipts. IC submission remains <strong>AWAITING_HUMAN_APPROVAL</strong> until operator token and registration gates pass.
+            Judges can follow the golden path from this hero through hosted Vercel demo, local Studio authority, and hash-bound FCO receipts. Immersive Commons submission is <strong>SUBMITTED</strong> (platform ack 2026-08-27T22:39:24Z); publication metadata here may advance without re-submitting the sealed IC payload.
           </p>
         </div>
         <div className="heroStatus">
-          <span className="pill pillWarn">IC · AWAITING_HUMAN_APPROVAL</span>
+          <span className="pill pillGood">IC · SUBMITTED</span>
           <span className="pill pillGood">FCO · MATERIALIZED</span>
           <span className="pill pillMuted">SIGNATURE · NOT_SIGNED</span>
         </div>
@@ -62,13 +62,16 @@ export default function SubmissionPage() {
         <span className="sectionNumber">02 / FCO + KNOWLEDGE GRAPH</span>
         <h2 className="displayTitle">Hero media is a governed receipt, not a decorative banner.</h2>
         <div className="metrics">
-          <article className="metric"><span className="metricLabel">FCO ID</span><strong className="mono small">{projection.hero.id.slice(0, 22)}…</strong></article>
+          <article className="metric"><span className="metricLabel">Website projection FCO</span><strong className="mono small">{projection.hero.id.slice(0, 22)}…</strong></article>
+          <article className="metric"><span className="metricLabel">Raw media FCO</span><strong className="mono small">{SUBMISSION_HERO.rawMediaFcoId.slice(0, 22)}…</strong></article>
+          <article className="metric"><span className="metricLabel">Relation</span><strong>DERIVED_FROM</strong></article>
           <article className="metric"><span className="metricLabel">Image SHA-256</span><strong className="mono small">{SUBMISSION_HERO.sha256.slice(0, 16)}…</strong></article>
           <article className="metric"><span className="metricLabel">Sponsor regions</span><strong>{HERO_REGIONS.filter((r) => r.kind === "sponsor").length}</strong></article>
           <article className="metric"><span className="metricLabel">Track regions</span><strong>{HERO_REGIONS.filter((r) => r.kind === "track").length}</strong></article>
         </div>
         <div className="actions">
-          <Link className="primary" href={`/fco/${encodeURIComponent(projection.hero.id)}`}>Inspect Submission Hero FCO ↗</Link>
+          <Link className="primary" href={`/fco/${encodeURIComponent(projection.hero.id)}`}>Inspect website projection FCO ↗</Link>
+          <Link className="secondary" href={`/fco/${encodeURIComponent(SUBMISSION_HERO.rawMediaFcoId)}`}>Inspect raw media FCO ↗</Link>
           <Link className="secondary" href="/graph">Open 4D FCG explorer</Link>
           <Link className="secondary" href="/knowledge#hydralamp-submission-hero">Knowledge term ↗</Link>
         </div>
@@ -100,9 +103,9 @@ export default function SubmissionPage() {
 
       <section className="computeSection">
         <span className="sectionNumber">04 / IMMERSIVE COMMONS INTEGRATION</span>
-        <h2 className="displayTitle">Integration repo synced · submit blocked on human gate.</h2>
+        <h2 className="displayTitle">Integration repo synced · IC submission recorded.</h2>
         <p className="sectionLead">
-          <code>biobitworks/immersivecommons-integration@8cc82a2</code> records canonical pointers, studio remote-work receipt, and SHA256SUMS transfer. Final <code>ic_hack_submit</code> requires <code>FLOOR10_AGENT_TOKEN</code>, live registration, and explicit operator approval.
+          <code>biobitworks/immersivecommons-integration@282992be5d61ed4e371ad355471c32755b346939</code> records canonical pointers, studio remote-work receipt, and SHA256SUMS transfer. Platform write receipt: <code>eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json</code> (EXTERNALLY_RETRIEVED_EVIDENCE; not cryptographically signed).
         </p>
         <div className="actions">
           <Link className="primary" href="/judge#golden-reference">Continue golden path →</Link>

@@ -1,0 +1,31 @@
+{
+  "schema": "hydradg.immersive_commons.submit_receipt.v1",
+  "recorded_at_utc": "2026-08-27T22:39:24Z",
+  "execution_host": "magicSTUDIObox.local",
+  "payload_sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+  "payload_path": "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+  "operator_approval": "APPROVE_IMMERSIVE_COMMONS_SUBMISSION_AFTER_QUICK_FIXES",
+  "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "transformation_class": "IC_PLATFORM_ACKNOWLEDGEMENT_CAPTURE",
+  "local_receipt_class": "DETERMINISTIC_TOOL_OUTPUT",
+  "secret_redaction": "NO_TOKENS_OR_CREDENTIALS_PRESENT",
+  "parsed": {
+    "ok": true,
+    "submission": {
+      "eid": "anb-hack-01",
+      "team_id": "t_3d43e808657d9b79",
+      "title": "HydraLamp",
+      "blurb": "HydraLamp is an agent-native zero-trust control plane built on HydraDG. Autonomous agents discover context, authenticate, operate through bounded capabilities, preserve failures and contradictions, and record source → action → result → claim provenance as FCO/FCG custody. The demo replays a frozen 46-event reference → poison → detection → antidote → restoration sequence while preserving authorization failures, replay rejections, quarantine state, and custody receipts rather than hiding unfavorable outcomes. Models propose. Deterministic custody decides.",
+      "repo_url": "https://github.com/biobitworks/hydradg",
+      "demo_url": "https://hydralamp.vercel.app/",
+      "agent_surface": "HydraLamp exposes machine-readable HTTP agent APIs on HydraDG (Vercel control plane) and a standalone public custody console at hydralamp.vercel.app. Agents without UI access can: (1) GET/POST /api/hydralamp/run to start a governed experiment (DETERMINISTIC_FIXTURE or LIVE_RUNTYPE on Vercel; local Ollarma lanes on Studio only); (2) GET /api/hydralamp/status?run_id= for FCG roots, hash-chain verification, quarantine, lanes, and claim ceilings; (3) GET /api/hydralamp/stream?run_id= for SSE custody events; (4) GET /api/hydralamp/events for the frozen 46-event golden lane JSONL; (5) GET/POST /api/agent-native/evidence-gateway for discover_capabilities, query_evidence, propose_external_evidence, and verify_custody_receipt (quarantine-only; no canonical FCG append); (6) GET /api/providers/status and /api/providers/health for sponsor integration state. The visual UI is a synchronized observer of the governed machine event stream — not the authority.",
+      "submitted_at": "2026-08-27T22:13:37.209Z",
+      "locked": false,
+      "updated_at": "2026-08-27T22:39:24.763Z"
+    }
+  },
+  "submission_write_state": "SUBMITTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED",
+  "fcg_append_state": "NOT_APPENDED"
+}

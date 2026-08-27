@@ -5,7 +5,9 @@ export const SUBMISSION_HERO = {
   imagePath: "/submission/HYDRALAMP_SUBMISSION_HERO.png",
   evalPath: "eval/immersive_commons_submission_20260827/assets/HYDRALAMP_SUBMISSION_HERO.png",
   sha256: "a5d558ab914b08da7373f858fbe79f60871315740e2abe06c39c31367c392b09",
-  fcoId: "fco:c39e474cfb598c86ba66b288403850aec57e65573f31342bc9644487e4a40ddc",
+  /** Raw PNG bytes + minimal materialization binding (eval/assets/SUBMISSION_HERO_FCO_BINDING.json). */
+  rawMediaFcoId: "fco:c39e474cfb598c86ba66b288403850aec57e65573f31342bc9644487e4a40ddc",
+  rawMediaBindingPath: "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_FCO_BINDING.json",
   license: {
     researchContent: "CC-BY-NC-ND-4.0",
     software: "Apache-2.0",
@@ -26,11 +28,11 @@ export const SUBMISSION_HERO = {
     },
     immersiveCommonsIntegration: {
       branch: "main",
-      sha: "8cc82a2",
+      sha: "282992be5d61ed4e371ad355471c32755b346939",
       url: "https://github.com/biobitworks/immersivecommons-integration",
     },
   },
-  submissionState: "AWAITING_HUMAN_APPROVAL",
+  submissionState: "SUBMITTED",
 } as const;
 
 export type HeroRegion = {
@@ -50,7 +52,7 @@ export const HERO_REGIONS: HeroRegion[] = [
   { id: "sponsor-cortex", label: "Cortex · P0", kind: "sponsor", priority: "P0", bbox: { x: 560, y: 260, w: 160, h: 80 }, detail: "Mitosis memory roundtrip · external only · not canonical FCG" },
   { id: "sponsor-cotal", label: "Cotal · P1", kind: "sponsor", priority: "P1", bbox: { x: 500, y: 360, w: 150, h: 75 }, detail: "Bounded A2A mesh transaction · BOUNDED_TX_PASS" },
   { id: "sponsor-aisa", label: "AIsa · P1", kind: "sponsor", priority: "P1", bbox: { x: 460, y: 460, w: 140, h: 70 }, detail: "qwen-flash proposal lane · composed golden path" },
-  { id: "sponsor-ic", label: "Immersive Commons · P1", kind: "sponsor", priority: "P1", bbox: { x: 420, y: 560, w: 200, h: 80 }, detail: "Event host · MCP surface · submission AWAITING_HUMAN_APPROVAL" },
+  { id: "sponsor-ic", label: "Immersive Commons · P1", kind: "sponsor", priority: "P1", bbox: { x: 420, y: 560, w: 200, h: 80 }, detail: "Event host · MCP surface · submission SUBMITTED (2026-08-27T22:39:24Z)" },
   { id: "sponsor-yappy", label: "Yappy.biz · P1", kind: "sponsor", priority: "P1", bbox: { x: 380, y: 660, w: 150, h: 70 }, detail: "Public product API · PASS · distinct from Mitosis Yappy" },
   { id: "sponsor-tenki", label: "Tenki · P2", kind: "sponsor", priority: "P2", bbox: { x: 340, y: 750, w: 130, h: 65 }, detail: "Sandbox microVM · deterministic exec receipt" },
   { id: "track-golden-path", label: "Composed Golden Path", kind: "track", bbox: { x: 600, y: 680, w: 320, h: 100 }, detail: "Tavily → AIsa → verify → quarantine · PARTIAL_P0_WITH_COMPOSED_FIXTURE" },
@@ -66,7 +68,10 @@ export function buildSubmissionHeroFcoProjection() {
     eval_path: SUBMISSION_HERO.evalPath,
     license_research_content: SUBMISSION_HERO.license.researchContent,
     license_software: SUBMISSION_HERO.license.software,
-    evidence_class: "DETERMINISTIC_RAW_MEDIA_BYTES",
+    evidence_class: "DETERMINISTIC_WEBSITE_PROJECTION",
+    raw_media_fco_id: SUBMISSION_HERO.rawMediaFcoId,
+    projection_relation: "DERIVED_FROM",
+    raw_media_binding_path: SUBMISSION_HERO.rawMediaBindingPath,
     claim_ceiling: "SUBMISSION_HERO_NAVIGATION_AND_CUSTODY_RECEIPT_ONLY",
     event_id: "anb-hack-01",
     repository_pointers: SUBMISSION_HERO.pointers,
