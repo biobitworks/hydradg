@@ -1,0 +1,152 @@
+Thinking...
+Okay, let's tackle this question. The user is asking about the correct cano[4D[K
+canonical design for Ollarma-bridged invocations, focusing on several aspec[5D[K
+aspects: MODEL ACTOR identity, MODEL INVOCATION, parent/root of invocation,[11D[K
+invocation, graph structure, and existing roots. They also want to know if [K
+a dedicated MODEL_ROOT is needed, about invocation identity objects, whethe[6D[K
+whether the same model across runs uses the same actor or new invocations, [K
+and the UI grouping mechanism. Plus, they want to flag any identity conflat[7D[K
+conflation risks.
+
+First, I need to recall the context provided. The schemas mention agent_mod[9D[K
+agent_model_handoff_receipt and orchestration_work_unit. The custody contra[6D[K
+contract outlines a chain from FCO to prompt FCO, then Ollarma-approved mod[3D[K
+model, runtime digest, etc., leading to FCG append with root_before and roo[3D[K
+root_after. HydraLamp events use fco:actor:ACTOR_ID, runtime_model=ollarma/[22D[K
+runtime_model=ollarma/actor_id, source_request_hash, and FCG roots.
+
+The user's question is about the correct design for each Ollarma-bridged in[2D[K
+invocation. Let me break down each point:
+
+1) Persistent MODEL ACTOR identity: The context says that the actor_class c[1D[K
+can be OLLARMA or OLLAMA_MODEL. The model has a runtime_name and digest. So[2D[K
+So, the MODEL ACTOR identity should be persistent, likely tied to the Ollar[5D[K
+Ollarma-approved model and its runtime digest. The actor_id in HydraLamp ev[2D[K
+events might be part of this identity.
+
+2) One MODEL INVOCATION: Each invocation would be a single work_unit, which[5D[K
+which has a work_unit_id and parent_receipt_sha256. So each invocation is a[1D[K
+a distinct work_unit, hence one per invocation.
+
+3) Parent/root of invocation: The lineage chain starts with parent handoff,[8D[K
+handoff, then Ollarma-approved model, runtime digest, etc. The FCG root_bef[8D[K
+root_before/after are part of the append. So the parent would be the parent[6D[K
+parent_receipt_sha256 in the orchestration_work_unit, which links to the ag[2D[K
+agent_model_handoff_receipt. The root would be the FCG root_after from the [K
+append.
+
+4) Graph structure: The existing FCO parent is part of the lineage. The mod[3D[K
+model-actor FCO would be the Ollarma-approved model's FCO. The invocation F[1D[K
+FCO is the work_unit's FCO. The FCG root_before/after are part of the appen[5D[K
+append. The user mentions not to invent new roots, so using existing FCG ro[2D[K
+roots is key. The graph would have FCOs linked via parent and work_unit rel[3D[K
+relationships, with FCG roots tracking the append.
+
+5) Existing equivalent to MODEL_ACTOR_ROOT / INVOCATION_ROOT / EXECUTION_RO[12D[K
+EXECUTION_ROOT: The custody contract mentions FCG append with root_before/r[13D[K
+root_before/root_after. The model_actor_root might be the Ollarma-approved [K
+model's FCO, and the invocation_root could be the work_unit's FCO. Executio[8D[K
+Execution_root might be the FCG root_after.
+
+Now, the critical points: No new Merkle/FCG roots for models. So, MODEL ACT[3D[K
+ACTOR IDENTITY is separate from FCG roots. The required lineage chain is pa[2D[K
+parent handoff -> Ollarma model -> runtime digest -> prompt SHA -> raw resp[4D[K
+response SHA -> parser -> result -> FCO -> F. So the MODEL ACTOR is the Oll[3D[K
+Ollama model with its digest, and the invocation is the work_unit with its [K
+FCO.
+
+For the answers:
+
+A) Dedicated MODEL_ROOT: The user says not to invent new roots, so no. Use [K
+existing FCG roots and FCOs.
+
+B) Invocation identity object: Each work_unit is an invocation, so the work[4D[K
+work_unit_id and its FCO would be the identity.
+
+C) Same model across runs: The same Ollama model would have the same actor_[6D[K
+actor_id, so same actor, but each invocation is a new work_unit. So same ac[2D[K
+actor, new invocations.
+
+D) UI grouping: The canonical FCO relations vs HydraDB projections. The UI [K
+should group by FCO relations, not HydraDB projections, to maintain provena[7D[K
+provenance. Media types like MODEL INVOCATION vs EVENT are derived from pro[3D[K
+provenance, not visibility.
+
+Identity conflation risks: If model_actor is conflated with FCG roots, but [K
+they are separate. Also, ensuring that the same actor isn't reused for diff[4D[K
+different models without proper tracking.
+
+Putting it all together, the answer should structure each point with bullet[6D[K
+bullets, state positions on A-D, and flag risks.
+...done thinking.
+
+**Answer:**  
+- **(A) Dedicated MODEL_ROOT**: **NO**. No new Merkle/FCG roots are needed [K
+for models. Use existing **FCG root_before/root_after** and **FCO** relatio[7D[K
+relationships to track lineage.  
+- **(B) Invocation identity object**: Each invocation is a **orchestration_[16D[K
+**orchestration_work_unit** with a unique **work_unit_id**, **parent_receip[15D[K
+**parent_receipt_sha256**, and **actor{runtime_identity,model_name,model_di[44D[K
+**actor{runtime_identity,model_name,model_digest}**. This forms the invocat[7D[K
+invocation identity.  
+- **(C) Same model across runs**: **Same actor (Ollarma-approved model)**, [K
+but each invocation is a **new work_unit** (distinct FCO and FCG root). Mod[3D[K
+Model identity is tied to the **actor_class (OLLARMA/OLLAMA_MODEL)** and **[2D[K
+**runtime_digest**, not invocations.  
+- **(D) UI grouping mechanism**: Use **canonical FCO relations** (parent/ch[10D[K
+(parent/child links) for grouping, not HydraDB projections. Media types (MO[3D[K
+(MODEL INVOCATION, EVENT, etc.) derive from **provenance** (e.g., source_re[9D[K
+source_request_hash, FCG roots) not visibility.  
+
+**Structured Design:**  
+1. **MODEL ACTOR IDENTITY**:  
+   - Persistent via **actor_class (OLLARMA/OLLAMA_MODEL)**, **model{runtime[15D[K
+**model{runtime_name, runtime_digest}**, and **actor_id** (from HydraLamp e[1D[K
+events).  
+   - **No conflated with FCG roots**; separate from **FCG root_before/root_[17D[K
+root_before/root_after**.  
+
+2. **MODEL INVOCATION**:  
+   - One per **orchestration_work_unit** with **work_unit_id** and **parent[8D[K
+**parent_receipt_sha256** (linking to **agent_model_handoff_receipt**).  
+   - **FCO** materializes the result of the invocation, linked via **source[8D[K
+**source_request_hash**.  
+
+3. **Parent/Root of Invocation**:  
+   - **Parent**: **parent_receipt_sha256** (from **agent_model_handoff_rece[26D[K
+**agent_model_handoff_receipt**).  
+   - **Root**: **FCG root_after** (from **FCG append**), which encapsulates[12D[K
+encapsulates the probabilistic model output and parser result.  
+
+4. **Graph Structure**:  
+   - **FCO parent**: Links to **prompt FCO** (via **prompt_sha256**).  
+   - **Model-actor FCO**: Represents the Ollarma-approved model (via **mode[6D[K
+**model{approved_name, runtime_digest}**).  
+   - **Invocation FCO**: Derived from **work_unit_id** and **source_request[16D[K
+**source_request_hash**.  
+   - **FCG root_before/after**: Track append operations without inventing n[1D[K
+new roots.  
+
+5. **Existing Roots**:  
+   - **MODEL_ACTOR_ROOT**: The **Ollarma-approved model’s FCO** (via **acto[6D[K
+**actor{model_name, model_digest}**).  
+   - **INVOCATION_ROOT**: The **work_unit’s FCO** (via **work_unit_id**).  [K
+
+   - **EXECUTION_ROOT**: The **FCG root_after** (from the append operation)[10D[K
+operation).  
+
+**Identity Conflation Risks**:  
+- **Model_actor vs FCG roots**: Explicitly separate to avoid conflating mod[3D[K
+model identity with execution state.  
+- **Same model across runs**: Ensure **actor_id** and **runtime_digest** ar[2D[K
+are stable, avoiding reuse of actors for different models.  
+- **UI grouping**: Avoid HydraDB projections; prioritize **FCO lineage** fo[2D[K
+for accuracy.  
+
+**Critical Flags**:  
+- **NO** new Merkle/FCG roots for models.  
+- **UI grouping** must align with **provenance** (e.g., source_request_hash[19D[K
+source_request_hash, FCG roots) to avoid visibility-based artifacts.  
+- **Model_actor** identity is **persistent**, while **invocation** is trans[5D[K
+transient (work_unit-specific).
+

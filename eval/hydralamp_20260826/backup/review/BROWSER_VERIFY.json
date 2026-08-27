@@ -1,0 +1,253 @@
+{
+  "schema": "hydradg.hydralamp.backup_browser_verify.v1",
+  "verified_utc": "2026-08-27T18:36:42.210Z",
+  "LIVE_INTERACTIVE_BACKUP_READY": "PASS",
+  "fail_count": 0,
+  "fails": [],
+  "results": [
+    {
+      "gate": "PREDECESSOR_NO_3D",
+      "result": "PASS",
+      "detail": "mode-3d count=0"
+    },
+    {
+      "gate": "CONTROL_PRESENT_mode-0d",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_mode-1d",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_mode-2d",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_mode-3d",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_mode-4d",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_rot-left",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_rot-right",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_rot-up",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_rot-down",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_zoom-in",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_zoom-out",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_cam-center",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_cam-reset",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_play",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_pause",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_step-back",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_step-fwd",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_scrub",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_jump-ref",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_jump-poison",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_jump-repair",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "CONTROL_PRESENT_jump-pass",
+      "result": "PASS",
+      "detail": "count=1"
+    },
+    {
+      "gate": "ARIA_PLAY",
+      "result": "PASS",
+      "detail": "Play event stream"
+    },
+    {
+      "gate": "MODE_0D",
+      "result": "PASS",
+      "detail": "{\"mode\":\"0D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "MODE_1D",
+      "result": "PASS",
+      "detail": "{\"mode\":\"1D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "MODE_2D",
+      "result": "PASS",
+      "detail": "{\"mode\":\"2D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "MODE_3D",
+      "result": "PASS",
+      "detail": "{\"mode\":\"3D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "MODE_4D",
+      "result": "PASS",
+      "detail": "{\"mode\":\"4D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "JUMP_REF",
+      "result": "PASS",
+      "detail": "{\"mode\":\"3D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "ROTATE_CONTROLS",
+      "result": "PASS",
+      "detail": "yaw 0.55->0.4 pitch -0.3->-0.42"
+    },
+    {
+      "gate": "ZOOM_CONTROLS",
+      "result": "PASS",
+      "detail": "245->295"
+    },
+    {
+      "gate": "RESET_CONTROL",
+      "result": "PASS",
+      "detail": "{\"mode\":\"3D\",\"idx\":0,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:0\",\"event_hash\":\"817309afbea60bfbbea4be6f9251e6a3d92e588af510bbee060c612080c9183a\",\"fcg_root_after\":\"7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "SCRUB_POISON",
+      "result": "PASS",
+      "detail": "{\"mode\":\"3D\",\"idx\":35,\"yaw\":0.55,\"pitch\":-0.3,\"zoom\":245,\"selectedId\":\"evt:35\",\"event_hash\":\"b16a2fd54f87c9933d39985cb7849ccac02e4e66ddb8be77e502572fad5e33cb\",\"fcg_root_after\":\"4a259e02afae0522086667d33622f321a182366cd59ec25101027247c1b51783\",\"stage\":\"POISON\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "SCRUB_REPAIR",
+      "result": "PASS",
+      "detail": "{\"mode\":\"3D\",\"idx\":6,\"yaw\":0.8500000000000001,\"pitch\":-0.18,\"zoom\":245,\"selectedId\":\"evt:6\",\"event_hash\":\"cc1f53612e81d6de604c489d0b1ed26a498fb3b158baef6f695ccf92d4dbcfa7\",\"fcg_root_after\":\"eb98da47b9b13939a8b781f42e0dc1946a01474a0078ec94c2510bf4a2ae9739\",\"stage\":\"ANTIDOTE/REPAIR\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "SCRUB_PASS_4D",
+      "result": "PASS",
+      "detail": "{\"mode\":\"4D\",\"idx\":45,\"yaw\":0.8500000000000001,\"pitch\":-0.18,\"zoom\":245,\"selectedId\":\"evt:45\",\"event_hash\":\"0ea47b216fe51b368988f510e1b6501cf4e225cd521d3da214de90d26bfdcb51\",\"fcg_root_after\":\"a1ec5db1cc9388dffb935ffd7ab4d0c254b8ab73b03c30f0722326da1d8846b1\",\"stage\":\"RESTORED/PASS\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "PLAY_PAUSE",
+      "result": "PASS",
+      "detail": "playIdx=0 pauseIdx=0"
+    },
+    {
+      "gate": "PLAY_ADVANCES",
+      "result": "PASS",
+      "detail": "idx=12"
+    },
+    {
+      "gate": "PREV_NEXT",
+      "result": "PASS",
+      "detail": "nxt=21 prv=20"
+    },
+    {
+      "gate": "SCRUB",
+      "result": "PASS",
+      "detail": "{\"mode\":\"4D\",\"idx\":12,\"yaw\":0.7000000000000001,\"pitch\":-0.18,\"zoom\":270,\"selectedId\":\"evt:12\",\"event_hash\":\"bd9b8d510cea84f62006b52618e337a6bbbe494f85eba54778a1eb484e87b19f\",\"fcg_root_after\":\"eb98da47b9b13939a8b781f42e0dc1946a01474a0078ec94c2510bf4a2ae9739\",\"stage\":\"REFERENCE\",\"event_count\":46,\"spatial\":\"DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES\"}"
+    },
+    {
+      "gate": "NODE_SELECT",
+      "result": "PASS",
+      "detail": "selectedId=evt:5"
+    },
+    {
+      "gate": "KEYBOARD",
+      "result": "PASS",
+      "detail": "kN=9 kP=8"
+    },
+    {
+      "gate": "EVENT_COUNT",
+      "result": "PASS",
+      "detail": "count=46"
+    },
+    {
+      "gate": "EVENT_GRAPH_SYNC",
+      "result": "PASS",
+      "detail": "{\"stateHash\":\"b16a2fd54f87c9933d39985cb7849ccac02e4e66ddb8be77e502572fad5e33cb\",\"jsonHash\":\"b16a2fd54f87c9933d39985cb7849ccac02e4e66ddb8be77e502572fad5e33cb\",\"fcg\":\"4a259e02afae0522086667d33622f321a182366cd59ec25101027247c1b51783\",\"jsonFcg\":\"4a259e02afae0522086667d33622f321a182366cd59ec25101027247c1b51783\",\"idx\":35,\"jsonIdx\":36}"
+    },
+    {
+      "gate": "TOUCH_POINTER_SURFACE",
+      "result": "PASS",
+      "detail": "touch-action=none"
+    },
+    {
+      "gate": "EXTERNAL_NETWORK_REQUIRED",
+      "result": "PASS",
+      "detail": ""
+    }
+  ],
+  "external_requests": [],
+  "screenshots": [
+    "backup-0d.png",
+    "backup-1d.png",
+    "backup-2d.png",
+    "backup-3d-poison.png",
+    "backup-3d-reference.png",
+    "backup-3d-repair.png",
+    "backup-3d.png",
+    "backup-4d-pass.png",
+    "backup-4d.png",
+    "backup-controls.png",
+    "backup-review-before.png"
+  ]
+}

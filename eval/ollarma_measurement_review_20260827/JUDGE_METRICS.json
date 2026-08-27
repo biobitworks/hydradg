@@ -1,0 +1,87 @@
+{
+  "tier": 1,
+  "max_visible": 8,
+  "metrics": [
+    "PRIVATE_LEAK_COUNT",
+    "UNAUTHORIZED_WRITE_COUNT",
+    "REPLAY_ACCEPTED_COUNT",
+    "POISON_CANONICALIZED_COUNT",
+    "RESTORATION_PASS",
+    "QUARANTINE_RESOLVED",
+    "fcg_root_after",
+    "BROWSER_VERIFY_PASS"
+  ],
+  "ACTUAL_HOST": "magicSTUDIObox.local",
+  "CURRENT_BRANCH": "hack-hydra/hydralamp-20260826",
+  "CURRENT_SHA": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "MODELS_INVENTORIED": 14,
+  "MODELS_EXECUTED": [
+    "qwen2.5:1.5b",
+    "phi4-mini:latest",
+    "qwen3:4b"
+  ],
+  "TOP_JUDGE_METRICS": [
+    "PRIVATE_LEAK_COUNT",
+    "UNAUTHORIZED_WRITE_COUNT",
+    "REPLAY_ACCEPTED_COUNT",
+    "POISON_CANONICALIZED_COUNT",
+    "RESTORATION_PASS",
+    "QUARANTINE_RESOLVED",
+    "fcg_root_after",
+    "BROWSER_VERIFY_PASS"
+  ],
+  "TOP_ENGINEERING_METRICS": [
+    "event_hash",
+    "source_request_hash",
+    "fcg_root_before",
+    "fcg_root_after",
+    "delta_g_star_drift_pointer",
+    "canonical_delta",
+    "contradictions_delta",
+    "quarantine_delta",
+    "cloud_drift_0_100",
+    "g_star",
+    "delta_g_star",
+    "restoration_gain"
+  ],
+  "TOP_SCIENCE_METRICS": [
+    "PASS_AT_3",
+    "PASS_CARET_3",
+    "PROPOSAL_ACCEPT_RATE",
+    "DENIAL_RATE",
+    "model_digest",
+    "output_sha256",
+    "provider_execution_receipt",
+    "evidence_class",
+    "claim_ceiling"
+  ],
+  "METRICS_TO_REMOVE_OR_HIDE": [
+    "visualization_x_y_z as scientific coordinate",
+    "cloud_drift on judge tier without distribution context",
+    "aggregate PASS rate without case vectors"
+  ],
+  "METRICS_TO_KEEP_SEPARATE": [
+    "CloudDrift magnitude vs \u0394G* direction vs FCG root vs task/restoration gates",
+    "BYTE_IDENTITY vs PROVENANCE_BINDING vs SIGNATURE_AUTHENTICITY",
+    "role actor vs Ollama model digest"
+  ],
+  "CLOUDDRIFT_STATUS": "DEFINED_JSD_MAGNITUDE_0_100 \u2014 two code paths; NOT_COMPUTED on frozen 46-event gateway replay",
+  "DELTA_G_STAR_STATUS": "DEFINED_DIMENSIONLESS \u2014 gateway runtime snapshot available; drift_pointer misnamed",
+  "RESTORATION_VECTOR_STATUS": "PARTIAL \u2014 REPAIR promote + zero leaks evidenced; restoration_gain not on frozen path",
+  "MODEL_COMPARISON_STATUS": "NOT_RUN on frozen lane (scripted actors); AVAILABLE on runtype stress matrix for qwen2.5:1.5b only",
+  "STATISTICAL_COMPARISON_STATUS": "UNDERPOWERED / BLOCKED_CASE_VECTORS for PASS@3",
+  "MEDIA_CUSTODY_METRICS_STATUS": "RAW_MEDIA_SHA256 + BROWSER_VERIFY evidenced; PIXEL_SEAL NOT_RUN",
+  "PERFORMANCE_TELEMETRY_STATUS": "PARTIAL \u2014 model_latency_ms on runtype stress only; tokens/VRAM NOT_MEASURED",
+  "EARLIEST_DIVERGENCE_STATUS": "EVIDENCED \u2014 backup predecessor UI layer; golden events NONE_OBSERVED",
+  "EARLIEST_DIVERGENCE": "Golden 46-event lane: NONE_OBSERVED; Backup repair: UI/visualization layer (NO_3D_4D_GRAPH_FRAME_SLIDESHOW_ONLY)",
+  "EVIDENCE_STATE": "PROBABILISTIC_REVIEW_PLUS_DETERMINISTIC_METRIC_RECONCILIATION",
+  "EXPERIMENT_STATE": "FROZEN_EVENTS_UNCHANGED",
+  "FCO_STATE": "NO_CANONICAL_APPEND_FROM_REVIEW",
+  "FCG_STATE": "NO_CANONICAL_APPEND_FROM_REVIEW",
+  "HYDRADB_STATE": "NOT_TOUCHED",
+  "CLAIM_CEILING": "MEASUREMENT_DESIGN_AND_RECOMPUTATION_ONLY",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED_BY_THIS_REVIEW",
+  "NEXT_SAFE_ACTION": "Preregister PASS@3/PASS^3 case vectors; expose judge tier from recomputed hard gates; keep CloudDrift/\u0394G* off judge strip unless distribution context shown",
+  "FINAL_REVIEW_GATE": "Operator approves judge metric surface before UI promotion"
+}

@@ -1,7 +1,7 @@
 {
   "schema": "sponsor.golden_path.composed_run.v1",
-  "run_id": "anb_gp_mtb53qww_4ca04a03",
-  "recorded_at_utc": "2026-08-27T06:26:40.398Z",
+  "run_id": "anb_gp_mtc1tnyj_1b92065c",
+  "recorded_at_utc": "2026-08-27T21:42:37.292Z",
   "execution_host": "magicSTUDIObox.local",
   "branch_expected": "cursor/vercel-control-plane-c66e",
   "steps": [
@@ -33,7 +33,7 @@
       "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
       "status": "PASS",
       "model": "qwen-flash",
-      "sha256": "578de16725088e173cfb86c58d0bb2278befcee2101b5f138d1e7fc7074a9d12"
+      "sha256": "e508d724879fd2f89b6f7a6ab648423c989e6695a2117dfa712dcc0a1c3b2ff5"
     },
     {
       "step": 4,
@@ -51,8 +51,8 @@
       "verify_proposal": {
         "status": "PASS",
         "verified": true,
-        "computed": "c8688db3bc85b910d5465ba8d81a178ce4258d985c959ca48cd61ca3dc3df81f",
-        "declared": "c8688db3bc85b910d5465ba8d81a178ce4258d985c959ca48cd61ca3dc3df81f",
+        "computed": "6491a038689e3714eb67ed162521f64967882e7dbe6d7dc849f747cb2802cfab",
+        "declared": "6491a038689e3714eb67ed162521f64967882e7dbe6d7dc849f747cb2802cfab",
         "claim_ceiling": "RECOMPUTED_RESULT",
         "evidence_class": "RECOMPUTED_RESULT"
       }

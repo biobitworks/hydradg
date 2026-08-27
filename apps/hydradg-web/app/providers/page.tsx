@@ -86,7 +86,7 @@ export default function ProvidersPage() {
           <h1 style={{ margin: "0.25rem 0 0.5rem", fontSize: "1.75rem" }}>Provider health</h1>
           <p style={{ margin: 0, maxWidth: 640, lineHeight: 1.5, opacity: 0.9 }}>
             Factual status only. Key presence is <Badge state="CONFIGURED" />, never PASS. Studio receipts remain
-            authoritative for Tavily PASS, Runtype ERROR, Cortex ERROR / CORTEX_TRIAL_EXPIRED, and Daytona
+            authoritative for Tavily PASS, Runtype ERROR, Cortex PASS (Studio), and Daytona
             INFRASTRUCTURE / LIVE_PASS.
           </p>
         </header>

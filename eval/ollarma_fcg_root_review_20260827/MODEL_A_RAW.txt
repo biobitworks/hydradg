@@ -1,0 +1,59 @@
+### Canonical Design for Ollama-Bridged Invocations
+
+#### 1. Persistent MODEL ACTOR identity?
+- **YES**: Each Ollama actor should have a persistent identity to ensure co[2D[K
+consistency and traceability across different invocations.
+
+#### 2. One MODEL INVOCATION?
+- **YES**: Each invocation should be treated as a separate instance to main[4D[K
+maintain the integrity and isolation of individual execution contexts.
+
+#### 3. Parent/root of invocation?
+- **YES**: An existing FCO parent should be utilized to establish the linea[5D[K
+lineage and context of each invocation.
+
+#### 4. Graph structure: existing FCO parent, model-actor FCO, invocation F[1D[K
+FCO, work-unit FCO, FCG root_before/after only, or other?
+- **YES**: Use an existing FCO parent, introduce a model-actor FCO, an invo[4D[K
+invocation FCO, and a work-unit FCO. Append FCG root_before and root_after [K
+for provenance tracking.
+
+#### 5. Existing equivalent to MODEL_ACTOR_ROOT / INVOCATION_ROOT / EXECUTI[7D[K
+EXECUTION_ROOT?
+- **NO**: The existing design does not include specific types for MODEL_ACT[9D[K
+MODEL_ACTOR_ROOT, INVOCATION_ROOT, or EXECUTION_ROOT. These can be inferred[8D[K
+inferred from the existing FCO identities and the graph structure.
+
+### Required Lineage Chain
+- **parent handoff -> Ollarma-approved actor/model -> exact Ollama model na[2D[K
+name -> runtime digest -> prompt/request SHA-256 -> raw response SHA-256 ->[2D[K
+-> deterministic parser -> derived result -> FCO materialization -> FCG app[3D[K
+append -> root_before/root_after**
+
+### UI Model Grouping
+- **UI model grouping**: The canonical FCO relation should be used for grou[4D[K
+grouping models. HydraDB projection and UI-only mechanisms should be consis[6D[K
+consistent with this.
+
+### Media
+- **MODEL INVOCATION**: Represents a specific instance of model execution.
+- **EVENT**: Represents actions or changes related to the model.
+- **RAW MEDIA FCO**: Represents raw input or output media.
+- **PROVENANCE MEDIA FCO**: Represents media with provenance information.
+- **VERIFICATION RECEIPT**: Represents the receipt for the verification of [K
+the model output.
+
+### Identity Conflation Risks
+- **Identity conflation risks**: Ensure that the FCO identities for MODEL_A[7D[K
+MODEL_ACTOR, INVOCATION, and EXECUTION are distinct to avoid confusion and [K
+maintain the integrity of the lineage.
+
+### Summary
+- **(A) Dedicated MODEL_ROOT**: NO
+- **(B) Invocation Identity Object**: A separate FCO for each invocation
+- **(C) Same model across runs**: Different actor for each invocation
+- **(D) UI Grouping Mechanism**: Use canonical FCO relations for grouping
+
+This design ensures that each invocation is traceable, isolated, and consis[6D[K
+consistent with the required lineage chain.
+

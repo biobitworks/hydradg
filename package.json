@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "npm --prefix apps/hydradg-web run dev",
     "build": "npm --prefix apps/hydradg-web run build",
+    "demo:20s": "node scripts/hydralamp_final_proof_20260827.mjs",
     "start": "npm --prefix apps/hydradg-web run start",
     "typecheck": "npm --prefix apps/hydradg-web run typecheck",
     "install:all": "npm --prefix apps/hydradg-web install"

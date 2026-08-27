@@ -46,6 +46,7 @@ function fcoHash(id: string) {
 
 export default function GraphPage() {
   const canvasRef = useRef<HTMLCanvasElement | null>(null);
+  const canvasWrapRef = useRef<HTMLDivElement | null>(null);
   const projectedRef = useRef<Projected[]>([]);
   const dragRef = useRef({ active: false, moved: false, x: 0, y: 0 });
   const [data, setData] = useState<FixtureResponse["fixture"] | null>(null);
@@ -54,6 +55,9 @@ export default function GraphPage() {
   const [yaw, setYaw] = useState(0.45);
   const [pitch, setPitch] = useState(-0.25);
   const [zoom, setZoom] = useState(260);
+  const [canvasHeight, setCanvasHeight] = useState(560);
+  const [viewportNarrow, setViewportNarrow] = useState(false);
+  const [reducedMotion, setReducedMotion] = useState(false);
   const [selectedId, setSelectedId] = useState<string>("");
   const [unlocked, setUnlocked] = useState<Set<string>>(new Set());
   const [query, setQuery] = useState("");
@@ -67,6 +71,35 @@ export default function GraphPage() {
     if (q) setQuery(q);
     if (node) setSelectedId(node);
   }, []);
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    const mq = window.matchMedia("(prefers-reduced-motion: reduce)");
+    setReducedMotion(mq.matches);
+    const fn = () => setReducedMotion(mq.matches);
+    mq.addEventListener("change", fn);
+    return () => mq.removeEventListener("change", fn);
+  }, []);
+
+  useEffect(() => {
+    const el = canvasWrapRef.current;
+    if (!el || typeof ResizeObserver === "undefined") return;
+    const measure = () => {
+      const w = el.clientWidth;
+      setViewportNarrow(w < 720);
+      setCanvasHeight(w < 520 ? 300 : w < 900 ? 420 : 560);
+    };
+    measure();
+    const ro = new ResizeObserver(() => measure());
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, []);
+
+  function resetView() {
+    setYaw(0.45);
+    setPitch(-0.25);
+    setZoom(viewportNarrow ? 200 : 260);
+  }
 
   useEffect(() => {
     fetch("/api/query", {
@@ -228,8 +261,12 @@ export default function GraphPage() {
     if (Math.abs(dx) + Math.abs(dy) > 2) dragRef.current.moved = true;
     dragRef.current.x = event.clientX;
     dragRef.current.y = event.clientY;
-    setYaw((value) => value + dx * 0.008);
-    setPitch((value) => Math.max(-1.3, Math.min(1.3, value + dy * 0.008)));
+    if (reducedMotion) return;
+    const yawSens = viewportNarrow ? 0.004 : 0.008;
+    const pitchSens = viewportNarrow ? 0.004 : 0.008;
+    const pitchMax = viewportNarrow ? 0.55 : 1.3;
+    setYaw((value) => value + dx * yawSens);
+    setPitch((value) => Math.max(-pitchMax, Math.min(pitchMax, value + dy * pitchSens)));
   }
 
   function onPointerUp(event: PointerEvent<HTMLCanvasElement>) {
@@ -254,7 +291,8 @@ export default function GraphPage() {
 
   function onWheel(event: WheelEvent<HTMLCanvasElement>) {
     event.preventDefault();
-    setZoom((value) => Math.max(120, Math.min(650, value - event.deltaY * 0.35)));
+    const maxZoom = viewportNarrow ? 420 : 650;
+    setZoom((value) => Math.max(120, Math.min(maxZoom, value - event.deltaY * 0.35)));
   }
 
   function toggleToyLock() {
@@ -337,17 +375,20 @@ export default function GraphPage() {
             <button className={heatMode === "mutation" ? "tab active" : "tab"} onClick={() => setHeatMode("mutation")}>mutation</button>
             <button className={heatMode === "restoration" ? "tab active" : "tab"} onClick={() => setHeatMode("restoration")}>restoration</button>
             <button className={heatMode === "delta" ? "tab active" : "tab"} onClick={() => setHeatMode("delta")}>|ΔG*|</button>
+            <button className="secondary" type="button" onClick={resetView}>Reset view</button>
           </div>
-          <canvas
-            ref={canvasRef}
-            aria-label="Interactive four-dimensional FCG projection"
-            style={{ width: "100%", height: 560, border: "1px solid var(--line)", borderRadius: 12, touchAction: "none", background: "#090c10" }}
-            onPointerDown={onPointerDown}
-            onPointerMove={onPointerMove}
-            onPointerUp={onPointerUp}
-            onPointerCancel={() => { dragRef.current.active = false; }}
-            onWheel={onWheel}
-          />
+          <div ref={canvasWrapRef} style={{ width: "100%" }}>
+            <canvas
+              ref={canvasRef}
+              aria-label="Interactive four-dimensional FCG projection"
+              style={{ width: "100%", height: canvasHeight, border: "1px solid var(--line)", borderRadius: 12, touchAction: "none", background: "#090c10" }}
+              onPointerDown={onPointerDown}
+              onPointerMove={onPointerMove}
+              onPointerUp={onPointerUp}
+              onPointerCancel={() => { dragRef.current.active = false; }}
+              onWheel={onWheel}
+            />
+          </div>
           <label style={{ marginTop: 14 }}>
             Time / graph state: t{time} — {activeMetric?.label || "loading"}
             <input type="range" min={0} max={2} step={1} value={time} onChange={(event) => setTime(Number(event.target.value))} />

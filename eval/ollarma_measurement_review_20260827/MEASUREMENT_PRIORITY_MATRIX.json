@@ -1,0 +1,85 @@
+{
+  "schema": "hydradg.ollarma_measurement_review.priority_matrix.v1",
+  "method": "DETERMINISTIC_RULES_THEN_PANEL_PRESERVED_SEPARATELY",
+  "families": {
+    "1_identity_custody": {
+      "judge": 3,
+      "engineering": 1,
+      "science": 2,
+      "risk": 2
+    },
+    "2_security_hard_gates": {
+      "judge": 1,
+      "engineering": 2,
+      "science": 3,
+      "risk": 1
+    },
+    "3_repeatability": {
+      "judge": 4,
+      "engineering": 5,
+      "science": 1,
+      "risk": 4
+    },
+    "4_fcg_structural_delta": {
+      "judge": 6,
+      "engineering": 3,
+      "science": 4,
+      "risk": 5
+    },
+    "5_cloud_drift": {
+      "judge": 7,
+      "engineering": 6,
+      "science": 5,
+      "risk": 8
+    },
+    "6_delta_g_star": {
+      "judge": 8,
+      "engineering": 7,
+      "science": 6,
+      "risk": 9
+    },
+    "7_restoration": {
+      "judge": 2,
+      "engineering": 4,
+      "science": 2,
+      "risk": 3
+    },
+    "8_model_difference": {
+      "judge": 9,
+      "engineering": 8,
+      "science": 1,
+      "risk": 7
+    },
+    "9_performance_cost": {
+      "judge": 5,
+      "engineering": 9,
+      "science": 8,
+      "risk": 2
+    },
+    "10_information_economy": {
+      "judge": 10,
+      "engineering": 10,
+      "science": 7,
+      "risk": 6
+    },
+    "11_media_fco": {
+      "judge": 4,
+      "engineering": 11,
+      "science": 9,
+      "risk": 4
+    },
+    "12_sponsor_provider": {
+      "judge": 11,
+      "engineering": 12,
+      "science": 10,
+      "risk": 5
+    },
+    "13_earliest_divergence": {
+      "judge": 3,
+      "engineering": 3,
+      "science": 3,
+      "risk": 2
+    }
+  },
+  "model_panel_note": "See MODEL_*_MEASUREMENTS_RAW.txt \u2014 not averaged into this table"
+}

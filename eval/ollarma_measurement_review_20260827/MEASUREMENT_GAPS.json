@@ -1,0 +1,24 @@
+{
+  "schema": "hydradg.ollarma_measurement_review.gaps.v1",
+  "missing_metrics": [
+    "PASS_AT_3 / PASS_CARET_3 preregistered case vectors on golden 46-event lane",
+    "parser_scorer_sha256 on handoff receipts",
+    "TTFT, prompt_tokens, output_tokens on frozen lane",
+    "PIXEL_SEAL_VERIFY for backup media",
+    "Unified restoration_gain on gateway frozen path",
+    "prev_event_hash in exported events",
+    "Single CloudDrift implementation across gateway vs web"
+  ],
+  "misinterpretation_risks": [
+    "cloud_drift_0_100 as correctness",
+    "delta_g_star as physical free energy",
+    "fcg_root as model root",
+    "visualization layout as semantic distance",
+    "zero hard-gate counts as statistical superiority",
+    "model agreement as truth"
+  ],
+  "blocked": {
+    "STATISTICAL_COMPARISON": "UNDERPOWERED \u2014 frozen lane uses scripted actors not multi-model matrix",
+    "PASS_AT_3": "BLOCKED_CASE_VECTORS"
+  }
+}

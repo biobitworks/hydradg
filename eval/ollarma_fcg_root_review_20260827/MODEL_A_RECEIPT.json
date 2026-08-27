@@ -1,0 +1,31 @@
+{
+  "schema": "hydradg.ollarma_fcg_review.panel_receipt.v1",
+  "recorded_at_utc": "2026-08-27T18:55:51Z",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "git_commit": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "execution_host": "magicSTUDIObox.local",
+  "bridge": "ollama_generate_direct",
+  "claim_ceiling": "ARCHITECTURAL_RECOMMENDATION_ONLY",
+  "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED_BY_THIS_LANE",
+  "fcg_state": "NO_CANONICAL_APPEND_FROM_REVIEW",
+  "fco_state": "NO_CANONICAL_APPEND_FROM_REVIEW",
+  "panel": "MODEL_A",
+  "role": "schema/custody conservative reviewer",
+  "model": {
+    "requested_name": "qwen2.5-coder:7b",
+    "approved_name": "qwen2.5-coder:7b",
+    "runtime_name": "qwen2.5-coder:7b",
+    "bridge": "OLLAMA_DIRECT_NOT_OLLARMA_CLI"
+  },
+  "output_sha256": "3e374f5a1697d8c964e26e994f702b530dd6b8e224abc4fcac3fe3cd89e220e6",
+  "output_bytes": 2772,
+  "prompt_sha256": "6015c410c10a4e6291f1ca8cc15255fb8f47985965d479dd402f292f5272d5bc",
+  "position_summary": {
+    "MODEL_ROOT_REQUIRED": "NO",
+    "invocation_identity": "separate_invocation_fco",
+    "same_model_across_runs": "new_actor_each_invocation"
+  }
+}

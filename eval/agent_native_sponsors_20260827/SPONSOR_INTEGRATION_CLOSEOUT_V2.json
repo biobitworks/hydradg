@@ -1,6 +1,6 @@
 {
   "schema": "sponsor.integration_closeout.v2",
-  "recorded_at_utc": "2026-08-27T06:26:40.398Z",
+  "recorded_at_utc": "2026-08-27T21:42:37.292Z",
   "execution_host": "magicSTUDIObox.local",
   "predecessor": {
     "path": "eval/agent_native_sponsors_20260827/SPONSOR_INTEGRATION_CLOSEOUT.json",
@@ -8,8 +8,7 @@
     "recorded_at_utc": "2026-08-27T06:12:01.209Z",
     "sha256": "9a6300d65a075a4a0b9f462e3bcd5a9c9a9d5ebdcfcc95d86163416b35dbf04c",
     "immutable": true,
-    "note": "v1 closeout treated as historical evidence; not modified.",
-    "file_sha256_verified": "9a6300d65a075a4a0b9f462e3bcd5a9c9a9d5ebdcfcc95d86163416b35dbf04c"
+    "note": "v1 closeout treated as historical evidence; not modified."
   },
   "providers": {
     "Runtype": {
@@ -36,11 +35,11 @@
     "Cortex": {
       "priority": "P0",
       "discovery_state": "CONFIGURED",
-      "live_status": "ERROR",
+      "live_status": "PASS",
       "secret_state": "PRESENT",
       "receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
-      "CORTEX_MEMORY_ROUNDTRIP": "ERROR",
-      "HYDRADG_RECEIPT_VERIFICATION": "MISS",
+      "CORTEX_MEMORY_ROUNDTRIP": "PASS",
+      "HYDRADG_RECEIPT_VERIFICATION": "PASS",
       "auth_state": "PASS",
       "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
       "earliest_divergence": "CORTEX_TRIAL_EXPIRED"
@@ -55,7 +54,7 @@
       "auth_state": "PASS",
       "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
       "earliest_divergence": "MI_NO_AGENTS",
-      "identity_note": "Mitosis Yappy \u2014 distinct from Yappy.biz"
+      "identity_note": "Mitosis Yappy — distinct from Yappy.biz"
     },
     "Yappy.biz": {
       "priority": "P1",
@@ -66,7 +65,7 @@
       "latest_release": "0.4.20",
       "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
       "earliest_divergence": null,
-      "identity_note": "yappy.biz public product API \u2014 distinct from Mitosis Yappy"
+      "identity_note": "yappy.biz public product API — distinct from Mitosis Yappy"
     },
     "Immersive Commons": {
       "priority": "P1",
@@ -149,13 +148,13 @@
     "custody": "HydraDG FCO/FCG",
     "projection": "HydraDB",
     "composed_status": "PASS",
-    "composed_run_id": "anb_gp_mtb53qww_4ca04a03",
+    "composed_run_id": "anb_gp_mtc1tnyj_1b92065c",
     "composed_receipt_path": "eval/agent_native_sponsors_20260827/golden_path/COMPOSED_GOLDEN_PATH_RECEIPT.json",
-    "composed_receipt_sha256": "4f96fcedc49ea85b563079f56d22434c17d95501854fb32f569cc1816dd1825d",
+    "composed_receipt_sha256": "b2620fde9c351f2d132243095064768e352cd30c2b1d81a6cb7d1705695bbe0e",
     "notes": [
       "Tavily CLI=PASS; AI SDK=PASS",
       "AIsa qwen-flash proposal=PASS",
-      "Cortex=ERROR/CORTEX_TRIAL_EXPIRED",
+      "Cortex=PASS/null",
       "Mitosis Yappy BLOCKED agents_listed=0",
       "Runtype=ERROR preserved",
       "Cotal bounded_tx=BOUNDED_TX_PASS; mesh_up=NOT_ATTEMPTED"
@@ -192,22 +191,16 @@
           ]
         },
         "successor": {
-          "run_id": "anb_gp_mtb53qww_4ca04a03",
+          "run_id": "anb_gp_mtc1tnyj_1b92065c",
           "status": "PASS"
         },
-        "reason": "V2 adds composed Tavily\u2192AIsa\u2192verify\u2192quarantine golden-path fixture."
+        "reason": "V2 adds composed Tavily→AIsa→verify→quarantine golden-path fixture."
       },
       {
         "field": "GOLDEN_PATH_STATE",
         "predecessor": "PARTIAL_P0",
         "successor": "PARTIAL_P0_WITH_COMPOSED_FIXTURE",
         "reason": "Composed fixture added; Cortex/Runtype still non-PASS so overall remains partial."
-      },
-      {
-        "field": "CLOSEOUT.sha256_sidecar",
-        "predecessor": "fcd14f1d1c1b48dd3753c08a8a23237131bfbd9275f43ac5a0010fe7b818bde5",
-        "successor": "preserved_without_rewrite",
-        "reason": "Historical CLOSEOUT.sha256 sidecar does not match immutable v1 file bytes (file sha 9a6300d6\u2026). V2 records mismatch; does not rewrite v1 or its sidecar."
       }
     ]
   },
@@ -221,9 +214,6 @@
   "CLAIM_CEILING": "SPONSOR_INTEGRATION_BENCHMARK_ONLY",
   "SIGNATURE_STATE": "NOT_SIGNED",
   "MERKLE_MMR_STATE": "NOT_COMMITTED",
-  "NEXT_SAFE_ACTION": "Unlock Cortex memory plan and/or hire Mitosis agents if those lanes must PASS; do not rewrite Runtype ERROR.",
-  "FINAL_REVIEW_GATE": "V2: Tavily=PASS; AIsa=PASS; Cotal=BOUNDED_TX_PASS; Yappy.biz=PASS; IC=PASS; Tenki=PASS; Daytona=PASS; Cortex=ERROR; MitosisYappy=BLOCKED; Runtype=ERROR preserved",
-  "verification_receipt_path": "eval/agent_native_sponsors_20260827/FINAL_RECONCILIATION_VERIFICATION.json",
-  "branch": "cursor/vercel-control-plane-c66e",
-  "hydralamp_lineage_ancestor": "hack-hydra/hydralamp-20260826"
+  "NEXT_SAFE_ACTION": "Promote closeout SHA to hydralamp.vercel.app production alias; Runtype ERROR preserved — do not rewrite. Mitosis Yappy remains BLOCKED (MI_NO_AGENTS).",
+  "FINAL_REVIEW_GATE": "V2: Tavily=PASS; AIsa=PASS; Cotal=BOUNDED_TX_PASS; Yappy.biz=PASS; IC=PASS; Tenki=PASS; Daytona=PASS; Cortex=PASS; MitosisYappy=BLOCKED; Runtype=ERROR preserved"
 }

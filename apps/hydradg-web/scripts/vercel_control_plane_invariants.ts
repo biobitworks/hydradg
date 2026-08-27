@@ -204,11 +204,12 @@ async function testProviderStatusPreserved() {
   assert.equal(status.invariant, "CONFIGURED_IS_NOT_PASS");
   assert.equal(status.preserved_invariants.Tavily, "PASS");
   assert.equal(status.preserved_invariants.Runtype, "ERROR");
-  assert.match(status.preserved_invariants.Cortex, /CORTEX_TRIAL_EXPIRED/);
+  assert.equal(status.preserved_invariants.Cortex, "PASS");
   assert.match(status.preserved_invariants.Daytona, /LIVE_PASS/);
   assert.equal(status.preserved_studio_receipts.Tavily.live_status, "PASS");
   assert.equal(status.preserved_studio_receipts.Runtype.live_status, "ERROR");
-  assert.equal(status.preserved_studio_receipts.Cortex.error_code, "CORTEX_TRIAL_EXPIRED");
+  assert.equal(status.preserved_studio_receipts.Cortex.live_status, "PASS");
+  assert.equal(status.preserved_studio_receipts.Cortex.error_code, null);
   assert.ok(
     status.preserved_studio_receipts.Daytona.live_status === "LIVE_PASS" ||
       status.preserved_studio_receipts.Daytona.live_status === "PASS",

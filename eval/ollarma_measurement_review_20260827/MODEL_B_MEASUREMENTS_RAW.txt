@@ -1,0 +1,38 @@
+```json
+{
+  "scientific_value": [
+    {"3": "delta G*", "4": "restoration vector", "7": "model difference", "[1D[K
+"8": "performance/cost", "9": "information economy"}
+  ],
+  "engineering_value": [
+    {"4": "delta G*", "5": "CloudDrift JSD", "6": "delta G*"},
+    {"7": "restoration vector", "8": "model difference", "9": "performance/[13D[K
+"performance/cost"},
+    {"6": "delta G*", "7": "restoration vector", "8": "model difference"}
+  ],
+  "judge_demo_value": [
+    {"1": "identity/custody", "2": "security hard gates", "3": "repeatabili[12D[K
+"repeatability R1/R2/R3", "4": "FCG structural delta", "5": "CloudDrift JSD[3D[K
+JSD", "6": "delta G*", "7": "restoration vector", "8": "model difference", [K
+"9": "performance/cost", "10": "information economy", "11": "media FCO", "1[2D[K
+"12": "sponsor/provider", "13": "earliest divergence"}
+  ],
+  "top_3_per_tier": {
+    "scientific_value": ["delta G*", "restoration vector", "model differenc[9D[K
+difference"],
+    "engineering_value": ["delta G*", "restoration vector", "performance/co[15D[K
+"performance/cost"],
+    "judge_demo_value": ["identity/custody", "security hard gates", "repeat[7D[K
+"repeatability R1/R2/R3"]
+  },
+  "top_3_misinterpretation_risk": [
+    {"11": "media FCO", "12": "sponsor/provider", "13": "earliest divergenc[9D[K
+divergence"},
+    {"12": "sponsor/provider", "13": "earliest divergence", "11": "media FC[2D[K
+FCO"},
+    {"13": "earliest divergence", "12": "sponsor/provider", "11": "media FC[2D[K
+FCO"}
+  ]
+}
+```
+

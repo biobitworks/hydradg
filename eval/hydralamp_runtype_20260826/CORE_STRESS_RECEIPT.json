@@ -1,12 +1,59 @@
 {
   "schema": "hydralamp.core_stress_receipt.v1",
-  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
   "CORE_STRESS": "PASS",
   "HASH_CHAIN_VERIFICATION": "100/100",
+  "HASH_CHAIN_VERIFICATION_PCT": 100,
   "UNEXPLAINED_HASH_MISMATCHES": 0,
   "CROSS_RUN_EVENT_CONTAMINATION": 0,
   "UNAUTHORIZED_CANONICAL_MODEL_WRITES": 0,
   "UNAUTHORIZED_PRIVATE_PLAINTEXT_DISCLOSURE": 0,
-  "failures": [],
+  "matrix_counts": {
+    "CONTROL": 25,
+    "INVALID_PROOF": 25,
+    "REPLAYED_PROOF": 25,
+    "BROKEN_AUTHORIZATION_EDGE": 25
+  },
+  "sample": [
+    {
+      "kind": "CONTROL",
+      "i": 0,
+      "run_id": "hlrt_mtbz0lvv_3c0fa082",
+      "chain_ok": true,
+      "event_count": 44,
+      "poison_root_unchanged": true,
+      "repair_root_changed": true,
+      "quarantine_count": 1
+    },
+    {
+      "kind": "CONTROL",
+      "i": 1,
+      "run_id": "hlrt_mtbz0lwa_dc07718f",
+      "chain_ok": true,
+      "event_count": 44,
+      "poison_root_unchanged": true,
+      "repair_root_changed": true,
+      "quarantine_count": 1
+    },
+    {
+      "kind": "CONTROL",
+      "i": 2,
+      "run_id": "hlrt_mtbz0lx7_ace6e9cf",
+      "chain_ok": true,
+      "event_count": 44,
+      "poison_root_unchanged": true,
+      "repair_root_changed": true,
+      "quarantine_count": 1
+    },
+    {
+      "kind": "CONTROL",
+      "i": 3,
+      "run_id": "hlrt_mtbz0lxo_9b267ca6",
+      "chain_ok": true,
+      "event_count": 44,
+      "poison_root_unchanged": true,
+      "repair_root_changed": true,
+      "quarantine_count": 1
+    }
+  ],
   "signature_state": "NOT_SIGNED"
 }

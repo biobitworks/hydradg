@@ -1,0 +1,52 @@
+{
+  "schema": "hydradg.magicstudio_vercel_harmonize.receipt.v1",
+  "recorded_at_utc": "2026-08-27T21:45:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "public_control_plane": "apps/hydradg-web on Vercel",
+  "ipad_scope": "NOT_REQUIRED",
+  "cloudmer_studio": {
+    "repo": "/Users/byron/projects/active/cloudmer",
+    "branch": "magicstudio/ipad-tailscale-ssh-harmonize-20260826",
+    "head": "a016376d9128c4d0e9105b89f09b7ffa9e02731c",
+    "python_ok": true,
+    "doctor": "PASS",
+    "pytest": "18 passed"
+  },
+  "hydradg_closeout": {
+    "branch": "cursor/hydralamp-submission-closeout-20260827",
+    "head": "bf639de3afc4aa235f6a9637b842658e941c866f",
+    "local_build": "PASS",
+    "local_routes": {
+      "/hydralamp": 200,
+      "/providers": 200,
+      "/api/providers/status": 200
+    },
+    "test_vercel_control_plane": "PASS 8/8"
+  },
+  "mitosis_cortex": {
+    "mission": "PASS",
+    "CORTEX_MEMORY_ROUNDTRIP": "PASS",
+    "HYDRADG_RECEIPT_VERIFICATION": "PASS",
+    "office_id": "3cd3118f-50fd-402c-868e-0f3e556d8dca",
+    "mi_connect": "cursor wired in closeout worktree",
+    "receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
+    "prior_blocker": "CORTEX_TRIAL_EXPIRED resolved on 2026-08-27 live rerun"
+  },
+  "vercel_github": {
+    "preview_deployment_sha": "bf639de",
+    "preview_sso": "SSO blocks anonymous /providers and /hydralamp on team preview URL",
+    "hydralamp_vercel_app_root": 200,
+    "hydralamp_vercel_app_hydralamp": 404,
+    "hydradg_vercel_app_providers": 404,
+    "production_alias_lag": "hydralamp.vercel.app /hydralamp not on closeout SHA — promote required"
+  },
+  "public_exposure": {
+    "tailscale_funnel": "NO",
+    "router_port_forward": "NO",
+    "public_ssh": "NO"
+  },
+  "signature_state": "NOT_SIGNED",
+  "mmr_project_commitment_state": "NOT_CLAIMED",
+  "next_human_action": "Promote bf639de (or later) to hydralamp.vercel.app production; merge PR #26 closeout when ready"
+}

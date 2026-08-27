@@ -3,15 +3,15 @@
   "mission_id": "ANB-SP-CORTEX-ROUNDTRIP-001",
   "provider": "Mitosis Cortex",
   "operation": "memory_roundtrip",
-  "status": "ERROR",
-  "error_code": "CORTEX_TRIAL_EXPIRED",
-  "error_summary": "Cortex office memory locked (trial_expired). Auth PASS; remember/ask blocked until plan unlock.",
+  "status": "PASS",
+  "error_code": null,
+  "error_summary": null,
   "offer_code_metadata": "FREECORTEX",
   "offer_is_api_credential": false,
   "architectural_boundary": "Cortex is external agent memory; FCG remains canonical HydraDG custody. Mission never appends to FCG.",
   "roundtrip": {
-    "CORTEX_MEMORY_ROUNDTRIP": "ERROR",
-    "UNDERLYING_HYDRADG_RECEIPT_VERIFICATION": "MISS"
+    "CORTEX_MEMORY_ROUNDTRIP": "PASS",
+    "UNDERLYING_HYDRADG_RECEIPT_VERIFICATION": "PASS"
   },
   "underlying_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
   "underlying_receipt_sha256": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",

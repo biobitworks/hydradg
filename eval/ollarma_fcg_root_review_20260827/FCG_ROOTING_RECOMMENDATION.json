@@ -1,0 +1,49 @@
+{
+  "schema": "hydradg.ollarma_fcg_review.recommendation.v1",
+  "recorded_at_utc": "2026-08-27T19:00:00Z",
+  "claim_ceiling": "ARCHITECTURAL_RECOMMENDATION_ONLY",
+  "ACTUAL_HOST": "magicSTUDIObox.local",
+  "CURRENT_BRANCH": "hack-hydra/hydralamp-20260826",
+  "CURRENT_SHA": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "MODELS_INVENTORIED": 14,
+  "MODELS_EXECUTED": [
+    "qwen2.5-coder:7b",
+    "deepseek-r1:14b",
+    "qwen3:8b"
+  ],
+  "CANONICAL_MODEL_ACTOR_REPRESENTATION": "Two-layer: (1) gateway role actor fco:actor:ROLE with runtime_model ollarma/role; (2) inference identity actor_class=OLLAMA_MODEL, actor_id=approved_name, model.runtime_digest",
+  "CANONICAL_INVOCATION_REPRESENTATION": "agent_model_handoff receipt (handoff_id + receipt_sha256) per material call; optional orchestration_work_unit wrapper with parent_receipt_sha256",
+  "CANONICAL_PARENT_REPRESENTATION": "parent_handoff_sha256 chain to delegating handoff/work_unit; prompt/request FCO hashes in input_dependencies",
+  "MODEL_ROOT_REQUIRED": "NO",
+  "MODEL_ROOT_MEANING": "N/A \u2014 do not mint Merkle/FCG roots for models; runtime_digest is content identity not graph root",
+  "FCG_ROOT_USAGE": "fcg_root_before/after on canonical append and recorded on handoff fcg{} block; single project FCG not per-model",
+  "MMR_ROOT_USAGE": "Separate merkle_mmr{} on handoff; NOT interchangeable with model digest or FCG root",
+  "HYDRADB_MODEL_GROUPING": "PROJECTION_ONLY \u2014 index/query by actor_id, runtime_model, model.runtime_digest, handoff receipt hashes",
+  "MEDIA_RELATIONSHIP_RECOMMENDATION": "EVENT or verification work_unit -> RAW MEDIA FCO (bytes) -> PROVENANCE MEDIA FCO (metadata) + VERIFICATION RECEIPT; link by event_hash/source_request_hash not model visibility",
+  "REQUIRED_LINEAGE_ELEMENTS_PRESENT": [
+    "parent_handoff_sha256",
+    "actor_class/actor_id",
+    "model.bridge/approved_name/runtime_digest",
+    "prompt_sha256",
+    "request_sha256",
+    "output_sha256",
+    "transformation_class",
+    "fcg.root_before/root_after (when append occurs)"
+  ],
+  "REQUIRED_LINEAGE_ELEMENTS_MISSING_OR_EVAL_LOCAL": [
+    "deterministic parser/scorer identity hash (not required in handoff schema today)",
+    "fco.object_id materialization (handoff fco{} optional/null in many receipts)",
+    "ollarma CLI bridge receipt when using direct ollama generate bypass"
+  ],
+  "SCHEMA_CHANGE_REQUIRED": "NO",
+  "SCHEMA_CHANGE_RECOMMENDED": "DEFER until FCO_SCHEMA.json / FCG_SCHEMA.json resolved upstream; optional non-blocking handoff fields for parser_id/parser_sha256",
+  "EVIDENCE_STATE": "PROBABILISTIC_MODEL_REVIEW_PLUS_DETERMINISTIC_SCHEMA_RECONCILIATION",
+  "EXPERIMENT_STATE": "NO_SCIENCE_EVENTS_CHANGED",
+  "FCO_STATE": "NO_CANONICAL_APPEND_FROM_REVIEW",
+  "FCG_STATE": "NO_CANONICAL_APPEND_FROM_REVIEW",
+  "HYDRADB_STATE": "NOT_TOUCHED",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED_BY_THIS_LANE",
+  "NEXT_SAFE_ACTION": "Implement HydraDB projection + UI filter keyed on handoff receipts; wire Ollarma path to always emit handoff before promotion; do not add MODEL_ROOT to FCG",
+  "FINAL_REVIEW_GATE": "Human schema authority resolves FCO_SCHEMA.json import; until then operate under agent_model_handoff + orchestration_work_unit only"
+}
