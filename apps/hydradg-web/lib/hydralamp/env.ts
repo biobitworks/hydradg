@@ -96,3 +96,9 @@ export function runtypeApiKeyStatus(): "PRESENT" | "MISSING" {
   if (!v || isRuntypeKeyPlaceholder(v)) return "MISSING";
   return "PRESENT";
 }
+
+/** Default export for tsx .mts scripts (Node 26 CJS interop). */
+export default {
+  loadHydraLampServerEnv,
+  runtypeApiKeyStatus,
+};

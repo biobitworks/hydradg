@@ -11,7 +11,8 @@ import * as deltaModNs from "../lib/hydralamp/contextDelta.ts";
 import * as storeModNs from "../lib/hydralamp/store.ts";
 import * as coordModNs from "../lib/hydralamp/coordinator.ts";
 import type { ExperimentRun, FixtureState, HydraLampEvent } from "../lib/hydralamp/types.ts";
-import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "../lib/hydralamp/env.ts";
+import envModNs from "../lib/hydralamp/env.ts";
+import { unwrapHydraLampMod } from "./hydralamp_tsx_import.mts";
 
 // tsx may expose CJS interop as .default when the runner is ESM (.mts)
 function unwrap<T extends Record<string, unknown>>(mod: T | { default: T }): T {
@@ -19,6 +20,8 @@ function unwrap<T extends Record<string, unknown>>(mod: T | { default: T }): T {
   return (m.default && typeof m.default === "object" ? m.default : (mod as T)) as T;
 }
 const hashMod = unwrap(hashModNs as never) as typeof hashModNs;
+const envMod = unwrapHydraLampMod(envModNs);
+const { loadHydraLampServerEnv, runtypeApiKeyStatus } = envMod;
 const canonicalMod = unwrap(canonicalModNs as never) as typeof canonicalModNs;
 const deltaMod = unwrap(deltaModNs as never) as typeof deltaModNs;
 const storeMod = unwrap(storeModNs as never) as typeof storeModNs;

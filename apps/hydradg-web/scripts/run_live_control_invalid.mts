@@ -5,11 +5,24 @@
  */
 import { writeFileSync, mkdirSync, readFileSync, existsSync } from "node:fs";
 import path from "node:path";
-import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "../lib/hydralamp/env.ts";
-import { startHydraLampExperiment } from "../lib/hydralamp/coordinator.ts";
-import { getRun, subscribe } from "../lib/hydralamp/store.ts";
-import { repoRoot } from "../lib/hydralamp/fixtures.ts";
+import envModNs from "../lib/hydralamp/env.ts";
+import * as coordModNs from "../lib/hydralamp/coordinator.ts";
+import * as storeModNs from "../lib/hydralamp/store.ts";
+import * as fixturesModNs from "../lib/hydralamp/fixtures.ts";
 import type { PerturbationKind } from "../lib/hydralamp/types.ts";
+import { unwrapHydraLampMod } from "./hydralamp_tsx_import.mts";
+
+const { loadHydraLampServerEnv, runtypeApiKeyStatus } = unwrapHydraLampMod(envModNs);
+const { startHydraLampExperiment } = unwrapHydraLampMod(coordModNs as Record<string, unknown>) as {
+  startHydraLampExperiment: typeof import("../lib/hydralamp/coordinator.ts").startHydraLampExperiment;
+};
+const { getRun, subscribe } = unwrapHydraLampMod(storeModNs as Record<string, unknown>) as {
+  getRun: typeof import("../lib/hydralamp/store.ts").getRun;
+  subscribe: typeof import("../lib/hydralamp/store.ts").subscribe;
+};
+const { repoRoot } = unwrapHydraLampMod(fixturesModNs as Record<string, unknown>) as {
+  repoRoot: () => string;
+};
 
 async function waitDone(runId: string, timeoutMs = 120_000) {
   return new Promise<void>((resolve, reject) => {

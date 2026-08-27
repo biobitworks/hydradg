@@ -4,8 +4,14 @@
  */
 import { writeFileSync } from "node:fs";
 import path from "node:path";
-import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "../lib/hydralamp/env.ts";
-import { repoRoot } from "../lib/hydralamp/fixtures.ts";
+import envModNs from "../lib/hydralamp/env.ts";
+import * as fixturesModNs from "../lib/hydralamp/fixtures.ts";
+import { unwrapHydraLampMod } from "./hydralamp_tsx_import.mts";
+
+const { loadHydraLampServerEnv, runtypeApiKeyStatus } = unwrapHydraLampMod(envModNs);
+const { repoRoot } = unwrapHydraLampMod(fixturesModNs as Record<string, unknown>) as {
+  repoRoot: () => string;
+};
 
 async function main() {
   loadHydraLampServerEnv();
