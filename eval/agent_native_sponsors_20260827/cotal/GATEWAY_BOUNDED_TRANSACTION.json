@@ -1,0 +1,44 @@
+{
+  "discover": {
+    "gateway": "HydraDG Agent-Native Evidence Gateway",
+    "version": "20260827",
+    "tools": [
+      {
+        "tool": "discover_capabilities",
+        "description": "List supported gateway tools, claim ceilings, and custody boundaries.",
+        "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+        "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+      },
+      {
+        "tool": "query_evidence",
+        "description": "Typed retrieval over quarantined external evidence receipts (read-only).",
+        "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+        "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+      },
+      {
+        "tool": "propose_external_evidence",
+        "description": "Submit external evidence candidate under quarantine; never direct FCG append.",
+        "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+      },
+      {
+        "tool": "verify_custody_receipt",
+        "description": "Verify SHA-256 of a custody receipt file against declared hash.",
+        "claim_ceiling": "RECOMPUTED_RESULT",
+        "evidence_class": "RECOMPUTED_RESULT"
+      }
+    ],
+    "custody_note": "External agents may discover and propose; FCG remains canonical HydraDG custody."
+  },
+  "propose": {
+    "status": "PASS",
+    "proposal_id": "1c7b98ee2456135b",
+    "quarantine_state": "PENDING_CUSTODY_REVIEW",
+    "fcg_append": "NOT_APPENDED",
+    "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+    "source_url": "https://docs.cortexmemory.dev/getting-started/introduction",
+    "raw_artifact_sha256": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+    "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+  },
+  "note": "Local gateway stub; not Cotal canonical state."
+}

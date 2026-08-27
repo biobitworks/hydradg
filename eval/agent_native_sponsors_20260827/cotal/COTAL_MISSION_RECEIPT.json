@@ -1,0 +1,17 @@
+{
+  "schema": "sponsor.cotal.mission_receipt.v1",
+  "mission_id": "ANB-SP-COTAL-A2A-001",
+  "provider": "Cotal",
+  "operation": "a2a_gateway_transaction",
+  "status": "SKIPPED",
+  "discovery_state": "DEFERRED_NONBLOCKING",
+  "gateway_tools_available": [
+    "discover_capabilities",
+    "query_evidence",
+    "propose_external_evidence",
+    "verify_custody_receipt"
+  ],
+  "bounded_transaction": "NOT_ATTEMPTED",
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "signature_state": "NOT_SIGNED"
+}

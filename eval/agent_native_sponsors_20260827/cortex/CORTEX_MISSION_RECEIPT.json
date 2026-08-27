@@ -1,0 +1,20 @@
+{
+  "schema": "sponsor.cortex.mission_receipt.v1",
+  "mission_id": "ANB-SP-CORTEX-ROUNDTRIP-001",
+  "provider": "Mitosis Cortex",
+  "operation": "memory_roundtrip",
+  "status": "BLOCKED",
+  "error_code": "MI_CLI_MISSING",
+  "error_summary": "mi CLI not on PATH; CONVEX_URL not configured; GUM Doctor secret injection BLOCKED",
+  "offer_code_metadata": "FREECORTEX",
+  "offer_is_api_credential": false,
+  "architectural_boundary": "Cortex is external agent memory; FCG remains canonical HydraDG custody",
+  "roundtrip": {
+    "CORTEX_MEMORY_ROUNDTRIP": "NOT_ATTEMPTED",
+    "UNDERLYING_HYDRADG_RECEIPT_VERIFICATION": "NOT_ATTEMPTED"
+  },
+  "underlying_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "secret_state": "BLOCKED",
+  "signature_state": "NOT_SIGNED"
+}
