@@ -1,0 +1,19 @@
+{
+  "schema": "hydralamp.ui_demo_receipt.v1",
+  "UI_DEMO_RECEIPT": "STRUCTURED",
+  "note": "UI-vs-receipt parity verified via status.hash_chain + client Web Crypto on /hydralamp",
+  "demo_20s_path": "/hydralamp?demo=20s",
+  "panels": [
+    "MODEL_LANES",
+    "LIVE_KG_FCG",
+    "CONTEXT_DELTA",
+    "HASH_CUSTODY_TIMELINE"
+  ],
+  "renderer": "cytoscape.js",
+  "REALTIME_GRAPH_READY": true,
+  "VIDEO_CORE_READY": "PENDING_OPERATOR_RECORDING",
+  "VIDEO_LOCAL_MODEL_READY": "PENDING_OPERATOR_RECORDING",
+  "VIDEO_LIVE_RUNTYPE_READY": "BLOCKED_KEY_MISSING",
+  "signature_state": "NOT_SIGNED",
+  "runs_dir_exists": true
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "sponsor.tavily.extract_receipt.v1",
+  "mission_id": "ANB-SP-TAVILY-EXTRACT-001",
+  "provider": "Tavily",
+  "operation": "extract",
+  "source_url": "https://docs.cortexmemory.dev/getting-started/introduction",
+  "request_id": "41a1b1b6-c7db-4614-b0a5-47005a4df5e4",
+  "retrieval_timestamp": "2026-08-27T05:29:15.401Z",
+  "raw_artifact_path": "eval/agent_native_sponsors_20260827/tavily/raw/TAVILY_EXTRACT_CORTEX_DOCS.json",
+  "raw_artifact_sha256": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+  "output_hash": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+  "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "fco_proposal": {
+    "action": "QUARANTINE_EXTERNAL_EVIDENCE",
+    "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+    "admit_decision": "PENDING_CUSTODY_REVIEW",
+    "note": "Tavily output must not write directly to canonical FCG state."
+  },
+  "status": "PASS",
+  "prior_negative_cases_preserved": [
+    "eval/hydralamp_tavily_20260827/raw/TAVILY_SEARCH_RAW.json",
+    "eval/hydralamp_tavily_20260827/raw/TAVILY_SEARCH_T1_DOMAIN_CONSTRAINED.json"
+  ]
+}

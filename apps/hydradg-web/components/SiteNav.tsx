@@ -10,6 +10,8 @@ const PRIMARY_NAV = [
   ["Why HydraDB", "/best-use"],
   ["Results", "/track03"],
   ["Graph", "/graph"],
+  ["HydraLamp", "/hydralamp"],
+  ["Providers", "/providers"],
 ] as const;
 
 const DEEP_NAV = [

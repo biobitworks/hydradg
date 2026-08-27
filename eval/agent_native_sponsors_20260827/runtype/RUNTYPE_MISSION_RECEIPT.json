@@ -1,0 +1,32 @@
+{
+  "schema": "sponsor.runtype.mission_receipt.v1",
+  "mission_id": "ANB-SP-RUNTYPE-CONTROL-001",
+  "provider": "Runtype",
+  "operation": "LIVE_RUNTYPE_CONTROL",
+  "started_at": "2026-08-27T05:23:53.593Z",
+  "completed_at": "2026-08-27T05:29:24.956Z",
+  "status": "ERROR",
+  "mode": "LIVE_RUNTYPE",
+  "run_id": "hlrt_mtb2v1q3_84d44d0a",
+  "model_id": "qwen/qwen3.6-27b",
+  "runtype_execution_id": null,
+  "model_output_hash": null,
+  "hash_chain_ok": true,
+  "prior_negative": {
+    "prior_run_id": "hlrt_mtb1spyh_bce57f34",
+    "prior_lane_status": "ERROR",
+    "prior_runtype_execution_id": null,
+    "prior_receipt": "eval/hydralamp_runtype_20260826/LIVE_RUNTYPE_STRESS_RECEIPT.json",
+    "preserved": true
+  },
+  "successor_attempt": {
+    "note": "Single bounded successor CONTROL from eval/hydralamp_runtype_20260826/live/LATEST.json — no retry loop.",
+    "source_batch": "eval/hydralamp_runtype_20260826/live/LATEST.json",
+    "lane_status": "ERROR",
+    "error_class": "ERROR"
+  },
+  "evidence_class": "LIVE_RUNTYPE",
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "RUNTYPE_API_KEY": "PRESENT",
+  "signature_state": "NOT_SIGNED"
+}

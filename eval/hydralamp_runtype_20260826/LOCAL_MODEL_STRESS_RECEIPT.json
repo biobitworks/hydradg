@@ -1,0 +1,253 @@
+{
+  "schema": "hydralamp.local_model_stress_receipt.v1",
+  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
+  "LOCAL_MODEL_GUM_OLLARMA_READY": true,
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "frozen_model": "qwen2.5:1.5b",
+  "matrix_replicates": [
+    "R1",
+    "R2",
+    "R3"
+  ],
+  "matrix_perturbations": [
+    "CONTROL",
+    "INVALID_PROOF",
+    "REPLAYED_PROOF",
+    "BROKEN_AUTHORIZATION_EDGE"
+  ],
+  "matrix": [
+    {
+      "replicate": "R1",
+      "perturbation": "CONTROL",
+      "run_id": "hlrt_mtb1rmej_886f46b2",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_5becbdf9-1",
+      "context_hash": "8c553913563eadbb4ec710dad9f7be57c3ec566b6d15e204b9958bc301357fc2",
+      "model_output_hash": "80750e17e94df2ac1c57647f6afd1a265a2ed2fd007752393323c8331da688f0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "7a4043cdda8b950f43ca989db5f32961d4480f872b498d56e9a3e8dfc87e0273",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 26736,
+      "end_to_end_ms": 27074
+    },
+    {
+      "replicate": "R1",
+      "perturbation": "INVALID_PROOF",
+      "run_id": "hlrt_mtb1s7ay_08c41ac4",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_d8e055ca-3",
+      "context_hash": "6c65173de55181eeebf8a869c18fbacc7cbff58c119665ad01de6dabe5563792",
+      "model_output_hash": "9a059410c3e707b0e60e5cc6e04463869723a98331ed24b54c65ec1a61d4a5b0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "130f950b3b3028b2e829b8aa5e9747a50ef860fd26d9a5e945bffc6e1e3ac0f6",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1855,
+      "end_to_end_ms": 2389
+    },
+    {
+      "replicate": "R1",
+      "perturbation": "REPLAYED_PROOF",
+      "run_id": "hlrt_mtb1s962_8da2cc41",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_0e969335-5",
+      "context_hash": "a5f3fec346cfb10c0fb55aa9ccbb78708b1c292f5531749fbed6042b763e32d4",
+      "model_output_hash": "8e2ac838ca275fdff8b8ec767179030703dba485b73d572236a1aef42403c3ea",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "d2eeb294e947676f3aaad90c90ddaf61d82db2394c17899d3ec32d7da44851b9",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1889,
+      "end_to_end_ms": 2197
+    },
+    {
+      "replicate": "R1",
+      "perturbation": "BROKEN_AUTHORIZATION_EDGE",
+      "run_id": "hlrt_mtb1saw6_5b4287d4",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_90362cb4-7",
+      "context_hash": "4744c4d4c8505fa3c752636116a6de62b2ab8ea8de8428b0ac16262dced6c403",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "13f07f47e6ac09c42ad1e101dc74a0b2c505844a5264f9a1d951022b44bffb00",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1207,
+      "end_to_end_ms": 1448
+    },
+    {
+      "replicate": "R2",
+      "perturbation": "CONTROL",
+      "run_id": "hlrt_mtb1sc1f_fdd03052",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_c5651b69-a",
+      "context_hash": "d5cb624c2c1cad7a76f436cf0df9456fa63d468424534c92add1478545237758",
+      "model_output_hash": "15ed7730639958b7da89682559bed0cd91b29b9225b818950b63e91a4453a371",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "7875453ae3aff2d51fa90f051c5f4730287b38b549f46c21fcc1ae745eaa6ee2",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1215,
+      "end_to_end_ms": 1586
+    },
+    {
+      "replicate": "R2",
+      "perturbation": "INVALID_PROOF",
+      "run_id": "hlrt_mtb1sda7_9515f1f9",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_977ea895-f",
+      "context_hash": "41cc8ae8148cbf448a173a4ed87983fbf62c96246cc4edced622a70a0f70f769",
+      "model_output_hash": "9a059410c3e707b0e60e5cc6e04463869723a98331ed24b54c65ec1a61d4a5b0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "ebd0c577a3f3d7be332e2c8de721faa7202e62c8f11500e4901229883482d929",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1949,
+      "end_to_end_ms": 2145
+    },
+    {
+      "replicate": "R2",
+      "perturbation": "REPLAYED_PROOF",
+      "run_id": "hlrt_mtb1seyv_798c58c0",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_7d3939eb-a",
+      "context_hash": "3f24941b2c1755797f9eda4b1eba051f9e2fea663898ac1cd41c85e05bd44d9f",
+      "model_output_hash": "40018160f1c6e0b7c77a1fe9b8ae9646fd56d68a32df86eb1772ba1d6e8410eb",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "0321849b42e81773da69a5f101d742d3a7b244b7dbdc82f0fd712839b8ffc3f4",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1687,
+      "end_to_end_ms": 2247
+    },
+    {
+      "replicate": "R2",
+      "perturbation": "BROKEN_AUTHORIZATION_EDGE",
+      "run_id": "hlrt_mtb1sgps_2a5f8ddf",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_9a20e5b5-d",
+      "context_hash": "3df3e9677a7ace6e7a99b98f2a317e30933e2e1fd7dccfe76f3652f786b867a3",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "e25f42dc9e954f21a7368042439ac46472eedaede57f184348772911ab65f5d6",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1396,
+      "end_to_end_ms": 1768
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "CONTROL",
+      "run_id": "hlrt_mtb1si3h_be782f2f",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_a07d221b-d",
+      "context_hash": "2a792e572896adbb5f560dc7ab5c9b77ffafaf5c0d16e91ae65c58f549147c61",
+      "model_output_hash": "2dbe86dc6cec544bb60fc10864cdf1d490be1c2b838b454bef7335ff03ab2737",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "18e21739771ce313cb26efb361dec3bf7abdfac41b1e03f7977ff8786555adbd",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1387,
+      "end_to_end_ms": 1837
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "INVALID_PROOF",
+      "run_id": "hlrt_mtb1sjj1_e895bd8c",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_e503522b-3",
+      "context_hash": "82888571081fd8686ce980ffab776bbfc83f387d7bb008bcb7344b508c1c286a",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "edd5041e4207d55cd88ed14425a3cc91044fe9127a629b30ab184d700f13ae75",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1387,
+      "end_to_end_ms": 1815
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "REPLAYED_PROOF",
+      "run_id": "hlrt_mtb1skxs_4147de90",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_456f24aa-f",
+      "context_hash": "c8f3b9cd5fe23eeb64f820b6327bdaadd230b866d19698bc62d90cd6f68e9f78",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "41fbe17257c3ff9e24071596e45ed473f23a1aa714fb42e89c1b654dce4e70bc",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1209,
+      "end_to_end_ms": 1600
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "BROKEN_AUTHORIZATION_EDGE",
+      "run_id": "hlrt_mtb1sm6h_5064ed44",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_d3b26249-c",
+      "context_hash": "134676548b68b98d274ec1318caade8667a43fdadbc7be2b8e0b72595071e714",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "39294688d6d5daba4d9757551fd4e2fdfdf9a6300b20a2b96979e244fb32a7eb",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1461,
+      "end_to_end_ms": 1671
+    }
+  ],
+  "hash_chain_all_ok": true,
+  "unauthorized_canonical_writes": 0,
+  "UNAUTHORIZED_PRIVATE_PLAINTEXT_DISCLOSURE": 0,
+  "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+  "signature_state": "NOT_SIGNED"
+}

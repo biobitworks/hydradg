@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.vercel_control_plane.receipt.v1",
+  "status": "PREVIEW_DEPLOYED_SSO_PROTECTED",
+  "base_sha": "b38096c6902511fc8488eb6b6dc22433a4e704aa",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "public_control_plane": "apps/hydradg-web on Vercel Preview",
+  "not_hosted_on_vercel": [
+    "Ollarma",
+    "GUM Doctor",
+    "Yappy local agent",
+    "Cotal local mesh",
+    "signing private keys"
+  ],
+  "scaffold_only_not_claimed_working": ["Cortex", "Tenki", "Nebius"],
+  "preserved_evidence": {
+    "tavily": "PASS",
+    "runtype": "ERROR preserved; overnight 4x25 not rerun",
+    "cortex": "ERROR / CORTEX_TRIAL_EXPIRED preserved",
+    "daytona": "INFRASTRUCTURE / LIVE_PASS"
+  },
+  "endpoints": {
+    "hydralamp": "/hydralamp",
+    "providers_ui": "/providers",
+    "providers_status": "/api/providers/status",
+    "providers_health": "/api/providers/health",
+    "evidence_gateway": "/api/agent-native/evidence-gateway",
+    "tavily_retrieve": "/api/tavily/retrieve",
+    "seedgraph_gap": "/api/seedgraph/gap",
+    "seedgraph_repair": "/api/seedgraph/repair"
+  },
+  "health_invariant": "CONFIGURED_IS_NOT_PASS",
+  "repair_outcomes": ["PASS", "NULL", "NEGATIVE", "ABSTAIN", "ERROR", "TIMEOUT"],
+  "admission_checks": ["schema_check", "provenance_check", "contradiction_check", "authorization_check"],
+  "canonical_fcg_writes": 0,
+  "canonical_seedgraph_writes": 0,
+  "tavily_evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "tavily_custody_state": "QUARANTINED",
+  "tenki_execute": "BLOCKED_UNTIL_tenki_login_AND_tenki_status",
+  "signature_state": "NOT_SIGNED",
+  "preview_url": "https://hydradg-nkb26m5u4-biobitworks.vercel.app",
+  "preview_verify_receipt": "eval/agent_native_sponsors_20260827/vercel/VERCEL_PREVIEW_VERIFY.json",
+  "judge_url_promoted": false,
+  "submission_sha_frozen": false,
+  "pr28_merged": false,
+  "note": "Do not alter Daytona/Cortex/Runtype/Tavily/science-closeout receipts. Preview SSO still blocks anonymous external gates."
+}

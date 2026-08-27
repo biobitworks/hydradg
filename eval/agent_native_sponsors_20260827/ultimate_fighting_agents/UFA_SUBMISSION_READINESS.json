@@ -1,0 +1,19 @@
+{
+  "schema": "sponsor.ufa.submission_readiness.v1",
+  "provider": "Ultimate Fighting Agents",
+  "track": "submission_only",
+  "sponsor_offer": {
+    "guaranteed_approval": true,
+    "prize_pool_usd": 15000
+  },
+  "perturbations_from_hydralamp": [
+    "CONTROL",
+    "INVALID_PROOF",
+    "REPLAYED_PROOF",
+    "BROKEN_AUTHORIZATION_EDGE"
+  ],
+  "science_outputs_unchanged": true,
+  "closeout_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+  "claim_ceiling": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN",
+  "signature_state": "NOT_SIGNED"
+}

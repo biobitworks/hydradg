@@ -1,0 +1,58 @@
+{
+  "schema": "infrastructure.daytona.smoke_receipt.v1",
+  "mission_id": "ANB-INFRA-DAYTONA-SMOKE-001",
+  "provider": "Daytona",
+  "lane": "INFRASTRUCTURE",
+  "anb_sponsor": false,
+  "operation": "ephemeral_sandbox_exec",
+  "started_at": "2026-08-27T05:42:21.384Z",
+  "completed_at": "2026-08-27T05:42:27.990Z",
+  "DAYTONA_STATE": "LIVE_PASS",
+  "secret_state": "PRESENT",
+  "required_env_names": [
+    "DAYTONA_API_KEY"
+  ],
+  "api_url": "https://app.daytona.io/api",
+  "official_docs": "https://www.daytona.io/docs/en/python-sdk/",
+  "smoke_command": "python -c \"import platform,hashlib; print(platform.python_version()); print(hashlib.sha256(b'hydradg-daytona-smoke').hexdigest())\"",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "scientific_experiments_on_daytona": false,
+  "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "promoted_to_verified_empirical_result": false,
+  "hydradg_independent_recompute": {
+    "payload": "hydradg-daytona-smoke",
+    "expected_sha256": "3e4e33cb4ad0a5c951dd46a73ca611a308bb250f04bc48dee85dde317c4318a0",
+    "match": true,
+    "observed_sha256": "3e4e33cb4ad0a5c951dd46a73ca611a308bb250f04bc48dee85dde317c4318a0"
+  },
+  "workspace_id": "e5cf09e2-9fca-4727-83a8-cd5f3508e1b0",
+  "execution_id": "e5cf09e2-9fca-4727-83a8-cd5f3508e1b0",
+  "image_or_runtime": "daytonaio/sandbox:0.8.0",
+  "exit_code": 0,
+  "stdout_sha256": "5ad56a2e1b59e89e83d7d78b76298702797ea2b1c8d9449964885f0e53786240",
+  "raw_response_sha256": "1afb161258f0190a17f095a00998537da5c252f13c18dc06a3e94d1f1b182a36",
+  "destroyed": true,
+  "status": "PASS",
+  "error_code": null,
+  "error_summary": null,
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "connectivity_state": "PASS",
+  "list_probe": {
+    "type": "generator",
+    "count": null
+  },
+  "sandbox_public": {
+    "id": "e5cf09e2-9fca-4727-83a8-cd5f3508e1b0",
+    "state": "started",
+    "snapshot": "daytonaio/sandbox:0.8.0",
+    "target": "us",
+    "created_at": "2026-08-27T05:42:27.585Z"
+  },
+  "exec_started_at": "2026-08-27T05:42:27.565Z",
+  "exec_completed_at": "2026-08-27T05:42:27.891Z",
+  "python_version_observed": "3.14.4",
+  "payload_hash_observed": "3e4e33cb4ad0a5c951dd46a73ca611a308bb250f04bc48dee85dde317c4318a0",
+  "raw_response_path": "eval/agent_native_sponsors_20260827/daytona/raw/DAYTONA_EXEC_RESPONSE.json"
+}

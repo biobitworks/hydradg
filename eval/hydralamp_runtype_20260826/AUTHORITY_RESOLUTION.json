@@ -1,0 +1,25 @@
+{
+  "schema": "hydralamp.runtype.authority_resolution.v1",
+  "recorded_at_utc": "2026-08-27T01:30:00Z",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "base_sha_at_handoff": "1593142c798b8e2eb5353014736e35cdb220adc8",
+  "present": [
+    "AGENTS.md",
+    "docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md",
+    "docs/AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md",
+    "schemas/orchestration_work_unit.schema.json",
+    "schemas/agent_model_handoff_receipt.schema.json"
+  ],
+  "absent_not_invented": [
+    "PROJECT_CONTROL.yaml",
+    "FCO_FCG_CANONICAL_SPEC.md",
+    "CLAIM_CEILINGS.md",
+    "EVIDENCE_LEVELS.md",
+    "FCO_SCHEMA.json",
+    "FCG_SCHEMA.json",
+    "SIGNING_AND_KEYS.md"
+  ],
+  "runtype_api_key_present": false,
+  "runtype_state": "NOT_CONFIGURED",
+  "signature_state": "NOT_SIGNED"
+}

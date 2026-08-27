@@ -1,0 +1,52 @@
+{
+  "schema": "hydralamp.hash_tamper_stress_receipt.v1",
+  "HASH_TAMPER_STRESS": "PASS",
+  "UNEXPLAINED_HASH_MISMATCHES": 0,
+  "cases": [
+    {
+      "name": "alter_model_context_byte",
+      "detected": true,
+      "detail": "expected≠got 53e2d5e79bf8"
+    },
+    {
+      "name": "alter_model_response_byte",
+      "detected": true,
+      "detail": "6bcc7d5350ff"
+    },
+    {
+      "name": "alter_tool_result",
+      "detected": true,
+      "detail": "27773f5c14bc"
+    },
+    {
+      "name": "remove_fcg_edge",
+      "detected": true,
+      "detail": "snapshot hash changed"
+    },
+    {
+      "name": "reorder_two_events",
+      "detected": true,
+      "detail": "[{\"seq\":2,\"reason\":\"PREV_HASH_DISCONTINUITY\"},{\"seq\":1,\"reason\":\"PREV_HASH_DISCONTINUITY\"}]"
+    },
+    {
+      "name": "change_prev_event_hash",
+      "detected": true,
+      "detail": "[{\"seq\":2,\"reason\":\"PREV_HASH_DISCONTINUITY\"},{\"seq\":2,\"reason\":\"EVENT_HASH_MISMATCH\"}]"
+    },
+    {
+      "name": "replay_old_proof",
+      "detected": true,
+      "detail": "replayed event_hash must not verify in chain"
+    },
+    {
+      "name": "altered_graph_expected_root",
+      "detected": true,
+      "detail": "root mismatch detected"
+    }
+  ],
+  "synthetic": true,
+  "security_incident": false,
+  "note": "Synthetic tamper cases only — never real incidents",
+  "signature_state": "NOT_SIGNED",
+  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e"
+}

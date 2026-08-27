@@ -1,0 +1,26 @@
+{
+  "schema": "sponsor.cortex.mission_receipt.v1",
+  "mission_id": "ANB-SP-CORTEX-ROUNDTRIP-001",
+  "provider": "Mitosis Cortex",
+  "operation": "memory_roundtrip",
+  "status": "ERROR",
+  "error_code": "CORTEX_TRIAL_EXPIRED",
+  "error_summary": "Cortex office memory locked (trial_expired). Auth PASS; remember/ask blocked until plan unlock.",
+  "offer_code_metadata": "FREECORTEX",
+  "offer_is_api_credential": false,
+  "architectural_boundary": "Cortex is external agent memory; FCG remains canonical HydraDG custody. Mission never appends to FCG.",
+  "roundtrip": {
+    "CORTEX_MEMORY_ROUNDTRIP": "ERROR",
+    "UNDERLYING_HYDRADG_RECEIPT_VERIFICATION": "MISS"
+  },
+  "underlying_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+  "underlying_receipt_sha256": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
+  "roundtrip_receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "secret_state": "PRESENT",
+  "signature_state": "NOT_SIGNED",
+  "docs_ref": "https://mitosislabs.ai/developers/cli/overview",
+  "office_id": "3cd3118f-50fd-402c-868e-0f3e556d8dca",
+  "auth_state": "PASS",
+  "fcg_append": "NOT_APPENDED"
+}

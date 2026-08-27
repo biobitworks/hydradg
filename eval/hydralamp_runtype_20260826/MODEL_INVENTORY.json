@@ -1,0 +1,23 @@
+{
+  "schema": "hydralamp.runtype.model_inventory.v1",
+  "recorded_at_utc": "2026-08-27T04:54:05.391Z",
+  "runtype_api_key_present": true,
+  "runtype_state": "CONFIGURED",
+  "selected_models": [
+    {
+      "lane": "agent-a",
+      "provider": "runtype",
+      "model_id": "qwen/qwen3.6-27b",
+      "config_id": "hydralamp-live-agent-a-temp0",
+      "temperature": 0,
+      "cache": false,
+      "recorded_at_utc": "2026-08-27T04:54:05.389Z"
+    }
+  ],
+  "discovery_method": "modelConfigs.list",
+  "discovery_count": 12,
+  "discovery_note": "Frozen before experiment. Do not mutate after CONTROL/INVALID_PROOF start.",
+  "minimum_required": 1,
+  "preferred": 3,
+  "secret_value_recorded": false
+}
