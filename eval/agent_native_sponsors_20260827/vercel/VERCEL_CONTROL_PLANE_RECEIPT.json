@@ -1,6 +1,6 @@
 {
   "schema": "hydradg.vercel_control_plane.receipt.v1",
-  "status": "PREVIEW_PENDING",
+  "status": "PREVIEW_DEPLOYED_SSO_PROTECTED",
   "scientific_execution_authority": "magicSTUDIObox.local",
   "public_control_plane": "apps/hydradg-web on Vercel Preview",
   "not_hosted_on_vercel": [
@@ -30,8 +30,9 @@
   "tavily_evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
   "tavily_custody_state": "QUARANTINED",
   "signature_state": "NOT_SIGNED",
-  "preview_url": null,
+  "preview_url": "https://hydradg-nkb26m5u4-biobitworks.vercel.app",
+  "preview_verify_receipt": "eval/agent_native_sponsors_20260827/vercel/VERCEL_PREVIEW_VERIFY.json",
   "judge_url_promoted": false,
   "submission_sha_frozen": false,
-  "note": "Preview must pass before freezing submission SHA or promoting the judge URL."
+  "note": "Preview built successfully but anonymous external gates returned 401 Protected deployment (Vercel SSO). Do not freeze submission SHA or promote the judge URL until Preview is reachable without SSO and those gates pass."
 }
