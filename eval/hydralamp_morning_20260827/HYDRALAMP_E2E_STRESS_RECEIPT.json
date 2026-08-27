@@ -1,0 +1,208 @@
+{
+  "schema": "hydralamp.e2e_stress_receipt.v1",
+  "recorded_at_utc": "2026-08-27T07:36:44.782774+00:00",
+  "golden_path_run_id": "hlrt_mtb7kqaw_8aa4b999",
+  "custody_stress_log_tail": "\n> hydradg-web@0.1.0 hydralamp:custody-stress\n> tsx scripts/hydralamp_custody_stress.mts\n\nvectors+tamper+delta done\nsse PASS\n(node:68783) [DEP0205] DeprecationWarning: `module.register()` is deprecated. Use `module.registerHooks()` instead.\n(Use `node --trace-deprecation ...` to show where the warning was created)\ncore PASS 100/100\nlocal true\n{\n  \"schema\": \"hydralamp.local_server_receipt.v1\",\n  \"LOCAL_SERVER_READY\": true,\n  \"DETERMINISTIC_FALLBACK_READY\": true,\n  \"LOCAL_MODEL_GUM_OLLARMA_READY\": true,\n  \"LIVE_RUNTYPE_READY\": \"CONFIGURED\",\n  \"HASH_CHAIN_READY\": true,\n  \"CONTEXT_DELTA_READY\": true,\n  \"REALTIME_GRAPH_READY\": true,\n  \"CORE_STRESS\": \"PASS\",\n  \"SSE_STRESS\": \"PASS\",\n  \"HASH_TAMPER_STRESS\": \"PASS\",\n  \"GUM_DOCTOR_STATE\": \"DEPENDENCY_UNRESOLVED\",\n  \"cloud_drift\": \"COMPUTED_FROM_CONTEXT_ICEBERG\",\n  \"signature_state\": \"NOT_SIGNED\",\n  \"merkle_mmr_state\": \"NOT_COMMITTED\"\n}\n",
+  "custody_stress_pass": true,
+  "scenarios": [
+    {
+      "id": "A",
+      "name": "normal success",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_FIXTURE",
+      "notes": "INVALID_PROOF + LONGMEMEVAL_OVERCLAIM completed",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "B",
+      "name": "duplicate request",
+      "state": "PASS_BOUNDED",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "separate run_ids; no shared mutation",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "C",
+      "name": "idempotent retry",
+      "state": "PASS_BOUNDED",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "status replay by run_id",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "D",
+      "name": "out-of-order event",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "hash chain rejects gaps (custody-stress)",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "E",
+      "name": "stale predecessor",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "custody-stress hash/tamper suite",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "F",
+      "name": "poison candidate",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_FIXTURE",
+      "notes": "LONGMEMEVAL_OVERCLAIM B quarantined",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "G",
+      "name": "contradictory source",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_FIXTURE",
+      "notes": "CONTRADICTS/OVERCLAIMS edges retained",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "H",
+      "name": "repair",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_FIXTURE",
+      "notes": "authorized FCG append to C",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "I",
+      "name": "verifier rejects repair",
+      "state": "PASS_PRIOR",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "INVALID_PROOF repair path covered in fixture suite",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "J",
+      "name": "verifier accepts repair",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_FIXTURE",
+      "notes": "antidote PASS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "K",
+      "name": "unknown tool",
+      "state": "PASS_PRIOR",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "evidence-gateway 400 unknown tool (prior review)",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "L",
+      "name": "malformed payload",
+      "state": "PASS_PRIOR",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "custody-stress / gateway",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "M",
+      "name": "unauthorized/expired authority",
+      "state": "BLOCKED_OR_N_A",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "toy Ed25519 fixtures; Cortex trial_expired separate",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "N",
+      "name": "provider timeout",
+      "state": "PASS_PRIOR",
+      "evidence_class": "LIVE_RUNTYPE",
+      "notes": "DEADLINE_MS timeout class preserved in Runtype lane",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "O",
+      "name": "Runtype error",
+      "state": "ERROR_PRESERVED",
+      "evidence_class": "LIVE_RUNTYPE",
+      "notes": "RUNTYPE_FOUNDER_REPRO.json PROVIDER_OR_SDK_ERROR",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "P",
+      "name": "Cortex unavailable",
+      "state": "BLOCKED",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "notes": "CORTEX_TRIAL_EXPIRED",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "Q",
+      "name": "browser disconnect/reconnect",
+      "state": "PASS_BOUNDED",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "SSE resume by run_id",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "R",
+      "name": "resume by run_id",
+      "state": "PASS",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "replay_ok true",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "S",
+      "name": "second-agent handoff",
+      "state": "PASS_BOUNDED",
+      "evidence_class": "DETERMINISTIC_FIXTURE",
+      "notes": "multi-lane agent-a/b/c + repair",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "T",
+      "name": "duplicate FCO candidate",
+      "state": "PASS_BOUNDED",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "content-addressed FCO ids",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    },
+    {
+      "id": "U",
+      "name": "concurrent updates",
+      "state": "PASS_PRIOR",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "notes": "concurrency stress receipt prior",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED"
+    }
+  ],
+  "verifications": {
+    "hash_chain_ok": true,
+    "poison_not_erased": true,
+    "lifecycle_restored": true,
+    "fcg_append": "PASS",
+    "cloudflare_transport": "LOCAL_DURABLE_PROJECTION",
+    "deterministic_authority": true
+  },
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

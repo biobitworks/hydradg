@@ -1,0 +1,16 @@
+{
+  "schema": "hydralamp.cloudflare_blocker.v1",
+  "CLOUDFLARE_STATE": "NOT_DEPLOYED_WORKER_STUB_PRESENT",
+  "api_live_http": 503,
+  "api_live_body_sha256": "d0cc656985e4cec7444e1b7bfcc212ca2d834bd0ff1142d07de7d5cb5236c965",
+  "local_projection": "LOCAL_DURABLE_PROJECTION",
+  "worker_stub_path": "workers/hydralamp-run-state/",
+  "golden_path_projection": {
+    "transport": "LOCAL_DURABLE_PROJECTION",
+    "custody_state": "CUSTODY_VERIFIED",
+    "updated_at": "2026-08-27T07:35:50.314Z"
+  },
+  "smallest_founder_action": "Deploy workers/hydralamp-run-state; set HYDRALAMP_CF_WORKER_URL server-side",
+  "secret_exposure": false,
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,168 @@
+{
+  "schema": "hydralamp.golden_path_test_results.v1",
+  "base_url": "http://127.0.0.1:3013",
+  "gum": {
+    "schema": "hydralamp.gum_doctor_receipt.v1",
+    "GUM_DOCTOR_STATE": "NOT_FOUND",
+    "command": [
+      "command -v gum",
+      "gum --version",
+      "gum doctor --format=json"
+    ],
+    "exit_code": 127,
+    "exact_output_sha256": "35994bfb065aaee7b7e5582b7ba4580c5e3a61c20ca2d4f4df0759fffaa07646",
+    "secret_exposure": false,
+    "classification": "ENVIRONMENT_INTEGRATION_DIAGNOSTIC_NOT_HYDRALAMP_STRESS",
+    "signature_state": "NOT_SIGNED"
+  },
+  "results": [
+    {
+      "id": "1",
+      "name": "happy_path",
+      "state": "PASS",
+      "detail": {
+        "phase": "RECEIPT",
+        "transitions": 8,
+        "unique_fcg_roots": 8
+      }
+    },
+    {
+      "id": "2",
+      "name": "poison_detected",
+      "state": "PASS",
+      "detail": {
+        "auth": "fco:d830d117292b35c0d66a5eb82d5ec718d75f57a6d6b6c80baba99c332d521499",
+        "A": "fco:982aaeb0613d1408c62c105ff6ad7d553eff08130e26c5de112ce3a27fc244a0",
+        "B": "fco:92340851c665de9bbfdc918c79fc98b2bdb366be301d51cac318da13a306b9e9",
+        "C": "fco:5c816917be9bc6cd960108de24e793c8889c40f211c7a0a30ca74cadbece5d9d"
+      }
+    },
+    {
+      "id": "5",
+      "name": "wrong_agent_decision",
+      "state": "BOUNDED_NOT_FORCED",
+      "detail": "Demo agent completes structured path"
+    },
+    {
+      "id": "8",
+      "name": "provider_timeout_class",
+      "state": "PRESERVED_PRIOR",
+      "detail": "Runtype ERROR/TIMEOUT classes exist in coordinator"
+    },
+    {
+      "id": "9",
+      "name": "pause_preserves_state",
+      "state": "PASS",
+      "detail": {
+        "phase": "REFERENCE",
+        "n": 2
+      }
+    },
+    {
+      "id": "10",
+      "name": "step_after_pause",
+      "state": "PASS",
+      "detail": null
+    },
+    {
+      "id": "11",
+      "name": "reset_new_session",
+      "state": "PASS",
+      "detail": {
+        "sessionA": "jdg_mtba2dwj_66f9ff28",
+        "sessionB": "jdg_mtba2dya_9fe55996"
+      }
+    },
+    {
+      "id": "12",
+      "name": "invalid_judge_capability",
+      "state": "PASS",
+      "detail": {
+        "ok": false,
+        "error": "Invalid judge capability",
+        "code": "INVALID_JUDGE_CAPABILITY"
+      }
+    },
+    {
+      "id": "13",
+      "name": "two_sessions_isolated",
+      "state": "PASS",
+      "detail": null
+    },
+    {
+      "id": "14",
+      "name": "runtype_unavailable_visible",
+      "state": "PASS",
+      "detail": "RUNTYPE KEY PRESENT — LIVE PATH ERROR-PRONE"
+    },
+    {
+      "id": "15",
+      "name": "mitosis_unavailable_visible",
+      "state": "PASS",
+      "detail": "CORTEX_MEMORY=BLOCKED_TRIAL_EXPIRED"
+    },
+    {
+      "id": "16",
+      "name": "cloudflare_unavailable_visible",
+      "state": "PASS",
+      "detail": "CLOUDFLARE INTEGRATION READY / NOT LIVE"
+    },
+    {
+      "id": "17",
+      "name": "hydradb_pending_visible",
+      "state": "PASS",
+      "detail": "PENDING_READBACK"
+    },
+    {
+      "id": "19",
+      "name": "fcg_root_changes_each_material_state",
+      "state": "PASS",
+      "detail": {
+        "uniqueRoots": 8
+      }
+    },
+    {
+      "id": "20",
+      "name": "demo_not_canonical_science",
+      "state": "PASS",
+      "detail": "DEMO_SESSION_MECHANISM_CANARY_NOT_EMPIRICAL_CLAIM"
+    },
+    {
+      "id": "3",
+      "name": "poison_missed",
+      "state": "BOUNDED_NOT_INJECTED",
+      "detail": null
+    },
+    {
+      "id": "4",
+      "name": "null_no_useful_change",
+      "state": "BOUNDED",
+      "detail": null
+    },
+    {
+      "id": "6",
+      "name": "verifier_rejection_path",
+      "state": "PASS_PRIOR_INVALID_PROOF",
+      "detail": null
+    },
+    {
+      "id": "7",
+      "name": "model_abstention",
+      "state": "BOUNDED",
+      "detail": null
+    },
+    {
+      "id": "18",
+      "name": "browser_refresh_reconnect",
+      "state": "PASS_BOUNDED_STATUS_BY_RUN_ID",
+      "detail": null
+    }
+  ],
+  "sample_run": {
+    "run_id": "gp_mtba2dwv_66f9ff28",
+    "phase": "RECEIPT",
+    "fcg_root_initial": "0e44789237d755f9c9359a55cfde2df96255a7a19223ac8d6e0c81d4ba205124",
+    "fcg_root_current": "0cbb28639425f3fd7859f46a3dc67f1c18f428689bd589375012b5ecb73c3485"
+  },
+  "signature_state": "NOT_SIGNED"
+}

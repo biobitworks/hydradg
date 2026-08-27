@@ -1,0 +1,41 @@
+{
+  "ABSTENTION_KEYS": [],
+  "CORRUPT_KEYS": [],
+  "DUPLICATE_KEYS": [],
+  "EXPECTED_MODEL_CASE_KEYS_STRUCTURAL": {
+    "lineage_B_9x1020": 9180,
+    "lineage_D_9x770": 6930
+  },
+  "FAILED_KEYS": "V11_FAILED_EMPTY_RESPONSE_COUNT_39_KEYS_NOT_IN_GIT",
+  "MISSING_KEYS_STRUCTURAL": {
+    "lineage_B": 9171,
+    "lineage_D": 6882
+  },
+  "TIMEOUT_KEYS": [],
+  "UNVERIFIED_KEYS": "ALL_V11_CASE_KEYS_NOT_IN_GIT_BANK",
+  "VALID_ACCOUNTED_STRUCTURAL": {
+    "lineage_B_status": 9,
+    "lineage_D_v11": 48
+  },
+  "claim_ceiling": "MISSING_SLOT_STRUCTURAL_ACCOUNTING_NOT_CASE_ENUMERATION",
+  "created_at": "2026-08-27T08:21:57.416Z",
+  "git_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "governing_note": "Case-level V11 receipt bank is not present in this checkout (only forensic summaries). Therefore EXPECTED\u2212VALID_ACCOUNTED cannot be expanded to exact model\u00d7case keys here. Do NOT invent missing keys. Failures/timeouts/abstentions with valid receipts are accounted.",
+  "replay_authorized": {
+    "do_not_rerun_to_green": true,
+    "genuinely_missing_slots": "YES_STRUCTURAL_BUT_REQUIRES_CASE_BANK_OR_SUCCESSOR_PREREG",
+    "invalidated_by_custody_defect": "LINEAGE_A_DEVELOPMENT_INVALID"
+  },
+  "schema": "hydradg.matrix_missing_slot_manifest.v1",
+  "scientific_roster": [
+    "deepseek-r1:14b",
+    "qwen2.5-coder:7b",
+    "granite4.1:8b",
+    "qwen3.5:9b",
+    "qwen3:8b",
+    "qwen3:4b",
+    "phi4-mini:latest",
+    "qwen2.5:1.5b",
+    "qwen3:1.7b"
+  ]
+}

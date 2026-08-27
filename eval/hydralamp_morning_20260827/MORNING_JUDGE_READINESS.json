@@ -1,0 +1,94 @@
+{
+  "schema": "hydralamp.morning_judge_readiness.v1",
+  "recorded_at_utc": "2026-08-27T07:36:44.884695+00:00",
+  "CURRENT_BRANCH": "cursor/hydralamp-morning-goldenpath-20260827",
+  "CURRENT_SHA": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "REVIEWED_BASE_SHA": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "PROJECT_CONTROL.yaml": "ABSENT",
+  "EVIDENCE_STATE": "INVENTORIED_FROM_FROZEN_RECEIPTS_PLUS_AUDIT_CORRECTIONS",
+  "EXPERIMENT_STATE": "GOLDEN_PATH_DETERMINISTIC_PASS; RUNTYPE_ERROR_PRESERVED; CF_LOCAL_PROJECTION; MITOSIS_BLOCKED",
+  "FCO_STATE": "MATERIALIZED_IN_GOLDEN_PATH_RUN",
+  "FCG_STATE": {
+    "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+    "root_after": "23a46061741e85f3bcbbd0d1d69d1df0bf698aef194f0682a96c6d57e0f33bda",
+    "append_state": "PASS"
+  },
+  "HYDRADB_STATE": "PENDING_READBACK",
+  "GUM_DOCTOR_STATE": "NOT_FOUND",
+  "RUNTYPE_STATE": "ERROR",
+  "CLOUDFLARE_STATE": "NOT_DEPLOYED_WORKER_STUB_PRESENT",
+  "MITOSIS_STATE": "CORTEX_MEMORY=BLOCKED_TRIAL_EXPIRED",
+  "EARLIEST_DIVERGENCE": "fco:92340851c665de9bbfdc918c79fc98b2bdb366be301d51cac318da13a306b9e9",
+  "CLAIM_CEILING": "TRACK03_DEPTH_EFFECT_REPLICATED; NO_AUTOMATIC_GRAPH_CONTEXT_ADVANTAGE; NO_MODEL_BENEFIT_AT_PRIMARY_K10",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "PUBLIC_JUDGE_STATE": "LOCAL_3013_ONLY_NO_ANON_PUBLIC_URL_THIS_TURN",
+  "LOCAL_URLS": {
+    "hydralamp": "http://127.0.0.1:3013/hydralamp",
+    "judge": "http://127.0.0.1:3013/judge",
+    "note": "Review server on 3012 left untouched; morning package serves 3013"
+  },
+  "P0": {
+    "reviewed_sha_preserved": true,
+    "successor_worktree_only": true,
+    "gum_doctor_recorded": true,
+    "custody_stress_pass": true,
+    "typecheck_pass": true,
+    "build_pass": true,
+    "e2e_normal_poison_antidote_restored": true,
+    "poison_remains": true,
+    "deterministic_over_model": true,
+    "evidence_hashes_visible": true,
+    "no_secrets": true,
+    "pos_neg_error_retained": true,
+    "replay_works": true
+  },
+  "P1": {
+    "runtype_pass": false,
+    "cloudflare_browser_stream_pass": false,
+    "public_anonymous_judge_url_pass": false
+  },
+  "P1_PLUS_MITOSIS": {
+    "cortex_write_read_pass": false,
+    "fresh_session_recall": false,
+    "blocked_reason": "CORTEX_MEMORY=BLOCKED_TRIAL_EXPIRED"
+  },
+  "P2": {
+    "hydradb_parity": false,
+    "model_size_poison_comparison": "DETERMINISTIC_LANE0_ONLY_THIS_TURN",
+    "cotal_mesh": false,
+    "agent_card_mcp_a2a": false,
+    "eca_micro_view": "HISTORICAL_BOUNDED_SEE_HYDRADG_ECA_STATUS"
+  },
+  "artifact_sha256": {
+    "CLOUDFLARE_BLOCKER.json": "71d1265d62756fa7bb4083f944d4efc702b61e19b54a91e4a4eac6bcc57eb7f6",
+    "GUM_DOCTOR_RECEIPT.json": "8523cb35a9ce4958ce2850c4d19268d0915b7e24aa73831f9d5b7dbbbb3d7a32",
+    "HYDRADG_DATASET_STATUS.json": "2dff7b0e535854c4cffb908dad463353c3d8a8719817909f5009e28def9b1b88",
+    "HYDRADG_ECA_STATUS.json": "714d545b101a9049b7a4720371d9b86f706e036ec745bb1698b329ee1a70ca4a",
+    "HYDRADG_EVIDENCE_INVENTORY.json": "9b819b9f07d6c66484027aad0a936bc926bd5b043fe687f8e77324a70a8a0b5c",
+    "HYDRADG_MODEL_STATUS.json": "b9dd3b399e713934b081bd29188d825cce50be78cccd190428e35db27d0a9887",
+    "HYDRADG_RESULT_MATRIX.json": "6f46d1a9e6205b75fbca15a88b2a596ff887cf3ae2108fa81e708d0fa0985e2f",
+    "HYDRADG_STATISTICAL_COMPARISON.json": "dcd837253fee729ddb40808ffa47a34d3ef30905bb35f29dcabfb65a13d40bfb",
+    "HYDRADG_STATISTICAL_COMPARISON.md": "a87507200bf08716316d65b09f42b2d8a3c385211a3426db58269dffffb6dbbf",
+    "HYDRALAMP_E2E_STRESS_RECEIPT.json": "a7c1035d373a3f60805bc8869a20ad71d4aa595a293ad7e416ac771ab51c69c4",
+    "HYDRALAMP_FAILURE_MATRIX.json": "6fca31722038883a2589c7d3e8bcadab61f33bf393788d8c4f3eca24bfd9ef19",
+    "HYDRALAMP_LIVE_GOLDEN_PATH.json": "b50d7efee3598f61606609bd578556b2da08692bcbe73de81aeec99f73e6a602",
+    "LONGMEMEVAL_EVIDENCE_PACKET.json": "61892cdff4e1d892f611c005709f0d0c85f6afa990a35472df6fc9f32b24445b",
+    "MITOSIS_FOUNDER_REPRO.json": "bf47c37cea32a846b7da06609f11e0715f90c7c166b90ebbe32e7d80a95ab500",
+    "MORNING_JUDGE_READINESS.json": "63d341c3b40bbb8c9939db09c8eb1d89403dc01ceb680796aa4a5698fe3f3361",
+    "RUNTYPE_FOUNDER_REPRO.json": "3cef75702fdc1ee1514c78a71bfaa754b811ab2bc6aa6eee355b57a1030b0b2a"
+  },
+  "secret_scan": {
+    "hits": [],
+    "pass": true
+  },
+  "NEXT_SAFE_ACTION": "HUMAN_REVIEW of /hydralamp LONGMEMEVAL_OVERCLAIM on :3013; founders unlock Runtype SDK error + CF deploy + Cortex trial before claiming P1/P1+",
+  "FINAL_REVIEW_GATE": "P0_MOSTLY_GREEN_P1_BLOCKED_NO_IC_SUBMIT",
+  "DO_NOT_SUBMIT_IC": true,
+  "audit_followup": {
+    "longmemeval_audit_agent": "dd83b3a2-9ca3-448d-aa91-61e8144baa7e",
+    "code_map_agent": "fbe4e782-bf2a-45ea-8328-5fc36591ba78",
+    "folded": true,
+    "server_3013": "RUNNING"
+  }
+}

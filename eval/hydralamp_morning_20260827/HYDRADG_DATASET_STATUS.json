@@ -1,0 +1,73 @@
+{
+  "schema": "hydradg.dataset_status.v1",
+  "datasets": {
+    "LongMemEval-S-full500": {
+      "DOWNLOADED": true,
+      "HASHED": true,
+      "RIGHTS_CLASSIFIED": true,
+      "FROZEN": true,
+      "SEEDGRAPH_INGESTED": true,
+      "FCO_MATERIALIZED": true,
+      "FCG_LINKED": true,
+      "HYDRADB_PROJECTED": "PARTIAL_OR_PENDING",
+      "EVALUATED": true,
+      "VERIFIED": "BOUNDED_RECEIPT",
+      "n_cases": 500,
+      "n_scored": 470,
+      "n_abstentions": 30,
+      "raw_dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "sources": [
+        "PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json",
+        "eval/track_model_k_20260820/CONTROL_RECONCILIATION_RECEIPT.json",
+        "eval/hosted_migration_20260820/byog_real_parity/BYOG_GRAPH_QUERY_TERMINAL.json"
+      ],
+      "sessions_23867_entities_4776_facts_3506": "CITED_IN_NARRATIVE_RECEIPTS_REVERIFY_IF_CLAIM_ELEVATED",
+      "sessions": 23867,
+      "facts": 3506,
+      "entities_matrix_stated": 4776,
+      "entities_recompute_status": "MATRIX_STATED_ONLY_MISMATCH_VS_FREEZE_JSONL",
+      "raw_bytes_on_disk": "NOT_FOUND",
+      "RAW_vs_SG_delta_hit": 0.0
+    },
+    "LongMemEval-v2": {
+      "EVALUATED": false,
+      "state": "EXTERNAL_READY_NO_LOCAL_PULL_RECEIPT"
+    },
+    "EnterpriseRAG-Bench": {
+      "DOWNLOADED": true,
+      "HASHED": true,
+      "EVALUATED": "TRACK01_MATRIX_PRESENT",
+      "VERIFIED": false,
+      "note": "CROSS_TRACK_STATS shows null retained; do not claim Track01 win",
+      "admitted_local_pull_receipt": "NOT_FOUND",
+      "evaluated_as_real_bytes": "NOT_ESTABLISHED"
+    },
+    "HERB": {
+      "state": "ACQUISITION_OR_HASH_REFERENCED",
+      "EVALUATED": false,
+      "evaluated": "NOT_EXECUTED",
+      "rights": "CC-BY-NC-4.0_DECLARED"
+    },
+    "BEAM": {
+      "path": "eval/beam_1m_20260820",
+      "DOWNLOADED": true,
+      "EVALUATED": "MANIFEST_PRESENT",
+      "official_rows_materialized": false,
+      "evaluated": "NOT_EXECUTED"
+    },
+    "BEAM-10M": {
+      "state": "NOT_APPLICABLE_DEFERRED"
+    },
+    "context-vs-entropy": {
+      "path": "eval/context_vs_entropy_20260820",
+      "EVALUATED": true,
+      "separate_from_hit_at_k": true,
+      "abstention_count_example": null
+    },
+    "HydraBlast-canaries": {
+      "EVALUATED": true,
+      "path_glob": "eval/studio_daisy_20260821/canary*"
+    }
+  },
+  "audit_followup_utc": "2026-08-27T07:38:42.650802+00:00"
+}

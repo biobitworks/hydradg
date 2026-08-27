@@ -1,0 +1,73 @@
+{
+  "schema": "hydralamp.longmemeval_evidence_packet.v1",
+  "packet_id": "LME_K5_K10_ACCEPTED_BOUNDS_20260820",
+  "recorded_for_mission": "HYDRALAMP_MORNING_GOLDENPATH_20260827",
+  "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+  "claim_ceiling": "TRACK03_DEPTH_EFFECT_REPLICATED; NO_AUTOMATIC_GRAPH_CONTEXT_ADVANTAGE; NO_MODEL_BENEFIT_AT_PRIMARY_K10",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "sources": [
+    {
+      "path": "eval/track_model_k_20260820/CONTROL_RECONCILIATION_RECEIPT.json",
+      "role": "exact_hit_rates_k5"
+    },
+    {
+      "path": "eval/track_model_k_20260820/TRACK03_SUMMARY.json",
+      "role": "primary_k10_no_model_benefit"
+    },
+    {
+      "path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "role": "holm_corrected_null_retention"
+    },
+    {
+      "path": "PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json",
+      "role": "preregistered_nulls"
+    },
+    {
+      "path": "eval/hosted_migration_20260820/byog_real_parity/BYOG_GRAPH_QUERY_TERMINAL.json",
+      "role": "narrative_k_depth_summary_with_n_470_abstain_30"
+    }
+  ],
+  "accepted_state_A": {
+    "statement": "Retrieval depth affected the tested LongMemEval retrieval behavior, while richer graph/context did not automatically produce a retrieval advantage. Model benefit in the primary K-depth experiment is not established.",
+    "n_scored": 470,
+    "n_abstentions": 30,
+    "n_total_cases": 500,
+    "k5": {
+      "treatment_A_hit_at_5": 0.9638297872340424,
+      "treatment_D_hit_at_5": 0.9446808510638298,
+      "approx_A_hits": 453,
+      "approx_D_hits": 444,
+      "interpretation": "B/C/D did not establish a positive Hit@5 advantage over A/reference."
+    },
+    "k10": {
+      "treatment_A_hit_at_10": 0.97872,
+      "approx_A_hits": 460,
+      "primary_result": "NO_MODEL_BENEFIT",
+      "interpretation": "Depth improved retrieval metrics relative to K5 while evidence-path density declined; model superiority not established."
+    },
+    "representation": {
+      "note": "RAW vs SeedGraph identical at fixed K in the retained matrix (H0_representation retained).",
+      "H0_representation_k": "RETAINED"
+    },
+    "nulls": {
+      "H0_rep": "preregistered exact SHA equality within cell replicates",
+      "H0_representation_k": "M(SG,k)-M(RAW,k)=0",
+      "H0_advantage_k": "M(SG,k)-M(RAW,k)<=0",
+      "H0_K_rep": "M(rep,K10)-M(rep,K5)<=0",
+      "H0_interaction": "[SG_K10-RAW_K10]-[SG_K5-RAW_K5]=0"
+    }
+  },
+  "poison_candidate_B": {
+    "statement": "More FCO/FCG graph context always improves LongMemEval retrieval, so HydraDG should maximize context at every retrieval depth.",
+    "classification": "UNTRUSTED_OVERCLAIM_CANDIDATE",
+    "contradicts": "accepted_state_A",
+    "malicious_intent": "NOT_ESTABLISHED",
+    "evidence_class_if_model_emitted": "PROBABILISTIC_MODEL_OUTPUT"
+  },
+  "corrected_state_C": {
+    "statement": "Accepted successor retains A: depth effects are evidence-bounded; richer graph/context does not automatically improve Hit@K; maximize-context-at-every-depth is an overclaim. Poison B remains quarantined in provenance.",
+    "supersedes": ["accepted_state_A_as_current", "poison_candidate_B_as_current"],
+    "retains_visible": ["A", "B", "C"]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema": "hydradg.model_status.v1",
+  "models": {
+    "deterministic_no_model": {
+      "state": "EXECUTED",
+      "role": "authority_baseline_lane0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    "ollarma_local": {
+      "state": "RUNTIME_AVAILABLE_PRIOR",
+      "models_seen": [
+        "qwen2.5:1.5b",
+        "qwen2.5-coder:7b",
+        "deepseek-r1:14b"
+      ]
+    },
+    "qwen_exact": {
+      "executed_tags": [
+        "qwen2.5:7b",
+        "qwen2.5-coder:7b",
+        "qwen2.5:1.5b",
+        "qwen2.5:0.5b",
+        "qwen3:1.7b"
+      ],
+      "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+      "digests_from_inventory": {
+        "qwen2.5:7b": "47e2630ccbcd",
+        "qwen2.5-coder:7b": "dae161e27b0e",
+        "qwen2.5:1.5b": "65ec06548149",
+        "qwen2.5:0.5b": "a8b0c5157701",
+        "qwen3:1.7b": "8f68893c685c",
+        "source": "eval/real_primary_matrix_v5_20260821/MODEL_INVENTORY.json"
+      }
+    },
+    "vithia": {
+      "VITHIA_REAL_ABLATION": "NOT_EXECUTED",
+      "note": "K5/K10 receipts list vithia_baseline with RETAINED_NO_SUPERIORITY_CLAIMED context-energy metrics; no exact checkpoint+dataset+prompt+case-level protocol established for promotion.",
+      "historical_lineage_only": true,
+      "LongMemEval_companion_lane": "NOT_EXECUTED"
+    },
+    "aisa_qwen_flash": {
+      "state": "PASS",
+      "model": "qwen-flash",
+      "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+      "receipt": "eval/agent_native_sponsors_20260827/golden_path/AISA_PROPOSAL_RECEIPT.json"
+    },
+    "runtype": {
+      "state": "ERROR_PRESERVED",
+      "model_id": "qwen/qwen3.6-27b",
+      "receipt": "eval/agent_native_sponsors_20260827/runtype/RUNTYPE_MISSION_RECEIPT.json (sibling dirty tree) / live/LATEST.json"
+    },
+    "daisy_1020_matrix": {
+      "state": "NOT_ESTABLISHED_COMPLETE",
+      "reverified_20260827": true,
+      "note": "Expanded 1,020-case Daisy model matrix remains incomplete / not established as finished in this checkout.",
+      "prereg_evaluable_cases_per_model": 1020,
+      "expected_model_case_executions": 10200,
+      "accounted_so_far": 0,
+      "evidence_audit_gate": "FAIL_DEVELOPMENT_RECEIPTS_NOT_REAL_EXECUTION",
+      "primary_claim_ceiling": "EXPANDED_MODEL_MATRIX_NOT_ESTABLISHED_FROM_REAL_CASE_EXECUTION"
+    }
+  },
+  "audit_followup_utc": "2026-08-27T07:38:42.652447+00:00"
+}

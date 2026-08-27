@@ -1,0 +1,135 @@
+{
+  "schema": "hydradg.evidence_inventory.v1",
+  "mission": "HYDRALAMP_MORNING_GOLDENPATH_20260827",
+  "recorded_at_utc": "2026-08-27T07:32:44.435725+00:00",
+  "base_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "PROJECT_CONTROL.yaml": "ABSENT",
+  "longmemeval": {
+    "n_cases": 500,
+    "n_scored": 470,
+    "n_abstentions": 30,
+    "k5": {
+      "historical_control_k5_hit_a": 0.9638297872340424,
+      "historical_control_k5_hit_d": 0.9446808510638298,
+      "previous_model_matrix_k5_hit": 0.942,
+      "reconciliation_resolution": "The previous 0.942 figure represents the rounded baseline score across N=470 retrieval scored cases. The exact raw vector identities for Treatment A (0.9638) and Treatment D (0.9446) are reconciled. Reconciliation complete.",
+      "schema": "hydradg.control_reconciliation_receipt.v1",
+      "status": "CONTROL_RECONCILED",
+      "timestamp_unix": 1787262339
+    },
+    "k10_primary": {
+      "track": "track03",
+      "claim_ceiling": "TRACK03_DEPTH_EFFECT_REPLICATED; SATURATION_AND_CONTEXT_DILUTION_OBSERVED_AT_K100",
+      "primary_k10_result": "NO_MODEL_BENEFIT"
+    },
+    "prereg_nulls": {
+      "H0_rep": "Canonical scientific payload R1 = R2 = R3 within each cell (exact SHA-256 equality).",
+      "H0_representation_k": "M(SG, k) - M(RAW, k) = 0",
+      "H0_advantage_k": "M(SG, k) - M(RAW, k) <= 0",
+      "H0_K_rep": "M(rep, K10) - M(rep, K5) <= 0",
+      "H0_interaction": "[SG_K10 - RAW_K10] - [SG_K5 - RAW_K5] = 0"
+    },
+    "packet_sha256": "61892cdff4e1d892f611c005709f0d0c85f6afa990a35472df6fc9f32b24445b",
+    "freeze": {
+      "raw_manifest": "RAW_FREEZE_MANIFEST.json",
+      "raw_manifest_sha256": "c072e94f8527b204c3fcc429bce8caf1c52381a0185997988cea583580c47d59",
+      "dataset_id": "longmemeval_s_cleaned_full500",
+      "raw_dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "size_bytes": 277383467,
+      "raw_bytes_on_disk_this_checkout": "NOT_FOUND",
+      "seedgraph_freeze": "HydraDG_DaisyTrain_v0.3.7/evidence/track03/matrix-20260819/seedgraph/SEEDGRAPH_FCO_FCG_FREEZE_MANIFEST.json"
+    },
+    "sessions_entities_facts": {
+      "sessions": {
+        "value": 23867,
+        "backed_by": "SEEDGRAPH_FCO_FCG_FREEZE_MANIFEST.session_fco_count + fco_sessions.jsonl recompute"
+      },
+      "facts": {
+        "value": 3506,
+        "backed_by": "FINAL_ELIGIBILITY_EVIDENCE_MATRIX + fact_mentions recompute MATCH"
+      },
+      "entities": {
+        "stated_in_matrix": 4776,
+        "recompute_unique_entity_names": 2558,
+        "recompute_entity_mentions": 6130,
+        "status": "MATRIX_STATED_ONLY_NOT_RECOMPUTED_FROM_FREEZE_JSONL"
+      }
+    },
+    "RAW_vs_SeedGraph": {
+      "delta_hit_k5": 0.0,
+      "delta_hit_k10": 0.0,
+      "delta_recall_k5": 0.0,
+      "delta_recall_k10": 0.0,
+      "source": "custody/graph/live/nodes.jsonl comparisons + award plan",
+      "absolute_RAW_hit_fields": "NOT_FOUND_AS_STANDALONE",
+      "absolute_SeedGraph_hit_fields": "NOT_FOUND_AS_STANDALONE"
+    },
+    "treatment_ABCD_hits": {
+      "source": "FINAL_ELIGIBILITY_EVIDENCE_MATRIX.json",
+      "k5": {
+        "A": 0.96383,
+        "B": 0.94681,
+        "C": 0.94681,
+        "D": 0.94468,
+        "evidence_path_coverage": 0.63787
+      },
+      "k10": {
+        "A": 0.97872,
+        "D": 0.97021,
+        "evidence_path_coverage": 0.51511
+      }
+    },
+    "K15": {
+      "K15_hit_at_15": 0.9851,
+      "K15_recall_at_15": 0.9582,
+      "K15_G_star": -0.3448,
+      "claim_ceiling": "LOCAL_PRIVATE_END_TO_END_DEMO_ONLY",
+      "prospective": "NO_PROMOTED_MODEL_DIFFERENCE"
+    },
+    "LongMemEval_v2": "NOT_EXECUTED",
+    "contradiction_supersession_executed_edges": {
+      "DERIVED_FROM": 23867,
+      "CONTRADICTS_in_freeze_edges": "NOT_FOUND",
+      "SUPERSEDED_BY_in_freeze_edges": "NOT_FOUND",
+      "note": "Schema supports CONTRADICTS/SUPERSEDED_BY; freeze edge file is DERIVED_FROM-only"
+    }
+  },
+  "context_iceberg": {
+    "separate_from_hit_at_k": true,
+    "paths": [
+      "eval/context_vs_entropy_20260820",
+      "eval/hosted_migration_20260820/daisy_train/K5_RETRIEVAL_EVALUATION_RECEIPT.json"
+    ],
+    "note": "\u0394G*/CloudDrift/context-energy are diagnostic \u2014 not Hit@K/model accuracy"
+  },
+  "case_level_paired_for_mcnemar": {
+    "full500_ABCD_per_case_hit_vectors": "NOT_FOUND",
+    "state": "DO_NOT_CLAIM_SIGNIFICANCE_WITHOUT_PAIRED_VECTORS",
+    "partial": [
+      "eval/track_model_k_20260820/.../STATS.json has aggregate mcnemar_p_value only",
+      "sibling eval/cotal_hydradg_ablation_20260827/RESULTS_MATRIX.json is paired PASS/FAIL not Hit@K"
+    ]
+  },
+  "audit_followup_utc": "2026-08-27T07:38:42.633730+00:00",
+  "audit_source": {
+    "agent": "dd83b3a2-9ca3-448d-aa91-61e8144baa7e",
+    "note": "Corrections folded from LongMemEval evidence audit; numbers only from receipt fields"
+  },
+  "H0_family_decisions": {
+    "prereg": {
+      "H0_rep": "Canonical scientific payload R1 = R2 = R3 within each cell (exact SHA-256 equality).",
+      "H0_representation_k": "M(SG, k) - M(RAW, k) = 0",
+      "H0_advantage_k": "M(SG, k) - M(RAW, k) <= 0",
+      "H0_K_rep": "M(rep, K10) - M(rep, K5) <= 0",
+      "H0_interaction": "[SG_K10 - RAW_K10] - [SG_K5 - RAW_K5] = 0"
+    },
+    "named_decision_receipts": "NOT_FOUND",
+    "inferable": {
+      "H0_representation_k": "SUPPORTED_BY_DELTA_ZERO",
+      "H0_advantage_k": "SUPPORTED_BY_DELTA_ZERO",
+      "H0_interaction": "SUPPORTED_BY_DELTA_ZERO",
+      "H0_K_rep": "REJECTED_IF_HIT_IS_METRIC (k10-k5 raw delta_hit\u22480.0255 > 0; H0 was <=0)",
+      "H0_rep": "NOT_FOUND (no R1/R2/R3 SHA equality decision receipt)"
+    }
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "QWEN38_PRESENT": true,
+  "canary_audit": "/Users/byron/projects/active/hydradg-morning-goldenpath-20260827/eval/hydralamp_morning_20260827/QWEN38_CANARY_AUDIT.json",
+  "capabilities": [
+    "completion",
+    "tools",
+    "thinking",
+    "vision"
+  ],
+  "claim_ceiling": "CANARY_INFRA_PASS_NOT_COMPARATIVE_BENEFIT",
+  "context_length": 262144,
+  "created_at": "2026-08-27T08:21:58.794Z",
+  "exact_runtime_tag": "qwen3.8:27b",
+  "full_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "host": "magicSTUDIObox.local",
+  "matrix_admission": "ADMITTED_SUCCESSOR_FACTOR",
+  "model_bytes": 17741872154,
+  "must_not_silently_replace": [
+    "qwen3.6:27b",
+    "qwen3.5:9b",
+    "qwen3:8b"
+  ],
+  "ollama_version": "ollama version is 0.33.0",
+  "ollarma_git_sha": "8e28b3a",
+  "parameter_count_model_info": 27320697856,
+  "parameters": "27.3B",
+  "quantization": "Q4_K_M",
+  "role": "SUCCESSOR_EXPERIMENTAL_FACTOR",
+  "schema": "hydradg.qwen38_admission.v1",
+  "tool_state": "PRESENT",
+  "vision_state": "PRESENT"
+}

@@ -1,0 +1,223 @@
+{
+  "schema": "hydradg.result_matrix.v1",
+  "rows": [
+    {
+      "source_path": "eval/track_model_k_20260820/CONTROL_RECONCILIATION_RECEIPT.json",
+      "source_sha": "30d1978e2be5871023445f90da8dde22919f73151309797e00a92267f8869753",
+      "experiment_run_id": "track_model_k_20260820",
+      "dataset_source_sha": null,
+      "treatment": "K5_A_vs_D",
+      "scorer": "hit_at_k",
+      "n": 470,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "negative",
+      "claim_ceiling": "CONTROL_RECONCILED",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "A_hit@5": 0.9638297872340424,
+        "D_hit@5": 0.9446808510638298
+      },
+      "note": "D did not beat A at K5"
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/TRACK03_SUMMARY.json",
+      "source_sha": "0d4f954553559476326499df1ad0c89c0138fcf33d01711d51766dee3898efa9",
+      "experiment_run_id": "track_model_k_20260820",
+      "dataset_source_sha": null,
+      "treatment": "K10_primary",
+      "scorer": "model_benefit",
+      "n": 470,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "TRACK03_DEPTH_EFFECT_REPLICATED; SATURATION_AND_CONTEXT_DILUTION_OBSERVED_AT_K100",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "primary_k10_result": "NO_MODEL_BENEFIT"
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track03:LongMemEval-S-full500:qwen2.5:7b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.6985354575022018,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track03:LongMemEval-S-full500:qwen2.5-coder:7b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.7945724594716763,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track01:EnterpriseRAG-Bench:qwen2.5:7b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.8262384360963847,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track02:HydraBlast-Real-Deps:deepseek-r1:14b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.8638317405351497,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track01:EnterpriseRAG-Bench:qwen2.5-coder:7b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.9120670477020211,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track01:EnterpriseRAG-Bench:deepseek-r1:14b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.9999999989503827,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track02:HydraBlast-Real-Deps:qwen2.5-coder:7b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.9999999989503827,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track02:HydraBlast-Real-Deps:qwen2.5:7b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.9999999989503827,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    },
+    {
+      "source_path": "eval/track_model_k_20260820/CROSS_TRACK_STATS.json",
+      "source_sha": "90ccc2a4832bb463f1abd3d885cf512984587c08e3027beae7aa78fd6e3cf6c0",
+      "experiment_run_id": "track03:LongMemEval-S-full500:deepseek-r1:14b",
+      "dataset_source_sha": null,
+      "treatment": "co_primary_family",
+      "scorer": "holm_bonferroni",
+      "n": null,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "outcome": "null",
+      "claim_ceiling": "CROSS_TRACK_STATS",
+      "signature_state": "NOT_SIGNED",
+      "merkle_mmr_state": "NOT_COMMITTED",
+      "current_or_superseded": "current",
+      "metrics": {
+        "raw_p": 0.9999999989503827,
+        "adj_p": 1.0,
+        "significant": false
+      }
+    }
+  ]
+}

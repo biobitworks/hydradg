@@ -1,0 +1,33 @@
+{
+  "models_admitted_for_scenario_suite": "PENDING_PER_MODEL_CANARY",
+  "phases_required": [
+    "REFERENCE",
+    "POISON",
+    "AGENT",
+    "VERIFY",
+    "ANTIDOTE",
+    "RESTORATION"
+  ],
+  "prior_golden_path_stress": "eval/hydralamp_golden_path_20260827/GOLDEN_PATH_TEST_RESULTS.json",
+  "qwen38_included": false,
+  "scenarios": [
+    "correct_repair",
+    "missed_poison",
+    "wrong_repair",
+    "contradictory_evidence",
+    "insufficient_evidence",
+    "abstention",
+    "timeout",
+    "provider_failure",
+    "runtype_failure",
+    "cloudflare_failure",
+    "mitosis_failure",
+    "hydradb_failure",
+    "pause_resume",
+    "single_step",
+    "touch_only",
+    "session_isolation",
+    "concurrent_sessions"
+  ],
+  "schema": "hydradg.hydralamp_model_scenario_matrix.v1"
+}

@@ -247,3 +247,62 @@
     grid-template-columns: 1fr;
   }
 }
+
+.hlBadges { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.85rem; }
+.hlBadge {
+  font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.28rem 0.55rem; border: 1px solid var(--line-strong, #2a3038);
+  border-radius: 6px; color: #c8cdd4;
+}
+.hlBadge.LIVE { border-color: #34d399; color: #34d399; }
+.hlBadge.BOUNDED { border-color: #7dd3fc; color: #7dd3fc; }
+.hlBadge.REPLAY { border-color: #c4b5fd; color: #c4b5fd; }
+.hlBadge.ERROR, .hlBadge.BLOCKED { border-color: #fb7185; color: #fb7185; }
+.hlRail {
+  display: flex; flex-wrap: wrap; gap: 0.35rem; margin: 1rem 0 0.25rem;
+}
+.hlRailStep {
+  font-size: 11px; letter-spacing: 0.08em; padding: 0.35rem 0.65rem;
+  border: 1px solid #2a3038; border-radius: 999px; color: #6b7280;
+}
+.hlRailStep.reached { color: #e8e5dc; border-color: #4b5563; }
+.hlRailStep.active { color: #0b0d10; background: #e8e5dc; border-color: #e8e5dc; }
+.hlInspector { margin-top: 1rem; }
+.hlInspectGrid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 0.65rem 1rem; margin: 0; padding: 0.75rem;
+}
+.hlInspectGrid dt { font-size: 10px; letter-spacing: 0.08em; text-transform: uppercase; color: #6b7280; }
+.hlInspectGrid dd { margin: 0.15rem 0 0; font-size: 12px; word-break: break-all; }
+.hlInspectGrid .mono { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 11px; }
+
+.hlUnlock { display: grid; gap: 0.6rem; margin: 1rem 0; max-width: 28rem; }
+.hlUnlock input, .hlTask textarea {
+  width: 100%; background: #12151a; color: #e8e5dc; border: 1px solid #2a3038;
+  border-radius: 10px; padding: 0.65rem 0.75rem; font: inherit;
+}
+.hlTask { margin: 1rem 0; }
+.hlTask label { display: grid; gap: 0.35rem; font-size: 12px; color: #9ca3af; }
+.hlFollow { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 12px; color: #9ca3af; }
+.hlCenterBar { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0.5rem 0 1rem; }
+.hlViewfinder { position: relative; }
+.hlReticleWrap { position: relative; }
+.hlReticle {
+  pointer-events: none; position: absolute; inset: 42% 42%; border: 1px solid rgba(232,229,220,0.45);
+  border-radius: 4px; box-shadow: 0 0 0 1px rgba(0,0,0,0.25);
+}
+.hlReticle::before, .hlReticle::after {
+  content: ""; position: absolute; background: rgba(232,229,220,0.55);
+}
+.hlReticle::before { left: 50%; top: -8px; bottom: -8px; width: 1px; transform: translateX(-50%); }
+.hlReticle::after { top: 50%; left: -8px; right: -8px; height: 1px; transform: translateY(-50%); }
+.hlModelLadder { display: flex; align-items: flex-end; gap: 0.45rem; padding: 0.75rem; flex-wrap: wrap; }
+.hlModelChip {
+  border-radius: 999px; border: 1px solid #334155; display: grid; place-items: center;
+  font-size: 9px; color: #94a3b8; background: #0f172a;
+}
+.hlModelChip.active { border-color: #e8e5dc; color: #e8e5dc; }
+.hlModelChip.status-RUNNING { border-color: #38bdf8; color: #38bdf8; }
+.hlModelChip.status-PASS { border-color: #34d399; }
+.hlModelChip.status-FAIL, .hlModelChip.status-NEGATIVE { border-color: #fb7185; }
+.hlMuted { color: #9ca3af; font-size: 13px; }

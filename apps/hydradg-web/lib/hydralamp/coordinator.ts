@@ -22,13 +22,17 @@ import { buildModelVisibleContext, kgSnapshotHash } from "./modelContext";
 import { computeContextDelta } from "./contextDelta";
 import { localModelComplete, probeLocalRuntime } from "./localModel";
 import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "./env";
+import { materializeLongMemEvalIncident } from "./goldenPathIncident";
+import { projectRunState, cloudflareConfigured } from "./cloudflareProjection";
 import type {
   EvidenceClass,
   ExecutionMode,
   ExperimentRun,
   HydraLampEvent,
   LaneResult,
+  LifecyclePhase,
   PerturbationKind,
+  ProviderBadge,
   StructuredAgentOutput,
   VerifierClass,
 } from "./types";
@@ -527,11 +531,285 @@ function publicSafeArgs(args: Record<string, unknown>) {
   return out;
 }
 
+async function setLifecycle(
+  run: ExperimentRun,
+  phase: LifecyclePhase,
+  custody: "PENDING_CUSTODY" | "CUSTODY_VERIFIED",
+) {
+  run.lifecycle_phase = phase;
+  const proj = await projectRunState({
+    run_id: run.run_id,
+    lifecycle: phase,
+    custody_state: custody,
+    event_count: run.events.length,
+    last_event_hash: run.last_event_hash,
+    fcg_root: run.fcg.root_after,
+    provider_badge: run.provider_badge || "BOUNDED",
+  });
+  run.cloudflare_projection = {
+    transport: proj.transport,
+    custody_state: proj.custody_state,
+    updated_at: proj.updated_at,
+  };
+  emit(run, {
+    lane: "custody",
+    type: "PERF",
+    summary: `LIFECYCLE=${phase} transport=${proj.transport} custody=${custody}`,
+    public_payload: {
+      lifecycle: phase,
+      cloudflare: proj,
+      cloudflare_configured: cloudflareConfigured(),
+    },
+  });
+}
+
+/**
+ * Judge golden path: NORMAL → POISON → QUARANTINED → ANTIDOTE → RESTORED
+ * Deterministic FCG/evidence authority over any model opinion.
+ */
+async function runLongMemEvalGoldenPathLanes(run: ExperimentRun): Promise<LaneResult[]> {
+  const incident = materializeLongMemEvalIncident();
+  run.evidence_packet_sha256 = incident.packet_sha256;
+  run.fco_lineage = { A: incident.fco_A, B: incident.fco_B, C: incident.fco_C };
+  run.earliest_divergence_expected = incident.earliest_divergence;
+  run.claim_ceiling = incident.packet.claim_ceiling;
+  run.mitosis_memory_state = "CORTEX_MEMORY=BLOCKED_TRIAL_EXPIRED";
+  run.provider_badge = "BOUNDED";
+  const results: LaneResult[] = [];
+  const fcg0 = run.fcg.root_before || GENESIS_PREV_HASH;
+
+  // NORMAL — accepted A
+  await setLifecycle(run, "NORMAL", "CUSTODY_VERIFIED");
+  syncGraphFromState(run, incident.reference);
+  run.current_root = incident.reference.state_root;
+  emit(run, {
+    lane: "reference",
+    type: "MODEL_CONTEXT",
+    summary: "NORMAL accepted evidence-bounded state A (LongMemEval K5/K10)",
+    evidence_class: "DETERMINISTIC_TOOL_OUTPUT",
+    public_payload: {
+      phase: "NORMAL",
+      fco_A: incident.fco_A,
+      statement: incident.packet.accepted_state_A.statement,
+      packet_sha256: incident.packet_sha256,
+      n_scored: incident.packet.accepted_state_A.n_scored,
+      n_abstentions: incident.packet.accepted_state_A.n_abstentions,
+    },
+  });
+
+  // Agent lanes: deterministic traversal — NO MODEL is authority
+  for (const lane of ["agent-a", "agent-b", "agent-c"] as const) {
+    const structured: StructuredAgentOutput = {
+      decision: "NO_ACTION",
+      earliest_divergence: null,
+      proof_state: "VALID",
+      requested_action: null,
+      confidence: 1,
+      evidence_refs: [incident.fco_A, incident.packet_sha256],
+    };
+    const model_output_hash = hashModelOutput(canonicalJson(structured));
+    emit(run, {
+      lane,
+      model_id: "deterministic:fcg-traversal",
+      type: "MODEL_FINAL",
+      summary: "Lane 0 deterministic: accept A; no poison yet",
+      model_output_hash,
+      public_payload: structured,
+      evidence_class: "DETERMINISTIC_TOOL_OUTPUT",
+    });
+    results.push({
+      lane,
+      model_id: "deterministic:fcg-traversal",
+      runtype_execution_id: null,
+      status: "COMPLETED",
+      tool_sequence: ["load_current_evidence"],
+      tool_count: 1,
+      structured,
+      raw_output_sha256: sha256Text(canonicalJson(structured)),
+      model_output_hash,
+      latency_ms: 0,
+      repair_requested: false,
+      repair_allowed: null,
+      candidate_root: null,
+      unauthorized_canonical_writes: 0,
+      evidence_class: "DETERMINISTIC_TOOL_OUTPUT",
+    });
+  }
+
+  // POISON — untrusted overclaim B
+  await setLifecycle(run, "POISON", "PENDING_CUSTODY");
+  syncGraphFromState(run, incident.poison, {
+    contradictedIds: [incident.fco_B],
+    quarantinedIds: [incident.fco_B],
+  });
+  run.current_root = incident.poison.state_root;
+  const poisonProposal = {
+    kind: "POISON_OVERCLAIM",
+    statement: incident.packet.poison_candidate_B.statement,
+    classification: "UNTRUSTED_OVERCLAIM_CANDIDATE",
+    contradicts: incident.fco_A,
+    fco_B: incident.fco_B,
+  };
+  const poisonHash = hashModelOutput(canonicalJson(poisonProposal));
+  emit(run, {
+    lane: "poison",
+    model_id: "untrusted:overclaim-candidate",
+    type: "MODEL_OUTPUT",
+    summary: "POISON: untrusted overclaim B injected (not erased later)",
+    model_output_hash: poisonHash,
+    evidence_class: "INFERENCE_HYPOTHESIS" as EvidenceClass,
+    public_payload: poisonProposal,
+  });
+
+  const poisonDecision = applyProposalDecision({
+    run,
+    lane: "poison",
+    model_id: "untrusted:overclaim-candidate",
+    proposal: poisonProposal,
+    decision: "DENY",
+    authorizeAppend: false,
+    stateBefore: incident.reference,
+    stateAfterVisual: incident.poison,
+  });
+  await setLifecycle(run, "QUARANTINED", "CUSTODY_VERIFIED");
+  results.push({
+    lane: "poison",
+    model_id: "untrusted:overclaim-candidate",
+    runtype_execution_id: null,
+    status: "COMPLETED",
+    tool_sequence: ["evaluate_untrusted_update"],
+    tool_count: 1,
+    structured: {
+      decision: "POISON_WRITE",
+      earliest_divergence: incident.fco_B,
+      proof_state: "INVALID",
+      requested_action: "quarantine_overclaim",
+      confidence: 0,
+      evidence_refs: [incident.fco_B],
+    },
+    raw_output_sha256: sha256Text(canonicalJson(poisonProposal)),
+    model_output_hash: poisonHash,
+    proposal_hash: poisonDecision.proposal_hash,
+    latency_ms: 0,
+    repair_requested: false,
+    repair_allowed: false,
+    candidate_root: null,
+    unauthorized_canonical_writes: 0,
+    verification_result: "DENY",
+    fcg_root_before: poisonDecision.fcg_root_before,
+    fcg_root_after: poisonDecision.fcg_root_after,
+    evidence_class: "DETERMINISTIC_TOOL_OUTPUT",
+  });
+
+  // ANTIDOTE — retrieve frozen K5/K10 evidence + claim ceiling
+  await setLifecycle(run, "ANTIDOTE", "PENDING_CUSTODY");
+  emit(run, {
+    lane: "verifier",
+    type: "TOOL_CALL",
+    tool: "run_verification",
+    summary: "ANTIDOTE: retrieve frozen K5/K10 evidence; apply claim ceiling",
+    public_payload: {
+      k5_A: (incident.packet.accepted_state_A.k5 as Record<string, unknown>).treatment_A_hit_at_5,
+      k5_D: (incident.packet.accepted_state_A.k5 as Record<string, unknown>).treatment_D_hit_at_5,
+      k10_primary: (incident.packet.accepted_state_A.k10 as Record<string, unknown>).primary_result,
+      H0_representation: "RETAINED",
+      model_opinions: "PROBABILISTIC_ONLY_NOT_CANONICAL",
+    },
+  });
+  emit(run, {
+    lane: "verifier",
+    type: "VERIFIER_RESULT",
+    summary: "ANTIDOTE VERIFIER: overclaim rejected; evidence-bounded conclusion retained",
+    verification_result: "PASS",
+    public_payload: {
+      poison_accepted: false,
+      contradiction_flagged: true,
+      earliest_divergence: incident.fco_B,
+      recovered_conclusion: incident.packet.accepted_state_A.statement,
+    },
+  });
+
+  // RESTORED — successor C; A and B remain visible
+  const repairProposal = {
+    kind: "AUTHORIZE_REPAIR",
+    restores_to: incident.restored.state_root,
+    fco_C: incident.fco_C,
+    retains_poison: true,
+  };
+  const repairDecision = applyProposalDecision({
+    run,
+    lane: "repair",
+    model_id: "deterministic:antidote",
+    proposal: repairProposal,
+    decision: "PASS",
+    authorizeAppend: true,
+    stateBefore: incident.poison,
+    stateAfterVisual: incident.restored,
+  });
+  syncGraphFromState(run, incident.restored, {
+    quarantinedIds: [incident.fco_B],
+    repairedIds: [incident.fco_C],
+    contradictedIds: [incident.fco_B],
+  });
+  run.current_root = incident.restored.state_root;
+  await setLifecycle(run, "RESTORED", "CUSTODY_VERIFIED");
+  emit(run, {
+    lane: "custody",
+    type: "FCG_APPEND",
+    summary: "RESTORED: C is current; A and B remain in provenance graph",
+    fcg_root_before: repairDecision.fcg_root_before,
+    fcg_root_after: repairDecision.fcg_root_after,
+    public_payload: {
+      fco_A: incident.fco_A,
+      fco_B: incident.fco_B,
+      fco_C: incident.fco_C,
+      poison_erased: false,
+      mitosis_memory_state: run.mitosis_memory_state,
+      note: "Cortex memory is NOT canonical custody; HydraDG/FCO/FCG remains authority",
+    },
+  });
+  results.push({
+    lane: "repair",
+    model_id: "deterministic:antidote",
+    runtype_execution_id: null,
+    status: "COMPLETED",
+    tool_sequence: ["run_verification", "trace_receipt"],
+    tool_count: 2,
+    structured: {
+      decision: "AUTHORIZE_REPAIR",
+      earliest_divergence: incident.fco_B,
+      proof_state: "VALID",
+      requested_action: "restore_corrected_successor_C",
+      confidence: 1,
+      evidence_refs: [incident.fco_C, incident.packet_sha256],
+    },
+    raw_output_sha256: sha256Text(canonicalJson(repairProposal)),
+    model_output_hash: hashModelOutput(canonicalJson(repairProposal)),
+    proposal_hash: repairDecision.proposal_hash,
+    latency_ms: 0,
+    repair_requested: true,
+    repair_allowed: true,
+    candidate_root: incident.restored.state_root,
+    unauthorized_canonical_writes: 0,
+    verification_result: "PASS",
+    fcg_root_before: repairDecision.fcg_root_before,
+    fcg_root_after: repairDecision.fcg_root_after,
+    evidence_class: "DETERMINISTIC_TOOL_OUTPUT",
+  });
+
+  // Keep fcg0 referenced for type/lint silence in empty path
+  void fcg0;
+  return results;
+}
+
 /** DETERMINISTIC_FIXTURE — offline guaranteed path with poison/repair custody demo. */
 async function runDeterministicFixtureLanes(params: {
   run: ExperimentRun;
   perturbation: PerturbationKind;
 }): Promise<LaneResult[]> {
+  if (params.perturbation === "LONGMEMEVAL_OVERCLAIM") {
+    return runLongMemEvalGoldenPathLanes(params.run);
+  }
   const { run, perturbation } = params;
   const ctx = buildToolContext(run.run_id, perturbation);
   const results: LaneResult[] = [];
@@ -800,6 +1078,7 @@ async function runDeterministicFixtureLanes(params: {
 }
 
 /** LOCAL_MODEL_GUM_OLLARMA — real local models; GUM Doctor not authority (unresolved). */
+
 async function runLocalModelLanes(params: {
   run: ExperimentRun;
   perturbation: PerturbationKind;

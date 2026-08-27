@@ -1,0 +1,11 @@
+name = "hydralamp-run-state"
+main = "src/index.ts"
+compatibility_date = "2026-08-01"
+
+[[durable_objects.bindings]]
+name = "RUN_STATE"
+class_name = "HydraLampRunState"
+
+[[migrations]]
+tag = "v1"
+new_classes = ["HydraLampRunState"]

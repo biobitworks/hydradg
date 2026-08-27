@@ -7,6 +7,7 @@ export type GraphNode = {
   id: string;
   label: string;
   visual_class: string;
+  size?: number;
 };
 
 export type GraphEdge = {
@@ -40,10 +41,12 @@ export default function CustodyGraph({
   nodes,
   edges,
   pulseIds,
+  focusId,
 }: {
   nodes: GraphNode[];
   edges: GraphEdge[];
   pulseIds?: string[];
+  focusId?: string | null;
 }) {
   const ref = useRef<HTMLDivElement>(null);
   const cyRef = useRef<Core | null>(null);
@@ -63,8 +66,8 @@ export default function CustodyGraph({
               "font-size": 9,
               color: "#cbd5e1",
               "background-color": "#64748b",
-              width: 28,
-              height: 28,
+              width: "data(size)",
+              height: "data(size)",
               "border-width": 2,
               "border-color": "#1e293b",
             },
@@ -89,6 +92,14 @@ export default function CustodyGraph({
               "border-color": "#fde68a",
             },
           },
+          {
+            selector: "node.focus",
+            style: {
+              "border-width": 5,
+              "border-color": "#e8e5dc",
+              "overlay-opacity": 0.08,
+            },
+          },
         ],
         layout: { name: "cose", animate: false },
         userZoomingEnabled: true,
@@ -100,16 +111,20 @@ export default function CustodyGraph({
     cy.elements().remove();
     const elements: cytoscape.ElementDefinition[] = [];
     for (const n of nodes) {
+      const size = n.size || 28;
       elements.push({
         data: {
           id: n.id,
           label: `${n.label}\n[${n.visual_class}]`,
           visual_class: n.visual_class,
+          size,
         },
         classes: n.visual_class,
         style: {
           shape: SHAPE[n.visual_class] || "ellipse",
           "background-color": COLOR[n.visual_class] || "#64748b",
+          width: size,
+          height: size,
         },
       });
     }
@@ -120,15 +135,20 @@ export default function CustodyGraph({
       });
     }
     cy.add(elements);
-    cy.layout({ name: "cose", animate: false, padding: 20 }).run();
+    cy.layout({ name: "cose", animate: false, padding: 24 }).run();
 
+    cy.nodes().removeClass("pulse focus");
     if (pulseIds?.length) {
-      cy.nodes().removeClass("pulse");
-      for (const id of pulseIds) {
-        cy.$id(id).addClass("pulse");
+      for (const id of pulseIds) cy.$id(id).addClass("pulse");
+    }
+    if (focusId) {
+      const n = cy.$id(focusId);
+      if (n.nonempty()) {
+        n.addClass("focus");
+        cy.animate({ center: { eles: n }, zoom: Math.max(cy.zoom(), 1.2) }, { duration: 280 });
       }
     }
-  }, [nodes, edges, pulseIds]);
+  }, [nodes, edges, pulseIds, focusId]);
 
   useEffect(() => {
     return () => {

@@ -4,7 +4,17 @@ export type PerturbationKind =
   | "CONTROL"
   | "INVALID_PROOF"
   | "REPLAYED_PROOF"
-  | "BROKEN_AUTHORIZATION_EDGE";
+  | "BROKEN_AUTHORIZATION_EDGE"
+  | "LONGMEMEVAL_OVERCLAIM";
+
+export type LifecyclePhase =
+  | "NORMAL"
+  | "POISON"
+  | "QUARANTINED"
+  | "ANTIDOTE"
+  | "RESTORED";
+
+export type ProviderBadge = "LIVE" | "BOUNDED" | "REPLAY" | "ERROR" | "BLOCKED";
 
 export type ProofState =
   | "VALID"
@@ -69,6 +79,7 @@ export type EvidenceClass =
   | "LOCAL_MODEL_GUM_OLLARMA"
   | "LIVE_RUNTYPE"
   | "GUM_DOCTOR_DIAGNOSTIC"
+  | "INFERENCE_HYPOTHESIS"
   | "UNKNOWN";
 
 export type NodeVisualClass =
@@ -198,6 +209,16 @@ export type ExperimentRun = {
   reference_root: string;
   current_root: string;
   earliest_divergence_expected: string | null;
+  lifecycle_phase?: LifecyclePhase;
+  provider_badge?: ProviderBadge;
+  evidence_packet_sha256?: string | null;
+  fco_lineage?: { A?: string; B?: string; C?: string };
+  mitosis_memory_state?: string;
+  cloudflare_projection?: {
+    transport: string;
+    custody_state: string;
+    updated_at?: string;
+  };
   events: HydraLampEvent[];
   last_event_hash: string;
   lanes: LaneResult[];

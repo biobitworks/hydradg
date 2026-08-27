@@ -3,7 +3,6 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import SiteNav from "@/components/SiteNav";
-import { verifyEventHash } from "@/lib/hydralamp/hashBrowser";
 import "./hydralamp.css";
 
 const CustodyGraph = dynamic(() => import("@/components/hydralamp/CustodyGraph"), {
@@ -11,524 +10,425 @@ const CustodyGraph = dynamic(() => import("@/components/hydralamp/CustodyGraph")
   loading: () => <div className="hlCyto hlCytoPlaceholder">Loading graph…</div>,
 });
 
-type Ev = {
-  run_id: string;
+type ModelSlot = {
+  tag: string;
+  params_b: number;
+  digest_abbrev: string;
+  status: string;
+  diameter_px: number;
+};
+
+type Transition = {
   seq: number;
-  timestamp: string;
-  lane: string;
-  actor_id?: string;
-  model_id?: string | null;
-  execution_id?: string | null;
-  runtype_execution_id?: string | null;
-  local_execution_id?: string | null;
-  type: string;
-  tool?: string;
+  phase: string;
+  action: string;
+  actor: string;
+  tool_provider: string | null;
+  model: ModelSlot | null;
+  input_fco: string | null;
+  output_fco: string | null;
+  fcg_root_before: string;
+  fcg_root_after: string;
+  evidence_class: string;
+  claim_ceiling: string;
+  status: string;
   summary: string;
-  public_payload?: Record<string, unknown>;
-  prev_event_hash?: string;
-  event_hash?: string;
-  context_hash_before?: string | null;
-  context_hash_after?: string | null;
-  model_output_hash?: string | null;
-  proposal_hash?: string | null;
-  fcg_root_before?: string | null;
-  fcg_root_after?: string | null;
-  context_delta?: {
-    nodes_added: number;
-    nodes_removed: number;
-    edges_added: number;
-    edges_removed: number;
-    contradictions_delta: number;
-    quarantine_delta: number;
-    canonical_delta: number;
-    cloud_drift_0_100: number | "NOT_COMPUTED";
-  } | null;
-  verification_result?: string | null;
-  evidence_class?: string;
 };
 
-type Perturbation =
-  | "CONTROL"
-  | "INVALID_PROOF"
-  | "REPLAYED_PROOF"
-  | "BROKEN_AUTHORIZATION_EDGE";
-
-type ModeRequest = "DETERMINISTIC_FIXTURE" | "LOCAL_MODEL_GUM_OLLARMA" | "LIVE_RUNTYPE";
-
-const LANE_META: Record<string, { title: string; shape: string; tone: string }> = {
-  "agent-a": { title: "QWEN / A", shape: "◆", tone: "#7dd3fc" },
-  "agent-b": { title: "MISTRAL / B", shape: "●", tone: "#f9a8d4" },
-  "agent-c": { title: "PEER / C", shape: "▲", tone: "#fde68a" },
-  poison: { title: "POISON", shape: "⬡", tone: "#fb7185" },
-  repair: { title: "REPAIR", shape: "★", tone: "#38bdf8" },
-  verifier: { title: "VERIFIER", shape: "■", tone: "#9bd59c" },
-  reference: { title: "REFERENCE", shape: "○", tone: "#e8e5dc" },
-  custody: { title: "CUSTODY", shape: "▣", tone: "#c4b5fd" },
+type GoldenRun = {
+  run_id: string;
+  session_id: string;
+  phase: string;
+  paused: boolean;
+  follow_current: boolean;
+  focus_target: string;
+  task_prompt: string;
+  transitions: Transition[];
+  fcg_root_initial: string;
+  fcg_root_current: string;
+  fco_lineage: { A?: string; B?: string; C?: string; auth?: string };
+  earliest_divergence: string | null;
+  model_ladder: ModelSlot[];
+  active_model_index: number;
+  escalation_reason: string | null;
+  providers: Record<string, string>;
+  result_panel: Record<string, unknown> | null;
+  claim_ceiling: string;
+  signature_state: string;
+  merkle_mmr_state: string;
+  hydradb_state: string;
+  done: boolean;
+  judge_label?: string;
+  phase_rail?: string[];
 };
 
-function shortHash(h?: string | null) {
+const PREFILL =
+  "Load a governed customer-support memory. Poison one trusted fact so the account state becomes wrong. Give the agent the task 'resolve the customer’s request using the current evidence.' Start with the smallest admitted model and increase model size only if the evidence is insufficient. Trace every tool call and handoff. Detect the earliest poisoned dependency, reject unsupported state, apply the verified antidote, restore the last supported state, and show the exact FCO/FCG path from reference → poison → agent decision → contradiction → antidote → restoration. Preserve every failed, null, abstaining, and superseded result.";
+
+const RAIL = ["UNLOCK", "REFERENCE", "POISON", "AGENT", "VERIFY", "ANTIDOTE", "RESTORATION", "RECEIPT"];
+
+async function postGolden(body: Record<string, unknown>) {
+  const res = await fetch("/api/hydralamp/golden", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(body),
+  });
+  const data = await res.json();
+  return { ok: res.ok, status: res.status, data };
+}
+
+function short(h?: string | null) {
   if (!h) return "—";
-  return `${h.slice(0, 4)}…${h.slice(-2)}`;
+  return `${h.slice(0, 8)}…${h.slice(-4)}`;
 }
 
 export default function HydraLampLivePage() {
-  const [demo20, setDemo20] = useState(false);
-  const [perturbation, setPerturbation] = useState<Perturbation>("INVALID_PROOF");
-  const [modeReq, setModeReq] = useState<ModeRequest>("DETERMINISTIC_FIXTURE");
-  const [vercelRuntime, setVercelRuntime] = useState(false);
-  const [runId, setRunId] = useState<string | null>(null);
-  const [mode, setMode] = useState<string>("");
-  const [label, setLabel] = useState<string>("");
-  const [events, setEvents] = useState<Ev[]>([]);
-  const [status, setStatus] = useState<Record<string, unknown> | null>(null);
+  const [judgeKey, setJudgeKey] = useState("");
+  const [task, setTask] = useState(PREFILL);
+  const [run, setRun] = useState<GoldenRun | null>(null);
   const [busy, setBusy] = useState(false);
-  const [elapsed, setElapsed] = useState(0);
-  const [hashChecks, setHashChecks] = useState<
-    Record<number, { verified: boolean; client: string; server: string | null }>
-  >({});
-  const [chainGap, setChainGap] = useState<string | null>(null);
-  const startRef = useRef<number | null>(null);
-  const esRef = useRef<EventSource | null>(null);
-  const lastHashRef = useRef<string | null>(null);
+  const [err, setErr] = useState<string | null>(null);
+  const [drawer, setDrawer] = useState(false);
+  const [evidenceTab, setEvidenceTab] = useState<"historical" | "demo" | "dev" | "future">("demo");
 
-  useEffect(() => {
-    const q = new URLSearchParams(window.location.search);
-    setDemo20(q.get("demo") === "20s");
-  }, []);
+  const applyRun = useCallback((r: GoldenRun) => setRun(r), []);
 
-  useEffect(() => {
-    void fetch("/api/hydralamp/run")
-      .then((r) => r.json())
-      .then((data: { vercel_runtime?: boolean; modes?: string[] }) => {
-        setVercelRuntime(Boolean(data.vercel_runtime));
-        if (data.vercel_runtime && modeReq === "LOCAL_MODEL_GUM_OLLARMA") {
-          setModeReq("DETERMINISTIC_FIXTURE");
-        }
-      })
-      .catch(() => {
-        /* inventory is optional */
+  const unlock = async () => {
+    setBusy(true);
+    setErr(null);
+    const { ok, data } = await postGolden({ action: "unlock", judge_key: judgeKey, task_prompt: task });
+    setBusy(false);
+    if (!ok) {
+      setErr(data.error || data.code || "Unlock failed");
+      return;
+    }
+    applyRun(data.run);
+  };
+
+  const act = async (action: string, extra: Record<string, unknown> = {}) => {
+    if (!run && action !== "reset") return;
+    setBusy(true);
+    setErr(null);
+    const { ok, data } = await postGolden({
+      action,
+      run_id: run?.run_id,
+      judge_key: judgeKey,
+      task_prompt: task,
+      ...extra,
+    });
+    setBusy(false);
+    if (!ok) {
+      setErr(data.error || "Action failed");
+      return;
+    }
+    if (data.run) applyRun(data.run);
+  };
+
+  const graphNodes = useMemo(() => {
+    if (!run) return [];
+    const nodes: Array<{ id: string; label: string; visual_class: string; size?: number }> = [];
+    const L = run.fco_lineage;
+    if (L.auth) nodes.push({ id: L.auth, label: "JudgeAuth", visual_class: "reference" });
+    if (L.A) nodes.push({ id: L.A, label: "A accepted", visual_class: "canonical" });
+    if (L.B) nodes.push({ id: L.B, label: "B poison", visual_class: "quarantined" });
+    if (L.C) nodes.push({ id: L.C, label: "C restored", visual_class: "repaired" });
+    const m = run.model_ladder[run.active_model_index];
+    if (m && (run.phase === "AGENT" || run.transitions.some((t) => t.phase === "AGENT"))) {
+      nodes.push({
+        id: `model:${m.tag}`,
+        label: `${m.tag} ${m.params_b}B`,
+        visual_class: "probabilistic_proposal",
+        size: m.diameter_px,
       });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
-
-  useEffect(() => {
-    if (!busy || !startRef.current) return;
-    const t = setInterval(() => {
-      setElapsed(Date.now() - (startRef.current || Date.now()));
-    }, 100);
-    return () => clearInterval(t);
-  }, [busy]);
-
-  const stopStream = useCallback(() => {
-    esRef.current?.close();
-    esRef.current = null;
-  }, []);
-
-  const refreshStatus = useCallback(async (id: string) => {
-    const r = await fetch(`/api/hydralamp/status?run_id=${id}`);
-    if (r.ok) setStatus(await r.json());
-  }, []);
-
-  const ingestEvent = useCallback(async (payload: Ev) => {
-    setEvents((prev) => [...prev, payload]);
-    if (payload.prev_event_hash && lastHashRef.current && payload.prev_event_hash !== lastHashRef.current) {
-      setChainGap(`CHAIN GAP at seq=${payload.seq}: prev≠last`);
     }
-    if (payload.event_hash) lastHashRef.current = payload.event_hash;
+    return nodes;
+  }, [run]);
 
-    if (payload.event_hash) {
-      const v = await verifyEventHash(payload as unknown as Record<string, unknown>);
-      setHashChecks((prev) => ({
-        ...prev,
-        [payload.seq]: {
-          verified: v.verified,
-          client: v.client_recompute,
-          server: v.server_hash,
-        },
-      }));
+  const graphEdges = useMemo(() => {
+    if (!run) return [];
+    const L = run.fco_lineage;
+    const edges: Array<{ id: string; source: string; target: string; label: string }> = [];
+    if (L.A && L.auth) edges.push({ id: "e1", source: L.A, target: L.auth, label: "AUTHORIZED_DEMO" });
+    if (L.B && L.A) edges.push({ id: "e2", source: L.B, target: L.A, label: "CONTRADICTS" });
+    if (L.C && L.A) edges.push({ id: "e3", source: L.C, target: L.A, label: "SUPERSEDES" });
+    if (L.C && L.B) edges.push({ id: "e4", source: L.B, target: L.C, label: "QUARANTINED_NOT_ERASED" });
+    return edges;
+  }, [run]);
+
+  const focusId = useMemo(() => {
+    if (!run) return null;
+    switch (run.focus_target) {
+      case "poison":
+        return run.fco_lineage.B || null;
+      case "divergence":
+        return run.earliest_divergence;
+      case "restoration":
+        return run.fco_lineage.C || null;
+      default:
+        return run.fco_lineage.C || run.fco_lineage.B || run.fco_lineage.A || run.fco_lineage.auth || null;
     }
-  }, []);
+  }, [run]);
 
-  const start = useCallback(
-    async (opts?: { mode?: ModeRequest }) => {
-      stopStream();
-      setBusy(true);
-      setEvents([]);
-      setStatus(null);
-      setHashChecks({});
-      setChainGap(null);
-      lastHashRef.current = null;
-      startRef.current = Date.now();
-      setElapsed(0);
-
-      const chosen = opts?.mode || modeReq;
-      const res = await fetch("/api/hydralamp/run", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          perturbation,
-          demo_20s: demo20,
-          mode: chosen,
-          allow_synthetic_ui_fixture: chosen === "DETERMINISTIC_FIXTURE",
-        }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setLabel(data.error || data.label || "BLOCKED");
-        setMode(data.mode || "BLOCKED");
-        setBusy(false);
-        return;
-      }
-      setRunId(data.run_id);
-      setMode(data.mode);
-      setLabel(data.label || "");
-
-      const es = new EventSource(data.stream_url);
-      esRef.current = es;
-      es.onmessage = (msg) => {
-        try {
-          const payload = JSON.parse(msg.data);
-          if (payload.type === "DONE_SENTINEL") {
-            void refreshStatus(data.run_id);
-            setBusy(false);
-            es.close();
-            return;
-          }
-          void ingestEvent(payload as Ev);
-          if (payload.type === "DONE") {
-            void refreshStatus(data.run_id);
-            setBusy(false);
-          }
-        } catch {
-          /* ignore malformed */
-        }
-      };
-      es.onerror = () => {
-        void refreshStatus(data.run_id);
-      };
-    },
-    [demo20, ingestEvent, modeReq, perturbation, refreshStatus, stopStream],
-  );
-
-  useEffect(() => {
-    if (!demo20) return;
-    const t = setTimeout(() => {
-      void start({ mode: "DETERMINISTIC_FIXTURE" });
-    }, 400);
-    return () => clearTimeout(t);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [demo20]);
-
-  const laneEvents = useMemo(() => {
-    const map: Record<string, Ev[]> = {};
-    for (const ev of events) {
-      if (!map[ev.lane]) map[ev.lane] = [];
-      map[ev.lane].push(ev);
-    }
-    return map;
-  }, [events]);
-
-  const latestDelta = useMemo(() => {
-    for (let i = events.length - 1; i >= 0; i--) {
-      if (events[i].context_delta) return events[i].context_delta;
-    }
-    return null;
-  }, [events]);
-
-  const graphNodes = (status?.graph_nodes || []) as Array<{
-    id: string;
-    label: string;
-    visual_class: string;
-  }>;
-  const graphEdges = (status?.graph_edges || []) as Array<{
-    id: string;
-    source: string;
-    target: string;
-    label: string;
-  }>;
-
-  const pulseIds = useMemo(() => {
-    const last = [...events].reverse().find((e) => e.type === "QUARANTINE" || e.type === "FCG_APPEND");
-    if (!last?.public_payload) return [];
-    return [];
-  }, [events]);
-
-  const verifiedCount = Object.values(hashChecks).filter((h) => h.verified).length;
-  const mismatchCount = Object.values(hashChecks).filter((h) => !h.verified).length;
-  const seconds = (elapsed / 1000).toFixed(1);
-  const demoPhase =
-    demo20 && elapsed < 3000
-      ? "0–3s reference KG"
-      : demo20 && elapsed < 7000
-        ? "3–7s model context"
-        : demo20 && elapsed < 11000
-          ? "7–11s proposals diverge"
-          : demo20 && elapsed < 14000
-            ? "11–14s verifier"
-            : demo20 && elapsed < 17000
-              ? "14–17s quarantine / repair"
-              : demo20
-                ? "17–20s root + receipt"
-                : null;
-
-  const finalFrame = status?.final_frame as
-    | {
-        decisions: Array<Record<string, string | null | undefined>>;
-        earliest_divergence: string | null;
-        fcg: { root_before: string | null; root_after: string | null };
-        quarantine?: { count: number };
-        hydradb: { state: string };
-        hash_chain_ok?: boolean;
-      }
-    | null
-    | undefined;
+  const last = run?.transitions[run.transitions.length - 1];
 
   return (
     <main className="hlPage">
       <SiteNav />
       <div className="hlInner hlMicroscope">
         <header className="hlHero">
-          <p className="hlEyebrow">HydraLamp Custody Microscope</p>
+          <p className="hlEyebrow">HydraLamp · Judge-operated golden path</p>
           <h1>Models propose. Custody decides.</h1>
           <p className="hlLead">
-            SHA-256 proves byte/state identity only. Context change is structural delta (+ CloudDrift when
-            resolved) — never hash Hamming distance.
+            Unlock a demo session, poison a governed memory, let an agent act, verify earliest divergence, restore —
+            with a visible FCG root change at every step. Demo session ≠ canonical science.
           </p>
-          {vercelRuntime && (
-            <p className="hlBanner">
-              Vercel is the public control plane. Ollarma / GUM Doctor are not hosted here. Scientific
-              execution authority remains magicSTUDIObox.local.
-            </p>
+          {run && (
+            <p className="hlBanner">{run.judge_label || "JUDGE SESSION — AUTHORIZED"} · not cryptographically signed</p>
           )}
-          {label && <p className="hlBanner">{label}</p>}
-          {mode === "LIVE_RUNTYPE" && <p className="hlLive">LIVE RUNTYPE</p>}
-          {chainGap && <p className="hlBanner">{chainGap}</p>}
         </header>
 
-        <section className="hlControls">
+        {!run && (
+          <section className="hlUnlock">
+            <label>
+              ENTER JUDGE KEY
+              <input
+                value={judgeKey}
+                onChange={(e) => setJudgeKey(e.target.value)}
+                placeholder="JUDGE-HYDRA-2026"
+                autoComplete="off"
+              />
+            </label>
+            <p className="hlMuted">Demo capability only — not a project private key, author signing key, or Merkle key.</p>
+            <button className="hlPrimary" disabled={busy || !judgeKey.trim()} onClick={() => void unlock()}>
+              {busy ? "…" : "AUTHORIZE SESSION"}
+            </button>
+          </section>
+        )}
+
+        <section className="hlTask">
           <label>
-            Mode
-            <select
-              value={modeReq}
-              onChange={(e) => setModeReq(e.target.value as ModeRequest)}
-              disabled={busy}
-            >
-              <option value="DETERMINISTIC_FIXTURE">DETERMINISTIC_FIXTURE</option>
-              {!vercelRuntime && (
-                <option value="LOCAL_MODEL_GUM_OLLARMA">LOCAL_MODEL_GUM_OLLARMA</option>
-              )}
-              <option value="LIVE_RUNTYPE">LIVE_RUNTYPE</option>
-            </select>
+            Task
+            <textarea value={task} onChange={(e) => setTask(e.target.value)} rows={5} />
           </label>
-          <label>
-            Perturbation
-            <select
-              value={perturbation}
-              onChange={(e) => setPerturbation(e.target.value as Perturbation)}
-              disabled={busy}
-            >
-              <option value="CONTROL">CONTROL</option>
-              <option value="INVALID_PROOF">INVALID PROOF</option>
-              <option value="REPLAYED_PROOF">REPLAYED PROOF</option>
-              <option value="BROKEN_AUTHORIZATION_EDGE">BROKEN AUTHORIZATION EDGE</option>
-            </select>
-          </label>
-          <button className="hlPrimary" disabled={busy} onClick={() => void start()}>
-            {busy ? "RUNNING…" : "RUN"}
-          </button>
-          <div className="hlMeta">
-            <span>{demo20 ? "DEMO 20s" : "LIVE"}</span>
-            {demoPhase && <span>{demoPhase}</span>}
-            <span>{seconds}s</span>
-            {runId && <span>{runId}</span>}
-            {mode && <span>{mode}</span>}
-            <span>
-              HASH ✓{verifiedCount} ✕{mismatchCount}
-            </span>
-          </div>
         </section>
 
-        <section className="hlLanes">
-          {(["agent-a", "agent-b", "agent-c", "poison", "repair", "verifier"] as const).map((lane) => (
-            <LaneCard key={lane} lane={lane} events={laneEvents[lane] || []} hashChecks={hashChecks} />
+        <section className="hlRail" aria-label="Phase rail">
+          {RAIL.map((p) => (
+            <span
+              key={p}
+              className={`hlRailStep ${run?.phase === p ? "active" : ""} ${
+                run && RAIL.indexOf(run.phase) >= RAIL.indexOf(p) ? "reached" : ""
+              }`}
+            >
+              {p}
+            </span>
           ))}
         </section>
 
+        <section className="hlControls">
+          <button className="hlPrimary" disabled={busy || !run || run.done} onClick={() => void act("run")}>
+            RUN
+          </button>
+          <button className="hlSecondary" disabled={busy || !run} onClick={() => void act("pause")}>
+            PAUSE
+          </button>
+          <button className="hlSecondary" disabled={busy || !run || run.done} onClick={() => void act("step")}>
+            STEP
+          </button>
+          <button
+            className="hlSecondary"
+            disabled={busy || !judgeKey.trim()}
+            onClick={() => void act("reset")}
+          >
+            RESET
+          </button>
+          <button
+            className="hlSecondary"
+            disabled={!run}
+            onClick={() => void act("focus", { focus: "current" })}
+          >
+            CENTER
+          </button>
+          <label className="hlFollow">
+            <input
+              type="checkbox"
+              checked={run?.follow_current ?? true}
+              disabled={!run}
+              onChange={(e) => void act("follow", { follow: e.target.checked })}
+            />
+            FOLLOW CURRENT
+          </label>
+        </section>
+
+        <section className="hlCenterBar">
+          {(
+            [
+              ["current", "CENTER CURRENT"],
+              ["poison", "CENTER POISON"],
+              ["divergence", "CENTER DIVERGENCE"],
+              ["restoration", "CENTER RESTORATION"],
+              ["centroid", "FIT GRAPH"],
+            ] as const
+          ).map(([focus, label]) => (
+            <button
+              key={focus}
+              className="hlSecondary"
+              disabled={!run}
+              onClick={() => void act("focus", { focus })}
+            >
+              {label}
+            </button>
+          ))}
+        </section>
+
+        {err && <p className="hlBanner">{err}</p>}
+
         <section className="hlMid">
-          <div className="hlPanel">
+          <div className="hlPanel hlViewfinder">
             <header>
-              <strong>LIVE KG / FCG</strong>
-              <span className="hlHint">shape + label + color · Cytoscape.js</span>
+              <strong>VIEWFINDER</strong>
+              <span className="hlHint">reticle on current focus · FOLLOW={String(run?.follow_current)}</span>
             </header>
-            <CustodyGraph nodes={graphNodes} edges={graphEdges} pulseIds={pulseIds} />
-            <div className="hlLegend">
-              <span>○ reference</span>
-              <span>□ canonical</span>
-              <span>◆ proposal</span>
-              <span>⬡ quarantine</span>
-              <span>△ contradicted</span>
-              <span>⬡ verified</span>
-              <span>★ repaired</span>
+            <div className="hlReticleWrap">
+              <CustodyGraph nodes={graphNodes} edges={graphEdges} pulseIds={focusId ? [focusId] : []} focusId={focusId} />
+              <div className="hlReticle" aria-hidden />
             </div>
+            <div className="hlModelLadder" aria-label="Model size ladder">
+              {(run?.model_ladder || []).map((m, i) => (
+                <div
+                  key={m.tag}
+                  className={`hlModelChip ${i === run?.active_model_index ? "active" : ""} status-${m.status}`}
+                  style={{ width: m.diameter_px, height: m.diameter_px }}
+                  title={`${m.tag} dig=${m.digest_abbrev} status=${m.status}`}
+                >
+                  <span>{m.params_b}B</span>
+                </div>
+              ))}
+            </div>
+            {run?.escalation_reason && <p className="hlBanner">{run.escalation_reason}</p>}
           </div>
+
           <div className="hlPanel">
             <header>
-              <strong>CONTEXT Δ</strong>
-              <span className="hlHint">not hash distance</span>
+              <strong>EVENT LEDGER</strong>
+              <span className="hlHint">session FCG deltas</span>
             </header>
-            {latestDelta ? (
-              <ul className="hlDelta">
-                <li>
-                  nodes <b>+{latestDelta.nodes_added}</b> / −{latestDelta.nodes_removed}
+            <ol className="hlChain">
+              {(run?.transitions || []).map((t) => (
+                <li key={t.seq}>
+                  <span className="seq">#{t.seq}</span>
+                  <span className="type">{t.phase}</span>
+                  <span className="hash">{short(t.fcg_root_before)}→{short(t.fcg_root_after)}</span>
+                  <span className="ver">{t.status}</span>
+                  <div className="hlMuted">{t.summary}</div>
                 </li>
-                <li>
-                  edges <b>+{latestDelta.edges_added}</b> / −{latestDelta.edges_removed}
-                </li>
-                <li>contradictions Δ {latestDelta.contradictions_delta}</li>
-                <li>quarantine Δ {latestDelta.quarantine_delta}</li>
-                <li>canonical Δ {latestDelta.canonical_delta}</li>
-                <li>
-                  CloudDrift={" "}
-                  {latestDelta.cloud_drift_0_100 === "NOT_COMPUTED"
-                    ? "NOT_COMPUTED"
-                    : latestDelta.cloud_drift_0_100}
-                </li>
-              </ul>
-            ) : (
-              <p className="hlMuted">Waiting for structural delta events…</p>
-            )}
-            <HashInspector events={events} hashChecks={hashChecks} />
+              ))}
+              {!run?.transitions?.length && <li className="hlMuted">Authorize a judge session to begin</li>}
+            </ol>
           </div>
         </section>
 
-        <section className="hlPanel hlTimeline">
+        <section className="hlPanel hlInspector">
           <header>
-            <strong>HASH / CUSTODY TIMELINE</strong>
-            <span className="hlHint">client Web Crypto recompute</span>
+            <strong>TRANSITION INSPECTOR</strong>
           </header>
-          <ol className="hlChain">
-            {events.map((e) => {
-              const chk = hashChecks[e.seq];
-              const rootSame =
-                e.fcg_root_before && e.fcg_root_after && e.fcg_root_before === e.fcg_root_after;
-              const rootChanged =
-                e.fcg_root_before && e.fcg_root_after && e.fcg_root_before !== e.fcg_root_after;
-              return (
-                <li key={e.seq} className={chk?.verified ? "ok" : chk ? "bad" : ""}>
-                  <span className="seq">e{e.seq}</span>
-                  <span className="type">{e.type}</span>
-                  <span className="hash" title={e.event_hash || ""}>
-                    {shortHash(e.event_hash)}
-                  </span>
-                  {chk?.verified ? (
-                    <span className="ver">VERIFIED ✓</span>
-                  ) : chk ? (
-                    <span className="ver bad">HASH MISMATCH ✕</span>
-                  ) : (
-                    <span className="ver">…</span>
-                  )}
-                  {rootSame && <span className="root">ROOT SAME ✓</span>}
-                  {rootChanged && (
-                    <span className="root chg">
-                      {shortHash(e.fcg_root_before)}→{shortHash(e.fcg_root_after)} CHANGED ✓
-                    </span>
-                  )}
-                </li>
-              );
-            })}
-            {!events.length && <li className="hlMuted">No SSE events yet</li>}
-          </ol>
+          <dl className="hlInspectGrid">
+            <div><dt>action</dt><dd>{last?.action || "—"}</dd></div>
+            <div><dt>actor</dt><dd>{last?.actor || "—"}</dd></div>
+            <div><dt>tool/provider</dt><dd>{last?.tool_provider || "—"}</dd></div>
+            <div><dt>model</dt><dd>{last?.model ? `${last.model.tag} · ${last.model.params_b}B` : "—"}</dd></div>
+            <div><dt>input FCO</dt><dd className="mono">{last?.input_fco || "—"}</dd></div>
+            <div><dt>output FCO</dt><dd className="mono">{last?.output_fco || "—"}</dd></div>
+            <div><dt>FCG before</dt><dd className="mono">{last?.fcg_root_before || "—"}</dd></div>
+            <div><dt>FCG after</dt><dd className="mono">{last?.fcg_root_after || "—"}</dd></div>
+            <div><dt>evidence class</dt><dd>{last?.evidence_class || "—"}</dd></div>
+            <div><dt>claim ceiling</dt><dd>{last?.claim_ceiling || run?.claim_ceiling || "—"}</dd></div>
+            <div><dt>Cloudflare</dt><dd>{run?.providers.cloudflare || "—"}</dd></div>
+            <div><dt>Runtype</dt><dd>{run?.providers.runtype || "—"}</dd></div>
+            <div><dt>Mitosis</dt><dd>{run?.providers.mitosis || "—"}</dd></div>
+            <div><dt>Mistral</dt><dd>{run?.providers.mistral || "FUTURE_OPTIONAL"}</dd></div>
+          </dl>
         </section>
 
-        {finalFrame && (
+        {run?.result_panel && (
           <section className="hlFinal">
-            <h2>HYDRALAMP</h2>
-            <p>Models propose. Custody decides.</p>
+            <h2>RESULT</h2>
             <ul>
-              {finalFrame.decisions.map((d) => (
-                <li key={String(d.lane)}>
-                  <strong>{String(d.lane).toUpperCase()}</strong> {d.model_id}: {d.decision}
-                  {d.context_hash ? ` · CTX=${shortHash(d.context_hash)}` : ""}
-                  {d.fcg_before || d.fcg_after
-                    ? ` · FCG=${shortHash(d.fcg_before)}→${shortHash(d.fcg_after)}`
-                    : ""}
+              {Object.entries(run.result_panel).map(([k, v]) => (
+                <li key={k}>
+                  <strong>{k}</strong> {String(v)}
                 </li>
               ))}
             </ul>
-            <p>
-              Quarantine count: {finalFrame.quarantine?.count ?? 0} · Hash chain:{" "}
-              {finalFrame.hash_chain_ok ? "OK" : "CHECK"}
-            </p>
-            <p>
-              FCG: <code>{(finalFrame.fcg.root_before || "").slice(0, 10)}</code> →{" "}
-              <code>{(finalFrame.fcg.root_after || "").slice(0, 10)}</code>
-            </p>
-            <p className="hlTag">Models propose. Custody decides.</p>
+            <button
+              className="hlPrimary"
+              onClick={() => void act("focus", { focus: "divergence" })}
+            >
+              TRACE THE REPAIR
+            </button>
           </section>
         )}
+
+        <section className="hlPanel">
+          <header>
+            <button className="hlSecondary" type="button" onClick={() => setDrawer((d) => !d)}>
+              REAL HYDRADG EVIDENCE
+            </button>
+          </header>
+          {drawer && (
+            <div>
+              <div className="hlCenterBar">
+                {(["historical", "demo", "dev", "future"] as const).map((t) => (
+                  <button key={t} className="hlSecondary" type="button" onClick={() => setEvidenceTab(t)}>
+                    {t}
+                  </button>
+                ))}
+              </div>
+              {evidenceTab === "historical" && (
+                <div className="hlMuted">
+                  <p>LongMemEval-S full500 · n=500 · scored=470 · abstain=30</p>
+                  <p>K5 Reference Hit@5≈0.96383 Recall@5≈0.90660 · Graph/context Hit@5≈0.94468 Recall@5≈0.84603 (NEGATIVE/null advantage)</p>
+                  <p>K10 Reference Hit@10≈0.97872 Recall@10≈0.94535 · depth effect; NO_MODEL_BENEFIT</p>
+                  <p>Source: docs/FINAL_ELIGIBILITY_EVIDENCE_MATRIX.json + CONTROL_RECONCILIATION_RECEIPT.json</p>
+                </div>
+              )}
+              {evidenceTab === "demo" && (
+                <div className="hlMuted">
+                  <p>Session {run?.session_id || "—"} · run {run?.run_id || "—"}</p>
+                  <p>FCG {short(run?.fcg_root_initial)} → {short(run?.fcg_root_current)}</p>
+                  <p>Transitions: {run?.transitions.length || 0}</p>
+                </div>
+              )}
+              {evidenceTab === "dev" && (
+                <div className="hlMuted">
+                  <p>Daisy 1020 matrix: NOT_ESTABLISHED (accounted_so_far=0)</p>
+                  <p>ECA_RESTORATION_EMPIRICAL_STATE=NOT_ESTABLISHED (ECA EXT80 is transparent deterministic demo substrate)</p>
+                  <p>Vithia LongMemEval companion: NOT_EXECUTED</p>
+                </div>
+              )}
+              {evidenceTab === "future" && (
+                <div className="hlMuted">
+                  <p>Mistral: FUTURE_OPTIONAL</p>
+                  <p>BEAM-10M: DEFERRED</p>
+                  <p>Cloudflare Worker DO stub present — NOT LIVE until deploy + HYDRALAMP_CF_WORKER_URL</p>
+                </div>
+              )}
+            </div>
+          )}
+        </section>
+
+        <section className="hlPanel">
+          <header>
+            <strong>STATISTICS (receipt-bound)</strong>
+          </header>
+          <div className="hlMuted">
+            <p>K5: A Hit 0.96383 / D Hit 0.94468 · A Recall 0.90660 / D Recall 0.84603 · evidence-path 0.63787</p>
+            <p>K10: A Hit 0.97872 / D Hit 0.97021 · A Recall 0.94535 / D Recall 0.92273 · evidence-path 0.51511</p>
+            <p>ΔHit K5 A−D positive for reference; graph/context did not establish advantage (preserve K5 negative/null).</p>
+            <p>Paired McNemar on full500 ABCD case vectors: NOT_FOUND — do not invent significance.</p>
+          </div>
+        </section>
       </div>
     </main>
-  );
-}
-
-function LaneCard({
-  lane,
-  events,
-  hashChecks,
-}: {
-  lane: string;
-  events: Ev[];
-  hashChecks: Record<number, { verified: boolean }>;
-}) {
-  const meta = LANE_META[lane] || { title: lane, shape: "•", tone: "#94a3b8" };
-  const last = events[events.length - 1];
-  return (
-    <article className="hlLane" style={{ borderColor: `${meta.tone}66` }}>
-      <header>
-        <span style={{ color: meta.tone }}>
-          {meta.shape} {meta.title}
-        </span>
-        <span>{events.length}</span>
-      </header>
-      <ol>
-        {events.slice(-5).map((e) => (
-          <li key={e.seq}>
-            <code style={{ color: meta.tone }}>{e.type}</code> {e.summary}
-            {e.model_id ? ` · MODEL=${e.model_id}` : ""}
-            {e.execution_id || e.runtype_execution_id || e.local_execution_id
-              ? ` · EXEC=${e.execution_id || e.runtype_execution_id || e.local_execution_id}`
-              : ""}
-            {hashChecks[e.seq]?.verified ? " · ✓" : ""}
-          </li>
-        ))}
-        {!events.length && <li className="hlMuted">idle</li>}
-      </ol>
-      {last?.verification_result && (
-        <footer>
-          VERIFIER={last.verification_result} · FCG={shortHash(last.fcg_root_before)}→
-          {shortHash(last.fcg_root_after)}
-        </footer>
-      )}
-    </article>
-  );
-}
-
-function HashInspector({
-  events,
-  hashChecks,
-}: {
-  events: Ev[];
-  hashChecks: Record<number, { verified: boolean; client: string; server: string | null }>;
-}) {
-  const last = [...events].reverse().find((e) => e.event_hash);
-  if (!last) return null;
-  const chk = hashChecks[last.seq];
-  return (
-    <div className="hlInspect">
-      <div>SERVER HASH {shortHash(chk?.server || last.event_hash)}</div>
-      <div>CLIENT RECOMPUTE {shortHash(chk?.client)}</div>
-      <div>{chk?.verified ? "VERIFIED ✓" : chk ? "HASH MISMATCH ✕" : "…"}</div>
-      <p className="hlHint">Never verified merely because a hash string exists.</p>
-    </div>
   );
 }

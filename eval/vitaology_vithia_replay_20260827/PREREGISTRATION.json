@@ -1,0 +1,26 @@
+{
+  "claim_ceiling": "PREREGISTRATION_ONLY_PENDING_EXECUTION",
+  "core_script_required": "archive/HydraDG_HackHydra_Plan_v0.2.7/scripts/vithia_divergence_core.py OR restored package script",
+  "created_at": "2026-08-27T08:21:58.826Z",
+  "deterministic_R1_R2_R3": true,
+  "experiment_id": "VITAOLOGY_VITHIA_REPLAY_20260827_V2",
+  "factors": [
+    "CONTROL",
+    "THREAD4",
+    "PERTURB_EARLY",
+    "PERTURB_MID",
+    "PERTURB_LATE"
+  ],
+  "git_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "host_authority": "magicSTUDIObox.local",
+  "kaggle_offload": "OPTIONAL_SUCCESSOR_ENV_REVISION_REQUIRED",
+  "question": "On the frozen Vithia/Pythia local fixture (NOT Vitalogy-1927 corpus unless separately admitted), do CONTROL vs THREAD/TOKEN treatments reproduce the predecessor divergence table under independent recompute, and does a successor Vitaology-named run remain custody-separated?",
+  "replication_expansion_seeds": "NONE_IN_V2_BASE",
+  "schema": "hydradg.vitaology_vithia_replay_prereg.v1",
+  "seeds_frozen": [
+    161803,
+    271828,
+    314159
+  ],
+  "signature_state": "NOT_SIGNED"
+}

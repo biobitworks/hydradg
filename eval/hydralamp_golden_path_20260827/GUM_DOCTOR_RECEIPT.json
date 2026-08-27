@@ -1,0 +1,14 @@
+{
+  "schema": "hydralamp.gum_doctor_receipt.v1",
+  "GUM_DOCTOR_STATE": "NOT_FOUND",
+  "command": [
+    "command -v gum",
+    "gum --version",
+    "gum doctor --format=json"
+  ],
+  "exit_code": 127,
+  "exact_output_sha256": "35994bfb065aaee7b7e5582b7ba4580c5e3a61c20ca2d4f4df0759fffaa07646",
+  "secret_exposure": false,
+  "classification": "ENVIRONMENT_INTEGRATION_DIAGNOSTIC_NOT_HYDRALAMP_STRESS",
+  "signature_state": "NOT_SIGNED"
+}

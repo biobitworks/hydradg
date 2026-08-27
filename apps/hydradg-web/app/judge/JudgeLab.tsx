@@ -199,6 +199,11 @@ export default function JudgeLab({ fixture, custody }: Props) {
             perturb one load-bearing fact, preserve the FCG delta, classify it with Anticube, traverse the changed state,
             and independently test the documented HydraDB cloud cookbook contract.
           </p>
+          <p className="lede">
+            Morning custody incident (NORMAL→POISON→ANTIDOTE→RESTORED):{" "}
+            <a href="/hydralamp">open HydraLamp</a> and run <code>LONGMEMEVAL OVERCLAIM</code>.
+            Live Best-Use tab stays honest when <code>/api/live</code> is 503.
+          </p>
         </div>
         <div className="heroStatus">
           <span className="pill pillGood">fixture ready</span>

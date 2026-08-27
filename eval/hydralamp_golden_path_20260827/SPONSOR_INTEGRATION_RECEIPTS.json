@@ -1,0 +1,27 @@
+{
+  "schema": "hydralamp.sponsor_integration_receipts.v1",
+  "Cloudflare": {
+    "state": "READY_NOT_LIVE",
+    "transport": "LOCAL_DURABLE_PROJECTION"
+  },
+  "Runtype": {
+    "state": "ERROR_OR_NOT_CONFIGURED",
+    "note": "Do not display CONNECTED"
+  },
+  "Mitosis": {
+    "state": "BLOCKED_TRIAL_EXPIRED"
+  },
+  "Cotal": {
+    "state": "PRIOR_BOUNDED"
+  },
+  "Nebius": {
+    "state": "UNKNOWN"
+  },
+  "Tavily": {
+    "state": "PRIOR_PASS_OPTIONAL"
+  },
+  "Mistral": {
+    "state": "FUTURE_OPTIONAL"
+  },
+  "signature_state": "NOT_SIGNED"
+}

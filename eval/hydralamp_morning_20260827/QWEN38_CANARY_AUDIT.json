@@ -1,0 +1,20 @@
+{
+  "MATRIX_ADMISSION": "ADMITTED_SUCCESSOR_FACTOR",
+  "claim_ceiling": "CANARY_INFRA_PASS_NOT_COMPARATIVE_BENEFIT",
+  "created_at": "2026-08-27T08:44:30.177034+00:00",
+  "custody_no_canonical_write": true,
+  "digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "infra_all_pass": true,
+  "model": "qwen3.8:27b",
+  "n_canaries": 4,
+  "nonempty_responses": 4,
+  "note": "Wrong answers retained; empty responses preserved as outcomes; no canonical FCG write",
+  "schema": "hydradg.qwen38_canary_audit.v1",
+  "scientific_correctness_gate": "NOT_REQUIRED_FOR_INFRA_ADMISSION",
+  "terminals": [
+    "PROPOSAL",
+    "PROPOSAL",
+    "PROPOSAL",
+    "ABSTAIN"
+  ]
+}

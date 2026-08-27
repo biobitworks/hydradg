@@ -1,0 +1,97 @@
+{
+  "schema": "hydradg.eca_status.v1",
+  "label": "TRANSPARENT_DETERMINISTIC_DEMONSTRATION_SUBSTRATE",
+  "not_nn_model": true,
+  "artifacts": {
+    "eca_core": {
+      "path": "HydraDG_DaisyTrain_v0.3.7/scripts/eca_core.py",
+      "exists": true,
+      "sha256": "a56063362ad6eeba3bd93c8def0ae6ebd0c9bff772f2f594a163a3f2393b3bd3"
+    },
+    "compare_backends": {
+      "path": "HydraDG_DaisyTrain_v0.3.7/scripts/compare_eca_backends.py",
+      "exists": true,
+      "sha256": "1f882d336a43e308886981409545ceb78e4e9f4c4315b2cf6e870652aeba004a"
+    },
+    "modal_ext": {
+      "path": "HydraDG_DaisyTrain_v0.3.7/modal/modal_eca_extension.py",
+      "exists": true,
+      "sha256": "72ce6314e89a4a307f3ea6882f011e5a0fd2247af7517ac537d0299793983979"
+    },
+    "car1a": {
+      "path": "archive/HydraDG_DaisyTrain_v0.3.6/receipts/CAR-1A-ECA-MAGICSTUDIOBOX.json",
+      "exists": true,
+      "sha256": "a5f4e95e891f72f5b438e8084c006ea4bc4e3c29436f12f62637d548e47e40fa"
+    },
+    "car1b": {
+      "path": "archive/HydraDG_DaisyTrain_v0.3.6/receipts/CAR-1B-ECA-EXT80.json",
+      "exists": true,
+      "sha256": "93766b89e7c984efb5d6135630afa79317fcb9b5d9eaa9934fbdf554d1bb8758"
+    },
+    "ext80": {
+      "path": "archive/HydraDG_DaisyTrain_v0.3.6/eval/eca/eca_extension_80.json",
+      "exists": true,
+      "sha256": "aa3d53786727557bd8abd1809c9ab20854e2e1692f60e4b547b6cb0b7f80c69c"
+    },
+    "cross": {
+      "path": "archive/HydraDG_DaisyTrain_v0.3.6/eval/eca_cross_backend_comparison.json",
+      "exists": true,
+      "sha256": "caedf2f9be4b9c65ac869d28bd0aadf4ebac2a35ba15e1d4674f53a2fbb88396"
+    }
+  },
+  "metrics_from_receipts": {
+    "car1a": {
+      "claim_ceiling": "BOUNDED_DETERMINISTIC_CONFORMANCE",
+      "custody_state": "HASHED",
+      "merkle_state": "NOT_MERKLE_COMMITTED",
+      "receipt_body_sha256": "a1956b5073c8797a2bdaaa0531bf5087762ce5a7e2c62f469f0bd1b5bdcd0d14",
+      "schema": "hydradg.daisy_stage_receipt.v1",
+      "signature_state": "NOT_SIGNED",
+      "stage": "CAR-1A-ECA-MAGICSTUDIOBOX",
+      "timestamp_utc": "2026-08-17T15:47:44.703091+00:00"
+    },
+    "car1b": {
+      "claim_ceiling": "BOUNDED_DETERMINISTIC_CONFORMANCE",
+      "custody_state": "HASHED",
+      "merkle_state": "NOT_MERKLE_COMMITTED",
+      "receipt_body_sha256": "734fc66c6b297740eff20f0d8a8fc7b2055a365070f12e709930e48e17026afe",
+      "schema": "hydradg.daisy_stage_receipt.v1",
+      "signature_state": "NOT_SIGNED",
+      "stage": "CAR-1B-ECA-EXT80",
+      "timestamp_utc": "2026-08-17T15:48:12.805677+00:00"
+    },
+    "ext80": {
+      "claim_ceiling": "BOUNDED_DETERMINISTIC_CONFORMANCE",
+      "experiment_id": "ECA-EXT80",
+      "result_body_sha256": "bf721043ead82d3e15be9427116341fbdc6b62d26a0bc45aa288198e047391fa",
+      "schema": "hydradg.eca_extension.v0.3.2",
+      "status": "RECOMPUTED_RESULT"
+    },
+    "cross": {
+      "schema": "hydradg.eca_cross_backend_compare.v1"
+    }
+  },
+  "recomputed_from_JSON_summary": {
+    "experiment_id": "ECA-EXT80",
+    "status": "RECOMPUTED_RESULT",
+    "total_trajectories": 80,
+    "perturbed_trajectories": 60,
+    "first_divergence_exact": 60,
+    "oracle_repair_trajectories": 20,
+    "state_exact_recovery": 20,
+    "design": {
+      "rules": [
+        30,
+        90,
+        110,
+        184
+      ],
+      "width": 129,
+      "steps": 96,
+      "master_seed": 20260817
+    },
+    "claim_ceiling": "BOUNDED_DETERMINISTIC_CONFORMANCE",
+    "not_nn_model": true
+  },
+  "audit_followup_utc": "2026-08-27T07:38:42.652833+00:00"
+}

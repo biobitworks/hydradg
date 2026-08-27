@@ -1,0 +1,123 @@
+{
+  "H0_formal": "NOT_FOUND_AS_LABELED_H0",
+  "OLD_MCNEMAR_STATE": "BLOCKED_NO_CASE_VECTORS_NOT_APPLICABLE_STATE_HASH_DESIGN",
+  "actual_runs": 11,
+  "claim_boundary": "Bounded local Vithia/Pythia fixture only. No causal hardware claim, historical-corpus reproduction claim, or global determinism claim.",
+  "classification_of_historical": "VERIFIED_EMPIRICAL_RESULT_BOUNDED_FIXTURE_NOT_VITAOLOGY_CORPUS",
+  "comparisons": [
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "control_s314159_r2",
+      "comparison_type": "same_seed_same_threads_replica",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "control_s314159_r3",
+      "comparison_type": "same_seed_same_threads_replica",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "DIVERGED_AT_STEP_0",
+      "comparison_run_id": "thread4_s314159",
+      "comparison_type": "thread_count_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": 0
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_early_s314159",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_mid_s314159",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_late_s314159",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s271828",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_mid_s271828",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s161803",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_mid_s161803",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    }
+  ],
+  "controls": [
+    "control_s314159_r1/r2/r3",
+    "control_s271828",
+    "control_s161803"
+  ],
+  "created_at": "2026-08-27T08:21:58.825Z",
+  "custody_sha256": "3689fb337d6e6389c998c8165cb2b1a596d0706adae24c5a3f3f14ce57b1b2f0",
+  "dedicated_preregistration": "NOT_FOUND",
+  "design_intent": "Bounded local Vithia/Pythia fixture for seed/thread/token-perturbation state divergence",
+  "divergence_table_sha256": "0705811cd20f4403cdaeadc54dd78abf3021fbc217f90a0e3d183903ca47d1ac",
+  "expected_runs": 11,
+  "experiment_id": "VITHIA-OVERNIGHT-01",
+  "failed_runs": 0,
+  "matrix_sha256": "9a08a28f0745cf1326d99ff790630525623ec4bca762d5f34e637b2678c0bc72",
+  "path": "HydraDG_DaisyTrain_v0.3.7/eval/vithia_overnight/VITHIA-OVERNIGHT-01",
+  "result_classifications": {
+    "same_seed_replicas": "VERIFIED_EMPIRICAL_RESULT",
+    "scores_copied_to_v2": "FORBIDDEN",
+    "thread4_step0_divergence_final_exact": "VERIFIED_EMPIRICAL_RESULT",
+    "token_perturbs_state_exact": "VERIFIED_EMPIRICAL_RESULT",
+    "vitaology_corpus_binding": "NOT_FOUND"
+  },
+  "schema": "hydradg.vithia_predecessor_audit.v1",
+  "seeds": [
+    161803,
+    271828,
+    314159
+  ],
+  "state": "PASS",
+  "status": {
+    "completed_runs": 11,
+    "current_run": null,
+    "cutoff_local": "2026-08-18T08:00:00-07:00",
+    "failed_runs": 0,
+    "pid": 94241,
+    "schema": "hydradg.vithia_overnight_status.v1",
+    "selected_local_model": "qwen3:1.7b",
+    "started_utc": "2026-08-18T07:49:44.881907+00:00",
+    "status": "COMPLETE",
+    "total_runs": 11,
+    "updated_utc": "2026-08-18T08:06:11.614152+00:00"
+  },
+  "treatments": [
+    "thread4",
+    "perturb_early",
+    "perturb_mid",
+    "perturb_late"
+  ],
+  "vithia_divergence_core_in_archive": true,
+  "vithia_divergence_core_in_package": false
+}

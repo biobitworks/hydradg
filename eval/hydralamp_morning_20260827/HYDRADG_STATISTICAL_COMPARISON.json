@@ -1,0 +1,276 @@
+{
+  "schema": "hydradg.statistical_comparison.v1",
+  "mission": "HYDRALAMP_MORNING_GOLDENPATH_20260827",
+  "preregistered_nulls": {
+    "H0_rep": "Canonical scientific payload R1 = R2 = R3 within each cell (exact SHA-256 equality).",
+    "H0_representation_k": "M(SG, k) - M(RAW, k) = 0",
+    "H0_advantage_k": "M(SG, k) - M(RAW, k) <= 0",
+    "H0_K_rep": "M(rep, K10) - M(rep, K5) <= 0",
+    "H0_interaction": "[SG_K10 - RAW_K10] - [SG_K5 - RAW_K5] = 0"
+  },
+  "comparisons": [
+    {
+      "id": "track03:LongMemEval-S-full500:qwen2.5:7b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": 30,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.6985354575022018,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track03:LongMemEval-S-full500:qwen2.5-coder:7b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": 30,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.7945724594716763,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track01:EnterpriseRAG-Bench:qwen2.5:7b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": null,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.8262384360963847,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track02:HydraBlast-Real-Deps:deepseek-r1:14b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": null,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.8638317405351497,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track01:EnterpriseRAG-Bench:qwen2.5-coder:7b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": null,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.9120670477020211,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track01:EnterpriseRAG-Bench:deepseek-r1:14b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": null,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.9999999989503827,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track02:HydraBlast-Real-Deps:qwen2.5-coder:7b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": null,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.9999999989503827,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track02:HydraBlast-Real-Deps:qwen2.5:7b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": null,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.9999999989503827,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "track03:LongMemEval-S-full500:deepseek-r1:14b",
+      "n": "NOT_IN_RECEIPT_ROW",
+      "missing": null,
+      "abstentions": 30,
+      "errors": null,
+      "point_estimate": null,
+      "absolute_delta": null,
+      "ci_95": null,
+      "raw_p": 0.9999999989503827,
+      "adjusted_p": 1.0,
+      "effect_size": null,
+      "preregistered_H0": "model/treatment benefit co-primary family (track matrix)",
+      "decision": "RETAIN_H0",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "note": "p-values taken from CROSS_TRACK_STATS.json as executed; not re-derived from case table here"
+    },
+    {
+      "id": "LongMemEval_K5_A_minus_D_descriptive",
+      "n": 470,
+      "abstentions": 30,
+      "point_estimate_A": 0.9638297872340424,
+      "point_estimate_D": 0.9446808510638298,
+      "absolute_delta": 0.019148936170212627,
+      "ci_95": "NOT_COMPUTED_WITHOUT_CASE_LEVEL_VECTOR",
+      "raw_p": "NOT_COMPUTED_WITHOUT_CASE_LEVEL_VECTOR",
+      "adjusted_p": null,
+      "preregistered_H0": "M(SG, k) - M(RAW, k) <= 0",
+      "decision": "NO_POSITIVE_ADVANTAGE_OF_D_OVER_A_AT_K5",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    }
+  ],
+  "holms_family": {
+    "co_primary_family_tests": 9,
+    "correction_method": "Holm-Bonferroni",
+    "family_wise_alpha": 0.05,
+    "primary_test_results": [
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.6985354575022018,
+        "test_id": "track03:LongMemEval-S-full500:qwen2.5:7b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.7945724594716763,
+        "test_id": "track03:LongMemEval-S-full500:qwen2.5-coder:7b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.8262384360963847,
+        "test_id": "track01:EnterpriseRAG-Bench:qwen2.5:7b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.8638317405351497,
+        "test_id": "track02:HydraBlast-Real-Deps:deepseek-r1:14b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.9120670477020211,
+        "test_id": "track01:EnterpriseRAG-Bench:qwen2.5-coder:7b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.9999999989503827,
+        "test_id": "track01:EnterpriseRAG-Bench:deepseek-r1:14b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.9999999989503827,
+        "test_id": "track02:HydraBlast-Real-Deps:qwen2.5-coder:7b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.9999999989503827,
+        "test_id": "track02:HydraBlast-Real-Deps:qwen2.5:7b"
+      },
+      {
+        "adjusted_p_value": 1.0,
+        "is_significant_at_alpha_0_05": false,
+        "null_hypothesis_retained": true,
+        "raw_p_value": 0.9999999989503827,
+        "test_id": "track03:LongMemEval-S-full500:deepseek-r1:14b"
+      }
+    ],
+    "schema": "hydradg.cross_track_stats.v1",
+    "timestamp_unix": 1787262339
+  },
+  "power_audit": {
+    "ceiling_limited_max_improvement_track03_k10": 0.022,
+    "schema": "hydradg.power_audit.v1",
+    "timestamp_unix": 1787262339,
+    "track01_mde_90pct_power": 0.042,
+    "track02_mde_90pct_power": 0.048,
+    "track03_mde_90pct_power": 0.035
+  },
+  "warnings": [
+    "Case-level paired hit vectors for RAW vs SeedGraph were not located as a single aligned table in this checkout; inferential McNemar not recomputed from aggregates.",
+    "Do not equate statistical significance with practical/model superiority.",
+    "30 LongMemEval abstentions retained in denominator narrative (scored N=470).",
+    "entities=4776 is matrix-stated only; freeze JSONL recompute does not reproduce it",
+    "full500 ABCD per-case hit vectors NOT_FOUND \u2014 no new McNemar",
+    "H0_K_rep rejected if Hit@K is the metric (depth increased Hit); representation/advantage/interaction supported by \u0394=0"
+  ],
+  "H0_family_inferable_decisions": {
+    "H0_representation_k": "SUPPORTED_BY_DELTA_ZERO",
+    "H0_advantage_k": "SUPPORTED_BY_DELTA_ZERO",
+    "H0_interaction": "SUPPORTED_BY_DELTA_ZERO",
+    "H0_K_rep": "REJECTED_IF_HIT_IS_METRIC (k10-k5 raw delta_hit\u22480.0255 > 0; H0 was <=0)",
+    "H0_rep": "NOT_FOUND (no R1/R2/R3 SHA equality decision receipt)"
+  },
+  "audit_followup_utc": "2026-08-27T07:38:42.653435+00:00"
+}

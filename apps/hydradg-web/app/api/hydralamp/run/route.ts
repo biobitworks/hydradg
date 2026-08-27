@@ -12,6 +12,7 @@ const ALLOWED: PerturbationKind[] = [
   "INVALID_PROOF",
   "REPLAYED_PROOF",
   "BROKEN_AUTHORIZATION_EDGE",
+  "LONGMEMEVAL_OVERCLAIM",
 ];
 
 const MODES: ExecutionMode[] = [

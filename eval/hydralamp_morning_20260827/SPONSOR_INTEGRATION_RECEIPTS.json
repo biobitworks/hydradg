@@ -1,0 +1,48 @@
+{
+  "Cloudflare": {
+    "AUTH_AVAILABLE": false,
+    "FAILURE_PATH_TESTED": true,
+    "LIVE_CALL_PASS": false,
+    "RECEIPT_PRESENT": true,
+    "STATIC_IMPLEMENTED": true,
+    "state": "READY_NOT_LIVE"
+  },
+  "Daytona": {
+    "AUTH_AVAILABLE": true,
+    "FAILURE_PATH_TESTED": true,
+    "LIVE_CALL_PASS": true,
+    "RECEIPT_PRESENT": true,
+    "STATIC_IMPLEMENTED": true,
+    "receipt": "eval/hydralamp_morning_20260827/DAYTONA_SMOKE_RECEIPT.json",
+    "scientific_experiments_on_daytona": false,
+    "state": "LIVE_PASS_INFRA_SMOKE"
+  },
+  "Kaggle": {
+    "AUTH_AVAILABLE": false,
+    "FAILURE_PATH_TESTED": false,
+    "LIVE_CALL_PASS": false,
+    "RECEIPT_PRESENT": false,
+    "STATIC_IMPLEMENTED": false,
+    "state": "CLI_NOT_FOUND"
+  },
+  "Mistral": {
+    "state": "FUTURE_OPTIONAL"
+  },
+  "Mitosis": {
+    "AUTH_AVAILABLE": true,
+    "FAILURE_PATH_TESTED": true,
+    "LIVE_CALL_PASS": false,
+    "RECEIPT_PRESENT": true,
+    "STATIC_IMPLEMENTED": true,
+    "state": "BLOCKED_TRIAL_EXPIRED"
+  },
+  "Runtype": {
+    "AUTH_AVAILABLE": true,
+    "FAILURE_PATH_TESTED": true,
+    "LIVE_CALL_PASS": false,
+    "RECEIPT_PRESENT": true,
+    "STATIC_IMPLEMENTED": true,
+    "state": "KEY_PRESENT_LIVE_PATH_ERROR_PRONE"
+  },
+  "created_at": "2026-08-27T08:21:58.834Z"
+}

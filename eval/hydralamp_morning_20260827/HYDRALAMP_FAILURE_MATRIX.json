@@ -1,0 +1,40 @@
+{
+  "schema": "hydralamp.failure_matrix.v1",
+  "rows": [
+    {
+      "component": "GUM_DOCTOR",
+      "state": "NOT_FOUND",
+      "blocking": false
+    },
+    {
+      "component": "RUNTYPE",
+      "state": "ERROR",
+      "blocking_for_P1": true,
+      "receipt": "RUNTYPE_FOUNDER_REPRO.json"
+    },
+    {
+      "component": "CLOUDFLARE_WORKER",
+      "state": "NOT_DEPLOYED",
+      "blocking_for_P1": true,
+      "receipt": "CLOUDFLARE_BLOCKER.json",
+      "local_projection": "LOCAL_DURABLE_PROJECTION"
+    },
+    {
+      "component": "API_LIVE_BEST_USE",
+      "state": "503",
+      "blocking_for_judge_live_tab": true
+    },
+    {
+      "component": "MITOSIS_CORTEX",
+      "state": "BLOCKED_TRIAL_EXPIRED",
+      "blocking_for_P1_plus": true,
+      "receipt": "MITOSIS_FOUNDER_REPRO.json"
+    },
+    {
+      "component": "GOLDEN_PATH_DETERMINISTIC",
+      "state": "PASS",
+      "blocking": false
+    }
+  ],
+  "signature_state": "NOT_SIGNED"
+}

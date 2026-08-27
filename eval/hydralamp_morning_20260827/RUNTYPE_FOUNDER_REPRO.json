@@ -1,0 +1,22 @@
+{
+  "schema": "hydralamp.runtype_founder_repro.v1",
+  "recorded_at_utc": "2026-08-27T07:35:50.635273+00:00",
+  "run_id": "hlrt_mtb7kqjx_09d7913c",
+  "mode": "LIVE_RUNTYPE",
+  "label": "LIVE_RUNTYPE",
+  "lane_status": "ERROR",
+  "model_id": "qwen/qwen3.6-27b",
+  "error_class": "PROVIDER_OR_SDK_ERROR",
+  "runtype_execution_id": null,
+  "RUNTYPE_STATE": "ERROR",
+  "request_response_meta_hashes": {
+    "start_body_sha256": "13c71e844f2f93cfe8f5fcf5312be4d3a93a390662756a7319f5e0c7df6d176e",
+    "final_status_sha256": "d5d0f1ba97d55b596ce2b402ff4bd4fd43841fe6e4fc93adb20d93a6fd8e49e1"
+  },
+  "smallest_repro": {
+    "command": "curl -s -X POST http://127.0.0.1:3013/api/hydralamp/run -H 'content-type: application/json' -d '{\"mode\":\"LIVE_RUNTYPE\",\"perturbation\":\"CONTROL\"}'"
+  },
+  "sanitized_failing_step": "RuntypeClient.runWithLocalTools (lane agent-a)",
+  "secret_exposure": false,
+  "signature_state": "NOT_SIGNED"
+}

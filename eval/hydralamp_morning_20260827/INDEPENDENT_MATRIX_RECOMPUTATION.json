@@ -1,0 +1,101 @@
+{
+  "atomization_nodes_edges": {
+    "edges": 2039,
+    "merkle_root_sha256": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+    "nodes": 1021,
+    "receipt_edges": 2039,
+    "receipt_nodes": 1021,
+    "state": "PASS"
+  },
+  "claim_ceiling": "INDEPENDENT_DETERMINISTIC_RECOMPUTE_PARTIAL_NO_FULL_CASE_BANK",
+  "created_at": "2026-08-27T08:21:58.834Z",
+  "dataset_1020": {
+    "DATASET_1020_REPLAY_GATE": "PASS",
+    "atomization": {
+      "track01_enterpriserag_bench": 300,
+      "track02_hydrablast_real_deps": 250,
+      "track03_longmemeval_s": 470
+    },
+    "created_at": "2026-08-27T08:21:57.408Z",
+    "duplicates": [],
+    "expected_canonical": {
+      "total": 1020,
+      "track01": 300,
+      "track02": 250,
+      "track03": 470
+    },
+    "git_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+    "note": "Track02 remains contract-blocked for scientific execution in v9/v11 even though atomized count is 250.",
+    "recomputed_manifest": {
+      "track01": 300,
+      "track02": 250,
+      "track03": 470
+    },
+    "schema": "hydradg.dataset_1020_reconciliation.v1",
+    "unique_ids": 1020
+  },
+  "disagreements": [],
+  "exact_agreement_where_deterministic": true,
+  "longmemeval_bind": {
+    "note": "Bound to existing matrix artifact; no silent score rewrite",
+    "payload_keys": [
+      "claim_ceiling",
+      "context_entropy",
+      "deployment_state",
+      "information_state_heat_fixture",
+      "merkle_state",
+      "primary_award_positioning",
+      "reviewed_branch",
+      "reviewed_head",
+      "scale_accounting",
+      "schema",
+      "signature_state",
+      "states",
+      "track03"
+    ],
+    "source": "docs/FINAL_ELIGIBILITY_EVIDENCE_MATRIX.json",
+    "source_sha256": "f22ec2acb88c0c4500b570505fb6b2a30fe642647c44e0306cfed642076b4c3f",
+    "state": "PASS"
+  },
+  "schema": "hydradg.independent_matrix_recomputation.v1",
+  "statistics_bind": {
+    "OLD_MCNEMAR_STATE": "BLOCKED_NO_CASE_VECTORS_UNLESS_STATED",
+    "preserve_k5_negative_null": true,
+    "source": "eval/hydralamp_morning_20260827/HYDRADG_STATISTICAL_COMPARISON.json",
+    "source_sha256": "dcd837253fee729ddb40808ffa47a34d3ef30905bb35f29dcabfb65a13d40bfb",
+    "state": "PASS"
+  },
+  "v11_structural": {
+    "lineage_C_9180": {
+      "accounted": 9,
+      "expected": 9180,
+      "status_claim": "STUDIO_OLLARMA_GOVERNED_REAL_MATRIX_EXECUTED"
+    },
+    "lineage_D_6930_v11": {
+      "accounted": 48,
+      "classification": "EARLY_TERMINATED_OUTPUT_BUDGET_LIMITED_CANARY_MATRIX",
+      "expected": 6930,
+      "terminals": {
+        "ABSTENTION_CONTEXT_OVERFLOW": 0,
+        "FAILED_EMPTY_RESPONSE": 39,
+        "HTTP_ERROR": 0,
+        "PARSER_FAILURE": 0,
+        "SUCCESS_CORRECT": 8,
+        "SUCCESS_INCORRECT": 1,
+        "TIMEOUT": 0
+      }
+    },
+    "scientific_roster_9": [
+      "deepseek-r1:14b",
+      "qwen2.5-coder:7b",
+      "granite4.1:8b",
+      "qwen3.5:9b",
+      "qwen3:8b",
+      "qwen3:4b",
+      "phi4-mini:latest",
+      "qwen2.5:1.5b",
+      "qwen3:1.7b"
+    ],
+    "state": "PASS"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "hydralamp.live_golden_path.v1",
+  "recorded_at_utc": "2026-08-27T07:35:50.631522+00:00",
+  "base_url": "http://127.0.0.1:3013",
+  "run_id": "hlrt_mtb7kqaw_8aa4b999",
+  "mode": "DETERMINISTIC_FIXTURE",
+  "label": "DETERMINISTIC FIXTURE \u2260 LIVE RUNTYPE",
+  "perturbation": "LONGMEMEVAL_OVERCLAIM",
+  "done": true,
+  "lifecycle_phase": "RESTORED",
+  "provider_badge": "BOUNDED",
+  "event_count": 26,
+  "hash_chain": {
+    "ok": true,
+    "checked": 26,
+    "failures": []
+  },
+  "fcg": {
+    "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+    "root_after": "23a46061741e85f3bcbbd0d1d69d1df0bf698aef194f0682a96c6d57e0f33bda",
+    "append_state": "PASS"
+  },
+  "fco_lineage": {
+    "A": "fco:982aaeb0613d1408c62c105ff6ad7d553eff08130e26c5de112ce3a27fc244a0",
+    "B": "fco:92340851c665de9bbfdc918c79fc98b2bdb366be301d51cac318da13a306b9e9",
+    "C": "fco:5c816917be9bc6cd960108de24e793c8889c40f211c7a0a30ca74cadbece5d9d"
+  },
+  "evidence_packet_sha256": "61892cdff4e1d892f611c005709f0d0c85f6afa990a35472df6fc9f32b24445b",
+  "earliest_divergence": "fco:92340851c665de9bbfdc918c79fc98b2bdb366be301d51cac318da13a306b9e9",
+  "claim_ceiling": "TRACK03_DEPTH_EFFECT_REPLICATED; NO_AUTOMATIC_GRAPH_CONTEXT_ADVANTAGE; NO_MODEL_BENEFIT_AT_PRIMARY_K10",
+  "cloudflare_projection": {
+    "transport": "LOCAL_DURABLE_PROJECTION",
+    "custody_state": "CUSTODY_VERIFIED",
+    "updated_at": "2026-08-27T07:35:50.314Z"
+  },
+  "mitosis_memory_state": "CORTEX_MEMORY=BLOCKED_TRIAL_EXPIRED",
+  "poison_retained_in_graph": true,
+  "lifecycle_events_sample": [],
+  "stream_url": "/api/hydralamp/stream?run_id=hlrt_mtb7kqaw_8aa4b999",
+  "status_url": "/api/hydralamp/status?run_id=hlrt_mtb7kqaw_8aa4b999",
+  "evidence_class": "DETERMINISTIC_FIXTURE",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "replay_ok": true,
+  "quarantine_count": 1,
+  "graph_node_ids": [
+    "fco:982aaeb0613d1408c62c105ff6ad7d553eff08130e26c5de112ce3a27fc244a0",
+    "fco:55b5247a7955e59354abfead652f0ce21e0afb38a900d70c82d87ec7a3594efa",
+    "fco:92340851c665de9bbfdc918c79fc98b2bdb366be301d51cac318da13a306b9e9",
+    "fco:5c816917be9bc6cd960108de24e793c8889c40f211c7a0a30ca74cadbece5d9d"
+  ]
+}

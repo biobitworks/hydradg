@@ -2,6 +2,7 @@ import { createHash, createPublicKey, verify as cryptoVerify } from "node:crypto
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import type { FixtureState, PerturbationKind, ProofState } from "./types";
+import { materializeLongMemEvalIncident } from "./goldenPathIncident";
 
 export function repoRoot(): string {
   // apps/hydradg-web -> repo root
@@ -127,6 +128,16 @@ export function materializeState(kind: PerturbationKind): {
       current,
       expectedEarliest: proof.id,
       expectedProof: "REPLAYED",
+    };
+  }
+
+  if (kind === "LONGMEMEVAL_OVERCLAIM") {
+    const incident = materializeLongMemEvalIncident();
+    return {
+      reference: incident.reference,
+      current: incident.poison,
+      expectedEarliest: incident.earliest_divergence,
+      expectedProof: "INVALID",
     };
   }
 

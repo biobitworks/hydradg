@@ -1,0 +1,33 @@
+{
+  "EXPECTED_SLOTS": 10200,
+  "EXPECTED_SLOTS_OPERATIONAL_770_WITHOUT_QWEN38": 6930,
+  "EXPECTED_SLOTS_WITHOUT_QWEN38": 9180,
+  "EXPECTED_SLOTS_WITH_QWEN38": 10200,
+  "MODEL_COUNT": 10,
+  "base_roster_frozen": [
+    "deepseek-r1:14b",
+    "qwen2.5-coder:7b",
+    "granite4.1:8b",
+    "qwen3.5:9b",
+    "qwen3:8b",
+    "qwen3:4b",
+    "phi4-mini:latest",
+    "qwen2.5:1.5b",
+    "qwen3:1.7b"
+  ],
+  "claim_ceiling": "PREREGISTRATION_WITH_QWEN38_ADMITTED_NOT_EXECUTED",
+  "created_at": "2026-08-27T08:21:58.815Z",
+  "dataset_cases": 1020,
+  "dataset_execution_note": "Track02 may remain BLOCKED for scientific slots \u2192 operational 770 until contract repaired",
+  "do_not_collapse_prior_lineages": true,
+  "experiment_id": "HYDRALAMP_SUCCESSOR_MATRIX_20260827_V1",
+  "git_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "host_authority": "magicSTUDIObox.local",
+  "prompt_contract": "PENDING_BIND_TO_v9_PROMPT_CONTRACT_OR_SUCCESSOR",
+  "qwen38_admission_conditional": true,
+  "qwen38_admitted": true,
+  "qwen38_tag_if_admitted": "qwen3.8:27b",
+  "schema": "hydradg.successor_matrix_preregistration.v1",
+  "scorer_contract": "PENDING_BIND_TO_v9_SCORER_CONTRACT_OR_SUCCESSOR",
+  "signature_state": "NOT_SIGNED"
+}

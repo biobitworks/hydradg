@@ -1,0 +1,53 @@
+{
+  "schema": "hydralamp.gum_doctor_receipt.v1",
+  "mission_id": "HYDRALAMP_MORNING_GOLDENPATH_20260827",
+  "recorded_at_utc": "2026-08-27T07:25:00Z",
+  "host": "magicSTUDIObox.local",
+  "repo": "biobitworks/hydradg",
+  "branch": "cursor/hydralamp-morning-goldenpath-20260827",
+  "base_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "GUM_DOCTOR_STATE": "NOT_FOUND",
+  "executable": null,
+  "version": null,
+  "command": [
+    "command -v gum",
+    "gum --version",
+    "gum doctor --format=json"
+  ],
+  "exit_code": 127,
+  "sanitized_capabilities": [],
+  "failures": [
+    {
+      "step": "command -v gum",
+      "result": "absent from PATH"
+    },
+    {
+      "step": "gum --version",
+      "result": "command not found"
+    },
+    {
+      "step": "gum doctor --format=json",
+      "result": "command not found; not executed"
+    }
+  ],
+  "secret_exposure": false,
+  "exact_output_sha256": "9469d150af956d009527a579e58a48c7cf907650b1b5ff70af3e3bd362578858",
+  "discovery": {
+    "command_v_gum": false,
+    "homebrew_bin_gum": false,
+    "usr_local_bin_gum": false,
+    "local_bin_gum": false,
+    "repo_wrapper": "apps/hydradg-web/lib/sponsors/gumDoctor.ts",
+    "classification": "ENVIRONMENT_INTEGRATION_DIAGNOSTIC_NOT_HYDRALAMP_STRESS",
+    "prior_receipts": [
+      "eval/hydralamp_runtype_20260826/GUM_DOCTOR_RECEIPT.json",
+      "eval/agent_native_sponsors_20260827/GUM_DOCTOR_DISCOVERY_RECEIPT.json"
+    ],
+    "note": "gum doctor is an environment/integration diagnostic unless an explicit HydraLamp stress wrapper is invoked. HydraLamp stress uses npm run hydralamp:custody-stress."
+  },
+  "authority_ceiling": "GUM_DOCTOR_IS_NOT_AUTHORITY_EVEN_IF_FOUND",
+  "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+  "claim_ceiling": "OBSERVED_LOCAL_DIAGNOSTIC_ABSENCE",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

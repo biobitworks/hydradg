@@ -1,0 +1,25 @@
+{
+  "DATASET_1020_REPLAY_GATE": "PASS",
+  "atomization": {
+    "track01_enterpriserag_bench": 300,
+    "track02_hydrablast_real_deps": 250,
+    "track03_longmemeval_s": 470
+  },
+  "created_at": "2026-08-27T08:21:57.408Z",
+  "duplicates": [],
+  "expected_canonical": {
+    "total": 1020,
+    "track01": 300,
+    "track02": 250,
+    "track03": 470
+  },
+  "git_sha": "7d48f6fd14b003d040dd8df25424e46cd6fc84fc",
+  "note": "Track02 remains contract-blocked for scientific execution in v9/v11 even though atomized count is 250.",
+  "recomputed_manifest": {
+    "track01": 300,
+    "track02": 250,
+    "track03": 470
+  },
+  "schema": "hydradg.dataset_1020_reconciliation.v1",
+  "unique_ids": 1020
+}

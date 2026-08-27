@@ -1,0 +1,70 @@
+{
+  "claim_boundary": "Bounded local Vithia/Pythia fixture only. No causal hardware claim, historical-corpus reproduction claim, or global determinism claim.",
+  "comparisons": [
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "control_s314159_r2",
+      "comparison_type": "same_seed_same_threads_replica",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "control_s314159_r3",
+      "comparison_type": "same_seed_same_threads_replica",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "DIVERGED_AT_STEP_0",
+      "comparison_run_id": "thread4_s314159",
+      "comparison_type": "thread_count_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": 0
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_early_s314159",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_mid_s314159",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s314159_r1",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_late_s314159",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s271828",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_mid_s271828",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    },
+    {
+      "baseline_run_id": "control_s161803",
+      "classification": "STATE_EXACT",
+      "comparison_run_id": "perturb_mid_s161803",
+      "comparison_type": "token_perturbation",
+      "final_state_exact": true,
+      "first_state_divergence_step": null
+    }
+  ],
+  "schema": "hydradg.vithia_first_divergence_table.v1"
+}
