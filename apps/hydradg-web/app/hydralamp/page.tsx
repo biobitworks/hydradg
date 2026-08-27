@@ -3,6 +3,7 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import SiteNav from "@/components/SiteNav";
+import JudgeMetricStrip from "@/components/hydralamp/JudgeMetricStrip";
 import { verifyEventHash } from "@/lib/hydralamp/hashBrowser";
 import "./hydralamp.css";
 
@@ -87,9 +88,19 @@ export default function HydraLampLivePage() {
     Record<number, { verified: boolean; client: string; server: string | null }>
   >({});
   const [chainGap, setChainGap] = useState<string | null>(null);
+  const [judgeSurface, setJudgeSurface] = useState<Record<string, unknown> | null>(null);
   const startRef = useRef<number | null>(null);
   const esRef = useRef<EventSource | null>(null);
   const lastHashRef = useRef<string | null>(null);
+
+  useEffect(() => {
+    void fetch("/demo/judge-metric-surface.json")
+      .then((r) => r.json())
+      .then((d) => setJudgeSurface(d))
+      .catch(() => {
+        /* frozen defaults in component */
+      });
+  }, []);
 
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
@@ -304,6 +315,8 @@ export default function HydraLampLivePage() {
           {mode === "LIVE_RUNTYPE" && <p className="hlLive">LIVE RUNTYPE</p>}
           {chainGap && <p className="hlBanner">{chainGap}</p>}
         </header>
+
+        <JudgeMetricStrip data={judgeSurface as never} />
 
         <section className="hlControls">
           <label>

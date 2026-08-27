@@ -1,0 +1,17 @@
+{
+  "schema": "hydradg.immersive_commons.capability_receipt.v1",
+  "recorded_at_utc": "2026-08-27T20:42:00Z",
+  "IMMERSIVE_COMMONS_STRESS": "BLOCKED_AUTH",
+  "auth_state": "NO_LOCAL_CREDENTIALS",
+  "credential_paths_checked": [
+    "~/.config/immersivecommons/env",
+    "/Users/byron/.config/immersivecommons/env"
+  ],
+  "mcp_url": "https://www.immersivecommons.com/api/mcp",
+  "manifest_url": "https://www.immersivecommons.com/.well-known/mcp.json",
+  "tools_discovered_public": ["ic_signal_*", "ic_hack_get", "ic_hack_me", "ic_hack_submit"],
+  "ic_hack_get": "NOT_INVOKED",
+  "ic_hack_me": "NOT_INVOKED",
+  "sandbox_submit": "NOT_INVOKED",
+  "note": "Operator must authenticate via Floor10 agent console; Cursor lane does not print bearer tokens."
+}

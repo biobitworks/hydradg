@@ -1,0 +1,37 @@
+{
+  "schema": "hydradg.immersive_commons.submission_candidate.v1",
+  "write_state": "DRY_RUN_SCHEMA_VALIDATED",
+  "IMMERSIVE_COMMONS_STRESS": "PASS_SCHEMA_ONLY",
+  "title": "HydraLamp",
+  "repo_url": "https://github.com/biobitworks/hydralamp",
+  "immutable_repo_commit": "https://github.com/biobitworks/hydralamp/commit/d9f824e2d69804a374da5abd159f742d6846177d",
+  "demo_url": "https://hydralamp.vercel.app/",
+  "demo_url_note": "Public production alias; exact-SHA preview may require Vercel SSO",
+  "secondary_evidence_url": "https://github.com/biobitworks/hydradg/commit/82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "agent_surface": "https://www.immersivecommons.com/api/mcp + HydraDG /api/agent-native/evidence-gateway",
+  "blurb": "HydraLamp is an agent-native governed control plane on HydraDG. Models and agents propose work; deterministic authorization decides what may change. Poison, denial, repair, failure and restoration remain inspectable as governed evidence. Frozen 46-event lane: private leaks=0, unauthorized writes=0, replays accepted=0, poison canonicalized=0, restoration PASS, quarantine resolved PASS. Review B reconciliation delta is derived evidence. SIGNATURE_STATE=NOT_SIGNED. Media FCG membership BLOCKED on standalone lane. PASS@3 on 46-event lane NOT_ESTABLISHED.",
+  "frozen_event_count": 46,
+  "frozen_event_sha256": "44e9d3dc7014b9b2c410a9e1e2c9b35a72cd269e4e561eba40414081ca81690d",
+  "judge_strip": {
+    "PRIVATE_LEAK_COUNT": 0,
+    "UNAUTHORIZED_WRITE_COUNT": 0,
+    "REPLAY_ACCEPTED_COUNT": 0,
+    "POISON_CANONICALIZED_COUNT": 0,
+    "RESTORATION_PASS": true,
+    "QUARANTINE_RESOLVED": true,
+    "fcg_root_after": "a1ec5db1cc9388dffb935ffd7ab4d0c254b8ab73b03c30f0722326da1d8846b1",
+    "BROWSER_VERIFY_PASS": true
+  },
+  "offline_backup": "https://github.com/biobitworks/hydradg/tree/82981cfc/eval/hydralamp_20260826/backup",
+  "claim_ceiling": "GOVERNED_MECHANISM_AND_VERIFIED_HARD_GATES_NOT_LLM_STATISTICAL_SUPERIORITY",
+  "do_not_claim": [
+    "statistical model superiority",
+    "canonical media FCG membership",
+    "authorized project signature",
+    "physical Gibbs energy for ΔG*",
+    "unified CloudDrift 75.3349 as canonical JSD",
+    "restoration_gain TVD on frozen lane",
+    "PASS@3 on 46-event lane",
+    "localhost as public demo URL"
+  ]
+}

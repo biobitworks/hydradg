@@ -1,0 +1,83 @@
+{
+  "schema": "hydradg.ollarma_measurement_review.local_website_route_matrix.v1",
+  "recorded_at_utc": "2026-08-27T20:41:18.995Z",
+  "routes": [
+    {
+      "route": "/",
+      "url": "http://127.0.0.1:3011/",
+      "status": 200,
+      "pass": true,
+      "bytes": 50896
+    },
+    {
+      "route": "/hydralamp",
+      "url": "http://127.0.0.1:3011/hydralamp",
+      "status": 200,
+      "pass": true,
+      "bytes": 20889
+    },
+    {
+      "route": "/judge",
+      "url": "http://127.0.0.1:3011/judge",
+      "status": 200,
+      "pass": true,
+      "bytes": 65472
+    },
+    {
+      "route": "/evidence",
+      "url": "http://127.0.0.1:3011/evidence",
+      "status": 200,
+      "pass": true,
+      "bytes": 40680
+    },
+    {
+      "route": "/how-to",
+      "url": "http://127.0.0.1:3011/how-to",
+      "status": 200,
+      "pass": true,
+      "bytes": 28324
+    },
+    {
+      "route": "/knowledge",
+      "url": "http://127.0.0.1:3011/knowledge",
+      "status": 200,
+      "pass": true,
+      "bytes": 159808
+    },
+    {
+      "route": "/demo/judge-metric-surface.json",
+      "url": "http://127.0.0.1:3011/demo/judge-metric-surface.json",
+      "status": 200,
+      "pass": true,
+      "bytes": 2599
+    },
+    {
+      "route": "/demo/reconciliation-delta-use-case.json",
+      "url": "http://127.0.0.1:3011/demo/reconciliation-delta-use-case.json",
+      "status": 200,
+      "pass": true,
+      "bytes": 1675
+    },
+    {
+      "route": "/api/hydralamp/reconciliation-delta",
+      "url": "http://127.0.0.1:3011/api/hydralamp/reconciliation-delta",
+      "status": 200,
+      "pass": true,
+      "bytes": 1603
+    },
+    {
+      "route": "/api/agent-native/evidence-gateway",
+      "url": "http://127.0.0.1:3011/api/agent-native/evidence-gateway",
+      "status": 200,
+      "pass": true,
+      "bytes": 1007
+    },
+    {
+      "route": "/api/status",
+      "url": "http://127.0.0.1:3011/api/status",
+      "status": 200,
+      "pass": true,
+      "bytes": 9524
+    }
+  ]
+}
