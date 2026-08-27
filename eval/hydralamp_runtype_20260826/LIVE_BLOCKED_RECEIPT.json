@@ -16,8 +16,10 @@
   "checks": {
     "TYPECHECK": "PASS",
     "BUILD": "PASS",
-    "SECRET_SCAN": "PENDING",
+    "SECRET_SCAN": "PASS",
     "RUNTYPE_REAL_EXECUTION": "BLOCKED_KEY_MISSING",
-    "SYNTHETIC_REFERENCE_PRESERVED": "PASS"
-  }
+    "SYNTHETIC_REFERENCE_PRESERVED": "PASS",
+    "SECRET_SCAN_NOTE": "RUNTYPE_API_KEY= empty placeholder only in .env.example; .env.local not tracked; no sk- tokens"
+  },
+  "source_sha": "9a38d8bac2faeeffd3f4bbe25c89593271b0c561"
 }
