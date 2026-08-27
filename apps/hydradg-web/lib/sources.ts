@@ -37,6 +37,30 @@ export const projectSources: ProjectSource[] = [
     role: "optional external retrieval and source discovery",
   },
   {
+    name: "Tavily + Vercel AI SDK",
+    url: "https://docs.tavily.com/documentation/integrations/vercel#benefits-of-tavily-+-vercel-ai-sdk",
+    status: "verified-doc",
+    role: "optional AI SDK tools (search/extract/crawl/map); not canonical FCG",
+  },
+  {
+    name: "Tenki Cloud",
+    url: "https://tenki.cloud/docs",
+    status: "verified-doc",
+    role: "optional sandbox/runners infra demo; not scientific execution authority",
+  },
+  {
+    name: "Cotal",
+    url: "https://docs.cotal.ai/",
+    status: "verified-doc",
+    role: "optional local agent mesh (NATS/A2A); not canonical FCG",
+  },
+  {
+    name: "Yappy.biz Web API",
+    url: "https://yappy.biz/api/",
+    status: "verified-doc",
+    role: "public product metadata API (distinct from Mitosis Yappy)",
+  },
+  {
     name: "GMI Cloud API",
     url: "https://docs.gmicloud.ai/api-reference/introduction",
     status: "verified-doc",

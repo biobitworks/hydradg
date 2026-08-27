@@ -1039,8 +1039,14 @@ export async function startHydraLampExperiment(opts: {
   const selected = inventory.selected_models || [];
 
   let mode: ExecutionMode = opts.mode || "LIVE_RUNTYPE";
+  if (process.env.VERCEL && mode === "LOCAL_MODEL_GUM_OLLARMA") {
+    mode = "NOT_CONFIGURED";
+  }
   if (opts.mode) {
     mode = opts.mode;
+    if (process.env.VERCEL && mode === "LOCAL_MODEL_GUM_OLLARMA") {
+      mode = "NOT_CONFIGURED";
+    }
     // Never silently fall from LIVE_RUNTYPE into local/fixture
     if (mode === "LIVE_RUNTYPE" && !keyPresent) {
       mode = "NOT_CONFIGURED";

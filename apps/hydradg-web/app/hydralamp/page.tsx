@@ -75,6 +75,7 @@ export default function HydraLampLivePage() {
   const [demo20, setDemo20] = useState(false);
   const [perturbation, setPerturbation] = useState<Perturbation>("INVALID_PROOF");
   const [modeReq, setModeReq] = useState<ModeRequest>("DETERMINISTIC_FIXTURE");
+  const [vercelRuntime, setVercelRuntime] = useState(false);
   const [runId, setRunId] = useState<string | null>(null);
   const [mode, setMode] = useState<string>("");
   const [label, setLabel] = useState<string>("");
@@ -93,6 +94,21 @@ export default function HydraLampLivePage() {
   useEffect(() => {
     const q = new URLSearchParams(window.location.search);
     setDemo20(q.get("demo") === "20s");
+  }, []);
+
+  useEffect(() => {
+    void fetch("/api/hydralamp/run")
+      .then((r) => r.json())
+      .then((data: { vercel_runtime?: boolean; modes?: string[] }) => {
+        setVercelRuntime(Boolean(data.vercel_runtime));
+        if (data.vercel_runtime && modeReq === "LOCAL_MODEL_GUM_OLLARMA") {
+          setModeReq("DETERMINISTIC_FIXTURE");
+        }
+      })
+      .catch(() => {
+        /* inventory is optional */
+      });
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
@@ -157,6 +173,12 @@ export default function HydraLampLivePage() {
         }),
       });
       const data = await res.json();
+      if (!res.ok) {
+        setLabel(data.error || data.label || "BLOCKED");
+        setMode(data.mode || "BLOCKED");
+        setBusy(false);
+        return;
+      }
       setRunId(data.run_id);
       setMode(data.mode);
       setLabel(data.label || "");
@@ -272,6 +294,12 @@ export default function HydraLampLivePage() {
             SHA-256 proves byte/state identity only. Context change is structural delta (+ CloudDrift when
             resolved) — never hash Hamming distance.
           </p>
+          {vercelRuntime && (
+            <p className="hlBanner">
+              Vercel is the public control plane. Ollarma / GUM Doctor are not hosted here. Scientific
+              execution authority remains magicSTUDIObox.local.
+            </p>
+          )}
           {label && <p className="hlBanner">{label}</p>}
           {mode === "LIVE_RUNTYPE" && <p className="hlLive">LIVE RUNTYPE</p>}
           {chainGap && <p className="hlBanner">{chainGap}</p>}
@@ -286,7 +314,9 @@ export default function HydraLampLivePage() {
               disabled={busy}
             >
               <option value="DETERMINISTIC_FIXTURE">DETERMINISTIC_FIXTURE</option>
-              <option value="LOCAL_MODEL_GUM_OLLARMA">LOCAL_MODEL_GUM_OLLARMA</option>
+              {!vercelRuntime && (
+                <option value="LOCAL_MODEL_GUM_OLLARMA">LOCAL_MODEL_GUM_OLLARMA</option>
+              )}
               <option value="LIVE_RUNTYPE">LIVE_RUNTYPE</option>
             </select>
           </label>

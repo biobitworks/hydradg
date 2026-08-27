@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { startHydraLampExperiment, runtypeKeyPresent, loadModelInventory } from "@/lib/hydralamp/coordinator";
 import { loadHydraLampServerEnv } from "@/lib/hydralamp/env";
+import { isVercelRuntime, NOT_HOSTED_ON_VERCEL, SCIENTIFIC_EXECUTION_AUTHORITY } from "@/lib/providers/vercelBoundary";
 import type { ExecutionMode, PerturbationKind } from "@/lib/hydralamp/types";
 
 export const dynamic = "force-dynamic";
@@ -40,6 +41,18 @@ export async function POST(req: Request) {
       ? "DETERMINISTIC_FIXTURE"
       : undefined;
 
+  if (isVercelRuntime() && requestedMode === "LOCAL_MODEL_GUM_OLLARMA") {
+    return NextResponse.json(
+      {
+        error: "LOCAL_MODEL_NOT_HOSTED_ON_VERCEL",
+        blocked_on_vercel: [...NOT_HOSTED_ON_VERCEL],
+        scientific_execution_authority: SCIENTIFIC_EXECUTION_AUTHORITY,
+        allowed_modes: ["DETERMINISTIC_FIXTURE", "LIVE_RUNTYPE"],
+      },
+      { status: 403 },
+    );
+  }
+
   const run = await startHydraLampExperiment({
     perturbation,
     demo_20s: Boolean(body.demo_20s),
@@ -68,10 +81,14 @@ export async function POST(req: Request) {
 
 export async function GET() {
   loadHydraLampServerEnv();
+  const vercel = isVercelRuntime();
   return NextResponse.json({
     runtype_api_key_present: runtypeKeyPresent(),
     inventory: loadModelInventory(),
     perturbations: ALLOWED,
-    modes: MODES,
+    modes: vercel ? MODES.filter((m) => m !== "LOCAL_MODEL_GUM_OLLARMA") : MODES,
+    vercel_runtime: vercel,
+    scientific_execution_authority: SCIENTIFIC_EXECUTION_AUTHORITY,
+    blocked_on_vercel: [...NOT_HOSTED_ON_VERCEL],
   });
 }

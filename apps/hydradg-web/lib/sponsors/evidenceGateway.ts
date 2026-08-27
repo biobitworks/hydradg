@@ -3,7 +3,7 @@
  * Does not make Cotal or IC canonical state.
  */
 import { createHash } from "node:crypto";
-import { readFileSync, existsSync } from "node:fs";
+import { readFileSync, existsSync, statSync } from "node:fs";
 import path from "node:path";
 
 export type GatewayToolName =
@@ -48,6 +48,12 @@ const CAPABILITIES: GatewayCapability[] = [
 
 function sha256File(absPath: string): string | null {
   if (!existsSync(absPath)) return null;
+  try {
+    const st = statSync(absPath);
+    if (!st.isFile()) return null;
+  } catch {
+    return null;
+  }
   const h = createHash("sha256");
   h.update(readFileSync(absPath));
   return h.digest("hex");
@@ -108,11 +114,33 @@ export function proposeExternalEvidence(params: {
   };
 }
 
-export function verifyCustodyReceipt(repoRoot: string, receiptPath: string, declaredSha256: string) {
-  const abs = path.isAbsolute(receiptPath) ? receiptPath : path.join(repoRoot, receiptPath);
-  const computed = sha256File(abs);
+export function verifyCustodyReceipt(
+  repoRoot: string,
+  receiptPath: string,
+  declaredSha256: string,
+  inlineReceipt?: unknown,
+) {
+  let computed: string | null = null;
+  if (inlineReceipt !== undefined && inlineReceipt !== null && inlineReceipt !== "") {
+    const bytes =
+      typeof inlineReceipt === "string" ? inlineReceipt : JSON.stringify(inlineReceipt);
+    computed = createHash("sha256").update(bytes, "utf8").digest("hex");
+  } else if (receiptPath) {
+    const abs = path.isAbsolute(receiptPath) ? receiptPath : path.join(repoRoot, receiptPath);
+    computed = sha256File(abs);
+  }
   if (!computed) {
-    return { status: "NULL" as const, verified: false, computed: null, declared: declaredSha256 };
+    return { status: "NULL" as const, verified: false, computed: null, declared: declaredSha256 || null };
+  }
+  if (!declaredSha256) {
+    return {
+      status: "PASS" as const,
+      verified: true,
+      computed,
+      declared: null,
+      note: "Hash computed; no declared SHA-256 supplied.",
+      claim_ceiling: "RECOMPUTED_RESULT",
+    };
   }
   const verified = computed === declaredSha256;
   return {
@@ -145,6 +173,7 @@ export function executeGatewayTool(
         repoRoot,
         String(args.receipt_path || ""),
         String(args.declared_sha256 || ""),
+        args.receipt,
       );
     default:
       return { status: "ERROR", error: "UNKNOWN_TOOL" };

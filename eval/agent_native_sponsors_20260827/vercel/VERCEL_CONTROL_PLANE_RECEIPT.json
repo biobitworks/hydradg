@@ -1,0 +1,37 @@
+{
+  "schema": "hydradg.vercel_control_plane.receipt.v1",
+  "status": "PREVIEW_PENDING",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "public_control_plane": "apps/hydradg-web on Vercel Preview",
+  "not_hosted_on_vercel": [
+    "Ollarma",
+    "GUM Doctor",
+    "Yappy local agent",
+    "Cotal local mesh",
+    "signing private keys"
+  ],
+  "scaffold_only_not_claimed_working": ["Cortex", "Tenki", "Nebius"],
+  "preserved_evidence": {
+    "runtype": "ERROR preserved; overnight 4x25 not rerun",
+    "cortex": "ERROR / CORTEX_TRIAL_EXPIRED preserved"
+  },
+  "endpoints": {
+    "hydralamp": "/hydralamp",
+    "evidence_gateway": "/api/agent-native/evidence-gateway",
+    "tavily_retrieve": "/api/tavily/retrieve",
+    "seedgraph_gap": "/api/seedgraph/gap",
+    "seedgraph_repair": "/api/seedgraph/repair",
+    "provider_health": "/api/providers/health",
+    "custody_verify": "/api/agent-native/evidence-gateway"
+  },
+  "health_invariant": "CONFIGURED_IS_NOT_PASS",
+  "canonical_fcg_writes": 0,
+  "canonical_seedgraph_writes": 0,
+  "tavily_evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "tavily_custody_state": "QUARANTINED",
+  "signature_state": "NOT_SIGNED",
+  "preview_url": null,
+  "judge_url_promoted": false,
+  "submission_sha_frozen": false,
+  "note": "Preview must pass before freezing submission SHA or promoting the judge URL."
+}
