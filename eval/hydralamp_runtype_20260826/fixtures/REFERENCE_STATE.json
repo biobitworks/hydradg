@@ -1,0 +1,72 @@
+{
+  "schema": "hydralamp.runtype.fixture_state.v1",
+  "state_id": "REFERENCE",
+  "synthetic": true,
+  "security_incident": false,
+  "objects": {
+    "fco:3f808deefda6247e716c7b558e2a0616f73afd589f8aaa1546405ea8b55b9241": {
+      "id": "fco:3f808deefda6247e716c7b558e2a0616f73afd589f8aaa1546405ea8b55b9241",
+      "object_sha256": "3f808deefda6247e716c7b558e2a0616f73afd589f8aaa1546405ea8b55b9241",
+      "type": "SourceFCO",
+      "payload": {
+        "label": "hydralamp_runtype_synthetic_source",
+        "evidence_class": "SYNTHETIC_DEMO_FIXTURE",
+        "claim_ceiling": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN"
+      }
+    },
+    "fco:5c8bb8484b6e1fcb2dcaa9b39de1192322739dbcee94273fbe77c97b95d695d0": {
+      "id": "fco:5c8bb8484b6e1fcb2dcaa9b39de1192322739dbcee94273fbe77c97b95d695d0",
+      "object_sha256": "5c8bb8484b6e1fcb2dcaa9b39de1192322739dbcee94273fbe77c97b95d695d0",
+      "type": "ActorFCO",
+      "payload": {
+        "actor_id": "self-safe",
+        "public_key_b64": "vHy8tWNjdfodgkNNRmck2SN39TuYBpXdSdJtDOEiBaU",
+        "key_label": "TOY_DEMO_KEY",
+        "authenticity_claim": "NO_REAL_AUTHENTICITY_CLAIM",
+        "note": "Possession of this toy key confers no secure identity guarantee."
+      }
+    },
+    "fco:7b37c35ae99744c92b90c52fae2ea07d7a30edf62862ca694b7793735b935e40": {
+      "id": "fco:7b37c35ae99744c92b90c52fae2ea07d7a30edf62862ca694b7793735b935e40",
+      "object_sha256": "7b37c35ae99744c92b90c52fae2ea07d7a30edf62862ca694b7793735b935e40",
+      "type": "ToyProofFCO",
+      "payload": {
+        "message": "HYDRALAMP_TOY_ACTOR_PROOF_V1:self-safe",
+        "signature_b64": "XrnUBZ8vYz5KkCVEjsDlGtlaF6vdenbmuD1npB72A_0e7TXDblVSzFeZuAtZCiCh7Yf0JCipZAdCOkW_2h1BAA",
+        "public_key_b64": "vHy8tWNjdfodgkNNRmck2SN39TuYBpXdSdJtDOEiBaU",
+        "algo": "Ed25519",
+        "key_label": "TOY_DEMO_KEY",
+        "authenticity_claim": "NO_REAL_AUTHENTICITY_CLAIM",
+        "sha256_is_not_a_signature": true
+      }
+    },
+    "fco:7ba54a00b67135442f54eb71599ef54b154bc1fc83e96b18a7138148331b2929": {
+      "id": "fco:7ba54a00b67135442f54eb71599ef54b154bc1fc83e96b18a7138148331b2929",
+      "object_sha256": "7ba54a00b67135442f54eb71599ef54b154bc1fc83e96b18a7138148331b2929",
+      "type": "ActionPolicyFCO",
+      "payload": {
+        "policy_id": "hydralamp_demo_policy_v1",
+        "canonical_write_authorized": false,
+        "ephemeral_repair_candidates_allowed": true
+      }
+    }
+  },
+  "edges": [
+    {
+      "from": "fco:3f808deefda6247e716c7b558e2a0616f73afd589f8aaa1546405ea8b55b9241",
+      "to": "fco:5c8bb8484b6e1fcb2dcaa9b39de1192322739dbcee94273fbe77c97b95d695d0",
+      "type": "CONTAINS"
+    },
+    {
+      "from": "fco:5c8bb8484b6e1fcb2dcaa9b39de1192322739dbcee94273fbe77c97b95d695d0",
+      "to": "fco:7b37c35ae99744c92b90c52fae2ea07d7a30edf62862ca694b7793735b935e40",
+      "type": "AUTHORIZED_BY"
+    },
+    {
+      "from": "fco:7b37c35ae99744c92b90c52fae2ea07d7a30edf62862ca694b7793735b935e40",
+      "to": "fco:7ba54a00b67135442f54eb71599ef54b154bc1fc83e96b18a7138148331b2929",
+      "type": "GOVERNED_BY"
+    }
+  ],
+  "state_root": "49d9967272f28c99d8e50c7c0174b6b709065b2bb21e11a15bd5848d811a812d"
+}
