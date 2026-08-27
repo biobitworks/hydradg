@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.cotal_coordination_custody_ablation.yappy_illustrative_demo.v1",
+  "benchmark_condition": false,
+  "note": "ONE illustrative external-agent/product demo after deterministic matrix only. Not scored in RESULTS_MATRIX.",
+  "provider": "Yappy.biz",
+  "identity_note": "yappy.biz public Web API (keyless). Distinct from Mitosis Yappy / mitosislabs.",
+  "operation": "GET /api/v1/releases/latest",
+  "url": "https://yappy.biz/api/v1/releases/latest",
+  "http_status": 200,
+  "latency_ms": 266,
+  "raw_artifact_path": "eval/cotal_hydradg_ablation_20260827/yappy_illustrative_raw.json",
+  "raw_sha256": "a2b459465df203d08abc804c86ecf948772685af6d655c019501b230d8aff9b9",
+  "error": null,
+  "status": "PASS",
+  "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "fcg_append": "NOT_APPENDED",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "execution_host": "magicSTUDIObox.local",
+  "recorded_at_utc": "2026-08-27T06:49:08Z"
+}
