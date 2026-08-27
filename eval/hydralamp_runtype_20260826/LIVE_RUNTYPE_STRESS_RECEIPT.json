@@ -1,14 +1,26 @@
 {
   "schema": "hydralamp.live_runtype_stress_receipt.v1",
-  "execution_source_sha": "9b257cb05d0b62a88c0854212973a7ed24402634",
-  "LIVE_RUNTYPE_READY": "BLOCKED_KEY_MISSING",
-  "RUNTYPE_API_KEY": "MISSING",
-  "discovery_exit_code": 1,
+  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
+  "LIVE_RUNTYPE_READY": "PROBE_CONTROL_SMOKE",
+  "RUNTYPE_API_KEY": "PRESENT",
+  "discovery_exit_code": 0,
   "inventory_summary": {
-    "runtype_state": "NOT_CONFIGURED",
-    "selected_count": 0
+    "runtype_state": "CONFIGURED",
+    "selected_count": 1
   },
-  "control_smoke": null,
+  "control_smoke": {
+    "run_id": "hlrt_mtb1spyh_bce57f34",
+    "mode": "LIVE_RUNTYPE",
+    "hash_chain_ok": true,
+    "lanes": [
+      {
+        "model_id": "qwen/qwen3.6-27b",
+        "runtype_execution_id": null,
+        "context_hash": "11c22c4e5a44c2637c47f7351dffa1859319800c1764d2578f234b1ed1508e82",
+        "status": "ERROR"
+      }
+    ]
+  },
   "note": "Overnight lane: probe + at most one CONTROL smoke — no 4×25 live load",
   "signature_state": "NOT_SIGNED"
 }

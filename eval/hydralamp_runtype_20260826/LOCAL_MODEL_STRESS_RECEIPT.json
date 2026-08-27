@@ -1,6 +1,6 @@
 {
   "schema": "hydralamp.local_model_stress_receipt.v1",
-  "execution_source_sha": "9b257cb05d0b62a88c0854212973a7ed24402634",
+  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
   "LOCAL_MODEL_GUM_OLLARMA_READY": true,
   "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
   "frozen_model": "qwen2.5:1.5b",
@@ -19,230 +19,230 @@
     {
       "replicate": "R1",
       "perturbation": "CONTROL",
-      "run_id": "hlrt_mtb0pwsm_3f7f82dd",
+      "run_id": "hlrt_mtb1rmej_886f46b2",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_b6e135f3-4",
-      "context_hash": "d66474a5eb4ece9f9de3595379bb0453d7c34996be1c5bb18d04882eb89b8872",
-      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "local_execution_id": "ollarma_5becbdf9-1",
+      "context_hash": "8c553913563eadbb4ec710dad9f7be57c3ec566b6d15e204b9958bc301357fc2",
+      "model_output_hash": "80750e17e94df2ac1c57647f6afd1a265a2ed2fd007752393323c8331da688f0",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "289670b251ab771126493b2f874efa4f7c57c62abe76a1e467cfee1889958dde",
+        "root_after": "7a4043cdda8b950f43ca989db5f32961d4480f872b498d56e9a3e8dfc87e0273",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 16422,
-      "end_to_end_ms": 16782
+      "model_latency_ms": 26736,
+      "end_to_end_ms": 27074
     },
     {
       "replicate": "R1",
       "perturbation": "INVALID_PROOF",
-      "run_id": "hlrt_mtb0q9rj_6f4e901d",
+      "run_id": "hlrt_mtb1s7ay_08c41ac4",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_252a577b-e",
-      "context_hash": "7f44c737740b3309778eb8c4c7a459baf1554052ec10d3b8293d0d8f3dc4e568",
+      "local_execution_id": "ollarma_d8e055ca-3",
+      "context_hash": "6c65173de55181eeebf8a869c18fbacc7cbff58c119665ad01de6dabe5563792",
       "model_output_hash": "9a059410c3e707b0e60e5cc6e04463869723a98331ed24b54c65ec1a61d4a5b0",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "ff0aa87b585c90ce653773fa617bce4ed6bda8489e785362f9c40ccdea01810d",
+        "root_after": "130f950b3b3028b2e829b8aa5e9747a50ef860fd26d9a5e945bffc6e1e3ac0f6",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 2959,
-      "end_to_end_ms": 3375
+      "model_latency_ms": 1855,
+      "end_to_end_ms": 2389
     },
     {
       "replicate": "R1",
       "perturbation": "REPLAYED_PROOF",
-      "run_id": "hlrt_mtb0qcdk_f24b272e",
+      "run_id": "hlrt_mtb1s962_8da2cc41",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_29db5882-9",
-      "context_hash": "2216239cf51a840730f88f6c7fc8789b9a6dec1d3d670f5ef63e97f5a39a6126",
-      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "local_execution_id": "ollarma_0e969335-5",
+      "context_hash": "a5f3fec346cfb10c0fb55aa9ccbb78708b1c292f5531749fbed6042b763e32d4",
+      "model_output_hash": "8e2ac838ca275fdff8b8ec767179030703dba485b73d572236a1aef42403c3ea",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "709b781ed3deb3d8d3299b689a7d68d7586c5861b5460420ee356f66ece7381b",
+        "root_after": "d2eeb294e947676f3aaad90c90ddaf61d82db2394c17899d3ec32d7da44851b9",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 1715,
-      "end_to_end_ms": 2309
+      "model_latency_ms": 1889,
+      "end_to_end_ms": 2197
     },
     {
       "replicate": "R1",
       "perturbation": "BROKEN_AUTHORIZATION_EDGE",
-      "run_id": "hlrt_mtb0qe6i_faa55747",
+      "run_id": "hlrt_mtb1saw6_5b4287d4",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_b6b917fc-c",
-      "context_hash": "75c8ffe5b90567bfb822f0e22a9456c508473d70be6357f77fdb748809a7268f",
-      "model_output_hash": "80bd9e280e12686cf18ab196213e0c29ad24871edfe14ed4cc84a0ac29d5926c",
-      "status": "COMPLETED",
-      "hash_chain_ok": true,
-      "fcg": {
-        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "5264fe36196261c3c557ff361076e0a34e022898f3131836f296702f26144672",
-        "append_state": "UNCHANGED_QUARANTINE"
-      },
-      "model_latency_ms": 3418,
-      "end_to_end_ms": 3668
-    },
-    {
-      "replicate": "R2",
-      "perturbation": "CONTROL",
-      "run_id": "hlrt_mtb0qh0o_c7872420",
-      "done": true,
-      "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_1790ef59-7",
-      "context_hash": "d657275649ecd084b914faaccda0b767393255c96c3619263aa7559e5b52bdbe",
-      "model_output_hash": "c94606b1397b0e2dbebb16baf08dbff269915d0432dbc8f073e37167e1e1c4a4",
-      "status": "COMPLETED",
-      "hash_chain_ok": true,
-      "fcg": {
-        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "ca17ac1de12d51c04db7ee2e765dc4df1e7cacbd65cd3d1fa0e3002ebf84d44b",
-        "append_state": "UNCHANGED_QUARANTINE"
-      },
-      "model_latency_ms": 1427,
-      "end_to_end_ms": 1700
-    },
-    {
-      "replicate": "R2",
-      "perturbation": "INVALID_PROOF",
-      "run_id": "hlrt_mtb0qic9_2fb46a91",
-      "done": true,
-      "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_eeae2edd-6",
-      "context_hash": "5f59f99c517dc904bb1e9e18fda11c0019dc630beac929764f3d59989526d1e7",
+      "local_execution_id": "ollarma_90362cb4-7",
+      "context_hash": "4744c4d4c8505fa3c752636116a6de62b2ab8ea8de8428b0ac16262dced6c403",
       "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "b1ac7932f60a78a365022a4e04289990158cf2629735e9bb5e17a84bfe594ba1",
+        "root_after": "13f07f47e6ac09c42ad1e101dc74a0b2c505844a5264f9a1d951022b44bffb00",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 1665,
-      "end_to_end_ms": 1953
+      "model_latency_ms": 1207,
+      "end_to_end_ms": 1448
     },
     {
       "replicate": "R2",
-      "perturbation": "REPLAYED_PROOF",
-      "run_id": "hlrt_mtb0qjuk_80970e21",
-      "done": true,
-      "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_6ba9d4b0-4",
-      "context_hash": "092073eb0091b31415e99f298af892c705ed3e71f9133a25dfc3c3f730b2f0ac",
-      "model_output_hash": "68eee3877c5d0cfb3c4ee0eec06e91a1a375a7e0463e96ba8a86bebbf211a303",
-      "status": "COMPLETED",
-      "hash_chain_ok": true,
-      "fcg": {
-        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "65fdfda987290696a3ca649eea08b798f286dca23bddebb8d72961e29e02b2fc",
-        "append_state": "UNCHANGED_QUARANTINE"
-      },
-      "model_latency_ms": 2023,
-      "end_to_end_ms": 2396
-    },
-    {
-      "replicate": "R2",
-      "perturbation": "BROKEN_AUTHORIZATION_EDGE",
-      "run_id": "hlrt_mtb0qlq5_ff5c4e7b",
-      "done": true,
-      "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_574ffcda-5",
-      "context_hash": "9a03e73d56f79ca29f43d5863e2d786eaa9769dca34db3df1303ae0aa36e6895",
-      "model_output_hash": "f4cdb678d4d28b9cdb314c6c2833420b1186d818efed92c5a0d0813b7d1ceb86",
-      "status": "COMPLETED",
-      "hash_chain_ok": true,
-      "fcg": {
-        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "3516fe3b9a6ec9fa6ca79fecf73507f7e3f3f71d84d6cf05eb2ad6690d655482",
-        "append_state": "UNCHANGED_QUARANTINE"
-      },
-      "model_latency_ms": 1906,
-      "end_to_end_ms": 2487
-    },
-    {
-      "replicate": "R3",
       "perturbation": "CONTROL",
-      "run_id": "hlrt_mtb0qno7_5e9e0ea8",
+      "run_id": "hlrt_mtb1sc1f_fdd03052",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_5090d31f-b",
-      "context_hash": "3b0b3a1099063f690c02bbc506ea49050066d732d5dfcfffadb3ab47f530e34c",
-      "model_output_hash": "d1da8ab3d538cf10f973da9b37c969946b50aaaa0c22f069f22908e1de6f9e64",
+      "local_execution_id": "ollarma_c5651b69-a",
+      "context_hash": "d5cb624c2c1cad7a76f436cf0df9456fa63d468424534c92add1478545237758",
+      "model_output_hash": "15ed7730639958b7da89682559bed0cd91b29b9225b818950b63e91a4453a371",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "f90f1047f153b1f75cb97424f8df9a6afe66508aee3b3008b274b84f934646c4",
+        "root_after": "7875453ae3aff2d51fa90f051c5f4730287b38b549f46c21fcc1ae745eaa6ee2",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 1709,
-      "end_to_end_ms": 2068
+      "model_latency_ms": 1215,
+      "end_to_end_ms": 1586
     },
     {
-      "replicate": "R3",
+      "replicate": "R2",
       "perturbation": "INVALID_PROOF",
-      "run_id": "hlrt_mtb0qp9r_256efa66",
+      "run_id": "hlrt_mtb1sda7_9515f1f9",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_77019ee0-b",
-      "context_hash": "f12b53f5009f890200c92436f6fbb7b37a3d0dfb83871dc33bc637b5c9de76fa",
-      "model_output_hash": "e86e47580811a66a4a32b7fd89e8489ec6cdd32a5ed896562eab0274ebbc0e03",
+      "local_execution_id": "ollarma_977ea895-f",
+      "context_hash": "41cc8ae8148cbf448a173a4ed87983fbf62c96246cc4edced622a70a0f70f769",
+      "model_output_hash": "9a059410c3e707b0e60e5cc6e04463869723a98331ed24b54c65ec1a61d4a5b0",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "3e131fbcb7214c3652453bf826c6c31a2700fe22b74184066d17c723a73fe5db",
+        "root_after": "ebd0c577a3f3d7be332e2c8de721faa7202e62c8f11500e4901229883482d929",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 2268,
-      "end_to_end_ms": 2669
+      "model_latency_ms": 1949,
+      "end_to_end_ms": 2145
     },
     {
-      "replicate": "R3",
+      "replicate": "R2",
       "perturbation": "REPLAYED_PROOF",
-      "run_id": "hlrt_mtb0qrco_32ec5313",
+      "run_id": "hlrt_mtb1seyv_798c58c0",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_515e1acb-b",
-      "context_hash": "c72d51fd6207593548b1c5863a54456571e47fb60e4289fdc7545753c91499dd",
-      "model_output_hash": "d76fac4029bc2cf4fbe2833a6e7f0087e4458a8bee2cdd33da537e702211fd19",
+      "local_execution_id": "ollarma_7d3939eb-a",
+      "context_hash": "3f24941b2c1755797f9eda4b1eba051f9e2fea663898ac1cd41c85e05bd44d9f",
+      "model_output_hash": "40018160f1c6e0b7c77a1fe9b8ae9646fd56d68a32df86eb1772ba1d6e8410eb",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "ff7079c111a5ceba6e3d2c510b1bd45ac6bc344f2ce8fe46ea6b6e25f545b490",
+        "root_after": "0321849b42e81773da69a5f101d742d3a7b244b7dbdc82f0fd712839b8ffc3f4",
         "append_state": "UNCHANGED_QUARANTINE"
       },
-      "model_latency_ms": 2037,
-      "end_to_end_ms": 2571
+      "model_latency_ms": 1687,
+      "end_to_end_ms": 2247
     },
     {
-      "replicate": "R3",
+      "replicate": "R2",
       "perturbation": "BROKEN_AUTHORIZATION_EDGE",
-      "run_id": "hlrt_mtb0qtd2_9b2ff7dc",
+      "run_id": "hlrt_mtb1sgps_2a5f8ddf",
       "done": true,
       "model_id": "qwen2.5:1.5b",
-      "local_execution_id": "ollarma_756051fd-f",
-      "context_hash": "be37f8730ca771688e3bfe956ff68b2cb017706e4ff8284a9fe267fb20813c8b",
+      "local_execution_id": "ollarma_9a20e5b5-d",
+      "context_hash": "3df3e9677a7ace6e7a99b98f2a317e30933e2e1fd7dccfe76f3652f786b867a3",
       "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
       "status": "COMPLETED",
       "hash_chain_ok": true,
       "fcg": {
         "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
-        "root_after": "b7e42c282f0328e0aac1d1efd4a25c4eef62eb94ef4fa5561072f3a36b5908f5",
+        "root_after": "e25f42dc9e954f21a7368042439ac46472eedaede57f184348772911ab65f5d6",
         "append_state": "UNCHANGED_QUARANTINE"
       },
       "model_latency_ms": 1396,
-      "end_to_end_ms": 2008
+      "end_to_end_ms": 1768
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "CONTROL",
+      "run_id": "hlrt_mtb1si3h_be782f2f",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_a07d221b-d",
+      "context_hash": "2a792e572896adbb5f560dc7ab5c9b77ffafaf5c0d16e91ae65c58f549147c61",
+      "model_output_hash": "2dbe86dc6cec544bb60fc10864cdf1d490be1c2b838b454bef7335ff03ab2737",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "18e21739771ce313cb26efb361dec3bf7abdfac41b1e03f7977ff8786555adbd",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1387,
+      "end_to_end_ms": 1837
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "INVALID_PROOF",
+      "run_id": "hlrt_mtb1sjj1_e895bd8c",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_e503522b-3",
+      "context_hash": "82888571081fd8686ce980ffab776bbfc83f387d7bb008bcb7344b508c1c286a",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "edd5041e4207d55cd88ed14425a3cc91044fe9127a629b30ab184d700f13ae75",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1387,
+      "end_to_end_ms": 1815
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "REPLAYED_PROOF",
+      "run_id": "hlrt_mtb1skxs_4147de90",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_456f24aa-f",
+      "context_hash": "c8f3b9cd5fe23eeb64f820b6327bdaadd230b866d19698bc62d90cd6f68e9f78",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "41fbe17257c3ff9e24071596e45ed473f23a1aa714fb42e89c1b654dce4e70bc",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1209,
+      "end_to_end_ms": 1600
+    },
+    {
+      "replicate": "R3",
+      "perturbation": "BROKEN_AUTHORIZATION_EDGE",
+      "run_id": "hlrt_mtb1sm6h_5064ed44",
+      "done": true,
+      "model_id": "qwen2.5:1.5b",
+      "local_execution_id": "ollarma_d3b26249-c",
+      "context_hash": "134676548b68b98d274ec1318caade8667a43fdadbc7be2b8e0b72595071e714",
+      "model_output_hash": "f9ac71afc336f29fb49ba3904a83738293470515f7348a4e79ca661ff5aab5a0",
+      "status": "COMPLETED",
+      "hash_chain_ok": true,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "39294688d6d5daba4d9757551fd4e2fdfdf9a6300b20a2b96979e244fb32a7eb",
+        "append_state": "UNCHANGED_QUARANTINE"
+      },
+      "model_latency_ms": 1461,
+      "end_to_end_ms": 1671
     }
   ],
   "hash_chain_all_ok": true,

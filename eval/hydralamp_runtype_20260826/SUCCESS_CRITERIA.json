@@ -1,7 +1,8 @@
 {
   "schema": "hydralamp.runtype.success_criteria.v1",
-  "recorded_at_utc": "2026-08-27T04:25:00Z",
-  "execution_source_sha": "9b257cb05d0b62a88c0854212973a7ed24402634",
+  "recorded_at_utc": "2026-08-27T04:54:15.653Z",
+  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
+  "science_closeout_receipt": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
   "BRANCH_CORRECT": "PASS",
   "BASE_SHA_RECORDED": "PASS",
   "DETERMINISTIC_SMOKE": "PASS",
@@ -15,9 +16,10 @@
   "CONCURRENCY_STRESS_10": "PASS",
   "RESTART_RECOVERY": "PASS",
   "LOCAL_MODEL_R1_R2_R3_MATRIX": "PASS",
-  "RUNTYPE_REAL_EXECUTION": "BLOCKED_KEY_MISSING",
+  "RUNTYPE_REAL_EXECUTION": "PROBE_CONTROL_SMOKE",
   "RUNTYPE_PROBE_ONLY": "PASS",
-  "REAL_MODEL_IDENTITY_RECORDED": "PASS_LOCAL_qwen2.5:1.5b",
+  "RUNTYPE_CONTROL_SMOKE_LANE_STATUS": "ERROR",
+  "REAL_MODEL_IDENTITY_RECORDED": "PASS_LOCAL_qwen2.5:1.5b_AND_INVENTORY_qwen/qwen3.6-27b",
   "REFERENCE_ROOT_REPRODUCIBLE": "PASS",
   "PERTURBATION_ROOT_REPRODUCIBLE": "PASS",
   "EARLIEST_DIVERGENCE_KNOWN": "PASS",
@@ -35,9 +37,10 @@
   "BUILD": "PASS",
   "SECRET_SCAN": "PASS",
   "reference_run_id": "hlrt_mtauivoj_4ce01c84",
-  "overnight_smoke_run_id": "hlrt_mtb0puwc_fced1d54",
+  "overnight_smoke_run_id": "hlrt_mtb1rkkf_91c5db2e",
+  "live_control_smoke_run_id": "hlrt_mtb1spyh_bce57f34",
   "claim_ceiling": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN + REALTIME_HASH/CONTEXT_VISUALIZATION",
   "SIGNATURE_STATE": "NOT_SIGNED",
   "MERKLE_MMR_STATE": "NOT_COMMITTED",
-  "note": "Overnight orchestrator PASS. Live Runtype blocked until RUNTYPE_API_KEY in gitignored .env.local."
+  "note": "Science closeout at b21f0d58. Bounded live Runtype PROBE_CONTROL_SMOKE executed; lane ERROR recorded without rerun. No 4×25 live load."
 }
