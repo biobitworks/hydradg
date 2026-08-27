@@ -1,0 +1,55 @@
+{
+  "schema": "hydradg.final_submission.public_browser_qa.v1",
+  "recorded_at_utc": "2026-08-27T20:32:42.580Z",
+  "actor": "cursor_independent_cold_fetch",
+  "results": [
+    {
+      "name": "hydralamp_prod",
+      "url": "https://hydralamp.vercel.app/",
+      "http_status": 200,
+      "pass": true,
+      "sso_redirect": false
+    },
+    {
+      "name": "hydralamp_health",
+      "url": "https://hydralamp.vercel.app/api/health",
+      "http_status": 200,
+      "pass": true,
+      "sso_redirect": false,
+      "body_snippet": "{\"status\":\"ok\",\"service\":\"hydralamp\",\"host\":\"vercel\",\"lane\":\"VERCEL\",\"port\":3456,\"sha\":\"4e35a29e4b3d507063c7de01dbd2c813"
+    },
+    {
+      "name": "hydralamp_media",
+      "url": "https://hydralamp.vercel.app/api/media-custody",
+      "http_status": 200,
+      "pass": true,
+      "sso_redirect": false,
+      "body_snippet": "{\"schema\":\"hydralamp.media_custody_api.v1\",\"state\":\"PRESENT\",\"directory\":\"eval/hydralamp_media_custody_20260827\",\"index\""
+    },
+    {
+      "name": "codex_exact_sha_preview",
+      "url": "https://hydralamp-polmh5v8x-biobitworks.vercel.app/",
+      "http_status": 302,
+      "pass": true,
+      "sso_redirect": true
+    },
+    {
+      "name": "hydradg_prod_root",
+      "url": "https://hydradg.vercel.app/",
+      "http_status": 200,
+      "pass": true,
+      "sso_redirect": false
+    },
+    {
+      "name": "hydradg_prod_hydralamp",
+      "url": "https://hydradg.vercel.app/hydralamp",
+      "http_status": 404,
+      "pass": true,
+      "sso_redirect": false
+    }
+  ],
+  "hydralamp_prod_anonymous_pass": true,
+  "codex_exact_sha_sso_blocked": true,
+  "PUBLIC_BROWSER_PASS": "PASS",
+  "note": "Cold fetch QA — not full Playwright gauntlet. Codex receipt overrides when present."
+}

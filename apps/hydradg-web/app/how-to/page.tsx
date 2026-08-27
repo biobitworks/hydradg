@@ -19,9 +19,15 @@ export default function HowToPage() {
           <a className="secondary" href="/">Open Overview</a>
         </article>
         <article className="panel">
-          <p className="eyebrow">2 · Judge Demo</p>
+          <p className="eyebrow">2 · HydraLamp golden path</p>
+          <h2>Reference → poison → denial → repair → restoration</h2>
+          <p className="muted">Open HydraLamp, scrub the 46-event lane, and confirm poison stays quarantined until governed repair restores authorized state.</p>
+          <a className="secondary" href="/hydralamp">Open HydraLamp</a>
+        </article>
+        <article className="panel">
+          <p className="eyebrow">2B · Judge walkthrough</p>
           <h2>Reference → poison → antidote</h2>
-          <p className="muted">Move through the controlled state sequence and confirm that prior state is retained rather than overwritten.</p>
+          <p className="muted">Alternate judge path on the custody microscope UI.</p>
           <a className="secondary" href="/judge">Start Judge Walkthrough</a>
         </article>
         <article className="panel">
@@ -92,6 +98,20 @@ export default function HowToPage() {
         <div className="actions">
           <a className="secondary" href="/backup/hydradg.html">Open Static Fallback</a>
           <a className="secondary" href="/">Return to Live Demo</a>
+        </div>
+      </section>
+
+      <section className="computeSection" id="reconciliation-delta">
+        <p className="eyebrow">Inspecting a reconciliation delta</p>
+        <h2 className="displayTitle">Source → recompute → difference → claim.</h2>
+        <p className="sectionLead">
+          Review B frozen 46 events (<code>44e9d3dc…1690d</code>) were recomputed deterministically. The reconciliation delta is derived evidence — not a model vote and not an empirical experiment.
+        </p>
+        <div className="flow mono"><span>frozen events</span><b>→</b><span>reconcile_measurements.py</span><b>→</b><span>delta JSON</span><b>→</b><span>claim ceiling</span></div>
+        <div className="actions">
+          <a className="secondary" href="/evidence#reconciliation-delta">Evidence delta card</a>
+          <a className="secondary" href="/demo/reconciliation-delta-use-case.json">Projection JSON</a>
+          <a className="secondary" href="/api/hydralamp/reconciliation-delta">API projection</a>
         </div>
       </section>
 

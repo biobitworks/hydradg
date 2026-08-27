@@ -1,0 +1,26 @@
+{
+  "schema": "hydradg.final_submission.local_stress.v1",
+  "recorded_at_utc": "2026-08-27T20:35:00Z",
+  "host": "magicSTUDIObox.local",
+  "worktree": "/Users/byron/projects/active/hydradg-cursor-closeout-20260827",
+  "branch": "cursor/hydralamp-submission-closeout-20260827",
+  "base_sha": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "LOCAL_STRESS_TEST": "PASS",
+  "checks": {
+    "npm_install": "PASS",
+    "typecheck": "PASS",
+    "build": "PASS",
+    "vercel_control_plane_invariants": "PASS_8_8",
+    "hydralamp_custody_stress": "PASS_PRIOR_SESSION",
+    "local_hydralamp_route": "PASS_200",
+    "reconciliation_delta_api": "PASS_200",
+    "agent_evidence_gateway": "PASS_DISCOVER"
+  },
+  "offline_backup": {
+    "path": "eval/hydralamp_20260826/backup/",
+    "receipt": "eval/hydralamp_20260826/backup/BACKUP_RECEIPT.json",
+    "browser_verify": "PASS fail_count=0",
+    "event_count": 46
+  },
+  "note": "Full Playwright gauntlet on integrated /hydralamp deferred to Codex final_proof lane; offline backup 46/46 PASS retained."
+}

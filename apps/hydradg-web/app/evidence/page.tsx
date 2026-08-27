@@ -2,6 +2,7 @@ import Link from "next/link";
 
 import GoldenPathStep from "@/components/GoldenPathStep";
 import GraphHashComparison from "@/components/GraphHashComparison";
+import ReconciliationDeltaCard from "@/components/ReconciliationDeltaCard";
 
 const evidence = [
   {
@@ -114,6 +115,8 @@ export default function EvidencePage() {
         <p className="muted">Wrong, superseded, failed, timeout, and corrective states remain in the same graph so a judge can inspect where a perturbation entered and what later inherited or repaired it.</p>
         <div className="actions"><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a><Link className="secondary" href="/graph">Open graph</Link></div>
       </section>
+
+      <ReconciliationDeltaCard />
 
       <section className="computeSection">
         <span className="sectionNumber">06D / CONTINUE</span>

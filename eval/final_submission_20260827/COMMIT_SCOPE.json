@@ -1,0 +1,29 @@
+{
+  "schema": "hydradg.final_submission.commit_scope.v1",
+  "recorded_at_utc": "2026-08-27T20:37:00Z",
+  "included": [
+    "docs/HYDRALAMP_HOW_TO_USE.md",
+    "docs/HYDRALAMP_GOLDEN_PATH.md",
+    "docs/HYDRALAMP_EVIDENCE.md",
+    "docs/JUDGE_LINKS_20260827.md",
+    "eval/final_submission_20260827/",
+    "eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+    "eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json",
+    "eval/ollarma_measurement_review_20260827/OPERATOR_SUBMISSION_CLOSEOUT.md",
+    "eval/hydralamp_20260826/SUBMISSION_OPERATOR_PACKET.json",
+    "apps/hydradg-web/app/api/hydralamp/reconciliation-delta/",
+    "apps/hydradg-web/components/ReconciliationDeltaCard.tsx",
+    "apps/hydradg-web/app/evidence/page.tsx",
+    "apps/hydradg-web/app/how-to/page.tsx",
+    "apps/hydradg-web/public/demo/reconciliation-delta-use-case.json",
+    "scripts/final_submission_browser_qa.mjs"
+  ],
+  "excluded_preexisting_dirty": [
+    "eval/hydralamp_20260826/backup/** (large media — separate promotion)",
+    "eval/hydralamp_final_proof_20260827/** (Codex active lane)",
+    "eval/ollarma_measurement_review_20260827/MODEL_*_RAW.txt",
+    "package.json / .gitignore on main worktree",
+    "archive/**"
+  ],
+  "reason": "Bounded submission documentation + delta projection only; no Codex science gauntlet or frozen event mutation."
+}

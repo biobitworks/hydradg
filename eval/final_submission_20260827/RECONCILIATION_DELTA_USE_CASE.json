@@ -1,0 +1,121 @@
+{
+  "schema": "hydradg.hydralamp.reconciliation_delta_use_case.v1",
+  "use_case_id": "HYDRALAMP_REVIEW_B_RECONCILIATION_DELTA_20260827",
+  "recorded_at_utc": "2026-08-27T20:32:00Z",
+  "projection_state": "PROJECTION_ONLY_DERIVED_EVIDENCE",
+  "canonical_fcg_append": "NOT_PERFORMED",
+  "hydradb_projection": "UI_AND_PUBLIC_JSON_ONLY",
+  "source_event_stream_sha256": "44e9d3dc7014b9b2c410a9e1e2c9b35a72cd269e4e561eba40414081ca81690d",
+  "source_event_count": 46,
+  "review_id": "ollarma_measurement_review_20260827",
+  "reconciliation_artifact_path": "eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+  "reconciliation_artifact_sha256": "c2ac58e2a46c233b816860aac7736a82acbbebae5ad5887c84d9a828d576c823",
+  "recompute_script_path": "eval/ollarma_measurement_review_20260827/scripts/reconcile_measurements.py",
+  "recompute_script_sha256": "67bbf8e1c1a09c971d7af58311df37c6715fe75501aae12863acf7e9f6a7fcbb",
+  "evidence_class": "DERIVED_RECONCILIATION_EVIDENCE",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "git_sha": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "lineage": [
+    "FrozenEventStreamFCO",
+    "DERIVED_BY MeasurementRecomputeFCO",
+    "PRODUCED ReconciliationDeltaFCO",
+    "SUPPORTS SubmissionClaimFCO"
+  ],
+  "lineage_note": "Conceptual lineage only — canonical FCG append not authorized before submission freeze.",
+  "story_sequence": [
+    "REFERENCE",
+    "POISON",
+    "DETERMINISTIC_GATE",
+    "QUARANTINE",
+    "REPAIR",
+    "RESTORATION",
+    "RECOMPUTE",
+    "DELTA_DIFFERENCE",
+    "CLAIM_BOUNDARY",
+    "CUSTODY_RECEIPT"
+  ],
+  "dimensions": {
+    "security_governance": {
+      "PRIVATE_LEAK_COUNT": 0,
+      "UNAUTHORIZED_WRITE_COUNT": 0,
+      "REPLAY_ACCEPTED_COUNT": 0,
+      "POISON_CANONICALIZED_COUNT": 0,
+      "RESTORATION_PASS": true,
+      "QUARANTINE_RESOLVED": true,
+      "delta_semantics": "DETERMINISTIC_GATE_OUTCOMES",
+      "claim_effect": "GOVERNED_MECHANISM_PASS"
+    },
+    "fcg_topology": {
+      "FCG_ROOT_CHANGE_COUNT": 6,
+      "fcg_root_after": "a1ec5db1cc9388dffb935ffd7ab4d0c254b8ab73b03c30f0722326da1d8846b1",
+      "delta_semantics": "CUSTODY_TOPOLOGY_CHANGE_NOT_ACCURACY",
+      "claim_effect": "INFORMATIONAL_ONLY"
+    },
+    "delta_g_star_stepwise": {
+      "formula": "G*(t) - G*(t-1)",
+      "tier": "ENGINEERING_SCIENCE_DIAGNOSTIC",
+      "physical_gibbs": false,
+      "judge_strip_eligible": false,
+      "synthetic_examples": {
+        "T0_G_star": -0.06123,
+        "T1_poison_G_star": 0.572956,
+        "T1_delta_g_star_step": 0.634186,
+        "T2_antidote_G_star": -0.027496,
+        "T2_delta_g_star_step": -0.600452
+      },
+      "delta_semantics": "DIRECTION_OF_CHANGE_VS_PREVIOUS_STATE",
+      "claim_effect": "ENGINEERING_ONLY"
+    },
+    "delta_g_star_reference": {
+      "formula": "G*(t) - G*(reference)",
+      "T2_delta_g_star_reference_approx": 0.033734,
+      "delta_semantics": "RESIDUAL_VS_REFERENCE_CONTRACT",
+      "claim_effect": "ENGINEERING_ONLY",
+      "note": "Preserves stepwise receipt; does not overwrite step semantics."
+    },
+    "cloud_drift": {
+      "canonical_context_iceberg": {
+        "name": "CLOUD_DRIFT_JSD_0_100",
+        "formula": "100 × JSD(P_t || P_reference)",
+        "implementation": "apps/hydradg-web/lib/contextIceberg.ts#jensenShannonDivergence",
+        "judge_strip_eligible": false
+      },
+      "gateway_msm_entropy_proxy": {
+        "name": "GATEWAY_MSM_ENTROPY_PROXY_0_100",
+        "value_frozen_lane": 75.3349,
+        "implementation": "hydralamp/gateway.py normalized_MSM_entropy_x_100",
+        "judge_strip_eligible": false,
+        "delta_semantics": "MAGNITUDE_NOT_CORRECTNESS",
+        "claim_effect": "NOT_INTERCHANGEABLE_WITH_CANONICAL_JSD"
+      }
+    },
+    "restoration_gain": {
+      "RESTORATION_GAIN_TV": "NOT_COMPUTED",
+      "frozen_46_event_lane_reason": "P_poison/P_restored/P_reference distributions not established under frozen gateway scorer",
+      "delta_semantics": "NOT_COMPUTED",
+      "claim_effect": "BLOCKED"
+    },
+    "pass_at_3_lane": {
+      "PASS_AT_3_46_EVENT_LANE": "NOT_ESTABLISHED",
+      "PASS_POW_3_46_EVENT_LANE": "NOT_ESTABLISHED",
+      "authorization_gauntlet_separate": {
+        "repo": "hydralamp",
+        "LOCAL_PASS_AT_3": 1.0,
+        "LOCAL_PASS_POW_3": 1.0,
+        "NOT_MERGED_INTO": "46_EVENT_GOLDEN_LANE"
+      }
+    }
+  },
+  "claim_ceiling": "GOVERNED_MECHANISM_AND_VERIFIED_HARD_GATES_NOT_LLM_STATISTICAL_SUPERIORITY",
+  "earliest_divergence": "NONE_FOR_FROZEN_SOURCE; separate lanes for gauntlet and standalone media",
+  "public_projection_paths": [
+    "/demo/reconciliation-delta-use-case.json",
+    "/api/hydralamp/reconciliation-delta"
+  ],
+  "evidence_pointers": {
+    "frozen_source": "eval/hydralamp_20260826/HYDRALAMP_EVENTS.jsonl",
+    "reconciliation_delta": "eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+    "judge_surface": "eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json",
+    "recompute_script": "eval/ollarma_measurement_review_20260827/scripts/reconcile_measurements.py"
+  }
+}

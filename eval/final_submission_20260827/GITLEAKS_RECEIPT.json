@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.final_submission.gitleaks_receipt.v1",
+  "recorded_at_utc": "2026-08-27T20:35:00Z",
+  "GITLEAKS": "PASS",
+  "finding_count": 0,
+  "scan_method": "gitleaks protect --staged",
+  "staged_scan_report": "eval/final_submission_20260827/gitleaks_staged_git.json",
+  "scanned_paths": [
+    "docs/HYDRALAMP_*.md",
+    "docs/JUDGE_LINKS_20260827.md",
+    "eval/final_submission_20260827/",
+    "eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+    "eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json",
+    "eval/ollarma_measurement_review_20260827/OPERATOR_SUBMISSION_CLOSEOUT.md",
+    "eval/hydralamp_20260826/SUBMISSION_OPERATOR_PACKET.json",
+    "apps/hydradg-web/app/api/hydralamp/",
+    "apps/hydradg-web/components/ReconciliationDeltaCard.tsx",
+    "apps/hydradg-web/public/demo/reconciliation-delta-use-case.json",
+    "scripts/final_submission_browser_qa.mjs"
+  ],
+  "excluded_from_scan": [
+    "archive/** (historical toy seal fixtures — 128 generic-api-key findings)",
+    "eval/ollarma_measurement_review_20260827/MODEL_*_RAW.txt (not staged)"
+  ],
+  "full_repo_scan_note": "Full-repo gitleaks hits archive toy-seal fixtures only; not in submission candidate.",
+  "signature_state": "NOT_SIGNED"
+}

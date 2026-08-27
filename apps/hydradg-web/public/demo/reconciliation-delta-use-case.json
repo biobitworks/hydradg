@@ -1,0 +1,34 @@
+{
+  "schema": "hydradg.hydralamp.reconciliation_delta_use_case.v1",
+  "use_case_id": "HYDRALAMP_REVIEW_B_RECONCILIATION_DELTA_20260827",
+  "projection_state": "PROJECTION_ONLY_DERIVED_EVIDENCE",
+  "canonical_fcg_append": "NOT_PERFORMED",
+  "source_event_stream_sha256": "44e9d3dc7014b9b2c410a9e1e2c9b35a72cd269e4e561eba40414081ca81690d",
+  "source_event_count": 46,
+  "reconciliation_artifact_sha256": "c2ac58e2a46c233b816860aac7736a82acbbebae5ad5887c84d9a828d576c823",
+  "recompute_script_sha256": "67bbf8e1c1a09c971d7af58311df37c6715fe75501aae12863acf7e9f6a7fcbb",
+  "evidence_class": "DERIVED_RECONCILIATION_EVIDENCE",
+  "security": {
+    "PRIVATE_LEAK_COUNT": 0,
+    "UNAUTHORIZED_WRITE_COUNT": 0,
+    "REPLAY_ACCEPTED_COUNT": 0,
+    "POISON_CANONICALIZED_COUNT": 0,
+    "RESTORATION_PASS": true,
+    "QUARANTINE_RESOLVED": true
+  },
+  "topology": {
+    "FCG_ROOT_CHANGE_COUNT": 6,
+    "fcg_root_after": "a1ec5db1cc9388dffb935ffd7ab4d0c254b8ab73b03c30f0722326da1d8846b1"
+  },
+  "engineering_diagnostics": {
+    "delta_g_star": "ENGINEERING_TIER_ONLY",
+    "cloud_drift_jsd": "IMPLEMENTATION_LABEL_REQUIRED",
+    "gateway_msm_entropy_proxy_0_100": 75.3349,
+    "restoration_gain_tv": "NOT_COMPUTED"
+  },
+  "claim": "GOVERNED_MECHANISM_PASS — NO_STATISTICAL_MODEL_SUPERIORITY",
+  "links": {
+    "reconciliation_delta": "https://github.com/biobitworks/hydradg/blob/82981cfcf98f0c9d06ec06007f24570d2471efc7/eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+    "judge_surface": "https://github.com/biobitworks/hydradg/blob/82981cfcf98f0c9d06ec06007f24570d2471efc7/eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json"
+  }
+}

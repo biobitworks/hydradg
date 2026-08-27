@@ -1,0 +1,19 @@
+{
+  "schema": "hydradg.final_submission.kb_publication_audit.v1",
+  "recorded_at_utc": "2026-08-27T20:37:00Z",
+  "audits": [
+    {"page_or_document": "docs/HYDRALAMP_HOW_TO_USE.md", "claim": "46-event frozen SHA", "evidence_pointer": "eval/hydralamp_20260826/HYDRALAMP_EVENTS.jsonl", "evidence_class": "DETERMINISTIC_EVENT_LOG", "status": "PASS", "public_safe": true},
+    {"page_or_document": "docs/HYDRALAMP_EVIDENCE.md", "claim": "8 judge metrics", "evidence_pointer": "eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json", "evidence_class": "DERIVED_RECONCILIATION_EVIDENCE", "status": "PASS", "public_safe": true},
+    {"page_or_document": "docs/HYDRALAMP_EVIDENCE.md", "claim": "PASS@3 lane separation", "evidence_pointer": "SUBMISSION_FREEZE_RECONCILIATION_DELTA.json", "evidence_class": "DERIVED_RECONCILIATION_EVIDENCE", "status": "PASS", "public_safe": true},
+    {"page_or_document": "public demo JSON", "claim": "reconciliation delta projection", "evidence_pointer": "eval/final_submission_20260827/RECONCILIATION_DELTA_USE_CASE.json", "evidence_class": "PROJECTION_ONLY_DERIVED_EVIDENCE", "status": "PASS", "public_safe": true},
+    {"page_or_document": "PRIMARY_DEMO_URL", "claim": "hydralamp.vercel.app anonymous", "evidence_pointer": "eval/final_submission_20260827/PUBLIC_VERCEL_BROWSER_RECEIPT.json", "evidence_class": "DETERMINISTIC_TOOL_OUTPUT", "status": "PASS", "public_safe": true},
+    {"page_or_document": "STALE_SHA_CHECK", "claim": "no stale 9079507 as current standalone", "evidence_pointer": "PERMANENT_LINKS.json d9f824e", "evidence_class": "GIT_RECEIPT", "status": "PASS", "public_safe": true},
+    {"page_or_document": "CLOUDDRIFT_OVERCLAIM", "claim": "75.3349 off judge strip", "evidence_pointer": "JUDGE_METRIC_SURFACE excluded_from_judge_strip", "evidence_class": "DERIVED_RECONCILIATION_EVIDENCE", "status": "ABSENT", "public_safe": true},
+    {"page_or_document": "PHYSICAL_GIBBS_CLAIM", "claim": "none in judge strip", "evidence_pointer": "docs/HYDRALAMP_HOW_TO_USE.md", "evidence_class": "DOCUMENTATION", "status": "ABSENT", "public_safe": true},
+    {"page_or_document": "MEDIA_FCG_FALSE_MEMBERSHIP", "claim": "FCG_MEMBERSHIP=BLOCKED stated", "evidence_pointer": "docs/HYDRALAMP_HOW_TO_USE.md", "evidence_class": "DOCUMENTATION", "status": "PASS", "public_safe": true},
+    {"page_or_document": "FALSE_SPONSOR_PASS", "claim": "Runtype ERROR preserved", "evidence_pointer": "eval/agent_native_sponsors_20260827/SPONSOR_INTEGRATION_CLOSEOUT_V2.json", "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE", "status": "PASS", "public_safe": true},
+    {"page_or_document": "HASH_AS_SIGNATURE", "claim": "SIGNATURE_STATE=NOT_SIGNED", "evidence_pointer": "SUBMISSION_FREEZE_RECONCILIATION_DELTA.json", "evidence_class": "DERIVED_RECONCILIATION_EVIDENCE", "status": "PASS", "public_safe": true},
+    {"page_or_document": "HYDRADG prod /hydralamp", "claim": "404 on hydradg.vercel.app/hydralamp", "evidence_pointer": "PUBLIC_VERCEL_BROWSER_RECEIPT.json", "evidence_class": "DETERMINISTIC_TOOL_OUTPUT", "status": "DOCUMENTED_SECONDARY", "public_safe": true}
+  ],
+  "forbidden_patterns_absent": ["STALE_SHA", "CLOUDDRIFT_ON_JUDGE_STRIP", "PHYSICAL_GIBBS_ON_JUDGE_STRIP", "MEDIA_FCG_FALSE_MEMBERSHIP", "PASS_AT_3_LANE_TRANSFER", "HASH_AS_SIGNATURE", "MMR_WITHOUT_RECEIPT"]
+}
