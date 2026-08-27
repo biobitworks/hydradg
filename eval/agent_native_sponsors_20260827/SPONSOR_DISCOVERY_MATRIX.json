@@ -1,0 +1,137 @@
+{
+  "schema": "sponsor.discovery_matrix.v1",
+  "recorded_at_utc": "2026-08-27T05:29:14.731Z",
+  "execution_host": "magicSTUDIObox.local",
+  "gum_doctor_state": "DEPENDENCY_UNRESOLVED",
+  "sponsor_secret_injection": "BLOCKED",
+  "providers": [
+    {
+      "provider": "Runtype",
+      "priority": "P0",
+      "product": "Runtype API / @runtypelabs/sdk",
+      "official_docs": "https://www.npmjs.com/package/@runtypelabs/sdk",
+      "auth_mechanism": "API key (RUNTYPE_API_KEY)",
+      "required_secret_names": [
+        "RUNTYPE_API_KEY"
+      ],
+      "sdk_or_cli": "@runtypelabs/sdk",
+      "minimal_operation": "modelConfigs.list or runWithLocalTools CONTROL lane",
+      "state": "CONFIGURED",
+      "evidence_notes": "HydraLamp integration exists; prior PROBE_CONTROL_SMOKE lane ERROR preserved."
+    },
+    {
+      "provider": "Tavily",
+      "priority": "P0",
+      "product": "Tavily Agent / tvly CLI",
+      "official_docs": "https://docs.tavily.com/",
+      "auth_mechanism": "OAuth via tvly login (CLI); optional TAVILY_API_KEY for MCP",
+      "required_secret_names": [],
+      "sdk_or_cli": "tvly CLI",
+      "minimal_operation": "tvly extract <authoritative-url>",
+      "state": "CONFIGURED",
+      "evidence_notes": "CLI auth on Studio; two prior negative search cases preserved in eval/hydralamp_tavily_20260827/raw/."
+    },
+    {
+      "provider": "Mitosis Cortex",
+      "priority": "P0",
+      "product": "Cortex memory / mi cortex / @mitosislabs/sdk",
+      "official_docs": "https://docs.cortexmemory.dev/getting-started/introduction",
+      "auth_mechanism": "mi login OAuth; CONVEX_URL for SDK; offer FREECORTEX is sponsor metadata not API credential",
+      "required_secret_names": [
+        "CONVEX_URL"
+      ],
+      "sdk_or_cli": "mi CLI, @mitosislabs/sdk",
+      "minimal_operation": "remember + recall memory roundtrip against verified HydraDG receipt",
+      "state": "BLOCKED",
+      "evidence_notes": "mi CLI not on PATH; GUM Doctor secret injection BLOCKED; external memory must not become canonical FCG."
+    },
+    {
+      "provider": "Mitosis Yappy",
+      "priority": "P1",
+      "product": "Yappy computer-use agents",
+      "official_docs": "https://mitosislabs.ai/",
+      "auth_mechanism": "mi login OAuth; office/agent workspace",
+      "required_secret_names": [],
+      "sdk_or_cli": "@mitosislabs/sdk, mi CLI",
+      "minimal_operation": "external agent reaches HydraLamp/Evidence Gateway and performs one bounded interaction",
+      "state": "BLOCKED",
+      "evidence_notes": "mi CLI not installed; cannot demonstrate independent computer-use agent without Mitosis workspace."
+    },
+    {
+      "provider": "Immersive Commons",
+      "priority": "P1",
+      "product": "IC MCP / A2A agent surface (event anb-hack-01)",
+      "official_docs": "https://www.immersivecommons.com/developers",
+      "auth_mechanism": "agt_ bearer token via device-code flow; 10 public MCP tools without token",
+      "required_secret_names": [],
+      "sdk_or_cli": "@immersivecommons/sdk",
+      "minimal_operation": "MCP manifest discovery + public tool probe",
+      "state": "DISCOVERED",
+      "evidence_notes": "Event credentials not copied to repo; MCP manifest fetchable without agt_ token."
+    },
+    {
+      "provider": "Cotal",
+      "priority": "P1",
+      "product": "Cotal agent mesh (NATS/A2A)",
+      "official_docs": "https://docs.cotal.ai/",
+      "auth_mechanism": "JWT mesh auth via cotal up",
+      "required_secret_names": [],
+      "sdk_or_cli": "cotal-ai npm global",
+      "minimal_operation": "one bounded A2A transaction via HydraDG evidence gateway",
+      "state": "DEFERRED_NONBLOCKING",
+      "evidence_notes": "Mesh setup (npx cotal-ai setup --yes && cotal up) exceeds P0 window; gateway stubs implemented."
+    },
+    {
+      "provider": "Hacker Bob",
+      "priority": "P2",
+      "product": "hacker-bob MCP security runtime",
+      "official_docs": "https://www.npmjs.com/package/hacker-bob",
+      "auth_mechanism": "local MCP install; authorized testing only",
+      "required_secret_names": [],
+      "sdk_or_cli": "hacker-bob / hacker-bob-cc",
+      "minimal_operation": "one bounded security scan with raw report hash",
+      "state": "DISCOVERED",
+      "evidence_notes": "Package documented; full hunt not run without explicit scoped authorization."
+    },
+    {
+      "provider": "Tenki",
+      "priority": "P2",
+      "product": "Tenki Sandbox microVM",
+      "official_docs": "https://tenki.cloud/docs/sandbox/quickstart",
+      "auth_mechanism": "Tenki account / API credentials",
+      "required_secret_names": [
+        "TENKI_API_KEY"
+      ],
+      "sdk_or_cli": "Tenki SDK/CLI",
+      "minimal_operation": "one isolated sandbox exec with deterministic receipt",
+      "state": "DEFERRED_NONBLOCKING",
+      "evidence_notes": "Account setup required; sponsor infra demo only — not scientific execution authority."
+    },
+    {
+      "provider": "Nebius",
+      "priority": "OPTIONAL",
+      "product": "Nebius Serverless GPU / inference",
+      "official_docs": "https://nebius.com/",
+      "auth_mechanism": "Nebius account API credentials",
+      "required_secret_names": [
+        "NEBIUS_API_KEY"
+      ],
+      "sdk_or_cli": "Nebius API",
+      "minimal_operation": "one bounded API/compute smoke",
+      "state": "SKIPPED",
+      "evidence_notes": "Non-blocking; discovery only."
+    },
+    {
+      "provider": "Ultimate Fighting Agents",
+      "priority": "SUBMISSION_ONLY",
+      "product": "Hackathon track submission",
+      "official_docs": "https://luma.com/agentnativebuildershackathon",
+      "auth_mechanism": "NOT_APPLICABLE",
+      "required_secret_names": [],
+      "sdk_or_cli": "NOT_APPLICABLE",
+      "minimal_operation": "submission readiness artifact from existing HydraLamp perturbations",
+      "state": "NOT_APPLICABLE",
+      "evidence_notes": "Guaranteed approval track; $15,000 prize pool — no API integration."
+    }
+  ]
+}
