@@ -468,14 +468,25 @@ async function uiParityFromLastCore() {
 
 async function main() {
   process.chdir(path.resolve(__dirname, ".."));
+  const phase = process.env.HYDRALAMP_STRESS_PHASE || "all";
+
   const vectors = buildVectors();
   const tamper = runTamperTests(vectors);
   const delta = runContextDeltaTests();
+  if (phase === "vectors_tamper_delta") {
+    console.log(JSON.stringify({ vectors: true, tamper: tamper.HASH_TAMPER_STRESS, delta: true }));
+    return;
+  }
   console.log("vectors+tamper+delta done");
+
   const sse = await runSseStress();
   console.log("sse", sse.SSE_STRESS);
+  if (phase === "sse_only") return;
+
   const core = await runCoreStress();
   console.log("core", core.CORE_STRESS, core.HASH_CHAIN_VERIFICATION);
+  if (phase === "core_only") return;
+
   const local = await runLocalModelOnce();
   console.log("local", local.LOCAL_MODEL_GUM_OLLARMA_READY);
   const ui = await uiParityFromLastCore();

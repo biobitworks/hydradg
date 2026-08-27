@@ -1,7 +1,14 @@
 {
   "schema": "hydralamp.live_runtype_stress_receipt.v1",
+  "execution_source_sha": "9b257cb05d0b62a88c0854212973a7ed24402634",
   "LIVE_RUNTYPE_READY": "BLOCKED_KEY_MISSING",
   "RUNTYPE_API_KEY": "MISSING",
-  "note": "No silent fallback to local/fixture from LIVE_RUNTYPE",
+  "discovery_exit_code": 1,
+  "inventory_summary": {
+    "runtype_state": "NOT_CONFIGURED",
+    "selected_count": 0
+  },
+  "control_smoke": null,
+  "note": "Overnight lane: probe + at most one CONTROL smoke — no 4×25 live load",
   "signature_state": "NOT_SIGNED"
 }

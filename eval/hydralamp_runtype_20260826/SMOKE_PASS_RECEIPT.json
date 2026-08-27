@@ -1,0 +1,36 @@
+{
+  "schema": "hydralamp.smoke_pass_receipt.v1",
+  "ok": true,
+  "run_id": "hlrt_mtb0puwc_fced1d54",
+  "event_count": 44,
+  "hash_chain": {
+    "ok": true,
+    "checked": 44,
+    "failures": []
+  },
+  "client_hash_verification": {
+    "ok": true,
+    "checked": 44,
+    "mismatches": 0
+  },
+  "fcg": {
+    "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+    "root_after": "a55c0362ee5020ede3d99ca9e914a4c78a569571e17cc258961c1c70ee11ce6b",
+    "append_state": "PASS"
+  },
+  "quarantine": {
+    "proposals": [
+      {
+        "kind": "POISON_WRITE",
+        "target": "canonical_fcg",
+        "synthetic": true,
+        "unauthorized": true,
+        "proposal_hash": "877811c848a8a8c5ab70305d70830b3990cf4f65d52bb45ea4103565f225577b",
+        "decision": "DENY"
+      }
+    ],
+    "count": 1
+  },
+  "source_sha": "9b257cb05d0b62a88c0854212973a7ed24402634",
+  "signature_state": "NOT_SIGNED"
+}

@@ -8,7 +8,8 @@
     "build": "next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
-    "hydralamp:custody-stress": "tsx scripts/hydralamp_custody_stress.mts"
+    "hydralamp:custody-stress": "tsx scripts/hydralamp_custody_stress.mts",
+    "hydralamp:overnight": "tsx scripts/hydralamp_overnight.mts"
   },
   "dependencies": {
     "@runtypelabs/sdk": "^9.2.0",
