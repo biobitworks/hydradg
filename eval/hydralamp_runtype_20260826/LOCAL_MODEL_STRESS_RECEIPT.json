@@ -1,0 +1,22 @@
+{
+  "schema": "hydralamp.local_model_stress_receipt.v1",
+  "LOCAL_MODEL_GUM_OLLARMA_READY": true,
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "mode": "LOCAL_MODEL_GUM_OLLARMA",
+  "run_id": "hlrt_mtb01hfw_c497a204",
+  "lanes": [
+    {
+      "lane": "agent-a",
+      "model_id": "qwen2.5:1.5b",
+      "status": "COMPLETED",
+      "context_hash": "9800b4109da35a4963b9fda57e0c6c2f84143e8a587ae35480b8a35675973b9d",
+      "model_output_hash": "c05a5da73c25d50dbfe85fb90f3b17ad5160053cd86f6f97648eb4605fc6b0de",
+      "local_execution_id": "ollarma_8576d367-5",
+      "unauthorized_canonical_writes": 0
+    }
+  ],
+  "hash_chain_ok": true,
+  "unauthorized_canonical_writes": 0,
+  "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+  "signature_state": "NOT_SIGNED"
+}

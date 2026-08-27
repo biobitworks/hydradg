@@ -1,0 +1,37 @@
+{
+  "schema": "hydralamp.gum_doctor_receipt.v1",
+  "recorded_at_utc": "2026-08-27T04:00:00Z",
+  "host": "magicSTUDIObox.local",
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "GUM_DOCTOR_PATH": null,
+  "GUM_DOCTOR_VERSION": null,
+  "GUM_DOCTOR_INTERFACE": null,
+  "GUM_DOCTOR_FILE_SHA256": null,
+  "discovery": {
+    "command_v_gum_doctor": false,
+    "command_v_gum": false,
+    "command_v_ollarma": false,
+    "command_v_ollama": true,
+    "ollarma_listen": "127.0.0.1:8484",
+    "ollama_listen": "127.0.0.1:11434",
+    "bounded_path_search": [
+      "/Users/byron/projects/active/ollarma",
+      "/Users/byron/projects/active/antigence",
+      "/Users/byron/projects/bin",
+      "/Users/byron/projects/active/gettingsciencedone",
+      "/Users/byron/projects/active/hydradg"
+    ],
+    "note": "No GUM Doctor implementation found. Do not invent. Ollarma+Ollama are available for LOCAL_MODEL path without GUM Doctor authority."
+  },
+  "authority_ceiling": "GUM_DOCTOR_IS_NOT_AUTHORITY_EVEN_IF_FOUND",
+  "local_runtime": {
+    "ollarma_health": "REACHABLE_DEGRADED_OR_READY",
+    "ollama_models_observed": [
+      "qwen2.5:1.5b",
+      "qwen2.5-coder:7b",
+      "qwen3:1.7b",
+      "deepseek-r1:14b"
+    ]
+  },
+  "signature_state": "NOT_SIGNED"
+}

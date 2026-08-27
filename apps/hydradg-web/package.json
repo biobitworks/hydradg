@@ -7,18 +7,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "hydralamp:custody-stress": "tsx scripts/hydralamp_custody_stress.mts"
   },
   "dependencies": {
     "@runtypelabs/sdk": "^9.2.0",
+    "cytoscape": "^3.30.4",
     "next": "^16.0.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   },
   "devDependencies": {
+    "@types/cytoscape": "^3.21.9",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.0"
   }
 }

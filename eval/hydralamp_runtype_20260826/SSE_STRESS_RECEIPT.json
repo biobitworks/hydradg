@@ -1,0 +1,22 @@
+{
+  "schema": "hydralamp.sse_stress_receipt.v1",
+  "SSE_STRESS": "PASS",
+  "initial_subscriber": {
+    "ok": true,
+    "checked": 44,
+    "failures": []
+  },
+  "late_subscriber_replay": {
+    "ok": true,
+    "checked": 44,
+    "failures": []
+  },
+  "missing_event_detected": true,
+  "duplicated_event_detected": true,
+  "out_of_order_detected": true,
+  "disconnect_reconnect": "SIMULATED_VIA_REPLAY_OK",
+  "two_simultaneous_viewers": "SAME_CHAIN_RECEIPT_OK",
+  "server_restart_persisted": true,
+  "run_id": "hlrt_mtb01glu_2009e8b1",
+  "signature_state": "NOT_SIGNED"
+}
