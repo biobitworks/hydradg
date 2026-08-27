@@ -43,16 +43,28 @@ export const projectSources: ProjectSource[] = [
     role: "optional AI SDK tools (search/extract/crawl/map); not canonical FCG",
   },
   {
+    name: "AIsa Agent Quickstart",
+    url: "https://aisa.one/docs/agent-quickstart.md",
+    status: "verified-doc",
+    role: "optional OpenAI-compatible LLM gateway + Skills/APIs; not canonical FCG",
+  },
+  {
     name: "Tenki Cloud",
     url: "https://tenki.cloud/docs",
     status: "verified-doc",
     role: "optional sandbox/runners infra demo; not scientific execution authority",
   },
   {
-    name: "Cotal",
+    name: "Cotal upstream",
+    url: "https://github.com/Cotal-AI/Cotal.git",
+    status: "verified-doc",
+    role: "open agent coordination mesh (NATS/A2A); not canonical FCG; not hosted on Vercel",
+  },
+  {
+    name: "Cotal docs",
     url: "https://docs.cotal.ai/",
     status: "verified-doc",
-    role: "optional local agent mesh (NATS/A2A); not canonical FCG",
+    role: "optional local agent mesh docs; not canonical FCG",
   },
   {
     name: "Yappy.biz Web API",
