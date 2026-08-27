@@ -1,0 +1,32 @@
+{
+  "schema": "hydradg.anb_live.input_packet.v1",
+  "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+  "product": "HydraDG Runtype Product",
+  "components": {
+    "agent": "real Agent",
+    "flow": "deterministic Flow",
+    "mcp_surface": "authenticated MCP Surface",
+    "trigger_surface": "API or Web Surface for judge trigger",
+    "tools": "HydraDG tools/capabilities attached"
+  },
+  "eval_suite": {
+    "case_count_min": 12,
+    "case_count_max": 20,
+    "implementation": "AS_CODE",
+    "path_placeholder": "eval/agent_native_builders_live_20260826/runtype_eval_suite/"
+  },
+  "comparison": {
+    "variant_count": 2,
+    "variants_frozen_before_execution": true,
+    "metrics": ["success", "latency", "cost", "tool_use", "hydradg_deterministic_grade"]
+  },
+  "execution_policy": {
+    "preserve_runtype_execution_ids": true,
+    "preserve_log_references": true,
+    "no_selective_reruns": true
+  },
+  "sponsor_credit_class": "RUNTYPE_50_USD",
+  "external_runtime_class": "EXTERNAL_PROBABILISTIC_EVIDENCE",
+  "scoring_host": "magicSTUDIObox.local",
+  "no_keys_in_repo": true
+}

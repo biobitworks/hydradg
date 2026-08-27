@@ -1,0 +1,64 @@
+{
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "work_unit_id": "work_unit:anb_track02_resumable_boundary_v1_20260826",
+  "phase": "OFFER",
+  "actor": {
+    "actor_class": "HUMAN",
+    "runtime_identity": "byron@magicSTUDIObox.local"
+  },
+  "role_lane": "AGENT_NATIVE_BUILDERS_LIVE_EMPIRICAL_V1",
+  "role_ceiling": "PREREGISTRATION_ONLY_NO_EXECUTION",
+  "writeback_disposition": "CANDIDATE_ONLY_NO_PROMOTION",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "base_git_sha": "2e4522c09922b7c323f8ebecae28aaca9bbc9f6a",
+  "expected_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
+  "input_packet_sha256": "8a4d3ce3a9006e8321cd257fa653ba956397bc39b5f4403e0b10f57cd547988d",
+  "locked_decisions": [
+    "Do not treat scripts/agent_native_builders_runner.py output as empirical evidence",
+    "Synthetic 20-fixture lane preserved as DEVELOPMENT_SYNTHETIC_FIXTURE_SIMULATION",
+    "magicSTUDIObox.local is scientific controller/scorer",
+    "External Runtype/Tenki/model activity is EXTERNAL_PROBABILISTIC_EVIDENCE until receipt-bound",
+    "Do not submit, merge to main, or spend beyond free/event credits",
+    "Do not print or commit sponsor keys"
+  ],
+  "deferred_ideas": [
+    "Final Track 01 vs Track 02 selection until both scorecards computed",
+    "Vercel/studio deploy promotion",
+    "Cotal/SGLang integration"
+  ],
+  "lease": {
+    "lease_id": "lease:anb_live_track02_20260826",
+    "fencing_token": 1,
+    "single_writer_scope": "eval/agent_native_builders_live_20260826/results/track02/",
+    "lease_owner": "magicSTUDIObox.local",
+    "lease_state": "OFFERED"
+  },
+  "expected_outputs": [
+    "eval/agent_native_builders_live_20260826/results/track02/",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_ACCEPT.json",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_CLOSEOUT.json"
+  ],
+  "verification_gates": [
+    "WORK_ITEMS_COMPLETED == 5",
+    "INTERRUPTION_AT_EACH_MAJOR_STAGE",
+    "RESUME_FROM_PERSISTENT_STATE_VERIFIED",
+    "NO_DUPLICATE_CANONICAL_WRITES",
+    "EXTERNAL_EVIDENCE_QUARANTINED_UNTIL_VERIFIED",
+    "NULL_FAILURE_TIMEOUT_PRESERVED"
+  ],
+  "stop_conditions": [
+    "PREREGISTRATION_VALIDATED",
+    "OPERATOR_REVIEW_BEFORE_EXECUTION",
+    "ALL_5_WORK_ITEMS_ACCOUNTED"
+  ],
+  "claim_ceiling": "LIVE_EMPIRICAL_PREREGISTERED_NOT_EXECUTED",
+  "fco_state": "PREREGISTERED",
+  "fcg_state": "NOT_APPENDED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+  "evidence_class": "LIVE_EMPIRICAL_EXPERIMENT_V1",
+  "input_packet_path": "eval/agent_native_builders_live_20260826/input_packets/TRACK02_RESUMABLE_BOUNDARY_INPUT.json"
+}

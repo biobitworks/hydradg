@@ -1,8 +1,15 @@
 #!/usr/bin/env python3
-"""Governed Deterministic Runner & Scorer for Agent Native Builders 20-Fixture Benchmark.
+"""DEVELOPMENT_SYNTHETIC_FIXTURE_SIMULATION — NOT EMPIRICAL EVIDENCE.
 
-Executes CONTROL (protocol-only) vs TREATMENT (HydraDG evidence/claim custody)
-across the 20 frozen preregistered fixtures on magicSTUDIObox.local.
+Governed Deterministic Runner & Scorer for Agent Native Builders 20-Fixture Benchmark.
+
+WARNING: This runner assigns TREATMENT observed values from fixture expected values
+and hard-codes treatment superiority. It performs zero model/MCP/runtime calls.
+Preserved for fixture/scorer development only.
+
+Live empirical successor lane: eval/agent_native_builders_live_20260826/
+See: eval/agent_native_builders_20260826/LANE_CLASSIFICATION.json
+     docs/ANB_LIVE_EMPIRICAL_EXPERIMENT_V1.md
 """
 import argparse
 import hashlib

@@ -1,0 +1,172 @@
+{
+  "schema": "hydradg.anb_live.plan.v1",
+  "phase": "PLAN",
+  "plan_id": "plan:anb_track01_cold_start_v1_20260826",
+  "track_id": "ANB_TRACK01_COLD_START_V1",
+  "created_at_utc": "2026-08-27T01:00:00Z",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "accepted_base_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_artifact_commit_sha": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "expected_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
+  "input_packet_path": "eval/agent_native_builders_live_20260826/input_packets/TRACK01_COLD_START_INPUT.json",
+  "input_packet_sha256": "682d4f720e564ea5b340655ba3d2fa29456d4a1bc7b1bd056935c43e5e67ea48",
+  "parent_accept_path": "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK01_COLD_START_V1_ACCEPT.json",
+  "execution_allowed": false,
+  "submit_allowed": false,
+  "merge_to_main_allowed": false,
+  "frozen_trials": [
+    {
+      "trial_id": "ANB_T01_TRIAL_01",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_02",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_03",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_04",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_05",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_06",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_07",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_08",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_09",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    },
+    {
+      "trial_id": "ANB_T01_TRIAL_10",
+      "initial_knowledge": "PUBLIC_HYDRADG_DOMAIN_ONLY",
+      "public_domain": "https://hydradg.vercel.app/",
+      "public_repo": "https://github.com/biobitworks/hydradg",
+      "preconfigured_mcp_endpoint": false,
+      "preconfigured_tool_catalog": false,
+      "preconfigured_private_api_url": false,
+      "preconfigured_hydradg_credential": false
+    }
+  ],
+  "credential_semantics": {
+    "per_trial_observation_fields": [
+      "DOMAIN_DISCOVERED",
+      "AGENT_MANIFEST_DISCOVERED",
+      "MCP_OR_MACHINE_SURFACE_DISCOVERED",
+      "CREDENTIAL_BOOTSTRAP_METHOD",
+      "CREDENTIAL_DISCOVERED",
+      "CREDENTIAL_ACQUIRED",
+      "PREEXISTING_CREDENTIAL_USED",
+      "TOOLS_DISCOVERED",
+      "BENIGN_REAL_WRITE_COMPLETED",
+      "PROPOSAL_QUARANTINED",
+      "CUSTODY_RECEIPT_RETURNED",
+      "CUSTODY_RECEIPT_VERIFIED",
+      "UNAUTHORIZED_PRIVATE_READ_DENIED",
+      "UNAUTHORIZED_CANONICAL_WRITE_DENIED"
+    ],
+    "record_discovery_fields_separately": true,
+    "preexisting_sponsor_model_credential_may_be_used_for_inference": true,
+    "preexisting_sponsor_model_credential_not_counted_as_hydradg_cold_start_acquisition": true,
+    "hydradg_cold_start_requires_CREDENTIAL_ACQUIRED_via_discovered_scoped_surface": true,
+    "PREEXISTING_CREDENTIAL_USED_must_not_satisfy_CREDENTIAL_ACQUIRED_for_hydradg": true
+  },
+  "timeout_retry_policy": {
+    "frozen_before_trial_01": true,
+    "trial_timeout_seconds": 900,
+    "max_retries": 1,
+    "retry_on": [
+      "TIMEOUT",
+      "TRANSIENT_NETWORK"
+    ],
+    "no_retry_on": [
+      "POLICY_DENIAL",
+      "AUTH_REJECTED",
+      "SCHEMA_FAIL"
+    ]
+  },
+  "tenki_fallback": {
+    "preferred": "Tenki disposable environment when event credit available",
+    "fallback_host": "magicSTUDIObox.local",
+    "fresh_isolated_profile": true,
+    "no_hydradg_state": true,
+    "no_cached_mcp_endpoint": true,
+    "no_hydradg_credentials": true,
+    "no_previous_conversation_state": true
+  },
+  "results_path": "eval/agent_native_builders_live_20260826/results/track01/",
+  "evidence_class_rules_ref": "eval/agent_native_builders_live_20260826/EVIDENCE_CLASSIFICATION_V1.json",
+  "claim_ceiling": "PLAN_ONLY_NOT_EXECUTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "hydradg.anb_live.evidence_classification.v1",
+  "supersedes": "blanket_term_EXTERNAL_PROBABILISTIC_EVIDENCE",
+  "decision_id": "DEC-ANB-LIVE-003",
+  "created_at_utc": "2026-08-27T01:00:00Z",
+  "note": "Classify outputs individually. Tenki is an execution environment and does not determine evidence class.",
+  "classes": {
+    "EXTERNALLY_RETRIEVED_EVIDENCE": "Tavily/search/API retrieved source material; external service receipts/metadata where applicable",
+    "PROBABILISTIC_MODEL_OUTPUT": "LLM/agent generations from Runtype, Immersive Commons, AIsa, Nebius or other model providers",
+    "DETERMINISTIC_TOOL_OUTPUT": "deterministic scripts/tools with frozen inputs/versions/parameters",
+    "RECOMPUTED_RESULT": "deterministic Studio recomputation",
+    "VERIFIED_EMPIRICAL_RESULT": "only after EXECUTE \u2192 VERIFY \u2192 SCIENCE_AUDIT gates pass"
+  },
+  "tenki_role": "EXECUTION_ENVIRONMENT_ONLY",
+  "signature_state": "NOT_SIGNED"
+}
