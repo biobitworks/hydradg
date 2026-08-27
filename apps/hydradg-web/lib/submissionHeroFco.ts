@@ -15,7 +15,7 @@ export const SUBMISSION_HERO = {
   pointers: {
     hydradg: {
       branch: "hack-hydra/hydralamp-20260826",
-      sha: "5b4bc20f0d20da96fe0e24090bafdeb3874280a4",
+      sha: "f6d3e0a6205ef1226d04325c402c63e1343803df",
       url: "https://github.com/biobitworks/hydradg",
     },
     hydralamp: {
