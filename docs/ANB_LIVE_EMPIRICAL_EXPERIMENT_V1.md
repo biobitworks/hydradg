@@ -1,8 +1,9 @@
 # HydraDG Agent Native Builders — Live Empirical Experiment V1
 
-**Status:** PREREGISTERED — NOT EXECUTED — NOT FOR SUBMISSION  
+**Status:** ACCEPTED — PLAN_CHECK PASS — NOT EXECUTED — NOT FOR SUBMISSION  
 **Branch:** `hack-hydra/agent-native-builders-20260826`  
-**Base SHA:** `2e4522c09922b7c323f8ebecae28aaca9bbc9f6a`  
+**Accepted base SHA (preregistration state):** `2ffb3e9ad528e464f83d0b777552aaa32d57333e`  
+**ACCEPT artifact commit SHA:** `3869da66a584815ae1f1f31d3b6edbfcc720135e`  
 **Scientific controller/scorer:** `magicSTUDIObox.local`  
 **Successor lane:** `eval/agent_native_builders_live_20260826/`  
 **Prior synthetic lane (preserved):** `eval/agent_native_builders_20260826/` → `DEVELOPMENT_SYNTHETIC_FIXTURE_SIMULATION`
@@ -94,7 +95,17 @@ Use before personal/paid resources:
 
 **Do not print or commit keys.**
 
-External Runtype/Tenki/model activity = `EXTERNAL_PROBABILISTIC_EVIDENCE` until bound to receipts on Studio.
+Do **not** use the blanket term `EXTERNAL_PROBABILISTIC_EVIDENCE` as a canonical evidence class. Classify outputs individually (see `eval/agent_native_builders_live_20260826/EVIDENCE_CLASSIFICATION_V1.json`):
+
+| Class | Meaning |
+|-------|---------|
+| `EXTERNALLY_RETRIEVED_EVIDENCE` | Tavily/search/API retrieved source material; external service receipts/metadata |
+| `PROBABILISTIC_MODEL_OUTPUT` | LLM/agent generations (Runtype, Immersive Commons, AIsa, Nebius, etc.) |
+| `DETERMINISTIC_TOOL_OUTPUT` | Deterministic scripts/tools with frozen inputs/versions/parameters |
+| `RECOMPUTED_RESULT` | Deterministic Studio recomputation |
+| `VERIFIED_EMPIRICAL_RESULT` | Only after EXECUTE → VERIFY → SCIENCE_AUDIT gates pass |
+
+Tenki is an **execution environment** and does not determine evidence class.
 
 ---
 
