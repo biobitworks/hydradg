@@ -1,0 +1,108 @@
+{
+  "schema": "hydradg.cotal_coordination_custody_ablation.preregistration.v1",
+  "experiment_id": "COTAL_HYDRADG_ABLATION_20260827",
+  "title": "Cotal coordination × HydraDG custody complementary ablation",
+  "framing": "NOT_WINNER_TAKE_ALL",
+  "goal": "Determine empirically what Cotal coordination contributes, what HydraDG custody contributes, and whether the combination provides complementary behavior.",
+  "execution_host": "magicSTUDIObox.local",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "cotal_upstream": {
+    "clone_url": "https://github.com/Cotal-AI/Cotal.git",
+    "pin_receipt": "eval/agent_native_sponsors_20260827/cotal/COTAL_UPSTREAM_PIN.json"
+  },
+  "preregistered_before_execution": true,
+  "live_llm_in_primary_benchmark": false,
+  "silent_retry": false,
+  "scorer_locked": true,
+  "yappy_is_benchmark_condition": false,
+  "yappy_demo": "ONE_ILLUSTRATIVE_AFTER_MATRIX_IF_CONFIGURED",
+  "hydralamp_overnight_rerun": false,
+  "runtype_rerun": false,
+  "alter_existing_sponsor_receipts": false,
+  "constants": {
+    "fixture_set": "FIXTURES.json",
+    "payload_bytes": "identical_per_fixture_across_conditions",
+    "roles": ["researcher", "custodian"],
+    "ordering": ["A_DIRECT_BASELINE", "B_COTAL_ONLY", "C_HYDRADG_ONLY", "D_COTAL_HYDRADG"],
+    "fixture_order": [
+      "01_NORMAL_HANDOFF",
+      "02_UNAUTHORIZED_WRITE",
+      "03_INVALID_SENDER_IDENTITY",
+      "04_REPLAY_DUPLICATE",
+      "05_RESTART_RECOVERY",
+      "06_CONTRADICTORY_CLAIMS",
+      "07_UNSOURCED_CLAIM",
+      "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "09_VALID_SOURCE_VALID_CLAIM",
+      "10_CORRUPTED_CUSTODY_RECEIPT"
+    ]
+  },
+  "conditions": {
+    "A_DIRECT_BASELINE": {
+      "coordination": "direct_HTTP_MCP",
+      "hydradg_custody": "OFF"
+    },
+    "B_COTAL_ONLY": {
+      "coordination": "cotal_local_JWT_mesh",
+      "hydradg_custody": "OFF"
+    },
+    "C_HYDRADG_ONLY": {
+      "coordination": "direct_HTTP_MCP",
+      "hydradg_custody": "ON"
+    },
+    "D_COTAL_HYDRADG": {
+      "coordination": "cotal_local_JWT_mesh",
+      "hydradg_custody": "ON"
+    }
+  },
+  "metric_families": {
+    "COORDINATION": [
+      "delivery_success",
+      "identity_authenticated",
+      "authorization_enforced",
+      "duplicate_delivery",
+      "ordered_delivery",
+      "restart_recovery",
+      "history_recovery",
+      "latency_ms"
+    ],
+    "CUSTODY": [
+      "source_preserved",
+      "evidence_class_correct",
+      "claim_admission",
+      "contradiction_preserved",
+      "unauthorized_canonical_write",
+      "receipt_recomputed",
+      "corrupt_receipt_rejected",
+      "earliest_divergence_identified"
+    ],
+    "collapse_to_single_score": false
+  },
+  "outcome_vocabulary": [
+    "PASS",
+    "FAIL",
+    "NULL",
+    "NEGATIVE",
+    "ERROR",
+    "TIMEOUT",
+    "ABSTAIN",
+    "CONTRADICTORY"
+  ],
+  "cryptographic_distinction": {
+    "cotal_message_signature_verification": "SEPARATE_FIELD",
+    "hydradg_fco_signature_state": "NOT_SIGNED",
+    "rule": "Never use Cotal message verification to set SIGNATURE_STATE=SIGNED. HydraDG remains NOT_SIGNED unless an actual authorized FCO private-key signing operation occurs."
+  },
+  "expected_complementarity_hypothesis": {
+    "statement": "Cotal improves coordination metrics (identity/auth/delivery/recovery) under mesh conditions; HydraDG custody improves custody metrics (admission/contradiction/unauthorized write/corrupt receipt). D should dominate A on the union of metric families without requiring either subsystem to win alone.",
+    "statistical_claim_ceiling": "DESCRIPTIVE_CONTRAST_ONLY",
+    "note": "No p-values claimed in this preregistration; RESULTS_MATRIX remains descriptive unless a later registered contrast is computed from arrays."
+  },
+  "stop_conditions": [
+    "Do not spawn live LLM agents for primary matrix",
+    "Do not rewrite sponsor mission receipts",
+    "Record ERROR/TIMEOUT/NULL honestly if mesh or custody path unavailable"
+  ],
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T06:35:00.000Z"
+}
