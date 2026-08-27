@@ -1,0 +1,618 @@
+{
+  "schema": "hydradg.cotal_coordination_custody_ablation.condition_receipt.v1",
+  "experiment_id": "COTAL_HYDRADG_ABLATION_20260827",
+  "condition": "C_HYDRADG_ONLY",
+  "coordination": "direct_HTTP_MCP",
+  "hydradg_custody": "ON",
+  "execution_host": "magicSTUDIObox.local",
+  "recorded_at_utc": "2026-08-27T06:47:41Z",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "mesh_bringup": {
+    "up_returncode": null,
+    "skipped": true
+  },
+  "unauthorized_canonical_writes": 0,
+  "canonical_claim_count": 0,
+  "successor_claim_count": 5,
+  "rejected_count": 6,
+  "contradiction_count": 1,
+  "rows": [
+    {
+      "fixture_id": "01_NORMAL_HANDOFF",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "a07efd81ba04a244187f6a419489484496b180bd269b126ccbae28159fcb2b2b",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 1
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "canonical_writes": 0
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "02_UNAUTHORIZED_WRITE",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "FAIL",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "38c28b3a53cdf5749471eb34cc541ff44af763b6e2820f8df2f0c134a42b142f",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "FAIL",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "intruder",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 2
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "canonical_writes": 0
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "03_INVALID_SENDER_IDENTITY",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "FAIL",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "2c55f94b5e168efb42d2f558af1b07c8cb3b24dfb678882d5cfc7a32bb92e22f",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "FAIL",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 3
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON"
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "04_REPLAY_DUPLICATE",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "FAIL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "39ce4d9a526f3654f6e156a5a2f9b0d7e5594dc6ee12a1e323e0a6ef632a1a5d",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "first": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "PASS",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 4
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          },
+          "second": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "FAIL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": true,
+              "message_count": 4
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "canonical_writes": 0
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "05_RESTART_RECOVERY",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "PASS",
+        "history_recovery": "PASS",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "99ed1cf7769482e6549f7c4d1807e4d8b69512953840b1ba584525285b0ba0e1",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "restart": {
+            "restart_recovery": "PASS",
+            "history_recovery": "PASS",
+            "before_count": 5,
+            "after_count": 5
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "canonical_writes": 0
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "06_CONTRADICTORY_CLAIMS",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "CONTRADICTORY",
+        "contradiction_preserved": "PASS",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "d51344f32909e0a9c88f25dbc2e0cdaa5aac8d46905252f259d035ba71251a6b",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 6
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "contradiction": {
+            "prior": "Source asserts tool set includes search/extract/crawl/map.",
+            "incoming": "Source asserts tool set is search-only.",
+            "status": "CONTRADICTORY"
+          }
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "07_UNSOURCED_CLAIM",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "FAIL",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "ad3c0c9312049a16a59d397ec97aef8d2d594b294c39a5136d5dbc2b1c42c33e",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 7
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON"
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "d90b7ff950563bd6523e169c6f1e786dbcf12804fad8265613a5ca8fa700a2b3",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 8
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON"
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "09_VALID_SOURCE_VALID_CLAIM",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "f7609a3199bcc71bae1b87a2c271f05a9ce83170a910e9d2213a0176b19add71",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 9
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "canonical_writes": 0
+        }
+      },
+      "outcome_vocabulary_respected": true
+    },
+    {
+      "fixture_id": "10_CORRUPTED_CUSTODY_RECEIPT",
+      "condition": "C_HYDRADG_ONLY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "PASS",
+        "corrupt_receipt_rejected": "PASS",
+        "earliest_divergence_identified": "PASS"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+      "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+      "payload_sha256": "296581b4a754fd21b2c4e6edeec8a252b3b0c34f4a194c9e40cee048cb498c52",
+      "elapsed_ms": 0,
+      "detail": {
+        "coordination": {
+          "send": {
+            "delivery_success": "PASS",
+            "identity_authenticated": "ABSTAIN",
+            "authorization_enforced": "ABSTAIN",
+            "duplicate_delivery": "NULL",
+            "ordered_delivery": "PASS",
+            "latency_ms": 0,
+            "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+            "broker_principal": null,
+            "effective_sender_role": "researcher",
+            "raw": {
+              "mode": "direct",
+              "duplicate": false,
+              "message_count": 10
+            },
+            "auth_outcome": "NULL",
+            "authenticated": false
+          }
+        },
+        "custody_extra": {
+          "SIGNATURE_STATE": "NOT_SIGNED",
+          "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT",
+          "fcg_identity": "SUCCESSOR_NOT_CANONICAL",
+          "custody": "ON",
+          "computed_sha256": "3ee6b83a3ee6eb580744fd208bf1deb4c64bfe1377ad382240cae023a12ad170"
+        }
+      },
+      "outcome_vocabulary_respected": true
+    }
+  ]
+}

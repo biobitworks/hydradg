@@ -1,0 +1,1677 @@
+{
+  "schema": "hydradg.cotal_coordination_custody_ablation.results_matrix.v1",
+  "experiment_id": "COTAL_HYDRADG_ABLATION_20260827",
+  "execution_host": "magicSTUDIObox.local",
+  "recorded_at_utc": "2026-08-27T06:48:11Z",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "metric_families_separate": true,
+  "rows": [
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "01_NORMAL_HANDOFF",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "02_UNAUTHORIZED_WRITE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "FAIL",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "FAIL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "03_INVALID_SENDER_IDENTITY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "FAIL",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "04_REPLAY_DUPLICATE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "FAIL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "05_RESTART_RECOVERY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "PASS",
+        "history_recovery": "PASS",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "06_CONTRADICTORY_CLAIMS",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "FAIL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "07_UNSOURCED_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "FAIL",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "09_VALID_SOURCE_VALID_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "A_DIRECT_BASELINE",
+      "fixture_id": "10_CORRUPTED_CUSTODY_RECEIPT",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "ABSTAIN",
+        "corrupt_receipt_rejected": "FAIL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "01_NORMAL_HANDOFF",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 767
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "02_UNAUTHORIZED_WRITE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "FAIL",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 724
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "FAIL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "03_INVALID_SENDER_IDENTITY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "PASS",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 1389
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": {
+        "bogus": "REJECTED",
+        "spoof": "VERIFIED_CONNECTION"
+      }
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "04_REPLAY_DUPLICATE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "FAIL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 1514
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "05_RESTART_RECOVERY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NEGATIVE",
+        "history_recovery": "FAIL",
+        "latency_ms": 746
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "06_CONTRADICTORY_CLAIMS",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 756
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "FAIL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "07_UNSOURCED_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 724
+      },
+      "CUSTODY": {
+        "source_preserved": "FAIL",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 702
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "09_VALID_SOURCE_VALID_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 741
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "B_COTAL_ONLY",
+      "fixture_id": "10_CORRUPTED_CUSTODY_RECEIPT",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 741
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "ABSTAIN",
+        "corrupt_receipt_rejected": "FAIL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "01_NORMAL_HANDOFF",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "02_UNAUTHORIZED_WRITE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "FAIL",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "03_INVALID_SENDER_IDENTITY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "FAIL",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "04_REPLAY_DUPLICATE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "FAIL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "05_RESTART_RECOVERY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "PASS",
+        "history_recovery": "PASS",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "06_CONTRADICTORY_CLAIMS",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "CONTRADICTORY",
+        "contradiction_preserved": "PASS",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "07_UNSOURCED_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "FAIL",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "09_VALID_SOURCE_VALID_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "C_HYDRADG_ONLY",
+      "fixture_id": "10_CORRUPTED_CUSTODY_RECEIPT",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "ABSTAIN",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 0
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "PASS",
+        "corrupt_receipt_rejected": "PASS",
+        "earliest_divergence_identified": "PASS"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "01_NORMAL_HANDOFF",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 727
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "02_UNAUTHORIZED_WRITE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "FAIL",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 729
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "03_INVALID_SENDER_IDENTITY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "PASS",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 1386
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": {
+        "bogus": "REJECTED",
+        "spoof": "VERIFIED_CONNECTION"
+      }
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "04_REPLAY_DUPLICATE",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "FAIL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 1451
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "05_RESTART_RECOVERY",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "PASS",
+        "history_recovery": "PASS",
+        "latency_ms": 815
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "06_CONTRADICTORY_CLAIMS",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 771
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "CONTRADICTORY",
+        "contradiction_preserved": "PASS",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "07_UNSOURCED_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 1184
+      },
+      "CUSTODY": {
+        "source_preserved": "FAIL",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 838
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "09_VALID_SOURCE_VALID_CLAIM",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 791
+      },
+      "CUSTODY": {
+        "source_preserved": "PASS",
+        "evidence_class_correct": "PASS",
+        "claim_admission": "PASS",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "PASS",
+        "receipt_recomputed": "NULL",
+        "corrupt_receipt_rejected": "NULL",
+        "earliest_divergence_identified": "NULL"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    },
+    {
+      "condition": "D_COTAL_HYDRADG",
+      "fixture_id": "10_CORRUPTED_CUSTODY_RECEIPT",
+      "COORDINATION": {
+        "delivery_success": "PASS",
+        "identity_authenticated": "PASS",
+        "authorization_enforced": "ABSTAIN",
+        "duplicate_delivery": "NULL",
+        "ordered_delivery": "PASS",
+        "restart_recovery": "NULL",
+        "history_recovery": "NULL",
+        "latency_ms": 741
+      },
+      "CUSTODY": {
+        "source_preserved": "NULL",
+        "evidence_class_correct": "NULL",
+        "claim_admission": "NEGATIVE",
+        "contradiction_preserved": "NULL",
+        "unauthorized_canonical_write": "NULL",
+        "receipt_recomputed": "PASS",
+        "corrupt_receipt_rejected": "PASS",
+        "earliest_divergence_identified": "PASS"
+      },
+      "SIGNATURE_STATE": "NOT_SIGNED",
+      "cotal_message_signature_verification": "VERIFIED_CONNECTION"
+    }
+  ],
+  "descriptive_contrasts": {
+    "coordination_cotal_vs_direct": {
+      "B_vs_A": {
+        "delivery_success": {
+          "B": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "A": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          }
+        },
+        "identity_authenticated": {
+          "B": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "A": {
+            "n": 10,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "ABSTAIN",
+              "ABSTAIN",
+              "FAIL",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN"
+            ]
+          }
+        },
+        "authorization_enforced": {
+          "B": {
+            "n": 10,
+            "pass": 1,
+            "rate": 0.1,
+            "values": [
+              "ABSTAIN",
+              "FAIL",
+              "PASS",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN"
+            ]
+          },
+          "A": {
+            "n": 10,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "ABSTAIN",
+              "FAIL",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN"
+            ]
+          }
+        },
+        "duplicate_delivery": {
+          "B": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          },
+          "A": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "restart_recovery": {
+          "B": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "NEGATIVE"
+            ]
+          },
+          "A": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          }
+        },
+        "history_recovery": {
+          "B": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          },
+          "A": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          }
+        }
+      },
+      "D_vs_C": {
+        "delivery_success": {
+          "D": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "C": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          }
+        },
+        "identity_authenticated": {
+          "D": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "C": {
+            "n": 10,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "ABSTAIN",
+              "ABSTAIN",
+              "FAIL",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN"
+            ]
+          }
+        },
+        "authorization_enforced": {
+          "D": {
+            "n": 10,
+            "pass": 1,
+            "rate": 0.1,
+            "values": [
+              "ABSTAIN",
+              "FAIL",
+              "PASS",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN"
+            ]
+          },
+          "C": {
+            "n": 10,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "ABSTAIN",
+              "FAIL",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN",
+              "ABSTAIN"
+            ]
+          }
+        },
+        "duplicate_delivery": {
+          "D": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          },
+          "C": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "restart_recovery": {
+          "D": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          },
+          "C": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          }
+        },
+        "history_recovery": {
+          "D": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          },
+          "C": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          }
+        }
+      }
+    },
+    "custody_on_vs_off": {
+      "C_vs_A": {
+        "claim_admission": {
+          "C": {
+            "n": 10,
+            "pass": 3,
+            "rate": 0.3,
+            "values": [
+              "PASS",
+              "NEGATIVE",
+              "NEGATIVE",
+              "NEGATIVE",
+              "PASS",
+              "CONTRADICTORY",
+              "NEGATIVE",
+              "NEGATIVE",
+              "PASS",
+              "NEGATIVE"
+            ]
+          },
+          "A": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          }
+        },
+        "contradiction_preserved": {
+          "C": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          },
+          "A": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "unauthorized_canonical_write": {
+          "C": {
+            "n": 6,
+            "pass": 6,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "A": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "corrupt_receipt_rejected": {
+          "C": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          },
+          "A": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "source_preserved": {
+          "C": {
+            "n": 7,
+            "pass": 6,
+            "rate": 0.8571428571428571,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "FAIL",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "A": {
+            "n": 8,
+            "pass": 7,
+            "rate": 0.875,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "FAIL",
+              "PASS",
+              "PASS"
+            ]
+          }
+        }
+      },
+      "D_vs_B": {
+        "claim_admission": {
+          "D": {
+            "n": 10,
+            "pass": 3,
+            "rate": 0.3,
+            "values": [
+              "PASS",
+              "NEGATIVE",
+              "NEGATIVE",
+              "NEGATIVE",
+              "PASS",
+              "CONTRADICTORY",
+              "NEGATIVE",
+              "NEGATIVE",
+              "PASS",
+              "NEGATIVE"
+            ]
+          },
+          "B": {
+            "n": 10,
+            "pass": 10,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          }
+        },
+        "contradiction_preserved": {
+          "D": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          },
+          "B": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "unauthorized_canonical_write": {
+          "D": {
+            "n": 6,
+            "pass": 6,
+            "rate": 1.0,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "B": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "corrupt_receipt_rejected": {
+          "D": {
+            "n": 1,
+            "pass": 1,
+            "rate": 1.0,
+            "values": [
+              "PASS"
+            ]
+          },
+          "B": {
+            "n": 1,
+            "pass": 0,
+            "rate": 0.0,
+            "values": [
+              "FAIL"
+            ]
+          }
+        },
+        "source_preserved": {
+          "D": {
+            "n": 7,
+            "pass": 6,
+            "rate": 0.8571428571428571,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "FAIL",
+              "PASS",
+              "PASS"
+            ]
+          },
+          "B": {
+            "n": 8,
+            "pass": 7,
+            "rate": 0.875,
+            "values": [
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "PASS",
+              "FAIL",
+              "PASS",
+              "PASS"
+            ]
+          }
+        }
+      }
+    },
+    "collapsed_single_score": false
+  },
+  "condition_summaries": {
+    "A_DIRECT_BASELINE": {
+      "unauthorized_canonical_writes": 1,
+      "canonical_claim_count": 9,
+      "successor_claim_count": 0,
+      "rejected_count": 0,
+      "contradiction_count": 0
+    },
+    "B_COTAL_ONLY": {
+      "unauthorized_canonical_writes": 1,
+      "canonical_claim_count": 9,
+      "successor_claim_count": 0,
+      "rejected_count": 0,
+      "contradiction_count": 0
+    },
+    "C_HYDRADG_ONLY": {
+      "unauthorized_canonical_writes": 0,
+      "canonical_claim_count": 0,
+      "successor_claim_count": 5,
+      "rejected_count": 6,
+      "contradiction_count": 1
+    },
+    "D_COTAL_HYDRADG": {
+      "unauthorized_canonical_writes": 0,
+      "canonical_claim_count": 0,
+      "successor_claim_count": 5,
+      "rejected_count": 6,
+      "contradiction_count": 1
+    }
+  }
+}
