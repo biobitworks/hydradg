@@ -245,6 +245,22 @@ export const KNOWLEDGE_TERMS: KnowledgeTerm[] = [
     howTo: "Preserve the completed null/negative full500 retrieval result while separately executing the fresh state-transition golden path and future governed treatment comparisons.",
     graphQuery: "HydraMemory",
   },
+  {
+    slug: "hydralamp-submission-hero",
+    term: "HydraLamp Submission Hero",
+    short: "Content-addressed submission hero media FCO with sponsor/track annotation regions for Immersive Commons judge navigation.",
+    howTo: "Open /submission, inspect the SubmissionHeroMediaFCO by hash, and follow golden-path steps without treating the image as canonical FCG append evidence.",
+    graphQuery: "SubmissionHeroMediaFCO",
+    external: "/submission",
+  },
+  {
+    slug: "licensing-split",
+    term: "Licensing Split",
+    short: "HydraDG software is Apache-2.0; FCO/FCG research content and designated submission media are CC BY-NC-ND 4.0.",
+    howTo: "Read LICENSING.md before reusing artifacts. License metadata is rights declaration only — not a hash, signature, or scientific verification result.",
+    graphQuery: "license",
+    external: "https://github.com/biobitworks/hydradg/blob/hack-hydra/hydralamp-20260826/LICENSING.md",
+  },
 ];
 
 export function knowledgeTerm(term: string) {

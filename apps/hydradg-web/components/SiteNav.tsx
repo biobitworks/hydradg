@@ -11,6 +11,7 @@ const PRIMARY_NAV = [
   ["Results", "/track03"],
   ["Graph", "/graph"],
   ["HydraLamp", "/hydralamp"],
+  ["Submission", "/submission"],
   ["Providers", "/providers"],
 ] as const;
 

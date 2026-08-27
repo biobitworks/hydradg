@@ -1,0 +1,89 @@
+{
+  "schema": "hydradg.immersive_commons.operator_approval_packet.v1",
+  "recorded_at_utc": "2026-08-27T22:35:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "event_id": "anb-hack-01",
+  "application_id": "a_74a64b4f0be8f50a",
+  "submission_write_state": "AWAITING_HUMAN_APPROVAL",
+  "operator_approval_required": true,
+  "approval_strings": [
+    "APPROVE IMMERSIVE COMMONS SUBMISSION",
+    "SUBMIT THIS EXACT PAYLOAD"
+  ],
+  "sealed_payload": {
+    "path": "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+    "sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+    "bytes": 1743,
+    "title": "HydraLamp",
+    "repo_url": "https://github.com/biobitworks/hydradg",
+    "demo_url": "https://hydralamp.vercel.app/",
+    "folder_id": null
+  },
+  "repository_pointers": {
+    "hydradg": {
+      "branch": "hack-hydra/hydralamp-20260826",
+      "sha_pending_commit": "PENDING_THIS_COMMIT",
+      "remote": "https://github.com/biobitworks/hydradg"
+    },
+    "hydralamp": {
+      "branch": "prototype/deterministic-local-20260826",
+      "sha": "d3d928aae47e12afa99c25bd5d1cd94ef74c3da7",
+      "remote": "https://github.com/biobitworks/hydralamp",
+      "demo_url": "https://hydralamp.vercel.app/"
+    },
+    "immersive_commons_integration": {
+      "branch": "main",
+      "sha": "8cc82a2",
+      "remote": "https://github.com/biobitworks/immersivecommons-integration"
+    }
+  },
+  "submission_hero_fco": {
+    "capture_id": "hydralamp-submission-hero-20260827",
+    "fco_id": "fco:c39e474cfb598c86ba66b288403850aec57e65573f31342bc9644487e4a40ddc",
+    "image_sha256": "a5d558ab914b08da7373f858fbe79f60871315740e2abe06c39c31367c392b09",
+    "public_path": "/submission/HYDRALAMP_SUBMISSION_HERO.png",
+    "website_route": "/submission",
+    "binding_path": "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_FCO_BINDING.json"
+  },
+  "license_preference": {
+    "software": "Apache-2.0",
+    "research_content_and_submission_hero": "CC-BY-NC-ND-4.0",
+    "superseded_cc_by_4": "SUPERSEDED_METADATA_ERROR",
+    "authority": "LICENSING.md"
+  },
+  "judge_path_steps": [
+    { "step": "01", "title": "Reference", "href": "/judge#golden-reference" },
+    { "step": "02", "title": "Poison", "href": "/judge#golden-poison" },
+    { "step": "03", "title": "Antidote", "href": "/judge#golden-antidote" },
+    { "step": "04", "title": "HydraDB", "href": "/judge#hydradb-status" },
+    { "step": "05", "title": "Results", "href": "/track03" },
+    { "step": "06", "title": "Evidence", "href": "/evidence" },
+    { "step": "07", "title": "Future", "href": "/beam-1m" },
+    { "step": "08", "title": "Claim", "href": "/eligibility" }
+  ],
+  "deployment_links": {
+    "vercel_production": "https://hydralamp.vercel.app/",
+    "vercel_golden": "https://hydralamp.vercel.app/golden",
+    "vercel_static_fallback": "https://hydralamp.vercel.app/demo/index.html",
+    "local_submission_page": "http://127.0.0.1:3000/submission",
+    "local_judge": "http://127.0.0.1:3000/judge#golden-reference"
+  },
+  "gates": {
+    "SECRET_SOURCE_TYPE": "UNTRACKED_ENV_FILE",
+    "REGISTRATION_GATE": "FAIL_applied_pending",
+    "TEAM_GATE": "FAIL_team_null",
+    "REPO_URL_GATE": "PASS",
+    "DEMO_URL_GATE": "PASS",
+    "SUBMISSION_WINDOW_GATE": "OPEN"
+  },
+  "knowledge_graph": {
+    "website_projection": "hydradg.website_knowledge_projection.v1",
+    "hero_term_slug": "hydralamp-submission-hero",
+    "fcg_append_state": "NOT_APPENDED",
+    "signature_state": "NOT_SIGNED",
+    "merkle_state": "NOT_COMMITTED"
+  },
+  "cursor_finish_prompt": "eval/immersive_commons_submission_20260827/CURSOR_IC_FINAL_SUBMISSION_PROMPT.md",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED"
+}

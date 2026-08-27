@@ -11,6 +11,7 @@ const SECTION_SPECS = [
   { route: "/track02", label: "Track 02", role: "dependency-blast-radius", claim: "TRACK02_IMPLEMENTATION_STATUS" },
   { route: "/track03", label: "Track 03", role: "temporal-memory-retrieval", claim: "TRACK03_EXECUTED_EVIDENCE_STATUS" },
   { route: "/eligibility", label: "Eligibility", role: "rules-custody-and-release-gate", claim: "SUBMISSION_ELIGIBILITY_AUDIT" },
+  { route: "/submission", label: "Submission", role: "immersive-commons-submission-hero", claim: "SUBMISSION_HERO_NAVIGATION_AND_CUSTODY_RECEIPT_ONLY" },
 ] as const;
 
 export function buildSiteFcg() {
@@ -42,6 +43,10 @@ export function buildSiteFcg() {
     ["/knowledge", "OPENS_IN", "/graph"],
     ["/evidence", "BOUNDED_BY", "/eligibility"],
     ["/", "BOUNDED_BY", "/eligibility"],
+    ["/submission", "NAVIGATES_TO", "/judge"],
+    ["/submission", "VISUALIZES_WITH", "/graph"],
+    ["/submission", "SUPPORTED_BY", "/evidence"],
+    ["/submission", "BOUNDED_BY", "/eligibility"],
   ] as const;
 
   const edges = edgeSpecs.map(([sourceRoute, relation, targetRoute]) => ({
