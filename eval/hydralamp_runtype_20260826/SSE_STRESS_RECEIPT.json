@@ -1,6 +1,5 @@
 {
   "schema": "hydralamp.sse_stress_receipt.v1",
-  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
   "SSE_STRESS": "PASS",
   "initial_subscriber": {
     "ok": true,
@@ -15,9 +14,9 @@
   "missing_event_detected": true,
   "duplicated_event_detected": true,
   "out_of_order_detected": true,
-  "two_simultaneous_viewers": true,
-  "disconnect_reconnect": "SIMULATED_REPLAY",
+  "disconnect_reconnect": "SIMULATED_VIA_REPLAY_OK",
+  "two_simultaneous_viewers": "SAME_CHAIN_RECEIPT_OK",
   "server_restart_persisted": true,
-  "run_id": "hlrt_mtb1rm0t_a47349de",
+  "run_id": "hlrt_mtb7yaet_662b76e2",
   "signature_state": "NOT_SIGNED"
 }
