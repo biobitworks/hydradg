@@ -75,13 +75,52 @@
   font-size: 11px;
   cursor: pointer;
 }
-.hlDiagPanel {
-  margin-top: 0.75rem;
-  padding: 0.75rem;
-  border: 1px dashed #334155;
-  border-radius: 8px;
-  color: #94a3b8;
+.hlCortexSuccessor {
+  margin: 0 0 1.25rem;
+  padding: 1rem 1.1rem;
+  border: 1px solid rgba(167, 139, 250, 0.35);
+  border-radius: 12px;
+  background: rgba(30, 27, 75, 0.35);
 }
+.hlCortexBoundary {
+  font-size: 12px;
+  margin: 0.5rem 0;
+  color: #cbd5e1;
+}
+.hlCortexTag {
+  color: #a78bfa;
+  font-weight: 600;
+}
+.hlHydraTag {
+  color: #38bdf8;
+  font-weight: 600;
+}
+.hlCortexGates {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1rem;
+  font-size: 12px;
+  color: #94a3b8;
+  margin-bottom: 0.5rem;
+}
+.hlCortexSteps {
+  list-style: none;
+  margin: 0.5rem 0;
+  padding: 0;
+  font-size: 12px;
+}
+.hlCortexSteps li {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 0.2rem 0;
+  border-bottom: 1px solid rgba(51, 65, 85, 0.5);
+}
+.hlCortexOutcome--PASS { color: #34d399; }
+.hlCortexOutcome--NEGATIVE { color: #fbbf24; }
+.hlCortexOutcome--CONTRADICTION { color: #f472b6; }
+.hlCortexOutcome--NULL { color: #94a3b8; }
+.hlCortexOutcome--ERROR { color: #f87171; }
 .hlLive {
   color: #34d399;
   font-size: 12px;

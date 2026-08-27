@@ -4,6 +4,7 @@ import { useCallback, useEffect, useMemo, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import SiteNav from "@/components/SiteNav";
 import JudgeMetricStrip from "@/components/hydralamp/JudgeMetricStrip";
+import CortexSuccessorStrip from "@/components/hydralamp/CortexSuccessorStrip";
 import { verifyEventHash } from "@/lib/hydralamp/hashBrowser";
 import "./hydralamp.css";
 
@@ -317,6 +318,7 @@ export default function HydraLampLivePage() {
         </header>
 
         <JudgeMetricStrip data={judgeSurface as never} />
+        <CortexSuccessorStrip />
 
         <section className="hlControls">
           <label>

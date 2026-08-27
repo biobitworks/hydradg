@@ -30,8 +30,8 @@ export const PRESERVED_STUDIO_RECEIPTS = {
   },
   Cortex: {
     receipt_path: "eval/agent_native_sponsors_20260827/cortex/CORTEX_MISSION_RECEIPT.json",
-    live_status: "ERROR",
-    error_code: "CORTEX_TRIAL_EXPIRED",
+    live_status: "PASS",
+    error_code: null as string | null,
     lane: "SPONSOR",
   },
   Daytona: {
@@ -105,7 +105,7 @@ export async function buildProviderStatus() {
       hosted_on_vercel: false,
       claim_ceiling: "EXTERNALLY_RETRIEVED_EVIDENCE",
       note:
-        "Scaffold only on Vercel. Preserve Studio ERROR / CORTEX_TRIAL_EXPIRED. " +
+        "Scaffold only on Vercel. Studio Mitosis Cortex roundtrip PASS (MagicStudioBox). " +
         vercelHostingNote("Mitosis Cortex / mi CLI"),
     },
     runtimeConfigRow(
@@ -184,7 +184,7 @@ export async function buildProviderStatus() {
     preserved_invariants: {
       Tavily: "PASS",
       Runtype: "ERROR",
-      Cortex: "ERROR / CORTEX_TRIAL_EXPIRED",
+      Cortex: "PASS",
       Daytona: "INFRASTRUCTURE / LIVE_PASS",
       Tenki: "SKIPPED until tenki login && tenki status",
     },

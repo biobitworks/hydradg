@@ -15,7 +15,7 @@
   "fcg_append": "NOT_APPENDED",
   "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
   "signature_state": "NOT_SIGNED",
-  "recorded_at_utc": "2026-08-27T05:49:38.760Z",
+  "recorded_at_utc": "2026-08-27T21:42:12.360Z",
   "remember": {
     "attempted": true,
     "command": [
@@ -32,10 +32,10 @@
       "--source",
       "hydradg-public-custody-receipt"
     ],
-    "exit_code": 2,
+    "exit_code": 0,
     "timed_out": false,
-    "raw_stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "raw_stderr_sha256": "53fef6762b9dd7c5bf8bf6efd74fd773050fbfa498995ae19417cbd6b7d61173",
+    "raw_stdout_sha256": "6f2710e9f5d7153b19eaf722725e29930ec2c90038991ec90f3d3ff5e1e6f07e",
+    "raw_stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
     "raw_artifact_path": "eval/agent_native_sponsors_20260827/cortex/raw/CORTEX_REMEMBER_RAW.txt",
     "note": "remember has no --json flag on mi CLI; streams hashed after secret redaction"
   },
@@ -52,25 +52,25 @@
       "--limit",
       "8"
     ],
-    "exit_code": 2,
+    "exit_code": 0,
     "timed_out": false,
-    "raw_response_sha256": "53fef6762b9dd7c5bf8bf6efd74fd773050fbfa498995ae19417cbd6b7d61173",
+    "raw_response_sha256": "043428caccb1d032329813f2e14aff14f53fd4c8a286f45788aaeb4249b130d3",
     "raw_artifact_path": "eval/agent_native_sponsors_20260827/cortex/raw/CORTEX_ASK_RAW.json",
-    "recovered_receipt_ref": null,
-    "recovery_state": "ERROR"
+    "recovered_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+    "recovery_state": "PASS"
   },
   "hydradg_verify": {
-    "status": "NULL",
-    "verified": false,
-    "computed": null,
+    "status": "PASS",
+    "verified": true,
+    "computed": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
     "declared": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
     "claim_ceiling": "RECOMPUTED_RESULT",
-    "recovered_ref_used": null
+    "recovered_ref_used": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json"
   },
-  "CORTEX_MEMORY_ROUNDTRIP": "ERROR",
-  "HYDRADG_RECEIPT_VERIFICATION": "MISS",
-  "status": "ERROR",
-  "error_code": "CORTEX_TRIAL_EXPIRED",
-  "error_summary": "Cortex office memory locked (trial_expired). Auth PASS; remember/ask blocked until plan unlock.",
+  "CORTEX_MEMORY_ROUNDTRIP": "PASS",
+  "HYDRADG_RECEIPT_VERIFICATION": "PASS",
+  "status": "PASS",
+  "error_code": null,
+  "error_summary": null,
   "secret_state": "PRESENT"
 }

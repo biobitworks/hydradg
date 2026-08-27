@@ -1,0 +1,50 @@
+{
+  "lane": "SPONSOR_INTEGRATION_LIVE",
+  "ui_demo_eligible": true,
+  "probes": [
+    {
+      "id": "A_MEMORY_WRITE",
+      "outcome": "PASS"
+    },
+    {
+      "id": "B_MEMORY_READ",
+      "outcome": "PASS"
+    },
+    {
+      "id": "C_PARAPHRASE_READ",
+      "outcome": "PASS"
+    },
+    {
+      "id": "D_POISON_CONFLICT",
+      "outcome": "PASS"
+    },
+    {
+      "id": "E_CURRENT_STATE_QUERY",
+      "outcome": "CONTRADICTION"
+    },
+    {
+      "id": "F_HYDRADG_CUSTODY_CHECK",
+      "outcome": "PASS"
+    },
+    {
+      "id": "G_ANTIDOTE_CORRECTION",
+      "outcome": "PASS"
+    },
+    {
+      "id": "H_RESTORATION_QUERY",
+      "outcome": "PASS"
+    },
+    {
+      "id": "I_NEGATIVE_ABSENT",
+      "outcome": "NEGATIVE"
+    },
+    {
+      "id": "J_RECEIPT_VERIFICATION",
+      "outcome": "PASS"
+    }
+  ],
+  "CORTEX_AUTH_CURRENT": "PASS",
+  "CORTEX_REMEMBER": "PASS",
+  "CORTEX_RECALL": "PASS",
+  "boundary": "Cortex memory ≠ HydraDG canonical FCG"
+}

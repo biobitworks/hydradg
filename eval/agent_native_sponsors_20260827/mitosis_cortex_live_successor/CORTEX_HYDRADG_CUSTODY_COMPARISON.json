@@ -1,0 +1,20 @@
+{
+  "schema": "sponsor.cortex.hydradg_custody_comparison.v1",
+  "recorded_at_utc": "2026-08-27T21:46:44.543Z",
+  "canonical_public_safe_receipt": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+  "canonical_sha256": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
+  "hydradg_verify": {
+    "status": "PASS",
+    "verified": true,
+    "computed": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
+    "declared": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
+    "claim_ceiling": "RECOMPUTED_RESULT"
+  },
+  "cortex_recall_contains_receipt_path": true,
+  "architectural_boundary": "Cortex memory is external tool evidence; FCG canonical custody remains HydraDG-only.",
+  "fcg_append": "NOT_APPENDED",
+  "graph_sketch": [
+    "PublicSafeFixtureFCO → CortexToolInvocationFCO → CortexResultFCO → HydraDGVerificationFCO → AdmissionDecisionFCO",
+    "ReferenceStateFCO → PoisonCandidateFCO CONTRADICTS ReferenceStateFCO → CorrectionFCO SUPERSEDES → DerivedCurrentStateFCO"
+  ]
+}

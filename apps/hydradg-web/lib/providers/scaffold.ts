@@ -14,7 +14,7 @@ export function cortexScaffoldHealth(): ProviderHealthRow {
     hosted_on_vercel: false,
     claim_ceiling: "EXTERNALLY_RETRIEVED_EVIDENCE",
     note:
-      "Scaffold only on Vercel. Preserve Studio Cortex trial-lock ERROR (CORTEX_TRIAL_EXPIRED). " +
+      "Scaffold only on Vercel. Studio Mitosis Cortex roundtrip PASS (MagicStudioBox). " +
       vercelHostingNote("Mitosis Cortex / mi CLI"),
   };
 }

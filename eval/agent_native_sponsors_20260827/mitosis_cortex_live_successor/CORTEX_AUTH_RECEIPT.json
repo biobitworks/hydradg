@@ -1,0 +1,26 @@
+{
+  "schema": "sponsor.cortex.auth_receipt.v1",
+  "recorded_at_utc": "2026-08-27T21:46:38.994Z",
+  "execution_host": "magicSTUDIObox.local",
+  "predecessor_receipt_ref": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
+  "predecessor_receipt_sha256": "c3c1d4d8c503c4d54ed6d9f0741f0c0dafddb2e9b68e2c6555b28a0449285dc0",
+  "CORTEX_PREDECESSOR_STATE": "PASS",
+  "CORTEX_AUTH_CURRENT": "PASS",
+  "mi_cli": "PRESENT",
+  "office_id": "3cd3118f-50fd-402c-868e-0f3e556d8dca",
+  "secret_boundary": {
+    "schema": "sponsor.cortex.secret_boundary.v1",
+    "immersive_commons_integration_repo": "biobitworks/immersivecommons-integration",
+    "credential_source_type": "user_environment",
+    "credential_name": "FLOOR10_AGENT_TOKEN",
+    "present": false,
+    "secret_value_exposed": false,
+    "tracked_plaintext_in_git": false,
+    "note": "IC token defined in PROJECT_CONTROL as user_environment only; not used for Cortex mi auth.",
+    "cortex_auth_source_type": "authenticated_mi_session",
+    "cortex_env_mi_api_key_present": false,
+    "secret_storage_gate": "PASS"
+  },
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "signature_state": "NOT_SIGNED"
+}

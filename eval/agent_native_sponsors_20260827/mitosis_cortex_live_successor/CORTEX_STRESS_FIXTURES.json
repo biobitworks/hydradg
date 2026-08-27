@@ -1,0 +1,12 @@
+{
+  "schema": "sponsor.cortex.stress_fixtures.v1",
+  "fixture_set_id": "MCX-LIVE-20260827",
+  "lane": "mitosis_cortex_live_successor",
+  "reference_token": "MCX-REF-001",
+  "reference_fact": "HYDRALAMP_SUCCESSOR_PROBE_REF=v1 lane=mitosis_cortex_live state=REFERENCE fixture_id=MCX-REF-001 canonical_label=DEMO_REFERENCE_ONLY",
+  "poison_fact": "HYDRALAMP_SUCCESSOR_PROBE_POISON=v1 lane=mitosis_cortex_live state=POISON fixture_id=MCX-POISON-001 claims=lane_FAILED contradicts=MCX-REF-001",
+  "antidote_fact": "HYDRALAMP_SUCCESSOR_ANTIDOTE=v1 lane=mitosis_cortex_live state=RESTORATION fixture_id=MCX-ANT-001 supersedes=MCX-POISON-001 restores=MCX-REF-001",
+  "absent_query_token": "MCX-ABSENT-999",
+  "public_safe_receipt_ref": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+  "note": "Public-safe synthetic fixtures only; not frozen 46-event HydraLamp submission."
+}
