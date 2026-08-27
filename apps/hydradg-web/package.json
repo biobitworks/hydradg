@@ -9,7 +9,12 @@
     "start": "next start",
     "typecheck": "tsc --noEmit",
     "hydralamp:custody-stress": "tsx scripts/hydralamp_custody_stress.mts",
-    "hydralamp:overnight": "tsx scripts/hydralamp_overnight.mts"
+    "hydralamp:overnight": "tsx scripts/hydralamp_overnight.mts",
+    "sponsor:discovery": "tsx scripts/sponsor_discovery_bootstrap.mts",
+    "sponsor:tavily": "tsx scripts/sponsor_tavily_mission.mts",
+    "sponsor:runtype": "tsx scripts/sponsor_runtype_mission.mts",
+    "sponsor:immersive-commons": "tsx scripts/sponsor_immersive_commons_mission.mts",
+    "sponsor:closeout": "tsx scripts/sponsor_closeout.mts"
   },
   "dependencies": {
     "@runtypelabs/sdk": "^9.2.0",

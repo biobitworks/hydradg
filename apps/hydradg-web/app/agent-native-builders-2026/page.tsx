@@ -1,4 +1,5 @@
 import React from "react";
+import SponsorMissionPanel from "@/components/sponsors/SponsorMissionPanel";
 
 export const metadata = {
   title: "Agent Native Builders 2026 — Evidence Gateway Benchmark",
@@ -28,7 +29,8 @@ export default function AgentNativeBuildersPage() {
       <h1>HydraDG Agent-Native Evidence Gateway</h1>
       <h2>Preregistered 20-Fixture Benchmark Results</h2>
       <p><strong>Execution Host:</strong> <code>magicSTUDIObox.local</code></p>
-      <p><strong>Branch:</strong> <code>hack-hydra/agent-native-builders-20260826</code></p>
+      <p><strong>Branch:</strong> <code>hack-hydra/hydralamp-20260826</code></p>
+      <SponsorMissionPanel />
       
       <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "1.5rem" }}>
         <thead>
