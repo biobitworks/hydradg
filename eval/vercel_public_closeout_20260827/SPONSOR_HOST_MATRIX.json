@@ -1,0 +1,131 @@
+{
+  "schema": "hydradg.sponsor_host_matrix.v1",
+  "recorded_at_utc": "2026-08-27T23:55:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "note": "CONFIGURED != PASS. Cortex is external memory, not canonical FCG. Cloudflare is venue/host context unless event evidence names a sponsor integration.",
+  "rows": [
+    {
+      "name": "Runtype",
+      "role": "organizer/challenge integration",
+      "implemented": true,
+      "local_live_verified": "PARTIAL",
+      "external_live_verified": "ERROR",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R0_SDK.json (PASS) … R3_STRUCTURED.json (FAIL TEST_KEY_DAILY_LIMIT_EXCEEDED)",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "state_summary": "R0–R2 PASS with execution_id; R3–R6 FAIL 429 quota; prior ERROR receipts preserved"
+    },
+    {
+      "name": "Mitosis Labs / Cortex",
+      "role": "sponsor integration — external agent memory",
+      "implemented": true,
+      "local_live_verified": "PASS",
+      "external_live_verified": "PASS",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/mitosis_cortex_live_successor/MITOSIS_CORTEX_LIVE_SUCCESSOR.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "state_summary": "remember/recall/restore PASS on Studio; NOT canonical FCG"
+    },
+    {
+      "name": "Cloudflare",
+      "role": "venue/platform host context",
+      "implemented": false,
+      "local_live_verified": "SKIPPED",
+      "external_live_verified": "SKIPPED",
+      "replay_only": true,
+      "receipt": "LOCAL_DEMO_ARCHITECTURE_LABEL only — no verified Cloudflare OS product integration",
+      "claim_ceiling": "NOT_APPLICABLE",
+      "state_summary": "Do not label Cloudflare as sponsor unless event evidence says so; no wrangler/workers receipt in repo"
+    },
+    {
+      "name": "Immersive Commons",
+      "role": "event/submission platform",
+      "implemented": true,
+      "local_live_verified": "N/A",
+      "external_live_verified": "SUBMITTED",
+      "replay_only": false,
+      "receipt": "eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "state_summary": "IC_SUBMITTED; payload sha256=230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d; do not resubmit"
+    },
+    {
+      "name": "Tavily",
+      "role": "sponsor integration — evidence extract",
+      "implemented": true,
+      "local_live_verified": "PASS",
+      "external_live_verified": "PASS",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/tavily/TAVILY_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "state_summary": "CLI extract receipts on Studio"
+    },
+    {
+      "name": "Cotal",
+      "role": "sponsor integration — A2A mesh",
+      "implemented": "PARTIAL",
+      "local_live_verified": "SKIPPED",
+      "external_live_verified": "SKIPPED",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/cotal/COTAL_MISSION_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "state_summary": "DEFERRED_NONBLOCKING; gateway stubs exist"
+    },
+    {
+      "name": "AIsa",
+      "role": "sponsor integration — Tavily/AISDK bridge",
+      "implemented": true,
+      "local_live_verified": "PASS",
+      "external_live_verified": "PASS",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/tavily/TAVILY_AISDK_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "state_summary": "AISDK mission receipt on file"
+    },
+    {
+      "name": "Yappy.biz",
+      "role": "sponsor integration — Mitosis Yappy / API",
+      "implemented": "PARTIAL",
+      "local_live_verified": "BLOCKED",
+      "external_live_verified": "BLOCKED",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/yappy_biz/YAPPY_BIZ_API_MISSION_RECEIPT.json",
+      "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+      "state_summary": "MI_NO_AGENTS / auth blocked preserved"
+    },
+    {
+      "name": "Tenki",
+      "role": "sponsor integration — sandbox infra",
+      "implemented": "DISCOVERED",
+      "local_live_verified": "SKIPPED",
+      "external_live_verified": "SKIPPED",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/tenki/TENKI_MISSION_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "state_summary": "DEFERRED_NONBLOCKING"
+    },
+    {
+      "name": "Daytona",
+      "role": "infrastructure — isolated sandboxes",
+      "implemented": true,
+      "local_live_verified": "PASS",
+      "external_live_verified": "PASS",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "state_summary": "Smoke receipt; not scientific execution authority"
+    },
+    {
+      "name": "Hacker Bob",
+      "role": "security scan sponsor",
+      "implemented": "DISCOVERED",
+      "local_live_verified": "LINKS_VERIFIED_DOCTOR_ONLY",
+      "external_live_verified": "NOT_RUN",
+      "replay_only": false,
+      "receipt": "eval/agent_native_sponsors_20260827/hacker_bob/HACKER_BOB_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "state_summary": "Public links E2E PASS prerequisite; npx doctor backup only"
+    }
+  ],
+  "signature_state": "NOT_SIGNED",
+  "fcg_append_state": "NOT_APPENDED"
+}

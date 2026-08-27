@@ -1,0 +1,40 @@
+{
+  "schema": "hydradg.vercel_redeployment_fcg_note.v1",
+  "recorded_at_utc": "2026-08-27T23:55:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "version_check_policy": "HydraLamp /api/health sha is the canonical deployed-version gate for public parity. Redeployment anomalies are preserved here; they do not overwrite frozen scientific lane receipts.",
+  "FROZEN_46_EVENT_LANE": "NOT_TOUCHED",
+  "FROZEN_EVENT_SHA256": "44e9d3dc7014b9b2c410a9e1e2c9b35a72cd269e4e561eba40414081ca81690d",
+  "FCG_APPEND_STATE": "NOT_APPENDED",
+  "anomalies": [
+    {
+      "id": "HYDRALAMP_WRONG_VERCEL_PROJECT",
+      "severity": "OPERATOR_ERROR_RECOVERED",
+      "summary": "Initial CLI deploy from clean worktree created biobitworks/hydralamp-deploy-closeout instead of aliasing hydralamp.vercel.app.",
+      "resolution": "Redeployed with --project hydralamp; accidental project left idle.",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "id": "HYDRALAMP_HEALTH_SHA_UNKNOWN",
+      "severity": "ENV_BINDING_GAP_RECOVERED",
+      "summary": "CLI deploy without git linkage left /api/health sha=UNKNOWN because VERCEL_GIT_COMMIT_SHA unset and git unavailable in serverless runtime.",
+      "resolution": "Set HYDRALAMP_COMMIT_SHA=c6dcadfeff0fa31e63e7865b04e1bef07511edaf on Vercel production env; redeployed.",
+      "canonical_check": "GET https://hydralamp.vercel.app/api/health → sha must equal source HEAD"
+    },
+    {
+      "id": "HYDRALAMP_STALE_PRODUCTION",
+      "severity": "ALIAS_LAG_RECOVERED",
+      "summary": "Production alias reported sha=4e35a29e4b3d507063c7de01dbd2c8133681d1f8; submission_media returned 404.",
+      "resolution": "Promoted c6dcadfeff0fa31e63e7865b04e1bef07511edaf with media publication commit."
+    },
+    {
+      "id": "HYDRADG_SUBMISSION_404",
+      "severity": "ALIAS_LAG_RECOVERED",
+      "summary": "https://hydradg.vercel.app/submission returned 404 while exact-SHA preview for 56efebd1 was READY.",
+      "resolution": "Deployed from repo root with --archive=tgz to biobitworks/hydradg production."
+    }
+  ],
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED"
+}

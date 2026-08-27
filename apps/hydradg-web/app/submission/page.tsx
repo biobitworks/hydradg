@@ -31,6 +31,48 @@ export default function SubmissionPage() {
       <SubmissionHeroAnnotated />
 
       <section className="computeSection">
+        <span className="sectionNumber">00 / START HERE</span>
+        <h2 className="displayTitle">Public judge links — anonymous, no preview URLs.</h2>
+        <article className="panel">
+          <pre className="mono small" style={{ whiteSpace: "pre-wrap", lineHeight: 1.6 }}>
+{`START HERE
+https://hydralamp.vercel.app/
+
+INTERACTIVE THREE-PANE CONSOLE
+https://hydralamp.vercel.app/
+
+GOLDEN PATH
+https://hydralamp.vercel.app/golden
+
+20 SECOND VIDEO
+https://hydralamp.vercel.app/submission_media/HYDRALAMP_DEMO_20S.mp4
+
+3 MINUTE VIDEO
+https://hydralamp.vercel.app/submission_media/HYDRALAMP_DEMO_3MIN.mp4
+
+STATIC FALLBACK
+https://hydralamp.vercel.app/demo/index.html
+
+AGENT DISCOVERY
+https://hydralamp.vercel.app/.well-known/agent.json
+
+HEALTH / DEPLOYED SHA
+https://hydralamp.vercel.app/api/health
+
+FULL SUBMISSION + FCO/FCG EVIDENCE
+https://hydradg.vercel.app/submission
+
+SOURCE
+https://github.com/biobitworks/hydradg`}
+          </pre>
+          <p className="small muted note">
+            Version gate: HydraLamp <code>/api/health</code> must report{" "}
+            <code className="mono">sha=c6dcadfeff0fa31e63e7865b04e1bef07511edaf</code>. Redeployment anomalies are recorded in FCG notes, not erased.
+          </p>
+        </article>
+      </section>
+
+      <section className="computeSection">
         <span className="sectionNumber">01 / DEPLOYMENT POINTERS</span>
         <h2 className="displayTitle">Vercel production · local Studio · repos.</h2>
         <div className="grid twoCol">
@@ -42,7 +84,7 @@ export default function SubmissionPage() {
               <a className="secondary" href="https://hydralamp.vercel.app/golden" target="_blank" rel="noreferrer">Legacy golden path ↗</a>
               <a className="secondary" href="https://hydralamp.vercel.app/demo/index.html" target="_blank" rel="noreferrer">Static fallback ↗</a>
             </div>
-            <p className="small muted note">Anonymous HTTP 200 verified. Production alias may lag closeout SHA — check deployment receipt before judging parity claims.</p>
+            <p className="small muted note">Anonymous HTTP 200 verified at closeout. Confirm deployed SHA via <a href="https://hydralamp.vercel.app/api/health" target="_blank" rel="noreferrer">/api/health</a> before parity claims.</p>
           </article>
           <article className="panel">
             <p className="eyebrow">Local scientific authority</p>

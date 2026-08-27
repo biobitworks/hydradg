@@ -1,0 +1,78 @@
+{
+  "schema": "hydralamp.production_media_qa.v1",
+  "recorded_at_utc": "2026-08-27T23:50:56Z",
+  "base_url": "https://hydralamp.vercel.app",
+  "viewport": "1280x720",
+  "fresh_context": true,
+  "javascript_enabled": true,
+  "auth_cookies": false,
+  "pass": true,
+  "checks": [
+    {
+      "name": "root_loads",
+      "pass": true,
+      "detail": "https://hydralamp.vercel.app"
+    },
+    {
+      "name": "golden_path_loads",
+      "pass": true,
+      "detail": "https://hydralamp.vercel.app/golden"
+    },
+    {
+      "name": "manifest_public",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "video_20s_public",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "screenshot_00_reference",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "screenshot_01_poison",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "screenshot_02_denied",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "screenshot_03_repair",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "screenshot_04_restored",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "no_secret_text_body",
+      "pass": true,
+      "detail": "scanned"
+    },
+    {
+      "name": "no_secret_text_video_sample",
+      "pass": true,
+      "detail": "bytes=469743"
+    },
+    {
+      "name": "golden_next_click",
+      "pass": true,
+      "detail": "attempted"
+    }
+  ],
+  "PUBLIC_DEMO_GATE": "PASS",
+  "PUBLIC_VIDEO_GATE": "PASS",
+  "console_errors": [],
+  "manifest_sha256": "221ab2739df9a4f13bdb408dca18597bd9cd730477ed2c52b871c437415169a9",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED"
+}

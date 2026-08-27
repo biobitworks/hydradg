@@ -3,9 +3,24 @@
   "mission_id": "ANB-SP-HACKERBOB-SCAN-001",
   "provider": "Hacker Bob",
   "operation": "bounded_security_scan",
-  "status": "SKIPPED",
-  "error_summary": "Full MCP hunt deferred; package discovery recorded only. Findings are EXTERNALLY_RETRIEVED_EVIDENCE not verified vulnerabilities.",
-  "scanner_identity": "hacker-bob npm package (discovered)",
+  "status": "LINKS_VERIFIED_DOCTOR_ONLY",
+  "recorded_at_utc": "2026-08-27T23:52:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "prerequisite": {
+    "PUBLIC_LINKS_E2E": "PASS",
+    "receipt_ref": "eval/vercel_public_closeout_20260827/PUBLIC_LINKS_E2E_RECEIPT.json",
+    "hydralamp_sha_gate": "c6dcadfeff0fa31e63e7865b04e1bef07511edaf"
+  },
+  "scanner_identity": "hacker-bob@2.0.1 (npx local backup CLI)",
+  "local_backup": {
+    "install_command": "npx hacker-bob@2.0.1 install . --adapter generic-mcp",
+    "install_note": "Project install requires @anthropic-ai/claude-agent-sdk; npx doctor used as portable backup.",
+    "doctor_command": "npx hacker-bob@2.0.1 doctor . --adapter generic-mcp --json",
+    "doctor_result": "WARN optional surface tools missing; patchright OK; no findings emitted"
+  },
+  "full_mcp_hunt": "NOT_RUN",
+  "error_summary": "Full MCP hunt deferred after link E2E PASS; doctor-only backup scan recorded. Findings would be EXTERNALLY_RETRIEVED_EVIDENCE not verified vulnerabilities.",
   "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
-  "signature_state": "NOT_SIGNED"
+  "signature_state": "NOT_SIGNED",
+  "fcg_append_state": "NOT_APPENDED"
 }
