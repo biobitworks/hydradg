@@ -1,0 +1,30 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "EXP-008-Q38",
+  "predecessor_experiment": "EXP-008",
+  "relationship": "REPLAYED_UNDER_MODEL",
+  "changed_variable": "MODEL_IDENTITY",
+  "hypothesis": "H0_EXP008: Structured FCG retrieval/composition does not improve failure-prevention vs flat prose.",
+  "conditions": {
+    "C0": "FLAT_PROSE",
+    "C1": "STRUCTURED_FCG"
+  },
+  "models": [
+    "qwen3.8:27b"
+  ],
+  "model_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "thinking_configuration": {
+    "think": false,
+    "api": "ollama_generate_top_level",
+    "preregistered": true
+  },
+  "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+  "cases_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "n_replicates": 3,
+  "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+  "case_aggregation": "MAJORITY_OF_3_REPLICATES",
+  "E06_POWER_STATE": "KNOWN_LIMITED",
+  "alpha": 0.05,
+  "frozen_at_utc": "2026-08-28T17:11:54Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
