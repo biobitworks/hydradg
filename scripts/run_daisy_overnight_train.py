@@ -666,16 +666,21 @@ def run_exp008(repo: Path, out_root: Path, execute_only: bool = False) -> dict[s
     return verdict
 
 
-def verify_checkpoint_gate(repo: Path) -> None:
+def verify_checkpoint_gate(repo: Path, require_exp009_prereg: bool = False) -> str:
     head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip()
-    if head != CHECKPOINT_SHA:
-        raise SystemExit(f"BLOCKED: HEAD {head} != checkpoint {CHECKPOINT_SHA}")
     if socket.gethostname() != "magicSTUDIObox.local":
         raise SystemExit("BLOCKED: hostname != magicSTUDIObox.local")
+    if require_exp009_prereg:
+        prereg = Path(repo) / "eval/ic_failure_learning_20260827/daisy_overnight_20260828/EXP-009/PREREGISTRATION.json"
+        if not prereg.exists():
+            raise SystemExit("BLOCKED: EXP-009 PREREGISTRATION.json missing — run exp009-prereg first")
+    elif head != CHECKPOINT_SHA:
+        raise SystemExit(f"BLOCKED: HEAD {head} != checkpoint {CHECKPOINT_SHA}")
+    return head
 
 
 def run_exp009_prereg(repo: Path, out_root: Path) -> dict[str, Any]:
-    verify_checkpoint_gate(repo)
+    verify_checkpoint_gate(repo, require_exp009_prereg=False)
     closed = verify_exp008_closed(out_root)
     exp_dir = out_root / "EXP-009"
     exp_dir.mkdir(parents=True, exist_ok=True)
@@ -706,7 +711,7 @@ def run_exp009_prereg(repo: Path, out_root: Path) -> dict[str, Any]:
 
 
 def run_exp009_execute(repo: Path, out_root: Path) -> None:
-    verify_checkpoint_gate(repo)
+    verify_checkpoint_gate(repo, require_exp009_prereg=True)
     verify_exp008_closed(out_root)
     exp_dir = out_root / "EXP-009"
     if not (exp_dir / "PREREGISTRATION.json").exists():
@@ -717,7 +722,7 @@ def run_exp009_execute(repo: Path, out_root: Path) -> None:
 
 
 def run_exp009_closeout(repo: Path, out_root: Path) -> dict[str, Any]:
-    verify_checkpoint_gate(repo)
+    verify_checkpoint_gate(repo, require_exp009_prereg=True)
     exp_dir = out_root / "EXP-009"
     power = json.loads((exp_dir / "POWER_ASSESSMENT.json").read_text())
     closed = verify_exp008_closed(out_root)
