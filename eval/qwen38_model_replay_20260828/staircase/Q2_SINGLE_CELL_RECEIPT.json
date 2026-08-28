@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.qwen38.staircase.q2_single_cell.v1",
+  "stage": "Q2",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "Q2_STARTED": "YES",
+  "Q2_COMPLETED": "YES",
+  "Q2_TERMINAL_STATE": "SINGLE_CELL_ACCOUNTED",
+  "expected": 1,
+  "accounted": 1,
+  "cell_key": {
+    "case_id": "E01-T0",
+    "condition": "C0",
+    "replicate": 1,
+    "model": "qwen3.8:27b"
+  },
+  "first_cell_output_sha256": "a033b358b22293ead425ef7ce2b17c275b0858e08dbf7432c72b50446bd4f030",
+  "source_receipt": "eval/qwen38_model_replay_20260828/Q38-EXP008-R/START_RECEIPT.json",
+  "paper_admissible": false,
+  "paper_admission_class": "CANARY_EVIDENCE_ONLY",
+  "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

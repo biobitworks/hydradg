@@ -1,0 +1,25 @@
+{
+  "schema": "hydradg.qwen38.staircase.resource_gate.v1",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "RESOURCE_GATE": "BLOCKED_RESOURCE_PRESSURE",
+  "disk_free_gb": 49,
+  "swap_total_mb": 37888,
+  "swap_used_mb": 37561,
+  "swap_used_pct": 99.1,
+  "ram_bytes": 34359738368,
+  "load_averages": [6.77, 5.97, 5.58],
+  "loaded_ollama_models": [],
+  "active_q38_pids": [],
+  "prior_q38_pid": 44389,
+  "prior_q38_pid_state": "NOT_RUNNING",
+  "preservation_plan": [
+    "Do not delete scientific evidence, model files, or caches blindly",
+    "Offload non-scientific large artifacts only after operator review",
+    "Refresh Ollarma selection artifact before governed lane promotion",
+    "Resume Q38 matrix only after swap pressure drops below degraded threshold",
+    "Consider sudo purge for file cache only with operator approval"
+  ],
+  "new_execution_blocked": true,
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

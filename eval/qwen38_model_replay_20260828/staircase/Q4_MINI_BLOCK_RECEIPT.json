@@ -1,0 +1,18 @@
+{
+  "schema": "hydradg.qwen38.staircase.q4_mini_block.v1",
+  "stage": "Q4",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "Q4_STARTED": "YES",
+  "Q4_COMPLETED": "NO",
+  "Q4_STATE": "INCOMPLETE_PARTIAL_C0_ONLY",
+  "expected": 30,
+  "accounted": 27,
+  "remaining": 3,
+  "first_five_cases_required": ["E01-T0", "E02-0", "E02-1", "E02-2", "E02-3"],
+  "note": "27 C0-only cells present; missing C1 cells and 3 cells from deterministic ordering",
+  "integrity_gate": "FAIL_ADVANCEMENT_BLOCKED",
+  "paper_admissible": false,
+  "paper_admission_class": "PILOT_EVIDENCE_ONLY",
+  "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.qwen38.staircase.q1_smoke.v1",
+  "stage": "Q1",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "Q1_STARTED": "YES",
+  "Q1_COMPLETED": "YES",
+  "Q1_TERMINAL_STATE": "DIRECT_OLLAMA_PASS_OLLARMA_GOVERNED_BLOCKED",
+  "reuse_policy": "REUSE_VERIFIED_UNCHANGED_DEPENDENCIES",
+  "reused_receipts": [
+    "eval/qwen38_model_replay_20260828/local_canary/QWEN38_CANARY_RECEIPT.json",
+    "eval/qwen38_model_replay_20260828/local_canary/MODEL_RUNTIME_IDENTITY.json",
+    "eval/model_stack_20260828/QWEN38_MAGICSTUDIO_SMOKE_RECEIPT.json"
+  ],
+  "direct_verdict": "DIRECT_OLLAMA_PASS",
+  "governed_verdict": "OLLARMA_GOVERNED_BLOCKED",
+  "governed_reason_code": "SELECTION_STALE",
+  "model_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "paper_admissible": false,
+  "paper_admission_class": "INFRASTRUCTURE_METHOD_VERIFICATION_ONLY",
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

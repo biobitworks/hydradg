@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.qwen38.staircase.q0_identity.v1",
+  "stage": "Q0",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "Q0_STATE": "Q0_COMPLETE",
+  "model_tag": "qwen3.8:27b",
+  "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "observed_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "digest_match": "PASS",
+  "ollama_version": "0.33.0",
+  "runner_sha256": "28fd89e574d88c65f40a1e730b3d7d4464fba9f0",
+  "case_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "preregistration_path": "eval/qwen38_model_replay_20260828/Q38-EXP008-R/PREREGISTRATION.json",
+  "prompt_contract_root": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+  "scorer_root": "eval/ic_failure_learning_20260827/daisy_overnight_20260828",
+  "terminal_state": "Q0_COMPLETE",
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
