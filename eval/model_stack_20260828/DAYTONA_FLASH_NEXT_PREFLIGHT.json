@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.model_stack.daytona_flash_next_preflight.v1",
+  "recorded_at_utc": "2026-08-28T17:11:36Z",
+  "terminal_state": "BLOCKED_ARTIFACT_FORMAT",
+  "daytona_cli": {
+    "available": true,
+    "version": "Daytona CLI version v0.200.1"
+  },
+  "studio_qwen38_artifact": {
+    "alias": "qwen3.8:27b",
+    "format": "gguf",
+    "quantization": "Q4_K_M",
+    "platform": "darwin_arm64_metal",
+    "note": "Studio artifact is MLX/GGUF via Ollama; not portable to Daytona CUDA without separate artifact"
+  },
+  "flash_next_candidate": {
+    "ollama_public_tag": "qwen3.8-flash-next:125b-mlx",
+    "ollama_format": "mlx",
+    "cuda_compatible": false,
+    "recommended_cuda_source": {
+      "repository": "Qwen/Qwen3.8-27B",
+      "huggingface_revision": "TO_BE_PINNED_AT_PROVISION",
+      "format": "safetensors",
+      "precision_options": [
+        "bf16",
+        "fp8"
+      ],
+      "runtime_candidates": [
+        "vLLM",
+        "SGLang"
+      ]
+    }
+  },
+  "fit_check": {
+    "performed": false,
+    "reason": "No GPU sandbox provisioned; MLX artifact blocked for CUDA host",
+    "estimated_vram_gb_qwen38_27b_fp8": "approx_28-32",
+    "estimated_vram_gb_flash_next_125b": "exceeds_single_gpu_typical"
+  },
+  "comparison_readiness": {
+    "D0_host_control": "BLOCKED",
+    "D1_model_comparison": "BLOCKED",
+    "reason": "CUDA-compatible Qwen3.8 artifact not frozen; Flash-Next MLX not admissible on Daytona CUDA"
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
