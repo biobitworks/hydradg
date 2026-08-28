@@ -3,24 +3,27 @@
   "mission_id": "ANB-SP-HACKERBOB-SCAN-001",
   "provider": "Hacker Bob",
   "operation": "bounded_security_scan",
-  "status": "LINKS_VERIFIED_DOCTOR_ONLY",
-  "recorded_at_utc": "2026-08-27T23:52:00Z",
+  "status": "PASS_NO_VERIFIED_FINDINGS",
+  "recorded_at_utc": "2026-08-28T00:02:05Z",
   "execution_host": "magicSTUDIObox.local",
+  "target": "https://hydralamp.vercel.app",
+  "target_sha": "c6dcadfeff0fa31e63e7865b04e1bef07511edaf",
+  "hacker_bob_version": "2.0.1",
+  "install_target": "biobitworks/hydralamp (generic-mcp)",
   "prerequisite": {
     "PUBLIC_LINKS_E2E": "PASS",
-    "receipt_ref": "eval/vercel_public_closeout_20260827/PUBLIC_LINKS_E2E_RECEIPT.json",
-    "hydralamp_sha_gate": "c6dcadfeff0fa31e63e7865b04e1bef07511edaf"
+    "HYDRALAMP_PRODUCTION_SHA_PARITY": "PASS"
   },
-  "scanner_identity": "hacker-bob@2.0.1 (npx local backup CLI)",
-  "local_backup": {
-    "install_command": "npx hacker-bob@2.0.1 install . --adapter generic-mcp",
-    "install_note": "Project install requires @anthropic-ai/claude-agent-sdk; npx doctor used as portable backup.",
-    "doctor_command": "npx hacker-bob@2.0.1 doctor . --adapter generic-mcp --json",
-    "doctor_result": "WARN optional surface tools missing; patchright OK; no findings emitted"
-  },
-  "full_mcp_hunt": "NOT_RUN",
-  "error_summary": "Full MCP hunt deferred after link E2E PASS; doctor-only backup scan recorded. Findings would be EXTERNALLY_RETRIEVED_EVIDENCE not verified vulnerabilities.",
-  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "scanner_identity": "hacker-bob@2.0.1 MCP headless orchestrator",
+  "verified_findings_count": 0,
+  "held_findings_count": 3,
+  "highest_verified_severity": "none",
+  "HACKER_BOB_SECURITY_GATE": "PASS_NO_VERIFIED_FINDINGS",
+  "receipt_ref": "eval/hacker_bob_20260827/HACKER_BOB_HYDRALAMP_RECEIPT.json (hydralamp repo)",
+  "summary_ref": "eval/hacker_bob_20260827/HACKER_BOB_SECURITY_SUMMARY.md (hydralamp repo)",
+  "note": "Signed-action gate returns authorized=true under TOY_KEY_MECHANISM_ONLY claim ceiling (documented demo). Scanner header observations held; VERIFY denied all as non-reportable.",
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
   "signature_state": "NOT_SIGNED",
-  "fcg_append_state": "NOT_APPENDED"
+  "fcg_append_state": "NOT_APPENDED",
+  "frozen_46_event_lane_touched": false
 }
