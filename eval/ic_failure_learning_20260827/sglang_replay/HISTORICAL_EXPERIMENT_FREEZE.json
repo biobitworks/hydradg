@@ -1,0 +1,159 @@
+{
+  "schema": "hydradg.sglang_replay.historical_freeze.v1",
+  "historical_root": "eval/hydralamp_runtype_20260826",
+  "entry_count": 12,
+  "entries": [
+    {
+      "path": "eval/hydralamp_runtype_20260826/EVAL_SUITE.json",
+      "status": "FROZEN",
+      "sha256": "1acf6734fcce6c6b44f49525d345353ee893433f91ae1d7e1c9bd5013803fccf",
+      "bytes": 968,
+      "git_blob_sha": "c70aa638235253684bc32d82dd6e88986447db32",
+      "historical_or_successor": "historical",
+      "role": "EVAL_SUITE",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/CORE_STRESS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "aa02089d1f55c3564e55d0fdb87a4a7773dfe24e1e5f1d8b3928d049b9463adf",
+      "bytes": 1479,
+      "git_blob_sha": "77ce0da9c4786674bb65f0cbd7ee41c2fe86fded",
+      "historical_or_successor": "historical",
+      "role": "CORE_STRESS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/HASH_TAMPER_STRESS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "a23dd3cefc0a2d8f0a7c56c7059e326d0a78001c32e7dd08f27e57303c477f8b",
+      "bytes": 1391,
+      "git_blob_sha": "676d6172d1cd5689bf9fb5f4e9b8143e3ffe8bd9",
+      "historical_or_successor": "historical",
+      "role": "HASH_TAMPER_STRESS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/CONCURRENCY_STRESS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "10b68c96167fb6840c10d476a93a37fe76a00d9ae0d9cd981fff6586280ff0c2",
+      "bytes": 251,
+      "git_blob_sha": "7942d7e29d97d94b5d4db147e0187f5b92de2883",
+      "historical_or_successor": "historical",
+      "role": "CONCURRENCY_STRESS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/CONTEXT_DELTA_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "96bc94e8d9a815747c208e9f6f6e9dd93f44076ebbc62e113d30d82b69a40f24",
+      "bytes": 807,
+      "git_blob_sha": "5ce404456b7ac51dadae159767f995ab1ca560a7",
+      "historical_or_successor": "historical",
+      "role": "CONTEXT_DELTA_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/SSE_STRESS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "1e502b7f8911183466bd2feccad3ff4db00e434a0a96fa13812227e9a730c9da",
+      "bytes": 569,
+      "git_blob_sha": "cc80457cfc6393046bcd1c80dd2c4a3e16c4bd1f",
+      "historical_or_successor": "historical",
+      "role": "SSE_STRESS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/RESTART_RECOVERY_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "b0b63a512ca697d245303c05430dbb8c6b1302d9adce66955905063e1ae547d9",
+      "bytes": 279,
+      "git_blob_sha": "0aa2b20f8d1906f507362de907c2871489b119a3",
+      "historical_or_successor": "historical",
+      "role": "RESTART_RECOVERY_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/LOCAL_MODEL_STRESS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "e95c95a5a996072a69a17d2af10f0e9e351a6b7cda0c23bdbd0006fec838bac7",
+      "bytes": 763,
+      "git_blob_sha": "462e0f9a275be6836e1e15350b6609aa3fd33785",
+      "historical_or_successor": "historical",
+      "role": "LOCAL_MODEL_STRESS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/LIVE_RUNTYPE_STRESS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "0a9d22b722c4454b7156555cadda22b8209d97be8b1c4baf78f0c1fe7088b02d",
+      "bytes": 252,
+      "git_blob_sha": "17451f168671fdd7d146fcc768e4945ae1258460",
+      "historical_or_successor": "historical",
+      "role": "LIVE_RUNTYPE_STRESS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/SMOKE_PASS_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "b62692214247faa92544949746a8933ce71f8bd1b37299b367e92819ca022b01",
+      "bytes": 927,
+      "git_blob_sha": "530c97ca4abe9212310b5a6f668ca4693cfd35b3",
+      "historical_or_successor": "historical",
+      "role": "SMOKE_PASS_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/MODEL_INVENTORY.json",
+      "status": "FROZEN",
+      "sha256": "04c33aeef2b0043fe72295beb43c5ffb70b728f5cf8e8d91b27bfeeecc5b6301",
+      "bytes": 696,
+      "git_blob_sha": "412ff5eb78b7d37f8ef857926288281a0769ea00",
+      "historical_or_successor": "historical",
+      "role": "MODEL_INVENTORY",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    },
+    {
+      "path": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+      "status": "FROZEN",
+      "sha256": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
+      "bytes": 5428,
+      "git_blob_sha": "765ffc838aa7d16c3f365228d61eacde4a2658ea",
+      "historical_or_successor": "historical",
+      "role": "HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT",
+      "training_visibility": "EVAL_ONLY",
+      "evaluation_visibility": "HISTORICAL_BASELINE"
+    }
+  ],
+  "matrix_contract": {
+    "CONTROL": 25,
+    "INVALID_PROOF": 25,
+    "REPLAYED_PROOF": 25,
+    "BROKEN_AUTHORIZATION_EDGE": 25,
+    "total": 100
+  },
+  "tamper_cases": [
+    "TAMPER_01_alter_model_context_byte",
+    "TAMPER_02_alter_model_response_byte",
+    "TAMPER_03_alter_tool_result",
+    "TAMPER_04_remove_fcg_edge",
+    "TAMPER_05_reorder_two_events",
+    "TAMPER_06_change_prev_event_hash",
+    "TAMPER_07_replay_old_proof",
+    "TAMPER_08_altered_graph_expected_root"
+  ],
+  "POISON_MUST_REMAIN_IMMUTABLE": true,
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED"
+}
