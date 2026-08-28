@@ -1,0 +1,16 @@
+{
+  "schema": "hydradg.qwen38.execution_gate.v1",
+  "experiment_id": "Q38-EXP008-R2",
+  "EXECUTION_STATE": "RESOURCE_BLOCKED",
+  "DAYTONA_AUTH": "FAIL",
+  "sandbox_creation": "NOT_ATTEMPTED",
+  "h200_verified": false,
+  "ollama_runtime": "NOT_PROVISIONED",
+  "n_planned": 300,
+  "n_terminal": 0,
+  "MATRIX_COMPLETE": "NO",
+  "block_reason": "Daytona auth missing: `daytona list` -> no profiles found; operator must run `daytona login`",
+  "evidence": "eval/qwen38_model_replay_20260828/DAYTONA_AUTH_RESTORATION_RECEIPT.json",
+  "recorded_at_utc": "2026-08-29T00:16:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
