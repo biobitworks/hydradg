@@ -1,44 +1,43 @@
 # Daisy Overnight Train — Status
 
-**Branch:** `hack-hydra/daisy-exp008-overnight-20260828` @ `033686ab`  
+**Branch:** `hack-hydra/daisy-exp008-overnight-20260828` @ `407e04ce`  
 **Worktree:** `/Users/byron/projects/active/hydradg-daisy-exp008-overnight-20260828`  
-**Parent SHA:** `d8166ae41f68c2d082eaf3d5380af0ea4e9b6bda`  
 **Host:** magicSTUDIObox.local
 
-## Bootstrap — COMPLETE
+## EXP-008 — CLOSED
 
-| Artifact | State |
-|----------|-------|
-| WORKTREE_GATE | PASS |
-| MODEL_INVENTORY_FREEZE | qwen3:1.7b, qwen2.5-coder:7b |
-| DAISY_COMMON_FREEZE | 25 cases, 3 replicates, 8000-char budget |
-| Runtime | DIRECT_OLLAMA_API (Ollarma NOT_IN_PATH) |
+- Result: `UNDERPOWERED` (E06 n_paired=2)
+- Decision: → EXP-009
 
-## EXP-008 — COMPLETE
+## EXP-009 — CLOSED
 
-**Result class:** `UNDERPOWERED`  
-**Primary (E06 prevents-C):** n_paired=2, rd=0.0, no discordant pairs  
-**Conclusion:** effect not established  
-**Next (Daisy):** `EXP-009` causal ordering ablation  
+**Intervention:** Causal FCG ordering vs neutral canonical ID ordering (ATOM_ORDER_ONLY)  
+**Cells:** 300/300  
+**Atom-set gate:** PASS (identical FCO sets C0/C1 per case)  
+**Ordering isolation gate:** PASS  
 
-Cells: 300/300 (25×2 models×2 conditions×3 replicates)  
-Valid parse rate: 90.7% | UNKNOWN: 50% | MALFORMED: 9.3%
+| Field | Value |
+|-------|-------|
+| **EXPERIMENT_PRIMARY_VERDICT** | `UNDERPOWERED` |
+| **MECHANISTIC_EXPLORATORY_PATTERN** | `DIRECTIONALLY_POSITIVE_SECONDARY` |
+| **E06 n_paired** | 2 |
+| **E06 rd** | 0.0 |
+| **ordering_established** | **NO** |
+| **Valid parse rate** | 88.3% |
+| **Daisy next** | `EXP-010` (queued, NOT started) |
 
-Resume/closeout:
+Bounded conclusion: causal FCG ordering effect **not established** on confirmatory E06 endpoint. Exploratory secondary signal recorded; not promoted to SUPPORTED_POSITIVE.
+
+## Pending
+
+- EXP-010 governed decision schema ablation
+- EXP-011 retrieval neighborhood
+- EXP-012 maximal admissible context diagnostic
+- FRONTIER_ESCALATION_PACKET (human gate)
+
+## Resume
+
 ```bash
 cd /Users/byron/projects/active/hydradg-daisy-exp008-overnight-20260828
-python3 scripts/run_daisy_overnight_train.py --repo . --phase exp008-execute   # missing cells only
-python3 scripts/run_daisy_overnight_train.py --repo . --phase exp008-closeout
+python3 scripts/run_daisy_overnight_train.py --repo . --phase exp010-prereg  # when implemented
 ```
-
-## Pending (preregistered train)
-
-- EXP-009 causal FCG ordering
-- EXP-010 governed decision schema
-- EXP-011 retrieval neighborhood breadth
-- EXP-012 maximal admissible context / local capacity
-- FRONTIER_ESCALATION_PACKET (human gate; no auto API)
-
-## Monitor
-
-`eval/ic_failure_learning_20260827/daisy_overnight_20260828/DAISY_TRAIN.jsonl`
