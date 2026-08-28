@@ -60,7 +60,6 @@ def main() -> int:
     )
     rows.append(case("E01-T0", "E01", "ACTUAL_SIX_FIELDS", submitted, blind_task, True))
 
-    # E02 origin ablation.
     origin_treatments: list[tuple[str, dict[str, Any]]] = []
     origin_treatments.append(("T0_ACTUAL", deepcopy(submitted)))
 
@@ -89,10 +88,12 @@ def main() -> int:
     origin_treatments.append(("T4_ALL_ORIGIN_FIXES", t4))
 
     for idx, (condition, payload) in enumerate(origin_treatments):
-        rows.append(case(f"E02-{idx}", "E02", condition, payload,
-                         "Classify product origin as DISTINCT_HACKATHON_DELTA, PREEXISTING_PROJECT, or AMBIGUOUS using only this fixture.", True))
+        rows.append(case(
+            f"E02-{idx}", "E02", condition, payload,
+            "Classify product origin as DISTINCT_HACKATHON_DELTA, PREEXISTING_PROJECT, or AMBIGUOUS using only this fixture.",
+            True,
+        ))
 
-    # E03 evidence surfacing ablation.
     evidence_treatments: list[tuple[str, dict[str, Any]]] = [("T0_NO_VAULT", deepcopy(submitted))]
     additions = [
         ("T1_START_HERE", {"vault_visible": ["00_START_HERE.md"]}),
@@ -112,10 +113,12 @@ def main() -> int:
         evidence_treatments.append((condition, payload))
 
     for idx, (condition, payload) in enumerate(evidence_treatments):
-        rows.append(case(f"E03-{idx}", "E03", condition, payload,
-                         "Evaluate judge-visible evidence completeness and cold-start/demo risk. Do not treat file names as proof of scientific claims.", True))
+        rows.append(case(
+            f"E03-{idx}", "E03", condition, payload,
+            "Evaluate judge-visible evidence completeness and cold-start/demo risk. Do not treat file names as proof of scientific claims.",
+            True,
+        ))
 
-    # E04 agent surface legibility.
     surface_treatments = [
         ("T0_PROSE_ONLY", {"agent_surface": submitted["agent_surface"]}),
         ("T1_STRUCTURED_ENDPOINT_TABLE", {"agent_surface_table": [
@@ -144,33 +147,40 @@ def main() -> int:
         }})
     ]
     for idx, (condition, payload) in enumerate(surface_treatments):
-        rows.append(case(f"E04-{idx}", "E04", condition, payload,
-                         "List the first three concrete actions a cold machine agent should take. Put any guessed unavailable action in invented_capabilities.", True))
+        rows.append(case(
+            f"E04-{idx}", "E04", condition, payload,
+            "List the first three concrete actions a cold machine agent should take. Put any guessed unavailable action in invented_capabilities.",
+            True,
+        ))
 
-    # E05 diagnosis: expose evidence strings but strip audit statuses and answer ranking.
     divergence_path = repo / "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json"
     divergence = json.loads(divergence_path.read_text(encoding="utf-8"))
     diagnosis_input = {
-        key.split("_", 1)[0]: {
-            "candidate": key,
-            "evidence": value["evidence"]
-        }
+        key.split("_", 1)[0]: {"candidate": key, "evidence": value["evidence"]}
         for key, value in sorted(divergence["candidates_tested"].items())
     }
-    rows.append(case("E05-T0", "E05", "CANDIDATE_EVIDENCE_WITHHELD_LABELS", diagnosis_input,
-                     "Rank A-G by causal priority and choose the earliest divergent dependency. Audit status labels and ground-truth ranking are withheld.", False))
+    rows.append(case(
+        "E05-T0", "E05", "CANDIDATE_EVIDENCE_WITHHELD_LABELS", diagnosis_input,
+        "Rank A-G by causal priority and choose the earliest divergent dependency. Audit status labels and ground-truth ranking are withheld.",
+        False,
+    ))
 
-    # E06 protocol repair baseline vs governed protocol availability.
     rubric_path = repo / "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json"
     rubric = json.loads(rubric_path.read_text(encoding="utf-8"))
     base_input = {"event_rubric": rubric, "actual_submission": submitted}
-    rows.append(case("E06-T0", "E06", "NO_FAILURE_LEARNING_PROTOCOL", base_input,
-                     "Produce an ordered pre-submission workflow intended to maximize judge-visible evidence and prevent avoidable submission-process failures.", False))
+    rows.append(case(
+        "E06-T0", "E06", "NO_FAILURE_LEARNING_PROTOCOL", base_input,
+        "Produce an ordered pre-submission workflow intended to maximize judge-visible evidence and prevent avoidable submission-process failures.",
+        False,
+    ))
 
     protocol_text = (repo / "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md").read_text(encoding="utf-8")
     treatment_input = {**base_input, "governed_failure_learning_protocol": protocol_text}
-    rows.append(case("E06-T1", "E06", "WITH_FAILURE_LEARNING_PROTOCOL", treatment_input,
-                     "Produce an ordered pre-submission workflow using the supplied governed protocol. Do not submit while required judge evidence remains unsurfaced unless a human waiver is explicit.", False))
+    rows.append(case(
+        "E06-T1", "E06", "WITH_FAILURE_LEARNING_PROTOCOL", treatment_input,
+        "Produce an ordered pre-submission workflow using the supplied governed protocol. Do not submit while required judge evidence remains unsurfaced unless a human waiver is explicit.",
+        False,
+    ))
 
     out = (repo / args.out).resolve()
     out.parent.mkdir(parents=True, exist_ok=True)
@@ -185,7 +195,7 @@ def main() -> int:
         "blind_case_count": sum(1 for row in rows if row["blind"]),
         "nonblind_case_count": sum(1 for row in rows if not row["blind"]),
         "historical_submission_payload_sha256": EXPECTED_PAYLOAD_SHA,
-        "ground_truth_in_case_payload": false if False else False,
+        "ground_truth_in_case_payload": False,
         "claim_ceiling": "EXPERIMENT_FIXTURE_ONLY_NOT_MODEL_RESULT"
     }
     (out.parent / "CASE_MANIFEST.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
