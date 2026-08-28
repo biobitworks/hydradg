@@ -26,6 +26,7 @@ import {
   normalizeRuntypeDispatchResult,
   runRuntypeWithLocalTools,
   sanitizeRuntypeProviderError,
+  type RuntypeLocalToolMap,
 } from "./runtypeNormalize";
 import type {
   EvidenceClass,
@@ -365,7 +366,7 @@ async function runOneLaneLive(params: {
         "Diagnose divergence using tools. Return only the required JSON object. No chain-of-thought.",
     });
 
-    const localTools: Record<string, (args: unknown) => Promise<unknown>> = {};
+    const localTools: RuntypeLocalToolMap = {};
     const tool_sequence: string[] = [];
     const tool_results_hashes: string[] = [];
     let repair_requested = false;

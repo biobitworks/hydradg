@@ -2,7 +2,7 @@
  * Normalize Runtype SDK 9.x dispatch results (FlowResult | FlowSummary | JSON).
  * Never logs secrets.
  */
-import { SDK_VERSION } from "@runtypelabs/sdk";
+import { SDK_VERSION, type RuntypeClient } from "@runtypelabs/sdk";
 
 export type SanitizedRuntypeError = {
   error_name: string | null;
@@ -132,23 +132,26 @@ export function buildRuntypeStreamCallbacks(capture: RuntypeStreamCapture) {
   };
 }
 
+export type RuntypeLocalToolMap = Record<
+  string,
+  | ((args: unknown) => Promise<unknown>)
+  | {
+      description?: string;
+      parametersSchema?: Record<string, unknown>;
+      execute: (args: unknown) => Promise<unknown>;
+    }
+>;
+
 export async function runRuntypeWithLocalTools(
-  client: {
-    runWithLocalTools: (
-      request: unknown,
-      localTools: Record<string, (args: unknown) => Promise<unknown>>,
-      callbacks?: unknown,
-      options?: unknown,
-    ) => Promise<unknown>;
-  },
+  client: RuntypeClient,
   request: Record<string, unknown>,
-  localTools: Record<string, (args: unknown) => Promise<unknown>>,
+  localTools: RuntypeLocalToolMap,
   options?: { cache?: boolean },
 ) {
   const capture: RuntypeStreamCapture = { streamedText: "", executionId: null, success: false };
   const raw = await client.runWithLocalTools(
-    { ...request, streamResponse: true },
-    localTools,
+    { ...request, streamResponse: true } as unknown as Parameters<RuntypeClient["runWithLocalTools"]>[0],
+    localTools as Parameters<RuntypeClient["runWithLocalTools"]>[1],
     buildRuntypeStreamCallbacks(capture),
     { cache: false, scope: "turn", ...options },
   );
