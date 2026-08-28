@@ -1,0 +1,9 @@
+{
+  "schema": "hydradg.daisy_next_action.v1",
+  "NEXT_SAFE_ACTION": "Provision governed CUDA host; execute SGLang G0/G1/G2; run E08 projection conditions P1-P4",
+  "resume_command": "python3 scripts/build_total_ingest.py --repo . && python3 scripts/build_sglang_replay_deliverables.py --repo .",
+  "blocked_on": [
+    "CUDA_GPU",
+    "TRIMMED_PROMPT_BYTES_NOT_RECOVERABLE_FOR_P0"
+  ]
+}

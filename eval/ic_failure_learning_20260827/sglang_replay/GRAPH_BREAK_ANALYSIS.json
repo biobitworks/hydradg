@@ -1,0 +1,84 @@
+{
+  "schema": "hydradg.sglang_replay.graph_break_analysis.v1",
+  "executed": false,
+  "hypothesis_breaks": [
+    {
+      "GRAPH_BREAK_ID": "hyp_break_000",
+      "MODEL_LAYER_OR_OPERATION": "verify_actor_proof",
+      "PHASE": "DECODE",
+      "WHY_BREAK_OCCURRED": "dynamic authorization decision",
+      "anticube_hypothesis": {
+        "SELF_NON_SELF": "SELF",
+        "SAFE_NON_SAFE": "NON_SAFE"
+      },
+      "evidence_class": "INFERENCE_HYPOTHESIS",
+      "measured_by_sglang": false
+    },
+    {
+      "GRAPH_BREAK_ID": "hyp_break_001",
+      "MODEL_LAYER_OR_OPERATION": "trace_divergence",
+      "PHASE": "PREFILL",
+      "WHY_BREAK_OCCURRED": "hash/graph divergence localization",
+      "anticube_hypothesis": {
+        "SELF_NON_SELF": "SELF",
+        "SAFE_NON_SAFE": "SAFE"
+      },
+      "evidence_class": "INFERENCE_HYPOTHESIS",
+      "measured_by_sglang": false
+    },
+    {
+      "GRAPH_BREAK_ID": "hyp_break_002",
+      "MODEL_LAYER_OR_OPERATION": "inspect_state",
+      "PHASE": "PREFILL",
+      "WHY_BREAK_OCCURRED": "read-only state inspection",
+      "anticube_hypothesis": {
+        "SELF_NON_SELF": "SELF",
+        "SAFE_NON_SAFE": "SAFE"
+      },
+      "evidence_class": "INFERENCE_HYPOTHESIS",
+      "measured_by_sglang": false
+    },
+    {
+      "GRAPH_BREAK_ID": "hyp_break_003",
+      "MODEL_LAYER_OR_OPERATION": "FCG_APPEND",
+      "PHASE": "DECODE",
+      "WHY_BREAK_OCCURRED": "FCG mutation",
+      "anticube_hypothesis": {
+        "SELF_NON_SELF": "SELF",
+        "SAFE_NON_SAFE": "NON_SAFE"
+      },
+      "evidence_class": "INFERENCE_HYPOTHESIS",
+      "measured_by_sglang": false
+    },
+    {
+      "GRAPH_BREAK_ID": "hyp_break_004",
+      "MODEL_LAYER_OR_OPERATION": "QUARANTINE",
+      "PHASE": "DECODE",
+      "WHY_BREAK_OCCURRED": "quarantine transition",
+      "anticube_hypothesis": {
+        "SELF_NON_SELF": "SELF",
+        "SAFE_NON_SAFE": "NON_SAFE"
+      },
+      "evidence_class": "INFERENCE_HYPOTHESIS",
+      "measured_by_sglang": false
+    },
+    {
+      "GRAPH_BREAK_ID": "hyp_break_005",
+      "MODEL_LAYER_OR_OPERATION": "repair_action",
+      "PHASE": "DECODE",
+      "WHY_BREAK_OCCURRED": "repair attempt",
+      "anticube_hypothesis": {
+        "SELF_NON_SELF": "SELF",
+        "SAFE_NON_SAFE": "NON_SAFE"
+      },
+      "evidence_class": "INFERENCE_HYPOTHESIS",
+      "measured_by_sglang": false
+    }
+  ],
+  "BREAK_COUNT": 0,
+  "USEFUL_GRAPH_BREAK_RATE": null,
+  "BREAK_RECOVERY_RATE": null,
+  "POST_BREAK_HASH_CONTINUITY": null,
+  "GRAPH_STATE_CONTAMINATION": null,
+  "claim_ceiling": "INFERENCE_HYPOTHESIS_PENDING_CUDA"
+}

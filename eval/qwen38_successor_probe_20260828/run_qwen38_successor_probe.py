@@ -13,7 +13,7 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
-OUT = Path(__file__).resolve().parent / "local_canary"
+OUT = Path(__file__).resolve().parent
 HISTORICAL = ROOT / "eval/vercel_public_closeout_20260827/LOCAL_LIVE_MODEL_RECEIPT.json"
 MODEL = "qwen3.8:27b"
 EXPECTED_DIGEST = "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643"
@@ -167,7 +167,6 @@ def verify_nonce(raw: str, nonce: str) -> tuple[bool, str]:
 
 def classify_governed(governed: dict, nonce: str) -> str:
     if governed.get("blocked"):
-        rc = governed.get("reason_code") or governed.get("status") or "BLOCKED"
         if governed.get("status") == "error":
             return "OLLARMA_GOVERNED_ERROR"
         return "OLLARMA_GOVERNED_BLOCKED"
@@ -235,7 +234,6 @@ def main() -> int:
     ollarma_snap = ollarma_state_snapshot()
     (OUT / "OLLARMA_STATE.json").write_text(json.dumps(ollarma_snap, indent=2) + "\n")
 
-    # Direct path first — governed path may block/timeout under concurrent matrix load.
     direct = ollama_direct(prompt)
     ollarma_degraded = ollarma_snap.get("reason_code") == "SELECTION_STALE"
     if ollarma_degraded:
@@ -265,6 +263,7 @@ def main() -> int:
         "recorded_at_utc": utc_now(),
         "classification": "SUCCESSOR_VERIFICATION",
         "historical_receipt": str(HISTORICAL.relative_to(ROOT)) if HISTORICAL.exists() else None,
+        "prior_probe_receipt": "eval/qwen38_successor_probe_20260828/QWEN38_HYDRADG_SUCCESSOR_PROBE_RECEIPT.json",
         "successor_model": MODEL,
         "EXPECTED_DIGEST": EXPECTED_DIGEST,
         "OBSERVED_DIGEST": identity["OBSERVED_DIGEST"],

@@ -1,0 +1,10 @@
+{
+  "schema": "hydradg.sglang_replay.model_equivalence.v1",
+  "HISTORICAL_MODEL_ID": "qwen/qwen3.6-27b",
+  "HISTORICAL_MODEL_DIGEST_IF_AVAILABLE": null,
+  "SGLANG_MODEL_ID": "Qwen/Qwen3-8B",
+  "SGLANG_MODEL_DIGEST": null,
+  "MODEL_EQUIVALENCE_STATE": "NOT_EQUIVALENT",
+  "interpretation": "SGLANG_RUNTIME_REPLICATION \u2014 restrict causal claims to within-SGLang graph-mode comparisons only",
+  "claim_ceiling": "MODEL_EQUIVALENCE_RECEIPT_ONLY"
+}

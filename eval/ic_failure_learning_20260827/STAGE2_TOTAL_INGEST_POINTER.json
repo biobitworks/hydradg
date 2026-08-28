@@ -1,0 +1,10 @@
+{
+  "schema": "hydradg.ic_failure_learning.stage2_ingest_pointer.v1",
+  "run_total_ingest": "python3 scripts/build_total_ingest.py --repo .",
+  "additional_sources": [
+    "results/MODEL_OUTPUTS.jsonl",
+    "scored/SCORED_RESULTS.jsonl",
+    "custody/CANARY_QWEN25_15B_EXECUTION_FAILURE.json",
+    "custody/POST_MODEL_FAILURE_LEARNING_FCG.json"
+  ]
+}

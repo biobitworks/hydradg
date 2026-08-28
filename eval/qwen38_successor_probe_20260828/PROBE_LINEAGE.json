@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.qwen38.probe_lineage.v1",
+  "recorded_at_utc": "2026-08-28T23:00:00Z",
+  "merge_resolution": "PR31_ic-failure-learning_base_into_qwen38_replay",
+  "artifacts": [
+    {
+      "path": "eval/qwen38_successor_probe_20260828/run_qwen38_successor_probe.py",
+      "base_commit_artifact": "1274be3523fa2fa2092926c0cf2147702a8f0775",
+      "successor_commit_artifact": "8a53be3c",
+      "relationship": "successor_of",
+      "resolution": "retain_repaired_probe_with_runtime_identity_and_independent_verdict_paths",
+      "preserved_historical_receipt": "eval/qwen38_successor_probe_20260828/QWEN38_HYDRADG_SUCCESSOR_PROBE_RECEIPT.json"
+    },
+    {
+      "path": "eval/qwen38_model_replay_20260828/run_qwen38_successor_probe.py",
+      "relationship": "duplicate_of",
+      "canonical_for_replay_lane": true,
+      "note": "Replay lane writes to local_canary/ subdirectory"
+    }
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
