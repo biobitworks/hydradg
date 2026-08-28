@@ -1,0 +1,32 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "EXP-009",
+  "intervention": "CAUSAL_FCG_ORDER",
+  "control": "NEUTRAL_DETERMINISTIC_ORDER",
+  "changed_variable": "ATOM_ORDER_ONLY",
+  "H0": "Causal FCG ordering does not change measured failure-prevention behavior relative to neutral ordering when atom identity/content are held fixed.",
+  "H1": "Causal FCG ordering changes measured failure-prevention behavior.",
+  "E06_POWER_STATE": "KNOWN_LIMITED",
+  "primary_registered_endpoint": "E06_PREVENTS_C",
+  "primary_confirmatory_status": "POWER_LIMITED_EXPLORATORY",
+  "secondary_endpoint_family": [
+    "E05_top1",
+    "E05_top3",
+    "E01_cold_start",
+    "E01_vault_media",
+    "E01_origin_gap",
+    "E07_directional_gate"
+  ],
+  "models": {
+    "qwen3:1.7b": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "qwen2.5-coder:7b": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+  },
+  "cases_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "replicates": 3,
+  "scorer_sha256": "917a2095935610d0907bd46e821d0fa571da9585faf2dfaa859859c7dcf8fb5f",
+  "FCG_source_root": "a8cdc6e7bbedc7d7f84a4221ce48223f9b0a0b68bd1735e351e3638a9db2ab84",
+  "predecessor_experiment": "EXP-008",
+  "predecessor_verdict": "UNDERPOWERED",
+  "checkpoint_sha": "a7889664ba0d53548595e7d812ca5ffa608690ca",
+  "frozen_at_utc": "2026-08-28T15:32:44Z"
+}

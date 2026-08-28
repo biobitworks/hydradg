@@ -1,0 +1,90 @@
+{
+  "schema": "hydradg.model_stack.qwen38_magicstudio_smoke_receipt.v1",
+  "recorded_at_utc": "2026-08-28T17:11:35Z",
+  "host": "magicSTUDIObox.local",
+  "requested_model": "qwen3.8:27b",
+  "full_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "prompt_sha256": "f219b3642bc078fa5033a6885820d53c1a7f3f6755b5cdcbae7df75fce5f8735",
+  "thinking_configuration": {
+    "think": false,
+    "api": "ollama_generate_top_level",
+    "preregistered_for_replay": true
+  },
+  "context_budget_chars": 8000,
+  "num_predict": 128,
+  "temperature": 0.0,
+  "routes": [
+    {
+      "route": "DIRECT_OLLAMA_API",
+      "prompt_sha256": "f219b3642bc078fa5033a6885820d53c1a7f3f6755b5cdcbae7df75fce5f8735",
+      "response_sha256": "726c79ffcf92a2d822a850210d26d2e02b3e5144ec6602578ba20308757ed8d0",
+      "response_bytes": 69,
+      "exact_model_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "thinking_configuration": {
+        "think": false,
+        "api": "ollama_generate_top_level",
+        "preregistered_for_replay": true
+      },
+      "latency_seconds": 72.657,
+      "eval_count": 32,
+      "prompt_eval_count": 63,
+      "done_reason": "stop",
+      "terminal_state": "PASS"
+    },
+    {
+      "response": "{\"smoke\":\"pass\",\"host\":\"magicSTUDIObox\",\"nonce\":\"Q38-SMOKE-20260828\"}",
+      "latency_seconds": 3.649,
+      "route": "OLLARMA_PROJECT_PYTHON_WRAPPER",
+      "terminal_state": "PASS",
+      "prompt_sha256": "f219b3642bc078fa5033a6885820d53c1a7f3f6755b5cdcbae7df75fce5f8735",
+      "response_sha256": "726c79ffcf92a2d822a850210d26d2e02b3e5144ec6602578ba20308757ed8d0",
+      "thinking_configuration": {
+        "think": false,
+        "api": "ollama_generate_top_level",
+        "preregistered_for_replay": true
+      },
+      "exact_model_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643"
+    }
+  ],
+  "memory_before": {
+    "timestamp_utc": "2026-08-28T17:10:19Z",
+    "loadavg": [
+      11.64501953125,
+      8.34716796875,
+      7.7998046875
+    ],
+    "hw_memsize_bytes": 34359738368,
+    "swap": "vm.swapusage: total = 41984.00M  used = 41109.25M  free = 874.75M  (encrypted)",
+    "disk_free_gb": 20.46,
+    "vm_stat_head": [
+      "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+      "Pages free:                                     3587.",
+      "Pages active:                                 361234.",
+      "Pages inactive:                               355397.",
+      "Pages speculative:                              4890.",
+      "Pages throttled:                                   0."
+    ]
+  },
+  "memory_after": {
+    "timestamp_utc": "2026-08-28T17:11:35Z",
+    "loadavg": [
+      9.3125,
+      8.3369140625,
+      7.83935546875
+    ],
+    "hw_memsize_bytes": 34359738368,
+    "swap": "vm.swapusage: total = 59392.00M  used = 58239.12M  free = 1152.88M  (encrypted)",
+    "disk_free_gb": 3.43,
+    "vm_stat_head": [
+      "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+      "Pages free:                                     6083.",
+      "Pages active:                                 117117.",
+      "Pages inactive:                               112958.",
+      "Pages speculative:                              2903.",
+      "Pages throttled:                                   0."
+    ]
+  },
+  "terminal_state": "PASS",
+  "QWEN38_MAGICSTUDIO_STATE": "VERIFIED_RUNNABLE",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

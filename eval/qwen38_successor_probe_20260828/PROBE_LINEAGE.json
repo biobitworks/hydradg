@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.qwen38.probe_lineage.v1",
+  "recorded_at_utc": "2026-08-28T22:50:00Z",
+  "reconciliation_branch": "reconcile/qwen38-successor-20260828",
+  "artifacts": [
+    {
+      "path": "eval/qwen38_successor_probe_20260828/run_qwen38_successor_probe.py",
+      "base_commit_artifact": "1274be3523fa2fa2092926c0cf2147702a8f0775",
+      "successor_commit_artifact": "8a53be3c",
+      "relationship": "successor_of",
+      "resolution": "retain_repaired_successor_probe_with_runtime_identity_and_independent_verdict_paths",
+      "note": "Base branch added initial probe; replay branch repaired Problems A/B without deleting base receipt"
+    },
+    {
+      "path": "eval/qwen38_model_replay_20260828/run_qwen38_successor_probe.py",
+      "relationship": "duplicate_of",
+      "canonical_for_replay_lane": true
+    }
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

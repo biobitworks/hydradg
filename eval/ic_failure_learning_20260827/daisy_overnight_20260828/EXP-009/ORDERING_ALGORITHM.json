@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.daisy_overnight.ordering_algorithm.v1",
+  "C0_NEUTRAL_ORDER": {
+    "algorithm": "STABLE_CANONICAL_FCO_ID_ASC",
+    "description": "Sort selected atoms by fco_id ascending; no semantic prioritization"
+  },
+  "C1_CAUSAL_FCG_ORDER": {
+    "algorithm": "CAUSAL_KIND_RANK_THEN_PRIORITY_THEN_FCO_ID",
+    "tiers": [
+      "source/input (ProvenanceFCO, MethodFCO)",
+      "requirement (RequirementFCO)",
+      "contradiction (ContradictionFCO)",
+      "failure (FailureRelationshipFCO, FailureClassFCO)",
+      "consequence/protocol (GovernedProtocolFCO)",
+      "claim ceiling (NegativeEvidenceFCO, ClaimCeilingFCO)"
+    ],
+    "tie_break": "priority_field_then_canonical_FCO_ID",
+    "outcome_labels_forbidden": true,
+    "scorer_labels_forbidden": true
+  },
+  "changed_variable": "ATOM_ORDER_ONLY"
+}

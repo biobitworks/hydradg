@@ -1,0 +1,38 @@
+{
+  "schema": "hydradg.qwen38.remote_model_freeze.v1",
+  "recorded_at_utc": "2026-08-28T19:50:00Z",
+  "SELECTED_REMOTE_PROVIDER": "BLOCKED_REMOTE_CAPACITY",
+  "RUNTIME_EQUIVALENCE": "NO",
+  "models": {
+    "QWEN38_27B": {
+      "lane": "LOCAL_STUDIO_OLLAMA",
+      "canonical_name": "Qwen3.8-27B",
+      "repo": "Qwen/Qwen3.8-27B",
+      "revision": "TO_BE_PINNED_AT_REMOTE_PROVISION",
+      "ollama_alias": "qwen3.8:27b",
+      "observed_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "quantization": "Q4_K_M",
+      "runtime": "Ollama",
+      "runtime_version": "0.33.0",
+      "thinking_mode": false,
+      "context_limit": 262144,
+      "remote_state": "NOT_PROVISIONED_USE_LOCAL",
+      "license": "Apache-2.0"
+    },
+    "FLASH_NEXT": {
+      "lane": "BLOCKED",
+      "canonical_name": "Qwen3.8-Flash-Next",
+      "repo": "Qwen/Qwen3.8-Flash-Next",
+      "revision": "UNPINNED_BLOCKED",
+      "ollama_mlx_tag": "qwen3.8-flash-next:125b-mlx",
+      "artifact_size_bytes_estimated": 112742891520,
+      "quantization": "MLX",
+      "runtime": "NONE",
+      "block_reason": "FLASH_NEXT_REMOTE_CAPACITY_BLOCKED",
+      "thinking_mode": false,
+      "context_limit": 262144,
+      "license": "qwen-community-1.0"
+    }
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

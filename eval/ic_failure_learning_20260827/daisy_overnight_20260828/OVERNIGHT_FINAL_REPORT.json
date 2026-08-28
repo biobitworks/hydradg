@@ -1,0 +1,31 @@
+{
+  "CURRENT_BRANCH": "hack-hydra/daisy-exp008-overnight-20260828",
+  "CURRENT_SHA": "407e04cef26d767794a4e760cb53e009c9c01dd3",
+  "EVIDENCE_STATE": "EXP009_COMPLETE_UNDERPOWERED",
+  "EXPERIMENT_STATE": "EXP009_CLOSED_EXP010_QUEUED",
+  "EXP008_RESULT": "UNDERPOWERED",
+  "EXP009_RESULT": "UNDERPOWERED",
+  "EXP009_MECHANISTIC_PATTERN": "DIRECTIONALLY_POSITIVE_SECONDARY",
+  "EXP009_ORDERING_ESTABLISHED": false,
+  "FCO_STATE": "EXP009_BUNDLE_COMMITTED",
+  "FCG_STATE": "SUCCESSOR_APPENDED",
+  "HYDRADB_STATE": "SKIPPED_OR_UNAVAILABLE",
+  "EARLIEST_DIVERGENCE": "C_MEDIA_NOT_IN_VAULT",
+  "CLAIM_CEILING": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "COMMITTED",
+  "NEXT_SAFE_ACTION": "Implement EXP-010 governed decision schema ablation; do not start until preregistered",
+  "FINAL_REVIEW_GATE": "PENDING_EXP010_012_TRAIN",
+  "closeout_answers": {
+    "1_atom_sets_identical": true,
+    "2_ordering_only_intervention": true,
+    "3_differential_truncation": false,
+    "4_E06_n": 2,
+    "5_E06_confirmatory_possible": false,
+    "6_E05": "underpowered exploratory (n=1 per model)",
+    "7_E07": "see STATS.json secondary_tests",
+    "10_exploratory_ordering_signal": "DIRECTIONALLY_POSITIVE_SECONDARY not confirmatory",
+    "11_ordering_established": false,
+    "12_EXP010_selected": "primary UNDERPOWERED; mechanistic train continues to decision-schema ablation"
+  }
+}
