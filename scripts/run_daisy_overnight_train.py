@@ -29,6 +29,17 @@ from daisy_overnight.atoms import (  # noqa: E402
     select_atoms,
 )
 from daisy_overnight.custody import append_fcg_edges, build_mmr_receipt, sha256_bytes  # noqa: E402
+from daisy_overnight.exp009 import (  # noqa: E402
+    CHECKPOINT_SHA,
+    build_atom_set_freeze,
+    build_ordering_algorithm,
+    build_power_assessment,
+    build_preregistration,
+    execute_exp009,
+    score_and_closeout_exp009,
+    verify_exp008_closed,
+    verify_ordering_isolation,
+)
 from daisy_overnight.stats import (  # noqa: E402
     bootstrap_rd_ci,
     classify_experiment,
@@ -655,10 +666,111 @@ def run_exp008(repo: Path, out_root: Path, execute_only: bool = False) -> dict[s
     return verdict
 
 
+def verify_checkpoint_gate(repo: Path) -> None:
+    head = subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip()
+    if head != CHECKPOINT_SHA:
+        raise SystemExit(f"BLOCKED: HEAD {head} != checkpoint {CHECKPOINT_SHA}")
+    if socket.gethostname() != "magicSTUDIObox.local":
+        raise SystemExit("BLOCKED: hostname != magicSTUDIObox.local")
+
+
+def run_exp009_prereg(repo: Path, out_root: Path) -> dict[str, Any]:
+    verify_checkpoint_gate(repo)
+    closed = verify_exp008_closed(out_root)
+    exp_dir = out_root / "EXP-009"
+    exp_dir.mkdir(parents=True, exist_ok=True)
+    power = build_power_assessment(repo, exp_dir)
+    atom_rows = build_atom_set_freeze(repo, exp_dir)
+    build_ordering_algorithm(exp_dir)
+    verify_ordering_isolation(exp_dir, atom_rows, repo)
+    prereg = build_preregistration(repo, exp_dir, power)
+    cases_path = repo / "eval/ic_failure_learning_20260827/cases/CASES.jsonl"
+    shutil.copy2(cases_path, exp_dir / "CASE_MANIFEST.json")
+    inv = json.loads((out_root / "MODEL_INVENTORY_FREEZE.json").read_text())
+    (exp_dir / "MODEL_INVENTORY.json").write_text(json.dumps(inv, indent=2) + "\n", encoding="utf-8")
+    common = json.loads((out_root / "DAISY_COMMON_FREEZE.json").read_text())
+    (exp_dir / "EXECUTION_FREEZE.json").write_text(
+        json.dumps(
+            {
+                "common_freeze": common,
+                "power_assessment_sha256": sha256_bytes((exp_dir / "POWER_ASSESSMENT.json").read_bytes()),
+                "atom_set_freeze_sha256": sha256_bytes((exp_dir / "ATOM_SET_FREEZE.jsonl").read_bytes()),
+                "predecessor_mmr": closed["predecessor_mmr"],
+            },
+            indent=2,
+        )
+        + "\n",
+        encoding="utf-8",
+    )
+    return {"prereg": prereg, "power": power, "atom_rows": atom_rows, "predecessor_mmr": closed["predecessor_mmr"]}
+
+
+def run_exp009_execute(repo: Path, out_root: Path) -> None:
+    verify_checkpoint_gate(repo)
+    verify_exp008_closed(out_root)
+    exp_dir = out_root / "EXP-009"
+    if not (exp_dir / "PREREGISTRATION.json").exists():
+        raise SystemExit("BLOCKED: run exp009-prereg first")
+    atom_rows = [json.loads(line) for line in (exp_dir / "ATOM_SET_FREEZE.jsonl").read_text().splitlines() if line.strip()]
+    inv = json.loads((exp_dir / "MODEL_INVENTORY.json").read_text())
+    execute_exp009(repo, exp_dir, atom_rows, ollama_generate, build_prompt, resource_snapshot, inv)
+
+
+def run_exp009_closeout(repo: Path, out_root: Path) -> dict[str, Any]:
+    verify_checkpoint_gate(repo)
+    exp_dir = out_root / "EXP-009"
+    power = json.loads((exp_dir / "POWER_ASSESSMENT.json").read_text())
+    closed = verify_exp008_closed(out_root)
+    result = score_and_closeout_exp009(repo, exp_dir, closed["predecessor_mmr"], power)
+    run_receipt = {
+        "schema": "hydradg.daisy_overnight.run_receipt.v1",
+        "experiment_id": "EXP-009",
+        "completed_at_utc": utc_now(),
+        "git_sha": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip(),
+        "fcg_root": result["fcg_root"],
+        "mmr_root": result["mmr"]["mmr_root"],
+        "verdict": result["verdict"]["EXPERIMENT_PRIMARY_VERDICT"],
+        "predecessor_experiment": "EXP-008",
+    }
+    (exp_dir / "RUN_RECEIPT.json").write_text(json.dumps(run_receipt, indent=2) + "\n", encoding="utf-8")
+    sha = git_checkpoint(repo, "EXP-009", "exp009: test causal FCG ordering after EXP-008 power limit")
+    append_train_log(
+        out_root,
+        {
+            "experiment_id": "EXP-009",
+            "parent": "EXP-008",
+            "parent_verdict": "UNDERPOWERED",
+            "prereg_sha": sha256_bytes((exp_dir / "PREREGISTRATION.json").read_bytes()),
+            "execution_sha": sha,
+            "result_class": result["verdict"]["EXPERIMENT_PRIMARY_VERDICT"],
+            "MECHANISTIC_EXPLORATORY_PATTERN": result["verdict"]["MECHANISTIC_EXPLORATORY_PATTERN"],
+            "E06_n_paired": result["verdict"]["primary"].get("n_paired"),
+            "next_experiment": result["decision"]["next_experiment"],
+            "fcg_root": result["fcg_root"],
+            "mmr_root": result["mmr"]["mmr_root"],
+            "SIGNATURE_STATE": "NOT_SIGNED",
+        },
+    )
+    return result
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=".")
-    ap.add_argument("--phase", choices=["bootstrap", "exp008", "exp008-execute", "exp008-closeout", "train"], default="train")
+    ap.add_argument(
+        "--phase",
+        choices=[
+            "bootstrap",
+            "exp008",
+            "exp008-execute",
+            "exp008-closeout",
+            "exp009-prereg",
+            "exp009-execute",
+            "exp009-closeout",
+            "train",
+        ],
+        default="train",
+    )
     args = ap.parse_args()
     repo = Path(args.repo).resolve()
     out_root = repo / "eval/ic_failure_learning_20260827/daisy_overnight_20260828"
@@ -704,6 +816,19 @@ def main() -> int:
             },
         )
         print(json.dumps(verdict, indent=2))
+
+    if args.phase == "exp009-prereg":
+        result = run_exp009_prereg(repo, out_root)
+        print(json.dumps({"EXP-009": "PREREG_FROZEN", "E06_POWER_STATE": result["power"]["E06_POWER_STATE"]}, indent=2))
+
+    if args.phase == "exp009-execute":
+        run_exp009_execute(repo, out_root)
+        n = sum(1 for _ in (out_root / "EXP-009/RAW_OUTPUTS.jsonl").open() if _.strip())
+        print(json.dumps({"EXP-009": "EXECUTION_COMPLETE", "raw_rows": n}, indent=2))
+
+    if args.phase == "exp009-closeout":
+        result = run_exp009_closeout(repo, out_root)
+        print(json.dumps(result["verdict"], indent=2))
 
     return 0
 
