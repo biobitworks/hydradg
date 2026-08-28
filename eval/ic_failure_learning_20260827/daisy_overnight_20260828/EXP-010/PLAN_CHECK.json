@@ -1,0 +1,43 @@
+{
+  "schema": "hydradg.daisy_overnight.exp010_independent_review.v1",
+  "recorded_at_utc": "2026-08-28T18:51:16Z",
+  "reviewer": "deterministic_recompute_script",
+  "checks": [
+    {
+      "check": "pseudoreplication",
+      "pass": true,
+      "note": "3 replicates nest under case; N is paired cases not rows"
+    },
+    {
+      "check": "q38_leakage",
+      "pass": true,
+      "note": "case bank built from frozen postmortem/submission sources only"
+    },
+    {
+      "check": "estimand_defined",
+      "pass": true,
+      "note": "paired_risk_difference_rd = rate_C1 - rate_C0 on case-level majority binary prevents_C across E06-P010-* cases"
+    },
+    {
+      "check": "power_gate",
+      "pass": true,
+      "required_n": 207,
+      "available_e06": 244
+    },
+    {
+      "check": "c1_schema_no_answer_key",
+      "pass": true
+    },
+    {
+      "check": "changed_variable_isolation",
+      "pass": true
+    },
+    {
+      "check": "power_recompute_match",
+      "pass": true
+    }
+  ],
+  "terminal_state": "PASS",
+  "stop_reasons": [],
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

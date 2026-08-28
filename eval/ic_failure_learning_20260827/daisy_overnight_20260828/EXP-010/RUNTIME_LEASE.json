@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.daisy_overnight.runtime_lease.v1",
+  "recorded_at_utc": "2026-08-28T18:51:16Z",
+  "host": "magicSTUDIObox.local",
+  "q38_process_matches": [
+    "byron            79957   0.0  0.0 435361920   8672   ??  S    11:40AM   0:00.09 /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py",
+    "byron            79951   0.0  0.0 435308800   1056   ??  Ss   11:40AM   0:00.01 /bin/zsh -c builtin export PATH=\"/usr/bin:/bin:/usr/sbin:/sbin${PATH:+:$PATH}\"; snap=$(command cat <&3); builtin unsetop",
+    "byron            60281   0.0  0.0 435299344    928   ??  S    10:44AM   0:00.07 /bin/bash /Users/byron/projects/active/hydradg-qwen38-model-replay-20260828/scripts/chain_q38_after_exp008.sh",
+    "byron            60274   0.0  0.0 435308800    976   ??  Ss   10:44AM   0:00.01 /bin/zsh -c builtin export PATH=\"/usr/bin:/bin:/usr/sbin:/sbin${PATH:+:$PATH}\"; snap=$(command cat <&3); builtin unsetop",
+    "byron            44389   0.0  0.0 435368288   9152   ??  S    10:12AM   0:00.31 /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py",
+    "byron            44390   0.0  0.0 435300160    432   ??  S    10:12AM   0:00.00 tee /tmp/exp008-q38-execute.log",
+    "byron            44383   0.0  0.0 435308608    976   ??  Ss   10:12AM   0:00.01 /bin/zsh -c builtin export PATH=\"/usr/bin:/bin:/usr/sbin:/sbin${PATH:+:$PATH}\"; snap=$(command cat <&3); builtin unsetop",
+    "byron            82807   0.0  0.0 435361712  12304   ??  S    11:47AM   0:00.10 /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Py",
+    "byron            82801   0.0  0.0 435308256   1200   ??  Ss   11:47AM   0:00.01 /bin/zsh -c builtin export PATH=\"/usr/bin:/bin:/usr/sbin:/sbin${PATH:+:$PATH}\"; snap=$(command cat <&3); builtin unsetop"
+  ],
+  "ollama_shared_runtime": true,
+  "terminal_state": "BLOCKED_RUNTIME_LEASE",
+  "exp010_execute_permitted": false,
+  "note": "EXP-010 uses qwen3:1.7b and qwen2.5-coder:7b; Q38 holds qwen3.8:27b but shares Ollama daemon"
+}

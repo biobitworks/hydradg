@@ -1,0 +1,41 @@
+{
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "work_unit_id": "T010-C",
+  "phase": "OFFER",
+  "actor": {
+    "actor_class": "AI_AGENT",
+    "runtime_identity": "cursor-agent/composer"
+  },
+  "role_lane": "STUDIO_DAISY_SCIENTIFIC_EXECUTION",
+  "role_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "writeback_disposition": "CANDIDATE_ONLY",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/daisy-exp010-20260828",
+  "base_git_sha": "825964f49e730d951e9199d8386334d8083448b9",
+  "expected_host": "magicSTUDIObox.local",
+  "actual_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "a53508bd49aa6b242877a81f3746c9be435d57a217e46828465822b639cebbf7",
+  "input_packet_sha256": "259f0edcaf86e29062920fe41efca8d9d18a6321b03684ae0de5dd8b73a70892",
+  "lease": {
+    "lease_id": "exp010-t010-c",
+    "fencing_token": 1,
+    "single_writer_scope": "eval/ic_failure_learning_20260827/daisy_overnight_20260828/EXP-010",
+    "lease_owner": "hack-hydra/daisy-exp010-20260828",
+    "lease_state": "ACTIVE"
+  },
+  "expected_outputs": [
+    "PREREGISTRATION.json"
+  ],
+  "verification_gates": [
+    "PLAN_CHECK_PASS",
+    "ORCHESTRATION_WORK_UNIT_PASS"
+  ],
+  "stop_conditions": [
+    "undefined_estimand"
+  ],
+  "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "fco_state": "NOT_APPENDED",
+  "fcg_state": "NOT_APPENDED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

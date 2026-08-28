@@ -1,0 +1,66 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "EXP-010",
+  "predecessor_experiment": "EXP-009",
+  "predecessor_verdict": "UNDERPOWERED",
+  "changed_variable": "DECISION_GOVERNANCE_SCHEMA_ONLY",
+  "intervention": "GOVERNED_DECISION_SCHEMA",
+  "control": "FREE_FORM",
+  "H0": "Explicit governed decision schema does not change measured failure-prevention behavior relative to free-form JSON composition when evidence atoms, ordering, models, and scorer are held fixed.",
+  "H1": "Governed decision schema changes measured failure-prevention behavior.",
+  "conditions": {
+    "C0": "FREE_FORM",
+    "C1": "GOVERNED_DECISION_SCHEMA"
+  },
+  "output_schemas": {
+    "C0": "Return exactly one JSON object:\n{\n  \"state\": \"OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE\",\n  \"experiment_family\": \"E01|E02|E03|E04|E05|E06|E07\",\n  \"condition\": \"string\",\n  \"observations\": [\"string\"],\n  \"predicted_weak_dimensions\": [\"string\"],\n  \"origin_classification\": \"DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE\",\n  \"missing_evidence_classes\": [\"string\"],\n  \"causal_ranking\": [\"A\", \"B\", \"C\"],\n  \"earliest_divergence_candidate\": \"A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN\",\n  \"first_three_machine_actions\": [\"string\"],\n  \"ordered_workflow\": [\"string\"],\n  \"recommended_first_correction\": \"string|null\",\n  \"confidence_0_1\": 0.0,\n  \"evidence_quotes\": [\"string\"],\n  \"invented_capabilities\": []\n}",
+    "C1": "Return exactly one JSON object with governed decision fields (NO top-level \"answer\" key):\n{\n  \"state\": \"OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE\",\n  \"experiment_family\": \"E01|E02|E03|E04|E05|E06|E07\",\n  \"condition\": \"string\",\n  \"evidence_used\": [\"fco_id_or_quote\"],\n  \"evidence_class\": \"SOURCE|INFERENCE|PROTOCOL|EXTERNALLY_RETRIEVED_EVIDENCE\",\n  \"requirement\": \"string\",\n  \"earliest_divergence\": \"A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN\",\n  \"contradiction\": \"string|null\",\n  \"missing_evidence\": [\"string\"],\n  \"prohibited_claim\": \"string|null\",\n  \"action\": \"string\",\n  \"abstention_reason\": \"string|null\",\n  \"claim_ceiling\": \"string\",\n  \"observations\": [\"string\"],\n  \"predicted_weak_dimensions\": [\"string\"],\n  \"origin_classification\": \"DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE\",\n  \"missing_evidence_classes\": [\"string\"],\n  \"causal_ranking\": [\"A\", \"B\", \"C\"],\n  \"earliest_divergence_candidate\": \"A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN\",\n  \"first_three_machine_actions\": [\"string\"],\n  \"ordered_workflow\": [\"string\"],\n  \"recommended_first_correction\": \"string|null\",\n  \"confidence_0_1\": 0.0,\n  \"evidence_quotes\": [\"string\"],\n  \"invented_capabilities\": []\n}",
+    "C1_prohibited_keys": [
+      "answer"
+    ]
+  },
+  "context_pipeline_frozen_from": "EXP-009",
+  "atom_order": "CAUSAL_FCG_ORDER",
+  "retrieval": "STRUCTURED_FCG",
+  "models": {
+    "qwen3:1.7b": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+    "qwen2.5-coder:7b": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+  },
+  "model_inventory_sha256": "638841935368d6ff6bb133d3649cedc54f91ce70e3604c1fd5370b37d9eeadfd",
+  "runtime": "DIRECT_OLLAMA_API",
+  "parser": "strict_json_ollama_format",
+  "scorer_sha256": "917a2095935610d0907bd46e821d0fa571da9585faf2dfaa859859c7dcf8fb5f",
+  "case_bank_sha256": "a50c7d00453a695b8453fecaf4dec50ddc5c0251a66cd71fdff7598a71f6a27a",
+  "case_bank_manifest_sha256": "d71c7d1943a5f6c0f53673f69338d2a3921f56df9ef7952ef8fd3a91b9945d7d",
+  "replicates": 3,
+  "replicate_aggregation": "MAJORITY_OF_3_AT_CASE_LEVEL",
+  "independent_unit": "CASE",
+  "replicate_inflation_prohibited": true,
+  "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+  "primary_estimand": "paired_risk_difference_rd = rate_C1 - rate_C0 on case-level majority binary prevents_C across E06-P010-* cases",
+  "primary_test": "exact_mcnemar_one_sided_on_discordant_pairs",
+  "alpha": 0.05,
+  "power_assessment_sha256": "3dc93f87b9956cddc271e1fea9918e0c18ec503287e0ba730a35277882c136d0",
+  "required_paired_n": 207,
+  "exclusions": {
+    "malformed_json": "excluded_from_primary_endpoint_computation",
+    "abstain": "scored_as_failure_to_prevent",
+    "timeout": "preserved_as_ABSTAIN_or_FAILED_row",
+    "label_leakage": "BLOCKED_LABEL_LEAKAGE rows excluded"
+  },
+  "parse_accounting": {
+    "valid_parse": "PARSED_JSON",
+    "malformed": "MALFORMED_JSON",
+    "unknown_state": "model_state=UNKNOWN",
+    "abstain_state": "model_state=ABSTAIN"
+  },
+  "falsifiers": [
+    "C1 valid_parse_rate < C0 valid_parse_rate by >10pp with no compensating prevents_C gain",
+    "governed schema introduces systematic ABSTAIN inflation",
+    "primary rd<=0 with adequate powered discordant pairs"
+  ],
+  "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "prompt_provenance_sha256": "8d5837bd0b87bcb2e6c29d0de7b34649e9a432a6ef7bb4bb62747af556824891",
+  "frozen_at_utc": "2026-08-28T18:51:16Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
