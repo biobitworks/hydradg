@@ -1,0 +1,10 @@
+{
+  "schema": "hydradg.qwen38.remote_canary.v1",
+  "model": "Qwen3.8-27B",
+  "lane": "REMOTE",
+  "CANARY_STATE": "NOT_RUN",
+  "reason": "SELECTED_REMOTE_PROVIDER=BLOCKED_REMOTE_CAPACITY; local digest-bound canary used instead",
+  "local_canary_substitute": "eval/qwen38_model_replay_20260828/local_canary/QWEN38_CANARY_RECEIPT.json",
+  "recorded_at_utc": "2026-08-28T19:52:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "hydradg.qwen38.remote_canary.v1",
+  "model": "Qwen3.8-Flash-Next",
+  "lane": "REMOTE",
+  "CANARY_STATE": "BLOCKED",
+  "terminal_state": "FLASH_NEXT_REMOTE_CAPACITY_BLOCKED",
+  "block_reasons": [
+    "Daytona CLI not authenticated; DAYTONA_API_KEY absent in shell",
+    "Kaggle CLI not on PATH",
+    "local disk_free_gb=34 < 110 required for MLX Ollama artifact",
+    "MLX Ollama artifact not admissible on Linux CUDA without separate HF revision",
+    "Flash-Next HF weights ~180GB+ exceed typical single-GPU provisioning"
+  ],
+  "recorded_at_utc": "2026-08-28T19:52:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
