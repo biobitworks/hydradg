@@ -1,0 +1,43 @@
+{
+  "schema": "hydradg.team_update_pull.v1",
+  "receipt_id": "TEAM_UPDATE_PULL_VERIFICATION",
+  "recorded_at_utc": "2026-08-29T00:00:00Z",
+  "host": "magicSTUDIObox.local",
+  "canonical_base": {
+    "branch": "hack-hydra/ic-failure-learning-20260827",
+    "sha": "1274be3523fa2fa2092926c0cf2147702a8f0775"
+  },
+  "reconciliation_branch": {
+    "name": "reconcile/qwen38-successor-20260828",
+    "sha": "6aac72665b4496de62c68a53ea27e8ecb45fab52",
+    "remote_parity": true
+  },
+  "pr31": {
+    "number": 31,
+    "head_at_verification": "28fd89e574d88c65f40a1e730b3d7d4464fba9f0",
+    "head_branch": "cursor/qwen38-successor-replay-b3c8",
+    "prior_reconciliation_head": "f4f22dec38d04e8e3f4d91bb5b04e379f8db496f",
+    "description_stale": true,
+    "note": "PR body claiming EXP008-R 26/150 is stale; see EXPERIMENT_TERMINAL_AUDIT.json"
+  },
+  "topology_base_vs_pr_head": {
+    "ahead_by": 18,
+    "behind_by": 0,
+    "classification": "DIVERGED"
+  },
+  "q38_lane": "OPEN",
+  "exp008": {"terminal": "CLOSED", "verdict": "UNDERPOWERED", "cells": "300/300"},
+  "exp009": {
+    "terminal": "CLOSED",
+    "cells": "300/300",
+    "atom_set_gate": "PASS",
+    "ordering_isolation_gate": "PASS",
+    "EXPERIMENT_PRIMARY_VERDICT": "UNDERPOWERED",
+    "MECHANISTIC_EXPLORATORY_PATTERN": "DIRECTIONALLY_POSITIVE_SECONDARY",
+    "ordering_established": false,
+    "secondary_promoted": false
+  },
+  "exp010": {"readiness": "BLOCKED", "preregistration_present": false},
+  "successor_of": "eval/qwen38_model_replay_20260828/RECONCILIATION_RECEIPT.json",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
