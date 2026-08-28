@@ -1,0 +1,23 @@
+{
+  "schema": "hydradg.qwen38.protocol_runtime_conflict.v1",
+  "experiment_id": "Q38-EXP008-R",
+  "Q38_EXP008_R_PROTOCOL_RUNTIME_CONFLICT": "YES",
+  "frozen_preregistration_preserved": "eval/qwen38_model_replay_20260828/Q38-EXP008-R/PREREGISTRATION.json",
+  "conflict": {
+    "preregistered_flash_next": {
+      "ollama_alias": "qwen3.8-flash-next:125b-mlx",
+      "runtime": "MLX",
+      "lane": "REMOTE_OR_STUDIO_MLX"
+    },
+    "intended_daytona_execution": {
+      "ollama_alias": "qwen3.8-flash-next:125b-a6b-nvfp4",
+      "runtime": "Ollama CUDA NVFP4",
+      "host_class": "Daytona H200",
+      "gpu": "NVIDIA H200"
+    },
+    "substitution_allowed": false,
+    "resolution": "SUCCESSOR Q38-EXP008-R2 preregistered with matched Daytona artifacts; original prereg untouched"
+  },
+  "recorded_at_utc": "2026-08-29T00:15:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
