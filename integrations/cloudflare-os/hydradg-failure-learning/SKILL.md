@@ -52,7 +52,7 @@ and stop that case.
 
 ## Required output envelope
 
-Return exactly one JSON object with this shape:
+Return exactly one JSON object with this shape. Use empty arrays or `null` when a field is not applicable.
 
 ```json
 {
@@ -63,8 +63,10 @@ Return exactly one JSON object with this shape:
   "predicted_weak_dimensions": ["string"],
   "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
   "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
   "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
   "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
   "recommended_first_correction": "string|null",
   "confidence_0_1": 0.0,
   "evidence_quotes": ["short source-grounded fragment"],
@@ -107,11 +109,11 @@ Penalize yourself by adding any guessed endpoint/capability to `invented_capabil
 
 ## E05 — causal diagnosis
 
-This lane may read the postmortem evidence selected by the case builder, but the frozen answer field remains withheld. Rank A–G from evidence and pick one earliest candidate.
+This lane may read the postmortem evidence selected by the case builder, but the frozen answer field remains withheld. Rank A–G from evidence in `causal_ranking` and pick one earliest candidate.
 
 ## E06 — protocol repair
 
-Produce an ordered submission workflow that would prevent the observed class of failure. The deterministic scorer, not you, decides whether required gates are present and ordered before submission.
+Produce an ordered submission workflow in `ordered_workflow` that would prevent the observed class of failure. The deterministic scorer, not you, decides whether required gates are present and ordered before submission.
 
 ## Safety / custody
 
