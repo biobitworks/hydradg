@@ -1,0 +1,53 @@
+{
+  "schema": "hydradg.ic_postmortem.counterfactual_maximal.v1",
+  "deadline_cutoff_utc": "2026-08-27T22:39:24Z",
+  "constraints": [
+    "IC schema only",
+    "pre-deadline assets only",
+    "no overclaim",
+    "curated not dump"
+  ],
+  "top_level_submission": {
+    "title": "HydraLamp \u2014 agent-native custody control plane (built Aug 26\u201327 on HydraDG)",
+    "blurb": "20-second judge path: open demo \u2192 golden lane \u2192 poison/detect/antidote. NEW: 39 HydraLamp commits in 26h on existing HydraDG substrate (not a Hack Hydra replay). FCO/FCG custody, RunType lane, 46-event frozen replay.",
+    "repo_url": "https://github.com/biobitworks/hydradg/tree/hack-hydra/hydralamp-20260826",
+    "demo_url": "https://hydralamp.vercel.app/golden",
+    "agent_surface": "Concise API table + curl one-liners for /api/hydralamp/run, /status, /events, evidence-gateway",
+    "folder_id": "d_<created_via_ic_folder_create>"
+  },
+  "vault_package": {
+    "files": [
+      "00_START_HERE.md",
+      "01_JUDGE_SCORECARD_MAP.md",
+      "02_WHAT_IS_NEW_VS_HACK_HYDRA.md",
+      "03_ORIGIN_TIMELINE.md",
+      "04_ARCHITECTURE.md",
+      "05_NEGATIVE_AND_NULL_RESULTS.md",
+      "06_SPONSOR_INTEGRATIONS.md",
+      "07_REPRODUCE.md",
+      "08_CLAIM_CEILINGS.md",
+      "HYDRALAMP_SUBMISSION_HERO.png",
+      "contact-sheet.png",
+      "02_reference.png",
+      "05_poison.png",
+      "07_denied.png",
+      "17_antidote.png",
+      "20_pass.png",
+      "demo.mp4",
+      "events.jsonl",
+      "BACKUP_RECEIPT.json",
+      "MEDIA_SUBMISSION_MANIFEST.json"
+    ],
+    "estimated_file_count": 20,
+    "rationale": "Judge comprehension per second \u2014 origin distinction on page 1"
+  },
+  "agent_native_proof": {
+    "should_demonstrate": [
+      "Agent discovers IC MCP via ic_hack_get",
+      "Agent creates vault folder and uploads evidence",
+      "Agent calls ic_hack_submit with folder_id",
+      "Agent retrieves ic_hack_me to verify"
+    ],
+    "actual": "Human-operator driven submit; folder_id null; logistics not demonstrated as proof"
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "schema": "hydradg.ic_postmortem.origin_provenance_audit.v1",
+  "verified_boundaries": {
+    "hydradg_first_commit": {
+      "sha": "e45580269275018b2824227ec1836bb1a082b9bd",
+      "timestamp": "2026-08-18 07:58:55 -0700",
+      "message": "Initial complete HydraDG private repository snapshot"
+    },
+    "hack_hydra_window": {
+      "start": "2026-08-19T00:19:53-07:00",
+      "end": "2026-08-21T22:20:44-07:00",
+      "commits_in_window": 513,
+      "note": "Git-visible elapsed \u224859h; not active human hours"
+    },
+    "first_hydralamp_commit": {
+      "sha": "757f3fa707e17acc9d07aa742098115243865625",
+      "timestamp": "2026-08-26 14:36:09 -0700",
+      "message": "HydraLamp prototype: zero-trust multi-agent federation on HydraDG"
+    },
+    "hydralamp_integration_commits_to_submission": 32,
+    "standalone_hydralamp_repo": {
+      "first_commit_approx": "2026-08-26T14:47 PDT",
+      "sha_at_submission": "d3d928aae47e12afa99c25bd5d1cd94ef74c3da7",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    "submission_ack_utc": "2026-08-27T22:39:24Z"
+  },
+  "chain_audit": [
+    {
+      "step": "HUMAN_VISIBLE_PROMPT",
+      "state": "PARTIAL",
+      "evidence_class": "RETROACTIVE_CUSTODY_RECONSTRUCTION_FROM_AVAILABLE_RECORD",
+      "note": "CURSOR_IC_FINAL_SUBMISSION_PROMPT.md exists; earlier build prompts not byte-captured"
+    },
+    {
+      "step": "AGENT_TURN",
+      "state": "PARTIAL",
+      "evidence_class": "RETROACTIVE_CUSTODY_RECONSTRUCTION_FROM_AVAILABLE_RECORD"
+    },
+    {
+      "step": "TOOL_ACCESS",
+      "state": "VERIFIED",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "artifact": "IC_SUBMIT_RECEIPT.json"
+    },
+    {
+      "step": "EXECUTION",
+      "state": "VERIFIED",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+    },
+    {
+      "step": "ARTIFACT",
+      "state": "VERIFIED",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d"
+    },
+    {
+      "step": "COMMIT",
+      "state": "VERIFIED",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "sha": "b337e60f"
+    },
+    {
+      "step": "PUSH_REMOTE_REF",
+      "state": "VERIFIED",
+      "evidence_class": "RECOMPUTED_RESULT"
+    },
+    {
+      "step": "SUBMISSION",
+      "state": "VERIFIED",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+    },
+    {
+      "step": "IC_ACK",
+      "state": "VERIFIED",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+    }
+  ],
+  "earliest_chain_break": "HUMAN_VISIBLE_PROMPT \u2014 contemporaneous prompt bytes for most build turns not captured",
+  "signature_state": "NOT_SIGNED",
+  "ic_signed_submit": false
+}
