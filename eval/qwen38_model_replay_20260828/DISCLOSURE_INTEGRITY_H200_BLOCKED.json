@@ -1,0 +1,29 @@
+{
+  "schema": "hydradg.disclosure_integrity_decision.v1",
+  "decision_id": "DID-H200-RESOURCE-BLOCKED-20260829",
+  "recorded_at_utc": "2026-08-29T00:43:00Z",
+  "label": "RESOURCE_BLOCKED_H200_UNAVAILABLE",
+  "rule_identifier": "Q38-R2-PREREG-GPU-CLASS-H200-EXACT",
+  "rule_hash_sha256": "704c4e97aada285761b6681b96d5c1bf140f4530311e47dff2fb5182215f8902",
+  "observed_atoms": [
+    {
+      "atom": "H200_CREATE_TIMEOUT_900S",
+      "source": "eval/qwen38_model_replay_20260828/DAYTONA_H200_ENVIRONMENT_RECEIPT.json",
+      "source_hash_sha256": "pending_at_write"
+    },
+    {
+      "atom": "SANDBOX_PENDING_BUILD",
+      "sandbox_id": "43402532-f74f-4d25-b23f-da04ff1f62dc",
+      "duration_minutes": ">15"
+    },
+    {
+      "atom": "H100_AVAILABLE_NOT_ADMITTED",
+      "note": "daytona-gpu snapshot yielded H100 80GB in prior probe; prereg forbids substitution"
+    }
+  ],
+  "contradicting_evidence": [],
+  "temporal_scope": "2026-08-29T00:28:00Z to 2026-08-29T00:43:06Z",
+  "derivation": "Preregistered primary host class requires verified NVIDIA H200. Explicit SDK create with GpuType.H200 exceeded 900s while sandbox remained pending_build. Execution STOP per no-substitution rule.",
+  "downstream_experiments_blocked": ["Q38-EXP008-R2", "Q38-EXP009-R2"],
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

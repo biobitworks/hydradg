@@ -1,16 +1,15 @@
 {
   "schema": "hydradg.qwen38.execution_gate.v1",
   "experiment_id": "Q38-EXP008-R2",
-  "EXECUTION_STATE": "RESOURCE_BLOCKED",
-  "DAYTONA_AUTH": "FAIL",
-  "sandbox_creation": "NOT_ATTEMPTED",
+  "EXECUTION_STATE": "RESOURCE_BLOCKED_H200_UNAVAILABLE",
+  "DAYTONA_AUTH": "PASS",
   "h200_verified": false,
-  "ollama_runtime": "NOT_PROVISIONED",
+  "block_reason": "H200 sandbox create timeout 900s; pending_build; no H100 substitution per prereg",
+  "environment_receipt": "eval/qwen38_model_replay_20260828/DAYTONA_H200_ENVIRONMENT_RECEIPT.json",
+  "evidence": "eval/qwen38_model_replay_20260828/DAYTONA_AUTH_RESTORATION_RECEIPT.json",
   "n_planned": 300,
   "n_terminal": 0,
   "MATRIX_COMPLETE": "NO",
-  "block_reason": "Daytona auth missing: `daytona list` -> no profiles found; operator must run `daytona login`",
-  "evidence": "eval/qwen38_model_replay_20260828/DAYTONA_AUTH_RESTORATION_RECEIPT.json",
-  "recorded_at_utc": "2026-08-29T00:16:00Z",
+  "recorded_at_utc": "2026-08-29T00:43:00Z",
   "SIGNATURE_STATE": "NOT_SIGNED"
 }

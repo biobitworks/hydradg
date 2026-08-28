@@ -1,0 +1,9 @@
+{
+  "schema": "hydradg.daytona_h200_environment.v1",
+  "recorded_at_utc": "2026-08-28T23:43:06Z",
+  "state": "RESOURCE_BLOCKED_H200_UNAVAILABLE",
+  "create_meta": {
+    "create_exit": 1,
+    "create_tail": "hon3.14/site-packages/daytona/_utils/errors.py\", line 224, in sync_wrapper\n    process_n_raise_exception(e)\n    ~~~~~~~~~~~~~~~~~~~~~~~~~^^^\n  File \"/private/tmp/daytona-preflight-venv/lib/python3.14/site-packages/daytona/_utils/errors.py\", line 144, in process_n_raise_exception\n    raise e.__class__(\n    ...<5 lines>...\n    ) from e\ndaytona.common.errors.DaytonaTimeoutError: Failed to create sandbox: Failure during waiting for sandbox to start: Function 'create' exceeded timeout of 900 seconds."
+  }
+}
