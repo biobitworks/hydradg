@@ -1,0 +1,19 @@
+{
+  "schema": "hydradg.qwen38.reconciliation.v1",
+  "recorded_at_utc": "2026-08-28T22:50:00Z",
+  "reconciliation_branch": "reconcile/qwen38-successor-20260828",
+  "base_branch": "hack-hydra/ic-failure-learning-20260827",
+  "base_sha": "1274be3523fa2fa2092926c0cf2147702a8f0775",
+  "q38_replay_head": "f4f22dec38d04e8e3f4d91bb5b04e379f8db496f",
+  "merge_commit": "19881456",
+  "topology": {
+    "base_vs_q38": "DIVERGED",
+    "ahead_by": 16,
+    "behind_by": 3,
+    "verified": true
+  },
+  "probe_conflict_resolution": "retain_repaired_successor_probe; PROBE_LINEAGE.json records successor_of",
+  "historical_receipts_preserved": true,
+  "force_push": false,
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
