@@ -1,0 +1,119 @@
+{
+  "schema": "hydradg.ic_failure_learning.post_model_fcg.v1",
+  "predecessor_fcg_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e",
+  "post_model_fcg_root": "c1134aa670e0cb5fcd1602f055223619ea8afa0d539087618bcaaebbed3b01bf",
+  "nodes": [
+    {
+      "node_id": "PreModelFailureLearningFCG",
+      "kind": "PreModelFailureLearningFCG",
+      "analysis_fcg_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e"
+    },
+    {
+      "node_id": "PostModelFailureLearningFCG",
+      "kind": "PostModelFailureLearningFCG",
+      "stage2_row_count": 414
+    },
+    {
+      "node_id": "CanaryExecutionFCO",
+      "kind": "CanaryExecutionFCO",
+      "EXECUTION_STATE": "ABORTED_EXECUTION_SETUP",
+      "EARLIEST_DIVERGENCE": "RESULT_OUTPUT_DIRECTORY_MISSING_BEFORE_TEE",
+      "partial_output_rows_preserved": 18
+    },
+    {
+      "node_id": "OutputDirectorySetupFCO",
+      "kind": "OutputDirectorySetupFCO",
+      "failure": "RESULT_OUTPUT_DIRECTORY_MISSING_BEFORE_TEE"
+    },
+    {
+      "node_id": "GenerationFCO:M0",
+      "kind": "GenerationFCO",
+      "generation": "M0"
+    },
+    {
+      "node_id": "GovernedContextFCO:M0",
+      "kind": "GovernedContextFCO",
+      "context": "NONE"
+    },
+    {
+      "node_id": "GenerationFCO:M1",
+      "kind": "GenerationFCO",
+      "generation": "M1"
+    },
+    {
+      "node_id": "GovernedContextFCO:M1",
+      "kind": "GovernedContextFCO",
+      "context": "RULE_CORPUS"
+    },
+    {
+      "node_id": "GenerationFCO:M2",
+      "kind": "GenerationFCO",
+      "generation": "M2"
+    },
+    {
+      "node_id": "GovernedContextFCO:M2",
+      "kind": "GovernedContextFCO",
+      "context": "FAILURE_LEARNING_FCG"
+    }
+  ],
+  "edges": [
+    {
+      "src": "PreModelFailureLearningFCG",
+      "rel": "PREDECESSOR_OF",
+      "dst": "PostModelFailureLearningFCG"
+    },
+    {
+      "src": "CanaryExecutionFCO",
+      "rel": "FAILED_AT",
+      "dst": "OutputDirectorySetupFCO"
+    },
+    {
+      "src": "GenerationFCO:M0",
+      "rel": "USES",
+      "dst": "GovernedContextFCO:M0"
+    },
+    {
+      "src": "GenerationFCO:M1",
+      "rel": "USES",
+      "dst": "GovernedContextFCO:M1"
+    },
+    {
+      "src": "GenerationFCO:M2",
+      "rel": "USES",
+      "dst": "GovernedContextFCO:M2"
+    }
+  ],
+  "leaf_count": 829,
+  "backbones": [
+    {
+      "height": 9,
+      "peak_root": "43ea6926154e71aeafcfa2f8000c0199e4fee25490e8256346637765d3644527"
+    },
+    {
+      "height": 8,
+      "peak_root": "01002fceb6f5bfb28d9baac652acb1cab287e4c45bb02c1149617eca1f31b3f1"
+    },
+    {
+      "height": 5,
+      "peak_root": "3dd370f0b4b496b32f30028178c48cd8b284ff1bda4c94648769c8be62e25922"
+    },
+    {
+      "height": 4,
+      "peak_root": "fa1450aa7e21fd55a64f79c5220010863d7f36394f4e8be73a132a10437fc368"
+    },
+    {
+      "height": 3,
+      "peak_root": "831e21125f77f0cc55f8b407b5b1c52a1d4220ea6ddec7255660c252af617657"
+    },
+    {
+      "height": 2,
+      "peak_root": "3e761d3d72ad36f433044c563545ab16d5374f91f2a4ee58283256fceba58bab"
+    },
+    {
+      "height": 0,
+      "peak_root": "fffb0df4dc059906ef4755974ef6a826bbf6b75bfca94fbc77bfc3a2af366c29"
+    }
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "CLAIM_CEILING": "FAILURE_LEARNING_EXPERIMENT_RESULTS_ONLY"
+}

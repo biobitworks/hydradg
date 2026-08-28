@@ -1,0 +1,23 @@
+{
+  "schema": "hydradg.ic_failure_learning.next_daisy_falsification.v1",
+  "title": "EXP-008 Structured FCG retrieval vs flat rule prose",
+  "rationale": "Stage2 nulls on cold-start, top1 divergence, and protocol ordering suggest context composition—not model capacity—is the earliest remaining failure",
+  "treatments": {
+    "T0": "flat injected rule prose (M1-like)",
+    "T1": "deterministic SeedGraph/FCG structured retrieval (bounded atom set)"
+  },
+  "fixed": [
+    "model=qwen2.5-coder:7b",
+    "cases=E05+E06 canary subset",
+    "replicates=3",
+    "scorer",
+    "sampling"
+  ],
+  "primary_metrics": [
+    "E05 top1",
+    "E06 prevents_C",
+    "cold_start_detection",
+    "protocol_order"
+  ],
+  "claim_ceiling": "FALSIFICATION_EXPERIMENT_PREREGISTERED"
+}
