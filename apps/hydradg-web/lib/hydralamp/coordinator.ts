@@ -22,6 +22,11 @@ import { buildModelVisibleContext, kgSnapshotHash } from "./modelContext";
 import { computeContextDelta } from "./contextDelta";
 import { localModelComplete, probeLocalRuntime } from "./localModel";
 import { loadHydraLampServerEnv, runtypeApiKeyStatus } from "./env";
+import {
+  normalizeRuntypeDispatchResult,
+  runRuntypeWithLocalTools,
+  sanitizeRuntypeProviderError,
+} from "./runtypeNormalize";
 import type {
   EvidenceClass,
   ExecutionMode,
@@ -33,7 +38,8 @@ import type {
   VerifierClass,
 } from "./types";
 
-const DEADLINE_MS = 10_000;
+/** Measured Runtype minimal latency ~15s; floor 45s, cap 120s unless env override. */
+const DEADLINE_MS = Number(process.env.RUNTYPE_PROVIDER_TIMEOUT_MS || 60_000);
 const MAX_TOOL_CALLS = 6;
 const LOCAL_DEADLINE_MS = 45_000;
 
@@ -368,7 +374,10 @@ async function runOneLaneLive(params: {
     let tool_count = 0;
 
     for (const schema of LOCAL_TOOL_SCHEMAS) {
-      localTools[schema.name] = async (args: unknown) => {
+      localTools[schema.name] = {
+        description: schema.description,
+        parametersSchema: schema.parametersSchema as Record<string, unknown>,
+        execute: async (args: unknown) => {
         const a = (args && typeof args === "object" ? args : {}) as Record<string, unknown>;
         if (tool_count >= MAX_TOOL_CALLS) {
           return { error: "MAX_TOOL_CALLS", max: MAX_TOOL_CALLS };
@@ -408,6 +417,7 @@ async function runOneLaneLive(params: {
           public_payload: result as Record<string, unknown>,
         });
         return result;
+        },
       };
     }
 
@@ -416,7 +426,8 @@ async function runOneLaneLive(params: {
     );
 
     const execPromise = (async () => {
-      return await client.runWithLocalTools(
+      return await runRuntypeWithLocalTools(
+        client,
         {
           agent: {
             name: `HydraLamp-${lane}`,
@@ -424,29 +435,23 @@ async function runOneLaneLive(params: {
             systemPrompt,
             temperature: 0,
             tools: {
-              runtimeTools: LOCAL_TOOL_SCHEMAS,
+              runtimeTools: [],
               maxToolCalls: MAX_TOOL_CALLS,
             },
           },
           messages: [{ role: "user", content: userPrompt }],
-          streamResponse: false,
-        } as never,
-        localTools as never,
-        { cache: false } as never,
+          streamResponse: true,
+        },
+        localTools,
+        { cache: false },
       );
     })();
 
-    const result = (await Promise.race([execPromise, timeout])) as unknown as Record<string, unknown>;
-    const executionId =
-      (result?.executionId as string) ||
-      (result?.id as string) ||
-      (result?.execution_id as string) ||
-      null;
-    const text =
-      (result?.output as string) ||
-      (result?.content as string) ||
-      (typeof result?.message === "string" ? result.message : "") ||
-      JSON.stringify(result?.final || result?.data || result);
+    const normalized = (await Promise.race([execPromise, timeout])) as Awaited<
+      ReturnType<typeof normalizeRuntypeDispatchResult>
+    >;
+    const executionId = normalized.executionId;
+    const text = normalized.text;
     const structured = parseStructured(text);
     const model_output_hash = hashModelOutput(text);
     emit(run, {
@@ -486,8 +491,12 @@ async function runOneLaneLive(params: {
       evidence_class: "LIVE_RUNTYPE",
     };
   } catch (err) {
-    const code = (err as { code?: string })?.code || (err as Error).message;
-    const isTimeout = String(code).includes("TIMEOUT");
+    const sanitized = sanitizeRuntypeProviderError(err, {
+      model_id,
+      latency_ms: Date.now() - started,
+    });
+    const code = sanitized.error_code || sanitized.error_message || (err as Error).message;
+    const isTimeout = sanitized.error_class === "TIMEOUT";
     emit(run, {
       lane,
       model_id,
@@ -496,18 +505,32 @@ async function runOneLaneLive(params: {
       verification_result: isTimeout ? "TIMEOUT" : "ERROR",
       context_hash_before: modelCtx.context_hash,
       context_hash_after: modelCtx.context_hash,
+      public_payload: {
+        error_class: sanitized.error_class,
+        error_name: sanitized.error_name,
+        error_code: sanitized.error_code,
+        provider_error_code: sanitized.provider_error_code,
+        http_status: sanitized.http_status,
+      },
     });
     return {
       lane,
       model_id,
-      runtype_execution_id: null,
+      runtype_execution_id: sanitized.execution_id,
       status: isTimeout ? "TIMEOUT" : "ERROR",
       tool_sequence: [],
       tool_count: 0,
       structured: null,
       raw_output_sha256: null,
       latency_ms: Date.now() - started,
-      error_class: isTimeout ? "TIMEOUT" : "PROVIDER_OR_SDK_ERROR",
+      error_class: sanitized.error_class,
+      error_name: sanitized.error_name,
+      error_code: sanitized.error_code,
+      error_message: sanitized.error_message,
+      provider_error_code: sanitized.provider_error_code,
+      http_status: sanitized.http_status,
+      provider_request_id: sanitized.provider_request_id,
+      sdk_version: sanitized.sdk_version,
       repair_requested: false,
       repair_allowed: null,
       candidate_root: null,

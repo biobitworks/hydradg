@@ -18,7 +18,7 @@ export function runtypeHealth(probed: boolean): ProviderHealthRow {
     hosted_on_vercel: true,
     claim_ceiling: "PROBABILISTIC_MODEL_OUTPUT",
     note:
-      "Prior HydraLamp LIVE_RUNTYPE lane ERROR preserved. Overnight 4×25 not rerun. Studio remains scientific authority.",
+      "Overnight PROBE_CONTROL_SMOKE + prior ERROR preserved. Repair ladder R0–R2 PASS; R3–R6 blocked TEST_KEY_DAILY_LIMIT_EXCEEDED. No 4×25 rerun.",
   };
 }
 

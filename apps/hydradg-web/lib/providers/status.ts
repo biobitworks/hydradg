@@ -93,7 +93,7 @@ export async function buildProviderStatus() {
       "SPONSOR",
       runtypeApiKeyStatus(),
       "PROBABILISTIC_MODEL_OUTPUT",
-      "Studio Runtype ERROR preserved. Overnight 4×25 not rerun. CONFIGURED ≠ PASS.",
+      "Overnight + repair ladder receipts on file (R0–R2 PASS; R3–R6 429). Prior ERROR preserved. CONFIGURED ≠ PASS.",
     ),
     {
       provider: "Cortex",

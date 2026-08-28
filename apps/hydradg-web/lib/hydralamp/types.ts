@@ -175,6 +175,13 @@ export type LaneResult = {
   proposal_hash?: string | null;
   latency_ms: number;
   error_class?: string;
+  error_name?: string | null;
+  error_code?: string | null;
+  error_message?: string | null;
+  provider_error_code?: string | null;
+  http_status?: number | null;
+  provider_request_id?: string | null;
+  sdk_version?: string | null;
   repair_requested: boolean;
   repair_allowed: boolean | null;
   candidate_root: string | null;

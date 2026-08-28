@@ -1,6 +1,6 @@
 {
   "schema": "hydradg.sponsor_host_matrix.v1",
-  "recorded_at_utc": "2026-08-27T23:55:00Z",
+  "recorded_at_utc": "2026-08-28T00:15:00Z",
   "execution_host": "magicSTUDIObox.local",
   "note": "CONFIGURED != PASS. Cortex is external memory, not canonical FCG. Cloudflare is venue/host context unless event evidence names a sponsor integration.",
   "rows": [
@@ -11,7 +11,7 @@
       "local_live_verified": "PARTIAL",
       "external_live_verified": "ERROR",
       "replay_only": false,
-      "receipt": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R0_SDK.json (PASS) … R3_STRUCTURED.json (FAIL TEST_KEY_DAILY_LIMIT_EXCEEDED)",
+      "receipt": "eval/agent_native_sponsors_20260827/live_loop_repair/RUNTYPE_LIVE_LOOP_REPAIR_RECEIPT.json",
       "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
       "state_summary": "R0–R2 PASS with execution_id; R3–R6 FAIL 429 quota; prior ERROR receipts preserved"
     },

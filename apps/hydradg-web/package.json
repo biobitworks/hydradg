@@ -11,6 +11,7 @@
     "test:vercel-control-plane": "tsx scripts/vercel_control_plane_invariants.ts",
     "hydralamp:custody-stress": "tsx scripts/hydralamp_custody_stress.mts",
     "hydralamp:overnight": "tsx scripts/hydralamp_overnight.mts",
+    "hydralamp:runtype-repair": "tsx scripts/run_runtype_repair_ladder.mts",
     "sponsor:discovery": "tsx scripts/sponsor_discovery_bootstrap.mts",
     "sponsor:tavily": "tsx scripts/sponsor_tavily_mission.mts",
     "sponsor:tavily-ai-sdk": "tsx scripts/sponsor_tavily_ai_sdk_mission.mts",
