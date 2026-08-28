@@ -1,0 +1,116 @@
+{
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "work_unit_id": "IC_FAILURE_LEARNING_CLOUDFLARE_OS_OLLAMA_20260827",
+  "state": "ACCEPTED_READY_FOR_PLAN_CHECK",
+  "human_instruction": "Build infrastructure from the HydraLamp Immersive Commons forensic audit, run experiments with local Ollama models through Cloudflare OS, learn where submission failures came from, and append successor FCO/FCG/MMR custody without rewriting the historical submission.",
+  "source_repo": "biobitworks/hydradg",
+  "source_branch": "hack-hydra/hydralamp-20260826",
+  "source_sha": "7a737d868e3d444aa29a629219fba689425959da",
+  "execution_branch": "hack-hydra/ic-failure-learning-20260827",
+  "roles": {
+    "magicSTUDIObox.local": "EXCLUSIVE_SCIENTIFIC_AND_MODEL_EXECUTION_HOST",
+    "magicPRObox.local": "CONTROLLER_REVIEWER_MIRROR",
+    "GitHub_origin": "SYNCHRONIZATION_ARBITER",
+    "Cloudflare_OS": "LOCAL_AGENT_WORKSPACE_CONTROL_SURFACE",
+    "Ollama": "PROBABILISTIC_MODEL_RUNTIME",
+    "HydraDG_deterministic_scripts": "CASE_CUSTODY_SCORING_MMR_AUTHORITY"
+  },
+  "locked_human_decisions": [
+    "Historical Immersive Commons submission seal remains unchanged",
+    "Actual submission payload SHA-256 remains 230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+    "Earliest forensic divergence remains C_media_not_in_vault unless successor evidence explicitly challenges it",
+    "Predecessor origin audit commitment remains a simplified linear SHA-256 chain and is not promoted into a full MMR",
+    "Blind model lanes must not receive postmortem/EVAL_ONLY answer evidence",
+    "No model/provider/tag substitution without a successor preregistration"
+  ],
+  "required_inputs": [
+    "docs/IC_FAILURE_LEARNING_EXPERIMENT_PLAN.md",
+    "eval/ic_failure_learning_20260827/PREREGISTRATION.json",
+    "integrations/cloudflare-os/hydradg-failure-learning/SKILL.md",
+    "integrations/cloudflare-os/hydradg-failure-learning/RUNBOOK.md",
+    "scripts/build_ic_failure_learning_cases.py",
+    "scripts/build_ic_failure_learning_fcg.py",
+    "scripts/record_ic_failure_learning_output.py",
+    "scripts/score_ic_failure_learning.py"
+  ],
+  "required_capabilities": [
+    "magicSTUDIObox shell",
+    "local Ollama API on 127.0.0.1:11434",
+    "Cloudflare OS local workerd/Wrangler runtime",
+    "exact Git checkout and push permission"
+  ],
+  "expected_outputs": [
+    "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+    "eval/ic_failure_learning_20260827/cases/CASE_MANIFEST.json",
+    "eval/ic_failure_learning_20260827/custody/FAILURE_LEARNING_FCG_MMR_MANIFEST.json",
+    "eval/ic_failure_learning_20260827/custody/FAILURE_LEARNING_MMR_VERIFICATION_RECEIPT.json",
+    "eval/ic_failure_learning_20260827/results/MODEL_OUTPUTS.jsonl",
+    "eval/ic_failure_learning_20260827/scored/SCORED_RESULTS.jsonl",
+    "eval/ic_failure_learning_20260827/scored/SCORE_SUMMARY.json",
+    "successor post-model FCO/FCG/MMR commitment and verification receipt"
+  ],
+  "plan_check_gates": [
+    "HOST_IS_MAGICSTUDIOBOX",
+    "BRANCH_AND_BASE_SHA_VERIFIED",
+    "WORKTREE_CLEAN_OR_EXPLICITLY_CUSTODIED",
+    "OLLAMA_RUNTIME_VERIFIED",
+    "CLOUDFLARE_OS_COMMIT_RECORDED",
+    "MODEL_TAGS_AND_IDENTITIES_FROZEN",
+    "BLIND_INPUT_LEAKAGE_GATE_PASS",
+    "CANONICAL_MMR_REFERENCE_AVAILABLE"
+  ],
+  "stop_conditions": [
+    "source hash mismatch",
+    "blind-lane label leakage",
+    "wrong execution host",
+    "wrong model/provider/tag",
+    "unrecorded model substitution",
+    "deterministic scorer contract drift",
+    "duplicate model-case-replicate key",
+    "canonical FCO identity conflict",
+    "MMR recomputation mismatch"
+  ],
+  "non_stop_scientific_outcomes": [
+    "incorrect diagnosis",
+    "null treatment effect",
+    "negative treatment effect",
+    "timeout",
+    "abstention",
+    "malformed model response when retained",
+    "cross-model disagreement"
+  ],
+  "handoff_sequence": [
+    "DISCOVER",
+    "OFFER",
+    "ACCEPT",
+    "PLAN_CHECK",
+    "EXECUTE",
+    "VERIFY",
+    "SCIENCE_AUDIT",
+    "CUSTODY_APPEND",
+    "COMMIT_PUSH",
+    "RECEIVER_SYNC",
+    "CLOSEOUT"
+  ],
+  "current_handoff_state": {
+    "DISCOVER": "COMPLETE",
+    "OFFER": "COMPLETE",
+    "ACCEPT": "COMPLETE_BY_CURRENT_HUMAN_INSTRUCTION",
+    "PLAN_CHECK": "PENDING_STUDIO_CAPABILITY_SNAPSHOT",
+    "EXECUTE": "NOT_STARTED",
+    "VERIFY": "NOT_STARTED",
+    "SCIENCE_AUDIT": "NOT_STARTED",
+    "CUSTODY_APPEND": "PRE_MODEL_INFRASTRUCTURE_ONLY",
+    "COMMIT_PUSH": "INFRASTRUCTURE_BRANCH_IN_PROGRESS",
+    "RECEIVER_SYNC": "NOT_STARTED",
+    "CLOSEOUT": "NOT_STARTED"
+  },
+  "evidence_state": "FAILURE_LEARNING_INFRASTRUCTURE_ONLY",
+  "experiment_state": "PREREGISTERED_NOT_EXECUTED",
+  "fco_state": "CANDIDATE_CONSTRUCTION_SCRIPT_PRESENT_NOT_YET_EXECUTED",
+  "fcg_state": "SUCCESSOR_GRAPH_PLAN_PRESENT_NOT_YET_EXECUTED",
+  "hydradb_state": "NO_NEW_PROJECTION_REQUIRED_FOR_STAGE_1",
+  "claim_ceiling": "FAILURE_LEARNING_INFRASTRUCTURE_PREREGISTERED_ONLY",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "PREDECESSOR_AUDIT_DOMAIN_COMMITTED_SIMPLIFIED_CHAIN__SUCCESSOR_FAILURE_LEARNING_MMR_NOT_YET_EXECUTED"
+}
