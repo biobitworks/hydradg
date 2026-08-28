@@ -58,9 +58,9 @@
 
 ## Data quality
 {
-  "n_raw": 305,
-  "valid_parse_rate": 0.9081967213114754,
-  "malformed_rate": 0.09180327868852459,
-  "unknown_rate": 0.4918032786885246,
-  "abstain_rate": 0.08196721311475409
+  "n_raw": 306,
+  "valid_parse_rate": 0.9084967320261438,
+  "malformed_rate": 0.0915032679738562,
+  "unknown_rate": 0.49019607843137253,
+  "abstain_rate": 0.08169934640522876
 }
