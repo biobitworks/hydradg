@@ -1,0 +1,40 @@
+{
+  "schema": "hydradg.remote_auth_rerun_gate.v1",
+  "receipt_id": "REMOTE_AUTH_RERUN_GATE",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "host": "magicSTUDIObox.local",
+  "reconcile_branch": "reconcile/qwen38-successor-20260828",
+  "reconcile_sha": "e5e1e1e4478ad69ae7cbc1f4f34e9669be66542e",
+  "GO_FORWARD": false,
+  "q38_successor_reruns": {
+    "Q38-EXP008-R": {
+      "state": "PARTIAL",
+      "completed_cells": 24,
+      "total_cells_27b_lane": 150,
+      "model": "qwen3.8:27b",
+      "digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "provider": "LOCAL_OLLAMA",
+      "note": "Distinct from canonical EXP-008 (qwen3:1.7b / qwen2.5-coder:7b)"
+    },
+    "Q38-EXP009-R": {
+      "state": "NOT_STARTED"
+    }
+  },
+  "canonical_daisy_closed": {
+    "EXP-008": "CLOSED_UNDERPOWERED",
+    "EXP-009": "CLOSED_UNDERPOWERED"
+  },
+  "daytona_matched_comparison": {
+    "design": "Q38-27B vs Flash-Next on same Daytona H200 sandbox",
+    "blocked": true,
+    "reason": "DAYTONA_AUTH_FAIL"
+  },
+  "kaggle": {
+    "auth": "PASS",
+    "sglang_successor": "NOT_STARTED",
+    "flash_next_on_kaggle": "FORBIDDEN"
+  },
+  "EXP-010": "BLOCKED until Q38 reruns + prereg",
+  "no_secret_leak": true,
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
