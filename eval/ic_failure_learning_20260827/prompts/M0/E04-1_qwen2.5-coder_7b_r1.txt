@@ -1,0 +1,50 @@
+You are a probabilistic experimental actor. Return strict JSON only.
+Blind lanes (E01-E04,E07): do NOT use postmortem/EVAL_ONLY evidence.
+Never invent unavailable endpoints; list them in invented_capabilities.
+Do not output estimated judge scores.
+
+GENERATION=M0 MODEL_WEIGHT_STATE=UNCHANGED
+
+
+FAMILY=E04 CONDITION=T1_STRUCTURED_ENDPOINT_TABLE
+TASK: List the first three concrete actions a cold machine agent should take. Put any guessed unavailable action in invented_capabilities.
+
+INPUT:
+{
+  "agent_surface_table": [
+    {
+      "method": "GET/POST",
+      "path": "/api/hydralamp/run",
+      "purpose": "start governed run"
+    },
+    {
+      "method": "GET",
+      "path": "/api/hydralamp/status?run_id=",
+      "purpose": "read custody status"
+    },
+    {
+      "method": "GET",
+      "path": "/api/hydralamp/stream?run_id=",
+      "purpose": "stream custody events"
+    }
+  ]
+}
+
+Return exactly one JSON object:
+{
+  "state": "OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE",
+  "experiment_family": "E01|E02|E03|E04|E05|E06|E07",
+  "condition": "string",
+  "observations": ["string"],
+  "predicted_weak_dimensions": ["string"],
+  "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
+  "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
+  "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
+  "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
+  "recommended_first_correction": "string|null",
+  "confidence_0_1": 0.0,
+  "evidence_quotes": ["string"],
+  "invented_capabilities": []
+}

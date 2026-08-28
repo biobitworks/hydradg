@@ -1,0 +1,481 @@
+{
+  "schema": "hydradg.ic_failure_learning.seedgraph_atomization.v1",
+  "rule_atoms": 18,
+  "atoms": [
+    {
+      "atom_id": "rule:R_EVENT_IMMERSIVE_COMMONS",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "event.eid",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "b30db8e18f44dcc01b3298cd15dfb3fad35907df2fdfb9cfeb8f510eb33fee3a",
+      "payload": {
+        "rule_id": "R_EVENT_IMMERSIVE_COMMONS",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "event.eid",
+        "verbatim_fragment": "anb-hack-01",
+        "normalized_meaning": "Submission targets Immersive Commons Agent Natives hackathon event",
+        "requirement_type": "EVENT",
+        "rubric_dimension": null,
+        "hard_gate": null,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_get response"
+        ],
+        "judge_visible_location": "event context",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_TRACK01_COLD_START",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.cold_start_success",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "f974d447ed74e4f0379ffe8b00b41678af73ff5ea8146d7e247a2258de760b3d",
+      "payload": {
+        "rule_id": "R_TRACK01_COLD_START",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "official_rubric.tracks.track01_external.criteria.cold_start_success",
+        "verbatim_fragment": "{\"max\": 30, \"scores_via\": \"agent_surface + live demo\"}",
+        "normalized_meaning": "Can an agent nobody on your team briefed, arriving with nothing but your domain name, discover what your product does, get a credential, and complete a real transaction?",
+        "requirement_type": "RUBRIC_DIMENSION",
+        "rubric_dimension": "cold_start_success",
+        "hard_gate": null,
+        "max_points": 30,
+        "required_evidence": [
+          "agent_surface",
+          "live demo",
+          "repo",
+          "vault"
+        ],
+        "judge_visible_location": "rubric dimension + judge-visible artifacts",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_IT_RUNS",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.it_runs",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "484702f5fcdf7097779f10ea31253d8b76ec467bdbf1698408bbc8ec175eef08",
+      "payload": {
+        "rule_id": "R_IT_RUNS",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "official_rubric.tracks.track01_external.criteria.it_runs",
+        "verbatim_fragment": "{\"max\": 25, \"gate\": true}",
+        "normalized_meaning": "Track01 criterion it_runs",
+        "requirement_type": "RUBRIC_DIMENSION",
+        "rubric_dimension": "it_runs",
+        "hard_gate": true,
+        "max_points": 25,
+        "required_evidence": [
+          "repo",
+          "vault",
+          "demo"
+        ],
+        "judge_visible_location": "rubric dimension + judge-visible artifacts",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SURFACE_QUALITY",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.surface_quality",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "d64e236853d0b04ca5a7aa5787167b15ee0df4b80d5e51888e3bf569ce2c70f7",
+      "payload": {
+        "rule_id": "R_SURFACE_QUALITY",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "official_rubric.tracks.track01_external.criteria.surface_quality",
+        "verbatim_fragment": "{\"max\": 20}",
+        "normalized_meaning": "Track01 criterion surface_quality",
+        "requirement_type": "RUBRIC_DIMENSION",
+        "rubric_dimension": "surface_quality",
+        "hard_gate": null,
+        "max_points": 20,
+        "required_evidence": [
+          "repo",
+          "vault",
+          "demo"
+        ],
+        "judge_visible_location": "rubric dimension + judge-visible artifacts",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_LANDS_IN_PRODUCT",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.lands_in_product",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "94e4fb4ef5e347a193a5947b77bb3c306f55b81874f9288b0415dfbe9794b21f",
+      "payload": {
+        "rule_id": "R_LANDS_IN_PRODUCT",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "official_rubric.tracks.track01_external.criteria.lands_in_product",
+        "verbatim_fragment": "{\"max\": 15}",
+        "normalized_meaning": "Track01 criterion lands_in_product",
+        "requirement_type": "RUBRIC_DIMENSION",
+        "rubric_dimension": "lands_in_product",
+        "hard_gate": null,
+        "max_points": 15,
+        "required_evidence": [
+          "repo",
+          "vault",
+          "demo"
+        ],
+        "judge_visible_location": "rubric dimension + judge-visible artifacts",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_DEMO",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.demo",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "8d518c1cce28627011bb6a1a3023c7495b604d1faa9d4a5e255c63765303e055",
+      "payload": {
+        "rule_id": "R_DEMO",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "official_rubric.tracks.track01_external.criteria.demo",
+        "verbatim_fragment": "{\"max\": 10}",
+        "normalized_meaning": "Track01 criterion demo",
+        "requirement_type": "RUBRIC_DIMENSION",
+        "rubric_dimension": "demo",
+        "hard_gate": null,
+        "max_points": 10,
+        "required_evidence": [
+          "repo",
+          "vault",
+          "demo"
+        ],
+        "judge_visible_location": "rubric dimension + judge-visible artifacts",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SUBMIT_FIELD_TITLE",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.title",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "93234a0fc7c8c99510ab8b418e2ed30c8c9cf3c83e5b019045f3fae9c93cfd57",
+      "payload": {
+        "rule_id": "R_SUBMIT_FIELD_TITLE",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.title",
+        "verbatim_fragment": "title",
+        "normalized_meaning": "IC submission requires field title",
+        "requirement_type": "REQUIRED_FIELD",
+        "rubric_dimension": null,
+        "hard_gate": false,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_submit"
+        ],
+        "judge_visible_location": "submission payload",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SUBMIT_FIELD_BLURB",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.blurb",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "68d6455b4bcb716c7f3131ef5d9266f05f2b273d26e623de9d393fde9a0350ea",
+      "payload": {
+        "rule_id": "R_SUBMIT_FIELD_BLURB",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.blurb",
+        "verbatim_fragment": "blurb",
+        "normalized_meaning": "IC submission requires field blurb",
+        "requirement_type": "REQUIRED_FIELD",
+        "rubric_dimension": null,
+        "hard_gate": false,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_submit"
+        ],
+        "judge_visible_location": "submission payload",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SUBMIT_FIELD_REPO_URL",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.repo_url",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "b6af4343e426d2d583c1e98c4b9abfcba478ad8de84b4bd5753617f0b4d4d91b",
+      "payload": {
+        "rule_id": "R_SUBMIT_FIELD_REPO_URL",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.repo_url",
+        "verbatim_fragment": "repo_url",
+        "normalized_meaning": "IC submission requires field repo_url",
+        "requirement_type": "REQUIRED_FIELD",
+        "rubric_dimension": null,
+        "hard_gate": false,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_submit"
+        ],
+        "judge_visible_location": "submission payload",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SUBMIT_FIELD_DEMO_URL",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.demo_url",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "c73aa45a4c213b46176acd27d35cf8f0ae6465c802e01d644d7e02001b4a6b3e",
+      "payload": {
+        "rule_id": "R_SUBMIT_FIELD_DEMO_URL",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.demo_url",
+        "verbatim_fragment": "demo_url",
+        "normalized_meaning": "IC submission requires field demo_url",
+        "requirement_type": "REQUIRED_FIELD",
+        "rubric_dimension": null,
+        "hard_gate": false,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_submit"
+        ],
+        "judge_visible_location": "submission payload",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SUBMIT_FIELD_AGENT_SURFACE",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.agent_surface",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "088b6710e2a6a55600d7986e5a9cafd52a228882fc2ab5673599212fd3f6db60",
+      "payload": {
+        "rule_id": "R_SUBMIT_FIELD_AGENT_SURFACE",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.agent_surface",
+        "verbatim_fragment": "agent_surface",
+        "normalized_meaning": "IC submission requires field agent_surface",
+        "requirement_type": "REQUIRED_FIELD",
+        "rubric_dimension": null,
+        "hard_gate": false,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_submit"
+        ],
+        "judge_visible_location": "submission payload",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_SUBMIT_FIELD_FOLDER_ID",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.folder_id",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "3a168f2e4f7925141af5238f0037349b71ad0ebe88eb043402a10e2788bec2e9",
+      "payload": {
+        "rule_id": "R_SUBMIT_FIELD_FOLDER_ID",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.folder_id",
+        "verbatim_fragment": "folder_id",
+        "normalized_meaning": "IC submission requires field folder_id",
+        "requirement_type": "REQUIRED_FIELD",
+        "rubric_dimension": null,
+        "hard_gate": true,
+        "max_points": null,
+        "required_evidence": [
+          "ic_hack_submit"
+        ],
+        "judge_visible_location": "submission payload",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_VAULT_FOLDER",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "submit.folder_id",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "atom_sha256": "412b61437ae6ee34a4828d5eb70885174b9a732625d81ecb1a402d528638a63f",
+      "payload": {
+        "rule_id": "R_VAULT_FOLDER",
+        "source": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+        "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+        "exact_locator": "submit.folder_id",
+        "verbatim_fragment": "folder_id",
+        "normalized_meaning": "folder_id represents populated IC vault with judge-visible evidence",
+        "requirement_type": "ARTIFACT_REQUIREMENT",
+        "rubric_dimension": "demo",
+        "hard_gate": true,
+        "max_points": null,
+        "required_evidence": [
+          "ic_folder_create",
+          "ic_files_put"
+        ],
+        "judge_visible_location": "vault / folder_id",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_AGENT_SURFACE_30PT",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.cold_start_success",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "atom_sha256": "abc917573446d4352738d8e4073eb24fe3ff6a014a9d6f267d88fa38e262b892",
+      "payload": {
+        "rule_id": "R_AGENT_SURFACE_30PT",
+        "source": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+        "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+        "exact_locator": "official_rubric.tracks.track01_external.criteria.cold_start_success",
+        "verbatim_fragment": "scores_via: agent_surface + live demo",
+        "normalized_meaning": "agent_surface is the scored cold-start discovery surface (30pt dimension)",
+        "requirement_type": "CRITERION",
+        "rubric_dimension": "cold_start_success",
+        "hard_gate": false,
+        "max_points": 30,
+        "required_evidence": [
+          "agent_surface field",
+          "live API"
+        ],
+        "judge_visible_location": "agent_surface + demo",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_NO_SUBMIT_BEFORE_VAULT",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "VAULT_BUNDLE",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "atom_sha256": "65c212714b2aba6c72dbd9ac743d5ba1b666ddfcdc70894e9c520346f98d6a47",
+      "payload": {
+        "rule_id": "R_NO_SUBMIT_BEFORE_VAULT",
+        "source": "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+        "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+        "exact_locator": "VAULT_BUNDLE",
+        "verbatim_fragment": "VAULT_BUNDLE",
+        "normalized_meaning": "Vault must be populated before submission; folder_id must not be null at submit",
+        "requirement_type": "HARD_GATE",
+        "rubric_dimension": "it_runs",
+        "hard_gate": true,
+        "max_points": null,
+        "required_evidence": [
+          "ic_folder_create",
+          "ic_files_put",
+          "folder_id"
+        ],
+        "judge_visible_location": "vault before ic_hack_submit",
+        "claim_ceiling": "PROTOCOL_CONTROL_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_NO_UNSURFACED_JUDGE_EVIDENCE",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "successor protocol",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "atom_sha256": "8a827be386f45a5eb6866b4720782c2fb082e4c61423ef50693f47e9f5f95246",
+      "payload": {
+        "rule_id": "R_NO_UNSURFACED_JUDGE_EVIDENCE",
+        "source": "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+        "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+        "exact_locator": "successor protocol",
+        "verbatim_fragment": "Do not submit while required judge evidence remains unsurfaced",
+        "normalized_meaning": "Judge-relevant evidence must be in vault or submission fields before submit",
+        "requirement_type": "EVIDENCE_REQUIREMENT",
+        "rubric_dimension": "demo",
+        "hard_gate": true,
+        "max_points": null,
+        "required_evidence": [
+          "vault manifest",
+          "media",
+          "origin doc"
+        ],
+        "judge_visible_location": "vault + submission fields",
+        "claim_ceiling": "PROTOCOL_CONTROL_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_ORIGIN_LEGIBILITY",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "ORIGIN_PROVENANCE",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "atom_sha256": "3c7b33590eb3521bc683ab237a5679ac8e76949a69c73393f2c19641f8d6263b",
+      "payload": {
+        "rule_id": "R_ORIGIN_LEGIBILITY",
+        "source": "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+        "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+        "exact_locator": "ORIGIN_PROVENANCE",
+        "verbatim_fragment": "Origin doc: substrate vs new work with commit SHAs",
+        "normalized_meaning": "Judge must be able to distinguish hackathon delta from pre-existing substrate",
+        "requirement_type": "CRITERION",
+        "rubric_dimension": "lands_in_product",
+        "hard_gate": false,
+        "max_points": 15,
+        "required_evidence": [
+          "origin comparison",
+          "branch-qualified repo",
+          "what is new doc"
+        ],
+        "judge_visible_location": "blurb + vault + repo entry",
+        "claim_ceiling": "SOURCE_IDENTITY_ONLY"
+      }
+    },
+    {
+      "atom_id": "rule:R_README_PROJECT_IDENTITY",
+      "kind": "RULE",
+      "parent": "ImmersiveCommonsEventFCO",
+      "source_locator": "README.md:1",
+      "source_sha256": "628a7e48e52d2ddd38245dfeb94994b099f9b7a804ccc2248df769f49f53ec04",
+      "atom_sha256": "8ea79821957108cbd5965a7c8362e2a800c42768a580a0c367a62d0c7b51f0c9",
+      "payload": {
+        "rule_id": "R_README_PROJECT_IDENTITY",
+        "source": "eval/ic_failure_learning_20260827/source_freeze/README_AT_SUBMISSION_SHA.md",
+        "source_sha256": "628a7e48e52d2ddd38245dfeb94994b099f9b7a804ccc2248df769f49f53ec04",
+        "exact_locator": "README.md:1",
+        "verbatim_fragment": "HydraDG — Graph-Native Governed Context Engine / Hack Hydra 2026 — Track 03",
+        "normalized_meaning": "Repository root README presents HydraDG/Hack Hydra identity, not HydraLamp IC delta",
+        "requirement_type": "ARTIFACT_REQUIREMENT",
+        "rubric_dimension": "lands_in_product",
+        "hard_gate": false,
+        "max_points": 15,
+        "required_evidence": [
+          "README",
+          "repo_url root"
+        ],
+        "judge_visible_location": "repo_url default entry",
+        "claim_ceiling": "INFERENCE_HYPOTHESIS"
+      }
+    }
+  ],
+  "orphan_atoms": [],
+  "failed_atoms": [],
+  "abstentions": [],
+  "RULE_ATOMIZATION_COVERAGE": "COMPLETE",
+  "CLAIM_CEILING": "RULE_ATOMIZATION_RECEIPT_ONLY"
+}

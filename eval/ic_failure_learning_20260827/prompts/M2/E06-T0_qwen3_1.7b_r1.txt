@@ -1,0 +1,196 @@
+You are a probabilistic experimental actor. Return strict JSON only.
+Blind lanes (E01-E04,E07): do NOT use postmortem/EVAL_ONLY evidence.
+Never invent unavailable endpoints; list them in invented_capabilities.
+Do not output estimated judge scores.
+
+GENERATION=M2 MODEL_WEIGHT_STATE=UNCHANGED
+IC RUBRIC SUMMARY: {"cold_start_success": {"max": 30, "scores_via": "agent_surface + live demo"}, "it_runs": {"max": 25, "gate": true}, "surface_quality": {"max": 20}, "lands_in_product": {"max": 15}, "demo": {"max": 10}}
+SUBMISSION FIELDS: title, blurb, repo_url, demo_url, agent_surface, folder_id
+GATE: folder_id must be populated before submit; vault required for media evidence
+KNOWN FAILURE: README presents HydraDG / Hack Hydra Track 03; conflicts with HydraLamp Immersive Commons Aug 26-27 delta; Anticube=SELF_NON_SAFE
+REPAIR: populate vault before submit; expose origin delta; branch-qualified repo URL
+
+FAMILY=E06 CONDITION=NO_FAILURE_LEARNING_PROTOCOL
+TASK: Produce an ordered pre-submission workflow intended to maximize judge-visible evidence and prevent avoidable submission-process failures.
+
+INPUT:
+{
+  "actual_submission": {
+    "agent_surface": "HydraLamp exposes machine-readable HTTP agent APIs on HydraDG (Vercel control plane) and a standalone public custody console at hydralamp.vercel.app. Agents without UI access can: (1) GET/POST /api/hydralamp/run to start a governed experiment (DETERMINISTIC_FIXTURE or LIVE_RUNTYPE on Vercel; local Ollarma lanes on Studio only); (2) GET /api/hydralamp/status?run_id= for FCG roots, hash-chain verification, quarantine, lanes, and claim ceilings; (3) GET /api/hydralamp/stream?run_id= for SSE custody events; (4) GET /api/hydralamp/events for the frozen 46-event golden lane JSONL; (5) GET/POST /api/agent-native/evidence-gateway for discover_capabilities, query_evidence, propose_external_evidence, and verify_custody_receipt (quarantine-only; no canonical FCG append); (6) GET /api/providers/status and /api/providers/health for sponsor integration state. The visual UI is a synchronized observer of the governed machine event stream — not the authority.",
+    "blurb": "HydraLamp is an agent-native zero-trust control plane built on HydraDG. Autonomous agents discover context, authenticate, operate through bounded capabilities, preserve failures and contradictions, and record source → action → result → claim provenance as FCO/FCG custody. The demo replays a frozen 46-event reference → poison → detection → antidote → restoration sequence while preserving authorization failures, replay rejections, quarantine state, and custody receipts rather than hiding unfavorable outcomes. Models propose. Deterministic custody decides.",
+    "demo_url": "https://hydralamp.vercel.app/",
+    "event_id": "anb-hack-01",
+    "folder_id": null,
+    "repo_url": "https://github.com/biobitworks/hydradg",
+    "title": "HydraLamp"
+  },
+  "event_rubric": {
+    "event": {
+      "bounties": [
+        {
+          "bounty_id": "b_b5d38aa257e38006",
+          "description": "Build your project on Runtype: agents, flows, tools, product evals, model routing and integrations already wired together, so a prompt that works becomes a product without rebuilding auth, multi tenancy and evals first. The strongest use of the platform takes the prize, judged alongside the main rubric. Separately, every builder gets $50 in Runtype credits just for turning up. Those are yours already and are not something you compete for.",
+          "eid": "anb-hack-01",
+          "posted_at": "2026-08-19T01:16:13.945Z",
+          "posted_by": "user_3Epz5W1M4DqjpbSgMS9HueDe9KD",
+          "prize": "$500 cash",
+          "sponsor": "Runtype",
+          "title": "Best use of Runtype"
+        }
+      ],
+      "event": {
+        "created_at": "2026-08-02T12:07:33.188Z",
+        "eid": "anb-hack-01",
+        "ends_on": "2026-08-27",
+        "nda_required": true,
+        "phase": "LOCKED",
+        "rubric_url": "https://www.immersivecommons.com/events/hackathon#judging",
+        "seats": 500,
+        "starts_on": "2026-08-26",
+        "title": "The Agent Natives Builders Hackathon",
+        "updated_at": "2026-08-27T23:10:18.925Z",
+        "venue": "Cloudflare SF, 101 Townsend St"
+      },
+      "ok": true,
+      "seats": {
+        "remaining": 469,
+        "total": 500,
+        "used": 31
+      }
+    },
+    "live_submission_state": {
+      "agent_surface": "HydraLamp exposes machine-readable HTTP agent APIs on HydraDG (Vercel control plane) and a standalone public custody console at hydralamp.vercel.app. Agents without UI access can: (1) GET/POST /api/hydralamp/run to start a governed experiment (DETERMINISTIC_FIXTURE or LIVE_RUNTYPE on Vercel; local Ollarma lanes on Studio only); (2) GET /api/hydralamp/status?run_id= for FCG roots, hash-chain verification, quarantine, lanes, and claim ceilings; (3) GET /api/hydralamp/stream?run_id= for SSE custody events; (4) GET /api/hydralamp/events for the frozen 46-event golden lane JSONL; (5) GET/POST /api/agent-native/evidence-gateway for discover_capabilities, query_evidence, propose_external_evidence, and verify_custody_receipt (quarantine-only; no canonical FCG append); (6) GET /api/providers/status and /api/providers/health for sponsor integration state. The visual UI is a synchronized observer of the governed machine event stream — not the authority.",
+      "blurb": "HydraLamp is an agent-native zero-trust control plane built on HydraDG. Autonomous agents discover context, authenticate, operate through bounded capabilities, preserve failures and contradictions, and record source → action → result → claim provenance as FCO/FCG custody. The demo replays a frozen 46-event reference → poison → detection → antidote → restoration sequence while preserving authorization failures, replay rejections, quarantine state, and custody receipts rather than hiding unfavorable outcomes. Models propose. Deterministic custody decides.",
+      "demo_url": "https://hydralamp.vercel.app/",
+      "eid": "anb-hack-01",
+      "locked": true,
+      "repo_url": "https://github.com/biobitworks/hydradg",
+      "submitted_at": "2026-08-27T22:13:37.209Z",
+      "team_id": "t_3d43e808657d9b79",
+      "title": "HydraLamp",
+      "updated_at": "2026-08-27T23:10:24.886Z"
+    },
+    "official_rubric": {
+      "inference_vs_source": {
+        "INFERENCE": "HydraLamp likely Track 01 based on customer-facing demo URL and blurb — not declared in submission",
+        "OFFICIAL_RUBRIC": "Criteria weights and track definitions from IC hackathon page + ic_hack_get rubric_url"
+      },
+      "it_runs_gate": "Submission a judge cannot trigger live cannot place",
+      "judging_method": "Mean across judges, not sum",
+      "rubric_url": "https://www.immersivecommons.com/events/hackathon#judging",
+      "total_points": 100,
+      "tracks": {
+        "track01_external": {
+          "criteria": {
+            "cold_start_success": {
+              "max": 30,
+              "scores_via": "agent_surface + live demo"
+            },
+            "demo": {
+              "max": 10
+            },
+            "it_runs": {
+              "gate": true,
+              "max": 25
+            },
+            "lands_in_product": {
+              "max": 15
+            },
+            "surface_quality": {
+              "max": 20
+            }
+          },
+          "name": "External · Customer facing",
+          "question": "Can an agent nobody on your team briefed, arriving with nothing but your domain name, discover what your product does, get a credential, and complete a real transaction?"
+        },
+        "track02_internal": {
+          "criteria": {
+            "coordination_design": {
+              "max": 20
+            },
+            "demo": {
+              "max": 10
+            },
+            "it_runs": {
+              "gate": true,
+              "max": 25
+            },
+            "lands_in_product": {
+              "max": 15
+            },
+            "real_work_across_real_boundary": {
+              "max": 30
+            }
+          },
+          "name": "Internal · Team facing",
+          "question": "Can tooling your company runs get real work done through an agent across systems it does not own and resume tomorrow?"
+        }
+      }
+    },
+    "retrieved_at_utc": "2026-08-28T05:28:03Z",
+    "schema": "hydradg.ic_postmortem.rubric_snapshot.v1",
+    "signature_state": "NOT_SIGNED",
+    "source": "EXTERNALLY_RETRIEVED_EVIDENCE",
+    "sources": [
+      {
+        "raw_path": "embedded",
+        "sha256": "6c6d7920ab6a81096140f69c71b5f645b6944c20a2e690115ce4e20d6cdad8cd",
+        "type": "ic_hack_get"
+      },
+      {
+        "note": "human-readable rubric table archived separately",
+        "type": "web",
+        "url": "https://www.immersivecommons.com/events/hackathon#judging"
+      },
+      {
+        "note": "project preregistration rubric — aligns with official IC rubric",
+        "path": "docs/ANB_LIVE_EMPIRICAL_EXPERIMENT_V1.md",
+        "type": "local"
+      }
+    ],
+    "sponsor_bounties": [
+      {
+        "bounty_id": "b_b5d38aa257e38006",
+        "description": "Build your project on Runtype: agents, flows, tools, product evals, model routing and integrations already wired together, so a prompt that works becomes a product without rebuilding auth, multi tenancy and evals first. The strongest use of the platform takes the prize, judged alongside the main rubric. Separately, every builder gets $50 in Runtype credits just for turning up. Those are yours already and are not something you compete for.",
+        "eid": "anb-hack-01",
+        "posted_at": "2026-08-19T01:16:13.945Z",
+        "posted_by": "user_3Epz5W1M4DqjpbSgMS9HueDe9KD",
+        "prize": "$500 cash",
+        "sponsor": "Runtype",
+        "title": "Best use of Runtype"
+      }
+    ],
+    "submission_schema_notes": {
+      "agent_surface_purpose": "What the 30-point track criterion actually scores",
+      "fields": [
+        "eid",
+        "title",
+        "blurb",
+        "repo_url",
+        "demo_url",
+        "agent_surface",
+        "folder_id"
+      ],
+      "folder_id_purpose": "Vault folder (d_...) with slides, video, screenshots per ic_hack_submit schema"
+    }
+  }
+}
+
+Return exactly one JSON object:
+{
+  "state": "OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE",
+  "experiment_family": "E01|E02|E03|E04|E05|E06|E07",
+  "condition": "string",
+  "observations": ["string"],
+  "predicted_weak_dimensions": ["string"],
+  "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
+  "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
+  "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
+  "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
+  "recommended_first_correction": "string|null",
+  "confidence_0_1": 0.0,
+  "evidence_quotes": ["string"],
+  "invented_capabilities": []
+}

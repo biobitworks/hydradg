@@ -91,6 +91,25 @@ def score_e04(condition: str, parsed: dict[str, Any]) -> dict[str, Any]:
     }
 
 
+def score_e07(condition: str, parsed: dict[str, Any]) -> dict[str, Any]:
+    classification = parsed.get("origin_classification", "")
+    expected_direction = {
+        "T0_ACTUAL_REPO_ACTUAL_README": {"PREEXISTING_PROJECT", "AMBIGUOUS"},
+        "T1_ACTUAL_REPO_BANNER_README": {"DISTINCT_HACKATHON_DELTA", "AMBIGUOUS"},
+        "T3_BRANCH_REPO_EXPLICIT_SHAS": {"DISTINCT_HACKATHON_DELTA"},
+        "T4_STANDALONE_HYDRALAMP_REPO": {"DISTINCT_HACKATHON_DELTA", "AMBIGUOUS"},
+    }.get(condition)
+    weak_dims = parsed.get("predicted_weak_dimensions") or []
+    return {
+        "origin_classification": classification,
+        "directional_gate": None if expected_direction is None else classification in expected_direction,
+        "confidence_0_1": parsed.get("confidence_0_1"),
+        "rubric_concern_count": len(weak_dims),
+        "invented_capability_count": len(parsed.get("invented_capabilities") or []),
+        "condition": condition,
+    }
+
+
 def score_e05(parsed: dict[str, Any]) -> dict[str, Any]:
     top1 = str(parsed.get("earliest_divergence_candidate", "UNKNOWN")).upper()
     ranking = [str(x).upper() for x in (parsed.get("causal_ranking") or [])]
@@ -152,9 +171,11 @@ def score_row(case: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
             "case_id": case["case_id"],
             "family": case["experiment_family"],
             "condition": case["condition"],
+            "generation": result.get("generation", "UNKNOWN"),
             "model": result.get("model"),
             "replicate": result.get("replicate"),
             "state": "MALFORMED_RESULT_ENVELOPE",
+            "model_state": "MALFORMED",
             "metrics": {},
         }
 
@@ -171,6 +192,8 @@ def score_row(case: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
         metrics = score_e05(parsed)
     elif family == "E06":
         metrics = protocol_gate(parsed.get("ordered_workflow") or [])
+    elif family == "E07":
+        metrics = score_e07(case["condition"], parsed)
     else:
         metrics = {}
 
@@ -178,6 +201,7 @@ def score_row(case: dict[str, Any], result: dict[str, Any]) -> dict[str, Any]:
         "case_id": case["case_id"],
         "family": family,
         "condition": case["condition"],
+        "generation": result.get("generation", "UNKNOWN"),
         "model": result.get("model"),
         "model_identity": result.get("model_identity"),
         "replicate": result.get("replicate"),
@@ -226,7 +250,7 @@ def main() -> int:
 
     aggregates: dict[str, Any] = {}
     for family, rows in sorted(by_family.items()):
-        state_counts = Counter(row["model_state"] for row in rows)
+        state_counts = Counter(row.get("model_state", "UNKNOWN") for row in rows)
         block: dict[str, Any] = {"n": len(rows), "model_state_counts": dict(state_counts)}
         if family == "E01":
             for metric in ["detects_vault_media_gap", "detects_origin_gap", "detects_cold_start_gap"]:
@@ -250,6 +274,12 @@ def main() -> int:
             for metric in ["prevents_C_media_not_in_vault", "vault_before_submit", "media_before_submit", "origin_before_submit", "red_team_before_submit"]:
                 yes, n = count_metric(rows, metric)
                 block[metric] = {"yes": yes, "n": n}
+        elif family == "E07":
+            eligible = [r for r in rows if r["metrics"].get("directional_gate") is not None]
+            block["directional_gate"] = {
+                "pass": sum(bool(r["metrics"].get("directional_gate")) for r in eligible),
+                "n": len(eligible),
+            }
         aggregates[family] = block
 
     scored_path = out / "SCORED_RESULTS.jsonl"

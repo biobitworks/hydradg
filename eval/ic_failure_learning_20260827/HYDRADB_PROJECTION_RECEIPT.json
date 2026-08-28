@@ -1,0 +1,18 @@
+{
+  "schema": "hydradg.ic_failure_learning.hydradb_projection.v1",
+  "state": "BLOCKED_HYDRADB_PROJECTION",
+  "reason": "Isolated namespace projection not executed in this Daisy block; FCO/FCG custody in Git is canonical",
+  "fcg_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e",
+  "required_queries": [
+    "Where did the IC submission first diverge?",
+    "Which rubric criteria depended on the missing vault?",
+    "Was README poison self or non-self?",
+    "Was it safe or non-safe in the IC context?",
+    "What model decisions inherited that README state?",
+    "What antidote superseded it?",
+    "Did the same model behave differently after learning context was appended?",
+    "What MMR root commits the successor learned state?"
+  ],
+  "queryable_via": "FAILURE_PROPAGATION_GRAPH.json + FAILURE_LEARNING_FCG.json until HydraDB projection executed",
+  "CLAIM_CEILING": "PROJECTION_RECEIPT_ONLY"
+}

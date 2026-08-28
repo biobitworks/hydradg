@@ -182,6 +182,54 @@ def main() -> int:
         False,
     ))
 
+    readme_freeze = repo / "eval/ic_failure_learning_20260827/source_freeze/README_AT_SUBMISSION_SHA.md"
+    if readme_freeze.exists():
+        readme_actual = readme_freeze.read_text(encoding="utf-8")
+    else:
+        import subprocess
+        readme_actual = subprocess.check_output(
+            ["git", "show", "7a737d868e3d444aa29a629219fba689425959da:README.md"],
+            cwd=repo,
+            text=True,
+        )
+    readme_banner = (
+        "# HydraLamp — Immersive Commons Aug 26–27 delta built on pre-existing HydraDG\n\n"
+        + readme_actual
+    )
+    e07_treatments = [
+        ("T0_ACTUAL_REPO_ACTUAL_README", {
+            "repo_url": submitted["repo_url"],
+            "readme_excerpt": readme_actual[:4000],
+        }),
+        ("T1_ACTUAL_REPO_BANNER_README", {
+            "repo_url": submitted["repo_url"],
+            "readme_excerpt": readme_banner[:4000],
+        }),
+        ("T2_BRANCH_REPO_ACTUAL_README", {
+            "repo_url": "https://github.com/biobitworks/hydradg/tree/hack-hydra/hydralamp-20260826",
+            "readme_excerpt": readme_actual[:4000],
+        }),
+        ("T3_BRANCH_REPO_EXPLICIT_SHAS", {
+            "repo_url": "https://github.com/biobitworks/hydradg/tree/hack-hydra/hydralamp-20260826",
+            "readme_excerpt": readme_actual[:4000],
+            "baseline_sha": "e4558026 (HydraDG substrate, 2026-08-18)",
+            "delta_sha": "757f3fa7 (HydraLamp IC delta, 2026-08-26)",
+        }),
+        ("T4_STANDALONE_HYDRALAMP_REPO", {
+            "repo_url": "https://github.com/biobitworks/hydradg",
+            "readme_excerpt": readme_banner[:4000],
+            "counterfactual_note": "Standalone HydraLamp front door did not exist before submission deadline; fixture only",
+        }),
+    ]
+    for idx, (condition, fixture) in enumerate(e07_treatments):
+        payload = {**submitted, "readme_poison_fixture": fixture}
+        rows.append(case(
+            f"E07-{idx}", "E07", condition, payload,
+            "Classify product origin as DISTINCT_HACKATHON_DELTA, PREEXISTING_PROJECT, or AMBIGUOUS "
+            "using only repo_url and README excerpt supplied. Report confidence and rubric concerns.",
+            True,
+        ))
+
     out = (repo / args.out).resolve()
     out.parent.mkdir(parents=True, exist_ok=True)
     with out.open("w", encoding="utf-8") as fh:

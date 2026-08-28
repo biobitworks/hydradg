@@ -1,0 +1,117 @@
+{
+  "schema": "hydradg.ic_failure_learning.failure_propagation_graph.v1",
+  "nodes": [
+    {
+      "id": "SubmittedRepoURLFCO",
+      "kind": "SubmissionFieldFCO",
+      "value": "https://github.com/biobitworks/hydradg"
+    },
+    {
+      "id": "RepositoryRootFCO",
+      "kind": "ArtifactFCO"
+    },
+    {
+      "id": "READMEFCO",
+      "kind": "ArtifactFCO",
+      "sha256": "628a7e48e52d2ddd38245dfeb94994b099f9b7a804ccc2248df769f49f53ec04"
+    },
+    {
+      "id": "HydraDGHackHydraIdentityFCO",
+      "kind": "DecisionFCO"
+    },
+    {
+      "id": "HydraLampICDeltaFCO",
+      "kind": "ArtifactFCO"
+    },
+    {
+      "id": "OriginClassificationDecision",
+      "kind": "DecisionFCO"
+    },
+    {
+      "id": "LandsInProductRubricDimension",
+      "kind": "RuleFCO",
+      "rule_id": "R_LANDS_IN_PRODUCT"
+    },
+    {
+      "id": "MISSING_VAULT_FCO",
+      "kind": "FailureFCO",
+      "candidate": "C_media_not_in_vault"
+    },
+    {
+      "id": "EVIDENCE_DELIVERY_RULE",
+      "kind": "RuleFCO",
+      "rule_id": "R_VAULT_FOLDER"
+    },
+    {
+      "id": "DEMO_EVIDENCE_GAP",
+      "kind": "FailureFCO"
+    },
+    {
+      "id": "SUCCESSOR_README_ANTIDOTE",
+      "kind": "RepairFCO"
+    },
+    {
+      "id": "E07_EXPERIMENT",
+      "kind": "ExperimentFCO"
+    }
+  ],
+  "edges": [
+    {
+      "src": "SubmittedRepoURLFCO",
+      "rel": "RESOLVES_TO",
+      "dst": "RepositoryRootFCO"
+    },
+    {
+      "src": "RepositoryRootFCO",
+      "rel": "DEFAULT_ENTRY",
+      "dst": "READMEFCO"
+    },
+    {
+      "src": "READMEFCO",
+      "rel": "PRESENTS_PROJECT_AS",
+      "dst": "HydraDGHackHydraIdentityFCO"
+    },
+    {
+      "src": "HydraDGHackHydraIdentityFCO",
+      "rel": "CONFLICTS_WITH",
+      "dst": "HydraLampICDeltaFCO"
+    },
+    {
+      "src": "READMEFCO",
+      "rel": "PROPAGATED_TO",
+      "dst": "OriginClassificationDecision"
+    },
+    {
+      "src": "OriginClassificationDecision",
+      "rel": "AFFECTED",
+      "dst": "LandsInProductRubricDimension"
+    },
+    {
+      "src": "MISSING_VAULT_FCO",
+      "rel": "VIOLATES",
+      "dst": "EVIDENCE_DELIVERY_RULE"
+    },
+    {
+      "src": "MISSING_VAULT_FCO",
+      "rel": "PROPAGATED_TO",
+      "dst": "DEMO_EVIDENCE_GAP"
+    },
+    {
+      "src": "SUCCESSOR_README_ANTIDOTE",
+      "rel": "REPAIRED_BY",
+      "dst": "READMEFCO"
+    },
+    {
+      "src": "E07_EXPERIMENT",
+      "rel": "TESTED_BY",
+      "dst": "SUCCESSOR_README_ANTIDOTE"
+    }
+  ],
+  "eval_only_causal_ranking": {
+    "primary": "C",
+    "secondary": "D",
+    "tertiary": "B"
+  },
+  "README_POISON_DOWNSTREAM_COUNT": 4,
+  "claim_ceiling": "STRUCTURAL_CAUSAL_GRAPH_ONLY"
+}

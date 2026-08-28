@@ -103,7 +103,7 @@ def build(repo: Path) -> dict[str, Any]:
 
     source_paths = [
         submission_path,
-        "eval/immersive_commons_submission_20260827/seal/IC_SUBMIT_RECEIPT.json",
+        "eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json",
         "eval/ic_postmortem_20260827/ACTUAL_SUBMISSION_FREEZE.json",
         "eval/ic_postmortem_20260827/POSTMORTEM.md",
         "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
@@ -176,7 +176,7 @@ def build(repo: Path) -> dict[str, Any]:
         {"edge_id": "e:submission-exhibits-text-form", "src": f"source:{submission_path}", "rel": "EXHIBITS", "dst": "failure:B_text_form_not_agent_native"},
         {"edge_id": "e:postmortem-derives-primary", "src": "source:eval/ic_postmortem_20260827/POSTMORTEM.md", "rel": "DERIVES", "dst": "failure:C_media_not_in_vault"},
         {"edge_id": "e:protocol-prevents-primary", "src": "control:submission_evidence_surface_gate", "rel": "PREVENTS", "dst": "failure:C_media_not_in_vault"},
-        {"edge_id": "e:failure-precedes-ack", "src": "failure:C_media_not_in_vault", "rel": "PRECEDES", "dst": "source:eval/immersive_commons_submission_20260827/seal/IC_SUBMIT_RECEIPT.json"},
+        {"edge_id": "e:failure-precedes-ack", "src": "failure:C_media_not_in_vault", "rel": "PRECEDES", "dst": "source:eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json"},
     ]
     edges = sorted(edges, key=lambda e: e["edge_id"])
     edge_seal = seal_atoms([canonical_json(edge).decode("utf-8") for edge in edges])
