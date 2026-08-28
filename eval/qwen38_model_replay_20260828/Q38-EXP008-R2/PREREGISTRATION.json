@@ -1,0 +1,87 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "Q38-EXP008-R2",
+  "classification": "PREREGISTERED_SUCCESSOR_MODEL_COMPARISON",
+  "predecessor_experiment": "Q38-EXP008-R",
+  "predecessor_closeout": "eval/qwen38_model_replay_20260828/Q38-EXP008-R/PARTIAL_CLOSEOUT.json",
+  "relationship": "SUCCESSOR_MATCHED_HOST_MODEL_COMPARISON",
+  "changed_variable": "MATCHED_RUNTIME_MODEL_PAIR_ON_SAME_GPU_CLASS",
+  "hypothesis": "H0_EXP008: Structured FCG retrieval/composition does not improve failure-prevention vs flat prose.",
+  "H1": "Structured FCG retrieval/composition improves failure-prevention vs flat prose on E06 primary endpoint.",
+  "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+  "case_aggregation": "MAJORITY_OF_3_REPLICATES",
+  "alpha": 0.05,
+  "statistical_test": "exact_mcnemar_on_paired_case_majorities",
+  "multiplicity_correction": "holm_on_secondary_if_any",
+  "E06_POWER_STATE": "KNOWN_LIMITED",
+  "E06_CONFIRMATORY_CLAIM_ALLOWED": "NO",
+  "conditions": {
+    "C0": "FLAT_PROSE",
+    "C1": "STRUCTURED_FCG"
+  },
+  "models": {
+    "MODEL_A": {
+      "ollama_alias": "qwen3.8:27b",
+      "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "hf_repo": "Qwen/Qwen3.8-27B"
+    },
+    "MODEL_B": {
+      "ollama_alias": "qwen3.8-flash-next:125b-a6b-nvfp4",
+      "expected_digest": "PENDING_DAYTONA_CANARY_FREEZE",
+      "hf_repo": "Qwen/Qwen3.8-Flash-Next"
+    }
+  },
+  "execution_host": {
+    "provider": "Daytona",
+    "host_class": "Daytona Linux",
+    "gpu_class": "NVIDIA H200",
+    "ollama_version": "PIN_AT_PROVISION",
+    "RUNTIME_EQUIVALENCE": "YES_SAME_HOST_GPU_CLASS"
+  },
+  "held_fixed": [
+    "host_class",
+    "gpu_class",
+    "ollama_version",
+    "prompt_projection",
+    "case_manifest",
+    "condition_definitions",
+    "scorer",
+    "context_budget",
+    "output_budget",
+    "thinking_mode",
+    "tool_schema",
+    "retry_policy",
+    "replicate_count"
+  ],
+  "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+  "cases_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "n_replicates": 3,
+  "matrix_formula": "25 cases × 2 conditions × 3 replicates × 2 models = 300",
+  "expected_matrix_cells": 300,
+  "thinking_configuration": {
+    "think": false,
+    "reasoning_effort": "default_off",
+    "preserve_thinking": false,
+    "api": "ollama_generate_top_level",
+    "preregistered": true
+  },
+  "technical_retry_policy": {
+    "max_technical_retries_per_cell": 2,
+    "allowed_reasons": [
+      "network_interruption",
+      "provider_5xx",
+      "model_server_crash",
+      "verified_infrastructure_timeout",
+      "corrupted_output_transfer"
+    ],
+    "prohibited_reasons": [
+      "unfavorable_model_answer",
+      "hypothesis_unfavorable",
+      "p_value_too_large",
+      "secondary_metric_decline"
+    ]
+  },
+  "failure_policy": "Every planned cell must reach exactly one terminal state; no outcome-based reruns.",
+  "frozen_at_utc": "2026-08-29T00:16:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
