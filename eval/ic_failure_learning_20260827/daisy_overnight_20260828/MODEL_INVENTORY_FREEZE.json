@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.daisy_overnight.model_inventory_freeze.v1",
+  "frozen_at_utc": "2026-08-28T08:00:28Z",
+  "host": "magicSTUDIObox.local",
+  "ollama_version": "ollama version is 0.33.0",
+  "ollarma_version": "NOT_IN_PATH",
+  "runtime": "DIRECT_OLLAMA_API",
+  "ollarma_note": "Ollarma not in PATH; governed local execution via Ollama HTTP API with receipts",
+  "models": [
+    {
+      "alias": "qwen3:1.7b",
+      "model_id": "qwen3:1.7b",
+      "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "size": 1359293444,
+      "modelfile_from": "FROM /Users/byron/.ollama/models/blobs/sha256-3d0b790534fe4b79525fc3692950408dca41171676ed7e21db57af5c65ef6ab6"
+    },
+    {
+      "alias": "qwen2.5-coder:7b",
+      "model_id": "qwen2.5-coder:7b",
+      "digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "size": 4683087561,
+      "modelfile_from": "FROM /Users/byron/.ollama/models/blobs/sha256-60e05f2100071479f596b964f89f510f057ce397ea22f2833a0cfe029bfc2463"
+    }
+  ],
+  "temperature": 0.0,
+  "num_predict": 512
+}
