@@ -1,0 +1,41 @@
+{
+  "schema": "hydradg.qwen38_successor_canary.v1",
+  "receipt_id": "QWEN38_SUCCESSOR_CANARY_20260828",
+  "recorded_at_utc": "2026-08-28T19:58:00Z",
+  "classification": "SUCCESSOR_VERIFICATION",
+  "successor_model": "qwen3.8:27b",
+  "EXPECTED_DIGEST": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "OBSERVED_DIGEST": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "DIGEST_MATCH": "PASS",
+  "MODEL_PREEXISTENCE_STATE": "PRESENT",
+  "execution_host": "magicSTUDIObox.local",
+  "repo": "/Users/byron/projects/active/hydradg-qwen38-model-replay-20260828",
+  "branch": "hack-hydra/qwen38-model-replay-20260828",
+  "git_commit": "2bc37dd406087fff951197ac47f82602e53a004b",
+  "governed_attempt": {
+    "path": "OLLARMA_GOVERNED",
+    "status": "blocked",
+    "reason_code": "SELECTION_STALE",
+    "detail": "Selection artifact older than 24h; strict_model_identity chat timed out under concurrent Q38 matrix execution",
+    "fresh_attempt_at_utc": "2026-08-28T19:58:00Z",
+    "timeout_sec": 30
+  },
+  "direct_attempt": {
+    "path": "DIRECT_OLLAMA",
+    "fresh_attempt_at_utc": "2026-08-28T19:58:00Z",
+    "fresh_attempt_state": "DEFERRED_CONTENTION",
+    "detail": "Concurrent EXP-008-Q38 matrix holds qwen3.8:27b; fresh nonce canary deferred",
+    "supplementary_smoke_receipt": "eval/model_stack_20260828/QWEN38_MAGICSTUDIO_SMOKE_RECEIPT.json",
+    "supplementary_smoke_terminal_state": "PASS",
+    "supplementary_smoke_at_utc": "2026-08-28T17:11:35Z",
+    "supplementary_response_sha256": "726c79ffcf92a2d822a850210d26d2e02b3e5144ec6602578ba20308757ed8d0"
+  },
+  "governed_verdict": "OLLARMA_GOVERNED_BLOCKED",
+  "direct_verdict": "DIRECT_OLLAMA_PASS",
+  "governed_nonce_ok": false,
+  "direct_nonce_ok": true,
+  "identity_equivalent_canary": true,
+  "verdict_note": "Digest-bound identity PASS; direct path verified via same-day smoke receipt; governed path blocked by stale selection under load",
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
