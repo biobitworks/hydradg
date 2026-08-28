@@ -1,0 +1,27 @@
+{
+  "CURRENT_BRANCH": "hack-hydra/daisy-exp008-overnight-20260828",
+  "CURRENT_SHA": "033686ab",
+  "EVIDENCE_STATE": "EXP008_COMPLETE_UNDERPOWERED",
+  "EXPERIMENT_STATE": "EXP008_CLOSED_EXP009_QUEUED",
+  "EXP008_RESULT_CLASS": "UNDERPOWERED",
+  "EXP008_PRIMARY_E06": {"n_paired": 2, "rd": 0.0, "c0_rate": 0.0, "c1_rate": 0.0, "p_exact": null},
+  "EXP008_CONCLUSION": "structured FCG retrieval vs flat prose — effect not established; primary endpoint underpowered (n=2 E06 cases)",
+  "FCO_STATE": "EXP008_BUNDLE_COMMITTED",
+  "FCG_STATE": "SUCCESSOR_APPENDED",
+  "HYDRADB_STATE": "SKIPPED_OR_UNAVAILABLE",
+  "EARLIEST_DIVERGENCE": "C_MEDIA_NOT_IN_VAULT",
+  "CLAIM_CEILING": "FALSIFICATION_EXPERIMENT_RESULTS_ONLY",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "COMMITTED",
+  "NEXT_SAFE_ACTION": "Implement and execute EXP-009 causal ordering ablation per DAISY_DECISION.json",
+  "FINAL_REVIEW_GATE": "PENDING_EXP009_012_TRAIN",
+  "FRONTIER_MODEL_NEEDED": "NO",
+  "answers_partial": {
+    "1_structured_vs_flat": "No established improvement; UNDERPOWERED on primary E06 (n=2)",
+    "2_causal_ordering": "NOT_EXECUTED",
+    "3_decision_schema": "NOT_EXECUTED",
+    "4_neighborhood_breadth": "NOT_EXECUTED",
+    "5_maximal_context": "NOT_EXECUTED",
+    "12_frontier_justified": false
+  }
+}
