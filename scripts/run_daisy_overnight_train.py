@@ -280,42 +280,47 @@ def execute_experiment(
     c1_label: str,
     hypothesis: str,
 ) -> None:
-    prereg = {
-        "schema": "hydradg.daisy_overnight.preregistration.v1",
-        "experiment_id": experiment_id,
-        "hypothesis": hypothesis,
-        "conditions": {"C0": c0_label, "C1": c1_label},
-        "models": STAGE2_MODELS,
-        "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
-        "n_replicates": N_REPLICATES,
-        "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
-        "case_aggregation": "MAJORITY_OF_3_REPLICATES",
-        "alpha": 0.05,
-        "prereg_sha": PARENT_SHA,
-        "frozen_at_utc": utc_now(),
-    }
-    (exp_dir / "PREREGISTRATION.json").write_text(json.dumps(prereg, indent=2) + "\n", encoding="utf-8")
+    if not (exp_dir / "PREREGISTRATION.json").exists():
+        prereg = {
+            "schema": "hydradg.daisy_overnight.preregistration.v1",
+            "experiment_id": experiment_id,
+            "hypothesis": hypothesis,
+            "conditions": {"C0": c0_label, "C1": c1_label},
+            "models": STAGE2_MODELS,
+            "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+            "n_replicates": N_REPLICATES,
+            "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+            "case_aggregation": "MAJORITY_OF_3_REPLICATES",
+            "alpha": 0.05,
+            "prereg_sha": PARENT_SHA,
+            "frozen_at_utc": utc_now(),
+        }
+        (exp_dir / "PREREGISTRATION.json").write_text(json.dumps(prereg, indent=2) + "\n", encoding="utf-8")
     common = json.loads((repo / "eval/ic_failure_learning_20260827/daisy_overnight_20260828/DAISY_COMMON_FREEZE.json").read_text())
     inv = json.loads((repo / "eval/ic_failure_learning_20260827/daisy_overnight_20260828/MODEL_INVENTORY_FREEZE.json").read_text())
-    (exp_dir / "EXECUTION_FREEZE.json").write_text(
-        json.dumps({"common_freeze": common, "model_inventory_sha256": sha256_bytes(json.dumps(inv, sort_keys=True).encode())}, indent=2)
-        + "\n",
-        encoding="utf-8",
-    )
-    cases = [
-        json.loads(line)
-        for line in (repo / "eval/ic_failure_learning_20260827/cases/CASES.jsonl").read_text().splitlines()
-        if line.strip()
-    ]
-    shutil.copy2(
-        repo / "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
-        exp_dir / "CASE_MANIFEST.json",
-    )
+    if not (exp_dir / "EXECUTION_FREEZE.json").exists():
+        (exp_dir / "EXECUTION_FREEZE.json").write_text(
+            json.dumps({"common_freeze": common, "model_inventory_sha256": sha256_bytes(json.dumps(inv, sort_keys=True).encode())}, indent=2)
+            + "\n",
+            encoding="utf-8",
+        )
+    cases_path = repo / "eval/ic_failure_learning_20260827/cases/CASES.jsonl"
+    manifest = exp_dir / "CASE_MANIFEST.json"
+    if not manifest.exists():
+        shutil.copy2(cases_path, manifest)
+    cases = [json.loads(line) for line in cases_path.read_text().splitlines() if line.strip()]
     atoms = load_admissible_atoms(repo)
     ledger_path = exp_dir / "PROMPT_PROJECTION_LEDGER.jsonl"
     raw_path = exp_dir / "RAW_OUTPUTS.jsonl"
-    ledger_path.write_text("", encoding="utf-8")
-    raw_path.write_text("", encoding="utf-8")
+    existing_keys: set[tuple[str, str, str, int]] = set()
+    if raw_path.exists():
+        for line in raw_path.read_text(encoding="utf-8").splitlines():
+            if not line.strip():
+                continue
+            row = json.loads(line)
+            existing_keys.add((row["model"], row["case_id"], row["condition"], row["replicate"]))
+    if not ledger_path.exists():
+        ledger_path.write_text("", encoding="utf-8")
 
     for model in STAGE2_MODELS:
         for condition, label in [("C0", c0_label), ("C1", c1_label)]:
@@ -327,6 +332,9 @@ def execute_experiment(
                 else:
                     context, retained = render_structured_fcg(selected, CONTEXT_BUDGET)
                 for replicate in range(1, N_REPLICATES + 1):
+                    key = (model, case["case_id"], condition, replicate)
+                    if key in existing_keys:
+                        continue
                     prompt, proj = build_prompt(case, condition, context, retained, experiment_id)
                     proj["model"] = model
                     proj["replicate"] = replicate
@@ -588,9 +596,25 @@ def append_train_log(out_root: Path, record: dict[str, Any]) -> None:
         fh.write(json.dumps(record, sort_keys=True) + "\n")
 
 
-def run_exp008(repo: Path, out_root: Path) -> dict[str, Any]:
+def run_exp008(repo: Path, out_root: Path, execute_only: bool = False) -> dict[str, Any]:
     exp_dir = out_root / "EXP-008"
     exp_dir.mkdir(parents=True, exist_ok=True)
+    if not (exp_dir / "PREREGISTRATION.json").exists():
+        prereg = {
+            "schema": "hydradg.daisy_overnight.preregistration.v1",
+            "experiment_id": "EXP-008",
+            "hypothesis": "H0_EXP008: Structured FCG retrieval/composition does not improve failure-prevention vs flat prose.",
+            "conditions": {"C0": "FLAT_PROSE", "C1": "STRUCTURED_FCG"},
+            "models": STAGE2_MODELS,
+            "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+            "n_replicates": N_REPLICATES,
+            "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+            "case_aggregation": "MAJORITY_OF_3_REPLICATES",
+            "alpha": 0.05,
+            "prereg_sha": PARENT_SHA,
+            "frozen_at_utc": utc_now(),
+        }
+        (exp_dir / "PREREGISTRATION.json").write_text(json.dumps(prereg, indent=2) + "\n", encoding="utf-8")
     execute_experiment(
         repo,
         exp_dir,
@@ -599,6 +623,8 @@ def run_exp008(repo: Path, out_root: Path) -> dict[str, Any]:
         "STRUCTURED_FCG",
         "H0_EXP008: Structured FCG retrieval/composition does not improve failure-prevention vs flat prose.",
     )
+    if execute_only:
+        return {"result_class": "EXECUTION_IN_PROGRESS"}
     verdict = score_and_analyze(repo, exp_dir, "EXP-008")
     fcg_root = append_fcg_edges(exp_dir, "EXP-008", verdict["result_class"], PREDECESSOR_MMR)
     mmr = build_mmr_receipt(exp_dir, PREDECESSOR_MMR)
@@ -632,7 +658,7 @@ def run_exp008(repo: Path, out_root: Path) -> dict[str, Any]:
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("--repo", default=".")
-    ap.add_argument("--phase", choices=["bootstrap", "exp008", "train"], default="train")
+    ap.add_argument("--phase", choices=["bootstrap", "exp008", "exp008-execute", "exp008-closeout", "train"], default="train")
     args = ap.parse_args()
     repo = Path(args.repo).resolve()
     out_root = repo / "eval/ic_failure_learning_20260827/daisy_overnight_20260828"
@@ -643,9 +669,41 @@ def main() -> int:
         freeze_model_inventory(repo, out_root)
         build_common_freeze(repo, out_root)
 
-    if args.phase in ("exp008", "train"):
-        verdict = run_exp008(repo, out_root)
-        print(json.dumps({"EXP-008": verdict["result_class"], "next": json.loads((out_root / "EXP-008/DAISY_DECISION.json").read_text())["next_experiment"]}, indent=2))
+    if args.phase in ("exp008", "exp008-execute", "train"):
+        verdict = run_exp008(repo, out_root, execute_only=args.phase == "exp008-execute")
+        if args.phase != "exp008-execute":
+            print(json.dumps({"EXP-008": verdict["result_class"], "next": json.loads((out_root / "EXP-008/DAISY_DECISION.json").read_text())["next_experiment"]}, indent=2))
+
+    if args.phase == "exp008-closeout":
+        exp_dir = out_root / "EXP-008"
+        verdict = score_and_analyze(repo, exp_dir, "EXP-008")
+        fcg_root = append_fcg_edges(exp_dir, "EXP-008", verdict["result_class"], PREDECESSOR_MMR)
+        mmr = build_mmr_receipt(exp_dir, PREDECESSOR_MMR)
+        run_receipt = {
+            "schema": "hydradg.daisy_overnight.run_receipt.v1",
+            "experiment_id": "EXP-008",
+            "completed_at_utc": utc_now(),
+            "git_sha": subprocess.check_output(["git", "rev-parse", "HEAD"], cwd=repo, text=True).strip(),
+            "fcg_root": fcg_root,
+            "mmr_root": mmr["mmr_root"],
+            "verdict": verdict["result_class"],
+        }
+        (exp_dir / "RUN_RECEIPT.json").write_text(json.dumps(run_receipt, indent=2) + "\n", encoding="utf-8")
+        sha = git_checkpoint(repo, "EXP-008", "exp008: test structured FCG retrieval against flat context")
+        append_train_log(
+            out_root,
+            {
+                "experiment_id": "EXP-008",
+                "parent": "STAGE2_POST_MODEL",
+                "prereg_sha": PARENT_SHA,
+                "execution_sha": sha,
+                "result_class": verdict["result_class"],
+                "fcg_root": fcg_root,
+                "mmr_root": mmr["mmr_root"],
+                "SIGNATURE_STATE": "NOT_SIGNED",
+            },
+        )
+        print(json.dumps(verdict, indent=2))
 
     return 0
 
