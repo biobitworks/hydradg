@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.experiment_queue.v1",
+  "recorded_at_utc": "2026-08-29T00:16:00Z",
+  "EXP010_FOUND": true,
+  "verdict": "EXP010_IS_ACTUAL_NEXT_ID",
+  "relationship_to_operator_exp020_request": "EXP-010 is the Daisy-queued successor after EXP-009; operator EXP-020 request does not match any defined experiment ID in tree",
+  "daisy_queue_evidence": [
+    {
+      "path": "eval/ic_failure_learning_20260827/daisy_overnight_20260828/EXP-009/DAISY_DECISION.json",
+      "next_experiment": "EXP-010"
+    },
+    {
+      "branch": "hack-hydra/daisy-exp010-20260828",
+      "preregistration": "eval/ic_failure_learning_20260827/daisy_overnight_20260828/EXP-010/PREREGISTRATION.json",
+      "changed_variable": "DECISION_GOVERNANCE_SCHEMA_ONLY"
+    }
+  ],
+  "EXP010_scope_note": "EXP-010 is decision-schema ablation on historical qwen3/qwen2.5 models; not part of Q38 GREEN matrix wave unless separately scoped",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

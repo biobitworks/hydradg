@@ -1,0 +1,89 @@
+{
+  "schema": "hydradg.experiment_green_scorecard.v1",
+  "recorded_at_utc": "2026-08-29T00:17:00Z",
+  "host": "magicSTUDIObox.local",
+  "branch": "reconcile/qwen38-successor-20260828",
+  "AUTH": {
+    "Daytona": "FAIL",
+    "Kaggle": "PASS"
+  },
+  "GLOBAL": {
+    "all_requested_matrices_green": "NO",
+    "GO_FORWARD": "NO",
+    "remaining_blockers": [
+      "Daytona operator login required",
+      "Q38-EXP008-R2 matrix 0/300 terminal",
+      "Q38-EXP009-R2 matrix 0/300 terminal",
+      "EXP-020 NOT_DEFINED (no matrix requested execution)",
+      "Flash-Next Daytona canary digest pending"
+    ]
+  },
+  "experiments": {
+    "Q38-EXP008-R": {
+      "preregistration": "VALID",
+      "input_freeze": "VALID",
+      "model_identity": "PASS_ON_COMPLETED",
+      "planned_cells": 300,
+      "terminal_cells": 26,
+      "matrix_accounting": "FAIL_PARTIAL",
+      "parser": "NOT_GREEN",
+      "scorer": "NOT_RECOMPUTED",
+      "stats": "NOT_RECOMPUTED",
+      "FCG": "NOT_VALIDATED",
+      "MMR": "NOT_VALIDATED",
+      "custody": "PARTIAL",
+      "scientific_verdict": "INCOMPLETE_PARTIAL",
+      "GREEN": "NO",
+      "closeout": "PARTIAL_PROTOCOL_BLOCKED"
+    },
+    "Q38-EXP008-R2": {
+      "preregistration": "VALID",
+      "input_freeze": "VALID",
+      "model_identity": "BLOCKED_DAYTONA",
+      "planned_cells": 300,
+      "terminal_cells": 0,
+      "matrix_accounting": "FAIL",
+      "parser": "PENDING",
+      "scorer": "PENDING",
+      "stats": "PENDING",
+      "FCG": "PENDING",
+      "MMR": "PENDING",
+      "custody": "PENDING",
+      "scientific_verdict": "NOT_EXECUTED",
+      "GREEN": "NO",
+      "execution_state": "RESOURCE_BLOCKED"
+    },
+    "Q38-EXP009-R2": {
+      "preregistration": "VALID",
+      "input_freeze": "VALID",
+      "model_identity": "BLOCKED_DAYTONA",
+      "atom_set_gate": "PENDING",
+      "ordering_isolation_gate": "PENDING",
+      "planned_cells": 300,
+      "terminal_cells": 0,
+      "matrix_accounting": "FAIL",
+      "parser": "PENDING",
+      "scorer": "PENDING",
+      "stats": "PENDING",
+      "FCG": "PENDING",
+      "MMR": "PENDING",
+      "custody": "PENDING",
+      "scientific_verdict": "NOT_EXECUTED",
+      "GREEN": "NO",
+      "execution_state": "RESOURCE_BLOCKED"
+    },
+    "EXP-020": {
+      "FOUND": false,
+      "EXP020_STATE": "NOT_DEFINED",
+      "planned_cells": null,
+      "terminal_cells": null,
+      "GREEN": "N/A"
+    },
+    "EXP-010": {
+      "FOUND": true,
+      "relationship": "Daisy queue successor after EXP-009; not operator EXP-020",
+      "branch": "hack-hydra/daisy-exp010-20260828",
+      "q38_matrix_scope": "OUT_OF_SCOPE_THIS_WAVE"
+    }
+  }
+}

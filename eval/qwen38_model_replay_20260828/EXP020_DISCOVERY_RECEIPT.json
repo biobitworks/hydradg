@@ -1,0 +1,24 @@
+{
+  "schema": "hydradg.experiment_discovery.v1",
+  "discovery_id": "EXP020_DISCOVERY_20260829",
+  "recorded_at_utc": "2026-08-29T00:16:00Z",
+  "EXP020_STATE": "NOT_DEFINED",
+  "EXP020_FOUND": false,
+  "verdict": "EXP020_NOT_DEFINED",
+  "search_scope": {
+    "working_tree": "eval/, scripts/, docs/",
+    "branch": "reconcile/qwen38-successor-20260828",
+    "branch_sha": "6ce3e6b6be5b4755032623674cf0bd6a72fb2fdb",
+    "patterns": ["EXP-020", "EXP020", "Q38-EXP020", "020"],
+    "related_branches_inspected": [
+      "hack-hydra/daisy-exp010-20260828",
+      "hack-hydra/ic-failure-learning-20260827",
+      "hack-hydra/qwen38-model-replay-20260828"
+    ],
+    "note": "Full git-rev-list grep not completed (long-running); no EXP-020 artifact in reconcile tree or daisy-exp010 branch"
+  },
+  "operator_requested_exp020": true,
+  "substitution_prohibited": true,
+  "actual_daisy_next_id": "EXP-010",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
