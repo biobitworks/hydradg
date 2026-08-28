@@ -1,0 +1,163 @@
+\documentclass{article}
+
+\PassOptionsToPackage{numbers,sort&compress}{natbib}
+\usepackage[dblblindworkshop]{neurips_2026}
+\workshoptitle{New in Machine Learning (NewInML) at NeurIPS 2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\title{HydraDG: Governed Context Interventions with Failure-Complete Custody for Agent Experiments}
+
+\author{Anonymous Author(s)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Agent systems increasingly rely on context interventions---structured retrieval, memory graphs, and prompt contracts---yet published evaluations often omit null outcomes, parser failures, and negative results.
+We present HydraDG, a governed experimental framework that binds every substantive model invocation, tool call, and handoff to a Failure-Complete Object (FCO) and Failure-Complete Graph (FCG) custody layer.
+HydraDG preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states including timeouts, abstentions, and malformed outputs without silent substitution.
+We report two preregistered confirmatory experiments (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as \emph{underpowered} under bounded case replication, establishing that confirmatory effect claims are not supported while retaining full negative and null evidence in custody.
+We argue that custody-first evaluation infrastructure is a prerequisite for reproducible agent science rather than an optional logging detail.
+\end{abstract}
+
+\section{Introduction}
+
+Large language model agents are evaluated on task success rates, benchmark scores, and human preference.
+Less often preserved are the conditions under which experiments fail: swapped models, stale runtime selection, partial matrix execution, or JSON outputs that never parse.
+When negative and null cells disappear from the public record, later work cannot distinguish \emph{no effect} from \emph{no measurement}.
+
+HydraDG addresses this gap with a custody-first experimental contract.
+Every actor---human operator, frontier agent, local model runtime, or deterministic script---must emit or be represented by a handoff receipt before its output is promoted.
+Receipts bind actor identity, host, repository state, input hashes, raw output hashes, evidence class, claim ceiling, and signature state.
+Probabilistic model outputs are never treated as authority; they are evidence objects subject to deterministic scoring and graph append rules.
+
+This paper describes the framework architecture and reports terminal results from the IC Failure Learning program's structured-retrieval falsification lane.
+We do \emph{not} claim that structured FCG context improves failure prevention; preregistered experiments EXP-008 and EXP-009 closed as underpowered.
+We also do not treat exploratory secondary patterns as promoted findings.
+
+\section{Related Work}
+
+\textbf{Agent evaluation.} Benchmark suites measure capability but rarely require publication of failed runs, malformed generations, or infrastructure blocks.
+HydraDG complements benchmarks with mandatory negative capture.
+
+\textbf{Provenance and reproducibility.} Scientific workflows use preregistration, version pinning, and artifact hashing; agent stacks often stop at prompt logging.
+FCO/FCG extends content-addressed lineage to cross-actor handoffs so that a stale agent cannot write after ownership moves.
+
+\textbf{Structured context and retrieval.} Graph-augmented prompting and memory systems assume structured context helps; falsification requires frozen contracts and power-aware verdicts.
+HydraDG enforces both.
+
+\section{Framework}
+
+\subsection{Custody objects}
+
+An \textbf{FCO} materializes one bounded transformation: e.g., a model call, scorer pass, or ingest operation.
+An \textbf{FCG} append records directed edges between FCOs with hash-linked roots.
+Claim ceilings (exploratory mechanistic falsification, descriptive only, etc.) are declared at preregistration and enforced at promotion time.
+
+\subsection{Experimental freeze}
+
+Each experiment declares:
+\begin{itemize}
+  \item frozen case manifest and prompt-contract hashes;
+  \item conditions (e.g., flat prose vs.\ structured FCG);
+  \item models with expected runtime digests;
+  \item primary endpoint and aggregation rule;
+  \item explicit gates for confirmatory vs.\ exploratory claims.
+\end{itemize}
+Execution emits \texttt{START\_RECEIPT}, per-cell raw outputs with prompt/response SHA-256, parser state, and terminal receipts.
+Integrity failure (duplicate keys, missing dependencies, silent model substitution) blocks promotion; scientific failure (timeout, abstention, malformed JSON) is retained as terminal evidence.
+
+\subsection{Governed local execution}
+
+Where preregistered, local model calls route through a governed bridge that records selection age, swap posture, and resolved digest.
+Direct runtime invocation and governed invocation are separate evidence classes; one is not silently labeled as the other.
+
+\section{Experimental Setup}
+
+\subsection{Task family}
+
+The IC Failure Learning suite uses synthetic agent-failure vignettes with preregistered endpoints such as E06 (prevents exposure of out-of-vault media).
+Cases are drawn from a frozen \texttt{CASES.jsonl} manifest; each case receives multiple replicates per condition.
+
+\subsection{Conditions and models}
+
+\textbf{C0 (FLAT\_PROSE):} failure-handling guidance as unstructured text.\\
+\textbf{C1 (STRUCTURED\_FCG):} the same semantic content composed through a frozen FCG retrieval contract.
+
+EXP-008 and EXP-009 used local models \texttt{qwen3:1.7b} and \texttt{qwen2.5-coder:7b} under identical case and scorer contracts.
+Thinking/reasoning modes were held consistent with preregistration.
+Primary aggregation: majority of three replicates per case.
+
+\subsection{AI and agent methodology disclosure}
+
+Frontier coding agents assisted with repository tooling and manuscript preparation; they are not listed as authors.
+All scientific endpoints come from preregistered local model executions with hashed prompts and responses.
+Routine editing does not constitute a reported experimental intervention.
+
+\subsection{Power and claim gates}
+
+E06 endpoints are known limited-power under the frozen case set.
+Confirmatory ordering claims require preregistered discordant pairs; exploratory secondary statistics are quarantined from primary promotion.
+
+\section{Results}
+
+Table~\ref{tab:terminal} summarizes terminal verdicts for preregistered confirmatory experiments.
+Both experiments executed the full raw matrix ($n=300$ cells each) with complete custody append.
+
+\begin{table}[t]
+  \centering
+  \caption{Terminal confirmatory experiments (HydraDG IC Failure Learning). \emph{Underpowered} denotes insufficient paired evidence for confirmatory promotion, not proof of null effect.}
+  \label{tab:terminal}
+  \begin{tabular}{llll}
+    \toprule
+    Experiment & Primary verdict & Raw cells & Valid parse rate \\
+    \midrule
+    EXP-008 & UNDERPOWERED & 300 & 0.907 \\
+    EXP-009 & UNDERPOWERED & 300 & 0.883 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\textbf{EXP-008.} Structured FCG retrieval did not yield promotable confirmatory evidence on E06 under the frozen design ($n=2$ paired cases per model stratum at aggregation scope). Data quality metrics show non-zero malformed and abstention rates preserved in custody.
+
+\textbf{EXP-009.} Primary verdict remains UNDERPOWERED for confirmatory E06 ordering. An exploratory secondary pattern was recorded as directionally positive at the descriptive layer only; it is \textbf{not promoted} to a causal claim and does not motivate redesign of the primary hypothesis.
+
+\textbf{Stage-2 baseline.} Prior IC Failure Learning stage-2 execution (414 scored rows across two models) established \texttt{FAILURE\_LEARNING\_BEHAVIOR\_IMPROVEMENT\_NOT\_ESTABLISHED} with committed post-model MMR state, providing historical context for the structured-retrieval falsification lane.
+
+\section{Discussion}
+
+HydraDG demonstrates that agent experiments can be run with the same negative-result integrity expected in preclinical trials: failures are first-class, hashes are mandatory, and claim ceilings block over-interpretation.
+The EXP-008/009 underpowered terminations are scientifically informative---they bound what cannot yet be claimed---while preserving malformed and timeout cells for audit.
+
+Limitations include bounded case replication, local-only model lanes in the reported confirmatory matrix, and absence of runtime-equivalent successor replication in this submission's primary results.
+Future work includes completing preregistered successor lanes under resource gates without merging partial counts into confirmatory tables.
+
+\section{Conclusion}
+
+We presented HydraDG, a custody-first framework for agent context-intervention experiments, and reported two terminal underpowered confirmatory studies that falsify premature promotion of structured FCG retrieval effects on failure-prevention endpoints.
+We recommend adoption of FCO/FCG custody, explicit claim ceilings, and terminal-state preservation as baseline infrastructure for NewInML-style agent evaluations.
+
+\begin{thebibliography}{9}
+
+\bibitem{prereg2026}
+Anonymous. (2026). HydraDG IC Failure Learning preregistrations EXP-008 and EXP-009. Internal frozen artifacts; anonymized submission.
+
+\bibitem{stage2}
+Anonymous. (2026). IC Failure Learning Stage-2 closeout receipt. Internal frozen artifacts; anonymized submission.
+
+\bibitem{neurips2026}
+NeurIPS. (2026). New in Machine Learning (NewInML) workshop call for papers. Non-archival workshop track.
+
+\end{thebibliography}
+
+\end{document}

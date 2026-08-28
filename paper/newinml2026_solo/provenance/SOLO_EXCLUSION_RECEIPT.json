@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.newinml2026_solo.exclusion_receipt.v1",
+  "recorded_at_utc": "2026-08-28T23:06:14Z",
+  "protein_hinge_repository": "biobitworks/protein-hinge",
+  "protein_hinge_repository_id": 1333522875,
+  "excluded_repositories": [
+    "biobitworks/protein-hinge"
+  ],
+  "excluded_artifact_classes": [
+    "PROTEIN_HINGE_COMMITS",
+    "PROTEIN_HINGE_TEAM_METRICS",
+    "CLINVAR_RESULTS",
+    "G1_G2_SUCCESSOR_RESULTS",
+    "HEALTHOMICS_ARTIFACTS",
+    "PROTEIN_HINGE_TEAM_AUTHORSHIP"
+  ],
+  "admitted_from_protein_hinge": 0,
+  "gate": "PASS",
+  "note": "HydraDG solo submission boundary enforced; no Protein Hinge bytes admitted."
+}
