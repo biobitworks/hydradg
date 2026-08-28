@@ -1,0 +1,13 @@
+{
+  "schema": "hydradg.qwen38.execution_gate.v1",
+  "experiment_id": "Q38-EXP009-R2",
+  "EXECUTION_STATE": "RESOURCE_BLOCKED",
+  "precondition": "Q38-EXP008-R2 design frozen; execution blocked on same Daytona gate",
+  "DAYTONA_AUTH": "FAIL",
+  "n_planned": 300,
+  "n_terminal": 0,
+  "MATRIX_COMPLETE": "NO",
+  "block_reason": "Daytona auth missing; cannot provision matched H200 host",
+  "recorded_at_utc": "2026-08-29T00:16:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

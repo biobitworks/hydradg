@@ -1,0 +1,72 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "Q38-EXP009-R2",
+  "classification": "PREREGISTERED_SUCCESSOR_ORDERING_ABLATION",
+  "predecessor_experiment": "EXP-009",
+  "predecessor_verdict": "UNDERPOWERED",
+  "relationship": "SUCCESSOR_REPLAY_NOT_HISTORICAL",
+  "changed_variable": "MODEL_IDENTITY",
+  "intervention": "CAUSAL_FCG_ORDER",
+  "control": "NEUTRAL_DETERMINISTIC_ORDER",
+  "ordering_isolation": "ATOM_SET_HELD_FIXED_ORDER_ONLY",
+  "H0": "Causal FCG ordering does not change measured failure-prevention behavior relative to neutral ordering when atom identity/content are held fixed.",
+  "H1": "Causal FCG ordering changes measured failure-prevention behavior.",
+  "primary_endpoint": "E06_PREVENTS_C",
+  "primary_registered_endpoint": "E06_PREVENTS_C",
+  "E06_POWER_STATE": "KNOWN_LIMITED",
+  "primary_confirmatory_status": "POWER_LIMITED_EXPLORATORY",
+  "alpha": 0.05,
+  "statistical_test": "exact_mcnemar_on_paired_case_majorities",
+  "multiplicity_correction": "holm_on_secondary_endpoints",
+  "secondary_endpoint_family_not_promoted_to_primary": [
+    "E05_top1",
+    "E05_top3",
+    "E01_cold_start",
+    "E01_vault_media",
+    "E01_origin_gap",
+    "E07_directional_gate"
+  ],
+  "conditions": {
+    "C0": "NEUTRAL_ORDER",
+    "C1": "CAUSAL_FCG_ORDER"
+  },
+  "models": {
+    "MODEL_A": {
+      "ollama_alias": "qwen3.8:27b",
+      "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643"
+    },
+    "MODEL_B": {
+      "ollama_alias": "qwen3.8-flash-next:125b-a6b-nvfp4",
+      "expected_digest": "PENDING_DAYTONA_CANARY_FREEZE"
+    }
+  },
+  "execution_host": {
+    "provider": "Daytona",
+    "gpu_class": "NVIDIA H200",
+    "RUNTIME_EQUIVALENCE": "YES_SAME_HOST_GPU_CLASS"
+  },
+  "cases_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "atom_set_predecessor": "eval/ic_failure_learning_20260827/daisy_overnight_20260828/EXP-009/ATOM_SET_FREEZE.jsonl",
+  "ordering_algorithm_predecessor": "eval/ic_failure_learning_20260827/daisy_overnight_20260828/EXP-009/ORDERING_ALGORITHM.json",
+  "scorer_sha256": "917a2095935610d0907bd46e821d0fa571da9585faf2dfaa859859c7dcf8fb5f",
+  "replicates": 3,
+  "matrix_formula": "25 cases × 2 orderings × 3 replicates × 2 models = 300",
+  "expected_matrix_cells": 300,
+  "technical_retry_policy": {
+    "max_technical_retries_per_cell": 2,
+    "allowed_reasons": [
+      "network_interruption",
+      "provider_5xx",
+      "model_server_crash",
+      "verified_infrastructure_timeout",
+      "corrupted_output_transfer"
+    ],
+    "prohibited_reasons": [
+      "unfavorable_model_answer",
+      "directionally_positive_secondary",
+      "p_value_too_large"
+    ]
+  },
+  "frozen_at_utc": "2026-08-29T00:16:00Z",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
