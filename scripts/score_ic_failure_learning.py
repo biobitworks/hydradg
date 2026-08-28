@@ -234,7 +234,7 @@ def main() -> int:
         if case_id not in cases:
             unknown_cases.append(str(case_id))
             continue
-        key = (result.get("model"), case_id, result.get("replicate"))
+        key = (result.get("model"), case_id, result.get("replicate"), result.get("generation", "UNKNOWN"))
         seen_keys[key] += 1
         scored.append(score_row(cases[case_id], result))
 
