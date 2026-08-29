@@ -9,7 +9,15 @@ import subprocess
 from datetime import datetime, timezone
 from pathlib import Path
 
-ROOT = Path("/Users/byron/projects/active/hydradg-newinml-solo-20260828")
+def discover_root() -> Path:
+    return Path(
+        subprocess.check_output(
+            ["git", "rev-parse", "--show-toplevel"], text=True
+        ).strip()
+    )
+
+
+ROOT = discover_root()
 PAPER = ROOT / "paper/newinml2026_solo"
 MANUSCRIPT = PAPER / "manuscript/main.tex"
 PDF = PAPER / "manuscript/build/main.pdf"
@@ -26,10 +34,11 @@ def sha256_file(p: Path) -> str:
     return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
-def git_head() -> tuple[str, str]:
+def git_head() -> tuple[str, str, str]:
     branch = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "--abbrev-ref", "HEAD"], text=True).strip()
     sha = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD"], text=True).strip()
-    return branch, sha
+    tree = subprocess.check_output(["git", "-C", str(ROOT), "rev-parse", "HEAD^{tree}"], text=True).strip()
+    return branch, sha, tree
 
 
 def pdf_text() -> str:
@@ -50,7 +59,7 @@ def page_counts() -> dict:
 
 def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
-    branch, head = git_head()
+    branch, head, tree = git_head()
     tex = MANUSCRIPT.read_text()
     pdf_sha = sha256_file(PDF)
     pages = page_counts()
@@ -287,8 +296,14 @@ def main() -> None:
     readiness = {
         "schema": "hydradg.newinml2026_solo.final_submission_readiness.v1",
         "recorded_at_utc": utc(),
-        "CURRENT_BRANCH": branch,
-        "CURRENT_SHA": head,
+        "GENERATED_FROM_BRANCH": branch,
+        "GENERATED_FROM_COMMIT": head,
+        "GENERATED_FROM_TREE": tree,
+        "PDF_GIT_BLOB_SHA": subprocess.check_output(
+            ["git", "-C", str(ROOT), "hash-object", str(PDF.relative_to(ROOT))], text=True
+        ).strip(),
+        "PDF_SHA256": pdf_sha,
+        "MANIFEST_ROOT": str(PAPER),
         "FINAL_PAPER_SELECTION": "SUCCESSOR_V2",
         "FALLBACK_PDF_SHA256": FALLBACK_SHA,
         "FINAL_PDF_SHA256": pdf_sha,
