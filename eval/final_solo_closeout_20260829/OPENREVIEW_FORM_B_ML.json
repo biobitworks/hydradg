@@ -1,0 +1,56 @@
+{
+  "schema": "hydradg.openinml2026_solo.openreview_form_b.v1",
+  "recorded_at_utc": "2026-08-29T16:55:10Z",
+  "venue_url": "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/NewInML",
+  "FORM_FIELD_STATE": "PARTIAL_LIVE_VENUE_VERIFIED_LOGIN_REQUIRED_FOR_SUBMIT_FORM",
+  "submission_start_utc": "2026-08-01T00:00:00Z",
+  "submission_deadline_utc": "2026-08-30T07:59:00Z",
+  "fields": [
+    {
+      "field": "Title",
+      "required": true,
+      "source": "live_venue_and_prior_receipt"
+    },
+    {
+      "field": "Authors",
+      "required": true,
+      "note": "OpenReview profiles required; human-only",
+      "source": "lane9_openreview_receipt"
+    },
+    {
+      "field": "Keywords",
+      "required": true,
+      "source": "lane9_openreview_receipt"
+    },
+    {
+      "field": "Abstract",
+      "required": true,
+      "source": "lane9_openreview_receipt"
+    },
+    {
+      "field": "TLDR",
+      "required": false,
+      "source": "lane9_openreview_receipt"
+    },
+    {
+      "field": "PDF",
+      "required": true,
+      "source": "lane9_openreview_receipt"
+    },
+    {
+      "field": "License",
+      "required": true,
+      "value": "CC BY 4.0",
+      "source": "lane9_openreview_receipt"
+    },
+    {
+      "field": "Supplemental upload",
+      "required": false,
+      "value": "NOT_VISIBLE_IN_SUPPLIED_FORM",
+      "source": "lane9_openreview_receipt"
+    }
+  ],
+  "certifications_checkboxes": "NOT_OBSERVED_WITHOUT_LOGIN",
+  "file_size_limits": "NOT_OBSERVED_WITHOUT_LOGIN",
+  "prior_receipt_path": "eval/newinml_final_daisy_20260829/execution/lane9_openreview/OPENREVIEW_STATE_RECEIPT.json"
+}
