@@ -1,0 +1,32 @@
+{"atom_id": "TABLE:tab:terminal", "atom_type": "Table", "table_index": 0}
+{"atom_id": "TABLE:tab:terminal:R0:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:terminal", "row": 0, "value": "Study"}
+{"atom_id": "TABLE:tab:terminal:R0:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:terminal", "row": 0, "value": "Primary verdict"}
+{"atom_id": "TABLE:tab:terminal:R0:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:terminal", "row": 0, "value": "Raw cells"}
+{"atom_id": "TABLE:tab:terminal:R0:C3", "atom_type": "TableCell", "col": 3, "parent": "TABLE:tab:terminal", "row": 0, "value": "Valid parse rate"}
+{"atom_id": "TABLE:tab:terminal:R1:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:terminal", "row": 1, "value": "EXP-008"}
+{"atom_id": "TABLE:tab:terminal:R1:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:terminal", "row": 1, "value": "UNDERPOWERED"}
+{"atom_id": "TABLE:tab:terminal:R1:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:terminal", "row": 1, "value": "300"}
+{"atom_id": "TABLE:tab:terminal:R1:C3", "atom_type": "TableCell", "col": 3, "parent": "TABLE:tab:terminal", "row": 1, "value": "0.907"}
+{"atom_id": "TABLE:tab:terminal:R2:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:terminal", "row": 2, "value": "EXP-009"}
+{"atom_id": "TABLE:tab:terminal:R2:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:terminal", "row": 2, "value": "UNDERPOWERED"}
+{"atom_id": "TABLE:tab:terminal:R2:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:terminal", "row": 2, "value": "300"}
+{"atom_id": "TABLE:tab:terminal:R2:C3", "atom_type": "TableCell", "col": 3, "parent": "TABLE:tab:terminal", "row": 2, "value": "0.883"}
+{"atom_id": "TABLE:tab:systems", "atom_type": "Table", "table_index": 1}
+{"atom_id": "TABLE:tab:systems:R0:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:systems", "row": 0, "value": "Validation"}
+{"atom_id": "TABLE:tab:systems:R0:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:systems", "row": 0, "value": "Scope"}
+{"atom_id": "TABLE:tab:systems:R0:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:systems", "row": 0, "value": "Outcome"}
+{"atom_id": "TABLE:tab:systems:R1:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:systems", "row": 1, "value": "Perturbation matrix"}
+{"atom_id": "TABLE:tab:systems:R1:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:systems", "row": 1, "value": "100 cells"}
+{"atom_id": "TABLE:tab:systems:R1:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:systems", "row": 1, "value": "100/100 chain verification"}
+{"atom_id": "TABLE:tab:systems:R2:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:systems", "row": 2, "value": "Synthetic tamper suite"}
+{"atom_id": "TABLE:tab:systems:R2:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:systems", "row": 2, "value": "8 modes"}
+{"atom_id": "TABLE:tab:systems:R2:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:systems", "row": 2, "value": "8/8 detected"}
+{"atom_id": "TABLE:tab:systems:R3:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:systems", "row": 3, "value": "Concurrent execution"}
+{"atom_id": "TABLE:tab:systems:R3:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:systems", "row": 3, "value": "10 runs"}
+{"atom_id": "TABLE:tab:systems:R3:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:systems", "row": 3, "value": "PASS (10 unique run IDs)"}
+{"atom_id": "TABLE:tab:systems:R4:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:systems", "row": 4, "value": "Replay/restart recovery"}
+{"atom_id": "TABLE:tab:systems:R4:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:systems", "row": 4, "value": "44 events"}
+{"atom_id": "TABLE:tab:systems:R4:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:systems", "row": 4, "value": "PASS"}
+{"atom_id": "TABLE:tab:systems:R5:C0", "atom_type": "TableCell", "col": 0, "parent": "TABLE:tab:systems", "row": 5, "value": "Live provider ladder"}
+{"atom_id": "TABLE:tab:systems:R5:C1", "atom_type": "TableCell", "col": 1, "parent": "TABLE:tab:systems", "row": 5, "value": "R0--R6"}
+{"atom_id": "TABLE:tab:systems:R5:C2", "atom_type": "TableCell", "col": 2, "parent": "TABLE:tab:systems", "row": 5, "value": "Bounded external failure preserved"}

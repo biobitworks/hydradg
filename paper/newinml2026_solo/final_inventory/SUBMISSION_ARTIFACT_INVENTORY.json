@@ -1,11 +1,11 @@
 {
   "PDF_MUTATED": false,
-  "all_baselines_match": true,
+  "all_baselines_match": false,
   "baseline_deltas": {
     "appendix_pages": {
       "expected": 0,
-      "match": true,
-      "observed": 0
+      "match": false,
+      "observed": 1
     },
     "bibliography_entries": {
       "expected": 10,
@@ -62,7 +62,7 @@
   "expected_green_sha256": "a9c8bae920e04cd892d01a6539f09dfa1f7347cc173bc153d7325b6a99eeb641",
   "manuscript_path": "paper/newinml2026_solo/final_v4/manuscript/main.tex",
   "observed": {
-    "appendix_pages": 0,
+    "appendix_pages": 1,
     "bibliography_entries": 10,
     "checklist_pages": 7,
     "citation_callsites": 9,
@@ -73,8 +73,8 @@
     "unique_bibkeys_used": 7
   },
   "pdf_path": "paper/newinml2026_solo/final_v4/manuscript/build/main.pdf",
-  "pdf_sha256": "a9c8bae920e04cd892d01a6539f09dfa1f7347cc173bc153d7325b6a99eeb641",
-  "pdf_sha_match": true,
-  "recorded_at_utc": "2026-08-29T09:05:48Z",
+  "pdf_sha256": "c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
+  "pdf_sha_match": false,
+  "recorded_at_utc": "2026-08-29T09:10:39Z",
   "schema": "hydradg.newinml.final_inventory.v1"
 }
