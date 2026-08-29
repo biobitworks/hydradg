@@ -1,6 +1,6 @@
 # Statistical Audit — Successor Recovery
 
-Recorded: 2026-08-29T22:29:17Z
+Recorded: 2026-08-29T22:32:55Z
 
 ## EXP-008
 - Statistical state: **UNDERPOWERED**
@@ -20,9 +20,9 @@ Recorded: 2026-08-29T22:29:17Z
 - Terminal: FAILURE_LEARNING_BEHAVIOR_IMPROVEMENT_NOT_ESTABLISHED
 
 ## Deterministic reproduction
-- R1 output root: 4ba575a5e3810b301d0f00eebbcef06c7f2b39c0313f31ea47e3cb8d59edbe89
-- R2 output root: 4ba575a5e3810b301d0f00eebbcef06c7f2b39c0313f31ea47e3cb8d59edbe89
-- R3 output root: 4ba575a5e3810b301d0f00eebbcef06c7f2b39c0313f31ea47e3cb8d59edbe89
+- R1 output root: 3e521a58917da1342746124b281580f5c24a982a546386624e731982618aa9a1
+- R2 output root: 3e521a58917da1342746124b281580f5c24a982a546386624e731982618aa9a1
+- R3 output root: 3e521a58917da1342746124b281580f5c24a982a546386624e731982618aa9a1
 - Gate: PASS
 
 ## No p-hacking statement

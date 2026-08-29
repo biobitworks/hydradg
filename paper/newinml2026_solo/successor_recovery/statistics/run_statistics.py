@@ -265,7 +265,8 @@ def run_once(run_id: str) -> dict:
     st2 = analyze_stage2()
     exp_rows = [exp8, exp9]
 
-    write_csv(OUT / "experiment_level_results.csv", [exp8, exp9, st2], list({k for r in [exp8, exp9, st2] for k in r}))
+    exp_level_fields = sorted({k for r in [exp8, exp9, st2] for k in r})
+    write_csv(OUT / "experiment_level_results.csv", [exp8, exp9, st2], exp_level_fields)
     write_csv(
         OUT / "effect_sizes.csv",
         [

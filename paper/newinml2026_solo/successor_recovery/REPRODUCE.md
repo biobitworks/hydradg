@@ -15,9 +15,9 @@ python3 scripts/reproduce_newinml.py --verify
 ## Statistics (deterministic on PRO)
 | Item | Hash |
 |------|------|
-| R1 output root | `118e50b4e2efad00e889593a99e86b7eff09a8b8e75db29b338b399354bab2ed` |
-| R2 output root | `118e50b4e2efad00e889593a99e86b7eff09a8b8e75db29b338b399354bab2ed` |
-| R3 output root | `118e50b4e2efad00e889593a99e86b7eff09a8b8e75db29b338b399354bab2ed` |
+| R1 output root | `3e521a58917da1342746124b281580f5c24a982a546386624e731982618aa9a1` |
+| R2 output root | `3e521a58917da1342746124b281580f5c24a982a546386624e731982618aa9a1` |
+| R3 output root | `3e521a58917da1342746124b281580f5c24a982a546386624e731982618aa9a1` |
 | Gate | `PASS` |
 
 ## Studio-bound experiments (verify only — DO NOT rerun)
