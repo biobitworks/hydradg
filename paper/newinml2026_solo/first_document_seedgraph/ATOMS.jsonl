@@ -1,0 +1,34 @@
+{"atom_id": "DOC:newinml2026_successor_v4", "atom_type": "Document", "source_sha256": "a9c8bae920e04cd892d01a6539f09dfa1f7347cc173bc153d7325b6a99eeb641"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:1", "atom_type": "Page", "page": 1, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:2", "atom_type": "Page", "page": 2, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:3", "atom_type": "Page", "page": 3, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:4", "atom_type": "Page", "page": 4, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:5", "atom_type": "Page", "page": 5, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:6", "atom_type": "Page", "page": 6, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:7", "atom_type": "Page", "page": 7, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:8", "atom_type": "Page", "page": 8, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:9", "atom_type": "Page", "page": 9, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:10", "atom_type": "Page", "page": 10, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:11", "atom_type": "Page", "page": 11, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:PAGE:12", "atom_type": "Page", "page": 12, "parent": "DOC:newinml2026_successor_v4"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:b605350b", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Introduction"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:963a0e1c", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Related Work"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:192eb452", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Framework"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:4a28c597", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Experimental Setup"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:219c4a6c", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Results"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:5eb6cf64", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Discussion"}
+{"atom_id": "DOC:newinml2026_successor_v4:SEC:89db2ad8", "atom_type": "Section", "parent": "DOC:newinml2026_successor_v4", "title": "Conclusion"}
+{"atom_id": "DOC:newinml2026_successor_v4:ABS-SENT:0", "atom_type": "Sentence", "parent": "DOC:newinml2026_successor_v4", "text": "Agent evaluations increasingly depend on context interventions---retrieval, memory graphs, and prompt contracts---yet published reports often omit null outcomes, parser failures, and negative cells."}
+{"atom_id": "DOC:newinml2026_successor_v4:ABS-SENT:1", "atom_type": "Sentence", "parent": "DOC:newinml2026_successor_v4", "text": "We present HydraDG, a governed experimental framework that binds substantive model invocations, tool calls, and handoffs to   (FCOs) and a   (FCG)."}
+{"atom_id": "DOC:newinml2026_successor_v4:ABS-SENT:2", "atom_type": "Sentence", "parent": "DOC:newinml2026_successor_v4", "text": "HydraDG preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states including timeouts, abstentions, and malformed outputs without silent substitution."}
+{"atom_id": "DOC:newinml2026_successor_v4:ABS-SENT:3", "atom_type": "Sentence", "parent": "DOC:newinml2026_successor_v4", "text": "We report two preregistered studies (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as   under bounded case replication, so confirmatory effect claims are not supported while negative and null evidence remains in custody."}
+{"atom_id": "DOC:newinml2026_successor_v4:ABS-SENT:4", "atom_type": "Sentence", "parent": "DOC:newinml2026_successor_v4", "text": "We argue that custody-first evaluation infrastructure supports reproducible agent science rather than optional logging."}
+{"atom_id": "DOC:newinml2026_successor_v4:CITE:7a3a80d8", "atom_type": "CitationCallsite", "bibkeys": ["liu2023agentbench", "zhou2023webarena"]}
+{"atom_id": "DOC:newinml2026_successor_v4:CITE:7a3a80d8", "atom_type": "CitationCallsite", "bibkeys": ["liu2023agentbench", "zhou2023webarena"]}
+{"atom_id": "DOC:newinml2026_successor_v4:CITE:b95a7542", "atom_type": "CitationCallsite", "bibkeys": ["lewis2020rag", "edge2024graphrag"]}
+{"atom_id": "DOC:newinml2026_successor_v4:CITE:a0347481", "atom_type": "CitationCallsite", "bibkeys": ["nosek2018prereg", "wilkinson2016fair", "groth2010nano"]}
+{"atom_id": "DOC:newinml2026_successor_v4:TABLE:a4a30f90", "atom_type": "Table", "caption": "Terminal preregistered studies (HydraDG IC Failure Learning). \\emph{Underpowered"}
+{"atom_id": "DOC:newinml2026_successor_v4:TABLE:1710bbbc", "atom_type": "Table", "caption": "Systems-validation outcomes (custody mechanics only; not treatment-effect evidence)."}
+{"atom_id": "DOC:newinml2026_successor_v4:NUM:300", "atom_type": "ReportedValue", "value": "300"}
+{"atom_id": "DOC:newinml2026_successor_v4:NUM:2", "atom_type": "ReportedValue", "value": "2"}
+{"atom_id": "DOC:newinml2026_successor_v4:NUM:100", "atom_type": "ReportedValue", "value": "100"}

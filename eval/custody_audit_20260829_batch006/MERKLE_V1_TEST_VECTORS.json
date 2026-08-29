@@ -1,0 +1,51 @@
+[
+  {
+    "expected_root": "c1f15b45c9c21b482264648ac4b6154cb3f7db55ca1f0a715e913b3cddc24865",
+    "input": [],
+    "profile": "SEEDGRAPH_MERKLE_V1_ASCIIHEX_DUPLAST",
+    "vector_id": "MERKLE_V1_EMPTY"
+  },
+  {
+    "expected_root": "16ba0b79912132f678e960242e4788fb4af607fd3ada71cdd710d6642e14a052",
+    "input": [
+      "aabbcc",
+      "ddeeff",
+      "112233"
+    ],
+    "profile": "SEEDGRAPH_MERKLE_V1_ASCIIHEX_DUPLAST",
+    "vector_id": "MERKLE_V1_THREE_LEAVES"
+  },
+  {
+    "expected_root": "80e91bc6956df845a4a248b0b1d329f58bbe4462556f70657ddf74e04846efa0",
+    "input": [
+      "aabb00",
+      "ccdd11",
+      "eeff22"
+    ],
+    "profile": "SEEDGRAPH_MERKLE_V1_ASCIIHEX_DUPLAST",
+    "vector_id": "MERKLE_V1_ODD_DUPLAST"
+  },
+  {
+    "expected_leaf": "9cb932ab4a539c167bad95d75c86237ee61b3198ea225fb32ef038686e861d16",
+    "input": {
+      "byte_range": [
+        0,
+        11
+      ],
+      "text": "Hello world"
+    },
+    "leaf_kind": "sentence",
+    "profile": "SEEDGRAPH_MERKLE_V1_ASCIIHEX_DUPLAST",
+    "vector_id": "SENTENCE_V1_HELLO"
+  },
+  {
+    "expected_leaf": "39a97a2eb8ca495785c5636eaef7473947060a7563b1e87644510e3cc711f519",
+    "input": {
+      "caption": "Figure 1: Test",
+      "image_prefix_hex": "89504e470d0a1a0a"
+    },
+    "leaf_kind": "figure",
+    "profile": "SEEDGRAPH_MERKLE_V1_ASCIIHEX_DUPLAST",
+    "vector_id": "FIGURE_V1_PNG_CAPTION"
+  }
+]
