@@ -1,0 +1,26 @@
+{
+  "ALPHA": 0.05,
+  "BASELINE": "FLAT_DOCUMENT_SEMANTIC_EXTRACTION",
+  "EXCLUSION_RULES": [
+    "malformed_parser_output",
+    "missing_gold_label"
+  ],
+  "H_D1": "exact_invariant",
+  "H_D2": "exact_invariant",
+  "H_PH1": "protein_hinge_transfer",
+  "H_S1": "structured_semantic_advantage",
+  "H_S2": "abstention_safety",
+  "MINIMUM_RELEVANT_EFFECT": 0.1,
+  "MULTIPLICITY_POLICY": "primary_confirmatory_holm_secondary",
+  "POWER_TARGET": 0.8,
+  "PRIMARY_ENDPOINT": "BOUNDED_CLAIM_CORRECT",
+  "PRIMARY_MODEL": "qwen2.5-coder:7b",
+  "PRIMARY_TEST": "exact_McNemar",
+  "RANDOM_SEED": 20260829,
+  "SAMPLE_SIZE": 45,
+  "STATISTICAL_UNIT": "adjudication_case",
+  "STOPPING_RULE": "fixed_N_no_optional_stopping",
+  "TREATMENT": "STRUCTURED_FCO_FCG_AOK_SOT",
+  "experiment_id": "NEWINML-DOC-ROUNDTRIP-001",
+  "frozen_at": "2026-08-29T10:48:19Z"
+}

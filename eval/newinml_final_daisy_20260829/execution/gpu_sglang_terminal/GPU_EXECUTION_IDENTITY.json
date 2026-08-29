@@ -1,0 +1,46 @@
+{
+  "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "CURRENT_SHA": "4d8d0c4e90085c3aa89d329700dd1b24fd784d9c",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "artifact_hashes": {
+    "experiment_matrix": {
+      "path": "eval/newinml_final_daisy_20260829/EXPERIMENT_MATRIX.json",
+      "present": true,
+      "sha256": "fa25b62024bf13c65b792297c5e57218d3f08045f133595b35dcf346a4c52b4c"
+    },
+    "graph_config": {
+      "path": "eval/ic_failure_learning_20260827/sglang_replay/GRAPH_CONFIG_MANIFEST.json",
+      "present": true,
+      "sha256": "0c0130c78b2b2be43851e8d3d3d071a8ca82751b46b12430b1b667eb69fdb3be"
+    },
+    "prep_audit": {
+      "path": "eval/newinml_final_daisy_20260829/execution/lane2_sglang/SGLANG_HL001_PREP_AUDIT.json",
+      "present": true,
+      "sha256": "1e836306a7d8e798fb23b2a807d968d4afb0af0f6b1f841385c80ca30d5e9978"
+    },
+    "preregistration": {
+      "path": "eval/ic_failure_learning_20260827/sglang_replay/PREREGISTRATION.json",
+      "present": true,
+      "sha256": "f31eb683d4ea3b7f450345a69c1d36b85a5ad664a906cf6ae3ab236040a5adbd"
+    }
+  },
+  "canary_cells_required": 24,
+  "canary_domain": "HYDRADG_SGLANG_HL001_CANARY_V1",
+  "experiment_id": "SGLANG-HL-001",
+  "logical_conditions": [
+    "CONTROL",
+    "INVALID_PROOF",
+    "REPLAYED_PROOF",
+    "BROKEN_AUTHORIZATION_EDGE"
+  ],
+  "model_id": "Qwen/Qwen3-8B",
+  "recorded_at_utc": "2026-08-29T09:45:15Z",
+  "runtime_modes": [
+    "EAGER_DISABLED",
+    "TC_PIECEWISE",
+    "BREAKABLE"
+  ],
+  "schema": "hydradg.gpu_execution.identity.v1",
+  "sglang_git_sha_pin": "acc918b3ece60af20321612b8ad204bdba8fcb80"
+}
