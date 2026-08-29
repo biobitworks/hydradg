@@ -1,0 +1,63 @@
+{
+  "BUILD_RECEIPT_present": false,
+  "checkpoint_identity": null,
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "content_store_root": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "graph_root": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "implementation_git_sha": "bed70f6af58d02fab76ce4f6133444b6360bbbbe",
+  "implementation_sha256": "2592f6a2b21dd671e19402c9367376fd9b65b54b39fa7eefa52034b7701bc938",
+  "interruption_boundary": "DURING_FINAL_PARQUET_WRITE",
+  "last_durable_atom": null,
+  "last_durable_batch": null,
+  "last_durable_record": null,
+  "last_observed_filesystem_activity_utc": "2026-08-28T14:56:33Z",
+  "ledger_root": null,
+  "partial_files": [
+    {
+      "integrity": {
+        "detail": "Parquet magic bytes not found in footer",
+        "integrity_state": "partial_corrupt",
+        "parquet_footer": "3465227d",
+        "parquet_header": "50415231"
+      },
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/nodes.parquet",
+      "size_bytes": 71601094693
+    },
+    {
+      "integrity": {
+        "detail": "Parquet magic bytes not found in footer",
+        "integrity_state": "partial_corrupt",
+        "parquet_footer": "34393638",
+        "parquet_header": "50415231"
+      },
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/edges.parquet",
+      "size_bytes": 46780800179
+    }
+  ],
+  "recorded_at_utc": "2026-08-29T04:59:56Z",
+  "schema": "hydradg.seedgraph.last_durable_checkpoint.v1",
+  "source_root": {
+    "track01_documents": {
+      "mtime_utc": "2026-08-19T17:37:48Z",
+      "path": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/documents/test.parquet",
+      "role": "track01_documents",
+      "sha256": "6b0747bf160af9427b12101537d53056ac592ada9831c1a98ae01fa50a8d2a9f",
+      "size_bytes": 1409893131
+    },
+    "track01_questions": {
+      "mtime_utc": "2026-08-19T17:37:03Z",
+      "path": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/questions/test.parquet",
+      "role": "track01_questions",
+      "sha256": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2",
+      "size_bytes": 408737
+    },
+    "track03_json": {
+      "mtime_utc": "2026-08-19T17:38:37Z",
+      "path": "/Users/byron/.local/share/hydradg-datasets/track03/longmemeval-cleaned/longmemeval_s_cleaned.json",
+      "role": "track03_json",
+      "sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "size_bytes": 277383467
+    }
+  },
+  "write_semantics": "seedgraph_hierarchy_v1a.build() holds all nodes/edges/atoms in memory, then writes parquet artifacts in one batch at finalize(). No incremental checkpoint/resume API exists in v1a."
+}

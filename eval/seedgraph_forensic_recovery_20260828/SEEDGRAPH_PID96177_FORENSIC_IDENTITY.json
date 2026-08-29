@@ -1,0 +1,94 @@
+{
+  "canonical_seedgraph_repo_note": "PID 96177 executed HydraDG scripts/seedgraph_hierarchy_v1a.py build, not uv run seedgraph import from /Users/byron/projects/active/seedgraph",
+  "checkpoint_path": null,
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "content_store_path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "engine_git_sha_at_last_change": "bed70f6af58d02fab76ce4f6133444b6360bbbbe",
+  "engine_path": "/Users/byron/projects/active/hydradg/scripts/seedgraph_hierarchy_v1a.py",
+  "engine_sha256": "2592f6a2b21dd671e19402c9367376fd9b65b54b39fa7eefa52034b7701bc938",
+  "estimated_start_utc": "2026-08-22T23:58:22Z",
+  "exact_command": "/opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/byron/projects/active/hydradg/scripts/seedgraph_hierarchy_v1a.py build --output-dir /Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation --require-studio",
+  "execution_host": "magicSTUDIObox.local",
+  "git_branch_at_forensic": "cursor/seedgraph-forensic-recovery-b3c8",
+  "git_repo": "/Users/byron/projects/active/hydradg",
+  "git_sha_at_forensic": "1274be3523fa2fa2092926c0cf2147702a8f0775",
+  "graph_path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "implementation_lane": "hydradg.seedgraph.hierarchy.v1a",
+  "interrupted_at_utc": "2026-08-29T04:44:50Z",
+  "last_observed_alive_utc": "2026-08-29T04:44:49Z",
+  "ledger_path": null,
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "output_root": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "pid": 96177,
+  "ppid": 96175,
+  "prior_misclassification": {
+    "corrected_to": "ACTIVE_IMPORT_INTERRUPTED",
+    "label": "OPERATIONAL_STALE",
+    "source_receipt": "/Users/byron/projects/active/hydradg-qwen38-model-replay-20260828/eval/qwen38_model_replay_20260828/remediation/SWAP_REMEDIATION_RECEIPT.json"
+  },
+  "python_identity": "Python 3.14.7",
+  "python_path": "/opt/homebrew/bin/python3",
+  "recorded_at_utc": "2026-08-29T04:59:56Z",
+  "runtime_seconds_observed": 392278.92,
+  "schema": "hydradg.seedgraph.forensic_identity.v1",
+  "signature_state": "NOT_SIGNED",
+  "source_datasets": {
+    "_logical_counts": {
+      "track01_documents_rows": 511962,
+      "track01_questions_primary_contract": 300,
+      "track01_questions_rows_total": 500,
+      "track03_json_items": 500,
+      "track03_turn_rows_estimated": 246750
+    },
+    "_source_bytes_total": 1687685335,
+    "track01_documents": {
+      "mtime_utc": "2026-08-19T17:37:48Z",
+      "path": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/documents/test.parquet",
+      "role": "track01_documents",
+      "sha256": "6b0747bf160af9427b12101537d53056ac592ada9831c1a98ae01fa50a8d2a9f",
+      "size_bytes": 1409893131
+    },
+    "track01_questions": {
+      "mtime_utc": "2026-08-19T17:37:03Z",
+      "path": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/questions/test.parquet",
+      "role": "track01_questions",
+      "sha256": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2",
+      "size_bytes": 408737
+    },
+    "track03_json": {
+      "mtime_utc": "2026-08-19T17:38:37Z",
+      "path": "/Users/byron/.local/share/hydradg-datasets/track03/longmemeval-cleaned/longmemeval_s_cleaned.json",
+      "role": "track03_json",
+      "sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "size_bytes": 277383467
+    }
+  },
+  "stage_at_interruption": "FINAL_PARQUET_SERIALIZATION",
+  "stage_not_reached": [
+    "VALIDATION",
+    "BUILD_RECEIPT_EMISSION",
+    "TERMINAL_WATCHER_CLOSEOUT"
+  ],
+  "stages_performed": [
+    "ROOT_IMPORT",
+    "BYTE_CUSTODY",
+    "LOGICAL_RECORD_INGEST",
+    "STRUCTURAL_ATOMIZATION",
+    "FCO_BINDING",
+    "FCG_BINDING"
+  ],
+  "stdout_stderr_paths": {
+    "process_stdout_stderr": "NOT_CAPTURED",
+    "watcher_log_path": "/tmp/seedgraph_audit.log",
+    "watcher_log_present": false
+  },
+  "watcher_relationship": {
+    "watcher_pid": 9211,
+    "watcher_script": "/Users/byron/projects/active/hydradg/scripts/ollarma_seedgraph_v1a_watcher.py",
+    "watcher_state": "TERMINATED_BEFORE_CLOSEOUT",
+    "watcher_terminal_receipt_expected": "/Volumes/magicBLACKbox/hydradg/seedgraph/audits/v1a_validation_watch_20260824_terminal_receipt.json",
+    "watcher_termination_reason": "Killed during Q38 swap remediation before PID 96177 exit closeout",
+    "watcher_watch_receipt": "/Volumes/magicBLACKbox/hydradg/seedgraph/audits/v1a_validation_watch_20260824.jsonl"
+  },
+  "working_directory": "/Users/byron/projects/active/hydradg"
+}
