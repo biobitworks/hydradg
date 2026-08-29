@@ -1,4 +1,4 @@
-HYDRADG — PULL FULL PROMPT AND EXECUTE
+HYDRADG — PULL FULL PROMPTS AND EXECUTE
 
 On magicSTUDIObox.local:
 
@@ -10,9 +10,12 @@ git pull --ff-only origin cursor/newinml-daisy-execute-20260829
 
 git rev-parse HEAD
 
-Read and execute exactly:
+Read and execute IN THIS ORDER:
 
-docs/CURSOR_TERMINOLOGY_SEEDGRAPH_ANTICUBE_MASTER_PROMPT_20260829.md
+1. docs/CURSOR_TERMINOLOGY_SEEDGRAPH_ANTICUBE_MASTER_PROMPT_20260829.md
+2. docs/CURSOR_NEWINML_FIGURE_TABLE_STATS_APPENDIX_INVENTORY_20260829.md
+
+The second file is a mandatory submission-artifact addendum. It requires an explicit inventory of figures, tables, statistical analyses, comparisons, references/citations, and appendix content before any successor PDF is selected.
 
 HARD PRIORITY RULE:
 After EVERY bounded action and EVERY agent response, begin with:
@@ -49,6 +52,11 @@ terminology + MeSH/GO/ECO matrix
 → FCG delta
 → CFMO/context-score delta
 → custody-auditor R1/R2/R3
+→ SUBMISSION ARTIFACT INVENTORY
+   figures + tables + statistics + comparisons + references + appendix plan
+→ verify every displayed number and citation by reverse trace
+→ explicitly label APPENDIX if admitted
+→ mechanically separate MAIN / REFERENCES / APPENDIX / CHECKLIST page counts
 → bounded Git commit/push/origin parity
 → GettingScienceDone reusable-contract update.
 
@@ -59,4 +67,17 @@ Preserve failures, partial/corrupt sources, contradictions, prior states, and hi
 MMR=COMMITTED only after an actual verified append.
 SIGNED only after an actual authorized signing operation.
 
-Return the final Section 13 closeout from the master prompt.
+CURRENT EXPECTED MANUSCRIPT BASELINE TO RECOMPUTE, NOT BLINDLY TRUST:
+main figures=0
+main tables=2
+main content pages=4
+reference pages=1
+appendix pages=0
+checklist pages=7
+reference entries=10
+citation callsites=9
+unique used bibkeys=7
+
+Do not add unsupported filler because appendix/reference pages are available. Any missing analysis/figure/table must be classified PLANNED_NOT_EXECUTED, DEFERRED_NOT_NEEDED, BLOCKED_MISSING_EVIDENCE, or OMITTED_CLAIM_CEILING.
+
+Return both the master closeout and the inventory addendum Section 12 report.
