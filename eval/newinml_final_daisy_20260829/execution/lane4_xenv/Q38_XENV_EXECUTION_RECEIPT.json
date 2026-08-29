@@ -1,68 +1,11 @@
 {
   "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
-  "CURRENT_SHA": "a6c245a68646347d8fdcd13601a0e6ee27b2ddf7",
-  "RUNTIME_EQUIVALENCE": "NO",
-  "blocking_reasons": [
-    "DAYTONA credentials not in environment",
-    "KAGGLE credentials not in environment"
-  ],
+  "CURRENT_SHA": "766760b7289f0faf6aa98ab1d5e6080f57e76aae",
+  "DAYTONA_STATE": "BLOCKED_HUMAN_SECRET_REQUIRED",
+  "GIT_DIRTY": true,
+  "KAGGLE_STATE": "CONFIG_FILE_PRESENT_ENV_ABSENT",
   "cells_executed": 0,
-  "cells_required": 8,
-  "claim_ceiling": "PORTABILITY_DESCRIPTIVE_SUCCESSOR_ONLY",
-  "daytona_configured": false,
-  "experiment_id": "Q38-XENV-001",
-  "kaggle_configured": false,
   "lane_state": "BLOCKED",
-  "recorded_at_utc": "2026-08-29T07:59:38Z",
-  "schema": "hydradg.q38_xenv.execution.v1",
-  "selected_cells": [
-    {
-      "cell_id": "HL-INVALID_PROOF-R2",
-      "condition": "INVALID_PROOF",
-      "rank_key": "13e79ed91b22868b66018db830b47892a6fd4f41fe957d7cc41b6c155a80d171",
-      "replicate": 2
-    },
-    {
-      "cell_id": "HL-CONTROL-R1",
-      "condition": "CONTROL",
-      "rank_key": "660c8f83148efa0ce261bc923dad35f3fd80ce033de6935962c6191b175b66a1",
-      "replicate": 1
-    },
-    {
-      "cell_id": "HL-INVALID_PROOF-R1",
-      "condition": "INVALID_PROOF",
-      "rank_key": "71e7f8ca0b5388ba53439d321b96f18ca0a587099a8aa99407df374da1d26c7f",
-      "replicate": 1
-    },
-    {
-      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R2",
-      "condition": "BROKEN_AUTHORIZATION_EDGE",
-      "rank_key": "739750e30b366857dcb632811f33bfa55eb08d497ea2bfeb3d56d7ecaef03cda",
-      "replicate": 2
-    },
-    {
-      "cell_id": "HL-REPLAYED_PROOF-R1",
-      "condition": "REPLAYED_PROOF",
-      "rank_key": "8225508e647d49c851fd71ee6fa1ec60b17bfa88071efaa952f05f4059d87c9d",
-      "replicate": 1
-    },
-    {
-      "cell_id": "HL-CONTROL-R2",
-      "condition": "CONTROL",
-      "rank_key": "828019f5d76aededdc4016f340aa4875227a05e618a5fe70decdc381cfb7a96c",
-      "replicate": 2
-    },
-    {
-      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R1",
-      "condition": "BROKEN_AUTHORIZATION_EDGE",
-      "rank_key": "bbe1bab7bced828617d32213b86fc2ec3b1f960d22aee719cf5bba601d797b68",
-      "replicate": 1
-    },
-    {
-      "cell_id": "HL-REPLAYED_PROOF-R2",
-      "condition": "REPLAYED_PROOF",
-      "rank_key": "cd6d7fa8d278c7841fef320cab3d8dc7609aacd65e7102539024502ad01dc63a",
-      "replicate": 2
-    }
-  ]
+  "recorded_at_utc": "2026-08-29T08:09:20Z",
+  "schema": "hydradg.q38_xenv.execution.v2"
 }

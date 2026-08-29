@@ -1,0 +1,62 @@
+{
+  "schema": "hydradg.cfos_hl001.stage_receipt.v1",
+  "experiment_id": "CFOS-HL-001",
+  "cloudflare_os_checkout": "/Users/byron/projects/active/cloudflare-os",
+  "cloudflare_os_sha": "14fea8592a6dbc59769d592c0752bbf6a465fa84",
+  "cfos_runtime_health": {
+    "ok": true,
+    "code": "200"
+  },
+  "signature_state": "NOT_SIGNED",
+  "stage": "2_CONDITION_SMOKE",
+  "results": [
+    {
+      "ok": true,
+      "run_id": "hlrt_mte3nins_6747aa9c",
+      "label": "stage2_CONTROL",
+      "perturbation": "CONTROL",
+      "event_count": 44,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "10e842172336a223b2155b1fe6d5ce9892f217992f7d0dafa006e22c3cf4c453",
+        "append_state": "PASS"
+      }
+    },
+    {
+      "ok": true,
+      "run_id": "hlrt_mte3ninz_26968562",
+      "label": "stage2_INVALID_PROOF",
+      "perturbation": "INVALID_PROOF",
+      "event_count": 44,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "a124283099a65804605952f3939cb22023f94f25c0783be007ce7cf61d3f913e",
+        "append_state": "PASS"
+      }
+    },
+    {
+      "ok": true,
+      "run_id": "hlrt_mte3nio6_ec146fcf",
+      "label": "stage2_REPLAYED_PROOF",
+      "perturbation": "REPLAYED_PROOF",
+      "event_count": 44,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "ec0606ed5b1894051701409e3fd95c82e31a2e895db786b5463be434db2c9913",
+        "append_state": "PASS"
+      }
+    },
+    {
+      "ok": true,
+      "run_id": "hlrt_mte3nioc_708b9492",
+      "label": "stage2_BROKEN_AUTHORIZATION_EDGE",
+      "perturbation": "BROKEN_AUTHORIZATION_EDGE",
+      "event_count": 44,
+      "fcg": {
+        "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+        "root_after": "229d1d76f07601b65343b49b5dc8b1f1a1f593d817303704848eb9cdba329831",
+        "append_state": "PASS"
+      }
+    }
+  ]
+}
