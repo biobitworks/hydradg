@@ -1,0 +1,62 @@
+HYDRADG — PULL FULL PROMPT AND EXECUTE
+
+On magicSTUDIObox.local:
+
+cd /Users/byron/projects/active/hydradg
+
+git fetch origin
+git switch cursor/newinml-daisy-execute-20260829
+git pull --ff-only origin cursor/newinml-daisy-execute-20260829
+
+git rev-parse HEAD
+
+Read and execute exactly:
+
+docs/CURSOR_TERMINOLOGY_SEEDGRAPH_ANTICUBE_MASTER_PROMPT_20260829.md
+
+HARD PRIORITY RULE:
+After EVERY bounded action and EVERY agent response, begin with:
+
+OPERATOR_ACTION_QUEUE
+SECRET_QUEUE
+EXECUTION_QUEUE
+
+Any secret/authorization that blocks an otherwise-ready material lane becomes P0 in the NEXT response. Never print secret values; record only PRESENT/ABSENT/EXPIRED/UNKNOWN and the blocked row.
+
+Every actionable row must carry dynamic:
+priority_before/after,
+Anticube_before/after,
+HydraDG_context_score_before/after,
+context_score_delta,
+scientific_goal_alignment,
+blocker,
+next_action.
+
+Do not invent an Anticube scalar or HydraDG score. Use the canonical implementations; otherwise record NOT_COMPUTED.
+
+Run the full governed chain:
+
+terminology + MeSH/GO/ECO matrix
+→ red-team prior-art search
+→ freeze/hash authoritative sources
+→ TOTAL_SOURCE_UNIVERSE terminal accounting
+→ SeedGraph piecewise ingest <=25 sources/batch
+→ first selected NewInML document full deconstruction
+   (prose + citations + figures + tables + visible numeric values)
+→ Atoms of Knowledge
+→ candidate/verified/contested/superseded Seeds of Truth
+→ contextual Anticube transition ledger
+→ FCG delta
+→ CFMO/context-score delta
+→ custody-auditor R1/R2/R3
+→ bounded Git commit/push/origin parity
+→ GettingScienceDone reusable-contract update.
+
+TOTAL_IMPORT_COMPLETE means every declared source has a terminal state, not that every source succeeded.
+
+Preserve failures, partial/corrupt sources, contradictions, prior states, and historical SeedGraph V1 IDs.
+
+MMR=COMMITTED only after an actual verified append.
+SIGNED only after an actual authorized signing operation.
+
+Return the final Section 13 closeout from the master prompt.
