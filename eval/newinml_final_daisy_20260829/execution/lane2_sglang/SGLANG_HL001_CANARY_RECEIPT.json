@@ -1,24 +1,26 @@
 {
-  "schema": "hydradg.sglang_hl001.canary.v1",
-  "recorded_at_utc": "2026-08-29T07:34:45Z",
-  "branch": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
-  "sha": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "EXECUTION_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "EXECUTION_COMMIT_ATTESTATION": "PENDING_POST_COMMIT_EXTERNAL_ATTESTATION",
+  "GENERATED_FROM_TREE": "cad047a99e97be9ff02a563b5fda251f704c4847",
+  "PLAN_BRANCH": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "PLAN_SHA": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
   "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
-  "host": "magicSTUDIObox.local",
-  "experiment_id": "SGLANG-HL-001",
-  "authorized_cuda_host_required": true,
-  "nvidia_smi_present": false,
-  "canary_cells_required": 24,
-  "canary_cells_executed": 0,
-  "expanded_cells_required": 300,
-  "expanded_cells_executed": 0,
-  "runtime_modes": [
-    "disabled",
-    "tc_piecewise",
-    "breakable"
-  ],
-  "lane_state": "BLOCKED",
   "blocking_reason": "NO_AUTHORIZED_CUDA_HOST_ON_MAGICSTUDIOBOX",
+  "canary_cells_executed": 0,
   "claim_ceiling": "RUNTIME_SYSTEMS_COMPARISON",
-  "note": "Historical G0_EAGER replay exists under eval/ic_failure_learning_20260827/sglang_replay/ but is not promoted as BCG evidence without pinned CUDA host"
+  "cuda_identity_frozen": false,
+  "execution_state": "NOT_EXECUTED",
+  "experiment_id": "SGLANG-HL-001",
+  "host": "magicSTUDIObox.local",
+  "lane_state": "BLOCKED",
+  "nvidia_smi_present": false,
+  "prep_only": true,
+  "progression": [
+    "2_call_mode_smoke",
+    "24_cell_canary",
+    "VERIFY",
+    "optional_300"
+  ],
+  "recorded_at_utc": "2026-08-29T07:40:32Z",
+  "schema": "hydradg.sglang_hl001.canary.v1"
 }

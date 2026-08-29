@@ -1,9 +1,13 @@
 {
-  "schema": "hydradg.seedgraph_piecewise.batch.v1",
-  "batch_id": "BATCH-001",
-  "verified_sources": 5,
-  "sources_expected": 5,
   "BATCH_ROOT": "e1a96942af4e22869af58374fa4ede5626e20ae79d17e247da95cab98a9ba4ad",
+  "atoms_total": 48,
+  "batch_id": "BATCH-001",
+  "batch_kind": "CONTROL",
   "mmr_append": "NOT_PERFORMED",
-  "readback_verified": true
+  "orphan_atoms": 0,
+  "readback_verified": true,
+  "reverify_gate": "PASS",
+  "schema": "hydradg.seedgraph_piecewise.batch.v1",
+  "sources_expected": 5,
+  "verified_sources": 5
 }
