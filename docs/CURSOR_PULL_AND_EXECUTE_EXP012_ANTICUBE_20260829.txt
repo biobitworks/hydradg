@@ -1,0 +1,50 @@
+HYDRADG — PULL AND EXECUTE EXP-012 ANTICUBE / ESCALATION / PAPER FIGURES
+
+Run only on magicSTUDIObox.local.
+
+cd /Users/byron/projects/active/hydradg
+
+git fetch origin
+git switch cursor/exp012-anticube-escalation-figures-20260829
+git pull --ff-only origin cursor/exp012-anticube-escalation-figures-20260829
+
+Print:
+
+hostname
+git branch --show-current
+git rev-parse HEAD
+git status --porcelain=v1 -uall
+
+Then read IN FULL and execute:
+
+docs/EXP012_ANTICUBE_ESCALATION_PREREGISTRATION_20260829.md
+docs/CURSOR_EXP012_ANTICUBE_FIGURES_MASTER_PROMPT_20260829.md
+
+The committed files are controlling; do not rely on a shortened chat summary.
+
+Critical rules:
+
+1. AntiCube remains SELF/NON-SELF × SAFE/NON-SAFE. The third plotted axis is time/state index, so the 2×2 classification becomes an auditable 3D trajectory. Do not invent continuous self/safety probabilities unless canonical code emits them.
+2. ΔG* is not the time axis. It is a derived state-transition/decision-pressure diagnostic and must be displayed separately/orthogonally.
+3. Human tickets are optional terminal escalations. Every rung can ACCEPT, REJECT, ABSTAIN, or ESCALATE.
+4. Do not force every predecessor red state to green. Historical nulls/negatives/failures remain immutable. Repair only current execution/integrity blockers with successor receipts.
+5. Deterministically inventory every distinct G*/ΔG definition before execution. Historical evidence suggests at least five named Gibbs-style quantities across project history, but compute the authoritative number from repository sources.
+6. Generate all paper figures deterministically from machine-readable receipts. No image generation, no hand-entered scientific numbers.
+7. Rebuild/validate the successor paper only after figure evidence-map and round-trip gates pass.
+8. Do not merge to main automatically.
+
+After every bounded checkpoint print:
+
+CURRENT_BRANCH=
+CURRENT_SHA=
+EVIDENCE_STATE=
+EXPERIMENT_STATE=
+FCO_STATE=
+FCG_STATE=
+HYDRADB_STATE=
+EARLIEST_DIVERGENCE=
+CLAIM_CEILING=
+SIGNATURE_STATE=
+MERKLE_MMR_STATE=
+NEXT_SAFE_ACTION=
+FINAL_REVIEW_GATE=
