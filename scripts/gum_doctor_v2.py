@@ -96,6 +96,20 @@ def swap_info() -> dict[str, Any]:
 KEYS_ENV = Path.home() / ".config" / "ai-keys" / "keys.env"
 HYDRADG_ENV_LOCAL = ROOT / "apps/hydradg-web/.env.local"
 KAGGLE_JSON = Path.home() / ".kaggle" / "kaggle.json"
+VENDOR_FCG_CORE = ROOT / "scripts/vendor/fcg_core"
+SECRET_REGISTRY_PIN = ROOT / "scripts/vendor/BIOCUSTODY_SECRET_REGISTRY_PIN.json"
+
+
+def _import_secret_registry():
+    vendor_src = VENDOR_FCG_CORE.parent
+    if str(vendor_src) not in sys.path:
+        sys.path.insert(0, str(vendor_src))
+    from fcg_core.secret_registry import (  # noqa: PLC0415
+        resolve_credential_metadata,
+        resolve_secret_source as registry_resolve,
+        SECRET_SOURCE_REGISTRY,
+    )
+    return resolve_credential_metadata, registry_resolve, SECRET_SOURCE_REGISTRY
 
 
 def read_env_file(path: Path) -> dict[str, str]:
@@ -122,12 +136,25 @@ def secret_presence(name: str) -> str:
 
 
 def resolve_secret_source(name: str) -> str | None:
+    """Resolve credential source via centralized SECRET_SOURCE_REGISTRY (no values)."""
+    try:
+        _, registry_resolve, _ = _import_secret_registry()
+        return registry_resolve(name)
+    except ImportError:
+        pass
     if os.environ.get(name):
         return "shell_env"
     if read_env_file(KEYS_ENV).get(name):
         return "keys.env"
-    if read_env_file(HYDRADG_ENV_LOCAL).get(name):
-        return "hydradg_env_local"
+    for entry in [
+        Path("/Users/byron/projects/.env"),
+        Path("/Users/byron/projects/active/ollarma/.env"),
+        ROOT / ".env",
+        ROOT / ".env.local",
+        HYDRADG_ENV_LOCAL,
+    ]:
+        if read_env_file(entry).get(name):
+            return f"env_file:{entry}"
     return None
 
 
@@ -182,16 +209,27 @@ def daytona_state() -> dict[str, str]:
 
 
 def credential_sources_summary() -> dict[str, Any]:
+    registry_paths = []
+    try:
+        _, _, SECRET_SOURCE_REGISTRY = _import_secret_registry()
+        registry_paths = [
+            {"source_class": e["source_class"], "path": str(e["path"]), "exists": e["path"].is_file()}
+            for e in SECRET_SOURCE_REGISTRY
+        ]
+    except ImportError:
+        registry_paths = []
+    pin = {}
+    if SECRET_REGISTRY_PIN.is_file():
+        pin = json.loads(SECRET_REGISTRY_PIN.read_text(encoding="utf-8"))
     return {
         "portfolio_keys_env": str(KEYS_ENV),
         "portfolio_keys_env_exists": KEYS_ENV.is_file(),
         "hydradg_env_local": str(HYDRADG_ENV_LOCAL),
         "hydradg_env_local_exists": HYDRADG_ENV_LOCAL.is_file(),
-        "projects_env": "/Users/byron/projects/.env",
-        "projects_env_exists": Path("/Users/byron/projects/.env").is_file(),
-        "ollarma_env": "/Users/byron/projects/active/ollarma/.env",
-        "ollarma_env_exists": Path("/Users/byron/projects/active/ollarma/.env").is_file(),
-        "resolution_order": "shell_env -> ~/.config/ai-keys/keys.env -> apps/hydradg-web/.env.local",
+        "SECRET_SOURCE_REGISTRY": registry_paths,
+        "SECRET_REGISTRY_VENDOR_PIN": pin,
+        "CROSS_REPO_RUNTIME_DEPENDENCY": pin.get("cross_repo_runtime_dependency", "BOUND_AT_PIN"),
+        "resolution_order": "process_env -> portfolio_keys_env -> project/application env -> provider file -> keychain (ollarma SSOT)",
         "ollarma_ssot_note": "Ollarma resolves env -> keys.env -> keychain; see active/ollarma/src/ollarma/credentials.py",
     }
 
