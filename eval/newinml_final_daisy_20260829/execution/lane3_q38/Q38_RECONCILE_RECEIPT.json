@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.q38_closeout_reconcile.v1",
+  "recorded_at_utc": "2026-08-29T07:34:45Z",
+  "branch": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "sha": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "host": "magicSTUDIObox.local",
+  "experiment_id": "Q38-CLOSEOUT-001",
+  "model": "qwen3.8:27b",
+  "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "observed_digest_prefix": "22130167c4c2",
+  "digest_gate": "PASS",
+  "terminal_cells_preserved": 27,
+  "target_cells_preregistered": 150,
+  "selective_rerun_forbidden": true,
+  "missing_cells": 123,
+  "resource_gate": {
+    "ram_pressure": "UNKNOWN",
+    "note": "Full resource gate requires governed host inventory; not executed this pass"
+  },
+  "audit_receipt_reference": "EXPERIMENT_TERMINAL_AUDIT.json",
+  "audit_receipt_located": false,
+  "lane_state": "RECONCILED_PARTIAL",
+  "claim_ceiling": "Q38_SUCCESSOR_NONTERMINAL",
+  "EXP008_STATE": "UNDERPOWERED_CLOSED",
+  "EXP009_STATE": "UNDERPOWERED_CLOSED"
+}

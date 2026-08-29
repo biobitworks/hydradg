@@ -1,0 +1,64 @@
+{
+  "schema": "hydradg.newinml_final_daisy.closeout.v1",
+  "recorded_at_utc": "2026-08-29T07:34:45Z",
+  "branch": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "sha": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "host": "magicSTUDIObox.local",
+  "lanes": [
+    {
+      "lane": "LANE0_GUM_DOCTOR",
+      "state": "PARTIAL",
+      "claim_ceiling": "ENVIRONMENT_INVENTORY_ONLY"
+    },
+    {
+      "lane": "Q38-CLOSEOUT-001",
+      "state": "PARTIAL",
+      "terminal_cells": 27,
+      "claim_ceiling": "Q38_SUCCESSOR_NONTERMINAL"
+    },
+    {
+      "lane": "CFOS-HL-001",
+      "state": "BLOCKED",
+      "cells": 0,
+      "claim_ceiling": "CLOUDFLARE_OS_INTEGRATION_CANARY"
+    },
+    {
+      "lane": "SGLANG-HL-001",
+      "state": "BLOCKED",
+      "cells": 0,
+      "claim_ceiling": "RUNTIME_SYSTEMS_COMPARISON"
+    },
+    {
+      "lane": "Q38-XENV-001",
+      "state": "BLOCKED",
+      "cells": 0,
+      "claim_ceiling": "DESCRIPTIVE_UNLESS_ARTIFACT_RUNTIME_EQUIVALENCE_ESTABLISHED"
+    },
+    {
+      "lane": "SEEDGRAPH_PIECEWISE",
+      "state": "PASS",
+      "sources": 5,
+      "atoms": 48,
+      "claim_ceiling": "PIECEWISE_CONTROL_CORPUS_ONLY"
+    },
+    {
+      "lane": "ATOM_GOVERNANCE",
+      "state": "PASS",
+      "vectors": 48
+    }
+  ],
+  "EXP008_STATE": "UNDERPOWERED_CLOSED",
+  "EXP009_STATE": "UNDERPOWERED_CLOSED",
+  "powered_positive_primary_effect": false,
+  "FCO_STATE": "PARTIAL_RECEIPTS_MATERIALIZED",
+  "FCG_STATE": "PIECEWISE_EDGES_ONLY",
+  "CFMO_STATE": "UPDATED_FROM_VERIFIED_BATCH",
+  "HYDRADB_STATE": "NOT_EXECUTED",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "EARLIEST_DIVERGENCE": "STALE_OR_INCORRECT_SOURCE_STATE_PROMOTED_AS_CURRENT_REQUIREMENT",
+  "CLAIM_CEILING": "SYSTEMS_AND_PLAN_ARTIFACTS_ONLY",
+  "NEXT_SAFE_ACTION": "Locate cloudflare-os + wrangler; authorize CUDA host for SGLANG-HL-001; re-auth Daytona/Kaggle; continue Q38 missing cells only after resource gate PASS",
+  "FINAL_REVIEW_GATE": "PARTIAL_EXECUTION_RECEIPTS_COMMITTED"
+}
