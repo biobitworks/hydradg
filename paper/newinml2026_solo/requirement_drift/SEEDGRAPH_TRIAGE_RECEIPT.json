@@ -1,0 +1,141 @@
+{
+  "schema": "hydradg.newinml2026_solo.seedgraph_triage_receipt.v1",
+  "recorded_at_utc": "2026-08-29T07:10:39Z",
+  "seedgraph_version_cmd": "seedgraph triage source",
+  "triage_records": [
+    {
+      "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/cfp_page.html",
+      "source_class": "unknown",
+      "route_target": "blocked_unknown_source",
+      "findings": [
+        {
+          "code": "SOURCE_CLASS_UNDETERMINED",
+          "severity": "block",
+          "message": "Source class could not be determined deterministically."
+        }
+      ],
+      "triage_passed": false
+    },
+    {
+      "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/countdown_page.html",
+      "source_class": "unknown",
+      "route_target": "blocked_unknown_source",
+      "findings": [
+        {
+          "code": "SOURCE_CLASS_UNDETERMINED",
+          "severity": "block",
+          "message": "Source class could not be determined deterministically."
+        }
+      ],
+      "triage_passed": false
+    },
+    {
+      "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/current_reconciliation.txt",
+      "source_class": "unknown",
+      "route_target": "blocked_unknown_source",
+      "findings": [
+        {
+          "code": "SOURCE_CLASS_UNDETERMINED",
+          "severity": "block",
+          "message": "Source class could not be determined deterministically."
+        }
+      ],
+      "triage_passed": false
+    },
+    {
+      "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/discord_organizer_message.txt",
+      "source_class": "unknown",
+      "route_target": "blocked_unknown_source",
+      "findings": [
+        {
+          "code": "SOURCE_CLASS_UNDETERMINED",
+          "severity": "block",
+          "message": "Source class could not be determined deterministically."
+        }
+      ],
+      "triage_passed": false
+    },
+    {
+      "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/earlier_assistant_derivation_0859utc.txt",
+      "source_class": "unknown",
+      "route_target": "blocked_unknown_source",
+      "findings": [
+        {
+          "code": "SOURCE_CLASS_UNDETERMINED",
+          "severity": "block",
+          "message": "Source class could not be determined deterministically."
+        }
+      ],
+      "triage_passed": false
+    },
+    {
+      "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/openreview_venue_config.txt",
+      "source_class": "unknown",
+      "route_target": "blocked_unknown_source",
+      "findings": [
+        {
+          "code": "SOURCE_CLASS_UNDETERMINED",
+          "severity": "block",
+          "message": "Source class could not be determined deterministically."
+        }
+      ],
+      "triage_passed": false
+    }
+  ],
+  "import_records": [
+    {
+      "file": "import_cfp_page.json",
+      "seeds_total": 47,
+      "created": 0,
+      "duplicate": 47,
+      "deferred": 0
+    },
+    {
+      "file": "import_countdown_page.json",
+      "seeds_total": 6,
+      "created": 6,
+      "duplicate": 0,
+      "deferred": 0
+    },
+    {
+      "file": "import_current_reconciliation.json",
+      "seeds_total": 1,
+      "created": 0,
+      "duplicate": 0,
+      "deferred": 1
+    },
+    {
+      "file": "import_discord_organizer_message.json",
+      "seeds_total": 1,
+      "created": 0,
+      "duplicate": 0,
+      "deferred": 1
+    },
+    {
+      "file": "import_earlier_assistant_derivation_0859utc.json",
+      "seeds_total": 1,
+      "created": 0,
+      "duplicate": 0,
+      "deferred": 1
+    },
+    {
+      "file": "import_openreview_venue_config.json",
+      "seeds_total": 1,
+      "created": 0,
+      "duplicate": 0,
+      "deferred": 1
+    }
+  ],
+  "semantic_note": "Automatic triage returned unknown/blocked for local HTML/TXT paths. Explicit operator import with --type requirement succeeded for HTML sources; TXT sources partially deferred. Requirement corpus treated as small isolated run.",
+  "SEEDGRAPH_TRIAGE_GATE": "PARTIAL_AUTOMATIC_BLOCK_EXPLICIT_IMPORT_OK",
+  "SEEDGRAPH_IMPORT_COUNT": 6,
+  "SEEDGRAPH_ATOM_COUNT": 53,
+  "SEEDGRAPH_DEFERRED_COUNT": 4,
+  "SOURCES_EXPECTED": 6,
+  "SOURCES_FROZEN": 6,
+  "SOURCES_TRIAGED": 6,
+  "SOURCES_IMPORTED_OR_EXPLICITLY_BLOCKED": 6,
+  "READABLE_IMPORTED_SOURCES_ATOMIZED": "100%",
+  "ORPHAN_ATOMS": 0,
+  "whole_project_seedgraph_completion": false
+}

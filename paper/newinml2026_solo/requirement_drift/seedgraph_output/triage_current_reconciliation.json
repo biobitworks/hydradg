@@ -1,0 +1,18 @@
+{
+  "mutation_performed": false,
+  "live_writeback_performed": false,
+  "input_ref": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/requirement_drift/source_freeze/current_reconciliation.txt",
+  "source_class": "unknown",
+  "route_target": "blocked_unknown_source",
+  "claim_ceiling": "NO_CLAIMS",
+  "requires_operator_confirmation": false,
+  "publication_reingest_required": false,
+  "writeback_allowed": false,
+  "findings": [
+    {
+      "code": "SOURCE_CLASS_UNDETERMINED",
+      "severity": "block",
+      "message": "Source class could not be determined deterministically."
+    }
+  ]
+}

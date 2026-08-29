@@ -1,0 +1,67 @@
+{
+  "requirements": [
+    {
+      "requirement_id": "REQ-DEADLINE-CFP-AOE",
+      "statement": "Paper Submission Deadline: August 29, 2026; All deadlines 11:59 PM Anywhere on Earth (AoE)",
+      "source_id": "SRC-CFP-PAGE",
+      "value": "2026-08-29",
+      "timezone": "AoE",
+      "authority": "OFFICIAL_POLICY",
+      "state": "RETAINED"
+    },
+    {
+      "requirement_id": "REQ-DEADLINE-COUNTDOWN",
+      "statement": "Countdown JavaScript DEADLINE = 2026-08-30T11:59:00Z (AoE conversion comment in source)",
+      "source_id": "SRC-COUNTDOWN-PAGE",
+      "value": "2026-08-30T11:59:00Z",
+      "timezone": "UTC",
+      "authority": "OFFICIAL_OPERATIONAL_UI",
+      "state": "RETAINED"
+    },
+    {
+      "requirement_id": "REQ-DEADLINE-OPENREVIEW",
+      "statement": "OpenReview Submission Deadline: Aug 30 2026 07:59AM UTC-0",
+      "source_id": "SRC-OPENREVIEW-VENUE",
+      "value": "2026-08-30T07:59:00Z",
+      "timezone": "UTC",
+      "authority": "SUBMISSION_PLATFORM",
+      "state": "ACTIVE_OPERATIONAL"
+    },
+    {
+      "requirement_id": "REQ-SUBMISSION-START-OPENREVIEW",
+      "statement": "OpenReview Submission Start: Aug 01 2026 12:00AM UTC-0",
+      "source_id": "SRC-OPENREVIEW-VENUE",
+      "value": "2026-08-01T00:00:00Z",
+      "timezone": "UTC",
+      "authority": "SUBMISSION_PLATFORM",
+      "state": "ACTIVE_OPERATIONAL"
+    },
+    {
+      "requirement_id": "REQ-DEADLINE-ORGANIZER",
+      "statement": "Organizer message: one day left (qualitative window)",
+      "source_id": "SRC-DISCORD-ORGANIZER",
+      "value": "QUALITATIVE_ONE_DAY_REMAINING",
+      "timezone": "UNKNOWN",
+      "authority": "ORGANIZER_DIRECT",
+      "state": "SUPPORTING"
+    },
+    {
+      "requirement_id": "REQ-DEADLINE-PAGE-LIMIT",
+      "statement": "Submissions non-archival, 2-8 pages, double-blind",
+      "source_id": "SRC-COUNTDOWN-PAGE",
+      "value": "2-8 pages",
+      "timezone": "N/A",
+      "authority": "OFFICIAL_OPERATIONAL_UI",
+      "state": "RETAINED"
+    },
+    {
+      "requirement_id": "DERIVED-DEADLINE-0859",
+      "statement": "Earlier assistant operational deadline 2026-08-29T08:59:00Z",
+      "source_id": "SRC-ASSISTANT-DERIVED-0859",
+      "value": "2026-08-29T08:59:00Z",
+      "timezone": "UTC",
+      "authority": "DERIVED",
+      "state": "SUPERSEDED_INCORRECT_SOURCE_INPUT"
+    }
+  ]
+}

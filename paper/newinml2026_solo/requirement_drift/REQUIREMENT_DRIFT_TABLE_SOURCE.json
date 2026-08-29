@@ -1,0 +1,39 @@
+{
+  "rows": [
+    {
+      "source": "CFP page",
+      "observed_requirement": "Paper Submission Deadline: August 29, 2026; All deadlines 11:59 PM Anywhere on Earth (AoE)",
+      "time_observed": "2026-08-29T07:07:50Z",
+      "authority": "OFFICIAL_POLICY",
+      "state": "RETAINED"
+    },
+    {
+      "source": "Countdown page",
+      "observed_requirement": "Countdown JavaScript DEADLINE = 2026-08-30T11:59:00Z (AoE conversion comment in source)",
+      "time_observed": "2026-08-29T07:07:50Z",
+      "authority": "OFFICIAL_OPERATIONAL_UI",
+      "state": "RETAINED"
+    },
+    {
+      "source": "OpenReview config",
+      "observed_requirement": "OpenReview Submission Deadline: Aug 30 2026 07:59AM UTC-0",
+      "time_observed": "UNKNOWN",
+      "authority": "SUBMISSION_PLATFORM",
+      "state": "ACTIVE_OPERATIONAL"
+    },
+    {
+      "source": "Organizer message",
+      "observed_requirement": "Organizer message: one day left (qualitative window)",
+      "time_observed": "UNKNOWN",
+      "authority": "ORGANIZER_DIRECT",
+      "state": "SUPPORTING"
+    },
+    {
+      "source": "Assistant derived",
+      "observed_requirement": "Earlier assistant operational deadline 2026-08-29T08:59:00Z",
+      "time_observed": "UNKNOWN",
+      "authority": "DERIVED",
+      "state": "SUPERSEDED_INCORRECT_SOURCE_INPUT"
+    }
+  ]
+}
