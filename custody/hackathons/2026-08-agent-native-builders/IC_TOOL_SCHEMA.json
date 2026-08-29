@@ -1,0 +1,419 @@
+{
+  "tools": [
+    {
+      "name": "floor10_get_my_floor_member",
+      "title": "Get my floor-member info",
+      "description": "Confirms the calling agent token is valid and returns the floor-member it's scoped to. Use as a post-mint smoke check before submitting. Args: none. Returns: { member_id, member_name, token_prefix, scopes }.",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_get_my_membership",
+      "title": "Get my membership (tier + pending request)",
+      "description": "Returns the calling user's current ring (operator / ic-member / ai-floor / ft-member / public), any pending tier request, and recent tier-history count. Use to check whether the human is already an ic-member before walking them through a tier-request flow. Args: none. Required scope: membership:read.",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {}
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_get",
+      "title": "Read a hackathon's public details (schedule, phase, rules)",
+      "description": "Everything a prospective participant or their agent needs to decide to come: title, dates, venue, current phase, seats total/remaining, whether an NDA is required, the rubric link, and the sponsor bounties posted so far. Args: { eid (default 'anb-hack-01') }. Returns: { ok, event, seats: {total, used, remaining}, bounties[] }. Required scope: hack:read (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "description": "Event id. Defaults to anb-hack-01.",
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_register",
+      "title": "Seat someone directly (organizer only \u2014 the walk-in path)",
+      "description": "Put a member straight onto the roster as a PARTICIPANT, bypassing the application queue. This is NOT the front door any more: since 2026-08-06 every seat is vetted, so the way in is ic_hack_application_form then ic_hack_apply, and a human decides. This tool is the organizer's override for the case the queue cannot serve \u2014 a walk-in at the badge table on day one. Requires the `organizer` role on this event. Registration is separate from ATTENDING: if the venue requires an NDA the person must still call ic_hack_sign_nda or check-in refuses them. Args: { eid?, member_id? (defaults to you), display_name?, org?, sponsor_visible? }. Returns: { ok, role, seats }. Required scope: hack:register (any tier \u2014 the organizer role is the real gate).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "member_id": {
+            "description": "Who to seat. Defaults to the calling member.",
+            "type": "string",
+            "maxLength": 128
+          },
+          "display_name": {
+            "description": "Name for the badge and the roster.",
+            "type": "string",
+            "maxLength": 120
+          },
+          "org": {
+            "description": "The startup or company they're bringing.",
+            "type": "string",
+            "maxLength": 120
+          },
+          "sponsor_visible": {
+            "description": "Opt in to sponsors seeing them on the attendee list. Default false.",
+            "type": "boolean"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_application_form",
+      "title": "Get the application questions for a hackathon (self-describing)",
+      "description": "Returns the exact questions to answer for one applicant type, so your agent can fill an application without scraping a web form. Each question carries an id, a prompt, a kind (short/long/url/email/bool/choice), whether it is required, and a `why` explaining what the reviewer is actually looking for \u2014 answer to the `why`, not just the prompt. Also tells you which roles an approval grants, whether it consumes one of the capped seats, and who decides it. Applicant types: founder, engineer, solo_builder, team, designer, partner_delegate, mentor, judge, sponsor, volunteer, media. Answer keys in ic_hack_apply MUST match the question ids returned here. Args: { eid?, applicant_type }. Returns: { ok, form_version, applicant_type, questions[], grants_roles[], consumes_seat, decided_by }. Required scope: hack:read (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "applicant_type": {
+            "type": "string",
+            "maxLength": 32,
+            "description": "One of: founder, engineer, solo_builder, team, designer, partner_delegate, mentor, judge, sponsor, volunteer, media."
+          }
+        },
+        "required": [
+          "applicant_type"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_apply",
+      "title": "Apply for a hackathon seat (vetted \u2014 approval required)",
+      "description": "Submit an application. This does NOT claim a seat: every applicant is reviewed by a human and the seat is only consumed when you are approved, so a full queue never locks out the room. Call ic_hack_application_form first and answer the question ids it gives you. If you supply a product/project URL we fetch it and record which agent surfaces it actually serves (ai-agent.json, MCP, agent-card, llms.txt) for the reviewer \u2014 finding none is NOT a rejection, it is a normal starting point, but an inflated claim the probe contradicts is worse than an honest 'none yet'. Re-applying while still pending UPDATES your application rather than creating a second one, so a retry after a timeout is safe. Args: { eid?, applicant_type, answers: { <question_id>: <string> } }. Returns: { ok, application: { application_id, status, evidence[] } } or { ok:false, error:'bad_answers', missing[], invalid[] }. Required scope: hack:register (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "applicant_type": {
+            "type": "string",
+            "maxLength": 32
+          },
+          "answers": {
+            "type": "object",
+            "propertyNames": {
+              "type": "string"
+            },
+            "additionalProperties": {
+              "type": "string",
+              "maxLength": 2000
+            },
+            "description": "Keyed by question id from ic_hack_application_form. Booleans as 'yes'/'no'."
+          }
+        },
+        "required": [
+          "applicant_type",
+          "answers"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_application_status",
+      "title": "Check your own hackathon application",
+      "description": "Where your application stands: applied / approved / waitlisted / rejected / withdrawn, plus the reviewer's note when there is one. `waitlisted` means yes-if-a-seat-frees, not no. Args: { eid? }. Returns: { ok, applied, application }. Required scope: hack:read (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_withdraw",
+      "title": "Withdraw your hackathon application (frees your seat)",
+      "description": "Withdraw. If you were already approved this revokes your roles and frees the seat for someone on the waitlist, which is the polite thing to do the moment you know you cannot come. Args: { eid? }. Returns: { ok, status, freed_seat }. Required scope: hack:register (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_sign_nda",
+      "title": "Record your venue NDA signature",
+      "description": "Record that you have signed the venue's NDA. The Cloudflare office requires one from every person in the building, sent 48h ahead; without it the door check-in tool refuses you. Idempotent. Args: { eid? }. Returns: { ok, nda_signed_at }. Required scope: hack:register (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_me",
+      "title": "Your own hackathon status (roles, team, submission, NDA)",
+      "description": "One call that answers 'where do I stand': your event roles, NDA and check-in state, your team and its members, and your submission if you have one. The orienting call for an agent arriving mid-event. Args: { eid? }. Returns: { ok, registered, role, team, submission }. Required scope: hack:read (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_team_list",
+      "title": "List hackathon teams (and who is recruiting)",
+      "description": "Every team at the event with its name, size, the startup it's working on, and whether it is recruiting plus what it's looking for. Use this to find a team to join rather than asking around the room. Args: { eid?, recruiting_only? }. Returns: { ok, teams[] }. Required scope: hack:read (any tier).",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "recruiting_only": {
+            "description": "Only teams open to new members.",
+            "type": "boolean"
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_team_create",
+      "title": "Create a hackathon team",
+      "description": "Start a team and become its lead. One team per person \u2014 leave your current team first. Link `startup_slug` to the IC startup profile you're here to work on, so the weekend's work attaches to something that outlives it. Args: { eid?, name, startup_slug?, looking_for? }. Returns: { ok, team }. Required scope: hack:team, and you must be registered on the event.",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "name": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 80
+          },
+          "startup_slug": {
+            "description": "IC startup profile this team is building on.",
+            "type": "string",
+            "maxLength": 80
+          },
+          "looking_for": {
+            "description": "Skills you need, e.g. 'a designer, someone who knows Workers'.",
+            "type": "string",
+            "maxLength": 200
+          }
+        },
+        "required": [
+          "name"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_team_join",
+      "title": "Join a hackathon team",
+      "description": "Join an existing team by id. One team per person, max 6 per team. Args: { eid?, team_id }. Returns: { ok, team }. Required scope: hack:team, and you must be registered on the event.",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "team_id": {
+            "type": "string",
+            "maxLength": 64
+          }
+        },
+        "required": [
+          "team_id"
+        ]
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    },
+    {
+      "name": "ic_hack_submit",
+      "title": "Create or update your team's hackathon submission",
+      "description": "Submit (or re-submit) your team's project. Idempotent by team: one submission per team, and calling again overwrites it, which is what 'I fixed the demo link at 2:55' means. `agent_surface` is the field the rubric actually scores \u2014 describe what makes the project agent-native (MCP server, agent-readable surfaces, A2A, machine-to-machine auth, agent payments), not just what it does. Once the organizer locks submissions the record freezes and further calls return `locked`. Args: { eid?, title?, blurb?, repo_url?, demo_url?, agent_surface?, folder_id? (a vault folder with slides/video) }. Returns: { ok, submission }. Required scope: hack:submit, and you must be on the team.",
+      "inputSchema": {
+        "$schema": "http://json-schema.org/draft-07/schema#",
+        "type": "object",
+        "properties": {
+          "eid": {
+            "type": "string",
+            "maxLength": 64
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 140
+          },
+          "blurb": {
+            "description": "One paragraph: what it is.",
+            "type": "string",
+            "maxLength": 2000
+          },
+          "repo_url": {
+            "type": "string",
+            "maxLength": 2048
+          },
+          "demo_url": {
+            "type": "string",
+            "maxLength": 2048
+          },
+          "agent_surface": {
+            "description": "What makes it agent-native. This is what the rubric scores.",
+            "type": "string",
+            "maxLength": 2000
+          },
+          "folder_id": {
+            "description": "Vault folder (d_...) with slides, video, screenshots.",
+            "type": "string",
+            "maxLength": 64
+          }
+        }
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": false,
+        "openWorldHint": false
+      },
+      "execution": {
+        "taskSupport": "forbidden"
+      }
+    }
+  ]
+}

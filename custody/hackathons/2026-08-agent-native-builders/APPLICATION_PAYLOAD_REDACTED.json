@@ -1,0 +1,22 @@
+{
+  "eid": "anb-hack-01",
+  "applicant_type": "founder",
+  "answers": {
+    "legal_name": "Byron Lee",
+    "email": "byron@biobitworks.com",
+    "org": "Biobitworks / HydraDG",
+    "handle": "biobitworks",
+    "both_days": "yes",
+    "nda_ack": "yes",
+    "media_ok": "yes",
+    "dietary": "None",
+    "nebius_optin": "yes",
+    "product_url": "https://github.com/biobitworks/hydradg",
+    "agent_surface_today": "HydraDG currently implements FCO/FCG (Fractal Custody Objects/Graphs) provenance, multi-agent handoff custody receipts (schemas/agent_model_handoff_receipt.schema.json), deterministic SHA-256 evidence linking, and agent-native execution orchestration profiles (GSD/gsigmad). It features structured turn contracts and single-writer fencing tokens across autonomous agent model transitions.",
+    "build_plan": "During the hackathon, we will build and extend HydraDG's agent-native builder workflows by deploying an automated FCO/FCG cross-host custody agent node. This node will perform real-time verification of multi-agent handoffs, issue deterministic cryptographic turn receipts over MCP/REST, and provide governed tool access and capability snapshot verification for multi-agent teams.",
+    "stack_undecided": "Current stack: Python 3.12+, FastAPI, MCP (Model Context Protocol), JSON-RPC 2.0, Pydantic, Git/GitHub, ArangoDB/HydraDB, Ed25519. Still evaluating: optimal low-latency SSE event-bus routing for real-time agent-to-agent (A2A) telemetry and zero-trust proxy token rotation under high agent concurrency.",
+    "team_status": "Solo founder building HydraDG; open to collaborating with builders specializing in frontend UI/dashboards for multi-agent provenance or low-latency agent messaging.",
+    "laptop_restrictions": "None. Full admin access on unmanaged macOS machine.",
+    "publish_constraints": "None. All hackathon work and receipts will be published in the open repository."
+  }
+}

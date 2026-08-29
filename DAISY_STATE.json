@@ -1,17 +1,23 @@
 {
   "schema": "hydradg.daisy_state.v3",
   "daisy_chain_id": "daisy-v3.0",
-  "active_gate": "GATE_GIBBS_MATH_AND_OLLARMA_ADVISORY_COMPLETE",
-  "state": "PASS",
+  "active_gate": "AGENT_NATIVE_BUILDERS_CONFORMANCE_AUDIT_COMPLETE",
+  "state": "PASS_WITH_CLAIM_DOWNGRADE",
+  "prior_20_fixture_state": "DETERMINISTIC_CONFORMANCE_SUITE_EXECUTED",
+  "empirical_superiority_state": "NOT_ESTABLISHED",
   "matrix_comparison_root": "3e29c925fee796cda8aa47c066fbf07cd92d46d2b9eb7c6572a0eb8180685358",
   "gibbs_diagnostics_root": "32135ca2d2fe1a8a25c11032df4c5ae120894101e4a64d852a3ee77a28e75eb8",
   "track03_golden_path_receipt_sha256": "542ec7214782876e8c0a9ff060edbb731ae0a9e013d03958b800025bf1f2808d",
+  "repair_classification_receipt_sha256": "693b45c37dfb915ec85fdfbccf2ddf6e5f89a014fd4a7158bd4ed475a637535d",
   "preregistered_next_branch": {
-    "branch_id": "BRANCH_A_RETRIEVAL_BUDGET_K15_VS_K10",
-    "one_changed_variable": "k_depth=15",
-    "preregistered_hypothesis": "P1 DEPTH-LIMITED RETRIEVAL: Increasing K from 10 to 15 will test whether additional slots recover remaining missed session evidence."
+    "branch_id": "AGENT_NATIVE_BUILDERS_REAL_AGENT_CANARY_V2",
+    "one_changed_variable": "HYDRADG_GATEWAY_TOOL_ACCESS",
+    "next_test": "2_CASE_CONTROL_TREATMENT_REAL_AGENT_CANARY",
+    "preregistered_hypothesis": "Does access to HydraDG's evidence/custody tool surface improve evidence classification, claim-ceiling adherence, null/contradiction preservation, disclosure safety, and receipt traceability versus the same agent/model without that tool surface?"
   },
-  "claim_ceiling": "GIBBS_MATHEMATICAL_ABSTRACTION_AND_RETRIEVAL_MATRIX_COMPARISON_ONLY",
+  "prior_k15_experiment_state": "DEFERRED_NOT_CANCELLED",
+  "claim_ceiling": "AGENT_NATIVE_BUILDERS_DETERMINISTIC_CONFORMANCE_ONLY",
   "signature_state": "NOT_SIGNED",
-  "timestamp_utc": "2026-08-19T12:11:00Z"
+  "merkle_mmr_state": "NOT_PERSISTED",
+  "timestamp_utc": "2026-08-25T18:10:00Z"
 }

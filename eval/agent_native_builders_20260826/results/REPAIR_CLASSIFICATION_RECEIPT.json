@@ -1,0 +1,34 @@
+{
+  "schema": "hydradg.agent_model_handoff.v1",
+  "handoff_id": "ANB-20260826-REPAIR-CLASSIFICATION-001",
+  "timestamp_utc": "2026-08-25T18:10:00Z",
+  "actor_class": "ANTIGRAVITY",
+  "actor_id": "antigravity-controller-magicprobox",
+  "execution_host": "magicPRObox.local",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "git_commit": "93229922f70f11e2244637c3e067afaacff63f78",
+  "parent_handoff_sha256": "db59336a7ed69e93f2b4a1024f784a62791541afb3542740dfa0be66da68e9e3",
+  "input_dependencies": [
+    {
+      "id": "PREREGISTERED_20_FIXTURE_MANIFEST",
+      "sha256": "399fd58ec7d53a024f291d7273aec3e64d2985acf21bdf0ac8853c422c1bd67a",
+      "evidence_class": "PREREGISTERED_BENCHMARK_MANIFEST"
+    },
+    {
+      "id": "AGENT_NATIVE_BUILDERS_20_FIXTURE_RESULTS",
+      "sha256": "e8fa4364e822ce14ad7d3a51fdac9cf796ee5f227b1db62589ce110724037374",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    }
+  ],
+  "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+  "transformation_class": "FORENSIC_AUDIT_AND_CLAIM_DOWNGRADE",
+  "claim_ceiling": "AGENT_NATIVE_BUILDERS_DETERMINISTIC_CONFORMANCE_ONLY",
+  "signature": {
+    "state": "NOT_SIGNED"
+  },
+  "merkle_mmr": {
+    "state": "NOT_PERSISTED"
+  },
+  "notes": "Forensic audit of 20-fixture runner. Outputs were deterministically generated inside evaluate_fixture with zero_model_calls=true. HYDRADG_EVIDENCE_CUSTODY_SUPERIORITY_ESTABLISHED is reclassified to AGENT_NATIVE_BUILDERS_20_FIXTURE_DETERMINISTIC_CONFORMANCE_PASS and AGENT_NATIVE_BUILDERS_EMPIRICAL_SUPERIORITY_NOT_ESTABLISHED."
+}

@@ -2,8 +2,8 @@ import React from "react";
 import SponsorMissionPanel from "@/components/sponsors/SponsorMissionPanel";
 
 export const metadata = {
-  title: "Agent Native Builders 2026 — Evidence Gateway Benchmark",
-  description: "Preregistered 20-Fixture Empirical Comparison: Protocol CONTROL vs HydraDG TREATMENT"
+  title: "Agent Native Builders 2026 — Evidence Gateway Audit & Conformance",
+  description: "Preregistered 20-Fixture Conformance Test Suite & Real Agent Experiment Status"
 };
 
 export default function AgentNativeBuildersPage() {
@@ -21,21 +21,28 @@ export default function AgentNativeBuildersPage() {
     treatment_unauthorized_disclosure: "0/20",
     control_receipt_hash_verified: "0/20",
     treatment_receipt_hash_verified: "20/20",
-    primary_effect: "HYDRADG_EVIDENCE_CUSTODY_SUPERIORITY_ESTABLISHED"
+    deterministic_conformance_status: "DETERMINISTIC CONFORMANCE TEST — PASS",
+    real_agent_experiment_status: "REAL AGENT CONTROL/TREATMENT EXPERIMENT — NOT YET ESTABLISHED"
   };
 
   return (
     <main style={{ padding: "2rem", fontFamily: "system-ui, sans-serif", maxWidth: "900px", margin: "0 auto" }}>
       <h1>HydraDG Agent-Native Evidence Gateway</h1>
-      <h2>Preregistered 20-Fixture Benchmark Results</h2>
+      <h2>20-Fixture Deterministic Conformance Suite</h2>
       <p><strong>Execution Host:</strong> <code>magicSTUDIObox.local</code></p>
-      <p><strong>Branch:</strong> <code>hack-hydra/hydralamp-20260826</code></p>
+      <p><strong>Branch:</strong> <code>hack-hydra/agent-native-builders-20260826</code></p>
+      <p><strong>Provenances:</strong> 5 Real Benchmark Cases, 14 Synthetic Conformance Fixtures, 1 Development Fixture</p>
       <SponsorMissionPanel />
-      
+
+      <div style={{ marginTop: "1rem", padding: "1rem", backgroundColor: "#eef9ff", borderLeft: "4px solid #0070f3", borderRadius: "4px" }}>
+        <p><strong>Suite Status:</strong> <code>{summary.deterministic_conformance_status}</code></p>
+        <p><strong>Empirical Comparison:</strong> <code>{summary.real_agent_experiment_status}</code></p>
+      </div>
+
       <table style={{ width: "100%", borderCollapse: "collapse", marginTop: "1.5rem" }}>
         <thead>
           <tr style={{ borderBottom: "2px solid #ccc", textAlign: "left" }}>
-            <th style={{ padding: "8px" }}>Metric / Primary Gate</th>
+            <th style={{ padding: "8px" }}>Metric / Conformance Gate</th>
             <th style={{ padding: "8px" }}>CONTROL (Protocol-Only)</th>
             <th style={{ padding: "8px" }}>TREATMENT (HydraDG Evidence Custody)</th>
           </tr>
@@ -70,8 +77,10 @@ export default function AgentNativeBuildersPage() {
       </table>
 
       <div style={{ marginTop: "2rem", padding: "1rem", backgroundColor: "#f4f4f4", borderRadius: "6px" }}>
-        <h3>Primary Effect</h3>
-        <p><code>{summary.primary_effect}</code></p>
+        <h3>Governance Audit & Reclassification Note</h3>
+        <p style={{ fontSize: "0.9rem", color: "#555" }}>
+          Forensic audit of <code>scripts/agent_native_builders_runner.py</code> verified that the 20-fixture suite evaluates deterministic conformance logic without live LLM calls (<code>zero_model_calls=true</code>). The empirical claim of superiority has been reclassified to a deterministic conformance test pass. A live 2-case Ollama model comparison canary (using <code>qwen3:8b</code>) is preregistered as the next experimental gate.
+        </p>
       </div>
     </main>
   );

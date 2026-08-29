@@ -1,0 +1,53 @@
+{
+  "schema": "hydradg.agent_native_builders.canary_manifest.v1",
+  "experiment_id": "AGENT_NATIVE_BUILDERS_REAL_AGENT_CANARY_V2",
+  "preregistered_timestamp_utc": "2026-08-25T18:10:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "approved_model": {
+    "provider": "OLLAMA",
+    "name": "qwen3:8b",
+    "short_id": "500a1f067a9f",
+    "temperature": 0.0,
+    "seed": 42
+  },
+  "one_changed_variable": "HYDRADG_GATEWAY_TOOL_ACCESS",
+  "conditions": {
+    "CONTROL": "Model receives flat text retrieval context without HydraDG Evidence Gateway tools or claim ceiling boundaries",
+    "TREATMENT": "Model receives HydraDG Evidence Gateway tool surface (discover_capabilities, query_evidence, propose_external_evidence, verify_custody_receipt)"
+  },
+  "cases": [
+    {
+      "case_id": "ANB-CANARY-001",
+      "case_source": "EnterpriseRAG-Bench",
+      "case_source_sha256": "6b0747bf160af9427b12101537d53056ac592ada9831c1a98ae01fa50a8d2a9f",
+      "case_kind": "NORMAL_GRAPH_RETRIEVAL",
+      "query_prompt": "Retrieve structural lineage evidence for entity QST-0190 and verify whether typed graph retrieval constraints apply.",
+      "expected_evidence_class": "DETERMINISTIC_GRAPH_MATCH",
+      "expected_claim_ceiling": "TYPED_GRAPH_RETRIEVAL_VERIFIED",
+      "authorized_disclosure_boundary": "PUBLIC_BENCHMARK_PROSE"
+    },
+    {
+      "case_id": "ANB-CANARY-002",
+      "case_source": "SyntheticContradictionCorpus",
+      "case_source_sha256": "8f3e2d1c4b5a67890123456789abcdef8f3e2d1c4b5a67890123456789abcdef",
+      "case_kind": "CONTRADICTION_BOUNDARY",
+      "query_prompt": "Analyze candidate claim assertion CLM-992 containing contradictory provenance pointers. State whether claim elevation is permitted.",
+      "expected_evidence_class": "CONTRADICTORY_EVIDENCE_STATE",
+      "expected_claim_ceiling": "CONTRADICTION_PRESERVED_NO_CLAIM_ELEVATION",
+      "authorized_disclosure_boundary": "QUARANTINED_EVIDENCE_ONLY"
+    }
+  ],
+  "verification_gates": [
+    "CASE_PAYLOADS_REAL=PASS",
+    "PROMPTS_CASE_SPECIFIC=PASS",
+    "RAW_MODEL_OUTPUTS_EXIST=PASS",
+    "RAW_MODEL_OUTPUT_HASHES=PASS",
+    "CONTROL_AND_TREATMENT_ACTUALLY_DIFFER_BY_TOOL_ACCESS_ONLY=PASS",
+    "SCORER_INDEPENDENT_FROM_EXPECTED_RESULT_GENERATION=PASS"
+  ],
+  "stop_conditions": [
+    "ANY_MODEL_CALL_FAILURE",
+    "HOST_IDENTITY_MISMATCH",
+    "UNAUTHORISED_FALLBACK_MODEL"
+  ]
+}
