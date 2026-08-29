@@ -1,0 +1,59 @@
+{
+  "schema": "hydradg.newinml.final_daisy.experiment_matrix.v1",
+  "recorded_as": "PREREGISTERED_PLAN_NOT_EXECUTED",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "existing_evidence": {
+    "EXP-008": {"state": "CLOSED", "cells": 300, "verdict": "UNDERPOWERED"},
+    "EXP-009": {"state": "CLOSED", "cells": 300, "verdict": "UNDERPOWERED", "secondary_promoted": false, "ordering_established": false},
+    "HYDRALAMP_CORE": {"state": "COMPLETE_SYSTEMS_VALIDATION", "logical_conditions": 4, "repetitions_per_condition": 25, "execution_cells": 100},
+    "Q38_EXP008_R": {"state": "NONTERMINAL_RECONCILE_BEFORE_RUN", "local_model": "qwen3.8:27b", "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643"}
+  },
+  "successor_lanes": [
+    {
+      "experiment_id": "CFOS-HL-001",
+      "intervention": "CLOUDFLARE_OS_RUNTIME",
+      "canary_cells": 8,
+      "expanded_cells": 100,
+      "design": "4 HydraLamp conditions x 2 canary reps; expand to x25",
+      "claim_type": "SYSTEMS_VALIDATION_ONLY"
+    },
+    {
+      "experiment_id": "SGLANG-HL-001",
+      "intervention": "CUDA_GRAPH_RUNTIME_MODE",
+      "runtime_modes": ["disabled", "tc_piecewise", "breakable"],
+      "canary_cells": 24,
+      "expanded_cells": 300,
+      "design": "4 HydraLamp conditions x 2 canary reps x 3 modes; expand to x25",
+      "claim_type": "RUNTIME_SYSTEMS_COMPARISON"
+    },
+    {
+      "experiment_id": "Q38-CLOSEOUT-001",
+      "intervention": "NONE_CONTINUE_EXISTING_PREREGISTRATION",
+      "state": "RECONCILE_EXISTING_RECEIPTS_FIRST",
+      "selective_rerun_forbidden": true
+    },
+    {
+      "experiment_id": "Q38-XENV-001",
+      "intervention": "REMOTE_EXECUTION_ENVIRONMENT",
+      "providers": ["DAYTONA", "KAGGLE"],
+      "canary_selection": "SHA256_RANK_DOMAIN_HYDRADG_Q38_XENV_CANARY_V1",
+      "canary_logical_cells": 8,
+      "runtime_equivalence_with_local_gguf_mps": false,
+      "claim_type": "DESCRIPTIVE_UNLESS_ARTIFACT_RUNTIME_EQUIVALENCE_ESTABLISHED"
+    },
+    {
+      "experiment_id": "XENV-DET-001",
+      "intervention": "HARDWARE_EXECUTION_ENVIRONMENT",
+      "providers": ["MAGICSTUDIOBOX", "DAYTONA", "KAGGLE"],
+      "payload": "PUBLIC_SAFE_DETERMINISTIC_FCO_FCG_TRANSFORM",
+      "primary_endpoint": "CANONICAL_SCIENTIFIC_ROOT_EQUALITY",
+      "claim_type": "DETERMINISTIC_ENVIRONMENT_PARITY"
+    }
+  ],
+  "promotion_rules": {
+    "scientific_failure_is_terminal": true,
+    "integrity_failure_blocks_affected_lineage": true,
+    "heterogeneous_cells_not_pooled_as_n": true,
+    "powered_positive_primary_effect_currently_established": false
+  }
+}
