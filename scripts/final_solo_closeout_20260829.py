@@ -32,6 +32,7 @@ PUBLIC_SCAN_ROOTS = [
 ]
 
 START_SHA = "7f6de6f45cb14c39fe82f67da5d816f0845ad9c9"
+PRE_CLOSEOUT_SHA = "40d001d70f50ffbd9f327ec429ddb60405c3441f"
 AUTHORITATIVE_BRANCH = "cursor/newinml-daisy-execute-20260829"
 AUTHORITATIVE_PR = 36
 
@@ -615,7 +616,7 @@ gitleaks detect --source . --no-git
         "FINAL_SHA": head,
         "CURRENT_BRANCH": AUTHORITATIVE_BRANCH,
         "CURRENT_SHA": head,
-        "NEW_COMMIT_CREATED": "NO",
+        "NEW_COMMIT_CREATED": "YES" if head != PRE_CLOSEOUT_SHA else "NO",
         "ORIGIN_PARITY": "YES" if origin_parity else "NO",
         "OPENREVIEW_DEADLINE": "2026-08-29T08:59:00Z operational; August 29 2026 AoE official",
         "TIME_GATE": "SUBMISSION_DEADLINE_ELAPSED",
