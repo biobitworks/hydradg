@@ -1,0 +1,113 @@
+{
+  "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "CURRENT_SHA": "94801dc3b58ddc874f336a016d0aba0477c2b191",
+  "OPENREVIEW_REQUIREMENT_ATOMS": 8,
+  "WORKSHOP_DATE_CONTRADICTION": "PRESERVED",
+  "atoms": [
+    {
+      "atom_id": "OR-SUBMISSION_START",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "SUBMISSION_START",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z",
+      "value": "2026-08-01T00:00:00Z"
+    },
+    {
+      "atom_id": "OR-SUBMISSION_DEADLINE",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "SUBMISSION_DEADLINE",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z",
+      "value": "2026-08-30T07:59:00Z"
+    },
+    {
+      "atom_id": "OR-REQ-TITLE",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "Title",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z"
+    },
+    {
+      "atom_id": "OR-REQ-AUTHORS",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "Authors",
+      "note": "OpenReview profiles required",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z"
+    },
+    {
+      "atom_id": "OR-REQ-KEYWORDS",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "Keywords",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z"
+    },
+    {
+      "atom_id": "OR-REQ-ABSTRACT",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "Abstract",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z"
+    },
+    {
+      "atom_id": "OR-REQ-PDF",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "PDF",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z"
+    },
+    {
+      "atom_id": "OR-REQ-LICENSE",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "License",
+      "required": true,
+      "retrieved_at": "2026-08-29T08:34:52Z",
+      "value": "CC BY 4.0"
+    },
+    {
+      "atom_id": "OR-OPT-TLDR",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "TLDR",
+      "required": false,
+      "retrieved_at": "2026-08-29T08:34:52Z"
+    },
+    {
+      "atom_id": "OR-NO-SUPPLEMENT",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "field": "Supplemental upload",
+      "required": false,
+      "retrieved_at": "2026-08-29T08:34:52Z",
+      "value": "NOT_VISIBLE_IN_SUPPLIED_FORM"
+    },
+    {
+      "atom_id": "OR-WORKSHOP-DATE",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "fco_id": "OPENREVIEW_DATE_FCO",
+      "field": "workshop_date",
+      "retrieved_at": "2026-08-29T08:34:52Z",
+      "source": "OpenReview",
+      "value": "2026-12-09"
+    },
+    {
+      "atom_id": "WEB-WORKSHOP-DATE",
+      "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+      "fco_id": "WEBSITE_DATE_FCO",
+      "field": "workshop_date",
+      "retrieved_at": "2026-08-29T08:34:52Z",
+      "source": "official NewInML website",
+      "value": "2026-12-11"
+    }
+  ],
+  "date_contradiction": {
+    "left": "OPENREVIEW_DATE_FCO",
+    "openreview_value": "2026-12-09",
+    "relation": "CONTRADICTS",
+    "resolution_policy": "NOT_SILENTLY_RESOLVED",
+    "right": "WEBSITE_DATE_FCO",
+    "schema": "hydradg.openreview.date_contradiction.v1",
+    "website_value": "2026-12-11"
+  },
+  "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+  "recorded_at_utc": "2026-08-29T08:34:52Z",
+  "schema": "hydradg.openreview.ingest.v1"
+}
