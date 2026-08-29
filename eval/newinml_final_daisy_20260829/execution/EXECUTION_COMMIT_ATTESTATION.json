@@ -1,0 +1,23 @@
+{
+  "schema": "hydradg.daisy_execution_commit_attestation.v1",
+  "recorded_at_utc": "2026-08-29T07:41:30Z",
+  "EXECUTION_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "EXECUTION_COMMIT": "966c3ebb53aab6e47c04b68365bdd393b97a7cd4",
+  "EXECUTION_COMMIT_FULL": "966c3ebb53aab6e47c04b68365bdd393b97a7cd4",
+  "PLAN_BRANCH": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "PLAN_SHA": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "host": "magicSTUDIObox.local",
+  "attestation_kind": "POST_COMMIT_EXTERNAL",
+  "receipts_bound": [
+    "eval/newinml_final_daisy_20260829/execution/FINAL_DAISY_EXECUTION_REPORT.json",
+    "eval/newinml_final_daisy_20260829/execution/lane3_q38/Q38_RECONCILE_RECEIPT.json",
+    "eval/newinml_final_daisy_20260829/execution/lane6_seedgraph/BATCH_MANIFEST_EVIDENCE.json",
+    "eval/newinml_final_daisy_20260829/execution/lane6_seedgraph/CONTROL_BATCH_REVERIFY.json"
+  ],
+  "control_batch_root": "e1a96942af4e22869af58374fa4ede5626e20ae79d17e247da95cab98a9ba4ad",
+  "evidence_batch_root": "dd1544867bb96ba94b87f9d1877b487d4127330be4a83857f9100bfe842bc16e",
+  "q38_provenance_gate": "PASS",
+  "mmr_state": "NOT_COMMITTED",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
