@@ -1,0 +1,71 @@
+{
+  "schema": "hydradg.qwen38.flash_next_block_decomposition.v1",
+  "recorded_at_utc": "2026-08-29T00:49:48Z",
+  "frozen_target": "Qwen/Qwen3.8-Flash-Next",
+  "gates": {
+    "A_PROVIDER_ACCESS": {
+      "daytona": "PASS",
+      "kaggle": "FAIL",
+      "studio_local_mlx": "N/A_REMOTE_LANE"
+    },
+    "B_EXACT_ARTIFACT_RESOLUTION": {
+      "hf_repo": "Qwen/Qwen3.8-Flash-Next",
+      "ollama_mlx_tag": "qwen3.8-flash-next:125b-mlx",
+      "state": "NOT_INSTALLED_STUDIO",
+      "linux_cuda_portable": false
+    },
+    "C_RUNTIME_IMPORT_COMPATIBILITY": {
+      "ollama_mlx_on_studio": "BLOCKED_NOT_INSTALLED",
+      "transformers_cuda_daytona": "UNTESTED",
+      "state": "RUNTIME_COMPATIBILITY_BLOCK"
+    },
+    "D_STORAGE": {
+      "studio_disk_free_gb": 99.88,
+      "mlx_artifact_required_gb": 110,
+      "state": "LOCAL_STORAGE_BLOCK"
+    },
+    "E_HOST_RAM": {
+      "minimum_gb": 128,
+      "studio_ram_gb": 32,
+      "state": "LOCAL_MEMORY_BLOCK"
+    },
+    "F_GPU_VRAM": {
+      "minimum_fp8_gb": 80,
+      "probed_on_daytona": false,
+      "state": "UNKNOWN_BLOCK_UNPROBED"
+    },
+    "G_MULTI_GPU": {
+      "state": "UNKNOWN_BLOCK_UNPROBED"
+    },
+    "H_QUOTA": {
+      "state": "UNKNOWN_BLOCK_UNPROBED"
+    },
+    "I_CANARY": {
+      "state": "NOT_ATTEMPTED",
+      "model_calls_executed": 0
+    }
+  },
+  "EARLIEST_DIVERGENCE": "LOCAL_STORAGE_BLOCK",
+  "FINAL_STATE": "BLOCKED_LOCAL_STORAGE",
+  "prior_mislabel": "BLOCKED_REMOTE_CAPACITY",
+  "FlashNextLaneBlockFCO": {
+    "provider_access_state": "PARTIAL_PASS_DAYTONA_ONLY",
+    "artifact_state": "NOT_RESOLVED",
+    "runtime_state": "RUNTIME_COMPATIBILITY_BLOCK",
+    "capacity_state": "LOCAL_STORAGE_BLOCK",
+    "earliest_divergence": "LOCAL_STORAGE_BLOCK",
+    "attempted_operations": [
+      "provider_access_reconciliation",
+      "daytona_no_gpu_smoke",
+      "local_disk_measurement"
+    ],
+    "unattempted_operations": [
+      "flash_next_model_load",
+      "flash_next_canary",
+      "flash_next_cell_matrix"
+    ],
+    "model_calls_executed": 0,
+    "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION"
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "hydradg.qwen38.flash_next_lane_block_fco.v1",
+  "recorded_at_utc": "2026-08-29T00:50:00Z",
+  "experiment_id": "Q38-EXP008-R",
+  "model_lane": "Qwen3.8-Flash-Next",
+  "frozen_hf_repo": "Qwen/Qwen3.8-Flash-Next",
+  "StageFCO_state": "BLOCKED_LOCAL_STORAGE",
+  "Q6_STATE": "BLOCKED_LOCAL_STORAGE",
+  "provider_access_state": {
+    "daytona": "PASS",
+    "kaggle": "HUMAN_SECRET_REQUIRED"
+  },
+  "artifact_state": "NOT_RESOLVED",
+  "runtime_state": "RUNTIME_COMPATIBILITY_BLOCK",
+  "capacity_state": "LOCAL_STORAGE_BLOCK",
+  "earliest_divergence": "LOCAL_STORAGE_BLOCK",
+  "attempted_operations": [
+    "provider_access_reconciliation",
+    "daytona_no_gpu_smoke",
+    "local_disk_and_ram_measurement",
+    "flash_next_gate_decomposition"
+  ],
+  "unattempted_operations": [
+    "flash_next_gpu_sandbox_provision",
+    "flash_next_hf_artifact_pull",
+    "flash_next_runtime_import",
+    "flash_next_canary",
+    "flash_next_cell_matrix"
+  ],
+  "model_calls_executed": 0,
+  "fake_cell_fcos_created": 0,
+  "MODEL_COMPARISON_ESTABLISHED": false,
+  "MODEL_COMPARISON_COMPLETE": false,
+  "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_APPENDED"
+}

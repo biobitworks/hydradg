@@ -1,0 +1,49 @@
+{
+  "schema": "hydradg.qwen38.experiment_leaf_accounting.v1",
+  "recorded_at_utc": "2026-08-29T00:49:48Z",
+  "experiment_id": "Q38-EXP008-R",
+  "model_tag": "qwen3.8:27b",
+  "model_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "case_count": 25,
+  "expected_local_leaves": 150,
+  "terminal_local_leaves": 27,
+  "missing_local_leaves": 123,
+  "invalidated_local_leaves": 0,
+  "duplicate_canonical_keys": 0,
+  "balance_check": true,
+  "EXPECTED_CELL_LEAVES_SHA256": "2a00cc342d2676092b8bbca03e118e8a4b72e6eb28fd7abbf25e21709ee6b376",
+  "ACTUAL_TERMINAL_LEAVES_SHA256": "06a11de7384482d33f7348b0c5b036544c3a2c12dafeb0ac59a667902abf84d2",
+  "MISSING_CELL_LEAVES_SHA256": "49aa33e321f8a3d19a45839b234493b7e06c5c34dd11114b9e6db4e4d43cdbca",
+  "INVALIDATED_CELL_LEAVES_SHA256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "terminal_state_counts": {
+    "MALFORMED_JSON": 18,
+    "TIMEOUT": 8,
+    "SUCCESS": 1
+  },
+  "global_condition_coverage": {
+    "C0": 27
+  },
+  "q3": {
+    "expected": 6,
+    "terminal": 3,
+    "missing": 3
+  },
+  "q4_corrected": {
+    "expected": 30,
+    "terminal": 15,
+    "missing": 15,
+    "c0": {
+      "expected": 15,
+      "terminal": 15,
+      "missing": 0
+    },
+    "c1": {
+      "expected": 15,
+      "terminal": 0,
+      "missing": 15
+    },
+    "prior_27_of_30_valid": "NO",
+    "prior_receipt_defect": "Counted cells outside Q4 5-case scope (E02-4,E03-*) as Q4 progress"
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}
