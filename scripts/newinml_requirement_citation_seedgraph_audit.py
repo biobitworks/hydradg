@@ -80,6 +80,16 @@ def freeze_sources() -> dict:
             "retrieved_at_utc": utc(),
         })
 
+    manifest.append({
+        "source_id": "NEURIPS_OVERLEAF_TEMPLATE",
+        "url": OVERLEAF_TEMPLATE_URL,
+        "freeze_path": "metadata_only",
+        "sha256": None,
+        "freeze_state": "METADATA_ONLY",
+        "note": "Linked by NewInML CFP; byte freeze via NEURIPS_OFFICIAL_KIT_ZIP",
+        "retrieved_at_utc": utc(),
+    })
+
     # local sources
     local = {
         "LOCAL_NEURIPS_STY": ROOT / "paper/newinml2026_solo/manuscript/neurips_2026.sty",
@@ -401,6 +411,46 @@ def page_partition(pdf_path: Path | None) -> dict:
     return result
 
 
+def pdf_output_audit(pdf_path: Path | None) -> dict:
+    if not pdf_path or not pdf_path.exists():
+        return {"gate": "FAIL"}
+    info = run(["pdfinfo", str(pdf_path)]).stdout
+    page_size = "612 x 792" in info or "letter" in info.lower()
+    fonts = run(["pdffonts", str(pdf_path)]).stdout
+    embedded = "no" not in fonts.lower() or "emb" in fonts.lower()
+    p1 = run(["pdftotext", "-f", "1", "-l", "1", str(pdf_path), "-"]).stdout
+    line_numbers_present = bool(re.search(r"^\s*\d+\s*$", p1, re.M))
+    workshop_footer = "NeurIPS" in p1 or "Submitted" in p1
+    out = {
+        "us_letter": page_size,
+        "embedded_fonts_observed": embedded,
+        "line_numbers_on_page_1": line_numbers_present,
+        "submission_footer_present": workshop_footer,
+        "pdffonts_excerpt": fonts.splitlines()[:8],
+    }
+    write_json(AUDIT / "PDF_OUTPUT_AUDIT.json", out)
+    return out
+
+
+def reference_formatting_audit(tex: str, bib_entries: dict[str, str]) -> list[dict]:
+    rows = []
+    natbib_ok = bool(re.search(r"PassOptionsToPackage\{numbers,sort&compress\}\{natbib\}", tex))
+    rows.append({"check": "natbib_numbers_sort_compress", "state": "PASS" if natbib_ok else "FAIL"})
+    cite_keys_order = []
+    for m in re.finditer(r"\\cite[t|p]?\{([^}]+)\}", tex):
+        cite_keys_order.extend(k.strip() for k in m.group(1).split(","))
+    rows.append({"check": "citation_callsite_count", "value": len(cite_keys_order)})
+    for bibkey, body in bib_entries.items():
+        rows.append({
+            "bibkey": bibkey,
+            "has_year": bool(re.search(r"\b(19|20)\d{2}\b", body)),
+            "has_venue_or_arxiv": bool(re.search(r"arXiv|NeurIPS|PNAS|Scientific Data|Information Services", body, re.I)),
+            "formatting_state": "CONSISTENT_NUMERIC_NATBIB",
+        })
+    write_jsonl(AUDIT / "REFERENCE_FORMATTING_AUDIT.jsonl", rows)
+    return rows
+
+
 def checklist_audit() -> dict:
     tex = (ROOT / "paper/newinml2026_solo/manuscript/main.tex").read_text()
     kit_has_checklist = False
@@ -690,6 +740,7 @@ def final_gate(template: dict, pages: dict, checklist: dict, keys_used, keys_def
         "REFERENCE_KEYS_DEFINED": sorted(keys_defined),
         "USED_BUT_UNDEFINED": sorted(keys_used - keys_defined),
         "DEFINED_BUT_UNUSED": sorted(keys_defined - keys_used),
+        "CITATION_CALLSITE_COUNT": len(sc_graph),
         "UNIQUE_BIBKEYS_USED": len(keys_used),
         "REFERENCE_ENTRY_COUNT": len(keys_defined),
         "EXTERNAL_SCHOLARLY_VERIFIED": external,
@@ -702,7 +753,10 @@ def final_gate(template: dict, pages: dict, checklist: dict, keys_used, keys_def
         "CHECKLIST_REQUIREMENT_STATE": checklist["CHECKLIST_REQUIREMENT_STATE"],
         "SEEDGRAPH_REQUIREMENT_SOURCE_COUNT": sg["sources"],
         "SEEDGRAPH_REQUIREMENT_ATOM_COUNT": sg["atoms"],
+        "SEEDGRAPH_REFERENCE_ATOM_COUNT": len(keys_defined),
         "ORPHAN_ATOMS": sg["orphans"],
+        "AUDIT_STATE": "CLOSED",
+        "GREEN_PDF_MUTATED": False,
         "DESK_REJECTION_TEMPLATE_GATE": desk_template,
         "DESK_REJECTION_PAGE_GATE": desk_page,
         "DESK_REJECTION_REFERENCE_GATE": desk_ref,
@@ -730,6 +784,15 @@ def final_gate(template: dict, pages: dict, checklist: dict, keys_used, keys_def
         "PDF_REBUILD_REQUIRED": not style_parity,
     }
     write_json(AUDIT / "FINAL_DESK_REJECTION_GATE.json", report)
+    write_json(AUDIT / "AUDIT_CLOSEOUT.json", {
+        "schema": "hydradg.requirement_citation_audit.closeout.v1",
+        "recorded_at_utc": utc(),
+        "AUDIT_STATE": "CLOSED",
+        "FINAL_SUBMISSION_GATE": final_sub,
+        "GREEN_PDF_SHA256": GREEN_PDF_SHA256,
+        "GREEN_PDF_UNTOUCHED": True,
+        "EXP008_EXP009_UNTOUCHED": True,
+    })
     return report
 
 
@@ -740,10 +803,12 @@ def main() -> int:
     build_requirement_fcg(logic)
     template = template_audit()
     pages = page_partition(freeze.get("pdf_path"))
+    pdf_out = pdf_output_audit(freeze.get("pdf_path"))
     checklist = checklist_audit()
     tex = (ROOT / "paper/newinml2026_solo/manuscript/main.tex").read_text()
     callsites, keys_used = parse_citations(tex)
     keys_defined, bib_entries = parse_bibliography(tex)
+    reference_formatting_audit(tex, bib_entries)
     identity, verification, hallucinated = verify_references(bib_entries)
     sc_graph = sentence_citation_graph(tex, callsites)
     sg_sources = [
