@@ -1,0 +1,25 @@
+raw_term	human_readable_term	source	meaning	scope	first_use	paper_action
+IC	Immersive Commons (submission portal)	eval/immersive_commons_submission_20260827	Hackathon/submission environment; NOT the scientific method	OPERATIONAL	20260827	Disambiguate on first use; do not use as method name
+IC Failure Learning	Structured-retrieval falsification suite	eval/ic_failure_learning_20260827	Agent failure-handling experiment family with frozen case manifest	SCIENTIFIC	20260827	Replace ambiguous IC prefix with full label on first use
+HydraDG	HydraDG governed experimental framework	repository root	Custody-first agent experiment framework	FRAMEWORK	20260818	Keep
+HydraLamp	HydraLamp systems-validation implementation	eval/hydralamp_*	Concrete HydraDG demo for perturbation/tamper validation	SYSTEMS	20260826	Introduce with HydraDG boundary
+FCO	Fractal Custody Object	HydraDG_DaisyTrain_v0.3.7	Content-addressed custody atom for one transformation	FRAMEWORK	20260818	Define on first use
+FCG	Fractal Custody Graph	HydraDG_DaisyTrain_v0.3.7	Hash-linked append-only graph of FCO edges	FRAMEWORK	20260818	Define on first use
+CFMO	Context Fractal Memory Object	HydraDG_DaisyTrain_v0.3.7/scripts	Instrumented memory object variant	ENGINEERING	20260827	Appendix only unless computed
+MMR	Merkle Mountain Range	eval/ic_postmortem_20260827	Hash chain commitment structure	CUSTODY	20260827	Distinguish from signature
+Delta G / ΔG	Context free-energy proxy (engineering tier)	eval/context_vs_entropy_20260820	Engineering-tier metric; not biological free energy	ENGINEERING	20260820	Mark ΔG* boundaries; NOT_COMPUTED states preserved
+Anticube	Self/non-self × safe/non-safe state classifier	eval/terminology_seedgraph_anticube_20260829	Security state transition taxonomy	SYSTEMS	20260829	Figure trajectory; SYNTHETIC if fixture
+SELF	Actor matches authorized experiment context	Anticube axis	Quadrant label	TAXONOMY	20260829	Do not infer if unrecorded
+NON_SELF	Actor outside authorized context	Anticube axis	Quadrant label	TAXONOMY	20260829	Keep
+SAFE	Operation within policy bounds	Anticube axis	Quadrant label	TAXONOMY	20260829	Keep
+NON_SAFE	Policy-violating or quarantined state	Anticube axis	Quadrant label	TAXONOMY	20260829	Keep
+SeedGraph	Hierarchical knowledge atomization system	HydraDG_DaisyTrain_v0.3.7/seedgraph	Long-running ingest; interrupted at Parquet	SYSTEMS	20260829	TOTAL_VERIFIED_INGEST_COMPLETE=NO
+HydraDB	Graph projection/readback store	eval/context_vs_entropy_20260820	Readback layer for FCG projections	SYSTEMS	20260820	Appendix
+Ollarma	Governed local Ollama bridge	eval/ollarma_*	Runtime identity and selection-age recording	INFRASTRUCTURE	20260827	Methods disclosure
+EXP-008	Flat vs structured FCG retrieval	provenance/admitted	Preregistered primary study	EXPERIMENT	20260828	Primary result table
+EXP-009	Causal FCG ordering	provenance/admitted	Preregistered primary study	EXPERIMENT	20260828	Primary result table
+Stage-2	IC Failure Learning stage-2 (M0/M1/M2)	eval/ic_failure_learning_20260827	Historical failure-learning baseline	EXPERIMENT	20260827	Context only; separate from EXP-008/009
+Q38	Qwen 3.8 successor model lane	eval/qwen38_successor_probe_20260828	Non-terminal successor probe	EXPERIMENT	20260828	Limitation; not primary
+SGLang	SGLang inference runtime	eval/ic_failure_learning_20260827/sglang_replay	Alternative runtime replay lane	INFRASTRUCTURE	20260827	Appendix replay only
+R0-R6	Live provider repair ladder rungs	eval/hydralamp_runtype_20260826	External failure preservation ladder	SYSTEMS	20260826	Systems validation table
+E06	Endpoint: prevents exposure of out-of-vault media	eval/ic_failure_learning_20260827	Primary confirmatory endpoint family	ENDPOINT	20260827	Primary statistical endpoint

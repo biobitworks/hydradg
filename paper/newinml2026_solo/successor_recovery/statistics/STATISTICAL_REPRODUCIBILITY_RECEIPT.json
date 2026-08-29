@@ -1,0 +1,28 @@
+{
+  "schema": "hydradg.statistical_reproducibility_receipt.v1",
+  "recorded_at_utc": "2026-08-29T22:29:17Z",
+  "input_hashes": {
+    "EXP-008": "76f056d6b42a73677bf71338ea97a61bf92e2d5911b99ac4e400247730936ac5",
+    "EXP-009": "7d1ea04f0429ed8f1dc98f0f85d1f29b327f5c14f5f3c2dbf03531b2705e1657",
+    "STAGE2": "17c943630e6215551cea76c7925766b66f61a2423da5ca122ecd0a43f82e97f6",
+    "script": "464620c969d0eda0895cebb2cf7209ea42440ee061e65132d90d18ca8169fe13"
+  },
+  "script_sha256": "464620c969d0eda0895cebb2cf7209ea42440ee061e65132d90d18ca8169fe13",
+  "R1": {
+    "run_id": "R1",
+    "combined_output_sha256": "4ba575a5e3810b301d0f00eebbcef06c7f2b39c0313f31ea47e3cb8d59edbe89",
+    "recorded_at_utc": "2026-08-29T22:29:17Z"
+  },
+  "R2": {
+    "run_id": "R2",
+    "combined_output_sha256": "4ba575a5e3810b301d0f00eebbcef06c7f2b39c0313f31ea47e3cb8d59edbe89",
+    "recorded_at_utc": "2026-08-29T22:29:17Z"
+  },
+  "R3": {
+    "run_id": "R3",
+    "combined_output_sha256": "4ba575a5e3810b301d0f00eebbcef06c7f2b39c0313f31ea47e3cb8d59edbe89",
+    "recorded_at_utc": "2026-08-29T22:29:17Z"
+  },
+  "REPRODUCIBILITY_GATE": "PASS",
+  "identical_deterministic_outputs": true
+}
