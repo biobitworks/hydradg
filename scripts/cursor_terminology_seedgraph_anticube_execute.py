@@ -20,6 +20,7 @@ FED = ROOT / "paper/newinml2026_solo/federated_evidence"
 FIRST_DOC = ROOT / "paper/newinml2026_solo/first_document_seedgraph"
 TERM_DIR = ROOT / "research/terminology"
 SEARCH_DIR = ROOT / "research/search"
+SEARCH_FREEZE = SEARCH_DIR / "freeze"
 V4 = ROOT / "paper/newinml2026_solo/final_v4"
 SUCCESSOR_PDF = V4 / "manuscript/build/main.pdf"
 MAIN_TEX = V4 / "manuscript/main.tex"
@@ -133,32 +134,120 @@ def build_query_matrix(terms: list[dict]) -> list[dict]:
     return rows
 
 
-def run_crossref(query: str) -> dict[str, Any]:
+def parse_crossref_response(body: bytes) -> dict[str, Any]:
+    """Parse frozen Crossref JSON into bounded record counts — no heuristic hit inflation."""
+    try:
+        payload = json.loads(body.decode("utf-8"))
+    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+        return {
+            "parse_state": "FAIL",
+            "parse_error": str(exc),
+            "items_returned": 0,
+            "total_results_reported": None,
+            "parsed_titles": [],
+        }
+    message = payload.get("message", {}) if isinstance(payload, dict) else {}
+    items = message.get("items", []) if isinstance(message, dict) else []
+    titles: list[str] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        title = item.get("title")
+        if isinstance(title, list) and title:
+            titles.append(str(title[0]))
+        elif isinstance(title, str):
+            titles.append(title)
+    total = message.get("total-results")
+    return {
+        "parse_state": "PASS",
+        "items_returned": len(items),
+        "total_results_reported": total,
+        "parsed_titles": titles,
+    }
+
+
+def run_crossref(query_id: str, query: str) -> dict[str, Any]:
     url = "https://api.crossref.org/works?" + urllib.parse.urlencode({"query": query, "rows": 5})
+    SEARCH_FREEZE.mkdir(parents=True, exist_ok=True)
+    freeze_path = SEARCH_FREEZE / f"{query_id}.json"
     try:
         req = urllib.request.Request(url, headers={"User-Agent": "HydraDG-terminology/1.0 (mailto:custody@hydradg.local)"})
         with urllib.request.urlopen(req, timeout=30) as resp:
             body = resp.read()
-        return {"surface": "crossref", "url": url, "http_status": 200, "body_sha256": sha256_bytes(body), "fetch": "PASS"}
+        freeze_path.write_bytes(body)
+        parsed = parse_crossref_response(body)
+        return {
+            "surface": "crossref",
+            "url": url,
+            "http_status": 200,
+            "body_sha256": sha256_bytes(body),
+            "freeze_path": str(freeze_path.relative_to(ROOT)),
+            "fetch": "PASS",
+            **parsed,
+        }
     except (urllib.error.URLError, TimeoutError) as exc:
         payload = f"{url}|FETCH_FAILED|{exc}".encode()
-        return {"surface": "crossref", "url": url, "http_status": 0, "body_sha256": sha256_bytes(payload), "fetch": "FAIL", "error": str(exc)}
+        freeze_path.write_bytes(payload)
+        return {
+            "surface": "crossref",
+            "url": url,
+            "http_status": 0,
+            "body_sha256": sha256_bytes(payload),
+            "freeze_path": str(freeze_path.relative_to(ROOT)),
+            "fetch": "FAIL",
+            "parse_state": "NOT_AVAILABLE",
+            "items_returned": 0,
+            "total_results_reported": None,
+            "parsed_titles": [],
+            "error": str(exc),
+        }
 
 
 def red_team_prior_art(search_rows: list[dict]) -> list[dict]:
+    """DISCOVERY_ONLY prior-art matrix from parsed response records — not VERIFIED_EMPIRICAL_RESULT."""
     rows = []
     for s in search_rows:
-        hits = 3 if s["fetch"] == "PASS" else 0
-        conclusion = "PARTIALLY_OVERLAPPING" if hits and "custody" in s["query_text"].lower() else "UNRESOLVED"
-        if "nanopublication" in s["query_text"].lower() or "FAIR" in s["query_text"]:
-            conclusion = "PARTIALLY_OVERLAPPING"
+        if s.get("fetch") != "PASS" or s.get("parse_state") != "PASS":
+            rows.append({
+                "query_id": s["query_id"],
+                "response_sha256": s["body_sha256"],
+                "freeze_path": s.get("freeze_path"),
+                "hit_count_bounded": "NOT_COMPUTED",
+                "items_returned": s.get("items_returned", 0),
+                "total_results_reported": s.get("total_results_reported"),
+                "title_overlap_count": 0,
+                "red_team_conclusion": "UNRESOLVED_FETCH_OR_PARSE",
+                "claim_ceiling": "DISCOVERY_ONLY",
+                "evidence_class": "SCAFFOLDING_NOT_VERIFIED_EMPIRICAL",
+                "novelty_proof": False,
+                "verified_empirical_result": False,
+            })
+            continue
+        query_terms = {t for t in re.split(r"[^a-z0-9]+", s["query_text"].lower()) if len(t) > 3}
+        overlap = 0
+        for title in s.get("parsed_titles", []):
+            title_terms = {t for t in re.split(r"[^a-z0-9]+", title.lower()) if len(t) > 3}
+            if query_terms & title_terms:
+                overlap += 1
+        items_returned = int(s.get("items_returned", 0))
+        conclusion = "UNRESOLVED"
+        if items_returned == 0:
+            conclusion = "NO_ITEMS_IN_BOUNDED_RESPONSE"
+        elif overlap > 0:
+            conclusion = "TITLE_TERM_OVERLAP_IN_BOUNDED_RESPONSE"
         rows.append({
             "query_id": s["query_id"],
             "response_sha256": s["body_sha256"],
-            "hit_count_bounded": hits,
+            "freeze_path": s.get("freeze_path"),
+            "hit_count_bounded": items_returned,
+            "items_returned": items_returned,
+            "total_results_reported": s.get("total_results_reported"),
+            "title_overlap_count": overlap,
             "red_team_conclusion": conclusion,
             "claim_ceiling": "DISCOVERY_ONLY",
+            "evidence_class": "SCAFFOLDING_NOT_VERIFIED_EMPIRICAL",
             "novelty_proof": False,
+            "verified_empirical_result": False,
         })
     return rows
 
@@ -362,13 +451,22 @@ def main() -> int:
     write_jsonl(SEARCH_DIR / "QUERY_MATRIX.jsonl", queries)
     search_ledger = []
     for q in queries:
-        result = run_crossref(q["query_text"])
+        result = run_crossref(q["query_id"], q["query_text"])
         row = {**q, **result, "retrieved_at": utc()}
         search_ledger.append(row)
     write_jsonl(SEARCH_DIR / "SEARCH_RUN_LEDGER.jsonl", search_ledger)
     red_team = red_team_prior_art(search_ledger)
     write_jsonl(SEARCH_DIR / "RED_TEAM_PRIOR_ART_MATRIX.jsonl", red_team)
-    impact = [{"query_id": r["query_id"], "impact": "P1" if r["red_team_conclusion"] == "PARTIALLY_OVERLAPPING" else "P2", "manuscript_claim": "custody_governance_novelty"} for r in red_team]
+    impact = [
+        {
+            "query_id": r["query_id"],
+            "impact": "P2",
+            "manuscript_claim": "custody_governance_novelty",
+            "prior_art_lane": "DISCOVERY_ONLY",
+            "verified_empirical_result": False,
+        }
+        for r in red_team
+    ]
     write_jsonl(SEARCH_DIR / "CLAIM_PRIOR_ART_IMPACT_LEDGER.jsonl", impact)
 
     universe = build_total_source_universe()
@@ -436,6 +534,7 @@ def main() -> int:
     declared = len(universe)
     complete = declared > 0 and sum(terminal_counts.values()) == declared
 
+    partial = terminal_counts.get("PARTIAL", 0)
     closeout = {
         "STAGE_ID": STAGE_ID,
         "BATCH_ID": BATCH_ID,
@@ -443,13 +542,17 @@ def main() -> int:
         **git_meta(),
         "TERM_COUNT": len(terms),
         "QUERY_COUNT": len(queries),
-        "VERIFIED_PRIOR_ART_SOURCES": len([s for s in search_ledger if s["fetch"] == "PASS"]),
+        "VERIFIED_PRIOR_ART_SOURCES": len([s for s in search_ledger if s.get("fetch") == "PASS" and s.get("parse_state") == "PASS"]),
+        "PRIOR_ART_LANE": "DISCOVERY_ONLY",
+        "PRIOR_ART_VERIFIED_EMPIRICAL_RESULT": "NO",
+        "TOTAL_SOURCE_ACCOUNTING_COMPLETE": "YES" if declared > 0 else "NO",
         "TOTAL_SOURCE_UNIVERSE_COUNT": declared,
+        "VERIFIED_INGEST_COUNT": verified,
+        "PARTIAL_TERMINAL_COUNT": partial,
+        "VERIFIED_INGEST_COVERAGE": f"{(verified / declared * 100):.2f}%" if declared else "0.00%",
+        "TOTAL_VERIFIED_INGEST_COMPLETE": "YES" if verified == declared and declared > 0 else "NO",
         "TOTAL_TERMINAL_SOURCE_COUNT": sum(terminal_counts.values()),
-        "TOTAL_VERIFIED_INGEST_COUNT": verified,
-        "TOTAL_PARTIAL_OR_FAILED_COUNT": terminal_counts.get("PARTIAL", 0),
-        "TOTAL_IMPORT_COVERAGE": round(verified / declared, 4) if declared else 0,
-        "TOTAL_IMPORT_COMPLETE": "YES" if complete else "NO",
+        "TOTAL_PARTIAL_OR_FAILED_COUNT": partial,
         "FIRST_DOCUMENT_ID": selection["FIRST_DOCUMENT_ID"],
         "FIRST_DOCUMENT_SHA256": selection["pdf_sha256"],
         "FIRST_DOCUMENT_ATOMS": fd["atoms"],
