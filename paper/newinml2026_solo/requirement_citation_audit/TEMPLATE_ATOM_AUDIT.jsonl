@@ -1,0 +1,13 @@
+{"check_id": "documentclass_article", "state": "PASS", "value": true}
+{"check_id": "neurips_dblblindworkshop", "state": "PASS", "value": true}
+{"check_id": "workshoptitle_present", "state": "PASS", "value": true}
+{"check_id": "title_present", "state": "PASS", "value": true}
+{"check_id": "final_option_absent", "state": "PASS", "value": true}
+{"check_id": "preprint_option_absent", "state": "PASS", "value": true}
+{"check_id": "no_neurips_2025", "state": "PASS", "value": true}
+{"check_id": "no_neurips_2024", "state": "PASS", "value": true}
+{"check_id": "no_nips", "state": "PASS", "value": true}
+{"check_id": "template_year_2026", "state": "PASS", "value": true}
+{"check_id": "double_blind_author", "state": "PASS", "value": true}
+{"check_id": "natbib_numbers_sort_compress", "state": "PASS", "value": true}
+{"check_id": "style_file_byte_parity_with_official_kit", "diff_summary": "69,74d68\n< }\n< \\newif\\if@education\\@educationfalse\n< \\DeclareOption{education}{\n<   \\@educationtrue\n<   \\@anonymousfalse\n<   \\newcommand{\\@trackname}{\\@neuripsordinal\\ Conference on Neural Information Processing Systems (NeurIPS \\@neuripsyear). Education Track.}", "local_sha256": "0c1ad36961fcd9198dcc2558cf2793e1df39973bde8264fd701f5e7970672757", "official_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a", "state": "FAIL"}
