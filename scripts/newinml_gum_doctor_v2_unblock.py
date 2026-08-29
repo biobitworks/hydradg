@@ -18,6 +18,30 @@ GOVERNED_CFOS = Path("/Users/byron/projects/active/cloudflare-os")
 EXTERNAL_CFOS = Path("/Users/byron/projects/external/cloudflare-os")
 Q38_DIGEST = "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643"
 HL_CONDITIONS = ["CONTROL", "INVALID_PROOF", "REPLAYED_PROOF", "BROKEN_AUTHORIZATION_EDGE"]
+KEYS_ENV = Path.home() / ".config" / "ai-keys" / "keys.env"
+HYDRADG_ENV_LOCAL = ROOT / "apps/hydradg-web/.env.local"
+
+
+def load_credential_files_into_env() -> list[str]:
+    """Load keys.env + hydradg .env.local into process env (names only in receipt)."""
+    loaded: list[str] = []
+    for label, path in [("keys.env", KEYS_ENV), ("hydradg_env_local", HYDRADG_ENV_LOCAL)]:
+        if not path.is_file():
+            continue
+        for raw in path.read_text().splitlines():
+            line = raw.strip()
+            if not line or line.startswith("#"):
+                continue
+            if line.startswith("export "):
+                line = line[7:].strip()
+            if "=" not in line:
+                continue
+            key, val = line.split("=", 1)
+            val = val.strip().strip('"').strip("'")
+            if val and key.strip() not in os.environ:
+                os.environ[key.strip()] = val
+        loaded.append(label)
+    return loaded
 
 
 def utc() -> str:
@@ -183,15 +207,22 @@ def verify_qwen38() -> dict:
 
 
 def remote_providers() -> dict:
-    daytona_key = "PRESENT" if os.environ.get("DAYTONA_API_KEY") or os.environ.get("DAYTONA_API_TOKEN") else "ABSENT"
-    kaggle_user = "PRESENT" if os.environ.get("KAGGLE_USERNAME") else "ABSENT"
-    kaggle_key = "PRESENT" if os.environ.get("KAGGLE_KEY") else "ABSENT"
-    kaggle_cfg = (Path.home() / ".kaggle/kaggle.json").is_file()
-    daytona_state = "CONFIGURED" if daytona_key == "PRESENT" else "BLOCKED_HUMAN_SECRET_REQUIRED"
-    if kaggle_user == "PRESENT" and kaggle_key == "PRESENT":
+    daytona_key = bool(os.environ.get("DAYTONA_API_KEY") or os.environ.get("DAYTONA_API_TOKEN"))
+    kaggle_user = bool(os.environ.get("KAGGLE_USERNAME"))
+    kaggle_key = bool(os.environ.get("KAGGLE_KEY"))
+    kaggle_cfg = Path.home() / ".kaggle/kaggle.json"
+    if kaggle_cfg.is_file() and not (kaggle_user and kaggle_key):
+        try:
+            data = json.loads(kaggle_cfg.read_text())
+            kaggle_user = kaggle_user or bool(str(data.get("KAGGLE_USERNAME", data.get("username", ""))).strip())
+            kaggle_key = kaggle_key or bool(str(data.get("KAGGLE_KEY", data.get("key", ""))).strip())
+        except json.JSONDecodeError:
+            pass
+    daytona_state = "CONFIGURED" if daytona_key else "BLOCKED_HUMAN_SECRET_REQUIRED"
+    if kaggle_user and kaggle_key:
         kaggle_state = "CONFIGURED"
-    elif kaggle_cfg:
-        kaggle_state = "CONFIG_FILE_PRESENT_ENV_ABSENT"
+    elif kaggle_cfg.is_file():
+        kaggle_state = "CONFIG_FILE_PRESENT_VALUES_ABSENT"
     else:
         kaggle_state = "BLOCKED_HUMAN_SECRET_REQUIRED"
     xenv = {
@@ -395,6 +426,7 @@ def final_report(parts: dict) -> dict:
 
 
 def main() -> int:
+    loaded = load_credential_files_into_env()
     parts = {
         "gum": run_gum_doctor_v2(),
         "cfos": run_cfos_hl001(),
@@ -403,6 +435,7 @@ def main() -> int:
         "remote": remote_providers(),
         "seedgraph": seedgraph_batch004(),
         "gsd": gsd_proposal(),
+        "credential_files_loaded": loaded,
     }
     report = final_report(parts)
     print(json.dumps(report, indent=2))

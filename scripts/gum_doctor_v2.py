@@ -93,43 +93,106 @@ def swap_info() -> dict[str, Any]:
     }
 
 
+KEYS_ENV = Path.home() / ".config" / "ai-keys" / "keys.env"
+HYDRADG_ENV_LOCAL = ROOT / "apps/hydradg-web/.env.local"
+KAGGLE_JSON = Path.home() / ".kaggle" / "kaggle.json"
+
+
+def read_env_file(path: Path) -> dict[str, str]:
+    out: dict[str, str] = {}
+    if not path.is_file():
+        return out
+    for raw in path.read_text().splitlines():
+        line = raw.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.startswith("export "):
+            line = line[7:].strip()
+        if "=" not in line:
+            continue
+        key, val = line.split("=", 1)
+        val = val.strip().strip('"').strip("'")
+        if val:
+            out[key.strip()] = val
+    return out
+
+
 def secret_presence(name: str) -> str:
-    return "PRESENT" if os.environ.get(name) else "ABSENT"
+    return "PRESENT" if resolve_secret_source(name) else "ABSENT"
+
+
+def resolve_secret_source(name: str) -> str | None:
+    if os.environ.get(name):
+        return "shell_env"
+    if read_env_file(KEYS_ENV).get(name):
+        return "keys.env"
+    if read_env_file(HYDRADG_ENV_LOCAL).get(name):
+        return "hydradg_env_local"
+    return None
 
 
 def kaggle_state() -> dict[str, str]:
-    cfg = Path.home() / ".kaggle" / "kaggle.json"
+    cfg = KAGGLE_JSON
     env_user = secret_presence("KAGGLE_USERNAME")
     env_key = secret_presence("KAGGLE_KEY")
+    json_user = json_key = "ABSENT"
+    if cfg.is_file():
+        try:
+            data = json.loads(cfg.read_text())
+            json_user = "PRESENT" if str(data.get("KAGGLE_USERNAME", data.get("username", ""))).strip() else "ABSENT"
+            json_key = "PRESENT" if str(data.get("KAGGLE_KEY", data.get("key", ""))).strip() else "ABSENT"
+        except json.JSONDecodeError:
+            json_user = json_key = "MALFORMED"
     if env_user == "PRESENT" and env_key == "PRESENT":
         state = "ENV_CONFIGURED"
+    elif json_user == "PRESENT" and json_key == "PRESENT":
+        state = "KAGGLE_JSON_CONFIGURED"
     elif cfg.is_file():
-        state = "CONFIG_FILE_PRESENT_ENV_ABSENT"
+        state = "CONFIG_FILE_PRESENT_VALUES_ABSENT"
     else:
         state = "BLOCKED_HUMAN_SECRET_REQUIRED"
     return {
         "KAGGLE_USERNAME": env_user,
         "KAGGLE_KEY": env_key,
+        "KAGGLE_JSON_USERNAME": json_user,
+        "KAGGLE_JSON_KEY": json_key,
         "KAGGLE_CONFIG_FILE": "PRESENT" if cfg.is_file() else "ABSENT",
         "KAGGLE_STATE": state,
     }
 
 
 def daytona_state() -> dict[str, str]:
-    key = secret_presence("DAYTONA_API_KEY")
-    token = secret_presence("DAYTONA_API_TOKEN")
+    key_src = resolve_secret_source("DAYTONA_API_KEY")
+    token_src = resolve_secret_source("DAYTONA_API_TOKEN")
     cli = shutil.which("daytona")
-    if key == "PRESENT" or token == "PRESENT":
-        state = "ENV_CONFIGURED"
+    if key_src or token_src:
+        state = "CONFIGURED"
     elif cli:
         state = "BLOCKED_HUMAN_SECRET_REQUIRED"
     else:
         state = "CLI_ABSENT"
     return {
         "DAYTONA_CLI": cli or None,
-        "DAYTONA_API_KEY": key,
-        "DAYTONA_API_TOKEN": token,
+        "DAYTONA_API_KEY": "PRESENT" if key_src else "ABSENT",
+        "DAYTONA_API_KEY_SOURCE": key_src,
+        "DAYTONA_API_TOKEN": "PRESENT" if token_src else "ABSENT",
+        "DAYTONA_API_TOKEN_SOURCE": token_src,
         "DAYTONA_STATE": state,
+    }
+
+
+def credential_sources_summary() -> dict[str, Any]:
+    return {
+        "portfolio_keys_env": str(KEYS_ENV),
+        "portfolio_keys_env_exists": KEYS_ENV.is_file(),
+        "hydradg_env_local": str(HYDRADG_ENV_LOCAL),
+        "hydradg_env_local_exists": HYDRADG_ENV_LOCAL.is_file(),
+        "projects_env": "/Users/byron/projects/.env",
+        "projects_env_exists": Path("/Users/byron/projects/.env").is_file(),
+        "ollarma_env": "/Users/byron/projects/active/ollarma/.env",
+        "ollarma_env_exists": Path("/Users/byron/projects/active/ollarma/.env").is_file(),
+        "resolution_order": "shell_env -> ~/.config/ai-keys/keys.env -> apps/hydradg-web/.env.local",
+        "ollarma_ssot_note": "Ollarma resolves env -> keys.env -> keychain; see active/ollarma/src/ollarma/credentials.py",
     }
 
 
@@ -248,6 +311,7 @@ def inspect_all() -> dict[str, Any]:
         **cuda_state(),
         **daytona_state(),
         **kaggle_state(),
+        **credential_sources_summary(),
         **seedgraph_check(),
     }
 
@@ -264,8 +328,8 @@ def capability_matrix(before: dict[str, Any]) -> dict[str, Any]:
         ("cloudflare_os", bool(before.get("active_checkout")), "REQUIRED_CFOS"),
         ("wrangler", bool(before.get("wrangler") or before.get("wrangler_via_pnpm")), "REQUIRED_CFOS"),
         ("local_cuda", before.get("LOCAL_CUDA_STATE") == "AVAILABLE", "OPTIONAL_LOCAL"),
-        ("daytona_auth", before.get("DAYTONA_STATE") == "ENV_CONFIGURED", "REMOTE_OPTIONAL"),
-        ("kaggle_auth", before.get("KAGGLE_STATE") == "ENV_CONFIGURED", "REMOTE_OPTIONAL"),
+        ("daytona_auth", before.get("DAYTONA_STATE") == "CONFIGURED", "REMOTE_OPTIONAL"),
+        ("kaggle_auth", before.get("KAGGLE_STATE") in ("ENV_CONFIGURED", "KAGGLE_JSON_CONFIGURED"), "REMOTE_OPTIONAL"),
         ("seedgraph", before.get("seedgraph_present"), "OPTIONAL"),
     ]
     for name, ok, tier in checks:
@@ -326,12 +390,12 @@ def apply_repairs(before: dict[str, Any]) -> tuple[dict[str, Any], list[dict], l
         else:
             blocked.append({"item": "wrangler_install", "reason": (r.stderr or "")[:300]})
 
-    if before.get("DAYTONA_STATE") == "BLOCKED_HUMAN_SECRET_REQUIRED":
+    if before.get("DAYTONA_STATE") != "CONFIGURED":
         blocked.append({"item": "daytona", "reason": "HUMAN_SECRET_REQUIRED", "policy": "REMOTE_COMPUTE_REQUIRED"})
-    if before.get("KAGGLE_STATE") in ("BLOCKED_HUMAN_SECRET_REQUIRED", "CONFIG_FILE_PRESENT_ENV_ABSENT"):
+    if before.get("KAGGLE_STATE") not in ("ENV_CONFIGURED", "KAGGLE_JSON_CONFIGURED"):
         blocked.append({
             "item": "kaggle",
-            "reason": "HUMAN_SECRET_REQUIRED" if before.get("KAGGLE_STATE") == "BLOCKED_HUMAN_SECRET_REQUIRED" else "ENV_EXPORT_REQUIRED",
+            "reason": "HUMAN_SECRET_REQUIRED" if before.get("KAGGLE_STATE") == "BLOCKED_HUMAN_SECRET_REQUIRED" else "VALUES_ABSENT_IN_KAGGLE_JSON",
             "policy": "REMOTE_COMPUTE_REQUIRED",
         })
     if before.get("LOCAL_CUDA_STATE") == "UNAVAILABLE_EXPECTED":

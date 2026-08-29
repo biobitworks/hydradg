@@ -1,9 +1,6 @@
 {
-  "blocked_remote": [
-    "daytona_auth",
-    "kaggle_auth"
-  ],
-  "recorded_at_utc": "2026-08-29T08:09:16Z",
+  "blocked_remote": [],
+  "recorded_at_utc": "2026-08-29T08:17:50Z",
   "rows": [
     {
       "capability": "host",
@@ -61,14 +58,14 @@
     },
     {
       "capability": "daytona_auth",
-      "ok": false,
-      "state": "BLOCKED",
+      "ok": true,
+      "state": "PASS",
       "tier": "REMOTE_OPTIONAL"
     },
     {
       "capability": "kaggle_auth",
-      "ok": false,
-      "state": "BLOCKED",
+      "ok": true,
+      "state": "PASS",
       "tier": "REMOTE_OPTIONAL"
     },
     {

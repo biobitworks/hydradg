@@ -1,27 +1,10 @@
 {
-  "recorded_at_utc": "2026-08-29T08:09:17Z",
-  "repair_policy": "LOCAL_DETERMINISTIC_ONLY",
-  "repairs_applied": [
-    {
-      "action": "npm_install_wrangler_local",
-      "prefix": "/Users/byron/projects/active/hydradg/.tools/npm-global"
-    }
-  ],
+  "recorded_at_utc": "2026-08-29T08:17:50Z",
+  "repairs_applied": [],
   "repairs_blocked": [
     {
-      "item": "daytona",
-      "policy": "REMOTE_COMPUTE_REQUIRED",
-      "reason": "HUMAN_SECRET_REQUIRED"
-    },
-    {
-      "item": "kaggle",
-      "policy": "REMOTE_COMPUTE_REQUIRED",
-      "reason": "ENV_EXPORT_REQUIRED"
-    },
-    {
-      "item": "local_cuda",
-      "policy": "REMOTE_AUTHORIZED_CUDA",
-      "reason": "UNSUPPORTED_LOCAL_HARDWARE"
+      "item": "repair_skipped",
+      "reason": "pass --repair to apply"
     }
   ],
   "schema": "hydradg.gum_doctor_v2.repair_plan.v1",
