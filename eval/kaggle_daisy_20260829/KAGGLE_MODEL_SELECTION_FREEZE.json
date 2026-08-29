@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.kaggle_daisy.model_selection_freeze.v1",
+  "recorded_at_utc": "2026-08-29T00:45:00Z",
+  "frozen_before_execution": true,
+  "capacity_rule": "Select from pre-registered project roster; no silent quantization substitution",
+  "candidates": [
+    {
+      "model_id": "qwen3.8:27b",
+      "ollama_digest": "22130167e8c4e8b9643",
+      "classification": "RUNTIME_PORTABLE_DIFFERENT_ARTIFACT",
+      "kaggle_fit": "LIKELY_FITS_T4",
+      "note": "Completed 26/300 cells on original EXP-008-R lane"
+    },
+    {
+      "model_id": "qwen3.8-flash-next:125b-a6b-nvfp4",
+      "classification": "DOES_NOT_FIT",
+      "kaggle_fit": "UNSUPPORTED_RUNTIME",
+      "reason": "VRAM exceeds typical Kaggle T4/P100; requires H200 per prereg"
+    },
+    {
+      "model_id": "qwen3.8-flash-next:125b-mlx",
+      "classification": "UNSUPPORTED_RUNTIME",
+      "kaggle_fit": "DOES_NOT_FIT",
+      "reason": "MLX artifact; not portable to Kaggle CUDA"
+    }
+  ],
+  "selected_conditions": [
+    {
+      "model_id": "qwen3.8:27b",
+      "role": "SUCCESSOR_PORTABILITY_REPLICATION"
+    }
+  ],
+  "comparison_design": "REPLICATION_ONLY",
+  "planned_cells_if_two_models": null,
+  "planned_cells_single_model": {
+    "formula": "25 cases x 2 conditions x 3 replicates x 1 model",
+    "total": 150,
+    "note": "Not labeled as 300-cell comparison"
+  },
+  "experiment_ids": {
+    "KG-EXP008-R1": "SUCCESSOR_PORTABILITY_REPLICATION",
+    "KG-EXP009-R1": "DEFERRED_SINGLE_MODEL_PRIORITY"
+  },
+  "EXP010": "DEFINED_GATED",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

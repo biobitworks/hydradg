@@ -1,0 +1,25 @@
+{
+  "schema": "hydradg.kaggle_daisy.capability_receipt.v1",
+  "recorded_at_utc": "2026-08-29T00:45:00Z",
+  "host": "magicSTUDIObox.local",
+  "kaggle_cli_version": "2.2.4",
+  "auth_status": "PASS",
+  "authenticated_user": "biobitworks",
+  "auth_method": "ACCESS_TOKEN",
+  "secrets_printed": false,
+  "accelerator_observation": {
+    "method": "kaggle_cli_kernels_list",
+    "note": "GPU type for new kernels determined at session start on Kaggle; not assumed here",
+    "typical_kaggle_gpu_options": ["T4 x2", "P100", "None"],
+    "local_dispatch_host": "magicSTUDIObox.local"
+  },
+  "cpu_ram_disk_cuda": {
+    "local_studio": "arm64 Apple Silicon — dispatch host only",
+    "remote_kaggle": "observed at kernel/session provision time"
+  },
+  "daytona_r2_preserved": {
+    "Q38-EXP008-R2": "RESOURCE_BLOCKED_H200_UNAVAILABLE",
+    "Q38-EXP009-R2": "GATED"
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

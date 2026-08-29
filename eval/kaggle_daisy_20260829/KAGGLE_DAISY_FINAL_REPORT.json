@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.kaggle_daisy.final_report.v1",
+  "recorded_at_utc": "2026-08-29T00:46:00Z",
+  "session_state": "PREREG_FROZEN_EXECUTION_PENDING",
+  "hardware": "Kaggle auth PASS; GPU observed at kernel provision (not yet started)",
+  "models": ["qwen3.8:27b"],
+  "planned_cells": 150,
+  "terminal_cells": 0,
+  "independent_N_cases": 25,
+  "information_state": "INFORMATION_INSUFFICIENT",
+  "scientific_result": null,
+  "decision_usability": "NO",
+  "fcg": "LOCAL_PREREG_ONLY",
+  "mmr": "NOT_APPLICABLE",
+  "limitations": [
+    "Single-model replication only on Kaggle",
+    "Does not substitute Daytona H200 R2 prereg",
+    "EXP-010 remains DEFINED_GATED"
+  ],
+  "federated_project_evidence": "NOT_REPORTED_IN_CURRENT_MANUSCRIPT"
+}
