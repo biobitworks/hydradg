@@ -1,0 +1,53 @@
+{
+  "schema": "hydradg.newinml2026_solo.implementation_success_gap.v1",
+  "recorded_at_utc": "2026-08-29T05:29:03Z",
+  "components": {
+    "fco_fcg_experiment_custody": {
+      "state": "VERIFIED",
+      "evidence": "EXP-008/009 terminal receipts admitted"
+    },
+    "EXP-008": {
+      "state": "VERIFIED",
+      "verdict": "UNDERPOWERED"
+    },
+    "EXP-009": {
+      "state": "VERIFIED",
+      "verdict": "UNDERPOWERED",
+      "secondary_promoted": false
+    },
+    "stage2_predecessor": {
+      "state": "VERIFIED",
+      "note": "context only"
+    },
+    "Q38_successor": {
+      "state": "INTERRUPTED",
+      "primary_results_admission": 0
+    },
+    "seedgraph_hierarchy_v1a": {
+      "state": "INTERRUPTED",
+      "forensic_sha": "7ec0199b2195164da27c5468dfecc438f99fe307"
+    },
+    "hydradb_readback": {
+      "state": "BLOCKED"
+    },
+    "deterministic_figure_pipeline": {
+      "state": "NOT_APPLICABLE_SOLO"
+    },
+    "mmr_state": {
+      "state": "NOT_COMMITTED"
+    },
+    "signature_state": {
+      "state": "NOT_SIGNED"
+    },
+    "cross_project_federation": {
+      "state": "PLANNED"
+    },
+    "hydralamp_biopharma": {
+      "state": "PLANNED",
+      "HYDRALAMP_BIOPHARMA_STATE": "PLANNED"
+    }
+  },
+  "IMPLEMENTATION_SUCCESS_COUNT": 3,
+  "IMPLEMENTATION_PARTIAL_COUNT": 0,
+  "IMPLEMENTATION_GAP_COUNT": 6
+}
