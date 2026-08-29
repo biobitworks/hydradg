@@ -1,0 +1,34 @@
+{
+  "definition_count": 4,
+  "definitions": [
+    {
+      "definition_id": "DG-STAR-TRANSITION",
+      "distinct": true,
+      "formula_family": "delta_g_star",
+      "name": "\u0394G* transition diagnostic",
+      "note": "Categorical AntiCube transition diagnostic; not a continuous time axis.",
+      "source": "paper/newinml2026_solo/longitudinal_fcg/SECRET_REGISTRY_AUDIT.jsonl"
+    },
+    {
+      "definition_id": "CLOUD-DRIFT-JSD",
+      "distinct": true,
+      "formula_family": "cloud_drift_jsd",
+      "name": "Cloud Drift JSD",
+      "source": "conceptual; not promoted as measured primary endpoint in solo package"
+    },
+    {
+      "definition_id": "TV-MUTATION-DISTANCE",
+      "distinct": true,
+      "formula_family": "tv_mutation_distance",
+      "name": "TV mutation distance",
+      "source": "doc roundtrip structural accounting"
+    },
+    {
+      "definition_id": "RESTORATION-GAIN",
+      "distinct": true,
+      "formula_family": "restoration_gain",
+      "name": "Restoration gain",
+      "source": "roundtrip equivalence report"
+    }
+  ]
+}

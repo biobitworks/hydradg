@@ -1,0 +1,32 @@
+{
+  "entries": [
+    {
+      "claim_impact": "GPU lane cannot support inference claims; infrastructure proof only",
+      "earliest_divergence": "SGLANG_INSTALL_FAILED",
+      "predecessor_artifact": "eval/newinml_final_daisy_20260829/execution/gpu_sglang_terminal/FINAL_GPU_SGLANG_CLOSEOUT.json",
+      "predecessor_state": "EXTERNAL_PROVIDER_BLOCKED",
+      "resolved": false,
+      "successor_artifact": "eval/newinml_final_daisy_20260829/execution/gpu_sglang_terminal/GPU_RUNTIME_PROOF.json",
+      "successor_state": "CUDA_PROOF_ONLY"
+    },
+    {
+      "claim_impact": "Operator packet PDF hash stale; rebuild required before upload",
+      "earliest_divergence": "MANUSCRIPT_REBUILD",
+      "predecessor_artifact": "paper/newinml2026_solo/FINAL_OPENREVIEW_OPERATOR_PACKET.md",
+      "predecessor_state": "PDF_SHA256=6578d37eeb28a7f2bdadb967939e68b816174491df3932a792601d09aaa14c60",
+      "resolved": "RESOLVED_BY_SUCCESSOR",
+      "successor_artifact": "paper/newinml2026_solo/manuscript/build/main.pdf",
+      "successor_state": "CURRENT_BUILD"
+    },
+    {
+      "claim_impact": "Q38 omitted from primary results per manuscript",
+      "earliest_divergence": "INCOMPLETE_MATRIX",
+      "predecessor_artifact": "eval/newinml_final_daisy_20260829/execution/lane3_q38/canonical_predecessor/EXPERIMENT_TERMINAL_AUDIT.json",
+      "predecessor_state": "Q38-EXP008-R STARTED 27/150",
+      "resolved": "PARTIAL",
+      "successor_artifact": "eval/newinml_final_daisy_20260829/execution/lane3_q38/Q38_TERMINAL_PROVENANCE.json",
+      "successor_state": "CANONICAL_27_SUPERSEDES_STALE_26"
+    }
+  ],
+  "recorded_at_utc": "2026-08-29T16:00:21Z"
+}
