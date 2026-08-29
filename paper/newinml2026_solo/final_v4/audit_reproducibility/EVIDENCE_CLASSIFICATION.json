@@ -1,0 +1,64 @@
+{
+  "EVIDENCE_STATE": "VERIFIED_EMPIRICAL_RESULT_FOR_DETERMINISTIC_REQUIREMENT_CITATION_AND_TEMPLATE_CUSTODY_VALIDATION",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "R1_ROOT": "a5cfca361a72d21fed03491e7cef63d61ed487837ee6dec00bdf00e349b21803",
+  "R2_ROOT": "a5cfca361a72d21fed03491e7cef63d61ed487837ee6dec00bdf00e349b21803",
+  "R3_ROOT": "a5cfca361a72d21fed03491e7cef63d61ed487837ee6dec00bdf00e349b21803",
+  "REPRODUCIBILITY_GATE": "PASS",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "SYNTHETIC_CANARY_GATE": "PASS",
+  "SYNTHETIC_FAILURE_CANARIES": [
+    {
+      "case": "C1",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "mutation": "one_byte_in_neurips_2026.sty",
+      "observed": "FAIL"
+    },
+    {
+      "case": "C2",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "hallucinated_reference_count": 1,
+      "mutation": "invented_reference_title"
+    },
+    {
+      "case": "C3",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "lineage_drift": true,
+      "mutation": "changed_cited_numeric_0.907_to_0.999"
+    },
+    {
+      "case": "C4",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "mutation": "added_cite_without_bibitem",
+      "used_but_undefined": [
+        "removed_target_xyz"
+      ]
+    },
+    {
+      "canonical_edge_count": 21,
+      "case": "C5",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "mutated_edge_count": 20,
+      "mutation": "removed_one_FCG_provenance_edge_on_copy",
+      "reverse_trace_gate": "FAIL"
+    }
+  ],
+  "not_promoted_to": [
+    "PRIMARY_EXP008_009_MODEL_EFFECT",
+    "WHOLE_PROJECT_ATOMIZATION",
+    "ALL_WORDS_REQUIRE_EXTERNAL_CITATION",
+    "AUTHOR_IDENTITY",
+    "SIGNED",
+    "MMR_COMMITTED",
+    "COMPARATIVE_SUPERIORITY_OVER_ALL_PROVENANCE_SYSTEMS"
+  ],
+  "recorded_at_utc": "2026-08-29T07:58:02Z",
+  "schema": "hydradg.successor_audit_closeout.v1",
+  "thesis_sentence": "In a heterogeneous multi-agent workflow, the final submission audit deterministically bound template requirements, citations, manuscript propositions, and reported values to versioned evidence objects, while synthetic source/citation mutations were detected before promotion.",
+  "thesis_sentence_allowed": true
+}

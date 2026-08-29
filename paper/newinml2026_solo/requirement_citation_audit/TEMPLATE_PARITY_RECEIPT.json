@@ -1,7 +1,8 @@
 {
-  "STYLE_FILE_UNMODIFIED": false,
+  "STYLE_FILE_UNMODIFIED": true,
   "TEMPLATE_MODE": "dblblindworkshop",
   "WORKSHOP_TITLE": "New in Machine Learning (NewInML) at NeurIPS 2026",
+  "WORKSHOP_TITLE_EXACT": true,
   "checks": {
     "documentclass_article": true,
     "double_blind_author": true,
@@ -14,9 +15,10 @@
     "preprint_option_absent": true,
     "template_year_2026": true,
     "title_present": true,
+    "workshoptitle_exact": true,
     "workshoptitle_present": true
   },
-  "gate": "FAIL",
-  "recorded_at_utc": "2026-08-29T07:46:59Z",
+  "gate": "PASS",
+  "recorded_at_utc": "2026-08-29T07:57:59Z",
   "schema": "hydradg.template_parity_receipt.v1"
 }

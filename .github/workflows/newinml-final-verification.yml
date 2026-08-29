@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - 'cursor/newinml-final-v3-*'
+      - 'cursor/newinml-daisy-execute-20260829'
   workflow_dispatch:
 
 permissions:

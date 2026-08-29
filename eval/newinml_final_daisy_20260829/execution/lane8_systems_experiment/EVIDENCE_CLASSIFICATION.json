@@ -1,0 +1,26 @@
+{
+  "EVIDENCE_STATE": "PARTIAL_BOUNDED_SYSTEMS_VALIDATION_TEMPLATE_BLOCKED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "atomization_hypotheses": {
+    "A1": "PASS",
+    "A2": "PASS",
+    "A3": "PASS",
+    "A4": "PASS",
+    "A5": "PASS"
+  },
+  "citation_chain_positive": true,
+  "final_template_gate": "FAIL",
+  "not_promoted_to": [
+    "PRIMARY_MODEL_EFFECT",
+    "GENERAL_SCIENTIFIC_CORRECTNESS",
+    "WHOLE_PROJECT_ATOMIZATION",
+    "AUTHOR_IDENTITY",
+    "SIGNED",
+    "MMR_COMMITTED"
+  ],
+  "recorded_at_utc": "2026-08-29T07:51:27Z",
+  "schema": "hydradg.evidence_classification.v1",
+  "thesis_sentence": null,
+  "thesis_sentence_allowed": false
+}

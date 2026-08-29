@@ -1,0 +1,69 @@
+{
+  "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "CURRENT_SHA": "a6c245a68646347d8fdcd13601a0e6ee27b2ddf7",
+  "Q38_CLOSEOUT_EXISTING_CELLS": 27,
+  "Q38_CLOSEOUT_STATE": true,
+  "Q38_NOW_STATE": "PASS",
+  "cells_executed": 8,
+  "cells_required": 8,
+  "claim_ceiling": "BOUNDED_INTEGRATION_SYSTEMS_ONLY",
+  "digest_gate": "PASS",
+  "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "experiment_id": "Q38-NOW-001",
+  "model": "qwen3.8:27b",
+  "note": "8 cells do not complete 27/150 predecessor closeout",
+  "observed_digest": "22130167c4c2",
+  "predecessor_cells_preregistered": 150,
+  "recorded_at_utc": "2026-08-29T07:59:38Z",
+  "schema": "hydradg.q38_now.execution.v1",
+  "selected_cells": [
+    {
+      "cell_id": "HL-INVALID_PROOF-R2",
+      "condition": "INVALID_PROOF",
+      "rank_key": "0b74576ee7da0bbeebe42af5792ea4b59dd1c9c7b639fa3a694a54c7659363ba",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-CONTROL-R2",
+      "condition": "CONTROL",
+      "rank_key": "4efb3b3fb809189d381ddcf9783a53bde431b66f981af0aabc576295059e0bfb",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R1",
+      "condition": "BROKEN_AUTHORIZATION_EDGE",
+      "rank_key": "75e301c4b18bdd6fe49bcfa5afbf8b4804b58ed063f2867108dcba1b1db8ecac",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-INVALID_PROOF-R1",
+      "condition": "INVALID_PROOF",
+      "rank_key": "854ed7968f59bafb171dce126c46084922020fedaa3055bc990a6b73a6e58b8b",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-REPLAYED_PROOF-R2",
+      "condition": "REPLAYED_PROOF",
+      "rank_key": "9f2e3510e8de402c7c2eadb217f7a79e595061694749a40c8732516c57eb0562",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-REPLAYED_PROOF-R1",
+      "condition": "REPLAYED_PROOF",
+      "rank_key": "a8536965710e3245a9ece260c91af42a03e86bd57fc37c347d39c2f62429486e",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-CONTROL-R1",
+      "condition": "CONTROL",
+      "rank_key": "b84d1fed33a1eee81c468b7a7b17643bdddd16a68a42b7cf9cdb2f5d54e411de",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R2",
+      "condition": "BROKEN_AUTHORIZATION_EDGE",
+      "rank_key": "f08da311989adf7b9359e7a20c28a1b52c5b7de9110bc72d946c0614b1ef57d5",
+      "replicate": 2
+    }
+  ]
+}

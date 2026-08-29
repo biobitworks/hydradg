@@ -1,0 +1,70 @@
+{
+  "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "CURRENT_SHA": "a6c245a68646347d8fdcd13601a0e6ee27b2ddf7",
+  "blocking_reasons": [
+    "NO_AUTHORIZED_CUDA_HOST_ON_CURRENT_MACHINE"
+  ],
+  "canary_cells_executed": 0,
+  "canary_cells_required": 24,
+  "claim_ceiling": "RUNTIME_SYSTEMS_COMPARISON_ONLY",
+  "experiment_id": "SGLANG-HL-001",
+  "lane_state": "BLOCKED",
+  "nvidia_smi": null,
+  "recorded_at_utc": "2026-08-29T07:58:02Z",
+  "runtime_modes": [
+    "EAGER_DISABLED",
+    "TC_PIECEWISE",
+    "BREAKABLE"
+  ],
+  "schema": "hydradg.sglang_hl001.execution.v1",
+  "selected_logical_cells": [
+    {
+      "cell_id": "HL-REPLAYED_PROOF-R1",
+      "condition": "REPLAYED_PROOF",
+      "rank_key": "04e79bd2c02d14f9c817a409e51c15ce93ac3790cbe222560e7bd64fb89f2c63",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-CONTROL-R1",
+      "condition": "CONTROL",
+      "rank_key": "08dc35d5db303b6d27719db7d473656b01f9102f83b0e0d0b81e765b5dbbff86",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-INVALID_PROOF-R1",
+      "condition": "INVALID_PROOF",
+      "rank_key": "2c9f0bf6671fa8e3609d3510d2a9888d001833689ba734f53fb25eb31fdc4614",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-CONTROL-R2",
+      "condition": "CONTROL",
+      "rank_key": "33b987791d75e18fa0b15b7538fc4402028a486c782d60de2470ba15ad094b4d",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R1",
+      "condition": "BROKEN_AUTHORIZATION_EDGE",
+      "rank_key": "599a518f5d289c3786f1eea3de9b2233ac5438d16558d8053d7c44db13ee3ec7",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-INVALID_PROOF-R2",
+      "condition": "INVALID_PROOF",
+      "rank_key": "5d6d48c7a47400a45eb54787a6376a2984b7042b6d8dc490eb1a75028841ed95",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R2",
+      "condition": "BROKEN_AUTHORIZATION_EDGE",
+      "rank_key": "89a1cfed6a4e2e9939e1bcb9c17d807a8673785f9c61b1fea3a69b45ea65e093",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-REPLAYED_PROOF-R2",
+      "condition": "REPLAYED_PROOF",
+      "rank_key": "e0576a2ac1ef984ded76eee054b3bde95513543401dd74544d760ebacce228ce",
+      "replicate": 2
+    }
+  ]
+}

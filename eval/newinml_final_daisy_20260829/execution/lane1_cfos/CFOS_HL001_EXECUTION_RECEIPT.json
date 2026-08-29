@@ -1,0 +1,73 @@
+{
+  "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "CURRENT_SHA": "a6c245a68646347d8fdcd13601a0e6ee27b2ddf7",
+  "blocking_reasons": [
+    "cloudflare-os checkout NOT_LOCATED",
+    "wrangler NOT_IN_PATH"
+  ],
+  "canary_cells_executed": 0,
+  "canary_cells_required": 8,
+  "claim_ceiling": "CLOUDFLARE_OS_INTEGRATION_ONLY",
+  "cloudflare_os_exists": false,
+  "experiment_id": "CFOS-HL-001",
+  "lane_state": "BLOCKED",
+  "logical_conditions": [
+    "CONTROL",
+    "INVALID_PROOF",
+    "REPLAYED_PROOF",
+    "BROKEN_AUTHORIZATION_EDGE"
+  ],
+  "recorded_at_utc": "2026-08-29T07:58:02Z",
+  "schema": "hydradg.cfos_hl001.execution.v1",
+  "selected_cells": [
+    {
+      "cell_id": "HL-INVALID_PROOF-R1",
+      "condition": "INVALID_PROOF",
+      "rank_key": "60059ad2e64e244157ca27700630576dd9bd1395f4792b166cba8743e341585b",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R2",
+      "condition": "BROKEN_AUTHORIZATION_EDGE",
+      "rank_key": "7cd37635eb476e9002d88eccbc59ea3b7ca67efaca5687f83077db46bb980884",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-INVALID_PROOF-R2",
+      "condition": "INVALID_PROOF",
+      "rank_key": "81841e8077c5038b2a6f5dbeec6c822ff7d0009c9d3620d2b0c2ee49ea3c9458",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-BROKEN_AUTHORIZATION_EDGE-R1",
+      "condition": "BROKEN_AUTHORIZATION_EDGE",
+      "rank_key": "91bc80bb1898a0e79e8a739407d6dc3e9cf4a5922ae91b7fb927d688c84e8f91",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-CONTROL-R2",
+      "condition": "CONTROL",
+      "rank_key": "9433ad770b3b9263a9fe193f340b8b0fd58b9e17de3d00a8d307dc75bd10e6cd",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-REPLAYED_PROOF-R1",
+      "condition": "REPLAYED_PROOF",
+      "rank_key": "b7ccc76dc8c34c066503186c5c564b165a041bd0d8a2d5feaf519a84077f2447",
+      "replicate": 1
+    },
+    {
+      "cell_id": "HL-REPLAYED_PROOF-R2",
+      "condition": "REPLAYED_PROOF",
+      "rank_key": "de1242233245d47f3f36b2e7f34bf8f8a703fba8b36f9f6de10e14fad7bb37c7",
+      "replicate": 2
+    },
+    {
+      "cell_id": "HL-CONTROL-R1",
+      "condition": "CONTROL",
+      "rank_key": "e8b2c853ec40ae9bb1ec7f05ea6ddf940032fcbf82162d60a7285c074e50eb76",
+      "replicate": 1
+    }
+  ],
+  "wrangler_present": false
+}

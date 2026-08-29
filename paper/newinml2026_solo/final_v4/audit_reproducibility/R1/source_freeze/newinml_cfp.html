@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <script type="text/javascript">
+        document.documentElement.className = "js";
+    </script>
+
+    <title>New In ML at NeurIPS 2026</title>
+
+    <link rel="stylesheet" id="base-css" href="./css/base.css?ver=6.0.2" type="text/css" media="none"
+        onload="media='all'" />
+
+    <script type="text/javascript">
+        let jqueryParams = [],
+            jQuery = function (r) {
+                return (jqueryParams = [...jqueryParams, r]), jQuery;
+            },
+            $ = function (r) {
+                return (jqueryParams = [...jqueryParams, r]), $;
+            };
+        (window.jQuery = jQuery), (window.$ = jQuery);
+        let customHeadScripts = !1;
+        (jQuery.fn = jQuery.prototype = {}),
+            ($.fn = jQuery.prototype = {}),
+            (jQuery.noConflict = function (r) {
+                if (window.jQuery)
+                    return (
+                        (jQuery = window.jQuery), ($ = window.jQuery), (customHeadScripts = !0), jQuery.noConflict
+                    );
+            }),
+            (jQuery.ready = function (r) {
+                jqueryParams = [...jqueryParams, r];
+            }),
+            ($.ready = function (r) {
+                jqueryParams = [...jqueryParams, r];
+            }),
+            (jQuery.load = function (r) {
+                jqueryParams = [...jqueryParams, r];
+            }),
+            ($.load = function (r) {
+                jqueryParams = [...jqueryParams, r];
+            }),
+            (jQuery.fn.ready = function (r) {
+                jqueryParams = [...jqueryParams, r];
+            }),
+            ($.fn.ready = function (r) {
+                jqueryParams = [...jqueryParams, r];
+            });
+    </script>
+
+    <style id="wp-block-library-theme-inline-css" type="text/css"></style>
+    <style id="global-styles-inline-css" type="text/css"></style>
+    <link rel="stylesheet" id="ts_fab_css-css" href="./css/ts-fab.min.css?ver=1.5" type="text/css" media="all" />
+    <link rel="stylesheet" id="divi-style-css" href="./css/style-static.min.css?ver=4.17.6" type="text/css"
+        media="all" />
+    <script type="text/javascript" src="./js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+    <script type="text/javascript" src="./js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+    <script type="text/javascript" id="jquery-js-after">
+        jqueryParams.length &&
+            $.each(jqueryParams, function (e, r) {
+                if ("function" == typeof r) {
+                    var n = String(r);
+                    n.replace("$", "jQuery");
+                    var a = new Function("return " + n)();
+                    $(document).ready(a);
+                }
+            });
+    </script>
+    <script type="text/javascript" src="./js/ts-fab.min.js?ver=1.5" id="ts_fab_js-js"></script>
+
+    <link rel="shortcut icon" href="img/newinml-fav.png" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+    <style>
+        .dropdown-menu {
+            width: 250px !important;
+        }
+
+        .dropdown-menu li a {
+            white-space: nowrap;
+        }
+
+        /* Unified font */
+        * { font-family: 'Open Sans', Arial, sans-serif !important; }
+        body, h1, h2, h3, h4, h5, h6, p, span, div, a, li, ul, ol, table, td, th,
+        input, textarea, select, button { font-family: 'Open Sans', Arial, sans-serif !important; }
+        code, pre { font-family: 'Courier New', monospace !important; }
+
+        /* Hero background: site purple gradient over a subtle Paris skyline */
+        .et_pb_section_0.et_pb_section {
+            background-color: #5a3782 !important;
+            background-image:
+                linear-gradient(135deg, rgba(102,126,234,0.86) 0%, rgba(118,75,162,0.92) 100%),
+                url('img/paris_hero.jpg') !important;
+            background-size: cover, cover !important;
+            background-position: center 35%, center 35% !important;
+            background-repeat: no-repeat, no-repeat !important;
+        }
+        /* Hero title: bright white with a soft shadow (background unchanged) */
+        .et_pb_section_0 h1,
+        .et_pb_section_0 h1 span {
+            color: #ffffff !important;
+            text-shadow: 0 2px 8px rgba(0,0,0,0.70), 0 0 3px rgba(0,0,0,0.50) !important;
+        }
+        /* Hero paragraphs: put them on a dark translucent panel so they're easy to read */
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner {
+            background: rgba(22,13,44,0.80) !important;
+            padding: 24px 28px !important;
+            border-radius: 16px !important;
+        }
+        /* Force the silver body text to clear white (colored links keep their own color) */
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner,
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner p,
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner span:not([style*="color"]),
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner sup {
+            color: #ffffff !important;
+        }
+        .et_pb_section_0 .et_pb_text_1 .et_pb_text_inner * {
+            text-shadow: 0 1px 2px rgba(0,0,0,0.55) !important;
+        }
+
+        /* Section spacing */
+        .et_pb_section_1.et_pb_section { padding-bottom: 10px !important; }
+        .et_pb_section_2.et_pb_section { padding-top: 10px !important; padding-bottom: 10px !important; }
+        .et_pb_section_3.et_pb_section { padding-top: 10px !important; padding-bottom: 10px !important; }
+        .et_pb_section_5.et_pb_section { padding-top: 10px !important; padding-bottom: 10px !important; }
+
+        /* Speaker placeholder box when no photo yet */
+        .speaker-placeholder {
+            width: 200px;
+            height: 220px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 4px;
+            margin: 0 auto;
+        }
+        .speaker-placeholder span {
+            color: white;
+            font-size: 52px;
+            font-weight: bold;
+            font-family: 'Open Sans', Arial, sans-serif !important;
+        }
+
+        /* In-person / Remote badges */
+        .speaker-badge {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 12px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-top: 6px;
+        }
+        .badge-inperson { background: #d4edda; color: #155724; }
+        .badge-remote   { background: #d1ecf1; color: #0c5460; }
+
+        /* ===== Enhanced Card & Grid Styling ===== */
+        .person-card {
+            text-align: center;
+            padding: 18px 10px;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+            border-radius: 16px;
+            background: #fff;
+        }
+        .person-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0 14px 36px rgba(102,126,234,0.22);
+        }
+        .person-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: top center;
+            border: 4px solid #764ba2;
+            margin: 0 auto 12px;
+            display: block;
+            box-shadow: 0 4px 18px rgba(118,75,162,0.28);
+        }
+        .person-name {
+            font-size: 1rem !important;
+            font-weight: 700 !important;
+            margin: 6px 0 3px !important;
+            line-height: 1.3;
+        }
+        .person-name a { color: #2c3e50 !important; text-decoration: none !important; }
+        .person-name a:hover { color: #764ba2 !important; }
+        .person-affil { font-size: 0.82rem; color: #666; margin: 0; }
+        /* Speakers grid: 4 columns */
+        .speakers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 28px;
+            padding: 24px 10px 36px;
+        }
+        .speakers-grid .person-card { flex: 0 0 200px; max-width: 210px; }
+        /* Organizers grid: 6 columns */
+        .organizers-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 22px;
+            padding: 16px 10px 30px;
+        }
+        .organizers-grid .person-card { flex: 0 0 155px; max-width: 165px; }
+        .organizers-grid .person-photo { width: 110px; height: 110px; }
+        /* Submit button */
+        .submit-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff !important;
+            padding: 12px 32px;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-weight: 700;
+            text-decoration: none !important;
+            transition: opacity 0.2s, transform 0.2s;
+            margin: 12px 0 6px;
+            box-shadow: 0 4px 16px rgba(118,75,162,0.4);
+        }
+        .submit-btn:hover { opacity: 0.88; transform: translateY(-2px); }
+        @media (max-width: 768px) {
+            .speakers-grid .person-card { flex: 0 0 calc(50% - 28px); }
+            .organizers-grid .person-card { flex: 0 0 calc(33% - 22px); }
+        }
+        @media (max-width: 480px) {
+            .speakers-grid .person-card, .organizers-grid .person-card { flex: 0 0 calc(50% - 20px); }
+        }
+        /* Important dates timeline */
+        .dates-timeline { list-style: none; padding: 0; margin: 16px 0; }
+        .dates-timeline li {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 11px 18px;
+            margin: 6px 0;
+            background: #f8f6fe;
+            border-radius: 8px;
+            border-left: 4px solid #764ba2;
+            font-size: 0.95rem;
+        }
+        .dates-tbd { font-weight: 700; color: #764ba2; min-width: 80px; }
+        /* Submission guidelines */
+        .guidelines-list { list-style: none; padding: 0; margin: 12px 0 20px; }
+        .guidelines-list li { display: flex; gap: 10px; align-items: flex-start; padding: 5px 0; font-size: 0.95rem; }
+        .guidelines-list li::before { content: "\2713"; color: #764ba2; font-weight: 700; flex-shrink: 0; }
+        /* Panel TBD */
+        .panel-tbd-box {
+            text-align: center;
+            padding: 44px 20px;
+            background: #f8f6fe;
+            border-radius: 14px;
+            border: 2px dashed #c4b5f5;
+            margin: 20px 0;
+            color: #888;
+        }
+        .panel-tbd-box p { margin: 6px 0; }
+    </style>
+</head>
+
+<body
+    class="page-template-default page page-id-324 et_divi_builder et_pb_button_helper_class et_fixed_nav et_show_nav et_primary_nav_dropdown_animation_fade et_secondary_nav_dropdown_animation_fade et_header_style_left et_pb_svg_logo et_pb_footer_columns4 et_cover_background et_pb_gutter linux et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 0 0" width="0" height="0" focusable="false" role="none"
+        style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden">
+        <defs>
+            <filter id="wp-duotone-dark-grayscale">
+                <feColorMatrix color-interpolation-filters="sRGB" type="matrix"
+                    values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 " />
+                <feComponentTransfer color-interpolation-filters="sRGB">
+                    <feFuncR type="table" tableValues="0 0.49803921568627" />
+                    <feFuncG type="table" tableValues="0 0.49803921568627" />
+                    <feFuncB type="table" tableValues="0 0.49803921568627" />
+                    <feFuncA type="table" tableValues="1 1" />
+                </feComponentTransfer>
+                <feComposite in2="SourceGraphic" operator="in" />
+            </filter>
+        </defs>
+    </svg>
+
+    <div id="page-container">
+
+        <!-- ===== Header ===== -->
+        <header id="main-header" data-height-onload="66">
+            <div class="container clearfix et_menu_container">
+                <div class="logo_container">
+                    <span class="logo_helper"></span>
+                    <a href="#">
+                        <img src="./img/neurips.png" width="93" height="43" alt="NeurIPS" id="logo"
+                            data-height-percentage="54" />
+                    </a>
+                </div>
+                <div id="et-top-navigation" data-height="66" data-fixed-height="40">
+                    <nav id="top-menu-nav">
+                        <ul id="top-menu" class="nav">
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"> Previous Workshops </a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="https://newinml.github.io/NewInML2025NeurIPS/">NewInML at NeurIPS 2025</a></li>
+                                    <li><a href="https://newinml.github.io/NewInML2025ICML/">NewInML at ICML 2025</a></li>
+                                    <li><a href="https://nehzux.github.io/NewInML2023NeurIPS">NewInML at NeurIPS 2024</a></li>
+                                    <li><a href="newinml2023.html">NewInML at NeurIPS 2023</a></li>
+                                    <li><a href="https://nehzux.github.io/NewInML2022NeurIPS/">NewInML at NeurIPS 2022</a></li>
+                                    <li><a href="https://ablacan.github.io/NewInML2022_ICML/">NewInML at ICML 2022</a></li>
+                                    <li><a href="https://nehzux.github.io/NewInML2019/">NewInML at NeurIPS 2019</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div id="et_mobile_nav_menu">
+                        <div class="mobile_nav closed">
+                            <span class="select_page">Select Page</span>
+                            <span class="mobile_menu_bar mobile_menu_bar_toggle"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div id="et-main-area">
+            <div id="main-content">
+                <article id="post-324" class="post-324 page type-page status-publish hentry">
+                    <div class="entry-content">
+                        <div class="et-l et-l--post">
+                            <div class="et_builder_inner_content et_pb_gutters3">
+
+                                <!-- ===== Section 0: Hero ===== -->
+                                <div class="et_pb_section et_pb_section_0 et_pb_with_background et_section_regular">
+                                    <div class="et_pb_row et_pb_row_0 et_pb_equal_columns">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_column_0 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                            <div class="et_pb_module et_pb_text et_pb_text_0 et_animated et_pb_text_align_left et_pb_bg_layout_dark">
+                                                <div class="et_pb_text_inner">
+                                                    <h1><span style="font-size: xx-large">New in Machine Learning (NewInML) at NeurIPS 2026</span></h1>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_module et_pb_text et_pb_text_1 et_animated et_pb_text_align_left et_pb_bg_layout_dark">
+                                                <div class="et_pb_text_inner">
+                                                    <p>
+                                                        <span style="font-size: large">
+                                                            <span style="color: #FFD700; font-size: 1.1rem;">📍 Paris, France &nbsp;|&nbsp; 🗓️ December 11, 2026, 13:30&ndash;18:30 &nbsp;|&nbsp; 📌 Room 141 (341 Theatre)</span>
+                                                            <br /><br />
+                                                            We are here to help! The submissions are non archival.
+                                                            Feel free to submit elsewhere in the future!
+                                                            We are updating the website frequently. Stay tuned!
+                                                            Contact us at:
+                                                            <a href="mailto:contactnewinml@gmail.com" style="color: #90EE90;">contactnewinml@gmail.com</a>;
+                                                            join our <a href="https://hovqr.to/981d36ee" target="_blank" rel="noopener noreferrer" style="color: #90EE90;">Discord</a>.
+                                                            <br>
+                                                            <img src="hovercode.png" alt="Discord QR Code" style="width:120px; height:120px; margin-top:10px;">
+                                                        </span>
+                                                    </p>
+                                                    <p>
+                                                        If you are interested in helping organize next NewInML, sign up via the
+                                                        <a href="https://forms.gle/oyedWiU9RBhrdiEi6" target="_blank" rel="noopener noreferrer" style="color: #90EE90;">form</a>
+                                                    </p>
+                                                    <p style="font-size: 0.72rem; white-space: nowrap; overflow-x: auto;"><sup>*</sup>Excluding submissions that are not serious. For example: blank pages, topics not in machine learning and papers completely not following the format.</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ===== Section 1: Our Mission + Call for Papers ===== -->
+                                <div class="et_pb_section et_pb_section_1 et_section_regular">
+                                    <div class="et_pb_row et_pb_row_1 et_pb_gutters1">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_column_1 et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+                                            <div class="et_pb_module et_pb_text et_pb_text_2 et_pb_text_align_left et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner">
+                                                    <h1><b>Our Mission</b></h1>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_3 et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <div class="et_pb_text_inner">
+                                                        <p style="text-align: justify; font-size: medium">
+                                                            Is this your first time to a top conference? Have you ever wanted your own work recognized by this huge and active community?
+                                                        </p>
+                                                        <p style="text-align: justify; font-size: medium">
+                                                            Do you encounter difficulties in polishing your ideas, experiments, paper writing, etc? Then, this session is exactly for you!
+                                                        </p>
+                                                        <p style="text-align: justify; font-size: medium">
+                                                            This year, we are hosting again the New in ML workshop at NeurIPS 2026.
+                                                            This workshop is intended for anyone who has not published a paper at a top conference yet (e.g. ICML, NeurIPS).
+                                                            We invited top researchers to review your work and share their experience with you.
+                                                            The best papers will receive awards and oral presentations. All accepted papers will be invited to present in our poster sessions!
+                                                        </p>
+                                                        <p style="text-align: justify; font-size: medium">
+                                                            Our biggest goal is to help you publish papers at the next NeurIPS conference, and generally provide you with the guidance you need to contribute to ML research fully and effectively!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="et_pb_module et_pb_divider et_pb_divider_1 et_pb_divider_position_center et_pb_space">
+                                                <div class="et_pb_divider_internal"></div>
+                                            </div>
+
+                                            <div class="et_pb_module et_pb_text et_pb_text_2 et_pb_text_align_left et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner">
+                                                    <h1><b>Call for Papers</b></h1>
+                                                </div>
+                                                <div class="et_pb_module et_pb_text et_pb_text_3 et_pb_text_align_left et_pb_bg_layout_light">
+                                                    <p style="font-size: medium; text-align: justify; margin-bottom: 16px;">
+                                                        We invite submissions on all topics in machine learning. This workshop is especially designed for researchers who have not yet published at a top venue &mdash; we want to help you get there!
+                                                        The best papers will receive oral presentations and awards. All accepted papers will be presented as posters.
+                                                    </p>
+
+                                                    <h3 style="margin-top:20px; margin-bottom:8px; color:#764ba2;">Submission Guidelines</h3>
+                                                    <ul class="guidelines-list">
+                                                        <li><strong>Format:</strong> 2&ndash;8 pages (excluding references) using the <a href="https://www.overleaf.com/latex/templates/formatting-instructions-for-neurips-2026/bjdwqfdkyftc" target="_blank" rel="noopener noreferrer" style="color:#764ba2;">NeurIPS 2026 workshop template ↗</a>.</li>
+                                                        <li><strong>Review process:</strong> Double-blind via <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/NewInML" target="_blank" rel="noopener noreferrer" style="color:#764ba2;">OpenReview ↗</a>. Submissions must be fully anonymized.</li>
+                                                        <li><strong>Non-archival:</strong> Work may be submitted to or published at other venues concurrently.</li>
+                                                        <li><strong>Eligibility:</strong> Open to anyone who has not yet published at a top ML conference (NeurIPS, ICML, ICLR, etc.).</li>
+                                                        <li><strong>Accepted posters:</strong> Authors are strongly encouraged to present a poster on-site at the workshop.</li>
+                                                    </ul>
+
+                                                    <h3 style="margin-top:24px; margin-bottom:10px; color:#764ba2;">Important Dates</h3>
+                                                    <p style="font-size:0.85rem; color:#888; margin-bottom:8px;">All deadlines are 11:59 PM Anywhere on Earth (AoE). Exact dates TBD.</p>
+                                                    <ul class="dates-timeline">
+                                                        <li><span class="dates-tbd">July 31, 2026</span><span>Submission Portal Opens</span></li>
+                                                        <li><span class="dates-tbd">August 29, 2026</span><span>Paper Submission Deadline</span></li>
+                                                        <li><span class="dates-tbd">September 29, 2026</span><span>Author Notification</span></li>
+                                                        <li><span class="dates-tbd">November 29, 2026</span><span>Camera Ready Deadline</span></li>
+                                                        <li><span class="dates-tbd">Dec 11, 2026</span><span>Workshop Day &mdash; 13:30&ndash;18:30, Room 141 (341 Theatre), Paris, France</span></li>
+                                                    </ul>
+
+                                                    <p style="margin-top:20px;">
+                                                        <a href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/NewInML" target="_blank" rel="noopener noreferrer" class="submit-btn" style="margin-right:14px;">Submit on OpenReview ↗</a>
+                                                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSd9SWFIwBlTNzXYa6i8Prihy9G0bhbn-78RpNNNoyvbdQ487w/viewform?usp=publish-editor" target="_blank" rel="noopener noreferrer" class="submit-btn">Register as a reviewer ↗</a>
+                                                    </p>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ===== Section 2: Invited Speakers ===== -->
+                                <div class="et_pb_section et_pb_section_2 et_pb_with_background et_section_regular">
+                                    <div class="et_pb_row et_pb_row_2">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_column_2 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                            <div class="et_pb_module et_pb_text et_pb_text_4 et_pb_text_align_left et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner">
+                                                    <h1><b>Invited Speakers</b></h1>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="et_pb_row">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_css_mix_blend_mode_passthrough et-last-child">
+
+                                            <div class="speakers-grid">
+
+                                                <!-- Zhijing Jin -->
+                                                <div class="person-card">
+                                                    <a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/zhijing_jin.jpg" alt="Zhijing Jin">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://zhijing-jin.com/home/" target="_blank" rel="noopener noreferrer">Zhijing Jin</a></p>
+                                                    <p class="person-affil">University of Toronto &amp; Vector Institute, EuroSafeAI, Max Planck Institute for Intelligent Systems</p>
+                                                </div>
+
+                                                <!-- Judah Goldfeder -->
+                                                <div class="person-card">
+                                                    <a href="https://judahgoldfeder.com/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/judah_goldfeder.jpg?v=2" alt="Judah Goldfeder">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://judahgoldfeder.com/" target="_blank" rel="noopener noreferrer">Judah Goldfeder</a></p>
+                                                    <p class="person-affil">Columbia University</p>
+                                                </div>
+
+                                                <!-- Stella Biderman -->
+                                                <div class="person-card">
+                                                    <a href="https://www.stellabiderman.ai/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/stella_biderman.jpg" alt="Stella Biderman">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://www.stellabiderman.ai/" target="_blank" rel="noopener noreferrer">Stella Biderman</a></p>
+                                                    <p class="person-affil">EleutherAI</p>
+                                                </div>
+
+                                                <!-- Niloofar Mireshghallah -->
+                                                <div class="person-card">
+                                                    <a href="https://mireshghallah.github.io/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/niloofar_mireshghallah.jpg" alt="Niloofar Mireshghallah">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://mireshghallah.github.io/" target="_blank" rel="noopener noreferrer">Niloofar Mireshghallah</a></p>
+                                                    <p class="person-affil">humans&amp;, Carnegie Mellon University</p>
+                                                </div>
+
+                                                <!-- Natasha Jacques -->
+                                                <div class="person-card">
+                                                    <a href="https://natashajaques.ai/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/natasha_jacques.jpg?v=2" alt="Natasha Jacques">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://natashajaques.ai/" target="_blank" rel="noopener noreferrer">Natasha Jacques</a></p>
+                                                        <p class="person-affil">University of Washington, Google DeepMind</p>
+                                                </div>
+
+                                                <!-- Nathan Lambert -->
+                                                <div class="person-card">
+                                                    <a href="https://natolambert.com/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/nathan_lambert.jpg" alt="Nathan Lambert">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://natolambert.com/" target="_blank" rel="noopener noreferrer">Nathan Lambert</a></p>
+                                                    <p class="person-affil">Allen Institute for AI</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ===== Section 3: Panel ===== -->
+                                <div class="et_pb_section et_pb_section_3 et_section_regular">
+                                    <div class="et_pb_row">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                            <div class="et_pb_module et_pb_text et_pb_text_align_left et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner">
+                                                    <h1><b>Panel</b></h1>
+                                                    <div class="panel-tbd-box">
+                                                        <p style="font-size:2rem; margin-bottom:10px;">&#127908;</p>
+                                                        <p style="font-size:1.1rem; font-weight:600; color:#555;">Panelists to be announced</p>
+                                                        <p style="font-size:0.9rem; margin-top:6px;">We will update this section once the panelists are confirmed. Stay tuned!</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- ===== Section 5: Organizers / Program Chairs ===== -->
+                                <div class="et_pb_section et_pb_section_5 et_section_regular">
+                                    <div class="et_pb_row et_pb_row_21">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_column_39 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                            <div class="et_pb_module et_pb_text et_pb_text_95 et_pb_text_align_left et_pb_bg_layout_light">
+                                                <div class="et_pb_text_inner">
+                                                    <h1><b>Organizers</b></h1>
+                                                </div>
+                                            </div>
+                                            <div class="et_pb_module et_pb_divider et_pb_divider_3 et_pb_divider_position_center et_pb_space">
+                                                <div class="et_pb_divider_internal"></div>
+                                            </div>
+                                            <div class="et_pb_module et_pb_text et_pb_text_96 et_pb_text_align_left et_pb_bg_layout_light"></div>
+                                        </div>
+                                    </div>
+
+                                    <div class="et_pb_row et_pb_row_22">
+                                        <div class="et_pb_column et_pb_column_4_4 et_pb_css_mix_blend_mode_passthrough et-last-child">
+                                            <div class="organizers-grid">
+
+                                                <!-- Arian Khorasani -->
+                                                <div class="person-card">
+                                                    <a href="https://sites.google.com/view/ariankhorasani/home" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/arian_khorasani.jpg" alt="Arian Khorasani">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://sites.google.com/view/ariankhorasani/home" target="_blank" rel="noopener noreferrer">Arian Khorasani</a></p>
+                                                    <p class="person-affil">University of Toronto &amp; Vector Institute</p>
+                                                </div>
+
+                                                <!-- Shashank Galla -->
+                                                <div class="person-card">
+                                                    <a href="https://sites.google.com/tamu.edu/shashankgalla/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/shashank_galla.jpg" alt="Shashank Galla">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://sites.google.com/tamu.edu/shashankgalla/" target="_blank" rel="noopener noreferrer">Shashank Galla</a></p>
+                                                    <p class="person-affil">Texas A&amp;M University</p>
+                                                </div>
+
+                                                <!-- Zarreen Reza -->
+                                                <div class="person-card">
+                                                    <a href="https://ai-diary-by-znreza.com/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/zarreen_reza.jpg?v=3" alt="Zarreen Reza">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://ai-diary-by-znreza.com/" target="_blank" rel="noopener noreferrer">Zarreen Reza</a></p>
+                                                    <p class="person-affil">JACOBB Applied AI Center</p>
+                                                </div>
+
+                                                <!-- Arth Singh -->
+                                                <div class="person-card">
+                                                    <a href="https://www.arthsingh.com/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/arth_singh.jpg" alt="Arth Singh">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://www.arthsingh.com/" target="_blank" rel="noopener noreferrer">Arth Singh</a></p>
+                                                    <p class="person-affil">AIM Intelligence</p>
+                                                </div>
+
+                                                <!-- I&#241;igo Parra -->
+                                                <div class="person-card">
+                                                    <a href="https://iparramartin.github.io/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/inigo_parra.jpg" alt="I&#241;igo Parra">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://iparramartin.github.io/" target="_blank" rel="noopener noreferrer">I&#241;igo Parra</a></p>
+                                                    <p class="person-affil">UC Berkeley</p>
+                                                </div>
+
+                                                <!-- Veeraraju Elluru -->
+                                                <div class="person-card">
+                                                    <a href="https://veeraraju-e.github.io/portfolio/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/veeraraju_elluru.jpg?v=2" alt="Veeraraju Elluru">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://veeraraju-e.github.io/portfolio/" target="_blank" rel="noopener noreferrer">Veeraraju Elluru</a></p>
+                                                    <p class="person-affil">SAAR-India</p>
+                                                </div>
+
+                                                <!-- Zhen (Zach) Xu -->
+                                                <div class="person-card">
+                                                    <a href="https://nehzux.github.io/" target="_blank" rel="noopener noreferrer">
+                                                        <img class="person-photo" src="./img/zach_profile.jpg" alt="Zhen (Zach) Xu">
+                                                    </a>
+                                                    <p class="person-name"><a href="https://nehzux.github.io/" target="_blank" rel="noopener noreferrer">Zhen (Zach) Xu</a></p>
+                                                    <p class="person-affil">University of Chicago</p>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <footer id="main-footer">
+            <div id="footer-bottom">
+                <div class="container clearfix"></div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="global-footer-content">
+        <div id="global-footer-content-inner">
+            <script src="./js/OWC-emergency-banner.js" type="text/javascript" async></script>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var et_animation_data = [
+            { class: "et_pb_text_0", style: "flipTop", repeat: "once", duration: "1000ms", delay: "0ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_text_1", style: "flipTop", repeat: "once", duration: "1000ms", delay: "50ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_image_0", style: "zoom", repeat: "once", duration: "1000ms", delay: "0ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_image_1", style: "zoom", repeat: "once", duration: "1000ms", delay: "50ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_image_2", style: "zoom", repeat: "once", duration: "1000ms", delay: "100ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_image_3", style: "zoom", repeat: "once", duration: "1000ms", delay: "150ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_image_4", style: "zoom", repeat: "once", duration: "1000ms", delay: "150ms", intensity: "50%", starting_opacity: "0%", speed_curve: "ease-in-out" },
+            { class: "et_pb_section_3", style: "zoom", repeat: "once", duration: "1000ms", delay: "0ms", intensity: "10%", starting_opacity: "0%", speed_curve: "ease-in-out" }
+        ];
+    </script>
+    <link rel="stylesheet" id="wp-block-library-css" href="./css/style.min.css?ver=6.0.2" type="text/css" media="none"
+        onload="media='all'" />
+    <script type="text/javascript" src="./js/current-menu-item.js?ver=1.0" id="current.menu-js"></script>
+    <script type="text/javascript" id="divi-custom-script-js-extra">
+        /* <![CDATA[ */
+        var DIVI = { item_count: "%d Item", items_count: "%d Items" };
+        var et_builder_utils_params = { condition: { diviTheme: true, extraTheme: false }, scrollLocations: ["app", "top"], builderScrollLocations: { desktop: "app", tablet: "app", phone: "app" }, onloadScrollLocation: "app", builderType: "fe" };
+        var et_frontend_scripts = { builderCssContainerPrefix: "#et-boc", builderCssLayoutPrefix: "#et-boc .et-l" };
+        var et_pb_custom = {
+            ajaxurl: "https:\/\/tripods.cis.cornell.edu\/wp-admin\/admin-ajax.php",
+            images_uri: "https:\/\/tripods.cis.cornell.edu\/wp-content\/themes\/divi\/images",
+            builder_images_uri: "https:\/\/tripods.cis.cornell.edu\/wp-content\/themes\/divi\/includes\/builder\/images",
+            et_frontend_nonce: "2a09c65839",
+            subscription_failed: "Please, check the fields below to make sure you entered the correct information.",
+            et_ab_log_nonce: "d87dd1361e",
+            fill_message: "Please, fill in the following fields:",
+            contact_error_message: "Please, fix the following errors:",
+            invalid: "Invalid email", captcha: "Captcha", prev: "Prev", previous: "Previous", next: "Next",
+            wrong_captcha: "You entered the wrong number in captcha.",
+            wrong_checkbox: "Checkbox", ignore_waypoints: "no", is_divi_theme_used: "1",
+            widget_search_selector: ".widget_search", ab_tests: [], is_ab_testing_active: "",
+            page_id: "324", unique_test_id: "", ab_bounce_rate: "5",
+            is_cache_plugin_active: "yes", is_shortcode_tracking: "",
+            tinymce_uri: "https:\/\/tripods.cis.cornell.edu\/wp-content\/themes\/divi\/includes\/builder\/frontend-builder\/assets\/vendors",
+            waypoints_options: []
+        };
+        var et_pb_box_shadow_elements = [];
+        /* ]]> */
+    </script>
+    <script type="text/javascript" src="./js/scripts.min.js?ver=4.17.6" id="divi-custom-script-js"></script>
+    <script type="text/javascript" src="./js/common.js?ver=4.17.6" id="et-core-common-js"></script>
+</body>
+
+</html>

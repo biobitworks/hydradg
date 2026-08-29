@@ -1,0 +1,31 @@
+{
+  "FINAL_SUBMISSION_GATE": "FAIL",
+  "audit_closeout": {
+    "AUDIT_STATE": "CLOSED",
+    "EXP008_EXP009_UNTOUCHED": true,
+    "FINAL_SUBMISSION_GATE": "FAIL",
+    "GREEN_PDF_SHA256": "0b096ccec7c6c1a630e4308abacea89a59620e410bfaff705409ce884a93c1ad",
+    "GREEN_PDF_UNTOUCHED": true,
+    "recorded_at_utc": "2026-08-29T07:51:27Z",
+    "schema": "hydradg.requirement_citation_audit.closeout.v1"
+  },
+  "blocking_reason": "STYLE_FILE_BYTE_MISMATCH_WITH_OFFICIAL_NEURIPS_2026_KIT",
+  "checks": {
+    "checklist_state": "AMBIGUOUS",
+    "citation_reference_audit": true,
+    "dblblindworkshop": true,
+    "double_blind": true,
+    "final_submission_gate": "FAIL",
+    "local_sty_parity": false,
+    "main_content_pages_le_8": true,
+    "no_final_preprint": true,
+    "no_previous_pass_exempts_final_bytes": true,
+    "official_template_reverified": true,
+    "pdf_sha256_frozen": "0b096ccec7c6c1a630e4308abacea89a59620e410bfaff705409ce884a93c1ad",
+    "workshoptitle": true
+  },
+  "recorded_at_utc": "2026-08-29T07:51:27Z",
+  "requirement_audit_exit": 1,
+  "schema": "hydradg.final_template_gate.v1",
+  "state": "FAIL"
+}

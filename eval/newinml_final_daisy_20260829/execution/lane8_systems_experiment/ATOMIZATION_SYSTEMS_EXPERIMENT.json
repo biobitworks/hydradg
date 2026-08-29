@@ -1,0 +1,50 @@
+{
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "citation_chain_requirements": {
+    "hallucinated_reference_count": 0,
+    "material_sentence_trace_coverage": 1.0,
+    "reported_numeric_trace_coverage": 1.0,
+    "unresolved_reference_count": 0
+  },
+  "claim_ceiling": "BOUNDED_CUSTODY_SYSTEMS_VALIDATION_ONLY",
+  "experiment_id": "ATOMIZATION-SYSTEMS-001",
+  "frozen_batches": {
+    "control": {
+      "atoms": 48,
+      "batch_root": "e1a96942af4e22869af58374fa4ede5626e20ae79d17e247da95cab98a9ba4ad",
+      "sources": 5
+    },
+    "evidence": {
+      "atoms": 312,
+      "batch_root": "dd1544867bb96ba94b87f9d1877b487d4127330be4a83857f9100bfe842bc16e",
+      "sources": 25
+    }
+  },
+  "hypotheses": {
+    "A1_DETERMINISM": {
+      "h0": "independent deterministic atomization runs differ",
+      "pass_criterion": "identical manifest/atom/edge/batch roots across R1/R2/R3"
+    },
+    "A2_COMPLETENESS": {
+      "h0": "declared sources/atoms lost or orphaned",
+      "pass_criterion": "verified==expected, orphan_atoms==0, readback PASS"
+    },
+    "A3_MULTI_ACTOR_PROVENANCE": {
+      "chat_ui_coverage_claimed": false,
+      "h0": "promoted object lacks accountable actor/tool/input lineage",
+      "pass_criterion": "100% promoted objects reverse-trace"
+    },
+    "A4_PERTURBATION_DETECTION": {
+      "h0": "mutation not detected before promotion",
+      "pass_criterion": "hash/root changes; divergence localized; stale not promoted"
+    },
+    "A5_REPRODUCIBLE_ANALYSIS": {
+      "h0": "rerun from frozen inputs yields different scientific payloads",
+      "pass_criterion": "identical citation/numeric/claim ledgers"
+    }
+  },
+  "not_primary_treatment_effect": true,
+  "recorded_at_utc": "2026-08-29T07:51:21Z",
+  "schema": "hydradg.atomization_systems_experiment.prereg.v1"
+}
