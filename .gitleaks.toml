@@ -84,7 +84,7 @@ regexes = ['''secret_state"\s*:\s*"[^"]*API_KEY=PRESENT''']
 description = "NewInML final daisy eval citation, rank, and stage receipt fields"
 condition = "AND"
 regexTarget = "match"
-paths = ['''^eval/newinml_final_daisy_20260829/''']
+paths = ['''^eval/newinml_''']
 regexes = [
   '''(?:bibkey|cite_key|citation_key)"?\s*:\s*"[a-z0-9_]+"''',
   '''rank_key"\s*:\s*"[0-9a-f]{64}"''',
@@ -94,4 +94,4 @@ regexes = [
 [[allowlists]]
 description = "NewInML daisy eval Cloudflare OS content SHA receipts"
 targetRules = ["cloudflare-api-key"]
-paths = ['''^eval/newinml_final_daisy_20260829/''']
+paths = ['''^eval/newinml_''']
