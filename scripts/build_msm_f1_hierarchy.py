@@ -13,11 +13,11 @@ def main() -> int:
 
     matplotlib.use("Agg")
     import matplotlib.pyplot as plt
-    from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+    from matplotlib.patches import FancyArrowPatch, FancyBboxPatch
 
-    fig, ax = plt.subplots(figsize=(8.5, 7))
+    fig, ax = plt.subplots(figsize=(8.5, 8.5))
     ax.set_xlim(0, 10)
-    ax.set_ylim(0, 10)
+    ax.set_ylim(0, 10.5)
     ax.axis("off")
 
     def box(x, y, w, h, text, fc="#E8F0FE", ec="#333333", fontsize=9):
@@ -45,19 +45,46 @@ def main() -> int:
             )
         )
 
-    box(2.5, 9.0, 5.0, 0.7, "Mechanical Scientific Method", fc="#DDEEFF")
-    arrow(5.0, 9.0, 5.0, 8.55)
-    box(2.5, 7.8, 5.0, 0.7, "FCO / FCG custody substrate", fc="#DDEEFF")
-    arrow(5.0, 7.8, 5.0, 7.35)
-    box(2.0, 6.5, 6.0, 0.8, "Mechanical Scientific Models\n(proposed model class)", fc="#FFF4DD")
-    arrow(3.2, 6.5, 2.8, 5.95)
-    arrow(6.8, 6.5, 7.2, 5.95)
-    box(0.6, 5.0, 3.6, 0.9, "HydraDG\n(primary evaluated implementation)", fc="#E8F8E8")
-    box(5.8, 5.0, 3.6, 1.1, "Vithia\nCOMPANION_IMPLEMENTATION\nZERO_PRIMARY_WEIGHT_EXP008_009", fc="#F5F5F5", fontsize=8)
-    arrow(2.4, 5.0, 2.4, 4.45)
-    box(0.4, 3.2, 4.0, 1.1, "SeedGraph / Ollarma / HydraLamp\n(execution & systems validation)", fc="#F0F0FF", fontsize=8)
-    arrow(2.4, 3.2, 2.4, 2.65)
-    box(0.4, 1.5, 4.0, 1.0, "EXP-008 / EXP-009\nUNDERPOWERED | EFFECT_NOT_ESTABLISHED", fc="#FDECEC", ec="#8B0000", fontsize=8)
+    box(2.5, 9.2, 5.0, 0.7, "Mechanical Scientific Method", fc="#DDEEFF")
+    arrow(5.0, 9.2, 5.0, 8.75)
+    box(2.5, 8.0, 5.0, 0.7, "FCO / FCG custody substrate", fc="#DDEEFF")
+    arrow(5.0, 8.0, 5.0, 7.55)
+    box(2.0, 6.7, 6.0, 0.8, "Mechanical Scientific Models\n(proposed model class)", fc="#FFF4DD")
+    arrow(3.2, 6.7, 2.8, 6.15)
+    arrow(6.8, 6.7, 7.2, 6.15)
+    box(0.5, 5.2, 3.6, 0.9, "HydraDG\n(primary evaluated implementation)", fc="#E8F8E8")
+    box(
+        5.6,
+        5.0,
+        3.9,
+        1.2,
+        "Vithia (vitaology / FCO repos)\nPRIOR RUN RECEIPTS (exec host)\nZERO_PRIMARY_WEIGHT EXP008/009",
+        fc="#F5F5F5",
+        fontsize=7,
+    )
+    arrow(2.3, 5.2, 2.3, 4.65)
+    arrow(7.5, 5.0, 7.5, 4.65)
+    box(
+        0.2,
+        3.35,
+        4.4,
+        1.25,
+        "HydraDG + HydraLamp\nlocal real-time scoring (M1-class, 32GB)\nLongMemEval / benchmarks: small local models only",
+        fc="#F0F0FF",
+        fontsize=7,
+    )
+    box(5.4, 3.55, 4.4, 1.05, "Antigence\nanticube + temporal classification", fc="#FFF8E8", fontsize=8)
+    arrow(2.4, 3.35, 2.4, 2.75)
+    box(
+        0.4,
+        1.55,
+        4.0,
+        1.05,
+        "EXP-008 / EXP-009\nUNDERPOWERED | EFFECT_NOT_ESTABLISHED",
+        fc="#FDECEC",
+        ec="#8B0000",
+        fontsize=8,
+    )
 
     ax.set_title("F1: Proposed hierarchy (conceptual; not treatment-effect evidence)", fontsize=10)
     OUT.parent.mkdir(parents=True, exist_ok=True)

@@ -23,6 +23,8 @@ V4 = ROOT / "paper/newinml2026_solo/final_v4"
 V1 = V4 / "comprehensive"
 OUT = V4 / "comprehensive_v2"
 MS = V4 / "manuscript"
+MSM_F1 = MS / "figures" / "F1_msm_hierarchy.png"
+MSM_F1_BUILDER = ROOT / "scripts/build_msm_f1_hierarchy.py"
 PREREG = ROOT / "paper/newinml2026_solo/provenance/admitted"
 EXP008 = PREREG / "eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json"
 EXP009 = PREREG / "eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json"
@@ -663,6 +665,12 @@ def build_data_layer() -> dict[str, Path]:
     return paths
 
 
+def ensure_msm_f1() -> Path:
+    if not MSM_F1.exists():
+        subprocess.run([sys.executable, str(MSM_F1_BUILDER)], cwd=ROOT, check=True)
+    return MSM_F1
+
+
 def render_figures(data_paths: dict[str, Path]) -> list[dict]:
     import matplotlib
 
@@ -695,49 +703,29 @@ def render_figures(data_paths: dict[str, Path]) -> list[dict]:
             }
         )
 
-    # F1 conceptual hierarchy (Mechanical Scientific Method → MSM → implementations)
-    fig, ax = plt.subplots(figsize=(8.5, 7))
-    ax.set_xlim(0, 10)
-    ax.set_ylim(0, 10)
-    ax.axis("off")
-    from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
-
-    def _box(x, y, w, h, text, fc="#E8F0FE", ec="#333333", fontsize=9):
-        patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.03", linewidth=1.2, edgecolor=ec, facecolor=fc)
-        ax.add_patch(patch)
-        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=fontsize)
-
-    def _arrow(x1, y1, x2, y2):
-        ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="-|>", mutation_scale=12, linewidth=1.2, color="#444444"))
-
-    _box(2.5, 9.0, 5.0, 0.7, "Mechanical Scientific Method", fc="#DDEEFF")
-    _arrow(5.0, 9.0, 5.0, 8.55)
-    _box(2.5, 7.8, 5.0, 0.7, "FCO / FCG custody substrate", fc="#DDEEFF")
-    _arrow(5.0, 7.8, 5.0, 7.35)
-    _box(2.0, 6.5, 6.0, 0.8, "Mechanical Scientific Models\n(proposed model class)", fc="#FFF4DD")
-    _arrow(3.2, 6.5, 2.8, 5.95)
-    _arrow(6.8, 6.5, 7.2, 5.95)
-    _box(0.6, 5.0, 3.6, 0.9, "HydraDG\n(primary evaluated implementation)", fc="#E8F8E8")
-    _box(5.8, 5.0, 3.6, 1.1, "Vithia\nCOMPANION_IMPLEMENTATION\nZERO_PRIMARY_WEIGHT_EXP008_009", fc="#F5F5F5", fontsize=8)
-    _arrow(2.4, 5.0, 2.4, 4.45)
-    _box(0.4, 3.2, 4.0, 1.1, "SeedGraph / Ollarma / HydraLamp\n(execution & systems validation)", fc="#F0F0FF", fontsize=8)
-    _arrow(2.4, 3.2, 2.4, 2.65)
-    _box(0.4, 1.5, 4.0, 1.0, "EXP-008 / EXP-009\nUNDERPOWERED | EFFECT_NOT_ESTABLISHED", fc="#FDECEC", ec="#8B0000", fontsize=8)
-    ax.set_title("F1: Proposed hierarchy (conceptual; not treatment-effect evidence)", fontsize=10)
-    save(
-        "F1",
-        fig,
-        "MSM→FCO/FCG→proposed model class→HydraDG/Vithia→execution stack→EXP-008/009",
-        "CONCEPTUAL_MECHANISM",
-        None,
-        "HYPOTHESIS_FRAMEWORK=NOT_APPLICABLE",
-        "Proposed intellectual hierarchy with bounded Vithia and underpowered EXP lanes",
+    # F1: canonical MSM hierarchy lives in manuscript TeX (F1_msm_hierarchy.png).
+    # Copy here for ledger/supplement parity — do not render a second duplicate diagram.
+    msm_f1 = ensure_msm_f1()
+    shutil.copy2(msm_f1, fig_dir / "F1.png")
+    ledger.append(
+        {
+            "figure_id": "F1",
+            "figure_type": "CONCEPTUAL_MECHANISM",
+            "figure_question": "Proposed intellectual hierarchy with bounded Vithia and underpowered EXP lanes",
+            "caption": "MSM→FCO/FCG→proposed model class→HydraDG/Vithia→execution stack→EXP-008/009",
+            "H0": "HYPOTHESIS_FRAMEWORK=NOT_APPLICABLE",
+            "data_source": str(msm_f1.relative_to(ROOT)),
+            "data_sha256": sha256_file(msm_f1),
+            "generator_sha256": sha256_file(MSM_F1_BUILDER),
+            "output_sha256": sha256_file(fig_dir / "F1.png"),
+        }
     )
 
-    # F2 primary hypothesis — attrition bars + null reference + underpowered band
+    # F2 primary hypothesis — 2×2: attrition counts (top) + data-quality rates from verdict JSON (bottom)
     d = load_json(data_paths["F2"])
-    fig, axes = plt.subplots(2, 2, figsize=(11, 7))
-    for ax, exp in zip(axes.flat, d["experiments"]):
+    fig, axes = plt.subplots(2, 2, figsize=(11, 7.5))
+    for col, exp in enumerate(d["experiments"]):
+        ax_top = axes[0, col]
         nr = exp["n_raw"]
         nv = exp.get("n_valid")
         if nv is None and nr and exp.get("valid_parse_rate") is not None:
@@ -748,27 +736,50 @@ def render_figures(data_paths: dict[str, Path]) -> list[dict]:
         vals = [nr, nv or 0, npair or 0, disc]
         colors = ["#4C72B0", "#55A868", "#C44E52", "#8172B2"]
         ypos = np.arange(len(labels))
-        ax.barh(ypos, vals, color=colors, height=0.55)
-        ax.set_yticks(ypos)
-        ax.set_yticklabels(labels, fontsize=8)
-        ax.set_xlim(0, max(nr, 1) * 1.15)
-        ax.axvspan(0, max(npair or 0, 1) + 0.5, alpha=0.12, color="#C44E52", label="Underpowered band")
-        ax.axvline(0, color="k", lw=0.8)
+        ax_top.barh(ypos, vals, color=colors, height=0.55)
+        ax_top.set_yticks(ypos)
+        ax_top.set_yticklabels(labels, fontsize=8)
+        ax_top.set_xlim(0, max(nr, 1) * 1.15)
+        ax_top.axvspan(0, max(npair or 0, 1) + 0.5, alpha=0.12, color="#C44E52")
+        ax_top.axvline(0, color="k", lw=0.8)
         rd = exp.get("rd")
         if rd is not None:
-            ax.text(0.98, 0.05, f"observed rd={rd}", transform=ax.transAxes, ha="right", fontsize=7)
-        ax.set_title(f"{exp['experiment_id']}: {exp['terminal_verdict']}", fontsize=9)
-        ax.text(
+            ax_top.text(0.98, 0.05, f"observed rd={rd}", transform=ax_top.transAxes, ha="right", fontsize=7)
+        ax_top.set_title(f"{exp['experiment_id']}: attrition ({exp['terminal_verdict']})", fontsize=9)
+        ax_top.text(
             0.02,
             0.95,
             "H0: delta=0\nEFFECT NOT ESTABLISHED",
-            transform=ax.transAxes,
+            transform=ax_top.transAxes,
             va="top",
             fontsize=7,
             color="#8B0000",
             bbox=dict(boxstyle="round", fc="white", alpha=0.8),
         )
-    fig.suptitle("F2: Primary EXP-008/009 --- nominal N vs effective confirmatory N", fontsize=10)
+
+        ax_bot = axes[1, col]
+        q_labels = ["Malformed", "Abstain", "Unknown"]
+        q_vals = [
+            100 * (exp.get("malformed_rate") or 0),
+            100 * (exp.get("abstain_rate") or 0),
+            100 * (exp.get("unknown_rate") or 0),
+        ]
+        q_colors = ["#DD8452", "#937860", "#8C8C8C"]
+        qpos = np.arange(len(q_labels))
+        ax_bot.barh(qpos, q_vals, color=q_colors, height=0.55)
+        ax_bot.set_yticks(qpos)
+        ax_bot.set_yticklabels(q_labels, fontsize=8)
+        ax_bot.set_xlim(0, max(max(q_vals) * 1.2, 5))
+        ax_bot.set_xlabel("% of raw cells", fontsize=8)
+        vpr = exp.get("valid_parse_rate")
+        ax_bot.set_title(
+            f"{exp['experiment_id']}: terminal failure mix (valid parse={vpr:.3f})" if vpr is not None else f"{exp['experiment_id']}: terminal failure mix",
+            fontsize=9,
+        )
+        for yi, val in zip(qpos, q_vals):
+            ax_bot.text(val + 0.5, yi, f"{val:.1f}%", va="center", fontsize=7)
+
+    fig.suptitle("F2: Primary EXP-008/009 --- attrition and frozen data-quality rates", fontsize=10)
     fig.tight_layout()
     save(
         "F2",
@@ -1402,13 +1413,23 @@ def _inject_figure(main_tex: Path, anchor: str, fig_block: str, fig_marker: str)
         main_tex.write_text(text.replace(anchor, fig_block + "\n" + anchor))
 
 
-def build_pdf() -> tuple[Path, Path]:
+def build_pdf(*, include_appendix: bool = True, output_name: str = "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf") -> tuple[Path, Path]:
     build_dir = OUT / "build"
+    if output_name == "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf":
+        build_dir = OUT / "build"
+    else:
+        build_dir = OUT / "openreview_build"
     build_dir.mkdir(parents=True, exist_ok=True)
-    work = OUT / "manuscript_work"
+    work = OUT / ("manuscript_work" if include_appendix else "openreview_work")
     if work.exists():
         shutil.rmtree(work)
     shutil.copytree(MS, work)
+    flags = work / "submission_flags.tex"
+    flags.write_text(
+        "% Auto-generated submission profile\n"
+        "\\newif\\ifincludeappendix\n"
+        + ("\\includeappendixtrue\n" if include_appendix else "\\includeappendixfalse\n")
+    )
     figs = work / "figures"
     figs.mkdir(exist_ok=True)
     for fig_id in ("F1", "F2", "F6"):
@@ -1416,18 +1437,7 @@ def build_pdf() -> tuple[Path, Path]:
         if src.exists():
             shutil.copy2(src, figs / f"{fig_id}.png")
     main = work / "main.tex"
-    _inject_figure(
-        main,
-        "\\subsection{Custody objects}",
-        r"""
-\begin{figure}[t]
-  \centering
-  \includegraphics[width=\linewidth]{figures/F1.png}
-  \caption{Proposed intellectual hierarchy (conceptual; not empirical effect evidence). HydraDG is the primary experimentally evaluated implementation; Vithia is a companion implementation with zero primary weight for EXP-008/009; EXP-008 and EXP-009 remain \emph{underpowered} with effect not established.}
-\end{figure}
-""",
-        "F1.png",
-    )
+    # F1 is only fig:msm-hierarchy in manuscript/main.tex — never inject a duplicate F1.png.
     _inject_figure(
         main,
         "\\section{Results}",
@@ -1435,7 +1445,8 @@ def build_pdf() -> tuple[Path, Path]:
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figures/F2.png}
-  \caption{Primary EXP-008/009 outcomes. H0 reference shown; terminal verdict UNDERPOWERED --- effect not established (not proof of null).}
+  \caption{Primary EXP-008/009 outcomes from frozen verdict JSON: top panels show attrition (raw $\rightarrow$ paired); bottom panels show terminal failure rates (malformed, abstain, unknown). H0 reference shown; UNDERPOWERED --- effect not established (not proof of null).}
+  \label{fig:primary-hypothesis}
 \end{figure}
 """,
         "F2.png",
@@ -1455,8 +1466,14 @@ def build_pdf() -> tuple[Path, Path]:
     log_path = build_dir / "main.log"
     subprocess.run(["tectonic", "-X", "compile", str(main), "--outdir", str(build_dir), "--keep-logs"], cwd=ROOT, check=True)
     pdf = build_dir / "main.pdf"
-    shutil.copy2(pdf, OUT / "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf")
-    return OUT / "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf", log_path
+    out_pdf = OUT / output_name
+    shutil.copy2(pdf, out_pdf)
+    return out_pdf, log_path
+
+
+def build_openreview_submission_pdf() -> Path:
+    pdf, _ = build_pdf(include_appendix=False, output_name="FINAL_OPENREVIEW_SUBMISSION_V2.pdf")
+    return pdf
 
 
 def build_supplement_pdf() -> Path:
@@ -1739,6 +1756,34 @@ def main() -> int:
     tab_r123 = run_r123(copy_tabs, OUT / "r123_tables", "tables")
 
     pdf, log_path = build_pdf()
+    or_pdf = build_openreview_submission_pdf()
+    or_pages = page_partition(or_pdf)
+    or_anon = anonymization_scan(or_pdf)
+    write_json(
+        OUT / "NEWINML_OPENREVIEW_FORMAT_COMPLIANCE.json",
+        {
+            "schema": "hydradg.newinml_openreview_format_compliance.v1",
+            "recorded_at_utc": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
+            "authorities": [
+                "NeurIPS 2026 Main Track Handbook V2026.3 (PDF order, checklist, double-blind, LLM disclosure)",
+                "NeurIPS 2026 neurips_2026.sty workshop template (dblblindworkshop + workshoptitle)",
+                "NewInML @ NeurIPS 2026 CFP: 2-8 pages excluding references; OpenReview double-blind; non-archival",
+            ],
+            "OPENREVIEW_SUBMISSION_PDF": str(or_pdf.relative_to(ROOT)),
+            "OPENREVIEW_PDF_SHA256": sha256_file(or_pdf),
+            "COMPREHENSIVE_INTERNAL_PDF": str(pdf.relative_to(ROOT)),
+            "TEMPLATE_OPTION": "dblblindworkshop",
+            "WORKSHOP_TITLE": "New in Machine Learning (NewInML) at NeurIPS 2026",
+            "APPENDIX_IN_OPENREVIEW_PDF": False,
+            "CHECKLIST_INCLUDED": True,
+            "OPENREVIEW_LICENSE_FIELD": "CC BY 4.0",
+            "REPOSITORY_LICENSE": "Apache-2.0 (code); article CC BY 4.0 at submission",
+            **or_pages,
+            "NEWINML_PAGE_GATE": or_pages.get("CONTENT_PAGE_GATE", "FAIL"),
+            "ANONYMITY_GATE": or_anon.get("ANONYMITY_GATE", "FAIL"),
+            "anonymity_hits": or_anon.get("hits", []),
+        },
+    )
     supp = build_supplement_pdf()
     zpath = build_zip(pdf, supp)
     pages = page_partition(pdf)

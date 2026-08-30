@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-08-30T06:05:16Z",
+  "recorded_at_utc": "2026-08-30T06:18:12Z",
   "rows": [
     {
       "evidence": "LICENSE+LICENSING.md+package.json+THIRD_PARTY_NOTICES.md",
@@ -9,7 +9,7 @@
     },
     {
       "evidence": "tables/A5_SOFTWARE_MODEL_DATASET_BOM.tsv",
-      "evidence_sha256": "2bda615f3a130756825ec974d805c6b66866001d2338594d7f66c426f3f66b47",
+      "evidence_sha256": "cd88d611f23171e7944fc0ef9117f743769819cfd40131e0dd81f962dfb73fe4",
       "gate": "SOFTWARE_LICENSE_COVERAGE",
       "method": "derived"
     },
@@ -27,31 +27,31 @@
     },
     {
       "evidence": "r123_figures/FIGURES_R123_RECEIPT.json",
-      "evidence_sha256": "8ab02077f5363fb93dd63ce0e3ad5bbbea25635b039eeeef1613d8ac501b6b4b",
+      "evidence_sha256": "bc6e9fc173123c6415465c39a8df69c7541337916a5858ba8908730c0115d595",
       "gate": "FIGURES_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "r123_tables/TABLES_R123_RECEIPT.json",
-      "evidence_sha256": "d1bd99043d45c8a6c8f9e2b71572429288a02b9f9a87511d4f6cd262f9044041",
+      "evidence_sha256": "980628cb069416154179cb19d7869bc1eaefea7eb16a13f09ef304b1e2a76228",
       "gate": "TABLES_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "TABLE_MASTER_LEDGER.tsv",
-      "evidence_sha256": "56ddc101cb821e70e2964a5b5f789dd9e31206906ce2193fa84bb8bd16fa23c4",
+      "evidence_sha256": "be437b4d953031a786dfbaf6e02bd838f5b76125825596c1e21c96ecc03864d4",
       "gate": "TABLE_UNIQUE_ID_GATE",
       "method": "derived"
     },
     {
       "evidence": "FIGURE_MASTER_LEDGER.json",
-      "evidence_sha256": "605e1dba0bb1673ecca2ac3dc8c8fc7df40980b90cc357c7de4ac210c97d56b5",
+      "evidence_sha256": "141730df7754e7fd8ad9dd0dad0a3b40fe81c4ffbce99e687a944c093e085211",
       "gate": "FIGURE_PARTITION_GATE",
       "method": "derived"
     },
     {
       "evidence": "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf",
-      "evidence_sha256": "7d0392a89a822ee0e6226387dd54fa88db08800fc645b04510b7a2337cf5f22e",
+      "evidence_sha256": "de64cf3c32fd79be22b6c45f6204c1fc452190aa7711ac4b5ddc3e49c0f298d2",
       "gate": "HUMAN_VISUAL_REVIEW",
       "method": "operator_required"
     }
