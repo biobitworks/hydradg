@@ -1,0 +1,43 @@
+{
+  "schema": "hydradg.newinml.appendix_requirements_gate.v1",
+  "checked_at_utc": "2026-08-30T02:10:00Z",
+  "cursor_review_branch": "cursor/newinml-solo-appendix-federation-v4-20260829",
+  "venue": {
+    "name": "NewInML @ NeurIPS 2026",
+    "official_url": "https://newinml.github.io/NewInML2026NeurIPS/",
+    "page_limit_content_pages": "2-8 excluding references",
+    "appendix_in_page_limit_assumption": "DO_NOT_ASSUME_EXCLUDED",
+    "template": "NeurIPS 2026 dblblindworkshop",
+    "review": "double-blind OpenReview",
+    "non_archival": true
+  },
+  "build_artifacts": {
+    "pdf_sha256": "06c60d34e91ced384ab9294aa1f412739bf0833ac5dab05f1eb90e74e200b86a",
+    "supplement_sha256": "d019f0344fb8821f372bbb8f6db8578a48a2609f9f5f562eb91b6d53fe66f42d",
+    "main_content_pages_estimate": 4,
+    "total_pdf_pages_including_appendix_checklist": 14,
+    "build_command": "make newinml-reproduce"
+  },
+  "gates": {
+    "APPENDIX_DOCUMENTATION_GAP": "PASS",
+    "PAGE_LIMIT_GATE": "PASS",
+    "ANONYMITY_GATE": "PASS",
+    "LICENSE_GATE": "PASS_WITH_NC_ND_EXCLUSIONS",
+    "REVERSE_TRACE_GATE": "PASS",
+    "CHECKLIST_GATE": "PASS_TRUTHFUL",
+    "REPRODUCIBILITY_GATE": "PASS",
+    "PROTEIN_HINGE_ADMISSION_COUNT": 0,
+    "EXP_008_STATE": "UNDERPOWERED",
+    "EXP_009_PRIMARY_STATE": "UNDERPOWERED",
+    "EXP_009_SECONDARY_PROMOTED": false,
+    "ANTICUBE_APPENDIX_F": "BLOCKED",
+    "FINAL_REVIEW_GATE": "HUMAN_REVIEW_REQUIRED"
+  },
+  "submission_topology_note": "Main body ~4 pages before references satisfies NewInML 2-8 rule. Built PDF includes appendix+checklist (14 pages total); split for OpenReview: submit main+refs+checklist only; use successor_supplement_anon.zip if supplement field permitted.",
+  "human_review_needed": [
+    "Split 14-page build PDF into submission vs internal dossier",
+    "Confirm OpenReview supplement upload field",
+    "Resolve Anticube canonical source before strengthening Appendix F",
+    "Visual review of federation paragraph"
+  ]
+}

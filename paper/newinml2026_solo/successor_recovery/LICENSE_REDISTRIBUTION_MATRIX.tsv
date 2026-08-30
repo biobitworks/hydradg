@@ -1,0 +1,21 @@
+file_or_asset	license_class	redistribution_allowed	derivative_allowed	anonymous_upload_allowed	openreview_include	notes
+successor_manuscript.pdf	OWNED_OR_AUTHORED	YES	YES	YES_AFTER_SCAN	YES	main anonymous paper; scan required
+appendices/E_gsd_antigence_federation.md	OWNED_OR_AUTHORED	YES	YES	YES	YES_IF_SUPPLEMENT_PERMITTED	anonymous functional labels
+figures/FIG-001 through FIG-007	OWNED_OR_AUTHORED	YES	YES	YES	YES	original diagrams
+statistics/*.csv	OWNED_OR_AUTHORED	YES	YES	YES	YES	derived from frozen observations
+eval/ic_failure_learning_20260827 frozen JSON	OWNED_OR_AUTHORED MIT	NO	NO	NO	NO	private repo paths; summarize only
+eval/hydralamp_runtype_20260826 receipts	OWNED_OR_AUTHORED MIT	YES summaries	YES summaries	YES summaries	YES	derived numeric summaries only
+antigence benchmark tables (derived)	UPSTREAM_OTHER Apache-2.0	NO code bundle	NO	YES tables only	YES	cite not rebundle repo
+vitaology pilot summaries (derived)	UPSTREAM_OTHER Apache-2.0	NO code bundle	NO	YES bounded tables	YES	EXP-003 FAIL disclosed
+Vithia Zenodo bundle	CC_BY_NC_ND_4_0	NO	NO	NO cite only	NO	10.5281/zenodo.21829929
+Vithia HF weights biobitworks/fco-vithia-fmo-076	CC_BY_NC_ND_4_0 gated	NO	NO	NO	NO	gated NFA artifact
+BEAM-1M reference	LICENSE_ONLY	NO	NO	NO	NO	license_only prereg
+Devign dataset stats only	UPSTREAM_OTHER	NO	NO	YES stats in table	YES	no dataset rebundle
+EnterpriseRAG-Bench stats	UPSTREAM_OTHER	NO	NO	YES stats only	YES	benchmark cite
+APPENDIX_SOURCE_MAP_INTERNAL.md	PRIVATE operator	NO	NO	NO	NO	never upload blind
+seedgraph private repo code	PRIVATE	NO	NO	NO	NO	frozen SHA cite only
+ollarma private repo code	PRIVATE	NO	NO	NO	NO	receipts in hydradg only
+gettingsciencedone private specs	PRIVATE	NO	NO	NO	NO	describe gates only
+fractal-custody-objects private code	PRIVATE	NO	NO	NO	NO	mechanism summaries only
+checklist.tex	OWNED_OR_AUTHORED	YES	YES	YES	YES	NeurIPS checklist mandatory
+neurips_2026.sty	UPSTREAM_OTHER NeurIPS	YES	YES	YES	YES	template required
