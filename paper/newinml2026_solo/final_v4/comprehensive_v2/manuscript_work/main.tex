@@ -14,7 +14,7 @@
 \usepackage{xcolor}
 \usepackage{microtype}
 
-\title{HydraDG: Governed Context Interventions with Fractal Custody for Agent Experiments}
+\title{Toward Mechanical Scientific Models: Fractal Custody and Governed Agent Experiments}
 
 \author{Anonymous Author(s)}
 
@@ -23,11 +23,12 @@
 \maketitle
 
 \begin{abstract}
-Agent evaluations increasingly depend on context interventions---retrieval, memory graphs, and prompt contracts---yet published reports often omit null outcomes, parser failures, and negative cells.
-We present HydraDG, a governed experimental framework that binds substantive model invocations, tool calls, and handoffs to \emph{Fractal Custody Objects} (FCOs) and a \emph{Fractal Custody Graph} (FCG).
-HydraDG preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states including timeouts, abstentions, and malformed outputs without silent substitution.
-We report two preregistered studies (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as \emph{underpowered} under bounded case replication, so confirmatory effect claims are not supported while negative and null evidence remains in custody.
-We argue that custody-first evaluation infrastructure supports reproducible agent science rather than optional logging.
+The \emph{Mechanical Scientific Method} treats scientific computation as a sequence of governed state transitions in which evidence, transforms, and bounded claims remain inspectable rather than collapsed into model prose.
+We propose the term \emph{Mechanical Scientific Model} for a computational model class that satisfies explicit requirements: explicit evidence state; governed and versioned state transitions; separation of deterministic transforms from probabilistic model outputs; preservation of positive, null, negative, failed, blocked, timeout, abstention, and contradictory outcomes; explicit claim ceilings; forward and reverse evidence traceability; and successor-state recording rather than silent history rewriting.
+\emph{Fractal Custody Objects} (FCOs) and a \emph{Fractal Custody Graph} (FCG) provide the custody substrate for binding those transitions.
+HydraDG is the primary experimentally evaluated implementation examined here: it preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states without silent substitution.
+We report two preregistered HydraDG studies (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as \emph{underpowered}, so confirmatory treatment-effect claims are not supported while null, negative, and failure evidence remains in custody.
+We do not claim that Mechanical Scientific Models are an established external field term; we offer them as a proposed model class and report bounded custody behavior from one implementation.
 \end{abstract}
 
 \section{Introduction}
@@ -36,14 +37,23 @@ Large language model agents are evaluated on task success, benchmark scores, and
 Less often preserved are the conditions under which experiments fail: swapped models, stale runtime selection, partial matrix execution, or JSON outputs that never parse.
 When negative and null cells disappear from the public record, later work cannot distinguish \emph{no effect} from \emph{no measurement}.
 
-HydraDG addresses this gap with a custody-first experimental contract.
+This paper separates five layers that are often conflated in agent-evaluation reporting:
+\begin{itemize}
+  \item \textbf{Method} --- the \emph{Mechanical Scientific Method}: governed transitions among explicit evidence states rather than narrative collapse of runs into conclusions.
+  \item \textbf{Model class} --- \emph{Mechanical Scientific Models} (proposed here; not an established external terminology): computational systems whose state transitions are mechanically exposable and failure-complete.
+  \item \textbf{Custody substrate} --- FCO/FCG receipts that bind source bytes, transforms, derived evidence, bounded claims, and successor state.
+  \item \textbf{Primary implementation} --- HydraDG, the experimentally evaluated implementation whose preregistered EXP-008 and EXP-009 results are reported here.
+  \item \textbf{Systems validation and companion exemplars} --- HydraLamp perturbation and replay tests evaluate custody mechanics only; Vithia is a bounded companion implementation carried at zero primary evidentiary weight for EXP-008/009.
+\end{itemize}
+
+HydraDG instantiates the proposed model class through a custody-first experimental contract.
 Every actor---human operator, frontier agent, local model runtime, or deterministic script---must emit or be represented by a handoff receipt before its output is promoted.
 Receipts bind actor identity, host, repository state, input hashes, raw output hashes, evidence class, claim ceiling, and signature state (hashes are identity commitments, not digital signatures unless an authorized signing operation occurred).
 Probabilistic model outputs are never treated as authority; they are evidence objects subject to deterministic scoring and graph append rules.
 
-This paper describes the HydraDG framework and reports terminal results from the IC Failure Learning structured-retrieval falsification lane.
-We do \emph{not} claim that structured FCG context improves failure prevention; preregistered EXP-008 and EXP-009 closed as underpowered.
-We also do not treat exploratory secondary patterns as promoted findings.
+This paper reports terminal results from the IC Failure Learning structured-retrieval falsification lane executed in HydraDG.
+We do \emph{not} claim that structured FCG context improves failure prevention; preregistered EXP-008 and EXP-009 closed as \emph{underpowered} with \emph{effect not established}.
+We also do not treat exploratory secondary patterns as promoted findings, and we do not promote Vithia to primary evidence for those experiments.
 
 \section{Related Work}
 
@@ -62,18 +72,48 @@ Companion custody-framework preprints (deferred to camera-ready de-anonymization
 
 \section{Framework}
 
+\subsection{Mechanical Scientific Models}
+
+We propose the term \emph{Mechanical Scientific Model} for a computational scientific system whose internal evidence-state transitions are mechanically exposable rather than inferred post hoc from model prose.
+We do not claim that this term is already established in the literature; it names a proposed model class whose required properties can be checked against an implementation.
+
+Let $S_t$ denote the governed evidence-and-claim state at step $t$.
+A Mechanical Scientific Model advances by governed transforms
+\[
+S_t \xrightarrow[\;E_t\;]{T_t} S_{t+1},
+\]
+where $T_t$ is a versioned, auditable transform (deterministic scorer, ingest pass, governed model call, or tool invocation) and $E_t$ is the evidence bound to that transition.
+Every transition must emit or bind:
+\begin{enumerate}
+  \item source or upstream evidence;
+  \item transform, tool, or model identity (with deterministic vs.\ probabilistic output separation);
+  \item derived evidence or parser state;
+  \item a bounded claim with an explicit ceiling; and
+  \item an artifact or state delta recorded as successor state rather than silent history rewriting.
+\end{enumerate}
+Required properties include: explicit evidence state; governed and versioned state transitions; deterministic vs.\ probabilistic output separation; preservation of positive, null, negative, failed, blocked, timeout, abstention, and contradictory outcomes; explicit claim ceilings; forward and reverse evidence traceability; and successor-state recording.
+Figure~\ref{fig:msm-hierarchy} situates the Mechanical Scientific Method, FCO/FCG custody, the proposed model class, HydraDG as the evaluated implementation, Vithia as a companion exemplar, and execution components used in this submission.
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/F1_msm_hierarchy.png}
+  \caption{Proposed intellectual hierarchy (conceptual; not empirical effect evidence).
+  HydraDG is the primary experimentally evaluated implementation; Vithia is a companion implementation with zero primary weight for EXP-008/009; EXP-008 and EXP-009 remain \emph{underpowered} with effect not established.}
+  \label{fig:msm-hierarchy}
+\end{figure}
+
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figures/F1.png}
-  \caption{Research program architecture (conceptual). Deterministic authority vs probabilistic model output are distinct layers.}
+  \caption{Proposed intellectual hierarchy (conceptual; not empirical effect evidence). HydraDG is the primary experimentally evaluated implementation; Vithia is a companion implementation with zero primary weight for EXP-008/009; EXP-008 and EXP-009 remain \emph{underpowered} with effect not established.}
 \end{figure}
 
 \subsection{Custody objects}
 
 An \textbf{FCO} (\emph{Fractal Custody Object}) materializes one bounded transformation: e.g., a model call, scorer pass, or ingest operation.
 An \textbf{FCG} (\emph{Fractal Custody Graph}) append records directed edges between FCOs with hash-linked roots \cite{laurie2013ct}.
-HydraDG preserves failures, nulls, and malformed outputs in custody (a failure-complete \emph{behavior}, not a redefinition of FCO/FCG).
+FCO/FCG provide the custody substrate on which Mechanical Scientific Models record transitions; HydraDG is one implementation that preserves failures, nulls, and malformed outputs in custody (a failure-complete \emph{behavior}, not a redefinition of FCO/FCG).
 Claim ceilings (exploratory mechanistic falsification, descriptive only, etc.) are declared at preregistration and enforced at promotion time.
 
 \subsection{Experimental freeze}
@@ -189,7 +229,13 @@ The same custody primitives have been instantiated in sibling systems for local-
 
 \section{Discussion}
 
-HydraDG shows that agent experiments can retain null and failure cells with the negative-result integrity expected in preregistered experimental sciences: failures are first-class, hashes are mandatory, and claim ceilings block over-interpretation.
+The principal contribution of this submission is not evidence that structured FCG retrieval improves failure prevention.
+EXP-008 and EXP-009 remain \emph{underpowered}; the empirical retrieval effect on the preregistered E06 endpoint is \emph{not established}.
+The broader methodological proposition is that scientific computational models can expose their evidence-state transitions mechanically---through governed receipts, explicit claim ceilings, and preserved terminal states---so that null, failure, and blocked outcomes remain part of model state rather than disappearing from the public record.
+
+HydraDG demonstrates bounded custody and systems-validation behavior under that contract: failures are first-class, hashes are mandatory, and claim ceilings block over-interpretation.
+HydraLamp perturbation, tamper, concurrency, and replay results evaluate custody mechanics only and do not constitute treatment-effect evidence for EXP-008/009.
+Vithia appears in the companion framework lineage as a bounded exemplar implementation; it is not promoted to primary evidence for the reported experiments.
 The EXP-008/009 underpowered terminations bound what cannot yet be claimed while preserving malformed and timeout cells for audit.
 
 \subsection{Limitations}
@@ -214,8 +260,10 @@ All directions above are \emph{planned} unless independently measured; they do n
 
 \section{Conclusion}
 
-We presented HydraDG, a custody-first framework for agent context-intervention experiments, and reported two terminal underpowered preregistered studies that block premature promotion of structured FCG retrieval effects on failure-prevention endpoints.
-We recommend FCO/FCG custody, explicit claim ceilings, and terminal-state preservation as baseline infrastructure for NewInML-style agent evaluations.
+We proposed the term \emph{Mechanical Scientific Model} for a computational model class whose governed state transitions expose evidence, separate deterministic from probabilistic outputs, preserve failure-complete terminal states, and bind explicit claim ceilings with forward and reverse traceability.
+FCO/FCG provide the custody substrate; HydraDG is one implementation examined here under that proposal.
+Two preregistered HydraDG studies (EXP-008, EXP-009) closed as \emph{underpowered}, demonstrating bounded custody and systems behavior while withholding confirmatory promotion of structured retrieval effects on failure-prevention endpoints.
+We recommend explicit Mechanical Scientific Method discipline---custody receipts, claim ceilings, and terminal-state preservation---as baseline infrastructure for NewInML-style agent evaluations, without claiming that structured retrieval efficacy has been established.
 
 \begin{thebibliography}{19}
 
