@@ -1,0 +1,110 @@
+{
+  "schema": "hydradg.cotal_coordination_custody_ablation.science_audit.v1",
+  "experiment_id": "COTAL_HYDRADG_ABLATION_20260827",
+  "framing": "NOT_WINNER_TAKE_ALL",
+  "execution_host": "magicSTUDIObox.local",
+  "recorded_at_utc": "2026-08-27T06:48:11Z",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "preregistration_sha256": "cac6546936852cd954e7cee480e54d0b1a29f8c2a1dbce1301721541dea2c63a",
+  "fixtures_file_sha256": "76d2745a5fc46c42e7605d7cf15d3da20459a94cad6c9655f06022fd02f190b2",
+  "constants_held": {
+    "fixture_count": 10,
+    "conditions": [
+      "A_DIRECT_BASELINE",
+      "B_COTAL_ONLY",
+      "C_HYDRADG_ONLY",
+      "D_COTAL_HYDRADG"
+    ],
+    "live_llm_in_primary_benchmark": false,
+    "silent_retry": false,
+    "scorer_locked": true,
+    "hydradg_signature_state_policy": "NOT_SIGNED",
+    "cotal_message_sig_separate_field": true
+  },
+  "outcome_vocabulary_preserved": [
+    "PASS",
+    "FAIL",
+    "NULL",
+    "NEGATIVE",
+    "ERROR",
+    "TIMEOUT",
+    "ABSTAIN",
+    "CONTRADICTORY"
+  ],
+  "findings": [
+    {
+      "finding": "COTAL_CONTRIBUTES_IDENTITY_AUTHENTICATION",
+      "evidence": {
+        "B_identity": [
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS"
+        ],
+        "A_identity": [
+          "ABSTAIN",
+          "ABSTAIN",
+          "FAIL",
+          "ABSTAIN",
+          "ABSTAIN",
+          "ABSTAIN",
+          "ABSTAIN",
+          "ABSTAIN",
+          "ABSTAIN",
+          "ABSTAIN"
+        ]
+      },
+      "claim_ceiling": "DESCRIPTIVE_CONTRAST_ONLY"
+    },
+    {
+      "finding": "HYDRADG_CONTRIBUTES_UNAUTHORIZED_WRITE_BLOCK",
+      "evidence": {
+        "C": [
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS",
+          "PASS"
+        ],
+        "A": [
+          "FAIL"
+        ]
+      },
+      "claim_ceiling": "DESCRIPTIVE_CONTRAST_ONLY"
+    },
+    {
+      "finding": "HYDRADG_CONTRIBUTES_CORRUPT_RECEIPT_REJECTION",
+      "evidence": {
+        "C": [
+          "PASS"
+        ],
+        "A": [
+          "FAIL"
+        ]
+      },
+      "claim_ceiling": "DESCRIPTIVE_CONTRAST_ONLY"
+    },
+    {
+      "finding": "COMBINATION_COMPLEMENTARY",
+      "statement": "D shows Cotal identity authentication together with HydraDG unauthorized-write blocking; neither subsystem alone covers both metric families.",
+      "claim_ceiling": "DESCRIPTIVE_CONTRAST_ONLY"
+    }
+  ],
+  "yappy_demo": {
+    "status": "PASS",
+    "benchmark_condition": false,
+    "receipt": "YAPPY_ILLUSTRATIVE_DEMO.json",
+    "raw_sha256": "a2b459465df203d08abc804c86ecf948772685af6d655c019501b230d8aff9b9",
+    "http_status": 200,
+    "SIGNATURE_STATE": "NOT_SIGNED",
+    "recorded_at_utc": "2026-08-27T06:49:08Z"
+  },
+  "negative_null_error_policy": "PRESERVED_NOT_COLLAPSED"
+}

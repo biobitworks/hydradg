@@ -1,0 +1,11 @@
+{
+  "CUDA_AVAILABLE": true,
+  "CUDA_DEVICE_COUNT": 1,
+  "GPU_MODEL": "Tesla P100-PCIE-16GB",
+  "PYTORCH_VERSION": "2.10.0+cu128",
+  "provider": "kaggle",
+  "receipt_sha256": "db0d3a652a1b0c746b77ad971abc8868316df58cf295e29913a514b847fb52cb",
+  "recorded_at_utc": "2026-08-29T10:39:57Z",
+  "schema": "hydradg.gpu_runtime_proof.v1",
+  "stdout_head": "{\"torch\": \"2.10.0+cu128\", \"cuda\": true, \"n\": 1, \"name\": \"Tesla P100-PCIE-16GB\"}"
+}

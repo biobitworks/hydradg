@@ -1,0 +1,50 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "qwen3.5:9b",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "FAILED_EMPTY_RESPONSE",
+  "git_commit": "f62e049f8e3a7684b1cd4b649174d68b827f5a19",
+  "handoff_id": "HANDOFF_V8_qwen3.5_9b_LongMemEval-S_e47becba",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "LongMemEval-S_e47becba",
+      "sha256": "011cded633c3236ea3be8f3f33ef201d719b80c48df5192c938d320c91ba5e18"
+    }
+  ],
+  "merkle_mmr": {
+    "receipt_sha256": "NOT_PROJECT_COMMITTED",
+    "root": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "qwen3.5:9b",
+    "bridge": "OLLARMA",
+    "requested_name": "qwen3.5:9b",
+    "runtime_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+    "runtime_name": "qwen3.5:9b"
+  },
+  "output_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "011cded633c3236ea3be8f3f33ef201d719b80c48df5192c938d320c91ba5e18",
+  "receipt_sha256": "3965939989b63760255c01f1a686150d8e0d9092632586aed18661e2791b0f6f",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "9c088dcc175d19b462d1330ee9eee26a89bad6a877b5ce71ba7823395411b034",
+  "response_text_bytes": 0,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "algorithm": null,
+    "public_key_id": null,
+    "signature_path": null,
+    "signed_scope": null,
+    "state": "NOT_SIGNED",
+    "verification_receipt_sha256": "NOT_APPLICABLE"
+  },
+  "successful": false,
+  "timestamp_utc": "2026-08-21T17:38:30Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "02949edaa13514fc85fd6867eed75ff62bfa2d71040e749f8cb06b518a7c053d"
+}

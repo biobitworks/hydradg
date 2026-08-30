@@ -1,0 +1,123 @@
+name: NewInML Final Verification
+
+on:
+  push:
+    branches:
+      - 'cursor/newinml-final-v3-*'
+      - 'cursor/newinml-daisy-execute-20260829'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  final-verification:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout exact SHA
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install verification tools
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+
+      - name: Print tested SHA
+        run: echo "TESTED_SHA=$GITHUB_SHA"
+
+      - name: Run public verifier
+        id: verifier
+        run: |
+          python3 scripts/newinml_final_v3_submission.py
+          cd paper/newinml2026_solo/reviewer_artifact
+          python3 verify_submission.py | tee /tmp/verify_out.json
+          if ! grep -q '"VERIFICATION": "PASS"' /tmp/verify_out.json; then
+            echo "Public verifier failed"
+            exit 1
+          fi
+
+      - name: Verify committed PDF SHA
+        run: |
+          PDF=paper/newinml2026_solo/manuscript/build/main.pdf
+          ACTUAL=$(sha256sum "$PDF" | awk '{print $1}')
+          EXPECTED=$(python3 -c "import json; print(json.load(open('paper/newinml2026_solo/FINAL_SUBMISSION_READINESS.json'))['PDF_SHA256'])")
+          echo "PDF_SHA256=$ACTUAL"
+          test "$ACTUAL" = "$EXPECTED"
+
+      - name: Verify content page gate
+        run: |
+          PAGES=$(pdfinfo paper/newinml2026_solo/manuscript/build/main.pdf | awk '/Pages:/ {print $2}')
+          CONTENT=$(python3 -c "import json; print(json.load(open('paper/newinml2026_solo/FINAL_SUBMISSION_READINESS.json'))['CONTENT_PAGES'])")
+          echo "TOTAL_PAGES=$PAGES CONTENT_PAGES=$CONTENT"
+          test "$CONTENT" -ge 2
+          test "$CONTENT" -le 8
+
+      - name: Anonymization scan
+        run: |
+          pdftotext paper/newinml2026_solo/manuscript/build/main.pdf - | tee /tmp/paper.txt
+          for needle in Byron Biobitworks biobitworks github.com 10.5281 Zenodo cellARCH magicSTUDIObox; do
+            if grep -qi "$needle" /tmp/paper.txt; then
+              echo "Anonymization failure: $needle"
+              exit 1
+            fi
+          done
+          echo "ANONYMIZATION_GATE=PASS"
+
+      - name: Project separation gates
+        run: |
+          python3 - <<'PY'
+          import json
+          r = json.load(open("paper/newinml2026_solo/FINAL_SUBMISSION_READINESS.json"))
+          assert r["PROTEIN_HINGE_ARTIFACTS_ADMITTED"] == 0
+          assert r["Q38_PRIMARY_RESULTS_ADMISSION"] == 0
+          assert r["SEEDGRAPH_TERMINAL_COMPLETION_CLAIM"] is False
+          assert r["FCO_EXPANSION_GATE"] == "PASS"
+          assert r["FCG_EXPANSION_GATE"] == "PASS"
+          assert r["SYSTEMS_SCIENCE_BOUNDARY_GATE"] == "PASS"
+          print("PROJECT_SEPARATION_GATE=PASS")
+          PY
+
+      - name: Secret scan anonymous bundle
+        run: |
+          if command -v gitleaks >/dev/null 2>&1; then
+            gitleaks detect --no-git --source paper/newinml2026_solo/reviewer_artifact --redact
+          else
+            echo "gitleaks not installed; running pattern scan"
+            ! grep -rE '(AKIA[0-9A-Z]{16}|ghp_[a-zA-Z0-9]{36}|sk-[a-zA-Z0-9]{20,})' paper/newinml2026_solo/reviewer_artifact || exit 1
+          fi
+          echo "ANONYMOUS_SUBMISSION_BUNDLE_SECRET_SCAN=PASS"
+
+      - name: Create attestation artifact
+        run: |
+          python3 - <<'PY'
+          import json, os
+          readiness = json.load(open("paper/newinml2026_solo/FINAL_SUBMISSION_READINESS.json"))
+          root = json.load(open("paper/newinml2026_solo/reviewer_artifact/PUBLIC_SUBMISSION_ROOT.json"))
+          att = {
+            "schema": "hydradg.newinml2026_solo.final_github_action_attestation.v1",
+            "TESTED_SHA": os.environ["GITHUB_SHA"],
+            "PDF_SHA256": readiness["PDF_SHA256"],
+            "PUBLIC_SUBMISSION_ROOT": root["PUBLIC_SUBMISSION_ROOT"],
+            "verifier_result": "PASS",
+            "anonymity_result": "PASS",
+            "page_result": "PASS",
+            "project_separation_result": "PASS",
+            "ACTION_FINAL_VERIFICATION": "PASS",
+          }
+          with open("FINAL_GITHUB_ACTION_ATTESTATION.json", "w") as f:
+            json.dump(att, f, indent=2)
+          print(json.dumps(att, indent=2))
+          PY
+
+      - name: Upload attestation
+        uses: actions/upload-artifact@v4
+        with:
+          name: newinml-final-attestation
+          path: FINAL_GITHUB_ACTION_ATTESTATION.json

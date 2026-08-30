@@ -1,0 +1,7 @@
+{
+  "note": "mi cortex remember does not support --json; raw CLI streams captured.",
+  "exit_code": 0,
+  "timed_out": false,
+  "stdout": "{\n  \"agent\": \"cli\",\n  \"confidence\": 0.7,\n  \"derived_from_edges\": 0,\n  \"embedded\": false,\n  \"kind\": \"decision\",\n  \"linked_sources\": 1,\n  \"note\": \"memory persisted on the universal_id spine (raw + embedded + graph) — retrievable via /v1/answer and /recall like any other knowledge\",\n  \"retrievable_at\": \"2026-08-27T21:42:10Z\",\n  \"status\": \"ok\",\n  \"universal_id\": \"agent:memories:5fbc61fd163cb128caf83d29\"\n}\n",
+  "stderr": ""
+}

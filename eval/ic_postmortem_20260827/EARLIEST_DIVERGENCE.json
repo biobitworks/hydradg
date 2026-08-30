@@ -1,0 +1,37 @@
+{
+  "schema": "hydradg.ic_postmortem.earliest_divergence.v1",
+  "candidates_tested": {
+    "A_rubric_not_retrieved_early": {
+      "status": "PARTIAL",
+      "evidence": "Rubric in docs/ANB prereg Aug 26; ic_hack_get called Aug 27 05:29 \u2014 before submit but vault not acted on"
+    },
+    "B_text_form_not_agent_native": {
+      "status": "CONFIRMED_CONTRIBUTING",
+      "evidence": "Submit used text fields only; did not demonstrate IC MCP logistics as proof"
+    },
+    "C_media_not_in_vault": {
+      "status": "CONFIRMED_PRIMARY",
+      "evidence": "folder_id=null; IC_VAULT_UPLOAD_PACKET created 33min AFTER ack"
+    },
+    "D_provenance_not_exposed": {
+      "status": "CONFIRMED_CONTRIBUTING",
+      "evidence": "No origin comparison in blurb or vault"
+    },
+    "E_product_over_package": {
+      "status": "CONFIRMED_CONTRIBUTING",
+      "evidence": "Backup media finalized 11:37 UTC; submit 22:13 UTC; vault packet never executed"
+    },
+    "F_late_package_design": {
+      "status": "CONFIRMED",
+      "evidence": "Seal/hero created ~15:02-15:31 PDT same day as submit"
+    },
+    "G_no_judge_red_team_gate": {
+      "status": "CONFIRMED",
+      "evidence": "IMMERSIVE_COMMONS_SUBMISSION_REVIEW.md focused on gates not 90s judge test"
+    }
+  },
+  "earliest_causal_divergence": "C",
+  "earliest_divergence_statement": "Media and evidence pack existed by 2026-08-27T18:37:46Z (BACKUP_RECEIPT) but ic_hack_submit was executed with folder_id=null; vault upload was planned only after acknowledgement (IC_VAULT_UPLOAD_PACKET at 23:12 UTC). The submission pipeline treated IC as a 6-field text form rather than an evidence-delivery surface.",
+  "secondary_divergence": "D",
+  "tertiary_divergence": "B"
+}

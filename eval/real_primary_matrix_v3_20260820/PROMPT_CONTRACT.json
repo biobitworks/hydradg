@@ -1,0 +1,9 @@
+{
+  "eval_only_separation": "GROUND_TRUTH_SEPARATED_IN_EVAL_ONLY_FIELD",
+  "schema": "hydradg.prompt_contract.v3",
+  "seed": 42,
+  "system_prompt": "Perform the requested retrieval/context task using only the supplied case material. Do not infer unavailable evidence.",
+  "temperature": 0.0,
+  "timestamp_unix": 1787281254,
+  "user_prompt_template": "Case ID: {case_id}\nDataset: {dataset}\nContent:\n{case_payload}\nExtract canonical entities and relationships:"
+}

@@ -1,0 +1,38 @@
+{
+  "execution_state": "PREPARED_UNEXECUTED",
+  "routes": [
+    {
+      "description": "Dense content retrieval",
+      "id": "Route A"
+    },
+    {
+      "description": "Route A + BM25 sparse lexical retrieval",
+      "id": "Route B"
+    },
+    {
+      "description": "Route B + sliding-window contextual enrichment / latent representation",
+      "id": "Route C"
+    },
+    {
+      "description": "Route C + adaptive query expansion",
+      "id": "Route D"
+    },
+    {
+      "description": "Route D + FCG graph entry and bounded traversal",
+      "id": "Route E"
+    },
+    {
+      "description": "Route E + valid-time/current-state/supersession filtering",
+      "id": "Route F"
+    },
+    {
+      "description": "Route F + reranking / evidence fusion",
+      "id": "Route G"
+    },
+    {
+      "description": "Route G + full FCO/FCG custody and claim-state controls",
+      "id": "Route H"
+    }
+  ],
+  "schema": "hydradg.beam_architecture_routes.v2"
+}

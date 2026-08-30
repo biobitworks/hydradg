@@ -1,0 +1,31 @@
+{
+  "claim_ceiling": "HOSTED_CONNECTIVITY_QUERY_EXECUTED; CANONICAL_FCO_FCG_BYOG_PARITY_NOT_ESTABLISHED",
+  "collection": "hydradg-judge-demo",
+  "database": "hydradg",
+  "edge_extra_count": 0,
+  "edge_missing_count": 1692,
+  "expected_edge_count": 1692,
+  "expected_fco_count": 653,
+  "fco_extra_count": 0,
+  "fco_missing_count": 653,
+  "first_extra_edge": null,
+  "first_extra_fco": null,
+  "first_missing_edge": [
+    "fco:0005856ac9fcdda2d95e7ec92132f85041dbea388a8cff72a08b774c7adec5a0",
+    "DERIVED_FROM",
+    "fco:daa11b4685189b2eff2f8412244582093b9e747caa184825d63a4165943b686f"
+  ],
+  "first_missing_fco": "fco:0005856ac9fcdda2d95e7ec92132f85041dbea388a8cff72a08b774c7adec5a0",
+  "graph_type_label": "HYDRADG_CANONICAL_BYOG_GRAPH",
+  "hosted_edge_root_sha256": "",
+  "hosted_fco_root_sha256": "",
+  "local_edge_root_sha256": "43c160a579ca48b9099b2d7827b2ef904d36e2b5047bfe89809a5e8d71bfa5e7",
+  "local_fco_root_sha256": "1384a838bd4988a46fff3705230a0c82fc8b1d5721951fb9e49cca293e5207ea",
+  "observed_edge_count": 0,
+  "observed_fco_count": 0,
+  "schema": "hydradg.full_hosted_byog_parity_receipt.v2",
+  "source_id": "hydradg-canonical-fcg-653-1692-v1",
+  "status": "NOT_ESTABLISHED",
+  "timestamp_iso": "2026-08-20T21:26:52Z",
+  "timestamp_unix": 1787261212
+}

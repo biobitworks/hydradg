@@ -1,0 +1,202 @@
+{
+  "schema": "hydradg.ollarma_fcg_review.comparison.v1",
+  "reconciled_at_utc": "2026-08-27T19:00:00Z",
+  "authority": {
+    "present": [
+      "AGENTS.md",
+      "docs/AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md",
+      "docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md",
+      "docs/FCO_FCG_SOURCE_LINEAGE.md",
+      "schemas/agent_model_handoff_receipt.schema.json",
+      "schemas/orchestration_work_unit.schema.json"
+    ],
+    "absent_not_invented": [
+      "PROJECT_CONTROL.yaml",
+      "FCO_FCG_CANONICAL_SPEC.md",
+      "CLAIM_CEILINGS.md",
+      "EVIDENCE_LEVELS.md",
+      "FCO_SCHEMA.json",
+      "FCG_SCHEMA.json",
+      "SIGNING_AND_KEYS.md"
+    ]
+  },
+  "disagreements": [
+    {
+      "topic": "MODEL_ACTOR_LAYER",
+      "POSITION_A": "Introduce separate model-actor FCO + invocation FCO + work-unit FCO types",
+      "POSITION_B": "handoff_id receipt is invocation identity; no new FCO types",
+      "POSITION_C": "work_unit FCO is invocation; model-actor FCO from model digest",
+      "AGREEMENT": "No dedicated MODEL_MERKLE_ROOT; parent_handoff chain required",
+      "DISAGREEMENT": "Whether to mint new FCO types vs reuse handoff receipt + work unit envelope",
+      "EARLIEST_DIVERGENT_ASSUMPTION": "Whether invocation identity is already fully represented by agent_model_handoff receipt SHA-256",
+      "CANONICAL_RESOLUTION": "REUSE handoff receipt as invocation identity; work_unit for orchestration; defer new FCO types until FCO_SCHEMA.json available"
+    },
+    {
+      "topic": "SAME_MODEL_ACROSS_RUNS",
+      "POSITION_A": "Different actor per invocation (model A)",
+      "POSITION_B": "Same actor, new invocations",
+      "POSITION_C": "Same actor (runtime_digest stable), new work_unit per invocation",
+      "AGREEMENT": "Each invocation is distinct evidence",
+      "DISAGREEMENT": "Actor stability across runs",
+      "EARLIEST_DIVERGENT_ASSUMPTION": "Whether actor_id names a role (RESEARCH_AGENT) or Ollama tag (qwen2.5-coder:7b)",
+      "CANONICAL_RESOLUTION": "Two layers: role actor fco:actor:* for gateway; OLLAMA_MODEL actor_id=approved_name with runtime_digest for inference; same tuple across runs, new handoff each call"
+    },
+    {
+      "topic": "UI_GROUPING",
+      "POSITION_A": "Canonical FCO relation for UI grouping",
+      "POSITION_B": "Canonical FCO relations",
+      "POSITION_C": "Canonical FCO relations (warns against HydraDB-only)",
+      "AGREEMENT": "Do not invent FCG roots for UI",
+      "DISAGREEMENT": "Whether grouping must be canonical graph edge vs query projection",
+      "EARLIEST_DIVERGENT_ASSUMPTION": "Whether UI convenience warrants canonical edge promotion",
+      "CANONICAL_RESOLUTION": "PROJECTION_ONLY via HydraDB/index on handoff receipts and events; optional deterministic UI grouping keyed by actor_id/runtime_model"
+    },
+    {
+      "topic": "EXECUTION_ROOT",
+      "POSITION_A": "Infer EXECUTION_ROOT from FCO graph (ambiguous)",
+      "POSITION_B": "No EXECUTION_ROOT type",
+      "POSITION_C": "EXECUTION_ROOT = FCG root_after",
+      "AGREEMENT": "None on EXECUTION_ROOT semantics",
+      "DISAGREEMENT": "Whether FCG root_after can name an invocation",
+      "EARLIEST_DIVERGENT_ASSUMPTION": "Confusing append outcome with invocation identity",
+      "CANONICAL_RESOLUTION": "REJECT \u2014 FCG root_after is graph state snapshot not invocation root"
+    }
+  ],
+  "proposals": [
+    {
+      "id": "P01_MODEL_ACTOR_MERKLE_ROOT",
+      "proposal": "Assign each Ollama model a dedicated Merkle/FCG MODEL_ACTOR_ROOT",
+      "canonical_support": "ABSENT \u2014 AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT forbids treating model digest as graph root; FCO_FCG_CANONICAL_SPEC absent but lineage doc separates hash/MMR/FCG root",
+      "schema_support": "agent_model_handoff_receipt has model.runtime_digest as field, not root; no MODEL_ROOT type in present schemas",
+      "implementation_change_required": true,
+      "claim_risk": "REJECT_CONFLATES_IDENTITIES \u2014 model digest \u2260 FCG root",
+      "decision": "REJECT_CONFLATES_IDENTITIES"
+    },
+    {
+      "id": "P02_ROLE_ACTOR_FCO",
+      "proposal": "Persistent gateway role actor as fco:actor:ROLE (RESEARCH_AGENT, POISON_AGENT)",
+      "canonical_support": "PRESENT \u2014 HydraLamp HYDRALAMP_EVENTS.jsonl uses fco:actor:ACTOR_ID on HANDSHAKE_OK",
+      "schema_support": "PARTIAL \u2014 handoff actor_class enum; HydraLamp event shape is eval-local not in FCO_SCHEMA.json (absent)",
+      "implementation_change_required": false,
+      "claim_risk": "LOW when labeled role/capability actor not Ollama weights",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P03_OLLAMA_MODEL_IDENTITY",
+      "proposal": "Persistent Ollama model identity = actor_class OLLAMA_MODEL + actor_id approved_name + runtime_digest",
+      "canonical_support": "PRESENT \u2014 custody/turns/HANDOFF_V9_* receipts; handoff model{} block",
+      "schema_support": "agent_model_handoff_receipt.model + actor_class OLLAMA_MODEL",
+      "implementation_change_required": false,
+      "claim_risk": "LOW \u2014 digest change implies new identity tuple",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P04_INVOCATION_HANDOFF_RECEIPT",
+      "proposal": "One material invocation = one agent_model_handoff receipt; identity = receipt SHA-256 / handoff_id",
+      "canonical_support": "PRESENT \u2014 AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT \u00a72-\u00a76",
+      "schema_support": "agent_model_handoff_receipt required fields incl parent_handoff_sha256",
+      "implementation_change_required": false,
+      "claim_risk": "LOW",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P05_ORCHESTRATION_WORK_UNIT",
+      "proposal": "Execution envelope = orchestration_work_unit with parent_receipt_sha256[] and lease",
+      "canonical_support": "PRESENT \u2014 GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE",
+      "schema_support": "orchestration_work_unit.schema.json",
+      "implementation_change_required": false,
+      "claim_risk": "LOW \u2014 work unit is orchestration not scientific root",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P06_PARENT_HANDOFF_CHAIN",
+      "proposal": "Invocation parent = parent_handoff_sha256 (prev receipt), not a new root type",
+      "canonical_support": "PRESENT \u2014 handoff contract \u00a72 parent links",
+      "schema_support": "parent_handoff_sha256 in handoff schema; parent_receipt_sha256 in work unit",
+      "implementation_change_required": false,
+      "claim_risk": "LOW",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P07_FCG_ROOT_ON_APPEND_ONLY",
+      "proposal": "FCG root_before/root_after only on canonical append / materialization events",
+      "canonical_support": "PRESENT \u2014 HydraLamp events; handoff fcg{} block",
+      "schema_support": "handoff fcg.root_before/root_after; events fcg_root_before/after",
+      "implementation_change_required": false,
+      "claim_risk": "LOW if not assigned per-model",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P08_INVOCATION_FCO_TYPE",
+      "proposal": "Add new canonical FCO type INVOCATION_ROOT distinct from handoff receipt",
+      "canonical_support": "ABSENT \u2014 FCO_SCHEMA.json not in checkout",
+      "schema_support": "ABSENT \u2014 no invocation FCO schema field",
+      "implementation_change_required": true,
+      "claim_risk": "MEDIUM \u2014 duplicates handoff receipt identity",
+      "decision": "REQUIRES_HUMAN_SCHEMA_DECISION"
+    },
+    {
+      "id": "P09_UI_MODEL_GROUPING_FCO_EDGE",
+      "proposal": "Add canonical FCO parent edge MODEL_ACTOR -> invocations for UI filtering",
+      "canonical_support": "ABSENT as required graph edge",
+      "schema_support": "ABSENT",
+      "implementation_change_required": true,
+      "claim_risk": "MEDIUM \u2014 UI convenience polluting FCG semantics",
+      "decision": "PROJECTION_ONLY"
+    },
+    {
+      "id": "P10_UI_HYDRADB_PROJECTION",
+      "proposal": "HydraDB/query projection groups events by runtime_model + actor_id + model.runtime_digest",
+      "canonical_support": "ALIGNED \u2014 HydraDB is projection substrate per orchestration profile",
+      "schema_support": "handoff hydradb{} block; hydra_schema nodes include Run/Turn",
+      "implementation_change_required": false,
+      "claim_risk": "LOW when labeled projection not canonical append",
+      "decision": "PROJECTION_ONLY"
+    },
+    {
+      "id": "P11_MEDIA_CHILD_OF_MODEL",
+      "proposal": "Screenshot FCO child of model invocation because model visible in frame",
+      "canonical_support": "CONTRADICTS \u2014 provenance must reflect derivation not visibility",
+      "schema_support": "ABSENT dedicated media schema in checkout",
+      "implementation_change_required": false,
+      "claim_risk": "HIGH \u2014 false lineage",
+      "decision": "REJECT_CONFLATES_IDENTITIES"
+    },
+    {
+      "id": "P12_MEDIA_DERIVATION_CHAIN",
+      "proposal": "RAW MEDIA FCO -> PROVENANCE MEDIA FCO links to EVENT + VERIFICATION RECEIPT via verification work_unit handoff",
+      "canonical_support": "PARTIAL \u2014 backup BROWSER_VERIFY.json pattern; VIDEO_RECORDING_RUNBOOK",
+      "schema_support": "PARTIAL \u2014 verification_receipt in handoff signature block only",
+      "implementation_change_required": false,
+      "claim_risk": "LOW with explicit derivation edges",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P13_SAME_MODEL_NEW_INVOCATION_ONLY",
+      "proposal": "Same Ollama model across runs: stable model identity, new handoff per invocation",
+      "canonical_support": "PRESENT \u2014 HANDOFF_V9_* matrix reuses actor_id, unique handoff_id/receipt per case",
+      "schema_support": "handoff_id unique per invocation",
+      "implementation_change_required": false,
+      "claim_risk": "LOW",
+      "decision": "REUSE_CANONICAL"
+    },
+    {
+      "id": "P14_EXECUTION_ROOT_EQUALS_FCG_AFTER",
+      "proposal": "EXECUTION_ROOT := FCG root_after for each invocation",
+      "canonical_support": "CONFLATES \u2014 FCG root is graph state not invocation identity",
+      "schema_support": "fcg.root_after is append outcome field not invocation id",
+      "implementation_change_required": false,
+      "claim_risk": "HIGH \u2014 identity conflation",
+      "decision": "REJECT_CONFLATES_IDENTITIES"
+    },
+    {
+      "id": "P15_LOCAL_EXECUTION_ID",
+      "proposal": "Use local_execution_id (ollarma_<uuid>) as operational correlation id only",
+      "canonical_support": "PRESENT \u2014 hydralamp localModel.ts / runtype receipts",
+      "schema_support": "NOT in handoff schema \u2014 eval-local operational id",
+      "implementation_change_required": false,
+      "claim_risk": "LOW if never promoted to FCG root",
+      "decision": "PROJECTION_ONLY"
+    }
+  ]
+}

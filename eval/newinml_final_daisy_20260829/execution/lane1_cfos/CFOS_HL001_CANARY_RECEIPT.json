@@ -1,0 +1,33 @@
+{
+  "EXECUTION_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "EXECUTION_COMMIT_ATTESTATION": "PENDING_POST_COMMIT_EXTERNAL_ATTESTATION",
+  "GENERATED_FROM_TREE": "cad047a99e97be9ff02a563b5fda251f704c4847",
+  "PLAN_BRANCH": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "PLAN_SHA": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "blocking_reasons": [
+    "cloudflare-os checkout NOT_LOCATED",
+    "wrangler NOT_IN_PATH"
+  ],
+  "canary_cells_executed": 0,
+  "claim_ceiling": "CLOUDFLARE_OS_INTEGRATION_CANARY",
+  "cloudflare_os_path": null,
+  "cloudflare_os_present": false,
+  "execution_state": "NOT_EXECUTED",
+  "experiment_id": "CFOS-HL-001",
+  "host": "magicSTUDIObox.local",
+  "lane_state": "BLOCKED",
+  "pnpm_present": true,
+  "prep_only": true,
+  "progression": [
+    "1_smoke",
+    "4_cell_smoke",
+    "8_cell_canary",
+    "VERIFY",
+    "optional_100"
+  ],
+  "recorded_at_utc": "2026-08-29T07:40:32Z",
+  "schema": "hydradg.cfos_hl001.canary.v1",
+  "smoke_cells_executed": 0,
+  "wrangler_present": false
+}

@@ -1,0 +1,130 @@
+{
+  "schema": "hydradg.ollarma_fcg_review.model_inventory.v1",
+  "recorded_at_utc": "2026-08-27T18:51:59Z",
+  "host": "magicSTUDIObox.local",
+  "repo": "/Users/byron/projects/active/hydradg",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "git_commit": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "discovery_path": "ollama list + ollama show --modelfile",
+  "ollarma_cli_in_path": false,
+  "ollama_api_reachable": true,
+  "panel_models_selected": {
+    "MODEL_A": "qwen2.5-coder:7b",
+    "MODEL_B": "deepseek-r1:14b",
+    "MODEL_C": "qwen3:8b"
+  },
+  "models": [
+    {
+      "MODEL_NAME": "qwen3.8:27b",
+      "MODEL_TAG": "27b",
+      "MODEL_DIGEST": "22130167c4c2",
+      "MODEL_SIZE": "17 GB",
+      "MODEL_FAMILY": "qwen3.8",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen3.6:27b",
+      "MODEL_TAG": "27b",
+      "MODEL_DIGEST": "a50eda8ed977",
+      "MODEL_SIZE": "17 GB",
+      "MODEL_FAMILY": "qwen3.6",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "llava:7b",
+      "MODEL_TAG": "7b",
+      "MODEL_DIGEST": "8dd30f6b0cb1",
+      "MODEL_SIZE": "4.7 GB",
+      "MODEL_FAMILY": "llava",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "gpt-oss:20b",
+      "MODEL_TAG": "20b",
+      "MODEL_DIGEST": "17052f91a42e",
+      "MODEL_SIZE": "13 GB",
+      "MODEL_FAMILY": "gpt-oss",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen2.5-coder:7b",
+      "MODEL_TAG": "7b",
+      "MODEL_DIGEST": "dae161e27b0e",
+      "MODEL_SIZE": "4.7 GB",
+      "MODEL_FAMILY": "qwen2.5-coder",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "deepseek-r1:14b",
+      "MODEL_TAG": "14b",
+      "MODEL_DIGEST": "c333b7232bdb",
+      "MODEL_SIZE": "9.0 GB",
+      "MODEL_FAMILY": "deepseek-r1",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "granite4.1:8b",
+      "MODEL_TAG": "8b",
+      "MODEL_DIGEST": "444af1c4b2fe",
+      "MODEL_SIZE": "5.3 GB",
+      "MODEL_FAMILY": "granite4.1",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen3.5:9b",
+      "MODEL_TAG": "9b",
+      "MODEL_DIGEST": "6488c96fa5fa",
+      "MODEL_SIZE": "6.6 GB",
+      "MODEL_FAMILY": "qwen3.5",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen3:8b",
+      "MODEL_TAG": "8b",
+      "MODEL_DIGEST": "500a1f067a9f",
+      "MODEL_SIZE": "5.2 GB",
+      "MODEL_FAMILY": "qwen3",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen3:4b",
+      "MODEL_TAG": "4b",
+      "MODEL_DIGEST": "359d7dd4bcda",
+      "MODEL_SIZE": "2.5 GB",
+      "MODEL_FAMILY": "qwen3",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "phi4-mini:latest",
+      "MODEL_TAG": "latest",
+      "MODEL_DIGEST": "78fad5d182a7",
+      "MODEL_SIZE": "2.5 GB",
+      "MODEL_FAMILY": "phi4-mini",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen2.5:1.5b",
+      "MODEL_TAG": "1.5b",
+      "MODEL_DIGEST": "65ec06548149",
+      "MODEL_SIZE": "986 MB",
+      "MODEL_FAMILY": "qwen2.5",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "nomic-embed-text:latest",
+      "MODEL_TAG": "latest",
+      "MODEL_DIGEST": "0a109f422b47",
+      "MODEL_SIZE": "274 MB",
+      "MODEL_FAMILY": "nomic-embed-text",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    },
+    {
+      "MODEL_NAME": "qwen3:1.7b",
+      "MODEL_TAG": "1.7b",
+      "MODEL_DIGEST": "8f68893c685c",
+      "MODEL_SIZE": "1.4 GB",
+      "MODEL_FAMILY": "qwen3",
+      "QUANTIZATION": "NOT_REPORTED_BY_OLLAMA_LIST"
+    }
+  ]
+}

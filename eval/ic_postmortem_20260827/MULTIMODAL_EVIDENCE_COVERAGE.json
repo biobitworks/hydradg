@@ -1,0 +1,50 @@
+{
+  "schema": "hydradg.ic_postmortem.multimodal_evidence_coverage.v1",
+  "deadline_cutoff_utc": "2026-08-27T22:39:24Z",
+  "raw_counts": {
+    "text": {
+      "total": 67,
+      "available_pre_submission": 57
+    },
+    "images": {
+      "total": 1,
+      "available_pre_submission": 1
+    },
+    "video": {
+      "total": 0,
+      "available_pre_submission": 0
+    },
+    "receipts": {
+      "total": 32,
+      "available_pre_submission": 28
+    }
+  },
+  "directly_submitted": {
+    "text": 6,
+    "images": 0,
+    "video": 0,
+    "receipts": 0
+  },
+  "coverage_ratios": {
+    "text": "6/85 eligible pre-deadline docs surfaced (7.1%) \u2014 only 6 IC schema fields, not repo docs",
+    "images": "0/69 (0%)",
+    "video": "0/3 (0%)",
+    "receipts": "0/42 (0%)",
+    "sponsor_evidence": "0/15 sponsor receipts surfaced to IC",
+    "origin_provenance": "0/1 origin comparison docs surfaced to IC"
+  },
+  "judge_relevant_evidence_coverage": {
+    "curated_text_available": 4,
+    "curated_text_submitted": 2,
+    "curated_text_submitted_note": "blurb + agent_surface only; no START_HERE or origin doc",
+    "curated_images_available": 6,
+    "curated_images_submitted": 0,
+    "curated_video_available": 1,
+    "curated_video_submitted": 0,
+    "curated_receipts_available": 3,
+    "curated_receipts_submitted": 0,
+    "judge_relevant_evidence_coverage_pct": 8.3,
+    "calculation": "2 of 24 curated judge-relevant items directly attached to IC (blurb partially covers product; agent_surface partially covers APIs)"
+  },
+  "hypothesis_multimodal": "CONFIRMED \u2014 vast majority of deadline-available media and receipts never reached IC judges"
+}

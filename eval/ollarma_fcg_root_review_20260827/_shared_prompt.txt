@@ -1,0 +1,24 @@
+HYDRADG FCG MODEL ROOTING ARCHITECTURE REVIEW (bounded, no schema edits)
+
+Context (canonical present):
+- agent_model_handoff_receipt.schema.json: handoff_id, parent_handoff_sha256, actor_class (OLLARMA/OLLAMA_MODEL), model{bridge,requested_name,approved_name,runtime_name,runtime_digest}, prompt_sha256, request_sha256, output_sha256, fco{}, fcg{root_before,root_after}
+- orchestration_work_unit.schema.json: work_unit_id, parent_receipt_sha256[], actor{runtime_identity,model_name,model_digest}, lease, fco_state, fcg_state
+- AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md: chain = case FCO -> prompt FCO -> Ollarma-approved model -> runtime digest -> raw response -> parser -> result FCO -> FCG append. Model output is PROBABILISTIC_MODEL_OUTPUT. No separate MODEL_ROOT or INVOCATION_ROOT type.
+- HydraLamp events use fco:actor:ACTOR_ID for actors, runtime_model=ollarma/actor_id, source_request_hash per event, fcg_root_before/after on append.
+
+Question: For every Ollarma-bridged invocation, what is the CORRECT canonical design?
+1) Persistent MODEL ACTOR identity?
+2) One MODEL INVOCATION?
+3) Parent/root of invocation?
+4) Graph structure: existing FCO parent, model-actor FCO, invocation FCO, work-unit FCO, FCG root_before/after only, or other?
+5) Existing equivalent to MODEL_ACTOR_ROOT / INVOCATION_ROOT / EXECUTION_ROOT?
+
+CRITICAL: Do NOT invent new Merkle/FCG roots for models. Keep separate: MODEL ACTOR IDENTITY, INVOCATION IDENTITY, FCO IDENTITY, FCG ROOT, MMR ROOT, GIT SHA, content hash, signature.
+
+Required lineage chain:
+parent handoff -> Ollarma-approved actor/model -> exact Ollama model name -> runtime digest -> prompt/request SHA-256 -> raw response SHA-256 -> deterministic parser -> derived result -> FCO materialization -> FCG append -> root_before/root_after
+
+Also: UI model grouping — canonical FCO relation vs HydraDB projection vs UI-only?
+Media: MODEL INVOCATION vs EVENT vs RAW MEDIA FCO vs PROVENANCE MEDIA FCO vs VERIFICATION RECEIPT — derive from actual provenance not visibility.
+
+Answer in structured bullets. State POSITION on: (A) whether a dedicated MODEL_ROOT is needed (YES/NO), (B) invocation identity object, (C) same model across runs — same actor or new invocation only, (D) UI grouping mechanism. Flag any identity conflation risks.

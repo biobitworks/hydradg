@@ -1,0 +1,27 @@
+{
+  "CONTENT_ROOT_EMBEDDED_IN_PDF": true,
+  "CONTENT_ROOT_RECOMPUTE": "PASS",
+  "DOUBLE_BLIND_GATE": "PASS",
+  "FCO_RECOMPUTE": "PASS",
+  "MERKLE_MMR_INCLUSION_VERIFY": "PASS",
+  "PDF_SHA256_RECOMPUTE": "PASS",
+  "PRIVATE_KEY_EXPOSURE_GATE": "PASS",
+  "RELEASE_ROOT_RECOMPUTE": "PASS",
+  "SIGNATURE_VERIFY": "NOT_SIGNED/PENDING",
+  "VISUAL_DIFF_GATE": "PASS",
+  "anonymity_hits": [],
+  "pages": {
+    "CHECKLIST_PAGES": 7,
+    "CONTENT_PAGES": 7,
+    "REFERENCE_PAGES": 1,
+    "TOTAL_PAGES": 15
+  },
+  "schema": "hydradg.newinml.openreview_v4.verification_receipt.v1",
+  "v3_pages": {
+    "CHECKLIST_PAGES": 7,
+    "CONTENT_PAGES": 7,
+    "REFERENCE_PAGES": 1,
+    "TOTAL_PAGES": 15
+  },
+  "v3_unmodified": true
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "hydradg.newinml2026_solo.cellarch_map_internal.v1",
+  "recorded_at_utc": "2026-08-29T05:29:03Z",
+  "visibility": "INTERNAL_ONLY",
+  "projects": [
+    {
+      "name": "HydraDG",
+      "repository": "biobitworks/hydradg",
+      "repository_id": 1338521739,
+      "relationship": "PRIMARY_SUBMISSION",
+      "evidence_state": "ESTABLISHED_HYDRADG_RESULT",
+      "submission_admission": "PRIMARY"
+    },
+    {
+      "name": "protein-hinge",
+      "repository": "biobitworks/protein-hinge",
+      "repository_id": 1333522875,
+      "relationship": "SEPARATE_TEAM_IMPLEMENTATION",
+      "evidence_state": "NOT_ADMISSIBLE",
+      "submission_admission": 0
+    },
+    {
+      "name": "HydraLamp",
+      "repository": "biobitworks/hydralamp",
+      "relationship": "ARCHIVED_REFERENCE; active UI in hydradg /hydralamp",
+      "evidence_state": "PARTIAL_DEMO_ONLY",
+      "HYDRALAMP_BIOPHARMA_STATE": "PLANNED",
+      "submission_admission": "INTERNAL_FUTURE_ONLY"
+    },
+    {
+      "name": "fractal-custody-objects",
+      "repository": "biobitworks/fractal-custody-objects",
+      "relationship": "FRAMEWORK_FOUNDATION",
+      "evidence_state": "ESTABLISHED_RELATED_IMPLEMENTATION",
+      "fco_fcg_usage": "CANONICAL_TERMINOLOGY_SOURCE",
+      "submission_admission": "DEFERRED_CAMERA_READY_CITATION"
+    },
+    {
+      "name": "seedgraph",
+      "repository": "biobitworks/seedgraph",
+      "relationship": "HIERARCHICAL_ATOMIZATION_LANE",
+      "evidence_state": "INTERRUPTED",
+      "forensic_sha": "7ec0199b2195164da27c5468dfecc438f99fe307",
+      "submission_admission": "LIMITATION_ONLY"
+    },
+    {
+      "name": "cellico",
+      "repository": "biobitworks/cellico",
+      "relationship": "COMP_BIO_WORKFLOW_SIBLING",
+      "evidence_state": "RELATED_IMPLEMENTATION",
+      "submission_admission": "FUTURE_DIRECTION_INTERNAL"
+    },
+    {
+      "name": "cellico-bio",
+      "repository": "biobitworks/cellico-bio",
+      "relationship": "COMP_BIO_PACKAGE",
+      "evidence_state": "RELATED_IMPLEMENTATION",
+      "submission_admission": "FUTURE_DIRECTION_INTERNAL"
+    },
+    {
+      "name": "cloudmer",
+      "repository": "biobitworks/cloudmer",
+      "relationship": "CELLULAR_PERTURBATION_SIBLING",
+      "evidence_state": "PLANNED_FUTURE_APPLICATION",
+      "submission_admission": "INTERNAL_FUTURE_ONLY"
+    },
+    {
+      "name": "gtm-cellico",
+      "repository": "local checkout",
+      "relationship": "COMP_BIO_WORKFLOW",
+      "evidence_state": "PLANNED_FUTURE_APPLICATION",
+      "submission_admission": "INTERNAL_FUTURE_ONLY"
+    }
+  ]
+}

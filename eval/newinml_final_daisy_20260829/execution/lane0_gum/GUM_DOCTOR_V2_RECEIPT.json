@@ -1,0 +1,16 @@
+{
+  "GUM_DOCTOR_V2_STATE": "READ_ONLY_V2_INVENTORY",
+  "HISTORICAL_TOOL_STATE": "NOT_LOCATED",
+  "MMR_STATE": "NOT_COMMITTED",
+  "PREDECESSOR_RECEIPTS": [
+    "eval/newinml_final_daisy_20260829/execution/lane0_gum/GUM_DOCTOR_BEFORE.json",
+    "eval/newinml_final_daisy_20260829/execution/lane0_gum/GUM_DOCTOR_REPAIR_PLAN.json",
+    "eval/newinml_final_daisy_20260829/execution/lane0_gum/GUM_DOCTOR_AFTER.json"
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "claim_ceiling": "ENVIRONMENT_CAPABILITY_EVIDENCE_ONLY",
+  "recorded_at_utc": "2026-08-29T08:17:50Z",
+  "repairs_applied": 0,
+  "repairs_blocked": 1,
+  "schema": "hydradg.gum_doctor_v2.receipt.v1"
+}

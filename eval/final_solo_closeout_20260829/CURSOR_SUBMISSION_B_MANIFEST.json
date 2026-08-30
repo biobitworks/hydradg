@@ -1,0 +1,203 @@
+{
+  "schema": "hydradg.newinml2026_solo.cursor_submission_b_manifest.v1",
+  "recorded_at_utc": "2026-08-29T16:55:10Z",
+  "candidate_id": "SUBMISSION_VERSION_B_CURSOR",
+  "branch": "cursor/newinml-daisy-execute-20260829",
+  "git_sha": "780874042e78a414c57079ce4ec150754beb45f2",
+  "expected_handoff_sha": "7f6de6f45cb14c39fe82f67da5d816f0845ad9c9",
+  "successor_sha": "780874042e78a414c57079ce4ec150754beb45f2",
+  "origin_parity": true,
+  "pdf_decision": "PRESERVE_FROZEN_PDF",
+  "pdf_decision_rationale": "final_v4 successor is the scientifically strongest admitted candidate; disk PDF passes template/page/anonymization gates; no new empirical claims from incomplete Q38/GPU lanes; rebuild would risk non-deterministic hash drift without scientific gain.",
+  "source_path": "paper/newinml2026_solo/final_v4/manuscript/main.tex",
+  "source_sha256": "149b01ec4668f7a6ce94f0e56b62f174d9f01de40e051212e43a7287dca82666",
+  "pdf_path": "paper/newinml2026_solo/final_v4/manuscript/build/main.pdf",
+  "pdf_sha256": "c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
+  "content_pages": 4,
+  "total_pages": 13,
+  "reference_pages": 2,
+  "checklist_pages": 7,
+  "title": "HydraDG: Governed Context Interventions with Fractal Custody for Agent Experiments",
+  "abstract": "Agent evaluations increasingly depend on context interventions---retrieval, memory graphs, and prompt contracts---yet published reports often omit null outcomes, parser failures, and negative cells. We present HydraDG, a governed experimental framework that binds substantive model invocations, tool calls, and handoffs to \\emph{Fractal Custody Objects} (FCOs) and a \\emph{Fractal Custody Graph} (FCG). HydraDG preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states including timeouts, abstentions, and malformed outputs without silent substitution. We report two preregistered studies (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as \\emph{underpowered} under bounded case replication, so confirmatory effect claims are not supported while negative and null evidence remains in custody. We argue that custody-first evaluation infrastructure supports reproducible agent science rather than optional logging.",
+  "keywords": [
+    "agent evaluation",
+    "scientific custody",
+    "preregistration",
+    "failure preservation",
+    "structured retrieval",
+    "reproducibility",
+    "LLM agents"
+  ],
+  "tldr": "HydraDG binds agent experiments to hash-linked custody receipts; preregistered EXP-008/009 close underpowered, preserving null and failure cells rather than promoting structured-retrieval effects.",
+  "historical_submission_candidates": [
+    {
+      "candidate": "GREEN_V3_FROZEN",
+      "source_path": "paper/newinml2026_solo/manuscript/build/main.pdf",
+      "pdf_sha256": "0b096ccec7c6c1a630e4308abacea89a59620e410bfaff705409ce884a93c1ad",
+      "status": "SUPERSEDED_BY_FINAL_V4"
+    },
+    {
+      "candidate": "FINAL_V4_SUCCESSOR_RECEIPT",
+      "source_path": "paper/newinml2026_solo/final_v4/manuscript/build/main.pdf",
+      "pdf_sha256": "a9c8bae920e04cd892d01a6539f09dfa1f7347cc173bc153d7325b6a99eeb641",
+      "status": "STALE_RECEIPT_SUPERSEDED_BY_DISK"
+    },
+    {
+      "candidate": "SUBMISSION_VERSION_B_CURSOR",
+      "source_path": "paper/newinml2026_solo/final_v4/manuscript/build/main.pdf",
+      "pdf_sha256": "c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
+      "status": "SELECTED"
+    }
+  ],
+  "newinml_requirements": {
+    "content_pages_excluding_references": {
+      "min": 2,
+      "max": 8,
+      "verified": true,
+      "candidate_value": 4
+    },
+    "template": "NeurIPS 2026 workshop (dblblindworkshop)",
+    "anonymization": "double_blind_required",
+    "archival_policy": "non_archival",
+    "newcomer_eligibility": "Open to anyone who has not yet published at a top ML conference (NeurIPS, ICML, ICLR, etc.)",
+    "eligibility_state": "HUMAN_CONFIRM_REQUIRED",
+    "paper_submission_deadline_newinml_cfp_aoe": "2026-08-29T23:59:00 AoE",
+    "paper_submission_deadline_openreview_utc": "2026-08-30T07:59:00Z",
+    "author_notification": "2026-09-29",
+    "camera_ready_deadline": "2026-11-29",
+    "workshop_date_openreview": "2026-12-09",
+    "workshop_date_website": "2026-12-11",
+    "workshop_date_contradiction": "PRESERVED_NOT_SILENTLY_RESOLVED"
+  },
+  "template_requirements": {
+    "TEMPLATE_YEAR": 2026,
+    "TRACK_OPTION": "dblblindworkshop",
+    "WORKSHOP_TITLE_PRESENT": "PASS",
+    "FINAL_OPTION_ABSENT": "PASS",
+    "PREPRINT_OPTION_ABSENT": "PASS",
+    "STYLE_FILE_UNMODIFIED": "PASS",
+    "CONTENT_PAGE_COUNT": "4 (gate 2..8 PASS)",
+    "REFERENCES_EXCLUDED_FROM_CONTENT_COUNT": "PASS",
+    "ABSTRACT_ONE_PARAGRAPH": "PASS",
+    "US_LETTER": "PASS",
+    "PAGES_NUMBERED": "PASS",
+    "FONTS_EMBEDDED": "NOT_MACHINE_VERIFIED",
+    "ACKNOWLEDGMENTS_ABSENT": "PASS",
+    "SELF_CITATION_BLIND": "PASS",
+    "EXTERNAL_URL_ANONYMITY": "PASS",
+    "CHECKLIST_PRESENT": "PASS",
+    "FIGURE_LEGIBILITY": "HUMAN_REQUIRED",
+    "TABLE_LEGIBILITY": "HUMAN_REQUIRED"
+  },
+  "openreview_requirements": {
+    "schema": "hydradg.openinml2026_solo.openreview_form_b.v1",
+    "recorded_at_utc": "2026-08-29T16:55:10Z",
+    "venue_url": "https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/NewInML",
+    "FORM_FIELD_STATE": "PARTIAL_LIVE_VENUE_VERIFIED_LOGIN_REQUIRED_FOR_SUBMIT_FORM",
+    "submission_start_utc": "2026-08-01T00:00:00Z",
+    "submission_deadline_utc": "2026-08-30T07:59:00Z",
+    "fields": [
+      {
+        "field": "Title",
+        "required": true,
+        "source": "live_venue_and_prior_receipt"
+      },
+      {
+        "field": "Authors",
+        "required": true,
+        "note": "OpenReview profiles required; human-only",
+        "source": "lane9_openreview_receipt"
+      },
+      {
+        "field": "Keywords",
+        "required": true,
+        "source": "lane9_openreview_receipt"
+      },
+      {
+        "field": "Abstract",
+        "required": true,
+        "source": "lane9_openreview_receipt"
+      },
+      {
+        "field": "TLDR",
+        "required": false,
+        "source": "lane9_openreview_receipt"
+      },
+      {
+        "field": "PDF",
+        "required": true,
+        "source": "lane9_openreview_receipt"
+      },
+      {
+        "field": "License",
+        "required": true,
+        "value": "CC BY 4.0",
+        "source": "lane9_openreview_receipt"
+      },
+      {
+        "field": "Supplemental upload",
+        "required": false,
+        "value": "NOT_VISIBLE_IN_SUPPLIED_FORM",
+        "source": "lane9_openreview_receipt"
+      }
+    ],
+    "certifications_checkboxes": "NOT_OBSERVED_WITHOUT_LOGIN",
+    "file_size_limits": "NOT_OBSERVED_WITHOUT_LOGIN",
+    "prior_receipt_path": "eval/newinml_final_daisy_20260829/execution/lane9_openreview/OPENREVIEW_STATE_RECEIPT.json"
+  },
+  "claim_ceiling": "CUSTODY_MECHANICS",
+  "admitted_experiments": [
+    "EXP-008",
+    "EXP-009",
+    "NEWINML-DOC-ROUNDTRIP-001",
+    "SEEDGRAPH-TRACEABILITY-001"
+  ],
+  "excluded_experiments": [
+    "Q38-SUCCESSOR-PROBE",
+    "GPU-SGLANG-TERMINAL",
+    "CFOS-HL-001",
+    "PROTEIN_HINGE_TRANSFER"
+  ],
+  "team_only_primary_evidence_count": 0,
+  "gitleaks_state": "PASS_SOLO_SCOPE",
+  "security_state": "PASS_PUBLIC_BLOCKER_COUNT_0",
+  "anonymity_state": "PASS",
+  "anticube_task_ledger_path": "eval/final_solo_closeout_20260829/SUBMISSION_ANTICUBE_TASK_LEDGER_B.jsonl",
+  "citation_manifest": "paper/newinml2026_solo/final_v4/audit_reproducibility/R2/CITATION_CALLSITE_LEDGER.jsonl",
+  "figure_manifest": "eval/final_solo_closeout_20260829/FIGURE_EVIDENCE_MAP_ML.json",
+  "portal_open_state": true,
+  "deadline_state": {
+    "cfp_aoe": "2026-08-29T23:59:00 AoE (August 29, 2026, 11:59 PM Anywhere on Earth)",
+    "openreview_utc": "2026-08-30T07:59:00Z",
+    "divergence": true,
+    "portal_open_now": true
+  },
+  "eligibility_state": "HUMAN_CONFIRM_REQUIRED",
+  "human_actions_remaining": [
+    "Confirm newcomer eligibility against CFP rule",
+    "Human visual review of PDF figures/tables",
+    "Select OpenReview author profiles",
+    "Upload PDF and metadata to OpenReview before 2026-08-30T07:59:00Z",
+    "ChatGPT A vs B independent comparison review"
+  ],
+  "self_compare": {
+    "NEWINML_GATE": "PASS",
+    "TEMPLATE_GATE": "PASS",
+    "OPENREVIEW_GATE": "HUMAN_REQUIRED",
+    "DEADLINE_GATE": "NOT_ESTABLISHED",
+    "PORTAL_OPEN_STATE": "PASS",
+    "ELIGIBILITY_STATE": "HUMAN_REQUIRED",
+    "SCIENCE_GATE": "PASS",
+    "SCOPE_GATE": "PASS",
+    "SECURITY_GATE": "PASS",
+    "ANONYMITY_GATE": "PASS",
+    "ML_HL_GATE": "PASS",
+    "FCO_STATE": "RECEIPTS_PRESENT",
+    "FCG_STATE": "DELTA_DOCUMENTED_NOT_MERKLE_COMMITTED",
+    "HYDRADB_STATE": "NOT_REQUIRED_FOR_SOLO_CLOSEOUT",
+    "SIGNATURE_STATE": "NOT_SIGNED",
+    "MERKLE_MMR_STATE": "NOT_COMMITTED",
+    "FINAL_REVIEW_GATE": "REQUIRED"
+  },
+  "NEW_COMMIT_CREATED": "NO"
+}

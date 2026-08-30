@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.local_live_model_receipt.v1",
+  "recorded_at_utc": "2026-08-27T23:43:58Z",
+  "execution_host": "magicSTUDIObox.local",
+  "LOCAL_ENDPOINT": "http://127.0.0.1:11434",
+  "LOCAL_ENDPOINT_REACHABLE": "PASS",
+  "SELECTED_MODEL": "qwen3.8:27b",
+  "FRESH_INFERENCE": "PASS",
+  "NONCE_ROUNDTRIP": "PASS",
+  "EXTERNAL_PROVIDER_USED": false,
+  "LOCAL_LIVE_MODEL": "PASS",
+  "HYDRALAMP_LOCAL_MODEL_UI": "PASS",
+  "hydralamp_ui_evidence": {
+    "endpoint": "http://127.0.0.1:3456/api/golden-path",
+    "method": "POST",
+    "body": { "live": true },
+    "mode": "LIVE",
+    "models": [
+      { "lane": "MODEL_A", "model": "qwen2.5:1.5b", "outcome": "OLLARMA_OK", "latency_ms": 20198 },
+      { "lane": "MODEL_B", "model": "qwen3:1.7b", "outcome": "POISON_RETAINED", "latency_ms": 0 },
+      { "lane": "MODEL_C", "model": "qwen2.5-coder:7b", "outcome": "OLLARMA_OK", "latency_ms": 10853 }
+    ],
+    "note": "Direct Ollama health and HydraLamp RUN WITH MODELS UI integration tested separately"
+  },
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "sponsor.yappy.mission_receipt.v1",
+  "mission_id": "ANB-SP-YAPPY-INTERACT-001",
+  "provider": "Mitosis Yappy",
+  "operation": "external_computer_use_interaction",
+  "identity_note": "Mitosis office agents (mi). Not yappy.biz. See eval/.../yappy_biz/ for public product API.",
+  "docs_ref": "https://mitosislabs.ai/developers/cli/overview",
+  "auth_state": "PASS",
+  "agents_listed": 0,
+  "agent_names": [],
+  "bounded_interaction": "BLOCKED",
+  "status": "BLOCKED",
+  "error_code": "MI_NO_AGENTS",
+  "error_summary": "Office has zero agents; cannot demonstrate computer-use interaction. Reconstructed from MI_AGENTS_LIST_RAW after closeout stub overwrote MI_AUTH_MISSING.",
+  "offer_code_metadata": "FREEYAPPY",
+  "offer_is_api_credential": false,
+  "fcg_append": "NOT_APPENDED",
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "secret_state": "PRESENT",
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T21:42:35.656Z"
+}

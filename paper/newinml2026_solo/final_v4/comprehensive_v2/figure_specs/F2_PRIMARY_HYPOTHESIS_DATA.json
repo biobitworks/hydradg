@@ -1,0 +1,50 @@
+{
+  "experiments": [
+    {
+      "H0": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT ordering/effect null under preregistered paired design",
+      "H1": "Structured FCG condition differs from flat prose on primary endpoint",
+      "abstain_rate": 0.08333333333333333,
+      "claim_ceiling": "UNDERPOWERED_NO_EFFECT_CLAIM",
+      "discordant": 0,
+      "experiment_id": "EXP-008",
+      "malformed_rate": 0.09333333333333334,
+      "n_paired": 2,
+      "n_raw": 300,
+      "n_valid": 272,
+      "p_exact": null,
+      "rd": 0.0,
+      "result_class": "UNDERPOWERED",
+      "source_path": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+      "source_sha256": "76f056d6b42a73677bf71338ea97a61bf92e2d5911b99ac4e400247730936ac5",
+      "terminal_interpretation": "EFFECT_NOT_ESTABLISHED",
+      "terminal_verdict": "UNDERPOWERED",
+      "uncertainty_method": "NOT_DEFENSIBLE_INTERVAL",
+      "unknown_rate": 0.5,
+      "valid_parse_rate": 0.9066666666666666
+    },
+    {
+      "H0": "E06_prevents_C ordering/effect null under preregistered paired design",
+      "H1": "Structured FCG condition differs from flat prose on primary endpoint",
+      "abstain_rate": 0.06,
+      "claim_ceiling": "UNDERPOWERED_NO_EFFECT_CLAIM",
+      "discordant": 0,
+      "experiment_id": "EXP-009",
+      "malformed_rate": 0.11666666666666667,
+      "n_paired": 2,
+      "n_raw": 300,
+      "n_valid": 265,
+      "p_exact": null,
+      "rd": 0.0,
+      "result_class": "UNDERPOWERED",
+      "source_path": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+      "source_sha256": "7d1ea04f0429ed8f1dc98f0f85d1f29b327f5c14f5f3c2dbf03531b2705e1657",
+      "terminal_interpretation": "EFFECT_NOT_ESTABLISHED",
+      "terminal_verdict": "UNDERPOWERED",
+      "uncertainty_method": "NOT_DEFENSIBLE_INTERVAL",
+      "unknown_rate": 0.49,
+      "valid_parse_rate": 0.8833333333333333
+    }
+  ],
+  "figure_id": "F2",
+  "schema": "hydradg.figure_data.v1"
+}

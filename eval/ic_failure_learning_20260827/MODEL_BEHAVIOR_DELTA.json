@@ -1,0 +1,30 @@
+{
+  "schema": "hydradg.ic_failure_learning.model_behavior_delta.v1",
+  "MODEL_WEIGHT_STATE": "UNCHANGED",
+  "MODEL_GOVERNED_CONTEXT_STATE": "UPDATED",
+  "M1_minus_M0": {
+    "e01_vault_gap_rate": null,
+    "e01_origin_gap_rate": null,
+    "e05_top1_correct_rate": null,
+    "e06_prevents_c_rate": null,
+    "e07_directional_gate_rate": null,
+    "n_scored": null
+  },
+  "M2_minus_M0": {
+    "e01_vault_gap_rate": "NULL",
+    "e01_origin_gap_rate": "NULL",
+    "e05_top1_correct_rate": null,
+    "e06_prevents_c_rate": null,
+    "e07_directional_gate_rate": "NULL",
+    "n_scored": "POSITIVE"
+  },
+  "M2_minus_M1": {
+    "e01_vault_gap_rate": "NULL",
+    "e01_origin_gap_rate": "NULL",
+    "e05_top1_correct_rate": null,
+    "e06_prevents_c_rate": null,
+    "e07_directional_gate_rate": "NULL",
+    "n_scored": "POSITIVE"
+  },
+  "CHANGE_DIRECTION": "DESCRIPTIVE_ONLY"
+}

@@ -1,0 +1,41 @@
+You are a probabilistic experimental actor. Return strict JSON only.
+Blind lanes (E01-E04,E07): do NOT use postmortem/EVAL_ONLY evidence.
+Never invent unavailable endpoints; list them in invented_capabilities.
+Do not output estimated judge scores.
+
+GENERATION=M1 MODEL_WEIGHT_STATE=UNCHANGED
+IC RUBRIC SUMMARY: {"cold_start_success": {"max": 30, "scores_via": "agent_surface + live demo"}, "it_runs": {"max": 25, "gate": true}, "surface_quality": {"max": 20}, "lands_in_product": {"max": 15}, "demo": {"max": 10}}
+SUBMISSION FIELDS: title, blurb, repo_url, demo_url, agent_surface, folder_id
+GATE: folder_id must be populated before submit; vault required for media evidence
+
+FAMILY=E04 CONDITION=T2_WELL_KNOWN_FIXTURE
+TASK: List the first three concrete actions a cold machine agent should take. Put any guessed unavailable action in invented_capabilities.
+
+INPUT:
+{
+  "well_known_agent_fixture": {
+    "auth": "machine credential required for consequential live actions",
+    "discovery": "/.well-known/ai-agent.json",
+    "run": "/api/hydralamp/run",
+    "status": "/api/hydralamp/status?run_id="
+  }
+}
+
+Return exactly one JSON object:
+{
+  "state": "OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE",
+  "experiment_family": "E01|E02|E03|E04|E05|E06|E07",
+  "condition": "string",
+  "observations": ["string"],
+  "predicted_weak_dimensions": ["string"],
+  "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
+  "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
+  "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
+  "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
+  "recommended_first_correction": "string|null",
+  "confidence_0_1": 0.0,
+  "evidence_quotes": ["string"],
+  "invented_capabilities": []
+}

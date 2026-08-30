@@ -1,0 +1,93 @@
+{
+  "schema": "sponsor.golden_path.composed_run.v1",
+  "run_id": "anb_gp_mtc1tnyj_1b92065c",
+  "recorded_at_utc": "2026-08-27T21:42:37.292Z",
+  "execution_host": "magicSTUDIObox.local",
+  "branch_expected": "cursor/vercel-control-plane-c66e",
+  "steps": [
+    {
+      "step": 1,
+      "name": "tavily_external_evidence",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "status": "PASS",
+      "sha256": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+      "hash_recompute": {
+        "status": "PASS",
+        "verified": true,
+        "computed": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+        "declared": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+        "claim_ceiling": "RECOMPUTED_RESULT",
+        "evidence_class": "RECOMPUTED_RESULT"
+      }
+    },
+    {
+      "step": 2,
+      "name": "hydradg_evidence_classification",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "status": "PASS",
+      "classification": "EXTERNALLY_RETRIEVED_EVIDENCE"
+    },
+    {
+      "step": 3,
+      "name": "aisa_qwen_flash_probabilistic_proposal",
+      "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+      "status": "PASS",
+      "model": "qwen-flash",
+      "sha256": "e508d724879fd2f89b6f7a6ab648423c989e6695a2117dfa712dcc0a1c3b2ff5"
+    },
+    {
+      "step": 4,
+      "name": "deterministic_hydradg_verifier",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "status": "PASS",
+      "verify_tavily": {
+        "status": "PASS",
+        "verified": true,
+        "computed": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+        "declared": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+        "claim_ceiling": "RECOMPUTED_RESULT",
+        "evidence_class": "RECOMPUTED_RESULT"
+      },
+      "verify_proposal": {
+        "status": "PASS",
+        "verified": true,
+        "computed": "6491a038689e3714eb67ed162521f64967882e7dbe6d7dc849f747cb2802cfab",
+        "declared": "6491a038689e3714eb67ed162521f64967882e7dbe6d7dc849f747cb2802cfab",
+        "claim_ceiling": "RECOMPUTED_RESULT",
+        "evidence_class": "RECOMPUTED_RESULT"
+      }
+    },
+    {
+      "step": 5,
+      "name": "quarantine_admit_decision",
+      "status": "PASS",
+      "decision": {
+        "action": "QUARANTINE_EXTERNAL_EVIDENCE",
+        "admit_decision": "PENDING_CUSTODY_REVIEW",
+        "fcg_append": "NOT_APPENDED",
+        "fcg_mutation_count": 0,
+        "note": "External Tavily evidence and AIsa proposal remain noncanonical; FCG not mutated."
+      }
+    },
+    {
+      "step": 6,
+      "name": "fco_fcg_receipt",
+      "status": "PASS",
+      "fco_path": "eval/agent_native_sponsors_20260827/golden_path/FCO_QUARANTINE_RECEIPT.json",
+      "fcg_path": "eval/agent_native_sponsors_20260827/golden_path/FCG_STATE_RECEIPT.json",
+      "fcg_mutation_count": 0
+    },
+    {
+      "step": 7,
+      "name": "hydradb_ui_projection",
+      "status": "PASS",
+      "path": "eval/agent_native_sponsors_20260827/golden_path/HYDRADB_UI_PROJECTION_RECEIPT.json"
+    }
+  ],
+  "FCG_STATE": "CANONICAL_UNCHANGED_BY_SPONSOR_MISSIONS",
+  "fcg_mutation_count": 0,
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "CLAIM_CEILING": "SPONSOR_INTEGRATION_BENCHMARK_ONLY",
+  "composed_status": "PASS"
+}

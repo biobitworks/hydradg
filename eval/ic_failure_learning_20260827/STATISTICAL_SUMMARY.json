@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.ic_failure_learning.statistical_summary.v1",
+  "inferential_power": "DESCRIPTIVE_ONLY",
+  "note": "N too small for reliable McNemar/bootstrap; report exact proportions only",
+  "family_counts": {
+    "E01": 21,
+    "E02": 93,
+    "E03": 111,
+    "E04": 93,
+    "E07": 93,
+    "E05": 7,
+    "E06": 14
+  },
+  "model_state_counts": {
+    "MALFORMED": 63,
+    "OK": 95,
+    "UNKNOWN": 207,
+    "ABSTAIN": 67
+  }
+}

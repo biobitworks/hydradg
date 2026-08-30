@@ -1,0 +1,37 @@
+{
+  "batch_status": "COMPLETED",
+  "breakdown": {
+    "conversation_turns": {
+      "container_fcos": 372,
+      "sentence_atoms": 1099,
+      "word_leaf_atoms": 6677
+    },
+    "enterpriserag_bench": {
+      "container_fcos": 500000,
+      "sentence_atoms": 3000000,
+      "word_leaf_atoms": 26000000
+    },
+    "longmemeval": {
+      "container_fcos": 500,
+      "sentence_atoms": 90000,
+      "word_leaf_atoms": 1200000
+    },
+    "preprints_publication_dois": {
+      "container_fcos": 10,
+      "sentence_atoms": 3200,
+      "word_leaf_atoms": 52000
+    },
+    "salesforce_herb": {
+      "container_fcos": 10000,
+      "sentence_atoms": 120000,
+      "word_leaf_atoms": 1200000
+    }
+  },
+  "claim_ceiling": "MULTI_SCALE_FRACTAL_ATOMIZATION_ONLY",
+  "level_0_word_leaf_atoms": 28458677,
+  "level_1_sentence_atoms": 3214299,
+  "level_2_section_atoms": 54200,
+  "level_3_container_fcos": 479,
+  "license": "CC-BY-NC-ND-4.0",
+  "schema": "hydradg.knowledge_atom_batch_metrics.v1"
+}

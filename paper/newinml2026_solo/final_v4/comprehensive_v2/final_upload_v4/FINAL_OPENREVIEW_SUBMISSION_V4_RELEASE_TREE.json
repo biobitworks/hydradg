@@ -1,0 +1,54 @@
+{
+  "INCLUSION_PROOF": {
+    "pdf_artifact": [
+      {
+        "position": "left",
+        "sibling": "bf9feb45b064b9ed4bea7117e61a6526f9d44a7158a9ea136afd7be519005bfe"
+      },
+      {
+        "position": "left",
+        "sibling": "cb5d61c56713f41f90529f040de21c7eb9d41c4ea046f04da48efa69989f0158"
+      }
+    ],
+    "release_fco": [
+      {
+        "position": "right",
+        "sibling": "8d22e7088ba6a24f42f2ce7798e1c82ff4bef8fe7d1d6adc3eab74973091f6cd"
+      },
+      {
+        "position": "left",
+        "sibling": "cb5d61c56713f41f90529f040de21c7eb9d41c4ea046f04da48efa69989f0158"
+      }
+    ]
+  },
+  "INCLUSION_VERIFY": "PASS",
+  "LEAF_COUNT": 4,
+  "LEAF_ENCODING": "leaf=sha256(0x00||sha256(bytes)); node=sha256(0x01||raw32||raw32); odd-promote; order_independent=sorted",
+  "LEAF_ORDER": "sorted(leaf_hash) order_independent=True",
+  "MERKLE_MMR_ALGORITHM": "fco_train.custody.merkle_root.v3",
+  "PREDECESSOR_ROOT": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+  "RELEASE_ROOT": "0d7ee4ba5411ec3cd3f680bfa73c1b6164b6ab70b8fb6a4b9a576334057087b8",
+  "leaves": [
+    {
+      "binds": "3e5185a0bf03640d96342be6354b07dcd3f31ecdfbd6ac2849e17eae9ca3b79e",
+      "leaf": "8d22e7088ba6a24f42f2ce7798e1c82ff4bef8fe7d1d6adc3eab74973091f6cd",
+      "role": "pdf_artifact"
+    },
+    {
+      "binds": "21681ab0dbd77fdda56f40b9c8b588b8a9bdb0c00a029d157fa8c20f25e0f06c",
+      "leaf": "bf9feb45b064b9ed4bea7117e61a6526f9d44a7158a9ea136afd7be519005bfe",
+      "role": "release_fco"
+    },
+    {
+      "binds": "1a6b0a967da41e5b619ec449ab0cdbb914797321661e7ee25f8b87f2521df94d",
+      "leaf": "d3990a7db77adda1ce7e0cefb4c76cc7e3b26d3f808ba2043376265d8dca70ee",
+      "role": "content_root"
+    },
+    {
+      "binds": "82ab3b812bbd40b3cb3e71536fd44764740149f3",
+      "leaf": "dbf57d02df4c76e35b5794ac024fd319c6bf1b96cf5f8697b2a454e2f35d37df",
+      "role": "source_git"
+    }
+  ],
+  "schema": "hydradg.newinml.openreview_v4.release_tree.v1"
+}

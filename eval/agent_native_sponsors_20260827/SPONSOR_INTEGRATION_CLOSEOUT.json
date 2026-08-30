@@ -1,0 +1,154 @@
+{
+  "schema": "sponsor.integration_closeout.v1",
+  "recorded_at_utc": "2026-08-27T06:12:01.209Z",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "execution_host": "magicSTUDIObox.local",
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "SPONSOR_SECRET_INJECTION": "BLOCKED",
+  "providers": {
+    "Runtype": {
+      "priority": "P0",
+      "discovery_state": "CONFIGURED",
+      "live_status": "ERROR",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/runtype/RUNTYPE_MISSION_RECEIPT.json",
+      "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+      "earliest_divergence": "runtype_execution_id null / lane ERROR"
+    },
+    "Tavily": {
+      "priority": "P0",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/tavily/TAVILY_MISSION_RECEIPT.json",
+      "ai_sdk_receipt_path": "eval/agent_native_sponsors_20260827/tavily/TAVILY_AISDK_MISSION_RECEIPT.json",
+      "ai_sdk_status": "PASS",
+      "ai_sdk_package_import": "PASS",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": null
+    },
+    "Cortex": {
+      "priority": "P0",
+      "discovery_state": "CONFIGURED",
+      "live_status": "ERROR",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
+      "mission_receipt_path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MISSION_RECEIPT.json",
+      "CORTEX_MEMORY_ROUNDTRIP": "ERROR",
+      "HYDRADG_RECEIPT_VERIFICATION": "MISS",
+      "offer_code_metadata": "FREECORTEX",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": "CORTEX_TRIAL_EXPIRED"
+    },
+    "Yappy": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "BLOCKED",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/yappy/YAPPY_MISSION_RECEIPT.json",
+      "agents_listed": 0,
+      "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+      "earliest_divergence": "MI_NO_AGENTS",
+      "identity_note": "Mitosis Yappy — distinct from Yappy.biz"
+    },
+    "Yappy.biz": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/yappy_biz/YAPPY_BIZ_API_MISSION_RECEIPT.json",
+      "latest_release": "0.4.20",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": null,
+      "identity_note": "yappy.biz public product API — distinct from Mitosis Yappy"
+    },
+    "Immersive Commons": {
+      "priority": "P1",
+      "discovery_state": "DISCOVERED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/immersive_commons/IMMERSIVE_COMMONS_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": null
+    },
+    "Cotal": {
+      "priority": "P1",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/cotal/COTAL_MISSION_RECEIPT.json",
+      "mesh_up": "NOT_ATTEMPTED",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null
+    },
+    "Hacker Bob": {
+      "priority": "P2",
+      "discovery_state": "DISCOVERED",
+      "live_status": "SKIPPED",
+      "secret_state": "NOT_APPLICABLE",
+      "receipt_path": "eval/agent_native_sponsors_20260827/hacker_bob/HACKER_BOB_MISSION_RECEIPT.json",
+      "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "earliest_divergence": "scan not executed"
+    },
+    "Tenki": {
+      "priority": "P2",
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/tenki/TENKI_SANDBOX_MISSION_RECEIPT.json",
+      "mission_receipt_path": "eval/agent_native_sponsors_20260827/tenki/TENKI_MISSION_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null,
+      "scientific_execution_authority": "magicSTUDIObox.local"
+    },
+    "Nebius": {
+      "priority": "OPTIONAL",
+      "discovery_state": "SKIPPED",
+      "live_status": "SKIPPED",
+      "NEBIUS_STATE": "SKIPPED_NONBLOCKING",
+      "secret_state": "MISSING",
+      "receipt_path": "eval/agent_native_sponsors_20260827/nebius/NEBIUS_MISSION_RECEIPT.json",
+      "claim_ceiling": "NOT_APPLICABLE",
+      "earliest_divergence": null
+    }
+  },
+  "infrastructure": {
+    "Daytona": {
+      "lane": "INFRASTRUCTURE",
+      "anb_sponsor": false,
+      "discovery_state": "CONFIGURED",
+      "live_status": "PASS",
+      "secret_state": "PRESENT",
+      "receipt_path": "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+      "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+      "earliest_divergence": null,
+      "scientific_execution_authority": "magicSTUDIObox.local"
+    }
+  },
+  "golden_path": {
+    "source": "Tavily",
+    "memory": null,
+    "model": null,
+    "external_actor": null,
+    "custody": "HydraDG FCO/FCG",
+    "projection": "HydraDB",
+    "composed_status": "PARTIAL",
+    "notes": [
+      "Tavily extract PASS",
+      "Runtype live ERROR preserved",
+      "Cortex roundtrip ERROR; HydraDG verify MISS (status=ERROR)"
+    ]
+  },
+  "GOLDEN_PATH_STATE": "PARTIAL_P0",
+  "EVIDENCE_STATE": "EXTERNALLY_RETRIEVED_EVIDENCE_CAPTURED",
+  "EXPERIMENT_STATE": "HYDRALAMP_CLOSEOUT_FROZEN_NO_RERUN",
+  "FCO_STATE": "QUARANTINE_PROPOSALS_ONLY",
+  "FCG_STATE": "CANONICAL_UNCHANGED_BY_SPONSOR_MISSIONS",
+  "HYDRADB_STATE": "PROJECTION_LANE_AVAILABLE",
+  "EARLIEST_DIVERGENCE": "Cortex ERROR/MISS",
+  "CLAIM_CEILING": "SPONSOR_INTEGRATION_BENCHMARK_ONLY",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "NEXT_SAFE_ACTION": "Unlock Cortex office memory plan (trial_expired), then re-run npm run sponsor:mitosis",
+  "FINAL_REVIEW_GATE": "P0: Tavily=PASS; Cortex=ERROR (roundtrip=ERROR, hydradg=MISS); Runtype=ERROR preserved"
+}

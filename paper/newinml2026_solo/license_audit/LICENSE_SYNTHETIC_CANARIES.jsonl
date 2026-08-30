@@ -1,0 +1,6 @@
+{"canary_id": "SYN-LIC-001", "case": "remove_license_file", "expected_compatibility_state": "LICENSE_UNKNOWN", "observed_compatibility_state": "LICENSE_UNKNOWN", "pass": true, "publication_safe": false, "synthetic": true}
+{"canary_id": "SYN-LIC-002", "case": "spdx_id_change", "expected_root_change": true, "observed_root_change": true, "pass": true, "synthetic": true}
+{"canary_id": "SYN-LIC-003", "case": "third_party_image_unknown_rights", "expected_compatibility_state": "PERMISSION_REQUIRED", "observed_compatibility_state": "PERMISSION_REQUIRED", "pass": true, "publication_safe": false, "synthetic": true}
+{"canary_id": "SYN-LIC-004", "case": "cc_by_without_attribution", "expected_compatibility_state": "LICENSE_CONFLICT", "observed_compatibility_state": "LICENSE_CONFLICT", "pass": true, "synthetic": true}
+{"canary_id": "SYN-LIC-005", "case": "apache_dependency_marked_cc_by_without_evidence", "expected_compatibility_state": "LICENSE_CONFLICT", "observed_compatibility_state": "LICENSE_CONFLICT", "pass": true, "synthetic": true}
+{"canary_id": "SYN-LIC-006", "case": "secret_in_publication_bundle", "expected_anticube": "SELF+NON_SAFE", "observed_anticube": "SELF+NON_SAFE", "pass": true, "synthetic": true}

@@ -1,0 +1,61 @@
+{
+  "schema": "hydradg.newinml2026_solo.related_implementation_evidence_matrix.v1",
+  "recorded_at_utc": "2026-08-29T06:06:39Z",
+  "tier": "RELATED_IMPLEMENTATION",
+  "scope_note": "Transfer scope where evidence exists; not additional primary experimental samples",
+  "entries": [
+    {
+      "system": "FCO/FCG",
+      "state": "CANONICAL_TERMINOLOGY",
+      "admission": "FRAMEWORK"
+    },
+    {
+      "system": "GettingScienceDone/gsigmad",
+      "state": "RELATED_WORKFLOW",
+      "admission": "INTERNAL"
+    },
+    {
+      "system": "Ollarma",
+      "state": "RELATED_LOCAL_BRIDGE",
+      "admission": "INTERNAL"
+    },
+    {
+      "system": "SeedGraph",
+      "state": "INTERRUPTED",
+      "admission": "LIMITATION_ONLY"
+    },
+    {
+      "system": "Antigence",
+      "state": "RELATED_SECURITY_LANE",
+      "admission": "INTERNAL"
+    },
+    {
+      "system": "Substrata/Fragmentum",
+      "state": "RELATED_SUBSTRATE",
+      "admission": "INTERNAL"
+    },
+    {
+      "system": "XenoDisorder",
+      "state": "RELATED_BIOINFORMATICS",
+      "admission": "INTERNAL"
+    },
+    {
+      "system": "Vitaology",
+      "state": "PLANNED",
+      "admission": "FUTURE"
+    },
+    {
+      "system": "Watchtower/Overwatch",
+      "state": "RELATED_OPERATOR_CONSOLE",
+      "admission": "INTERNAL"
+    },
+    {
+      "system": "HydraLamp",
+      "state": "SYSTEMS_VALIDATION_DEMO",
+      "admission": "SYSTEMS_ONLY"
+    }
+  ],
+  "vithia_state": "UNRESOLVED_CANONICAL_SOURCE",
+  "anticube_state": "UNRESOLVED_CANONICAL_SOURCE",
+  "shadow_dogma_state": "UNRESOLVED_CANONICAL_SOURCE"
+}

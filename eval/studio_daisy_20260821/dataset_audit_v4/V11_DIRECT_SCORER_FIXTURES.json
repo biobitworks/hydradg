@@ -1,0 +1,106 @@
+{
+  "schema": "hydradg.v11_direct_scorer_fixtures.v1",
+  "timestamp_utc": "2026-08-22T06:54:05Z",
+  "track01": {
+    "TRACK01_V11_DIRECT_FIXTURE_GATE": "PASS",
+    "canned_calls_executed": 9,
+    "fixtures": [
+      {
+        "canned_transport_sha256": "f8f9cb4368e0fcf6bc1684bc755143c76b1adaad7bc57fb58dbb266711e66745",
+        "description": "Positive >4 char gold token in response",
+        "expected_terminal_state": "SUCCESS_CORRECT",
+        "fixture_id": "T1_POS_TOKEN_GT4",
+        "input_sha256": "817a71275dc2364aea22fbdf80a56467496de6cfac38332e2fcb9a06fc46af0e",
+        "observed_terminal_state": "SUCCESS_CORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "ba55d1dbeb00ba623c19fe945df20a917976850e474904393677893ec6e015bb",
+        "description": "Negative with no qualifying gold token",
+        "expected_terminal_state": "SUCCESS_INCORRECT",
+        "fixture_id": "T1_NEG_NO_TOKEN",
+        "input_sha256": "417bc85288172be860a0a766d8e21eb399d0ca2a972f60c8d4f40ab5471751d7",
+        "observed_terminal_state": "SUCCESS_INCORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "603faaa2c2a62bd083298bc7181dbedcfc78b8c239e0011615e3fcf27873c4f5",
+        "description": "Boundary showing <=4 char gold tokens ignored",
+        "expected_terminal_state": "SUCCESS_INCORRECT",
+        "fixture_id": "T1_BOUNDARY_LE4_IGNORED",
+        "input_sha256": "61a74d27a395ce81af3528d746be60ec6beb638c693dffb63bd4e2a888318cb1",
+        "observed_terminal_state": "SUCCESS_INCORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "bffa5ffbc080ab61d88a824b09019d46ac0f68b0bf24efc55eb6fddc07c00cee",
+        "description": "Case-insensitive token matching",
+        "expected_terminal_state": "SUCCESS_CORRECT",
+        "fixture_id": "T1_CASE_INSENSITIVE",
+        "input_sha256": "c9020dfae8462c9dc44bcecc9e8ea3b41e3e4a06fe132a4fdef3d30c635905ad",
+        "observed_terminal_state": "SUCCESS_CORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      }
+    ]
+  },
+  "track03": {
+    "TRACK03_V11_DIRECT_FIXTURE_GATE": "PASS",
+    "fixtures": [
+      {
+        "canned_transport_sha256": "9c8c4982dd94ab2b52a5b65c5e25bb9a9c104d5e8dde2f78ff35e639318394cb",
+        "description": "Exact positive match",
+        "expected_terminal_state": "SUCCESS_CORRECT",
+        "fixture_id": "T3_EXACT_POS",
+        "input_sha256": "5dd272b4f316b776a7b8e3d0894b37e1e42be3d5d3b204b8a5836cc50597a6b1",
+        "observed_terminal_state": "SUCCESS_CORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "0aa2c82f1b7253e1a4a4cc838dad604814bf9ffde222156b65ff542801144a91",
+        "description": "Negative non-matching answer",
+        "expected_terminal_state": "SUCCESS_INCORRECT",
+        "fixture_id": "T3_NEG",
+        "input_sha256": "ecc0e7dc084f141b29479058967d0bc07dee25d9690a98ee4e6fdad5168274d7",
+        "observed_terminal_state": "SUCCESS_INCORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "2afbb200b2c6b278197b921e5e8e7e56e1f02b7c35ce2dd1434b5068dd3e33b5",
+        "description": "Gold answer substring embedded in longer response",
+        "expected_terminal_state": "SUCCESS_CORRECT",
+        "fixture_id": "T3_SUBSTRING_POS",
+        "input_sha256": "a1b7eb2ee7a6aded8dda4e6cf30826f5afffb28a5597ee9389e91eb326d4e319",
+        "observed_terminal_state": "SUCCESS_CORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "3d26256b03311464d1be7bab7eb9b8aef373f251965e6a48442bf901f4afeb41",
+        "description": "Case-insensitive match",
+        "expected_terminal_state": "SUCCESS_CORRECT",
+        "fixture_id": "T3_CASE_INSENSITIVE",
+        "input_sha256": "1670f2e42fefa5044d59a65349e47c566009488fc57d7b4376dd5787b59e3c57",
+        "observed_terminal_state": "SUCCESS_CORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      },
+      {
+        "canned_transport_sha256": "3d26256b03311464d1be7bab7eb9b8aef373f251965e6a48442bf901f4afeb41",
+        "description": "Whitespace boundary showing frozen behavior",
+        "expected_terminal_state": "SUCCESS_INCORRECT",
+        "fixture_id": "T3_WHITESPACE_EXACT_BEHAVIOR",
+        "input_sha256": "1670f2e42fefa5044d59a65349e47c566009488fc57d7b4376dd5787b59e3c57",
+        "observed_terminal_state": "SUCCESS_INCORRECT",
+        "passed": true,
+        "synthetic_status": "SYNTHETIC_FIXTURE_INPUT"
+      }
+    ]
+  },
+  "v11_frozen_git_sha": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831"
+}

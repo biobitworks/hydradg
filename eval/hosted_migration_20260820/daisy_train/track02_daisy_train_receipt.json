@@ -1,0 +1,31 @@
+{
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "DAISY_TRAIN_TRACK_EXPANSION_COMPLETED_FOR_TRACK02",
+  "context_energy_metrics": {
+    "delta_g_star": 0.0078,
+    "g_star_diagnostic": -0.1153,
+    "shannon_entropy_bits": 1.8016,
+    "u_star_burden": 0.2
+  },
+  "corpus_statistics": {
+    "deduplication_ratio": "68.40%",
+    "document_count": 1250,
+    "raw_word_atoms": 485000,
+    "spatiotemporal_pointers": 331740,
+    "unique_word_keys": 153260
+  },
+  "information_energy_savings": {
+    "flops_saved": 4644360000000000,
+    "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+    "watt_hours_saved": 12.9
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "schema": "hydradg.track_daisy_train_receipt.v1",
+  "signature_hash": "541943ee0e5fce68363806fbbf8cae7e12dc99b56be8bbc9deb8bdb15ce2e843",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T19:26:04Z",
+  "timestamp_unix": 1787253964,
+  "track_id": "track02",
+  "track_name": "HydraDB OSS Repository & Core Graph Structure"
+}

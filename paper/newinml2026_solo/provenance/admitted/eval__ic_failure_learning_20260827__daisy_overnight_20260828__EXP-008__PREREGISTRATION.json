@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "EXP-008",
+  "hypothesis": "H0_EXP008: Structured FCG retrieval/composition does not improve failure-prevention vs flat prose.",
+  "conditions": {
+    "C0": "FLAT_PROSE",
+    "C1": "STRUCTURED_FCG"
+  },
+  "models": [
+    "qwen3:1.7b",
+    "qwen2.5-coder:7b"
+  ],
+  "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+  "n_replicates": 3,
+  "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+  "case_aggregation": "MAJORITY_OF_3_REPLICATES",
+  "alpha": 0.05,
+  "prereg_sha": "d8166ae41f68c2d082eaf3d5380af0ea4e9b6bda",
+  "frozen_at_utc": "2026-08-28T08:01:11Z"
+}

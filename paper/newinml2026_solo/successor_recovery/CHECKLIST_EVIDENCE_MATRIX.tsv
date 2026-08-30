@@ -1,0 +1,17 @@
+question	current_answer	evidence	candidate_answer	justification	human_input_required	paper_change_required
+claims	Yes	Abstract states underpowered EXP-008/009	Yes	Frozen verdict receipts	NO	NO
+limitations	Yes	Limitations section present	Yes	SeedGraph interrupted; Q38 non-terminal	NO	NO
+theory	N/A	No formal theorems	N/A	Infrastructure paper	NO	NO
+experimental_setting	Yes	Setup section	Yes	Frozen manifests cited	NO	NO
+open_code_data	No	Custody internal	Partial	Anonymized reproducibility bundle for deterministic parts	YES	YES
+experimental_details	Yes	Conditions/models disclosed	Yes	Table 2 + appendix commands	NO	NO
+statistical_significance	No	Underpowered; no informative p	Partial	CIs where valid; UNDERPOWERED label retained	NO	NO
+compute_resources	Yes	Local models named	Yes	Host requirements in REPRODUCE.md	NO	NO
+ethics	Yes	No human subjects	Yes	HUMAN_SUBJECTS=NO all datasets	NO	NO
+broader_impacts	N/A	Not dedicated section	Yes	Bounded impacts paragraph added	NO	YES
+safeguards	N/A	No new high-risk model release	N/A	No release	NO	NO
+licenses	Yes	Bibliography credits	Yes	SOFTWARE_BOM + DATASET_BOM	NO	NO
+assets	No	No new public assets	No	Frozen internal custody	NO	NO
+crowdsourcing	N/A	None	N/A	None	NO	NO
+IRB	N/A	None	N/A	Synthetic cases only	NO	NO
+LLM_usage	Yes	Disclosed in setup	Yes	Frontier agents assisted tooling; not authors	NO	NO

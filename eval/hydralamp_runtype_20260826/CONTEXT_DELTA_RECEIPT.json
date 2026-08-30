@@ -1,0 +1,29 @@
+{
+  "schema": "hydralamp.context_delta_receipt.v1",
+  "CONTEXT_DELTA_READY": true,
+  "rule": "NOT_HASH_HAMMING",
+  "delta": {
+    "nodes_added": 1,
+    "nodes_removed": 0,
+    "edges_added": 1,
+    "edges_removed": 0,
+    "claims_added": 1,
+    "claims_removed": 0,
+    "claims_contested": 0,
+    "contradictions_delta": 1,
+    "quarantine_delta": 1,
+    "canonical_delta": 0,
+    "evidence_class_counts_before": {
+      "SYNTHETIC": 1
+    },
+    "evidence_class_counts_after": {
+      "SYNTHETIC": 1,
+      "PROBABILISTIC_MODEL_OUTPUT": 1
+    },
+    "model_context_token_delta": null,
+    "cloud_drift_0_100": 31.13,
+    "cloud_drift_source": "apps/hydradg-web/lib/contextIceberg.ts#jensenShannonDivergence"
+  },
+  "cloud_drift_policy": "COMPUTED_FROM_CONTEXT_ICEBERG",
+  "signature_state": "NOT_SIGNED"
+}

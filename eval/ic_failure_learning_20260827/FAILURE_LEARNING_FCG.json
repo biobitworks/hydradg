@@ -1,0 +1,527 @@
+{
+  "schema": "hydradg.ic_failure_learning.fcg_manifest.v1",
+  "domain_separator": "hydradg.ic_failure_learning.mmr.v1",
+  "canonical_reference": {
+    "repo": "biobitworks/fractal-custody-objects",
+    "commit": "71bf05dc8630641965c513a16790c192c9799d2e",
+    "path": "scripts/seal_app_fcg.py",
+    "recipe": "leaf_sha256_0x00; node_sha256_0x01; MMR peaks bagged right-to-left"
+  },
+  "base_forensic_sha": "7a737d868e3d444aa29a629219fba689425959da",
+  "historical_submission_payload_sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+  "predecessor_origin_commitment_policy": "PRESERVED_UNCHANGED_LINEAR_CHAIN_AUDIT_ONLY_NOT_FULL_MMR",
+  "nodes": [
+    {
+      "node_id": "control:submission_evidence_surface_gate",
+      "kind": "PREVENTIVE_CONTROL_FCO_CANDIDATE",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "PROTOCOL_CONTROL_ONLY_NOT_EMPIRICAL_EFFECT",
+      "gate_id": "NO_SUBMISSION_WHILE_JUDGE_RELEVANT_EVIDENCE_IS_AVAILABLE_BUT_UNSURFACED",
+      "prevents": "C_media_not_in_vault",
+      "source": "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+      "n_atoms": 3,
+      "fco_root": "321e4d0e3349222bb6fa6138fda4a0be33a55468d5ed265f2586058efb7dda53",
+      "backbones": [
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "cc9420a7894d44097deae5b50a5b4fc228f3b008d025415b3f8b300e5b1ec217"
+        },
+        {
+          "height": 0,
+          "atoms": 1,
+          "peak_root": "a37575236344fd8b4dcf8301384f553fe12adca9b43cd595747a21a7b2cbf8cc"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:A_rubric_not_retrieved_early",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "A_rubric_not_retrieved_early",
+      "status": "PARTIAL",
+      "evidence": "Rubric in docs/ANB prereg Aug 26; ic_hack_get called Aug 27 05:29 — before submit but vault not acted on",
+      "audit_ground_truth_role": "CONTRIBUTING_OR_PARTIAL",
+      "n_atoms": 4,
+      "fco_root": "4fdc0e031f0406f61abaf114bd02825e545a956c48e980676ff17365c0608f8e",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "4fdc0e031f0406f61abaf114bd02825e545a956c48e980676ff17365c0608f8e"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:B_text_form_not_agent_native",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "B_text_form_not_agent_native",
+      "status": "CONFIRMED_CONTRIBUTING",
+      "evidence": "Submit used text fields only; did not demonstrate IC MCP logistics as proof",
+      "audit_ground_truth_role": "TERTIARY",
+      "n_atoms": 4,
+      "fco_root": "7668e2833ad26ecfccea41d6aded63c47e4929d9c6321f49515343f0fd6ba217",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "7668e2833ad26ecfccea41d6aded63c47e4929d9c6321f49515343f0fd6ba217"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:C_media_not_in_vault",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "C_media_not_in_vault",
+      "status": "CONFIRMED_PRIMARY",
+      "evidence": "folder_id=null; IC_VAULT_UPLOAD_PACKET created 33min AFTER ack",
+      "audit_ground_truth_role": "PRIMARY",
+      "n_atoms": 4,
+      "fco_root": "bdf74d27b3f0db26afd1a07c677b5565eb1c2a41d82d6f739a00cdb8e70b6f89",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "bdf74d27b3f0db26afd1a07c677b5565eb1c2a41d82d6f739a00cdb8e70b6f89"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:D_provenance_not_exposed",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "D_provenance_not_exposed",
+      "status": "CONFIRMED_CONTRIBUTING",
+      "evidence": "No origin comparison in blurb or vault",
+      "audit_ground_truth_role": "SECONDARY",
+      "n_atoms": 4,
+      "fco_root": "0a56507cbad54a9ddf1b2df1b31ba480ff808c5a5a1f67602cd6bac1ab64f7d1",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "0a56507cbad54a9ddf1b2df1b31ba480ff808c5a5a1f67602cd6bac1ab64f7d1"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:E_product_over_package",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "E_product_over_package",
+      "status": "CONFIRMED_CONTRIBUTING",
+      "evidence": "Backup media finalized 11:37 UTC; submit 22:13 UTC; vault packet never executed",
+      "audit_ground_truth_role": "CONTRIBUTING_OR_PARTIAL",
+      "n_atoms": 4,
+      "fco_root": "fcf44bbbe47c716cc646f7d16782c6a39554f9c78f0be041e7ec7b34d1914992",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "fcf44bbbe47c716cc646f7d16782c6a39554f9c78f0be041e7ec7b34d1914992"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:F_late_package_design",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "F_late_package_design",
+      "status": "CONFIRMED",
+      "evidence": "Seal/hero created ~15:02-15:31 PDT same day as submit",
+      "audit_ground_truth_role": "CONTRIBUTING_OR_PARTIAL",
+      "n_atoms": 4,
+      "fco_root": "39a7fb4df829b227e080d5eadbf0d0400375a24f7bd892af9ae8baef40c25a94",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "39a7fb4df829b227e080d5eadbf0d0400375a24f7bd892af9ae8baef40c25a94"
+        }
+      ]
+    },
+    {
+      "node_id": "failure:G_no_judge_red_team_gate",
+      "kind": "FORENSIC_FAILURE_FCO_CANDIDATE",
+      "derived_from": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "evidence_class": "RECOMPUTED_RESULT",
+      "claim_ceiling": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY",
+      "candidate": "G_no_judge_red_team_gate",
+      "status": "CONFIRMED",
+      "evidence": "IMMERSIVE_COMMONS_SUBMISSION_REVIEW.md focused on gates not 90s judge test",
+      "audit_ground_truth_role": "CONTRIBUTING_OR_PARTIAL",
+      "n_atoms": 4,
+      "fco_root": "91eb51abc9eacdf30f5b74cf60659ee0e4c0a600dc4590fc5475247bd43387a4",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "91eb51abc9eacdf30f5b74cf60659ee0e4c0a600dc4590fc5475247bd43387a4"
+        }
+      ]
+    },
+    {
+      "node_id": "fcg:failure_learning_edges",
+      "kind": "FCG_EDGE_SET_FCO_CANDIDATE",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "STRUCTURAL_CAUSAL_GRAPH_ONLY",
+      "edge_count": 6,
+      "n_atoms": 6,
+      "fco_root": "57f96e5a935f20041e73845b621e3e4c4decb825653c908577b75c14af850634",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "ef9f79e0e4efbff11817d36c8c59933840ba76441f8c675dad0bfa630f2c4cf2"
+        },
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "b3cebbe929d3d689302186fc3ab0ccddd7c9cf83b195796826af6b8298723292"
+        }
+      ]
+    },
+    {
+      "node_id": "source:docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "source_bytes": 3084,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 87,
+      "fco_root": "bb13aab6b1d03ca33ae5816c266775a45939ee470673f8579ff9b1e90821c0fa",
+      "backbones": [
+        {
+          "height": 6,
+          "atoms": 64,
+          "peak_root": "95c157ce325f827ce39b48826d9e9efbd7b058e22c412de618de63f38c17b26a"
+        },
+        {
+          "height": 4,
+          "atoms": 16,
+          "peak_root": "dd0242af66c217d7c32010ef063edbc5926e9b489af8513247de347b4db700a8"
+        },
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "fbdc7192ddca5550a7a93d9c9e6ca4466db9f05feb36253c77a79ef69b9603c4"
+        },
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "ae4acf6753612159a7f2b6f33dd5e310b8f43fba24d7d547cf73e33ee5fb60f8"
+        },
+        {
+          "height": 0,
+          "atoms": 1,
+          "peak_root": "29b7fc786c727d5d284977043fa557800b5788b823aeb69d283f1a66e97c11a2"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/ic_postmortem_20260827/ACTUAL_SUBMISSION_FREEZE.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/ic_postmortem_20260827/ACTUAL_SUBMISSION_FREEZE.json",
+      "source_sha256": "89097a602984e0d0e82140d8a6dc79510a595be2a6453e52a64912ef10201db1",
+      "source_bytes": 4783,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 54,
+      "fco_root": "214f1298e6cb81097820890aada269e4285247d89e085d326e0a240ae952a678",
+      "backbones": [
+        {
+          "height": 5,
+          "atoms": 32,
+          "peak_root": "6d93caad4f26b87445a3b3436ef56e315bf533fc99ed71a7f9e89cc059041a92"
+        },
+        {
+          "height": 4,
+          "atoms": 16,
+          "peak_root": "3c2b988a48916863733f659a5d28eaf18777c46ad1f164982273228e8c0a35a8"
+        },
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "421b67c8186687b7c37e7cd1262d193c341e5424ff5a3fdbdf12541ea58b0067"
+        },
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "104c5b331f1abd5e4a25ed099c166cd6a8bf462681f22a5b493de2b9dacd379e"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+      "source_sha256": "b7aff9f64f38144b18bf24027de004d6df92942891e2500bb9bd7a4f7cefc86c",
+      "source_bytes": 1716,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 19,
+      "fco_root": "fb317240e6df4118767ca6c31a26dfc5f0dbbc3903f54221b50269e6bfbbb2b1",
+      "backbones": [
+        {
+          "height": 4,
+          "atoms": 16,
+          "peak_root": "6ff5c4da27c99be50dfc1828606f2f975436c5cb92519ba112ade2a3efabb6bd"
+        },
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "c8e545eda62c88c244cfd427859f07496037056fa858ec6b141fc292eb153b8c"
+        },
+        {
+          "height": 0,
+          "atoms": 1,
+          "peak_root": "17f164a8137b5ddc649856eaf2f55ec55933cb30b0a502aca44300fb4cf86c06"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "source_bytes": 7038,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 86,
+      "fco_root": "7a4c9bce866b9f29a4f6b1c8a9d9299f040df570d03f6693e5df48aea30fe077",
+      "backbones": [
+        {
+          "height": 6,
+          "atoms": 64,
+          "peak_root": "2c604ccd35cef78f8320c63c5a8635bb291a05c307bf0b021d2293044ad4c051"
+        },
+        {
+          "height": 4,
+          "atoms": 16,
+          "peak_root": "f8c90310a4a403282484892a4508eb4c51b67696549d51b2a98e3aa6bd949fe1"
+        },
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "0bd38b75b8ac08aa7aaf49ed9240936729cb81312f6114c45e7380442a5a4493"
+        },
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "28a3490b689098fd5f76e0b4e18ff42c973993e70799abc1f9cca1a1d0b563ed"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "source_bytes": 54375,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 636,
+      "fco_root": "4d3171c83623f115bebe90002e912272628bccb691b022b800c0ba965d743bb6",
+      "backbones": [
+        {
+          "height": 9,
+          "atoms": 512,
+          "peak_root": "c200a0fb232145de3412f9c8188b71032429697200e6eec3f71e602d481e8cac"
+        },
+        {
+          "height": 6,
+          "atoms": 64,
+          "peak_root": "806c25e13a49cba3948d8cbf5ac7c8585adc460645343846f23a8b9703e04868"
+        },
+        {
+          "height": 5,
+          "atoms": 32,
+          "peak_root": "71ca6d5bd2546a471f95919558f4d11af84978156ed41765493c26b2bfd408cd"
+        },
+        {
+          "height": 4,
+          "atoms": 16,
+          "peak_root": "c9e2b7c4dd3001cc6805bb52a50ffc942ba964649b1cceb386ca8152f6819930"
+        },
+        {
+          "height": 3,
+          "atoms": 8,
+          "peak_root": "dc63677214d8cdd33f7eded4014a376c806b0fdbda9aee9bc1685f8da28c9ca2"
+        },
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "e08e3c9aa09f1da2c1cc03223b62395cc972afc8bd119aa3560023028eca0575"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/ic_postmortem_20260827/MULTIMODAL_EVIDENCE_COVERAGE.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/ic_postmortem_20260827/MULTIMODAL_EVIDENCE_COVERAGE.json",
+      "source_sha256": "c5a8a6635b8503faea4f33ac19c8b96d3906ed532f9cb4a93a741c2e359e4a67",
+      "source_bytes": 1646,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 32,
+      "fco_root": "dac774fb34bf573c348e0e8ee879520a5e5a5a5b738b52c3a06e765eab27cfc4",
+      "backbones": [
+        {
+          "height": 5,
+          "atoms": 32,
+          "peak_root": "dac774fb34bf573c348e0e8ee879520a5e5a5a5b738b52c3a06e765eab27cfc4"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/ic_postmortem_20260827/POSTMORTEM.md",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/ic_postmortem_20260827/POSTMORTEM.md",
+      "source_sha256": "f0981d2818c12aaed96344a21d09c59cba6d32c30b844f855f7e085cf616b333",
+      "source_bytes": 6370,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 96,
+      "fco_root": "56d75f1ac13465ea7243a911dae93525bfa5cf7a7d2d7d410040d41a1235bd71",
+      "backbones": [
+        {
+          "height": 6,
+          "atoms": 64,
+          "peak_root": "93bcdee9f9bbcb64376cd45883e8eb7707d7fcca90b3317f1c628f8a703d5d8b"
+        },
+        {
+          "height": 5,
+          "atoms": 32,
+          "peak_root": "af16168f1f7745948ce80bc1e7e67a74545c359163c7bfdb09db429f124da336"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json",
+      "source_sha256": "453d5d42834e43b9cbfe5244fa6e729c67dd1bf47c0e88eb02fb4d2670aa9343",
+      "source_bytes": 2774,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 25,
+      "fco_root": "954a6f4b521a30a31e0ba33774c8b34537bff120540574111b22809c10fc2b4c",
+      "backbones": [
+        {
+          "height": 4,
+          "atoms": 16,
+          "peak_root": "effcec1c3215038935c3f73616b65c698e3208bcd5ab38073b34f6e8838e62e0"
+        },
+        {
+          "height": 3,
+          "atoms": 8,
+          "peak_root": "d30cff3ee5034b86acde6c5c0220f2f58b0d55176c8108b11de2d3903e8281dc"
+        },
+        {
+          "height": 0,
+          "atoms": 1,
+          "peak_root": "05fd3c28d53d441d75710664d58f67db2ccdce2f4470b4273c5c3a922cdaba06"
+        }
+      ]
+    },
+    {
+      "node_id": "source:eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+      "kind": "SOURCE_EVIDENCE_FCO_CANDIDATE",
+      "source_path": "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+      "source_sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+      "source_bytes": 1743,
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "claim_ceiling": "SOURCE_IDENTITY_ONLY",
+      "n_atoms": 7,
+      "fco_root": "1f2f2dbced46e40cde3807710bfc0650243bd478c693c3b0315647206e506cc6",
+      "backbones": [
+        {
+          "height": 2,
+          "atoms": 4,
+          "peak_root": "4490ddff29ee27b4ef6b4834dadd8494658bde15c257fc370af64b93b6cd220f"
+        },
+        {
+          "height": 1,
+          "atoms": 2,
+          "peak_root": "905ebe6b130782283d53704ea016195004ece73c0ceb4c01ad976ae3451c0a84"
+        },
+        {
+          "height": 0,
+          "atoms": 1,
+          "peak_root": "afa64b53d76fff5bdc66d1afa9f97b2e99c7618954c793734f8ddfe43967b808"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e:failure-precedes-ack",
+      "src": "failure:C_media_not_in_vault",
+      "rel": "PRECEDES",
+      "dst": "source:eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json"
+    },
+    {
+      "edge_id": "e:postmortem-derives-primary",
+      "src": "source:eval/ic_postmortem_20260827/POSTMORTEM.md",
+      "rel": "DERIVES",
+      "dst": "failure:C_media_not_in_vault"
+    },
+    {
+      "edge_id": "e:protocol-prevents-primary",
+      "src": "control:submission_evidence_surface_gate",
+      "rel": "PREVENTS",
+      "dst": "failure:C_media_not_in_vault"
+    },
+    {
+      "edge_id": "e:submission-exhibits-origin-ambiguity",
+      "src": "source:eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+      "rel": "EXHIBITS",
+      "dst": "failure:D_provenance_not_exposed"
+    },
+    {
+      "edge_id": "e:submission-exhibits-text-form",
+      "src": "source:eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+      "rel": "EXHIBITS",
+      "dst": "failure:B_text_form_not_agent_native"
+    },
+    {
+      "edge_id": "e:submission-exhibits-vault-omission",
+      "src": "source:eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+      "rel": "EXHIBITS",
+      "dst": "failure:C_media_not_in_vault"
+    }
+  ],
+  "analysis_fcg_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e",
+  "analysis_backbones": [
+    {
+      "height": 4,
+      "objects": 16,
+      "peak_root": "f272b39b18003476dfd53de7dc322d06dbcfbce72a76c8c62e7a949e5f0e4f53"
+    },
+    {
+      "height": 1,
+      "objects": 2,
+      "peak_root": "23a69508558c478ab014605d053fc2e8011e1b90043571a045f288d1b549cb24"
+    }
+  ],
+  "n_nodes": 18,
+  "n_edges": 6,
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "COMMITTED_FAILURE_LEARNING_DOMAIN",
+  "CLAIM_CEILING": "IDENTITY_AND_SUBMISSION_FORENSICS_ONLY"
+}

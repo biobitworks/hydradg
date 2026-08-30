@@ -1,0 +1,66 @@
+{
+  "authoritative_branch": "cursor/newinml-daisy-execute-20260829",
+  "current_sha": "b8f6d2aa809525a3937749a10205709004becb45",
+  "host": "magicSTUDIObox.local",
+  "material_experiments": [
+    {
+      "execution_state": "TERMINAL_PASS",
+      "experiment_id": "NEWINML-DOC-ROUNDTRIP-001",
+      "reproduction": "python3 scripts/newinml_doc_roundtrip_execute.py",
+      "scientific_state": "NULL_PRIMARY_STATISTICAL",
+      "terminal_receipt": "eval/newinml_doc_roundtrip_20260829/13_closeout/FINAL_CLOSEOUT.json"
+    },
+    {
+      "execution_state": "TERMINAL_PASS",
+      "experiment_id": "SEEDGRAPH-TRACEABILITY-001",
+      "reproduction": "python3 scripts/newinml_seedgraph_full_traceability_execute.py",
+      "scientific_state": "CUSTODY_MECHANICS_VALIDATED",
+      "terminal_receipt": "paper/newinml2026_solo/seedgraph_traceability/SEEDGRAPH_TRACEABILITY_CLOSEOUT.json"
+    },
+    {
+      "execution_state": "BLOCKED",
+      "experiment_id": "GPU-SGLANG-TERMINAL",
+      "reproduction": "python3 scripts/newinml_gpu_sglang_daisy_execute.py",
+      "scientific_state": "NOT_EXECUTED",
+      "terminal_receipt": "eval/newinml_final_daisy_20260829/execution/gpu_sglang_terminal/FINAL_GPU_SGLANG_CLOSEOUT.json"
+    },
+    {
+      "execution_state": "TERMINAL_UNDERPOWERED",
+      "experiment_id": "EXP-008",
+      "reproduction": "historical lane; see eval/ic_failure_learning_20260827/",
+      "scientific_state": "UNDERPOWERED",
+      "terminal_receipt": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json"
+    },
+    {
+      "execution_state": "TERMINAL_UNDERPOWERED",
+      "experiment_id": "EXP-009",
+      "reproduction": "historical lane; see eval/ic_failure_learning_20260827/",
+      "scientific_state": "UNDERPOWERED",
+      "terminal_receipt": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json"
+    },
+    {
+      "execution_state": "PARTIAL",
+      "experiment_id": "Q38-SUCCESSOR-PROBE",
+      "reproduction": "see eval/newinml_final_daisy_20260829/execution/lane3_q38/",
+      "scientific_state": "NON_TERMINAL",
+      "terminal_receipt": "eval/newinml_final_daisy_20260829/execution/lane3_q38/Q38_TERMINAL_PROVENANCE.json"
+    },
+    {
+      "execution_state": "BLOCKED",
+      "experiment_id": "CFOS-HL-001",
+      "reproduction": "blocked: cloudflare-os checkout NOT_LOCATED",
+      "scientific_state": "NOT_EXECUTED",
+      "terminal_receipt": "eval/newinml_final_daisy_20260829/execution/lane1_cfos/CFOS_HL001_CANARY_RECEIPT.json"
+    }
+  ],
+  "note": "Ollama serve is infrastructure only; no solo experiment RUNNING_VERIFIED at closeout.",
+  "ollama_daemon": {
+    "api_http_code": 200,
+    "material_experiment": false,
+    "pid_observed": true
+  },
+  "recorded_at_utc": "2026-08-29T16:48:46Z",
+  "running_verified_count": 0,
+  "schema": "hydradg.final_solo.runtime_status.v1",
+  "start_sha": "7f6de6f45cb14c39fe82f67da5d816f0845ad9c9"
+}

@@ -1,0 +1,67 @@
+{
+  "HydraDG_git_branch": "hack-hydra/hydralamp-20260826",
+  "HydraDG_git_sha": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "artifact_type": "IMMERSIVE_COMMONS_HACKATHON_SUBMISSION",
+  "claim_ceiling": "GOVERNED_MECHANISM_AND_VERIFIED_HARD_GATES_NOT_LLM_STATISTICAL_SUPERIORITY",
+  "created_at": "2026-08-27T22:02:10Z",
+  "disclosure_state": {
+    "PATENT_FIRST": [],
+    "PUBLIC": [
+      "submission_payload",
+      "seal_manifest",
+      "provenance_sidecar",
+      "demo_capsule_plaintext_fixture",
+      "demo_ciphertext",
+      "publicly_disclosed_demo_unlock_key"
+    ],
+    "REDACT": [],
+    "WITHHOLD": [
+      "FLOOR10_AGENT_TOKEN",
+      "production_signing_private_keys",
+      "api_credentials"
+    ],
+    "note": "Protected payload != public provenance pointer (GTM-Cellico invariant)"
+  },
+  "event_id": "anb-hack-01",
+  "frozen_event_sha256": "44e9d3dc7014b9b2c410a9e1e2c9b35a72cd269e4e561eba40414081ca81690d",
+  "merkle_mmr_note": "No canonical HydraDG publication-seal Merkle/MMR tooling executed for this lane",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "product": "HydraDG",
+  "project": "HydraLamp",
+  "schema": "hydradg.immersive_commons.submission_seal_manifest.v1",
+  "seal_version": "20260827",
+  "signature_state": "NOT_SIGNED",
+  "source_receipts": [
+    {
+      "evidence_class": "DETERMINISTIC_RECOMPUTATION_FROM_FROZEN_ARTIFACTS",
+      "path": "eval/hydralamp_20260826/SUBMISSION_OPERATOR_PACKET.json",
+      "present": true,
+      "role": "SubmissionOperatorPacket",
+      "sha256": "b0bccbd98bfaeadd3989d0c678771b96b7f3760633be1a3af0df322484c6fde6"
+    },
+    {
+      "evidence_class": "DETERMINISTIC_RECOMPUTATION_FROM_FROZEN_ARTIFACTS",
+      "path": "eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+      "present": true,
+      "role": "FrozenReviewB",
+      "sha256": "c2ac58e2a46c233b816860aac7736a82acbbebae5ad5887c84d9a828d576c823"
+    },
+    {
+      "evidence_class": "GOVERNED_MAPPING_FROM_DETERMINISTIC_RECOMPUTATION",
+      "path": "eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json",
+      "present": true,
+      "role": "JudgeMetricSurface",
+      "sha256": "c8fe4ab549fc2f9a055b69e201173095046192fe7fa38c1869ae8f1f4aae250f"
+    },
+    {
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+      "path": "eval/hydralamp_20260826/backup/BACKUP_RECEIPT.json",
+      "present": true,
+      "role": "InteractiveDemoBackup",
+      "sha256": "569ab69c55dd8aa87f688fd835e2d9b2e46afb007d75ffe02971e05e6754f063"
+    }
+  ],
+  "submission_payload_bytes": 1743,
+  "submission_payload_path": "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+  "submission_payload_sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d"
+}

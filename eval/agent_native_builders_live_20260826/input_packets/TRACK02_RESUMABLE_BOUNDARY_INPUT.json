@@ -1,0 +1,28 @@
+{
+  "schema": "hydradg.anb_live.input_packet.v1",
+  "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+  "work_item_count": 5,
+  "work_items_are_public_evidence_review": true,
+  "workflow_chain": ["GitHub", "Runtype", "Tavily", "HydraDG", "GitHub"],
+  "interruption_policy": {
+    "deliberate_interruption_at_each_major_stage": true,
+    "major_stages": [
+      "github_intake",
+      "runtype_agent_step",
+      "tavily_retrieval",
+      "hydradg_proposal",
+      "github_writeback"
+    ],
+    "resume_from_persistent_state_required": true
+  },
+  "hard_gates": [
+    "no_duplicate_canonical_writes",
+    "external_evidence_quarantined_until_governed_verification",
+    "preserve_null_failure_timeout_outcomes"
+  ],
+  "scoring_host": "magicSTUDIObox.local",
+  "external_runtime_class": "EXTERNAL_PROBABILISTIC_EVIDENCE",
+  "receipt_binding_required_before_promotion": true,
+  "sponsor_credit_order": ["Runtype", "Tavily", "Tenki", "Nebius", "AIsa"],
+  "no_keys_in_repo": true
+}

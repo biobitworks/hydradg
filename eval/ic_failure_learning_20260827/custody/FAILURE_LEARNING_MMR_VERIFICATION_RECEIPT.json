@@ -1,0 +1,31 @@
+{
+  "schema": "hydradg.ic_failure_learning.mmr_verification.v1",
+  "manifest_path": "eval/ic_failure_learning_20260827/custody/FAILURE_LEARNING_FCG_MMR_MANIFEST.json",
+  "manifest_sha256": "b4b186f8c2369f78e7bcd2135ac4d918fb4f5ce95379fa6c6f5a5e3ddfe6766f",
+  "analysis_fcg_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e",
+  "recomputed_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e",
+  "root_match": true,
+  "leaf_order": [
+    "control:submission_evidence_surface_gate",
+    "failure:A_rubric_not_retrieved_early",
+    "failure:B_text_form_not_agent_native",
+    "failure:C_media_not_in_vault",
+    "failure:D_provenance_not_exposed",
+    "failure:E_product_over_package",
+    "failure:F_late_package_design",
+    "failure:G_no_judge_red_team_gate",
+    "fcg:failure_learning_edges",
+    "source:docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md",
+    "source:eval/ic_postmortem_20260827/ACTUAL_SUBMISSION_FREEZE.json",
+    "source:eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+    "source:eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+    "source:eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+    "source:eval/ic_postmortem_20260827/MULTIMODAL_EVIDENCE_COVERAGE.json",
+    "source:eval/ic_postmortem_20260827/POSTMORTEM.md",
+    "source:eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json",
+    "source:eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json"
+  ],
+  "algorithm": "leaf_sha256_0x00; node_sha256_0x01; MMR peaks bagged right-to-left",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "COMMITTED_FAILURE_LEARNING_DOMAIN"
+}

@@ -1,0 +1,33 @@
+{
+  "schema": "hydradg.control_topology.v1",
+  "reason": "OPERATOR_CONTROLLER_HOST_LOST_REPLACED_BY_IPAD_CONTROL_PLANE",
+  "control_topology_predecessor_sha": "0000000000000000000000000000000000000000",
+  "control_topology_successor_sha": "278cd4804e88c28800b4bd6c72d206e9349cc0f6",
+  "effective_immediately": {
+    "magicPRObox": "UNAVAILABLE / NOT_REQUIRED_FOR_CURRENT_CONTROL",
+    "iPad Cursor Remote Control": "CONTROLLER PATH / CONTROLLER / REVIEWER / OPERATOR",
+    "iPad iSH + Tailscale": "MANUAL/BREAK-GLASS SSH PATH",
+    "GitHub origin": "synchronization arbiter / DURABLE GIT TRUTH",
+    "magicSTUDIObox.local": "exclusive scientific/model execution host",
+    "magicSTUDIObox Tailscale SSH": "BREAK-GLASS / MANUAL SHELL \u2014 OpenSSH on 100.105.40.90:22 (Tailscale GUI SSH unavailable)",
+    "Cursor My Machines worker": "magicstudiobox-hydradg @ /Users/byron/projects/active/hydradg"
+  },
+  "synchronization_invariant": "STUDIO_COMMITTED_HEAD == ORIGIN_HEAD plus independent controller readback from GitHub/iPad",
+  "timestamp_utc": "2026-08-26T07:01:57Z",
+  "ssh": {
+    "host": "100.105.40.90",
+    "magicdns": "magicstudiobox",
+    "user": "byron",
+    "port": 22,
+    "auth": "ed25519 publickey",
+    "phone_key_sent_via_tailscale_file": "magicphone_to_magicstudio_ed25519",
+    "ipad_key_sent_via_tailscale_file": "ipad_to_magicstudio_ed25519",
+    "verified_local_tailscale_ssh": true
+  },
+  "cursor_mobile": {
+    "path": "Cloud Agents and/or My Machines worker magicstudiobox-hydradg; Remote Control from desktop Agents Window",
+    "repo": "biobitworks/hydradg",
+    "branch": "hack-hydra/agent-native-builders-20260826",
+    "note": "Cursor iOS apps are not SSH clients into the Mac IDE"
+  }
+}

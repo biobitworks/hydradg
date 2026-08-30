@@ -1,0 +1,16 @@
+---
+pid: 32486
+cwd: "/Users/byron/projects/active/hydradg"
+command: "cd /Users/byron/projects/active/hydradg && rm -f eval/ic_failure_learning_20260827/results/MODEL_OUTPUTS.jsonl && python3 scripts/run_ic_failure_learning_experiments.py --generation M0 --models qwen2.5:1.5b --replicates 1 --case-ids E01-T0 E02-0 E03-0 E04-0 E07-0 2>&1 | tee eval/ic_failure_learning_20260827/results/run_m0_canary.log"
+title: "Run M0 canary experiments with qwen2.5:1.5b"
+status: failed   
+started_at: 2026-08-28T05:55:00.940Z
+running_for_ms: 1227534  
+---
+tee: eval/ic_failure_learning_20260827/results/run_m0_canary.log: No such file or directory
+
+---
+exit_code: unknown
+elapsed_ms: 1227530
+ended_at: 2026-08-28T06:15:28.470Z
+---

@@ -1,0 +1,73 @@
+{
+  "schema": "hydradg.hydralamp.submission_operator_packet.v1",
+  "recorded_at_utc": "2026-08-27T20:05:00Z",
+  "upstream_hydradg": {
+    "host": "magicSTUDIObox.local",
+    "branch": "hack-hydra/hydralamp-20260826",
+    "sha": "82981cfcf98f0c9d06ec06007f24570d2471efc7"
+  },
+  "downstream_hydralamp": {
+    "branch": "prototype/deterministic-local-20260826",
+    "sha": "9079507d12f1f63730b1fbbb4930689cdc85da4b",
+    "submission_packet": "eval/SUBMISSION_PACKET.json"
+  },
+  "measurement_review_b": {
+    "path": "eval/ollarma_measurement_review_20260827/",
+    "reconciliation_delta": "eval/ollarma_measurement_review_20260827/SUBMISSION_FREEZE_RECONCILIATION_DELTA.json",
+    "judge_surface": "eval/ollarma_measurement_review_20260827/JUDGE_METRIC_SURFACE.json"
+  },
+  "FROZEN_46_EVENT_SHA256": "44e9d3dc7014b9b2c410a9e1e2c9b35a72cd269e4e561eba40414081ca81690d",
+  "FROZEN_EVENT_COUNT": 46,
+  "PRIVATE_LEAK_COUNT": 0,
+  "UNAUTHORIZED_WRITE_COUNT": 0,
+  "REPLAY_ACCEPTED_COUNT": 0,
+  "REPLAY_REJECTED_COUNT": 5,
+  "POISON_CANONICALIZED_COUNT": 0,
+  "RESTORATION_PASS": true,
+  "FCG_ROOT_CHANGE_COUNT": 6,
+  "fcg_root_after": "a1ec5db1cc9388dffb935ffd7ab4d0c254b8ab73b03c30f0722326da1d8846b1",
+  "PASS_AT_3_46_EVENT_LANE": "NOT_ESTABLISHED",
+  "PASS_POW_3_46_EVENT_LANE": "NOT_ESTABLISHED",
+  "PASS_AT_3_46_EVENT_LANE_REASON": "BLOCKED_CASE_VECTORS",
+  "AUTHORIZATION_GAUNTLET": {
+    "repo": "hydralamp",
+    "lane": "LOCAL_AUTHORIZE_15x3",
+    "LOCAL_PASS_AT_3": 1.0,
+    "LOCAL_PASS_POW_3": 1.0,
+    "NOT_MERGED_INTO": "46_EVENT_GOLDEN_LANE"
+  },
+  "CLOUDDRIFT_STATUS": "DEFINED_MULTIPLE_IMPLEMENTATIONS_NOT_UNIFIED_ON_FROZEN_LANE",
+  "DELTA_G_STAR_STATUS": "DEFINED_DIMENSIONLESS_INFORMATION_STATE_DIAGNOSTIC",
+  "STATISTICAL_COMPARISON_STATUS": "UNDERPOWERED_BLOCKED_CASE_VECTORS",
+  "MEASUREMENT_REVIEW_MODELS": [
+    "qwen2.5:1.5b",
+    "phi4-mini:latest",
+    "qwen3:4b"
+  ],
+  "MEASUREMENT_REVIEW_MODEL_OUTPUT_CLASS": "PROBABILISTIC_MODEL_OUTPUT",
+  "media_lanes": {
+    "HYDRADG_82981c_FROZEN_LANE": {
+      "PIXEL_SEAL": "NOT_RUN",
+      "BROWSER_VERIFY_PASS": true
+    },
+    "STANDALONE_HYDRALAMP_MEDIA": {
+      "path": "hydralamp/eval/hydralamp_media_custody_20260827/FINAL_CLOSEOUT.json",
+      "PIXEL_SEAL": "PASS",
+      "ONE_PIXEL_TAMPER_TEST": "PASS_REJECTED",
+      "BYTE_IDENTITY": "PASS",
+      "MANIFEST_BINDING": "PASS"
+    }
+  },
+  "final_public_claim": "Models propose. Deterministic custody decides.",
+  "submission_claim_ceiling": "GOVERNED_MECHANISM_AND_VERIFIED_HARD_GATES_NOT_LLM_STATISTICAL_SUPERIORITY",
+  "human_submission_gate": "READY_FOR_HUMAN_SUBMISSION",
+  "remaining_human_actions": [
+    "Record demo video (<=3 min)",
+    "Submit Immersive Commons form with GitHub + video URLs",
+    "Optional: wire judge strip into demo UI"
+  ],
+  "SIGNATURE_STATE_REVIEW_B": "NOT_SIGNED",
+  "MERKLE_MMR_STATE_REVIEW_B": "NOT_COMMITTED_BY_THIS_REVIEW",
+  "NEXT_SAFE_ACTION": "Human submission closeout — do not block on statistical model comparison",
+  "FINAL_REVIEW_GATE": "OPERATOR_HUMAN_SUBMISSION_CLOSEOUT"
+}

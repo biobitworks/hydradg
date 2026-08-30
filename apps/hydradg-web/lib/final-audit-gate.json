@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.final_audit_gate.correction.v2",
+  "correction_state": "SUPERSEDES_PRIOR_V2_PASS_RECEIPT",
+  "superseded_git_blob_sha": "9c4ca8e243e8d895c24025edd1f42aefecae022a",
+  "correction_reason": "The prior v2 script discovered the runtime inventory but did not perform real per-dataset-row Ollama inference; it generated development hashes and literal retrieval metrics. The prior PASS/10200-executed interpretation is therefore not eligible as empirical evidence.",
+  "execution_host": "REDACTED_LOCAL_HOST",
+  "host_disclosure_state": "PUBLIC_RELEASE_MINIMIZATION",
+  "models_discovered": 10,
+  "models_actually_called": 0,
+  "model_responses_receipted": 0,
+  "dataset_cases_actually_executed": 0,
+  "real_retrieval_score_rows": 0,
+  "no_primary_hardcoded_constants": false,
+  "external_evaluator_scores_promoted": false,
+  "vithia_execution_evidence": "NOT_ESTABLISHED_FROM_EXECUTION_RECEIPT",
+  "historical_track03_evidence_state": "EXECUTED_PRESERVED",
+  "evidence_audit_gate": "FAIL_DEVELOPMENT_RECEIPTS_NOT_REAL_EXECUTION",
+  "primary_claim_ceiling": "EXPANDED_MODEL_MATRIX_NOT_ESTABLISHED_FROM_REAL_CASE_EXECUTION",
+  "production_deployed": "NO",
+  "main_merged": "NO"
+}

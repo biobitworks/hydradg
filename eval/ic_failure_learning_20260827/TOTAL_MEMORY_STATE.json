@@ -1,0 +1,39 @@
+{
+  "schema": "hydradg.total_memory_state.v1",
+  "git_branch": "hack-hydra/ic-failure-learning-20260827",
+  "git_sha": "94059bbd09907a12d5bb193c9705ad8fc7dd6572",
+  "execution_host": "magicSTUDIObox.local",
+  "seedgraph_root": "/Users/byron/projects/active/seedgraph",
+  "total_source_count": 32,
+  "total_source_bytes": 1342114,
+  "structural_atom_count": 3753,
+  "semantic_atom_count": 26,
+  "semantic_abstention_count": 3,
+  "orphan_count": 0,
+  "latest_full_fcg_root": "27ba2a47a1bf2570b71d1d2acf9ddd7941094c2509466a73e1383a6c6c116bbe",
+  "latest_verified_mmr_root": "27ba2a47a1bf2570b71d1d2acf9ddd7941094c2509466a73e1383a6c6c116bbe",
+  "current_context_epoch": "CONTEXT_EPOCH_006",
+  "data_quality_vector": {
+    "SOURCE_BYTE_COVERAGE": 1.0,
+    "LOGICAL_MEMBERSHIP_COVERAGE": 1.0,
+    "ORPHAN_ATOM_RATE": 0.0,
+    "UNSURFACED_JUDGE_EVIDENCE_RATE": 8.3,
+    "PROMPT_ATOM_COVERAGE": null,
+    "PROMPT_CONSTRAINT_RECALL": null
+  },
+  "response_quality_vector": {
+    "EARLIEST_DIVERGENCE_TOP1": null,
+    "FIRST_ACTION_ACCURACY": null,
+    "CONSTRAINT_VIOLATION_RATE": null,
+    "ABSTENTION_RATE": null,
+    "MALFORMED_OUTPUT_RATE": null,
+    "E06_prevents_C_rate": null,
+    "E07_directional_gate_rate": null
+  },
+  "blocked_dependencies": [
+    "CUDA_GPU_FOR_SGLANG_BCG",
+    "E08_EXECUTION",
+    "HYDRADB_PROJECTION"
+  ],
+  "claim_ceiling": "TOTAL_INGEST_V1_COMPLETE__QUALITY_LONGITUDINAL_NOT_EXECUTED"
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "sponsor.yappy_biz.api_probe_receipt.v1",
+  "mission_id": "ANB-SP-YAPPY-BIZ-API-001",
+  "provider": "Yappy.biz",
+  "product": "Yappy Web API (macOS voice agent product metadata)",
+  "operation": "public_api_index_and_latest_release",
+  "identity_note": "Distinct from Mitosis Yappy (mitosislabs / mi agents). This is yappy.biz public product API only.",
+  "docs_ref": "https://yappy.biz/api/",
+  "openapi_url": "https://yappy.biz/openapi.json",
+  "base_url": "https://yappy.biz/api/v1",
+  "probes": [
+    {
+      "path": "https://yappy.biz/api/v1",
+      "http_status": 200,
+      "ok": true,
+      "raw_artifact_path": "eval/agent_native_sponsors_20260827/yappy_biz/raw/yappy.biz_api_v1.json",
+      "raw_sha256": "82ec1bfa9e653d2fe6257f060f19b6133f477775c83b8097999d8b8715b8664b",
+      "error": null
+    },
+    {
+      "path": "https://yappy.biz/api/v1/releases/latest",
+      "http_status": 200,
+      "ok": true,
+      "raw_artifact_path": "eval/agent_native_sponsors_20260827/yappy_biz/raw/yappy.biz_api_v1_releases_latest.json",
+      "raw_sha256": "a2b459465df203d08abc804c86ecf948772685af6d655c019501b230d8aff9b9",
+      "error": null
+    },
+    {
+      "path": "https://yappy.biz/openapi.json",
+      "http_status": 200,
+      "ok": true,
+      "raw_artifact_path": "eval/agent_native_sponsors_20260827/yappy_biz/raw/yappy.biz_openapi.json.json",
+      "raw_sha256": "16fd4c6815a8ce588eb3405377c4d9454e16660692c9eaf0ba6bbe88a034d699",
+      "error": null
+    }
+  ],
+  "latest_release_version": "0.4.20",
+  "fcg_append": "NOT_APPENDED",
+  "status": "PASS",
+  "error_code": null,
+  "error_summary": null,
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T06:11:34.284Z"
+}

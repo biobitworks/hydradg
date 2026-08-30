@@ -1,0 +1,31 @@
+{
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "DAISY_TRAIN_TRACK_EXPANSION_COMPLETED_FOR_TRACK01",
+  "context_energy_metrics": {
+    "delta_g_star": 0.0612,
+    "g_star_diagnostic": -0.0619,
+    "shannon_entropy_bits": 1.7822,
+    "u_star_burden": 0.25
+  },
+  "corpus_statistics": {
+    "deduplication_ratio": "68.40%",
+    "document_count": 510000,
+    "raw_word_atoms": 27200000,
+    "spatiotemporal_pointers": 18604800,
+    "unique_word_keys": 8595200
+  },
+  "information_energy_savings": {
+    "flops_saved": 260467200000000000,
+    "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+    "watt_hours_saved": 723.52
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "schema": "hydradg.track_daisy_train_receipt.v1",
+  "signature_hash": "8504e216f3b7d83d77a5a88be98abd0c46230028975f16fcdd1d914b79256f67",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T19:26:35Z",
+  "timestamp_unix": 1787253995,
+  "track_id": "track01",
+  "track_name": "EnterpriseRAG-Bench & Salesforce HERB Corpora"
+}

@@ -1,0 +1,7 @@
+symbol	human_readable_name	formula	units	input	output	interpretation	source_script	source_data	claim_ceiling
+ΔG*	Context free-energy proxy (engineering tier)	NOT_COMPUTED in context_vs_entropy lane	nats	repo scan findings	classification label	engineering proxy not biological	eval/context_vs_entropy_20260820	CONTEXT_VS_ENTROPY_RESULT.json	DESCRIPTIVE_ONLY
+gateway_entropy_proxy	Shannon entropy of token gateway	NOT_COMPUTED	bits	model gateway logs	entropy scalar	engineering proxy	N/A	NOT_COMPUTED	NOT_COMPUTED
+Context Iceberg JSD	Jensen-Shannon divergence context layers	NOT_COMPUTED	unitless	layer embeddings	JSD	exploratory	terminology STAGE-001	STAGE-001_CLOSEOUT.json	NOT_COMPUTED
+TVD restoration_gain	Total variation distance restoration	NOT_COMPUTED	unitless	restoration pairs	TVD delta	exploratory	N/A	NOT_COMPUTED	NOT_COMPUTED
+CONTEXT_SCORE_DELTA	HydraDG context score change	NOT_COMPUTED	score	ingest batches	delta	engineering	eval/terminology_seedgraph_anticube_20260829	STAGE-001_CLOSEOUT.json	NOT_COMPUTED
+classification_coverage	Context vs entropy classified fraction	18555/18567=99.94%	count	secret scan	classified count	deterministic endpoint	eval/context_vs_entropy_20260820	CONTEXT_VS_ENTROPY_RESULT.json	DETERMINISTIC_VALIDATION

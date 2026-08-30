@@ -1,0 +1,121 @@
+{
+  "schema": "hydradg.ic_failure_learning.generation_summary.v1",
+  "generation": "M1",
+  "n_scored": 132,
+  "model_state_counts": {
+    "UNKNOWN": 66,
+    "ABSTAIN": 24,
+    "MALFORMED": 16,
+    "OK": 26
+  },
+  "models": [
+    "qwen2.5-coder:7b",
+    "qwen3:1.7b"
+  ],
+  "E01": {
+    "vault_media_detection": {
+      "yes": 3,
+      "n": 6,
+      "rate": 0.5
+    },
+    "origin_detection": {
+      "yes": 3,
+      "n": 6,
+      "rate": 0.5
+    },
+    "cold_start_detection": {
+      "yes": 0,
+      "n": 6,
+      "rate": 0.0
+    }
+  },
+  "E02": {
+    "directional_gate": {
+      "yes": 3,
+      "n": 9,
+      "rate": 0.3333333333333333
+    }
+  },
+  "E05": {
+    "top1_divergence": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "top3_divergence": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    }
+  },
+  "E06": {
+    "prevents_C": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "vault_before_submit": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "media_before_submit": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "origin_before_submit": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    },
+    "red_team_before_submit": {
+      "yes": 0,
+      "n": 0,
+      "rate": null
+    }
+  },
+  "E07": {
+    "directional_gate": {
+      "yes": 3,
+      "n": 18,
+      "rate": 0.16666666666666666
+    }
+  },
+  "per_model": {
+    "qwen2.5-coder:7b": {
+      "n_scored": 66,
+      "model_state_counts": {
+        "ABSTAIN": 24,
+        "MALFORMED": 16,
+        "OK": 26
+      },
+      "E05_top1": {
+        "yes": 0,
+        "n": 0,
+        "rate": null
+      },
+      "E06_prevents_C": {
+        "yes": 0,
+        "n": 0,
+        "rate": null
+      }
+    },
+    "qwen3:1.7b": {
+      "n_scored": 66,
+      "model_state_counts": {
+        "UNKNOWN": 66
+      },
+      "E05_top1": {
+        "yes": 0,
+        "n": 0,
+        "rate": null
+      },
+      "E06_prevents_C": {
+        "yes": 0,
+        "n": 0,
+        "rate": null
+      }
+    }
+  }
+}

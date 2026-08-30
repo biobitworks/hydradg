@@ -1,0 +1,18 @@
+{
+  "schema": "hydradg.daisy_state.v1",
+  "branch": "hack-hydra/ic-failure-learning-20260827",
+  "sha": "94059bbd09907a12d5bb193c9705ad8fc7dd6572",
+  "completed_blocks": [
+    "IC_FAILURE_LEARNING_M0_M1_M2",
+    "STAGE2_POST_CUSTODY",
+    "SGLANG_REPLAY_PREREG_BLOCKED",
+    "TOTAL_INGEST_V1"
+  ],
+  "pending_blocks": [
+    "EXP-008_FALSIFICATION",
+    "SGLANG_CUDA_EXECUTION"
+  ],
+  "total_memory_root": "27ba2a47a1bf2570b71d1d2acf9ddd7941094c2509466a73e1383a6c6c116bbe",
+  "sglang_replay_equivalence": "BLOCKED_CUDA_UNAVAILABLE",
+  "claim_ceiling": "TOTAL_INGEST_V1_COMPLETE__QUALITY_LONGITUDINAL_NOT_EXECUTED"
+}

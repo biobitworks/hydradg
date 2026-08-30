@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.cfos_hl001.execution.v1",
+  "experiment_id": "CFOS-HL-001",
+  "logical_conditions": [
+    "CONTROL",
+    "INVALID_PROOF",
+    "REPLAYED_PROOF",
+    "BROKEN_AUTHORIZATION_EDGE"
+  ],
+  "canary_cells_required": 8,
+  "canary_cells_executed": 8,
+  "lane_state": "PASS",
+  "cloudflare_os_checkout": "/Users/byron/projects/active/cloudflare-os",
+  "cloudflare_os_sha": "14fea8592a6dbc59769d592c0752bbf6a465fa84",
+  "cfos_runtime_health": {
+    "ok": true,
+    "code": "200"
+  },
+  "stages_completed": [
+    "1_CONTROL_SMOKE",
+    "2_CONDITION_SMOKE",
+    "3_8_CELL_CANARY"
+  ],
+  "claim_ceiling": "CLOUDFLARE_OS_INTEGRATION_CANARY",
+  "signature_state": "NOT_SIGNED",
+  "MMR_STATE": "NOT_COMMITTED"
+}

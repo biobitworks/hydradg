@@ -1,0 +1,24 @@
+{
+  "schema": "hydradg.newinml2026_solo.deadline_divergence_analysis.v1",
+  "recorded_at_utc": "2026-08-29T07:10:39Z",
+  "earliest_divergence": "STALE_OR_INCORRECT_SOURCE_STATE_PROMOTED_AS_CURRENT_REQUIREMENT",
+  "transform_math_state": "CORRECT_GIVEN_INPUT",
+  "input_freshness_state": "FAILED",
+  "decision_state": "SUPERSEDED",
+  "note": "Timezone arithmetic was not the root failure. The assistant derived 2026-08-29T08:59:00Z from a stale requirement observation that was promoted as current without reconciling CFP AoE language, countdown JS, and OpenReview config.",
+  "preserved_contradictions": [
+    {
+      "a": "REQ-DEADLINE-CFP-AOE",
+      "b": "REQ-DEADLINE-OPENREVIEW",
+      "relation": "CALENDAR_DATE_AND_AOE_VS_PLATFORM_UTC"
+    },
+    {
+      "a": "REQ-DEADLINE-COUNTDOWN",
+      "b": "REQ-DEADLINE-OPENREVIEW",
+      "relation": "COUNTDOWN_11_59_UTC_VS_OPENREVIEW_07_59_UTC"
+    }
+  ],
+  "allowed_conclusion": "Requirements change or diverge over time; source freshness and explicit supersession matter more than byte identity alone.",
+  "disallowed_conclusion": "HydraDG prevented this failure",
+  "truthful_statement": "Our current workflow failed to update the active requirement graph in time; the failure itself provides a concrete target for the custody architecture."
+}

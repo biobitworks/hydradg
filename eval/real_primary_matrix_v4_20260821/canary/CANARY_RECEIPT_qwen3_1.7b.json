@@ -1,0 +1,30 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "c333b7232bdb",
+  "model_name": "qwen3:1.7b",
+  "parsed_output": "Entities derived from longmemeval_s_case_0001",
+  "parsed_output_sha256": "73e3d8d2e77d916f14e0f9a06366eed19f041b4c69f484b2414b3e69af02fa35",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "**Canonical Entities and Relationships:**  \n- **Entities:**  \n  - User  \n  - Assistant  \n\n- **Relationships:**  \n  - User \u2194 Assistant (Interaction)  \n\n**Explanation:**  \nThe case material describes a longitudinal conversation session (Turn 1) between a user and an assistant. The entities are the par",
+  "raw_response_bytes": 501,
+  "raw_response_sha256": "f77bf0c3e0ed836ec30f93f8a8d6cdfd012a6ab0c05152944f79bdd86c0a70de",
+  "request_sha256": "251e826b58e462369976ecb1af0801b577441b82423da04d83e4af677f5b62cc",
+  "scientific_correct": true,
+  "scientific_end": 1787308404.0647318,
+  "scientific_start": 1787308375.394123,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 28.67,
+  "warmup_receipt_sha256": "1943faf1af435472521e0d8e35204f350636c6f93f0e9c48619d8d127907ff65"
+}

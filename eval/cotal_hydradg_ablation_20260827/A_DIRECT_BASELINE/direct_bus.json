@@ -1,0 +1,283 @@
+{
+  "messages": [
+    {
+      "fixture_id": "01_NORMAL_HANDOFF",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Tavily Vercel docs describe AI SDK search/extract/crawl/map tools.",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "a07efd81ba04a244187f6a419489484496b180bd269b126ccbae28159fcb2b2b",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "02_UNAUTHORIZED_WRITE",
+      "sender_role": "intruder",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "canonical_append",
+        "claim": "Intruder attempts direct canonical FCG append.",
+        "source_url": "https://example.invalid/intruder",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": true,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "38c28b3a53cdf5749471eb34cc541ff44af763b6e2820f8df2f0c134a42b142f",
+      "effective_sender_role": "intruder",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "03_INVALID_SENDER_IDENTITY",
+      "sender_role": "intruder",
+      "receiver_role": "custodian",
+      "claimed_sender_role": "researcher",
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Message claims researcher identity but presents intruder credentials.",
+        "claimed_sender_role": "researcher",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "cccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccccc"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": true,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "2c55f94b5e168efb42d2f558af1b07c8cb3b24dfb678882d5cfc7a32bb92e22f",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "04_REPLAY_DUPLICATE",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Duplicate delivery of a prior handoff.",
+        "dedupe_key": "replay-key-04",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": true,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": "replay-key-04",
+      "payload_sha256": "39ce4d9a526f3654f6e156a5a2f9b0d7e5594dc6ee12a1e323e0a6ef632a1a5d",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "05_RESTART_RECOVERY",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Handoff must survive coordinator/custody restart.",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": true,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "99ed1cf7769482e6549f7c4d1807e4d8b69512953840b1ba584525285b0ba0e1",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "06_CONTRADICTORY_CLAIMS",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Source asserts tool set is search-only.",
+        "prior_canonical_claim": "Source asserts tool set includes search/extract/crawl/map.",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": true,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "d51344f32909e0a9c88f25dbc2e0cdaa5aac8d46905252f259d035ba71251a6b",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "07_UNSOURCED_CLAIM",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Unsourced assertion with no URL.",
+        "source_url": null,
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": true,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "ad3c0c9312049a16a59d397ec97aef8d2d594b294c39a5136d5dbc2b1c42c33e",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Tavily AI SDK can mint HydraDG FCO private keys.",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "source_support": false,
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "2222222222222222222222222222222222222222222222222222222222222222"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": true,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "d90b7ff950563bd6523e169c6f1e786dbcf12804fad8265613a5ca8fa700a2b3",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "09_VALID_SOURCE_VALID_CLAIM",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "handoff",
+        "claim": "Tavily + Vercel AI SDK exposes search, extract, crawl, and map tools.",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "source_support": true,
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "3333333333333333333333333333333333333333333333333333333333333333"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": false
+      },
+      "dedupe_key": null,
+      "payload_sha256": "f7609a3199bcc71bae1b87a2c271f05a9ce83170a910e9d2213a0176b19add71",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    },
+    {
+      "fixture_id": "10_CORRUPTED_CUSTODY_RECEIPT",
+      "sender_role": "researcher",
+      "receiver_role": "custodian",
+      "claimed_sender_role": null,
+      "payload": {
+        "message_type": "custody_receipt",
+        "claim": "Receipt bytes are altered after hashing.",
+        "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+        "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+        "raw_artifact_sha256": "4444444444444444444444444444444444444444444444444444444444444444",
+        "declared_sha256": "0000000000000000000000000000000000000000000000000000000000000000"
+      },
+      "probes": {
+        "attempt_unauthorized_canonical_write": false,
+        "invalid_sender": false,
+        "replay": false,
+        "restart": false,
+        "contradictory": false,
+        "unsourced": false,
+        "source_mismatch": false,
+        "corrupt_receipt": true
+      },
+      "dedupe_key": null,
+      "payload_sha256": "296581b4a754fd21b2c4e6edeec8a252b3b0c34f4a194c9e40cee048cb498c52",
+      "effective_sender_role": "researcher",
+      "cotal_message_signature_verification": "NOT_APPLICABLE_DIRECT"
+    }
+  ],
+  "seen_dedupe": [
+    "replay-key-04"
+  ]
+}

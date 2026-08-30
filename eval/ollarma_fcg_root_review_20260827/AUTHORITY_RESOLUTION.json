@@ -1,0 +1,32 @@
+{
+  "schema": "hydradg.ollarma_fcg_review.authority_resolution.v1",
+  "recorded_at_utc": "2026-08-27T19:00:00Z",
+  "host": "magicSTUDIObox.local",
+  "repo": "/Users/byron/projects/active/hydradg",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "git_commit": "82981cfcf98f0c9d06ec06007f24570d2471efc7",
+  "PROJECT_CONTROL.yaml": "ABSENT",
+  "present": [
+    "AGENTS.md",
+    "docs/AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md",
+    "docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md",
+    "docs/FCO_FCG_SOURCE_LINEAGE.md",
+    "schemas/agent_model_handoff_receipt.schema.json",
+    "schemas/orchestration_work_unit.schema.json",
+    "eval/hydralamp_20260826/HYDRALAMP_EVENTS.jsonl",
+    "custody/turns/HANDOFF_V9_*"
+  ],
+  "absent_not_invented": [
+    "FCO_FCG_CANONICAL_SPEC.md",
+    "CLAIM_CEILINGS.md",
+    "EVIDENCE_LEVELS.md",
+    "FCO_SCHEMA.json",
+    "FCG_SCHEMA.json",
+    "SIGNING_AND_KEYS.md"
+  ],
+  "frozen_facts_preserved": {
+    "HYDRALAMP_EVENTS.jsonl": "46 events unchanged",
+    "visualization_layout": "DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES"
+  },
+  "claim_ceiling": "ARCHITECTURAL_RECOMMENDATION_ONLY"
+}

@@ -1,0 +1,13 @@
+{
+  "context_length": 32768,
+  "max_output_tokens": 512,
+  "prompt_template_sha256": "4fc3a9e58efd2a1fa14e695af48bd9793434500a1bc7006c7a99170eefec1506",
+  "schema": "hydradg.prompt_contract.v2",
+  "seed": 42,
+  "system_prompt": "You are a deterministic FCO entity and relationship extractor for governed context graphs.",
+  "temperature": 0.0,
+  "timeout_seconds": 45,
+  "timestamp_unix": 1787280742,
+  "top_p": 1.0,
+  "user_prompt_template": "Extract canonical FCO entities and relationships from this case context: {case_text}"
+}

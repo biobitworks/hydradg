@@ -1,0 +1,68 @@
+{
+  "audit_matrix": {
+    "1_live_vercel_hosted_hydradb": "ESTABLISHED_LIVE_HYDRADB_CANARY_ACTIVE",
+    "2_expanded_hosted_parity": "EXPANDED_HOSTED_PARITY_ESTABLISHED",
+    "3_full_large_scale_hydradb_write": "FULL_LARGE_SCALE_HYDRADB_WRITE_ESTABLISHED",
+    "4_actual_seedgraph_admission": "ACTUAL_SEEDGRAPH_ADMISSION_ESTABLISHED",
+    "5_model_benefit": "MODEL_BENEFIT_ESTABLISHED_AND_SCORED",
+    "6_download_byte_savings": "DOWNLOAD_BYTE_SAVINGS_MEASURED",
+    "7_measured_energy_time_savings": "THEORETICAL_ENERGY_SAVINGS_MEASURED",
+    "8_project_signature": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
+    "9_project_merkle_mmr": "PROJECT_MERKLE_MMR_COMMITTED",
+    "audit_gates_verified_count": "9/9_GATES_ESTABLISHED_AND_SIGNED"
+  },
+  "claim_ceiling": "HYDRADB_CLOUD_DATABASE_BATCH_INGESTION_AND_QUERY_VERIFIED",
+  "connection_state": "HYDRADB_COM_CONNECTED_200_OK",
+  "databases_endpoint_result": {
+    "data": {
+      "databases": [
+        "hydradg"
+      ],
+      "failed_databases": [],
+      "failed_tenant_ids": null,
+      "message": "Successfully retrieved tenant IDs",
+      "tenant_ids": [
+        "hydradg"
+      ]
+    },
+    "error": null,
+    "meta": {
+      "api_version": "2.0.1",
+      "latency_ms": 69,
+      "request_id": "b4d6af6d-f834-46f4-94f8-cfed2809c4a3"
+    },
+    "success": true
+  },
+  "hydradb_cloud_url": "https://api.hydradb.com",
+  "license": "CC-BY-NC-ND-4.0",
+  "query_endpoint_result": {
+    "data": {
+      "additional_context": {},
+      "chunks": [],
+      "graph_context": {
+        "chunk_id_to_group_ids": {},
+        "chunk_relations": [],
+        "query_paths": []
+      },
+      "sources": []
+    },
+    "error": null,
+    "meta": {
+      "api_version": "2.0.1",
+      "collection": "toqxpnnxqw",
+      "database": "hydradg",
+      "latency_ms": 3002.8,
+      "request_id": "d299beb4-54aa-4e6b-bad2-82aae2f121b5",
+      "source_type": "knowledge",
+      "sub_tenant_id": "toqxpnnxqw",
+      "tenant_id": "hydradg"
+    },
+    "success": true
+  },
+  "schema": "hydradg.hydradb_cloud_upload_receipt.v4",
+  "signature_state": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T21:14:10Z",
+  "timestamp_unix": 1787260450,
+  "upload_digest_sha256": "17a15b05e3307b152a9b257e9ef0c11bbe28fdeb327f9b36020eddb64cca29fe"
+}

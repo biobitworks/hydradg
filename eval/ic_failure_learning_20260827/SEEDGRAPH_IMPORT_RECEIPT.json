@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.ic_failure_learning.seedgraph_import.v1",
+  "seedgraph_root": "/Users/byron/projects/active/seedgraph",
+  "descriptor_path": "eval/ic_failure_learning_20260827/seedgraph/ic_failure_rules_descriptor.json",
+  "descriptor_sha256": "1e4b9d3ca4979b70f95dc880ab023887a5388303592b4fca61cd9653fde23f5d",
+  "atomization_receipt_path": "eval/ic_failure_learning_20260827/SEEDGRAPH_ATOMIZATION_RECEIPT.json",
+  "import_state": "PASS",
+  "import_attempt": {
+    "command": "uv run seedgraph import /Users/byron/projects/active/hydradg/eval/ic_failure_learning_20260827/seedgraph/ic_failure_rules_descriptor.json --type requirement --json --no-require-publication-reingest-gate --publication-reingest-not-applicable IC failure-learning rule corpus; not a publication-family reingest --publication-reingest-operator ic-failure-learning-daisy --publication-reingest-receipt /Users/byron/projects/active/hydradg/eval/ic_failure_learning_20260827/seedgraph/PUBLICATION_REINGEST_BYPASS_RECEIPT.json",
+    "returncode": 0,
+    "stdout": "[\n  {\n    \"seed_id\": \"9463fe64c7cce065f9ce991f90e8544d1bd289a4e945facd79351fea010d9f00\",\n    \"seed_type\": \"evidence\",\n    \"status\": \"created\",\n    \"entry_hash\": \"0ac918d1b45c61e0b9f49cfa4fb6a134a5b0211a9b14a392bec71f51b146d30b\",\n    \"source_sha256\": \"1e4b9d3ca4979b70f95dc880ab023887a5388303592b4fca61cd9653fde23f5d\",\n    \"proof_state\": \"pending_proof\",\n    \"family_id\": null,\n    \"family_status\": null,\n    \"family_degradation_codes\": [],\n    \"error\": null\n  }\n]\n",
+    "stderr": ""
+  },
+  "RULE_SOURCE_BYTES": {},
+  "RULE_ATOMS": 18,
+  "RULE_ATOMIZATION_COVERAGE": "COMPLETE",
+  "ORPHAN_ATOMS": [],
+  "FAILED_ATOMS": [],
+  "ABSTENTIONS": [],
+  "CLAIM_CEILING": "SEEDGRAPH_IMPORT_RECEIPT_ONLY"
+}

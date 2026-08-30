@@ -1,0 +1,35 @@
+{
+  "schema": "hydradg.anb_live.plan_check_receipt.v1",
+  "created_at_utc": "2026-08-27T01:05:00Z",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "head_at_check": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "host": "magicSTUDIObox.local",
+  "accepted_base_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_artifact_commit_sha": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "checker": "scripts/check_anb_live_plan.py",
+  "results": [
+    {
+      "track_id": "ANB_TRACK01_COLD_START_V1",
+      "path": "eval/agent_native_builders_live_20260826/plans/ANB_TRACK01_COLD_START_V1_PLAN.json",
+      "plan_sha256": "36a7b0a73403d2655bd8ee7dbf06a9203b417e165ba0814e5dbbcfa1d232cfa3",
+      "PLAN_CHECK": "PASS"
+    },
+    {
+      "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+      "path": "eval/agent_native_builders_live_20260826/plans/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_PLAN.json",
+      "plan_sha256": "44655d2696d02d304a2790171e7bde08c9bc24d6f0f76416e7e1604677d4715a",
+      "PLAN_CHECK": "PASS"
+    },
+    {
+      "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+      "path": "eval/agent_native_builders_live_20260826/plans/ANB_RUNTYPE_PRODUCT_EVAL_V1_PLAN.json",
+      "plan_sha256": "63dd715a6b302b45c2ee4df07d6841ab4d886219ce405bec435b166a389f1459",
+      "PLAN_CHECK": "PASS"
+    }
+  ],
+  "secret_disclosure_gate": "PASS",
+  "execution_allowed": false,
+  "next_safe_action": "STOP_BEFORE_EXECUTE_OR_RUN_IMMERSIVE_COMMONS_EXISTING_KEY_CANARY",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

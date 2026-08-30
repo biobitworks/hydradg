@@ -1,0 +1,26 @@
+{
+  "schema": "hydradg.sglang_replay.graph_config.v1",
+  "SGLANG_GIT_SHA": "acc918b3ece60af20321612b8ad204bdba8fcb80",
+  "configs": {
+    "G0_EAGER": {
+      "prefill": "disabled",
+      "decode": "disabled"
+    },
+    "G1_FULL": {
+      "prefill": "full",
+      "decode": "full"
+    },
+    "G2_BREAKABLE": {
+      "prefill": "breakable",
+      "decode": "full",
+      "env": {
+        "SGLANG_USE_BREAKABLE_CUDA_GRAPH": "1"
+      }
+    },
+    "G3_BREAKABLE_EXTENDED": {
+      "status": "OPTIONAL_BLOCKED_UNTIL_SUPPORTED"
+    }
+  },
+  "resolved_at_execution": false,
+  "claim_ceiling": "PREREGISTERED_CONFIG_NOT_EXECUTED"
+}

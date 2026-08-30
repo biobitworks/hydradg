@@ -1,0 +1,30 @@
+{
+  "schema": "hydradg.scorer_contract.v1",
+  "version": "8.0.0",
+  "timestamp_utc": "2026-08-21T17:20:00Z",
+  "contract_type": "DETERMINISTIC_SCORING_SPECIFICATION",
+  "prohibited_rules": [
+    "response length > 20 => correct",
+    "response contains 'entities' => correct",
+    "HTTP 200 with empty text => correct",
+    "hashing literal string 'EMPTY_RESPONSE' as model output"
+  ],
+  "track_evaluators": {
+    "track01": {
+      "dataset": "EnterpriseRAG-Bench",
+      "method": "GROUND_TRUTH_FACT_OVERLAP",
+      "rule": "Extract clean text response; check non-trivial key phrase overlap against gold_answer and answer_facts references."
+    },
+    "track02": {
+      "dataset": "HydraBlast-Real-Deps",
+      "method": "DEPENDENCY_BLAST_RADIUS_MATCH",
+      "rule": "Parse target package and affected service names from response text; compare against case-specific dependency graph oracle."
+    },
+    "track03": {
+      "dataset": "LongMemEval-S-full500",
+      "method": "EXACT_OR_KEYPHRASE_MATCH",
+      "rule": "Normalize response text; match against ground-truth answer key phrases."
+    }
+  },
+  "empty_response_rule": "Zero-byte generated output produces response_text_sha256 = e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855 and execution_status = FAILED_EMPTY_RESPONSE."
+}

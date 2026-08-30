@@ -1,0 +1,32 @@
+{
+  "schema": "hydradg.anb_live.input_packet.v1",
+  "track_id": "ANB_TRACK01_COLD_START_V1",
+  "initial_input_only": "public HydraDG domain — no preconfigured HydraDG MCP endpoint",
+  "trial_count": 10,
+  "trials_are_independent": true,
+  "agent_must_discover": [
+    "machine_surface",
+    "scoped_authentication_surface",
+    "tool_catalog",
+    "benign_evidence_proposal_write_path"
+  ],
+  "required_outcomes_per_trial": [
+    "authenticate_via_real_scoped_surface",
+    "discover_tools",
+    "execute_benign_evidence_proposal_write",
+    "proposal_remains_quarantined",
+    "return_and_verify_custody_receipt",
+    "unauthorized_private_read_denied",
+    "unauthorized_canonical_write_denied"
+  ],
+  "external_runtime": {
+    "preferred": "Tenki disposable environment when event credit available",
+    "credit_class": "TENKI_EVENT_100_USD",
+    "fallback": "magicSTUDIObox.local bounded sandbox only if Tenki unavailable"
+  },
+  "scoring_host": "magicSTUDIObox.local",
+  "scoring_mode": "deterministic",
+  "preserve_outcomes": ["success", "null", "failure", "timeout", "abstention"],
+  "sponsor_credit_order": ["Tenki", "Runtype", "Tavily", "Nebius", "AIsa", "Immersive Commons workshop"],
+  "no_keys_in_repo": true
+}

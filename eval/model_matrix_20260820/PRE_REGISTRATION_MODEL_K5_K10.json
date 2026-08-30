@@ -1,0 +1,15 @@
+{
+  "abstentions": 30,
+  "control_baseline": "HEURISTIC_STRUCTURAL",
+  "correction_method": "Holm-Bonferroni",
+  "dataset_sha256": "4b97a2c1f010e9a508316dfa99bc3230a174df8344e21b1990bc1f30206e100a",
+  "determinism_gate_required": true,
+  "objective": "Controlled model-treatment extension of LongMemEval K5/K10 retrieval benchmark",
+  "replicates_per_cell": 3,
+  "retrieval_scored": 470,
+  "schema": "hydradg.preregistration_model_k5_k10.v1",
+  "stat_alpha": 0.05,
+  "timestamp_unix": 1787261647,
+  "total_cases": 500,
+  "treatment_variable": "SEMANTIC_EXTRACTOR_MODEL"
+}

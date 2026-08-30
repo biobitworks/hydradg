@@ -1,0 +1,21 @@
+{
+  "api_version": "2.0.1",
+  "base_url": "https://api.hydradb.com",
+  "client_implementation": "Python urllib HTTP/REST Client",
+  "collection": "fcg-canonical",
+  "database": "hydradg",
+  "schema": "hydradg.hydradb_client_receipt.v1",
+  "timestamp_unix": 1787260839,
+  "verified_endpoints": [
+    {
+      "method": "GET",
+      "path": "/databases",
+      "status": 200
+    },
+    {
+      "method": "POST",
+      "path": "/query",
+      "status": 200
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+You are a probabilistic experimental actor. Return strict JSON only.
+Blind lanes (E01-E04,E07): do NOT use postmortem/EVAL_ONLY evidence.
+Never invent unavailable endpoints; list them in invented_capabilities.
+Do not output estimated judge scores.
+
+GENERATION=M2 MODEL_WEIGHT_STATE=UNCHANGED
+IC RUBRIC SUMMARY: {"cold_start_success": {"max": 30, "scores_via": "agent_surface + live demo"}, "it_runs": {"max": 25, "gate": true}, "surface_quality": {"max": 20}, "lands_in_product": {"max": 15}, "demo": {"max": 10}}
+SUBMISSION FIELDS: title, blurb, repo_url, demo_url, agent_surface, folder_id
+GATE: folder_id must be populated before submit; vault required for media evidence
+KNOWN FAILURE: README presents HydraDG / Hack Hydra Track 03; conflicts with HydraLamp Immersive Commons Aug 26-27 delta; Anticube=SELF_NON_SAFE
+REPAIR: populate vault before submit; expose origin delta; branch-qualified repo URL
+
+FAMILY=E07 CONDITION=T4_STANDALONE_HYDRALAMP_REPO
+TASK: Classify product origin as DISTINCT_HACKATHON_DELTA, PREEXISTING_PROJECT, or AMBIGUOUS using only repo_url and README excerpt supplied. Report confidence and rubric concerns.
+
+INPUT:
+{
+  "counterfactual_note": "Standalone HydraLamp front door did not exist before submission deadline; fixture only",
+  "readme_excerpt": "# HydraLamp — Immersive Commons Aug 26–27 delta built on pre-existing HydraDG\n\n# HydraDG — Graph-Native Governed Context Engine\n\nHydraDG is a governed memory and context engine built **only on HydraDB** for **Hack Hydra 2026 — Track 03: Memory + Context Retrieval**. It preserves evolving state, provenance, contradictions, supersession, recovery, null results, and claim boundaries as an inspectable graph instead of silently overwriting context.\n\n**Demo video:** https://youtu.be/7EDb6q-loPA  \n**Submission track:** Track 03 — Memory + Context Retrieval  \n**Graph backend:** HydraDB only\n\n---\n\n## Judge: start here\n\nIf you have three minutes:\n\n1. Watch the demo video above.\n2. Read [`SUBMISSION.md`](SUBMISSION.md) for the bounded submission claim.\n3. Use [`HOW_TO.md`](HOW_TO.md) or [`docs/JUDGE_REPRODUCE_FROM_SCRATCH.md`](docs/JUDGE_REPRODUCE_FROM_SCRATCH.md) to rebuild the HydraDB graph and website on a clean machine.\n4. Inspect the canonical public FCG snapshot in [`custody/graph/live/`](custody/graph/live/).\n5. Inspect [`docs/COMPONENT_MAP.md`](docs/COMPONENT_MAP.md) for component purpose, inputs, outputs, and claim boundaries.\n6. Inspect [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md) for versioned preprint/package/hash/signature boundaries.\n\nThere is **no Neo4j fallback** in the judge application. The executable graph path is:\n\n```text\nHydraDG application -> HydraDB HTTP graph API -> isolated HydraDB namespace\n```\n\n---\n\n## The problem\n\nLong-lived AI memory systems can flatten or overwrite changing context. Once facts are updated or contradicted, it becomes difficult to determine:\n\n- what is current;\n- what was believed before;\n- which source supports each state;\n- where a stale or poisoned fact first entered a dependency chain;\n- whether a contradiction was superseded or merely hidden;\n- whether null and negative experimental results were preserved.\n\nHydraDG makes those transitions explicit and queryable.\n\n---\n\n## What we built\n\n- **HydraDB graph/query projection** for temporal state, provenance, contradiction, supersession, and evidence-path traversal.\n- **Fractal Custody Objects (FCOs)** and a **Fractal Custody Graph (FCG)** for source -> transformation -> evidence -> claim -> artifact lineage.\n- **4D Context Iceberg / FCG visualization** using a browser canvas plus time controls.\n- **Reference -> Poison -> Antidote** state transitions that preserve prior and contradictory states rather than deleting them.\n- **Track 03 LongMemEval-S full500 retrieval evaluation** with explicit retention of null/negative outcomes.\n- **Knowledge Base** linking project concepts and mathematical lineage to evidence and claim ceilings.\n- **Reproduction bundle** containing the website source, canonical FCG JSONL, HydraDB projection/import tooling, environment template, custody receipts, and security gates.\n\n---\n\n## HydraDB is load-bearing\n\nHydraDB is the queryable graph projection layer used to traverse governed longitudinal state. Representative relationships include:\n\n```text\nSession -> NEXT/PREV -> Session\nSession -> ASSERTS -> Fact\nFact -> DERIVED_FROM -> Session\nFact -> ABOUT -> Entity\nFact -> SUPERSEDED_BY -> Fact\nFact -> CONTRADICTS -> Fact\n```\n\nThe FCO/FCG layer preserves canonical identity, provenance, evidence class, and claim boundaries. **HydraDB is the operational graph/query backend for the submission.**\n\nJudge-facing configuration is under:\n\n```text\napps/hydradg-web/.env.example\napps/hydradg-web/lib/graph.ts\napps/hydradg-web/package.json\napps/hydradg-web/package-lock.json\n```\n\nThose files are intended to contain the HydraDB path only.\n\n---\n\n## Reproduce the HydraDB database and website from scratch\n\nPortable reconstruction inputs:\n\n```text\napps/hydradg-web/                  complete Next.js / React website source\napps/hydradg-web/.env.example      HydraDB environment template\napps/hydradg-web/package-lock.json pinned web dependency resolution\ncustody/graph/live/nodes.jsonl     canonical public FCG nodes\ncustody/gra",
+  "repo_url": "https://github.com/biobitworks/hydradg"
+}
+
+Return exactly one JSON object:
+{
+  "state": "OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE",
+  "experiment_family": "E01|E02|E03|E04|E05|E06|E07",
+  "condition": "string",
+  "observations": ["string"],
+  "predicted_weak_dimensions": ["string"],
+  "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
+  "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
+  "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
+  "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
+  "recommended_first_correction": "string|null",
+  "confidence_0_1": 0.0,
+  "evidence_quotes": ["string"],
+  "invented_capabilities": []
+}

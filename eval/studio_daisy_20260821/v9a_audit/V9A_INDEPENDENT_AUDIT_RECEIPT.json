@@ -1,0 +1,109 @@
+{
+  "canary_executions_accounted": 18,
+  "canary_executions_expected": 18,
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "dataset_cases_total": 770,
+  "dataset_contract_sha256": "4dc8f0caa1d96a3367f4cbb133d34ff1f9a79e7cf03bec3162081f77310a8618",
+  "empty_response_failures": 0,
+  "empty_response_forensics": [],
+  "final_review_gate": "HYDRADG_V9A_AUDIT_COMPLETE__WAIT_FOR_REMOTE_OPERATOR_APPROVAL",
+  "full_matrix_authorized": "NO",
+  "full_matrix_expected": 6930,
+  "gates": {
+    "CASE_LEVEL_SCORING_GATE": "PASS",
+    "CASE_SPECIFIC_PROMPT_GATE": "PASS",
+    "CLEAN_OUTPUT_NAMESPACE_GATE": "PASS",
+    "CONTEXT_CAPACITY_GATE": "PASS",
+    "CONTRACT_IDENTITY_SEPARATION_GATE": "PASS",
+    "DATASET_CASE_GATE": "PASS",
+    "EMPTY_RESPONSE_CLASSIFICATION_GATE": "FAIL",
+    "FCG_LINEAGE_GATE": "PASS",
+    "GIT_EXECUTION_BINDING_GATE": "PASS",
+    "INDEPENDENT_HASH_RECOMPUTATION": "PASS",
+    "LABEL_LEAKAGE_GATE": "PASS",
+    "MODEL_RUNTIME_RESOLUTION_GATE": "FAIL",
+    "RAW_TRANSPORT_RECEIPT_GATE": "FAIL",
+    "REAL_MODEL_INVOCATION_GATE": "PASS",
+    "SOURCE_FREEZE_GATE": "FAIL"
+  },
+  "merkle_mmr_state": "PENDING_OPERATION_RECEIPT_CONFIRMATION",
+  "model_roster_sha256": "af72db26884c6f45cd2ce50b4b20a857d8f72346b27fd06476173f44b685f883",
+  "models_admitted": 9,
+  "next_safe_action": "STOP_FOR_REMOTE_OPERATOR_APPROVAL_BEFORE_FULL_MATRIX_LAUNCH",
+  "prompt_contract_sha256": "96d719d3cc98905277af2abbc68481561956f94db8d4a6ff91b63a0899a48c28",
+  "runtime_resolution_audit": {
+    "deepseek-r1:14b": {
+      "expected_digest": "c333b7232bdb521236694ffbb5f5a6b11cc45d98e9142c73123b670fca400b09",
+      "match": true,
+      "observed_digest": "c333b7232bdb521236694ffbb5f5a6b11cc45d98e9142c73123b670fca400b09"
+    },
+    "granite4.1:8b": {
+      "expected_digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+      "match": false,
+      "observed_digest": ""
+    },
+    "phi4-mini:latest": {
+      "expected_digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+      "match": false,
+      "observed_digest": ""
+    },
+    "qwen2.5-coder:7b": {
+      "expected_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364",
+      "match": true,
+      "observed_digest": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+    },
+    "qwen2.5:1.5b": {
+      "expected_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b",
+      "match": true,
+      "observed_digest": "65ec06548149b04c096a120e4a6da9d4017ea809c91734ea5631e89f96ddc57b"
+    },
+    "qwen3.5:9b": {
+      "expected_digest": "6488c96fa5faab64bb65cbd30d4289e20e6130ef535a93ef9a49f42eda893ea7",
+      "match": false,
+      "observed_digest": ""
+    },
+    "qwen3:1.7b": {
+      "expected_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "match": true,
+      "observed_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7"
+    },
+    "qwen3:4b": {
+      "expected_digest": "359d7dd4bcdab3d86b87d73ac27966f4dbb9f5efdfcc75d34a8764a09474fae7",
+      "match": false,
+      "observed_digest": ""
+    },
+    "qwen3:8b": {
+      "expected_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "match": false,
+      "observed_digest": ""
+    }
+  },
+  "schema": "hydradg.v9a_independent_audit_receipt.v1",
+  "scorer_contract_sha256": "c2bee70f84ec092c4bedb7e047236045824277aca3cfff4a4094bb71d31a0f8b",
+  "signature_state": "NOT_SIGNED",
+  "source_file_audit": {
+    "track01": {
+      "expected": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2",
+      "match": false,
+      "observed": "MISSING"
+    },
+    "track02": {
+      "expected": "5fcfe8ec8300aea6a3e58adb4a3299d4b80b288f13e361e73ee27b8a89f8a241",
+      "match": true,
+      "observed": "5fcfe8ec8300aea6a3e58adb4a3299d4b80b288f13e361e73ee27b8a89f8a241"
+    },
+    "track03": {
+      "expected": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "match": false,
+      "observed": "MISSING"
+    }
+  },
+  "successful_invocations": 13,
+  "timestamp_utc": "2026-08-21T19:01:35Z",
+  "track01_admitted": 300,
+  "track02_admitted": 0,
+  "track03_admitted": 470,
+  "v9_evidence_sha": "32965ffc4937b54154035f561785cdc2b5f7d75f",
+  "v9_execution_sha": "ae0db3f9d1c65074b5472fc92379be84d3026a26",
+  "v9a_auditor_sha256": "301592514ae89b00841852e58065b851e04ffdffa3c64690f57e1c48d6885f0f"
+}

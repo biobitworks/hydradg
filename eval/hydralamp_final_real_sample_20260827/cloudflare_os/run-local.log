@@ -1,0 +1,963 @@
+
+> cloudflare-os@1.0.0 run-local /Users/byron/projects/external/cloudflare-os
+> node scripts/run-local.ts
+
+Dependencies up to date; skipping install.
+No source changes since last build; skipping build.
+
+Starting local server at http://localhost:8787 ...
+format blueprints up-to-date (3): /Users/byron/projects/external/cloudflare-os/packages/workshop-backend/src/generated/format-blueprints.ts
+11:20:51 AM [vite+] warning: `esbuild` option was specified by "vite:react-babel" plugin. This option is deprecated, please use `oxc` instead.
+11:20:51 AM [vite+] warning: `esbuild` option was specified by "vite:react-babel" plugin. This option is deprecated, please use `oxc` instead.
+11:20:51 AM [vite+] warning: `optimizeDeps.esbuildOptions` option was specified by "vite:react-babel" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+11:20:51 AM [vite+] warning: `optimizeDeps.esbuildOptions` option was specified by "vite:react-babel" plugin. This option is deprecated, please use `optimizeDeps.rolldownOptions` instead.
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+The plugin "vite-tsconfig-paths" is detected. Vite now supports tsconfig paths resolution natively via the resolve.tsconfigPaths option. You can remove the plugin and set resolve.tsconfigPaths: true in your Vite config instead.
+You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this option is now deprecated. Vite now uses Rolldown to optimize the dependencies. Please use `optimizeDeps.rolldownOptions` instead.
+You or a plugin you are using have set `optimizeDeps.esbuildOptions` but this option is now deprecated. Vite now uses Rolldown to optimize the dependencies. Please use `optimizeDeps.rolldownOptions` instead.
+~/packages/gatekeeper-scheduler$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+~/packages/gatekeeper-homeassistant$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+~/packages/gatekeeper-context$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+~/packages/gatekeeper-google$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+~/packages/gatekeeper-slack$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+~/packages/gatekeeper-notion$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-confluence$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+
+~/packages/gatekeeper-cloudflare$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-mcp$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-email$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+~/packages/gatekeeper-scheduler$ node build-app.mjs --dev ○ cache miss: '.wrangler' added in 'packages/gatekeeper-context', executing
+
+~/packages/gatekeeper-context$ node build-app.mjs --dev ○ cache miss: '.wrangler' added in 'packages/gatekeeper-cloudflare', executing
+
+~/packages/gatekeeper-zoominfo$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-spotify$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-github$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-mcp-portal$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+building context library app single-file bundle…
+
+~/packages/gatekeeper-supabase$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-linear$ node ../../scripts/clean-error-reporting-artifacts.ts . ⊘ cache disabled
+
+~/packages/gatekeeper-homeassistant$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 5 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-homeassistant
+
+
+~/packages/gatekeeper-slack$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 3 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack
+
+~/packages/gatekeeper-notion$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 2 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion
+
+~/packages/gatekeeper-google$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 8 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-google
+
+~/packages/gatekeeper-confluence$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 3 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence
+
+~/packages/gatekeeper-cloudflare$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 2 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-cloudflare
+
+~/packages/gatekeeper-mcp$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 1 configurator UI module: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp
+
+~/packages/gatekeeper-email$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 1 configurator UI module: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email
+
+~/packages/gatekeeper-zoominfo$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 1 configurator UI module: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo
+
+
+~/packages/gatekeeper-spotify$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 2 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-spotify
+
+~/packages/gatekeeper-github$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 3 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github
+
+~/packages/gatekeeper-mcp-portal$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 1 configurator UI module: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp-portal
+
+~/packages/gatekeeper-supabase$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 2 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-supabase
+
+
+~/packages/gatekeeper-linear$ node ../../scripts/build-gatekeeper-configurator.ts . --dev ◉ cache hit, replaying
+generated 3 configurator UI modules: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear
+
+---
+vp run: 14/28 cache hit (50%), 7.97s saved. (Run `vp run --last-details` for full details)
+vite v7.3.6 building client environment for production...
+vite v7.3.6 building client environment for production...
+transforming...
+transforming...
+✓ 4579 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: gatekeeper-scheduler.js
+[plugin vite:singlefile] Inlining: style-DKCeUq4x.css
+computing gzip size...
+dist-app/app/index.html  869.28 kB │ gzip: 151.91 kB
+✓ built in 4.77s
+
+✓ 5043 modules transformed.
+rendering chunks...
+[plugin vite:singlefile] 
+
+[plugin vite:singlefile] Inlining: gatekeeper-context.js
+[plugin vite:singlefile] Inlining: style-DC238aBn.css
+computing gzip size...
+dist-app/app/index.html  3,644.58 kB │ gzip: 771.94 kB
+✓ built in 6.49s
+app.txt unchanged (3542 KiB), skipping write
+
+---
+vp run: 0/4 cache hit (0%). (Run `vp run --last-details` for full details)
+generated: /Users/byron/projects/external/cloudflare-os/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-cloudflare/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-context/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-google/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-homeassistant/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp-portal/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-scheduler/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-spotify/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-supabase/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo/wrangler.dev.jsonc
+generated: /Users/byron/projects/external/cloudflare-os/packages/workshop-backend/wrangler.dev.jsonc
+
+Starting: wrangler dev -c wrangler.dev.jsonc -c packages/workshop-backend/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-cloudflare/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-context/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-google/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-homeassistant/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp-portal/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-scheduler/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-spotify/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-supabase/wrangler.dev.jsonc -c /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo/wrangler.dev.jsonc --port 8787
+
+watching context library app for changes…
+vite v7.3.6 building client environment for production...
+
+watching for file changes...
+
+build started...
+vite v7.3.6 building client environment for production...
+
+watching for file changes...
+
+build started...
+transforming...
+transforming...
+
+ ⛅️ wrangler 4.120.0 (update available 4.127.0)
+───────────────────────────────────────────────
+dev-router has access to the following bindings:
+Binding                                                      Resource      Mode
+env.WORKSHOP_BACKEND (workshop-backend)                      Worker        local [connected]
+env.GATEKEEPER_CLOUDFLARE (gatekeeper-cloudflare)            Worker        local [connected]
+env.GATEKEEPER_CONFLUENCE (gatekeeper-confluence)            Worker        local [connected]
+env.GATEKEEPER_CONTEXT (gatekeeper-context)                  Worker        local [connected]
+env.GATEKEEPER_EMAIL (gatekeeper-email)                      Worker        local [connected]
+env.GATEKEEPER_GITHUB (gatekeeper-github)                    Worker        local [connected]
+env.GATEKEEPER_GOOGLE (gatekeeper-google)                    Worker        local [connected]
+env.GATEKEEPER_HOMEASSISTANT (gatekeeper-homeassistant)      Worker        local [connected]
+env.GATEKEEPER_LINEAR (gatekeeper-linear)                    Worker        local [connected]
+env.GATEKEEPER_MCP (gatekeeper-mcp)                          Worker        local [connected]
+env.GATEKEEPER_MCP_PORTAL (gatekeeper-mcp-portal)            Worker        local [connected]
+env.GATEKEEPER_NOTION (gatekeeper-notion)                    Worker        local [connected]
+env.GATEKEEPER_SCHEDULER (gatekeeper-scheduler)              Worker        local [connected]
+env.GATEKEEPER_SLACK (gatekeeper-slack)                      Worker        local [connected]
+env.GATEKEEPER_SPOTIFY (gatekeeper-spotify)                  Worker        local [connected]
+env.GATEKEEPER_SUPABASE (gatekeeper-supabase)                Worker        local [connected]
+env.GATEKEEPER_ZOOMINFO (gatekeeper-zoominfo)                Worker        local [connected]
+
+
+Service bindings, Durable Object bindings, and Tail consumers connect to other Wrangler or Vite dev processes running locally, with their connection status indicated by [connected] or [not connected]. For more details, refer to https://developers.cloudflare.com/workers/runtime-apis/bindings/service-bindings/#local-development
+
+[custom build] Running: node build-browser-runtime.mjs && "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1m*** Fatal uncaught kj::Exception: kj/async-io-unix.c++:941: failed: ::bind(sockfd, &addr.generic, addrlen): Address already in use; toString() = 127.0.0.1:8787[0m
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mstack: 1076a1ddb 1076a1bbf 1076a04fb 104bf125b 104bf1a6b 104bf24af 104bf36af 104b5fec3 1076cb86f 1076cbb97 1076ca403 1076ca1c3 104b4c8f3 1887b3dff[0m
+
+
+[custom build] capnweb-validate: ENOTEMPTY: directory not empty, rmdir '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/.wrangler/validate/src'
+[custom build] 
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mError: Command failed with exit code 1: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate[0m
+
+  capnweb-validate: ENOTEMPTY: directory not empty, rmdir '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/.wrangler/validate/src'
+      at makeError (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:177171:20)
+      at handlePromise (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:177638:29)
+      at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+      at async runCommand (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:252556:5)
+      at async runCustomBuild (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:252579:5)
+      at async getEntry (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:270188:3)
+      at async resolveConfig (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:277967:17)
+      at async #updateConfig (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:278275:68)
+      at async setupDevEnv (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:438511:3)
+      at async Promise.all (index 11) {
+    shortMessage: 'Command failed with exit code 1: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate',
+    command: '"/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate',
+    escapedCommand: '"\\"/opt/homebrew/Cellar/node/26.0.0/bin/node\\"" "\\"/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs\\"" build --out ".wrangler/validate"',
+    exitCode: 1,
+    signal: undefined,
+    signalDescription: undefined,
+    stdout: '',
+    stderr: "capnweb-validate: ENOTEMPTY: directory not empty, rmdir '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/.wrangler/validate/src'",
+    failed: true,
+    timedOut: false,
+    isCanceled: false,
+    killed: false
+  }
+
+
+⎔ Shutting down remote connections...
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mRunning custom build `"/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate` failed. There are likely more logs from your build command above.[0m
+
+
+ ELIFECYCLE  Command failed with exit code 1.
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               The file packages/gatekeeper-slack/src/generated/workspace-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-notion/src/generated/notion-workspace-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-google/src/generated/shared-drive-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-homeassistant/src/generated/label-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-cloudflare/src/generated/cloudflare-worker-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-mcp/src/generated/server-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-email/src/generated/email-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-zoominfo/src/generated/account-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-confluence/src/generated/confluence-space-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-github/src/generated/github-repo-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-mcp-portal/src/generated/server-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-supabase/src/generated/supabase-project-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-linear/src/generated/linear-workspace-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-spotify/src/generated/playlist-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/src/notion.ts:959:1: capnweb-validate: `PagedCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<PagedCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 9 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 8 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-homeassistant); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 15 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/src/github.ts:809:1: capnweb-validate: `ArrayCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<ArrayCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/src/github.ts:839:1: capnweb-validate: `StreamingCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<StreamingCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 10 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence/src/confluence.ts:717:1: capnweb-validate: `PagedCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<PagedCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-supabase); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 9 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-spotify); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 7 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 12 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 11 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 5 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-cloudflare); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 3 transformed, 22 copied, 5 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 28 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/mcp-shared/src/html.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 9 copied, 28 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 28 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp-portal); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 7 copied, 28 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-google); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 54 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+⎔ Reloading local server...
+The file packages/gatekeeper-zoominfo/src/generated/account-configurator-ui.txt changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+dev-router has access to the following bindings:
+Binding                                                      Resource      Mode
+env.WORKSHOP_BACKEND (workshop-backend)                      Worker        local [connected]
+env.GATEKEEPER_CLOUDFLARE (gatekeeper-cloudflare)            Worker        local [connected]
+env.GATEKEEPER_CONFLUENCE (gatekeeper-confluence)            Worker        local [connected]
+env.GATEKEEPER_CONTEXT (gatekeeper-context)                  Worker        local [connected]
+env.GATEKEEPER_EMAIL (gatekeeper-email)                      Worker        local [connected]
+env.GATEKEEPER_GITHUB (gatekeeper-github)                    Worker        local [connected]
+env.GATEKEEPER_GOOGLE (gatekeeper-google)                    Worker        local [connected]
+env.GATEKEEPER_HOMEASSISTANT (gatekeeper-homeassistant)      Worker        local [connected]
+env.GATEKEEPER_LINEAR (gatekeeper-linear)                    Worker        local [connected]
+env.GATEKEEPER_MCP (gatekeeper-mcp)                          Worker        local [connected]
+env.GATEKEEPER_MCP_PORTAL (gatekeeper-mcp-portal)            Worker        local [connected]
+env.GATEKEEPER_NOTION (gatekeeper-notion)                    Worker        local [connected]
+env.GATEKEEPER_SCHEDULER (gatekeeper-scheduler)              Worker        local [connected]
+env.GATEKEEPER_SLACK (gatekeeper-slack)                      Worker        local [connected]
+env.GATEKEEPER_SPOTIFY (gatekeeper-spotify)                  Worker        local [connected]
+env.GATEKEEPER_SUPABASE (gatekeeper-supabase)                Worker        local [connected]
+env.GATEKEEPER_ZOOMINFO (gatekeeper-zoominfo)                Worker        local [connected]
+
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] Running: node build-browser-runtime.mjs && "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 10 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+gatekeeper-linear has access to the following bindings:
+Binding                                                       Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/linear")      Environment Variable      local
+
+The file packages/gatekeeper-linear/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 9 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+gatekeeper-slack has access to the following bindings:
+Binding                                                      Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/slack")      Environment Variable      local
+
+The file packages/gatekeeper-slack/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+gatekeeper-email has access to the following bindings:
+Binding                                                      Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/email")      Environment Variable      local
+
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/src/notion.ts:959:1: capnweb-validate: `PagedCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<PagedCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[custom build] capnweb-validate: skipped 7 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-scheduler); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 11 copied, 7 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence/src/confluence.ts:717:1: capnweb-validate: `PagedCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<PagedCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/src/github.ts:809:1: capnweb-validate: `ArrayCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<ArrayCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/src/github.ts:839:1: capnweb-validate: `StreamingCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<StreamingCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+gatekeeper-scheduler has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/sche...")      Environment Variable      local
+
+The file packages/gatekeeper-email/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-supabase); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 9 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 12 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+The file packages/gatekeeper-scheduler/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+gatekeeper-supabase has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/supa...")      Environment Variable      local
+
+gatekeeper-confluence has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/conf...")      Environment Variable      local
+
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 8 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+gatekeeper-zoominfo has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/zoom...")      Environment Variable      local
+
+gatekeeper-notion has access to the following bindings:
+Binding                                                       Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/notion")      Environment Variable      local
+
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-spotify); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 7 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-homeassistant); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+The file packages/gatekeeper-supabase/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: 1 transformed, 15 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+The file packages/gatekeeper-confluence/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-zoominfo/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-notion/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+gatekeeper-spotify has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/spot...")      Environment Variable      local
+
+gatekeeper-homeassistant has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/home...")      Environment Variable      local
+
+The file packages/gatekeeper-spotify/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 11 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+The file packages/gatekeeper-homeassistant/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+gatekeeper-github has access to the following bindings:
+Binding                                                       Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/github")      Environment Variable      local
+
+The file packages/gatekeeper-github/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+⎔ Local server updated and ready
+⎔ Reloading local server...
+[custom build] capnweb-validate: skipped 5 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-cloudflare); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 3 transformed, 22 copied, 5 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 28 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp-portal); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 7 copied, 28 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 28 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/mcp-shared/src/html.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 9 copied, 28 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-context); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 3 transformed, 14 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 9 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 10 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-google); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 54 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+gatekeeper-mcp-portal has access to the following bindings:
+Binding                                                                  Resource                  Mode
+env.MCP_ALLOW_INSECURE ("false")                                         Environment Variable      local
+env.BASE_URL ("http://localhost:8787/gatekeeper/mcp-...")                Environment Variable      local
+
+gatekeeper-context has access to the following bindings:
+Binding                                                                   Resource                  Mode
+env.CONTEXT_COLLECTIONS (gadgets-context-collections)                     KV Namespace              local
+env.BASE_URL ("http://localhost:8787/gatekeeper/cont...")                 Environment Variable      local
+
+gatekeeper-cloudflare has access to the following bindings:
+Binding                                                        Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/clou...")      Environment Variable      local
+
+gatekeeper-mcp has access to the following bindings:
+Binding                                                              Resource                  Mode
+env.MCP_ALLOW_INSECURE ("false")                                     Environment Variable      local
+env.BASE_URL ("http://localhost:8787/gatekeeper/mcp")                Environment Variable      local
+
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion/src/notion.ts:959:1: capnweb-validate: `PagedCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<PagedCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[custom build] capnweb-validate: skipped 7 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-scheduler); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 11 copied, 7 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-supabase); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 9 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe expected output file at ".wrangler/validate/src/worker.ts" was not found after running custom build: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate.[0m
+
+  The `main` property in your wrangler.jsonc file should point to the file generated by the custom build.
+
+
+gatekeeper-google has access to the following bindings:
+Binding                                                       Resource                  Mode
+env.BASE_URL ("http://localhost:8787/gatekeeper/google")      Environment Variable      local
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mThe expected output file at ".wrangler/validate/src/supabase.ts" was not found after running custom build: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate.[0m
+
+  The `main` property in your wrangler.jsonc file should point to the file generated by the custom build.
+
+
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 5 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence/src/confluence.ts:717:1: capnweb-validate: `PagedCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<PagedCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] 
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 1 error:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-email/.wrangler/validate/src/email.ts"[0m
+  
+      .wrangler/tmp/bundle-TwA7Im/middleware-insertion-facade.js:1:43:
+  [37m      1 │ ...PORTS from [32m"/Users/byron/projects/external/cloudflare-os/package[37m...
+          ╵               [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 1 error:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-linear/.wrangler/validate/src/linear.ts"[0m
+  
+      .wrangler/tmp/bundle-XmISvh/middleware-insertion-facade.js:1:43:
+  [37m      1 │ ...PORTS from [32m"/Users/byron/projects/external/cloudflare-os/package[37m...
+          ╵               [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-notion); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 8 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-spotify); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 7 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-confluence); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 12 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/src/github.ts:809:1: capnweb-validate: `ArrayCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<ArrayCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github/src/github.ts:839:1: capnweb-validate: `StreamingCursor` is generic; unconstrained type parameters default to `any` and are not runtime-validated. Pass a concrete type argument (e.g. @validateRpc<StreamingCursor<string>>()) or constrain the parameter (`<T extends ...>`) to validate those positions.
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-github); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: skipped 2 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-homeassistant); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 15 copied, 2 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 11 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+The file packages/gatekeeper-context/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-mcp-portal/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-cloudflare/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-mcp/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+The file packages/gatekeeper-google/src changed, restarting build...
+[custom build] Running: "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 1 error:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-zoominfo/.wrangler/validate/src/zoominfo.ts"[0m
+  
+      .wrangler/tmp/bundle-pm57mp/middleware-insertion-facade.js:1:43:
+  [37m      1 │ ...PORTS from [32m"/Users/byron/projects/external/cloudflare-os/package[37m...
+          ╵               [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 7 errors:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mENOENT: no such file or directory, open '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/generated/conversation-configurator-ui.txt'[0m [1m[35m[plugin wrangler-module-collector][0m
+  
+      ../../node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:21:
+  [37m      1498 │         let result = [32m[37mawait callback({
+             ╵                      [32m^[0m
+  
+      at async open (node:internal/fs/promises:1281:25)
+      at async Object.readFile (node:internal/fs/promises:1929:14)
+      at async /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170887:37
+      at async requestCallbacks.on-resolve (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:22)
+      at async handleRequest (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:909:11)
+  
+    This error came from the "onResolve" callback registered here:
+  
+      ../../node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:19:
+  [37m      170852 │             build6.[32monResolve[37m(
+               ╵                    [32m~~~~~~~~~[0m
+  
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:20
+      at Array.forEach (<anonymous>)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170851:22
+      at Array.forEach (<anonymous>)
+      at setup (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170847:28)
+      at handlePlugins (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1422:21)
+      at buildOrContextImpl (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1135:5)
+      at Object.buildOrContext (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:961:5)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:2316:15
+  
+    The plugin "wrangler-module-collector" was triggered by this import
+  
+      .wrangler/validate/src/slack.ts:167:43:
+  [37m      167 │ ...GURATOR_HTML from [32m"./generated/conversation-configurator-ui.txt"[37m;
+            ╵                      [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mENOENT: no such file or directory, open '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/generated/thread-configurator-ui.txt'[0m [1m[35m[plugin wrangler-module-collector][0m
+  
+      ../../node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:21:
+  [37m      1498 │         let result = [32m[37mawait callback({
+             ╵                      [32m^[0m
+  
+      at async open (node:internal/fs/promises:1281:25)
+      at async Object.readFile (node:internal/fs/promises:1929:14)
+      at async /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170887:37
+      at async requestCallbacks.on-resolve (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:22)
+      at async handleRequest (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:909:11)
+  
+    This error came from the "onResolve" callback registered here:
+  
+      ../../node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:19:
+  [37m      170852 │             build6.[32monResolve[37m(
+               ╵                    [32m~~~~~~~~~[0m
+  
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:20
+      at Array.forEach (<anonymous>)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170851:22
+      at Array.forEach (<anonymous>)
+      at setup (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170847:28)
+      at handlePlugins (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1422:21)
+      at buildOrContextImpl (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1135:5)
+      at Object.buildOrContext (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:961:5)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:2316:15
+  
+    The plugin "wrangler-module-collector" was triggered by this import
+  
+      .wrangler/validate/src/slack.ts:168:37:
+  [37m      168 │ ..._CONFIGURATOR_HTML from [32m"./generated/thread-configurator-ui.txt"[37m;
+            ╵                            [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mENOENT: no such file or directory, open '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/generated/workspace-configurator-ui.txt'[0m [1m[35m[plugin wrangler-module-collector][0m
+  
+      ../../node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:21:
+  [37m      1498 │         let result = [32m[37mawait callback({
+             ╵                      [32m^[0m
+  
+      at async open (node:internal/fs/promises:1281:25)
+      at async Object.readFile (node:internal/fs/promises:1929:14)
+      at async /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170887:37
+      at async requestCallbacks.on-resolve (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:22)
+      at async handleRequest (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:909:11)
+  
+    This error came from the "onResolve" callback registered here:
+  
+      ../../node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:19:
+  [37m      170852 │             build6.[32monResolve[37m(
+               ╵                    [32m~~~~~~~~~[0m
+  
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:20
+      at Array.forEach (<anonymous>)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170851:22
+      at Array.forEach (<anonymous>)
+      at setup (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170847:28)
+      at handlePlugins (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1422:21)
+      at buildOrContextImpl (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1135:5)
+      at Object.buildOrContext (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:961:5)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:2316:15
+  
+    The plugin "wrangler-module-collector" was triggered by this import
+  
+      .wrangler/validate/src/slack.ts:166:40:
+  [37m      166 │ ...NFIGURATOR_HTML from [32m"./generated/workspace-configurator-ui.txt"[37m;
+            ╵                         [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mENOENT: no such file or directory, open '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/slack-logo.svg'[0m [1m[35m[plugin wrangler-module-collector][0m
+  
+      ../../node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:21:
+  [37m      1498 │         let result = [32m[37mawait callback({
+             ╵                      [32m^[0m
+  
+      at async open (node:internal/fs/promises:1281:25)
+      at async Object.readFile (node:internal/fs/promises:1929:14)
+      at async /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170887:37
+      at async requestCallbacks.on-resolve (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:22)
+      at async handleRequest (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:909:11)
+  
+    This error came from the "onResolve" callback registered here:
+  
+      ../../node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:19:
+  [37m      170852 │             build6.[32monResolve[37m(
+               ╵                    [32m~~~~~~~~~[0m
+  
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:20
+      at Array.forEach (<anonymous>)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170851:22
+      at Array.forEach (<anonymous>)
+      at setup (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170847:28)
+      at handlePlugins (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1422:21)
+      at buildOrContextImpl (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1135:5)
+      at Object.buildOrContext (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:961:5)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:2316:15
+  
+    The plugin "wrangler-module-collector" was triggered by this import
+  
+      .wrangler/validate/src/slack.ts:169:27:
+  [37m      169 │ import SLACK_LOGO_SVG from [32m"./slack-logo.svg"[37m;
+            ╵                            [32m~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mENOENT: no such file or directory, open '/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/types.txt'[0m [1m[35m[plugin wrangler-module-collector][0m
+  
+      ../../node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:21:
+  [37m      1498 │         let result = [32m[37mawait callback({
+             ╵                      [32m^[0m
+  
+      at async open (node:internal/fs/promises:1281:25)
+      at async Object.readFile (node:internal/fs/promises:1929:14)
+      at async /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170887:37
+      at async requestCallbacks.on-resolve (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1498:22)
+      at async handleRequest (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:909:11)
+  
+    This error came from the "onResolve" callback registered here:
+  
+      ../../node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:19:
+  [37m      170852 │             build6.[32monResolve[37m(
+               ╵                    [32m~~~~~~~~~[0m
+  
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170852:20
+      at Array.forEach (<anonymous>)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170851:22
+      at Array.forEach (<anonymous>)
+      at setup (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/wrangler@4.120.0_@cloudflare+workers-types@5.20260808.1/node_modules/wrangler/wrangler-dist/cli.js:170847:28)
+      at handlePlugins (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1422:21)
+      at buildOrContextImpl (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:1135:5)
+      at Object.buildOrContext (/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:961:5)
+      at /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/esbuild@0.28.1/node_modules/esbuild/lib/main.js:2316:15
+  
+    The plugin "wrangler-module-collector" was triggered by this import
+  
+      .wrangler/validate/src/slack.ts:165:23:
+  [37m      165 │ import TYPES_CODE from [32m"./types.txt"[37m;
+            ╵                        [32m~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/slack-api.ts[0m
+  
+      .wrangler/validate/src/slack.ts:157:7:
+  [37m      157 │ } from [32m"./slack-api"[37m;
+            ╵        [32m~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCannot read file: /Users/byron/projects/external/cloudflare-os/packages/gatekeeper-slack/.wrangler/validate/src/slack-configurators.ts[0m
+  
+      .wrangler/validate/src/slack.ts:164:7:
+  [37m      164 │ } from [32m"./slack-configurators"[37m;
+            ╵        [32m~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+[custom build] capnweb-validate: skipped 5 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-cloudflare); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/backend-utils/src/logger-core.ts).
+[custom build] 
+[custom build] capnweb-validate: 3 transformed, 22 copied, 5 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 28 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/mcp-shared/src/html.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 9 copied, 28 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 28 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-mcp-portal); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 1 transformed, 7 copied, 28 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 15 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/workshop-backend); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 5 transformed, 45 copied, 15 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-context); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 3 transformed, 14 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[custom build] capnweb-validate: skipped 4 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/gatekeeper-google); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 2 transformed, 54 copied, 4 skipped (outside project) -> .wrangler/validate
+[custom build] 
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 3 errors:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./notion-api"[0m
+  
+      .wrangler/validate/src/notion.ts:190:7:
+  [37m      190 │ } from [32m"./notion-api"[37m;
+            ╵        [32m~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./notion-actions"[0m
+  
+      .wrangler/validate/src/notion.ts:207:7:
+  [37m      207 │ } from [32m"./notion-actions"[37m;
+            ╵        [32m~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./notion-configurators"[0m
+  
+      .wrangler/validate/src/notion.ts:232:72:
+  [37m      232 │ ...I, NotionWorkspaceConfiguratorUI } from [32m"./notion-configurators"[37m;
+            ╵                                            [32m~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 1 error:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./spotify-api"[0m
+  
+      .wrangler/validate/src/spotify.ts:265:7:
+  [37m      265 │ } from [32m"./spotify-api"[37m;
+            ╵        [32m~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+workshop-backend has access to the following bindings:
+Binding                                                                       Resource                  Mode
+env.BLUEPRINTS (gadgets-blueprint-metadata)                                   KV Namespace              local
+env.AVATARS (gadgets-avatars)                                                 KV Namespace              local
+env.BLUEPRINT_CONTENT (gadgets-blueprint-content)                             R2 Bucket                 local
+env.GATEKEEPER_CLOUDFLARE (gatekeeper-cloudflare#GatekeeperVendor)            Worker                    local [connected]
+env.GATEKEEPER_CONFLUENCE (gatekeeper-confluence#GatekeeperVendor)            Worker                    local [connected]
+env.GATEKEEPER_CONTEXT (gatekeeper-context#GatekeeperVendor)                  Worker                    local [connected]
+env.GATEKEEPER_EMAIL (gatekeeper-email#GatekeeperVendor)                      Worker                    local [connected]
+env.GATEKEEPER_GITHUB (gatekeeper-github#GatekeeperVendor)                    Worker                    local [connected]
+env.GATEKEEPER_GOOGLE (gatekeeper-google#GatekeeperVendor)                    Worker                    local [connected]
+env.GATEKEEPER_HOMEASSISTANT (gatekeeper-homeassistant#GatekeeperVendor)      Worker                    local [connected]
+env.GATEKEEPER_LINEAR (gatekeeper-linear#GatekeeperVendor)                    Worker                    local [connected]
+env.GATEKEEPER_MCP (gatekeeper-mcp#GatekeeperVendor)                          Worker                    local [connected]
+env.GATEKEEPER_MCP_PORTAL (gatekeeper-mcp-portal#GatekeeperVendor)            Worker                    local [connected]
+env.GATEKEEPER_NOTION (gatekeeper-notion#GatekeeperVendor)                    Worker                    local [connected]
+env.GATEKEEPER_SCHEDULER (gatekeeper-scheduler#GatekeeperVendor)              Worker                    local [connected]
+env.GATEKEEPER_SLACK (gatekeeper-slack#GatekeeperVendor)                      Worker                    local [connected]
+env.GATEKEEPER_SPOTIFY (gatekeeper-spotify#GatekeeperVendor)                  Worker                    local [connected]
+env.GATEKEEPER_SUPABASE (gatekeeper-supabase#GatekeeperVendor)                Worker                    local [connected]
+env.GATEKEEPER_ZOOMINFO (gatekeeper-zoominfo#GatekeeperVendor)                Worker                    local [connected]
+env.BROWSER                                                                   Browser Run               local
+env.ADMINS (["admin"])                                                        Environment Variable      local
+env.LOADER                                                                    Worker Loader             local
+
+[31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mBuild failed with 4 errors:[0m
+
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./confluence-api"[0m
+  
+      .wrangler/validate/src/confluence-observers.ts:17:7:
+  [37m      17 │ } from [32m"./confluence-api"[37m;
+           ╵        [32m~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./confluence-api"[0m
+  
+      .wrangler/validate/src/confluence.ts:220:7:
+  [37m      220 │ } from [32m"./confluence-api"[37m;
+            ╵        [32m~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./confluence-actions"[0m
+  
+      .wrangler/validate/src/confluence.ts:238:7:
+  [37m      238 │ } from [32m"./confluence-actions"[37m;
+            ╵        [32m~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+  [31m✘ [41;31m[[41;97mERROR[41;31m][0m [1mCould not resolve "./confluence-configurators"[0m
+  
+      .wrangler/validate/src/confluence.ts:239:41:
+  [37m      239 │ ...t { ConfluenceConfiguratorUI } from [32m"./confluence-configurators"[37m;
+            ╵                                        [32m~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+  
+  
+
+
+The file packages/workshop-backend/src changed, restarting build...
+[custom build] Running: node build-browser-runtime.mjs && "/opt/homebrew/Cellar/node/26.0.0/bin/node" "/Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/capnweb-validate@0.3.0_capnweb@0.12.0_esbuild@0.28.1_rollup@4.62.3_vite@7.3.6_@types+node@26._xivppvosrbtue675dzcuc2noje/node_modules/capnweb-validate/dist/cli.cjs" build --out .wrangler/validate
+⎔ Local server updated and ready
+⎔ Reloading local server...
+[custom build] capnweb-validate: skipped 15 file(s) outside the project directory (cwd=/Users/byron/projects/external/cloudflare-os/packages/workshop-backend); they cannot be written under --out, so they are not validated (e.g. /Users/byron/projects/external/cloudflare-os/packages/workshop-shared/src/gatekeeper.ts).
+[custom build] 
+[custom build] capnweb-validate: 5 transformed, 45 copied, 15 skipped (outside project) -> .wrangler/validate
+[custom build] 
+⎔ Local server updated and ready
+⎔ Reloading local server...
+⎔ Local server updated and ready

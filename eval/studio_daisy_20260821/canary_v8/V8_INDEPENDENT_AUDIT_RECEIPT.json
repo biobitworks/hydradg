@@ -1,0 +1,69 @@
+{
+  "canary_executions_accounted": 18,
+  "canary_executions_expected": 18,
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "dataset_cases_total": 770,
+  "dataset_contract_sha256": "72edf47e6385e1b35c15063293d28984d07c48c0b472ba3f89e521f72adf9685",
+  "empty_response_failures": 5,
+  "final_review_gate": "HYDRADG_V8_CANARY_AND_AUDIT_READY__STOP_HERE_FOR_USER_REVIEW",
+  "full_matrix_authorized": false,
+  "full_matrix_expected": 6930,
+  "gates": {
+    "CASE_LEVEL_SCORING_GATE": "PASS",
+    "CASE_SPECIFIC_PROMPT_GATE": "PASS",
+    "CONTRACT_IDENTITY_SEPARATION_GATE": "PASS",
+    "DATASET_CASE_GATE": "PASS",
+    "EMPTY_RESPONSE_CLASSIFICATION_GATE": "PASS",
+    "FCG_LINEAGE_GATE": "PASS",
+    "INDEPENDENT_HASH_RECOMPUTATION": "PASS",
+    "LABEL_LEAKAGE_GATE": "PASS",
+    "MODEL_RUNTIME_RESOLUTION_GATE": "PASS",
+    "RAW_TRANSPORT_RECEIPT_GATE": "PASS",
+    "REAL_MODEL_INVOCATION_GATE": "PASS",
+    "SOURCE_FREEZE_GATE": "PASS"
+  },
+  "merkle_mmr_state": "PENDING_OPERATION_RECEIPT_CONFIRMATION",
+  "model_roster_sha256": "311e9facc48f23a4faced246b82090cc9c9e97f546a5f8ebff9bef3fe02d3ff5",
+  "models_admitted": 9,
+  "next_safe_action": "STOP_FOR_OPERATOR_REVIEW_BEFORE_FULL_MATRIX_LAUNCH",
+  "prompt_contract_sha256": "a70bf5931bb428ef12ff85eebdca398f1e21b9a99497f8eb9f1695185d9875ef",
+  "schema": "hydradg.v8_independent_audit_receipt.v1",
+  "scorer_contract_sha256": "4cacab4c8c866af88fe4de70fa9af7287f663e604b061289565ae5f094a4608d",
+  "signature_state": "NOT_SIGNED",
+  "source_file_audit": {
+    "track01": {
+      "expected": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2",
+      "match": true,
+      "observed": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2"
+    },
+    "track02": {
+      "expected": "5fcfe8ec8300aea6a3e58adb4a3299d4b80b288f13e361e73ee27b8a89f8a241",
+      "match": true,
+      "observed": "5fcfe8ec8300aea6a3e58adb4a3299d4b80b288f13e361e73ee27b8a89f8a241"
+    },
+    "track03": {
+      "expected": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "match": true,
+      "observed": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+    }
+  },
+  "static_code_audit": {
+    "clean": true,
+    "details": {
+      "label_leakage_check_present": true,
+      "no_hardcoded_pass_gates": true,
+      "no_hardcoded_scores": true,
+      "no_silent_session_truncation": true,
+      "no_synthetic_response_hash": true
+    }
+  },
+  "successful_invocations": 13,
+  "timestamp_utc": "2026-08-21T17:43:40Z",
+  "track01_admitted": 300,
+  "track02_admitted": 0,
+  "track03_admitted": 470,
+  "v7_classification": "REAL_OLLAMA_INVOCATION_EXECUTED + REAL_ENTERPRISERAG_QUESTION_CANARY + CANARY_GATE_IMPLEMENTATION_DEFECTS + NOT_FULL_MATRIX_AUTHORIZATION",
+  "v7_predecessor_sha": "f62e049f8e3a7684b1cd4b649174d68b827f5a19",
+  "v8_auditor_sha256": "ed13849e5742a619ada03eaf4c8d100b1ec5371e5256dfa333a21f175c7c518b",
+  "v8_runner_sha256": "9afaa78721b4c89707a4acc12c5e6f77dc0366aa7034b9df503374828184a323"
+}

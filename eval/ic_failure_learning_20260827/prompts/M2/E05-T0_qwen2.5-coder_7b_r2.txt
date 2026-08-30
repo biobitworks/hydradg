@@ -1,0 +1,65 @@
+You are a probabilistic experimental actor. Return strict JSON only.
+Blind lanes (E01-E04,E07): do NOT use postmortem/EVAL_ONLY evidence.
+Never invent unavailable endpoints; list them in invented_capabilities.
+Do not output estimated judge scores.
+
+GENERATION=M2 MODEL_WEIGHT_STATE=UNCHANGED
+IC RUBRIC SUMMARY: {"cold_start_success": {"max": 30, "scores_via": "agent_surface + live demo"}, "it_runs": {"max": 25, "gate": true}, "surface_quality": {"max": 20}, "lands_in_product": {"max": 15}, "demo": {"max": 10}}
+SUBMISSION FIELDS: title, blurb, repo_url, demo_url, agent_surface, folder_id
+GATE: folder_id must be populated before submit; vault required for media evidence
+KNOWN FAILURE: README presents HydraDG / Hack Hydra Track 03; conflicts with HydraLamp Immersive Commons Aug 26-27 delta; Anticube=SELF_NON_SAFE
+REPAIR: populate vault before submit; expose origin delta; branch-qualified repo URL
+
+FAMILY=E05 CONDITION=CANDIDATE_EVIDENCE_WITHHELD_LABELS
+TASK: Rank A-G by causal priority and choose the earliest divergent dependency. Audit status labels and ground-truth ranking are withheld.
+
+INPUT:
+{
+  "A": {
+    "candidate": "A_rubric_not_retrieved_early",
+    "evidence": "Rubric in docs/ANB prereg Aug 26; ic_hack_get called Aug 27 05:29 — before submit but vault not acted on"
+  },
+  "B": {
+    "candidate": "B_text_form_not_agent_native",
+    "evidence": "Submit used text fields only; did not demonstrate IC MCP logistics as proof"
+  },
+  "C": {
+    "candidate": "C_media_not_in_vault",
+    "evidence": "folder_id=null; IC_VAULT_UPLOAD_PACKET created 33min AFTER ack"
+  },
+  "D": {
+    "candidate": "D_provenance_not_exposed",
+    "evidence": "No origin comparison in blurb or vault"
+  },
+  "E": {
+    "candidate": "E_product_over_package",
+    "evidence": "Backup media finalized 11:37 UTC; submit 22:13 UTC; vault packet never executed"
+  },
+  "F": {
+    "candidate": "F_late_package_design",
+    "evidence": "Seal/hero created ~15:02-15:31 PDT same day as submit"
+  },
+  "G": {
+    "candidate": "G_no_judge_red_team_gate",
+    "evidence": "IMMERSIVE_COMMONS_SUBMISSION_REVIEW.md focused on gates not 90s judge test"
+  }
+}
+
+Return exactly one JSON object:
+{
+  "state": "OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE",
+  "experiment_family": "E01|E02|E03|E04|E05|E06|E07",
+  "condition": "string",
+  "observations": ["string"],
+  "predicted_weak_dimensions": ["string"],
+  "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
+  "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
+  "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
+  "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
+  "recommended_first_correction": "string|null",
+  "confidence_0_1": 0.0,
+  "evidence_quotes": ["string"],
+  "invented_capabilities": []
+}

@@ -1,0 +1,50 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "phi4-mini:latest",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "SUCCESS",
+  "git_commit": "f62e049f8e3a7684b1cd4b649174d68b827f5a19",
+  "handoff_id": "HANDOFF_V8_phi4-mini_latest_EnterpriseRAG-Bench_qst_0001",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "EnterpriseRAG-Bench_qst_0001",
+      "sha256": "0cf387c93fca8b4e7f59fd0160d6e8c6e6760fbaa51ddd0a34177c571967a15d"
+    }
+  ],
+  "merkle_mmr": {
+    "receipt_sha256": "NOT_PROJECT_COMMITTED",
+    "root": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "phi4-mini:latest",
+    "bridge": "OLLARMA",
+    "requested_name": "phi4-mini:latest",
+    "runtime_digest": "78fad5d182a7c33065e153a5f8ba210754207ba9d91973f57dffa7f487363753",
+    "runtime_name": "phi4-mini:latest"
+  },
+  "output_sha256": "b150312972eb4422f72628bd495109e8036e2a7c4c6be82ef7438a4956f632d5",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "0cf387c93fca8b4e7f59fd0160d6e8c6e6760fbaa51ddd0a34177c571967a15d",
+  "receipt_sha256": "2f8c5fe44cd74646b4212875d3ae5d2afdc7d79b2df5b2d6f53247ca7fee7371",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "77d1f9a5c81f43f6edd371a0d9dce2f6427b6b8a513ba49680303fa5312802d3",
+  "response_text_bytes": 1184,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "algorithm": null,
+    "public_key_id": null,
+    "signature_path": null,
+    "signed_scope": null,
+    "state": "NOT_SIGNED",
+    "verification_receipt_sha256": "NOT_APPLICABLE"
+  },
+  "successful": true,
+  "timestamp_utc": "2026-08-21T17:30:54Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "874e3d43cd1f221566d23334d154a1635281366a786b7ab57814a92d48569ee8"
+}

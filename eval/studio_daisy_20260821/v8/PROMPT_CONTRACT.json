@@ -1,0 +1,24 @@
+{
+  "schema": "hydradg.prompt_contract.v1",
+  "version": "8.0.0",
+  "timestamp_utc": "2026-08-21T17:20:00Z",
+  "contract_type": "MODEL_INPUT_PROMPT_SPECIFICATION",
+  "track_prompt_templates": {
+    "track01": {
+      "dataset": "EnterpriseRAG-Bench",
+      "system_instruction": "Perform the requested retrieval and enterprise question answering task using only the supplied context documents. Do not infer unavailable evidence.",
+      "template": "Dataset: EnterpriseRAG-Bench\nQuestion ID: {question_id}\nQuestion: {question}\n\nContext Documents:\n{context_documents}\n\nExtract canonical entities, concepts, and evidence paths to answer the question:"
+    },
+    "track02": {
+      "dataset": "HydraBlast-Real-Deps",
+      "system_instruction": "Analyze the supplied package dependency graph structure to identify reverse-transitive dependency blast radius.",
+      "template": "Dataset: HydraBlast-Real-Deps\nCase ID: {case_id}\nTarget Package: {target_package}\nDependency Tree:\n{dependency_tree}\n\nCompute reverse-transitive dependency exposure and list affected services:"
+    },
+    "track03": {
+      "dataset": "LongMemEval-S-full500",
+      "system_instruction": "Answer the question based on the user's past conversation sessions context.",
+      "template": "Dataset: LongMemEval-S\nQuestion ID: {question_id}\nConversation Sessions:\n{conversation_sessions}\n\nQuestion: {question}\n\nAnswer:"
+    }
+  },
+  "label_isolation_rule": "Ground-truth benchmark references (gold_answer, answer_facts, reference_affected_services) MUST remain EVAL_ONLY and MUST NOT be included in the model prompt."
+}

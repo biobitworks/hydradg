@@ -1,0 +1,13 @@
+{
+  "schema": "hydralamp.runtype.repair.r2.v1",
+  "gate": "PASS",
+  "model_id": "qwen/qwen3.6-27b",
+  "execution_id": "exec_dcdb6453-ecdb-470b-9115-afddab3c4726",
+  "latency_ms": 11796,
+  "output_preview": "HYDRALAMP_RUNTYPE_LIVE_OK",
+  "output_contains_expected": true,
+  "output_sha256": "95687cc0e74d9d9e0f0488b97d72727014d405d7152dcc575dc26eab06f4902f",
+  "provider_timeout_ms_chosen": 35388,
+  "timeout_rationale": "max(observed_minimal_latency * 3, 15000) cap 120000",
+  "recorded_at_utc": "2026-08-27T23:28:20.797Z"
+}

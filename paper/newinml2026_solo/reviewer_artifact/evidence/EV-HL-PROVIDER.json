@@ -1,0 +1,11 @@
+{
+  "public_id": "EV-HL-PROVIDER",
+  "derived_from_internal": "RUNTYPE_LIVE_LOOP_REPAIR_RECEIPT.json",
+  "derived_from_sha256": "d2696729c543a022b6c02c8b4f6c41c8ca5fe265744856d1d346ff14ff54dcb6",
+  "anonymization_state": "PUBLIC_SAFE_DERIVED",
+  "fields": {
+    "first_failing_gate": "RUNTYPE_R3_STRUCTURED",
+    "provider_error_code": "TEST_KEY_DAILY_LIMIT_EXCEEDED",
+    "interpretation": "bounded external failure preserved"
+  }
+}

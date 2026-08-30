@@ -1,0 +1,19 @@
+{
+  "schema": "hydradg.anb_live.accept_git_binding_reconciliation.v1",
+  "receipt_id": "receipt:anb_accept_git_binding_reconciliation_20260827",
+  "created_at_utc": "2026-08-27T01:00:00Z",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "accepted_base_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_artifact_commit_sha": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "reason": "2ffb3e9a is the preregistration state accepted by the operator. 3869da66 is the Git commit containing the resulting ACCEPT artifacts. Do not call 2ffb3e9a the ACCEPT artifact commit.",
+  "accept_artifacts_preserved_unchanged": true,
+  "accept_artifact_paths": [
+    "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK01_COLD_START_V1_ACCEPT.json",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_ACCEPT.json",
+    "eval/agent_native_builders_live_20260826/work_units/ANB_RUNTYPE_PRODUCT_EVAL_V1_ACCEPT.json"
+  ],
+  "historical_receipts_not_rewritten": true,
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

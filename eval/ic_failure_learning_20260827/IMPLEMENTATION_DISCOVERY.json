@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.ic_failure_learning.implementation_discovery.v1",
+  "discovered_at_host": "magicSTUDIObox.local",
+  "discovered_at_sha": "a7941dc37dbfb57b1a92aa2f06213c135fd0c2f3",
+  "implementations": {
+    "SEEDGRAPH_IMPLEMENTATION": "/Users/byron/projects/active/seedgraph",
+    "SEEDGRAPH_VERSION_SHA": "local checkout via uv run seedgraph",
+    "ANTICUBE_IMPLEMENTATION": "scripts/classify_ic_failure_anticube.py (quadrant classifier; hydralamp/anticube.py is gateway perturbation tests only)",
+    "ANTICUBE_VERSION_SHA": "hydradg-ic-failure-anticube-1.0.0",
+    "FCO_IMPLEMENTATION": "/Users/byron/projects/active/fractal-custody-objects",
+    "FCO_VERSION_SHA": "71bf05dc8630641965c513a16790c192c9799d2e",
+    "FCG_IMPLEMENTATION": "scripts/build_ic_failure_learning_fcg.py",
+    "FCG_VERSION_SHA": "a7941dc37dbfb57b1a92aa2f06213c135fd0c2f3",
+    "MMR_IMPLEMENTATION": "scripts/build_ic_failure_learning_fcg.py (canonical recipe from fractal-custody-objects/scripts/seal_app_fcg.py)",
+    "MMR_VERSION_SHA": "71bf05dc8630641965c513a16790c192c9799d2e",
+    "OLLARMA_IMPLEMENTATION": "/Users/byron/projects/active/ollarma",
+    "OLLARMA_VERSION_SHA": "NOT_USED_DIRECT_OLLAMA_FALLBACK",
+    "CLOUDFLARE_OS_IMPLEMENTATION": "BLOCKED_NOT_LOCATED",
+    "CLOUDFLARE_OS_VERSION_SHA": "14fea8592a6dbc59769d592c0752bbf6a465fa84 (preregistered; checkout not found under /Users/byron/projects/active)"
+  },
+  "notes": [
+    "Experiments executed via DIRECT_OLLAMA_FALLBACK per RUNBOOK section 24",
+    "Anticube quadrant classification uses documented SELF/NON_SELF × SAFE/NON_SAFE; no scalar Anticube score invented",
+    "hydralamp/anticube.py is adversarial gateway perturbation harness, not the publication quadrant classifier"
+  ],
+  "CLAIM_CEILING": "IMPLEMENTATION_DISCOVERY_ONLY"
+}

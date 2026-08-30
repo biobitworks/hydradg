@@ -1,0 +1,81 @@
+{
+  "schema": "hydradg.real_local_matrix.preview.v1",
+  "state": "CURRENTLY_RUNNING",
+  "execution_host": "magicstudiobox",
+  "authoritative_result_source": "eval/real_local_matrix_20260820/REAL_LOCAL_MODEL_MATRIX_FINAL_RECEIPT.json",
+  "publication_rule": "REPLACE_RUNNING_ONLY_FROM_STABLE_EXECUTION_RECEIPTS",
+  "models": [
+    "deepseek-r1:14b",
+    "qwen2.5-coder:7b",
+    "phi4-reasoning:14b",
+    "qwen2.5:7b",
+    "llama3.2:3b",
+    "granite4.1:3b",
+    "llama3.2:1b",
+    "qwen2.5:0.5b",
+    "qwen2.5:1.5b",
+    "qwen3:1.7b"
+  ],
+  "datasets": [
+    {
+      "track": "Track 01 · Enterprise RAG",
+      "name": "EnterpriseRAG-Bench",
+      "scope": "N=300"
+    },
+    {
+      "track": "Track 02 · Dependency Graph",
+      "name": "HydraBlast-Real-Deps",
+      "scope": "N=250"
+    },
+    {
+      "track": "Track 03 · Context Memory",
+      "name": "LongMemEval-S-full500",
+      "scope": "N=500 total / 470 historical K=5 scored"
+    }
+  ],
+  "k_levels": [5, 10, 100],
+  "cells": [
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"deepseek-r1:14b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"qwen2.5-coder:7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"phi4-reasoning:14b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"qwen2.5:7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"llama3.2:3b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"granite4.1:3b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"llama3.2:1b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"qwen2.5:0.5b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"qwen2.5:1.5b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"EnterpriseRAG-Bench","track":"Track 01 · Enterprise RAG","model":"qwen3:1.7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"deepseek-r1:14b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"qwen2.5-coder:7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"phi4-reasoning:14b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"qwen2.5:7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"llama3.2:3b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"granite4.1:3b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"llama3.2:1b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"qwen2.5:0.5b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"qwen2.5:1.5b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"HydraBlast-Real-Deps","track":"Track 02 · Dependency Graph","model":"qwen3:1.7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"deepseek-r1:14b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"qwen2.5-coder:7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"phi4-reasoning:14b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"qwen2.5:7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"llama3.2:3b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"granite4.1:3b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"llama3.2:1b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"qwen2.5:0.5b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"qwen2.5:1.5b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"},
+    {"dataset":"LongMemEval-S-full500","track":"Track 03 · Context Memory","model":"qwen3:1.7b","extraction_state":"CURRENTLY_RUNNING","k5":"CURRENTLY_RUNNING","k10":"CURRENTLY_RUNNING","k100":"CURRENTLY_RUNNING","receipt":"PENDING_STABLE_RECEIPT"}
+  ],
+  "vithia": {
+    "family": "Vithia / Pythia-14m",
+    "historical_reference_basin": "EXECUTED_HISTORICAL_REFERENCE",
+    "seed_atom_perturbation": "CURRENTLY_RUNNING",
+    "first_divergence_analysis": "CURRENTLY_RUNNING",
+    "final_claim_ceiling": "PENDING_EXECUTION_RECEIPT"
+  },
+  "historical_baseline": {
+    "label": "HISTORICAL_TRACK03_K5_BASELINE",
+    "state": "EXECUTED_HISTORICAL_BASELINE",
+    "claim": "No positive B/C/D Hit@5 advantage over the flat reference route was established at that tested configuration."
+  }
+}

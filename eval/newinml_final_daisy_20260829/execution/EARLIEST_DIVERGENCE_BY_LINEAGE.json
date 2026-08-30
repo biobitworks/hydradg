@@ -1,0 +1,44 @@
+{
+  "EXECUTION_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "EXECUTION_COMMIT_ATTESTATION": "PENDING_POST_COMMIT_EXTERNAL_ATTESTATION",
+  "GENERATED_FROM_TREE": "cad047a99e97be9ff02a563b5fda251f704c4847",
+  "PLAN_BRANCH": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "PLAN_SHA": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "host": "magicSTUDIObox.local",
+  "lineages": {
+    "cfos": {
+      "cells_executed": 0,
+      "earliest_divergence": "CLOUDFLARE_OS_CHECKOUT_NOT_LOCATED",
+      "evidence": "eval/newinml_final_daisy_20260829/execution/lane1_cfos/CFOS_HL001_CANARY_RECEIPT.json"
+    },
+    "daisy_execution": {
+      "earliest_divergence": "PLAN_EXECUTED_WITH_PARTIAL_HOST_CAPABILITY",
+      "evidence": "eval/newinml_final_daisy_20260829/execution/FINAL_DAISY_EXECUTION_REPORT.json",
+      "note": "Lane 0 gum doctor not located; CFOS/SGLang/XENV blocked on host"
+    },
+    "q38_local": {
+      "earliest_divergence": "NONTERMINAL_MATRIX_27_OF_150",
+      "evidence": "eval/qwen38_model_replay_20260828/EXPERIMENT_TERMINAL_AUDIT.json",
+      "predecessor_sha": "6aac72665b4496de62c68a53ea27e8ecb45fab52",
+      "stale_claim_superseded": 26
+    },
+    "q38_remote": {
+      "cells_executed": 0,
+      "earliest_divergence": "REMOTE_CREDENTIALS_NOT_PRESENT_IN_CURRENT_SHELL_AND_NOT_REAUDITED",
+      "evidence": "eval/newinml_final_daisy_20260829/execution/lane4_xenv/Q38_XENV_AUDIT_RECEIPT.json"
+    },
+    "requirement_drift": {
+      "earliest_divergence": "STALE_OR_INCORRECT_SOURCE_STATE_PROMOTED_AS_CURRENT_REQUIREMENT",
+      "evidence": "paper/newinml2026_solo/requirement_drift/DEADLINE_DIVERGENCE_ANALYSIS.json",
+      "operational_deadline": "2026-08-30T07:59:00Z"
+    },
+    "sglang": {
+      "cells_executed": 0,
+      "earliest_divergence": "NO_AUTHORIZED_CUDA_HOST_ON_MAGICSTUDIOBOX",
+      "evidence": "eval/newinml_final_daisy_20260829/execution/lane2_sglang/SGLANG_HL001_CANARY_RECEIPT.json"
+    }
+  },
+  "recorded_at_utc": "2026-08-29T07:40:31Z",
+  "schema": "hydradg.earliest_divergence_by_lineage.v1"
+}

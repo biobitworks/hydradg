@@ -19,7 +19,10 @@ export async function GET() {
     },
     providers: {
       exa: Boolean(process.env.EXA_API_KEY),
+      tavily: Boolean(process.env.TAVILY_API_KEY),
       daytona: Boolean(process.env.DAYTONA_API_KEY),
+      mitosis: Boolean(process.env.MI_API_KEY),
+      tenki: Boolean(process.env.TENKI_API_KEY),
       gmi: Boolean(process.env.GMI_API_KEY),
       modal: Boolean(process.env.MODAL_ENDPOINT_URL && process.env.MODAL_PROXY_TOKEN),
     },

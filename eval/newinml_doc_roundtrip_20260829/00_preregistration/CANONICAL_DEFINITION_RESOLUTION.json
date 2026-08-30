@@ -1,0 +1,16 @@
+{
+  "AOK_CANONICAL_SOURCE": "seedgraph/docs/FCO_FCG_FRAMEWORK.md",
+  "AOK_CANONICAL_SOURCE_SHA256": "3c3f345b8303e4ef8e644441079f640450e507ce56cea56386183cfbe7e6b9f3",
+  "AOK_DEFINITION": "Atom of knowledge \u2014 an atomized leaf in seedKG (sentence, citation, entity, equation, figure, table) with a Merkle leaf hash, joined to its family by source_seed_id.",
+  "CONFLICTS": [],
+  "RESOLUTION_STATE": "RESOLVED",
+  "SEEDGRAPH_CANONICAL_SOURCE": "seedgraph/src/seedgraph/merkle/atoms.py",
+  "SEEDGRAPH_CANONICAL_SOURCE_SHA256": "00db2d2de2a894c53c6005f826743eb103d0c436a4f9222a4df767e1039e8ff0",
+  "SOT_CANONICAL_SOURCE": "seedgraph/prompts/PROMPT_020_SEEDS_OF_TRUTH_TIER.json",
+  "SOT_CANONICAL_SOURCE_SHA256": "6ea4d4d53b628893f3a38b8b32b646ddba3a9b5da617a1c20c77ccf3c36d7908",
+  "SOT_DEFINITION": "Seed of truth \u2014 a composite verified assertion built out of atoms with >=1 supporting atom Merkle leaf; deterministic assembler in seedgraph/seeds_of_truth/assembler.py (PROMPT-020 STEP1).",
+  "SUPPLEMENTARY_SOURCES": [
+    "gettingsciencedone/src/gsigmad/longitudinal/hash_contract.py",
+    "seedgraph/src/seedgraph/seeds_of_truth/models.py"
+  ]
+}

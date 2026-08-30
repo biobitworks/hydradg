@@ -1,0 +1,75 @@
+{
+  "canary_executions_accounted": 18,
+  "canary_executions_expected": 18,
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "dataset_cases_total": 770,
+  "dataset_contract_sha256": "4dc8f0caa1d96a3367f4cbb133d34ff1f9a79e7cf03bec3162081f77310a8618",
+  "empty_response_failures": 5,
+  "final_review_gate": "HYDRADG_V9_FROZEN_SHA_CANARY_READY__STOP_FOR_CHATGPT_REVIEW",
+  "full_matrix_authorized": false,
+  "full_matrix_expected": 6930,
+  "gates": {
+    "CASE_LEVEL_SCORING_GATE": "PASS",
+    "CASE_SPECIFIC_PROMPT_GATE": "PASS",
+    "CLEAN_OUTPUT_NAMESPACE_GATE": "PASS",
+    "CONTEXT_CAPACITY_GATE": "PASS",
+    "CONTRACT_IDENTITY_SEPARATION_GATE": "PASS",
+    "DATASET_CASE_GATE": "PASS",
+    "EMPTY_RESPONSE_CLASSIFICATION_GATE": "PASS",
+    "FCG_LINEAGE_GATE": "PASS",
+    "GIT_EXECUTION_BINDING_GATE": "PASS",
+    "INDEPENDENT_HASH_RECOMPUTATION": "PASS",
+    "LABEL_LEAKAGE_GATE": "PASS",
+    "MODEL_RUNTIME_RESOLUTION_GATE": "PASS",
+    "RAW_TRANSPORT_RECEIPT_GATE": "PASS",
+    "REAL_MODEL_INVOCATION_GATE": "PASS",
+    "SOURCE_FREEZE_GATE": "PASS"
+  },
+  "merkle_mmr_state": "PENDING_OPERATION_RECEIPT_CONFIRMATION",
+  "model_roster_sha256": "af72db26884c6f45cd2ce50b4b20a857d8f72346b27fd06476173f44b685f883",
+  "models_admitted": 9,
+  "next_safe_action": "STOP_FOR_OPERATOR_REVIEW_BEFORE_FULL_MATRIX_LAUNCH",
+  "prompt_contract_sha256": "96d719d3cc98905277af2abbc68481561956f94db8d4a6ff91b63a0899a48c28",
+  "schema": "hydradg.v9_independent_audit_receipt.v1",
+  "scorer_contract_sha256": "c2bee70f84ec092c4bedb7e047236045824277aca3cfff4a4094bb71d31a0f8b",
+  "signature_state": "NOT_SIGNED",
+  "source_file_audit": {
+    "track01": {
+      "expected": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2",
+      "match": true,
+      "observed": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2"
+    },
+    "track02": {
+      "expected": "5fcfe8ec8300aea6a3e58adb4a3299d4b80b288f13e361e73ee27b8a89f8a241",
+      "match": true,
+      "observed": "5fcfe8ec8300aea6a3e58adb4a3299d4b80b288f13e361e73ee27b8a89f8a241"
+    },
+    "track03": {
+      "expected": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "match": true,
+      "observed": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442"
+    }
+  },
+  "static_code_audit": {
+    "clean": true,
+    "details": {
+      "DYNAMIC_OUTPUT_NAMESPACE_IMPLEMENTED": true,
+      "NO_HARDCODED_GIT_SHA": true,
+      "NO_HARDCODED_PRIMARY_PASS_GATE": true,
+      "NO_HARDCODED_SCORES": true,
+      "NO_SENTINEL_OUTPUT_AS_GENERATION": true,
+      "NO_SILENT_CONTEXT_TRUNCATION": true,
+      "NO_SYNTHETIC_PRIMARY_REFERENCE": true,
+      "RAW_TRANSPORT_PERSISTENCE_IMPLEMENTED": true
+    }
+  },
+  "successful_invocations": 13,
+  "timestamp_utc": "2026-08-21T18:33:23Z",
+  "track01_admitted": 300,
+  "track02_admitted": 0,
+  "track03_admitted": 470,
+  "v8_predecessor_sha": "5aa34133b02723d5d7b68fbe890c73b85ed7d34d",
+  "v9_auditor_sha256": "eb17f1c48decbc2b83bef82011f435a6bfd4794e841db2e277c9e5d7a344044c",
+  "v9_frozen_git_sha": "ae0db3f9d1c65074b5472fc92379be84d3026a26",
+  "v9_runner_sha256": "5911c7278dd3bf427c165a931c412be37458acab5ec327537b7a306c4aa08961"
+}

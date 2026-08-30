@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.frozen_pdf_decision.v1",
+  "recorded_at_utc": "2026-08-30T03:25:00Z",
+  "mode": "FINAL_CITATION_GAP_REPAIR_AND_SUBMISSION_DECISION",
+  "CITATION_GAPS_SUBMISSION_BLOCKING": "YES",
+  "FROZEN_PDF_DECISION": "SUCCESSOR",
+  "NEW_PDF_CREATED": "YES",
+  "PREDECESSOR_PDF_PATH": "paper/newinml2026_solo/final_v4/manuscript/build/main.pdf",
+  "PREDECESSOR_PDF_SHA256": "c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
+  "PREDECESSOR_PRESERVATION_COPY": "paper/newinml2026_solo/final_v4/manuscript/build/main_predecessor_frozen_c16be09e.pdf",
+  "SUCCESSOR_PDF_PATH": "paper/newinml2026_solo/final_v4/manuscript/build/successor_citation/main.pdf",
+  "SUCCESSOR_PDF_SHA256": "ee8347969827f0296b16e934590c6efd24fb3ecc6fc090f7251f58d30a096b81",
+  "PREDECESSOR_BYTES_MODIFIED": false,
+  "RATIONALE": "Predecessor omitted Merkle/CT, main-text PROV/workflow provenance, negative-results, and agent-provenance comparators while using hash-linked integrity language. Successor patches Related Work and one Framework callsite; predecessor hash preserved.",
+  "DEFERRED_TO_CAMERA_READY": [],
+  "CITATION_ONLY_REBUILD": true,
+  "FIGURE_DETERMINISM_REPAIRED": false,
+  "TABLE_DETERMINISM_REPAIRED": false,
+  "RECOMMENDED_UPLOAD_PDF": "paper/newinml2026_solo/final_v4/manuscript/build/successor_citation/main.pdf",
+  "CURRENT_BRANCH": "cursor/newinml-solo-citation-priorart-final-20260829"
+}

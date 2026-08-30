@@ -1,0 +1,41 @@
+{
+  "schema": "hydradg.byog_ingest_request_receipt.v1",
+  "timestamp_unix": 1787261208,
+  "source_id": "hydradg-canonical-fcg-653-1692-v1",
+  "database": "hydradg",
+  "collection": "hydradg-judge-demo",
+  "submitted_entity_count": 657,
+  "submitted_relation_count": 1692,
+  "local_fco_root_sha256": "1384a838bd4988a46fff3705230a0c82fc8b1d5721951fb9e49cca293e5207ea",
+  "local_edge_root_sha256": "43c160a579ca48b9099b2d7827b2ef904d36e2b5047bfe89809a5e8d71bfa5e7",
+  "upload_status": "UPLOAD_ACCEPTED (HTTP 202)",
+  "api_response": {
+    "success": true,
+    "data": {
+      "success": true,
+      "message": "Knowledge uploaded successfully. Ingestion is asynchronous: this 202 means the sources were accepted and queued, not indexed. Poll GET /context/status?database=<database>&id=<source_id> until each source's indexing_status reaches a terminal state (completed or errored) before querying. See https://docs.hydradb.com/api-reference/v2/endpoint/source-status for usage details. ",
+      "results": [
+        {
+          "id": "hydradg-canonical-fcg-653-1692-v1",
+          "filename": "HYDRADG_CANONICAL_FCG_BYOG_SOURCE.md",
+          "status": "queued",
+          "error": null,
+          "error_code": null
+        }
+      ],
+      "success_count": 1,
+      "failed_count": 0
+    },
+    "error": null,
+    "meta": {
+      "request_id": "f32978cd-5c10-4f8f-873e-bebc2edbf8cf",
+      "api_version": "2.0.1",
+      "latency_ms": 285.8,
+      "tenant_id": "hydradg",
+      "database": "hydradg",
+      "sub_tenant_id": "hydradg-judge-demo",
+      "collection": "hydradg-judge-demo",
+      "source_type": "knowledge"
+    }
+  }
+}

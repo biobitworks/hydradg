@@ -1,0 +1,76 @@
+{
+  "figure_id": "F3",
+  "flows": [
+    {
+      "experiment_id": "EXP-008",
+      "stages": [
+        {
+          "n": 300,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+          "stage": "planned_cells"
+        },
+        {
+          "n": 300,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+          "stage": "executed"
+        },
+        {
+          "n": 272,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+          "stage": "parse_valid"
+        },
+        {
+          "n": 2,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+          "stage": "paired_scorable"
+        },
+        {
+          "n": 0,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+          "stage": "discordant_informative"
+        },
+        {
+          "label": "UNDERPOWERED",
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json",
+          "stage": "terminal"
+        }
+      ]
+    },
+    {
+      "experiment_id": "EXP-009",
+      "stages": [
+        {
+          "n": 300,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+          "stage": "planned_cells"
+        },
+        {
+          "n": 300,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+          "stage": "executed"
+        },
+        {
+          "n": 265,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+          "stage": "parse_valid"
+        },
+        {
+          "n": 2,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+          "stage": "paired_scorable"
+        },
+        {
+          "n": 0,
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+          "stage": "discordant_informative"
+        },
+        {
+          "label": "UNDERPOWERED",
+          "source": "paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+          "stage": "terminal"
+        }
+      ]
+    }
+  ],
+  "schema": "hydradg.figure_data.v1"
+}

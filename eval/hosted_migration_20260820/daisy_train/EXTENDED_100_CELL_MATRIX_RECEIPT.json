@@ -1,0 +1,3227 @@
+{
+  "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "SYNTHETIC_100_CELL_MULTI_MODEL_DATASET_MATRIX_DESIGN_ONLY_NOT_MODEL_EXECUTION",
+  "corpus_accounting": {
+    "declared_total_document_count": 520870,
+    "enumeration_state": "DECLARED_CORPUS_ESTIMATE"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "matrix_cells": [
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1d2baa3ca57b32c43369e89d0bdbdec6d7ca64b65a07a3294829143c59aa9c20",
+      "cell_index": 1,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0042,
+        "g_star_diagnostic": -0.119,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.202
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 248976000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "15ab283f34714ac54af22112a0a384154d28deb6c47793e19c4344bd0bf3efda",
+      "cell_index": 2,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0087,
+        "g_star_diagnostic": -0.1145,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.204
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 106704000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f5c554ce9407c7df9cf0b8844d04e27e881d722e1ace11966e89c4ccc1fd676d",
+      "cell_index": 3,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0135,
+        "g_star_diagnostic": -0.1096,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.206
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 248976000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "d94f10ba323ba998086879f30d54f4298068c619563a00d17a7d3f5cd1aefb8f",
+      "cell_index": 4,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0188,
+        "g_star_diagnostic": -0.1044,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.208
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 248976000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "b4bb83512b02f7d2d040f2b6a7fa42195dd0f029b90160e04ef9dce998eafbf4",
+      "cell_index": 5,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.01,
+        "g_star_diagnostic": -0.1131,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.21
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 497952000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "8bef8fc74fc88bdc294818f10d8b1e3312dd2eafe315113830a0551614da81de",
+      "cell_index": 6,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0142,
+        "g_star_diagnostic": -0.109,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.212
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 271028160000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "dea2e479dbdfdc2145332beff7a0574262c53b37d28c58c6c2a6ca8e68f895b4",
+      "cell_index": 7,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0187,
+        "g_star_diagnostic": -0.1045,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.214
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 290590560000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "42272d5cb3d90df2be99ecf03391ecdd80bb30ff529886b86aa21fdf12a53fbe",
+      "cell_index": 8,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0235,
+        "g_star_diagnostic": -0.0996,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.216
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "c5948c0c2911fcfd08951d4c274f32a04254c46df45263bd0e89be95d01040e4",
+      "cell_index": 9,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0288,
+        "g_star_diagnostic": -0.0944,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.218
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 497952000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "5e84be34b0cb2eb39917721caaa15142a41c21943b27b95f8af133db22c6134d",
+      "cell_index": 10,
+      "dataset": {
+        "declared_docs": 500000,
+        "id": "enterpriserag_bench",
+        "name": "EnterpriseRAG-Bench (Onyx)",
+        "tokens": 26000000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.02,
+        "g_star_diagnostic": -0.1031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.22
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 17784000,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 248976000000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "6a2e67d9a9e64158d48e0b46e5ed454d68cc93049e1d1d2b5ac6024be792a9a4",
+      "cell_index": 11,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0242,
+        "g_star_diagnostic": -0.099,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.222
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1c6f371ac2d84f9597981b34959557276cdd58d5eb16f44e8c8a3535f2ebad3d",
+      "cell_index": 12,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0287,
+        "g_star_diagnostic": -0.0945,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.224
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 4924800000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "2b0ade6612abb650aa816e12978b4c777047c2dbbc8d77834a4649da5bdeefa0",
+      "cell_index": 13,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0335,
+        "g_star_diagnostic": -0.0896,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.226
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f98a15ddc0b4d769e12a757ed01fc3aba7a5896d008382e44ce419fdfe2c4fd6",
+      "cell_index": 14,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0388,
+        "g_star_diagnostic": -0.0844,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.228
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "807e2e38440a26f4de73dd3d46fc576fc3edd2258cdd6892734817c9bc6fe4cd",
+      "cell_index": 15,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.03,
+        "g_star_diagnostic": -0.0931,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.23
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 22982400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "a7bb9569f7e60c2db1397ebaeae01ad40dd1f13f14851ab93c6bb3e6fa4e073a",
+      "cell_index": 16,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0342,
+        "g_star_diagnostic": -0.089,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.232
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 12508992000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "058bac2ef694fad9ff46c6ab16b84c04c3f7f6f297bff7be02dc48995cebf086",
+      "cell_index": 17,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0387,
+        "g_star_diagnostic": -0.0845,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.234
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 13411872000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "74c8c12491726f46b2f9639eae864947620c0d6a0a0b5fe7c5c14ffa98dc3705",
+      "cell_index": 18,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0435,
+        "g_star_diagnostic": -0.0796,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.236
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1398ee56b490338b123934e1324d0e33e9f6626c9fc5e82ebd1f4e06f7b19aa7",
+      "cell_index": 19,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0488,
+        "g_star_diagnostic": -0.0744,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.238
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 22982400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "c01e18d0478c9b78d7e0e95ebddea4306041f642255a2fd7658da685a7f559da",
+      "cell_index": 20,
+      "dataset": {
+        "declared_docs": 10000,
+        "id": "salesforce_herb",
+        "name": "Salesforce HERB Benchmark",
+        "tokens": 1200000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.04,
+        "g_star_diagnostic": -0.0831,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.24
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f308522ab0c06738e801e6a763c5e30f3582c77bf05da107ad2ec13050e1634f",
+      "cell_index": 21,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0442,
+        "g_star_diagnostic": -0.079,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.242
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 5745600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f61391c5bba6df898d89dd7970a4caa22898e87d4c47fc96b821ef8a91a0f457",
+      "cell_index": 22,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0487,
+        "g_star_diagnostic": -0.0745,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.244
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 2462400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "401cd606d6eb62870c73c864ed46acacc0bf5c770ac9f09cb349f668eabfdb9b",
+      "cell_index": 23,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0535,
+        "g_star_diagnostic": -0.0696,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.246
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 5745600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "8f5a22726566c4ee3567fe57b057a600fdd6992efdf0056b4bc5619fd01f8e26",
+      "cell_index": 24,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0588,
+        "g_star_diagnostic": -0.0644,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.248
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 5745600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "b08143f0dbab4763441853756bc571e43cb2e5b0dbd17c8632ba9e234a49550f",
+      "cell_index": 25,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.05,
+        "g_star_diagnostic": -0.0731,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.25
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "94b557c3f461d4f078f2f2dcdb28dca5d02661c863d426a6737fdc268d97eb16",
+      "cell_index": 26,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0542,
+        "g_star_diagnostic": -0.069,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.252
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 6254496000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1e3c68dbc218722cb5e8ee6f4d27f35c32472da3c5b4b517ee03ac4c57cede20",
+      "cell_index": 27,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0587,
+        "g_star_diagnostic": -0.0645,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.254
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 6705936000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "42fbddf93307bacafec7bca67632215899cab816961bc616e91f64cabb1e0a7d",
+      "cell_index": 28,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0635,
+        "g_star_diagnostic": -0.0596,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.256
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "e6f86511f6bea7e5c39afaf658602d814361e63e6b41873fd0c29372a1cf72c8",
+      "cell_index": 29,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0688,
+        "g_star_diagnostic": -0.0544,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.258
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "713cea1aa4d4e059c03e754b0e2f7b9259873007f0303ee8817da6abe06941ca",
+      "cell_index": 30,
+      "dataset": {
+        "declared_docs": 5000,
+        "id": "beam_benchmark",
+        "name": "BEAM Retrieval Benchmark",
+        "tokens": 600000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.06,
+        "g_star_diagnostic": -0.0631,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.26
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 410400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 5745600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "2af378c639baca750c22e0cc16ffa53cfec22ba6b2de68c0ca6c9492ef8044cf",
+      "cell_index": 31,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0642,
+        "g_star_diagnostic": -0.059,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.262
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3351600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "833a1220978308b6c2e1cfa61cfb650c1ae775d74ae32ac117a4fc188e84973d",
+      "cell_index": 32,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0687,
+        "g_star_diagnostic": -0.0545,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.264
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1436400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1eda05f93d94b4b3c6316d960bb16d7828737938879033132b2ad1c59c24f909",
+      "cell_index": 33,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0735,
+        "g_star_diagnostic": -0.0496,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.266
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3351600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "ac3abc10629da6c17d3368e6d3d08aa4d251403d438804ea0d5cbc9e9a1f6e1f",
+      "cell_index": 34,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0788,
+        "g_star_diagnostic": -0.0444,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.268
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3351600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "24d8c6b9b37029482c864bb77b63234ca5088b3686e1591e2246917b732fbf24",
+      "cell_index": 35,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.07,
+        "g_star_diagnostic": -0.0531,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.27
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 6703200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "b7770dfafc953fee1e8c40b2d0536219d8b0a345c1b207973546a67867809bc7",
+      "cell_index": 36,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0742,
+        "g_star_diagnostic": -0.049,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.272
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3648456000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "782e39700adfd8dcaf3d3dbfacd8b80a406f9402e6b6c6203d37c231c634b921",
+      "cell_index": 37,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0787,
+        "g_star_diagnostic": -0.0445,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.274
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3911796000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "4ed5c99796e0bd72784e80c0e5f3a13792a91e2273dd6dac5940e9c79e72d19c",
+      "cell_index": 38,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0835,
+        "g_star_diagnostic": -0.0396,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.276
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "4ef2be9909cada027a367a2a53b3e34259c44dfdbc0ed23b79eac8011d91d0c9",
+      "cell_index": 39,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0888,
+        "g_star_diagnostic": -0.0344,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.278
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 6703200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1f808592f598068b1e20002da03ec3050dbf75e1dd43845320375d7c05989e45",
+      "cell_index": 40,
+      "dataset": {
+        "declared_docs": 2500,
+        "id": "finance_bench",
+        "name": "FinanceBench Financial QA",
+        "tokens": 350000,
+        "track": "track01"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.08,
+        "g_star_diagnostic": -0.0431,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.28
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 239400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3351600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "8f1bdc762aa151e07c6201bfe923a15b1c00ae7316a21d088c9c3f5c5e03632d",
+      "cell_index": 41,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0842,
+        "g_star_diagnostic": -0.039,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.282
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 4644360000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f5d182080dbb177eba5339d3d3f702bb0aeed89a0c777ae5138fe885ebccc293",
+      "cell_index": 42,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0887,
+        "g_star_diagnostic": -0.0345,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.284
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1990440000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "0d6cc8d09de92952de8847236425193608e868e3bee97362ff694fc721d3e17f",
+      "cell_index": 43,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0935,
+        "g_star_diagnostic": -0.0296,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.286
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 4644360000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "b1da36ca368f786e4333c3b1112bb578b1720189ad47b2aa37cbca329b63ceda",
+      "cell_index": 44,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0988,
+        "g_star_diagnostic": -0.0244,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.288
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 4644360000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "bfc4e014406f58c977d1c7f2341c188a8544336458d97362be3432bacd7c5ff4",
+      "cell_index": 45,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.09,
+        "g_star_diagnostic": -0.0331,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.29
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 9288720000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "003d4f78545df4d95210c299b3ba0cc1891cbdad183a6c03f509ca8898de3d42",
+      "cell_index": 46,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0942,
+        "g_star_diagnostic": -0.029,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.292
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 5055717600000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "821cd88959e39a69dc5a1674f742fa616ace9d5f39601b12fbabf7d556939b68",
+      "cell_index": 47,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.0987,
+        "g_star_diagnostic": -0.0245,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.294
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 5420631600000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "3c8be54dd75e4dde89d48a8feddb213a11a9b9072b63132ba980c868ec375603",
+      "cell_index": 48,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1035,
+        "g_star_diagnostic": -0.0196,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.296
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "1f6f38a0039e2cd0c3ba1a525a07d230f00c145030ca68a9ef7d59772fede027",
+      "cell_index": 49,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1088,
+        "g_star_diagnostic": -0.0144,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.298
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 9288720000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "0e1539142b4ed39898d108ea233466ec2c92e26c1e36faadfdc7dc791fe5ae77",
+      "cell_index": 50,
+      "dataset": {
+        "declared_docs": 1250,
+        "id": "hydradb_repo",
+        "name": "HydraDB OSS Repository",
+        "tokens": 485000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1,
+        "g_star_diagnostic": -0.0231,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.3
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 331740,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 4644360000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "66b11a1c9bef5243b0a859546d49f9f401b9417220265fce2c4989f94a5d10e3",
+      "cell_index": 51,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1042,
+        "g_star_diagnostic": -0.019,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.302
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1723680000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "2bf5b2e1b9bbbb5a160daf299dd55d484b3d22bbe2b4608d22df27b5576e7bef",
+      "cell_index": 52,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1087,
+        "g_star_diagnostic": -0.0145,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.304
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 738720000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "6de3ca0f4da3ccc6889575fa7fcf265ed4cf131a060d47855c6bae102a6014c7",
+      "cell_index": 53,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1135,
+        "g_star_diagnostic": -0.0096,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.306
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1723680000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "718d492463b6905e1fa702be9c60d533686075c0d523cab70e8723b2b8df5aa9",
+      "cell_index": 54,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1188,
+        "g_star_diagnostic": -0.0044,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.308
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1723680000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "ef9983b0719be745347e3a0455f5eb4a429e8e0295b62d9cb9ce83be5d050519",
+      "cell_index": 55,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.11,
+        "g_star_diagnostic": -0.0131,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.31
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3447360000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "41c15a8b3bbe239b67aeef163f0374ff17be0eeb81c5c2a475ca50153e6b6f5c",
+      "cell_index": 56,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1142,
+        "g_star_diagnostic": -0.009,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.312
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1876348800000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f122b9d27974a9514de54876dab9d3bd1ae5bfa976380a9fcb9cb5d01af6aad8",
+      "cell_index": 57,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1187,
+        "g_star_diagnostic": -0.0045,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.314
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 2011780800000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "462c2a2cb96af960918262b80200024d8c9e58541a799f7fe04773880f999db2",
+      "cell_index": 58,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1235,
+        "g_star_diagnostic": 0.0004,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.316
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "e2d57f455b79c18b01bf9838f599a6ba67351e3cb88647a8970889558eb35176",
+      "cell_index": 59,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1288,
+        "g_star_diagnostic": 0.0056,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.318
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3447360000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "cf31f79a95d0d54c08050aa5379730857cef5c52175dbb77a888ff06d52bea2f",
+      "cell_index": 60,
+      "dataset": {
+        "declared_docs": 450,
+        "id": "seedgraph_ledger",
+        "name": "SeedGraph Custody Ledger",
+        "tokens": 180000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.12,
+        "g_star_diagnostic": -0.0031,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.32
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 123120,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1723680000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "b601327b7afc30b2558481e60fcc88d799fbf9bf5c29e91c125fbea95debdf7b",
+      "cell_index": 61,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1242,
+        "g_star_diagnostic": 0.001,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.322
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1340640000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "def7f24aad8a505ce0a052feb7fd13d6ae996101cafd56b6b261c38de971aa92",
+      "cell_index": 62,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1287,
+        "g_star_diagnostic": 0.0055,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.324
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 574560000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "455a55482db49af7468f44e2ce4ce1d8f82b3bed8cd117bd3177d06ae21f147b",
+      "cell_index": 63,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1335,
+        "g_star_diagnostic": 0.0104,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.326
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1340640000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "866066c19183c0f260e33ef8d00f58c0e78cc81c7cf7e4ba48817c749f21d1dd",
+      "cell_index": 64,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1388,
+        "g_star_diagnostic": 0.0156,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.328
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1340640000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "d31d6095f27a4e72edc931465a9d220f9abf26d683db60d3f0f015f77996445b",
+      "cell_index": 65,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.13,
+        "g_star_diagnostic": 0.0069,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.33
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 2681280000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "c7cef0912876be00834bdc925e27581ea48e955f728d10641925e6c8a28b9f58",
+      "cell_index": 66,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1342,
+        "g_star_diagnostic": 0.011,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.332
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1459382400000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "444bcaaad309f86e0c0438bc8e1a945405f4e1337e1df8825ecf60d73c2e1859",
+      "cell_index": 67,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1387,
+        "g_star_diagnostic": 0.0155,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.334
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1564718400000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "535ffd958d725db9e7ba895ab4aaa8f1dcf47446f94ecf517bff4f9d7c66f719",
+      "cell_index": 68,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1435,
+        "g_star_diagnostic": 0.0204,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.336
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "297d293db5cb78d8c008048e90efe2ba1df25ca8c552348f39200a8f9afedba2",
+      "cell_index": 69,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1488,
+        "g_star_diagnostic": 0.0256,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.338
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 2681280000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "3fd50063994695346cfb4f79a82ea727b7a2013372ddb0ff386bae75fadbb2db",
+      "cell_index": 70,
+      "dataset": {
+        "declared_docs": 320,
+        "id": "daisytrain_logs",
+        "name": "DaisyTrain v0.3.7 Execution Logs",
+        "tokens": 140000,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.14,
+        "g_star_diagnostic": 0.0169,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.34
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 95760,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 1340640000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "5ca35f7fbd8ac7231dbe67ad20a4311ae7d464e2962c9dbe4793b62f053b64de",
+      "cell_index": 71,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1442,
+        "g_star_diagnostic": 0.021,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.342
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 485282000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "9a17af0d924cdafb7f69bd61ee15296c89e53e9b91fea6e5587b6ed370ccc428",
+      "cell_index": 72,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1487,
+        "g_star_diagnostic": 0.0255,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.344
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 207978000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "879d33588519350a07c6be4e417a50e7445e52262c9bd957e95bae353c4bf11c",
+      "cell_index": 73,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1535,
+        "g_star_diagnostic": 0.0304,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.346
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 485282000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "a8bee82c37b68bc168ef1bd9386e06b3f14a8946317b4cc096679c8640189594",
+      "cell_index": 74,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1588,
+        "g_star_diagnostic": 0.0356,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.348
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 485282000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "29c01ae54d50cf853be6b7e6f9a6b3bf078bdf7e808bb1b67e236ad82de28b2e",
+      "cell_index": 75,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.15,
+        "g_star_diagnostic": 0.0269,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.35
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 970564000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "03e80b38d4112d07a08821764cbe07b4251a99b9157082ccd43f878e9a37a2c6",
+      "cell_index": 76,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1542,
+        "g_star_diagnostic": 0.031,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.352
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 528264120000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "c8a67587bede04186a404cad66e364b44b103a92cd5ea20d286e06bcce6d4615",
+      "cell_index": 77,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1587,
+        "g_star_diagnostic": 0.0355,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.354
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 566393420000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "12c29d2ce65001504de73359f7cadb22ea401fcf7bbbab8423da7eb0150ef8cf",
+      "cell_index": 78,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1635,
+        "g_star_diagnostic": 0.0404,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.356
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "588042dd729231d97da181ea4d6558b0310dbc6ddae0b6d421417bb6f0ba77e7",
+      "cell_index": 79,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1688,
+        "g_star_diagnostic": 0.0456,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.358
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 970564000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "adceb9b42fb4f90c6fd65ddfab2fc9e4febcbea3cc32c0d681190c24a7c40f4b",
+      "cell_index": 80,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "inturn_transcripts",
+        "name": "Antigravity In-Turn Transcripts",
+        "tokens": 50677,
+        "track": "track02"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.16,
+        "g_star_diagnostic": 0.0369,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.36
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 34663,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 485282000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "265559cceb27cb39566d70a722d0004a5f11c32cd3413d8bc05df01eb23512d5",
+      "cell_index": 81,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1642,
+        "g_star_diagnostic": 0.041,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.362
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "419b7366ac9799b66392f0bf435e4b3b16d1fce541292704bc194beca88ce8b6",
+      "cell_index": 82,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1687,
+        "g_star_diagnostic": 0.0455,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.364
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 4924800000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "692f774ab8a44656da525bcf7fb75d08f9c92f230968daa314cd81ab1a3919b6",
+      "cell_index": 83,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1735,
+        "g_star_diagnostic": 0.0504,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.366
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "fd5f20345c2dc08db68231d1b6309e23a8dcce47c9e4bfc6e884a474251d6151",
+      "cell_index": 84,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1788,
+        "g_star_diagnostic": 0.0556,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.368
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "da4e490398b68b07bd43ec8d1082bb08791148d7d20e874626b50767c5bcbc0e",
+      "cell_index": 85,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.17,
+        "g_star_diagnostic": 0.0469,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.37
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 22982400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "0c7c188fbd748c6c80baa4e4170e973126ab9e4b35465c7ae42bd9864780920d",
+      "cell_index": 86,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1742,
+        "g_star_diagnostic": 0.051,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.372
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 12508992000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "9427c7423e8cb498682a16bbcdb90f7d015b23c248e115f2e3eb1e4ccfcf3c44",
+      "cell_index": 87,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1787,
+        "g_star_diagnostic": 0.0555,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.374
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 13411872000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "e5fdfecc3e4f67a089dd9b2798927b814ddda34493a782eed725820d0e4925d9",
+      "cell_index": 88,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1835,
+        "g_star_diagnostic": 0.0604,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.376
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "940353f919f4aa49d988ea5fb47d47d0fbf47877b4b33094b716aac74cf7046a",
+      "cell_index": 89,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1888,
+        "g_star_diagnostic": 0.0656,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.378
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 22982400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "7569d2b80eba9b6ba5e80b772a8b8ed8d11d5242f5f66390f0be2840a742679f",
+      "cell_index": 90,
+      "dataset": {
+        "declared_docs": 500,
+        "id": "longmemeval_full500",
+        "name": "LongMemEval-S full500 Benchmark",
+        "tokens": 1200000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.18,
+        "g_star_diagnostic": 0.0569,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.38
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 11491200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "38b37f6436f8ed6fb411cf2c54acceb8e3b1a4fb52e592c8464b4cfa9e429d80",
+      "cell_index": 91,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "vithia_baseline",
+        "name": "HydraDG VITHIA CFMO Baseline v0.1",
+        "params_b": 7.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1842,
+        "g_star_diagnostic": 0.061,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.382
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 8139600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "653007a488b655d12d0d16ccfc9189f44153e6e4301cb8878bfd5193b8308be4",
+      "cell_index": 92,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "anticube_classifier",
+        "name": "Anticube Contradiction Classifier",
+        "params_b": 3.0,
+        "provider": "Local/HF"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1887,
+        "g_star_diagnostic": 0.0655,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.384
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 3488400000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "d7a23eda53bd29d0f00743b328690a64f5a52ecbe058e9eb0ef8154f5caa08fb",
+      "cell_index": 93,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen2.5_coder_7b",
+        "name": "Qwen 2.5 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1935,
+        "g_star_diagnostic": 0.0704,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.386
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 8139600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "af5f6d6f0e4f0fb3cf0e7bef4201f55b8924b12fe5366b9d975073f9e6586d97",
+      "cell_index": 94,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_coder_7b",
+        "name": "Qwen 3 Coder 7B",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen3-coder:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1988,
+        "g_star_diagnostic": 0.0756,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.388
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 8139600000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "f86628cc83d7359e32539432a09042c4bc6ce9e2216d4b0f8c0f8a60884c03cb",
+      "cell_index": 95,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "qwen3_reasoning_14b",
+        "name": "Qwen 3 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (qwen3-reasoning:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.19,
+        "g_star_diagnostic": 0.0669,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.39
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 16279200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "6f1f682ffa7848513bf6f6b34113744bec679799d9e76694b24ca5527b10cddf",
+      "cell_index": 96,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "deepseek_r1_distill_qwen_7b",
+        "name": "DeepSeek-R1-Distill-Qwen-7B",
+        "params_b": 7.62,
+        "provider": "Ollama (deepseek-r1:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1942,
+        "g_star_diagnostic": 0.071,
+        "shannon_entropy_bits": 1.8341,
+        "u_star_burden": 0.392
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 8860536000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "bc375c4dd22b34c4b3e153735cddc5813b016f20b07fd89650183158c70747b3",
+      "cell_index": 97,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "granite_3.1_dense_8b",
+        "name": "IBM Granite 3.1 Dense 8B",
+        "params_b": 8.17,
+        "provider": "Ollama (granite3.1-dense:8b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.1987,
+        "g_star_diagnostic": 0.0755,
+        "shannon_entropy_bits": 1.8199,
+        "u_star_burden": 0.394
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 9500076000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "5b5ce7a7ae6bd2b22f44033c335cf80e2d27f12d716c5b213e9bae8630f0ab5c",
+      "cell_index": 98,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "gpt4o_mini",
+        "name": "GPT-4o Mini Baseline",
+        "params_b": null,
+        "provider": "OpenAI API (gpt-4o-mini)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.2035,
+        "g_star_diagnostic": 0.0804,
+        "shannon_entropy_bits": 1.8035,
+        "u_star_burden": 0.396
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "NOT_APPLICABLE_PROVIDER_PARAMETERS_UNDISCLOSED",
+        "theoretical_flops_avoided": 0
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "50a9cc0643a0cd77a7f956b3bb3f96ab50788b53f780fe03eceee6c2ba650154",
+      "cell_index": 99,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "phi4_reasoning_14b",
+        "name": "Phi-4 Reasoning 14B",
+        "params_b": 14.0,
+        "provider": "Ollama (phi4:14b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.2088,
+        "g_star_diagnostic": 0.0856,
+        "shannon_entropy_bits": 1.785,
+        "u_star_burden": 0.398
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 16279200000000000
+      }
+    },
+    {
+      "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "cell_digest_sha256": "3d72e2a1fea62d91ec6ab0c4e9504a4e29bfc822bcab1e75760f65b4c9546a6f",
+      "cell_index": 100,
+      "dataset": {
+        "declared_docs": 350,
+        "id": "longmemeval_v2",
+        "name": "LongMemEval-V2 Core Trajectories",
+        "tokens": 850000,
+        "track": "track03"
+      },
+      "execution_state": "NOT_EXECUTED_SYNTHETIC_DESIGN",
+      "model": {
+        "id": "ollama_standard_7b",
+        "name": "Ollama Standard 7B (qwen2.5:7b)",
+        "params_b": 7.0,
+        "provider": "Ollama (qwen2.5:7b)"
+      },
+      "null_hypothesis_state": "NOT_EVALUATED_SYNTHETIC_DESIGN",
+      "signature_state": "NOT_SIGNED",
+      "synthetic_context_energy_metrics": {
+        "delta_g_star": 0.2,
+        "g_star_diagnostic": 0.0769,
+        "shannon_entropy_bits": 1.8464,
+        "u_star_burden": 0.4
+      },
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 581400,
+        "parameter_flops_state": "COMPUTED_PARAM_APPROXIMATION",
+        "theoretical_flops_avoided": 8139600000000000
+      }
+    }
+  ],
+  "matrix_dimensions": {
+    "dataset_count": 10,
+    "model_count": 10,
+    "total_cells": 100
+  },
+  "schema": "hydradg.synthetic_100_cell_matrix_receipt.v1",
+  "signature_state": "NOT_SIGNED",
+  "status": "PASS",
+  "theoretical_energy_summary": {
+    "efficiency_assumption_flops_per_second_per_watt": 100000000000000,
+    "energy_measurement_state": "NOT_MEASURED",
+    "measured_energy_wh": null,
+    "theoretical_energy_equivalent_wh_under_declared_efficiency_assumption": 8.82609,
+    "theoretical_flops_avoided": 3177390775140000000
+  },
+  "timestamp_unix": 1787254747
+}

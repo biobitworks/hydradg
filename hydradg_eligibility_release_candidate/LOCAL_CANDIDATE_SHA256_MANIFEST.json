@@ -1,0 +1,51 @@
+{
+  "artifacts": [
+    {
+      "path": "apps/hydradg-web/app/eligibility/page.tsx",
+      "sha256": "431acb4afec4615d660865db37aa18a9795309fb0bf2bcb7a770a1631377e6d6",
+      "size_bytes": 23762
+    },
+    {
+      "path": "apps/hydradg-web/components/GoldenPathRail.tsx",
+      "sha256": "67bd9546f93b526dc823380418eec1b23a776beeb2f46c322b64c6e6a52d37ab",
+      "size_bytes": 953
+    },
+    {
+      "path": "apps/hydradg-web/lib/siteFcg.patch.md",
+      "sha256": "acecc3ba8141ee77c794400d2a675a95ce7752d9634800b14090d53f4d65d8f0",
+      "size_bytes": 910
+    },
+    {
+      "path": "docs/ANTIGRAVITY_FINAL_ELIGIBILITY_EXPANSION_PROMPT.md",
+      "sha256": "1b8302ce27b8926c67c8ad5a942b711e4ff1d76f25b331eeb14bdc8c022dfb06",
+      "size_bytes": 12673
+    },
+    {
+      "path": "docs/FINAL_ELIGIBILITY_AWARD_CASE_PLAN.md",
+      "sha256": "72d5487c301d17beb7aca6594db9b17f48b433756416d9b2c57e4a73f79411c2",
+      "size_bytes": 12272
+    },
+    {
+      "path": "docs/FINAL_ELIGIBILITY_EVIDENCE_MATRIX.json",
+      "sha256": "f22ec2acb88c0c4500b570505fb6b2a30fe642647c44e0306cfed642076b4c3f",
+      "size_bytes": 3825
+    }
+  ],
+  "human_inputs": [
+    {
+      "evidence_class": "DIRECTLY_SUPPLIED_HUMAN_INSTRUCTION",
+      "label": "HUMAN_CURRENT_TASK",
+      "sha256": "ef0ffe7bb54af0a0270b996b43cff8d9c2d75041050d67d61d63c3fc20219dc1"
+    },
+    {
+      "evidence_class": "DIRECTLY_SUPPLIED_HUMAN_STATUS_ATTESTATION",
+      "label": "HUMAN_BRANCH_STATUS_UPDATE",
+      "sha256": "59e3645f37a23005d823446dece34792b8c787221dc705e2814f82c5862b52e6"
+    }
+  ],
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "reviewed_source_head": "c62d8d56ce6ab8cbb40a4c5d7120e66f4468cfac",
+  "schema": "hydradg.local_eligibility_candidate_manifest.v1",
+  "signature_state": "NOT_SIGNED",
+  "status": "LOCAL_ONLY_NOT_COMMITTED_NOT_DEPLOYED"
+}

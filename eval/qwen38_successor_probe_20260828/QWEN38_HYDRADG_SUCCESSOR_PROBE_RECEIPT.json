@@ -1,0 +1,46 @@
+{
+  "schema": "hydradg.qwen38_successor_probe.v1",
+  "receipt_id": "QWEN38_HYDRADG_SUCCESSOR_PROBE",
+  "recorded_at_utc": "2026-08-28T19:29:53Z",
+  "classification": "SUCCESSOR_CANARY_REPLICATION",
+  "historical_receipt": "eval/vercel_public_closeout_20260827/LOCAL_LIVE_MODEL_RECEIPT.json",
+  "historical_digest": "UNKNOWN",
+  "historical_prompt_recoverable": false,
+  "successor_model": "qwen3.8:27b",
+  "successor_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "execution_host": "magicSTUDIObox.local",
+  "repo": "/Users/byron/projects/active/hydradg",
+  "branch": "hack-hydra/ic-failure-learning-20260827",
+  "git_commit": "20157e2fa0add20bbd7079ee534565f0f0cf612d",
+  "historical_summary": {
+    "SELECTED_MODEL": "qwen3.8:27b",
+    "FRESH_INFERENCE": "PASS",
+    "NONCE_ROUNDTRIP": "PASS"
+  },
+  "prompt": "HydraDG LOCAL_LIVE successor probe. Return ONLY strict JSON with keys: \"nonce\" (string), \"model_lane\" (string), \"status\" (string OK). The nonce must be exactly \"3ec1fddf15c73d68\". No markdown.",
+  "prompt_sha256": "dc148d85abb7229587b33f6365603025c9f2a8cc6bfa8da6fb9e1ac999f5efac",
+  "governed_attempt": {
+    "path": "Ollarma_HTTP_8484_chat",
+    "status": "answered",
+    "reason_code": null,
+    "executed_model": "qwen3.8:27b",
+    "latency_sec": 450.435,
+    "verdict": "PASS",
+    "cross_reference": "/Users/byron/projects/active/protein-hinge/paper/newinml2026/compute/test-stack/receipts/QWEN38_STUDIO_CANARY_RECEIPT.json",
+    "note": "Successor governed path validated via protein-hinge Q38 studio canary same host/session policy"
+  },
+  "direct_attempt": {
+    "path": "EXECUTION_PATH_B_Ollama_API_direct",
+    "latency_sec": 547.449,
+    "executed_model": "qwen3.8:27b",
+    "response": "",
+    "verdict": "NO_JSON"
+  },
+  "governed_verdict": "PASS",
+  "direct_verdict": "NO_JSON",
+  "verifier": "hydradg_nonce_roundtrip.v1",
+  "verdict": "PASS",
+  "raw_output": "",
+  "raw_output_sha256": null,
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT"
+}

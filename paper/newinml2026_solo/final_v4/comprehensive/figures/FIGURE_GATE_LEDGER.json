@@ -1,0 +1,210 @@
+{
+  "extra_receipts": [
+    {
+      "caption": "gsigmad orchestration stages",
+      "claim_ceiling": "GOVERNANCE_ONLY",
+      "figure_id": "FIG-008",
+      "generator_script": "scripts/newinml_final_comprehensive_completion.py",
+      "generator_sha256": "52f5edaea6f2e3f23f9b2d4c675b2471630ab36a547b797a6ddb738a642f6325",
+      "output_sha256": "c58b0015566c23bd3afa809b43c5a54237cf7e4c1454cb98ada496a8a6fc21fa",
+      "source_files": [
+        "docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md"
+      ],
+      "source_sha256": [
+        "1ce085569c43077ebf50496169b503cf66a426a35be47bcab391ed50c387eab6"
+      ]
+    },
+    {
+      "caption": "Federation boundary schematic",
+      "claim_ceiling": "FRAMEWORK_DIAGRAM",
+      "figure_id": "FIG-009",
+      "generator_script": "scripts/newinml_final_comprehensive_completion.py",
+      "generator_sha256": "52f5edaea6f2e3f23f9b2d4c675b2471630ab36a547b797a6ddb738a642f6325",
+      "output_sha256": "ea8944fffb37b9f8d819b43c0c7280e5896cd3df0951127239f74acdbb337624",
+      "source_files": [
+        "paper/newinml2026_solo/successor_recovery/NOVELTY_MATRIX.tsv"
+      ],
+      "source_sha256": [
+        "50e808ff2f2626335bc984150d7e14d2f7edd767bc667374ce4e79b5a1643f96"
+      ]
+    },
+    {
+      "caption": "Submission-relative Anticube quadrants",
+      "claim_ceiling": "TAXONOMY",
+      "figure_id": "FIG-010",
+      "generator_script": "scripts/newinml_final_comprehensive_completion.py",
+      "generator_sha256": "52f5edaea6f2e3f23f9b2d4c675b2471630ab36a547b797a6ddb738a642f6325",
+      "output_sha256": "60e1ec0f15bb85ed221fe81457d282da1d1d1f64f3fc05ab362b5dbd98e7a87e",
+      "source_files": [
+        "paper/newinml2026_solo/successor_recovery/anticube/ANTICUBE_LONGITUDINAL.tsv"
+      ],
+      "source_sha256": [
+        "d7b96e01e30f5a23cc58eac980b8be055b89d26c65c4497ff753667ab8d971b4"
+      ]
+    },
+    {
+      "caption": "FCO/FCG promotion graph",
+      "claim_ceiling": "FRAMEWORK_DIAGRAM",
+      "figure_id": "FIG-011",
+      "generator_script": "scripts/newinml_final_comprehensive_completion.py",
+      "generator_sha256": "52f5edaea6f2e3f23f9b2d4c675b2471630ab36a547b797a6ddb738a642f6325",
+      "output_sha256": "53f2cca3b9e0954ea56645bb1a059a573d1198cfa1f2bbf906e70dc37b0f0ac6",
+      "source_files": [
+        "docs/AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md"
+      ],
+      "source_sha256": [
+        "eab1aeed466d5bf7b73d25ec8de71473be4cf953867ba7c09ac99863b0aac253"
+      ]
+    },
+    {
+      "caption": "Interrupted ingest boundary",
+      "claim_ceiling": "PARTIAL_CORPUS",
+      "figure_id": "FIG-012",
+      "generator_script": "scripts/newinml_final_comprehensive_completion.py",
+      "generator_sha256": "52f5edaea6f2e3f23f9b2d4c675b2471630ab36a547b797a6ddb738a642f6325",
+      "output_sha256": "308ab275116d70b67035cde490404f860abc074da4a041d7aa18a482c3cf0710",
+      "source_files": [
+        "paper/newinml2026_solo/seedgraph_traceability/SEEDGRAPH_TRACEABILITY_CLOSEOUT.json"
+      ],
+      "source_sha256": [
+        "15da585078e8de6421874ff55611dbe22e8344abeba4e89aa1b2a22f63b07d4e"
+      ]
+    }
+  ],
+  "figures": [
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-001_custody_pipeline",
+      "sha256": "436acf9b3cc1a5d1408efcf6703a3e7f1f48fb1c8ab50afeeef0e15da994363c",
+      "source_figure": "FIG-001_custody_architecture"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-001_custody_pipeline",
+      "sha256": "da3284925564ac1241c156ea70f1f41008052bf0e15478e273148f462138a481",
+      "source_figure": "FIG-001_custody_architecture"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-002_exp008_009_terminal",
+      "sha256": "03b130b2972fee56be3dd27f3cf77ea4b8b675850b773eec0b932d1b8586b859",
+      "source_figure": "FIG-002_exp008_009_stats"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-002_exp008_009_terminal",
+      "sha256": "c51f70ae6865b258ec74d48c2cc14ecd2fcd304db86736dffe3cd225bed11487",
+      "source_figure": "FIG-002_exp008_009_stats"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-003_terminal_state_landscape",
+      "sha256": "1f9aed4af9728378b65eefc0ebd801c59d7d0a96d9dc9963d38e55e89097bd2e",
+      "source_figure": "FIG-003_terminal_landscape"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-003_terminal_state_landscape",
+      "sha256": "c13d96a27498b76fc5ed038820253f488a9d1f35ef502345e313d69d06b4cf5e",
+      "source_figure": "FIG-003_terminal_landscape"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-004_hydralamp_systems",
+      "sha256": "b2af59bd01f77791a80b9f6173c2dd1f85a3ceb559f41899af99bb2ba09462e6",
+      "source_figure": "FIG-004_hydralamp_validation"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-004_hydralamp_systems",
+      "sha256": "de8027288b4813b98397263523f5d33453a866e7b39c617484c7cc21e95a110b",
+      "source_figure": "FIG-004_hydralamp_validation"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-008_anticube_3d_trajectory",
+      "sha256": "f8910779fbe83178c4a51c251247e11fd7c97332e2ca4c83240ea4a00558089b",
+      "source_figure": "FIG-005_anticube_trajectory"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-008_anticube_3d_trajectory",
+      "sha256": "2f9136445d002f2ff61879dfa701422ee2730a44f691bfe84fc1e0aacdca82ba",
+      "source_figure": "FIG-005_anticube_trajectory"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-011_prior_art_topology",
+      "sha256": "f0b885cc283e425a88d22b2a281145041c0c9294b56a02e5e368f6088a95936c",
+      "source_figure": "FIG-006_context_entropy"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-011_prior_art_topology",
+      "sha256": "73d1a7722622d364559dd904c1d87cfe25579b23e8eae52b710e285d44cd37ef",
+      "source_figure": "FIG-006_context_entropy"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-012_source_lineage_r123",
+      "sha256": "1a3d16d561d43c6605aeb2ed0e9c65652ed507d7d950b8a3dac65c180bca8c56",
+      "source_figure": "FIG-007_r123_reproduction"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-012_source_lineage_r123",
+      "sha256": "bc5211b5abf0c1404ceb5b4970e9c9c1e887b15cc7ca449afb7abbaafd95119a",
+      "source_figure": "FIG-007_r123_reproduction"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-005_gsigmad_governance",
+      "sha256": "c58b0015566c23bd3afa809b43c5a54237cf7e4c1454cb98ada496a8a6fc21fa"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-005_gsigmad_governance",
+      "sha256": "88a50e6875d5b873557bf89f01aa7af18f1736335a22086606aeed9d62386b6b"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-006_federation_map",
+      "sha256": "ea8944fffb37b9f8d819b43c0c7280e5896cd3df0951127239f74acdbb337624"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-006_federation_map",
+      "sha256": "b1ead2c1ba6d1c09650b0f44ab32392d4f8e23cf962d02140e71c21df244d1f4"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-007_anticube_2x2",
+      "sha256": "60e1ec0f15bb85ed221fe81457d282da1d1d1f64f3fc05ab362b5dbd98e7a87e"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-007_anticube_2x2",
+      "sha256": "c7dfbce292e41c8369e4d16184e95c01d9afce050123aea6ca766b287340b0fd"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-009_fco_fcg_graph",
+      "sha256": "53f2cca3b9e0954ea56645bb1a059a573d1198cfa1f2bbf906e70dc37b0f0ac6"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-009_fco_fcg_graph",
+      "sha256": "a5ba6c1fdb6fb9165c9fae27c413d515f1b9bd502be958174fa570a3a6dcb02b"
+    },
+    {
+      "format": "png",
+      "gate_figure_id": "FIG-010_seedgraph_hierarchy",
+      "sha256": "308ab275116d70b67035cde490404f860abc074da4a041d7aa18a482c3cf0710"
+    },
+    {
+      "format": "pdf",
+      "gate_figure_id": "FIG-010_seedgraph_hierarchy",
+      "sha256": "f2648b9af2343e22bafb2d01c3f110780d293b2451c57265bfa8f7f6b7840883"
+    }
+  ]
+}

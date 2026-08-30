@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.ic_failure_learning.readme_antidote_fco.v1",
+  "fco_id": "SUCCESSOR_README_ANTIDOTE",
+  "supersedes": "README_POISON_FCO",
+  "content_sha256": "2b00b865511e07a1a4f9975dd8f858b9511c96574564c7b21a37825eab4f3c80",
+  "content_preview": "# HydraLamp \u2014 Immersive Commons Aug 26\u201327 Agent-Native Delta\n\n> **Judge start here:** This repository contains pre-existing HydraDG substrate (commits before 2026-08-26) plus the HydraLamp hackathon delta on branch `hack-hydra/hydralamp-20260826`.\n\n- **Substrate baseline:** `e4558026` (2026-08-18)\n- **HydraLamp delta:** `757f3fa7` (2026-08-26)\n- **Vault:** see `00_START_HERE.md` in IC folder\n- **Agent surface:** `/.well-known/ai-agent.json` + `/api/hydralamp/run`\n",
+  "repairs": [
+    "project_identity",
+    "origin_date",
+    "substrate_vs_hackathon_delta",
+    "branch_sha",
+    "judge_start_path",
+    "agent_discovery",
+    "vault_evidence_path"
+  ],
+  "anticube_classification": "SELF_SAFE",
+  "POISON_RETAINED": true,
+  "basis": "Successor antidote supersedes poison for future judge entry without erasing historical README",
+  "claim_ceiling": "PROTOCOL_CONTROL_ONLY_NOT_EMPIRICAL_EFFECT"
+}

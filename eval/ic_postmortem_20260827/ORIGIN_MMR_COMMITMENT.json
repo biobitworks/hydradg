@@ -1,0 +1,10 @@
+{
+  "schema": "hydradg.origin_mmr.commitment.v1",
+  "domain_separator": "hydradg.origin_evidence.v1",
+  "algorithm": "linear_sha256_chain_for_audit_only_NOT_full_mmr",
+  "leaf_count": 6,
+  "root": "28b9bbef1ba4cb271acacff1565e7110f8cd600a3d41697e794b57d9bc09aa94",
+  "verification": "PASS_LINEAR_CHAIN",
+  "note": "Simplified commitment for postmortem; not interchangeable with HydraLamp scientific MMR",
+  "MERKLE_MMR_STATE": "COMMITTED_AUDIT_DOMAIN_ONLY"
+}

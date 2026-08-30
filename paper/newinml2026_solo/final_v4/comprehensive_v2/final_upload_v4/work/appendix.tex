@@ -1,0 +1,77 @@
+\section{Full EXP-008 / EXP-009 statistical audit}
+\label{app:exp-stats}
+Table~\ref{tab:app_exp_stats} records terminal verdicts with parse rates reverse-traced to frozen verdict JSON receipts. $p$-values remain \emph{not informative} under the preregistered underpowered design.
+
+\begin{table}[h]
+  \centering
+  \caption{Terminal preregistered study audit (appendix).}
+  \label{tab:app_exp_stats}
+  \begin{tabular}{llll}
+    \toprule
+    Study & Verdict & Raw cells & Valid parse rate \\
+    \midrule
+    EXP-008 & UNDERPOWERED & 300 & 0.907 \\
+    EXP-009 & UNDERPOWERED & 300 & 0.883 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Stage-2 M0/M1/M2 baseline}
+\label{app:stage2}
+Stage-2 IC Failure Learning execution (414 scored rows across two models) closed as \texttt{FAILURE\_LEARNING\_BEHAVIOR\_IMPROVEMENT\_NOT\_ESTABLISHED}; descriptive only.
+
+\section{HydraLamp systems-validation matrix}
+\label{app:systems}
+See Table~\ref{tab:app_systems} for custody-mechanics outcomes (not treatment-effect evidence).
+
+\begin{table}[h]
+  \centering
+  \caption{Systems-validation matrix (appendix).}
+  \label{tab:app_systems}
+  \begin{tabular}{lll}
+    \toprule
+    Validation & Scope & Outcome \\
+    \midrule
+    Perturbation matrix & 100 cells & 100/100 chain verification \\
+    Synthetic tamper suite & 8 modes & 8/8 detected \\
+    Concurrent execution & 10 runs & PASS (10 unique run IDs) \\
+    Replay/restart recovery & 44 events & PASS \\
+    Live provider ladder & R0--R6 & Bounded external failure preserved \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Deterministic verification and tooling}
+\label{app:tooling}
+Figure~\ref{fig:custody-pipeline} and \texttt{DETERMINISTIC\_AUDIT\_TOOLING\_LEDGER.jsonl} document the custody verification pipeline with frozen script SHA-256 and R1/R2/R3 roots.
+
+\begin{figure}[ht]
+  \centering
+  \fbox{\begin{minipage}{0.92\linewidth}
+  \small
+  Source bytes $\rightarrow$ SHA-256 $\rightarrow$ Atom $\rightarrow$ ResultAtom $\rightarrow$ Claim/Table $\rightarrow$ FCG delta $\rightarrow$ exact-SHA verification
+  \end{minipage}}
+  \caption{FIG-001: governed custody pipeline from source bytes to exact-SHA verification (structured data; self-generated).}
+  \label{fig:custody-pipeline}
+\end{figure}
+
+\section{Citation and reference custody}
+\label{app:citations}
+Portfolio recovery bounded 185 occurrences to unique identities; only proposition-backed references are admitted. Citation fabrication literature informs desk-rejection risk \cite{kuhn2014trusty}, \cite{walters2023fabrication}, \cite{khan2019cwlprov}, \cite{leo2024rocrote}, \cite{lebo2013provo}.
+
+\section{Requirement, template, and deadline drift}
+\label{app:requirements}
+The NewInML workshop submission form requests a CC~BY~4.0 article license for this non-archival track; OpenReview platform terms govern platform use separately from article and repository licenses. Repository code remains Apache-2.0 (separate layer).
+
+\section{Prior-art comparison matrix}
+\label{app:priorart}
+Related-work boundaries include PROV-O, CWLProv, and Workflow Run RO-Crate \cite{kuhn2014trusty}, \cite{walters2023fabrication}, \cite{khan2019cwlprov}, \cite{leo2024rocrote}, \cite{lebo2013provo}. Prior-art search responses remain \emph{DISCOVERY\_ONLY}; not promoted to verified empirical novelty proof.
+
+\section{SeedGraph / FCO / FCG custody audit}
+\label{app:seedgraph}
+\texttt{TOTAL\_VERIFIED\_INGEST\_COMPLETE=NO} with verified coverage 31.55\% (307/973).
+
+\section{Planned and nonterminal lanes}
+\label{app:planned}
+GPU SGLang canary, Q38 XENV, and full verified ingest remain nonterminal.
+All appendix citations resolve through the single main-text bibliography authority.

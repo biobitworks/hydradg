@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.newinml2026_solo.fallback_v2_freeze.v1",
+  "frozen_at_utc": "2026-08-29T06:06:39Z",
+  "source_pr": 34,
+  "source_branch": "cursor/newinml-final-review-v2-b3c8",
+  "source_commit": "632702e2f2db4bd889982f04bae4d5bb6d806296",
+  "pdf_path": "paper/newinml2026_solo/manuscript/build/main.pdf",
+  "pdf_sha256": "6578d37eeb28a7f2bdadb967939e68b816174491df3932a792601d09aaa14c60",
+  "pdf_git_blob_sha": "831a960646f3a1af15277e54df18b2a8dec4395b",
+  "page_count_total": 5,
+  "content_page_count": 4,
+  "known_green_gates": [
+    "NEWINML_PAGE_GATE",
+    "NEWINML_TEMPLATE_GATE",
+    "DOUBLE_BLIND_GATE",
+    "ANONYMIZATION_GATE",
+    "FCO_EXPANSION_GATE",
+    "FCG_EXPANSION_GATE",
+    "REFERENCE_AUDIT",
+    "MATERIAL_CLAIM_REVERSE_TRACE",
+    "PROTEIN_HINGE_ARTIFACTS_ADMITTED=0",
+    "Q38_PRIMARY_RESULTS_ADMISSION=0",
+    "SEEDGRAPH_TERMINAL_COMPLETION_CLAIM=false"
+  ],
+  "immutable": true,
+  "note": "V2 fallback; never overwrite"
+}

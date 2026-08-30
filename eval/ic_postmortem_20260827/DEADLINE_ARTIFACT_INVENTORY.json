@@ -1,0 +1,636 @@
+{
+  "schema": "hydradg.ic_postmortem.deadline_artifact_inventory.v1",
+  "deadline_cutoff_utc": "2026-08-27T22:39:24Z",
+  "counts": {
+    "text": {
+      "total": 67,
+      "available_pre_submission": 57
+    },
+    "images": {
+      "total": 1,
+      "available_pre_submission": 1
+    },
+    "video": {
+      "total": 0,
+      "available_pre_submission": 0
+    },
+    "receipts": {
+      "total": 32,
+      "available_pre_submission": 28
+    }
+  },
+  "directly_submitted_to_ic": {
+    "text_fields": 6,
+    "vault_files": 0,
+    "folder_id": null
+  },
+  "artifacts": {
+    "text": [
+      {
+        "path": "eval/hydralamp_20260826/AGENT_NATIVE_20_FIXTURE_HYDRALAMP_RESULTS.json",
+        "sha256": "c09dd64e2a4a3ae6861803c85c9f724d1f3de8e93dd31357157f2ea99c63ee95",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.589704+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/HYDRALAMP_STATUS.json",
+        "sha256": "7ca5f43e611afb93c520d438e06794d4a696b00afc938a78121ca88cac1387fe",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.592223+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/SUBMISSION_OPERATOR_PACKET.json",
+        "sha256": "b0bccbd98bfaeadd3989d0c678771b96b7f3760633be1a3af0df322484c6fde6",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T20:00:23.262033+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/ORCHESTRATOR_STATE.json",
+        "sha256": "c104abceec80b54409b1069f66a6e330470e00c74ab041395779af8381b57dfc",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.593041+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/CFMO_TRAJECTORY.json",
+        "sha256": "209b8b06276db0d9b07390c2451635ab094a3fd33730eb5ebead3636ad364417",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.590675+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/HYDRALAMP_PREREGISTRATION.json",
+        "sha256": "dfe5d675949c05bf48d972d7335484122dc727ab6f2dadbc31f68d3c6adcc61f",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.591517+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/HYDRALAMP_RUNTIME.json",
+        "sha256": "9c9df1e452c279070ca87fb1cc8705bc3fb5a651af04d9823ea67f76fdba4570",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.591748+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/ANTICUBE_PERTURBATIONS.json",
+        "sha256": "b2d6bd865fb0d59b89ed1fc168d90194bf2b77b342c474a3c5b032253025ceab",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.590256+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/MMR_COMMITMENT.json",
+        "sha256": "6c459073f3d00a150a93e32549e367f048eeda40e481e66cd7f09b10513a2630",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.592555+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup_predecessor_20260827/PREDECESSOR_AUDIT.json",
+        "sha256": "e8b711bdcd4d494f0c169a7bba02ed4082ace6f7c87f2186bbd4a9db6f523a2c",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:30:37.399153+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup_predecessor_20260827/manifest.json",
+        "sha256": "a4232f7de05e10d2983b00b0f9bbacb4312eee233e42e12ad3fb81b7154a0c7e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:30:37.395033+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/test_vector/HYDRALAMP_RUNTIME.json",
+        "sha256": "3657609f51989b48fb26b9e98e61e4bc287a117993db65b16766830c0809fd07",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.632909+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/replay/REPLAY_MANIFEST.json",
+        "sha256": "7dd32e04b672da0aec24156673e5ed0386151e4709cbac81f87d19e31942b582",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.595527+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/replay/RENDER_META.json",
+        "sha256": "51c148056546ec965b0368abc6f9fcdfff13a5288cc775f5859df9d98d2b3637",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.595205+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup/manifest.json",
+        "sha256": "e2b8c01f53e21b36e7a5e37390d2fc21369ef78620b2ce51c0a25589fedcd72d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:37:36.073029+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup/review/BROWSER_VERIFY.json",
+        "sha256": "542dbda761a4bcc16156f35ef72a3402e09531aa32de0593d687990f7753b2b1",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:36:42.211891+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup/review/GUM_DOCTOR_CLOSEOUT.json",
+        "sha256": "9b7247276d30f2a580565a52b7b1af1b4b9b8a7bb6511255ea58d3754b691b65",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:37:46.294849+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/world_leak_bundle/public_fcg.json",
+        "sha256": "9edb31fd9209314cdd6779b4ab8c3dbc49d7271b21825ecb3df0a9150af653cd",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.634084+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/world_leak_bundle/public_capabilities.json",
+        "sha256": "8e2fb16cca2edab638c337f5c27924457224a1757d67e4d4ca9bbb6fc3232423",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.633865+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/world_leak_bundle/public_actor_keys.json",
+        "sha256": "b8ac8afe29c8544d3538f01871481e710c2686e4bf8d3655f250c3453d654405",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.633642+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/world_leak_bundle/BUNDLE_MANIFEST.json",
+        "sha256": "12f196ba6f3baac36a130853d6346584e6ac9fbdeeb98f051635764e1f8ca82e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.633162+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/world_leak_bundle/encrypted_private_fco_payloads.json",
+        "sha256": "ddad534701efe94bdee406dd8abfe68e1169a733a49523f6f555ec22c7a090ff",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.633421+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/real_crypto/HYDRALAMP_RUNTIME.json",
+        "sha256": "b996f59677e7ac7f9b95c992d9427147f7dded7e40f7f1bebb4d8184d809b7ad",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.594100+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/IMMERSIVE_COMMONS_SUBMISSION_REVIEW.md",
+        "sha256": "161b9f0f4fdd3524ce4624d8d96f31457247b15f1635787f4d06e6d810d344f0",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:03:19.876951+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/CURSOR_IC_FINAL_SUBMISSION_PROMPT.md",
+        "sha256": "8262b21296709fdbd7cdab386245e2802512c14ab5e831436be3b942a4d4f670",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:31:18.440716+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/OPERATOR_APPROVAL_PACKET.json",
+        "sha256": "ec0ef1b8d36986f544764c78347eef734c928ef4c2412ca7dc84b93b01c6d1c1",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:46:09.663277+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/IC_VAULT_UPLOAD_PACKET.json",
+        "sha256": "aec221f88f0c55f3c7cb44efa939e8efbdab60082646d9a25f5f4059ccc6380b",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:00:04.385914+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/IMMERSIVE_COMMONS_IDENTITY_RECONCILIATION.json",
+        "sha256": "2ffef774ce4b627a44e35676b1691d72ad088979a9f2c65f5f85726ff5acf01e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:03:19.146132+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/SUBMISSION_SEAL_MANIFEST.json",
+        "sha256": "d6da50e0bbfaeaa252f977de93e4eb45b86d5d0be125c865fde64b67d59ff3b9",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.280000+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/SUBMISSION_SEAL_SIGNATURE.json",
+        "sha256": "6c1759c6e3b3ecdbb47b4c054a7cbe6df899241ce754a3129a70b174258c50f4",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.280234+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+        "sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.279496+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/HYDRALAMP_PUBLIC_UNLOCK_DEMO.enc.json",
+        "sha256": "4e6b96c726a7015215759c9a7206b85fbb402b6aa61727b41bc1215c1dd0523d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.299923+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/SUBMISSION_SEAL_CLOSEOUT.json",
+        "sha256": "bae9623d53368c65f166b3d817abde94b02e35250820911b6436ca7f9644b89e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.300812+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/HYDRALAMP_PUBLIC_UNLOCK_DEMO_MANIFEST.json",
+        "sha256": "f95d90abaeac45d9362f0064950b84cca4ad65329e1af57fe2ccce8d1496e38d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.300431+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/HYDRALAMP_PUBLIC_UNLOCK_DEMO.json",
+        "sha256": "991349525043b14beccb905cc279aa25edaf07216d4547c403bede4e80c80e0e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.280335+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/seal/SUBMISSION_SEAL_PROVENANCE.json",
+        "sha256": "c5ba6b14c3828cd2616a4f180f37b1286b53ee672df5486ae94203317c10efa9",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:02:10.280133+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_ANNOTATIONS.json",
+        "sha256": "9fc6a5a1753e20250c9d6ebe48682b2fb7bf2f8afc9fbec6d97ef3991c4a8082",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:30:29.981281+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_FCO_BINDING.json",
+        "sha256": "4aef2e3e7cdc96386dde8cb4de6a0c68266848bd4de74e5d8210e6de73e14587",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:30:21.218472+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/SPONSOR_INTEGRATION_CLOSEOUT.json",
+        "sha256": "9a6300d65a075a4a0b9f462e3bcd5a9c9a9d5ebdcfcc95d86163416b35dbf04c",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.604160+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/SPONSOR_DISCOVERY_MATRIX.json",
+        "sha256": "9488f0f7a244485eff2a65b5e0c9d7b8c59605dd88bd95ebd6f2abf2672c65ba",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:05.581403+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/SPONSOR_INTEGRATION_CLOSEOUT_V2.json",
+        "sha256": "6edc4bbf72d0576820b0a6f4cf38d452ebccac2ef8be25aec5b333fedc28de20",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:06.785499+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/FINAL_RECONCILIATION_VERIFICATION.json",
+        "sha256": "1f2c71fc3384e1c10096a7ed16b1d69437b25bed2dccbf992efb4f55c72209a0",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.601163+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/yappy/raw/MI_AGENTS_LIST_RAW.json",
+        "sha256": "2da432fbd2bb29568d9bfc894a774282cce378af58a0fdc9ec65f885066ded2e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.624766+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/cortex/raw/CORTEX_ASK_RAW.json",
+        "sha256": "31e5ddf56a6f4604e4da9854c8e0ba684ecee7d762edc1265846b2838355f0ba",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:12.358843+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/vercel/VERCEL_PREVIEW_VERIFY.json",
+        "sha256": "92c45c142dc7f536b1baf7d6cf21df2f7a3f87636d44f6c8a4b4b58d38e376d1",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.623404+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/golden_path/raw/AISA_QWEN_FLASH_PROPOSAL_RAW.json",
+        "sha256": "e3466c93f1c25bd31d85fad79663ba99a211303e948a29ed477d28e275048f50",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:37.291803+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/yappy_biz/raw/yappy.biz_openapi.json.json",
+        "sha256": "16fd4c6815a8ce588eb3405377c4d9454e16660692c9eaf0ba6bbe88a034d699",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.627695+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/yappy_biz/raw/yappy.biz_api_v1.json",
+        "sha256": "82ec1bfa9e653d2fe6257f060f19b6133f477775c83b8097999d8b8715b8664b",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.626082+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/yappy_biz/raw/yappy.biz_api_v1_releases_latest.json",
+        "sha256": "a2b459465df203d08abc804c86ecf948772685af6d655c019501b230d8aff9b9",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.626321+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/ultimate_fighting_agents/UFA_SUBMISSION_READINESS.json",
+        "sha256": "6c78e06684d41612c94439084651c6ae341280034779e91dd89c7f9fb50d4354",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:01.480208+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/cotal/COTAL_UPSTREAM_PIN.json",
+        "sha256": "58f7763e4e2828921033b6fd2b87b83f5b13ce4b880c0b60c1bebe1a762ff882",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.611818+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/cotal/GATEWAY_BOUNDED_TRANSACTION.json",
+        "sha256": "fa349c9e5c4b51b4f0d3aa1ec0ac3cd5a53c225fbaff448b8818cb30a3b3e6e2",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:01.480429+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R2_MINIMAL.json",
+        "sha256": "80a85364b2ced73b28ce2daedb43d6533ada38d164792235b1f2d59b5ab45d9c",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:20.798206+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R1_AUTH_INVENTORY.json",
+        "sha256": "139d6d0a279a616e47f518b8ed241310eb83db18a44f4f56be708ac25ae7e550",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:09.001101+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R0_SDK.json",
+        "sha256": "8781a5addd4f18eb77947daec197a686f53e92be8f25deae99db7d0114ff2e25",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:07.540495+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R5_HYDRALAMP_TOOLS.json",
+        "sha256": "0dce34020b33972ca93eb8a61b366aac98caa110aa12a5ade9b37a187b71cbce",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:23.367492+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R3_STRUCTURED.json",
+        "sha256": "2397f2aec4e7aded33aca91ab0d7f25ddc00e4da7ed5d95f6feb4834db4f14ae",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:21.661160+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R6_RESTORATION.json",
+        "sha256": "201c20490ab1ffdd90976c541559f81be59ee0bab390b8f8f81adf1f7c74cf9b",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:24.149914+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_R4_ONE_TOOL.json",
+        "sha256": "a37811c2879dc362e06a9d15859f33a0e670c36b94d80d947b9d5eeaa1e413a5",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:22.431873+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/mitosis_cortex_live_successor/MITOSIS_CORTEX_LIVE_SUCCESSOR.json",
+        "sha256": "cd753b05e154ef35ecdec8186a8110b43183e491393d57738adc604a06bbe4b5",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:57:30.055219+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/immersive_commons/MCP_MANIFEST_SNAPSHOT.json",
+        "sha256": "b4046e7b69598c684df0dc816d01a288dd70906d87b814423f62e9ebf95fb42f",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T06:32:17.372148+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/daytona/raw/DAYTONA_EXEC_RESPONSE.json",
+        "sha256": "5f92f0d3dfe5de22e2df2fafc4249bd5fabdd7420d346e7e4e48c875db4cda4e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T05:42:27.891677+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tavily/raw/TAVILY_AISDK_EXTRACT_RAW.json",
+        "sha256": "37524cd79099286703852d8873624757266e95cbec9000a406e25e303a01b16a",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.619404+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tavily/raw/TAVILY_EXTRACT_CORTEX_DOCS.json",
+        "sha256": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T05:23:53.969824+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tenki/raw/TENKI_CREATE_RAW.json",
+        "sha256": "2400a9e67e645b92795dfa2d3c19ff63624659cb7e9e6e52b276ab9d4dc64f5a",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.621235+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tenki/raw/TENKI_EXEC_RAW.json",
+        "sha256": "7f3b0876c50d5c039fc3cae80cca3aa8a351761e202f7cf1f7b6d5d83e9ae856",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.621809+00:00"
+      },
+      {
+        "path": "docs/ANB_LIVE_EMPIRICAL_EXPERIMENT_V1.md",
+        "sha256": "ae2b823fad00dc5b08991e6dd21a7197e232b5e09922d71a8b10fb05e40df641",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:14.411484+00:00"
+      }
+    ],
+    "images": [
+      {
+        "path": "eval/immersive_commons_submission_20260827/assets/HYDRALAMP_SUBMISSION_HERO.png",
+        "sha256": "a5d558ab914b08da7373f858fbe79f60871315740e2abe06c39c31367c392b09",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:30:12.378867+00:00"
+      }
+    ],
+    "video": [],
+    "receipts": [
+      {
+        "path": "eval/hydralamp_20260826/SENTINEL_PREDECESSOR_RECEIPT.json",
+        "sha256": "7671288677c8b8d51cb6e338e5fc65893fe54b3df4297736e26d0feaad9a7809",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.593420+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/HYDRALAMP_FINAL_RECEIPT.json",
+        "sha256": "f41e7819dbd55fd44df5db00658746ad816dbf188c5173696e3ca5bfc71e347d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.591273+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/SGLANG_CANARY_RECEIPT.json",
+        "sha256": "e72fec91049ead7015cd398a4b6fb022e92bb0c21b8426d653f18f7106ae22cf",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-26T23:31:03.593656+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup_predecessor_20260827/BACKUP_RECEIPT.json",
+        "sha256": "83945c2d4e9e4f1e286219c8cdcce0181b9f020fe8182277c0c2e86acffafce4",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:30:37.398576+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/replay/VIDEO_RECEIPT.json",
+        "sha256": "56e3b984d8231ca9ac15b57f7a207dd99a97a019979ee3fb445f71f9aedcf864",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:21:03.390945+00:00"
+      },
+      {
+        "path": "eval/hydralamp_20260826/backup/BACKUP_RECEIPT.json",
+        "sha256": "569ab69c55dd8aa87f688fd835e2d9b2e46afb007d75ffe02971e05e6754f063",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T18:37:46.294597+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/IC_SUBMIT_RECEIPT.json",
+        "sha256": "453d5d42834e43b9cbfe5244fa6e729c67dd1bf47c0e88eb02fb4d2670aa9343",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:45:46.452645+00:00"
+      },
+      {
+        "path": "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_MATERIALIZATION_RECEIPT.json",
+        "sha256": "13f832542aeca3ce8eb23d70e01ed0bebd5b4ef3732b9ffdabbea790836bc6af",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T22:31:40.055329+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/GUM_DOCTOR_DISCOVERY_RECEIPT.json",
+        "sha256": "4b414267e4781477973f2a0c693a7bcda5db70132e7d21d06bd34822fd0c958d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:01.475073+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/MAGICSTUDIOBOX_VERCEL_HARMONIZE_RECEIPT.json",
+        "sha256": "6c4b48b9d58a8c1f367f7cff9c983b8b23f6dbaf23c79629ffb5bf941eca2c4d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:10.454640+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/yappy/YAPPY_MISSION_RECEIPT.json",
+        "sha256": "f7a7c683275c3f54bcbff46600117140bceacd46d55feacbbf8aaa543901fb2b",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:35.656789+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MEMORY_ROUNDTRIP_RECEIPT.json",
+        "sha256": "c3c1d4d8c503c4d54ed6d9f0741f0c0dafddb2e9b68e2c6555b28a0449285dc0",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:12.360525+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/cortex/CORTEX_MISSION_RECEIPT.json",
+        "sha256": "5c85039831b0c7afb0706456bc1d1bf0d5f7d348b6fbee4a8a1465889e7e7801",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:12.360640+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/vercel/VERCEL_CONTROL_PLANE_RECEIPT.json",
+        "sha256": "7357d4284456f1c325a74223a7e1dfabd338cd220189fdabc4edc83cb6a47c9e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:29.692261+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/golden_path/HYDRADB_UI_PROJECTION_RECEIPT.json",
+        "sha256": "1d778919b84e80445d8ed7988144f6b172d285571b1e46d07b91016927fb4a38",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:37.292337+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/golden_path/AISA_PROPOSAL_RECEIPT.json",
+        "sha256": "6491a038689e3714eb67ed162521f64967882e7dbe6d7dc849f747cb2802cfab",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:37.292032+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/golden_path/COMPOSED_GOLDEN_PATH_RECEIPT.json",
+        "sha256": "b2620fde9c351f2d132243095064768e352cd30c2b1d81a6cb7d1705695bbe0e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:37.292478+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/golden_path/FCG_STATE_RECEIPT.json",
+        "sha256": "46ee7fdd095193f0a4298f2c59338ffd57958620ef33044f5930f8192e272492",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:37.292234+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/golden_path/FCO_QUARANTINE_RECEIPT.json",
+        "sha256": "9c8243f97eb51f59c25ce9d757a64f6203f0baf7c754bdac6d968b9bb99bc583",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:37.292145+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/runtype/RUNTYPE_MISSION_RECEIPT.json",
+        "sha256": "e98ded68e380efdab5a5942570bb7125cf05a5cb38776e8431f04da81fe5fa2f",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T05:43:36.813113+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/yappy_biz/YAPPY_BIZ_API_MISSION_RECEIPT.json",
+        "sha256": "82ed4d6f29841b9672b4fc157fccceb67f77faa2116d79b1c9082ff9af1d3748",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.625670+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/hacker_bob/HACKER_BOB_MISSION_RECEIPT.json",
+        "sha256": "32b6d282c63327d55e37b00ae0245832bbd2b1b96c61afc2a6f50a072c57cd70",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-28T00:02:17.074609+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/cotal/COTAL_MISSION_RECEIPT.json",
+        "sha256": "8c230627601c17ff3423c743f9284ecffe76c3dd24b4175cbf515abb45a21172",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:42:35.656138+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/RUNTYPE_LIVE_LOOP_REPAIR_RECEIPT.json",
+        "sha256": "d2696729c543a022b6c02c8b4f6c41c8ca5fe265744856d1d346ff14ff54dcb6",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-28T00:12:18.797628+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/RUNTYPE_NEGATIVE_RECEIPT.json",
+        "sha256": "fbabd2b61fa9f52ef4ee97f80c0673b7966f940a3dbd34a71b83dc834d35fc7e",
+        "classification": "CREATED_POST_SUBMISSION",
+        "mtime_utc": "2026-08-27T23:28:24.948633+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/nebius/NEBIUS_MISSION_RECEIPT.json",
+        "sha256": "ec8b1399f7d6e160e3afa68ff36d8faaec6ceb7bbf07a03da2895e84fa9e5b0b",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T21:43:01.479914+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/immersive_commons/IMMERSIVE_COMMONS_MISSION_RECEIPT.json",
+        "sha256": "cbee881318b576de29d4a46f5501a4456c0c8ea4edad0f30c2334dae8da4c41e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:05.581287+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+        "sha256": "a3c30952fd62b40015f1962fbca48c6fdfa4fe730943b7efcf86fe3e6500d97e",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T05:42:27.990354+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tavily/TAVILY_MISSION_RECEIPT.json",
+        "sha256": "5703f862e15c89604a16062a1512d91e688d671cee6305dec2290b9aef869988",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T06:23:37.772397+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tavily/TAVILY_AISDK_MISSION_RECEIPT.json",
+        "sha256": "aa02b25456426ed203da30e21e46246fcc1101c64872e51e03a18698df1e8b7d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.619141+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tenki/TENKI_MISSION_RECEIPT.json",
+        "sha256": "1197bc17eb3d29f3bfcadf2c87ec525bd1f5ca33a944d8587547e5f4216f6e4d",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T06:23:37.772818+00:00"
+      },
+      {
+        "path": "eval/agent_native_sponsors_20260827/tenki/TENKI_SANDBOX_MISSION_RECEIPT.json",
+        "sha256": "aeda6db1f88e616f6c9991e3401383fa09b28880593a04bd7059f0737a482993",
+        "classification": "AVAILABLE_PRE_SUBMISSION",
+        "mtime_utc": "2026-08-27T08:19:11.620543+00:00"
+      }
+    ]
+  }
+}

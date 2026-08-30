@@ -1,0 +1,123 @@
+{
+  "canary_case_id": "EnterpriseRAG-Bench_qst_0001",
+  "canary_results": [
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "1bb3e20d4516ec695bdd7d378ee35975c8b84d02cc9360c628e68f4f94bb0c0d",
+      "is_correct": false,
+      "model_name": "deepseek-r1:14b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "769d9f1da61a0c7581acbf9787732255773627a59702c05848e76b3b320cca98",
+      "request_sha256": "e1900f434d8f9069b730e6a6804bd5832da5a57a038b50d19b35267aa3b77ae4",
+      "wall_sec": 13.289
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "715ffd366feef39f27345c39ed0ad364b638c8a400b3213c1ea80b23801c8f75",
+      "is_correct": true,
+      "model_name": "qwen2.5-coder:7b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "6da54daf4f6dcfd4d33f06deed4ba30c81b2190d36d63fa26dd967c9b64307d9",
+      "request_sha256": "82028b66c5c93c3a4cda6e0c8756df6608b0616bb5ab964695613935aeb3c481",
+      "wall_sec": 5.17
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "7b3cc33dfcfbd784a402c6e2b301525e733fc9f0197f5657dc794847ed9427d8",
+      "is_correct": true,
+      "model_name": "granite4.1:8b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "2fdd4dc717356aa8d9ca2711d3f41abde2a589f260799675907692a96c2dc323",
+      "request_sha256": "2f727750bd2d6c19b9b88ec85e228bcf0c50d2e191510bb5bf3c9b3d1996283a",
+      "wall_sec": 6.959
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "f157d56c877a3702ae4adeeca48cc605ef3f3d9dd3ae7b19769ec70d224886d6",
+      "is_correct": false,
+      "model_name": "qwen3.5:9b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "769d9f1da61a0c7581acbf9787732255773627a59702c05848e76b3b320cca98",
+      "request_sha256": "76c952cf574c22bc973be393d275035de1a7708b8f27633294b82ff4df687709",
+      "wall_sec": 12.477
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "72a82262149dd4effd310d4be24beade4d455b69c76ec68ec600c5b005ea65d0",
+      "is_correct": false,
+      "model_name": "qwen3:8b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "769d9f1da61a0c7581acbf9787732255773627a59702c05848e76b3b320cca98",
+      "request_sha256": "0f0fdb2c60a5fb8e87655f2cf888008f54630833b52a024183da0d7e0b3446d0",
+      "wall_sec": 10.978
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "46750fc64a201a7b1af97451dc070b0b6d08d22870e6eca2073cc82805d1d783",
+      "is_correct": false,
+      "model_name": "qwen3:4b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "769d9f1da61a0c7581acbf9787732255773627a59702c05848e76b3b320cca98",
+      "request_sha256": "6ade043fc15b9af9686c26fd21ac1c359c853ac1a574865f5e27513fb15bac1c",
+      "wall_sec": 6.601
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "dd1ae283e6be5f9867902c35f2d53dcdd6fd3c0f12c5171964fdbd56417a328a",
+      "is_correct": true,
+      "model_name": "phi4-mini:latest",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "0511489432de2541aa6f85905eb019f4dcbc76742ae190915c522c1cecc36ebc",
+      "request_sha256": "c05b272db201f11d03506b3c323dbfe36392c39482db5fe7ce8a438d7dc0e576",
+      "wall_sec": 2.673
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "160ba68402c98dd06398aefc5b679f0d86ae6d7831cd115171fa3cf2c3e6a400",
+      "is_correct": true,
+      "model_name": "qwen2.5:1.5b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "7b8e0cbd9a8e43ea02b096b803b25c2c71566ffc7fe19cd66f69ac4b2364fcb3",
+      "request_sha256": "6c78a661d33ebfdc781c8debeb0a32a7c7213c8726383f8b6568555ed40a86ff",
+      "wall_sec": 1.7
+    },
+    {
+      "case_id": "EnterpriseRAG-Bench_qst_0001",
+      "dataset": "EnterpriseRAG-Bench",
+      "handoff_receipt_sha256": "653f9d766478441fde3b538e3866db24d92e3a96925ee778c3a0d1ea3ca6183b",
+      "is_correct": false,
+      "model_name": "qwen3:1.7b",
+      "prompt_sha256": "8a987b4428ea40b486582c276092a73f645ed1fa344012be72a097490aef7f33",
+      "raw_response_sha256": "769d9f1da61a0c7581acbf9787732255773627a59702c05848e76b3b320cca98",
+      "request_sha256": "2761e0c6b53c1307d8edcfa7ae70231a19275f961cc2d026a559dbfc8e51f1dc",
+      "wall_sec": 3.927
+    }
+  ],
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "dataset": "EnterpriseRAG-Bench",
+  "final_review_gate": "HYDRADG_REAL_DATA_CANARY_READY__STOP_HERE_FOR_USER_AND_CHATGPT_REVIEW",
+  "full_matrix_authorized": false,
+  "gates": {
+    "CASE_SPECIFIC_PROMPT_GATE": "PASS",
+    "DETERMINISTIC_SCORING_GATE": "PASS",
+    "HANDOFF_RECEIPT_GATE": "PASS",
+    "LABEL_LEAKAGE_GATE": "PASS",
+    "RAW_RESPONSE_HASH_GATE": "PASS",
+    "REAL_CASE_LOCATOR_GATE": "PASS",
+    "REAL_MODEL_INVOCATION_GATE": "PASS",
+    "REAL_SOURCE_BYTES_GATE": "PASS"
+  },
+  "models_accounted": 9,
+  "models_expected": 9,
+  "schema": "hydradg.real_data_canary_gate.v1",
+  "source_sha256": "e25066f4eff3843dd0f3df0d1348113471e072e75007ffe390a0aa83f2a80af2",
+  "timestamp_utc": "2026-08-21T17:05:05Z"
+}

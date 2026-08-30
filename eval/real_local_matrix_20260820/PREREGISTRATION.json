@@ -1,0 +1,31 @@
+{
+  "co_primary_family_size": 30,
+  "control_baseline": "deterministic_heuristic",
+  "correction_method": "Holm-Bonferroni",
+  "execution_host": "magicstudiobox",
+  "family_wise_alpha": 0.05,
+  "primary_datasets": [
+    "EnterpriseRAG-Bench",
+    "HydraBlast-Real-Deps",
+    "LongMemEval-S-full500"
+  ],
+  "primary_ollama_models": [
+    "deepseek-r1:14b",
+    "qwen2.5-coder:7b",
+    "phi4-reasoning:14b",
+    "qwen2.5:7b",
+    "llama3.2:3b",
+    "granite4.1:3b",
+    "llama3.2:1b",
+    "qwen2.5:0.5b",
+    "qwen2.5:1.5b",
+    "qwen3:1.7b"
+  ],
+  "retrieval_depths": [
+    5,
+    10,
+    100
+  ],
+  "schema": "hydradg.preregistration_real_matrix.v1",
+  "timestamp_unix": 1787270514
+}

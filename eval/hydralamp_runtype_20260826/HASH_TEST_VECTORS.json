@@ -1,0 +1,69 @@
+{
+  "schema": "hydralamp.hash_test_vectors.v1",
+  "rule": "HASH_CHANGE_NE_SEMANTIC_DISTANCE",
+  "genesis_prev_hash": "0d4241e01ed423c96ac23cd9f6abc7d37adb2a64949a6410fa8004b5a7ef7b7e",
+  "domains": {
+    "EVENT": "HYDRALAMP_EVENT_V1",
+    "MODEL_CONTEXT": "HYDRALAMP_MODEL_CONTEXT_V1",
+    "MODEL_OUTPUT": "HYDRALAMP_MODEL_OUTPUT_V1",
+    "TOOL_INPUT": "HYDRALAMP_TOOL_INPUT_V1",
+    "TOOL_OUTPUT": "HYDRALAMP_TOOL_OUTPUT_V1",
+    "PROPOSAL": "HYDRALAMP_PROPOSAL_V1",
+    "KG_SNAPSHOT": "HYDRALAMP_KG_SNAPSHOT_V1"
+  },
+  "model_context": {
+    "preimage_note": "HYDRALAMP_MODEL_CONTEXT_V1 + canonical_json",
+    "value": {
+      "run_id": "vec_run",
+      "actor_id": "agent-a",
+      "objects": {
+        "n1": {
+          "id": "n1"
+        }
+      },
+      "edges": []
+    },
+    "hash": "e6ab4c77787208e71e3af3734f53161b94d154789da82e749049a3b2b540f4fd"
+  },
+  "model_output": {
+    "text": "OK",
+    "hash": "f3b0753abfdb4696c89e680a20b784ba20fd802ddaddfcd774e2360429c04e18"
+  },
+  "tool_input": {
+    "hash": "4dbb8f521390dae91d742384f9b412940c6447d92a77b46b6a86f598572df329"
+  },
+  "tool_output": {
+    "hash": "dc471047aca2cb9cef06f00f612b1ebcb134ce9c7618a827ce4ee78df4924556"
+  },
+  "proposal": {
+    "hash": "a11e958f6e4da15a96f5997255c2a65a12afa5ea515385d387736e8e5a31a8c8"
+  },
+  "event": {
+    "value": {
+      "seq": 1,
+      "run_id": "vec_run",
+      "lane": "reference",
+      "actor_id": "reference",
+      "type": "RUN_STARTED",
+      "summary": "vector",
+      "prev_event_hash": "0d4241e01ed423c96ac23cd9f6abc7d37adb2a64949a6410fa8004b5a7ef7b7e",
+      "context_hash_before": null,
+      "context_hash_after": null,
+      "kg_snapshot_hash_before": null,
+      "kg_snapshot_hash_after": null,
+      "model_output_hash": null,
+      "tool_input_hash": null,
+      "tool_output_hash": null,
+      "proposal_hash": null,
+      "fcg_root_before": null,
+      "fcg_root_after": null,
+      "context_delta": null,
+      "verification_result": null,
+      "evidence_class": "SYNTHETIC",
+      "claim_ceiling": "TEST"
+    },
+    "hash": "f862e5bd54bfbaf4b69077cd21d9f95d81cc783c5b4cba865de86568b2da03ad",
+    "note": "event_hash field excluded from preimage"
+  },
+  "canonical_json_sample": "{\"a\":2,\"b\":1}"
+}

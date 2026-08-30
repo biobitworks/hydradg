@@ -1,0 +1,50 @@
+{
+  "active_runtime": "Ollarma + Ollama on magicSTUDIObox",
+  "checkpoint_cadence": "EVERY_MODEL_BLOCK",
+  "claim_ceiling": "STUDIO_OLLARMA_GOVERNED_REAL_MATRIX_EXECUTED",
+  "completion_verification": [
+    "ALL_EXPECTED_MODEL_CASE_SLOTS_ACCOUNTED",
+    "DAISY_STATUS_GATE_PASS",
+    "THREE_WAY_SHA_TREE_PARITY_PASS"
+  ],
+  "contract_sha256": "b3e108f188ab16bcad694b368031450032836f178887d478d3e8eb6d9cd53682",
+  "controller_host": "magicPRObox.local",
+  "execution_host": "magicSTUDIObox.local",
+  "fallback_runtime": "NONE",
+  "hydradb_paths": [
+    "bolt://127.0.0.1:7687"
+  ],
+  "magicblackbox_paths": [
+    "/Volumes/magicBLACKbox/hydradg/daisy/studio_daisy_20260821/"
+  ],
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "ollarma_bridge_update_cadence": "EVERY_MODEL_BLOCK",
+  "output_paths": [
+    "eval/studio_daisy_20260821/cases/",
+    "/Volumes/magicBLACKbox/hydradg/daisy/studio_daisy_20260821/raw/"
+  ],
+  "owner_repo": "hydradg",
+  "pid_duplicate_run_check": "REQUIRED",
+  "preservation_rules": [
+    "NO_CLEANUP",
+    "NO_NEGATIVE_RESULT_DELETION",
+    "NO_NULL_RESULT_DELETION",
+    "NO_FAILED_RECEIPT_DELETION"
+  ],
+  "run_id": "studio_daisy_20260821_run01",
+  "schema": "hydradg.daisy_long_run_contract.v1",
+  "signature_state": "NOT_SIGNED",
+  "source_paths": [
+    "eval/real_primary_matrix_20260820/DATASET_CASE_MANIFEST.jsonl"
+  ],
+  "stop_conditions": [
+    "TARGET_HOST_MISMATCH",
+    "REMOTE_SSH_DISCONNECTED",
+    "DUAL_HOST_SYNC_FAIL",
+    "INFRASTRUCTURE_FAILURE"
+  ],
+  "target_paths": [
+    "eval/studio_daisy_20260821/"
+  ],
+  "timestamp_unix": 1787328590
+}

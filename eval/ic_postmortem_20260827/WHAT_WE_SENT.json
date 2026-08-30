@@ -1,0 +1,120 @@
+{
+  "schema": "hydradg.ic_postmortem.what_we_sent.v1",
+  "deadline_cutoff_utc": "2026-08-27T22:39:24Z",
+  "matrix": [
+    {
+      "dimension": "Title",
+      "what_ic_received": "HydraLamp",
+      "status": "SUBMITTED",
+      "evidence": "IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json title field; IC_SUBMIT_RECEIPT.json"
+    },
+    {
+      "dimension": "Blurb",
+      "what_ic_received": "Agent-native zero-trust control plane... 46-event golden lane...",
+      "status": "SUBMITTED",
+      "evidence": "payload blurb; no origin-date or Hack-Hydra distinction"
+    },
+    {
+      "dimension": "Repo",
+      "what_ic_received": "https://github.com/biobitworks/hydradg",
+      "status": "SUBMITTED",
+      "evidence": "Points to full HydraDG repo (Aug 18 origin), not biobitworks/hydralamp standalone"
+    },
+    {
+      "dimension": "Demo",
+      "what_ic_received": "https://hydralamp.vercel.app/",
+      "status": "SUBMITTED",
+      "evidence": "Anonymous HTTP 200 at submission; hero at /submission not linked in payload"
+    },
+    {
+      "dimension": "Agent surface",
+      "what_ic_received": "HTTP API enumeration (6 endpoints)",
+      "status": "SUBMITTED",
+      "evidence": "Long agent_surface text; scores 30pt rubric band per IC schema"
+    },
+    {
+      "dimension": "Vault folder",
+      "what_ic_received": "null",
+      "status": "NOT_SUBMITTED",
+      "evidence": "folder_id=null in payload and IC ack"
+    },
+    {
+      "dimension": "Screenshots",
+      "what_ic_received": "None via IC",
+      "status": "AVAILABLE_BUT_NOT_SUBMITTED",
+      "evidence": "69 PNGs in eval/hydralamp_20260826/backup/ all pre-deadline"
+    },
+    {
+      "dimension": "Video",
+      "what_ic_received": "None via IC",
+      "status": "AVAILABLE_BUT_NOT_SUBMITTED",
+      "evidence": "demo.mp4/webm pre-deadline; IC_VAULT_UPLOAD_PACKET lists videos for post-submit upload"
+    },
+    {
+      "dimension": "Hero image",
+      "what_ic_received": "Not in IC vault; possibly on demo /submission",
+      "status": "DESCRIBED_NOT_ATTACHED",
+      "evidence": "HYDRALAMP_SUBMISSION_HERO.png exists; OPERATOR_APPROVAL_PACKET deployment_links"
+    },
+    {
+      "dimension": "Text evidence pack",
+      "what_ic_received": "None",
+      "status": "AVAILABLE_BUT_NOT_SUBMITTED",
+      "evidence": "85+ markdown/json docs pre-deadline in eval/"
+    },
+    {
+      "dimension": "Benchmark/eval receipts",
+      "what_ic_received": "None",
+      "status": "AVAILABLE_BUT_NOT_SUBMITTED",
+      "evidence": "eval/agent_native_sponsors_20260827/* receipts"
+    },
+    {
+      "dimension": "Sponsor evidence",
+      "what_ic_received": "Mentioned in agent_surface only",
+      "status": "DESCRIBED_NOT_ATTACHED",
+      "evidence": "Runtype/Cortex/Vercel receipts exist; Runtype live_status=ERROR"
+    },
+    {
+      "dimension": "Origin/time proof",
+      "what_ic_received": "None",
+      "status": "AVAILABLE_BUT_NOT_SUBMITTED",
+      "evidence": "Git shows HydraDG Aug 18 vs HydraLamp Aug 26; not in blurb"
+    },
+    {
+      "dimension": "Prompt provenance",
+      "what_ic_received": "None",
+      "status": "NOT_AVAILABLE",
+      "evidence": "Historical agent turns mostly RETROACTIVE_CUSTODY_RECONSTRUCTION"
+    },
+    {
+      "dimension": "Signed request",
+      "what_ic_received": "Bearer only",
+      "status": "NOT_USED",
+      "evidence": "RFC9421 signed mode available but not used at submit"
+    },
+    {
+      "dimension": "Origin MMR",
+      "what_ic_received": "None",
+      "status": "NOT_COMMITTED",
+      "evidence": "Scientific MMR exists separately; origin MMR constructed in this audit only"
+    },
+    {
+      "dimension": "Repro instructions",
+      "what_ic_received": "None in IC",
+      "status": "LINK_ONLY",
+      "evidence": "Repo README/eval paths; judge must discover"
+    },
+    {
+      "dimension": "Negative/null evidence",
+      "what_ic_received": "Described in blurb",
+      "status": "DESCRIBED_NOT_ATTACHED",
+      "evidence": "Blurb mentions failures; receipts not attached"
+    },
+    {
+      "dimension": "Accessibility",
+      "what_ic_received": "Not stated",
+      "status": "AVAILABLE_BUT_NOT_SUBMITTED",
+      "evidence": "BACKUP_RECEIPT keyboard/touch PASS gates"
+    }
+  ]
+}

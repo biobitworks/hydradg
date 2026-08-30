@@ -1,0 +1,50 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "granite4.1:8b",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_CANARY_PASS_FULL_MATRIX_NOT_FINAL",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "SUCCESS",
+  "git_commit": "f62e049f8e3a7684b1cd4b649174d68b827f5a19",
+  "handoff_id": "HANDOFF_V8_granite4.1_8b_LongMemEval-S_e47becba",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "LongMemEval-S_e47becba",
+      "sha256": "011cded633c3236ea3be8f3f33ef201d719b80c48df5192c938d320c91ba5e18"
+    }
+  ],
+  "merkle_mmr": {
+    "receipt_sha256": "NOT_PROJECT_COMMITTED",
+    "root": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "granite4.1:8b",
+    "bridge": "OLLARMA",
+    "requested_name": "granite4.1:8b",
+    "runtime_digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+    "runtime_name": "granite4.1:8b"
+  },
+  "output_sha256": "f1ecd9dcecc275b916732f27e050810fcdb7cb0d0b575a6bd1e03a485324d704",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "011cded633c3236ea3be8f3f33ef201d719b80c48df5192c938d320c91ba5e18",
+  "receipt_sha256": "05b6ec61c8aa25ac37af499bedc8f8728af92d8857ad3c783092dcc4c2e62d59",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "b3cb1227712f49c764f76ddbe4642eb04f6d8bae18e97e8258fbdb3380f74a02",
+  "response_text_bytes": 55,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "algorithm": null,
+    "public_key_id": null,
+    "signature_path": null,
+    "signed_scope": null,
+    "state": "NOT_SIGNED",
+    "verification_receipt_sha256": "NOT_APPLICABLE"
+  },
+  "successful": true,
+  "timestamp_utc": "2026-08-21T17:37:17Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "07ac1a1a601a12286a3b5caf4d8eec9a717213e93ce233d7009dcaa02b5a2eb2"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "sponsor.gum_doctor_discovery_receipt.v1",
+  "recorded_at_utc": "2026-08-27T21:43:01.450Z",
+  "host": "magicSTUDIObox.local",
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "SPONSOR_SECRET_INJECTION": "BLOCKED",
+  "GUM_DOCTOR_PATH": null,
+  "GUM_DOCTOR_VERSION": null,
+  "GUM_DOCTOR_INTERFACE_SHA256": null,
+  "discovery": {
+    "command_v_gum_doctor": false,
+    "command_v_gum_doctor_alt": false,
+    "command_v_gum": false,
+    "command_v_ollarma": false,
+    "command_v_ollama": true,
+    "trusted_path_scan": [
+      "/Users/byron/projects/bin",
+      "/Users/byron/projects/active/ollarma/bin",
+      "/opt/homebrew/bin",
+      "/usr/local/bin"
+    ]
+  },
+  "note": "GUM Doctor executable or secret-injection interface not established on host.",
+  "signature_state": "NOT_SIGNED"
+}
