@@ -1665,6 +1665,7 @@ def finalize_receipt_only() -> int:
         "HEAD_PARITY": "PASS",
         "RECEIPT_HEAD_PARITY": "PASS",
         "LICENSE_METADATA_PARITY": license_gate["LICENSE_METADATA_PARITY"],
+        "LICENSE_GATE_DERIVATION": license_gate["LICENSE_GATE_DERIVATION"],
         "FINAL_PDF_SHA256": pdf_sha,
         "FINAL_SUPPLEMENT_SHA256": supp_sha,
         **pages,
