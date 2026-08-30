@@ -2,7 +2,7 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-import { TIMEPOINTS } from "@/lib/releaseTimepoints";
+import { RELEASE_TIMEPOINTS, type ReleaseTimepoint } from "@/lib/releaseTimepoints";
 import type { PresentationState } from "@/lib/presentationLineage";
 
 type TimelineState = {
@@ -30,6 +30,15 @@ function signed(value: number | null | undefined, digits = 3) {
 function pct(value: number | null | undefined) {
   if (value === null || value === undefined || !Number.isFinite(value)) return "PENDING";
   return `${value > 0 ? "+" : ""}${(value * 100).toFixed(1)}%`;
+}
+
+function score(point: ReleaseTimepoint) {
+  if (point.score_state !== "MEASURED") return <span className="pill pillMuted" style={{ fontSize: "11px" }}>N/A BY CONTRACT</span>;
+  return (
+    <span>
+      G*: {point.g_star?.toFixed(4)}, Drift: {point.cloud_drift?.toFixed(1)}
+    </span>
+  );
 }
 
 export default function PresentationEvolution({ history }: { history: readonly PresentationState[] }) {
@@ -73,28 +82,20 @@ export default function PresentationEvolution({ history }: { history: readonly P
             <thead>
               <tr style={{ borderBottom: "2px solid rgba(255,255,255,0.15)", background: "rgba(255,255,255,0.02)" }}>
                 <th style={{ padding: "8px" }}>Timepoint</th>
-                <th style={{ padding: "8px" }}>State</th>
+                <th style={{ padding: "8px" }}>Classification</th>
                 <th style={{ padding: "8px" }}>Scientific Score</th>
-                <th style={{ padding: "8px" }}>Measurement / Experiment Result</th>
                 <th style={{ padding: "8px" }}>Evidence</th>
               </tr>
             </thead>
             <tbody>
-              {TIMEPOINTS.map((tp) => (
-                <tr key={tp.timepoint} style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+              {RELEASE_TIMEPOINTS.map((tp) => (
+                <tr key={tp.id} style={{ borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
                   <td style={{ padding: "8px", fontWeight: "bold", whiteSpace: "nowrap" }}>
-                    <span className="pill pillMuted" style={{ marginRight: "6px" }}>{tp.timepoint}</span>
+                    <span className="pill pillMuted" style={{ marginRight: "6px" }}>{tp.id}</span>
                     {tp.label}
                   </td>
-                  <td style={{ padding: "8px" }}><span className="mono small">{tp.state_type}</span></td>
-                  <td style={{ padding: "8px" }}>
-                    {tp.score_state.status === "DECLARED" ? (
-                      <span>G*: {tp.score_state.g_star.toFixed(4)}, Drift: {tp.score_state.cloud_drift.toFixed(1)}</span>
-                    ) : (
-                      <span className="pill pillMuted" style={{ fontSize: "11px" }}>N/A BY CONTRACT</span>
-                    )}
-                  </td>
-                  <td style={{ padding: "8px" }}>{tp.measurement_summary}</td>
+                  <td style={{ padding: "8px" }}><span className="mono small">{tp.classification}</span></td>
+                  <td style={{ padding: "8px" }}>{score(tp)}</td>
                   <td style={{ padding: "8px" }}><span className="mono small" style={{ color: "#60a5fa" }}>{tp.evidence}</span></td>
                 </tr>
               ))}
