@@ -1,0 +1,21 @@
+capability	hydradg_implementation	nearest_prior_art	classification	citation_id	hydradg_difference	notes
+agent_benchmarks	IC Failure Learning + AgentBench-class tasks	AgentBench; WebArena	MAIN_TEXT_REQUIRED	liu2023agentbench;zhou2023webarena	benchmarks measure success; HydraDG mandates failure/null custody	already in main text
+RAG	flat prose C0 condition	Lewis et al. RAG	MAIN_TEXT_REQUIRED	lewis2020rag	structured falsification not RAG QA	already in main text
+GraphRAG	structured FCG C1 condition	GraphRAG	MAIN_TEXT_REQUIRED	edge2024graphrag	comparator for structured memory; no treatment effect shown	already in main text
+preregistration	frozen manifests + EXP-008/009	Nosek preregistration	MAIN_TEXT_REQUIRED	nosek2018prereg	terminal underpowered verdicts with claim ceilings	already in main text
+negative_result_publication	underpowered EXP-008/009 retained	Karl et al. ICML 2024 position	MAIN_TEXT_REQUIRED	karl2024negative	preserves null/underpowered cells as evidence	not in predecessor PDF; added successor
+PROV-O	evidence_class typing	PROV-O ontology	MAIN_TEXT_REQUIRED	lebo2013provo	generic provenance not novel; claim ceilings added	promoted to main text in successor
+RO-Crate	research-object packaging	RO-Crate / Workflow Run RO-Crate	APPENDIX_REQUIRED	leo2024rocrote;rocrate	comparator only; appendix prior-art matrix	RO-Crate name in matrix; Workflow Run RO-Crate cited in appendix
+CWLProv	workflow run lineage	CWLProv	MAIN_TEXT_REQUIRED	khan2019cwlprov	workflow provenance not scientific custody contract	promoted to main text in successor
+Merkle/Certificate_Transparency	hash-linked FCG roots; tamper suite	RFC 6962 Certificate Transparency	MAIN_TEXT_REQUIRED	laurie2013ct	HydraDG does not invent Merkle audit logs	added successor; independent of Protein Hinge import
+selective_prediction	abstention as terminal evidence state	Geifman & El-Yaniv 2017	APPENDIX_REQUIRED	geifman2017selective	confidence/risk abstention != precondition/failure/gate abstention	not in main text (space); matrix documents distinction
+MLflow	experiment tracking comparator	MLflow	APPENDIX_REQUIRED	zaharia2018mlflow	run logging vs typed terminal states + claim ceilings	ledger inconsistency resolved
+DataLad	versioned data/code comparator	DataLad	APPENDIX_REQUIRED	datalad	dataset versioning vs cross-actor custody handoffs	appendix comparator only
+SLSA/in-toto	software attestation comparator	SLSA; in-toto	APPENDIX_REQUIRED	slsa;in-toto	build provenance != experiment custody contract	appendix comparator only
+nanopublications	assertion lineage	Groth nanopublications	MAIN_TEXT_REQUIRED	groth2010nano	FCO objects not nanopublication syntax	already in main text
+agent_execution_provenance	FCO/FCG handoff receipts	Wang et al. 2026 survey	MAIN_TEXT_REQUIRED	wang2026agentprovenance	agent trace graphs vs scientific custody + promotion ceilings	added successor
+experiment_tracking_SaaS	prior-art matrix row	W&B / MLflow	OPTIONAL	zaharia2018mlflow;wandb	matrix may generalize W&B to SaaS tracking	MLflow ledger entry added; W&B generalized
+FAIR_metadata	FAIR principles	Wilkinson FAIR	MAIN_TEXT_REQUIRED	wilkinson2016fair	FAIR metadata != custody graph	already in main text
+Chow_1970_reject_option	NOT USED	model reject tradeoff	OPTIONAL	chow1970reject	NOT_RELEVANT to HydraDG terminal-state model	rejected from main; appendix optional
+Rubin_1976_missing_data	NOT USED	MCAR/MAR/MNAR	NOT_RELEVANT	rubin1976inference	HydraDG does not use Rubin taxonomy	rejected (Protein Hinge probe only)
+Huang_2024_repurposing	NOT USED	biomedical repurposing	NOT_RELEVANT	huang2024repurposing	TEAM/Protein Hinge lane	explicit scope exclusion

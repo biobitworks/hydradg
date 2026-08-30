@@ -1,0 +1,5 @@
+system	question	N	outcome	claim_ceiling	source
+HydraLamp perturbation	chain under fault	100	100/100	SYSTEMS_VALIDATION_ONLY	eval/hydralamp_runtype_20260826/CORE_STRESS_RECEIPT.json
+Tamper suite	synthetic tamper detect	8	8/8	SYSTEMS_VALIDATION_ONLY	eval/hydralamp_runtype_20260826/HASH_TAMPER_STRESS_RECEIPT.json
+Provider ladder	live repair R0-R6	7 gates	R3-R6 FAIL preserved	SYSTEMS_VALIDATION_ONLY	eval/agent_native_sponsors_20260827/live_loop_repair/RUNTYPE_LIVE_LOOP_REPAIR_RECEIPT.json
+SeedGraph traceability	manuscript atomization	163 atoms	PARTIAL	CUSTODY_MECHANICS	paper/newinml2026_solo/seedgraph_traceability/SEEDGRAPH_TRACEABILITY_CLOSEOUT.json

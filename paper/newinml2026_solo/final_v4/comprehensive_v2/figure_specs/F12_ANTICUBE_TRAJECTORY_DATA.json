@@ -1,0 +1,31 @@
+{
+  "events": [
+    {
+      "event_id": "AC-001",
+      "safe": -1,
+      "self": -1,
+      "source": "longitudinal_fcg/SECRET_REGISTRY_AUDIT.jsonl",
+      "transition": "SECRET_REGISTRY_DISCLOSURE",
+      "z_index": 0
+    },
+    {
+      "event_id": "AC-002",
+      "safe": 1,
+      "self": -1,
+      "source": "longitudinal_fcg/SECRET_REGISTRY_AUDIT.jsonl",
+      "transition": "RUNTIME_PERMITTED",
+      "z_index": 1
+    },
+    {
+      "event_id": "AC-003",
+      "safe": 1,
+      "self": 1,
+      "source": "eval/newinml_doc_roundtrip_20260829/13_closeout/FINAL_CLOSEOUT.json",
+      "transition": "DOC_ROUNDTRIP_PASS",
+      "z_index": 2
+    }
+  ],
+  "schema": "hydradg.figure_data.v1",
+  "source_sha256": "6feb4ba13f55d2e87cf1da411f48f0b0819ae9212315a984d2024c06d69280eb",
+  "trajectory_sparse": true
+}

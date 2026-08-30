@@ -1,0 +1,165 @@
+{
+  "figures": [
+    {
+      "H0": "HYPOTHESIS_FRAMEWORK=NOT_APPLICABLE",
+      "caption": "Conceptual MSM\u2192FCO/FCG\u2192HydraDG/HydraLamp pipeline",
+      "data_sha256": "",
+      "data_source": "",
+      "figure_id": "F1",
+      "figure_type": "CONCEPTUAL_MECHANISM",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "6989103cdd4bb1a029c44cac0eea0bca28e7fbb9981705ac33eb685fbdd529a0"
+    },
+    {
+      "H0": "\u0394 primary endpoint = 0",
+      "caption": "Underpowered terminal; does not establish superiority or equivalence",
+      "data_sha256": "232fe68c3d78fdb781b9b5da5fa38213406ba511b77d5ff65562ff35b6e22d99",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F2_PRIMARY_HYPOTHESIS_DATA.json",
+      "figure_id": "F2",
+      "figure_type": "EMPIRICAL_STATISTICAL",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "114136cca3c254908340b2b61bb4193065d7ff899e8b0967e837db31bc7b9e3e"
+    },
+    {
+      "H0": "N/A attrition descriptive",
+      "caption": "Attrition from raw cells to paired/discordant evidence",
+      "data_sha256": "448d4dca9ef6afcb4b4c0d8b88178a5d79a4b20bc9470160f11617f1b21435d8",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F3_ATTRITION_FLOW_DATA.json",
+      "figure_id": "F3",
+      "figure_type": "EMPIRICAL_STATISTICAL",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "fe754aee2349b4b43468d036fdef5cbe48905c298702363892e80b93d9cb59fe"
+    },
+    {
+      "H0": "\u0394 Hit@K = 0",
+      "caption": "Historical supporting evidence only",
+      "data_sha256": "9e465fdab39857cf00eccccf0323007800aea05e48b726bc53dc0517e145ed24",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F4_HISTORICAL_RETRIEVAL_DATA.json",
+      "figure_id": "F4",
+      "figure_type": "AI_MODEL_EVALUATION",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "4e61b0a9b2727dddfbc22849418348dd189851d71b35085c17324d76fc83a9fe"
+    },
+    {
+      "H0": "\u0394=0 at each K",
+      "caption": "K sweep; frozen scorer only",
+      "data_sha256": "9e465fdab39857cf00eccccf0323007800aea05e48b726bc53dc0517e145ed24",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F4_HISTORICAL_RETRIEVAL_DATA.json",
+      "figure_id": "F5",
+      "figure_type": "AI_MODEL_EVALUATION",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "a1b25f87e87ec46a5d1e4afb9ddccbcd5a64007a00d59af4c6c44404d4c84df6"
+    },
+    {
+      "H0": "chain integrity maintained",
+      "caption": "Systems robustness \u2014 not treatment effect",
+      "data_sha256": "cb97694f9dd476bea2cd2777cdfd09f65fdbc183f2dd20c29d637bafafd2a50e",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F6_HYDRALAMP_MATRIX_DATA.json",
+      "figure_id": "F6",
+      "figure_type": "ROBUSTNESS_FAULT_INJECTION",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "93f75345a1c3ab5e0b6e36406c692f30f94b202c30451e983fca2eaf1f65e7db"
+    },
+    {
+      "H0": "all modes detected",
+      "caption": "8/8 detected from receipt",
+      "data_sha256": "aea479997378207763e1c6c6c67998df58b15708d78e70193084674d0303b161",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F7_TAMPER_MODES_DATA.json",
+      "figure_id": "F7",
+      "figure_type": "ROBUSTNESS_FAULT_INJECTION",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "199a8433d84b53ddbb09860a5f59e5bb2868024e4008985460cbab050992268c"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Provider R3-R6 FAIL preserved",
+      "data_sha256": "e852bc5f8e3fff5485d74a64a9cedfa4f0dcddfaab91e390651108d13192c79e",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F8_SYSTEMS_STATE_DATA.json",
+      "figure_id": "F8",
+      "figure_type": "SYSTEMS_COMPUTER_SCIENCE",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "6c1a2d1fae30593794f2ed77e56f6a037833a2b6fb16aeff1d5652531f77ca78"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Mechanism evidence only \u2014 not biological validation",
+      "data_sha256": "",
+      "data_source": "",
+      "figure_id": "F9",
+      "figure_type": "SYSTEMS_COMPUTER_SCIENCE",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "629d79e69461498c2ef3dedfd79e90da687ecd6cf4220f8f8f0d8fee4988eee1"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Cross-implementation comparison blocked \u2014 no checkout artifacts",
+      "data_sha256": "",
+      "data_source": "",
+      "figure_id": "F10",
+      "figure_type": "CROSS_IMPLEMENTATION_COMPARISON",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "fbefbca84ef54461b71b6de5a4eee3816f87832ab3cd4d7fff82d0a998d7fba2"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Canonical quadrant semantics; examples in ledger",
+      "data_sha256": "",
+      "data_source": "",
+      "figure_id": "F11",
+      "figure_type": "CONCEPTUAL_MECHANISM",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "9538dc15966af51afdeb878453925516d5a0be0996a469d6abfb58f17d6ab4de"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Sparse canonical history only",
+      "data_sha256": "175e75c2d310f5bd308c848025fd63002b7a086adae09c6f92f5495cce7e737d",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F12_ANTICUBE_TRAJECTORY_DATA.json",
+      "figure_id": "F12",
+      "figure_type": "CONCEPTUAL_MECHANISM",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "198eb16e19fff7226575afb5787a1c8795210bd3a7fa2e9daa20b6234eab466a"
+    },
+    {
+      "H0": "N/A",
+      "caption": "TOTAL_VERIFIED_INGEST_COMPLETE=NO",
+      "data_sha256": "cfd5cba2aff7426b79040bfc958dbe656f4a7db425937e278fc818c232306227",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F13_SEEDGRAPH_COVERAGE_DATA.json",
+      "figure_id": "F13",
+      "figure_type": "SYSTEMS_COMPUTER_SCIENCE",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "093328458ad1c6a19cc5e4d5fa558227e595d1b8f076c1a2c918ee0c52d90855"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Bidirectional provenance for material result",
+      "data_sha256": "232fe68c3d78fdb781b9b5da5fa38213406ba511b77d5ff65562ff35b6e22d99",
+      "data_source": "paper/newinml2026_solo/final_v4/comprehensive_v2/figure_specs/F2_PRIMARY_HYPOTHESIS_DATA.json",
+      "figure_id": "F14",
+      "figure_type": "CUSTODY_PROVENANCE",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "906ea000782d9ac89d69bc803b70139db8e55c72297146f98791f9bd921a9425"
+    },
+    {
+      "H0": "N/A",
+      "caption": "PASS",
+      "data_sha256": "",
+      "data_source": "",
+      "figure_id": "F15",
+      "figure_type": "REPRODUCIBILITY",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "ff42ba18dc9e2d6e307f645148347736053f51d2396a8040916f934c14d3b900"
+    },
+    {
+      "H0": "N/A",
+      "caption": "Does not replace neighboring systems",
+      "data_sha256": "",
+      "data_source": "",
+      "figure_id": "F16",
+      "figure_type": "CONCEPTUAL_MECHANISM",
+      "generator_sha256": "01e5d30f1a6047084d834c28d75b6c923c2594b8cb7792a6797db1a4f9d13464",
+      "output_sha256": "7b248f375b54ae94215d95f248ad10cd5a403fad237d5eef4b5a791459523f02"
+    }
+  ],
+  "total": 16
+}
