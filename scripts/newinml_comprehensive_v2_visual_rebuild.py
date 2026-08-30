@@ -695,27 +695,44 @@ def render_figures(data_paths: dict[str, Path]) -> list[dict]:
             }
         )
 
-    # F1 conceptual
-    fig, ax = plt.subplots(figsize=(9, 5))
-    stages = [
-        "Mechanical Scientific Method",
-        "FCO",
-        "FCG",
-        "Anticube",
-        "SeedGraph",
-        "Ollarma",
-        "HydraDG",
-        "HydraLamp",
-        "Claim ceiling",
-    ]
-    y = np.arange(len(stages))
-    colors = ["#4C72B0" if i % 2 == 0 else "#DD8452" for i in range(len(stages))]
-    ax.barh(y, [1] * len(stages), color=colors)
-    ax.set_yticks(y)
-    ax.set_yticklabels(stages)
-    ax.set_title("F1: Research program / custody architecture (conceptual)")
-    ax.set_xlabel("Governed stage (no empirical %)")
-    save("F1", fig, "Conceptual MSM→FCO/FCG→HydraDG/HydraLamp pipeline", "CONCEPTUAL_MECHANISM", None, "HYPOTHESIS_FRAMEWORK=NOT_APPLICABLE")
+    # F1 conceptual hierarchy (Mechanical Scientific Method → MSM → implementations)
+    fig, ax = plt.subplots(figsize=(8.5, 7))
+    ax.set_xlim(0, 10)
+    ax.set_ylim(0, 10)
+    ax.axis("off")
+    from matplotlib.patches import FancyBboxPatch, FancyArrowPatch
+
+    def _box(x, y, w, h, text, fc="#E8F0FE", ec="#333333", fontsize=9):
+        patch = FancyBboxPatch((x, y), w, h, boxstyle="round,pad=0.03", linewidth=1.2, edgecolor=ec, facecolor=fc)
+        ax.add_patch(patch)
+        ax.text(x + w / 2, y + h / 2, text, ha="center", va="center", fontsize=fontsize)
+
+    def _arrow(x1, y1, x2, y2):
+        ax.add_patch(FancyArrowPatch((x1, y1), (x2, y2), arrowstyle="-|>", mutation_scale=12, linewidth=1.2, color="#444444"))
+
+    _box(2.5, 9.0, 5.0, 0.7, "Mechanical Scientific Method", fc="#DDEEFF")
+    _arrow(5.0, 9.0, 5.0, 8.55)
+    _box(2.5, 7.8, 5.0, 0.7, "FCO / FCG custody substrate", fc="#DDEEFF")
+    _arrow(5.0, 7.8, 5.0, 7.35)
+    _box(2.0, 6.5, 6.0, 0.8, "Mechanical Scientific Models\n(proposed model class)", fc="#FFF4DD")
+    _arrow(3.2, 6.5, 2.8, 5.95)
+    _arrow(6.8, 6.5, 7.2, 5.95)
+    _box(0.6, 5.0, 3.6, 0.9, "HydraDG\n(primary evaluated implementation)", fc="#E8F8E8")
+    _box(5.8, 5.0, 3.6, 1.1, "Vithia\nCOMPANION_IMPLEMENTATION\nZERO_PRIMARY_WEIGHT_EXP008_009", fc="#F5F5F5", fontsize=8)
+    _arrow(2.4, 5.0, 2.4, 4.45)
+    _box(0.4, 3.2, 4.0, 1.1, "SeedGraph / Ollarma / HydraLamp\n(execution & systems validation)", fc="#F0F0FF", fontsize=8)
+    _arrow(2.4, 3.2, 2.4, 2.65)
+    _box(0.4, 1.5, 4.0, 1.0, "EXP-008 / EXP-009\nUNDERPOWERED | EFFECT_NOT_ESTABLISHED", fc="#FDECEC", ec="#8B0000", fontsize=8)
+    ax.set_title("F1: Proposed hierarchy (conceptual; not treatment-effect evidence)", fontsize=10)
+    save(
+        "F1",
+        fig,
+        "MSM→FCO/FCG→proposed model class→HydraDG/Vithia→execution stack→EXP-008/009",
+        "CONCEPTUAL_MECHANISM",
+        None,
+        "HYPOTHESIS_FRAMEWORK=NOT_APPLICABLE",
+        "Proposed intellectual hierarchy with bounded Vithia and underpowered EXP lanes",
+    )
 
     # F2 primary hypothesis — attrition bars + null reference + underpowered band
     d = load_json(data_paths["F2"])
@@ -1406,7 +1423,7 @@ def build_pdf() -> tuple[Path, Path]:
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figures/F1.png}
-  \caption{Research program architecture (conceptual). Deterministic authority vs probabilistic model output are distinct layers.}
+  \caption{Proposed intellectual hierarchy (conceptual; not empirical effect evidence). HydraDG is the primary experimentally evaluated implementation; Vithia is a companion implementation with zero primary weight for EXP-008/009; EXP-008 and EXP-009 remain \emph{underpowered} with effect not established.}
 \end{figure}
 """,
         "F1.png",
