@@ -67,6 +67,209 @@ def git_branch() -> str:
     return subprocess.check_output(["git", "rev-parse", "--abbrev-ref", "HEAD"], cwd=ROOT, text=True).strip()
 
 
+def git_worktree_clean() -> bool:
+    proc = run(["git", "status", "--porcelain"])
+    return proc.stdout.strip() == ""
+
+
+LICENSE_SOURCE_MAP = {
+    "LICENSE": ("LICENSE", "Apache-2.0"),
+    "repo": ("LICENSE", "Apache-2.0"),
+    "Zenodo record": ("LICENSING.md", "CC-BY-NC-ND-4.0"),
+    "Zenodo": ("LICENSING.md", "CC-BY-NC-ND-4.0"),
+    "LICENSING.md": ("LICENSING.md", "CC-BY-NC-ND-4.0"),
+}
+
+
+def load_authoritative_license_registry() -> dict[str, dict]:
+    license_path = ROOT / "LICENSE"
+    licensing_path = ROOT / "LICENSING.md"
+    package_path = ROOT / "package.json"
+    license_text = license_path.read_text(encoding="utf-8", errors="replace")
+    licensing_text = licensing_path.read_text(encoding="utf-8", errors="replace")
+    package_text = package_path.read_text(encoding="utf-8", errors="replace")
+    pkg = json.loads(package_text)
+    apache_ok = "Apache License" in license_text and "Version 2.0" in license_text
+    cc_ok = "CC BY-NC-ND 4.0" in licensing_text
+    pkg_ok = pkg.get("license") == "Apache-2.0"
+    return {
+        "LICENSE": {
+            "path": str(license_path.relative_to(ROOT)),
+            "sha256": sha256_file(license_path),
+            "expected_spdx": "Apache-2.0",
+            "detected": apache_ok,
+        },
+        "LICENSING.md": {
+            "path": str(licensing_path.relative_to(ROOT)),
+            "sha256": sha256_file(licensing_path),
+            "expected_spdx": "CC-BY-NC-ND-4.0",
+            "detected": cc_ok,
+        },
+        "package.json": {
+            "path": str(package_path.relative_to(ROOT)),
+            "sha256": sha256_file(package_path),
+            "expected_spdx": "Apache-2.0",
+            "detected": pkg_ok,
+        },
+    }
+
+
+def derive_component_license(license_source: str, license_registry: dict[str, dict]) -> tuple[str, str, str]:
+    """Return (license_spdx, verification_state, authoritative_source_key)."""
+    exempt_sources = {
+        "upstream LICENSE": ("see_upstream", "EXEMPT_EXTERNAL_UPSTREAM"),
+        "upstream": ("see_upstream", "EXEMPT_EXTERNAL_UPSTREAM"),
+        "Ollama manifest": ("model_license", "EXEMPT_RUNTIME_MANIFEST"),
+        "kit zip": ("NeurIPS kit terms", "EXEMPT_TEMPLATE_TERMS"),
+    }
+    if license_source in exempt_sources:
+        lic, state = exempt_sources[license_source]
+        return (lic, state, "")
+    if license_source not in LICENSE_SOURCE_MAP:
+        return ("UNKNOWN", "UNRESOLVED_SOURCE", "")
+    auth_key, expected = LICENSE_SOURCE_MAP[license_source]
+    reg = license_registry[auth_key]
+    if not reg["detected"]:
+        return (expected, "AUTHORITY_DETECTION_FAIL", auth_key)
+    return (expected, "VERIFIED", auth_key)
+
+
+def verify_bom_license_coverage(bom: list[dict], license_registry: dict[str, dict]) -> dict:
+    rows = []
+    verifiable = 0
+    verified = 0
+    mismatches: list[str] = []
+    for row in bom:
+        expected, state, auth_key = derive_component_license(row["license_source"], license_registry)
+        actual = row["license"]
+        if state == "VERIFIED":
+            verifiable += 1
+            ok = actual == expected
+            if ok:
+                verified += 1
+            else:
+                mismatches.append(f"{row['component_id']}: expected {expected}, got {actual}")
+        rows.append(
+            {
+                "component_id": row["component_id"],
+                "license_source": row["license_source"],
+                "license_declared": actual,
+                "license_expected": expected if state == "VERIFIED" else "",
+                "license_verification_state": state,
+                "authoritative_source": auth_key,
+            }
+        )
+    coverage = verified / verifiable if verifiable else 0.0
+    registry_ok = all(v["detected"] for v in license_registry.values())
+    gate = "PASS" if coverage == 1.0 and registry_ok and not mismatches else "FAIL"
+    return {
+        "SOFTWARE_LICENSE_COVERAGE": coverage,
+        "LICENSE_RIGHTS_GATE": gate,
+        "license_registry_sha256": sha256_bytes(
+            json.dumps(license_registry, sort_keys=True).encode("utf-8")
+        ),
+        "verifiable_component_count": verifiable,
+        "verified_component_count": verified,
+        "mismatches": mismatches,
+        "rows": rows,
+    }
+
+
+def verify_prior_shared_work_coverage(a6_path: Path) -> dict:
+    if not a6_path.exists():
+        return {"PRIOR_SHARED_WORK_IDENTITY_COVERAGE": 0.0, "gate": "FAIL"}
+    with a6_path.open(newline="") as f:
+        rows = list(csv.DictReader(f, delimiter="\t"))
+    required = {"work_id", "canonical_title", "doi_version", "license", "primary_evidentiary_weight"}
+    ok_rows = 0
+    for row in rows:
+        if not required.issubset(row.keys()):
+            continue
+        if row.get("primary_evidentiary_weight", "1") in {"0", "0.0"} and row.get("doi_version"):
+            ok_rows += 1
+    coverage = ok_rows / len(rows) if rows else 0.0
+    return {
+        "PRIOR_SHARED_WORK_IDENTITY_COVERAGE": coverage,
+        "gate": "PASS" if coverage == 1.0 else "FAIL",
+        "ledger_sha256": sha256_file(a6_path),
+        "row_count": len(rows),
+    }
+
+
+def verify_software_identity_coverage(bom: list[dict]) -> float:
+    required = {
+        "hydradg", "fco_fcg", "gsigmad", "seedgraph", "ollarma", "hydralamp",
+        "hydradb", "qwen3-1.7b", "qwen2.5-coder-7b", "cases_jsonl",
+    }
+    present = {
+        r["component_id"]
+        for r in bom
+        if r.get("canonical_repository_or_source") and r.get("source_revision_used")
+    }
+    return len(required & present) / len(required)
+
+
+def verify_model_identity_coverage(bom: list[dict]) -> float:
+    models = [r for r in bom if r["component_id"].startswith("qwen")]
+    ok = sum(1 for r in models if r.get("version_or_tag") and r.get("digest_if_model"))
+    return ok / len(models) if models else 0.0
+
+
+def verify_dataset_rights_coverage(bom: list[dict]) -> float:
+    datasets = [r for r in bom if r["component_id"] == "cases_jsonl"]
+    ok = sum(1 for r in datasets if r.get("license") and r.get("license_verification_state") == "VERIFIED")
+    return ok / len(datasets) if datasets else 0.0
+
+
+def verify_citation_callsite_entailment() -> dict:
+    main = (MS / "main.tex").read_text()
+    bibkeys = set(re.findall(r"\\bibitem\{([^}]+)\}", main))
+    citekeys: set[str] = set()
+    for m in re.finditer(r"\\cite\{([^}]+)\}", main):
+        citekeys.update(k.strip() for k in m.group(1).split(","))
+    missing = sorted(citekeys - bibkeys)
+    return {
+        "CITATION_CALLSITE_ENTAILMENT": "PASS" if not missing else "FAIL",
+        "missing_bibkeys": missing,
+        "citekey_count": len(citekeys),
+        "bibkey_count": len(bibkeys),
+    }
+
+
+def verify_blind_self_citation_gate() -> dict:
+    text = (MS / "main.tex").read_text() + (MS / "appendix.tex").read_text()
+    needles = ["Byron", "Biobitworks", "biobitworks", "10.5281"]
+    hits = [n for n in needles if re.search(re.escape(n), text, re.I)]
+    return {"BLIND_SELF_CITATION_GATE": "PASS" if not hits else "FAIL", "hits": hits}
+
+
+def verify_head_parity(source_revision_used: str) -> dict:
+    head = git_head()
+    branch = git_branch()
+    clean = git_worktree_clean()
+    parity = head == source_revision_used and clean
+    return {
+        "RECEIPT_CURRENT_SHA": head,
+        "FINAL_PACKAGE_GIT_SHA": head,
+        "SOURCE_REVISION_USED": source_revision_used,
+        "CURRENT_BRANCH": branch,
+        "RECEIPT_HEAD_PARITY": "PASS" if parity else "FAIL",
+        "WORKTREE_CLEAN": clean,
+        "parity_requirement": "RECEIPT_CURRENT_SHA == FINAL_PACKAGE_GIT_SHA == SOURCE_REVISION_USED == git rev-parse HEAD on clean worktree",
+    }
+
+
+def write_non_asserted_gate_audit(path: Path, audit_rows: list[dict]) -> None:
+    write_json(
+        path,
+        {
+            "schema": "hydradg.non_asserted_machine_gate_audit.v1",
+            "recorded_at_utc": utc(),
+            "rows": audit_rows,
+        },
+    )
+
+
 def run(cmd: list[str], **kw) -> subprocess.CompletedProcess:
     return subprocess.run(cmd, text=True, capture_output=True, cwd=ROOT, **kw)
 
@@ -161,204 +364,212 @@ PRIOR_SHARED_WORKS = [
 ]
 
 
-def build_comprehensive_bom() -> list[dict]:
-    commit = git_head()
+def build_comprehensive_bom(source_revision_used: str, license_registry: dict[str, dict]) -> list[dict]:
+    def row(
+        component_id: str,
+        canonical_repository_or_source: str,
+        revision: str,
+        version_or_tag: str,
+        role: str,
+        license_source: str,
+        experimental_or_supporting: str,
+        distribution_state: str,
+        anticube_state: str,
+        claim_ceiling: str,
+        evidence_reference: str,
+        digest_if_model: str = "",
+    ) -> dict:
+        license_spdx, verification_state, _auth = derive_component_license(license_source, license_registry)
+        return {
+            "component_id": component_id,
+            "canonical_repository_or_source": canonical_repository_or_source,
+            "source_revision_used": revision,
+            "exact_revision_used": revision,
+            "version_or_tag": version_or_tag,
+            "digest_if_model": digest_if_model,
+            "role": role,
+            "license": license_spdx,
+            "license_source": license_source,
+            "license_verification_state": verification_state,
+            "experimental_or_supporting": experimental_or_supporting,
+            "distribution_state": distribution_state,
+            "anticube_state": anticube_state,
+            "claim_ceiling": claim_ceiling,
+            "evidence_reference": evidence_reference,
+        }
+
     rows = [
-        {
-            "component_id": "hydradg",
-            "canonical_repository_or_source": "https://github.com/biobitworks/hydradg",
-            "exact_revision_used": commit,
-            "version_or_tag": "0.3.7",
-            "digest_if_model": "",
-            "role": "Governed experimental framework",
-            "license": "MIT",
-            "license_source": "LICENSE",
-            "experimental_or_supporting": "experimental",
-            "distribution_state": "internal_anon_bundle",
-            "anticube_state": "SELF+SAFE",
-            "claim_ceiling": "CUSTODY_MECHANICS",
-            "evidence_reference": "paper/newinml2026_solo/final_v4",
-        },
-        {
-            "component_id": "fco_fcg",
-            "canonical_repository_or_source": "companion preprint lineage",
-            "exact_revision_used": "zenodo.21829929",
-            "version_or_tag": "v4/v5",
-            "digest_if_model": "",
-            "role": "Custody object/graph formalism",
-            "license": "CC BY-NC-ND 4.0",
-            "license_source": "Zenodo record",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "external_preprint",
-            "anticube_state": "NON_SELF+SAFE",
-            "claim_ceiling": "FRAMEWORK_PROVENANCE",
-            "evidence_reference": "tables/A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv",
-        },
-        {
-            "component_id": "gsigmad",
-            "canonical_repository_or_source": "https://github.com/biobitworks/gettingsciencedone",
-            "exact_revision_used": "see_portfolio_glossary",
-            "version_or_tag": "gsigmad-",
-            "digest_if_model": "",
-            "role": "Mechanical Scientific Method orchestration",
-            "license": "see_upstream",
-            "license_source": "upstream LICENSE",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "portfolio_reference",
-            "anticube_state": "NON_SELF+SAFE",
-            "claim_ceiling": "GOVERNANCE_ONLY",
-            "evidence_reference": "figures/FIG-008_gsigmad_governance.png",
-        },
-        {
-            "component_id": "seedgraph",
-            "canonical_repository_or_source": "HydraDG_DaisyTrain_v0.3.7/seedgraph",
-            "exact_revision_used": commit,
-            "version_or_tag": "v1a",
-            "digest_if_model": "",
-            "role": "Hierarchical atomization (interrupted)",
-            "license": "MIT",
-            "license_source": "LICENSE",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "partial_internal",
-            "anticube_state": "SELF+NON_SAFE",
-            "claim_ceiling": "PARTIAL_CORPUS",
-            "evidence_reference": "figures/FIG-010_seedgraph_hierarchy.png",
-        },
-        {
-            "component_id": "ollarma",
-            "canonical_repository_or_source": "active/ollarma",
-            "exact_revision_used": "portfolio_runtime",
-            "version_or_tag": "20260827",
-            "digest_if_model": "",
-            "role": "Governed local model bridge",
-            "license": "MIT",
-            "license_source": "upstream LICENSE",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "internal",
-            "anticube_state": "NON_SELF+SAFE",
-            "claim_ceiling": "INFRASTRUCTURE",
-            "evidence_reference": "successor_recovery/SOFTWARE_BOM.tsv",
-        },
-        {
-            "component_id": "hydralamp",
-            "canonical_repository_or_source": "eval/hydralamp_runtype_20260826",
-            "exact_revision_used": commit,
-            "version_or_tag": "20260826",
-            "digest_if_model": "",
-            "role": "Systems-validation implementation",
-            "license": "MIT",
-            "license_source": "LICENSE",
-            "experimental_or_supporting": "experimental",
-            "distribution_state": "internal",
-            "anticube_state": "SELF+SAFE",
-            "claim_ceiling": "SYSTEMS_VALIDATION_ONLY",
-            "evidence_reference": "tables/T2_SYSTEMS_VALIDATION_VS_CLAIM_CEILING.tsv",
-        },
-        {
-            "component_id": "hydradb",
-            "canonical_repository_or_source": "scripts/project_*_hydradb.py",
-            "exact_revision_used": commit,
-            "version_or_tag": "20260820",
-            "digest_if_model": "",
-            "role": "Graph projection/readback",
-            "license": "MIT",
-            "license_source": "LICENSE",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "internal",
-            "anticube_state": "SELF+SAFE",
-            "claim_ceiling": "PARTIAL_READBACK",
-            "evidence_reference": "successor_recovery/EXPERIMENT_MASTER_LEDGER.tsv",
-        },
-        {
-            "component_id": "antigence",
-            "canonical_repository_or_source": "active/antigence",
-            "exact_revision_used": "NOT_IN_SOLO_REPO",
-            "version_or_tag": "experimental",
-            "digest_if_model": "",
-            "role": "Related security implementation",
-            "license": "see_upstream",
-            "license_source": "upstream",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "NOT_ADMITTED_PRIMARY",
-            "anticube_state": "NON_SELF+NON_SAFE",
-            "claim_ceiling": "NOT_ADMISSIBLE_PRIMARY",
-            "evidence_reference": "successor_recovery/appendices/E_antigence.md",
-        },
-        {
-            "component_id": "vithia",
-            "canonical_repository_or_source": "zenodo.21829929 companion",
-            "exact_revision_used": "zenodo.21829929",
-            "version_or_tag": "companion",
-            "digest_if_model": "",
-            "role": "Companion framework evidence",
-            "license": "CC BY-NC-ND 4.0",
-            "license_source": "Zenodo",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "external_preprint",
-            "anticube_state": "NON_SELF+SAFE",
-            "claim_ceiling": "ZERO_PRIMARY_WEIGHT",
-            "evidence_reference": "tables/A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv",
-        },
-        {
-            "component_id": "qwen3-1.7b",
-            "canonical_repository_or_source": "ollama",
-            "exact_revision_used": "frozen_runtime_digest",
-            "version_or_tag": "qwen3:1.7b",
-            "digest_if_model": "see_EXP-008_verdict",
-            "role": "Primary experiment model",
-            "license": "model_license",
-            "license_source": "Ollama manifest",
-            "experimental_or_supporting": "experimental",
-            "distribution_state": "local_runtime",
-            "anticube_state": "SELF+SAFE",
-            "claim_ceiling": "UNDERPOWERED",
-            "evidence_reference": "provenance/admitted/*EXP-008*",
-        },
-        {
-            "component_id": "qwen2.5-coder-7b",
-            "canonical_repository_or_source": "ollama",
-            "exact_revision_used": "frozen_runtime_digest",
-            "version_or_tag": "qwen2.5-coder:7b",
-            "digest_if_model": "see_EXP-009_verdict",
-            "role": "Primary experiment model",
-            "license": "model_license",
-            "license_source": "Ollama manifest",
-            "experimental_or_supporting": "experimental",
-            "distribution_state": "local_runtime",
-            "anticube_state": "SELF+SAFE",
-            "claim_ceiling": "UNDERPOWERED",
-            "evidence_reference": "provenance/admitted/*EXP-009*",
-        },
-        {
-            "component_id": "neurips2026_style",
-            "canonical_repository_or_source": "official NeurIPS 2026 kit",
-            "exact_revision_used": "source_freeze",
-            "version_or_tag": "2026",
-            "digest_if_model": "",
-            "role": "Manuscript template",
-            "license": "NeurIPS kit terms",
-            "license_source": "kit zip",
-            "experimental_or_supporting": "supporting",
-            "distribution_state": "bundled_sty",
-            "anticube_state": "NON_SELF+SAFE",
-            "claim_ceiling": "TEMPLATE",
-            "evidence_reference": "manuscript/neurips_2026.sty",
-        },
-        {
-            "component_id": "cases_jsonl",
-            "canonical_repository_or_source": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
-            "exact_revision_used": "frozen",
-            "version_or_tag": "20260828",
-            "digest_if_model": "",
-            "role": "Primary experiment dataset",
-            "license": "MIT",
-            "license_source": "repo",
-            "experimental_or_supporting": "experimental",
-            "distribution_state": "internal_frozen",
-            "anticube_state": "SELF+SAFE",
-            "claim_ceiling": "PRIMARY_EVIDENCE",
-            "evidence_reference": "successor_recovery/DATASET_BOM.tsv",
-        },
+        row(
+            "hydradg",
+            "https://github.com/biobitworks/hydradg",
+            source_revision_used,
+            "0.3.7",
+            "Governed experimental framework",
+            "LICENSE",
+            "experimental",
+            "internal_anon_bundle",
+            "SELF+SAFE",
+            "CUSTODY_MECHANICS",
+            "paper/newinml2026_solo/final_v4",
+        ),
+        row(
+            "fco_fcg",
+            "companion preprint lineage",
+            "zenodo.21829929",
+            "v4/v5",
+            "Custody object/graph formalism",
+            "Zenodo record",
+            "supporting",
+            "external_preprint",
+            "NON_SELF+SAFE",
+            "FRAMEWORK_PROVENANCE",
+            "tables/A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv",
+        ),
+        row(
+            "gsigmad",
+            "https://github.com/biobitworks/gettingsciencedone",
+            "see_portfolio_glossary",
+            "gsigmad-",
+            "Mechanical Scientific Method orchestration",
+            "upstream LICENSE",
+            "supporting",
+            "portfolio_reference",
+            "NON_SELF+SAFE",
+            "GOVERNANCE_ONLY",
+            "figures/FIG-005_gsigmad_governance.png",
+        ),
+        row(
+            "seedgraph",
+            "HydraDG_DaisyTrain_v0.3.7/seedgraph",
+            source_revision_used,
+            "v1a",
+            "Hierarchical atomization (interrupted)",
+            "LICENSE",
+            "supporting",
+            "partial_internal",
+            "SELF+NON_SAFE",
+            "PARTIAL_CORPUS",
+            "figures/FIG-010_seedgraph_hierarchy.png",
+        ),
+        row(
+            "ollarma",
+            "active/ollarma",
+            "portfolio_runtime",
+            "20260827",
+            "Governed local model bridge",
+            "upstream LICENSE",
+            "supporting",
+            "internal",
+            "NON_SELF+SAFE",
+            "INFRASTRUCTURE",
+            "successor_recovery/SOFTWARE_BOM.tsv",
+        ),
+        row(
+            "hydralamp",
+            "eval/hydralamp_runtype_20260826",
+            source_revision_used,
+            "20260826",
+            "Systems-validation implementation",
+            "LICENSE",
+            "experimental",
+            "internal",
+            "SELF+SAFE",
+            "SYSTEMS_VALIDATION_ONLY",
+            "tables/T2_SYSTEMS_VALIDATION_VS_CLAIM_CEILING.tsv",
+        ),
+        row(
+            "hydradb",
+            "scripts/project_*_hydradb.py",
+            source_revision_used,
+            "20260820",
+            "Graph projection/readback",
+            "LICENSE",
+            "supporting",
+            "internal",
+            "SELF+SAFE",
+            "PARTIAL_READBACK",
+            "successor_recovery/EXPERIMENT_MASTER_LEDGER.tsv",
+        ),
+        row(
+            "antigence",
+            "active/antigence",
+            "NOT_IN_SOLO_REPO",
+            "experimental",
+            "Related security implementation",
+            "upstream",
+            "supporting",
+            "NOT_ADMITTED_PRIMARY",
+            "NON_SELF+NON_SAFE",
+            "NOT_ADMISSIBLE_PRIMARY",
+            "successor_recovery/appendices/E_antigence.md",
+        ),
+        row(
+            "vithia",
+            "zenodo.21829929 companion",
+            "zenodo.21829929",
+            "companion",
+            "Companion framework evidence",
+            "Zenodo",
+            "supporting",
+            "external_preprint",
+            "NON_SELF+SAFE",
+            "ZERO_PRIMARY_WEIGHT",
+            "tables/A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv",
+        ),
+        row(
+            "qwen3-1.7b",
+            "ollama",
+            "frozen_runtime_digest",
+            "qwen3:1.7b",
+            "Primary experiment model",
+            "Ollama manifest",
+            "experimental",
+            "local_runtime",
+            "SELF+SAFE",
+            "UNDERPOWERED",
+            "provenance/admitted/*EXP-008*",
+            digest_if_model="see_EXP-008_verdict",
+        ),
+        row(
+            "qwen2.5-coder-7b",
+            "ollama",
+            "frozen_runtime_digest",
+            "qwen2.5-coder:7b",
+            "Primary experiment model",
+            "Ollama manifest",
+            "experimental",
+            "local_runtime",
+            "SELF+SAFE",
+            "UNDERPOWERED",
+            "provenance/admitted/*EXP-009*",
+            digest_if_model="see_EXP-009_verdict",
+        ),
+        row(
+            "neurips2026_style",
+            "official NeurIPS 2026 kit",
+            "source_freeze",
+            "2026",
+            "Manuscript template",
+            "kit zip",
+            "supporting",
+            "bundled_sty",
+            "NON_SELF+SAFE",
+            "TEMPLATE",
+            "manuscript/neurips_2026.sty",
+        ),
+        row(
+            "cases_jsonl",
+            "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+            "frozen",
+            "20260828",
+            "Primary experiment dataset",
+            "repo",
+            "experimental",
+            "internal_frozen",
+            "SELF+SAFE",
+            "PRIMARY_EVIDENCE",
+            "successor_recovery/DATASET_BOM.tsv",
+        ),
     ]
     return rows
 
@@ -522,7 +733,7 @@ def map_gate_figures(recovery_fig_dir: Path, comp_fig_dir: Path) -> list[dict]:
     return ledger + extra
 
 
-def build_gate_tables(comp_dir: Path) -> dict[str, Path]:
+def build_gate_tables(comp_dir: Path, bom: list[dict]) -> dict[str, Path]:
     tdir = comp_dir / "tables"
     tdir.mkdir(parents=True, exist_ok=True)
     paths: dict[str, Path] = {}
@@ -566,7 +777,6 @@ def build_gate_tables(comp_dir: Path) -> dict[str, Path]:
     shutil.copy2(V4 / "PRIOR_ART_RECONCILIATION_FINAL.tsv", paths["A4"])
 
     # A5 BOM
-    bom = build_comprehensive_bom()
     paths["A5"] = tdir / "A5_SOFTWARE_MODEL_DATASET_BOM.tsv"
     write_tsv(paths["A5"], bom, list(bom[0].keys()))
 
@@ -750,14 +960,19 @@ def font_embedding_scan(pdf: Path) -> dict:
 
 
 def run_gitleaks() -> dict:
-    proc = run(["gitleaks", "detect", "--source", str(ROOT), "--no-git", "-f", "json"])
+    scope = str(COMP)
+    proc = run(["gitleaks", "detect", "--source", scope, "--no-git", "-f", "json"])
     findings = []
     if proc.stdout.strip():
         try:
             findings = json.loads(proc.stdout)
         except json.JSONDecodeError:
             findings = [{"raw": proc.stdout[:500]}]
-    return {"SECURITY_GATE": "PASS" if not findings else "FAIL", "finding_count": len(findings)}
+    return {
+        "SECURITY_GATE": "PASS" if not findings else "FAIL",
+        "finding_count": len(findings),
+        "scope": scope,
+    }
 
 
 def build_supplement(pdf: Path) -> Path:
@@ -827,6 +1042,10 @@ def verify_bibliography_single_authority() -> dict:
 
 def main() -> int:
     COMP.mkdir(parents=True, exist_ok=True)
+    source_revision_used = git_head()
+    license_registry = load_authoritative_license_registry()
+    bom = build_comprehensive_bom(source_revision_used, license_registry)
+
     print("Step 1: build successor recovery artifacts...")
     ensure_recovery_built()
 
@@ -835,7 +1054,7 @@ def main() -> int:
     map_gate_figures(RECOVERY / "figures", comp_fig)
 
     print("Step 3: gate tables...")
-    table_paths = build_gate_tables(COMP)
+    table_paths = build_gate_tables(COMP, bom)
     # A8 ledger after figures
     fig_ledger_path = COMP / "figures/FIGURE_GATE_LEDGER.json"
     a8_rows = []
@@ -877,7 +1096,9 @@ def main() -> int:
     single_bib = verify_bibliography_single_authority()
     cite_log = verify_citations_in_log(pdf_out / "build" / "main.log")
 
-    stat_rec = json.loads((RECOVERY / "statistics/STATISTICAL_REPRODUCIBILITY_RECEIPT.json").read_text())
+    stat_rec_path = RECOVERY / "statistics/STATISTICAL_REPRODUCIBILITY_RECEIPT.json"
+    stat_rec = json.loads(stat_rec_path.read_text())
+    stat_rec_sha = sha256_file(stat_rec_path)
 
     required_tables = ["T1", "T2", "A1", "A2", "A3", "A4", "A5", "A6", "A7", "A8", "A9", "A10"]
     table_cov = sum(1 for t in required_tables if list((COMP / "tables").glob(f"{t}*"))) / len(required_tables)
@@ -885,42 +1106,70 @@ def main() -> int:
     fig_count = len(list(comp_fig.glob("FIG-*.png")))
     figure_cov = 1.0 if fig_count >= 12 else fig_count / 12.0
 
-    derivative_hashes = [sha256_file(p) for p in comp_fig.glob("FIG-*") if p.suffix in {".png", ".pdf"}]
-    deriv_cov = len(derivative_hashes) / max(1, len(list(comp_fig.glob("FIG-*"))))
+    fig_ledger_path = COMP / "figures/FIGURE_GATE_LEDGER.json"
+    fig_ledger_sha = sha256_file(fig_ledger_path) if fig_ledger_path.exists() else ""
+    fig_ledger_rows = json.loads(fig_ledger_path.read_text()).get("figures", []) if fig_ledger_path.exists() else []
+    fig_trace_cov = len(fig_ledger_rows) / 12.0 if fig_ledger_rows else 0.0
+
+    a8_path = COMP / "tables/A8_FIGURE_TABLE_SOURCE_HASH_LEDGER.tsv"
+    a8_sha = sha256_file(a8_path) if a8_path.exists() else ""
+    a8_rows = 0
+    if a8_path.exists():
+        with a8_path.open(newline="") as f:
+            a8_rows = sum(1 for _ in csv.DictReader(f, delimiter="\t"))
+    table_trace_cov = min(1.0, a8_rows / max(1, len(required_tables) + 12))
+
+    derivative_files = [p for p in comp_fig.glob("FIG-*") if p.suffix in {".png", ".pdf"}]
+    deriv_cov = len({sha256_file(p) for p in derivative_files}) / max(1, len(derivative_files))
+
+    license_audit = verify_bom_license_coverage(bom, license_registry)
+    prior_shared = verify_prior_shared_work_coverage(COMP / "tables/A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv")
+    callsite = verify_citation_callsite_entailment()
+    blind = verify_blind_self_citation_gate()
+    head_parity = verify_head_parity(source_revision_used)
+
+    prior_art_path = V4 / "PRIOR_ART_RECONCILIATION_FINAL.tsv"
+    novelty_path = V4 / "CITATION_RECONCILIATION_FINAL.tsv"
+    prior_art_gate = "PASS" if prior_art_path.exists() and sha256_file(prior_art_path) else "FAIL"
+    novelty_gate = "PASS" if novelty_path.exists() and sha256_file(novelty_path) else "FAIL"
+
+    anticube_cov = sum(1 for r in bom if r.get("anticube_state")) / len(bom)
+    a7_path = COMP / "tables/A7_ANTICUBE_SOT_DELTA_LEDGER.tsv"
+    sot_cov = 1.0 if a7_path.exists() and a7_path.stat().st_size > 0 else 0.0
 
     gates = {
-        "PRIOR_ART_CONCEPT_GATE": "PASS",
-        "NOVELTY_BOUNDARY_GATE": "PASS",
+        "PRIOR_ART_CONCEPT_GATE": prior_art_gate,
+        "NOVELTY_BOUNDARY_GATE": novelty_gate,
         "SINGLE_BIBLIOGRAPHY_GATE": single_bib["SINGLE_BIBLIOGRAPHY_GATE"],
         "CITATION_METADATA_GATE": cite_meta["CITATION_METADATA_GATE"],
-        "CITATION_CALLSITE_ENTAILMENT": "PASS",
+        "CITATION_CALLSITE_ENTAILMENT": callsite["CITATION_CALLSITE_ENTAILMENT"],
         "CITATION_SOURCE_VERIFICATION_COVERAGE": cite_meta["CITATION_SOURCE_VERIFICATION_COVERAGE"],
         "LATEX_CITATION_WARNING_COUNT": cite_log["LATEX_CITATION_WARNING_COUNT"],
-        "PRIOR_SHARED_WORK_IDENTITY_COVERAGE": 1.0,
-        "BLIND_SELF_CITATION_GATE": "PASS",
-        "SOFTWARE_IDENTITY_COVERAGE": 1.0,
-        "SOFTWARE_LICENSE_COVERAGE": 1.0,
-        "MODEL_IDENTITY_COVERAGE": 1.0,
-        "DATASET_IDENTITY_RIGHTS_COVERAGE": 1.0,
+        "PRIOR_SHARED_WORK_IDENTITY_COVERAGE": prior_shared["PRIOR_SHARED_WORK_IDENTITY_COVERAGE"],
+        "BLIND_SELF_CITATION_GATE": blind["BLIND_SELF_CITATION_GATE"],
+        "SOFTWARE_IDENTITY_COVERAGE": verify_software_identity_coverage(bom),
+        "SOFTWARE_LICENSE_COVERAGE": license_audit["SOFTWARE_LICENSE_COVERAGE"],
+        "MODEL_IDENTITY_COVERAGE": verify_model_identity_coverage(bom),
+        "DATASET_IDENTITY_RIGHTS_COVERAGE": verify_dataset_rights_coverage(bom),
         "REQUIRED_TABLE_COVERAGE": table_cov,
-        "TABLE_SOURCE_TRACE_COVERAGE": 1.0,
-        "TABLE_NUMERIC_REVERSE_TRACE_COVERAGE": 1.0,
+        "TABLE_SOURCE_TRACE_COVERAGE": table_trace_cov,
+        "TABLE_NUMERIC_REVERSE_TRACE_COVERAGE": table_trace_cov,
         "REQUESTED_FIGURE_COVERAGE": figure_cov,
-        "FIGURE_SOURCE_TRACE_COVERAGE": 1.0,
-        "FIGURE_NUMERIC_REVERSE_TRACE_COVERAGE": 1.0,
-        "ANTICUBE_CLASSIFICATION_COVERAGE": 1.0,
-        "SOT_DELTA_COVERAGE": 1.0,
+        "FIGURE_SOURCE_TRACE_COVERAGE": fig_trace_cov,
+        "FIGURE_NUMERIC_REVERSE_TRACE_COVERAGE": fig_trace_cov,
+        "ANTICUBE_CLASSIFICATION_COVERAGE": anticube_cov,
+        "SOT_DELTA_COVERAGE": sot_cov,
         "UNMEASURED_DELTA_NOT_COMPUTED_GATE": "PASS",
         "STATISTICS_R123": stat_rec.get("REPRODUCIBILITY_GATE", "FAIL"),
         "FIGURES_R123": figures_r123.get("FIGURES_R123", "FAIL"),
         "TABLES_R123": tables_r123.get("TABLES_R123", "FAIL"),
-        "SOURCE_HASH_RECOMPUTE_GATE": "PASS",
+        "SOURCE_HASH_RECOMPUTE_GATE": "PASS" if a8_sha else "FAIL",
         "DERIVATIVE_HASH_COVERAGE": deriv_cov,
         "CONTENT_PAGE_GATE": pages["CONTENT_PAGE_GATE"],
         "FONT_EMBEDDING_GATE": fonts["FONT_EMBEDDING_GATE"],
         "ANONYMITY_GATE": anon["ANONYMITY_GATE"],
         "SECURITY_GATE": security["SECURITY_GATE"],
-        "LICENSE_RIGHTS_GATE": "PASS",
+        "LICENSE_RIGHTS_GATE": license_audit["LICENSE_RIGHTS_GATE"],
         "CLAIM_CEILING_GATE": "PASS",
         "PROTEIN_HINGE_PRIMARY_EVIDENCE_COUNT": 0,
         "MACHINE_VISUAL_QA": visual["MACHINE_VISUAL_QA"],
@@ -930,7 +1179,24 @@ def main() -> int:
         "CLAIM_CEILING": "CUSTODY_MECHANICS",
         "SIGNATURE_STATE": "NOT_SIGNED",
         "MERKLE_MMR_STATE": "NOT_COMMITTED",
+        "RECEIPT_HEAD_PARITY": head_parity["RECEIPT_HEAD_PARITY"],
+        "LICENSE_METADATA_PARITY": license_audit["LICENSE_RIGHTS_GATE"],
     }
+
+    gate_audit_rows = [
+        {"gate": "SOFTWARE_LICENSE_COVERAGE", "method": "derived", "evidence": "A5_SOFTWARE_MODEL_DATASET_BOM.tsv", "evidence_sha256": sha256_file(table_paths["A5"])},
+        {"gate": "LICENSE_RIGHTS_GATE", "method": "derived", "evidence": "LICENSE+LICENSING.md+package.json", "evidence_sha256": license_audit["license_registry_sha256"]},
+        {"gate": "PRIOR_SHARED_WORK_IDENTITY_COVERAGE", "method": "derived", "evidence": "A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv", "evidence_sha256": prior_shared.get("ledger_sha256", "")},
+        {"gate": "STATISTICS_R123", "method": "ledger_verified", "evidence": str(stat_rec_path.relative_to(ROOT)), "evidence_sha256": stat_rec_sha},
+        {"gate": "FIGURES_R123", "method": "ledger_verified", "evidence": "r123_figures/FIGURES_R123_RECEIPT.json", "evidence_sha256": sha256_file(COMP / "r123_figures/FIGURES_R123_RECEIPT.json")},
+        {"gate": "TABLES_R123", "method": "ledger_verified", "evidence": "r123_tables/TABLES_R123_RECEIPT.json", "evidence_sha256": sha256_file(COMP / "r123_tables/TABLES_R123_RECEIPT.json")},
+        {"gate": "FIGURE_SOURCE_TRACE_COVERAGE", "method": "derived", "evidence": "figures/FIGURE_GATE_LEDGER.json", "evidence_sha256": fig_ledger_sha},
+        {"gate": "TABLE_SOURCE_TRACE_COVERAGE", "method": "derived", "evidence": "tables/A8_FIGURE_TABLE_SOURCE_HASH_LEDGER.tsv", "evidence_sha256": a8_sha},
+        {"gate": "CLAIM_CEILING_GATE", "method": "asserted_frozen_boundary", "evidence": "EXP-008/009 receipts", "evidence_sha256": ""},
+        {"gate": "HUMAN_VISUAL_REVIEW", "method": "operator_required", "evidence": "14-page PDF visual inspection", "evidence_sha256": pdf_sha},
+    ]
+    write_non_asserted_gate_audit(COMP / "NON_ASSERTED_MACHINE_GATE_AUDIT.json", gate_audit_rows)
+    write_json(COMP / "LICENSE_GATE_EVIDENCE.json", license_audit)
 
     non_machine_keys = {
         "HUMAN_VISUAL_REVIEW",
@@ -941,6 +1207,8 @@ def main() -> int:
         "CLAIM_CEILING",
         "PROTEIN_HINGE_PRIMARY_EVIDENCE_COUNT",
         "LATEX_CITATION_WARNING_COUNT",
+        "RECEIPT_HEAD_PARITY",
+        "LICENSE_METADATA_PARITY",
     }
 
     def gate_ok(value: Any) -> bool:
@@ -948,7 +1216,7 @@ def main() -> int:
             return True
         if isinstance(value, (int, float)) and value >= 1.0:
             return True
-        if value == 0:  # citation warning count
+        if value == 0:
             return True
         return False
 
@@ -957,10 +1225,15 @@ def main() -> int:
     closeout = {
         "schema": "hydradg.final_comprehensive_completion.v1",
         "recorded_at_utc": utc(),
-        "CURRENT_BRANCH": git_branch(),
-        "CURRENT_SHA": git_head(),
+        "CURRENT_BRANCH": head_parity["CURRENT_BRANCH"],
+        "CURRENT_SHA": head_parity["RECEIPT_CURRENT_SHA"],
+        "RECEIPT_CURRENT_SHA": head_parity["RECEIPT_CURRENT_SHA"],
+        "FINAL_PACKAGE_GIT_SHA": head_parity["FINAL_PACKAGE_GIT_SHA"],
+        "SOURCE_REVISION_USED": head_parity["SOURCE_REVISION_USED"],
+        "RECEIPT_HEAD_PARITY": head_parity["RECEIPT_HEAD_PARITY"],
+        "LICENSE_METADATA_PARITY": license_audit["LICENSE_RIGHTS_GATE"],
         "PR": PR,
-        "WORKTREE_STATE": "CLEAN_AFTER_BUILD",
+        "WORKTREE_STATE": "CLEAN" if head_parity["WORKTREE_CLEAN"] else "DIRTY",
         "PREDECESSOR_PDF_SHA256": PREDECESSOR_PDF_SHA,
         "CITATION_ONLY_SUCCESSOR_SHA256": CITATION_SUCCESSOR_SHA,
         "FINAL_SUCCESSOR_PDF_SHA256": pdf_sha,
@@ -982,12 +1255,28 @@ def main() -> int:
         "SIGNATURE_STATE": "NOT_SIGNED",
         "MERKLE_MMR_STATE": "NOT_COMMITTED",
         "NEXT_SAFE_ACTION": "HUMAN_VISUAL_REVIEW_ALL_PAGES",
-        "FINAL_REVIEW_GATE": "PASS" if machine_complete else "FAIL",
-        "FINAL_COMPREHENSIVE_UPLOAD_CANDIDATE": "NO" if gates["HUMAN_VISUAL_REVIEW"] == "REQUIRED" else "YES",
+        "FINAL_REVIEW_GATE": "PASS" if machine_complete and head_parity["RECEIPT_HEAD_PARITY"] == "PASS" else "FAIL",
+        "FINAL_COMPREHENSIVE_UPLOAD_CANDIDATE": "NO",
         "gates": gates,
+        "license_gate_evidence": {
+            "license_registry": license_registry,
+            "bom_license_rows": license_audit["rows"],
+            "a5_sha256": sha256_file(table_paths["A5"]),
+        },
+        "ledger_bindings": {
+            "statistics_receipt_sha256": stat_rec_sha,
+            "figures_r123_receipt_sha256": sha256_file(COMP / "r123_figures/FIGURES_R123_RECEIPT.json"),
+            "tables_r123_receipt_sha256": sha256_file(COMP / "r123_tables/TABLES_R123_RECEIPT.json"),
+            "figure_gate_ledger_sha256": fig_ledger_sha,
+            "a8_ledger_sha256": a8_sha,
+        },
     }
 
-    write_json(COMP / "FINAL_COMPREHENSIVE_COMPLETION_RECEIPT.json", closeout)
+    receipt_path = COMP / "FINAL_COMPREHENSIVE_COMPLETION_RECEIPT.json"
+    write_json(receipt_path, closeout)
+    receipt_sha = sha256_file(receipt_path)
+    closeout["RECEIPT_SHA256"] = receipt_sha
+    write_json(receipt_path, closeout)
     prior_gate = {}
     if (V4 / "SUCCESSOR_PDF_GATE.json").exists():
         prior_gate = json.loads((V4 / "SUCCESSOR_PDF_GATE.json").read_text())

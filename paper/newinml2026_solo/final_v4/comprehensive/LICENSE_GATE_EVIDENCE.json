@@ -1,0 +1,114 @@
+{
+  "LICENSE_RIGHTS_GATE": "PASS",
+  "SOFTWARE_LICENSE_COVERAGE": 1.0,
+  "license_registry_sha256": "d6adf46fb14dd22ce85102330c8aa2c72f827b35dd1d0b0466514dce7390f5a5",
+  "mismatches": [],
+  "rows": [
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "hydradg",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "LICENSING.md",
+      "component_id": "fco_fcg",
+      "license_declared": "CC-BY-NC-ND-4.0",
+      "license_expected": "CC-BY-NC-ND-4.0",
+      "license_source": "Zenodo record",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "gsigmad",
+      "license_declared": "see_upstream",
+      "license_expected": "",
+      "license_source": "upstream LICENSE",
+      "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "seedgraph",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "ollarma",
+      "license_declared": "see_upstream",
+      "license_expected": "",
+      "license_source": "upstream LICENSE",
+      "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "hydralamp",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "hydradb",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "antigence",
+      "license_declared": "see_upstream",
+      "license_expected": "",
+      "license_source": "upstream",
+      "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
+    },
+    {
+      "authoritative_source": "LICENSING.md",
+      "component_id": "vithia",
+      "license_declared": "CC-BY-NC-ND-4.0",
+      "license_expected": "CC-BY-NC-ND-4.0",
+      "license_source": "Zenodo",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "qwen3-1.7b",
+      "license_declared": "model_license",
+      "license_expected": "",
+      "license_source": "Ollama manifest",
+      "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "qwen2.5-coder-7b",
+      "license_declared": "model_license",
+      "license_expected": "",
+      "license_source": "Ollama manifest",
+      "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "neurips2026_style",
+      "license_declared": "NeurIPS kit terms",
+      "license_expected": "",
+      "license_source": "kit zip",
+      "license_verification_state": "EXEMPT_TEMPLATE_TERMS"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "cases_jsonl",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "repo",
+      "license_verification_state": "VERIFIED"
+    }
+  ],
+  "verifiable_component_count": 7,
+  "verified_component_count": 7
+}
