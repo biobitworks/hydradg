@@ -1,0 +1,31 @@
+{
+  "actor_id": null,
+  "anticube_state": {
+    "identity": "self",
+    "safety": "safe"
+  },
+  "authorization_basis": "double-blind anonymous commitment repair of V4 reviewer projection",
+  "canonicalization_method": "fco_train.custody.canon",
+  "claim_ceiling": "CUSTODY_MECHANICS",
+  "content_hash": "sha256:dd21288b691000bc3cf398c21c0166ac5ab70abf544d1af08a6c1a27ac39c519",
+  "created_at": "2026-08-30T00:47:54-07:00",
+  "device_or_instrument_id": null,
+  "encryption": null,
+  "environment_hash": "sha256:32f9f73b7b7417393aa917b93c38dbe923e812b461787a4222a7a88dd8d996a8",
+  "fco_version": "fco_minimum.v1",
+  "notes": "Reviewer PDF embeds ANON_COMMIT only (scheme NEWINML-ANON-COMMIT-V1). CONTENT_ROOT preserved in custody receipts; nonce is operator-private.",
+  "object_id": "fco:ffb1b746d7ea5bb8a59a24196d799d93b9091fea0abc6446e0d0e16815195531",
+  "object_type": "OPENREVIEW_SUBMISSION_PDF",
+  "parent_hashes": [
+    "sha256:1a6b0a967da41e5b619ec449ab0cdbb914797321661e7ee25f8b87f2521df94d",
+    "sha256:3e5185a0bf03640d96342be6354b07dcd3f31ecdfbd6ac2849e17eae9ca3b79e",
+    "sha256:0d7ee4ba5411ec3cd3f680bfa73c1b6164b6ab70b8fb6a4b9a576334057087b8"
+  ],
+  "project_id": "hydradg",
+  "run_id": "newinml-openreview-v5-anon-fco-20260830",
+  "signature": null,
+  "software_hash": "sha256:e116f9ff55c639997a44e3830df8753273a68f76918fff2b68ee822a60d7b6cb",
+  "source_or_derivative": "derivative",
+  "status": "accepted",
+  "supersedes": "sha256:3e5185a0bf03640d96342be6354b07dcd3f31ecdfbd6ac2849e17eae9ca3b79e"
+}

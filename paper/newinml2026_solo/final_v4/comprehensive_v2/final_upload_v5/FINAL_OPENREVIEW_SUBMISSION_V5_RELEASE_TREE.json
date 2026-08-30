@@ -1,0 +1,54 @@
+{
+  "INCLUSION_PROOF": {
+    "pdf_artifact": [
+      {
+        "position": "left",
+        "sibling": "d3990a7db77adda1ce7e0cefb4c76cc7e3b26d3f808ba2043376265d8dca70ee"
+      },
+      {
+        "position": "right",
+        "sibling": "aac5522c0965d60e57faad888b90ca7b289a587d8593f6ea084d919eeb0c2ecb"
+      }
+    ],
+    "release_fco": [
+      {
+        "position": "left",
+        "sibling": "3535e1af8e2112e50c0e07de89ae81c0d83c6909fff70d37d9d50bf70c12d155"
+      },
+      {
+        "position": "left",
+        "sibling": "79421c5623fcabbcc9ccd0b9cefa4d77146b4293fb4e19ea0d46636550cc8c4f"
+      }
+    ]
+  },
+  "INCLUSION_VERIFY": "PASS",
+  "LEAF_COUNT": 4,
+  "LEAF_ENCODING": "leaf=sha256(0x00||sha256(bytes)); node=sha256(0x01||raw32||raw32); odd-promote; order_independent=sorted",
+  "LEAF_ORDER": "sorted(leaf_hash) order_independent=True",
+  "MERKLE_MMR_ALGORITHM": "fco_train.custody.merkle_root.v3",
+  "PREDECESSOR_ROOT": "0d7ee4ba5411ec3cd3f680bfa73c1b6164b6ab70b8fb6a4b9a576334057087b8",
+  "RELEASE_ROOT": "b045fed4ecb4586de91182d8e2d722d5258452f2967eda42fb3613b59bdbf227",
+  "leaves": [
+    {
+      "binds": "4730c787f03e216f08c4e81c4d3e62250d52252c6c6a111be6377db36ed8e1c0",
+      "leaf": "16147f069748d6c77a880c07af2baa5055d0053d1c71d83d354efe1b6a7f7143",
+      "role": "release_fco"
+    },
+    {
+      "binds": "0d7ee4ba5411ec3cd3f680bfa73c1b6164b6ab70b8fb6a4b9a576334057087b8",
+      "leaf": "3535e1af8e2112e50c0e07de89ae81c0d83c6909fff70d37d9d50bf70c12d155",
+      "role": "predecessor_release"
+    },
+    {
+      "binds": "dd21288b691000bc3cf398c21c0166ac5ab70abf544d1af08a6c1a27ac39c519",
+      "leaf": "4fb195c1e2e02cdf087dbbf5362115a5cc699c243a067361f8262971d5bd6c31",
+      "role": "pdf_artifact"
+    },
+    {
+      "binds": "1a6b0a967da41e5b619ec449ab0cdbb914797321661e7ee25f8b87f2521df94d",
+      "leaf": "d3990a7db77adda1ce7e0cefb4c76cc7e3b26d3f808ba2043376265d8dca70ee",
+      "role": "content_root"
+    }
+  ],
+  "schema": "hydradg.newinml.openreview_v5.release_tree.v1"
+}
