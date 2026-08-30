@@ -1,0 +1,71 @@
+{
+  "schema": "hydradg.chatgpt_review_reconciliation.v1",
+  "reconciled_at_utc": "2026-08-29T23:30:00Z",
+  "source_pr": 38,
+  "source_sha": "38cdb62e72bd26a48b42e286b86303a949a545fa",
+  "chatgpt_review_pr": 39,
+  "chatgpt_review_sha": "b835777bddaca44063c70b683367248f7b9d7cc5",
+  "cursor_review_branch": "cursor/newinml-solo-appendix-federation-v4-20260829",
+  "appendix_documentation_gap": {
+    "verdict": "PASS",
+    "prior_E": "one-line RELATED_IMPLEMENTATION label only",
+    "prior_F": "figure pointer only",
+    "successor_E": "E_gsd_antigence_federation.md verified independent"
+  },
+  "unsupported_chatgpt_claims": [
+    "Implied automated Python enforcement of UNDERPOWERED vs TRUE_NEGATIVE (spec-only; gate_checks empty)",
+    "Treating claimed repo SHAs as current HEAD (all three sibling repos moved forward)",
+    "Whole-project SeedGraph completion (V1A INTERRUPTED/NONTERMINAL)",
+    "Federation-wide signature/MMR commitment (all NewInML closeouts NOT_SIGNED/NOT_COMMITTED)",
+    "Anticube canonical semantics fully resolved (BLOCKED: ANTICUBE_SPACE_TIME v2 not located)",
+    "Vitaology EXP-001 1906 imprint toolchain proof (receipt is 1899 ch01 only)",
+    "Vitaology classifier admissible as positive evidence (EXP-003 FAIL κ=0.472 < 0.7)",
+    "HydraLamp primary evidence location in hydralamp repo (primary receipts in hydradg eval)",
+    "CodeBERT/VulBERTa as executed main Antigence pipeline (future work for B1-B3; scripts only)"
+  ],
+  "corrected_chatgpt_claims": [
+    "GSD spec surface and CONFIRMATORY/EXPLORATORY/REPLICATION gates verified at pin 484e42c",
+    "Negative-result taxonomy NULL/UNDERPOWERED/TRUE_NEGATIVE verified in negative-results.yaml",
+    "Antigence B1-B3 numbers match BENCHMARKS.md at pin 060dba88",
+    "Devign near-chance result preserved prominently",
+    "25-source/312-atom bounded SeedGraph batch verified in lane8 receipts",
+    "163/163 manuscript traceability verified in seedgraph_traceability closeout",
+    "HydraLamp 4x25 100/100 and 8/8 tamper verified in hydradg eval",
+    "EXP-008/009 UNDERPOWERED invariants preserved",
+    "Protein Hinge primary admission count 0",
+    "Vithia resolves to Zenodo 10.5281/zenodo.21829929 + HF biobitworks/fco-vithia-fmo-076 (no standalone GitHub)"
+  ],
+  "newly_verified_implementations": [
+    "GSD UNDERPOWERED misclassification risk documented (no runtime gate)",
+    "Antigence B5 SciFact embedding lane post-pin (not in ChatGPT B1-B3 scope)",
+    "Ollarma strict_model_identity post claimed SHA",
+    "SeedGraph custody audit head mismatch documented (frozen f2f5d7e vs observed head)",
+    "Hosted migration 2026-08-20 SIGNED lane explicitly not conflated with NewInML closeouts"
+  ],
+  "sha_drift_since_chatgpt": {
+    "gettingsciencedone": {"claimed": "484e42c", "current_head": "d90c4d6", "commits_ahead": 343},
+    "antigence": {"claimed": "060dba88", "current_head": "1f12b3c2", "commits_ahead": 237},
+    "fractal-custody-objects": {"claimed": "2431dd9", "current_head": "9c8e202", "commits_ahead": 2},
+    "seedgraph": {"claimed": "f2f5d7e", "current_head": "0652bc87", "commits_ahead": 3, "hydradg_frozen": true},
+    "ollarma": {"claimed": "d0cf78d4", "current_head": "9942f58", "commits_ahead": 118},
+    "hydralamp": {"claimed": "0799e94e", "current_head": "0799e94e", "commits_ahead": 0},
+    "vitaology": {"claimed": "0efab4aa", "current_head": "65de7eb6", "commits_ahead": "unknown"}
+  },
+  "independent_questions": {
+    "1_appendix_E_documents_implementation": true,
+    "2_unsupported_statements": "see unsupported_chatgpt_claims",
+    "3_sha_moved": true,
+    "4_quantitative_reverse_trace": true,
+    "5_evidence_classes_separated": true,
+    "6_ml_complement_consistent": true,
+    "7_vitaology_admissible_related": true,
+    "8_vithia_companion_only": true,
+    "9_anticube_resolved": false,
+    "10_anonymity_leak_scan": "PENDING",
+    "11_redistribution_safe": "PASS_WITH_NC_ND_EXCLUSIONS",
+    "12_main_pdf_page_limit": "PENDING_BUILD",
+    "13_checklist_truthful": true,
+    "14_protein_hinge_zero": true,
+    "15_earliest_blocker": "ANTICUBE_CANONICAL_SOURCE + PAGE_LIMIT_BUILD_VERIFY + ANONYMITY_SCAN"
+  }
+}

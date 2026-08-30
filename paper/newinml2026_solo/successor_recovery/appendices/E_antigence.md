@@ -1,3 +1,3 @@
 # Appendix E_antigence.md
 
-Antigence: NOT_ADMISSIBLE as primary; RELATED_IMPLEMENTATION only per final_v3 matrix.
+See `appendices/E_gsd_antigence_federation.md` in successor_recovery package.
