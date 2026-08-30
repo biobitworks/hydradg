@@ -5,24 +5,36 @@
   "CONCEPTUAL_FIGURES": 4,
   "CONTENT_PAGES": 5,
   "CONTENT_PAGE_GATE": "PASS",
+  "CROSS_IMPLEMENTATION_COMPARISON_FIGURES": 1,
   "CURRENT_BRANCH": "cursor/comprehensive-v2-visual-rebuild-fb0f",
-  "CURRENT_SHA": "331e4adac24b07650abe4dd4ec18be0543aa864a",
+  "CURRENT_SHA": "d197cddf84b5d51436709e318e9068e4c4192717",
+  "CUSTODY_PROVENANCE_FIGURES": 1,
   "EMPIRICAL_STATISTICAL_FIGURES": 2,
   "EXECUTION_HOST": "magicSTUDIObox.local",
   "FIGURES_TOTAL": 16,
+  "FIGURE_PARTITION_GATE": "PASS",
+  "FINAL_PACKAGE_GIT_SHA": "d197cddf84b5d51436709e318e9068e4c4192717",
   "FINAL_PDF_PATH": "paper/newinml2026_solo/final_v4/comprehensive_v2/FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf",
   "FINAL_PDF_SHA256": "487c7e28132c9ba1fb2d86c7ef2e74ce8f9f89245aa16f3374a943356a6bc120",
   "FINAL_SUPPLEMENT_PATH": "paper/newinml2026_solo/final_v4/comprehensive_v2/FINAL_COMPREHENSIVE_SUPPLEMENT_V2.pdf",
   "FINAL_SUPPLEMENT_SHA256": "ee0553f2b1333077ab29a5f4506019b5fb5bbf03c949068c5e81df965c5fcf85",
   "FINAL_ZIP_SHA256": "267a63cb4c87e95b4beb21722076a7e5d01f3dff17726471f00148e092352cb2",
+  "HEAD_PARITY": "PASS",
+  "LICENSE_GATE_DERIVATION": "semantic_authoritative_registry",
+  "LICENSE_METADATA_PARITY": "PASS",
   "MAIN_PAPER_FIGURES": [
     "F1",
     "F2",
     "F6"
   ],
   "PARENT_SHA": "cd71bb99f30e9bc9ac67a0f688516c1665f1906f",
+  "RECEIPT_CURRENT_SHA": "d197cddf84b5d51436709e318e9068e4c4192717",
+  "RECEIPT_HEAD_PARITY": "PASS",
+  "RECEIPT_SHA256": "40dc67b31cd5db6d58b21976da9d3f2376fd8ad94b5c506662ea090be8bc02bb",
   "REFERENCE_PAGES": 3,
   "REPRODUCIBILITY_FIGURES": 1,
+  "ROBUSTNESS_FAULT_INJECTION_FIGURES": 2,
+  "SOURCE_REVISION_USED": "d197cddf84b5d51436709e318e9068e4c4192717",
   "SUPPLEMENT_FIGURES": [
     "F3",
     "F4",
@@ -41,12 +53,16 @@
   ],
   "SYSTEMS_FIGURES": 3,
   "TABLES_TOTAL": 13,
+  "TABLE_LEDGER_COUNT": 13,
+  "TABLE_UNIQUE_ID_GATE": "PASS",
   "TOTAL_PAGES": 15,
+  "finalize_mode": "receipt_only_clean_head",
   "gates": {
     "ANONYMITY_GATE": "PASS",
     "ANTICUBE_CANONICAL_SEMANTICS_GATE": "PASS",
     "ANTICUBE_INVENTED_SCALAR_COUNT": 0,
     "CITATION_GATE": "PASS",
+    "CLAIM_CEILING": "CUSTODY_MECHANICS",
     "CLAIM_CEILING_GATE": "PASS",
     "CONTENT_PAGE_GATE": "PASS",
     "CROSS_PROJECT_PRIMARY_EVIDENCE_LEAK_COUNT": 0,
@@ -56,18 +72,26 @@
     "FIGURES_R123": "PASS",
     "FIGURE_CONCEPT_VS_EMPIRICAL_CLASSIFICATION_COVERAGE": 1.0,
     "FIGURE_NUMERIC_REVERSE_TRACE_COVERAGE": 1.0,
+    "FIGURE_PARTITION_GATE": "PASS",
     "FIGURE_QUESTION_COVERAGE": 1.0,
     "FIGURE_SOURCE_TRACE_COVERAGE": 1.0,
     "FONT_EMBEDDING_GATE": "PASS",
+    "HEAD_PARITY": "PASS",
     "HUMAN_VISUAL_REVIEW": "REQUIRED",
     "LATEX_CITATION_WARNING_COUNT": 0,
+    "LICENSE_GATE_DERIVATION": "semantic_authoritative_registry",
+    "LICENSE_METADATA_PARITY": "PASS",
     "LICENSE_RIGHTS_GATE": "PASS",
     "MACHINE_VISUAL_QA": "PASS",
+    "MERKLE_MMR_STATE": "NOT_COMMITTED",
     "NULL_REFERENCE_VISIBILITY": "PASS",
     "PRIMARY_HYPOTHESIS_FIGURE": "PASS",
     "PROTEIN_HINGE_PRIMARY_EVIDENCE_COUNT": 0,
+    "RECEIPT_HEAD_PARITY": "PASS",
     "SECURITY_GATE": "PASS",
+    "SIGNATURE_STATE": "NOT_SIGNED",
     "SINGLE_BIBLIOGRAPHY_GATE": "PASS",
+    "SOFTWARE_LICENSE_COVERAGE": 1.0,
     "SOFTWARE_MODEL_DATASET_BOM_GATE": "PASS",
     "STATISTICS_R123": "PASS",
     "SYNTHETIC_AS_REAL_COUNT": 0,
@@ -75,173 +99,149 @@
     "TABLES_R123": "PASS",
     "TABLE_NUMERIC_REVERSE_TRACE_COVERAGE": 1.0,
     "TABLE_SOURCE_TRACE_COVERAGE": 1.0,
+    "TABLE_UNIQUE_ID_GATE": "PASS",
     "UNDERPOWERED_SEMANTICS_GATE": "PASS",
     "UNEXPLAINED_NONPASS_COUNT": 0,
     "empty_pages": 0,
     "finding_count": 0,
     "hits": [],
     "main_bibitem_count": 18,
-    "unembedded_count": 0,
-    "LICENSE_METADATA_PARITY": "PASS",
-    "LICENSE_GATE_DERIVATION": "semantic_authoritative_registry",
-    "SOFTWARE_LICENSE_COVERAGE": 1.0,
-    "CLAIM_CEILING": "CUSTODY_MECHANICS",
-    "TABLE_UNIQUE_ID_GATE": "PASS",
-    "FIGURE_PARTITION_GATE": "PASS",
-    "HEAD_PARITY": "PASS",
-    "RECEIPT_HEAD_PARITY": "PASS",
-    "SIGNATURE_STATE": "NOT_SIGNED",
-    "MERKLE_MMR_STATE": "NOT_COMMITTED"
+    "unembedded_count": 0
   },
-  "recorded_at_utc": "2026-08-30T05:41:33Z",
-  "schema": "hydradg.comprehensive_v2_closeout.v1",
-  "RECEIPT_CURRENT_SHA": "331e4adac24b07650abe4dd4ec18be0543aa864a",
-  "FINAL_PACKAGE_GIT_SHA": "331e4adac24b07650abe4dd4ec18be0543aa864a",
-  "SOURCE_REVISION_USED": "331e4adac24b07650abe4dd4ec18be0543aa864a",
-  "HEAD_PARITY": "PASS",
-  "RECEIPT_HEAD_PARITY": "PASS",
-  "LICENSE_METADATA_PARITY": "PASS",
-  "TABLE_LEDGER_COUNT": 13,
-  "TABLE_UNIQUE_ID_GATE": "PASS",
-  "FIGURE_PARTITION_GATE": "PASS",
-  "ROBUSTNESS_FAULT_INJECTION_FIGURES": 2,
-  "CROSS_IMPLEMENTATION_COMPARISON_FIGURES": 1,
-  "CUSTODY_PROVENANCE_FIGURES": 1,
-  "finalize_mode": "receipt_only_clean_head",
   "license_gate_evidence": {
-    "license_registry": {
-      "LICENSE": {
-        "path": "LICENSE",
-        "sha256": "76e1c97f4b74316600e7e76407f0423d0f9f880867d7356a772b4c04de089ad0",
-        "expected_spdx": "Apache-2.0",
-        "detected": true
-      },
-      "LICENSING.md": {
-        "path": "LICENSING.md",
-        "sha256": "ae3dc8c988bb5ad7042a5a7664d764eba308a5c70b8765bbe0fa14b4d50ad46e",
-        "expected_spdx": "CC-BY-NC-ND-4.0",
-        "detected": true
-      },
-      "package.json": {
-        "path": "package.json",
-        "sha256": "4007832d7fd3078ccd84571622db84e3201598ecb517ec42488c20065118f381",
-        "expected_spdx": "Apache-2.0",
-        "detected": true
-      },
-      "THIRD_PARTY_NOTICES.md": {
-        "path": "THIRD_PARTY_NOTICES.md",
-        "sha256": "4c143a782b8a5a865cb9ce2db39e24f6c03aa7444ed5572baa5fc6f0a3ac5205",
-        "expected_spdx": "AGPL-3.0-upstream-HydraDB",
-        "detected": true
-      }
-    },
     "bom_license_rows": [
       {
+        "authoritative_source": "LICENSE",
         "component_id": "hydradg",
-        "license_source": "LICENSE",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "LICENSE",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "LICENSING.md",
         "component_id": "fco_fcg",
-        "license_source": "Zenodo record",
         "license_declared": "CC-BY-NC-ND-4.0",
         "license_expected": "CC-BY-NC-ND-4.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSING.md"
+        "license_source": "Zenodo record",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "gsigmad",
-        "license_source": "upstream LICENSE",
         "license_declared": "see_upstream",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM",
-        "authoritative_source": ""
+        "license_source": "upstream LICENSE",
+        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
       },
       {
+        "authoritative_source": "LICENSE",
         "component_id": "seedgraph",
-        "license_source": "LICENSE",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "LICENSE",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "ollarma",
-        "license_source": "upstream LICENSE",
         "license_declared": "see_upstream",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM",
-        "authoritative_source": ""
+        "license_source": "upstream LICENSE",
+        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
       },
       {
+        "authoritative_source": "LICENSE",
         "component_id": "hydralamp",
-        "license_source": "LICENSE",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "LICENSE",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "THIRD_PARTY_NOTICES.md",
         "component_id": "hydradb",
-        "license_source": "THIRD_PARTY_NOTICES.md",
         "license_declared": "AGPL-3.0-upstream-HydraDB",
         "license_expected": "AGPL-3.0-upstream-HydraDB",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "THIRD_PARTY_NOTICES.md"
+        "license_source": "THIRD_PARTY_NOTICES.md",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "antigence",
-        "license_source": "upstream",
         "license_declared": "see_upstream",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM",
-        "authoritative_source": ""
+        "license_source": "upstream",
+        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
       },
       {
+        "authoritative_source": "LICENSING.md",
         "component_id": "vithia",
-        "license_source": "Zenodo",
         "license_declared": "CC-BY-NC-ND-4.0",
         "license_expected": "CC-BY-NC-ND-4.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSING.md"
+        "license_source": "Zenodo",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "qwen3-1.7b",
-        "license_source": "Ollama manifest",
         "license_declared": "model_license",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST",
-        "authoritative_source": ""
+        "license_source": "Ollama manifest",
+        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
       },
       {
+        "authoritative_source": "",
         "component_id": "qwen2.5-coder-7b",
-        "license_source": "Ollama manifest",
         "license_declared": "model_license",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST",
-        "authoritative_source": ""
+        "license_source": "Ollama manifest",
+        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
       },
       {
+        "authoritative_source": "",
         "component_id": "neurips2026_style",
-        "license_source": "kit zip",
         "license_declared": "NeurIPS kit terms",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_TEMPLATE_TERMS",
-        "authoritative_source": ""
+        "license_source": "kit zip",
+        "license_verification_state": "EXEMPT_TEMPLATE_TERMS"
       },
       {
+        "authoritative_source": "LICENSE",
         "component_id": "cases_jsonl",
-        "license_source": "repo",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "repo",
+        "license_verification_state": "VERIFIED"
       }
-    ]
+    ],
+    "license_registry": {
+      "LICENSE": {
+        "detected": true,
+        "expected_spdx": "Apache-2.0",
+        "path": "LICENSE",
+        "sha256": "76e1c97f4b74316600e7e76407f0423d0f9f880867d7356a772b4c04de089ad0"
+      },
+      "LICENSING.md": {
+        "detected": true,
+        "expected_spdx": "CC-BY-NC-ND-4.0",
+        "path": "LICENSING.md",
+        "sha256": "ae3dc8c988bb5ad7042a5a7664d764eba308a5c70b8765bbe0fa14b4d50ad46e"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "detected": true,
+        "expected_spdx": "AGPL-3.0-upstream-HydraDB",
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "4c143a782b8a5a865cb9ce2db39e24f6c03aa7444ed5572baa5fc6f0a3ac5205"
+      },
+      "package.json": {
+        "detected": true,
+        "expected_spdx": "Apache-2.0",
+        "path": "package.json",
+        "sha256": "4007832d7fd3078ccd84571622db84e3201598ecb517ec42488c20065118f381"
+      }
+    }
   },
-  "RECEIPT_SHA256": "0032b4e89808939533cde5f201eb56d66f861f4912cc8bac830dc34831543bc2",
-  "LICENSE_GATE_DERIVATION": "semantic_authoritative_registry"
+  "recorded_at_utc": "2026-08-30T05:41:44Z",
+  "schema": "hydradg.comprehensive_v2_closeout.v1"
 }
