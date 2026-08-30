@@ -1,240 +1,116 @@
 import Link from "next/link";
 
-import Breadcrumbs from "@/components/Breadcrumbs";
-
-const RECEIPT_URL =
-  "https://github.com/biobitworks/hydradg/blob/hack-hydra/final-hosted-fcg-20260820/eval/hosted_migration_20260820/information_savings/INFORMATION_SAVINGS_RECEIPT_V2.json";
-const CALCULATOR_URL =
-  "https://github.com/biobitworks/hydradg/blob/hack-hydra/final-hosted-fcg-20260820/scripts/calculate_information_savings.py";
-
-const evidenceStates = [
-  ["Repository artifact chain", "PRESENT", "Hash-addressed artifacts and FCO/FCG lineage are retained in GitHub."],
-  ["LongMemEval full500", "EXECUTED", "500 cases; 470 retrieval-scored; 30 abstentions; no positive B/C/D Hit@5 signal."],
-  ["Atom/key dedup accounting", "PRESENT", "Deterministic arithmetic over the retained word + sentence accounting inputs."],
-  ["Download-byte savings", "NOT_MEASURED", "A complete {path,size_bytes,sha256} acquisition manifest has not yet been frozen."],
-  ["Energy savings", "THEORETICAL_ONLY", "FLOP and energy-equivalent scenario only; measured electrical energy is null."],
-  ["SeedGraph admission", "NOT_ESTABLISHED", "A generated receipt is not treated as evidence of an executed SeedGraph admission."],
-  ["Full local HydraDB write/read", "NOT_ESTABLISHED", "The existing accounting script does not prove a full network write plus readback."],
-  ["Expanded hosted parity", "NOT_ESTABLISHED", "The retained 36-node/24-edge hosted receipt remains a historical bounded scope only."],
-  ["Root scopes", "RECONCILIATION_REQUIRED", "Historical T3 roots and expanded conversation/project roots remain explicitly scoped."],
+const K_ROWS = [
+  ["K=5", "Method A", "0.96383", "0.90660", "0.63787"],
+  ["K=5", "Method D", "0.94468", "0.84603", "0.63787"],
+  ["K=10", "Method A", "0.97872", "0.94535", "0.51511"],
+  ["K=10", "Method D", "0.97021", "0.92273", "0.51511"],
 ] as const;
 
-const judgeFit = [
-  {
-    title: "A particularly strong graph data model",
-    body: "Canonical FCO identities are reused while typed FCG edges preserve source, time, supersession, contradiction, membership and spatiotemporal context. One content identity can participate in many contexts without becoming many unrelated copies.",
-    href: "/knowledge#fractal-custody-object-fco",
-    link: "Open FCO terminology",
-  },
-  {
-    title: "A novel retrieval or reasoning approach",
-    body: "HydraDG treats similarity as only one candidate signal. Retrieval can carry graph context, custody state, source identity, time, contradiction, abstention and claim ceilings into the reasoning surface.",
-    href: "/how-to",
-    link: "Follow the retrieval walkthrough",
-  },
-  {
-    title: "Interesting use of relationships, traversal or context",
-    body: "A judge can move from source bytes to KnowledgeAtom to SeedOfTruth to evidence, state and release, or start from a reused hash and traverse every retained location/time where that identity appears.",
-    href: "/graph",
-    link: "Traverse the 4D FCG",
-  },
-  {
-    title: "Harder to pull off with vector or relational approaches alone",
-    body: "Vector similarity does not prove exact identity or provenance. Relational systems can encode these facts, but recursive content-addressed custody, supersession and multi-scale traversal require substantial application machinery. HydraDG uses the graph itself as the context/governance surface; this is a fit claim, not an impossibility claim about other databases.",
-    href: "/evidence",
-    link: "Inspect bounded evidence",
-  },
+const SOURCE_LINKS = [
+  ["Scale economics + fail-closed plan", "https://github.com/biobitworks/hydradg/blob/main/docs/BEST_USE_HYDRADB_SCALE_ECONOMICS_PLAN.md"],
+  ["Deterministic calculator", "https://github.com/biobitworks/hydradg/blob/main/scripts/calculate_information_savings.py"],
+  ["Calculator input", "https://github.com/biobitworks/hydradg/blob/main/eval/hosted_migration_20260820/information_savings/INPUT.json"],
+  ["Deterministic receipt", "https://github.com/biobitworks/hydradg/blob/main/eval/hosted_migration_20260820/information_savings/INFORMATION_SAVINGS_RECEIPT_V2.json"],
+  ["Legacy projection receipt", "https://github.com/biobitworks/hydradg/blob/main/eval/hosted_migration_20260820/DEDUPLICATION_PARQUET_RECEIPT.json"],
+  ["K5/K10 pre-registration", "https://github.com/biobitworks/hydradg/blob/main/PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json"],
+  ["Retained K5/K10 summary", "https://github.com/biobitworks/hydradg/blob/main/eval/track03_k5_k10_20260819/RETAINED_MATRIX_SUMMARY.json"],
 ] as const;
 
 export default function BestUsePage() {
   return (
     <main>
-      <Breadcrumbs
-        items={[
-          { label: "Home", href: "/" },
-          { label: "Judge", href: "/judge" },
-          { label: "Best Use of HydraDB" },
-        ]}
-        summaryText="Look for the separation between exact identity reuse, measured benchmark evidence, modeled scale accounting, and operations that remain intentionally NOT_ESTABLISHED."
-      />
-
       <header className="hero">
         <div>
-          <p className="eyebrow">Hack Hydra 2026 · Best Use of HydraDB · show the math</p>
-          <h1>Store identity once. Traverse context many times.</h1>
-          <p className="lede">
-            HydraDG uses a content-addressed graph to separate canonical identity from the many places, times,
-            models and claims that reference it. The scale-economics calculator is deterministic and fail-closed:
-            input hash → calculation-contract hash → output receipt hash. A mismatch is evidence, not a value to hide.
-          </p>
-          <div className="actions">
-            <Link className="primary" href="/graph">Open the graph</Link>
-            <Link className="secondary" href="/evidence">Evidence ledger</Link>
-            <Link className="secondary" href="/how-to">How to use</Link>
-            <Link className="secondary" href="/knowledge">Terminology / KB</Link>
-          </div>
+          <p className="eyebrow goldText">Best Use of HydraDB</p>
+          <h1>One canonical fact. Many relationships. Deterministic accounting.</h1>
+          <p className="lede">HydraDG uses HydraDB as a graph-native context and custody layer: exact content identities become reusable nodes, while provenance, time, contradiction, supersession and evidence-path context remain typed relationships. A Vercel deployment can lack live HydraDB credentials without erasing the retained HydraDB execution evidence.</p>
+          <div className="actions"><Link className="primary goldenCta" href="/track03">See executed retrieval</Link><Link className="secondary" href="/graph">Traverse the FCG</Link><Link className="secondary" href="/models">Model boundary</Link></div>
         </div>
-        <div className="heroStatus">
-          <span className="pill pillGood">DETERMINISTIC ACCOUNTING</span>
-          <span className="pill pillGood">FULL500 EXECUTED</span>
-          <span className="pill pillMuted">ENERGY THEORETICAL ONLY</span>
-          <span className="pill pillMuted">EXPANDED PARITY NOT ESTABLISHED</span>
-        </div>
+        <div className="heroStatus"><span className="pill pillGood">GRAPH-NATIVE USE CASE</span><span className="pill pillWarn">LIVE HOSTED STATUS IS DEPLOYMENT-SPECIFIC</span></div>
       </header>
 
-      <section className="metrics" aria-label="Deterministic scale accounting">
-        <article className="metric">
-          <span className="metricLabel">Combined identity reuse</span>
-          <strong>65.730975%</strong>
-          <span className="small muted">31,672,976 raw occurrences → 10,854,020 unique keys</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Duplicate occurrences</span>
-          <strong>20,818,956</strong>
-          <span className="small muted">word + sentence retained accounting</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">Canonical Parquet footprint</span>
-          <strong>1,101,473,790 B</strong>
-          <span className="small muted">declared canonical output footprint · not download savings</span>
-        </article>
-        <article className="metric">
-          <span className="metricLabel">7B scenario</span>
-          <strong>2.91465384×10¹⁷ FLOPs</strong>
-          <span className="small muted">0.809626 Wh theoretical equivalent · NOT measured energy</span>
-        </article>
+      <section className="metrics">
+        <article className="metric"><span className="metricLabel">Raw word + sentence occurrences</span><strong>31,672,976</strong></article>
+        <article className="metric"><span className="metricLabel">Canonical unique keys</span><strong>10,854,020</strong></article>
+        <article className="metric"><span className="metricLabel">Reusable duplicate occurrences</span><strong>20,818,956</strong></article>
+        <article className="metric"><span className="metricLabel">Occurrence reuse</span><strong>65.730975%</strong></article>
       </section>
 
       <section className="computeSection">
-        <span className="sectionNumber">01 / WHY HYDRADB</span>
-        <h2 className="displayTitle">The judging criteria map directly to the graph contract.</h2>
+        <span className="sectionNumber goldenSectionLabel">01 / WHY HYDRADB</span>
+        <h2 className="displayTitle">Similarity is not identity, and context is not a flat row.</h2>
         <div className="grid twoCol">
-          {judgeFit.map((item) => (
-            <article className="panel" key={item.title}>
-              <h2>{item.title}</h2>
-              <p className="muted">{item.body}</p>
-              <div className="actions"><Link className="secondary" href={item.href}>{item.link}</Link></div>
-            </article>
-          ))}
+          <article className="panel"><p className="eyebrow">Canonical graph identity</p><h2>Hash once; reference many times.</h2><p>A content-addressed FCO can be reused across documents, releases, experiments and times without pretending each occurrence is new content. FCG edges preserve where, when and why that identity appears.</p></article>
+          <article className="panel"><p className="eyebrow">Typed reasoning context</p><h2>Traverse provenance, contradiction and supersession.</h2><p>HydraDB relationships can carry <span className="mono">DERIVED_FROM</span>, <span className="mono">CONTRADICTS</span>, <span className="mono">SUPERSEDED_BY</span> and spatiotemporal context. Vector similarity can be a candidate signal, but it does not prove custody or exact equality.</p></article>
+        </div>
+        <p className="small muted note">HydraDG does not claim vector or relational systems are incapable of representing this information. The claim is narrower: a graph-native context layer makes recursive evidence relationships, exact identity and traversal first-class rather than application-side glue.</p>
+      </section>
+
+      <section className="computeSection">
+        <span className="sectionNumber goldenSectionLabel">02 / DETERMINISTIC REUSE MATH</span>
+        <h2 className="displayTitle">The savings claim is split into measured, counted and theoretical lanes.</h2>
+        <div className="panel goldenPanel">
+          <p className="mono">31,672,976 raw occurrences = 10,854,020 unique keys + 20,818,956 duplicate occurrences</p>
+          <p className="mono">reuse% = 100 × 20,818,956 / 31,672,976 = 65.730975%</p>
+          <p className="mono">declared canonical Parquet footprint = 350,290,966 + 751,182,824 = 1,101,473,790 bytes</p>
+        </div>
+        <div className="grid twoCol" style={{ marginTop: 24 }}>
+          <article className="panel"><p className="eyebrow">What is established</p><h2>Canonical atom/key reuse accounting</h2><p>The retained counts deterministically show 20,818,956 repeated word/sentence occurrences relative to unique keys. This supports the graph-economic idea of reusing canonical identities while preserving multiple contextual edges.</p></article>
+          <article className="panel"><p className="eyebrow">What is not established</p><h2>Download-byte savings: NOT_MEASURED</h2><p>The calculator input currently has an empty full acquisition manifest. We therefore do not convert occurrence reuse into GB saved. The next byte-level gate requires one <span className="mono">path + size_bytes + sha256</span> record per acquired object.</p></article>
         </div>
       </section>
 
-      <section className="computeSection" id="math">
-        <span className="sectionNumber">02 / DETERMINISTIC MATH</span>
-        <h2 className="displayTitle">The arithmetic is reproducible from retained inputs.</h2>
+      <section className="computeSection">
+        <span className="sectionNumber goldenSectionLabel">03 / CALCULATOR CAUGHT A DISCREPANCY</span>
+        <h2 className="displayTitle">Failure is evidence when the calculation is hash-bound.</h2>
+        <div className="metrics">
+          <article className="metric"><span className="metricLabel">Legacy projection</span><strong>809.63 Wh</strong><span className="small muted">projection-only receipt</span></article>
+          <article className="metric"><span className="metricLabel">Deterministic recomputation</span><strong>0.809626 Wh</strong><span className="small muted">theoretical equivalent only</span></article>
+          <article className="metric"><span className="metricLabel">Theoretical FLOPs</span><strong>2.91465384e17</strong><span className="small muted">not measured compute</span></article>
+          <article className="metric"><span className="metricLabel">Measured energy</span><strong>NULL</strong><span className="small muted">not fabricated</span></article>
+        </div>
+        <div className="panel"><p className="mono">2 × 7,000,000,000 × 20,818,956 = 291,465,384,000,000,000 FLOPs</p><p className="mono">291,465,384,000,000,000 / 100,000,000,000,000 / 3600 = 0.809626 Wh</p><p>The roughly 1,000× legacy discrepancy is preserved instead of silently overwritten. The deterministic contract hashes canonical input, calculation rules and output receipt; <span className="mono">--verify</span> exits non-zero on mismatch.</p></div>
+        <p className="small muted note">Energy remains theoretical. No measured watt-hour claim is promoted from this scenario.</p>
+      </section>
+
+      <section className="computeSection">
+        <span className="sectionNumber goldenSectionLabel">04 / WHY K=5 AND K=10</span>
+        <h2 className="displayTitle">K is a context budget, not a model score.</h2>
+        <p className="sectionLead">K=5 asks whether the correct memory survives a tight five-item retrieval budget. K=10 is the controlled falsification test for the hypothesis that useful memories are ranked below position five. The retained matrix changed K while preserving the frozen dataset and retrieval logic.</p>
+        <div className="tableWrap"><table><thead><tr><th>Depth</th><th>Method</th><th>Hit@K</th><th>Recall@K</th><th>Evidence-path coverage</th></tr></thead><tbody>{K_ROWS.map(([k, method, hit, recall, coverage]) => <tr key={`${k}-${method}`}><td>{k}</td><td>{method}</td><td>{hit}</td><td>{recall}</td><td>{coverage}</td></tr>)}</tbody></table></div>
+        <div className="grid twoCol" style={{ marginTop: 24 }}>
+          <article className="panel"><p className="eyebrow">Depth result</p><h2>K=10 improved retrieval.</h2><p>Method A gained +1.489 percentage points Hit@K and +3.875 pp Recall@K. Method D gained +2.553 pp Hit@K and +7.670 pp Recall@K.</p></article>
+          <article className="panel"><p className="eyebrow">Trade-off</p><h2>More depth did not mean denser evidence paths.</h2><p>Evidence-path coverage moved from 0.63787 at K=5 to 0.51511 at K=10, a -12.276 percentage-point change in this retained matrix.</p></article>
+        </div>
+        <p className="small muted note">RAW and SeedGraph had identical retrieval metrics at the same K under the tested parameters. That retains the representation null rather than calling K=10 a SeedGraph win.</p>
+      </section>
+
+      <section className="computeSection">
+        <span className="sectionNumber goldenSectionLabel">05 / DOES A MODEL IMPROVE IT?</span>
+        <h2 className="displayTitle">Not established yet.</h2>
         <div className="grid twoCol">
-          <article className="panel">
-            <p className="eyebrow">Word identity reuse</p>
-            <h2>28,458,677 − 8,992,941 = 19,465,736</h2>
-            <p className="mono small">100 × 19,465,736 / 28,458,677 = 68.400003%</p>
-            <p className="muted">This is exact arithmetic over the retained accounting inputs. It is not a new claim that the entire third-party corpus was independently enumerated in this release.</p>
-          </article>
-          <article className="panel">
-            <p className="eyebrow">Sentence identity reuse</p>
-            <h2>3,214,299 − 1,861,079 = 1,353,220</h2>
-            <p className="mono small">100 × 1,353,220 / 3,214,299 = 42.100004%</p>
-            <p className="muted">The canonical key can be referenced by many contextual pointers instead of giving every occurrence a new content identity.</p>
-          </article>
-          <article className="panel">
-            <p className="eyebrow">Combined retained accounting</p>
-            <h2>31,672,976 → 10,854,020</h2>
-            <p className="mono small">duplicates = 20,818,956 · identity reuse = 65.730975%</p>
-            <p className="muted">This is the strongest current deterministic size/reuse statement because its units are explicit: word/sentence occurrence accounting, not tokenizer tokens or bytes.</p>
-          </article>
-          <article className="panel">
-            <p className="eyebrow">Hypothetical 7B compute scenario</p>
-            <h2>2 × 7,000,000,000 × 20,818,956</h2>
-            <p className="mono small">= 291,465,384,000,000,000 theoretical FLOPs avoided</p>
-            <p className="mono small">÷ 100,000,000,000,000 FLOP/s/W ÷ 3600 = 0.809626 Wh</p>
-            <p className="muted">This assumes one model token per duplicate atom occurrence. It is a scenario, not a measured Ollama run or measured electrical energy.</p>
-          </article>
+          <article className="panel"><p className="eyebrow">Executed matrix</p><h2>Model = NONE</h2><p>The primary K5/K10 comparison intentionally kept probabilistic model output out of the deterministic retrieval matrix. The K=10 improvement is therefore a retrieval-depth effect, not evidence that Qwen, Ollama or Ollarma improved retrieval.</p></article>
+          <article className="panel"><p className="eyebrow">Next controlled axis</p><h2>Heuristic vs Ollarma, K held fixed.</h2><p>Freeze the same input, K, graph logic and evaluation; bind the exact model tag/digest, tokenizer, prompt and extraction receipt; then compare model-assisted extraction against heuristic extraction. Model stochasticity must be measured or cached separately from retrieval determinism.</p></article>
         </div>
+        <p className="mono small">MODEL_BENEFIT_NOT_ESTABLISHED · FUTURE_CONTROLLED_MODEL_EXTRACTION_ABLATION</p>
       </section>
 
-      <section className="computeSection" id="download-savings">
-        <span className="sectionNumber">03 / DOWNLOAD-BYTE SAVINGS</span>
-        <h2 className="displayTitle">The valuable number we refuse to invent.</h2>
-        <div className="panel">
-          <p className="eyebrow">NOT_MEASURED</p>
-          <h2>Whole-corpus duplicate download bytes require a hashed byte manifest.</h2>
-          <p className="muted">
-            HydraDG can deterministically calculate download/storage reuse once every acquired object contributes
-            <code> path</code>, <code>size_bytes</code> and <code>sha256</code>. Until that manifest is frozen,
-            the site does not convert atom reuse into a fabricated GB-saved claim.
-          </p>
-          <div className="flow mono">
-            <span>raw bytes = Σ all sizes</span><b>→</b><span>unique bytes = Σ one size / SHA-256</span><b>→</b><span>duplicate bytes = raw − unique</span>
-          </div>
-          <p className="small muted note">Same SHA-256 + conflicting byte sizes is a hard calculator failure. Missing manifest means NOT_MEASURED.</p>
-        </div>
-      </section>
-
-      <section className="computeSection" id="determinism">
-        <span className="sectionNumber">04 / HASHED CALCULATION CHAIN</span>
-        <h2 className="displayTitle">Input → deterministic analysis → output.</h2>
-        <div className="stack">
-          <article className="panel">
-            <p className="eyebrow">Canonical input SHA-256</p>
-            <p className="mono compact" style={{ overflowWrap: "anywhere" }}>e32e89eaf2035a6ade0646d3f782b32e0b96e628c13f42cf23d095b911a931b5</p>
-          </article>
-          <article className="panel">
-            <p className="eyebrow">Calculation contract SHA-256</p>
-            <p className="mono compact" style={{ overflowWrap: "anywhere" }}>5ab14c2c3b24f1603795bb521b2747f0e475f3a2afd358b4dd19e72eea6b5846</p>
-          </article>
-          <article className="panel">
-            <p className="eyebrow">Deterministic receipt SHA-256</p>
-            <p className="mono compact" style={{ overflowWrap: "anywhere" }}>8d60ab68f989e88aec9446fc06739d2c52f4af911b673af058889c9f52afdf36</p>
-          </article>
-        </div>
-        <div className="actions">
-          <a className="secondary" href={RECEIPT_URL} target="_blank" rel="noreferrer">Open receipt JSON ↗</a>
-          <a className="secondary" href={CALCULATOR_URL} target="_blank" rel="noreferrer">Open calculator source ↗</a>
-        </div>
-      </section>
-
-      <section className="computeSection" id="failure-is-evidence">
-        <span className="sectionNumber">05 / FAILURE IS EVIDENCE</span>
-        <h2 className="displayTitle">A red calculation is retained instead of normalized away.</h2>
+      <section className="computeSection">
+        <span className="sectionNumber goldenSectionLabel">06 / LIVE HOSTED STATUS VS PROJECT EVIDENCE</span>
+        <h2 className="displayTitle">A missing deployment secret is not a missing HydraDB experiment.</h2>
+        <p className="sectionLead">The public status card reports request-level connectivity for the current Vercel deployment. If it says Hosted HydraDB is not configured, that deployment cannot perform a live server-side HydraDB canary. The retained local HydraDB executions and bounded historical hosted receipts remain separate evidence objects.</p>
         <div className="grid twoCol">
-          <article className="panel"><p className="eyebrow">FAIL CLOSED</p><h3>Same content hash, different byte size</h3><p className="muted">The byte-manifest calculator rejects the input because one SHA-256 identity cannot truthfully name two different byte lengths in this contract.</p></article>
-          <article className="panel"><p className="eyebrow">FAIL CLOSED</p><h3>Output receipt no longer recomputes</h3><p className="muted"><code>--verify</code> returns non-zero when the canonical input and contract do not reproduce the retained output receipt.</p></article>
-          <article className="panel"><p className="eyebrow">NOT ESTABLISHED</p><h3>SeedGraph / local HydraDB operation absent</h3><p className="muted">Counting intended nodes does not establish an admission or database write. The operation stays red until a real request and readback exist.</p></article>
-          <article className="panel"><p className="eyebrow">NOT ESTABLISHED</p><h3>Hosted readback unavailable</h3><p className="muted">A network failure cannot inherit local expected counts. Expanded parity must compare actual hosted IDs/hashes and fail closed on non-200 readback.</p></article>
+          <article className="panel"><p className="eyebrow">Deployment lane</p><h2>Live credentials/configuration</h2><p>Server-only HydraDB configuration must be present in the Vercel environment for a live hosted canary. Credentials must never be exposed through <span className="mono">NEXT_PUBLIC_*</span> variables or browser code.</p></article>
+          <article className="panel"><p className="eyebrow">Evidence lane</p><h2>Fail closed on parity scope</h2><p>Historical hosted parity remains bounded to its recorded graph scope. Expanded hosted parity, full local writeback/readback and root reconciliation must remain NOT_ESTABLISHED until their own receipts execute.</p></article>
         </div>
       </section>
 
-      <section className="computeSection" id="evidence-state">
-        <span className="sectionNumber">06 / CURRENT CLAIM STATE</span>
-        <h2 className="displayTitle">Green, gray and red lanes are intentionally separate.</h2>
-        <div className="stack">
-          {evidenceStates.map(([label, state, detail]) => (
-            <article className="panel" key={label}>
-              <p className="eyebrow">{state}</p>
-              <h3>{label}</h3>
-              <p className="muted">{detail}</p>
-            </article>
-          ))}
-        </div>
-        <p className="mono small compact">
-          claim_ceiling=REPOSITORY_ARTIFACT_CHAIN_AND_DEDUP_ACCOUNTING_PRESENT; LONGMEMEVAL_EXECUTED_EVIDENCE_RETAINED; ENERGY_SAVINGS_THEORETICAL_ONLY; ACTUAL_SEEDGRAPH_ADMISSION_FULL_LOCAL_HYDRADB_WRITEBACK_AND_EXPANDED_HOSTED_PARITY_NOT_YET_ESTABLISHED; ROOT_SCOPES_REQUIRE_RECONCILIATION
-        </p>
-      </section>
-
-      <section className="computeSection" id="fractal-custody">
-        <span className="sectionNumber">07 / FRACTAL CUSTODY</span>
-        <h2 className="displayTitle">The same context/governance/provenance pattern recurs at every scale.</h2>
-        <div className="flow mono">
-          <span>source bytes</span><b>→</b><span>KnowledgeAtom</span><b>→</b><span>SeedOfTruth</span><b>→</b><span>experiment/state FCO</span><b>→</b><span>release/project root</span>
-        </div>
-        <p className="muted">
-          A lower-level content-addressed root can become evidence inside a higher-level custody object. That recursive composition—not hashing alone—is the fractal design: identity plus context plus governance plus provenance at each layer.
-        </p>
-        <div className="actions">
-          <Link className="secondary" href="/knowledge">Resolve terms in the KB</Link>
-          <Link className="secondary" href="/graph?q=KnowledgeAtom">KnowledgeAtom graph</Link>
-          <Link className="secondary" href="/graph?q=SeedOfTruth">SeedOfTruth graph</Link>
-          <Link className="primary" href="/judge">Return to judge walkthrough</Link>
-        </div>
+      <section className="computeSection">
+        <span className="sectionNumber goldenSectionLabel">07 / SOURCE, MATH, IMPLEMENTATION</span>
+        <h2 className="displayTitle">Every headline has a route to the artifact.</h2>
+        <div className="grid twoCol">{SOURCE_LINKS.map(([label, href]) => <article className="panel" key={href}><h3><a className="goldLink" href={href}>{label}</a></h3><p className="small muted">Open the retained repository artifact.</p></article>)}</div>
+        <div className="actions"><Link className="primary goldenCta" href="/track03">Back to Track 03</Link><Link className="secondary" href="/custody">Custody state</Link><Link className="secondary" href="/evidence">Evidence ledger</Link></div>
       </section>
     </main>
   );

@@ -9,7 +9,6 @@ const GOLDEN_PATH = [
   ["MODELS USED", "/models"],
   ["VERIFY CUSTODY", "/custody"],
   ["EVIDENCE", "/evidence"],
-  ["ELIGIBILITY / CASE", "/eligibility"],
 ] as const;
 
 export default function GoldenPathRail() {

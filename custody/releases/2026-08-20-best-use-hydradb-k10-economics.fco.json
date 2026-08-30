@@ -1,0 +1,31 @@
+{
+  "id": "fco:0e6595197ca06b6ef9cbd9a4ff39a09947306852f968cd79af3c0650c21a451b",
+  "object_sha256": "0e6595197ca06b6ef9cbd9a4ff39a09947306852f968cd79af3c0650c21a451b",
+  "payload": {
+    "base_git_sha": "a4625cc2f69254a973514a99c5f9ac5076353c99",
+    "claim_ceiling": "REPOSITORY_ARTIFACT_CHAIN_AND_DEDUP_ACCOUNTING_PRESENT; LONGMEMEVAL_EXECUTED_EVIDENCE_RETAINED; K5_K10_DEPTH_EFFECT_EXECUTED; MODEL_BENEFIT_NOT_ESTABLISHED; ENERGY_SAVINGS_THEORETICAL_ONLY; DOWNLOAD_BYTE_SAVINGS_NOT_MEASURED; ACTUAL_SEEDGRAPH_ADMISSION_FULL_LOCAL_HYDRADB_WRITEBACK_AND_EXPANDED_HOSTED_PARITY_NOT_YET_ESTABLISHED; ROOT_SCOPES_REQUIRE_RECONCILIATION",
+    "evidence_dependencies": {
+      "information_savings_input_sha256": "e32e89eaf2035a6ade0646d3f782b32e0b96e628c13f42cf23d095b911a931b5",
+      "information_savings_receipt_sha256": "8d60ab68f989e88aec9446fc06739d2c52f4af911b673af058889c9f52afdf36",
+      "longmemeval_source_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+      "matrix_cell_canonical_result_sha256": {
+        "RAW_K10": "0b0a0648d7ebd472e0e20f7669998adfeb738eeb06cfeeb617db166b6b095af0",
+        "RAW_K5": "6afacab1833996c06c27a3697034949de4bedeb3499590f9a353f130e226c488",
+        "SG_K10": "20485b59382ecaaee543b6dfc6313a17aa1aa71b04aafff3106ec1dd5e87dad0",
+        "SG_K5": "e1620e490dfd7c632e5ba2f6b6dd8733a5d681013e20dbbbc2880312cfe5436e"
+      }
+    },
+    "human_instruction": {
+      "evidence_class": "DIRECTLY_SUPPLIED_HUMAN_INSTRUCTION",
+      "sha256": "4b0d401bb283294ea5c4218c860b01f2f57ac515178443ea092f6dc86092d832"
+    },
+    "license": "CC-BY-NC-ND-4.0",
+    "merkle_state": "NOT_MERKLE_COMMITTED",
+    "project": "HydraDG",
+    "purpose": "Expose Best Use of HydraDB use case, deterministic information-savings math and implementation; distinguish deployment-specific hosted connectivity from retained HydraDB evidence; expose K5/K10 depth ablation without promoting model benefit.",
+    "schema": "hydradg.best_use_hydradb_release_fco.v1",
+    "signature_state": "NOT_SIGNED",
+    "type": "ReleaseChangeFCO"
+  },
+  "type": "ReleaseChangeFCO"
+}

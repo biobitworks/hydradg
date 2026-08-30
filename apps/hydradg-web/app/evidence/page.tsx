@@ -1,44 +1,43 @@
 import Link from "next/link";
 
-import GoldenPathStep from "@/components/GoldenPathStep";
-import GraphHashComparison from "@/components/GraphHashComparison";
+import { buildKnowledgeProjection } from "@/lib/knowledgeFcg";
+import { RELEASE_TIMEPOINTS } from "@/lib/releaseTimepoints";
 
-const evidence = [
+const EVIDENCE = [
   {
-    label: "LongMemEval full500 retrieval ablation",
-    status: "EXECUTED · NEGATIVE/NEUTRAL",
-    detail: "500 cases; 470 retrieval-scored; 30 abstentions. B/C/D did not establish a positive Hit@5 advantage over A at the tested K=5 configuration.",
+    label: "LongMemEval full500 typed-memory ablation",
+    status: "PASS · EXECUTED · NEGATIVE/NEUTRAL RESULT RETAINED",
+    detail: "500 cases; 23,867 sessions; 4,776 entities; 3,506 facts; 470 retrieval-scored and 30 abstentions. B/C/D did not establish a positive Hit@5 advantage over A at K=5.",
     ceiling: "LONGMEMEVAL_FULL500_RETRIEVAL_ABLATION_ONLY_NOT_END_TO_END_QA",
+    href: "/track03",
   },
   {
-    label: "Hosted HydraDB connectivity + canary",
-    status: "CONNECTED · REQUEST-LEVEL TRACEABILITY",
-    detail: "The configured database/collection is reachable and the canonical canary relation request succeeds. This is not the same claim as complete hosted graph parity.",
-    ceiling: "REMOTE_HYDRADB_CONNECTIVITY_AND_REQUEST_LEVEL_TRACEABILITY_ONLY",
+    label: "Context vs Entropy classification",
+    status: "PASS · EXECUTED",
+    detail: "18,567 raw findings; 18,555 context-classified; 12 abstentions; 99.9354% classification coverage. The historical Modal item remains USER_ATTESTED_REVOKED and provider_verified=false.",
+    ceiling: "CONTEXT_AWARE_SECOND_STAGE_CLASSIFICATION_NOT_GITLEAKS_REPLACEMENT",
+    href: "/results/context-vs-entropy",
   },
   {
-    label: "Expanded 653-FCO / 1,692-edge hosted parity",
-    status: "NOT_ESTABLISHED",
-    detail: "Full parity still requires scoped FCO/edge counts, missing/extra accounting, canonical identity mapping, and root comparison.",
-    ceiling: "EXPANDED_HOSTED_PARITY_REQUIRES_REAL_SCOPED_READBACK",
+    label: "Hosted canonical FCG projection/readback",
+    status: "PASS · RECEIPT RETAINED",
+    detail: "The retained hosted-migration receipt records database hydradg, collection default, 36 canonical FCOs, 24 canonical edges, root match and zero canonical FCO/edge/content-hash delta for the projected graph scope.",
+    ceiling: "HOSTED_PROJECTION_AND_READBACK_SCOPE_ONLY",
+    href: "/how-to#hosted-hydradb",
   },
   {
-    label: "Identity reuse accounting",
-    status: "PRESENT · DETERMINISTIC",
-    detail: "31,672,976 retained occurrences map to 10,854,020 unique keys, for 65.730975% identity reuse. This is not automatically byte, token, or dollar savings.",
-    ceiling: "DETERMINISTIC_IDENTITY_REUSE_ACCOUNTING_ONLY",
+    label: "Website FCO identity contract",
+    status: "PASS · DETERMINISTIC",
+    detail: "Website, Knowledge and release FCOs are content-addressed as fco:<object_sha256>. The deployed /api/release endpoint verifies one canonical 64-hex SHA-256 identity per FCO and rejects conflicting duplicate IDs in its bounded catalog.",
+    ceiling: "OBJECT_IDENTITY_NOT_SCIENTIFIC_CORRECTNESS",
+    href: "/api/release",
   },
   {
-    label: "Expanded local-model matrix",
-    status: "AUDIT REQUIRED BEFORE PROMOTION",
-    detail: "Runtime inventory/model-call evidence is retained, but only case-level results with real response receipts and non-synthetic metrics may become primary empirical evidence.",
-    ceiling: "NO_EXPANDED_MODEL_CLAIM_WITHOUT_CASE_LEVEL_EXECUTION_RECEIPTS",
-  },
-  {
-    label: "Cost / energy savings",
-    status: "NOT MEASURED",
-    detail: "Serialized bytes, retrieved context tokens, avoided inference calls, and measured energy remain future measurements rather than current savings claims.",
-    ceiling: "NO_COST_SAVINGS_CLAIM_WITHOUT_MEASURED_BYTES_TOKENS_AND_CALLS",
+    label: "Reference → poison → antidote visualization",
+    status: "PASS · DECLARED SYNTHETIC FIXTURE",
+    detail: "Violet reference/normal, orange poison/mutation and blue antidote/restoration are explicit state colors. G*, ΔG*, Cloud Drift, total-variation mutation distance and restoration gain remain separately labeled calculations.",
+    ceiling: "SYNTHETIC_INFORMATION_STATE_VISUALIZATION_ONLY",
+    href: "/graph",
   },
 ] as const;
 
@@ -47,80 +46,67 @@ const hashes = [
   ["full500 result", "bdecb4b62cf90040c7f346d283efe78459825b427557cec8d4998f3499ee0324"],
   ["full500 statistics", "8dcf57f5ac60418d16d3c945ad678b4d17b557b9425fededbd6684add7cff7cc"],
   ["full500 receipt", "21a29046de961e252372d06fd85d98db767b900982f90421cc720dfb85069365"],
+  ["Context-vs-Entropy result artifact", "512be8de14feb8512b5dcb7724df740bc2f027946f9250859f91d37e984d5e91"],
 ] as const;
 
 export default function EvidencePage() {
+  const knowledge = buildKnowledgeProjection();
+  const gStarIndex = knowledge.nodes.findIndex((node) => node.payload.slug === "g-star");
+  const jsdIndex = knowledge.nodes.findIndex((node) => node.payload.slug === "jensen-shannon-divergence");
+  const gStar = gStarIndex >= 0 ? knowledge.nodes[gStarIndex] : null;
+  const jsd = jsdIndex >= 0 ? knowledge.nodes[jsdIndex] : null;
+
   return (
     <main>
-      <GoldenPathStep
-        step={6}
-        summary="Trace each visible result back to its evidence class, custody identity, and claim ceiling. This is where a judge verifies that PASS, pending, failed, theoretical, and historical states are not collapsed together."
-      />
-
       <header className="hero">
         <div>
-          <p className="eyebrow">Step 06 of 08 · Evidence + FCG</p>
-          <h1>Follow the evidence, not the headline.</h1>
-          <p className="lede">Every result keeps a provenance path and a claim ceiling. Connectivity is not parity; a hash is not a signature; a development receipt is not automatically empirical execution.</p>
-          <div className="actions">
-            <Link className="primary" href="/beam-1m">Next · 07 Future Work →</Link>
-            <Link className="secondary" href="/track03">← 05 Results</Link>
-            <Link className="secondary" href="/knowledge">Open Knowledge Base</Link>
-          </div>
+          <p className="eyebrow">Hack Hydra 2026 · evidence ledger</p>
+          <h1>Executed evidence, bounded claims, no hidden nulls.</h1>
+          <p className="lede">The judge ledger contains executed results, retained negative/null evidence, canonical object identities and explicit N/A states where a scalar is not defined. It does not convert unexecuted work into a green badge.</p>
+          <div className="actions"><Link className="primary" href="/judge">Judge walkthrough</Link><Link className="secondary" href="/how-to">How to use</Link><Link className="secondary" href="/knowledge">Knowledge Base</Link></div>
         </div>
-        <div className="heroStatus">
-          <span className="pill pillGood">FULL500 EXECUTED</span>
-          <span className="pill pillGood">CANARY READBACK</span>
-          <span className="pill pillWarn">PARITY NOT ESTABLISHED</span>
-          <span className="pill pillMuted">NOT_SIGNED</span>
-        </div>
+        <div className="heroStatus"><span className="pill pillGood">FULL500 RETAINED</span><span className="pill pillGood">HOSTED READBACK RECEIPT</span><span className="pill pillMuted">NOT_SIGNED</span><span className="pill pillMuted">NOT_MERKLE_COMMITTED</span></div>
       </header>
 
-      <GraphHashComparison />
+      <section className="metrics" aria-label="Submission evidence status">
+        <article className="metric"><span className="metricLabel">Track 03</span><strong>500 cases</strong><span className="small muted">470 scored · 30 abstentions</span></article>
+        <article className="metric"><span className="metricLabel">Context/Entropy</span><strong>99.9354%</strong><span className="small muted">18,555 / 18,567 classified</span></article>
+        <article className="metric"><span className="metricLabel">Hosted parity</span><strong>0 canonical delta</strong><span className="small muted">retained projection scope</span></article>
+        <article className="metric"><span className="metricLabel">Track 03 decision</span><strong>No positive signal</strong><span className="small muted">B/C/D vs A Hit@5</span></article>
+      </section>
+
+      <section className="computeSection"><span className="sectionNumber">01 / EVIDENCE OBJECTS</span><h2 className="displayTitle">Every judge-facing state has a declared evidence class.</h2><div className="grid twoCol">{EVIDENCE.map((item) => <article className="panel" key={item.label}><p className="eyebrow">{item.status}</p><h2>{item.label}</h2><p className="muted">{item.detail}</p><p className="mono small compact">claim_ceiling={item.ceiling}</p><div className="actions"><Link className="secondary" href={item.href}>Follow evidence path</Link></div></article>)}</div></section>
+
+      <section className="computeSection"><span className="sectionNumber">02 / RETAINED IDENTITIES</span><h2 className="displayTitle">Hashes link exact retained artifacts.</h2><div className="stack">{hashes.map(([label, hash]) => <div className="panel" key={label}><p className="eyebrow">{label}</p><p className="mono compact">{hash}</p></div>)}</div><p className="small muted note">A SHA-256 establishes byte/object identity for the retained artifact. It does not establish correctness or independent verification.</p></section>
 
       <section className="computeSection">
-        <span className="sectionNumber">06A / EVIDENCE CLASSES</span>
-        <h2 className="displayTitle">Different evidence states keep different ceilings.</h2>
+        <span className="sectionNumber">03 / GOVERNED THEORY + METRIC NAVIGATION</span>
+        <h2 className="displayTitle">Academic source → internal Knowledge FCO → exact scorer contract.</h2>
         <div className="grid twoCol">
-          {evidence.map((item) => (
-            <article className="panel" key={item.label}>
-              <p className="eyebrow">{item.status}</p>
-              <h2>{item.label}</h2>
-              <p className="muted">{item.detail}</p>
-              <p className="mono small compact">claim_ceiling={item.ceiling}</p>
-            </article>
-          ))}
+          <article className="panel">
+            <p className="eyebrow">G* design rationale</p>
+            <h3>Enßlin &amp; Weig (2010) → HydraDG G* Knowledge FCO</h3>
+            <p className="small muted">The paper is design-rationale lineage for an information/free-energy analogy; it does not define HydraDG's exact synthetic-fixture equation.</p>
+            {gStar ? <><p className="mono small compact">{gStar.id}</p><p className="mono small compact">object_sha256={gStar.object_sha256}</p><div className="actions"><Link className="secondary" href={`/fco/${encodeURIComponent(gStar.id)}`}>Inspect canonical Knowledge FCO</Link><a className="secondary" href="https://doi.org/10.1103/PhysRevE.82.051112" target="_blank" rel="noreferrer">Authoritative DOI ↗</a></div></> : null}
+          </article>
+          <article className="panel">
+            <p className="eyebrow">Cloud Drift source lineage</p>
+            <h3>Lin (1991) → JSD Knowledge FCO</h3>
+            <p className="small muted">Cloud Drift is 100 × base-2 Jensen-Shannon divergence from the frozen reference distribution.</p>
+            {jsd ? <><p className="mono small compact">{jsd.id}</p><p className="mono small compact">object_sha256={jsd.object_sha256}</p><div className="actions"><Link className="secondary" href={`/fco/${encodeURIComponent(jsd.id)}`}>Inspect canonical Knowledge FCO</Link><Link className="secondary" href="/knowledge#jensen-shannon-divergence">Open KB term</Link></div></> : null}
+          </article>
         </div>
       </section>
 
-      <section className="computeSection" id="deterministic-identities">
-        <span className="sectionNumber">06B / CUSTODY IDENTITIES</span>
-        <h2 className="displayTitle">Retained objects are content-addressed.</h2>
-        <div className="stack">
-          {hashes.map(([label, hash]) => (
-            <div className="panel" key={label}>
-              <p className="eyebrow">{label}</p>
-              <p className="mono compact" style={{ overflowWrap: "anywhere" }}>{hash}</p>
-            </div>
-          ))}
+      <section className="computeSection">
+        <span className="sectionNumber">04 / T3–T5 SCORE BOUNDARY</span>
+        <h2 className="displayTitle">N/A is data when the scorer inputs do not exist.</h2>
+        <div className="grid threeCol">
+          {RELEASE_TIMEPOINTS.slice(3).map((point) => <article className="panel" key={point.id}><p className="eyebrow">{point.id}</p><h3>{point.label}</h3><p><strong>Scalar context score: N/A</strong></p><p className="small muted">Reason: no governed state distribution is declared for this project/release timepoint. {point.evidence}</p></article>)}
         </div>
-        <p className="small muted note">SHA-256 establishes retained byte/object identity. It does not establish correctness, digital signature, or Merkle commitment by itself.</p>
       </section>
 
-      <section className="computeSection">
-        <span className="sectionNumber">06C / PROJECT FCG</span>
-        <h2 className="displayTitle">Source → transformation → evidence → claim.</h2>
-        <div className="flow mono"><span>source bytes</span><b>→</b><span>KnowledgeAtom</span><b>→</b><span>SeedOfTruth</span><b>→</b><span>FCO/FCG state</span><b>→</b><span>HydraDB projection</span><b>→</b><span>judge-visible claim</span></div>
-        <p className="muted">Wrong, superseded, failed, timeout, and corrective states remain in the same graph so a judge can inspect where a perturbation entered and what later inherited or repaired it.</p>
-        <div className="actions"><a className="secondary" href="/api/site-fcg">Open site FCG JSON</a><Link className="secondary" href="/graph">Open graph</Link></div>
-      </section>
-
-      <section className="computeSection">
-        <span className="sectionNumber">06D / CONTINUE</span>
-        <h2 className="displayTitle">Now show what comes next.</h2>
-        <p className="sectionLead">The current submission stops at the established claim ceiling. Step 07 shows the preregistered BEAM and multi-agent program without presenting future work as completed evidence.</p>
-        <div className="actions"><Link className="primary" href="/beam-1m">Continue · 07 Future Work →</Link><Link className="secondary" href="/track03">← 05 Results</Link></div>
-      </section>
+      <section className="computeSection"><span className="sectionNumber">05 / PROJECT FCG</span><h2 className="displayTitle">Source → transformation → evidence → claim → artifact.</h2><div className="flow mono"><span>source bytes</span><b>→</b><span>SeedGraph / transform</span><b>→</b><span>KnowledgeAtom</span><b>→</b><span>SeedOfTruth</span><b>→</b><span>FCO/FCG</span><b>→</b><span>HydraDB projection</span><b>→</b><span>website artifact</span></div><div className="actions"><a className="secondary" href="/api/site-fcg">Site FCG JSON</a><a className="secondary" href="/api/release">Release JSON</a><Link className="secondary" href="/graph?q=KnowledgeAtom">Atoms</Link><Link className="secondary" href="/graph?q=SeedOfTruth">Seeds</Link></div></section>
     </main>
   );
 }

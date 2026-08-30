@@ -1,0 +1,55 @@
+{
+  "abstentions": 30,
+  "cells": {
+    "RAW_K10": {
+      "canonical_result_sha256": "0b0a0648d7ebd472e0e20f7669998adfeb738eeb06cfeeb617db166b6b095af0",
+      "evidence_path_coverage": "0.51511",
+      "method_a": {"hit_at_k": "0.97872", "recall_at_k": "0.94535"},
+      "method_d": {"hit_at_k": "0.97021", "recall_at_k": "0.92273"}
+    },
+    "RAW_K5": {
+      "canonical_result_sha256": "6afacab1833996c06c27a3697034949de4bedeb3499590f9a353f130e226c488",
+      "evidence_path_coverage": "0.63787",
+      "method_a": {"hit_at_k": "0.96383", "recall_at_k": "0.90660"},
+      "method_d": {"hit_at_k": "0.94468", "recall_at_k": "0.84603"}
+    },
+    "SG_K10": {
+      "canonical_result_sha256": "20485b59382ecaaee543b6dfc6313a17aa1aa71b04aafff3106ec1dd5e87dad0",
+      "evidence_path_coverage": "0.51511",
+      "method_a": {"hit_at_k": "0.97872", "recall_at_k": "0.94535"},
+      "method_d": {"hit_at_k": "0.97021", "recall_at_k": "0.92273"}
+    },
+    "SG_K5": {
+      "canonical_result_sha256": "e1620e490dfd7c632e5ba2f6b6dd8733a5d681013e20dbbbc2880312cfe5436e",
+      "evidence_path_coverage": "0.63787",
+      "method_a": {"hit_at_k": "0.96383", "recall_at_k": "0.90660"},
+      "method_d": {"hit_at_k": "0.94468", "recall_at_k": "0.84603"}
+    }
+  },
+  "claim_ceiling": "LONGMEMEVAL_RETRIEVAL_DEPTH_ABLATION_ONLY_NOT_END_TO_END_QA_NOT_MODEL_BENEFIT",
+  "dataset_sha256": "d6f21ea9d60a0d56f34a05b609c79c88a451d2ae03597821ea3d5a9678c3a442",
+  "depth_deltas_k10_minus_k5_percentage_points": {
+    "evidence_path_coverage": "-12.276",
+    "method_a_hit": "1.489",
+    "method_a_recall": "3.875",
+    "method_d_hit": "2.553",
+    "method_d_recall": "7.670"
+  },
+  "evidence_class": "RECOMPUTED_LOCAL_EVIDENCE_REPORTED_2026-08-19",
+  "interpretation": "Increasing retrieval depth improved Hit@K and Recall@K in the retained deterministic matrix. SeedGraph and RAW were identical under the tested lexical/graph retrieval parameters. This does not establish a language-model benefit.",
+  "invariants": {
+    "k10_improves_method_a_hit_and_recall": true,
+    "k10_improves_method_d_hit_and_recall": true,
+    "k10_reduces_evidence_path_coverage_density": true,
+    "raw_equals_seedgraph_at_k10": true,
+    "raw_equals_seedgraph_at_k5": true
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "model_involvement": "NONE_IN_PRIMARY_MATRIX",
+  "schema": "hydradg.track03_k5_k10_retained_summary.v1",
+  "scored_n": 470,
+  "signature_state": "NOT_SIGNED",
+  "source_state": "RETAINED_LOCAL_EXECUTION_REPORT_NOT_REPLAYED_IN_THIS_RELEASE",
+  "summary_sha256": "266df6eea532b191af222efbcb4a30debe428c4ea8bf00fdff46d98ad2ce1f97"
+}
