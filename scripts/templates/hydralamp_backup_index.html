@@ -1,0 +1,666 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HydraLamp LIVE INTERACTIVE Replay — 0D→4D</title>
+<style>
+  :root {
+    --bg: #0c0e12;
+    --panel: #12151c;
+    --line: #2a3140;
+    --text: #e6eaf0;
+    --muted: #8b93a3;
+    --ref: #6b8cae;
+    --poison: #d9773a;
+    --repair: #3db89a;
+    --pass: #4ecdc4;
+    --active: #f0f4f8;
+    --btn: #1c2230;
+    --btn-border: #3a4558;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+  }
+  header, footer, .rail, .toolbar {
+    padding: 10px 14px;
+    border-bottom: 1px solid var(--line);
+    background: var(--panel);
+  }
+  footer { border-bottom: none; border-top: 1px solid var(--line); font-size: 11px; color: var(--muted); }
+  h1 { font-size: 15px; margin: 0; font-weight: 600; letter-spacing: 0.02em; }
+  .sub { color: var(--muted); font-size: 11px; margin-top: 4px; }
+  .badge {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 11px; border: 1px solid var(--line); color: var(--muted);
+  }
+  .badge.on-ref { border-color: var(--ref); color: var(--ref); }
+  .badge.on-poison { border-color: var(--poison); color: var(--poison); }
+  .badge.on-repair { border-color: var(--repair); color: var(--repair); }
+  .badge.on-pass { border-color: var(--pass); color: var(--pass); }
+  .row { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+  button, .mode-btn {
+    background: var(--btn); color: var(--text); border: 1px solid var(--btn-border);
+    border-radius: 4px; padding: 7px 10px; cursor: pointer; font-size: 12px;
+    touch-action: manipulation; min-height: 36px;
+  }
+  button:hover, .mode-btn:hover { background: #252b3a; }
+  button.active, .mode-btn.active {
+    background: #2a3348; border-color: #7a8aaa; color: var(--active);
+  }
+  button:focus-visible, .mode-btn:focus-visible, input:focus-visible {
+    outline: 2px solid #7a8aaa; outline-offset: 2px;
+  }
+  main {
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(280px, 0.75fr);
+    gap: 0; min-height: 0;
+  }
+  @media (max-width: 900px) {
+    main { grid-template-columns: 1fr; }
+  }
+  #viewport-wrap {
+    position: relative; background: #07090b; border-right: 1px solid var(--line);
+    min-height: 420px;
+  }
+  #frame-img { width: 100%; height: 100%; object-fit: contain; display: none; background: #000; }
+  #graph {
+    width: 100%; height: 100%; min-height: 420px; display: block;
+    touch-action: none; cursor: grab;
+  }
+  #graph.dragging { cursor: grabbing; }
+  #side {
+    background: var(--panel); padding: 12px; overflow: auto; border-left: 1px solid var(--line);
+  }
+  #side h2 { font-size: 12px; margin: 0 0 8px; color: var(--muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em; }
+  #eventJson, #nodeJson {
+    white-space: pre-wrap; word-break: break-word; font-size: 11px;
+    font-family: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+    background: #0a0c10; border: 1px solid var(--line); padding: 10px; border-radius: 4px;
+    max-height: 280px; overflow: auto; margin: 0 0 12px;
+  }
+  #timeline {
+    display: flex; flex-direction: column; gap: 2px; max-height: 200px; overflow: auto;
+    margin-bottom: 12px;
+  }
+  .tl-item {
+    font-size: 11px; padding: 4px 6px; border-radius: 3px; cursor: pointer;
+    color: var(--muted); border: 1px solid transparent;
+  }
+  .tl-item:hover { background: #1a1f2a; }
+  .tl-item.active { border-color: #7a8aaa; color: var(--text); background: #1a2230; }
+  .tl-item.poison { color: var(--poison); }
+  .tl-item.repair { color: var(--repair); }
+  input[type=range] { flex: 1; min-width: 140px; }
+  .legend { font-size: 11px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 10px; margin-top: 6px; }
+  .legend span::before {
+    content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+    margin-right: 4px; vertical-align: middle;
+  }
+  .leg-ref::before { background: var(--ref); }
+  .leg-poison::before { background: var(--poison); }
+  .leg-repair::before { background: var(--repair); }
+  .leg-pass::before { background: var(--pass); }
+  .status-line { font-size: 12px; color: var(--muted); margin-top: 6px; }
+  .status-line strong { color: var(--text); font-weight: 500; }
+  .group-label { font-size: 10px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.08em; margin-right: 4px; }
+</style>
+</head>
+<body>
+<header>
+  <div class="row" style="justify-content:space-between">
+    <div>
+      <h1>HydraLamp LIVE INTERACTIVE</h1>
+      <div class="sub">Offline custody replay · same frozen 46-event stream · 0D→4D projections</div>
+    </div>
+    <div class="row">
+      <span class="badge" id="badge-task">HYDRALAMP_REAL_EVIDENCE_RESTORE_V1</span>
+      <span class="badge" id="badge-stage">REFERENCE</span>
+      <span class="badge" id="badge-layout">LAYOUT: VISUALIZATION ONLY</span>
+    </div>
+  </div>
+</header>
+
+<div class="rail row" role="toolbar" aria-label="Projection mode">
+  <span class="group-label">Mode</span>
+  <button type="button" class="mode-btn" id="mode-0d" aria-label="0D single object inspector" aria-pressed="false">0D</button>
+  <button type="button" class="mode-btn" id="mode-1d" aria-label="1D ordered custody event stream" aria-pressed="false">1D</button>
+  <button type="button" class="mode-btn active" id="mode-2d" aria-label="2D FCG topology" aria-pressed="true">2D</button>
+  <button type="button" class="mode-btn" id="mode-3d" aria-label="3D spatial FCG" aria-pressed="false">3D</button>
+  <button type="button" class="mode-btn" id="mode-4d" aria-label="4D spatial FCG with event time" aria-pressed="false">4D</button>
+  <span class="group-label" style="margin-left:12px">Stage</span>
+  <button type="button" id="jump-ref" aria-label="Jump to reference stage">REFERENCE</button>
+  <button type="button" id="jump-poison" aria-label="Jump to poison stage">POISON</button>
+  <button type="button" id="jump-repair" aria-label="Jump to antidote repair stage">ANTIDOTE/REPAIR</button>
+  <button type="button" id="jump-pass" aria-label="Jump to restored pass stage">RESTORED/PASS</button>
+</div>
+
+<div class="toolbar row" role="toolbar" aria-label="Camera and playback controls">
+  <span class="group-label">Rotate</span>
+  <button type="button" id="rot-left" aria-label="Rotate left">ROTATE LEFT</button>
+  <button type="button" id="rot-right" aria-label="Rotate right">ROTATE RIGHT</button>
+  <button type="button" id="rot-up" aria-label="Rotate up">ROTATE UP</button>
+  <button type="button" id="rot-down" aria-label="Rotate down">ROTATE DOWN</button>
+  <span class="group-label" style="margin-left:8px">Zoom</span>
+  <button type="button" id="zoom-in" aria-label="Zoom in">ZOOM +</button>
+  <button type="button" id="zoom-out" aria-label="Zoom out">ZOOM −</button>
+  <button type="button" id="cam-center" aria-label="Center camera">CENTER</button>
+  <button type="button" id="cam-reset" aria-label="Fit and reset camera">FIT / RESET CAMERA</button>
+  <span class="group-label" style="margin-left:8px">Time</span>
+  <button type="button" id="play" aria-label="Play event stream">PLAY</button>
+  <button type="button" id="pause" aria-label="Pause event stream">PAUSE</button>
+  <button type="button" id="step-back" aria-label="Previous event">PREVIOUS EVENT</button>
+  <button type="button" id="step-fwd" aria-label="Next event">NEXT EVENT</button>
+  <input id="scrub" type="range" min="0" max="__N_MAX__" value="0" aria-label="Event scrubber">
+  <span id="counter" aria-live="polite">0 / __N_MAX__</span>
+</div>
+
+<main>
+  <div id="viewport-wrap">
+    <canvas id="graph" aria-label="Navigable FCG projection canvas" width="900" height="520"></canvas>
+    <img id="frame-img" alt="HydraLamp replay frame for current event" hidden>
+    <div class="legend" style="position:absolute;left:10px;bottom:8px;background:rgba(8,10,13,.75);padding:6px 8px;border-radius:4px;">
+      <span class="leg-ref">reference / handshake</span>
+      <span class="leg-poison">poison / quarantine</span>
+      <span class="leg-repair">repair / promote</span>
+      <span class="leg-pass">denied/pass gate</span>
+    </div>
+  </div>
+  <aside id="side">
+    <h2>Cursor</h2>
+    <div class="status-line" id="cursor-meta"></div>
+    <h2 style="margin-top:14px">1D stream</h2>
+    <div id="timeline" role="listbox" aria-label="Custody event stream"></div>
+    <h2>0D inspector</h2>
+    <pre id="nodeJson">Select a node or remain on current event.</pre>
+    <h2>Event JSON</h2>
+    <pre id="eventJson"></pre>
+  </aside>
+</main>
+
+<footer>
+  Self-contained offline replay — events embedded; frames in frames/ —
+  SPATIAL_COORDINATES=DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES —
+  claim ceiling: DEMO_SESSION_MECHANISM_CANARY_NOT_EMPIRICAL_CLAIM —
+  SIGNATURE_STATE=NOT_SIGNED · MERKLE_MMR_STATE=NOT_COMMITTED —
+  Keyboard: Space play/pause · ←/→ prev/next · R reset · +/- zoom · Shift+arrows rotate
+</footer>
+
+<script>
+const EVENTS = __EVENTS_JSON__;
+const N = EVENTS.length;
+const SPATIAL_COORDINATES = "DETERMINISTIC_VISUALIZATION_LAYOUT_NOT_SCIENTIFIC_COORDINATES";
+
+const ACTOR_X = {
+  HUMAN_CONTROLLER: -1.4,
+  RESEARCH_AGENT: -0.7,
+  VERIFIER_AGENT: 0.0,
+  REPAIR_AGENT: 0.7,
+  POISON_AGENT: 1.4
+};
+
+const TYPE_Y = {
+  HANDSHAKE_OK: -1.1,
+  HANDSHAKE_DENIED: -0.9,
+  READ_OK: -0.5,
+  READ_PRIVATE_DENIED: -0.3,
+  PROPOSAL_QUARANTINED: 0.2,
+  PROPOSAL_REJECTED: 0.4,
+  UNAUTHORIZED_CANONICAL_WRITE_BLOCKED: 0.6,
+  CANONICAL_PROMOTED: 0.9,
+  PROMOTE_DENIED: 1.1
+};
+
+function stageOf(ev) {
+  const t = ev.event_type || "";
+  const a = ev.actor_id || "";
+  if (t === "PROMOTE_DENIED" && ev.event_index === 46) return "RESTORED/PASS";
+  if (t === "CANONICAL_PROMOTED" || a === "REPAIR_AGENT") return "ANTIDOTE/REPAIR";
+  if (t.includes("QUARANTINE") || t.includes("UNAUTHORIZED") || a === "POISON_AGENT" || t.includes("DENIED") && a === "POISON_AGENT") return "POISON";
+  if (t.includes("QUARANTINE") || a === "POISON_AGENT") return "POISON";
+  if (t === "PROPOSAL_QUARANTINED") return "POISON";
+  if (t === "PROMOTE_DENIED") return "RESTORED/PASS";
+  return "REFERENCE";
+}
+
+function colorFor(ev) {
+  const s = stageOf(ev);
+  if (s === "POISON") return "#d9773a";
+  if (s === "ANTIDOTE/REPAIR") return "#3db89a";
+  if (s === "RESTORED/PASS") return "#4ecdc4";
+  return "#6b8cae";
+}
+
+function buildScene() {
+  const nodes = [];
+  const links = [];
+  const fcoFirst = new Map();
+  let depth = 0;
+  let prevRoot = null;
+  EVENTS.forEach((ev, i) => {
+    const changed = ev.fcg_root_before !== ev.fcg_root_after;
+    if (changed) depth += 1;
+    const id = "evt:" + i;
+    const fcos = ev.fco_ids || [];
+    nodes.push({
+      id,
+      kind: "event",
+      label: ev.event_type,
+      actor_id: ev.actor_id,
+      event_index: ev.event_index,
+      seq: i,
+      x: ACTOR_X[ev.actor_id] ?? 0,
+      y: TYPE_Y[ev.event_type] ?? 0,
+      z: (depth * 0.35) + (i * 0.02) - 0.8,
+      t: i,
+      color: colorFor(ev),
+      stage: stageOf(ev),
+      event_hash: ev.event_hash,
+      fcg_root_before: ev.fcg_root_before,
+      fcg_root_after: ev.fcg_root_after,
+      run_id: ev.run_id || "HYDRALAMP_REAL_EVIDENCE_RESTORE_V1",
+      fco_ids: fcos
+    });
+    if (i > 0) links.push({ source: "evt:" + (i - 1), target: id, relation: "custody_seq" });
+    if (changed && prevRoot) links.push({ source: "evt:" + (i - 1), target: id, relation: "fcg_root_change" });
+    fcos.forEach((fid) => {
+      const nid = "fco:" + fid;
+      if (!fcoFirst.has(fid)) {
+        fcoFirst.set(fid, i);
+        nodes.push({
+          id: nid,
+          kind: "fco",
+          label: fid.length > 18 ? fid.slice(0, 10) + "…" : fid,
+          actor_id: ev.actor_id,
+          event_index: ev.event_index,
+          seq: i,
+          x: (ACTOR_X[ev.actor_id] ?? 0) + 0.25,
+          y: (TYPE_Y[ev.event_type] ?? 0) - 0.35,
+          z: depth * 0.35 - 0.4,
+          t: i,
+          color: "#a8b0bc",
+          stage: stageOf(ev),
+          event_hash: ev.event_hash,
+          fcg_root_before: ev.fcg_root_before,
+          fcg_root_after: ev.fcg_root_after,
+          fco_ids: [fid]
+        });
+      }
+      links.push({ source: id, target: nid, relation: "mentions_fco" });
+    });
+    prevRoot = ev.fcg_root_after;
+  });
+  return { nodes, links };
+}
+
+const SCENE = buildScene();
+
+const state = {
+  mode: "2D",
+  idx: 0,
+  playing: false,
+  timer: null,
+  yaw: 0.55,
+  pitch: -0.3,
+  zoom: 245,
+  selectedId: "evt:0",
+  drag: { active: false, moved: false, x: 0, y: 0 }
+};
+
+const canvas = document.getElementById("graph");
+const ctx = canvas.getContext("2d");
+const frameImg = document.getElementById("frame-img");
+const eventJson = document.getElementById("eventJson");
+const nodeJson = document.getElementById("nodeJson");
+const scrub = document.getElementById("scrub");
+const counter = document.getElementById("counter");
+const cursorMeta = document.getElementById("cursor-meta");
+const badgeStage = document.getElementById("badge-stage");
+const timeline = document.getElementById("timeline");
+let projectedHits = [];
+
+const STAGE_JUMP = {
+  ref: 0,
+  poison: 35,
+  repair: 6,
+  pass: 45
+};
+
+function resizeCanvas() {
+  const wrap = document.getElementById("viewport-wrap");
+  const ratio = Math.max(1, window.devicePixelRatio || 1);
+  const width = wrap.clientWidth || 720;
+  const height = Math.max(420, wrap.clientHeight || 520);
+  canvas.style.width = width + "px";
+  canvas.style.height = height + "px";
+  canvas.width = Math.floor(width * ratio);
+  canvas.height = Math.floor(height * ratio);
+  ctx.setTransform(ratio, 0, 0, ratio, 0, 0);
+  return { width, height };
+}
+
+function visibleNodes() {
+  if (state.mode === "4D" || state.mode === "1D" || state.mode === "0D") {
+    return SCENE.nodes.filter((n) => n.t <= state.idx);
+  }
+  return SCENE.nodes.filter((n) => n.kind === "event" ? n.t <= state.idx : n.t <= state.idx);
+}
+
+function projectNode(node, width, height) {
+  if (state.mode === "2D") {
+    const px = width / 2 + node.x * 160;
+    const py = height / 2 + node.y * 140;
+    return { id: node.id, px, py, depth: 0, hitRadius: 16, r: node.kind === "event" ? 6 : 4 };
+  }
+  const cosY = Math.cos(state.yaw);
+  const sinY = Math.sin(state.yaw);
+  const x1 = node.x * cosY - node.z * sinY;
+  const z1 = node.x * sinY + node.z * cosY;
+  const cosP = Math.cos(state.pitch);
+  const sinP = Math.sin(state.pitch);
+  const y2 = node.y * cosP - z1 * sinP;
+  const z2 = node.y * sinP + z1 * cosP;
+  const perspective = state.zoom / Math.max(1.25, 3.2 - z2);
+  const sizeScale = Math.max(0.55, Math.min(1.45, perspective / 180));
+  return {
+    id: node.id,
+    px: width / 2 + x1 * perspective,
+    py: height / 2 + y2 * perspective,
+    depth: z2,
+    hitRadius: 16,
+    r: (node.kind === "event" ? 6 : 4) * sizeScale,
+    alpha: Math.max(0.35, Math.min(1, 0.55 + (z2 + 1.5) * 0.18))
+  };
+}
+
+function drawGraph() {
+  const { width, height } = resizeCanvas();
+  ctx.clearRect(0, 0, width, height);
+  const showCanvas = state.mode === "2D" || state.mode === "3D" || state.mode === "4D";
+  canvas.style.display = showCanvas ? "block" : "none";
+  frameImg.style.display = state.mode === "0D" ? "block" : "none";
+  frameImg.hidden = state.mode !== "0D";
+
+  if (state.mode === "0D") {
+    frameImg.src = "frames/frame_" + String(state.idx).padStart(4, "0") + ".png";
+    projectedHits = [];
+    return;
+  }
+  if (state.mode === "1D") {
+    ctx.fillStyle = "#07090b";
+    ctx.fillRect(0, 0, width, height);
+    const visible = EVENTS.slice(0, state.idx + 1);
+    visible.forEach((ev, i) => {
+      const y = 40 + i * 14;
+      if (y > height - 20) return;
+      ctx.globalAlpha = i === state.idx ? 1 : 0.55;
+      ctx.fillStyle = colorFor(ev);
+      ctx.fillRect(40, y, Math.max(8, (i + 1) * 8), 8);
+      if (i === state.idx) {
+        ctx.fillStyle = "#eef2f5";
+        ctx.font = "12px ui-monospace, Menlo, monospace";
+        ctx.fillText(ev.event_index + " · " + ev.event_type, 40, y - 4);
+      }
+    });
+    ctx.globalAlpha = 1;
+    projectedHits = [];
+    return;
+  }
+
+  const visible = visibleNodes();
+  const ids = new Set(visible.map((n) => n.id));
+  const projected = new Map();
+  visible.forEach((n) => projected.set(n.id, projectNode(n, width, height)));
+
+  SCENE.links.forEach((link) => {
+    if (!ids.has(link.source) || !ids.has(link.target)) return;
+    const a = projected.get(link.source);
+    const b = projected.get(link.target);
+    if (!a || !b) return;
+    const depthMean = ((a.depth || 0) + (b.depth || 0)) / 2;
+    ctx.globalAlpha = state.mode === "2D" ? 0.28 : Math.max(0.12, Math.min(0.4, 0.22 + depthMean * 0.05));
+    ctx.strokeStyle = link.relation === "fcg_root_change" ? "#d9773a" : "#87909b";
+    ctx.lineWidth = link.relation === "fcg_root_change" ? 1.5 : 1;
+    ctx.beginPath();
+    ctx.moveTo(a.px, a.py);
+    ctx.lineTo(b.px, b.py);
+    ctx.stroke();
+  });
+
+  const ordered = [...visible].sort((a, b) => (projected.get(a.id).depth || 0) - (projected.get(b.id).depth || 0));
+  const hits = [];
+  ordered.forEach((node) => {
+    const p = projected.get(node.id);
+    if (!p) return;
+    const selected = node.id === state.selectedId || (node.id === "evt:" + state.idx);
+    ctx.globalAlpha = p.alpha != null ? p.alpha : 0.9;
+    ctx.fillStyle = node.color;
+    ctx.beginPath();
+    ctx.arc(p.px, p.py, selected ? p.r + 2 : p.r, 0, Math.PI * 2);
+    ctx.fill();
+    if (selected) {
+      ctx.strokeStyle = "#ffffff";
+      ctx.lineWidth = 1.5;
+      ctx.globalAlpha = 0.95;
+      ctx.beginPath();
+      ctx.arc(p.px, p.py, p.r + 6, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.fillStyle = "#eef2f5";
+      ctx.font = "11px ui-monospace, Menlo, monospace";
+      ctx.fillText(node.label, p.px + 10, p.py - 8);
+    }
+    hits.push({ id: node.id, px: p.px, py: p.py, hitRadius: Math.max(18, p.r + 8) });
+  });
+  ctx.globalAlpha = 1;
+  projectedHits = hits;
+}
+
+function syncUI() {
+  const ev = EVENTS[state.idx];
+  scrub.value = String(state.idx);
+  counter.textContent = state.idx + " / " + (N - 1);
+  eventJson.textContent = JSON.stringify(ev, null, 2);
+  const stage = stageOf(ev);
+  badgeStage.textContent = stage;
+  badgeStage.className = "badge " + (
+    stage === "POISON" ? "on-poison" :
+    stage === "ANTIDOTE/REPAIR" ? "on-repair" :
+    stage === "RESTORED/PASS" ? "on-pass" : "on-ref"
+  );
+  cursorMeta.innerHTML =
+    "<strong>run</strong> HYDRALAMP_REAL_EVIDENCE_RESTORE_V1 · " +
+    "<strong>seq</strong> " + state.idx + " · " +
+    "<strong>event_index</strong> " + ev.event_index + " · " +
+    "<strong>hash</strong> " + ev.event_hash.slice(0, 12) + "… · " +
+    "<strong>FCG</strong> " + ev.fcg_root_after.slice(0, 8) + "… · " +
+    "<strong>mode</strong> " + state.mode + " · " +
+    "<strong>yaw/pitch/zoom</strong> " + state.yaw.toFixed(2) + "/" + state.pitch.toFixed(2) + "/" + state.zoom.toFixed(0);
+
+  const sel = SCENE.nodes.find((n) => n.id === state.selectedId) || SCENE.nodes.find((n) => n.id === "evt:" + state.idx);
+  nodeJson.textContent = JSON.stringify({
+    selected_id: sel && sel.id,
+    kind: sel && sel.kind,
+    label: sel && sel.label,
+    layout_xyz_t: sel && { x: sel.x, y: sel.y, z: sel.z, t: sel.t },
+    layout_class: SPATIAL_COORDINATES,
+    bound_event_hash: sel && sel.event_hash,
+    fcg_root_after: sel && sel.fcg_root_after,
+    fco_ids: sel && sel.fco_ids,
+    note: "Layout distance is visualization only — not semantic/CloudDrift/ΔG*/hash distance."
+  }, null, 2);
+
+  [...timeline.children].forEach((el, i) => {
+    el.classList.toggle("active", i === state.idx);
+  });
+
+  ["0d","1d","2d","3d","4d"].forEach((m) => {
+    const btn = document.getElementById("mode-" + m);
+    const on = state.mode === m.toUpperCase();
+    btn.classList.toggle("active", on);
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+  });
+
+  drawGraph();
+}
+
+function show(i) {
+  state.idx = Math.max(0, Math.min(N - 1, i));
+  state.selectedId = "evt:" + state.idx;
+  syncUI();
+}
+
+function play() {
+  if (state.timer) return;
+  state.playing = true;
+  state.timer = setInterval(() => show((state.idx + 1) % N), 500);
+}
+
+function pause() {
+  state.playing = false;
+  clearInterval(state.timer);
+  state.timer = null;
+}
+
+function resetCamera() {
+  state.yaw = 0.55;
+  state.pitch = -0.3;
+  state.zoom = 245;
+  syncUI();
+}
+
+function buildTimeline() {
+  timeline.innerHTML = "";
+  EVENTS.forEach((ev, i) => {
+    const el = document.createElement("div");
+    el.className = "tl-item";
+    el.setAttribute("role", "option");
+    el.setAttribute("aria-label", "Event " + ev.event_index + " " + ev.event_type);
+    const st = stageOf(ev);
+    if (st === "POISON") el.classList.add("poison");
+    if (st === "ANTIDOTE/REPAIR") el.classList.add("repair");
+    el.textContent = String(ev.event_index).padStart(2, "0") + "  " + ev.event_type + " · " + ev.actor_id;
+    el.onclick = () => { pause(); show(i); };
+    timeline.appendChild(el);
+  });
+}
+
+document.getElementById("play").onclick = play;
+document.getElementById("pause").onclick = pause;
+document.getElementById("step-back").onclick = () => { pause(); show(state.idx - 1); };
+document.getElementById("step-fwd").onclick = () => { pause(); show(state.idx + 1); };
+scrub.oninput = () => { pause(); show(Number(scrub.value)); };
+
+document.getElementById("rot-left").onclick = () => { state.yaw -= 0.15; syncUI(); };
+document.getElementById("rot-right").onclick = () => { state.yaw += 0.15; syncUI(); };
+document.getElementById("rot-up").onclick = () => { state.pitch = Math.max(-1.25, state.pitch - 0.12); syncUI(); };
+document.getElementById("rot-down").onclick = () => { state.pitch = Math.min(1.25, state.pitch + 0.12); syncUI(); };
+document.getElementById("zoom-in").onclick = () => { state.zoom = Math.min(620, state.zoom + 25); syncUI(); };
+document.getElementById("zoom-out").onclick = () => { state.zoom = Math.max(120, state.zoom - 25); syncUI(); };
+document.getElementById("cam-center").onclick = () => { state.yaw = 0.55; state.pitch = -0.3; syncUI(); };
+document.getElementById("cam-reset").onclick = resetCamera;
+
+["0d","1d","2d","3d","4d"].forEach((m) => {
+  document.getElementById("mode-" + m).onclick = () => {
+    state.mode = m.toUpperCase();
+    syncUI();
+  };
+});
+
+document.getElementById("jump-ref").onclick = () => { pause(); show(STAGE_JUMP.ref); };
+document.getElementById("jump-poison").onclick = () => { pause(); show(STAGE_JUMP.poison); };
+document.getElementById("jump-repair").onclick = () => { pause(); show(STAGE_JUMP.repair); };
+document.getElementById("jump-pass").onclick = () => { pause(); show(STAGE_JUMP.pass); };
+
+canvas.addEventListener("pointerdown", (e) => {
+  canvas.setPointerCapture(e.pointerId);
+  state.drag = { active: true, moved: false, x: e.clientX, y: e.clientY };
+  canvas.classList.add("dragging");
+});
+canvas.addEventListener("pointermove", (e) => {
+  if (!state.drag.active) return;
+  if (state.mode !== "3D" && state.mode !== "4D") return;
+  const dx = e.clientX - state.drag.x;
+  const dy = e.clientY - state.drag.y;
+  if (Math.abs(dx) + Math.abs(dy) > 2) state.drag.moved = true;
+  state.drag.x = e.clientX;
+  state.drag.y = e.clientY;
+  state.yaw += dx * 0.008;
+  state.pitch = Math.max(-1.25, Math.min(1.25, state.pitch + dy * 0.008));
+  syncUI();
+});
+function endDrag(e) {
+  const moved = state.drag.moved;
+  state.drag.active = false;
+  canvas.classList.remove("dragging");
+  if (moved) return;
+  const rect = canvas.getBoundingClientRect();
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+  const hit = projectedHits
+    .map((p) => ({ p, d: Math.hypot(p.px - x, p.py - y) }))
+    .filter(({ p, d }) => d <= p.hitRadius)
+    .sort((a, b) => a.d - b.d)[0];
+  if (hit) {
+    state.selectedId = hit.p.id;
+    if (hit.p.id.startsWith("evt:")) {
+      pause();
+      show(Number(hit.p.id.slice(4)));
+      return;
+    }
+    syncUI();
+  }
+}
+canvas.addEventListener("pointerup", endDrag);
+canvas.addEventListener("pointercancel", () => { state.drag.active = false; canvas.classList.remove("dragging"); });
+canvas.addEventListener("wheel", (e) => {
+  e.preventDefault();
+  state.zoom = Math.max(120, Math.min(620, state.zoom - e.deltaY * 0.3));
+  syncUI();
+}, { passive: false });
+
+window.addEventListener("keydown", (e) => {
+  if (e.target && (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA")) return;
+  if (e.code === "Space") { e.preventDefault(); state.playing ? pause() : play(); }
+  if (e.key === "ArrowLeft" && !e.shiftKey) { pause(); show(state.idx - 1); }
+  if (e.key === "ArrowRight" && !e.shiftKey) { pause(); show(state.idx + 1); }
+  if (e.key === "ArrowLeft" && e.shiftKey) { state.yaw -= 0.15; syncUI(); }
+  if (e.key === "ArrowRight" && e.shiftKey) { state.yaw += 0.15; syncUI(); }
+  if (e.key === "ArrowUp" && e.shiftKey) { state.pitch = Math.max(-1.25, state.pitch - 0.12); syncUI(); }
+  if (e.key === "ArrowDown" && e.shiftKey) { state.pitch = Math.min(1.25, state.pitch + 0.12); syncUI(); }
+  if (e.key === "+" || e.key === "=") { state.zoom = Math.min(620, state.zoom + 25); syncUI(); }
+  if (e.key === "-" || e.key === "_") { state.zoom = Math.max(120, state.zoom - 25); syncUI(); }
+  if (e.key === "r" || e.key === "R") resetCamera();
+});
+
+window.addEventListener("resize", () => drawGraph());
+
+// expose for browser QA
+window.__HL_BACKUP__ = {
+  getState: () => ({
+    mode: state.mode,
+    idx: state.idx,
+    yaw: state.yaw,
+    pitch: state.pitch,
+    zoom: state.zoom,
+    selectedId: state.selectedId,
+    event_hash: EVENTS[state.idx].event_hash,
+    fcg_root_after: EVENTS[state.idx].fcg_root_after,
+    stage: stageOf(EVENTS[state.idx]),
+    event_count: N,
+    spatial: SPATIAL_COORDINATES
+  }),
+  show, play, pause, resetCamera
+};
+
+buildTimeline();
+show(0);
+</script>
+</body>
+</html>

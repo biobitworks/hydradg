@@ -1,0 +1,50 @@
+{
+  "schema": "hydradg.seedgraph_piecewise_plan.v1",
+  "state": "PREREGISTERED_PLAN_NOT_EXECUTED",
+  "monolithic_resume_allowed": false,
+  "work_unit": "ONE_EXPLICIT_SOURCE_DOCUMENT_MEDIA_OR_FILE",
+  "per_source_outputs": [
+    "SOURCE_MANIFEST.json",
+    "ATOMS.jsonl",
+    "EDGES.jsonl",
+    "INGEST_RECEIPT.json",
+    "SEGMENT_ROOT.json"
+  ],
+  "source_terminal_states": [
+    "VERIFIED",
+    "PARTIAL",
+    "CORRUPT",
+    "NOT_READBACK_SAFE",
+    "BLOCKED",
+    "UNSUPPORTED_SOURCE_CLASS"
+  ],
+  "batch_policy": {
+    "default_verified_sources_per_batch": 25,
+    "adaptive_smaller_batch_on_memory_pressure": true,
+    "outputs": [
+      "BATCH_MANIFEST.json",
+      "BATCH_ROOT.json",
+      "BATCH_FCG_DELTA.jsonl",
+      "BATCH_CFMO_UPDATE.json",
+      "BATCH_MMR_APPEND_RECEIPT.json"
+    ],
+    "mmr_receipt_condition": "ONLY_AFTER_ACTUAL_CANONICAL_APPEND_AND_VERIFICATION",
+    "writeback_condition": "ONLY_VERIFIED_SEGMENTS",
+    "readback_required_before_promotion": true
+  },
+  "snakemake_chain": [
+    "freeze_source",
+    "triage_source",
+    "deterministic_atomize",
+    "validate_atoms",
+    "materialize_fco",
+    "materialize_fcg",
+    "verify_segment",
+    "checkpoint_segment",
+    "append_verified_batch",
+    "readback_verify",
+    "update_cfmo",
+    "append_mmr_if_authorized"
+  ],
+  "claim_boundary": "PIECEWISE_SUCCESSOR_DOES_NOT_ESTABLISH_WHOLE_PROJECT_ATOMIZATION_UNTIL_ALL_DECLARED_SOURCES_TERMINATE_VERIFIED"
+}

@@ -1,0 +1,9 @@
+{
+  "claim_ceiling": "HOSTED_CONNECTIVITY_QUERY_EXECUTED; CANONICAL_FCO_FCG_BYOG_PARITY_NOT_ESTABLISHED",
+  "original_claim": "FULL LARGE-SCALE HYDRADB WRITE ESTABLISHED (20,820,112 FCO Nodes)",
+  "reclassified_status": "SUPERSEDED_HISTORICAL_FAILURE_EVIDENCE",
+  "schema": "hydradg.superseded_historical_receipt.v1",
+  "superseded_file": "eval/hosted_migration_20260820/LOCAL_HYDRADB_WRITEBACK_RECEIPT.json",
+  "supersession_reason": "Reclassified under strict fail-closed audit. The 20.8M count represents spatiotemporal pointer occurrences counted locally from Parquet dictionaries, not individually streamed cloud objects.",
+  "timestamp_unix": 1787263074
+}

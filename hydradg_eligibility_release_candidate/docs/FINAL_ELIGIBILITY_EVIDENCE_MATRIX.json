@@ -1,0 +1,144 @@
+{
+  "claim_ceiling": "EXECUTED_AND_RETAINED_EVIDENCE_ONLY; PSEUDO_RECEIPTS_RECLASSIFIED_FAIL_CLOSED; MODEL_BENEFIT_AND_EXPANDED_HOSTED_PARITY_NOT_ESTABLISHED",
+  "context_entropy": {
+    "abstentions": 12,
+    "classified": 18555,
+    "coverage_percent": 99.9354,
+    "deterministic_hash": 18428,
+    "raw_findings": 18567,
+    "revoked_historical_credential": 1,
+    "toy_non_authenticating_key": 126,
+    "unexplained_secret_candidate": 12
+  },
+  "deployment_state": "PAUSED_BY_USER_UNTIL_LATER_AFTERNOON",
+  "information_state_heat_fixture": [
+    {
+      "G": -0.061230299,
+      "H": 0.6395563654,
+      "Hnorm": 0.40351514,
+      "P": [
+        0.88,
+        0.08,
+        0.04
+      ],
+      "TV": 0.0,
+      "U": 0.08,
+      "cloud_drift": 0.0,
+      "dG": 0.0,
+      "id": "T0"
+    },
+    {
+      "G": 0.5729557908,
+      "H": 1.118730879,
+      "Hnorm": 0.7058405978,
+      "P": [
+        0.18,
+        0.72,
+        0.1
+      ],
+      "TV": 0.7,
+      "U": 0.82,
+      "cloud_drift": 40.3628644176,
+      "dG": 0.6341860898,
+      "id": "T1"
+    },
+    {
+      "G": -0.0274962803,
+      "H": 1.030208781,
+      "Hnorm": 0.6499893723,
+      "P": [
+        0.76,
+        0.14,
+        0.1
+      ],
+      "TV": 0.12,
+      "U": 0.2,
+      "cloud_drift": 1.8728650216,
+      "dG": -0.6004520711,
+      "id": "T2",
+      "restoration_gain": 0.58
+    }
+  ],
+  "merkle_state": "NOT_MERKLE_COMMITTED",
+  "primary_award_positioning": [
+    "TRACK03_STRONGEST_EXECUTED_TRACK_CASE",
+    "BEST_USE_HYDRADB_STRONGEST_CROSS_CUTTING_CASE",
+    "TRACK01_TRACK02_ADJACENT_FUTURE_FIT_PENDING_DISTINCT_REAL_DATA_EXECUTION"
+  ],
+  "reviewed_branch": "hack-hydra/final-hosted-fcg-20260820",
+  "reviewed_head": "c62d8d56ce6ab8cbb40a4c5d7120e66f4468cfac",
+  "scale_accounting": {
+    "declared_canonical_parquet_bytes": 1101473790,
+    "download_byte_savings_state": "NOT_MEASURED",
+    "duplicate_occurrences": 20818956,
+    "identity_reuse_percent": 65.730975,
+    "measured_energy_wh": null,
+    "measured_time_saved_seconds": null,
+    "raw_occurrences": 31672976,
+    "theoretical_7b_flops": 291465384000000000,
+    "theoretical_energy_equivalent_wh": 0.809626,
+    "unique_keys": 10854020
+  },
+  "schema": "hydradg.final_eligibility_award_case_matrix.v1",
+  "signature_state": "NOT_SIGNED",
+  "states": {
+    "context_entropy_hydradb_readback": "SUCCESS_RETAINED",
+    "download_byte_savings": "NOT_MEASURED",
+    "energy_savings": "THEORETICAL_ONLY",
+    "expanded_hosted_parity": "NOT_ESTABLISHED",
+    "full_local_20m_writeback": "NOT_ESTABLISHED",
+    "historical_hosted_36_24": "PASS_BOUNDED_HISTORICAL_SCOPE",
+    "k5_k10_depth": "RETAINED_LOCAL_EXECUTION",
+    "live_vercel_hydradb": "DEGRADED_NOT_CONFIGURED_ON_CURRENT_DEPLOYMENT",
+    "longmemeval_full500": "EXECUTED_RETAINED",
+    "model_benefit": "NOT_ESTABLISHED",
+    "project_merkle": "NOT_MERKLE_COMMITTED",
+    "project_signature": "NOT_SIGNED",
+    "seedgraph_external_admission": "NOT_ESTABLISHED"
+  },
+  "track03": {
+    "abstentions": 30,
+    "cases": 500,
+    "depth_deltas_pp": {
+      "A_hit": 1.489,
+      "A_recall": 3.875,
+      "D_hit": 2.553,
+      "D_recall": 7.67,
+      "evidence_path_coverage": -12.276
+    },
+    "entities": 4776,
+    "facts": 3506,
+    "k10": {
+      "A": {
+        "hit": 0.97872,
+        "recall": 0.94535
+      },
+      "D": {
+        "hit": 0.97021,
+        "recall": 0.92273
+      },
+      "evidence_path_coverage": 0.51511
+    },
+    "k5": {
+      "A": {
+        "hit": 0.96383,
+        "recall": 0.9066
+      },
+      "B": {
+        "hit": 0.94681,
+        "recall": 0.85383
+      },
+      "C": {
+        "hit": 0.94681,
+        "recall": 0.85259
+      },
+      "D": {
+        "hit": 0.94468,
+        "recall": 0.84603
+      },
+      "evidence_path_coverage": 0.63787
+    },
+    "scored": 470,
+    "sessions": 23867
+  }
+}

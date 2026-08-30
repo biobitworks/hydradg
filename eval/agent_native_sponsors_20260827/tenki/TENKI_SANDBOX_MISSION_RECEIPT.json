@@ -1,0 +1,39 @@
+{
+  "schema": "sponsor.tenki.sandbox_mission_receipt.v1",
+  "mission_id": "ANB-SP-TENKI-SANDBOX-001",
+  "provider": "Tenki",
+  "operation": "sandbox_create_exec_terminate",
+  "docs_ref": "https://tenki.cloud/docs",
+  "sandbox_docs_ref": "https://tenki.cloud/docs/sandbox/quickstart",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "tenki_cli": "PRESENT",
+  "TENKI_API_KEY": "PRESENT",
+  "fcg_append": "NOT_APPENDED",
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T06:02:33.983Z",
+  "auth_state": "PASS",
+  "session_id": "01a041d0-22cb-77c9-9761-c30741940f18",
+  "exec": {
+    "attempted": true,
+    "command": [
+      "tenki",
+      "sandbox",
+      "exec",
+      "--session",
+      "01a041d0-22cb-77c9-9761-c30741940f18",
+      "-c",
+      "uname -a && echo HYDRADG_TENKI_OK"
+    ],
+    "exit_code": 0,
+    "stdout_sha256": "ddb0deda8d9ae15aef5e5617a1318a8f9332306e3f546b7f34aa00e851469a8a",
+    "raw_artifact_path": "eval/agent_native_sponsors_20260827/tenki/raw/TENKI_EXEC_RAW.json"
+  },
+  "terminate": {
+    "attempted": true,
+    "exit_code": 0
+  },
+  "status": "PASS",
+  "error_code": null,
+  "error_summary": null
+}

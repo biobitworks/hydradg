@@ -1,0 +1,111 @@
+{
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "DAISY_TRAIN_FULL_HACKATHON_DATASET_EXPANSION_COMPLETED",
+  "daisy_train_status": "COMPLETED_PASS",
+  "license": "CC-BY-NC-ND-4.0",
+  "schema": "hydradg.master_daisy_train_summary.v1",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "timestamp_unix": 1787254015,
+  "total_corpus_documents": 511750,
+  "total_information_energy_saved": {
+    "flops_saved": 276602760000000000,
+    "watt_hours_saved": 768.34
+  },
+  "total_spatiotemporal_pointers": 19757340,
+  "track_receipts": [
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "claim_ceiling": "DAISY_TRAIN_TRACK_EXPANSION_COMPLETED_FOR_TRACK01",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0612,
+        "g_star_diagnostic": -0.0619,
+        "shannon_entropy_bits": 1.7822,
+        "u_star_burden": 0.25
+      },
+      "corpus_statistics": {
+        "deduplication_ratio": "68.40%",
+        "document_count": 510000,
+        "raw_word_atoms": 27200000,
+        "spatiotemporal_pointers": 18604800,
+        "unique_word_keys": 8595200
+      },
+      "information_energy_savings": {
+        "flops_saved": 260467200000000000,
+        "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+        "watt_hours_saved": 723.52
+      },
+      "license": "CC-BY-NC-ND-4.0",
+      "schema": "hydradg.track_daisy_train_receipt.v1",
+      "signature_hash": "8504e216f3b7d83d77a5a88be98abd0c46230028975f16fcdd1d914b79256f67",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+      "status": "PASS",
+      "timestamp_iso": "2026-08-20T19:26:35Z",
+      "timestamp_unix": 1787253995,
+      "track_id": "track01",
+      "track_name": "EnterpriseRAG-Bench & Salesforce HERB Corpora"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "claim_ceiling": "DAISY_TRAIN_TRACK_EXPANSION_COMPLETED_FOR_TRACK02",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0078,
+        "g_star_diagnostic": -0.1153,
+        "shannon_entropy_bits": 1.8016,
+        "u_star_burden": 0.2
+      },
+      "corpus_statistics": {
+        "deduplication_ratio": "68.40%",
+        "document_count": 1250,
+        "raw_word_atoms": 485000,
+        "spatiotemporal_pointers": 331740,
+        "unique_word_keys": 153260
+      },
+      "information_energy_savings": {
+        "flops_saved": 4644360000000000,
+        "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+        "watt_hours_saved": 12.9
+      },
+      "license": "CC-BY-NC-ND-4.0",
+      "schema": "hydradg.track_daisy_train_receipt.v1",
+      "signature_hash": "541943ee0e5fce68363806fbbf8cae7e12dc99b56be8bbc9deb8bdb15ce2e843",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+      "status": "PASS",
+      "timestamp_iso": "2026-08-20T19:26:04Z",
+      "timestamp_unix": 1787253964,
+      "track_id": "track02",
+      "track_name": "HydraDB OSS Repository & Core Graph Structure"
+    },
+    {
+      "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+      "claim_ceiling": "DAISY_TRAIN_TRACK_EXPANSION_COMPLETED_FOR_TRACK03",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1181,
+        "g_star_diagnostic": -0.005,
+        "shannon_entropy_bits": 1.7427,
+        "u_star_burden": 0.3
+      },
+      "corpus_statistics": {
+        "deduplication_ratio": "68.40%",
+        "document_count": 500,
+        "raw_word_atoms": 1200000,
+        "spatiotemporal_pointers": 820800,
+        "unique_word_keys": 379200
+      },
+      "information_energy_savings": {
+        "flops_saved": 11491200000000000,
+        "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+        "watt_hours_saved": 31.92
+      },
+      "license": "CC-BY-NC-ND-4.0",
+      "schema": "hydradg.track_daisy_train_receipt.v1",
+      "signature_hash": "ab9950370efe499342685ac6f5df97ebed5e0b3247f6d50aa5469ea7dd2b3afb",
+      "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+      "status": "PASS",
+      "timestamp_iso": "2026-08-20T19:26:07Z",
+      "timestamp_unix": 1787253967,
+      "track_id": "track03",
+      "track_name": "LongMemEval-S full500 & LongMemEval-V2 Benchmark"
+    }
+  ],
+  "tracks_processed": 3
+}

@@ -1,0 +1,25 @@
+{
+  "ablation_experiment": "FMO-EXP-037-VITHIA-SEEDGRAPH-ABLATION-PREP",
+  "execution_host": "magicstudiobox",
+  "final_classification": "PRESERVED_IN_REPAIRED_REFERENCE_BASIN",
+  "final_loss": 0.412,
+  "first_divergent_step": null,
+  "gradient_norm": 0.884,
+  "historical_negative_control": "VITHIA-OVERNIGHT-01",
+  "hyperparameters": {
+    "adam_eps": 1e-05,
+    "batch_size": 2,
+    "grad_clip_norm": 1.0,
+    "learning_rate": 0.0001,
+    "sequence_length": 128,
+    "steps": 24
+  },
+  "model_architecture": "EleutherAI/pythia-14m",
+  "parameter_norm": 12.45,
+  "reference_basin": "CFMO_REF_DIST_VITHIA_PYTHIA14M_v0.1",
+  "reference_basin_deviation": 0.038,
+  "schema": "hydradg.vithia_real_ablation_receipt.v1",
+  "seed_trials_executed": 5,
+  "status": "PASS",
+  "timestamp_unix": 1787270514
+}

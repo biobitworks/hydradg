@@ -1,0 +1,180 @@
+[
+  {
+    "id": "fco:daa11b4685189b2eff2f8412244582093b9e747caa184825d63a4165943b686f",
+    "type": "ConversationSourceFCO",
+    "object_sha256": "daa11b4685189b2eff2f8412244582093b9e747caa184825d63a4165943b686f",
+    "payload": {
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "agent_identity": "Antigravity/Gemini Pro",
+      "provenance": "Antigravity Local Brain Logs",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:b0cce7763cbbb2247d4d9c1b8ce1ee6718114cc39fbe415d3994e2add9608014",
+    "type": "BrainArtifactFCO",
+    "object_sha256": "b0cce7763cbbb2247d4d9c1b8ce1ee6718114cc39fbe415d3994e2add9608014",
+    "payload": {
+      "artifact_name": "implementation_plan.md",
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "agent_identity": "Antigravity/Gemini Pro",
+      "content_sha256": "92c1cf00d7c285a14fa8100692508dc742155c3e59ef50d71e14e0e3472aeee6",
+      "gemini_provenance_hash": "69c6a0b933fc7e2b357c8bb9f03dc7510a9150b8a43a3c0c4acab8dbd1cf7272",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0",
+      "bytes": 2891
+    }
+  },
+  {
+    "id": "fco:0b5ec6e37d56d179d7ba014612d1987b2d47027147fadcfb816f608fb04498ee",
+    "type": "BrainArtifactFCO",
+    "object_sha256": "0b5ec6e37d56d179d7ba014612d1987b2d47027147fadcfb816f608fb04498ee",
+    "payload": {
+      "artifact_name": "walkthrough.md",
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "agent_identity": "Antigravity/Gemini Pro",
+      "content_sha256": "9576fed08e48c1328b024407bddd6395fad053f99ffcf573ee5b60d66e3b44de",
+      "gemini_provenance_hash": "8d806b67a3c2b3ef2aa18edad67260c5ee41f0efb1b8aefa56910a74e7f9fa2f",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0",
+      "bytes": 9841
+    }
+  },
+  {
+    "id": "fco:12864e066471d84ea83694e14cc071640172981772850232c239729bb3103b01",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "12864e066471d84ea83694e14cc071640172981772850232c239729bb3103b01",
+    "payload": {
+      "step_index": 0,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "USER_INPUT",
+      "actor_role": "HUMAN_USER",
+      "role_kind": "USER_INPUT",
+      "agent_identity": "HUMAN_USER",
+      "content_sha256": "1fa0a571c91ce1484cf5c20a0cefaa0f0946f56a9cf17c08422a30f3937f5b9f",
+      "gemini_provenance_hash": "7faa86e788b409c3ecf84e31bd00c80b43e6d3e7ffad34b07ef1f6553b28a327",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:cae5bc8c112858a91ad62db134102694b64fb924e1201b9bc673694eef7cd73b",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "cae5bc8c112858a91ad62db134102694b64fb924e1201b9bc673694eef7cd73b",
+    "payload": {
+      "step_index": 1,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "CHECKPOINT",
+      "actor_role": "SYSTEM",
+      "role_kind": "TOOL_CALL",
+      "agent_identity": "SYSTEM",
+      "content_sha256": "1bd5ddeb93289391521427b777e45821665195cc99f167a5cc327073dee2c3f5",
+      "gemini_provenance_hash": "9b11daf06b1004875e76e942a5c552c79fa67863759ae41c3782f103749ea1e6",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:6be2dd2f69ca677ca141bb7de736f9c61b93d97a9871437377047c32fe1db5c8",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "6be2dd2f69ca677ca141bb7de736f9c61b93d97a9871437377047c32fe1db5c8",
+    "payload": {
+      "step_index": 2,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "PLANNER_RESPONSE",
+      "actor_role": "AI_AGENT",
+      "role_kind": "MODEL",
+      "agent_identity": "Antigravity/Gemini Pro",
+      "content_sha256": "59814300419b312d8bc70570cd8d00ba360f68b541c78fd549cbd2aec7506a86",
+      "gemini_provenance_hash": "fe163ce951d45bcc44f28d8a43fd01095755fd4da7624eaba9458ab9ff120a6e",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:5edbd683e6dc2896df59880671a13011c74024e62b045b0a6e8f66119d1d0d8e",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "5edbd683e6dc2896df59880671a13011c74024e62b045b0a6e8f66119d1d0d8e",
+    "payload": {
+      "step_index": 3,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "GENERIC",
+      "actor_role": "SYSTEM",
+      "role_kind": "TOOL_CALL",
+      "agent_identity": "SYSTEM",
+      "content_sha256": "0d48047d82ef81941e1af7a0f013178c586ca815b5a64e6c9c49d8f108e144b2",
+      "gemini_provenance_hash": "61402dcbb744920fe02957192aa23ee0c726769d312e854682b230a7b3716f68",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:51de72915c3666d5f9799ffc092e7d8d37cd3ad5371246f7d8ac51b8d90564af",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "51de72915c3666d5f9799ffc092e7d8d37cd3ad5371246f7d8ac51b8d90564af",
+    "payload": {
+      "step_index": 4,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "PLANNER_RESPONSE",
+      "actor_role": "AI_AGENT",
+      "role_kind": "MODEL",
+      "agent_identity": "Antigravity/Gemini Pro",
+      "content_sha256": "ef2c7b1c238f6e25dda029bbdbfe80423015d52936a7e40f176da4239cf42daf",
+      "gemini_provenance_hash": "1f2eb9cd6b845775861b2f75729e009afa7f41c138bd5364b70e61792cc55f37",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:83c2663029e0a3b0d64a9c072fc88ba4133c39f51e0764d7d8503009fda7cf4f",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "83c2663029e0a3b0d64a9c072fc88ba4133c39f51e0764d7d8503009fda7cf4f",
+    "payload": {
+      "step_index": 5,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "GENERIC",
+      "actor_role": "SYSTEM",
+      "role_kind": "TOOL_CALL",
+      "agent_identity": "SYSTEM",
+      "content_sha256": "b5ffb11d34294001754a5e5142db80992d7168cc02e8df0903a75b490dc1178c",
+      "gemini_provenance_hash": "e5caf7928f10d9f713e0d4169cc51d930390f2f8b519b53c99fd697c100c624b",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  },
+  {
+    "id": "fco:f451b07ed19ce015ea8a666063410690adbfef4e1eaa8f34ec87885006b878c7",
+    "type": "InTurnReceiptFCO",
+    "object_sha256": "f451b07ed19ce015ea8a666063410690adbfef4e1eaa8f34ec87885006b878c7",
+    "payload": {
+      "step_index": 6,
+      "conversation_id": "eee59322-9ae9-4eb7-a286-acc43ba20a29",
+      "step_type": "PLANNER_RESPONSE",
+      "actor_role": "AI_AGENT",
+      "role_kind": "MODEL",
+      "agent_identity": "Antigravity/Gemini Pro",
+      "content_sha256": "eb8f877c4b2b14d2373ea5556481741eb9676dd08325840e5a615449a471eb82",
+      "gemini_provenance_hash": "fc1bdbd5b57960d9dd50dc35e15e94a2b12f01cf13347a17b896be896e15a065",
+      "signature_state": "NOT_SIGNED",
+      "seedgraph_admitted": true,
+      "custody_state": "HASHED_SEEDGRAPH_ADMITTED",
+      "license": "CC-BY-NC-ND-4.0"
+    }
+  }
+]

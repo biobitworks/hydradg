@@ -1,0 +1,39 @@
+{
+  "schema": "hydralamp.runtype.live_loop_repair_receipt.v1",
+  "recorded_at_utc": "2026-08-27T23:28:24.948Z",
+  "execution_host": "magicSTUDIObox.local",
+  "repo_branch": "hack-hydra/hydralamp-20260826",
+  "prior_overnight_receipt": "eval/hydralamp_runtype_20260826/OVERNIGHT_EXECUTION_RECEIPT.json",
+  "prior_science_closeout": "eval/hydralamp_runtype_20260826/HYDRALAMP_SCIENCE_CLOSEOUT_RECEIPT.json",
+  "model_inventory_successor": "eval/hydralamp_runtype_20260826/MODEL_INVENTORY.json",
+  "model_id": "qwen/qwen3.6-27b",
+  "sdk_version": "9.2.0",
+  "overnight_rerun": false,
+  "interpretation": "Post-overnight repair ladder (R0–R6 + negative). Prior ERROR receipts preserved; not a 4×25 live rerun.",
+  "gates": {
+    "RUNTYPE_R0_SDK": "PASS",
+    "RUNTYPE_R1_AUTH_INVENTORY": "PASS",
+    "RUNTYPE_R2_MINIMAL": "PASS",
+    "RUNTYPE_R3_STRUCTURED": "FAIL",
+    "RUNTYPE_R4_ONE_TOOL": "FAIL",
+    "RUNTYPE_R5_HYDRALAMP_TOOLS": "FAIL",
+    "RUNTYPE_R6_RESTORATION": "FAIL",
+    "RUNTYPE_NEGATIVE": "PASS"
+  },
+  "execution_ids": {
+    "r2_minimal": "exec_dcdb6453-ecdb-470b-9115-afddab3c4726",
+    "r4_one_tool": null,
+    "r6_restoration": null
+  },
+  "blocking_error": {
+    "provider_error_code": "TEST_KEY_DAILY_LIMIT_EXCEEDED",
+    "http_status": 429,
+    "error_message": "Test Key Limit Exceeded",
+    "first_failing_gate": "RUNTYPE_R3_STRUCTURED"
+  },
+  "provider_timeout_ms_chosen": 35388,
+  "artifact_dir": "eval/agent_native_sponsors_20260827/live_loop_repair/runtype/",
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "signature_state": "NOT_SIGNED",
+  "fcg_append_state": "NOT_APPENDED"
+}

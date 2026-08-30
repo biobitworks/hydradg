@@ -1,0 +1,101 @@
+{
+  "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "K5_LOCAL_MODEL_RETRIEVAL_EVALUATION_COMPLETED_ON_MAGICSTUDIOBOX",
+  "execution_environment": {
+    "local_ollama_status": "ONLINE_ACTIVE (http://127.0.0.1:11434)",
+    "orbstack_container_status": "ONLINE_ACTIVE (seedgraph-neo4j-local:7474)",
+    "target_machine": "magicstudiobox"
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "model_evaluations": [
+    {
+      "cell_digest_sha256": "9e408653729e10d90021413663e41fe92bb74bd0f6147ec317d6049bf6e67d95",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0696,
+        "g_star_diagnostic": -0.0535,
+        "shannon_entropy_bits": 1.7345,
+        "u_star_burden": 0.25
+      },
+      "model_id": "qwen2.5_coder_7b",
+      "model_name": "Qwen 2.5 Coder 7B",
+      "model_tag": "qwen2.5-coder:7b",
+      "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED",
+      "params_b": 7.0,
+      "retrieval_horizon_k": 5,
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "theoretical_flops_avoided": 11491200000000002
+      }
+    },
+    {
+      "cell_digest_sha256": "910ea390cc3baed5a1c1d47cb74792792505dcebb648bcf010356692938d4c42",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0805,
+        "g_star_diagnostic": -0.0426,
+        "shannon_entropy_bits": 1.7005,
+        "u_star_burden": 0.255
+      },
+      "model_id": "phi4_reasoning_14b",
+      "model_name": "Phi-4 Reasoning 14B",
+      "model_tag": "phi4:14b",
+      "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED",
+      "params_b": 14.0,
+      "retrieval_horizon_k": 5,
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "theoretical_flops_avoided": 22982400000000004
+      }
+    },
+    {
+      "cell_digest_sha256": "2925a9f8c5c88a870ceed34acd352f370b63bc30c62b7a2e504ffd7f5f404064",
+      "context_energy_metrics": {
+        "delta_g_star": 0.0924,
+        "g_star_diagnostic": -0.0307,
+        "shannon_entropy_bits": 1.6614,
+        "u_star_burden": 0.26
+      },
+      "model_id": "deepseek_r1_7b",
+      "model_name": "DeepSeek-R1-Distill-Qwen-7B",
+      "model_tag": "deepseek-r1:7b",
+      "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED",
+      "params_b": 7.62,
+      "retrieval_horizon_k": 5,
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "theoretical_flops_avoided": 12508992000000002
+      }
+    },
+    {
+      "cell_digest_sha256": "205c63ae6e413c30308945794909c7e4836ce29b9f59f8354b77f63f302daa0c",
+      "context_energy_metrics": {
+        "delta_g_star": 0.1053,
+        "g_star_diagnostic": -0.0178,
+        "shannon_entropy_bits": 1.6159,
+        "u_star_burden": 0.265
+      },
+      "model_id": "vithia_baseline",
+      "model_name": "HydraDG VITHIA CFMO Baseline v0.1",
+      "model_tag": "hydradg-vithia-cfmo-v0.1",
+      "null_hypothesis_state": "RETAINED_NO_SUPERIORITY_CLAIMED",
+      "params_b": 7.0,
+      "retrieval_horizon_k": 5,
+      "theoretical_energy_metrics": {
+        "estimated_duplicate_atom_instances": 820800,
+        "theoretical_flops_avoided": 11491200000000002
+      }
+    }
+  ],
+  "retrieval_horizon_k": 5,
+  "schema": "hydradg.k5_retrieval_evaluation_receipt.v1",
+  "signature_state": "NOT_SIGNED",
+  "status": "PASS",
+  "theoretical_energy_summary": {
+    "efficiency_assumption_flops_per_second_per_watt": 100000000000000,
+    "energy_measurement_state": "NOT_MEASURED",
+    "measured_energy_wh": null,
+    "theoretical_energy_equivalent_wh_under_declared_efficiency_assumption": 0.16243,
+    "theoretical_flops_avoided": 58473792000000010
+  },
+  "timestamp_iso": "2026-08-20T21:06:02Z",
+  "timestamp_unix": 1787259962
+}

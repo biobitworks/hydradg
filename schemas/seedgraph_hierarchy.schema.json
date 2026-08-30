@@ -1,0 +1,23 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"https://hydradg.local/schemas/seedgraph_hierarchy.schema.json",
+  "title":"HydraDG SeedGraph Hierarchy Object v1",
+  "type":"object",
+  "required":["schema","object_id","object_sha256","object_type","visibility","depth"],
+  "properties":{
+    "schema":{"const":"hydradg.seedgraph.hierarchy_object.v1"},
+    "object_id":{"type":"string"},
+    "object_sha256":{"type":"string","pattern":"^[0-9a-f]{64}$"},
+    "object_type":{"type":"string"},
+    "visibility":{"enum":["MODEL_VISIBLE","MODEL_VISIBLE_SAFE","EVAL_QUERY","EVAL_ONLY"]},
+    "depth":{"type":"integer","minimum":0},
+    "canonical_key":{"type":["string","null"]},
+    "display_text":{"type":["string","null"]},
+    "source_sha256":{"type":["string","null"]},
+    "source_pointer":{"type":["object","null"]},
+    "score_bundle":{"type":["object","null"]},
+    "aggregate_scores":{"type":["object","null"]},
+    "metadata":{"type":"object"}
+  },
+  "additionalProperties":true
+}

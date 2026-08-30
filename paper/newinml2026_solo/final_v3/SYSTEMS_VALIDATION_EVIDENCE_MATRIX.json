@@ -1,0 +1,83 @@
+{
+  "schema": "hydradg.newinml2026_solo.systems_validation_evidence_matrix.v1",
+  "recorded_at_utc": "2026-08-29T06:06:39Z",
+  "tier": "SYSTEMS_VALIDATION",
+  "scope_note": "Custody mechanics; does NOT establish EXP-008/009 treatment effect",
+  "entries": [
+    {
+      "validation": "HydraLamp core perturbation matrix",
+      "scope": "100 cells",
+      "outcome": "100/100",
+      "conditions": {
+        "CONTROL": 25,
+        "INVALID_PROOF": 25,
+        "REPLAYED_PROOF": 25,
+        "BROKEN_AUTHORIZATION_EDGE": 25
+      },
+      "unexplained_hash_mismatches": 0,
+      "cross_run_contamination": 0,
+      "source": "eval/hydralamp_runtype_20260826/CORE_STRESS_RECEIPT.json",
+      "source_sha256": "aa02089d1f55c3564e55d0fdb87a4a7773dfe24e1e5f1d8b3928d049b9463adf"
+    },
+    {
+      "validation": "Synthetic tamper suite",
+      "scope": "8 modes",
+      "outcome": "8/8 detected",
+      "synthetic": true,
+      "security_incident": false,
+      "source": "eval/hydralamp_runtype_20260826/HASH_TAMPER_STRESS_RECEIPT.json",
+      "source_sha256": "a23dd3cefc0a2d8f0a7c56c7059e326d0a78001c32e7dd08f27e57303c477f8b"
+    },
+    {
+      "validation": "Concurrent execution",
+      "scope": "10 runs",
+      "outcome": "PASS",
+      "unique_run_ids": 10,
+      "failures": [],
+      "source": "eval/hydralamp_runtype_20260826/CONCURRENCY_STRESS_RECEIPT.json",
+      "source_sha256": "10b68c96167fb6840c10d476a93a37fe76a00d9ae0d9cd981fff6586280ff0c2"
+    },
+    {
+      "validation": "Replay/restart recovery",
+      "scope": "single run",
+      "outcome": "PASS",
+      "events_on_disk": 44,
+      "events_in_memory": 44,
+      "source": "eval/hydralamp_runtype_20260826/RESTART_RECOVERY_RECEIPT.json",
+      "source_sha256": "b0b63a512ca697d245303c05430dbb8c6b1302d9adce66955905063e1ae547d9"
+    },
+    {
+      "validation": "SSE integrity / replay",
+      "scope": "44 events",
+      "outcome": "PASS",
+      "late_subscriber_replay_ok": true,
+      "source": "eval/hydralamp_runtype_20260826/SSE_STRESS_RECEIPT.json",
+      "source_sha256": "1e502b7f8911183466bd2feccad3ff4db00e434a0a96fa13812227e9a730c9da"
+    },
+    {
+      "validation": "Live provider ladder",
+      "scope": "R0-R6 repair ladder",
+      "outcome": "BOUNDED_EXTERNAL_FAILURE_PRESERVED",
+      "first_failing_gate": "RUNTYPE_R3_STRUCTURED",
+      "provider_error_code": "TEST_KEY_DAILY_LIMIT_EXCEEDED",
+      "gates_passed": [
+        "RUNTYPE_R0_SDK",
+        "RUNTYPE_R1_AUTH_INVENTORY",
+        "RUNTYPE_R2_MINIMAL",
+        "RUNTYPE_NEGATIVE"
+      ],
+      "gates_failed": [
+        "RUNTYPE_R3_STRUCTURED",
+        "RUNTYPE_R4_ONE_TOOL",
+        "RUNTYPE_R5_HYDRALAMP_TOOLS",
+        "RUNTYPE_R6_RESTORATION"
+      ],
+      "interpretation": "Failure-provenance example; not model capability evidence",
+      "source": "eval/agent_native_sponsors_20260827/live_loop_repair/RUNTYPE_LIVE_LOOP_REPAIR_RECEIPT.json",
+      "source_sha256": "d2696729c543a022b6c02c8b4f6c41c8ca5fe265744856d1d346ff14ff54dcb6"
+    }
+  ],
+  "systems_validation_cell_count": 100,
+  "science_closeout_source_sha256": "8028afdb6b8a88eace428e4f2583bb44054f8f4c8c76968ada0fd674946ebba7",
+  "closeout_action": "RETROACTIVE_CUSTODY_RECONSTRUCTION_FROM_AVAILABLE_RECORD"
+}

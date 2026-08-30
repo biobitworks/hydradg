@@ -1,0 +1,42 @@
+You are a probabilistic experimental actor. Return strict JSON only.
+Blind lanes (E01-E04,E07): do NOT use postmortem/EVAL_ONLY evidence.
+Never invent unavailable endpoints; list them in invented_capabilities.
+Do not output estimated judge scores.
+
+GENERATION=M1 MODEL_WEIGHT_STATE=UNCHANGED
+IC RUBRIC SUMMARY: {"cold_start_success": {"max": 30, "scores_via": "agent_surface + live demo"}, "it_runs": {"max": 25, "gate": true}, "surface_quality": {"max": 20}, "lands_in_product": {"max": 15}, "demo": {"max": 10}}
+SUBMISSION FIELDS: title, blurb, repo_url, demo_url, agent_surface, folder_id
+GATE: folder_id must be populated before submit; vault required for media evidence
+
+FAMILY=E02 CONDITION=T2_BRANCH_QUALIFIED_REPO
+TASK: Classify product origin as DISTINCT_HACKATHON_DELTA, PREEXISTING_PROJECT, or AMBIGUOUS using only this fixture.
+
+INPUT:
+{
+  "agent_surface": "HydraLamp exposes machine-readable HTTP agent APIs on HydraDG (Vercel control plane) and a standalone public custody console at hydralamp.vercel.app. Agents without UI access can: (1) GET/POST /api/hydralamp/run to start a governed experiment (DETERMINISTIC_FIXTURE or LIVE_RUNTYPE on Vercel; local Ollarma lanes on Studio only); (2) GET /api/hydralamp/status?run_id= for FCG roots, hash-chain verification, quarantine, lanes, and claim ceilings; (3) GET /api/hydralamp/stream?run_id= for SSE custody events; (4) GET /api/hydralamp/events for the frozen 46-event golden lane JSONL; (5) GET/POST /api/agent-native/evidence-gateway for discover_capabilities, query_evidence, propose_external_evidence, and verify_custody_receipt (quarantine-only; no canonical FCG append); (6) GET /api/providers/status and /api/providers/health for sponsor integration state. The visual UI is a synchronized observer of the governed machine event stream — not the authority.",
+  "blurb": "HydraLamp is an agent-native zero-trust control plane built on HydraDG. Autonomous agents discover context, authenticate, operate through bounded capabilities, preserve failures and contradictions, and record source → action → result → claim provenance as FCO/FCG custody. The demo replays a frozen 46-event reference → poison → detection → antidote → restoration sequence while preserving authorization failures, replay rejections, quarantine state, and custody receipts rather than hiding unfavorable outcomes. Models propose. Deterministic custody decides.",
+  "demo_url": "https://hydralamp.vercel.app/",
+  "event_id": "anb-hack-01",
+  "folder_id": null,
+  "repo_url": "https://github.com/biobitworks/hydradg/tree/hack-hydra/hydralamp-20260826",
+  "title": "HydraLamp"
+}
+
+Return exactly one JSON object:
+{
+  "state": "OK|ABSTAIN|MALFORMED_INPUT|BLOCKED_LABEL_LEAKAGE",
+  "experiment_family": "E01|E02|E03|E04|E05|E06|E07",
+  "condition": "string",
+  "observations": ["string"],
+  "predicted_weak_dimensions": ["string"],
+  "origin_classification": "DISTINCT_HACKATHON_DELTA|PREEXISTING_PROJECT|AMBIGUOUS|NOT_APPLICABLE",
+  "missing_evidence_classes": ["string"],
+  "causal_ranking": ["A", "B", "C"],
+  "earliest_divergence_candidate": "A|B|C|D|E|F|G|NOT_APPLICABLE|UNKNOWN",
+  "first_three_machine_actions": ["string"],
+  "ordered_workflow": ["string"],
+  "recommended_first_correction": "string|null",
+  "confidence_0_1": 0.0,
+  "evidence_quotes": ["string"],
+  "invented_capabilities": []
+}

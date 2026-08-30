@@ -1,0 +1,94 @@
+{
+  "schema": "hydradg.ic_postmortem.rubric_counterfactual_estimate.v1",
+  "track_assumed": "track01_external",
+  "track_declaration_in_submission": false,
+  "OFFICIAL_RUBRIC": true,
+  "dimensions": [
+    {
+      "dimension": "cold_start_success",
+      "max": 30,
+      "actual_range": [
+        12,
+        20
+      ],
+      "confidence": "medium",
+      "judge_visible": "agent_surface text + demo URL; no cold-start walkthrough doc",
+      "hidden_available": "golden path docs, API curl examples",
+      "missing_asset": "START_HERE cold-start script for anonymous agent",
+      "counterfactual_range": [
+        22,
+        28
+      ]
+    },
+    {
+      "dimension": "it_runs",
+      "max": 25,
+      "actual_range": [
+        18,
+        23
+      ],
+      "confidence": "high",
+      "judge_visible": "demo_url HTTP 200; live golden lane",
+      "hidden_available": "BACKUP_RECEIPT browser verify",
+      "missing_asset": "None critical if demo works",
+      "counterfactual_range": [
+        25,
+        25
+      ]
+    },
+    {
+      "dimension": "surface_quality",
+      "max": 20,
+      "actual_range": [
+        10,
+        16
+      ],
+      "confidence": "medium",
+      "judge_visible": "Long agent_surface prose",
+      "hidden_available": "MCP manifest, evidence gateway",
+      "missing_asset": "Structured API schema link",
+      "counterfactual_range": [
+        20,
+        20
+      ]
+    },
+    {
+      "dimension": "lands_in_product",
+      "max": 15,
+      "actual_range": [
+        8,
+        13
+      ],
+      "confidence": "medium-low",
+      "judge_visible": "Vercel demo + hydradg repo",
+      "hidden_available": "39 integration commits, standalone hydralamp",
+      "missing_asset": "Origin doc \u2014 looks like old Hack Hydra repo",
+      "counterfactual_range": [
+        12,
+        15
+      ]
+    },
+    {
+      "dimension": "demo",
+      "max": 10,
+      "actual_range": [
+        5,
+        8
+      ],
+      "confidence": "medium",
+      "judge_visible": "demo link only",
+      "hidden_available": "demo.mp4, contact sheet, 46-event replay",
+      "missing_asset": "Video/screenshots in vault",
+      "counterfactual_range": [
+        8,
+        10
+      ]
+    }
+  ],
+  "total_estimated_range": [
+    72,
+    92
+  ],
+  "RED_TEAM_DIAGNOSTIC": "Origin confusion likely depresses lands_in_product and cold_start",
+  "counterfactual_package": "Vault with origin doc + video + scorecard map"
+}

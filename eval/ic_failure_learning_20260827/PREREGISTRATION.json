@@ -1,0 +1,110 @@
+{
+  "schema": "hydradg.ic_failure_learning.preregistration.v1",
+  "status": "PREREGISTERED_NOT_EXECUTED",
+  "base_forensic_sha": "7a737d868e3d444aa29a629219fba689425959da",
+  "historical_submission_payload_sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+  "execution_authority": {
+    "scientific_host": "magicSTUDIObox.local",
+    "controller_host": "magicPRObox.local",
+    "cloudflare_os_role": "LOCAL_AGENT_WORKSPACE_CONTROL_SURFACE",
+    "ollama_role": "PROBABILISTIC_MODEL_RUNTIME",
+    "deterministic_scorer_role": "SCIENTIFIC_GATE_AUTHORITY"
+  },
+  "reference_implementations": {
+    "cloudflare_os_reviewed_commit": "14fea8592a6dbc59769d592c0752bbf6a465fa84",
+    "fco_mmr_reference_repo": "biobitworks/fractal-custody-objects",
+    "fco_mmr_reference_commit": "71bf05dc8630641965c513a16790c192c9799d2e",
+    "fco_mmr_reference_path": "scripts/seal_app_fcg.py"
+  },
+  "frozen_sources": [
+    "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+    "eval/immersive_commons_submission_20260827/seal/IC_SUBMIT_RECEIPT.json",
+    "eval/ic_postmortem_20260827/ACTUAL_SUBMISSION_FREEZE.json",
+    "eval/ic_postmortem_20260827/POSTMORTEM.md",
+    "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+    "eval/ic_postmortem_20260827/IC_RUBRIC_SNAPSHOT.json",
+    "eval/ic_postmortem_20260827/IC_TOOL_SCHEMA_SNAPSHOT.json",
+    "eval/ic_postmortem_20260827/MULTIMODAL_EVIDENCE_COVERAGE.json",
+    "docs/HACKATHON_SUBMISSION_FCO_PROTOCOL.md"
+  ],
+  "blind_lane_forbidden_inputs": [
+    "eval/ic_postmortem_20260827/EARLIEST_DIVERGENCE.json",
+    "eval/ic_postmortem_20260827/POSTMORTEM.md",
+    "eval/ic_postmortem_20260827/IC_RUBRIC_ACTUAL_SCORE_ESTIMATE.json",
+    "eval/ic_postmortem_20260827/IC_RUBRIC_COUNTERFACTUAL_SCORE_ESTIMATE.json",
+    "eval/ic_postmortem_20260827/RED_TEAM_B_REUSE_SKEPTIC.md"
+  ],
+  "experiment_families": [
+    "E00_CUSTODY_LEAKAGE_GATE",
+    "E01_BLIND_JUDGE_RECONSTRUCTION",
+    "E02_ORIGIN_CONFUSION_ABLATION",
+    "E03_EVIDENCE_SURFACING_ABLATION",
+    "E04_AGENT_SURFACE_LEGIBILITY_ABLATION",
+    "E05_EARLIEST_DIVERGENCE_DIAGNOSIS",
+    "E06_PROTOCOL_REPAIR_TEST",
+    "E07_CROSS_MODEL_STABILITY"
+  ],
+  "candidate_model_tags": [
+    "qwen2.5:1.5b",
+    "qwen3:1.7b",
+    "llama3.2:3b",
+    "granite4.1:3b",
+    "qwen2.5:7b",
+    "qwen2.5-coder:7b",
+    "deepseek-r1:14b",
+    "phi4-reasoning:14b"
+  ],
+  "model_admission_rule": "ADMIT_ONLY_EXACT_TAGS_PRESENT_LOCALLY_WITH_RECORDED_RUNTIME_IDENTITY; NO_SILENT_PULL_OR_SUBSTITUTION",
+  "stage_1_canary": {
+    "cases_per_family": 1,
+    "replicates": 1,
+    "purpose": "validate model routing, blindness, receipt and parser contract"
+  },
+  "stage_2_screen": {
+    "replicates_per_condition": 3,
+    "admit_only_after_stage_1": true
+  },
+  "generation_contract": {
+    "temperature": 0,
+    "seed": "USE_IF_EXPOSED_BY_PROVIDER_AND_RECORD_EXACT_VALUE_OTHERWISE_NULL",
+    "max_output_tokens": 1024,
+    "output_format": "STRICT_JSON",
+    "probabilistic_classification": "ALL_MODEL_OUTPUTS_REMAIN_PROBABILISTIC_MODEL_OUTPUT"
+  },
+  "primary_ground_truth": {
+    "earliest_divergence": "C_media_not_in_vault",
+    "secondary_divergence": "D_provenance_not_exposed",
+    "tertiary_divergence": "B_text_form_not_agent_native",
+    "visibility": "EVAL_ONLY"
+  },
+  "primary_metrics": [
+    "blind_failure_detection_rate",
+    "origin_correct_classification_rate",
+    "vault_omission_detection_rate",
+    "agent_surface_first_actions_accuracy",
+    "earliest_divergence_top1_accuracy",
+    "earliest_divergence_top3_inclusion",
+    "protocol_prevents_C_rate",
+    "hallucinated_capability_rate",
+    "malformed_output_rate",
+    "timeout_rate",
+    "abstention_rate"
+  ],
+  "preserve_outcomes": [
+    "POSITIVE",
+    "NULL",
+    "NEGATIVE",
+    "FAILED",
+    "TIMEOUT",
+    "ABSTENTION",
+    "MALFORMED",
+    "CONTRADICTORY"
+  ],
+  "mmr_policy": {
+    "predecessor_origin_commitment": "PRESERVE_UNCHANGED_LINEAR_CHAIN_AUDIT_ONLY",
+    "new_failure_learning_commitment": "CANONICAL_MMR_RECIPE_REQUIRED",
+    "merkle_mmr_state_before_execution": "NOT_COMMITTED"
+  },
+  "signature_state": "NOT_SIGNED",
+  "claim_ceiling": "FAILURE_LEARNING_INFRASTRUCTURE_PREREGISTERED_ONLY"
+}

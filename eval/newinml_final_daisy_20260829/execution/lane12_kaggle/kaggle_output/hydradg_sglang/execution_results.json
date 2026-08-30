@@ -1,0 +1,26 @@
+{
+  "provider": "kaggle",
+  "cuda": {
+    "torch": "2.10.0+cu128",
+    "cuda": true,
+    "n": 1,
+    "name": "Tesla P100-PCIE-16GB"
+  },
+  "sglang_version": "",
+  "sglang_git_sha_pin": "acc918b3ece60af20321612b8ad204bdba8fcb80",
+  "model_id": "Qwen/Qwen3-8B",
+  "results": [
+    {
+      "mode": "EAGER_DISABLED",
+      "server_started": false
+    },
+    {
+      "mode": "TC_PIECEWISE",
+      "server_started": false
+    },
+    {
+      "mode": "BREAKABLE",
+      "server_started": false
+    }
+  ]
+}

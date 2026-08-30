@@ -1,0 +1,35 @@
+{
+  "schema": "hydradg.vercel_preview_verify.v1",
+  "preview_url": "https://hydradg-nkb26m5u4-biobitworks.vercel.app",
+  "git_sha": "baa23ffbee97967a898322f2bf0654a048863f77",
+  "github_deployment_id": 6117617997,
+  "vercel_dashboard": "https://vercel.com/biobitworks/hydradg/Fzv251Uwy9rjejkgBtThwiEwotDm",
+  "status": "PREVIEW_DEPLOYED_SSO_PROTECTED",
+  "http_anonymous": 401,
+  "protection": {
+    "vercel_auth_enabled": true,
+    "password_enabled": false,
+    "error_code": "401",
+    "error_message": "Protected deployment"
+  },
+  "preview_pass": false,
+  "judge_url_promoted": false,
+  "submission_sha_frozen": false,
+  "overnight_rerun": false,
+  "local_invariants": {
+    "test:vercel-control-plane": "PASS 7/7",
+    "typecheck": "PASS",
+    "health_configured_is_not_pass": "PASS (local)",
+    "canonical_writes": 0
+  },
+  "blocked_external_gates": [
+    "/hydralamp",
+    "Evidence Gateway discovery",
+    "Tavily retrieve",
+    "SeedGraph gap/repair",
+    "custody receipt verification"
+  ],
+  "required_operator_action": "Allow anonymous Preview access or a Standard Protection Bypass for Automation, then re-run external gates. Do not freeze submission SHA or promote the judge URL until those gates pass.",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "signature_state": "NOT_SIGNED"
+}

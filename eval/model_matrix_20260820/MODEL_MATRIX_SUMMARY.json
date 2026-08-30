@@ -1,0 +1,14 @@
+{
+  "claim_ceiling": "NO_MODEL_BENEFIT_OBSERVED",
+  "control_baseline": "heuristic",
+  "determinism_gate_all_cells": "PASS",
+  "model_benefit_established": false,
+  "preregistered_models_evaluated": [
+    "qwen2.5-coder:7b",
+    "qwen2.5:7b",
+    "deepseek-r1:14b"
+  ],
+  "schema": "hydradg.model_matrix_summary.v1",
+  "summary_notes": "Local model extraction treatments showed non-positive Hit@K deltas compared to heuristic baseline under fixed LongMemEval retrieval setup. Null hypotheses H0_M_K5 and H0_M_K10 retained across all tested models.",
+  "timestamp_unix": 1787261647
+}

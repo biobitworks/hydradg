@@ -1,0 +1,28 @@
+{
+  "CURRENT_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "CURRENT_SHA": "94801dc3b58ddc874f336a016d0aba0477c2b191",
+  "LOCAL_CUDA_STATE": "UNAVAILABLE_EXPECTED",
+  "blocking_reasons": [
+    "REMOTE_CUDA_NOT_PROVISIONED"
+  ],
+  "canary_cells_executed": 0,
+  "canary_cells_required": 24,
+  "earliest_divergent_dependency": "GPU sandbox/instance not provisioned for SGLang canary",
+  "experiment_id": "SGLANG-HL-001",
+  "lane_state": "NOT_STARTED",
+  "logical_conditions": [
+    "CONTROL",
+    "INVALID_PROOF",
+    "REPLAYED_PROOF",
+    "BROKEN_AUTHORIZATION_EDGE"
+  ],
+  "provider_auth_pass": true,
+  "recorded_at_utc": "2026-08-29T08:34:55Z",
+  "runtime_modes": [
+    "EAGER_DISABLED",
+    "TC_PIECEWISE",
+    "BREAKABLE"
+  ],
+  "schema": "hydradg.sglang_hl001.execution.v3",
+  "selected_provider": "kaggle"
+}

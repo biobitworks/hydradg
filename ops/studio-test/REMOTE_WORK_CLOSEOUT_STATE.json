@@ -1,0 +1,19 @@
+{
+  "schema": "hydradg.studio_test_remote_work_closeout_state.v1",
+  "updated_at": "2026-08-26T16:42:00Z",
+  "deltadg_state": "NOT_APPLICABLE",
+  "server_target": "HYDRADG_WEB",
+  "server_path": "apps/hydradg-web",
+  "ic_blocks_remote_work": false,
+  "ic_credential_blocks_only": "CREDENTIAL_DEPENDENT_IC_OPERATIONS",
+  "web_persistence_mode": "nohup_supervise_loop",
+  "web_launchd_label": "com.biobitworks.hydradg-test",
+  "web_launchd_note": "launchd next-start hangs without bind on this host; nohup used",
+  "deploy_watcher_label": "com.biobitworks.hydradg-deploy-watcher",
+  "launchd_constraint": "ProgramArguments_and_stdio_logs_must_be_on_boot_volume_not_magicBLACKbox",
+  "notes": [
+    "DeltaDG absence is not a blocker for this workflow.",
+    "FLOOR10_AGENT_TOKEN missing does not block REMOTE_WORK_READY.",
+    "SeedGraph incomplete build is out of scope for this closeout."
+  ]
+}

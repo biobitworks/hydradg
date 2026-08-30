@@ -1,0 +1,51 @@
+{
+  "schema": "hydradg.atom_governance_protocol.v1",
+  "state": "PREREGISTERED_PLAN_NOT_EXECUTED",
+  "identity_layers": {
+    "content_identity": "SHA256(domain_separator || atom_type || canonical_bytes)",
+    "occurrence_identity": "SHA256(content_identity || source_fco || source_pointer || parent_path || occurrence_index)",
+    "context_fingerprint": "SHA256(task || time_version || actor || environment || governing_policy || parent_lineage)"
+  },
+  "required_atom_vector_fields": [
+    "content_identity_sha256",
+    "occurrence_id",
+    "atom_type",
+    "source_fco",
+    "source_pointer",
+    "parent_path",
+    "time_version",
+    "actor_type",
+    "environment_runtime",
+    "evidence_class",
+    "provenance_completeness",
+    "custody_hash_state",
+    "self_state",
+    "safety_state",
+    "anticube_basis",
+    "hydralamp_gate_state",
+    "hydradg_claim_state",
+    "claim_ceiling",
+    "contradiction_state",
+    "supersession_state",
+    "security_classification",
+    "context_fingerprint"
+  ],
+  "optional_metric_fields_only_when_governed_and_computed": [
+    "cloud_drift_0_100",
+    "delta_g_star",
+    "retrieval_metrics",
+    "cfmo_state"
+  ],
+  "anticube": {
+    "representation": "CATEGORICAL_VECTOR",
+    "axes": ["SELF|NON_SELF", "SAFE|NON_SAFE"],
+    "scalar_score_allowed": false,
+    "classification_attaches_to": "OCCURRENCE_AND_CONTEXT_NOT_CONTENT_HASH"
+  },
+  "entity_resolution": {
+    "string_hash_equals_entity": false,
+    "protein_gene_chemical_person_strings_require_typed_resolution": true,
+    "numbers_require_unit_and_semantic_type": true
+  },
+  "promotion_rule": "EXACT_HASH_EQUALITY_GROUPS_ARE_DETERMINISTIC; SEMANTIC_EQUIVALENCE_REQUIRES_SEPARATE_EVIDENCE"
+}

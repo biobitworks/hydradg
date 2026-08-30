@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NewInML at NeurIPS 2026 — submission deadline</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;500&family=IBM+Plex+Sans:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0B1220;
+    --panel:#121D31;
+    --line:#22314F;
+    --paper:#E8EDF7;
+    --muted:#8093B3;
+    --sun:#F2C14E;
+    --late:#FF6B5A;
+    --glow:var(--sun);
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+
+  body{
+    min-height:100vh;
+    display:grid;
+    place-items:center;
+    padding:clamp(20px,5vw,64px);
+    background:var(--ink);
+    background-image:
+      linear-gradient(var(--line) 1px,transparent 1px),
+      linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:64px 64px;
+    background-position:center;
+    color:var(--paper);
+    font-family:"IBM Plex Sans",system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  /* the grid fades out at the edges so it reads as a plot, not wallpaper */
+  body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    background:radial-gradient(ellipse at center,transparent 0%,var(--ink) 78%);
+    pointer-events:none;
+  }
+
+  .card{
+    position:relative;
+    width:min(760px,100%);
+    padding:clamp(28px,5vw,52px);
+    background:linear-gradient(var(--panel),var(--panel)) padding-box;
+    border:1px solid var(--line);
+    border-radius:4px;
+    text-align:center;
+  }
+
+  .eyebrow{
+    font-family:"IBM Plex Mono",monospace;
+    font-weight:300;
+    font-size:.72rem;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--muted);
+    margin-bottom:1.6rem;
+  }
+
+  h1{
+    font-family:"Newsreader",Georgia,serif;
+    font-weight:400;
+    font-size:clamp(1.5rem,4.2vw,2.15rem);
+    line-height:1.25;
+    letter-spacing:-.01em;
+    margin-bottom:2.2rem;
+  }
+  h1 em{font-style:italic;color:var(--sun)}
+
+  .clock{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:clamp(6px,2vw,18px);
+    margin-bottom:1.8rem;
+  }
+
+  .unit{
+    padding:clamp(12px,2.5vw,20px) 4px;
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+  }
+
+  .value{
+    display:block;
+    font-family:"IBM Plex Mono",monospace;
+    font-weight:500;
+    font-variant-numeric:tabular-nums;
+    font-size:clamp(2.1rem,9vw,3.6rem);
+    line-height:1;
+    color:var(--glow);
+    transition:color .6s ease;
+  }
+
+  .label{
+    display:block;
+    margin-top:.7rem;
+    font-family:"IBM Plex Mono",monospace;
+    font-weight:300;
+    font-size:.66rem;
+    letter-spacing:.16em;
+    text-transform:uppercase;
+    color:var(--muted);
+  }
+
+  /* the seconds column breathes once per tick — the only motion on the page */
+  #seconds{animation:tick 1s steps(1,end) infinite}
+  @keyframes tick{0%,60%{opacity:1}61%,100%{opacity:.72}}
+
+  .local{
+    font-size:.92rem;
+    line-height:1.6;
+    color:var(--paper);
+    margin-bottom:2rem;
+  }
+  .local strong{font-weight:500;color:var(--sun)}
+
+  .cta{
+    display:inline-block;
+    padding:.85rem 1.9rem;
+    background:var(--sun);
+    color:var(--ink);
+    font-weight:500;
+    font-size:.95rem;
+    text-decoration:none;
+    border-radius:2px;
+    transition:transform .15s ease,background .15s ease;
+  }
+  .cta:hover{background:#FFD470;transform:translateY(-1px)}
+  .cta:focus-visible{outline:2px solid var(--paper);outline-offset:3px}
+
+  .note{
+    margin-top:2.4rem;
+    padding-top:1.6rem;
+    border-top:1px solid var(--line);
+    font-size:.82rem;
+    line-height:1.7;
+    color:var(--muted);
+    text-align:left;
+  }
+  .note b{font-weight:500;color:var(--paper)}
+
+  /* inside the final six hours the clock warms up */
+  body.final{--glow:var(--late)}
+  body.final h1 em{color:var(--late)}
+  body.final .cta{background:var(--late);color:var(--paper)}
+  body.final .cta:hover{background:#FF8878}
+  body.final .local strong{color:var(--late)}
+
+  body.closed .clock{opacity:.35}
+  body.closed #seconds{animation:none}
+
+  @media (prefers-reduced-motion:reduce){
+    #seconds{animation:none}
+    .cta{transition:none}
+  }
+
+  @media (max-width:420px){
+    .clock{grid-template-columns:repeat(2,1fr);gap:4px}
+  }
+</style>
+</head>
+<body>
+
+<main class="card">
+  <p class="eyebrow">NewInML · NeurIPS 2026 · Paris</p>
+
+  <h1>Paper submissions close in <em id="headline-unit">—</em></h1>
+
+  <div class="clock" role="timer">
+    <div class="unit"><span class="value" id="days">--</span><span class="label">Days</span></div>
+    <div class="unit"><span class="value" id="hours">--</span><span class="label">Hours</span></div>
+    <div class="unit"><span class="value" id="minutes">--</span><span class="label">Minutes</span></div>
+    <div class="unit"><span class="value" id="seconds">--</span><span class="label">Seconds</span></div>
+  </div>
+
+  <p class="local" id="local">Working out your local time…</p>
+
+  <a class="cta" id="cta" href="https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/NewInML">Submit on OpenReview</a>
+
+  <p class="note">
+    <b>Anywhere on Earth.</b> The deadline passes when it hits 11:59&nbsp;PM in the last
+    timezone on the planet — so you get more time than the calendar date suggests.
+    This clock already accounts for it, wherever you are.
+    Submissions are non-archival, 2–8 pages, double-blind.
+  </p>
+</main>
+
+<script>
+  // ── Edit this one line if the deadline moves ──────────────────────────
+  // 29 August 2026, 11:59 PM Anywhere on Earth (UTC−12) = 30 Aug 11:59 UTC
+  const DEADLINE = new Date("2026-08-30T11:59:00Z");
+  // ──────────────────────────────────────────────────────────────────────
+
+  const el = {
+    days: document.getElementById("days"),
+    hours: document.getElementById("hours"),
+    minutes: document.getElementById("minutes"),
+    seconds: document.getElementById("seconds"),
+    local: document.getElementById("local"),
+    headline: document.getElementById("headline-unit"),
+    cta: document.getElementById("cta")
+  };
+
+  const pad = n => String(n).padStart(2, "0");
+
+  // Show the deadline in the reader's own timezone, named.
+  const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+  const localTime = DEADLINE.toLocaleString(undefined, {
+    weekday: "long", day: "numeric", month: "long",
+    hour: "numeric", minute: "2-digit"
+  });
+  el.local.innerHTML = `That is <strong>${localTime}</strong> where you are (${zone}).`;
+
+  function render() {
+    const left = DEADLINE - Date.now();
+
+    if (left <= 0) {
+      document.body.classList.add("closed");
+      [el.days, el.hours, el.minutes, el.seconds].forEach(n => n.textContent = "00");
+      el.headline.textContent = "closed";
+      document.querySelector("h1").innerHTML = "Paper submissions are <em>closed</em>.";
+      el.local.innerHTML = "Thank you to everyone who submitted. Notifications go out by <strong>29 September 2026</strong>.";
+      el.cta.textContent = "See the workshop schedule";
+      el.cta.href = "https://newinml.github.io/NewInML2026NeurIPS/";
+      return;
+    }
+
+    const s = Math.floor(left / 1000);
+    const d = Math.floor(s / 86400);
+    const h = Math.floor(s % 86400 / 3600);
+    const m = Math.floor(s % 3600 / 60);
+
+    el.days.textContent = pad(d);
+    el.hours.textContent = pad(h);
+    el.minutes.textContent = pad(m);
+    el.seconds.textContent = pad(s % 60);
+
+    el.headline.textContent = d > 0 ? (d === 1 ? "1 day" : d + " days") : h + "h";
+    document.body.classList.toggle("final", left < 6 * 3600 * 1000);
+    document.title = `${pad(d)}d ${pad(h)}h left — NewInML 2026`;
+  }
+
+  render();
+  setInterval(render, 1000);
+</script>
+
+</body>
+</html>

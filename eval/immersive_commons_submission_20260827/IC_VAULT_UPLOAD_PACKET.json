@@ -1,0 +1,34 @@
+{
+  "schema": "hydradg.immersive_commons.vault_upload_packet.v1",
+  "recorded_at_utc": "2026-08-27T23:12:00Z",
+  "IC_SUBMISSION_STATE": "SUBMITTED",
+  "IC_PAYLOAD_SHA256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+  "IC_VAULT_MECHANISM": {
+    "folder_tools": ["ic_folder_create", "ic_folder_get", "ic_folders_list", "ic_folder_update", "ic_folder_grant"],
+    "file_tools": ["ic_files_put", "ic_files_get", "ic_files_list", "ic_files_update", "ic_files_grant"],
+    "source": "eval/agent_native_sponsors_20260827/immersive_commons/MCP_MANIFEST_SNAPSHOT.json"
+  },
+  "upload_state": "PENDING_OPERATOR_AUTHORIZATION",
+  "resubmit_policy": "Display exact folder_id delta before any ic_hack_submit update; do not overwrite title/blurb/repo/demo/agent_surface unless necessary",
+  "artifacts_to_upload": [
+    "HYDRALAMP_DEMO_20S.mp4",
+    "HYDRALAMP_DEMO_3MIN.mp4",
+    "00_reference.fco.png",
+    "01_poison.fco.png",
+    "02_denied.fco.png",
+    "03_repair.fco.png",
+    "04_restored.fco.png",
+    "MEDIA_SUBMISSION_MANIFEST.json"
+  ],
+  "artifact_source_repo": "biobitworks/hydralamp",
+  "artifact_public_base": "https://hydralamp.vercel.app/submission_media/",
+  "manifest_path": "submission_media/MEDIA_SUBMISSION_MANIFEST.json",
+  "IC_VAULT_FOLDER_ID": null,
+  "IC_FOLDER_ATTACHED": false,
+  "JUDGE_REPO_ACCESS": "FAIL_PRIVATE",
+  "JUDGE_REPO_NOTE": "Submitted demo_url uses hydralamp.vercel.app (public). GitHub hydralamp repo is private; public code/evidence path is biobitworks/hydradg.",
+  "FROZEN_46_EVENT_LANE": "NOT_TOUCHED",
+  "FCG_APPEND_STATE": "NOT_APPENDED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED"
+}

@@ -1,0 +1,27 @@
+{
+  "attempt_number": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "end_timestamp": 1787281455.2113721,
+  "failure_reason": "timed out",
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 500,
+  "model_digest": "c333b7232bdb",
+  "model_name": "llama3.2:1b",
+  "parsed_output": "",
+  "parsed_output_sha256": "",
+  "parser_status": "FAILED",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "",
+  "raw_response_bytes": 0,
+  "raw_response_sha256": "",
+  "request_sha256": "2f92e34a3dc279d940c18081621b27c90ebdc5819c3a5aa6e3fc201f2d0a2ffd",
+  "start_timestamp": 1787281425.2056398,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 30.006
+}

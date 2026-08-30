@@ -1,0 +1,88 @@
+Thinking...
+Okay, so I'm trying to figure out the correct canonical design for the Olla[4D[K
+Ollarma-bridged invocations based on the provided context. Let me start by [K
+breaking down the information given.
+
+First, the context mentions several schemas and a contract. The agent_model[11D[K
+agent_model_handoff_receipt.schema.json includes fields like handoff_id, pa[2D[K
+parent_handoff_sha256, actor_class, model details, and various SHA256 field[5D[K
+fields for different parts of the process. The orchestration_work_unit.sche[28D[K
+orchestration_work_unit.schema.json has work_unit_id, parent_receipt_sha256[21D[K
+parent_receipt_sha256 array, actor details, lease, and states for fco and f[1D[K
+fcg.
+
+The contract AGENT_MODEL_HANDOFF_CUSTODY_CONTRACT.md outlines a chain where[5D[K
+where FCOs are involved at each step, starting from the prompt, moving thro[4D[K
+through the model, runtime digest, response, parser, and finally to FCO and[3D[K
+and FCG append. It also specifies that model output is probabilistic, and t[1D[K
+there's no separate MODEL_ROOT or INVOCATION_ROOT type.
+
+HydraLamp events use fco:actor:ACTOR_ID for actors, with runtime_model as o[1D[K
+ollarma/actor_id, and source_request_hash per event. FCG roots are handled [K
+with root_before and root_after on append.
+
+The question asks about the correct design for every Ollarma-bridged invoca[6D[K
+invocation, focusing on five aspects: persistent model actor identity, one [K
+model invocation, parent/root of invocation, graph structure, and existing [K
+equivalents for roots.
+
+Looking at the first point, whether a dedicated MODEL_ROOT is needed, the c[1D[K
+contract says no separate MODEL_ROOT or INVOCATION_ROOT, so the answer is N[1D[K
+NO.
+
+For the invocation identity object, the agent_model_handoff_receipt uses ha[2D[K
+handoff_id, which seems to serve as the unique identifier, so that's the co[2D[K
+correct object.
+
+Regarding whether the same model across runs uses the same actor or new inv[3D[K
+invocations, the model is Ollarma-approved, so it's the same actor, but eac[3D[K
+each run is a new invocation.
+
+The graph structure should follow the lineage chain provided: parent handof[6D[K
+handoff → Ollarma actor → model name → runtime digest → prompt/request SHA [K
+→ response SHA → parser → FCO materialization → FCG append. So the FCOs and[3D[K
+and FCGs are part of this chain.
+
+UI grouping should be based on canonical FCO relations, not projections or [K
+UI-only, to avoid identity conflation. Media types like MODEL INVOCATION, E[1D[K
+EVENT, etc., should be derived from actual provenance, not just visibility.[11D[K
+visibility.
+
+I think I've covered all the points. Now, I'll structure the answer as per [K
+the required format.
+...done thinking.
+
+**Answer:**
+
+**A) Dedicated MODEL_ROOT:**
+- **Position:** NO
+  - Rationale: The contract specifies no separate MODEL_ROOT or INVOCATION_[11D[K
+INVOCATION_ROOT, so no dedicated root is needed.
+
+**B) Invocation Identity Object:**
+- **Position:** handoff_id
+  - Rationale: Serves as the unique identifier for each Ollarma-bridged inv[3D[K
+invocation.
+
+**C) Model Actor Across Runs:**
+- **Position:** Same actor, new invocations
+  - Rationale: The same Ollarma-approved model uses the same actor, but eac[3D[K
+each run creates a new invocation.
+
+**D) UI Grouping Mechanism:**
+- **Position:** Canonical FCO relations
+  - Rationale: Grouping is based on actual provenance to avoid conflation, [K
+ensuring accurate lineage.
+
+**E) Identity Conflation Risks:**
+- **Risk:** Avoid conflating different identities (MODEL, INVOCATION, FCO) [K
+to maintain clear lineage.
+
+**Graph Structure Summary:**
+- Follows the lineage chain: parent handoff → Ollarma actor → model name → [K
+runtime digest → prompt/request SHA → response SHA → parser → FCO materiali[9D[K
+materialization → FCG append.
+
+This structured approach ensures clarity and correctness in the design of O[1D[K
+Ollarma-bridged invocations.
+

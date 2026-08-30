@@ -1,0 +1,9 @@
+name	source	source_url	creator	version	persistent_identifier	license	copyright_owner	redistribution_allowed	modification_allowed	derived_data_status	synthetic_or_real	human_subjects	PII	anonymization	paper_usage	citation	source_hash
+EXP-008/009 CASES	eval/ic_failure_learning_20260827/cases/CASES.jsonl	biobitworks/hydradg	frozen	internal manifest	MIT	biobitworks	NO	YES	derived frozen	synthetic	NO	NO	none	PRIMARY	internal prereg	sha256 in manifest	
+Stage-2 scored rows	eval/ic_failure_learning_20260827/scored/	biobitworks/hydradg	frozen	internal	MIT	biobitworks	NO	YES	derived	synthetic	NO	NO	none	CONTEXT	internal	432 rows	
+HydraLamp perturbations	eval/hydralamp_20260826/ANTICUBE_PERTURBATIONS.json	biobitworks/hydradg	synthetic	internal	MIT	biobitworks	YES	YES	synthetic	synthetic	NO	NO	none	SYSTEMS	none	14 AC cases	
+Context vs entropy scan	eval/context_vs_entropy_20260820	repo scan	20260820	internal	MIT	biobitworks	NO	NO	derived	real repo artifacts	NO	NO	redacted	MINOR	none	18567 findings	
+BEAM-1M	eval/beam_1m_20260820	external BEAM	prereg only	BEAM-1M	LICENSE_ONLY	BEAM authors	NO	NO	not downloaded	real	NO	NO	N/A	REFERENCE	BEAM paper	not redistributed	
+Agent native fixtures	eval/agent_native_builders_20260826	hackathon	20260826	internal	MIT	biobitworks	NO	NO	internal	synthetic	NO	NO	none	APPENDIX	none	20 fixtures	
+Antigence artifacts	NOT_IN_REPO	Antigence project	experimental	N/A	UNKNOWN	unknown	NO	NO	NOT_ADMITTED	real/synthetic mixed	NO	NO	N/A	FUTURE	none	NOT_ADMISSIBLE without manifest	
+EnterpriseRAG-Bench	eval/track_model_k_20260820	external benchmark	frozen refs	benchmark	see benchmark	authors	NO	NO	frozen stats only	real	NO	NO	N/A	APPENDIX	benchmark cite	stats only in repo	

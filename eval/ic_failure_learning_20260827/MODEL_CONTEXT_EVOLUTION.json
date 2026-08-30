@@ -1,0 +1,45 @@
+{
+  "schema": "hydradg.ic_failure_learning.model_context_evolution.v1",
+  "MODEL_WEIGHT_UPDATED": "NO",
+  "generations": {
+    "M0": {
+      "weights_root": "UNCHANGED",
+      "SeedGraph_context_root": "NONE",
+      "FCG_context_root": "NONE",
+      "behavior_metrics": {
+        "e01_vault_gap_rate": 0.2222222222222222,
+        "e01_origin_gap_rate": 0.5,
+        "e05_top1_correct_rate": null,
+        "e06_prevents_c_rate": null,
+        "e07_directional_gate_rate": 0.12307692307692308,
+        "n_scored": 411
+      }
+    },
+    "M1": {
+      "weights_root": "UNCHANGED",
+      "SeedGraph_context_root": "RULE_CORPUS",
+      "FCG_context_root": "RULE_ONLY",
+      "behavior_metrics": {
+        "e01_vault_gap_rate": 0.2222222222222222,
+        "e01_origin_gap_rate": 0.5,
+        "e05_top1_correct_rate": null,
+        "e06_prevents_c_rate": null,
+        "e07_directional_gate_rate": 0.12307692307692308,
+        "n_scored": 411
+      }
+    },
+    "M2": {
+      "weights_root": "UNCHANGED",
+      "SeedGraph_context_root": "RULES+FAILURE",
+      "FCG_context_root": "FAILURE_LEARNING_FCG",
+      "behavior_metrics": {
+        "e01_vault_gap_rate": 0.2222222222222222,
+        "e01_origin_gap_rate": 0.5,
+        "e05_top1_correct_rate": 0.0,
+        "e06_prevents_c_rate": 0.0,
+        "e07_directional_gate_rate": 0.12307692307692308,
+        "n_scored": 432
+      }
+    }
+  }
+}

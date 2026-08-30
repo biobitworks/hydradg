@@ -1,0 +1,53 @@
+{
+  "schema": "hydralamp.hash_contract.v1",
+  "frozen_at_utc": "2026-08-27T04:00:00Z",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "parent_sha": "e221ef8a1d6bb25b710281a05f3cc69adc40a386",
+  "rule": "HASH_CHANGE_NE_SEMANTIC_DISTANCE",
+  "sha256_meaning": "byte_or_state_identity_only",
+  "domain_separators": {
+    "HYDRALAMP_EVENT_V1": "event envelope excluding event_hash",
+    "HYDRALAMP_MODEL_CONTEXT_V1": "exact model-visible context",
+    "HYDRALAMP_MODEL_OUTPUT_V1": "exact model output bytes/text",
+    "HYDRALAMP_TOOL_INPUT_V1": "deterministic tool input",
+    "HYDRALAMP_TOOL_OUTPUT_V1": "deterministic tool output",
+    "HYDRALAMP_PROPOSAL_V1": "action proposal object",
+    "HYDRALAMP_KG_SNAPSHOT_V1": "objects+edges snapshot"
+  },
+  "event_required_fields": [
+    "seq",
+    "run_id",
+    "lane",
+    "actor_id",
+    "model_id",
+    "execution_id",
+    "prev_event_hash",
+    "context_hash_before",
+    "context_hash_after",
+    "kg_snapshot_hash_before",
+    "kg_snapshot_hash_after",
+    "model_output_hash",
+    "tool_input_hash",
+    "tool_output_hash",
+    "proposal_hash",
+    "fcg_root_before",
+    "fcg_root_after",
+    "context_delta",
+    "verification_result",
+    "evidence_class",
+    "claim_ceiling"
+  ],
+  "event_hash_excludes": [
+    "event_hash",
+    "hash_compute_ms",
+    "context_delta_compute_ms",
+    "graph_render_update_ms",
+    "SSE_delivery_ms",
+    "model_latency_ms",
+    "end_to_end_ms"
+  ],
+  "cloud_drift_source": "apps/hydradg-web/lib/contextIceberg.ts#jensenShannonDivergence",
+  "cloud_drift_policy": "COMPUTE_WHEN_DISTRIBUTIONS_AVAILABLE_ELSE_NOT_COMPUTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

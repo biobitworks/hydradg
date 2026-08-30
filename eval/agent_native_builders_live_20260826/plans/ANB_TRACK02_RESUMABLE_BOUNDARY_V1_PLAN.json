@@ -1,0 +1,101 @@
+{
+  "schema": "hydradg.anb_live.plan.v1",
+  "phase": "PLAN",
+  "plan_id": "plan:anb_track02_resumable_boundary_v1_20260826",
+  "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+  "created_at_utc": "2026-08-27T01:00:00Z",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "accepted_base_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_artifact_commit_sha": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "expected_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
+  "input_packet_path": "eval/agent_native_builders_live_20260826/input_packets/TRACK02_RESUMABLE_BOUNDARY_INPUT.json",
+  "input_packet_sha256": "8a4d3ce3a9006e8321cd257fa653ba956397bc39b5f4403e0b10f57cd547988d",
+  "parent_accept_path": "eval/agent_native_builders_live_20260826/work_units/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_ACCEPT.json",
+  "execution_allowed": false,
+  "submit_allowed": false,
+  "merge_to_main_allowed": false,
+  "workflow_chain": [
+    "GitHub",
+    "Runtype",
+    "Tavily",
+    "HydraDG",
+    "GitHub"
+  ],
+  "frozen_work_items": [
+    {
+      "work_item_id": "WORK_ITEM_01",
+      "source_url": "https://github.com/biobitworks/hydradg/blob/hack-hydra/agent-native-builders-20260826/docs/ANB_LIVE_EMPIRICAL_EXPERIMENT_V1.md",
+      "query_definition": "Review the public ANB live empirical experiment doc and extract whether the synthetic 20-fixture runner is classified as empirical evidence. Return a public-safe evidence proposal only.",
+      "content_sha256": "adc810b77c66c2a0bc5b9edd6c1e2ddf97f3eca12c8261cdc129d838583bbe39",
+      "public_safe": true
+    },
+    {
+      "work_item_id": "WORK_ITEM_02",
+      "source_url": "https://github.com/biobitworks/hydradg/blob/hack-hydra/agent-native-builders-20260826/PUBLIC_KNOWLEDGE_HUB.md",
+      "query_definition": "From the public knowledge hub, list the canonical public repository URL and judge-start path. Propose quarantined evidence only.",
+      "content_sha256": "93a7a87c5472d3574a35149f688cb13870f471a3ce34c037f1c9bd90aa6b5bb8",
+      "public_safe": true
+    },
+    {
+      "work_item_id": "WORK_ITEM_03",
+      "source_url": "https://github.com/biobitworks/hydradg/blob/hack-hydra/agent-native-builders-20260826/JUDGE_SUBMISSION_LINKS.md",
+      "query_definition": "From public judge submission links, identify the public production URL and state that preview/production parity is not assumed. Quarantined proposal only.",
+      "content_sha256": "85a553d6990b1e63bfc31d3635983ee113318a87b831b8517108c10c6972aa58",
+      "public_safe": true
+    },
+    {
+      "work_item_id": "WORK_ITEM_04",
+      "source_url": "https://github.com/biobitworks/hydradg/blob/hack-hydra/agent-native-builders-20260826/docs/GSD_GSIGMAD_FCO_ORCHESTRATION_PROFILE.md",
+      "query_definition": "Extract the required orchestration lifecycle sequence beginning at OFFER. Do not invent custody states. Quarantined proposal only.",
+      "content_sha256": "36a6c645ce6156f31560d5273f0292a02019454e9a8a059a15a57320862714ab",
+      "public_safe": true
+    },
+    {
+      "work_item_id": "WORK_ITEM_05",
+      "source_url": "https://github.com/biobitworks/hydradg/blob/hack-hydra/agent-native-builders-20260826/AGENTS.md",
+      "query_definition": "From AGENTS.md custody contract, restate that a hash is not a signature and models are not authorities. Quarantined proposal only.",
+      "content_sha256": "493f5cb2f8f24a398783b3ff89ba86bf815bc340bf47c366f327febd635162c6",
+      "public_safe": true
+    }
+  ],
+  "interruption_mapping": {
+    "WORK_ITEM_01": "interrupt after github_intake",
+    "WORK_ITEM_02": "interrupt after runtype_agent_step",
+    "WORK_ITEM_03": "interrupt after tavily_retrieval",
+    "WORK_ITEM_04": "interrupt after hydradg_proposal",
+    "WORK_ITEM_05": "interrupt before github_writeback"
+  },
+  "per_item_preserve_fields": [
+    "original_work_unit_id",
+    "retrieval_receipt",
+    "runtype_execution_id",
+    "tavily_source_result_references",
+    "hydradg_quarantine_proposal_id",
+    "custody_receipt",
+    "resume_checkpoint_id",
+    "final_github_writeback_reference",
+    "duplicate_write_count",
+    "null_failure_timeout_abstention_state"
+  ],
+  "timeout_retry_policy": {
+    "work_item_timeout_seconds": 1200,
+    "max_retries": 1,
+    "retry_on": [
+      "TIMEOUT",
+      "TRANSIENT_NETWORK"
+    ],
+    "no_retry_on": [
+      "POLICY_DENIAL",
+      "DUPLICATE_CANONICAL_WRITE"
+    ]
+  },
+  "tavily_state": "CONFIRMED",
+  "tavily_key_in_git_or_receipts": false,
+  "results_path": "eval/agent_native_builders_live_20260826/results/track02/",
+  "evidence_class_rules_ref": "eval/agent_native_builders_live_20260826/EVIDENCE_CLASSIFICATION_V1.json",
+  "claim_ceiling": "PLAN_ONLY_NOT_EXECUTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

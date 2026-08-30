@@ -1,0 +1,56 @@
+{
+  "schema": "hydradg.ic_failure_learning.generation_comparison.v1",
+  "baseline": "M1",
+  "treatment": "M2",
+  "n_paired_keys": 132,
+  "comparisons": {
+    "E01.detects_vault_media_gap": {
+      "n_paired": 6,
+      "improved": 0,
+      "worsened": 2,
+      "unchanged": 4,
+      "verdict": "TREND_NEGATIVE"
+    },
+    "E01.detects_origin_gap": {
+      "n_paired": 6,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 6,
+      "verdict": "NULL"
+    },
+    "E01.detects_cold_start_gap": {
+      "n_paired": 6,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 6,
+      "verdict": "NULL"
+    },
+    "E02.directional_gate": {
+      "n_paired": 9,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 9,
+      "verdict": "NULL"
+    },
+    "E05.top1_correct": {
+      "n_paired": 0,
+      "verdict": "UNDERPOWERED"
+    },
+    "E05.top3_contains_primary": {
+      "n_paired": 0,
+      "verdict": "UNDERPOWERED"
+    },
+    "E06.prevents_C_media_not_in_vault": {
+      "n_paired": 0,
+      "verdict": "UNDERPOWERED"
+    },
+    "E07.directional_gate": {
+      "n_paired": 12,
+      "improved": 0,
+      "worsened": 0,
+      "unchanged": 12,
+      "verdict": "NULL"
+    }
+  },
+  "hypothesis_retained_null": false
+}

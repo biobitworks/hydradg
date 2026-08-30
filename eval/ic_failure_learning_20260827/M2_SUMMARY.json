@@ -1,0 +1,121 @@
+{
+  "schema": "hydradg.ic_failure_learning.generation_summary.v1",
+  "generation": "M2",
+  "n_scored": 150,
+  "model_state_counts": {
+    "UNKNOWN": 75,
+    "ABSTAIN": 43,
+    "MALFORMED": 20,
+    "OK": 12
+  },
+  "models": [
+    "qwen2.5-coder:7b",
+    "qwen3:1.7b"
+  ],
+  "E01": {
+    "vault_media_detection": {
+      "yes": 1,
+      "n": 6,
+      "rate": 0.16666666666666666
+    },
+    "origin_detection": {
+      "yes": 3,
+      "n": 6,
+      "rate": 0.5
+    },
+    "cold_start_detection": {
+      "yes": 0,
+      "n": 6,
+      "rate": 0.0
+    }
+  },
+  "E02": {
+    "directional_gate": {
+      "yes": 6,
+      "n": 12,
+      "rate": 0.5
+    }
+  },
+  "E05": {
+    "top1_divergence": {
+      "yes": 0,
+      "n": 6,
+      "rate": 0.0
+    },
+    "top3_divergence": {
+      "yes": 3,
+      "n": 6,
+      "rate": 0.5
+    }
+  },
+  "E06": {
+    "prevents_C": {
+      "yes": 0,
+      "n": 12,
+      "rate": 0.0
+    },
+    "vault_before_submit": {
+      "yes": 0,
+      "n": 12,
+      "rate": 0.0
+    },
+    "media_before_submit": {
+      "yes": 0,
+      "n": 12,
+      "rate": 0.0
+    },
+    "origin_before_submit": {
+      "yes": 0,
+      "n": 12,
+      "rate": 0.0
+    },
+    "red_team_before_submit": {
+      "yes": 0,
+      "n": 12,
+      "rate": 0.0
+    }
+  },
+  "E07": {
+    "directional_gate": {
+      "yes": 0,
+      "n": 15,
+      "rate": 0.0
+    }
+  },
+  "per_model": {
+    "qwen2.5-coder:7b": {
+      "n_scored": 75,
+      "model_state_counts": {
+        "ABSTAIN": 43,
+        "MALFORMED": 20,
+        "OK": 12
+      },
+      "E05_top1": {
+        "yes": 0,
+        "n": 3,
+        "rate": 0.0
+      },
+      "E06_prevents_C": {
+        "yes": 0,
+        "n": 6,
+        "rate": 0.0
+      }
+    },
+    "qwen3:1.7b": {
+      "n_scored": 75,
+      "model_state_counts": {
+        "UNKNOWN": 75
+      },
+      "E05_top1": {
+        "yes": 0,
+        "n": 3,
+        "rate": 0.0
+      },
+      "E06_prevents_C": {
+        "yes": 0,
+        "n": 6,
+        "rate": 0.0
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "hydradg.newinml2026_solo.primary_experiment_evidence_matrix.v1",
+  "recorded_at_utc": "2026-08-29T06:06:39Z",
+  "tier": "PRIMARY_EXPERIMENTAL_SCIENCE",
+  "scope_note": "Treatment-effect evidence only; not systems validation",
+  "entries": [
+    {
+      "experiment_id": "IC-FAILURE-LEARNING-STAGE2",
+      "evidence_class": "STAGE_CLOSEOUT",
+      "terminal_state": "FAILURE_LEARNING_BEHAVIOR_IMPROVEMENT_NOT_ESTABLISHED",
+      "raw_rows": 432,
+      "proper_rows": 414,
+      "canary_rows": 18,
+      "m0_scored": 132,
+      "m1_scored": 132,
+      "m2_scored": 150,
+      "claim_ceiling": "FAILURE_LEARNING_EXPERIMENT_RESULTS_ONLY",
+      "source_sha256": "17c943630e6215551cea76c7925766b66f61a2423da5ca122ecd0a43f82e97f6"
+    },
+    {
+      "experiment_id": "EXP-008",
+      "evidence_class": "TERMINAL_EXPERIMENT_VERDICT",
+      "terminal_state": "UNDERPOWERED",
+      "raw_cells": 300,
+      "valid_parse_rate": 0.9066666666666666,
+      "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+      "source_sha256": "76f056d6b42a73677bf71338ea97a61bf92e2d5911b99ac4e400247730936ac5"
+    },
+    {
+      "experiment_id": "EXP-009",
+      "evidence_class": "TERMINAL_EXPERIMENT_VERDICT",
+      "terminal_state": "UNDERPOWERED",
+      "raw_cells": 300,
+      "valid_parse_rate": 0.8833333333333333,
+      "secondary_promoted": false,
+      "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+      "source_sha256": "7d1ea04f0429ed8f1dc98f0f85d1f29b327f5c14f5f3c2dbf03531b2705e1657"
+    },
+    {
+      "experiment_id": "Q38",
+      "evidence_class": "SUCCESSOR_PROBE",
+      "terminal_state": "NONTERMINAL",
+      "terminal_partial_cells": 27,
+      "primary_results_admission": 0,
+      "claim_ceiling": "LIMITATION_ONLY",
+      "note": "Not primary Results"
+    }
+  ],
+  "primary_experimental_raw_cell_n": 600,
+  "primary_experimental_raw_cell_breakdown": {
+    "EXP-008": 300,
+    "EXP-009": 300
+  }
+}

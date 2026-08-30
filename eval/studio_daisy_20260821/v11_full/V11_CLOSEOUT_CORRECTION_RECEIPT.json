@@ -1,0 +1,17 @@
+{
+  "schema": "hydradg.v11_closeout_correction.v1",
+  "timestamp_utc": "2026-08-21T19:45:00Z",
+  "v11_execution_sha": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+  "v11_evidence_head": "c5093d98d830a39a7e4dd6521656dc325148ed5e",
+  "earliest_divergence": "FROZEN_NUM_PREDICT_256_EXHAUSTED_BY_REASONING_BEFORE_FINAL_RESPONSE",
+  "shutdown_sequence": "SIGTERM_REQUESTED_THEN_SIGKILL_REQUIRED",
+  "termination_class": "FORCED_TERMINATION_AFTER_GRACEFUL_STOP_REQUEST",
+  "lease_release": "MANUALLY_CLEARED_AFTER_PROCESS_TERMINATION",
+  "v11_classification": "EARLY_TERMINATED_OUTPUT_BUDGET_LIMITED_DIAGNOSTIC_MATRIX",
+  "slots_summary": {
+    "total": 48,
+    "success_correct": 8,
+    "success_incorrect": 1,
+    "failed_empty_response": 39
+  }
+}

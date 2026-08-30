@@ -1,0 +1,139 @@
+{
+  "schema": "hydralamp.science_closeout_receipt.v1",
+  "recorded_at_utc": "2026-08-27T05:10:00Z",
+  "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
+  "branch": "hack-hydra/hydralamp-20260826",
+  "execution_host": "magicSTUDIObox.local",
+  "overnight_window_utc": {
+    "started_at": "2026-08-27T04:53:09.757Z",
+    "completed_at": "2026-08-27T04:54:15.653Z"
+  },
+  "closeout_action": "RETROACTIVE_CUSTODY_RECONSTRUCTION_FROM_AVAILABLE_RECORD",
+  "experiments_rerun": false,
+  "verification": {
+    "json_validity": "PASS",
+    "successor_receipt_count": 13,
+    "execution_source_sha_match": "PASS",
+    "secret_scan_modified_receipts": "PASS",
+    "unauthorized_canonical_model_writes": 0,
+    "unauthorized_private_plaintext_disclosure": 0,
+    "gum_doctor_state": "DEPENDENCY_UNRESOLVED",
+    "signature_state": "NOT_SIGNED",
+    "merkle_mmr_state": "NOT_COMMITTED"
+  },
+  "promotion_summary": {
+    "LOCAL_SERVER_READY": true,
+    "DETERMINISTIC_FALLBACK_READY": true,
+    "HASH_CHAIN_READY": true,
+    "CONTEXT_DELTA_READY": true,
+    "REALTIME_GRAPH_READY": true,
+    "LOCAL_MODEL_GUM_OLLARMA_READY": true,
+    "LIVE_RUNTYPE_READY": "PROBE_CONTROL_SMOKE",
+    "CORE_STRESS": "PASS",
+    "HASH_TAMPER_STRESS": "PASS",
+    "SSE_STRESS": "PASS",
+    "TYPECHECK": "PASS",
+    "BUILD": "PASS",
+    "SECRET_SCAN": "PASS"
+  },
+  "runtype_probe": {
+    "discovery_exit_code": 0,
+    "inventory_runtype_state": "CONFIGURED",
+    "selected_model_id": "qwen/qwen3.6-27b",
+    "control_smoke_run_id": "hlrt_mtb1spyh_bce57f34",
+    "control_smoke_mode": "LIVE_RUNTYPE",
+    "control_smoke_hash_chain_ok": true,
+    "control_smoke_lane_status": "ERROR",
+    "control_smoke_runtype_execution_id": null,
+    "interpretation": "Bounded PROBE_CONTROL_SMOKE executed (orchestrator gate). Lane returned ERROR; not upgraded to full live success."
+  },
+  "reference_run_ids": {
+    "overnight_smoke": "hlrt_mtb1rkkf_91c5db2e",
+    "live_control_smoke": "hlrt_mtb1spyh_bce57f34"
+  },
+  "receipt_divergence_from_head": [
+    {
+      "file": "CONCURRENCY_STRESS_RECEIPT.json",
+      "earliest_divergent_field": "execution_source_sha",
+      "predecessor": "9b257cb05d0b62a88c0854212973a7ed24402634",
+      "successor": "b21f0d58234746edcb68b401398b546151e0b56e"
+    },
+    {
+      "file": "CORE_STRESS_RECEIPT.json",
+      "earliest_divergent_field": "execution_source_sha",
+      "predecessor": "9b257cb05d0b62a88c0854212973a7ed24402634",
+      "successor": "b21f0d58234746edcb68b401398b546151e0b56e"
+    },
+    {
+      "file": "GUM_DOCTOR_RECEIPT.json",
+      "earliest_divergent_field": "recorded_at_utc",
+      "predecessor": "2026-08-27T04:23:52.233Z",
+      "successor": "2026-08-27T04:53:11.773Z"
+    },
+    {
+      "file": "HASH_TAMPER_STRESS_RECEIPT.json",
+      "earliest_divergent_field": "execution_source_sha",
+      "predecessor": "9b257cb05d0b62a88c0854212973a7ed24402634",
+      "successor": "b21f0d58234746edcb68b401398b546151e0b56e"
+    },
+    {
+      "file": "LIVE_RUNTYPE_STRESS_RECEIPT.json",
+      "earliest_divergent_field": "LIVE_RUNTYPE_READY",
+      "predecessor": "BLOCKED_KEY_MISSING",
+      "successor": "PROBE_CONTROL_SMOKE"
+    },
+    {
+      "file": "LOCAL_MODEL_STRESS_RECEIPT.json",
+      "earliest_divergent_field": "execution_source_sha",
+      "predecessor": "9b257cb05d0b62a88c0854212973a7ed24402634",
+      "successor": "b21f0d58234746edcb68b401398b546151e0b56e"
+    },
+    {
+      "file": "LOCAL_SERVER_RECEIPT.json",
+      "earliest_divergent_field": "schema",
+      "predecessor": "hydralamp.local_server_receipt.v1",
+      "successor": "hydralamp.overnight_execution_receipt.v1",
+      "artifact_note": "Overnight writer spread order overwrote schema field; payload otherwise mirrors OVERNIGHT_EXECUTION_RECEIPT."
+    },
+    {
+      "file": "MODEL_INVENTORY.json",
+      "earliest_divergent_field": "recorded_at_utc",
+      "predecessor": "2026-08-27T04:44:39.338Z",
+      "successor": "2026-08-27T04:54:05.391Z"
+    },
+    {
+      "file": "OVERNIGHT_EXECUTION_RECEIPT.json",
+      "earliest_divergent_field": "LIVE_RUNTYPE_READY",
+      "predecessor": "BLOCKED_KEY_MISSING",
+      "successor": "PROBE_CONTROL_SMOKE"
+    },
+    {
+      "file": "RESTART_RECOVERY_RECEIPT.json",
+      "earliest_divergent_field": "execution_source_sha",
+      "predecessor": "9b257cb05d0b62a88c0854212973a7ed24402634",
+      "successor": "b21f0d58234746edcb68b401398b546151e0b56e"
+    },
+    {
+      "file": "SMOKE_PASS_RECEIPT.json",
+      "earliest_divergent_field": "fcg.root_after",
+      "predecessor": "a55c0362ee5020ede3d99ca9e914a4c78a569571e17cc258961c1c70ee11ce6b",
+      "successor": "6abd3aae068da46b019bd778ca1d64fef64624438affb2312a86d857a2037425"
+    },
+    {
+      "file": "SSE_STRESS_RECEIPT.json",
+      "earliest_divergent_field": "execution_source_sha",
+      "predecessor": "9b257cb05d0b62a88c0854212973a7ed24402634",
+      "successor": "b21f0d58234746edcb68b401398b546151e0b56e"
+    },
+    {
+      "file": "UI_DEMO_RECEIPT.json",
+      "earliest_divergent_field": "samples",
+      "predecessor": "present",
+      "successor": "removed",
+      "artifact_note": "Custody-stress refresh dropped samples and nested stress summary fields; VIDEO_LIVE_RUNTYPE_READY remains BLOCKED_KEY_MISSING."
+    }
+  ],
+  "claim_ceiling": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN + REALTIME_HASH/CONTEXT_VISUALIZATION",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

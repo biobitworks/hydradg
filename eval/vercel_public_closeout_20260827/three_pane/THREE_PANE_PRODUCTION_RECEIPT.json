@@ -1,0 +1,228 @@
+{
+  "schema": "hydralamp.gum_doctor_three_pane_receipt.v1",
+  "recorded_at_utc": "2026-08-28T00:03:52.970Z",
+  "execution_host": "magicSTUDIObox.local",
+  "base_url": "https://hydralamp.vercel.app",
+  "commit_sha": "0270efc10321877f07fe2487f40f6c8bbe151981",
+  "viewport_tiers": [
+    "DESKTOP_1440",
+    "TABLET_820",
+    "MOBILE_390"
+  ],
+  "pass": true,
+  "checks": [
+    {
+      "name": "DESKTOP_home_loads",
+      "pass": true,
+      "detail": "chars=18596",
+      "viewport": "DESKTOP"
+    },
+    {
+      "name": "DESKTOP_three_pane_title",
+      "pass": true,
+      "detail": "found=true",
+      "viewport": "DESKTOP"
+    },
+    {
+      "name": "DESKTOP_golden_pack",
+      "pass": true,
+      "detail": "found=true",
+      "viewport": "DESKTOP"
+    },
+    {
+      "name": "DESKTOP_responsive_tabs",
+      "pass": true,
+      "detail": "tabs=false width=1440",
+      "viewport": "DESKTOP"
+    },
+    {
+      "name": "DESKTOP_grid_layout",
+      "pass": true,
+      "detail": "465.328px 465.328px 465.344px 0px",
+      "viewport": "DESKTOP"
+    },
+    {
+      "name": "TABLET_home_loads",
+      "pass": true,
+      "detail": "chars=18596",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "TABLET_three_pane_title",
+      "pass": true,
+      "detail": "found=true",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "TABLET_golden_pack",
+      "pass": true,
+      "detail": "found=true",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "TABLET_responsive_tabs",
+      "pass": true,
+      "detail": "tabs=true width=820",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "TABLET_grid_layout",
+      "pass": true,
+      "detail": "393px 393px",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "TABLET_focus_conversation",
+      "pass": true,
+      "detail": "clicked",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "TABLET_focus_fcg",
+      "pass": true,
+      "detail": "clicked",
+      "viewport": "TABLET"
+    },
+    {
+      "name": "MOBILE_home_loads",
+      "pass": true,
+      "detail": "chars=18596",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "MOBILE_three_pane_title",
+      "pass": true,
+      "detail": "found=true",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "MOBILE_golden_pack",
+      "pass": true,
+      "detail": "found=true",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "MOBILE_responsive_tabs",
+      "pass": true,
+      "detail": "tabs=true width=390",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "MOBILE_grid_layout",
+      "pass": true,
+      "detail": "366px",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "MOBILE_focus_conversation",
+      "pass": true,
+      "detail": "clicked",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "MOBILE_focus_fcg",
+      "pass": true,
+      "detail": "clicked",
+      "viewport": "MOBILE"
+    },
+    {
+      "name": "golden_api_status",
+      "pass": true,
+      "detail": "200"
+    },
+    {
+      "name": "golden_event_count",
+      "pass": true,
+      "detail": "events=18"
+    },
+    {
+      "name": "golden_private_leaks",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "golden_unauthorized_writes",
+      "pass": true,
+      "detail": "0"
+    },
+    {
+      "name": "golden_restoration",
+      "pass": true,
+      "detail": "PASS"
+    },
+    {
+      "name": "golden_step_next",
+      "pass": true,
+      "detail": "2x Next"
+    },
+    {
+      "name": "golden_scrub_present",
+      "pass": true,
+      "detail": "count=1"
+    },
+    {
+      "name": "golden_scrub_end",
+      "pass": true,
+      "detail": "seq=17"
+    },
+    {
+      "name": "golden_scrub_start",
+      "pass": true,
+      "detail": "seq=0"
+    },
+    {
+      "name": "golden_play_started",
+      "pass": true,
+      "detail": "Pause visible"
+    },
+    {
+      "name": "golden_play_pause",
+      "pass": true,
+      "detail": "toggled"
+    },
+    {
+      "name": "golden_visible_REFERENCE",
+      "pass": true,
+      "detail": "REFERENCE"
+    },
+    {
+      "name": "golden_visible_POISON",
+      "pass": true,
+      "detail": "POISON"
+    },
+    {
+      "name": "golden_visible_DENIED",
+      "pass": true,
+      "detail": "DENIED"
+    },
+    {
+      "name": "golden_visible_REPAIR",
+      "pass": true,
+      "detail": "REPAIR"
+    },
+    {
+      "name": "golden_visible_RESTORED",
+      "pass": true,
+      "detail": "RESTORED"
+    },
+    {
+      "name": "golden_visible_PRIVATE_LEAKS",
+      "pass": true,
+      "detail": "PRIVATE_LEAKS"
+    },
+    {
+      "name": "golden_visible_RESTORATION",
+      "pass": true,
+      "detail": "RESTORATION"
+    },
+    {
+      "name": "legacy_golden_route",
+      "pass": true,
+      "detail": "chars=5446"
+    }
+  ],
+  "golden_path_authority": "hydralamp_standalone_not_hydradg_embed",
+  "claim_ceiling": "DEMO_SESSION_MECHANISM_CANARY_NOT_EMPIRICAL_CLAIM",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED"
+}

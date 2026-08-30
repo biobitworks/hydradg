@@ -1,0 +1,31 @@
+{
+  "mode": "TEST_VECTOR_REPLAY",
+  "security_claim_eligibility": "NO",
+  "fcg_root": "eb98da47b9b13939a8b781f42e0dc1946a01474a0078ec94c2510bf4a2ae9739",
+  "unauthorized_plaintext_disclosures": 0,
+  "unauthorized_canonical_writes": 0,
+  "real_crypto_receipts": [],
+  "diagnostics": {
+    "g_star": 0.06875,
+    "delta_g_star": 0.06875,
+    "cloud_drift_0_100": 87.5,
+    "burden": 0.375,
+    "poison_burden": 1
+  },
+  "msm_matrix": {
+    "UNKNOWN": {
+      "AUTHENTICATED": 3,
+      "PROMOTED": 1
+    },
+    "AUTHENTICATED": {
+      "EVIDENCE_ACCESSED": 1,
+      "DENIED": 1
+    },
+    "EVIDENCE_ACCESSED": {
+      "QUARANTINED": 1
+    },
+    "DENIED": {
+      "DENIED": 1
+    }
+  }
+}

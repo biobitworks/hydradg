@@ -1,0 +1,3301 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "Yappy Web API",
+    "version": "1.0.0",
+    "summary": "Free, keyless, read-only access to everything factual about Yappy.",
+    "description": "Yappy is a voice agent for macOS: hold a key and it types what you say, hold another and it does what you ask. This API describes the product \u2014 releases, documentation, FAQ, pricing, requirements \u2014 so an agent answering a question about Yappy reads structured data instead of scraping a marketing page.\n\n**No API key is required for any read operation.** Credentials exist only to raise the rate ceiling and to unlock export jobs; nothing behind them is secret. See https://yappy.biz/auth.md.\n\n**This API does not transcribe audio.** Yappy's speech recognition runs on the user's own Mac and there is no hosted endpoint behind it. If a user wants dictation, the answer is to install the app.\n\nConventions: cursor pagination on every list, a strong `ETag` on every GET, RFC 9457 `application/problem+json` on every error, RFC-style `RateLimit-*` headers on every response, and a dated `API-Version` header naming the build that answered. The major version lives in the path; a removal is announced with `Deprecation` and `Sunset` headers at least 180 days ahead.",
+    "termsOfService": "https://yappy.biz/privacy/",
+    "contact": {
+      "name": "Yappy support",
+      "email": "support@yappy.biz",
+      "url": "https://yappy.biz/contact/"
+    },
+    "license": {
+      "name": "Proprietary \u2014 LicenseRef-Proprietary",
+      "identifier": "LicenseRef-Proprietary"
+    },
+    "x-api-version": "2026-08-25",
+    "x-logo": {
+      "url": "https://yappy.biz/assets/logo.svg",
+      "altText": "Yappy"
+    }
+  },
+  "externalDocs": {
+    "description": "Developer portal, including the versioning and deprecation policy",
+    "url": "https://yappy.biz/developers/deprecation"
+  },
+  "servers": [
+    {
+      "url": "https://yappy.biz/api/v1",
+      "description": "Production"
+    },
+    {
+      "url": "https://yappy.biz/api/v1/sandbox",
+      "description": "Sandbox \u2014 deterministic fixtures, ?simulate= to force any error"
+    }
+  ],
+  "tags": [
+    {
+      "name": "Discovery",
+      "description": "Finding your way around the API."
+    },
+    {
+      "name": "Releases",
+      "description": "Yappy's macOS release history and current version."
+    },
+    {
+      "name": "Documentation",
+      "description": "Documentation pages, FAQ, and search."
+    },
+    {
+      "name": "Product",
+      "description": "Features, requirements, and machine compatibility."
+    },
+    {
+      "name": "Commerce",
+      "description": "What Yappy and its backends cost."
+    },
+    {
+      "name": "Batch",
+      "description": "Many reads, one request, one unit of rate limit."
+    },
+    {
+      "name": "Exports",
+      "description": "Asynchronous corpus exports."
+    }
+  ],
+  "security": [
+    {},
+    {
+      "bearerAuth": []
+    },
+    {
+      "oauth2": [
+        "read:releases",
+        "read:docs",
+        "read:pricing",
+        "read:faq",
+        "export:docs"
+      ]
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "operationId": "getServiceIndex",
+        "summary": "Service index",
+        "description": "Every endpoint this API exposes, the dated API version that answered, the rate-limit policy in force, and links to the OpenAPI spec, both MCP servers, and the OAuth discovery documents. A good first call for an agent that has just found this domain and wants the map before the territory.",
+        "tags": [
+          "Discovery"
+        ],
+        "responses": {
+          "200": {
+            "description": "The service index",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ServiceIndex"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": []
+          },
+          {
+            "oauth2": []
+          }
+        ]
+      }
+    },
+    "/releases": {
+      "get": {
+        "operationId": "listReleases",
+        "summary": "List releases",
+        "description": "Yappy's release history for macOS, newest first, cursor-paginated. Each entry carries the version, publication date, human-readable notes, and a download URL. Use this to answer 'what changed recently'; use /releases/latest when you only need the current version.",
+        "tags": [
+          "Releases"
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of releases",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              },
+              "Link": {
+                "$ref": "#/components/headers/Link"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/ReleaseList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/Cursor"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:releases"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:releases"
+            ]
+          }
+        ]
+      }
+    },
+    "/releases/latest": {
+      "get": {
+        "operationId": "getLatestRelease",
+        "summary": "Get the current release",
+        "description": "The release Yappy's own updater would install right now, read from the same signed appcast rather than from hand-maintained marketing copy, so it cannot be stale. Returns the version, publication date, release notes, download URL, and the platform floor (macOS version and CPU architecture).",
+        "tags": [
+          "Releases"
+        ],
+        "responses": {
+          "200": {
+            "description": "The current release",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Release"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:releases"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:releases"
+            ]
+          }
+        ]
+      }
+    },
+    "/releases/{version}": {
+      "get": {
+        "operationId": "getRelease",
+        "summary": "Get one release",
+        "description": "One release by its exact version string, for example '0.4.17'. Responds 404 with code 'not_found' when no such version was published.",
+        "tags": [
+          "Releases"
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested release",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Release"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Version"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:releases"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:releases"
+            ]
+          }
+        ]
+      }
+    },
+    "/docs": {
+      "get": {
+        "operationId": "listDocs",
+        "summary": "List documentation pages",
+        "description": "The documentation index: slug, title, description, HTML URL, and markdown URL for every page. Cursor-paginated. Fetch a page's content with /docs/{slug}.",
+        "tags": [
+          "Documentation"
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of documentation entries",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              },
+              "Link": {
+                "$ref": "#/components/headers/Link"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/DocList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/Cursor"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:docs"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:docs"
+            ]
+          }
+        ]
+      }
+    },
+    "/docs/{slug}": {
+      "get": {
+        "operationId": "getDoc",
+        "summary": "Get one documentation page",
+        "description": "One documentation page as markdown, with its title, description, and last update date. The slug is the path after /docs/ \u2014 for example 'quickstart', 'agent-mode', or 'privacy-model'. On a miss the 404 detail suggests the nearest slug, so a typo costs one request rather than a guessing game.",
+        "tags": [
+          "Documentation"
+        ],
+        "responses": {
+          "200": {
+            "description": "The requested documentation page",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Doc"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Slug"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:docs"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:docs"
+            ]
+          }
+        ]
+      }
+    },
+    "/faq": {
+      "get": {
+        "operationId": "listFaq",
+        "summary": "List frequently asked questions",
+        "description": "Question and answer pairs about Yappy \u2014 privacy, requirements, cost, permissions, and how it differs from other dictation tools. The same set is published as FAQPage structured data on the homepage.",
+        "tags": [
+          "Documentation"
+        ],
+        "responses": {
+          "200": {
+            "description": "A page of FAQ entries",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              },
+              "Link": {
+                "$ref": "#/components/headers/Link"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FaqList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Limit"
+          },
+          {
+            "$ref": "#/components/parameters/Cursor"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:faq"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:faq"
+            ]
+          }
+        ]
+      }
+    },
+    "/pricing": {
+      "get": {
+        "operationId": "getPricing",
+        "summary": "Get pricing",
+        "description": "What Yappy costs: the free Mac app, the per-backend cost of the language model that cleans up dictation, and the terms of this API itself. Call this before telling a user about price \u2014 most of the product is free and two of the backend options cost nothing at all.",
+        "tags": [
+          "Commerce"
+        ],
+        "responses": {
+          "200": {
+            "description": "The pricing model",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Pricing"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:pricing"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:pricing"
+            ]
+          }
+        ]
+      }
+    },
+    "/features": {
+      "get": {
+        "operationId": "listFeatures",
+        "summary": "List product features",
+        "description": "Yappy's capabilities as structured objects rather than marketing bullets: an id, a name, a description, whether the feature runs entirely on-device, and which macOS permission it needs. Use this to build an accurate comparison against another product.",
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "The feature list",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/FeatureList"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": []
+          },
+          {
+            "oauth2": []
+          }
+        ]
+      }
+    },
+    "/requirements": {
+      "get": {
+        "operationId": "getRequirements",
+        "summary": "Get system requirements",
+        "description": "The minimum macOS version, the required CPU architecture, disk needs, and every macOS permission Yappy asks for with what each one unlocks and what breaks if it is denied.",
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "System requirements",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Requirements"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": []
+          },
+          {
+            "oauth2": []
+          }
+        ]
+      }
+    },
+    "/compatibility": {
+      "get": {
+        "operationId": "checkCompatibility",
+        "summary": "Check whether a Mac can run Yappy",
+        "description": "A deterministic yes or no for a specific machine, given its macOS version and CPU architecture, with the reasons spelled out. Prefer this over reasoning about the requirements yourself: it encodes the same rules the installer uses.",
+        "tags": [
+          "Product"
+        ],
+        "responses": {
+          "200": {
+            "description": "The compatibility verdict",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Compatibility"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/OsVersion"
+          },
+          {
+            "$ref": "#/components/parameters/Arch"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": []
+          },
+          {
+            "oauth2": []
+          }
+        ]
+      }
+    },
+    "/search": {
+      "get": {
+        "operationId": "search",
+        "summary": "Search documentation and FAQ",
+        "description": "Full-text search across every documentation page and FAQ entry. Results carry a relevance score, the matching excerpt, and both HTML and markdown URLs, so you can quote the excerpt and cite the page in one step. Cursor-paginated.",
+        "tags": [
+          "Documentation"
+        ],
+        "responses": {
+          "200": {
+            "description": "Ranked search results",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              },
+              "Link": {
+                "$ref": "#/components/headers/Link"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/SearchResults"
+                }
+              }
+            }
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/Query"
+          },
+          {
+            "$ref": "#/components/parameters/SearchLimit"
+          },
+          {
+            "$ref": "#/components/parameters/Cursor"
+          },
+          {
+            "$ref": "#/components/parameters/SearchType"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "read:docs"
+            ]
+          },
+          {
+            "oauth2": [
+              "read:docs"
+            ]
+          }
+        ]
+      }
+    },
+    "/batch": {
+      "post": {
+        "operationId": "createBatch",
+        "summary": "Run up to 20 reads in one request",
+        "description": "Bundle up to twenty GET operations into a single round trip that costs one unit of rate limit rather than twenty. Each result carries the id you supplied, its own HTTP status, and its body; one failing operation returns its problem document in that entry and leaves the rest untouched.",
+        "tags": [
+          "Batch"
+        ],
+        "responses": {
+          "200": {
+            "description": "Per-operation results",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              },
+              "Idempotency-Key": {
+                "$ref": "#/components/headers/IdempotencyKey"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/BatchResponse"
+                }
+              }
+            }
+          },
+          "413": {
+            "$ref": "#/components/responses/PayloadTooLarge"
+          },
+          "415": {
+            "$ref": "#/components/responses/UnsupportedMediaType"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "The operations to run.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/BatchRequest"
+              }
+            }
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": []
+          },
+          {
+            "oauth2": []
+          }
+        ]
+      }
+    },
+    "/exports": {
+      "post": {
+        "operationId": "createExport",
+        "summary": "Start an export job",
+        "description": "Start an asynchronous export of a corpus \u2014 documentation, FAQ, or releases \u2014 as markdown or JSON. Returns 202 Accepted with a Location header and a Retry-After hint rather than blocking, so a large export never holds a connection open. Poll the job with getExport until its status is 'completed'.",
+        "tags": [
+          "Exports"
+        ],
+        "responses": {
+          "202": {
+            "description": "The job was accepted and is being prepared",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              },
+              "Location": {
+                "$ref": "#/components/headers/Location"
+              },
+              "Retry-After": {
+                "$ref": "#/components/headers/RetryAfter"
+              },
+              "Idempotency-Key": {
+                "$ref": "#/components/headers/IdempotencyKey"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "409": {
+            "$ref": "#/components/responses/Conflict"
+          },
+          "415": {
+            "$ref": "#/components/responses/UnsupportedMediaType"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/IdempotencyKey"
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "description": "What to export, and in which format.",
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/ExportRequest"
+              }
+            }
+          }
+        },
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "export:docs"
+            ]
+          },
+          {
+            "oauth2": [
+              "export:docs"
+            ]
+          }
+        ]
+      }
+    },
+    "/exports/{job_id}": {
+      "get": {
+        "operationId": "getExport",
+        "summary": "Poll an export job",
+        "description": "The current state of an export job. Status moves queued, then running, then completed; a completed job carries result.url pointing at the finished artifact. Poll no faster than the Retry-After hint on the previous response.",
+        "tags": [
+          "Exports"
+        ],
+        "responses": {
+          "200": {
+            "description": "The job's current state",
+            "headers": {
+              "ETag": {
+                "$ref": "#/components/headers/ETag"
+              },
+              "API-Version": {
+                "$ref": "#/components/headers/APIVersion"
+              },
+              "Cache-Control": {
+                "$ref": "#/components/headers/CacheControl"
+              },
+              "RateLimit-Limit": {
+                "$ref": "#/components/headers/RateLimitLimit"
+              },
+              "RateLimit-Remaining": {
+                "$ref": "#/components/headers/RateLimitRemaining"
+              },
+              "RateLimit-Reset": {
+                "$ref": "#/components/headers/RateLimitReset"
+              },
+              "RateLimit-Policy": {
+                "$ref": "#/components/headers/RateLimitPolicy"
+              },
+              "X-Request-Id": {
+                "$ref": "#/components/headers/XRequestId"
+              }
+            },
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/Job"
+                }
+              }
+            }
+          },
+          "404": {
+            "$ref": "#/components/responses/NotFound"
+          },
+          "400": {
+            "$ref": "#/components/responses/BadRequest"
+          },
+          "401": {
+            "$ref": "#/components/responses/Unauthorized"
+          },
+          "403": {
+            "$ref": "#/components/responses/Forbidden"
+          },
+          "429": {
+            "$ref": "#/components/responses/RateLimited"
+          },
+          "500": {
+            "$ref": "#/components/responses/InternalError"
+          },
+          "503": {
+            "$ref": "#/components/responses/UpstreamUnavailable"
+          }
+        },
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/JobId"
+          }
+        ],
+        "security": [
+          {},
+          {
+            "bearerAuth": [
+              "export:docs"
+            ]
+          },
+          {
+            "oauth2": [
+              "export:docs"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer",
+        "bearerFormat": "opaque",
+        "description": "An access token from /oauth/token. Optional \u2014 every read endpoint also answers anonymously."
+      },
+      "oauth2": {
+        "type": "oauth2",
+        "description": "OAuth 2.1 with PKCE S256. Dynamic client registration (RFC 7591) at /oauth/register; no human approval step.",
+        "flows": {
+          "clientCredentials": {
+            "tokenUrl": "https://yappy.biz/oauth/token",
+            "refreshUrl": "https://yappy.biz/oauth/token",
+            "scopes": {
+              "read:releases": "Read release history and the current version",
+              "read:docs": "Read documentation pages and run searches",
+              "read:pricing": "Read pricing and plan data",
+              "read:faq": "Read frequently asked questions",
+              "export:docs": "Start and poll documentation export jobs"
+            }
+          },
+          "authorizationCode": {
+            "authorizationUrl": "https://yappy.biz/oauth/authorize",
+            "tokenUrl": "https://yappy.biz/oauth/token",
+            "refreshUrl": "https://yappy.biz/oauth/token",
+            "scopes": {
+              "read:releases": "Read release history and the current version",
+              "read:docs": "Read documentation pages and run searches",
+              "read:pricing": "Read pricing and plan data",
+              "read:faq": "Read frequently asked questions",
+              "export:docs": "Start and poll documentation export jobs"
+            }
+          }
+        }
+      }
+    },
+    "headers": {
+      "ETag": {
+        "description": "Strong validator. Send it back as If-None-Match for a cheap 304.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "\"r-0.4.19\""
+      },
+      "APIVersion": {
+        "description": "The dated build of v1 that answered this request.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "2026-08-25"
+      },
+      "CacheControl": {
+        "description": "How long this response may be reused.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "public, max-age=300"
+      },
+      "Link": {
+        "description": "RFC 8288 links. rel=\"next\" carries the next page.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "Location": {
+        "description": "Where to poll the job that was just created.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "RetryAfter": {
+        "description": "Seconds to wait before retrying.",
+        "schema": {
+          "type": "integer"
+        },
+        "example": 12
+      },
+      "IdempotencyKey": {
+        "description": "Echo of the Idempotency-Key you supplied.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "RateLimitLimit": {
+        "description": "Requests permitted in the current window.",
+        "schema": {
+          "type": "integer"
+        },
+        "example": 120
+      },
+      "RateLimitRemaining": {
+        "description": "Requests left in the current window.",
+        "schema": {
+          "type": "integer"
+        },
+        "example": 117
+      },
+      "RateLimitReset": {
+        "description": "Seconds until the window resets.",
+        "schema": {
+          "type": "integer"
+        },
+        "example": 43
+      },
+      "RateLimitPolicy": {
+        "description": "The policy in force, as quota;w=window.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "120;w=60"
+      },
+      "XRequestId": {
+        "description": "Identifier for this request. Quote it in a support mail.",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "Deprecation": {
+        "description": "Present only on a version scheduled for removal: the HTTP date when we started saying so. Absent on v1, which is current.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "Sat, 01 Feb 2026 00:00:00 GMT"
+      },
+      "Sunset": {
+        "description": "RFC 8594. Present only on a version scheduled for removal: the HTTP date after which it answers 410 Gone. At least 180 days after Deprecation.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "Sat, 01 Aug 2026 00:00:00 GMT"
+      },
+      "WWWAuthenticate": {
+        "description": "Bearer challenge. Carries resource_metadata on an unauthenticated 401, and error/scope on a rejected credential.",
+        "schema": {
+          "type": "string"
+        },
+        "example": "Bearer resource_metadata=\"https://yappy.biz/.well-known/oauth-protected-resource\""
+      }
+    },
+    "parameters": {
+      "Limit": {
+        "name": "limit",
+        "in": "query",
+        "required": false,
+        "description": "How many items to return, 1 to 100.",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100,
+          "default": 20
+        }
+      },
+      "SearchLimit": {
+        "name": "limit",
+        "in": "query",
+        "required": false,
+        "description": "How many results to return, 1 to 50.",
+        "schema": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 50,
+          "default": 10
+        }
+      },
+      "Cursor": {
+        "name": "cursor",
+        "in": "query",
+        "required": false,
+        "description": "Opaque cursor from a previous response's pagination.next_cursor. Pass it back verbatim; do not construct one.",
+        "schema": {
+          "type": "string",
+          "maxLength": 256
+        }
+      },
+      "Version": {
+        "name": "version",
+        "in": "path",
+        "required": true,
+        "description": "Exact release version, for example 0.4.19, or the literal 'latest'.",
+        "schema": {
+          "type": "string",
+          "pattern": "^(latest|\\d+\\.\\d+\\.\\d+)$"
+        },
+        "example": "0.4.19"
+      },
+      "Slug": {
+        "name": "slug",
+        "in": "path",
+        "required": true,
+        "description": "Documentation page slug \u2014 the path after /docs/.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "quickstart",
+            "dictation",
+            "agent-mode",
+            "backends",
+            "configuration",
+            "privacy-model",
+            "troubleshooting",
+            "changelog"
+          ]
+        },
+        "example": "quickstart"
+      },
+      "JobId": {
+        "name": "job_id",
+        "in": "path",
+        "required": true,
+        "description": "Job identifier from the createExport response.",
+        "schema": {
+          "type": "string",
+          "maxLength": 128
+        }
+      },
+      "Query": {
+        "name": "q",
+        "in": "query",
+        "required": true,
+        "description": "What to search for, in plain words.",
+        "schema": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 200
+        },
+        "example": "accessibility permission"
+      },
+      "SearchType": {
+        "name": "type",
+        "in": "query",
+        "required": false,
+        "description": "Narrow the search to one kind of result.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "doc",
+            "faq"
+          ]
+        }
+      },
+      "OsVersion": {
+        "name": "os_version",
+        "in": "query",
+        "required": true,
+        "description": "macOS version of the machine in question, for example 14.5.",
+        "schema": {
+          "type": "string",
+          "pattern": "^\\d+(\\.\\d+){0,2}$"
+        },
+        "example": "14.5"
+      },
+      "Arch": {
+        "name": "arch",
+        "in": "query",
+        "required": true,
+        "description": "CPU architecture of the machine in question.",
+        "schema": {
+          "type": "string",
+          "enum": [
+            "arm64",
+            "x86_64"
+          ]
+        },
+        "example": "arm64"
+      },
+      "IdempotencyKey": {
+        "name": "Idempotency-Key",
+        "in": "header",
+        "required": false,
+        "description": "A client-chosen key that makes a retry return the original result instead of starting a second job. Echoed back on the response.",
+        "schema": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "example": "docs-export-1"
+      }
+    },
+    "responses": {
+      "BadRequest": {
+        "description": "The request was malformed",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#invalid_request",
+              "title": "The request was malformed",
+              "status": 400,
+              "code": "invalid_request",
+              "detail": "limit must be between 1 and 100, got 500.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "Unauthorized": {
+        "description": "The supplied credential is missing, expired, or invalid",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "WWW-Authenticate": {
+            "$ref": "#/components/headers/WWWAuthenticate"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#invalid_token",
+              "title": "The supplied credential is missing, expired, or invalid",
+              "status": 401,
+              "code": "invalid_token",
+              "detail": "The access token has expired. Request a new one at /oauth/token.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "Forbidden": {
+        "description": "The credential is valid but lacks the required scope",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "WWW-Authenticate": {
+            "$ref": "#/components/headers/WWWAuthenticate"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#insufficient_scope",
+              "title": "The credential is valid but lacks the required scope",
+              "status": 403,
+              "code": "insufficient_scope",
+              "detail": "This operation needs the export:docs scope.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "NotFound": {
+        "description": "No such resource",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#not_found",
+              "title": "No such resource",
+              "status": 404,
+              "code": "not_found",
+              "detail": "No release with version '9.9.9'.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "PayloadTooLarge": {
+        "description": "The request body was too large",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#payload_too_large",
+              "title": "The request body was too large",
+              "status": 413,
+              "code": "payload_too_large",
+              "detail": "A batch accepts at most 20 operations; 34 were supplied.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "UnsupportedMediaType": {
+        "description": "The body was not application/json",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#unsupported_media_type",
+              "title": "The body was not application/json",
+              "status": 415,
+              "code": "unsupported_media_type",
+              "detail": "POST bodies must be application/json.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "Conflict": {
+        "description": "Same Idempotency-Key, different body",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#idempotency_conflict",
+              "title": "Same Idempotency-Key, different body",
+              "status": 409,
+              "code": "idempotency_conflict",
+              "detail": "This Idempotency-Key was used with a different body. Use a new key.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "RateLimited": {
+        "description": "Too many requests",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          },
+          "Retry-After": {
+            "$ref": "#/components/headers/RetryAfter"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#rate_limited",
+              "title": "Too many requests",
+              "status": 429,
+              "code": "rate_limited",
+              "detail": "120 requests per 60s exceeded. Retry in 12 seconds, or batch your reads via POST /batch.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "InternalError": {
+        "description": "Unexpected server error",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#internal_error",
+              "title": "Unexpected server error",
+              "status": 500,
+              "code": "internal_error",
+              "detail": "Something failed on our side. Retry once, then report request_id to support@yappy.biz.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      },
+      "UpstreamUnavailable": {
+        "description": "A dependency was unavailable",
+        "headers": {
+          "RateLimit-Limit": {
+            "$ref": "#/components/headers/RateLimitLimit"
+          },
+          "RateLimit-Remaining": {
+            "$ref": "#/components/headers/RateLimitRemaining"
+          },
+          "RateLimit-Reset": {
+            "$ref": "#/components/headers/RateLimitReset"
+          },
+          "X-Request-Id": {
+            "$ref": "#/components/headers/XRequestId"
+          }
+        },
+        "content": {
+          "application/problem+json": {
+            "schema": {
+              "$ref": "#/components/schemas/Problem"
+            },
+            "example": {
+              "type": "https://yappy.biz/developers/errors#upstream_unavailable",
+              "title": "A dependency was unavailable",
+              "status": 503,
+              "code": "upstream_unavailable",
+              "detail": "The release feed did not answer. Retry with backoff.",
+              "instance": "/api/v1/releases",
+              "request_id": "01J9X4Q0F7",
+              "docs_url": "https://yappy.biz/developers/errors"
+            }
+          }
+        }
+      }
+    },
+    "schemas": {
+      "Problem": {
+        "type": "object",
+        "title": "Problem",
+        "description": "RFC 9457 problem details. Branch on `code`, which is stable; `title` and `detail` are prose for a human or for an agent explaining itself.",
+        "required": [
+          "type",
+          "title",
+          "status",
+          "code"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "format": "uri",
+            "description": "Link to the documentation for this error code."
+          },
+          "title": {
+            "type": "string",
+            "description": "Short, human-readable summary."
+          },
+          "status": {
+            "type": "integer",
+            "description": "The HTTP status code."
+          },
+          "detail": {
+            "type": "string",
+            "description": "What went wrong here specifically, and the fix."
+          },
+          "instance": {
+            "type": "string",
+            "description": "The path that produced the error."
+          },
+          "code": {
+            "type": "string",
+            "description": "Stable machine-readable error code.",
+            "enum": [
+              "invalid_request",
+              "invalid_cursor",
+              "invalid_token",
+              "insufficient_scope",
+              "not_found",
+              "method_not_allowed",
+              "not_acceptable",
+              "idempotency_conflict",
+              "payload_too_large",
+              "unsupported_media_type",
+              "unprocessable",
+              "rate_limited",
+              "internal_error",
+              "upstream_unavailable"
+            ]
+          },
+          "request_id": {
+            "type": "string",
+            "description": "Identifier for this request."
+          },
+          "docs_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Where the full error reference lives."
+          },
+          "errors": {
+            "type": "array",
+            "description": "One entry per offending field, when the failure was validation.",
+            "items": {
+              "type": "object",
+              "required": [
+                "field",
+                "code"
+              ],
+              "properties": {
+                "field": {
+                  "type": "string",
+                  "description": "The parameter at fault."
+                },
+                "code": {
+                  "type": "string",
+                  "description": "Why it was rejected."
+                },
+                "detail": {
+                  "type": "string",
+                  "description": "The specific problem, in words."
+                }
+              }
+            }
+          }
+        }
+      },
+      "Pagination": {
+        "type": "object",
+        "title": "Pagination",
+        "description": "Cursor pagination. When has_more is false, next_cursor is null.",
+        "required": [
+          "limit",
+          "has_more",
+          "next_cursor"
+        ],
+        "properties": {
+          "limit": {
+            "type": "integer",
+            "description": "How many items this page holds at most."
+          },
+          "has_more": {
+            "type": "boolean",
+            "description": "Whether another page exists."
+          },
+          "next_cursor": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Opaque cursor for the next page, or null."
+          },
+          "next_url": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "uri",
+            "description": "Fully-formed URL for the next page, or null."
+          }
+        }
+      },
+      "Platform": {
+        "type": "object",
+        "title": "Platform",
+        "description": "The floor a release requires.",
+        "required": [
+          "os",
+          "min_version",
+          "arch"
+        ],
+        "properties": {
+          "os": {
+            "type": "string",
+            "description": "Operating system name.",
+            "examples": [
+              "macOS"
+            ]
+          },
+          "min_version": {
+            "type": "string",
+            "description": "Lowest supported OS version."
+          },
+          "arch": {
+            "type": "string",
+            "enum": [
+              "arm64"
+            ],
+            "description": "Required CPU architecture."
+          }
+        }
+      },
+      "Release": {
+        "type": "object",
+        "title": "Release",
+        "description": "One published build of the Yappy Mac app.",
+        "required": [
+          "object",
+          "version",
+          "published_at",
+          "notes",
+          "download_url",
+          "platform"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "release",
+            "description": "Type discriminator."
+          },
+          "version": {
+            "type": "string",
+            "description": "Semantic version.",
+            "examples": [
+              "0.4.19"
+            ]
+          },
+          "published_at": {
+            "type": "string",
+            "format": "date",
+            "description": "Publication date."
+          },
+          "notes": {
+            "type": "string",
+            "description": "What changed, in prose."
+          },
+          "download_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Direct download for this build."
+          },
+          "platform": {
+            "$ref": "#/components/schemas/Platform"
+          },
+          "is_latest": {
+            "type": "boolean",
+            "description": "Whether this is the current release."
+          },
+          "sandbox": {
+            "type": "boolean",
+            "description": "Present and true on sandbox fixtures."
+          }
+        }
+      },
+      "ReleaseList": {
+        "type": "object",
+        "title": "ReleaseList",
+        "description": "A cursor-paginated page of release entries.",
+        "required": [
+          "object",
+          "data",
+          "pagination"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "list",
+            "description": "Type discriminator."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Release"
+            },
+            "description": "This page of items."
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "total": {
+            "type": "integer",
+            "description": "How many items exist in total."
+          }
+        }
+      },
+      "Doc": {
+        "type": "object",
+        "title": "Doc",
+        "description": "A documentation page, content included.",
+        "required": [
+          "object",
+          "slug",
+          "title",
+          "description",
+          "url",
+          "markdown_url",
+          "content"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "doc",
+            "description": "Type discriminator."
+          },
+          "slug": {
+            "type": "string",
+            "description": "Path after /docs/."
+          },
+          "title": {
+            "type": "string",
+            "description": "Page title."
+          },
+          "description": {
+            "type": "string",
+            "description": "One-line summary."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "HTML page."
+          },
+          "markdown_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Markdown twin."
+          },
+          "content": {
+            "type": "string",
+            "description": "The page body as markdown."
+          },
+          "word_count": {
+            "type": "integer",
+            "description": "Length of the body in words."
+          },
+          "last_updated": {
+            "type": "string",
+            "format": "date",
+            "description": "When the page last changed."
+          },
+          "sandbox": {
+            "type": "boolean",
+            "description": "Present and true on sandbox fixtures."
+          }
+        }
+      },
+      "DocSummary": {
+        "type": "object",
+        "title": "DocSummary",
+        "description": "A documentation page without its body.",
+        "required": [
+          "object",
+          "slug",
+          "title",
+          "description",
+          "url",
+          "markdown_url"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "doc",
+            "description": "Type discriminator."
+          },
+          "slug": {
+            "type": "string",
+            "description": "Path after /docs/."
+          },
+          "title": {
+            "type": "string",
+            "description": "Page title."
+          },
+          "description": {
+            "type": "string",
+            "description": "One-line summary."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "HTML page."
+          },
+          "markdown_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Markdown twin."
+          },
+          "word_count": {
+            "type": "integer",
+            "description": "Length of the body in words."
+          },
+          "last_updated": {
+            "type": "string",
+            "format": "date",
+            "description": "When the page last changed."
+          },
+          "sandbox": {
+            "type": "boolean",
+            "description": "Present and true on sandbox fixtures."
+          }
+        }
+      },
+      "DocList": {
+        "type": "object",
+        "title": "DocSummaryList",
+        "description": "A cursor-paginated page of documentation entries.",
+        "required": [
+          "object",
+          "data",
+          "pagination"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "list",
+            "description": "Type discriminator."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/DocSummary"
+            },
+            "description": "This page of items."
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "total": {
+            "type": "integer",
+            "description": "How many items exist in total."
+          }
+        }
+      },
+      "Faq": {
+        "type": "object",
+        "title": "Faq",
+        "description": "One question and its answer.",
+        "required": [
+          "object",
+          "id",
+          "question",
+          "answer"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "faq",
+            "description": "Type discriminator."
+          },
+          "id": {
+            "type": "string",
+            "description": "Stable identifier for this entry."
+          },
+          "question": {
+            "type": "string",
+            "description": "The question, as a user would ask it."
+          },
+          "answer": {
+            "type": "string",
+            "description": "The answer, complete enough to quote."
+          },
+          "topic": {
+            "type": "string",
+            "description": "Which area the question belongs to."
+          },
+          "sandbox": {
+            "type": "boolean",
+            "description": "Present and true on sandbox fixtures."
+          }
+        }
+      },
+      "FaqList": {
+        "type": "object",
+        "title": "FaqList",
+        "description": "A cursor-paginated page of FAQ entries.",
+        "required": [
+          "object",
+          "data",
+          "pagination"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "list",
+            "description": "Type discriminator."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Faq"
+            },
+            "description": "This page of items."
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "total": {
+            "type": "integer",
+            "description": "How many items exist in total."
+          }
+        }
+      },
+      "Plan": {
+        "type": "object",
+        "title": "Plan",
+        "description": "A way of paying \u2014 or not paying \u2014 for part of Yappy.",
+        "required": [
+          "object",
+          "id",
+          "name",
+          "price",
+          "currency",
+          "description"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "plan",
+            "description": "Type discriminator."
+          },
+          "id": {
+            "type": "string",
+            "description": "Stable identifier."
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name."
+          },
+          "price": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Price in the given currency, 0 for free, null when it is billed by a third party."
+          },
+          "currency": {
+            "type": "string",
+            "description": "ISO 4217 code."
+          },
+          "billing_period": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "enum": [
+              "month",
+              "year",
+              "usage",
+              null
+            ],
+            "description": "How often the price recurs."
+          },
+          "billed_by": {
+            "type": "string",
+            "description": "Who charges you: 'yappy', 'nobody', or a third-party provider."
+          },
+          "description": {
+            "type": "string",
+            "description": "What this covers."
+          },
+          "includes": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "What you get."
+          }
+        }
+      },
+      "Pricing": {
+        "type": "object",
+        "title": "Pricing",
+        "description": "The complete cost picture: the app, the backends, and this API.",
+        "required": [
+          "object",
+          "app",
+          "plans",
+          "api"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "pricing",
+            "description": "Type discriminator."
+          },
+          "app": {
+            "$ref": "#/components/schemas/Plan"
+          },
+          "plans": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Plan"
+            },
+            "description": "Every backend option and what it costs."
+          },
+          "api": {
+            "type": "object",
+            "description": "The terms of this API itself.",
+            "required": [
+              "price",
+              "currency",
+              "api_key_required"
+            ],
+            "properties": {
+              "price": {
+                "type": "number",
+                "description": "Cost per call."
+              },
+              "currency": {
+                "type": "string",
+                "description": "ISO 4217 code."
+              },
+              "api_key_required": {
+                "type": "boolean",
+                "description": "Whether reads need a credential."
+              },
+              "rate_limit": {
+                "type": "string",
+                "description": "The anonymous ceiling, in words."
+              }
+            }
+          },
+          "currency": {
+            "type": "string",
+            "description": "Default currency for this document."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "The human pricing page."
+          }
+        }
+      },
+      "Feature": {
+        "type": "object",
+        "title": "Feature",
+        "description": "One product capability, described factually.",
+        "required": [
+          "object",
+          "id",
+          "name",
+          "description",
+          "on_device"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "feature",
+            "description": "Type discriminator."
+          },
+          "id": {
+            "type": "string",
+            "description": "Stable identifier."
+          },
+          "name": {
+            "type": "string",
+            "description": "Display name."
+          },
+          "description": {
+            "type": "string",
+            "description": "What it does."
+          },
+          "on_device": {
+            "type": "boolean",
+            "description": "Whether it runs entirely on the user's Mac."
+          },
+          "requires_permission": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "The macOS permission it needs, if any."
+          },
+          "requires_network": {
+            "type": "boolean",
+            "description": "Whether it needs the network to work."
+          }
+        }
+      },
+      "FeatureList": {
+        "type": "object",
+        "title": "FeatureList",
+        "description": "A cursor-paginated page of features.",
+        "required": [
+          "object",
+          "data",
+          "pagination"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "list",
+            "description": "Type discriminator."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Feature"
+            },
+            "description": "This page of items."
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          },
+          "total": {
+            "type": "integer",
+            "description": "How many items exist in total."
+          }
+        }
+      },
+      "Requirements": {
+        "type": "object",
+        "title": "Requirements",
+        "description": "What a Mac needs before Yappy will run on it.",
+        "required": [
+          "object",
+          "os",
+          "minimum_os_version",
+          "architectures",
+          "permissions"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "requirements",
+            "description": "Type discriminator."
+          },
+          "os": {
+            "type": "string",
+            "description": "Operating system name."
+          },
+          "minimum_os_version": {
+            "type": "string",
+            "description": "Lowest supported version."
+          },
+          "architectures": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Supported CPU architectures."
+          },
+          "disk_space_mb": {
+            "type": "integer",
+            "description": "Approximate install size in megabytes."
+          },
+          "app_store": {
+            "type": "boolean",
+            "description": "Whether it is distributed via the Mac App Store."
+          },
+          "permissions": {
+            "type": "array",
+            "description": "Each macOS permission, what it unlocks, and what breaks without it.",
+            "items": {
+              "type": "object",
+              "required": [
+                "name",
+                "required",
+                "purpose"
+              ],
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "description": "The permission as macOS names it."
+                },
+                "required": {
+                  "type": "boolean",
+                  "description": "Whether Yappy is unusable without it."
+                },
+                "purpose": {
+                  "type": "string",
+                  "description": "What it is used for."
+                },
+                "if_denied": {
+                  "type": "string",
+                  "description": "What stops working."
+                }
+              }
+            }
+          }
+        }
+      },
+      "Compatibility": {
+        "type": "object",
+        "title": "Compatibility",
+        "description": "Whether a described machine can run Yappy, and why.",
+        "required": [
+          "object",
+          "compatible",
+          "reasons",
+          "minimum"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "compatibility",
+            "description": "Type discriminator."
+          },
+          "compatible": {
+            "type": "boolean",
+            "description": "The verdict."
+          },
+          "reasons": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Why, in words you can pass to a user."
+          },
+          "checked": {
+            "type": "object",
+            "description": "What was evaluated.",
+            "properties": {
+              "os_version": {
+                "type": "string",
+                "description": "The version supplied."
+              },
+              "arch": {
+                "type": "string",
+                "description": "The architecture supplied."
+              }
+            }
+          },
+          "minimum": {
+            "type": "object",
+            "description": "The floor the verdict was measured against.",
+            "properties": {
+              "os_version": {
+                "type": "string",
+                "description": "Lowest supported macOS version."
+              },
+              "arch": {
+                "type": "string",
+                "description": "Required architecture."
+              }
+            }
+          }
+        }
+      },
+      "SearchResult": {
+        "type": "object",
+        "title": "SearchResult",
+        "description": "One hit, with enough context to quote and cite.",
+        "required": [
+          "object",
+          "type",
+          "title",
+          "url",
+          "excerpt",
+          "score"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "search_result",
+            "description": "Type discriminator."
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "doc",
+              "faq"
+            ],
+            "description": "What kind of thing matched."
+          },
+          "id": {
+            "type": "string",
+            "description": "Slug or FAQ id."
+          },
+          "title": {
+            "type": "string",
+            "description": "Title of the matching page or question."
+          },
+          "url": {
+            "type": "string",
+            "format": "uri",
+            "description": "HTML page."
+          },
+          "markdown_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Markdown twin."
+          },
+          "excerpt": {
+            "type": "string",
+            "description": "The matching passage."
+          },
+          "score": {
+            "type": "number",
+            "description": "Relevance, higher is better."
+          }
+        }
+      },
+      "SearchResults": {
+        "type": "object",
+        "title": "SearchResults",
+        "description": "Ranked search results with the query echoed back.",
+        "required": [
+          "object",
+          "query",
+          "data",
+          "pagination"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "list",
+            "description": "Type discriminator."
+          },
+          "query": {
+            "type": "string",
+            "description": "The query that produced these results."
+          },
+          "total": {
+            "type": "integer",
+            "description": "How many results matched in total."
+          },
+          "data": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/SearchResult"
+            },
+            "description": "This page of results."
+          },
+          "pagination": {
+            "$ref": "#/components/schemas/Pagination"
+          }
+        }
+      },
+      "BatchRequest": {
+        "type": "object",
+        "title": "BatchRequest",
+        "description": "Up to twenty read operations to run in one request.",
+        "required": [
+          "operations"
+        ],
+        "properties": {
+          "operations": {
+            "type": "array",
+            "minItems": 1,
+            "maxItems": 20,
+            "description": "The operations, run independently of each other.",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "method",
+                "path"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "maxLength": 64,
+                  "description": "Your label for this operation, echoed back."
+                },
+                "method": {
+                  "type": "string",
+                  "enum": [
+                    "GET"
+                  ],
+                  "description": "Only GET is accepted inside a batch."
+                },
+                "path": {
+                  "type": "string",
+                  "maxLength": 512,
+                  "description": "A path relative to /api/v1, query string included.",
+                  "examples": [
+                    "/releases/latest",
+                    "/faq?limit=2"
+                  ]
+                }
+              }
+            }
+          }
+        }
+      },
+      "BatchResponse": {
+        "type": "object",
+        "title": "BatchResponse",
+        "description": "One entry per operation, in the order supplied. Check each status; the envelope is 200 even when an operation failed.",
+        "required": [
+          "object",
+          "results"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "batch",
+            "description": "Type discriminator."
+          },
+          "results": {
+            "type": "array",
+            "description": "Per-operation outcomes.",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "status",
+                "body"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "description": "The label you supplied."
+                },
+                "status": {
+                  "type": "integer",
+                  "description": "HTTP status for this operation."
+                },
+                "body": {
+                  "description": "The operation's response body, or its problem document."
+                }
+              }
+            }
+          }
+        }
+      },
+      "ExportRequest": {
+        "type": "object",
+        "title": "ExportRequest",
+        "description": "What to export, and in which format.",
+        "required": [
+          "resource"
+        ],
+        "properties": {
+          "resource": {
+            "type": "string",
+            "enum": [
+              "docs",
+              "faq",
+              "releases"
+            ],
+            "description": "Which corpus to export."
+          },
+          "format": {
+            "type": "string",
+            "enum": [
+              "markdown",
+              "json"
+            ],
+            "default": "markdown",
+            "description": "The artifact format."
+          }
+        }
+      },
+      "Job": {
+        "type": "object",
+        "title": "Job",
+        "description": "An asynchronous export. Poll until status is completed, then read result.url.",
+        "required": [
+          "object",
+          "id",
+          "status",
+          "resource",
+          "poll_url"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "job",
+            "description": "Type discriminator."
+          },
+          "id": {
+            "type": "string",
+            "description": "Job identifier."
+          },
+          "status": {
+            "type": "string",
+            "enum": [
+              "queued",
+              "running",
+              "completed",
+              "failed"
+            ],
+            "description": "Where the job is now."
+          },
+          "resource": {
+            "type": "string",
+            "description": "What is being exported."
+          },
+          "format": {
+            "type": "string",
+            "description": "The artifact format."
+          },
+          "created_at": {
+            "type": "string",
+            "format": "date-time",
+            "description": "When it was accepted."
+          },
+          "poll_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Where to poll this job."
+          },
+          "retry_after": {
+            "type": "integer",
+            "description": "Seconds to wait before polling again."
+          },
+          "result": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Present once status is completed.",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "The finished artifact."
+              },
+              "content_type": {
+                "type": "string",
+                "description": "Media type of the artifact."
+              },
+              "item_count": {
+                "type": "integer",
+                "description": "How many items it contains."
+              }
+            }
+          },
+          "error": {
+            "type": [
+              "object",
+              "null"
+            ],
+            "description": "Present once status is failed."
+          }
+        }
+      },
+      "ServiceIndex": {
+        "type": "object",
+        "title": "ServiceIndex",
+        "description": "The map: endpoints, limits, and every other machine surface this domain publishes.",
+        "required": [
+          "object",
+          "name",
+          "api_version",
+          "endpoints"
+        ],
+        "properties": {
+          "object": {
+            "type": "string",
+            "const": "service_index",
+            "description": "Type discriminator."
+          },
+          "name": {
+            "type": "string",
+            "description": "Service name."
+          },
+          "description": {
+            "type": "string",
+            "description": "What this API is for, and what it is not."
+          },
+          "api_version": {
+            "type": "string",
+            "description": "The dated build answering right now."
+          },
+          "documentation_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Human docs."
+          },
+          "openapi_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "The machine contract."
+          },
+          "authentication": {
+            "type": "object",
+            "description": "How to authenticate, and whether you need to.",
+            "properties": {
+              "required": {
+                "type": "boolean",
+                "description": "Whether reads need a credential."
+              },
+              "walkthrough": {
+                "type": "string",
+                "format": "uri",
+                "description": "Prose guide for agents."
+              },
+              "protected_resource_metadata": {
+                "type": "string",
+                "format": "uri",
+                "description": "RFC 9728 document."
+              },
+              "authorization_server_metadata": {
+                "type": "string",
+                "format": "uri",
+                "description": "RFC 8414 document."
+              }
+            }
+          },
+          "mcp": {
+            "type": "object",
+            "description": "The MCP surfaces over the same data.",
+            "properties": {
+              "url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Product MCP server."
+              },
+              "docs_url": {
+                "type": "string",
+                "format": "uri",
+                "description": "Documentation MCP server."
+              },
+              "transport": {
+                "type": "string",
+                "description": "Transport in use."
+              },
+              "server_card": {
+                "type": "string",
+                "format": "uri",
+                "description": "Tool list, before connecting."
+              }
+            }
+          },
+          "rate_limit": {
+            "type": "object",
+            "description": "The ceiling in force for this caller.",
+            "properties": {
+              "limit": {
+                "type": "integer",
+                "description": "Requests per window."
+              },
+              "window_seconds": {
+                "type": "integer",
+                "description": "Window length."
+              },
+              "documentation": {
+                "type": "string",
+                "format": "uri",
+                "description": "The rate-limit page."
+              }
+            }
+          },
+          "sandbox_url": {
+            "type": "string",
+            "format": "uri",
+            "description": "Base URL of the fixture environment."
+          },
+          "endpoints": {
+            "type": "array",
+            "description": "Every operation, with its path and what it answers.",
+            "items": {
+              "type": "object",
+              "required": [
+                "method",
+                "path",
+                "operation_id",
+                "description"
+              ],
+              "properties": {
+                "method": {
+                  "type": "string",
+                  "description": "HTTP verb."
+                },
+                "path": {
+                  "type": "string",
+                  "description": "Path relative to this server."
+                },
+                "operation_id": {
+                  "type": "string",
+                  "description": "Matches the OpenAPI operationId."
+                },
+                "description": {
+                  "type": "string",
+                  "description": "What it returns."
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "x-mcp": {
+    "server": "https://yappy.biz/mcp",
+    "transport": "streamable-http",
+    "serverCard": "https://yappy.biz/.well-known/mcp/server-card.json",
+    "docsServer": "https://yappy.biz/docs/mcp"
+  },
+  "x-rate-limit": {
+    "anonymous": {
+      "requests": 120,
+      "window_seconds": 60
+    },
+    "authenticated": {
+      "requests": 600,
+      "window_seconds": 60
+    },
+    "headers": [
+      "RateLimit-Limit",
+      "RateLimit-Remaining",
+      "RateLimit-Reset",
+      "RateLimit-Policy",
+      "Retry-After"
+    ],
+    "documentation": "https://yappy.biz/developers/rate-limits"
+  },
+  "x-deprecation-policy": {
+    "versioning": "major version in the path (/api/v1)",
+    "current_version": "v1",
+    "current_status": "current - not deprecated, no Sunset date set",
+    "signals": [
+      "Deprecation",
+      "Sunset",
+      "Link rel=deprecation",
+      "Link rel=successor-version"
+    ],
+    "sunset_rfc": "RFC 8594",
+    "minimum_notice_days": 180,
+    "retired_status_code": 410,
+    "retired_versions": [
+      {
+        "version": "v0",
+        "path": "/api/v0",
+        "deprecated_on": "2026-02-01",
+        "sunset_on": "2026-08-01",
+        "status": 410,
+        "successor": "https://yappy.biz/api/v1"
+      }
+    ],
+    "documentation": "https://yappy.biz/developers/deprecation"
+  },
+  "x-idempotency": {
+    "header": "Idempotency-Key",
+    "applies_to": [
+      "POST /batch",
+      "POST /exports"
+    ],
+    "documentation": "https://yappy.biz/developers/rest-api#idempotency"
+  }
+}

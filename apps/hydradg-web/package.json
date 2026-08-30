@@ -7,17 +7,42 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:vercel-control-plane": "tsx scripts/vercel_control_plane_invariants.ts",
+    "hydralamp:custody-stress": "tsx scripts/hydralamp_custody_stress.mts",
+    "hydralamp:overnight": "tsx scripts/hydralamp_overnight.mts",
+    "hydralamp:runtype-repair": "tsx scripts/run_runtype_repair_ladder.mts",
+    "sponsor:discovery": "tsx scripts/sponsor_discovery_bootstrap.mts",
+    "sponsor:tavily": "tsx scripts/sponsor_tavily_mission.mts",
+    "sponsor:tavily-ai-sdk": "tsx scripts/sponsor_tavily_ai_sdk_mission.mts",
+    "sponsor:mitosis": "tsx scripts/sponsor_mitosis_mission.mts",
+    "sponsor:runtype": "tsx scripts/sponsor_runtype_mission.mts",
+    "sponsor:immersive-commons": "tsx scripts/sponsor_immersive_commons_mission.mts",
+    "sponsor:daytona": "tsx scripts/sponsor_daytona_mission.mts",
+    "sponsor:tenki": "tsx scripts/sponsor_tenki_mission.mts",
+    "sponsor:cotal": "tsx scripts/sponsor_cotal_mission.mts",
+    "sponsor:yappy-biz": "tsx scripts/sponsor_yappy_biz_mission.mts",
+    "sponsor:mitosis-yappy": "tsx scripts/sponsor_mitosis_yappy_mission.mts",
+    "sponsor:closeout": "tsx scripts/sponsor_closeout.mts",
+    "sponsor:final-reconciliation": "tsx scripts/sponsor_final_reconciliation.mts"
   },
   "dependencies": {
+    "@runtypelabs/sdk": "^9.2.0",
+    "@tavily/ai-sdk": "^0.5.0",
+    "@tenkicloud/sandbox": "^1.0.1",
+    "ai": "^6.0.270",
+    "cytoscape": "^3.30.4",
     "next": "^16.0.0",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0"
+    "react-dom": "^19.2.0",
+    "zod": "^4.4.3"
   },
   "devDependencies": {
+    "@types/cytoscape": "^3.21.9",
     "@types/node": "^22.0.0",
     "@types/react": "^19.0.0",
     "@types/react-dom": "^19.0.0",
+    "tsx": "^4.19.3",
     "typescript": "^5.7.0"
   }
 }

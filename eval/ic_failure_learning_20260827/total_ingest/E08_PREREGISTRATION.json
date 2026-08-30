@@ -1,0 +1,25 @@
+{
+  "schema": "hydradg.total_ingest.e08_prompt_projection.v1",
+  "experiment_id": "E08_PROMPT_PROJECTION_QUALITY",
+  "conditions": {
+    "P0_UNMANAGED_TRIMMED": {
+      "state": "NOT_RECONSTRUCTABLE",
+      "reason": "Exact trimmed prompt bytes not recoverable"
+    },
+    "P1_FULL_SOURCE_WITHIN_LIMIT": {
+      "state": "PENDING"
+    },
+    "P2_SEEDGRAPH_RULE_RETRIEVAL": {
+      "state": "PENDING"
+    },
+    "P3_SEEDGRAPH_PROJECT_MEMORY": {
+      "state": "PENDING"
+    },
+    "P4_SEEDGRAPH_FAILURE_LEARNED": {
+      "state": "PENDING"
+    }
+  },
+  "TRIMMED_PROMPT_BYTES_STATE": "NOT_RECOVERABLE",
+  "hypothesis": "Governed SeedGraph retrieval retains more constraints than unmanaged trimming",
+  "claim_ceiling": "PREREGISTERED_NOT_EXECUTED"
+}

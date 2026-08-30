@@ -1,0 +1,47 @@
+{
+  "schema": "hydradg.agent_native_builders.lane_classification.v1",
+  "classified_at_utc": "2026-08-26T23:30:00Z",
+  "base_git_sha": "2e4522c09922b7c323f8ebecae28aaca9bbc9f6a",
+  "lanes": [
+    {
+      "lane_id": "agent_native_builders_20260826_synthetic",
+      "path": "eval/agent_native_builders_20260826/",
+      "evidence_class": "DEVELOPMENT_SYNTHETIC_FIXTURE_SIMULATION",
+      "claim_ceiling": "NOT_EMPIRICAL_EVIDENCE",
+      "runner": "scripts/agent_native_builders_runner.py",
+      "disqualification_reasons": [
+        "TREATMENT observed values are assigned directly from fixture expected values (evaluate_fixture lines 49-58)",
+        "class_correct and ceiling_correct hard-coded True for TREATMENT condition",
+        "primary_effect hard-coded HYDRADG_EVIDENCE_CUSTODY_SUPERIORITY_ESTABLISHED without live runtime",
+        "zero_model_calls true — no agent, MCP, or external runtime invoked"
+      ],
+      "preserved_artifacts": [
+        "eval/agent_native_builders_20260826/PREREGISTERED_20_FIXTURE_MANIFEST.json",
+        "eval/agent_native_builders_20260826/results/AGENT_NATIVE_BUILDERS_20_FIXTURE_RESULTS.json",
+        "eval/agent_native_builders_20260826/results/EXECUTION_RECEIPT.json"
+      ],
+      "may_be_used_for": [
+        "fixture schema development",
+        "deterministic scorer unit tests",
+        "UI/demo wiring",
+        "HydraLamp wrapper development"
+      ],
+      "must_not_be_used_for": [
+        "hackathon empirical submission",
+        "Track 01/02 rubric scoring",
+        "treatment superiority claims",
+        "publication-grade evidence"
+      ]
+    },
+    {
+      "lane_id": "agent_native_builders_live_20260826",
+      "path": "eval/agent_native_builders_live_20260826/",
+      "evidence_class": "LIVE_EMPIRICAL_EXPERIMENT_V1",
+      "claim_ceiling": "PENDING_EXECUTION",
+      "successor_of": "agent_native_builders_20260826_synthetic",
+      "overwrite_policy": "DO_NOT_OVERWRITE_SYNTHETIC_LANE"
+    }
+  ],
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

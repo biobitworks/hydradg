@@ -1,0 +1,44 @@
+{
+  "canaries": [
+    {
+      "case": "C1",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "mutation": "one_byte_in_neurips_2026.sty",
+      "observed": "FAIL"
+    },
+    {
+      "case": "C2",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "hallucinated_reference_count": 1,
+      "mutation": "invented_reference_title"
+    },
+    {
+      "case": "C3",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "lineage_drift": true,
+      "mutation": "changed_cited_numeric_0.907_to_0.999"
+    },
+    {
+      "case": "C4",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "mutation": "added_cite_without_bibitem",
+      "used_but_undefined": [
+        "removed_target_xyz"
+      ]
+    },
+    {
+      "canonical_edge_count": 21,
+      "case": "C5",
+      "expected": "FAIL",
+      "gate": "PASS",
+      "mutated_edge_count": 20,
+      "mutation": "removed_one_FCG_provenance_edge_on_copy",
+      "reverse_trace_gate": "FAIL"
+    }
+  ],
+  "synthetic_only": true
+}

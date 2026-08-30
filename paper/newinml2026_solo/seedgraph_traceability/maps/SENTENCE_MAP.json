@@ -1,0 +1,776 @@
+[
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "16d75a20b57c7ecfe733539fa6ca5cf908d2e2672e8879a0e28da16229d98c52",
+    "text": "Agent evaluations increasingly depend on context interventions---retrieval, memory graphs, and prompt contracts---yet published reports often omit null outcomes, parser failures, and negative cells."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "f8aa6491364895bac16125dd4ecaf1f0c448ffed1e24f22d3c6d25afe7bb9c1c",
+    "text": "We present HydraDG, a governed experimental framework that binds substantive model invocations, tool calls, and handoffs to \\emph{Fractal Custody Objects} (FCOs) and a \\emph{Fractal Custody Graph} (FCG)."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "3e0c06306b472e0a787bd693933b45915ed6b64d3887f6547870c5e79bfbae65",
+    "text": "HydraDG preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states including timeouts, abstentions, and malformed outputs without silent substitution."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "f23865f17b03557bfdaccb1322cffcb8d11f98b0b3bbba685fc9b300a3b2d69e",
+    "text": "We report two preregistered studies (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as \\emph{underpowered} under bounded case replication, so confirmatory effect claims are not supported while negative and null evidence remains in custody."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "13e65208af63a94f711db0ef53252c9b42526e9317a2d50d3909b17453505408",
+    "text": "We argue that custody-first evaluation infrastructure supports reproducible agent science rather than optional logging."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "04a98108d81803c58376675cb91c3271f747efbe0580fb2e9566fc338ec3540c",
+    "text": "{natbib}                Agent evaluations increasingly depend on context interventions---retrieval, memory graphs, and prompt contracts---yet published reports often omit null outcomes, parser failures, and negative cells."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "627f59218a474118fc9fa49eff38efe419e8766684bff38b2686cd01f5416177",
+    "text": "Less often preserved are the conditions under which experiments fail: swapped models, stale runtime selection, partial matrix execution, or JSON outputs that never parse."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "a75fe645cfe77fa8f24059be92a301a126d37871ddf532c946b692c829d76203",
+    "text": "When negative and null cells disappear from the public record, later work cannot distinguish  from ."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "38ce170706a6bd9621c8f1fede12826531ae08027643d084e8438cbb890a8440",
+    "text": "HydraDG addresses this gap with a custody-first experimental contract."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "ee0cf839c6cd10183cf34f7c56e53762584bc45c1d3e90969daacae2a6071b6e",
+    "text": "Every actor---human operator, frontier agent, local model runtime, or deterministic script---must emit or be represented by a handoff receipt before its output is promoted."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "0b512f11d4dcebfd42ea2ad222aabe8d785daa0db636772b761ee43cb2c1ba60",
+    "text": "Receipts bind actor identity, host, repository state, input hashes, raw output hashes, evidence class, claim ceiling, and signature state (hashes are identity commitments, not digital signatures unless an authorized signing operation occurred)."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "5612263f621232be1e6a4166bd13f2a3c880e0ada02e05a98a1fc4942ed34c0a",
+    "text": "Probabilistic model outputs are never treated as authority; they are evidence objects subject to deterministic scoring and graph append rules."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "b9b9dceacd408eeef6cb597cc264fc90474d10c022b949030934a354269b21ea",
+    "text": "This paper describes the HydraDG framework and reports terminal results from the IC Failure Learning structured-retrieval falsification lane."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "e81f7dffecd5c2a35c30adb3a2ae681baf7141b28db35b0293069fa01e214c4f",
+    "text": "We do  claim that structured FCG context improves failure prevention; preregistered EXP-008 and EXP-009 closed as underpowered."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d1abcbac4c86da93510b6d9f4c50c9d890e5aabfd09ee446fe42b1c2fc9453bc",
+    "text": "We also do not treat exploratory secondary patterns as promoted findings."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "90b445f5ea90a03002d871b4a26c261dab9e706827e0c2d5fb6c58a01201f1aa",
+    "text": "} Benchmark suites measure capability but rarely require publication of failed runs, malformed generations, or infrastructure blocks ."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "5b5a9f696fdf32e41214c7e1cf1568475502c481c2614734b2d9cbe785568748",
+    "text": "HydraDG complements benchmarks with mandatory negative capture at the custody layer."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "a7f40498fd1f975b251321bd00987776fab260bc1587c76fca30a8d428291db1",
+    "text": "} Retrieval-augmented generation and graph-augmented memory systems assume structured context helps ."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "7b9df82cf19b3e9fe54e7742e8907aaaf10d46db421536a36cb48caea74e4108",
+    "text": "Falsification requires frozen contracts, explicit null retention, and power-aware verdicts; HydraDG enforces both."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "165a5439670963013a111639f3d1e12f14447e1a17b70e41bf8aa12ab2815011",
+    "text": "} Preregistration, FAIR data principles, and nanopublication-style lineage support scientific reproducibility ."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "ca36368bc936ead4760b48c049c44553161fb6804cd7cbf3ce49ed9742762378",
+    "text": "Agent stacks often stop at prompt logging."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "e19bf4c54b960f32eafc6945d0f296b0b174c2fac96d72382a211ecb90fd833e",
+    "text": "FCO/FCG extend content-addressed lineage to cross-actor handoffs so that a stale agent cannot write after ownership moves."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "482c89acaa44d43edf959663896d6491a078fd10aed10cb384a6e3b8e350d4b1",
+    "text": "Companion custody-framework preprints (deferred to camera-ready de-anonymization) define FCO/FCG formally; they establish framework provenance, not the HydraDG empirical results reported here."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "4d4199675470dfd1d0ab8d97ad5ae569962ec64722e9c8b9f1be48b73243e69d",
+    "text": "An  () materializes one bounded transformation: e."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "b15c2b12dc0df5fcd4b67aec4bebe0482a0db89d7713e4f92e3ad283768eb54b",
+    "text": ", a model call, scorer pass, or ingest operation."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "09ff0c829b1a6447e8fcdfa1fa3e5f4d70f9c684d4e769286e3119d6dc1a1341",
+    "text": "An  () append records directed edges between FCOs with hash-linked roots."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "de48da552567af235be68aa4da364d15811c3524df1d73026cf6758df611227f",
+    "text": "HydraDG preserves failures, nulls, and malformed outputs in custody (a failure-complete , not a redefinition of FCO/FCG)."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "e9e6c729f19cfa141fe5e488c46cc7baabc6d24634bea54c91cdc4749bf15537",
+    "text": "Claim ceilings (exploratory mechanistic falsification, descriptive only, etc."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "b88f0f3ae95cce46ac9c3b47d556c1afa847a0cfbe421aa7abc4a926f0f9c189",
+    "text": ") are declared at preregistration and enforced at promotion time."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "ea826c8cce68740decde48640431c2a44ba5d61198845108fdcb6662c164d944",
+    "text": "Each experiment declares:"
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "53d80041519ddffdd13f59531d1fdd6bb9bf080738a430e8b53f266593225243",
+    "text": "\\ exploratory claims."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "46ce0a7fc34564ec8ae238a49ceb2e4fdb70b84634ec3ff4f8ffa844b642052c",
+    "text": "Execution emits , per-cell raw outputs with prompt/response SHA-256, parser state, and terminal receipts."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "519a0e4825f057761cb2a175765a44a8d93334109a8178b54cd110e617813fe6",
+    "text": "Integrity failure (duplicate keys, missing dependencies, silent model substitution) blocks promotion; scientific failure (timeout, abstention, malformed JSON) is retained as terminal evidence."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "0e7447932104b4e8676961d266f65da0ba60659a81c0c2f3aa9d1d7dc9c1ef0d",
+    "text": "Where preregistered, local model calls route through a governed bridge that records selection age, swap posture, and resolved digest."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "dfa78df6fe8950d7a1d0d97563a7f90a8c6b37662b8c847c89fc1eaf76ead102",
+    "text": "Direct runtime invocation and governed invocation are separate evidence classes; one is not silently labeled as the other."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "0ed6e0c0300ee096c27c114dfecd00eca3a25bfbf16a7a9f1657e604accdd366",
+    "text": "The IC Failure Learning suite uses synthetic agent-failure vignettes with preregistered endpoints such as E06 (prevents exposure of out-of-vault media)."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "bdffd05ac4bcf9207aa21b9ea0d1ba5828b522fa72895e529890ff5f48a5540c",
+    "text": "Cases are drawn from a frozen"
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "f1e42f1cc9ccec7d003eba13b45da766c930291527d4a1968096395e6c8644a4",
+    "text": "jsonl} manifest; each case receives multiple replicates per condition."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d71e5d714af8112810fe4f82d342b3820dd150479ca3dbe756364f3f2cac8d69",
+    "text": "failure-handling guidance as unstructured text."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "077b550b33ccb114ce9757571d451f7567635bb64f467796a34cc6a506401d28",
+    "text": "\\\\  the same semantic content composed through a frozen FCG retrieval contract."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "b44dee40903e744e6a0dff3a3fbb14e79f203a6fc78df3c920ac6944f8a37ae3",
+    "text": "EXP-008 and EXP-009 used local models"
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d2fcf6d094b4a72d0f122a51dc45ec43e25a24ad8e2c981f2bf80651c74c4e4d",
+    "text": "5-coder:7b} under identical case and scorer contracts."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "973519cc65194d287477a0913680ee9d65396ea61effa069bd5fa346d2dad551",
+    "text": "Thinking/reasoning modes were held consistent with preregistration."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "e6d2be1a21be5029a2c2d651936414533c48d53514e6004516be96c991a7bdab",
+    "text": "Primary aggregation: majority of three replicates per case."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "a07db70dafdb4ab66d2b49fef401a97b085e323e325dceb321a787baa5ef9afb",
+    "text": "Frontier coding agents assisted with repository tooling and manuscript preparation; they are not listed as authors."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "3ece5c0aac83d8febe26bece9841614ba4b896880a25a49e2832d1be330a2a4b",
+    "text": "All scientific endpoints come from preregistered local model executions with hashed prompts and responses."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "7dca304d1ce8e91fc885fc1150719d0b68084aa29c5e4a6719db2389d97b3313",
+    "text": "Routine editing does not constitute a reported experimental intervention."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "333f23aa91f29ac9ed9c128a0504aeecd807f8bc38e5686d7a0ea6dfee6c12ff",
+    "text": "E06 endpoints are known limited-power under the frozen case set."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "5f1a92ce6cd6f0cc273864a0deeb6789336bc9eeed7f5f14519f3c3b25da127b",
+    "text": "Confirmatory ordering claims require preregistered discordant pairs; exploratory secondary statistics are quarantined from primary promotion."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "5a01b2e098623a5e335e11f906bd942a04750aad2e132f192f9acd4365aef320",
+    "text": "Table~ summarizes terminal verdicts for preregistered studies."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d91f27d648e79800d7778c65fabcd8317c6728623e366c1f3612eeceaa27d43d",
+    "text": "Both experiments executed the full raw matrix ($n=300$ cells each) with complete custody append."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "599ac77f1807e3dbec7c149f2be954f062fef29d76fb63edab6229a4792b9e24",
+    "text": "} Structured FCG retrieval did not yield promotable confirmatory evidence on E06 under the frozen design ($n=2$ paired cases per model stratum at aggregation scope)."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "1d4ce53958d442d1eee4ba176d37f8ee409537376478ff7f522dc75f1af9d9c5",
+    "text": "Non-zero malformed and abstention rates are preserved in custody."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "a179bfce8e76353f18ec58370f8bcacf296de78243f1a9b07e9ff177379a6a64",
+    "text": "} Primary verdict remains UNDERPOWERED for confirmatory E06 ordering."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "99e40b0b9cb4f43f56c1c4a658337ccc963d14dc44bcdd27fc45b12abcf4afdb",
+    "text": "An exploratory secondary pattern was recorded as directionally positive at the descriptive layer only; it is  to a causal claim."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "a9c10a49098f03fca9525e174ee5af6ea245900f826f169c61feb9b2e6059fa2",
+    "text": "} Prior IC Failure Learning stage-2 execution (414 scored rows across two models) established , providing historical context for the structured-retrieval falsification lane."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "8bb0edec2309206b4a2114875ecbe0fec79aabd30a90346273490d71ebf4085f",
+    "text": "The preregistered retrieval experiments above test whether structured context improves a frozen endpoint."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "2f7b1374f060f40f6bf90dfd5fe4a1311076545555167b60218c346446173613",
+    "text": "A separate systems-validation suite asks a different question: does the custody mechanism preserve integrity under perturbation, tampering, concurrency, replay, and external execution failure?"
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "3a7b79c4b3053bf76d8928108785a90751e99ebeec3cf0cd46e107bce8b46f6c",
+    "text": "Table~ summarizes source-verified outcomes from a frozen HydraLamp perturbation matrix; these results evaluate custody mechanics and do  constitute evidence that structured FCG context improves the EXP-008/009 endpoint."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "ff7bbca43d688621e679375a6f6d8b8054a5daf64602d658912dcd6a0453985b",
+    "text": "In a live provider repair ladder, earlier infrastructure gates passed before a structured call hit an external quota limit; the failure remained a terminal auditable state rather than being erased or substituted."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "69efc2cc68479a71bc151b8fae02470993ca4aa3bbf82dd6c64ca74830bad579",
+    "text": "The same custody primitives have been instantiated in sibling systems for local-model orchestration, deterministic scientific-document atomization, offline anomaly detection, bounded bioinformatics, substrate generation, and operator-facing scientific workflow monitoring; these implementations motivate transfer studies but do not provide additional evidence for the treatment effect reported here."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "4fd837d721cdeb3b6bb0e51cdf573a9b6abebcbcafb78ed800f607a9e45f34cf",
+    "text": "HydraDG shows that agent experiments can retain null and failure cells with the negative-result integrity expected in preregistered experimental sciences: failures are first-class, hashes are mandatory, and claim ceilings block over-interpretation."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d6975203623b261960f2417b3eaa0c16c51c54d87861208c72f818ec5077848b",
+    "text": "The EXP-008/009 underpowered terminations bound what cannot yet be claimed while preserving malformed and timeout cells for audit."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "f36d6a31aebf204d9754b906ca48bd1edb2bca951a29e0aac9b6f2afffc6f40f",
+    "text": "Limitations include bounded case replication, local-only model lanes in the reported matrix, and absence of runtime-equivalent successor replication in primary results."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d62972fa4e37ab598020a5fd4799f3d54dbd6a06f9d1873a451ce415acfb5bce",
+    "text": "A preregistered Qwen~3."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "0316d1a9c84ef7fd646a07a3e5b43efd0af2efe64035ab007de6f62fe950dad6",
+    "text": "8 successor lane exists but is non-terminal and omitted from primary results."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d616c5ad24c8c461492c64b1da09c0a74192ea96140cc71c209241868079f242",
+    "text": "Whole-project hierarchical atomization (SeedGraph v1a validation) ran for multiple days but was interrupted during final Parquet serialization without a ; partial node/edge artifacts are not readback-safe, so terminal whole-corpus atomization is not established in this submission."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "08fb6ed37953ada21227edcde000dc5e48b5a02fdca28724b3a52a3f39be26a9",
+    "text": "Biological, protein-structure, and cellular perturbation applications of the custody framework remain future validation targets, not demonstrated generalizations of the agent-context results here."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "5edc6b58e304b128d829d1bd4a67d9688ab8a4a846128060c2725123625bc714",
+    "text": "} Larger successor replications, governed multi-agent handoffs, selective replay, and resource-aware custody gates under preregistered manifests."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "130b981da592cc47b3ecb712bf2d55f711bbd5131414828e3bfbf008d33004a1",
+    "text": "} Checkpointed ingest and transactionally durable atomization so long hierarchy builds can resume from batch boundaries rather than materializing the entire graph at finalization."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "1824c64748988d0fef54afea55c5fb828cf1bd9a374f49f09748e877cc47d3ac",
+    "text": "} Project-local FCG roots with explicit cross-project references and no automatic evidence admission between repositories."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "32af9e23c03a0082b4f7fb24f98da526cbb836aa88e1cd3030d220c21f8514dc",
+    "text": "} Authorized signatures and MMR commitments where policy permits; hashes remain identity commitments unless a verified signing operation occurred."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "1fbd2f31b2aeb6d703c0d5d05d39286acf9f153c4b2a9e2ff610a0fc6d348f90",
+    "text": "All directions above are  unless independently measured; they do not extend the EXP-008/009 empirical claims."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "5d9e7833124421a8aec30e5eadf31f130b914e0d0a8c9e44fdb601f6d71314ab",
+    "text": "We presented HydraDG, a custody-first framework for agent context-intervention experiments, and reported two terminal underpowered preregistered studies that block premature promotion of structured FCG retrieval effects on failure-prevention endpoints."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "b07258562f36907df7c0117b9bc215fcd644e7a66ad064ccfa9df5879dccdefb",
+    "text": "We recommend FCO/FCG custody, explicit claim ceilings, and terminal-state preservation as baseline infrastructure for NewInML-style agent evaluations."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "43a4cbbae13cb10c1e91b5ab3a44365a0f8f30f5ccebd9853e4d456772cda5b6",
+    "text": "Table~ records terminal verdicts with parse rates reverse-traced to frozen verdict JSON receipts."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "34b399e977efacbea3b0116697f9c50fbc2dfc0e7b50bab39d2c1e73b8ec140c",
+    "text": "$p$-values remain  under the preregistered underpowered design."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "e0e8dc05a097baf62698247576d30d7aea5e1f8a04a0000a634c49977d9eea72",
+    "text": "See Table~ for custody-mechanics outcomes (not treatment-effect evidence)."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "3312a20b52e1348b19d21f9cc37c89d3233bf2505ec6e8fbd883f315b613fc18",
+    "text": "jsonl} document the custody verification pipeline with frozen script SHA-256 and R1/R2/R3 roots."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "8df411a3ebeb5957ee2bb32857070590c05ffdb1d97b9727e2077fe7faf23949",
+    "text": "Citation fabrication literature informs desk-rejection risk , , , , ."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "f2d454b211a80d99d7a491ca7a2740ed151dd81e0e53d20b04f43f95b9b4f518",
+    "text": "OpenReview license requirement CC BY 4."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "e1364f0febb5184c2770a344c0659dab532125bead27f7c4c79eaf915e81c393",
+    "text": "0 is frozen in requirement atoms; repository code remains Apache-2."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "c5c8d17d9834ac925411871d56dfdce031ae5699df94ea9ad0dbed5b388632cb",
+    "text": "Related-work boundaries include PROV-O, CWLProv, and Workflow Run RO-Crate , , , , ."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "42a6cf19c46bdc4485759c7244ef4bf4760e731fa63dbe2dbb8535c0a05f9577",
+    "text": "Prior-art search responses remain ; not promoted to verified empirical novelty proof."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "d6d1f4cccf6969b0a192cbe393897812f7763976ccc217c1d8e649099882104e",
+    "text": "with verified coverage 31."
+  },
+  {
+    "cross_document_links": [],
+    "linked_requirements": [],
+    "raw_source_seed_ids": [
+      "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04"
+    ],
+    "sentence_id": "b06449d480d48d8fcd27cb1acbcdcc9846cd27dabee00a712f7666c8391d7f04",
+    "text": "GPU SGLang canary, Q38 XENV, and full verified ingest remain nonterminal."
+  }
+]

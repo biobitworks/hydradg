@@ -1,0 +1,29 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "durable_bank_path": "/Volumes/magicBLACKbox/hydradg/daisy/studio_daisy_20260821/raw/qwen3_8b_longmemeval_s_case_0001.json",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "500a1f067a9f",
+  "model_name": "qwen3:8b",
+  "parsed_output_sha256": "b2bd4c7cdeafbecdb7345d78b6f0ca0f46e0ca7374fda29192c7dc89739acdf6",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response_bytes": 621,
+  "raw_response_sha256": "73b905cf01dd06c1b330c51f797d8fa63620e1159f356c31b200a8ed0730d04b",
+  "request_sha256": "3c63969f27cf9ac56405278797005ea83061a476510eb8a1f8d37f4ed8d228bf",
+  "scientific_correct": true,
+  "scientific_end": 1787328068.815569,
+  "scientific_start": 1787328046.397671,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 22.416,
+  "warmup_receipt_sha256": "46a8c36873d13223ef738df7c27e32f64f211e0c49a547eef23f43a7dd6fa1b2"
+}

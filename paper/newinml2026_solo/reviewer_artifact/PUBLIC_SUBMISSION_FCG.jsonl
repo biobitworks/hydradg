@@ -1,0 +1,10 @@
+{"from": "EXP-008-VERDICT", "to": "TABLE-001-SRC", "edge_type": "DERIVES"}
+{"from": "EXP-009-VERDICT", "to": "TABLE-001-SRC", "edge_type": "DERIVES"}
+{"from": "TABLE-001-SRC", "to": "TABLE-001-TEX", "edge_type": "RENDERS"}
+{"from": "TABLE-001-TEX", "to": "TEX-MAIN", "edge_type": "INCLUDES"}
+{"from": "TEX-MAIN", "to": "PDF-MAIN", "edge_type": "COMPILES"}
+{"from": "CORE_STRESS_RECEIPT.json", "to": "EV-HL-CORE", "edge_type": "PUBLIC_DERIVATION"}
+{"from": "HASH_TAMPER_STRESS_RECEIPT.json", "to": "EV-HL-TAMPER", "edge_type": "PUBLIC_DERIVATION"}
+{"from": "CONCURRENCY_STRESS_RECEIPT.json", "to": "EV-HL-CONCURRENCY", "edge_type": "PUBLIC_DERIVATION"}
+{"from": "RESTART_RECOVERY_RECEIPT.json", "to": "EV-HL-RESTART", "edge_type": "PUBLIC_DERIVATION"}
+{"from": "RUNTYPE_LIVE_LOOP_REPAIR_RECEIPT.json", "to": "EV-HL-PROVIDER", "edge_type": "PUBLIC_DERIVATION"}

@@ -1,0 +1,25 @@
+{
+  "schema": "hydralamp.gum_doctor_receipt.v1",
+  "recorded_at_utc": "2026-08-27T04:53:11.773Z",
+  "host": "magicSTUDIObox.local",
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "GUM_DOCTOR_PATH": null,
+  "GUM_DOCTOR_VERSION": null,
+  "GUM_DOCTOR_INTERFACE": null,
+  "GUM_DOCTOR_FILE_SHA256": null,
+  "discovery": {
+    "command_v_gum_doctor": false,
+    "command_v_gum": false,
+    "command_v_ollarma": false,
+    "command_v_ollama": true,
+    "ollarma_listen": "127.0.0.1:8484",
+    "ollama_listen": "127.0.0.1:11434"
+  },
+  "authority_ceiling": "GUM_DOCTOR_IS_NOT_AUTHORITY_EVEN_IF_FOUND",
+  "local_runtime": {
+    "ollarma_reachable": true,
+    "ollama_reachable": true,
+    "preferred_model": "qwen2.5:1.5b"
+  },
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "hydradg.daisy_overnight.experiment_audit.v1",
+  "recorded_at_utc": "2026-08-28T22:50:00Z",
+  "branch_audited": "hack-hydra/qwen38-model-replay-20260828",
+  "canonical_daisy": {
+    "EXP-008": {
+      "state": "CLOSED",
+      "cells": "300/300",
+      "verdict": "UNDERPOWERED",
+      "mmr": "COMMITTED",
+      "fcg_validation": "PASS"
+    },
+    "EXP-009": {
+      "state": "CLOSED",
+      "cells": "300/300",
+      "atom_set_gate": "PASS",
+      "ordering_isolation_gate": "PASS",
+      "EXPERIMENT_PRIMARY_VERDICT": "UNDERPOWERED",
+      "MECHANISTIC_EXPLORATORY_PATTERN": "DIRECTIONALLY_POSITIVE_SECONDARY",
+      "ordering_established": false,
+      "E06_n_paired": 2,
+      "next": "EXP-010",
+      "mmr": "COMMITTED",
+      "fcg_validation": "PASS",
+      "secondary_promoted": false
+    },
+    "EXP-010": {
+      "state": "NOT_STARTED",
+      "preregistration_present": false
+    }
+  },
+  "q38_successor_replay": {
+    "Q38-EXP008-R": {
+      "alias": "EXP-008-Q38",
+      "state": "STARTED",
+      "cells": "27/150",
+      "full_matrix_target": "300",
+      "flash_next_lane": "BLOCKED"
+    },
+    "Q38-EXP009-R": {
+      "state": "NOT_STARTED"
+    }
+  },
+  "model_identity_frozen": {
+    "model": "qwen3.8:27b",
+    "digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643"
+  },
+  "q38_lane_open": true,
+  "exp010_readiness": "BLOCKED_PENDING_RECONCILIATION_AND_EXP010_PREREG",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

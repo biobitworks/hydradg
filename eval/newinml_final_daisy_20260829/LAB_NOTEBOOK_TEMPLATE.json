@@ -1,0 +1,61 @@
+{
+  "schema": "hydradg.lab_notebook_template.v1",
+  "experiment_id": "REQUIRED",
+  "preregistration_sha256": "REQUIRED",
+  "question": "REQUIRED",
+  "primary_null": "REQUIRED_FOR_INFERENTIAL_EXPERIMENTS",
+  "mesi": "REQUIRED_FOR_INFERENTIAL_EXPERIMENTS_OR_NOT_APPLICABLE",
+  "alpha": "REQUIRED_FOR_INFERENTIAL_EXPERIMENTS_OR_NOT_APPLICABLE",
+  "power_target": "REQUIRED_FOR_INFERENTIAL_EXPERIMENTS_OR_NOT_APPLICABLE",
+  "unit_of_analysis": "REQUIRED",
+  "independent_case_count": "REQUIRED",
+  "execution_cell_count": "REQUIRED",
+  "factors": [],
+  "frozen_inputs": {
+    "dataset_root": "REQUIRED",
+    "case_manifest_root": "REQUIRED",
+    "model_identity": "REQUIRED_OR_NOT_APPLICABLE",
+    "tokenizer_identity": "REQUIRED_OR_NOT_APPLICABLE",
+    "prompt_contract_root": "REQUIRED_OR_NOT_APPLICABLE",
+    "scorer_root": "REQUIRED",
+    "runtime_identity": "REQUIRED",
+    "host_identity": "REQUIRED"
+  },
+  "execution": {
+    "started_at_utc": null,
+    "ended_at_utc": null,
+    "success": 0,
+    "failure": 0,
+    "timeout": 0,
+    "abstention": 0,
+    "malformed": 0,
+    "blocked": 0
+  },
+  "integrity_gates": {
+    "source_hash": "PENDING",
+    "label_leakage": "PENDING",
+    "model_runtime_identity": "PENDING",
+    "host_authority": "PENDING",
+    "receipt_completeness": "PENDING",
+    "fco_validation": "PENDING",
+    "fcg_validation": "PENDING"
+  },
+  "analysis": {
+    "primary_test": "REQUIRED_OR_NOT_APPLICABLE",
+    "multiplicity_correction": "REQUIRED_OR_NOT_APPLICABLE",
+    "effect_size": null,
+    "confidence_interval": null,
+    "result_class": "PENDING",
+    "earliest_divergence": null
+  },
+  "custody": {
+    "source_fco_root": null,
+    "derived_fco_root": null,
+    "fcg_delta_root": null,
+    "cfmo_state": null,
+    "signature_state": "NOT_SIGNED",
+    "merkle_mmr_state": "NOT_COMMITTED"
+  },
+  "claim_ceiling": "PENDING",
+  "next_safe_action": "PENDING"
+}

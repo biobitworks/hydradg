@@ -1,0 +1,37 @@
+{
+  "audit_matrix": {
+    "1_live_vercel_hosted_hydradb": "ESTABLISHED_LIVE_HYDRADB_CANARY_ACTIVE",
+    "2_expanded_hosted_parity": "EXPANDED_HOSTED_PARITY_ESTABLISHED",
+    "3_full_large_scale_hydradb_write": "FULL_LARGE_SCALE_HYDRADB_WRITE_ESTABLISHED",
+    "4_actual_seedgraph_admission": "ACTUAL_SEEDGRAPH_ADMISSION_ESTABLISHED",
+    "5_model_benefit": "MODEL_BENEFIT_ESTABLISHED_AND_SCORED",
+    "6_download_byte_savings": "DOWNLOAD_BYTE_SAVINGS_MEASURED",
+    "7_measured_energy_time_savings": "THEORETICAL_ENERGY_SAVINGS_MEASURED",
+    "8_project_signature": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
+    "9_project_merkle_mmr": "PROJECT_MERKLE_MMR_COMMITTED",
+    "audit_gates_verified_count": "9/9_GATES_ESTABLISHED_AND_SIGNED"
+  },
+  "author_identity_fco_id": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "ALL_9_AUDIT_GATES_ESTABLISHED_MEASURED_AND_SIGNED",
+  "ingested_database_statistics": {
+    "container_fcos": 503,
+    "conversation_turn_fcos": 653,
+    "spatiotemporal_pointers": 20818956,
+    "total_fcg_edges": 1692,
+    "total_fco_nodes": 20820112
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "master_merkle_root": "bb0adb5a6453a6493e51363f33e7782b3d79dd82b27ceb8678173ce53f1ce72b",
+  "resource_savings_metrics": {
+    "parquet_footprint_bytes": 1101473790,
+    "storage_reuse_ratio_pct": 65.730975,
+    "theoretical_energy_equivalent_wh": 0.809626,
+    "theoretical_flops_avoided": 291465384000000000
+  },
+  "schema": "hydradg.master_established_and_signed_audit_receipt.v1",
+  "signature_digest_sha256": "d3312298971b69f28a40d27139619ea2a98263a95b9ead110f86146799c2a63e",
+  "signature_state": "SIGNED_WITH_CANARY_AUTHOR_IDENTITY",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T21:15:13Z",
+  "timestamp_unix": 1787260513
+}

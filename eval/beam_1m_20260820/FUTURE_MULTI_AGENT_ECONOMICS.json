@@ -1,0 +1,42 @@
+{
+  "anticube_role": "CLASSIFICATION_AND_GOVERNANCE_SIGNAL_NOT_ASSUMED_RANKING_BOOST",
+  "controlled_perturbations": [
+    "extraction_poison",
+    "stale_state_poison",
+    "contradiction_poison",
+    "provenance_loss",
+    "downstream_agent_inheritance"
+  ],
+  "economic_claim_ceiling": "NO_COST_SAVINGS_CLAIM_UNTIL_MEASURED",
+  "failure_policy": "WRONG_AGENT_DECISIONS_RETAINED_AS_PERTURBATION_EVIDENCE",
+  "future_economic_metrics": [
+    "SerializedByteReduction",
+    "ContextTokenReduction",
+    "AvoidedDownstreamInferenceCalls",
+    "UsefulComputeRatio",
+    "CostPerCorrectGovernedAnswer"
+  ],
+  "future_quality_metrics": [
+    "ErrorPropagationRate",
+    "RecoveryRate",
+    "FirstDivergenceAccuracy",
+    "CurrentStateAccuracy",
+    "HistoricalStateRetention",
+    "CompleteEvidencePathRecovery"
+  ],
+  "hypothesis": "Explicit FCO supersession, validity, provenance, claim-state, and agent-decision lineage can improve knowledge-update, contradiction-resolution, and multi-session reasoning while preserving temporal reasoning, event ordering, and multi-session guardrails.",
+  "multi_agent_chain": [
+    "retrieval_agent",
+    "extraction_agent",
+    "reasoning_agent",
+    "decision_agent",
+    "answer_agent"
+  ],
+  "non_inferiority_guardrails": [
+    "temporal_reasoning",
+    "event_ordering",
+    "multi_session_reasoning"
+  ],
+  "schema": "hydradg.future_multi_agent_economics.v1",
+  "state": "FUTURE_PREREGISTERED_HYPOTHESIS_NOT_EXECUTED"
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "hydradg.sglang_replay.summary.v1",
+  "REPLAY_EQUIVALENCE": "BLOCKED_CUDA_UNAVAILABLE",
+  "primary_executions_requested": 300,
+  "primary_executions_completed": 0,
+  "primary_executions_blocked": 424,
+  "tamper_executions_blocked": 24,
+  "tamper_synthetic": true,
+  "tamper_security_incident": false,
+  "G0_EAGER_STATE": "BLOCKED_CUDA_UNAVAILABLE",
+  "G1_FULL_STATE": "BLOCKED_CUDA_UNAVAILABLE",
+  "G2_BREAKABLE_STATE": "BLOCKED_CUDA_UNAVAILABLE",
+  "G2A_DAISY_STATE": "BLOCKED_CUDA_UNAVAILABLE",
+  "G3_BREAKABLE_EXTENDED_STATE": "BLOCKED_UNSUPPORTED_GRAPH_MODE",
+  "historical_verification": {
+    "HASH_CHAIN_VERIFICATION_RATE": 1.0,
+    "CONTROL_FALSE_POSITIVE_RATE": 0.0,
+    "INVALID_PROOF_DETECTION_RATE": 1.0,
+    "REPLAYED_PROOF_DETECTION_RATE": 1.0,
+    "BROKEN_AUTH_EDGE_DETECTION_RATE": 1.0,
+    "UNAUTHORIZED_CANONICAL_WRITE_RATE": 0.0
+  },
+  "MODEL_EQUIVALENCE_STATE": "NOT_EQUIVALENT",
+  "hypotheses_testable": false,
+  "claim_ceiling": "PREREGISTERED_BLOCKED_PENDING_CUDA_HOST"
+}

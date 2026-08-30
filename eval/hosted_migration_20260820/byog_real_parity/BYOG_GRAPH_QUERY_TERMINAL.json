@@ -1,0 +1,1082 @@
+{
+  "additional_context": {},
+  "chunks": [
+    {
+      "chunk_content": "# HydraDB Data, Schemas & FCO/FCG Provenance Manual\n\nThis document describes the **HydraDB** graph projection used by **HydraDG**, the portable public graph snapshot, current schema files, and the boundary between canonical custody and the operational query backend.\n\n**FCO = Fractal Custody Object.**  \n**FCG = Fractal Custody Graph.**\n\n## 1. Architecture\n\n```text\nCANONICAL / PORTABLE CUSTODY                 OPERATIONAL HYDRADB PROJECTION\ncustody/graph/live/nodes.jsonl               HydraDB graph nodes\ncustody/graph/live/edges.jsonl               HydraDB typed relationships\nFCO identity + evidence class       ->       query/traversal/readback\nclaim ceiling + source lineage               isolated graph namespace\n```\n\nHydraDB is load-bearing for the submission's graph/query path: it supports temporal traversal, provenance lookup, contradiction/supersession traversal, and reconstruction of the public FCO/FCG projection. The repository does not require a machine-specific HydraDB database directory to reproduce the public state.\n\n## 2. Portable reconstruction inputs\n\n| Artifact | Purpose |\n|---|---|\n| `custody/graph/live/nodes.jsonl` | Public canonical FCG node snapshot used by the reproduction importer |\n| `custody/graph/live/edges.jsonl` | Public canonical FCG edge snapshot used by the reproduction importer |\n| `scripts/project_fcg_snapshot_to_hydradb.py` | Fail-closed FCG -> HydraDB importer and readback verifier |\n| `HydraDG_DaisyTrain_v0.3.7/hydra/schema_nodes.json` | Current Track 03 node schema definitions |\n| `HydraDG_DaisyTrain_v0.3.7/hydra/schema_edges.json` | Current Track 03 edge schema definitions |\n| `PRE_REGISTRATION_K5_K10_RAW_SEEDGRAPH.json` | Preregistered matrix design, source identity, null hypotheses, and claim boundary; **not the 277 MB source dataset itself** |\n| `custody/website_knowledge_fco_projection.json` | Public website/knowledge projection input where present |\n\nThe original LongMemEval source is governed separately by its exact source identity and dataset rights. Do not infer that the compact preregistration JSON is a copy of the full source dataset.\n\n## 3. Representative graph semantics\n\nRepresentative relationships used by the Track 03 memory model include:\n\n```text\nSession -> NEXT/PREV -> Session\nSession -> ASSERTS -> Fact\n",
+      "chunk_uuid": "9ac937b64d9de91b0762d863d8ec309e_chunk_0000",
+      "id": "9ac937b64d9de91b0762d863d8ec309e",
+      "metadata": {},
+      "relevancy_score": 0.5777592691179163,
+      "source_last_updated_time": "2026-08-20T21:19:11.072195+00:00",
+      "source_title": "HYDRADB_DATA.md",
+      "source_type": "document",
+      "source_upload_time": "2026-08-20T21:19:11.072195+00:00",
+      "additional_metadata": null,
+      "extra_context_ids": null,
+      "layout": null
+    },
+    {
+      "chunk_content": "- K=10 depth ablation improved retrieval metrics but reduced evidence-path density.\n- RAW and SeedGraph were identical at fixed K in the retained matrix.\n\nRecommendation:\n`PRIMARY TRACK / STRONGEST CURRENT AWARD CASE`\n\n### Track 01 \u2014 strong architecture fit, real benchmark still pending\nOfficial problem:\nenterprise ontology, aliases, contradictions, multi-hop reasoning, abstention.\n\nHydraDG has:\n- EnterpriseRAG-Bench and HERB acquisition/hash state.\n- ontology/entity-resolution design;\n- exact identity/provenance/supersession machinery.\n\nMissing:\n- full real corpus atomization into HydraDB;\n- real entity-resolution benchmark;\n- contradiction/current-state benchmark.\n\nRecommendation:\n`FUTURE / ADJACENT TRACK FIT \u2014 DO NOT CLAIM TRACK 01 WIN YET`\n\n### Track 02 \u2014 graph structure fit, real ecosystem lane pending\nOfficial problem:\nreverse dependency closure, versioned packages, blast radius, code graph context.\n\nHydraDG has:\n- deterministic synthetic canary:\n  `reference 0 \u2192 poison 2 \u2192 partial repair 1 \u2192 full repair 0`;\n- independent Python closure vs HydraDB design.\n\nMissing:\n- frozen real npm/PyPI snapshot;\n- OSV/GHSA version evidence;\n- real reverse-closure evaluation.\n\nRecommendation:\n`FUTURE / ADJACENT TRACK FIT \u2014 DO NOT CLAIM TRACK 02 WIN YET`\n\n### Best Use of HydraDB \u2014 strongest cross-cutting case\nUse:\n- content-addressed identities;\n- typed custody/context edges;\n- temporal/supersession/contradiction traversal;\n- null/abstention retention;\n- deterministic calculators;\n- graph-native reproduction;\n- backend-degradation visibility;\n- context-state diagnostics.\n\n## K-depth statistics\n\nScored N = 470; abstentions = 30.\n\nK=5:\n- A Hit@5 = 0.96383 \u2248 453/470\n- D Hit@5 = 0.94468 \u2248 444/470\n- A Recall@5 = 0.90660\n- D Recall@5 = 0.84603\n- evidence-path coverage = 0.63787\n- B/C/D did not establish a positive Hit@5 advantage over A.\n\nK=10:\n- A Hit@10 = 0.97872 \u2248 460/470\n",
+      "chunk_uuid": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0004",
+      "id": "0f24d6153c06d0a50f4c5584ea535fda",
+      "metadata": {},
+      "relevancy_score": 0.5120903085383699,
+      "source_last_updated_time": "2026-08-20T21:22:15.453045+00:00",
+      "source_title": "FINAL_ELIGIBILITY_AWARD_CASE_PLAN.md",
+      "source_type": "document",
+      "source_upload_time": "2026-08-20T21:22:15.453045+00:00",
+      "additional_metadata": null,
+      "extra_context_ids": null,
+      "layout": null
+    },
+    {
+      "chunk_content": "   - explain server-only endpoint/token/namespace requirement;\n   - prior local/Track03 use remains real evidence;\n   - historical hosted 36/24 parity is bounded;\n   - expanded parity pending.\n\n2. **Official-track fit**\n   - Track 03 = strongest executed fit.\n   - Track 01 = architecture/data acquired; real benchmark pending.\n   - Track 02 = synthetic structural canary; real npm/PyPI graph pending.\n   - Best Use HydraDB = strongest cross-cutting award case.\n   - State the official multi-track rule: one team may enter multiple tracks, but each submission must be meaningfully distinct. Do not present one HydraDG build as three separate eligible submissions.\n\n3. **Industry terminology matrix**\n   Columns:\n   `Industry standard | HydraDB capability | HydraDG integration | Evidence state | Gap`\n   Include:\n   - semantic/vector retrieval;\n   - hybrid retrieval;\n   - property/metadata filters;\n   - knowledge graph;\n   - entity resolution;\n   - temporal/versioned graph;\n   - graph traversal;\n   - provenance/lineage;\n   - contradiction/supersession;\n   - abstention;\n   - content dedup/canonical identity;\n   - model-agnostic context;\n   - deterministic replay;\n   - context-state diagnostics.\n\n4. **Executed/null/future experiment matrix**\n   Use evidence classes, not marketing labels.\n\n5. **Track 03 full statistics**\n   N=500 total, N=470 scored, 30 abstentions.\n   K5 A/B/C/D exact Hit@5 and Recall@5.\n   K10 retained depth results.\n   State:\n   `K_DEPTH_EFFECT_OBSERVED`\n   `RAW_EQUALS_SEEDGRAPH_AT_FIXED_K`\n   `MODEL_BENEFIT_NOT_ESTABLISHED`\n   `NOT_END_TO_END_QA`\n\n6. **Information-State Heat Layer**\n   Render equations:\n   `H=-\u03a3p log2p`\n   `Hnorm=H/log2(n)`\n   `G*=U*\u22120.35Hnorm`\n   `\u0394G*=G*(t)\u2212G*(t\u22121)`\n   `Cloud Drift=100\u00d7JSD_base2(Pt||Pref)`\n   `TV=1/2 \u03a3|Pt\u2212Pref|`\n\n",
+      "chunk_uuid": "6733d87927d050c965cff0f44b82772c_chunk_0003",
+      "id": "6733d87927d050c965cff0f44b82772c",
+      "metadata": {},
+      "relevancy_score": 0.46750681691720997,
+      "source_last_updated_time": "2026-08-20T21:22:15.699488+00:00",
+      "source_title": "ANTIGRAVITY_FINAL_ELIGIBILITY_EXPANSION_PROMPT.md",
+      "source_type": "document",
+      "source_upload_time": "2026-08-20T21:22:15.699488+00:00",
+      "additional_metadata": null,
+      "extra_context_ids": null,
+      "layout": null
+    },
+    {
+      "chunk_content": "# HydraDG Canonical FCG BYOG Source\n\nSource ID: `hydradg-canonical-fcg-653-1692-v1`\nCanonical FCO Nodes: 653\nCanonical FCG Edges: 1692\nPre-submission Entity Slots (Super-Node Splitting): 657\nLocal FCO Root SHA-256: `1384a838bd4988a46fff3705230a0c82fc8b1d5721951fb9e49cca293e5207ea`\nLocal Edge Root SHA-256: `43c160a579ca48b9099b2d7827b2ef904d36e2b5047bfe89809a5e8d71bfa5e7`\n",
+      "chunk_uuid": "hydradg-canonical-fcg-653-1692-v1_chunk_0000",
+      "id": "hydradg-canonical-fcg-653-1692-v1",
+      "metadata": {},
+      "relevancy_score": 0.38436629282129564,
+      "source_last_updated_time": "2026-08-20T21:26:51.735152+00:00",
+      "source_title": "HYDRADG_CANONICAL_FCG_BYOG_SOURCE.md",
+      "source_type": "document",
+      "source_upload_time": "2026-08-20T21:26:51.735152+00:00",
+      "additional_metadata": null,
+      "extra_context_ids": null,
+      "layout": null
+    },
+    {
+      "chunk_content": "      \"TV\": 0.12,\n      \"U\": 0.2,\n      \"cloud_drift\": 1.8728650216,\n      \"dG\": -0.6004520711,\n      \"id\": \"T2\",\n      \"restoration_gain\": 0.58\n    }\n  ],\n  \"merkle_state\": \"NOT_MERKLE_COMMITTED\",\n  \"primary_award_positioning\": [\n    \"TRACK03_STRONGEST_EXECUTED_TRACK_CASE\",\n    \"BEST_USE_HYDRADB_STRONGEST_CROSS_CUTTING_CASE\",\n    \"TRACK01_TRACK02_ADJACENT_FUTURE_FIT_PENDING_DISTINCT_REAL_DATA_EXECUTION\"\n  ],\n  \"reviewed_branch\": \"hack-hydra/final-hosted-fcg-20260820\",\n  \"reviewed_head\": \"c62d8d56ce6ab8cbb40a4c5d7120e66f4468cfac\",\n  \"scale_accounting\": {\n    \"declared_canonical_parquet_bytes\": 1101473790,\n    \"download_byte_savings_state\": \"NOT_MEASURED\",\n    \"duplicate_occurrences\": 20818956,\n    \"identity_reuse_percent\": 65.730975,\n    \"measured_energy_wh\": null,\n    \"measured_time_saved_seconds\": null,\n    \"raw_occurrences\": 31672976,\n    \"theoretical_7b_flops\": 291465384000000000,\n    \"theoretical_energy_equivalent_wh\": 0.809626,\n    \"unique_keys\": 10854020\n  },\n  \"schema\": \"hydradg.final_eligibility_award_case_matrix.v1\",\n  \"signature_state\": \"NOT_SIGNED\",\n  \"states\": {\n    \"context_entropy_hydradb_readback\": \"SUCCESS_RETAINED\",\n    \"download_byte_savings\": \"NOT_MEASURED\",\n    \"energy_savings\": \"THEORETICAL_ONLY\",\n    \"expanded_hosted_parity\": \"NOT_ESTABLISHED\",\n    \"full_local_20m_writeback\": \"NOT_ESTABLISHED\",\n    \"historical_hosted_36_24\": \"PASS_BOUNDED_HISTORICAL_SCOPE\",\n    \"k5_k10_depth\": \"RETAINED_LOCAL_EXECUTION\",\n    \"live_vercel_hydradb\": \"DEGRADED_NOT_CONFIGURED_ON_CURRENT_DEPLOYMENT\",\n    \"longmemeval_full500\": \"EXECUTED_RETAINED\",\n    \"model_benefit\": \"NOT_ESTABLISHED\",\n    \"project_merkle\": \"NOT_MERKLE_COMMITTED\",\n    \"project_signature\": \"NOT_SIGNED\",\n    \"seedgraph_external_admission\": \"NOT_ESTABLISHED\"\n  },\n  \"track03\": {\n    \"abstentions\": 30,\n    \"cases\": 500,\n",
+      "chunk_uuid": "4b6c7c0ae5d1ac5713be50c655a9e959_chunk_0001",
+      "id": "4b6c7c0ae5d1ac5713be50c655a9e959",
+      "metadata": {},
+      "relevancy_score": 0.3175036138709676,
+      "source_last_updated_time": "2026-08-20T21:22:15.479246+00:00",
+      "source_title": "FINAL_ELIGIBILITY_EVIDENCE_MATRIX.json",
+      "source_type": "document",
+      "source_upload_time": "2026-08-20T21:22:15.479246+00:00",
+      "additional_metadata": null,
+      "extra_context_ids": null,
+      "layout": null
+    }
+  ],
+  "graph_context": {
+    "chunk_id_to_group_ids": {
+      "0f24d6153c06d0a50f4c5584ea535fda_chunk_0001": [
+        "p_11",
+        "p_14"
+      ],
+      "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003": [
+        "p_0",
+        "p_13"
+      ],
+      "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005": [
+        "p_1",
+        "p_3",
+        "p_5",
+        "p_6",
+        "p_7",
+        "p_8",
+        "p_9",
+        "p_10"
+      ],
+      "6733d87927d050c965cff0f44b82772c_chunk_0003": [
+        "p_2"
+      ],
+      "9ac937b64d9de91b0762d863d8ec309e_chunk_0000": [
+        "p_12"
+      ],
+      "9ac937b64d9de91b0762d863d8ec309e_chunk_0001": [
+        "p_4"
+      ]
+    },
+    "chunk_relations": [
+      {
+        "combined_context": "HydraDG is a strong candidate for Best Use of HydraDB due to its use of content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, and graph-native reproduction.",
+        "group_id": "p_0",
+        "relevancy_score": 0.07346976389819798,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "strong candidate for",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003",
+              "context": "HydraDG is a strong candidate for Best Use of HydraDB due to its use of content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, and graph-native reproduction.",
+              "raw_predicate": "strong candidate for",
+              "relationship_id": "115c10057c7dab9b918815bfebbd7eeb",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "d45c38ee32ae357e0afd2b8da824a3b5",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "d45c38ee32ae357e0afd2b8da824a3b5",
+              "identifier": null,
+              "name": "best use of hydradb",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_1",
+        "relevancy_score": 0.04039734393719251,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "158eaea5e6c233c8ae058a3afef2ca97",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "151c75caf263aa63f470408995cf5240",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "151c75caf263aa63f470408995cf5240",
+              "identifier": null,
+              "name": "temporal/supersession/contradiction traversal",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "HydraDG integrates several industry standard capabilities including semantic/vector retrieval, hybrid retrieval, property/metadata filters, knowledge graph, entity resolution, temporal/versioned graph, graph traversal, provenance/lineage, contradiction/supersession, and abstention.",
+        "group_id": "p_2",
+        "relevancy_score": 0.03770847941370597,
+        "source_chunk_ids": [
+          "6733d87927d050c965cff0f44b82772c_chunk_0003"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "integrates",
+              "chunk_id": "6733d87927d050c965cff0f44b82772c_chunk_0003",
+              "context": "HydraDG integrates several industry standard capabilities including semantic/vector retrieval, hybrid retrieval, property/metadata filters, knowledge graph, entity resolution, temporal/versioned graph, graph traversal, provenance/lineage, contradiction/supersession, and abstention.",
+              "raw_predicate": "integrates",
+              "relationship_id": "bb833493c5836d7a9248e4378448558f",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "0cd7ee58ae708980a96f0b0b70a402b9",
+              "temporal_details": null,
+              "timestamp": 1787261051.59529
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "0cd7ee58ae708980a96f0b0b70a402b9",
+              "identifier": null,
+              "name": "semantic/vector retrieval",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_3",
+        "relevancy_score": 0.03477167002673881,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "fa38a072f3ab442179cf0aa8587ceb6f",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "ef4615ae791e35357a5e2c6e52ce0861",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "ef4615ae791e35357a5e2c6e52ce0861",
+              "identifier": null,
+              "name": "typed custody/context edges",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "In the Track 03 memory model, a Fact is derived from a Session.",
+        "group_id": "p_4",
+        "relevancy_score": 0.03425373833600371,
+        "source_chunk_ids": [
+          "9ac937b64d9de91b0762d863d8ec309e_chunk_0001"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "derived from",
+              "chunk_id": "9ac937b64d9de91b0762d863d8ec309e_chunk_0001",
+              "context": "In the Track 03 memory model, a Fact is derived from a Session.",
+              "raw_predicate": "derived from",
+              "relationship_id": "fd3a8df7b302e5a23b7b28379c08dff8",
+              "source_entity_id": "d6b42823937bc483ef36b189e723eef4",
+              "target_entity_id": "d45fe310a2c42e1462c4fcc66294f830",
+              "temporal_details": null,
+              "timestamp": 1787260846.51225
+            },
+            "source": {
+              "entity_id": "d6b42823937bc483ef36b189e723eef4",
+              "identifier": null,
+              "name": "fact",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            },
+            "target": {
+              "entity_id": "d45fe310a2c42e1462c4fcc66294f830",
+              "identifier": null,
+              "name": "session",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_5",
+        "relevancy_score": 0.03322738707890306,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "71d19ea0271c0a3d06e0c1231cb881d5",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "3ab431f89b5cde5106b9a4b2a956ffdd",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "3ab431f89b5cde5106b9a4b2a956ffdd",
+              "identifier": null,
+              "name": "deterministic calculators",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_6",
+        "relevancy_score": 0.03251831300208787,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "cabc58b574512f235174d012ac452b7e",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "164f6649c5f2f3d6f86896ba1082743c",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "164f6649c5f2f3d6f86896ba1082743c",
+              "identifier": null,
+              "name": "graph-native reproduction",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_7",
+        "relevancy_score": 0.03251831300208787,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "e9d47e062840780dcbc37038d71c8140",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "2567cb8ccbcef80f2916c509bbca8d19",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "2567cb8ccbcef80f2916c509bbca8d19",
+              "identifier": null,
+              "name": "null/abstention retention",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_8",
+        "relevancy_score": 0.03251831300208787,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "2b4ed48df0304deac3c7ee942b55b4f2",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "248dfcc90654e438ceb668b1fd162b56",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "248dfcc90654e438ceb668b1fd162b56",
+              "identifier": null,
+              "name": "content-addressed identities",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_9",
+        "relevancy_score": 0.03251831300208787,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "fca1a5a4938f494b4cbeeab487222241",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "13ab467f06eeebc2704abcf0b5e52941",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "13ab467f06eeebc2704abcf0b5e52941",
+              "identifier": null,
+              "name": "context-state diagnostics",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+        "group_id": "p_10",
+        "relevancy_score": 0.03251831300208787,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "best use case includes",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0005",
+              "context": "The strongest cross-cutting cases for using HydraDB include content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, null/abstention retention, deterministic calculators, graph-native reproduction, backend-degradation visibility, and context-state diagnostics.",
+              "raw_predicate": "best use case includes",
+              "relationship_id": "a8489fdbd81f69d2da0149a1e7d6ae98",
+              "source_entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "target_entity_id": "94a01309619dd0f5d60d09b8050a3f6d",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "b5f1d43940f5b484de71950decfaa81b",
+              "identifier": null,
+              "name": "hydradb",
+              "namespace": "products",
+              "type": "PRODUCT"
+            },
+            "target": {
+              "entity_id": "94a01309619dd0f5d60d09b8050a3f6d",
+              "identifier": null,
+              "name": "backend-degradation visibility",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "HydraDG has not established expanded current hosted parity, full 20.82M-node local HydraDB writeback, actual external SeedGraph admission of the 653-node / 1,692-edge conversation bundle, whole-download byte savings, measured energy savings, model benefit in the primary K-depth matrix, or Project Ed25519 signing/Merkle/MMR commitment.",
+        "group_id": "p_11",
+        "relevancy_score": 0.02759559635494513,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0001"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "does not establish",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0001",
+              "context": "HydraDG has not established expanded current hosted parity, full 20.82M-node local HydraDB writeback, actual external SeedGraph admission of the 653-node / 1,692-edge conversation bundle, whole-download byte savings, measured energy savings, model benefit in the primary K-depth matrix, or Project Ed25519 signing/Merkle/MMR commitment.",
+              "raw_predicate": "does not establish",
+              "relationship_id": "c56e794f56f9ec968037b62f8ccd85d0",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "38d68e8e452cd1378965c92fb36ee987",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "38d68e8e452cd1378965c92fb36ee987",
+              "identifier": null,
+              "name": "seedgraph",
+              "namespace": "products",
+              "type": "PRODUCT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "In the Track 03 memory model, a Session can have a NEXT or PREV relationship to another Session.",
+        "group_id": "p_12",
+        "relevancy_score": 0.025918428204034477,
+        "source_chunk_ids": [
+          "9ac937b64d9de91b0762d863d8ec309e_chunk_0000"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "next/prev",
+              "chunk_id": "9ac937b64d9de91b0762d863d8ec309e_chunk_0000",
+              "context": "In the Track 03 memory model, a Session can have a NEXT or PREV relationship to another Session.",
+              "raw_predicate": "next/prev",
+              "relationship_id": "b743ccd491c29d79f59240bf54e17d77",
+              "source_entity_id": "d45fe310a2c42e1462c4fcc66294f830",
+              "target_entity_id": "d45fe310a2c42e1462c4fcc66294f830",
+              "temporal_details": null,
+              "timestamp": 1787260846.51225
+            },
+            "source": {
+              "entity_id": "d45fe310a2c42e1462c4fcc66294f830",
+              "identifier": null,
+              "name": "session",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            },
+            "target": {
+              "entity_id": "d45fe310a2c42e1462c4fcc66294f830",
+              "identifier": null,
+              "name": "session",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "Track 01 is a strong architecture fit for HydraDG due to its enterprise ontology, alias, and contradiction machinery, though real benchmarks are still pending.",
+        "group_id": "p_13",
+        "relevancy_score": 0.021532493772695466,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "architecture fit for",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003",
+              "context": "Track 01 is a strong architecture fit for HydraDG due to its enterprise ontology, alias, and contradiction machinery, though real benchmarks are still pending.",
+              "raw_predicate": "architecture fit for",
+              "relationship_id": "9da06785a3a12747720e8b6f50e9d228",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "c512864ab86d89d80d2e78921eacf453",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "c512864ab86d89d80d2e78921eacf453",
+              "identifier": null,
+              "name": "track 01",
+              "namespace": "projects",
+              "type": "PROJECT"
+            }
+          }
+        ]
+      },
+      {
+        "combined_context": "The file LOCAL_HYDRADB_WRITEBACK_RECEIPT.json says PASS, but the associated script scripts/write_back_to_local_hydradb.py performs no network request and merely derives counts from local files.",
+        "group_id": "p_14",
+        "relevancy_score": 0.016246901501659826,
+        "source_chunk_ids": [
+          "0f24d6153c06d0a50f4c5584ea535fda_chunk_0001"
+        ],
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "is a pseudo receipt",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0001",
+              "context": "The file LOCAL_HYDRADB_WRITEBACK_RECEIPT.json says PASS, but the associated script scripts/write_back_to_local_hydradb.py performs no network request and merely derives counts from local files.",
+              "raw_predicate": "is a pseudo receipt",
+              "relationship_id": "0e7ffecea4686d1f2171f6aa694740cd",
+              "source_entity_id": "6e35c7ccc795241f3d02f9d27e599827",
+              "target_entity_id": "c5cb4c299f1a23af0833fe13bf046a87",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "6e35c7ccc795241f3d02f9d27e599827",
+              "identifier": null,
+              "name": "local_hydradb_writeback_receipt.json",
+              "namespace": "documents",
+              "type": "DOCUMENT"
+            },
+            "target": {
+              "entity_id": "c5cb4c299f1a23af0833fe13bf046a87",
+              "identifier": null,
+              "name": "scripts/write_back_to_local_hydradb.py",
+              "namespace": "documents",
+              "type": "DOCUMENT"
+            }
+          }
+        ]
+      }
+    ],
+    "query_paths": [
+      {
+        "combined_context": "HydraDG is a strong candidate for Best Use of HydraDB due to its use of content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, and graph-native reproduction.",
+        "group_id": "p_0",
+        "relevancy_score": 0.09318209777896098,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "strong candidate for",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003",
+              "context": "HydraDG is a strong candidate for Best Use of HydraDB due to its use of content-addressed identities, typed custody/context edges, temporal/supersession/contradiction traversal, and graph-native reproduction.",
+              "raw_predicate": "strong candidate for",
+              "relationship_id": "115c10057c7dab9b918815bfebbd7eeb",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "d45c38ee32ae357e0afd2b8da824a3b5",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "d45c38ee32ae357e0afd2b8da824a3b5",
+              "identifier": null,
+              "name": "best use of hydradb",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "HydraDG integrates several industry standard capabilities including semantic/vector retrieval, hybrid retrieval, property/metadata filters, knowledge graph, entity resolution, temporal/versioned graph, graph traversal, provenance/lineage, contradiction/supersession, and abstention.",
+        "group_id": "p_1",
+        "relevancy_score": 0.029418335160336692,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "integrates",
+              "chunk_id": "6733d87927d050c965cff0f44b82772c_chunk_0003",
+              "context": "HydraDG integrates several industry standard capabilities including semantic/vector retrieval, hybrid retrieval, property/metadata filters, knowledge graph, entity resolution, temporal/versioned graph, graph traversal, provenance/lineage, contradiction/supersession, and abstention.",
+              "raw_predicate": "integrates",
+              "relationship_id": "bb833493c5836d7a9248e4378448558f",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "0cd7ee58ae708980a96f0b0b70a402b9",
+              "temporal_details": null,
+              "timestamp": 1787261051.59529
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "0cd7ee58ae708980a96f0b0b70a402b9",
+              "identifier": null,
+              "name": "semantic/vector retrieval",
+              "namespace": "concepts",
+              "type": "CONCEPT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "HydraDG has not established expanded current hosted parity, full 20.82M-node local HydraDB writeback, actual external SeedGraph admission of the 653-node / 1,692-edge conversation bundle, whole-download byte savings, measured energy savings, model benefit in the primary K-depth matrix, or Project Ed25519 signing/Merkle/MMR commitment.",
+        "group_id": "p_2",
+        "relevancy_score": 0.01880564469586677,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "does not establish",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0001",
+              "context": "HydraDG has not established expanded current hosted parity, full 20.82M-node local HydraDB writeback, actual external SeedGraph admission of the 653-node / 1,692-edge conversation bundle, whole-download byte savings, measured energy savings, model benefit in the primary K-depth matrix, or Project Ed25519 signing/Merkle/MMR commitment.",
+              "raw_predicate": "does not establish",
+              "relationship_id": "c56e794f56f9ec968037b62f8ccd85d0",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "38d68e8e452cd1378965c92fb36ee987",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "38d68e8e452cd1378965c92fb36ee987",
+              "identifier": null,
+              "name": "seedgraph",
+              "namespace": "products",
+              "type": "PRODUCT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "Track 01 is a strong architecture fit for HydraDG due to its enterprise ontology, alias, and contradiction machinery, though real benchmarks are still pending.",
+        "group_id": "p_3",
+        "relevancy_score": 0.00938843654009226,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "architecture fit for",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003",
+              "context": "Track 01 is a strong architecture fit for HydraDG due to its enterprise ontology, alias, and contradiction machinery, though real benchmarks are still pending.",
+              "raw_predicate": "architecture fit for",
+              "relationship_id": "9da06785a3a12747720e8b6f50e9d228",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "c512864ab86d89d80d2e78921eacf453",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "c512864ab86d89d80d2e78921eacf453",
+              "identifier": null,
+              "name": "track 01",
+              "namespace": "projects",
+              "type": "PROJECT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "HydraDG is being developed for Hack Hydra 2026.",
+        "group_id": "p_4",
+        "relevancy_score": 1.2547574604717562e-05,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "part of",
+              "chunk_id": "6733d87927d050c965cff0f44b82772c_chunk_0000",
+              "context": "HydraDG is being developed for Hack Hydra 2026.",
+              "raw_predicate": "part of",
+              "relationship_id": "937a99346c56795b3b3766981b20a7f3",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "0de228d5c71c12bb9f16b0b9d0541551",
+              "temporal_details": null,
+              "timestamp": 1787261051.59529
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "0de228d5c71c12bb9f16b0b9d0541551",
+              "identifier": null,
+              "name": "hack hydra 2026",
+              "namespace": "events",
+              "type": "EVENT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "HydraDG has a declared canonical Parquet footprint of 1,101,473,790 bytes.",
+        "group_id": "p_5",
+        "relevancy_score": 1.1342974851871081e-05,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "has declared canonical parquet footprint",
+              "chunk_id": "6733d87927d050c965cff0f44b82772c_chunk_0004",
+              "context": "HydraDG has a declared canonical Parquet footprint of 1,101,473,790 bytes.",
+              "raw_predicate": "has declared canonical parquet footprint",
+              "relationship_id": "580e649f53552704c021e787c29ecc0e",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "7e20e34c7ad8758cf04b6b8bfb95b55e",
+              "temporal_details": null,
+              "timestamp": 1787261051.59529
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "7e20e34c7ad8758cf04b6b8bfb95b55e",
+              "identifier": null,
+              "name": "1,101,473,790 bytes",
+              "namespace": "metrics",
+              "type": "METRIC"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "The final Golden Path step for HydraDG is the /eligibility page, which serves as the final synthesis.",
+        "group_id": "p_6",
+        "relevancy_score": 1.0823435869385592e-05,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "has final golden path step",
+              "chunk_id": "6733d87927d050c965cff0f44b82772c_chunk_0002",
+              "context": "The final Golden Path step for HydraDG is the /eligibility page, which serves as the final synthesis.",
+              "raw_predicate": "has final golden path step",
+              "relationship_id": "adac1199ceb8a205c8f3c485a10d9bbe",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "b051a493f56c66a61013f797cc92925c",
+              "temporal_details": null,
+              "timestamp": 1787261051.59529
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "b051a493f56c66a61013f797cc92925c",
+              "identifier": null,
+              "name": "/eligibility",
+              "namespace": "documents",
+              "type": "DOCUMENT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "The /best-use page remains the HydraDB technical deep dive for the HydraDG project.",
+        "group_id": "p_7",
+        "relevancy_score": 1.0823435869385592e-05,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "has technical deep dive",
+              "chunk_id": "6733d87927d050c965cff0f44b82772c_chunk_0002",
+              "context": "The /best-use page remains the HydraDB technical deep dive for the HydraDG project.",
+              "raw_predicate": "has technical deep dive",
+              "relationship_id": "5b5e4f0d98622e59b3e3730975366085",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "b50f4eb8960048687c9670a9a07494a4",
+              "temporal_details": null,
+              "timestamp": 1787261051.59529
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "b50f4eb8960048687c9670a9a07494a4",
+              "identifier": null,
+              "name": "/best-use",
+              "namespace": "documents",
+              "type": "DOCUMENT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "Track 02 is a graph structure fit for HydraDG, featuring a deterministic synthetic canary and independent Python closure design, though real ecosystem lanes are pending.",
+        "group_id": "p_8",
+        "relevancy_score": 8.973822059728993e-06,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "graph structure fit for",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0003",
+              "context": "Track 02 is a graph structure fit for HydraDG, featuring a deterministic synthetic canary and independent Python closure design, though real ecosystem lanes are pending.",
+              "raw_predicate": "graph structure fit for",
+              "relationship_id": "1c28a6bbea853817eaf766838ac3cb60",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "b78a635c9b5a15005fb69059fefdc4cb",
+              "temporal_details": null,
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "b78a635c9b5a15005fb69059fefdc4cb",
+              "identifier": null,
+              "name": "track 02",
+              "namespace": "projects",
+              "type": "PROJECT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      },
+      {
+        "combined_context": "HydraDG has a Final Golden-Path Eligibility / Award Dossier Implementation Plan to make /eligibility the final page of the judge Golden Path, synthesizing the award case and eligibility. (Date/Time: 20260820)",
+        "group_id": "p_9",
+        "relevancy_score": 8.056027119704581e-06,
+        "triplets": [
+          {
+            "relation": {
+              "canonical_predicate": "has implementation plan",
+              "chunk_id": "0f24d6153c06d0a50f4c5584ea535fda_chunk_0000",
+              "context": "HydraDG has a Final Golden-Path Eligibility / Award Dossier Implementation Plan to make /eligibility the final page of the judge Golden Path, synthesizing the award case and eligibility.",
+              "raw_predicate": "has implementation plan",
+              "relationship_id": "28ef48cc1925c922eaa8be71280e75b1",
+              "source_entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "target_entity_id": "663c0bf55e97c7da644747fde7288f34",
+              "temporal_details": "20260820",
+              "timestamp": 1787261088.18588
+            },
+            "source": {
+              "entity_id": "26ff01b130c1d4720e3b45c90deffb79",
+              "identifier": null,
+              "name": "hydradg",
+              "namespace": "projects",
+              "type": "PROJECT"
+            },
+            "target": {
+              "entity_id": "663c0bf55e97c7da644747fde7288f34",
+              "identifier": null,
+              "name": "eligibility / case",
+              "namespace": "documents",
+              "type": "DOCUMENT"
+            }
+          }
+        ],
+        "source_chunk_ids": null
+      }
+    ]
+  },
+  "sources": [
+    {
+      "additional_metadata": {},
+      "description": "",
+      "id": "9ac937b64d9de91b0762d863d8ec309e",
+      "metadata": {},
+      "timestamp": "2026-08-20T21:19:11.072195+00:00",
+      "title": "HYDRADB_DATA.md",
+      "type": "document",
+      "url": "s3://hydradb-ingestion-free/65mzwa4k7g/toqxpnnxqw/hydradg-judge-demo/9ac937b64d9de91b0762d863d8ec309e",
+      "app_external_id": null,
+      "app_kind": null,
+      "app_provider": null
+    },
+    {
+      "additional_metadata": {},
+      "description": "",
+      "id": "0f24d6153c06d0a50f4c5584ea535fda",
+      "metadata": {},
+      "timestamp": "2026-08-20T21:22:15.453045+00:00",
+      "title": "FINAL_ELIGIBILITY_AWARD_CASE_PLAN.md",
+      "type": "document",
+      "url": "s3://hydradb-ingestion-free/65mzwa4k7g/toqxpnnxqw/hydradg-judge-demo/0f24d6153c06d0a50f4c5584ea535fda",
+      "app_external_id": null,
+      "app_kind": null,
+      "app_provider": null
+    },
+    {
+      "additional_metadata": {},
+      "description": "",
+      "id": "6733d87927d050c965cff0f44b82772c",
+      "metadata": {},
+      "timestamp": "2026-08-20T21:22:15.699488+00:00",
+      "title": "ANTIGRAVITY_FINAL_ELIGIBILITY_EXPANSION_PROMPT.md",
+      "type": "document",
+      "url": "s3://hydradb-ingestion-free/65mzwa4k7g/toqxpnnxqw/hydradg-judge-demo/6733d87927d050c965cff0f44b82772c",
+      "app_external_id": null,
+      "app_kind": null,
+      "app_provider": null
+    },
+    {
+      "additional_metadata": {},
+      "description": "",
+      "id": "hydradg-canonical-fcg-653-1692-v1",
+      "metadata": {},
+      "timestamp": "2026-08-20T21:26:51.735152+00:00",
+      "title": "HYDRADG_CANONICAL_FCG_BYOG_SOURCE.md",
+      "type": "document",
+      "url": "s3://hydradb-ingestion-free/65mzwa4k7g/toqxpnnxqw/hydradg-judge-demo/hydradg-canonical-fcg-653-1692-v1",
+      "app_external_id": null,
+      "app_kind": null,
+      "app_provider": null
+    },
+    {
+      "additional_metadata": {},
+      "description": "",
+      "id": "4b6c7c0ae5d1ac5713be50c655a9e959",
+      "metadata": {},
+      "timestamp": "2026-08-20T21:22:15.479246+00:00",
+      "title": "FINAL_ELIGIBILITY_EVIDENCE_MATRIX.json",
+      "type": "document",
+      "url": "s3://hydradb-ingestion-free/65mzwa4k7g/toqxpnnxqw/hydradg-judge-demo/4b6c7c0ae5d1ac5713be50c655a9e959",
+      "app_external_id": null,
+      "app_kind": null,
+      "app_provider": null
+    }
+  ]
+}

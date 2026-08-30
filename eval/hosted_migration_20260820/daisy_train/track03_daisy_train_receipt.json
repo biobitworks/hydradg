@@ -1,0 +1,31 @@
+{
+  "author_public_key": "fco:303b3fab6fd8831b84a37f789aa4ef1f1ab78a808572eddf8632d1b88f97e1d5",
+  "claim_ceiling": "DAISY_TRAIN_TRACK_EXPANSION_COMPLETED_FOR_TRACK03",
+  "context_energy_metrics": {
+    "delta_g_star": 0.1181,
+    "g_star_diagnostic": -0.005,
+    "shannon_entropy_bits": 1.7427,
+    "u_star_burden": 0.3
+  },
+  "corpus_statistics": {
+    "deduplication_ratio": "68.40%",
+    "document_count": 500,
+    "raw_word_atoms": 1200000,
+    "spatiotemporal_pointers": 820800,
+    "unique_word_keys": 379200
+  },
+  "information_energy_savings": {
+    "flops_saved": 11491200000000000,
+    "target_ollama_model_params": "7B Parameters (qwen2.5-coder / phi4 / ollarma)",
+    "watt_hours_saved": 31.92
+  },
+  "license": "CC-BY-NC-ND-4.0",
+  "schema": "hydradg.track_daisy_train_receipt.v1",
+  "signature_hash": "ab9950370efe499342685ac6f5df97ebed5e0b3247f6d50aa5469ea7dd2b3afb",
+  "signature_state": "SIGNED_WITH_AUTHOR_PUBLIC_KEY",
+  "status": "PASS",
+  "timestamp_iso": "2026-08-20T19:26:07Z",
+  "timestamp_unix": 1787253967,
+  "track_id": "track03",
+  "track_name": "LongMemEval-S full500 & LongMemEval-V2 Benchmark"
+}

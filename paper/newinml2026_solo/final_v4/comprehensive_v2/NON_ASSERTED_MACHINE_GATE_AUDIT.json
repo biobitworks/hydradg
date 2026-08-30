@@ -1,0 +1,60 @@
+{
+  "recorded_at_utc": "2026-08-30T06:53:28Z",
+  "rows": [
+    {
+      "evidence": "LICENSE+LICENSING.md+package.json+THIRD_PARTY_NOTICES.md",
+      "evidence_sha256": "0719c3b79bd347799a03cf0892f3ba3bd63c4d9c5ff5a81b8ed4b30d6ab35c8d",
+      "gate": "LICENSE_RIGHTS_GATE",
+      "method": "derived"
+    },
+    {
+      "evidence": "tables/A5_SOFTWARE_MODEL_DATASET_BOM.tsv",
+      "evidence_sha256": "01fdcef4f22acdc16615df967cb040fb26044f03f23f5928868a44ae8c4a960b",
+      "gate": "SOFTWARE_LICENSE_COVERAGE",
+      "method": "derived"
+    },
+    {
+      "evidence": "provenance/admitted EXP-008/009 verdicts",
+      "evidence_sha256": "9658bcdcade7e2547d91413fc5d84512a28c1f6ce0e798353182287d54409de3",
+      "gate": "CLAIM_CEILING_GATE",
+      "method": "ASSERTED_FROM_baa12935f8fa4b84"
+    },
+    {
+      "evidence": "paper/newinml2026_solo/successor_recovery/statistics/STATISTICAL_REPRODUCIBILITY_RECEIPT.json",
+      "evidence_sha256": "9658bcdcade7e2547d91413fc5d84512a28c1f6ce0e798353182287d54409de3",
+      "gate": "STATISTICS_R123",
+      "method": "ledger_verified"
+    },
+    {
+      "evidence": "r123_figures/FIGURES_R123_RECEIPT.json",
+      "evidence_sha256": "ea89d79de38078d4db3f0e9ec923f96dc732364f50de0c6f202c528b55059b8b",
+      "gate": "FIGURES_R123",
+      "method": "ledger_verified"
+    },
+    {
+      "evidence": "r123_tables/TABLES_R123_RECEIPT.json",
+      "evidence_sha256": "9f24188e13a6b74fe0e1844714208003a9e1da55ffa94efad838a147c105501a",
+      "gate": "TABLES_R123",
+      "method": "ledger_verified"
+    },
+    {
+      "evidence": "TABLE_MASTER_LEDGER.tsv",
+      "evidence_sha256": "0e4fb0d8a69a10c1133c372852644d5fe65cb0f5d748a110cbe49c557755b07a",
+      "gate": "TABLE_UNIQUE_ID_GATE",
+      "method": "derived"
+    },
+    {
+      "evidence": "FIGURE_MASTER_LEDGER.json",
+      "evidence_sha256": "3bde0a4a2bf32177a2114d2202b45c8ee5aec10b61d3875e222e7c000ab0732a",
+      "gate": "FIGURE_PARTITION_GATE",
+      "method": "derived"
+    },
+    {
+      "evidence": "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf",
+      "evidence_sha256": "e5b38f10dadec97d2f40b1581bca7bcdad0f15c660e0ec083e84fec8c2dca604",
+      "gate": "HUMAN_VISUAL_REVIEW",
+      "method": "operator_required"
+    }
+  ],
+  "schema": "hydradg.non_asserted_machine_gate_audit.v1"
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "sponsor.cotal.upstream_pin.v1",
+  "provider": "Cotal",
+  "product": "open standard for agent coordination (pub/sub mesh)",
+  "clone_url": "https://github.com/Cotal-AI/Cotal.git",
+  "html_url": "https://github.com/Cotal-AI/Cotal",
+  "default_branch": "main",
+  "pinned_commit_sha": "d1aeafc36bbbbd5e8d5f2e181cd7083f46e1b8b9",
+  "pinned_commit_date_utc": "2026-08-27T04:22:27Z",
+  "license": "Apache-2.0",
+  "topics": [
+    "a2a",
+    "agent-communication",
+    "agent-orchestration",
+    "multi-agent",
+    "nats",
+    "protocol",
+    "pubsub"
+  ],
+  "official_docs": "https://docs.cotal.ai/",
+  "installer": "https://get.cotal.ai",
+  "hydradg_boundary": {
+    "role": "COORDINATION_MESH_ONLY",
+    "canonical_fcg": false,
+    "hosted_on_vercel": false,
+    "scientific_execution_authority": "magicSTUDIObox.local",
+    "cotal_message_signature_vs_hydradg_fco_signature": "SEPARATE_FIELDS",
+    "note": "Cotal message-signature verification must never set HydraDG SIGNATURE_STATE=SIGNED."
+  },
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "fcg_append": "NOT_APPENDED",
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T06:30:00.000Z",
+  "status": "PASS"
+}

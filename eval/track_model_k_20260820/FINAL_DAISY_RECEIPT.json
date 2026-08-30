@@ -1,0 +1,29 @@
+{
+  "best_use_hydradb_state": "BEST_USE_HYDRADB_EVIDENCE_PACKAGE_COMPLETE",
+  "determinism_gate_all_cells": "PASS",
+  "host": "magicstudiobox",
+  "models_evaluated": [
+    "heuristic",
+    "qwen2.5-coder:7b",
+    "qwen2.5:7b",
+    "deepseek-r1:14b"
+  ],
+  "overall_claim_ceiling": "NO_MODEL_BENEFIT_OBSERVED",
+  "primary_family_statistical_decision": "ALL_NULL_HYPOTHESES_RETAINED_UNDER_HOLM_CORRECTION",
+  "retrieval_depths": [
+    5,
+    10,
+    100
+  ],
+  "schema": "hydradg.final_daisy_receipt.v1",
+  "status": "PASS_CROSS_TRACK_BENCHMARK_COMPLETED",
+  "timestamp_unix": 1787262339,
+  "track01_claim_ceiling": "TRACK01_NO_GRAPH_ADVANTAGE_OBSERVED",
+  "track02_claim_ceiling": "TRACK02_REAL_DEPENDENCY_BENCHMARK_EXECUTED",
+  "track03_claim_ceiling": "TRACK03_DEPTH_EFFECT_REPLICATED; SATURATION_AND_CONTEXT_DILUTION_OBSERVED_AT_K100",
+  "tracks_evaluated": [
+    "track01",
+    "track02",
+    "track03"
+  ]
+}

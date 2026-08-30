@@ -1,0 +1,17 @@
+{
+  "schema": "hydralamp.runtype.experiment_config.v1",
+  "experiment_family": "HYDRALAMP_RUNTYPE_LIVE_20S",
+  "max_tool_calls": 6,
+  "model_decision_deadline_ms": 10000,
+  "demo_window_ms": 20000,
+  "temperature": 0,
+  "cache": false,
+  "system_prompt_id": "hydralamp_custody_sentinel_v1",
+  "tools": [
+    "inspect_state",
+    "trace_divergence",
+    "verify_actor_proof",
+    "attempt_repair"
+  ],
+  "claim_ceiling_until_executed": "PREREGISTERED_RUNTYPE_HYDRALAMP_DEMO_DESIGN"
+}

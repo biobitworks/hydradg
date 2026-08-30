@@ -1,0 +1,35 @@
+{
+  "schema": "hydradg.deterministic_artifact_binding.v1",
+  "FCO_BINDING_STATE": "GOVERNED_EXTENSION_RECEIPT_ONLY_NO_CANONICAL_FCG_APPEND",
+  "capture_id": "hydralamp-submission-hero-20260827",
+  "license_preference": {
+    "research_content_and_submission_hero_media": "CC-BY-NC-ND-4.0",
+    "software_and_website_metadata": "Apache-2.0",
+    "superseded_cc_by_4_metadata": "SUPERSEDED_METADATA_ERROR",
+    "authority": "LICENSING.md"
+  },
+  "artifacts": [
+    {
+      "role": "raw_submission_hero_png",
+      "path": "eval/immersive_commons_submission_20260827/assets/HYDRALAMP_SUBMISSION_HERO.png",
+      "public_path": "/submission/HYDRALAMP_SUBMISSION_HERO.png",
+      "sha256": "a5d558ab914b08da7373f858fbe79f60871315740e2abe06c39c31367c392b09",
+      "fco_type": "SubmissionHeroMediaFCO",
+      "content_addressed_id": "fco:c39e474cfb598c86ba66b288403850aec57e65573f31342bc9644487e4a40ddc"
+    },
+    {
+      "role": "annotation_manifest",
+      "path": "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_ANNOTATIONS.json",
+      "fco_type": "DeterministicArtifactReceipt"
+    },
+    {
+      "role": "materialization_receipt",
+      "path": "eval/immersive_commons_submission_20260827/assets/SUBMISSION_HERO_MATERIALIZATION_RECEIPT.json",
+      "fco_type": "MediaMaterializationReceipt"
+    }
+  ],
+  "CANONICAL_FCG_EDGES": [],
+  "fcg_append": "NOT_PERFORMED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED"
+}

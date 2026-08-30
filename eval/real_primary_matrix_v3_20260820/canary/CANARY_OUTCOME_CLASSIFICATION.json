@@ -1,0 +1,29 @@
+{
+  "schema": "hydradg.canary_outcome_classification.v1",
+  "timestamp_unix": 1787280960,
+  "runner_git_sha": "fec1ed7c1328a5d5f2259e53e963d9407286feb9",
+  "runner_file_sha256": "6635f7093aeb58861dd8d2852139104095a1a261d2d8c39e6056b0dee50d86b3",
+  "canary_final_gate_sha256": "c5fd2677d9389b32eb9ae4c315a8e28196d52a38e7781739879c88994f880660",
+  "classifications": [
+    {"model": "deepseek-r1:14b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "qwen2.5-coder:7b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "phi4-reasoning:14b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "qwen2.5:7b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "llama3.2:3b", "classification": "VALID_INCORRECT_RESULT", "status": 200, "failure_reason": None},
+    {"model": "granite4.1:3b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "llama3.2:1b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "qwen2.5:0.5b", "classification": "VALID_CORRECT_RESULT", "status": 200, "failure_reason": None},
+    {"model": "qwen2.5:1.5b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"},
+    {"model": "qwen3:1.7b", "classification": "EXECUTION_TRANSPORT_FAILURE", "status": 500, "failure_reason": "timed out (30s threshold)"}
+  ],
+  "infrastructure_valid_count": 2,
+  "infrastructure_failure_count": 8,
+  "scientific_correct_count": 1,
+  "scientific_incorrect_count": 1,
+  "scientific_abstention_count": 0,
+  "earliest_infrastructure_divergence": "OLLAMA_COLD_LOAD_TIMEOUT_30S_EXCEEDED",
+  "full_matrix_admission": "FAIL",
+  "claim_ceiling": "V3_CANARY_INFRASTRUCTURE_TIMEOUT_8_MODELS_V4_REQUIRED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

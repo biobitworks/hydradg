@@ -1,0 +1,22 @@
+{
+  "determinism_gate": "PASS",
+  "model_name": "heuristic",
+  "r1_r2_r3_equal": true,
+  "retrieval_horizon_k10": {
+    "abstentions": 30,
+    "evidence_coverage": 0.965,
+    "flops_avoided": 1.17e+17,
+    "hit_at_k": 0.978,
+    "recall_at_k": 0.941,
+    "wh_equivalent": 0.3249
+  },
+  "retrieval_horizon_k5": {
+    "abstentions": 30,
+    "evidence_coverage": 0.912,
+    "flops_avoided": 5.85e+16,
+    "hit_at_k": 0.942,
+    "recall_at_k": 0.884,
+    "wh_equivalent": 0.1624
+  },
+  "schema": "hydradg.control_reference.v1"
+}

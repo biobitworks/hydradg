@@ -1,0 +1,22 @@
+{
+  "agent-a": {
+    "model_id": "fixture:qwen",
+    "raw_output_sha256": "39958b85730988ed8d8a64d6c4d9acbdb44e1c3fb490ad502b686d732a71282a"
+  },
+  "agent-b": {
+    "model_id": "fixture:mistral",
+    "raw_output_sha256": "39958b85730988ed8d8a64d6c4d9acbdb44e1c3fb490ad502b686d732a71282a"
+  },
+  "agent-c": {
+    "model_id": "fixture:verifier-peer",
+    "raw_output_sha256": "39958b85730988ed8d8a64d6c4d9acbdb44e1c3fb490ad502b686d732a71282a"
+  },
+  "poison": {
+    "model_id": "fixture:poison",
+    "raw_output_sha256": "e58d4d018ad054f68619c57bfc91ad0f80bd39247cdc70dafa53c0ace1bdd58d"
+  },
+  "repair": {
+    "model_id": "fixture:repair",
+    "raw_output_sha256": "9d71309759b41f41d70072bfd987b609e4af34be496ec28c7fb58be89b85c66a"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "hydradg.final_daisy.routing_plan.v1",
+  "state": "PREREGISTERED_PLAN_NOT_EXECUTED",
+  "deterministic_executor": [
+    "uv",
+    "python",
+    "snakemake",
+    "seedgraph_structural_extraction",
+    "sha256",
+    "scoring",
+    "statistics",
+    "fco_validation",
+    "fcg_validation"
+  ],
+  "ollarma": {
+    "allowed_inputs": ["UNRESOLVED", "AMBIGUOUS"],
+    "forbidden_inputs": ["EVAL_ONLY_LABELS", "HELD_OUT_ANSWERS", "SECRET_KEYS"],
+    "output_class": "PROBABILISTIC_MODEL_OUTPUT",
+    "promotion_requires_deterministic_verification": true,
+    "watcher_generation_during_active_scientific_inference": "FORBIDDEN"
+  },
+  "repo_sources": {
+    "hydralamp": "READ_AND_ADMIT_EXACT_RECEIPTS_ONLY",
+    "fractal-custody-objects": "SCHEMA_AND_REFERENCE_IMPLEMENTATION_SOURCE",
+    "gettingsciencedone": "SCIENTIFIC_METHOD_AND_GSIGMAD_SOURCE",
+    "seedgraph": "STRUCTURAL_INGESTION_SOURCE",
+    "antigence": "RELATED_IMPLEMENTATION_AND_ANTICUBE_LINEAGE_IF_EXACT_SOURCE_RESOLVED",
+    "vitaology": "RELATED_IMPLEMENTATION_VITHIA_FIXTURE_SOURCE",
+    "xenodisorder": "RELATED_IMPLEMENTATION_SOURCE"
+  },
+  "writeback": {
+    "mode": "BATCHED",
+    "default_verified_sources_per_batch": 25,
+    "requires_readback_before_next_promotion": true
+  }
+}

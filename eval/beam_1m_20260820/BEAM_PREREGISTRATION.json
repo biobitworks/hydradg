@@ -1,0 +1,30 @@
+{
+  "beam_numerical_results_published": false,
+  "blockers": [
+    "OFFICIAL_BEAM_1M_ROWS_NOT_MATERIALIZED",
+    "OFFICIAL_DATA_REVISION_AND_ROW_HASHES_NOT_FROZEN"
+  ],
+  "expected_conversations_count": 35,
+  "expected_probes_count": 700,
+  "future_multi_agent_experiment": "FUTURE_MULTI_AGENT_ECONOMICS.json",
+  "generative_inference_started": false,
+  "official_rows_materialized": false,
+  "preregistration_sha256": "2ee93a86ead6622cf6dfa0abb0af8fc8111cfcb0b42418265b2398271d2b9014",
+  "primary_route_comparison": "Route H vs Route A after official rows are materialized and frozen",
+  "published_hydradb_reference_accuracy": 0.82,
+  "published_reference_state": "EXTERNAL_REFERENCE_NOT_HYDRADG_RESULT",
+  "ready_for_execution": false,
+  "routes_implemented": [
+    "Route A",
+    "Route B",
+    "Route C",
+    "Route D",
+    "Route E",
+    "Route F",
+    "Route G",
+    "Route H"
+  ],
+  "schema": "hydradg.beam_preregistration.v2",
+  "scientific_claim_ceiling": "BEAM_PIPELINE_PREPARED_OFFICIAL_ROWS_NOT_MATERIALIZED",
+  "tier": "BEAM_1M"
+}

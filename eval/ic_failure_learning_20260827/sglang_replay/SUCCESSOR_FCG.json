@@ -1,0 +1,43 @@
+{
+  "schema": "hydradg.sglang_replay.successor_fcg.v1",
+  "domain_separator": "hydradg.sglang_replay.mmr.v1",
+  "canonical_reference": {
+    "commit": "71bf05dc8630641965c513a16790c192c9799d2e",
+    "recipe": "leaf_sha256_0x00; node_sha256_0x01"
+  },
+  "nodes": [
+    {
+      "node_id": "HistoricalRuntypeProbeFCO",
+      "kind": "HistoricalRuntypeProbeFCO",
+      "LIVE_RUNTYPE_READY": "PROBE_CONTROL_SMOKE",
+      "control_smoke_lane_status": "ERROR",
+      "runtype_execution_id": null,
+      "selected_model_id": "qwen/qwen3.6-27b"
+    },
+    {
+      "node_id": "SglangReplayExperimentFCO",
+      "kind": "SglangReplayExperimentFCO",
+      "REPLAY_EQUIVALENCE": "BLOCKED_CUDA_UNAVAILABLE",
+      "SGLANG_GIT_SHA": "acc918b3ece60af20321612b8ad204bdba8fcb80",
+      "predecessor_ic_fcg_root": "08267db2a56b96155db46a06d334d9ed27a7a09dc43cd276923d32b56167131e"
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "e:historical-superseded-by-sglang",
+      "src": "HistoricalRuntypeProbeFCO",
+      "rel": "SUPERSEDED_FOR_TESTING_BY",
+      "dst": "SglangReplayExperimentFCO"
+    }
+  ],
+  "successor_fcg_root": "d31618fd7479abd506314eb095277117c31b614552d2072780d0fabdfdd408c3",
+  "backbones": [
+    {
+      "height": 1,
+      "peak_root": "d31618fd7479abd506314eb095277117c31b614552d2072780d0fabdfdd408c3"
+    }
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "COMMITTED_SGLANG_REPLAY_DOMAIN",
+  "CLAIM_CEILING": "SUCCESSOR_EXPERIMENT_CUSTODY_ONLY"
+}

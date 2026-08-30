@@ -1,0 +1,133 @@
+{
+  "schema": "hydradg.submission_hero_annotations.v1",
+  "image_sha256": "a5d558ab914b08da7373f858fbe79f60871315740e2abe06c39c31367c392b09",
+  "coordinate_space": "normalized_0_1000",
+  "license_preference": {
+    "annotation_overlay_software": "Apache-2.0",
+    "hero_image_research_content": "CC-BY-NC-ND-4.0",
+    "authority": "LICENSING.md"
+  },
+  "judge_path": {
+    "label": "Golden Path · 8 steps for judges",
+    "arc_bbox": { "x": 520, "y": 120, "w": 460, "h": 820 },
+    "steps": [
+      { "number": "01", "title": "Reference", "href": "/judge#golden-reference" },
+      { "number": "02", "title": "Poison", "href": "/judge#golden-poison" },
+      { "number": "03", "title": "Antidote", "href": "/judge#golden-antidote" },
+      { "number": "04", "title": "HydraDB", "href": "/judge#hydradb-status" },
+      { "number": "05", "title": "Results", "href": "/track03" },
+      { "number": "06", "title": "Evidence", "href": "/evidence" },
+      { "number": "07", "title": "Future", "href": "/beam-1m" },
+      { "number": "08", "title": "Claim", "href": "/eligibility" }
+    ]
+  },
+  "deployment_links": {
+    "vercel_production": "https://hydralamp.vercel.app/",
+    "vercel_golden_legacy": "https://hydralamp.vercel.app/golden",
+    "vercel_static_fallback": "https://hydralamp.vercel.app/demo/index.html",
+    "local_studio_authority": "http://127.0.0.1:3000/hydralamp",
+    "hydradg_repo": "https://github.com/biobitworks/hydradg",
+    "hydralamp_repo": "https://github.com/biobitworks/hydralamp"
+  },
+  "regions": [
+    {
+      "id": "hydralamp-core",
+      "label": "HydraLamp FCO Core",
+      "kind": "custody_anchor",
+      "bbox": { "x": 380, "y": 180, "w": 240, "h": 520 },
+      "detail": "46-event golden lane · reference → poison → antidote → restoration"
+    },
+    {
+      "id": "ship-of-theseus",
+      "label": "Ship of Theseus",
+      "kind": "judge_concept",
+      "bbox": { "x": 180, "y": 120, "w": 220, "h": 280 },
+      "detail": "Identity continuity under custody repair without erasing divergent history"
+    },
+    {
+      "id": "sponsor-runtype",
+      "label": "Runtype · P0",
+      "kind": "sponsor",
+      "priority": "P0",
+      "bbox": { "x": 720, "y": 60, "w": 180, "h": 90 },
+      "detail": "Agent product voyage · flows + evals · preserved ERROR lane"
+    },
+    {
+      "id": "sponsor-tavily",
+      "label": "Tavily · P0",
+      "kind": "sponsor",
+      "priority": "P0",
+      "bbox": { "x": 640, "y": 160, "w": 170, "h": 85 },
+      "detail": "External retrieval · golden-path source lane · PASS"
+    },
+    {
+      "id": "sponsor-cortex",
+      "label": "Cortex · P0",
+      "kind": "sponsor",
+      "priority": "P0",
+      "bbox": { "x": 560, "y": 260, "w": 160, "h": 80 },
+      "detail": "Mitosis memory roundtrip · external only · not canonical FCG"
+    },
+    {
+      "id": "sponsor-cotal",
+      "label": "Cotal · P1",
+      "kind": "sponsor",
+      "priority": "P1",
+      "bbox": { "x": 500, "y": 360, "w": 150, "h": 75 },
+      "detail": "Bounded A2A mesh transaction · BOUNDED_TX_PASS"
+    },
+    {
+      "id": "sponsor-aisa",
+      "label": "AIsa · P1",
+      "kind": "sponsor",
+      "priority": "P1",
+      "bbox": { "x": 460, "y": 460, "w": 140, "h": 70 },
+      "detail": "qwen-flash proposal lane · composed golden path"
+    },
+    {
+      "id": "sponsor-ic",
+      "label": "Immersive Commons · P1",
+      "kind": "sponsor",
+      "priority": "P1",
+      "bbox": { "x": 420, "y": 560, "w": 200, "h": 80 },
+      "detail": "Event host · MCP surface · submission AWAITING_HUMAN_APPROVAL"
+    },
+    {
+      "id": "sponsor-yappy",
+      "label": "Yappy.biz · P1",
+      "kind": "sponsor",
+      "priority": "P1",
+      "bbox": { "x": 380, "y": 660, "w": 150, "h": 70 },
+      "detail": "Public product API · PASS · distinct from Mitosis Yappy"
+    },
+    {
+      "id": "sponsor-tenki",
+      "label": "Tenki · P2",
+      "kind": "sponsor",
+      "priority": "P2",
+      "bbox": { "x": 340, "y": 750, "w": 130, "h": 65 },
+      "detail": "Sandbox microVM · deterministic exec receipt"
+    },
+    {
+      "id": "track-golden-path",
+      "label": "Composed Golden Path",
+      "kind": "track",
+      "bbox": { "x": 600, "y": 680, "w": 320, "h": 100 },
+      "detail": "Tavily → AIsa → verify → quarantine · PARTIAL_P0_WITH_COMPOSED_FIXTURE"
+    },
+    {
+      "id": "track-ufa",
+      "label": "Ultimate Fighting Agents",
+      "kind": "track",
+      "bbox": { "x": 680, "y": 800, "w": 260, "h": 90 },
+      "detail": "Submission-only track · perturbation receipts preserved"
+    },
+    {
+      "id": "track-judge-strip",
+      "label": "Judge Strip · 8 metrics",
+      "kind": "track",
+      "bbox": { "x": 720, "y": 880, "w": 240, "h": 80 },
+      "detail": "PRIVATE_LEAK=0 · UNAUTHORIZED_WRITE=0 · RESTORATION_PASS · BROWSER_VERIFY_PASS"
+    }
+  ]
+}

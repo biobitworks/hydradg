@@ -1,0 +1,34 @@
+{
+  "datasets": [
+    {
+      "id": "EnterpriseRAG-Bench",
+      "n": 300,
+      "role": "PRIMARY",
+      "sha256": "8f3b21049a0e1",
+      "track": "track01"
+    },
+    {
+      "id": "HydraBlast-Real-Deps",
+      "n": 250,
+      "role": "PRIMARY",
+      "sha256": "1c7d92058b4e2",
+      "track": "track02"
+    },
+    {
+      "id": "LongMemEval-S-full500",
+      "n": 470,
+      "role": "PRIMARY",
+      "sha256": "4b97a2c1f010e",
+      "track": "track03"
+    },
+    {
+      "herb_state": "RIGHTS_PASS_DATA_NOT_EXECUTABLE",
+      "id": "HERB",
+      "n": 0,
+      "rights_pass": true,
+      "role": "SECONDARY_RIGHTS_GATED",
+      "track": "track01"
+    }
+  ],
+  "schema": "hydradg.dataset_registry.v1"
+}

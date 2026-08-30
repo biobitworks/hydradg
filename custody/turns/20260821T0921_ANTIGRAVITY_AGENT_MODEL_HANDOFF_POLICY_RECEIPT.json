@@ -1,0 +1,41 @@
+{
+  "actor_class": "ANTIGRAVITY",
+  "actor_id": "Antigravity Gemini 3.6 Flash",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_GOVERNED_CANARY_PASS_FULL_MATRIX_IN_PROGRESS_NOT_FINAL",
+  "evidence_class": "CANONICAL_FCO_FCG_HYDRADB_APPLICATION",
+  "execution_host": "magicSTUDIObox.local",
+  "git_commit": "b322b97f0ed83ff51443d39cec5cc88715cfe177404d7aaaf4f7ff1592197c73",
+  "handoff_id": "ANTIGRAVITY_AGENT_MODEL_HANDOFF_POLICY_20260821T0921_PT",
+  "input_dependencies": [
+    {
+      "evidence_class": "AI_GENERATED_GITHUB_POLICY_TRANSFORMATION",
+      "id": "chatgpt_policy_receipt",
+      "sha256": "3d49102e9cd9ba3ddc733d29230f3a0c97edf71f5f3a77ac72223b77d2d9f487"
+    },
+    {
+      "evidence_class": "RECOMPUTED_FILE_HASHES",
+      "id": "recomputed_policy_files",
+      "sha256": "eab1aeed466d5bf7b73d25ec8de71473be4cf953867ba7c09ac99863b0aac253"
+    }
+  ],
+  "merkle_mmr": {
+    "receipt_sha256": "94b03565b772b69cb59ffa0fd977b97c571de5b14aa5bf8eaa4d0fb284f137c9",
+    "root": "e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+    "state": "NOT_PROJECT_COMMITTED"
+  },
+  "parent_handoff_sha256": "3d49102e9cd9ba3ddc733d29230f3a0c97edf71f5f3a77ac72223b77d2d9f487",
+  "receipt_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "repo": "biobitworks/hydradg",
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "algorithm": null,
+    "public_key_id": null,
+    "signature_path": null,
+    "signed_scope": null,
+    "state": "NOT_SIGNED",
+    "verification_receipt_sha256": "NOT_APPLICABLE"
+  },
+  "timestamp_utc": "2026-08-21T16:22:06Z",
+  "transformation_class": "AUTOMATED_APPLICATION_AND_READBACK"
+}

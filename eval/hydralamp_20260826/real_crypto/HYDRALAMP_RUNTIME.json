@@ -1,0 +1,27 @@
+{
+  "mode": "REAL_CRYPTO_CANARY",
+  "security_claim_eligibility": "CONDITIONAL_ON_OBSERVED_TESTS",
+  "fcg_root": "7ace7e325779ffde0a2584623e16b69b1390cdf0d1fb8fc3ea2e3d87c982fff9",
+  "unauthorized_plaintext_disclosures": 0,
+  "unauthorized_canonical_writes": 0,
+  "real_crypto_receipts": [
+    "REAL_ENCRYPTION",
+    "REAL_SIGNATURE_OPERATION",
+    "REAL_SIGNATURE_VERIFICATION",
+    "REAL_AUTHORIZED_DECRYPTION"
+  ],
+  "diagnostics": {
+    "g_star": 0.172632,
+    "delta_g_star": 0.172632,
+    "cloud_drift_0_100": 45.9148,
+    "burden": 0.333333,
+    "poison_burden": 0
+  },
+  "msm_matrix": {
+    "UNKNOWN": {
+      "AUTHENTICATED": 1,
+      "EVIDENCE_ACCESSED": 1,
+      "DENIED": 1
+    }
+  }
+}

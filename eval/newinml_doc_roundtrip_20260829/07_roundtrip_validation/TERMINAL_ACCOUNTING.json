@@ -1,0 +1,56 @@
+{
+  "multiset_post": {
+    "ABSTAIN": 1,
+    "BLOCKED_DEPENDENCY": 1,
+    "CONTRADICTED": 1,
+    "FAIL": 1,
+    "MALFORMED": 1,
+    "NOT_COMPUTED": 1,
+    "PASS": 1,
+    "TIMEOUT": 1
+  },
+  "multiset_pre": {
+    "ABSTAIN": 1,
+    "BLOCKED_DEPENDENCY": 1,
+    "CONTRADICTED": 1,
+    "FAIL": 1,
+    "MALFORMED": 1,
+    "NOT_COMPUTED": 1,
+    "PASS": 1,
+    "TIMEOUT": 1
+  },
+  "terminals": [
+    {
+      "state": "PASS",
+      "synthetic": true
+    },
+    {
+      "state": "FAIL",
+      "synthetic": true
+    },
+    {
+      "state": "ABSTAIN",
+      "synthetic": true
+    },
+    {
+      "state": "TIMEOUT",
+      "synthetic": true
+    },
+    {
+      "state": "MALFORMED",
+      "synthetic": true
+    },
+    {
+      "state": "NOT_COMPUTED",
+      "synthetic": true
+    },
+    {
+      "state": "BLOCKED_DEPENDENCY",
+      "synthetic": true
+    },
+    {
+      "state": "CONTRADICTED",
+      "synthetic": true
+    }
+  ]
+}

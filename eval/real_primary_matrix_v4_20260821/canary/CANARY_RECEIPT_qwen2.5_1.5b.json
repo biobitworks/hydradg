@@ -1,0 +1,30 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "c333b7232bdb",
+  "model_name": "qwen2.5:1.5b",
+  "parsed_output": "Entities derived from longmemeval_s_case_0001",
+  "parsed_output_sha256": "5ad5aedec968b7b2fb99705a1294d4e226530610d1608091dcc4d8168c4393ed",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "To perform the requested retrieval/context task, I will extract canonical entities and relationships from the provided content. The content is a part of a longitudinal conversation session where user interactions are recorded along with their temporal updates and factual information.\n\n### Step 1: Id",
+  "raw_response_bytes": 1546,
+  "raw_response_sha256": "a21df4349c0ea5c0381957454e495abddd6201f91a3def4e2c00525c8b6acb8c",
+  "request_sha256": "8fad6a655bd3e8f0e6305a3b1ebc17a9799f7fa876e83a747ff6a16dc80849b5",
+  "scientific_correct": true,
+  "scientific_end": 1787308375.393354,
+  "scientific_start": 1787308361.548256,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 13.845,
+  "warmup_receipt_sha256": "4e36af507220a7e8b36f90052ae020d32345a818be6352cb81336178d77f6256"
+}

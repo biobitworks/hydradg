@@ -1,0 +1,15 @@
+{
+  "included": [
+    "public_fcg.json",
+    "public_actor_keys.json",
+    "encrypted_private_fco_payloads.json",
+    "public_capabilities.json",
+    "receipts.jsonl"
+  ],
+  "excluded": [
+    "actor_private_keys",
+    "authority_private_key",
+    "payload_decryption_keys",
+    "unprotected_plaintext_private_fixture"
+  ]
+}

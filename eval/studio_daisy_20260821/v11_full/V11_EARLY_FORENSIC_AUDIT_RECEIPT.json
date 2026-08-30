@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.v11_early_forensic_audit_receipt.v1",
+  "timestamp_utc": "2026-08-21T19:40:00Z",
+  "audit_execution_host": "magicSTUDIObox.local",
+  "v11_execution_sha": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+  "run_id": "studio_daisy_20260821_v11_full",
+  "slots_accounted": 48,
+  "slots_expected": 6930,
+  "terminal_counts": {
+    "SUCCESS_CORRECT": 8,
+    "SUCCESS_INCORRECT": 1,
+    "FAILED_EMPTY_RESPONSE": 39,
+    "ABSTENTION_CONTEXT_OVERFLOW": 0,
+    "TIMEOUT": 0,
+    "HTTP_ERROR": 0,
+    "PARSER_FAILURE": 0
+  },
+  "output_budget_binding": "YES",
+  "output_budget_binding_evidence": "100% of the 39 FAILED_EMPTY_RESPONSE slots hit eval_count = 256 (num_predict limit) with done_reason = 'length' and thinking_bytes > 0 (850 to 1419 bytes) without emitting final response text.",
+  "v11_classification": "EARLY_TERMINATED_OUTPUT_BUDGET_LIMITED_CANARY_MATRIX",
+  "run_status": "EARLY_TERMINATED_FOR_RECONFIG_REVIEW",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_DIAGNOSTIC_CANARY_MATRIX_EXECUTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "PENDING_OPERATION_RECEIPT_CONFIRMATION",
+  "next_safe_action": "STOP_FOR_HUMAN_CHATGPT_REVIEW_BEFORE_V12_RECONFIGURATION",
+  "final_review_gate": "HYDRADG_V11_OUTPUT_BUDGET_LIMIT_DIAGNOSED__STOP_FOR_V12_REVIEW"
+}

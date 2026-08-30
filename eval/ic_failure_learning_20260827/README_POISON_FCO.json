@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.ic_failure_learning.readme_poison_fco.v1",
+  "fco_id": "README_POISON_FCO",
+  "source_path": "README.md",
+  "source_commit": "7a737d868e3d444aa29a629219fba689425959da",
+  "source_sha256": "628a7e48e52d2ddd38245dfeb94994b099f9b7a804ccc2248df769f49f53ec04",
+  "submitted_repo_url": "https://github.com/biobitworks/hydradg",
+  "presents_project_as": "HydraDG / Hack Hydra Track 03",
+  "conflicts_with": "HydraLamp Immersive Commons Aug 26-27 delta",
+  "anticube_classification": "SELF_NON_SAFE",
+  "first_divergence_hypothesis": "H_README_POISON",
+  "null_hypothesis": "H0_README",
+  "propagation_candidates": [
+    "OriginClassificationDecision",
+    "LandsInProductRubricDimension",
+    "ModelJudgeOriginAmbiguity"
+  ],
+  "downstream_dependent_count": 4,
+  "POISON_RETAINED": true,
+  "claim_ceiling": "INFERENCE_HYPOTHESIS"
+}

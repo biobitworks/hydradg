@@ -1,0 +1,72 @@
+{
+  "co_primary_family_tests": 9,
+  "correction_method": "Holm-Bonferroni",
+  "family_wise_alpha": 0.05,
+  "primary_test_results": [
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.6985354575022018,
+      "test_id": "track03:LongMemEval-S-full500:qwen2.5:7b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.7945724594716763,
+      "test_id": "track03:LongMemEval-S-full500:qwen2.5-coder:7b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.8262384360963847,
+      "test_id": "track01:EnterpriseRAG-Bench:qwen2.5:7b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.8638317405351497,
+      "test_id": "track02:HydraBlast-Real-Deps:deepseek-r1:14b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.9120670477020211,
+      "test_id": "track01:EnterpriseRAG-Bench:qwen2.5-coder:7b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.9999999989503827,
+      "test_id": "track01:EnterpriseRAG-Bench:deepseek-r1:14b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.9999999989503827,
+      "test_id": "track02:HydraBlast-Real-Deps:qwen2.5-coder:7b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.9999999989503827,
+      "test_id": "track02:HydraBlast-Real-Deps:qwen2.5:7b"
+    },
+    {
+      "adjusted_p_value": 1.0,
+      "is_significant_at_alpha_0_05": false,
+      "null_hypothesis_retained": true,
+      "raw_p_value": 0.9999999989503827,
+      "test_id": "track03:LongMemEval-S-full500:deepseek-r1:14b"
+    }
+  ],
+  "schema": "hydradg.cross_track_stats.v1",
+  "timestamp_unix": 1787262339
+}

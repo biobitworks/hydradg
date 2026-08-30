@@ -1,0 +1,24 @@
+{
+  "canonical_edge_records_materialized": 1692,
+  "canonical_node_records_materialized": 653,
+  "container_fco_records_materialized": 74,
+  "materialized_total_edge_count": 1692,
+  "materialized_total_node_count": 727,
+  "projected_spatiotemporal_pointer_count": 20818956,
+  "schema": "hydradg.source_materialization_audit.v1",
+  "source_files": [
+    {
+      "path": "eval/hosted_migration_20260820/CONVERSATION_TURNS_FCO.jsonl",
+      "sha256": "9edc37a5667ed1cb35e1f667f77aa92684fe60e6fcea4bfba377e347e9f6a815",
+      "size_bytes": 453712
+    },
+    {
+      "path": "eval/hosted_migration_20260820/CONVERSATION_TURNS_EDGES.jsonl",
+      "sha256": "fcc5a1939f669a373c9df9f4d072e5bce09522e547a3cee88847f38f90571724",
+      "size_bytes": 301196
+    }
+  ],
+  "spatiotemporal_pointer_scale": "PROJECTED_OR_COUNTED_NOT_MATERIALIZED_FOR_CLOUD_STREAMING",
+  "state": "MATERIALIZATION_AUDIT_COMPLETED",
+  "timestamp_unix": 1787260839
+}

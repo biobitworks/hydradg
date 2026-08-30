@@ -1,0 +1,79 @@
+{
+  "blocked_remote": [],
+  "recorded_at_utc": "2026-08-29T08:17:50Z",
+  "rows": [
+    {
+      "capability": "host",
+      "ok": true,
+      "state": "PASS",
+      "tier": "OBSERVED"
+    },
+    {
+      "capability": "git_clean",
+      "ok": false,
+      "state": "BLOCKED",
+      "tier": "INFO"
+    },
+    {
+      "capability": "python",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REQUIRED"
+    },
+    {
+      "capability": "uv",
+      "ok": true,
+      "state": "PASS",
+      "tier": "OPTIONAL"
+    },
+    {
+      "capability": "ollama",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REQUIRED_Q38"
+    },
+    {
+      "capability": "qwen38_digest",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REQUIRED_Q38"
+    },
+    {
+      "capability": "cloudflare_os",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REQUIRED_CFOS"
+    },
+    {
+      "capability": "wrangler",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REQUIRED_CFOS"
+    },
+    {
+      "capability": "local_cuda",
+      "ok": false,
+      "state": "BLOCKED",
+      "tier": "OPTIONAL_LOCAL"
+    },
+    {
+      "capability": "daytona_auth",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REMOTE_OPTIONAL"
+    },
+    {
+      "capability": "kaggle_auth",
+      "ok": true,
+      "state": "PASS",
+      "tier": "REMOTE_OPTIONAL"
+    },
+    {
+      "capability": "seedgraph",
+      "ok": true,
+      "state": "PASS",
+      "tier": "OPTIONAL"
+    }
+  ],
+  "schema": "hydradg.gum_doctor_v2.capability_matrix.v1"
+}

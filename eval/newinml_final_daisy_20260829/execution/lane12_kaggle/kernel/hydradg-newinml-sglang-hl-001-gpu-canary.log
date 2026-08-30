@@ -1,0 +1,12 @@
+[{"stream_name":"stderr","time":15.587955539,"data":"Traceback (most recent call last):\n"}
+,{"stream_name":"stderr","time":15.588033734,"data":"  File \"/kaggle/src/script.py\", line 35, in \u003cmodule\u003e\n"}
+,{"stream_name":"stderr","time":15.588038688,"data":"    _, tout, _ = run(\n"}
+,{"stream_name":"stderr","time":15.588041121,"data":"    ^^^^^^^^^^\n"}
+,{"stream_name":"stderr","time":15.588043403,"data":"TypeError: cannot unpack non-iterable CompletedProcess object\n"}
+,{"stream_name":"stderr","time":18.23772221,"data":"/usr/local/lib/python3.12/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":18.237755391,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":18.697799507,"data":"/usr/local/lib/python3.12/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":18.697829743,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":19.437706021,"data":"[NbConvertApp] Converting notebook __script__.ipynb to html\n"}
+,{"stream_name":"stderr","time":21.085538307,"data":"[NbConvertApp] Writing 297732 bytes to __results__.html\n"}
+]

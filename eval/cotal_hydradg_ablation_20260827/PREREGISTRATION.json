@@ -1,0 +1,130 @@
+{
+  "schema": "hydradg.cotal_coordination_custody_ablation.preregistration.v1",
+  "experiment_id": "COTAL_HYDRADG_ABLATION_20260827",
+  "title": "Cotal coordination \u00d7 HydraDG custody complementary ablation",
+  "framing": "NOT_WINNER_TAKE_ALL",
+  "goal": "Determine empirically what Cotal coordination contributes, what HydraDG custody contributes, and whether the combination provides complementary behavior.",
+  "execution_host": "magicSTUDIObox.local",
+  "scientific_execution_authority": "magicSTUDIObox.local",
+  "cotal_upstream": {
+    "clone_url": "https://github.com/Cotal-AI/Cotal.git",
+    "pin_receipt": "eval/agent_native_sponsors_20260827/cotal/COTAL_UPSTREAM_PIN.json"
+  },
+  "preregistered_before_execution": true,
+  "live_llm_in_primary_benchmark": false,
+  "silent_retry": false,
+  "scorer_locked": true,
+  "yappy_is_benchmark_condition": false,
+  "yappy_demo": "ONE_ILLUSTRATIVE_AFTER_MATRIX_IF_CONFIGURED",
+  "hydralamp_overnight_rerun": false,
+  "runtype_rerun": false,
+  "alter_existing_sponsor_receipts": false,
+  "constants": {
+    "fixture_set": "FIXTURES.json",
+    "payload_bytes": "identical_per_fixture_across_conditions",
+    "roles": [
+      "researcher",
+      "custodian"
+    ],
+    "ordering": [
+      "A_DIRECT_BASELINE",
+      "B_COTAL_ONLY",
+      "C_HYDRADG_ONLY",
+      "D_COTAL_HYDRADG"
+    ],
+    "fixture_order": [
+      "01_NORMAL_HANDOFF",
+      "02_UNAUTHORIZED_WRITE",
+      "03_INVALID_SENDER_IDENTITY",
+      "04_REPLAY_DUPLICATE",
+      "05_RESTART_RECOVERY",
+      "06_CONTRADICTORY_CLAIMS",
+      "07_UNSOURCED_CLAIM",
+      "08_SOURCE_DOES_NOT_SUPPORT_CLAIM",
+      "09_VALID_SOURCE_VALID_CLAIM",
+      "10_CORRUPTED_CUSTODY_RECEIPT"
+    ]
+  },
+  "conditions": {
+    "A_DIRECT_BASELINE": {
+      "coordination": "direct_HTTP_MCP",
+      "hydradg_custody": "OFF"
+    },
+    "B_COTAL_ONLY": {
+      "coordination": "cotal_local_JWT_mesh",
+      "hydradg_custody": "OFF"
+    },
+    "C_HYDRADG_ONLY": {
+      "coordination": "direct_HTTP_MCP",
+      "hydradg_custody": "ON"
+    },
+    "D_COTAL_HYDRADG": {
+      "coordination": "cotal_local_JWT_mesh",
+      "hydradg_custody": "ON"
+    }
+  },
+  "metric_families": {
+    "COORDINATION": [
+      "delivery_success",
+      "identity_authenticated",
+      "authorization_enforced",
+      "duplicate_delivery",
+      "ordered_delivery",
+      "restart_recovery",
+      "history_recovery",
+      "latency_ms"
+    ],
+    "CUSTODY": [
+      "source_preserved",
+      "evidence_class_correct",
+      "claim_admission",
+      "contradiction_preserved",
+      "unauthorized_canonical_write",
+      "receipt_recomputed",
+      "corrupt_receipt_rejected",
+      "earliest_divergence_identified"
+    ],
+    "collapse_to_single_score": false
+  },
+  "outcome_vocabulary": [
+    "PASS",
+    "FAIL",
+    "NULL",
+    "NEGATIVE",
+    "ERROR",
+    "TIMEOUT",
+    "ABSTAIN",
+    "CONTRADICTORY"
+  ],
+  "cryptographic_distinction": {
+    "cotal_message_signature_verification": "SEPARATE_FIELD",
+    "hydradg_fco_signature_state": "NOT_SIGNED",
+    "rule": "Never use Cotal message verification to set SIGNATURE_STATE=SIGNED. HydraDG remains NOT_SIGNED unless an actual authorized FCO private-key signing operation occurs."
+  },
+  "expected_complementarity_hypothesis": {
+    "statement": "Cotal improves coordination metrics (identity/auth/delivery/recovery) under mesh conditions; HydraDG custody improves custody metrics (admission/contradiction/unauthorized write/corrupt receipt). D should dominate A on the union of metric families without requiring either subsystem to win alone.",
+    "statistical_claim_ceiling": "DESCRIPTIVE_CONTRAST_ONLY",
+    "note": "No p-values claimed in this preregistration; RESULTS_MATRIX remains descriptive unless a later registered contrast is computed from arrays."
+  },
+  "stop_conditions": [
+    "Do not spawn live LLM agents for primary matrix",
+    "Do not rewrite sponsor mission receipts",
+    "Record ERROR/TIMEOUT/NULL honestly if mesh or custody path unavailable"
+  ],
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T06:35:00.000Z",
+  "fixtures_file_sha256": "76d2745a5fc46c42e7605d7cf15d3da20459a94cad6c9655f06022fd02f190b2",
+  "payload_sha256_by_fixture": {
+    "01_NORMAL_HANDOFF": "a07efd81ba04a244187f6a419489484496b180bd269b126ccbae28159fcb2b2b",
+    "02_UNAUTHORIZED_WRITE": "38c28b3a53cdf5749471eb34cc541ff44af763b6e2820f8df2f0c134a42b142f",
+    "03_INVALID_SENDER_IDENTITY": "2c55f94b5e168efb42d2f558af1b07c8cb3b24dfb678882d5cfc7a32bb92e22f",
+    "04_REPLAY_DUPLICATE": "39ce4d9a526f3654f6e156a5a2f9b0d7e5594dc6ee12a1e323e0a6ef632a1a5d",
+    "05_RESTART_RECOVERY": "99ed1cf7769482e6549f7c4d1807e4d8b69512953840b1ba584525285b0ba0e1",
+    "06_CONTRADICTORY_CLAIMS": "d51344f32909e0a9c88f25dbc2e0cdaa5aac8d46905252f259d035ba71251a6b",
+    "07_UNSOURCED_CLAIM": "ad3c0c9312049a16a59d397ec97aef8d2d594b294c39a5136d5dbc2b1c42c33e",
+    "08_SOURCE_DOES_NOT_SUPPORT_CLAIM": "d90b7ff950563bd6523e169c6f1e786dbcf12804fad8265613a5ca8fa700a2b3",
+    "09_VALID_SOURCE_VALID_CLAIM": "f7609a3199bcc71bae1b87a2c271f05a9ce83170a910e9d2213a0176b19add71",
+    "10_CORRUPTED_CUSTODY_RECEIPT": "296581b4a754fd21b2c4e6edeec8a252b3b0c34f4a194c9e40cee048cb498c52"
+  },
+  "preregistration_sha256": "cac6546936852cd954e7cee480e54d0b1a29f8c2a1dbce1301721541dea2c63a"
+}

@@ -1,0 +1,38 @@
+{
+  "recorded_at_utc": "2026-08-29T07:58:02Z",
+  "repairs_applied": [],
+  "repairs_blocked": [
+    {
+      "item": "gum_ai_stack_doctor.zsh",
+      "reason": "NOT_LOCATED_AFTER_CANONICAL_SEARCH",
+      "searched": [
+        "scripts/gum_ai_stack_doctor.zsh",
+        "ollarma/scripts/gum_ai_stack_doctor.zsh",
+        "bin/gum_ai_stack_doctor.zsh",
+        "gum-doctor CLI"
+      ]
+    },
+    {
+      "blocks": "CFOS-HL-001",
+      "item": "wrangler",
+      "reason": "NOT_IN_PATH"
+    },
+    {
+      "blocks": "SGLANG-HL-001",
+      "item": "CUDA host",
+      "reason": "NO_NVIDIA_SMI"
+    },
+    {
+      "blocks": "Q38-XENV-001",
+      "item": "Daytona",
+      "reason": "NO_API_CREDENTIALS_IN_ENV"
+    },
+    {
+      "blocks": "Q38-XENV-001",
+      "item": "Kaggle",
+      "reason": "NO_API_CREDENTIALS_IN_ENV"
+    }
+  ],
+  "schema": "hydradg.gum_doctor.repair_plan.v1",
+  "scientific_variables_frozen": true
+}

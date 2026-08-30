@@ -1,0 +1,91 @@
+{
+  "hit_count": 11,
+  "hits": [
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "garnett@wustl.edu",
+      "path": "paper/newinml2026_solo/manuscript/neurips_2026.sty",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "garnett@wustl.edu",
+      "path": "paper/newinml2026_solo/final_v4/manuscript/neurips_2026.sty",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "garnett@wustl.edu",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R2/source_freeze/official_neurips_2026.sty",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "contactnewinml@gmail.com",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R2/source_freeze/newinml_cfp.html",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "contactnewinml@gmail.com",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R2/source_freeze/newinml_cfp.html",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "garnett@wustl.edu",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R3/source_freeze/official_neurips_2026.sty",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "contactnewinml@gmail.com",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R3/source_freeze/newinml_cfp.html",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "contactnewinml@gmail.com",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R3/source_freeze/newinml_cfp.html",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "garnett@wustl.edu",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R1/source_freeze/official_neurips_2026.sty",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "contactnewinml@gmail.com",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R1/source_freeze/newinml_cfp.html",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    },
+    {
+      "classification": "FALSE_POSITIVE",
+      "match_excerpt": "contactnewinml@gmail.com",
+      "path": "paper/newinml2026_solo/final_v4/audit_reproducibility/R1/source_freeze/newinml_cfp.html",
+      "pattern": "email",
+      "reclassification_reason": "Third-party NeurIPS sty maintainer or frozen workshop CFP contact; not author identifier in submission PDF"
+    }
+  ],
+  "public_blocker_count": 0,
+  "reclassification_note": "Third-party NeurIPS sty maintainer email and frozen workshop CFP contact emails; not author identifiers in submission PDF.",
+  "reclassified_false_positive_count": 11,
+  "scanned_roots": [
+    "paper/newinml2026_solo/manuscript",
+    "paper/newinml2026_solo/reviewer_artifact",
+    "paper/newinml2026_solo/final_v4"
+  ],
+  "status": "PASS"
+}

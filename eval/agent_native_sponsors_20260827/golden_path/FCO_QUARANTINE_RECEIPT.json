@@ -1,0 +1,27 @@
+{
+  "schema": "sponsor.golden_path.fco_quarantine_receipt.v1",
+  "run_id": "anb_gp_mtc1tnyj_1b92065c",
+  "fco_state": "QUARANTINE_PROPOSALS_ONLY",
+  "materials": [
+    {
+      "kind": "tavily_external_evidence",
+      "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE",
+      "sha256": "da0c0f172d5f6ea927f5889e23235f7e88684b06a3ddeddae79893801302ec01",
+      "path": "eval/agent_native_sponsors_20260827/tavily/raw/TAVILY_EXTRACT_CORTEX_DOCS.json"
+    },
+    {
+      "kind": "aisa_probabilistic_proposal",
+      "evidence_class": "PROBABILISTIC_MODEL_OUTPUT",
+      "sha256": "e508d724879fd2f89b6f7a6ab648423c989e6695a2117dfa712dcc0a1c3b2ff5",
+      "path": "eval/agent_native_sponsors_20260827/golden_path/AISA_PROPOSAL_RECEIPT.json"
+    }
+  ],
+  "quarantine": {
+    "action": "QUARANTINE_EXTERNAL_EVIDENCE",
+    "admit_decision": "PENDING_CUSTODY_REVIEW",
+    "fcg_append": "NOT_APPENDED",
+    "fcg_mutation_count": 0,
+    "note": "External Tavily evidence and AIsa proposal remain noncanonical; FCG not mutated."
+  },
+  "signature_state": "NOT_SIGNED"
+}

@@ -1,0 +1,1170 @@
+{
+  "schema": "hydradg.hydralamp.cfmo.v1",
+  "version_count": 47,
+  "versions": [
+    {
+      "version_id": "cfmo:v000001:00a72169897f",
+      "sequence": 1,
+      "state_type": "TOY_KEY_MODE",
+      "payload": {
+        "claim_ceiling": "TOY_KEY_MECHANISM_ONLY_NO_AUTHENTICITY_OR_CONFIDENTIALITY"
+      },
+      "actor_id": "AUTHORITY",
+      "event_index": 0,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "0bbeba3330049d0a1f08aae46a4ee6e14c7e973fd1e3182b9de5b415566a2210"
+    },
+    {
+      "version_id": "cfmo:v000002:d791e4dabb37",
+      "sequence": 2,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "HUMAN_CONTROLLER",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "HUMAN_CONTROLLER",
+      "event_index": 1,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "24e2be228932480e7960aaa713c9adc0a5e43f6305d52e4612920328405d09b4"
+    },
+    {
+      "version_id": "cfmo:v000003:85511e7fd117",
+      "sequence": 3,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 2,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "f4c74272e816baaf63b9e81c56dc7311e16bd119b4745eb0856099867047be77"
+    },
+    {
+      "version_id": "cfmo:v000004:7fe5ec4d434b",
+      "sequence": 4,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 3,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "483c74fa55d8fca271acb960a8e065a4c42f66df4585acf9972be2e758a2565f"
+    },
+    {
+      "version_id": "cfmo:v000005:97c181f740d4",
+      "sequence": 5,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "READ_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_PAYLOAD",
+          "reason": "PUBLIC_ACCESS",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 4,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "e233d21cb17de204c36196318cee5bcb65cb716258d3e047fefdca80b171d327"
+    },
+    {
+      "version_id": "cfmo:v000006:846262bcc1dc",
+      "sequence": 6,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "READ_PRIVATE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PRIVATE_PAYLOAD",
+          "reason": "NO_CAPABILITY",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 5,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "54932ee00644d7a8add240ddfe4c4551b2ed3e86e35fc3dee5d8763b6cdf9efe"
+    },
+    {
+      "version_id": "cfmo:v000007:2337fe1b4c3a",
+      "sequence": 7,
+      "state_type": "QUARANTINE",
+      "payload": {
+        "event_type": "PROPOSAL_QUARANTINED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "QUARANTINED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": true,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 6,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "ec00d1fb910cadeeb29e93a969820ef9cba5128b49babaff81c3fa152e9a0f16"
+    },
+    {
+      "version_id": "cfmo:v000008:68260b986f07",
+      "sequence": 8,
+      "state_type": "CANONICAL",
+      "payload": {
+        "event_type": "CANONICAL_PROMOTED",
+        "actor_id": "REPAIR_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PROMOTE",
+          "reason": "CAPABILITY_GRANTED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": true
+        }
+      },
+      "actor_id": "REPAIR_AGENT",
+      "event_index": 7,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "b77841c7265e90dd772f5e09ffd0b54ee459afd2d669e20a86188e335f07ccc5"
+    },
+    {
+      "version_id": "cfmo:v000009:90afa97f083f",
+      "sequence": 9,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "UNAUTHORIZED_CANONICAL_WRITE_BLOCKED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROMOTE",
+          "reason": "DIRECT_WRITE_FORBIDDEN",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 8,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "9e9a8a75ad3eccf9f26b3f53f3e6ea050f225c11c212495377a43c17a100ac5c"
+    },
+    {
+      "version_id": "cfmo:v000010:d791e4dabb37",
+      "sequence": 10,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "HUMAN_CONTROLLER",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "HUMAN_CONTROLLER",
+      "event_index": 9,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "4fbdfac77c532cbbde4a21829431d82c0551f1bace14cf7161876e705cb2f114"
+    },
+    {
+      "version_id": "cfmo:v000011:1729f6854958",
+      "sequence": 11,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "READ_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PRIVATE_PAYLOAD",
+          "reason": "CAPABILITY_GRANTED",
+          "connect": true,
+          "read_private": true,
+          "decrypt_private": true,
+          "propose": true,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 10,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "01e1b9a045b5fb8cc77261c8bf6e06530edf5d9c8cc4ae3042de952332eafac3"
+    },
+    {
+      "version_id": "cfmo:v000012:846262bcc1dc",
+      "sequence": 12,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "READ_PRIVATE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PRIVATE_PAYLOAD",
+          "reason": "NO_CAPABILITY",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 11,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "a2c00a8c8d2ac20928c32cf0ab9db2f7887eaa70791e2d06cbe0dca661bb6cad"
+    },
+    {
+      "version_id": "cfmo:v000013:85511e7fd117",
+      "sequence": 13,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 12,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "755bc9661aeb541cc45b16bd47d2f8d1b19481db1fa1928712a6263d87546b4f"
+    },
+    {
+      "version_id": "cfmo:v000014:85511e7fd117",
+      "sequence": 14,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 13,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "228204173c20dd4d65bf81e6a5a76e62838ff28b7c7c475ee318f968e21b9bbe"
+    },
+    {
+      "version_id": "cfmo:v000015:85511e7fd117",
+      "sequence": 15,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 14,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "775b92bd4a7b3b03e30cfc1f36ee327ddb07ef3986d4eeff07b354d00f54dc17"
+    },
+    {
+      "version_id": "cfmo:v000016:85511e7fd117",
+      "sequence": 16,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 15,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "86f624afcf21ca8c7b0d6a62b2909931e5a67095cf0e81b8d4aa4f90b94c954d"
+    },
+    {
+      "version_id": "cfmo:v000017:8aa23b921fd1",
+      "sequence": 17,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "HANDSHAKE_DENIED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "INVALID_SIGNATURE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 16,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "774f006d69b879055bde930b4316c906f9598c68db4cbafe4456b33d5b3f1c8a"
+    },
+    {
+      "version_id": "cfmo:v000018:8aa23b921fd1",
+      "sequence": 18,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "HANDSHAKE_DENIED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "INVALID_SIGNATURE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 17,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "88f9ae2818066462515cb7bf2cb7faa72278183a9788076fc38a451b475b71ff"
+    },
+    {
+      "version_id": "cfmo:v000019:8aa23b921fd1",
+      "sequence": 19,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "HANDSHAKE_DENIED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "INVALID_SIGNATURE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 18,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "51ee4d47866495f0591eef122f33de5fc0b0548969e7482755dbe503119151a5"
+    },
+    {
+      "version_id": "cfmo:v000020:8aa23b921fd1",
+      "sequence": 20,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "HANDSHAKE_DENIED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "INVALID_SIGNATURE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 19,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "4e8702bc60deec4325c63663a10d588a1617b7eb9ae9c12fb59184b7955943c8"
+    },
+    {
+      "version_id": "cfmo:v000021:85511e7fd117",
+      "sequence": 21,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 20,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "4c16ea848362a6644f4c94accedfc8a5c29bf327298d0df18e2c135fd14d8f08"
+    },
+    {
+      "version_id": "cfmo:v000022:85511e7fd117",
+      "sequence": 22,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 21,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "6e31e932b76845ded7396c0e5b0b4c2a40b54658d5d1f64e24a2a9a51090e647"
+    },
+    {
+      "version_id": "cfmo:v000023:b7e0aea7df31",
+      "sequence": 23,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "HANDSHAKE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "ACTOR_UNKNOWN_OR_REVOKED",
+          "connect": false,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 22,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "34bbec7054f98d2f1dce4ec6259a17f36089775012bd58a678b56ca2b75ee726"
+    },
+    {
+      "version_id": "cfmo:v000024:b7e0aea7df31",
+      "sequence": 24,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "HANDSHAKE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "ACTOR_UNKNOWN_OR_REVOKED",
+          "connect": false,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 23,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "88a18ee86ab6a726700d6f73ff802769c30062eea44b0d1d3d860f4b8b505e32"
+    },
+    {
+      "version_id": "cfmo:v000025:2337fe1b4c3a",
+      "sequence": 25,
+      "state_type": "QUARANTINE",
+      "payload": {
+        "event_type": "PROPOSAL_QUARANTINED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "QUARANTINED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": true,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 24,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "4c16bbf5d939ca6bc339a409f220b10f593eb45e1d6388a78ab64e286ebb1025"
+    },
+    {
+      "version_id": "cfmo:v000026:07862eb17eea",
+      "sequence": 26,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROPOSAL_REJECTED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "REPLAYED_NONCE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 25,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "70e38e848e74ccaf39f19fe6837e66eeea11cb979f4cf691c541894c2d1faa34"
+    },
+    {
+      "version_id": "cfmo:v000027:07862eb17eea",
+      "sequence": 27,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROPOSAL_REJECTED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "REPLAYED_NONCE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 26,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "d97de1fb4daa5a43e0f4b6db4194063da1cd3dba28f304e25ddfe331f18e9005"
+    },
+    {
+      "version_id": "cfmo:v000028:07862eb17eea",
+      "sequence": 28,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROPOSAL_REJECTED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "REPLAYED_NONCE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 27,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "0052cf25cd89bf6dcf0e3bc680db66cbc320b06c23eef178dfe09f836759b970"
+    },
+    {
+      "version_id": "cfmo:v000029:85511e7fd117",
+      "sequence": 29,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 28,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "310edfda08ff800b4e1d7033cd0689486e195d83a1c82350cecfef2eb29f78a1"
+    },
+    {
+      "version_id": "cfmo:v000030:85511e7fd117",
+      "sequence": 30,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 29,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "b4cd591f75bd7dfddf9dfd5a85a6c20820c31824a824908751560ef057668c3b"
+    },
+    {
+      "version_id": "cfmo:v000031:97c181f740d4",
+      "sequence": 31,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "READ_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_PAYLOAD",
+          "reason": "PUBLIC_ACCESS",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 30,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "50a9672aaf5685e65e763f9d7e418b13c82170bcce393ba3b6f8df4f15f41982"
+    },
+    {
+      "version_id": "cfmo:v000032:97c181f740d4",
+      "sequence": 32,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "READ_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_PAYLOAD",
+          "reason": "PUBLIC_ACCESS",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 31,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "c530468198e268c12ea9e39563f5706d7a5e89aa3b1823e4ceaa1bcc36e422b2"
+    },
+    {
+      "version_id": "cfmo:v000033:49187c9840f5",
+      "sequence": 33,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "READ_PRIVATE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "ACTOR_REVOKED",
+          "connect": false,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 32,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "8ba51f17a690125da37dbcc9b13bba45de9464a3ae1c8f50a14eb05f297ea3bd"
+    },
+    {
+      "version_id": "cfmo:v000034:49187c9840f5",
+      "sequence": 34,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "READ_PRIVATE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "ACTOR_REVOKED",
+          "connect": false,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 33,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "6e658c933bcd03d73cdd57846087e7d1470e6c07881cc7c97e530973f92c060f"
+    },
+    {
+      "version_id": "cfmo:v000035:2337fe1b4c3a",
+      "sequence": 35,
+      "state_type": "QUARANTINE",
+      "payload": {
+        "event_type": "PROPOSAL_QUARANTINED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "QUARANTINED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": true,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 34,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "3eb9b6e41ce5afa5f71e0ea148ff6deb55c73617ca36de7dbed9e8cda9ddcbb7"
+    },
+    {
+      "version_id": "cfmo:v000036:07862eb17eea",
+      "sequence": 36,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROPOSAL_REJECTED",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "REPLAYED_NONCE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 35,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "4fc0321de31fc30121ddbcd224af7fc257011568f9b894ef2f947e017fb8d050"
+    },
+    {
+      "version_id": "cfmo:v000037:29215d281076",
+      "sequence": 37,
+      "state_type": "QUARANTINE",
+      "payload": {
+        "event_type": "PROPOSAL_QUARANTINED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "QUARANTINED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": true,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 36,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "e74f9fb0812b7ad869fdce49a36af8a9ebdc02d23779e65f271c99ec2f328c2c"
+    },
+    {
+      "version_id": "cfmo:v000038:eb27d4104c45",
+      "sequence": 38,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROMOTE_DENIED",
+        "actor_id": "VERIFIER_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROMOTE",
+          "reason": "NO_CAPABILITY",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "VERIFIER_AGENT",
+      "event_index": 37,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "afc0a0f39996e6259c1a7088a6dbf09dff4190c154d5894a0e7e1e6d558e8f38"
+    },
+    {
+      "version_id": "cfmo:v000039:79ca9d96cdd8",
+      "sequence": 39,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROPOSAL_REJECTED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "REPLAYED_NONCE",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 38,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "f202fa21ae227f42dd0cf5f7db49b1b5c70d6af4815a2b8d4ce9b0cedd3f603d"
+    },
+    {
+      "version_id": "cfmo:v000040:90afa97f083f",
+      "sequence": 40,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "UNAUTHORIZED_CANONICAL_WRITE_BLOCKED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROMOTE",
+          "reason": "DIRECT_WRITE_FORBIDDEN",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 39,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "81c818f944efb62a320535c045ea4afcb57dacd74bb2049bdae3c4d80c62a0cf"
+    },
+    {
+      "version_id": "cfmo:v000041:90afa97f083f",
+      "sequence": 41,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "UNAUTHORIZED_CANONICAL_WRITE_BLOCKED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROMOTE",
+          "reason": "DIRECT_WRITE_FORBIDDEN",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 40,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "1129db936a1fb0c8da2b0d0a98f3da62f2fd51611fab37dc1bfc020f74887090"
+    },
+    {
+      "version_id": "cfmo:v000042:85511e7fd117",
+      "sequence": 42,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 41,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "7feb03f9fed25799b0a918ed5b5e9522d90da4b98465c21d4c1ba3934cfcfa1a"
+    },
+    {
+      "version_id": "cfmo:v000043:85511e7fd117",
+      "sequence": 43,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "HANDSHAKE_OK",
+        "actor_id": "RESEARCH_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PUBLIC_METADATA",
+          "reason": "AUTHENTICATED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "RESEARCH_AGENT",
+      "event_index": 42,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "e9d266eca3230253b4d0d6c46b090dad9c833f597e0a81a04fc2d0bf9f3f03b4"
+    },
+    {
+      "version_id": "cfmo:v000044:49187c9840f5",
+      "sequence": 44,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "READ_PRIVATE_DENIED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "REVOKED",
+          "reason": "ACTOR_REVOKED",
+          "connect": false,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 43,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "b7e2a5d32cb57c05ee91f009a0fd737f58fa86ece715e01e713a681126d5a0bb"
+    },
+    {
+      "version_id": "cfmo:v000045:90afa97f083f",
+      "sequence": 45,
+      "state_type": "TRANSITION",
+      "payload": {
+        "event_type": "UNAUTHORIZED_CANONICAL_WRITE_BLOCKED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROMOTE",
+          "reason": "DIRECT_WRITE_FORBIDDEN",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 44,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": false,
+      "version_hash": "b21461d1b20d14431e57f737097d1b1d0b9446766a08ce183ff46bbd9a12d592"
+    },
+    {
+      "version_id": "cfmo:v000046:29215d281076",
+      "sequence": 46,
+      "state_type": "QUARANTINE",
+      "payload": {
+        "event_type": "PROPOSAL_QUARANTINED",
+        "actor_id": "POISON_AGENT",
+        "access": {
+          "allowed": true,
+          "access_level": "PROPOSE_ONLY",
+          "reason": "QUARANTINED",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": true,
+          "promote": false
+        }
+      },
+      "actor_id": "POISON_AGENT",
+      "event_index": 45,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "3238da23dae8a2ef8b94b87f8632dc0aaf5ae1671072e04f1ad8ce851c9113d9"
+    },
+    {
+      "version_id": "cfmo:v000047:eb27d4104c45",
+      "sequence": 47,
+      "state_type": "RETAINED_REJECTION",
+      "payload": {
+        "event_type": "PROMOTE_DENIED",
+        "actor_id": "VERIFIER_AGENT",
+        "access": {
+          "allowed": false,
+          "access_level": "PROMOTE",
+          "reason": "NO_CAPABILITY",
+          "connect": true,
+          "read_private": false,
+          "decrypt_private": false,
+          "propose": false,
+          "promote": false
+        }
+      },
+      "actor_id": "VERIFIER_AGENT",
+      "event_index": 46,
+      "parent_version_id": null,
+      "supersedes": null,
+      "immutable": true,
+      "version_hash": "68596eb14b495fb1a55e6b7e3fd7974f1e598852ab313ba080239d3545429448"
+    }
+  ]
+}

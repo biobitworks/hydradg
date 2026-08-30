@@ -1,0 +1,27 @@
+{
+  "schema": "hydradg.anb_live.plan_index.v1",
+  "created_at_utc": "2026-08-27T01:00:00Z",
+  "accepted_base_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_artifact_commit_sha": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "execution_state": "PLAN_CHECK_PASS_STOP_BEFORE_EXECUTE",
+  "plans": [
+    {
+      "track_id": "ANB_TRACK01_COLD_START_V1",
+      "path": "eval/agent_native_builders_live_20260826/plans/ANB_TRACK01_COLD_START_V1_PLAN.json",
+      "plan_sha256": "36a7b0a73403d2655bd8ee7dbf06a9203b417e165ba0814e5dbbcfa1d232cfa3"
+    },
+    {
+      "track_id": "ANB_TRACK02_RESUMABLE_BOUNDARY_V1",
+      "path": "eval/agent_native_builders_live_20260826/plans/ANB_TRACK02_RESUMABLE_BOUNDARY_V1_PLAN.json",
+      "plan_sha256": "44655d2696d02d304a2790171e7bde08c9bc24d6f0f76416e7e1604677d4715a"
+    },
+    {
+      "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+      "path": "eval/agent_native_builders_live_20260826/plans/ANB_RUNTYPE_PRODUCT_EVAL_V1_PLAN.json",
+      "plan_sha256": "63dd715a6b302b45c2ee4df07d6841ab4d886219ce405bec435b166a389f1459"
+    }
+  ],
+  "scorer_implementation_sha256": "1d94ff09d78c0803381198a3bc495a59f39982247492a9b8e311025e03884acf",
+  "plan_check_script": "scripts/check_anb_live_plan.py",
+  "plan_check_receipt": "eval/agent_native_builders_live_20260826/receipts/PLAN_CHECK_RECEIPT.json"
+}

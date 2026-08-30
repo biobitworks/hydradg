@@ -1,0 +1,54 @@
+{
+  "EXECUTION_QUEUE": [
+    {
+      "next_action": "Ingest next 25 PARTIAL sources",
+      "priority": "P2",
+      "row_id": "ROW-BATCH007"
+    },
+    {
+      "next_action": "Atomize figure panels and table cells",
+      "priority": "P2",
+      "row_id": "ROW-FIRSTDOC-FIGTABLE"
+    },
+    {
+      "next_action": "Resolve MeSH/GO/ECO IDs via OLS",
+      "priority": "P3",
+      "row_id": "ROW-TERMINOLOGY-MESH-GO"
+    }
+  ],
+  "OPERATOR_ACTION_QUEUE": [
+    {
+      "actionable": true,
+      "anticube_after": "NON_SELF+SAFE",
+      "anticube_before": "NON_SELF+SAFE",
+      "blocking_dependency": "GPU sandbox/instance not provisioned",
+      "context_score_delta": "NOT_COMPUTED",
+      "hydradg_context_score_after": "NOT_COMPUTED",
+      "hydradg_context_score_before": "NOT_COMPUTED",
+      "next_action": "Provision GPU sandbox on Daytona or Kaggle notebook",
+      "priority_after": "P0",
+      "priority_before": "P2",
+      "row_id": "ROW-GPU-REMOTE",
+      "scientific_goal_alignment": "SGLANG_HL001_REMOTE_CUDA_CANARY",
+      "secret_requirement": "DAYTONA_GPU_OR_KAGGLE_CUDA_RUNTIME",
+      "secret_state": "DAYTONA_API_KEY=PRESENT; KAGGLE_JSON=PRESENT"
+    }
+  ],
+  "SECRET_QUEUE": [
+    {
+      "blocks_row_id": "ROW-GPU-REMOTE",
+      "priority": "P0",
+      "provider": "Daytona",
+      "secret_name": "DAYTONA_API_KEY",
+      "state": "PRESENT"
+    },
+    {
+      "blocks_row_id": "ROW-GPU-REMOTE",
+      "note": "auth_pass_gpu_runtime_not_provisioned",
+      "priority": "P0",
+      "provider": "Kaggle",
+      "secret_name": "KAGGLE_JSON",
+      "state": "PRESENT"
+    }
+  ]
+}

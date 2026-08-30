@@ -1,0 +1,165 @@
+{
+  "object": "service_index",
+  "name": "Yappy Web API",
+  "description": "Free, keyless, read-only access to everything factual about Yappy: releases, documentation, FAQ, pricing, requirements, and machine compatibility. This API does not transcribe audio — Yappy's speech recognition runs on the user's own Mac and there is no hosted endpoint behind it.",
+  "api_version": "2026-08-25",
+  "environment": "production",
+  "documentation_url": "https://yappy.biz/developers/",
+  "openapi_url": "https://yappy.biz/openapi.json",
+  "llms_txt_url": "https://yappy.biz/llms.txt",
+  "authentication": {
+    "required": false,
+    "note": "Every read endpoint answers anonymously. A credential only raises the rate ceiling and unlocks export jobs.",
+    "walkthrough": "https://yappy.biz/auth.md",
+    "protected_resource_metadata": "https://yappy.biz/.well-known/oauth-protected-resource",
+    "authorization_server_metadata": "https://yappy.biz/.well-known/oauth-authorization-server",
+    "scopes_supported": [
+      "read:releases",
+      "read:docs",
+      "read:pricing",
+      "read:faq",
+      "export:docs"
+    ]
+  },
+  "mcp": {
+    "url": "https://yappy.biz/mcp",
+    "docs_url": "https://yappy.biz/docs/mcp",
+    "transport": "streamable-http",
+    "protocol_version": "2025-06-18",
+    "server_card": "https://yappy.biz/.well-known/mcp/server-card.json"
+  },
+  "rate_limit": {
+    "limit": 120,
+    "window_seconds": 60,
+    "documentation": "https://yappy.biz/developers/rate-limits"
+  },
+  "versioning": {
+    "current": "v1",
+    "strategy": "major version in the URL path",
+    "status": "current — not deprecated, no Sunset date set",
+    "deprecation_signals": [
+      "Deprecation",
+      "Sunset",
+      "Link; rel=\"deprecation\""
+    ],
+    "minimum_notice_days": 180,
+    "policy": "https://yappy.biz/developers/deprecation",
+    "retired": [
+      {
+        "version": "v0",
+        "path": "/api/v0",
+        "deprecated_on": "2026-02-01",
+        "sunset_on": "2026-08-01",
+        "status": 410
+      }
+    ]
+  },
+  "sandbox_url": "https://yappy.biz/api/v1/sandbox",
+  "endpoints": [
+    {
+      "method": "GET",
+      "path": "/",
+      "operation_id": "getServiceIndex",
+      "description": "This document.",
+      "url": "https://yappy.biz/api/v1"
+    },
+    {
+      "method": "GET",
+      "path": "/releases",
+      "operation_id": "listReleases",
+      "description": "Release history, newest first, cursor-paginated.",
+      "url": "https://yappy.biz/api/v1/releases"
+    },
+    {
+      "method": "GET",
+      "path": "/releases/latest",
+      "operation_id": "getLatestRelease",
+      "description": "The current release, from the same signed appcast the app updater reads.",
+      "url": "https://yappy.biz/api/v1/releases/latest"
+    },
+    {
+      "method": "GET",
+      "path": "/releases/{version}",
+      "operation_id": "getRelease",
+      "description": "One release by exact version string.",
+      "url": "https://yappy.biz/api/v1/releases/{version}"
+    },
+    {
+      "method": "GET",
+      "path": "/docs",
+      "operation_id": "listDocs",
+      "description": "Documentation index.",
+      "url": "https://yappy.biz/api/v1/docs"
+    },
+    {
+      "method": "GET",
+      "path": "/docs/{slug}",
+      "operation_id": "getDoc",
+      "description": "One documentation page as markdown.",
+      "url": "https://yappy.biz/api/v1/docs/{slug}"
+    },
+    {
+      "method": "GET",
+      "path": "/faq",
+      "operation_id": "listFaq",
+      "description": "Frequently asked questions.",
+      "url": "https://yappy.biz/api/v1/faq"
+    },
+    {
+      "method": "GET",
+      "path": "/pricing",
+      "operation_id": "getPricing",
+      "description": "What the app, each backend, and this API cost.",
+      "url": "https://yappy.biz/api/v1/pricing"
+    },
+    {
+      "method": "GET",
+      "path": "/features",
+      "operation_id": "listFeatures",
+      "description": "Product capabilities as structured objects.",
+      "url": "https://yappy.biz/api/v1/features"
+    },
+    {
+      "method": "GET",
+      "path": "/requirements",
+      "operation_id": "getRequirements",
+      "description": "System requirements and macOS permissions.",
+      "url": "https://yappy.biz/api/v1/requirements"
+    },
+    {
+      "method": "GET",
+      "path": "/compatibility",
+      "operation_id": "checkCompatibility",
+      "description": "Whether a given Mac can run Yappy, and why.",
+      "url": "https://yappy.biz/api/v1/compatibility"
+    },
+    {
+      "method": "GET",
+      "path": "/search",
+      "operation_id": "search",
+      "description": "Full-text search over documentation and FAQ.",
+      "url": "https://yappy.biz/api/v1/search"
+    },
+    {
+      "method": "POST",
+      "path": "/batch",
+      "operation_id": "createBatch",
+      "description": "Up to 20 reads in one request.",
+      "url": "https://yappy.biz/api/v1/batch"
+    },
+    {
+      "method": "POST",
+      "path": "/exports",
+      "operation_id": "createExport",
+      "description": "Start an export job; returns 202.",
+      "url": "https://yappy.biz/api/v1/exports"
+    },
+    {
+      "method": "GET",
+      "path": "/exports/{job_id}",
+      "operation_id": "getExport",
+      "description": "Poll an export job.",
+      "url": "https://yappy.biz/api/v1/exports/{job_id}"
+    }
+  ]
+}

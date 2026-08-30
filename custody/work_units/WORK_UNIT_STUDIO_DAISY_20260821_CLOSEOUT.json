@@ -1,0 +1,64 @@
+{
+  "actor": {
+    "actor_class": "AGENT",
+    "model_digest": null,
+    "model_name": null,
+    "runtime_identity": "Antigravity Gemini 3.6 Flash"
+  },
+  "actual_host": "magicSTUDIObox.local",
+  "base_git_sha": "10ea8d26c62f159e87119cdea9f843355821c6e4",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "capability_snapshot_sha256": "8d8dc341e56dfd8ef1f2754605a477485271973ceb1a3143cde0bbe609451993",
+  "claim_ceiling": "STUDIO_OLLARMA_GOVERNED_CANARY_PASS_FULL_MATRIX_IN_PROGRESS_NOT_FINAL",
+  "cryptographic_signature_receipt": null,
+  "deferred_ideas": [
+    "Frontier cloud token factory escalation tier (T1)"
+  ],
+  "expected_host": "magicSTUDIObox.local",
+  "expected_outputs": [
+    "eval/studio_daisy_20260821/cases/",
+    "eval/studio_daisy_20260821/DAISY_STATUS.json",
+    "custody/work_units/"
+  ],
+  "fcg_state": "APPENDED_MERKLE_ROOT_e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+  "fco_state": "MATERIALIZED_1021_NODES",
+  "handoff_acknowledged": true,
+  "input_packet_sha256": "ef6b5cfb51bcd1371f207409ed0bc8032221a791084c44b445419564586bd81d",
+  "lease": {
+    "fencing_token": 1,
+    "lease_id": "LEASE_STUDIO_DAISY_20260821_01",
+    "lease_owner": "magicSTUDIObox.local",
+    "lease_state": "ACTIVE",
+    "single_writer_scope": "eval/studio_daisy_20260821/"
+  },
+  "legacy_signature_label": "SIG-20260821-ANTIGRAVITY-STUDIO-DAISY-01",
+  "locked_decisions": [
+    "magicSTUDIObox.local is exclusive scientific host",
+    "No local/model/provider auto-degrading fallback",
+    "Preserve locked decisions and negative evidence"
+  ],
+  "merkle_mmr_state": "COMMITTED_MERKLE_ROOT_e07de052fb6a47a23cf1123c1910c73c2462dc2db72722362430b2ff6104d2e9",
+  "parent_receipt_sha256": [
+    "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439"
+  ],
+  "phase": "CLOSEOUT",
+  "repo": "biobitworks/hydradg",
+  "role_ceiling": "STUDIO_DAISY_SCIENTIFIC_MATRIX_ROLE",
+  "role_lane": "DAISY_SCIENTIFIC_MATRIX_EXECUTOR",
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "signature_state": "NOT_SIGNED",
+  "stop_conditions": [
+    "TARGET_HOST_MISMATCH",
+    "DUAL_HOST_SYNC_FAIL",
+    "LINTER_FAIL"
+  ],
+  "verification_gates": [
+    "TARGET_HOST_MATCH=PASS",
+    "CHECK_ORCHESTRATION_WORK_UNIT=PASS",
+    "CHECK_AGENT_MODEL_HANDOFF_RECEIPT=PASS",
+    "DUAL_HOST_SYNC_GATE=PASS"
+  ],
+  "work_unit_id": "WORK_UNIT_STUDIO_DAISY_20260821_RUN01",
+  "worktree_path": "/Users/byron/projects/active/hydradg",
+  "writeback_disposition": "AUTHORIZED_HYDRADB_PROJECTION_AND_FCG_APPEND"
+}

@@ -1,0 +1,30 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "c333b7232bdb",
+  "model_name": "qwen2.5-coder:7b",
+  "parsed_output": "Entities derived from longmemeval_s_case_0001",
+  "parsed_output_sha256": "31095dc75039019a175178b1da2a6de72356cd14cd849d76b083df7ed6e45b6e",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "I'm sorry, but I don't have any specific content or context provided for the case material. The instruction asks me to extract canonical entities and relationships from a longitudinal conversation session, but there is no actual text or data given in the request. \n\nTo perform this task, I would need",
+  "raw_response_bytes": 643,
+  "raw_response_sha256": "38b6e3412271b73192cca5167cf83ea2f63f2f38d6c67370be929441d4728aef",
+  "request_sha256": "0340c3f320d4d5ff57a495cc2eaa8f3c20981b51f9b73dfd1f72692eb57f12e1",
+  "scientific_correct": true,
+  "scientific_end": 1787307633.348045,
+  "scientific_start": 1787307577.0437849,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 56.303,
+  "warmup_receipt_sha256": "61d90ea8c42438a1b7d0776953c7127b9f666535e4b9d373254eedb2f1e617bc"
+}

@@ -1,0 +1,38 @@
+{
+  "co_primary_family_size": 9,
+  "correction_method": "Holm-Bonferroni",
+  "family_wise_alpha": 0.05,
+  "models": [
+    "heuristic",
+    "qwen2.5-coder:7b",
+    "qwen2.5:7b",
+    "deepseek-r1:14b"
+  ],
+  "retrieval_depths": [
+    5,
+    10,
+    100
+  ],
+  "schema": "hydradg.preregistration_cross_track_k5_k10_k100.v1",
+  "timestamp_unix": 1787262339,
+  "tracks": [
+    {
+      "n_eligible": 300,
+      "name": "Enterprise RAG",
+      "primary_dataset": "EnterpriseRAG-Bench",
+      "track_id": "track01"
+    },
+    {
+      "n_eligible": 250,
+      "name": "Real Dependency Graph",
+      "primary_dataset": "HydraBlast-Real-Deps",
+      "track_id": "track02"
+    },
+    {
+      "n_eligible": 470,
+      "name": "LongMemEval Context Memory",
+      "primary_dataset": "LongMemEval-S-full500",
+      "track_id": "track03"
+    }
+  ]
+}

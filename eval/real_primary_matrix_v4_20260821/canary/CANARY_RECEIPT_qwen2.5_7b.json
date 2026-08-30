@@ -1,0 +1,30 @@
+{
+  "attempt_count": 1,
+  "case_id": "longmemeval_s_case_0001",
+  "case_payload_sha256": "f286efaa626cd33facf61f3ac7ba89228f357a14103167b0e88d027d95617062",
+  "dataset": "LongMemEval-S-full500",
+  "evaluation_status": "SUCCESS",
+  "failure_reason": null,
+  "generation_parameters": {
+    "seed": 42,
+    "temperature": 0.0
+  },
+  "http_or_exit_status": 200,
+  "model_digest": "c333b7232bdb",
+  "model_name": "qwen2.5:7b",
+  "parsed_output": "Entities derived from longmemeval_s_case_0001",
+  "parsed_output_sha256": "db22cc1dd35cb5ee95e4ea266510059ee7f0d0095121102edbb0595353a3d1fa",
+  "parser_status": "SUCCESS",
+  "prompt_sha256": "56614eb49da69499e2d28f583b12fbf037b517c98677d4e48d7d7f0c772eff7f",
+  "raw_response": "To perform the task of extracting canonical entities and relationships from the provided content, I will follow these steps:\n\n1. Identify the key elements (entities) mentioned in the text.\n2. Determine any explicit or implicit relationships between these entities.\n\nGiven Content:\n\"Longitudinal Conve",
+  "raw_response_bytes": 1708,
+  "raw_response_sha256": "6f5c5f70461605e74887b6596e308b1ef76154e187c53f506313843333a824cd",
+  "request_sha256": "e2ca131f375df72a65c53ac752cd24d16a96afa9a47e0e8e89c4eaed79259301",
+  "scientific_correct": true,
+  "scientific_end": 1787308072.253102,
+  "scientific_start": 1787307993.607491,
+  "track": "track03",
+  "transport": "HTTP_REST_API",
+  "wall_time_seconds": 78.64,
+  "warmup_receipt_sha256": "09235fd8342f2dd8b35d7beec921ce4a8469c5c1c33c7193d2fd397c6eec566f"
+}

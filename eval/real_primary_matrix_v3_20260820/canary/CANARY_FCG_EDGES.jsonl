@@ -1,0 +1,14 @@
+{"src": "LongMemEval-S-full500", "rel": "CONTAINS_CASE", "dst": "longmemeval_s_case_0001"}
+{"src": "longmemeval_s_case_0001", "rel": "GENERATED_PROMPT", "dst": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "deepseek-r1:14b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "qwen2.5-coder:7b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "phi4-reasoning:14b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "qwen2.5:7b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "llama3.2:3b"}
+{"src": "llama3.2:3b", "rel": "PRODUCED_RAW_RESPONSE", "dst": "7e7d53d20a4ce10b06a4669d325191f26df63a548ad972509eae1811a7c7a719"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "granite4.1:3b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "llama3.2:1b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "qwen2.5:0.5b"}
+{"src": "qwen2.5:0.5b", "rel": "PRODUCED_RAW_RESPONSE", "dst": "387a2a54536c94ffbeaf99b2e824501202b1ae3bb625bb50656efd42e7fd9a37"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "qwen2.5:1.5b"}
+{"src": "b34c43603a042854bb19b4e5b4dca18074d61b0d4f0e1729ee9258a8c9c25652", "rel": "INVOKED_MODEL", "dst": "qwen3:1.7b"}

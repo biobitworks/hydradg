@@ -1,0 +1,17 @@
+{
+  "schema": "hydralamp.local_server_receipt.v1",
+  "LOCAL_SERVER_READY": true,
+  "DETERMINISTIC_FALLBACK_READY": true,
+  "LOCAL_MODEL_GUM_OLLARMA_READY": true,
+  "LIVE_RUNTYPE_READY": "CONFIGURED",
+  "HASH_CHAIN_READY": true,
+  "CONTEXT_DELTA_READY": true,
+  "REALTIME_GRAPH_READY": true,
+  "CORE_STRESS": "PASS",
+  "SSE_STRESS": "PASS",
+  "HASH_TAMPER_STRESS": "PASS",
+  "GUM_DOCTOR_STATE": "DEPENDENCY_UNRESOLVED",
+  "cloud_drift": "COMPUTED_FROM_CONTEXT_ICEBERG",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

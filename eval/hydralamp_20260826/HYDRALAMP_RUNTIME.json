@@ -1,0 +1,41 @@
+{
+  "mode": "TEST_VECTOR_REPLAY",
+  "security_claim_eligibility": "NO",
+  "fcg_root": "a1ec5db1cc9388dffb935ffd7ab4d0c254b8ab73b03c30f0722326da1d8846b1",
+  "unauthorized_plaintext_disclosures": 0,
+  "unauthorized_canonical_writes": 0,
+  "real_crypto_receipts": [],
+  "diagnostics": {
+    "g_star": 0.323285,
+    "delta_g_star": -0.0,
+    "cloud_drift_0_100": 75.3349,
+    "burden": 0.586957,
+    "poison_burden": 5
+  },
+  "msm_matrix": {
+    "UNKNOWN": {
+      "AUTHENTICATED": 3,
+      "PROMOTED": 1,
+      "DENIED": 1
+    },
+    "AUTHENTICATED": {
+      "EVIDENCE_ACCESSED": 1,
+      "DENIED": 1,
+      "AUTHENTICATED": 1
+    },
+    "EVIDENCE_ACCESSED": {
+      "QUARANTINED": 1
+    },
+    "DENIED": {
+      "DENIED": 19,
+      "AUTHENTICATED": 6,
+      "QUARANTINED": 4,
+      "EVIDENCE_ACCESSED": 2
+    },
+    "QUARANTINED": {
+      "EVIDENCE_ACCESSED": 1,
+      "AUTHENTICATED": 4,
+      "DENIED": 1
+    }
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "hydradg.newinml2026_solo.anonymization_audit.v1",
+  "recorded_at_utc": "2026-08-28T23:08:11Z",
+  "target_pdf_sha256": "f68a9c18252fb82857691bc2d1ab7a0b647ab276851b70da0d9cac47f2c35130",
+  "FULLY_ANONYMIZED": "PASS",
+  "needles_scanned": {
+    "Byron": false,
+    "Biobitworks": false,
+    "biobitworks": false,
+    "github.com/biobitworks": false,
+    "hydradg.vercel": false,
+    "Acknowledg": false,
+    "magicSTUDIO": false,
+    "magicPRO": false
+  },
+  "acknowledgments_present": false,
+  "author_block": "Anonymous Author(s)",
+  "identifying_git_sha_in_pdf": false,
+  "identifying_urls_in_pdf": false,
+  "internal_custody_metadata_in_pdf": false,
+  "gate": "PASS",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "email_patterns_found": [],
+  "scan_method": "strings_extracted_text"
+}

@@ -1,0 +1,207 @@
+{
+  "schema": "hydradg.total_ingest.semantic_atomization.v1",
+  "semantic_atom_count": 26,
+  "semantic_abstention_count": 3,
+  "atoms": [
+    {
+      "atom_id": "semantic:R_EVENT_IMMERSIVE_COMMONS",
+      "kind": "RULE",
+      "source_locator": "event.eid",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_TRACK01_COLD_START",
+      "kind": "RULE",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.cold_start_success",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_IT_RUNS",
+      "kind": "RULE",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.it_runs",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SURFACE_QUALITY",
+      "kind": "RULE",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.surface_quality",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_LANDS_IN_PRODUCT",
+      "kind": "RULE",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.lands_in_product",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_DEMO",
+      "kind": "RULE",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.demo",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SUBMIT_FIELD_TITLE",
+      "kind": "RULE",
+      "source_locator": "submit.title",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SUBMIT_FIELD_BLURB",
+      "kind": "RULE",
+      "source_locator": "submit.blurb",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SUBMIT_FIELD_REPO_URL",
+      "kind": "RULE",
+      "source_locator": "submit.repo_url",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SUBMIT_FIELD_DEMO_URL",
+      "kind": "RULE",
+      "source_locator": "submit.demo_url",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SUBMIT_FIELD_AGENT_SURFACE",
+      "kind": "RULE",
+      "source_locator": "submit.agent_surface",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_SUBMIT_FIELD_FOLDER_ID",
+      "kind": "RULE",
+      "source_locator": "submit.folder_id",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_VAULT_FOLDER",
+      "kind": "RULE",
+      "source_locator": "submit.folder_id",
+      "source_sha256": "720476ea5c872c6d80c280b835bec7d7691670e6aa6c07f0970293576582aaa6",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_AGENT_SURFACE_30PT",
+      "kind": "RULE",
+      "source_locator": "official_rubric.tracks.track01_external.criteria.cold_start_success",
+      "source_sha256": "f0098b64e5f2b9235e342da912640264d7300c52e363a78d09216121c54eee44",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_NO_SUBMIT_BEFORE_VAULT",
+      "kind": "RULE",
+      "source_locator": "VAULT_BUNDLE",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_NO_UNSURFACED_JUDGE_EVIDENCE",
+      "kind": "RULE",
+      "source_locator": "successor protocol",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_ORIGIN_LEGIBILITY",
+      "kind": "RULE",
+      "source_locator": "ORIGIN_PROVENANCE",
+      "source_sha256": "e55b75bb2129d9abc1e65c4940e7e4e66553aa27a291c229d402e450658c5397",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:R_README_PROJECT_IDENTITY",
+      "kind": "RULE",
+      "source_locator": "README.md:1",
+      "source_sha256": "628a7e48e52d2ddd38245dfeb94994b099f9b7a804ccc2248df769f49f53ec04",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:4",
+      "kind": "CONSTRAINT",
+      "text": "Authority",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:20",
+      "kind": "CONSTRAINT",
+      "text": "Meta-orchestration: GSD + gsigmad",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:40",
+      "kind": "CONSTRAINT",
+      "text": "Mandatory handoff rule",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:76",
+      "kind": "CONSTRAINT",
+      "text": "Ollarma / Ollama",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:86",
+      "kind": "CONSTRAINT",
+      "text": "Hashing, signatures, and commitments are different",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:98",
+      "kind": "CONSTRAINT",
+      "text": "Cross-host / GitHub handoff",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:110",
+      "kind": "CONSTRAINT",
+      "text": "Enforcement",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    },
+    {
+      "atom_id": "semantic:agents_heading:121",
+      "kind": "CONSTRAINT",
+      "text": "Current repair note",
+      "source_path": "AGENTS.md",
+      "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+    }
+  ],
+  "abstentions": [
+    {
+      "source_class": "media",
+      "state": "SOURCE_PRESENT_BUT_SEMANTIC_EXTRACTOR_ABSTAINED",
+      "reason": "No deterministic semantic extractor registered for this class in v1 pipeline"
+    },
+    {
+      "source_class": "video",
+      "state": "SOURCE_PRESENT_BUT_SEMANTIC_EXTRACTOR_ABSTAINED",
+      "reason": "No deterministic semantic extractor registered for this class in v1 pipeline"
+    },
+    {
+      "source_class": "conversation_turn_content",
+      "state": "SOURCE_PRESENT_BUT_SEMANTIC_EXTRACTOR_ABSTAINED",
+      "reason": "No deterministic semantic extractor registered for this class in v1 pipeline"
+    }
+  ],
+  "note": "Semantic abstention is valid; no hallucinated semantic atoms"
+}

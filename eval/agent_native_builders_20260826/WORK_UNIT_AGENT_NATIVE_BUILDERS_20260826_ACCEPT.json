@@ -1,0 +1,45 @@
+{
+  "schema": "hydradg.orchestration_work_unit.v1",
+  "work_unit_id": "work_unit:agent_native_builders_20_fixture_comparison_20260826",
+  "phase": "ACCEPT",
+  "actor": {
+    "actor_class": "GOVERNED_EXECUTION_HOST",
+    "runtime_identity": "byron@magicSTUDIObox.local"
+  },
+  "role_lane": "AGENT_NATIVE_BUILDERS_HACKATHON_LANE",
+  "role_ceiling": "BENCHMARK_PREREGISTRATION_AND_EXECUTION",
+  "writeback_disposition": "BOUNDED_CANDIDATE_COMMIT",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "base_git_sha": "f0c096f31a5de1a3583768f394d3f109e1f1e8ad",
+  "expected_host": "magicSTUDIObox.local",
+  "actual_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "4a73752e50dfb0b92db2c9811c759ca7868478d10b77b707ce4e4ee7c68a4bc8",
+  "input_packet_sha256": "f6a0404fa6ce9dbb01ff91132f562ce0652b23bde1074e021e83c058d215561d",
+  "lease": {
+    "lease_id": "lease:agent_native_builders_studio_lane_20260826",
+    "fencing_token": 1,
+    "single_writer_scope": "eval/agent_native_builders_20260826/results",
+    "lease_owner": "magicSTUDIObox.local",
+    "lease_state": "ACTIVE"
+  },
+  "expected_outputs": [
+    "eval/agent_native_builders_20260826/results/AGENT_NATIVE_BUILDERS_20_FIXTURE_RESULTS.json",
+    "eval/agent_native_builders_20260826/results/EXECUTION_RECEIPT.json"
+  ],
+  "verification_gates": [
+    "FIXTURES_EXPECTED == 20",
+    "CONTROL_ACCOUNTED == 20",
+    "TREATMENT_ACCOUNTED == 20",
+    "UNAUTHORIZED_PLAINTEXT_DISCLOSURE == 0"
+  ],
+  "stop_conditions": [
+    "ALL_20_FIXTURES_EVALUATED",
+    "EXECUTION_RECEIPT_WRITTEN"
+  ],
+  "claim_ceiling": "AGENT_NATIVE_BUILDERS_20_FIXTURE_COMPARISON_EXECUTED",
+  "fco_state": "ACCEPTED_BY_STUDIO_HOST",
+  "fcg_state": "NOT_APPENDED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

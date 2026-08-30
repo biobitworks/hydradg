@@ -55,3 +55,95 @@ condition = "AND"
 regexTarget = "match"
 paths = ['''^HydraDG_DaisyTrain_v0\.3\.3/logs/20260817_081811_ECA_RETRY_2\.log$''']
 regexes = ['''Token:\s+ak-[A-Za-z0-9_-]+''']
+
+[[rules.allowlists]]
+description = "NewInML SOLO citation ledger bibkey/cite_key/citation_key identifiers"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^paper/newinml2026_solo/''']
+regexes = [
+  '''(?:bibkey|cite_key|citation_key)"?\s*:\s*"[a-z0-9_]+"''',
+  '''bibkey:[a-z0-9_]+"''',
+]
+
+[[rules.allowlists]]
+description = "NewInML SOLO portfolio reference admission keys"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^paper/newinml2026_solo/portfolio_references/''']
+regexes = ['''(?:bibkey:[a-z0-9_]+|key"\s*:\s*"[a-z0-9_]+")''']
+
+[[rules.allowlists]]
+description = "NewInML SOLO secret presence state markers (not secret values)"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^paper/newinml2026_solo/federated_evidence/''']
+regexes = ['''secret_state"\s*:\s*"[^"]*API_KEY=PRESENT''']
+
+[[rules.allowlists]]
+description = "NewInML final daisy eval citation, rank, and stage receipt fields"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^eval/newinml_''']
+regexes = [
+  '''(?:bibkey|cite_key|citation_key)"?\s*:\s*"[a-z0-9_]+"''',
+  '''rank_key"\s*:\s*"[0-9a-f]{64}"''',
+  '''key"\s*:\s*"STAGE2_[A-Z_]+"''',
+]
+
+[[allowlists]]
+description = "Eval receipt Cloudflare OS git SHA fields (not API keys)"
+targetRules = ["cloudflare-api-key"]
+paths = ['''^eval/''']
+regexes = [
+  '''(?i)cloudflare_os_(?:sha|version_sha|reviewed_commit)''',
+  '''CLOUDFLARE_OS_SHA''',
+]
+
+[[rules.allowlists]]
+description = "HydraLamp crypto dataclass parameter names (not secret values)"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^hydralamp/crypto\.py$''']
+regexes = ['''private_key:\s*(?:Ed25519|X25519)PrivateKey''']
+
+[[rules.allowlists]]
+description = "Secret presence state markers (not secret values)"
+condition = "AND"
+regexTarget = "match"
+paths = [
+  '''^paper/newinml2026_solo/federated_evidence/''',
+  '''^eval/terminology_seedgraph_anticube_''',
+  '''^eval/agent_native_sponsors_''',
+  '''^eval/hydralamp_final_real_sample_''',
+  '''^scripts/cursor_terminology_seedgraph_anticube_execute\.py$''',
+]
+regexes = ['''secret_state"\s*:\s*"[^"]*(?:PRESENT|MISSING|NOT_APPLICABLE)''']
+
+[[rules.allowlists]]
+description = "NewInML audit script citation_key ledger fields"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^scripts/newinml_''']
+regexes = ['''citation_key"\s*:\s*"[a-z0-9]+"''']
+
+[[rules.allowlists]]
+description = "Public HydraLamp demo unlock seal (intentionally disclosed)"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^eval/immersive_commons_submission_20260827/seal/''']
+regexes = ['''(?:private_key_b64url|public_encryption_key_fingerprint)"?\s*[:=]''']
+
+[[rules.allowlists]]
+description = "Cloudflare blocker SHA-256 receipt fields"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^eval/hydralamp_morning_''']
+regexes = ['''api_live_body_sha256"\s*:\s*"[0-9a-f]{64}"''']
+
+[[rules.allowlists]]
+description = "HydraLamp golden-path stress test judge_key fixture"
+condition = "AND"
+regexTarget = "match"
+paths = ['''^apps/hydradg-web/scripts/hydralamp_golden_path_stress\.mts$''']
+regexes = ['''judge_key:\s*"[a-zA-Z0-9_-]+"''']

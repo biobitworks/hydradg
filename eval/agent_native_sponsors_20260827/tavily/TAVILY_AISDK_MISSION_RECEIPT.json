@@ -1,0 +1,57 @@
+{
+  "schema": "sponsor.tavily_ai_sdk.mission_receipt.v1",
+  "mission_id": "ANB-SP-TAVILY-AISDK-001",
+  "provider": "Tavily",
+  "product": "@tavily/ai-sdk + Vercel AI SDK",
+  "operation": "ai_sdk_tool_wiring_and_optional_extract",
+  "docs_ref": "https://docs.tavily.com/documentation/integrations/vercel#benefits-of-tavily-+-vercel-ai-sdk",
+  "benefits": [
+    "Pre-built Tools",
+    "Type-Safe",
+    "Real-time Information",
+    "Optimized for LLMs",
+    "Multiple Capabilities (search/extract/crawl/map)",
+    "Easy Integration with Vercel AI SDK v5/v6",
+    "Flexible Configuration",
+    "Production-Ready"
+  ],
+  "package_import": "PASS",
+  "tools": [
+    {
+      "name": "tavilySearch",
+      "description": "Search the web for real-time information using Tavily's AI-optimized search engine. Returns relevant sources, snippets, and optional AI-generated answers."
+    },
+    {
+      "name": "tavilyExtract",
+      "description": "Extract clean, structured content from one or more URLs. Returns parsed content in markdown or text format, optimized for AI consumption."
+    },
+    {
+      "name": "tavilyCrawl",
+      "description": "Crawl a website starting from a base URL to discover and extract content from multiple pages. Intelligently traverses links and extracts structured data at scale."
+    },
+    {
+      "name": "tavilyMap",
+      "description": "Map the structure of a website starting from a base URL. Discovers pages, links, and site hierarchy without extracting full content. Ideal for understanding site architecture."
+    }
+  ],
+  "TAVILY_API_KEY": "PRESENT",
+  "live_extract": {
+    "attempted": true,
+    "source_url": "https://docs.tavily.com/documentation/integrations/vercel",
+    "status": "PASS",
+    "raw_artifact_path": "eval/agent_native_sponsors_20260827/tavily/raw/TAVILY_AISDK_EXTRACT_RAW.json",
+    "raw_artifact_sha256": "37524cd79099286703852d8873624757266e95cbec9000a406e25e303a01b16a",
+    "error_summary": null
+  },
+  "fco_proposal": {
+    "action": "QUARANTINE_EXTERNAL_EVIDENCE",
+    "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+    "admit_decision": "PENDING_CUSTODY_REVIEW",
+    "note": "Tavily AI SDK output must not write directly to canonical FCG state."
+  },
+  "fcg_append": "NOT_APPENDED",
+  "status": "PASS",
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "signature_state": "NOT_SIGNED",
+  "recorded_at_utc": "2026-08-27T06:02:32.194Z"
+}

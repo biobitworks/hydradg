@@ -1,0 +1,119 @@
+[
+  {
+    "caption": "HydraDG custody pipeline schematic.",
+    "claim_ceiling": "FRAMEWORK_DIAGRAM",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+    "figure_id": "FIG-001",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "436acf9b3cc1a5d1408efcf6703a3e7f1f48fb1c8ab50afeeef0e15da994363c",
+    "source_files": [],
+    "source_sha256": []
+  },
+  {
+    "caption": "EXP-008/009 valid parse rates with approximate uncertainty.",
+    "claim_ceiling": "PRIMARY_DESCRIPTIVE",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "VERIFIED_EMPIRICAL_RESULT",
+    "figure_id": "FIG-002",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "03b130b2972fee56be3dd27f3cf77ea4b8b675850b773eec0b932d1b8586b859",
+    "source_files": [
+      "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-009__VERDICT.json",
+      "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/provenance/admitted/eval__ic_failure_learning_20260827__daisy_overnight_20260828__EXP-008__VERDICT.json"
+    ],
+    "source_sha256": [
+      "7d1ea04f0429ed8f1dc98f0f85d1f29b327f5c14f5f3c2dbf03531b2705e1657",
+      "76f056d6b42a73677bf71338ea97a61bf92e2d5911b99ac4e400247730936ac5"
+    ]
+  },
+  {
+    "caption": "Terminal states across solo experiment inventory.",
+    "claim_ceiling": "INVENTORY",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+    "figure_id": "FIG-003",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "1f9aed4af9728378b65eefc0ebd801c59d7d0a96d9dc9963d38e55e89097bd2e",
+    "source_files": [
+      "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/successor_recovery/EXPERIMENT_MASTER_LEDGER.tsv"
+    ],
+    "source_sha256": [
+      "8df139df0ddac91b4cbc41aaf389016fd621d4406763b86219ca8a8184b77059"
+    ]
+  },
+  {
+    "caption": "100/100 chain verification; 8/8 tamper detection.",
+    "claim_ceiling": "SYSTEMS_VALIDATION",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+    "figure_id": "FIG-004",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "b2af59bd01f77791a80b9f6173c2dd1f85a3ceb559f41899af99bb2ba09462e6",
+    "source_files": [
+      "/Users/byron/projects/active/hydradg/eval/hydralamp_runtype_20260826/CORE_STRESS_RECEIPT.json"
+    ],
+    "source_sha256": [
+      "aa02089d1f55c3564e55d0fdb87a4a7773dfe24e1e5f1d8b3928d049b9463adf"
+    ]
+  },
+  {
+    "caption": "Recorded Anticube transitions; sparse ML closeout slice.",
+    "claim_ceiling": "DESCRIPTIVE",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "VERIFIED_EMPIRICAL_RESULT",
+    "figure_id": "FIG-005",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "f8910779fbe83178c4a51c251247e11fd7c97332e2ca4c83240ea4a00558089b",
+    "source_files": [
+      "/Users/byron/projects/active/hydradg/eval/final_solo_closeout_20260829/ANTICUBE_TRAJECTORIES_ML.jsonl"
+    ],
+    "source_sha256": [
+      "6feb4ba13f55d2e87cf1da411f48f0b0819ae9212315a984d2024c06d69280eb"
+    ]
+  },
+  {
+    "caption": "Context classification coverage; \u0394G* not computed.",
+    "claim_ceiling": "ENGINEERING_PROXY",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+    "figure_id": "FIG-006",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "f0b885cc283e425a88d22b2a281145041c0c9294b56a02e5e368f6088a95936c",
+    "source_files": [
+      "/Users/byron/projects/active/hydradg/eval/context_vs_entropy_20260820/CONTEXT_VS_ENTROPY_RESULT.json"
+    ],
+    "source_sha256": [
+      "512be8de14feb8512b5dcb7724df740bc2f027946f9250859f91d37e984d5e91"
+    ]
+  },
+  {
+    "caption": "Statistical pipeline R1/R2/R3 hash equivalence.",
+    "claim_ceiling": "REPRODUCIBILITY",
+    "command": "python3 scripts/build_successor_recovery.py --figures",
+    "environment": "statistics/environment.txt",
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+    "figure_id": "FIG-007",
+    "generator_script": "scripts/build_successor_recovery.py",
+    "generator_sha256": "c9dcc8cd737795f3ef27f00b13dc12721c24196cfbc07fcff920395b241ab93b",
+    "output_sha256": "1a3d16d561d43c6605aeb2ed0e9c65652ed507d7d950b8a3dac65c180bca8c56",
+    "source_files": [
+      "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/successor_recovery/statistics/STATISTICAL_REPRODUCIBILITY_RECEIPT.json"
+    ],
+    "source_sha256": [
+      "9658bcdcade7e2547d91413fc5d84512a28c1f6ce0e798353182287d54409de3"
+    ]
+  }
+]

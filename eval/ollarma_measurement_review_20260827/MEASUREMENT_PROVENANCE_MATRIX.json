@@ -1,0 +1,36 @@
+{
+  "schema": "hydradg.ollarma_measurement_review.provenance_matrix.v1",
+  "cloud_drift": {
+    "web_implementation": "apps/hydradg-web/lib/contextIceberg.ts#jensenShannonDivergence",
+    "inputs": "normalized distribution arrays L vs R; reference = timeline[0]",
+    "output": "js * 100 bounded [0,100]",
+    "semantics": "MAGNITUDE_NOT_CORRECTNESS",
+    "comparable_across_runs": "YES when same reference distribution definition"
+  },
+  "delta_g_star": {
+    "web_implementation": "apps/hydradg-web/lib/fcg4d.ts#computeStateField",
+    "gateway_implementation": "hydralamp/gateway.py#compute_diagnostics",
+    "formula_web": "G* = clamp01(burden) - tau * normalized_entropy; delta = G*(t)-G*(t-1)",
+    "formula_gateway": "burden from msm states; entropy from [promoted, quarantined, denied, other] counts",
+    "units": "DIMENSIONLESS",
+    "physical_gibbs": "NO \u2014 explicitly documented as information-state abstraction",
+    "semantics": "DIRECTION_ONLY_NOT_ACCURACY",
+    "implementation_divergence": "YES \u2014 gateway uses MSM histogram; web uses declared distributions"
+  },
+  "restoration": {
+    "restoration_gain_formula": "max(0, previous_TVD - current_TVD) in fcg4d.ts",
+    "judge_gate": "REPAIR_AGENT CANONICAL_PROMOTED + zero unauthorized disclosures",
+    "dimensional_vector_recommended": [
+      "AUTH_RESTORED",
+      "QUARANTINE_RESOLVED",
+      "STRUCTURE_RESTORED",
+      "REFERENCE_ALIGNMENT",
+      "TASK_RESULT_RESTORED"
+    ],
+    "canonical_RESTORATION_GAIN_on_frozen_lane": "NOT_COMPUTED"
+  },
+  "presentation_only": [
+    "visualization_x_y_z",
+    "delta_g_star_drift_pointer name (tracks FCG prefix not \u0394G*)"
+  ]
+}

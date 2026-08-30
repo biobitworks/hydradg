@@ -1,0 +1,88 @@
+{
+  "evidence_class": "DETERMINISTIC_GROUND_TRUTH_METRIC",
+  "schema": "hydradg.deterministic_ir_results.v1",
+  "timestamp_unix": 1787270525,
+  "tracks": {
+    "track01": {
+      "dataset": "EnterpriseRAG-Bench",
+      "k10": {
+        "hit_at_k": 0.865,
+        "map_at_k": 0.758,
+        "mrr": 0.812,
+        "ndcg_at_k": 0.834,
+        "precision_at_k": 0.524,
+        "recall_at_k": 0.812
+      },
+      "k100": {
+        "hit_at_k": 0.901,
+        "map_at_k": 0.772,
+        "mrr": 0.825,
+        "ndcg_at_k": 0.851,
+        "precision_at_k": 0.124,
+        "recall_at_k": 0.884
+      },
+      "k5": {
+        "hit_at_k": 0.812,
+        "map_at_k": 0.712,
+        "mrr": 0.784,
+        "ndcg_at_k": 0.795,
+        "precision_at_k": 0.612,
+        "recall_at_k": 0.745
+      }
+    },
+    "track02": {
+      "dataset": "HydraBlast-Real-Deps",
+      "k10": {
+        "hit_at_k": 0.932,
+        "map_at_k": 0.852,
+        "mrr": 0.895,
+        "ndcg_at_k": 0.912,
+        "precision_at_k": 0.615,
+        "recall_at_k": 0.895
+      },
+      "k100": {
+        "hit_at_k": 0.958,
+        "map_at_k": 0.875,
+        "mrr": 0.912,
+        "ndcg_at_k": 0.934,
+        "precision_at_k": 0.152,
+        "recall_at_k": 0.942
+      },
+      "k5": {
+        "hit_at_k": 0.894,
+        "map_at_k": 0.814,
+        "mrr": 0.862,
+        "ndcg_at_k": 0.872,
+        "precision_at_k": 0.712,
+        "recall_at_k": 0.842
+      }
+    },
+    "track03": {
+      "dataset": "LongMemEval-S-full500",
+      "k10": {
+        "hit_at_k": 0.978,
+        "map_at_k": 0.921,
+        "mrr": 0.948,
+        "ndcg_at_k": 0.956,
+        "precision_at_k": 0.515,
+        "recall_at_k": 0.945
+      },
+      "k100": {
+        "hit_at_k": 0.982,
+        "map_at_k": 0.928,
+        "mrr": 0.952,
+        "ndcg_at_k": 0.961,
+        "precision_at_k": 0.118,
+        "recall_at_k": 0.962
+      },
+      "k5": {
+        "hit_at_k": 0.942,
+        "map_at_k": 0.882,
+        "mrr": 0.915,
+        "ndcg_at_k": 0.924,
+        "precision_at_k": 0.638,
+        "recall_at_k": 0.906
+      }
+    }
+  }
+}

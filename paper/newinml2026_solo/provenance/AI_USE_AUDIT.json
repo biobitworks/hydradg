@@ -1,0 +1,24 @@
+{
+  "schema": "hydradg.newinml2026_solo.ai_use_audit.v1",
+  "recorded_at_utc": "2026-08-28T23:06:14Z",
+  "internal_review_only": true,
+  "ai_systems_used_in_manuscript_preparation": [
+    {
+      "role": "drafting_and_editing",
+      "system_class": "frontier_coding_agent",
+      "listed_as_author": false
+    },
+    {
+      "role": "latex_compilation_assistance",
+      "system_class": "deterministic_tooling",
+      "listed_as_author": false
+    }
+  ],
+  "scientific_experiments_disclosed_in_setup": true,
+  "models_used_as_experimental_subjects": [
+    "qwen3:1.7b",
+    "qwen2.5-coder:7b"
+  ],
+  "successor_q38_lane": "NOT_ADMITTED_PRIMARY_RESULTS_NON_TERMINAL",
+  "anonymized_submission_excludes_custody_metadata": true
+}

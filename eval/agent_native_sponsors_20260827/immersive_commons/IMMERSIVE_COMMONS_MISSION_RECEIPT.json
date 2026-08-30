@@ -1,0 +1,34 @@
+{
+  "schema": "sponsor.immersive_commons.discovery_receipt.v1",
+  "mission_id": "ANB-SP-IC-MCP-DISCOVERY-001",
+  "provider": "Immersive Commons",
+  "event_reference": "anb-hack-01",
+  "operation": "mcp_manifest_discovery",
+  "started_at": "2026-08-27T05:29:25.496Z",
+  "completed_at": "2026-08-27T05:29:25.752Z",
+  "mcp_url": "https://www.immersivecommons.com/api/mcp",
+  "manifest_url": "https://www.immersivecommons.com/.well-known/mcp.json",
+  "status": "PASS",
+  "error_summary": null,
+  "capabilities": {
+    "manifest_name": "immersive-commons-floor10",
+    "manifest_version": "1.34.0",
+    "tool_count": 190,
+    "public_tool_count": 11,
+    "public_tools_sample": [
+      "ic_signal_list_issues",
+      "ic_signal_get_issue",
+      "ic_signal_get_story",
+      "ic_signal_search",
+      "ic_signal_get_latest"
+    ]
+  },
+  "unknown_agent_discovery": {
+    "can_discover_hydradg_via_ic": "NOT_TESTED",
+    "note": "HydraDG evidence gateway exposed separately; IC MCP is event-native surface."
+  },
+  "bounded_transaction": "NOT_ATTEMPTED",
+  "event_credentials_in_repo": false,
+  "claim_ceiling": "EXTERNALLY_RETRIEVED_EVIDENCE",
+  "signature_state": "NOT_SIGNED"
+}

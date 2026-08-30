@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://hydradg.local/schemas/orchestration_work_unit.schema.json",
+  "title": "HydraDG GSD/gsigmad Orchestration Work Unit",
+  "type": "object",
+  "additionalProperties": true,
+  "required": [
+    "schema",
+    "work_unit_id",
+    "phase",
+    "actor",
+    "role_lane",
+    "role_ceiling",
+    "writeback_disposition",
+    "repo",
+    "branch",
+    "base_git_sha",
+    "expected_host",
+    "capability_snapshot_sha256",
+    "input_packet_sha256",
+    "lease",
+    "expected_outputs",
+    "verification_gates",
+    "stop_conditions",
+    "claim_ceiling",
+    "fco_state",
+    "fcg_state",
+    "signature_state",
+    "merkle_mmr_state"
+  ],
+  "properties": {
+    "schema": {"const": "hydradg.orchestration_work_unit.v1"},
+    "work_unit_id": {"type": "string", "minLength": 1},
+    "phase": {"enum": ["OFFER", "ACCEPT", "CHECKPOINT", "CLOSEOUT"]},
+    "parent_receipt_sha256": {
+      "type": "array",
+      "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+      "uniqueItems": true
+    },
+    "actor": {
+      "type": "object",
+      "required": ["actor_class", "runtime_identity"],
+      "properties": {
+        "actor_class": {"enum": ["HUMAN", "AGENT", "MODEL", "TOOL", "SERVICE"]},
+        "runtime_identity": {"type": "string", "minLength": 1},
+        "model_name": {"type": ["string", "null"]},
+        "model_digest": {"type": ["string", "null"]}
+      }
+    },
+    "role_lane": {"type": "string", "minLength": 1},
+    "role_ceiling": {"type": "string", "minLength": 1},
+    "writeback_disposition": {"type": "string", "minLength": 1},
+    "repo": {"type": "string", "minLength": 1},
+    "worktree_path": {"type": ["string", "null"]},
+    "branch": {"type": "string", "minLength": 1},
+    "base_git_sha": {"type": "string", "pattern": "^[0-9a-f]{40}$"},
+    "expected_host": {"type": "string", "minLength": 1},
+    "actual_host": {"type": ["string", "null"]},
+    "hardware_identity_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "capability_snapshot_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "input_packet_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "plan_sha256": {"type": ["string", "null"], "pattern": "^[0-9a-f]{64}$"},
+    "locked_decisions": {"type": "array", "items": {"type": "string"}},
+    "deferred_ideas": {"type": "array", "items": {"type": "string"}},
+    "lease": {
+      "type": "object",
+      "required": ["lease_id", "fencing_token", "single_writer_scope", "lease_owner", "lease_state"],
+      "properties": {
+        "lease_id": {"type": "string", "minLength": 1},
+        "fencing_token": {"type": "integer", "minimum": 1},
+        "single_writer_scope": {"type": "string", "minLength": 1},
+        "lease_owner": {"type": "string", "minLength": 1},
+        "lease_state": {"enum": ["OFFERED", "ACCEPTED", "ACTIVE", "RELEASED", "EXPIRED", "BLOCKED"]}
+      }
+    },
+    "expected_outputs": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "verification_gates": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "stop_conditions": {"type": "array", "minItems": 1, "items": {"type": "string"}},
+    "result_artifact_sha256": {"type": ["array", "null"], "items": {"type": "string", "pattern": "^[0-9a-f]{64}$"}},
+    "claim_ceiling": {"type": "string", "minLength": 1},
+    "fco_state": {"type": "string", "minLength": 1},
+    "fcg_state": {"type": "string", "minLength": 1},
+    "signature_state": {"enum": ["NOT_SIGNED", "PENDING_EXTERNAL_PRIVATE_KEY_OPERATION", "SIGNED_VERIFIED"]},
+    "cryptographic_signature_receipt": {"type": ["string", "null"]},
+    "legacy_signature_label": {"type": ["string", "null"]},
+    "merkle_mmr_state": {"type": "string", "minLength": 1},
+    "handoff_acknowledged": {"type": ["boolean", "null"]}
+  },
+  "allOf": [
+    {
+      "if": {"properties": {"phase": {"enum": ["ACCEPT", "CHECKPOINT", "CLOSEOUT"]}}},
+      "then": {"required": ["actual_host"]}
+    },
+    {
+      "if": {"properties": {"signature_state": {"const": "SIGNED_VERIFIED"}}},
+      "then": {"required": ["cryptographic_signature_receipt"], "properties": {"cryptographic_signature_receipt": {"type": "string", "minLength": 1}}}
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+HYDRADG FINAL DAISY EXECUTION — 2026-08-29
+
+On magicSTUDIObox.local, fetch and checkout:
+cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829
+
+Read first:
+docs/NEWINML_FINAL_DAISY_CFOS_Q38_SEEDGRAPH_PLAN_20260829.md
+eval/newinml_final_daisy_20260829/EXPERIMENT_MATRIX.json
+eval/newinml_final_daisy_20260829/ATOM_GOVERNANCE_PROTOCOL.json
+eval/newinml_final_daisy_20260829/SEEDGRAPH_PIECEWISE_PLAN.json
+eval/newinml_final_daisy_20260829/LAB_NOTEBOOK_TEMPLATE.json
+eval/newinml_final_daisy_20260829/ROUTING_PLAN.json
+
+Do not mutate the green NewInML V3 paper lane.
+
+1. Locate and run gum_ai_stack_doctor.zsh read-only. Save BEFORE/AFTER JSON; repair only non-scientific environment defects.
+2. Reconcile Q38 receipts/model digest/resource gates. Preserve all existing terminal cells. No selective reruns.
+3. Pin cloudflare/cloudflare-os exact SHA. Run local `pnpm run-local`/Wrangler-workerd canary and execute CFOS-HL-001: 8 cells first; if all integrity gates pass, expand to the frozen 100-cell HydraLamp matrix.
+4. On an authorized CUDA host, pin SGLang SHA and explicit CUDA graph config. Run SGLANG-HL-001 canary: 24 cells across disabled/tc_piecewise/breakable; expand to 300 only after canary verification.
+5. Re-audit Daytona/Kaggle credentials/capacity. If available, run Q38-XENV-001 with exact pinned HF revisions; local GGUF/MPS remains runtime-non-equivalent and descriptive. Block honestly if capacity/auth is absent.
+6. Replace monolithic SeedGraph resume with per-source checkpoints. Every source emits SOURCE_MANIFEST, ATOMS, EDGES, INGEST_RECEIPT, SEGMENT_ROOT. Batch verified writeback every 25 sources with readback before promotion.
+7. Build current atom catalog and exact-identity groups. Attach Anticube categorical SELF/NON_SELF × SAFE/NON_SAFE to occurrence/context, not content hash. Do not invent an Anticube scalar.
+8. Use uv/Snakemake/Python for deterministic work. Route only unresolved semantic cases to Ollarma; classify outputs PROBABILISTIC_MODEL_OUTPUT and deterministically verify before promotion.
+9. Update CFMO only from verified experiment/batch state. Set MMR COMMITTED only after actual canonical append+verification.
+10. Commit/push receipts after each bounded Daisy stage. Report PASS/PARTIAL/BLOCKED/NOT_EXECUTED, exact cell counts, first divergence, claim ceiling, FCO/FCG/CFMO/MMR states.
+
+EXP-008 and EXP-009 remain UNDERPOWERED. Do not relabel them negative. No powered positive primary treatment-effect result is currently established; deterministic systems PASS results are a separate evidence tier.

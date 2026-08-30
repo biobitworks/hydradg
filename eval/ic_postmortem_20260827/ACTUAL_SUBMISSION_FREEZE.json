@@ -1,0 +1,78 @@
+{
+  "schema": "hydradg.ic_postmortem.actual_submission_freeze.v1",
+  "audit_recorded_at_utc": "2026-08-28T05:27:34Z",
+  "deadline_cutoff_utc": "2026-08-27T22:39:24Z",
+  "submission_payload": {
+    "path": "eval/immersive_commons_submission_20260827/seal/IMMERSIVE_COMMONS_SUBMISSION_PAYLOAD.json",
+    "sha256": "230bd00a6d95e57d423dd26d2be18512c2041030f1b7007bdb0374a85722611d",
+    "bytes": 1743,
+    "fields": {
+      "agent_surface": "HydraLamp exposes machine-readable HTTP agent APIs on HydraDG (Vercel control plane) and a standalone public custody console at hydralamp.vercel.app. Agents without UI access can: (1) GET/POST /api/hydralamp/run to start a governed experiment (DETERMINISTIC_FIXTURE or LIVE_RUNTYPE on Vercel; local Ollarma lanes on Studio only); (2) GET /api/hydralamp/status?run_id= for FCG roots, hash-chain verification, quarantine, lanes, and claim ceilings; (3) GET /api/hydralamp/stream?run_id= for SSE custody events; (4) GET /api/hydralamp/events for the frozen 46-event golden lane JSONL; (5) GET/POST /api/agent-native/evidence-gateway for discover_capabilities, query_evidence, propose_external_evidence, and verify_custody_receipt (quarantine-only; no canonical FCG append); (6) GET /api/providers/status and /api/providers/health for sponsor integration state. The visual UI is a synchronized observer of the governed machine event stream \u2014 not the authority.",
+      "blurb": "HydraLamp is an agent-native zero-trust control plane built on HydraDG. Autonomous agents discover context, authenticate, operate through bounded capabilities, preserve failures and contradictions, and record source \u2192 action \u2192 result \u2192 claim provenance as FCO/FCG custody. The demo replays a frozen 46-event reference \u2192 poison \u2192 detection \u2192 antidote \u2192 restoration sequence while preserving authorization failures, replay rejections, quarantine state, and custody receipts rather than hiding unfavorable outcomes. Models propose. Deterministic custody decides.",
+      "demo_url": "https://hydralamp.vercel.app/",
+      "event_id": "anb-hack-01",
+      "folder_id": null,
+      "repo_url": "https://github.com/biobitworks/hydradg",
+      "title": "HydraLamp"
+    },
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+  },
+  "known_payload_sha256_match": true,
+  "ic_acknowledgement": {
+    "recorded_at_utc": "2026-08-27T22:39:24Z",
+    "platform_submitted_at": "2026-08-27T22:13:37.209Z",
+    "platform_updated_at": "2026-08-27T22:39:24.763Z",
+    "team_id": "t_3d43e808657d9b79",
+    "locked_at_ack": false,
+    "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+  },
+  "source_git_commits": {
+    "seal_commit": {
+      "sha": "9bc6d8f6c8398a0fc7002008c9068b30c798dafa",
+      "timestamp": "2026-08-27 15:21:17 -0700",
+      "message": "Add Immersive Commons submission seal and operator review packet."
+    },
+    "receipt_commit": {
+      "sha": "b337e60f87e00e869eef3a0c737ec7effdedc077",
+      "timestamp": "2026-08-27 15:47:18 -0700",
+      "message": "Record Immersive Commons submission receipt and final publication reconciliation"
+    },
+    "post_submit_vault_packet_commit": {
+      "sha": "56efebd10a8e206f3bc60937dd6e629beea60302",
+      "timestamp": "2026-08-27 16:00:14 -0700",
+      "message": "Add IC vault upload packet and Mitosis Cortex successor receipt for media closeout"
+    },
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+  },
+  "production_demo_at_submission": {
+    "demo_url": "https://hydralamp.vercel.app/",
+    "repo_url": "https://github.com/biobitworks/hydradg",
+    "hydradg_branch": "hack-hydra/hydralamp-20260826",
+    "hydradg_sha_at_approval": "f6d3e0a6205ef1226d04325c402c63e1343803df",
+    "hydralamp_standalone_sha": "d3d928aae47e12afa99c25bd5d1cd94ef74c3da7",
+    "note": "Production SHA at exact ack moment not independently re-verified from Vercel API in this audit; operator packet pins f6d3e0a6",
+    "evidence_class": "RECOMPUTED_RESULT"
+  },
+  "submission_lock_state": {
+    "at_ack": false,
+    "current_live": true,
+    "note": "Live ic_hack_me refresh 2026-08-28 shows locked=true",
+    "evidence_class": "EXTERNALLY_RETRIEVED_EVIDENCE"
+  },
+  "folder_vault_state": {
+    "folder_id": null,
+    "ic_folder_attached": false,
+    "vault_upload_packet_state": "PENDING_OPERATOR_AUTHORIZATION",
+    "vault_packet_created_post_ack": true,
+    "evidence_class": "DETERMINISTIC_TOOL_OUTPUT"
+  },
+  "signature_state": "NOT_SIGNED",
+  "ic_signed_request_mode": "NOT_USED",
+  "fcg_state": "NOT_APPENDED",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "operator_approval": {
+    "path": "eval/immersive_commons_submission_20260827/OPERATOR_APPROVAL_PACKET.json",
+    "approval": "APPROVE_IMMERSIVE_COMMONS_SUBMISSION_AFTER_QUICK_FIXES",
+    "evidence_class": "DIRECT_HUMAN_EVIDENCE"
+  }
+}

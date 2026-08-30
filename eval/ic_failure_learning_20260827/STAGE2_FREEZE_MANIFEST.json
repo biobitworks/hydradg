@@ -1,0 +1,38 @@
+{
+  "schema": "hydradg.ic_failure_learning.stage2_freeze.v1",
+  "frozen_at_utc": "2026-08-28T07:30:48Z",
+  "git_head": "94059bbd09907a12d5bb193c9705ad8fc7dd6572",
+  "entries": [
+    {
+      "path": "eval/ic_failure_learning_20260827/results/MODEL_OUTPUTS.jsonl",
+      "sha256": "bdd3d6349c6e8d21edf820b7e7fbaec2202e53ac464904e41d1ca7595a9f2b02",
+      "bytes": 607219
+    },
+    {
+      "path": "eval/ic_failure_learning_20260827/EXPERIMENT_RESULTS.jsonl",
+      "sha256": "bdd3d6349c6e8d21edf820b7e7fbaec2202e53ac464904e41d1ca7595a9f2b02",
+      "bytes": 607219
+    },
+    {
+      "path": "eval/ic_failure_learning_20260827/EXPERIMENT_SUMMARY.json",
+      "sha256": "8c539ec4fd4259f9af5739a878986437e4b5e824710ea60d803d38cc0fb30b74",
+      "bytes": 3077
+    },
+    {
+      "path": "eval/ic_failure_learning_20260827/MODEL_BEHAVIOR_DELTA.json",
+      "sha256": "c2e569e379ab7fa85f89c31db2dee46cb52ea9ba56ee0bba3ced38f6fc50c895",
+      "bytes": 869
+    }
+  ],
+  "STAGE2_ROW_COUNT": 432,
+  "STAGE2_MODELS": [
+    "qwen2.5-coder:7b",
+    "qwen3:1.7b"
+  ],
+  "STAGE2_GENERATIONS": [
+    "M0",
+    "M1",
+    "M2"
+  ],
+  "STAGE2_REPLICATES": 3
+}

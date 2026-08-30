@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.v3_v4_change_audit.v1",
+  "timestamp_unix": 1787281050,
+  "permitted_changes": [
+    "MODEL_LOAD_TIMEOUT_SECONDS increased to 180s",
+    "GENERATION_TIMEOUT_SECONDS set to 120s",
+    "Pre-warmup infrastructure calls added before scientific invocation",
+    "MODEL_WARMUP_RECEIPTS.jsonl created",
+    "Separated CANARY_INFRASTRUCTURE_VALID from CANARY_SCIENTIFIC_CORRECT counters"
+  ],
+  "forbidden_changes_audit": {
+    "prompts_changed": false,
+    "case_payloads_changed": false,
+    "scoring_changed": false,
+    "parser_changed": false,
+    "datasets_changed": false,
+    "labels_changed": false,
+    "k_values_changed": false,
+    "models_changed": false
+  },
+  "scientific_contract_changed": "NO"
+}

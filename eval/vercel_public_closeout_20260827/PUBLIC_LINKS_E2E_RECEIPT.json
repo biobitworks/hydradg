@@ -1,0 +1,276 @@
+{
+  "schema": "hydradg.public_links_e2e_receipt.v1",
+  "recorded_at_utc": "2026-08-28T00:03:43Z",
+  "execution_host": "magicSTUDIObox.local",
+  "hydralamp_base": "https://hydralamp.vercel.app",
+  "hydradg_base": "https://hydradg.vercel.app",
+  "expected_hydralamp_sha": "c6dcadfeff0fa31e63e7865b04e1bef07511edaf",
+  "expected_hydradg_source_sha": "56efebd10a8e206f3bc60937dd6e629beea60302",
+  "version_check_policy": "HydraLamp /api/health sha is canonical deployed-version gate; redeployment anomalies recorded in FCG not overwritten.",
+  "fresh_context": true,
+  "auth_cookies": false,
+  "pass": true,
+  "PUBLIC_LINKS_E2E": "PASS",
+  "checks": [
+    {
+      "name": "ROOT_200",
+      "url": "https://hydralamp.vercel.app/",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydralamp"
+    },
+    {
+      "name": "GOLDEN_200",
+      "url": "https://hydralamp.vercel.app/golden",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydralamp"
+    },
+    {
+      "name": "STATIC_200",
+      "url": "https://hydralamp.vercel.app/demo/index.html",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydralamp"
+    },
+    {
+      "name": "AGENT_CARD_200",
+      "url": "https://hydralamp.vercel.app/.well-known/agent.json",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydralamp"
+    },
+    {
+      "name": "HEALTH_200",
+      "url": "https://hydralamp.vercel.app/api/health",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydralamp"
+    },
+    {
+      "name": "MANIFEST_200",
+      "url": "https://hydralamp.vercel.app/submission_media/MEDIA_SUBMISSION_MANIFEST.json",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydralamp"
+    },
+    {
+      "name": "VIDEO_20S_200",
+      "url": "https://hydralamp.vercel.app/submission_media/HYDRALAMP_DEMO_20S.mp4",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "VIDEO_3MIN_200",
+      "url": "https://hydralamp.vercel.app/submission_media/HYDRALAMP_DEMO_3MIN.mp4",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "PNG_00_REFERENCE_200",
+      "url": "https://hydralamp.vercel.app/submission_media/00_reference.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "PNG_01_POISON_200",
+      "url": "https://hydralamp.vercel.app/submission_media/01_poison.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "PNG_02_DENIED_200",
+      "url": "https://hydralamp.vercel.app/submission_media/02_denied.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "PNG_03_REPAIR_200",
+      "url": "https://hydralamp.vercel.app/submission_media/03_repair.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "PNG_04_RESTORED_200",
+      "url": "https://hydralamp.vercel.app/submission_media/04_restored.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "media"
+    },
+    {
+      "name": "HYDRALAMP_PRODUCTION_SHA",
+      "url": "https://hydralamp.vercel.app/api/health",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=c6dcadfeff0fa31e63e7865b04e1bef07511edaf expected=c6dcadfeff0fa31e63e7865b04e1bef07511edaf",
+      "category": "sha"
+    },
+    {
+      "name": "MANIFEST_PARSE",
+      "url": "https://hydralamp.vercel.app/submission_media/MEDIA_SUBMISSION_MANIFEST.json",
+      "pass": true,
+      "http_status": 200,
+      "detail": "artifacts=8",
+      "category": "manifest"
+    },
+    {
+      "name": "MEDIA_SHA_HYDRALAMP_DEMO_20S.mp4",
+      "url": "https://hydralamp.vercel.app/submission_media/HYDRALAMP_DEMO_20S.mp4",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=891bee8d206fdcc4… expected=891bee8d206fdcc4…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_HYDRALAMP_DEMO_3MIN.mp4",
+      "url": "https://hydralamp.vercel.app/submission_media/HYDRALAMP_DEMO_3MIN.mp4",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=1cba07ccac2998b5… expected=1cba07ccac2998b5…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_00_reference.fco.png",
+      "url": "https://hydralamp.vercel.app/submission_media/00_reference.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=8db4c9ee7b8fb056… expected=8db4c9ee7b8fb056…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_01_poison.fco.png",
+      "url": "https://hydralamp.vercel.app/submission_media/01_poison.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=3cc39226a2aef56c… expected=3cc39226a2aef56c…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_02_denied.fco.png",
+      "url": "https://hydralamp.vercel.app/submission_media/02_denied.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=e77caab886dd717d… expected=e77caab886dd717d…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_03_repair.fco.png",
+      "url": "https://hydralamp.vercel.app/submission_media/03_repair.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=2f841d4202236bbb… expected=2f841d4202236bbb…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_04_restored.fco.png",
+      "url": "https://hydralamp.vercel.app/submission_media/04_restored.fco.png",
+      "pass": true,
+      "http_status": 200,
+      "detail": "sha=925754c7397b1e5c… expected=925754c7397b1e5c…",
+      "category": "media"
+    },
+    {
+      "name": "MEDIA_SHA_VERIFY",
+      "url": "https://hydralamp.vercel.app/submission_media/",
+      "pass": true,
+      "http_status": 200,
+      "detail": "7/7 match manifest",
+      "category": "manifest"
+    },
+    {
+      "name": "HYDRADG_ROOT_200",
+      "url": "https://hydradg.vercel.app/",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "FULL_SUBMISSION_200",
+      "url": "https://hydradg.vercel.app/submission",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_HYDRALAMP_200",
+      "url": "https://hydradg.vercel.app/hydralamp",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_JUDGE_200",
+      "url": "https://hydradg.vercel.app/judge",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_PROVIDERS_200",
+      "url": "https://hydradg.vercel.app/providers",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_GRAPH_200",
+      "url": "https://hydradg.vercel.app/graph",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_KNOWLEDGE_200",
+      "url": "https://hydradg.vercel.app/knowledge",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_HOWTO_200",
+      "url": "https://hydradg.vercel.app/how-to",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    },
+    {
+      "name": "HYDRADG_ELIGIBILITY_200",
+      "url": "https://hydradg.vercel.app/eligibility",
+      "pass": true,
+      "http_status": 200,
+      "detail": "http=200",
+      "category": "hydradg"
+    }
+  ],
+  "hacker_bob_prerequisite": "READY",
+  "signature_state": "NOT_SIGNED",
+  "fcg_append_state": "NOT_APPENDED",
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT"
+}

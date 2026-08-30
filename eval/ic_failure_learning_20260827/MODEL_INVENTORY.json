@@ -1,0 +1,48 @@
+{
+  "schema": "hydradg.ic_failure_learning.model_inventory.v1",
+  "ollama_version": "ollama version is 0.33.0",
+  "admitted_count": 4,
+  "blocked_count": 4,
+  "models": [
+    {
+      "tag": "qwen2.5:1.5b",
+      "status": "ADMITTED",
+      "digest": "65ec06548149",
+      "show_excerpt": "  Model\n    architecture        qwen2     \n    parameters          1.5B      \n    context length      32768     \n    embedding length    1536      \n    quantization        Q4_K_M    \n\n  Capabilities\n    completion    \n    tools         \n\n  System\n    You are Qwen, created by Alibaba Cloud. You are a helpful assistant.    \n\n  License\n    Apache License               \n    Version 2.0, January 2004    \n    ...                          \n\n"
+    },
+    {
+      "tag": "qwen3:1.7b",
+      "status": "ADMITTED",
+      "digest": "8f68893c685c",
+      "show_excerpt": "  Model\n    architecture        qwen3     \n    parameters          2.0B      \n    context length      40960     \n    embedding length    2048      \n    quantization        Q4_K_M    \n\n  Capabilities\n    completion    \n    tools         \n    thinking      \n\n  Parameters\n    top_p             0.95              \n    repeat_penalty    1                 \n    stop              \"<|im_start|>\"    \n    stop              \"<|im_end|>\"      \n    temperature       0.6               \n    top_k             20 "
+    },
+    {
+      "tag": "llama3.2:3b",
+      "status": "BLOCKED_MODEL_UNAVAILABLE"
+    },
+    {
+      "tag": "granite4.1:3b",
+      "status": "BLOCKED_MODEL_UNAVAILABLE"
+    },
+    {
+      "tag": "qwen2.5:7b",
+      "status": "BLOCKED_MODEL_UNAVAILABLE"
+    },
+    {
+      "tag": "qwen2.5-coder:7b",
+      "status": "ADMITTED",
+      "digest": "dae161e27b0e",
+      "show_excerpt": "  Model\n    architecture        qwen2     \n    parameters          7.6B      \n    context length      32768     \n    embedding length    3584      \n    quantization        Q4_K_M    \n\n  Capabilities\n    completion    \n    tools         \n    insert        \n\n  System\n    You are Qwen, created by Alibaba Cloud. You are a helpful assistant.    \n\n  License\n    Apache License               \n    Version 2.0, January 2004    \n    ...                          \n\n"
+    },
+    {
+      "tag": "deepseek-r1:14b",
+      "status": "ADMITTED",
+      "digest": "c333b7232bdb",
+      "show_excerpt": "  Model\n    architecture        qwen2     \n    parameters          14.8B     \n    context length      131072    \n    embedding length    5120      \n    quantization        Q4_K_M    \n\n  Capabilities\n    tools         \n    thinking      \n    completion    \n\n  Parameters\n    stop    \"<\uff5cbegin\u2581of\u2581sentence\uff5c>\"    \n    stop    \"<\uff5cend\u2581of\u2581sentence\uff5c>\"      \n    stop    \"<\uff5cUser\uff5c>\"                 \n    stop    \"<\uff5cAssistant\uff5c>\"            \n\n  License\n    MIT License                    \n    Copyright (c) 2023 "
+    },
+    {
+      "tag": "phi4-reasoning:14b",
+      "status": "BLOCKED_MODEL_UNAVAILABLE"
+    }
+  ]
+}

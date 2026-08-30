@@ -1,0 +1,136 @@
+{
+  "schema": "hydradg.anb_live.plan.v1",
+  "phase": "PLAN",
+  "plan_id": "plan:anb_runtype_product_eval_v1_20260826",
+  "track_id": "ANB_RUNTYPE_PRODUCT_EVAL_V1",
+  "created_at_utc": "2026-08-27T01:00:00Z",
+  "repo": "biobitworks/hydradg",
+  "branch": "hack-hydra/agent-native-builders-20260826",
+  "accepted_base_sha": "2ffb3e9ad528e464f83d0b777552aaa32d57333e",
+  "accept_artifact_commit_sha": "3869da66a584815ae1f1f31d3b6edbfcc720135e",
+  "expected_host": "magicSTUDIObox.local",
+  "capability_snapshot_sha256": "627f19c2bcb06f1b34191f08b171140157be9dbb52829ebb9b50318334907179",
+  "input_packet_path": "eval/agent_native_builders_live_20260826/input_packets/RUNTYPE_PRODUCT_EVAL_INPUT.json",
+  "input_packet_sha256": "8fc6543687359e9bf80596ade8427199fd3b0467b87999a13e08a6063092270f",
+  "parent_accept_path": "eval/agent_native_builders_live_20260826/work_units/ANB_RUNTYPE_PRODUCT_EVAL_V1_ACCEPT.json",
+  "execution_allowed": false,
+  "submit_allowed": false,
+  "merge_to_main_allowed": false,
+  "product": "HydraDG Runtype Product",
+  "eval_suite": {
+    "suite_id": "ANB_RUNTYPE_EVAL_SUITE_V1",
+    "case_count": 16,
+    "implementation": "AS_CODE",
+    "cases_path": "eval/agent_native_builders_live_20260826/runtype_eval_suite/cases.jsonl",
+    "suite_manifest_path": "eval/agent_native_builders_live_20260826/runtype_eval_suite/SUITE_MANIFEST.json",
+    "cases": [
+      {
+        "case_id": "ANB_RT_CASE_01",
+        "content_sha256": "5006aca1d55023b8f65780639b4a34f68c11d3e3454c2fbb494d5086b88a65d6"
+      },
+      {
+        "case_id": "ANB_RT_CASE_02",
+        "content_sha256": "ea5e5f676c198dff14ffd5e82184884f5d643cec5ee3fbe1427d425b3e1534bc"
+      },
+      {
+        "case_id": "ANB_RT_CASE_03",
+        "content_sha256": "0f35bb8b280b6448604e51cdceb5e2878f1ef9c8207d6a7672cd0cbd814c0eb4"
+      },
+      {
+        "case_id": "ANB_RT_CASE_04",
+        "content_sha256": "ccfdbdb9c13d8d3156047c788c3be41b15ae8ed1b8a5cc7eea5f3eef5aa8f20c"
+      },
+      {
+        "case_id": "ANB_RT_CASE_05",
+        "content_sha256": "325148f19f08faa6064e8223114a479faa6d9765d5627e23d537b44f30222f25"
+      },
+      {
+        "case_id": "ANB_RT_CASE_06",
+        "content_sha256": "fad9a2b43698dc92501fc4911bff1aacf6d317c28aa9531532703c21b1849359"
+      },
+      {
+        "case_id": "ANB_RT_CASE_07",
+        "content_sha256": "8badeffdc476717ffe5e1d749ad2f98357ab2d57b1fec355d32b1c72e895fb83"
+      },
+      {
+        "case_id": "ANB_RT_CASE_08",
+        "content_sha256": "31f0837cb3e8a0fcde0006780e349731f21e0ab727e8caa41c93e2157cbc21c3"
+      },
+      {
+        "case_id": "ANB_RT_CASE_09",
+        "content_sha256": "704ed0c4ce2dc23427244de123a851d70a1e4f199a5fc43d44139799b18b0e66"
+      },
+      {
+        "case_id": "ANB_RT_CASE_10",
+        "content_sha256": "43dc9d6873993263b304c638bbc9e29b4c93457c97849e348e04ab277a2ccf47"
+      },
+      {
+        "case_id": "ANB_RT_CASE_11",
+        "content_sha256": "8af3c51b0a679388fdb79ef93af1e079771010ad3d1a73cffd0b157fc1e9c208"
+      },
+      {
+        "case_id": "ANB_RT_CASE_12",
+        "content_sha256": "095f30f90553eee9b1240d0d3cb01a64f4ed06d7198e10fe2fc059162c327e36"
+      },
+      {
+        "case_id": "ANB_RT_CASE_13",
+        "content_sha256": "6af3f48acc70b150fa3cf41b61a4e444fb187fd5e9dbef02093782859665740b"
+      },
+      {
+        "case_id": "ANB_RT_CASE_14",
+        "content_sha256": "0bc244a4ca4ad8990c818286f5ac256cfd3c52a399555077e059ecf49e3948f4"
+      },
+      {
+        "case_id": "ANB_RT_CASE_15",
+        "content_sha256": "31b38505b1250c98d985a2b0c67ad075b66fbc09202db06e50de833ee72af335"
+      },
+      {
+        "case_id": "ANB_RT_CASE_16",
+        "content_sha256": "f4bd5f432a8edf1056415fd39ab2198821eb815e2b53124af81667881c79e916"
+      }
+    ]
+  },
+  "variant_a": {
+    "variant_id": "ANB_RT_VAR_A_V1",
+    "provider": "runtype",
+    "model_requested": "runtype-default-chat",
+    "config_id": "anb-eval-a-temp0-tools-hydradg-v1",
+    "prompt_config_version": "anb-runtype-prompt-v1",
+    "tool_set_id": "hydradg-tools-quarantine-propose-v1",
+    "temperature": 0,
+    "notes": "Frozen identity before first eval call; create matching Runtype Agent config before EXECUTE"
+  },
+  "variant_b": {
+    "variant_id": "ANB_RT_VAR_B_V1",
+    "provider": "immersive_commons",
+    "model_requested": "workshop-model",
+    "config_id": "anb-eval-b-ic-workshop-temp0-v1",
+    "prompt_config_version": "anb-runtype-prompt-v1",
+    "tool_set_id": "hydradg-tools-quarantine-propose-v1",
+    "temperature": 0,
+    "credential_class": "PREEXISTING_WORKSHOP_KEY_ALREADY_USED_BY_OTHER_PROJECT",
+    "requires_hydradg_canary_before_route_attach": true,
+    "not_eligible_as_track01_fresh_credential_acquisition": true,
+    "notes": "MODEL_RETURNED bound from Immersive Commons canary receipt before EXECUTE; do not request a new key"
+  },
+  "runtype_agent_version_config": "hydradg-anb-agent-v1",
+  "deterministic_flow_version_config": "hydradg-anb-flow-v1",
+  "mcp_surface_config_identity": "hydradg-anb-mcp-surface-auth-v1",
+  "scorer_path": "eval/agent_native_builders_live_20260826/runtype_eval_suite/scorer.py",
+  "scorer_implementation_sha256": "1d94ff09d78c0803381198a3bc495a59f39982247492a9b8e311025e03884acf",
+  "timeout_seconds": 180,
+  "retry_count": 0,
+  "failure_handling": "RECORD_ERROR_CLASS_AND_CONTINUE_SUITE_NO_SELECTIVE_RERUN",
+  "missing_output_handling": "SCORE_AS_MISSING_OUTPUT_GRADE_ZERO",
+  "cost_accounting_method": "PROVIDER_USAGE_METADATA_IF_PRESENT_ELSE_NULL_PRESERVED",
+  "no_variant_mutation_after_execute_start": true,
+  "successor_experiment_required_for_any_change": true,
+  "preserve_runtype_execution_ids": true,
+  "preserve_log_references": true,
+  "no_selective_reruns": true,
+  "results_path": "eval/agent_native_builders_live_20260826/results/runtype/",
+  "evidence_class_rules_ref": "eval/agent_native_builders_live_20260826/EVIDENCE_CLASSIFICATION_V1.json",
+  "claim_ceiling": "PLAN_ONLY_NOT_EXECUTED",
+  "signature_state": "NOT_SIGNED",
+  "merkle_mmr_state": "NOT_COMMITTED"
+}

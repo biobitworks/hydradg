@@ -1,0 +1,22 @@
+{
+  "schema": "hydradg.cfos_hl001.stage_receipt.v1",
+  "experiment_id": "CFOS-HL-001",
+  "cloudflare_os_checkout": "/Users/byron/projects/active/cloudflare-os",
+  "cloudflare_os_sha": "14fea8592a6dbc59769d592c0752bbf6a465fa84",
+  "cfos_runtime_health": {
+    "ok": true,
+    "code": "200"
+  },
+  "signature_state": "NOT_SIGNED",
+  "stage": "1_CONTROL_SMOKE",
+  "ok": true,
+  "run_id": "hlrt_mte3nin8_8a63fec0",
+  "label": "stage1_control_smoke",
+  "perturbation": "CONTROL",
+  "event_count": 44,
+  "fcg": {
+    "root_before": "ea6b4b4cf63f27b64cc83119332fd1d1cbf2eab0db81ad710fad5af26b591fb1",
+    "root_after": "f7f1644d3c7321411951c3c8a985faf3a5e8625dac1bda7cc095a0de948108fc",
+    "append_state": "PASS"
+  }
+}

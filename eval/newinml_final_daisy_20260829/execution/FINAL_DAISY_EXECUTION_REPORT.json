@@ -1,0 +1,77 @@
+{
+  "CFMO_STATE": "UPDATED_FROM_VERIFIED_BATCH",
+  "CLAIM_CEILING": "SYSTEMS_AND_PLAN_ARTIFACTS_ONLY",
+  "EARLIEST_DIVERGENCE_BY_LINEAGE": "eval/newinml_final_daisy_20260829/execution/EARLIEST_DIVERGENCE_BY_LINEAGE.json",
+  "EXECUTION_BRANCH": "cursor/newinml-daisy-execute-20260829",
+  "EXECUTION_COMMIT_ATTESTATION": "PENDING_POST_COMMIT_EXTERNAL_ATTESTATION",
+  "EXP008_STATE": "UNDERPOWERED_CLOSED",
+  "EXP009_STATE": "UNDERPOWERED_CLOSED",
+  "FCG_STATE": "PIECEWISE_EDGES_AND_BATCH_DELTA",
+  "FCO_STATE": "PARTIAL_RECEIPTS_MATERIALIZED",
+  "FINAL_REVIEW_GATE": "CUSTODY_REPAIRED_EVIDENCE_BATCH_COMMITTED",
+  "GENERATED_FROM_TREE": "cad047a99e97be9ff02a563b5fda251f704c4847",
+  "HYDRADB_STATE": "NOT_EXECUTED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "NEXT_SAFE_ACTION": "Post-commit attestation; CFOS smoke after cloudflare-os+wrangler; SGLang after CUDA freeze; Q38 continuation only if provenance PASS",
+  "PLAN_BRANCH": "cursor/newinml-daisy-cfos-q38-seedgraph-plan-20260829",
+  "PLAN_SHA": "0f2c032bdbb4db6ff0d147015388d994cfcc98dd",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "base_submission_sha": "cfee4ee7a6a8c418f9c71a37ca96031518d895bc",
+  "control_batch_reverify": "PASS",
+  "evidence_batch_gate": "PASS",
+  "host": "magicSTUDIObox.local",
+  "lanes": [
+    {
+      "claim_ceiling": "ENVIRONMENT_INVENTORY_ONLY",
+      "lane": "LANE0_GUM_DOCTOR",
+      "state": "PARTIAL"
+    },
+    {
+      "claim_ceiling": "Q38_SUCCESSOR_NONTERMINAL",
+      "lane": "Q38-CLOSEOUT-001",
+      "provenance_gate": "PASS",
+      "state": "PASS",
+      "terminal_cells": 27
+    },
+    {
+      "cells": 0,
+      "claim_ceiling": "CLOUDFLARE_OS_INTEGRATION_CANARY",
+      "lane": "CFOS-HL-001",
+      "state": "BLOCKED"
+    },
+    {
+      "cells": 0,
+      "claim_ceiling": "RUNTIME_SYSTEMS_COMPARISON",
+      "lane": "SGLANG-HL-001",
+      "state": "BLOCKED"
+    },
+    {
+      "cells": 0,
+      "claim_ceiling": "DESCRIPTIVE_UNLESS_ARTIFACT_RUNTIME_EQUIVALENCE_ESTABLISHED",
+      "lane": "Q38-XENV-001",
+      "state": "BLOCKED"
+    },
+    {
+      "atoms": 48,
+      "claim_ceiling": "PIECEWISE_CONTROL_CORPUS_ONLY",
+      "lane": "SEEDGRAPH_CONTROL",
+      "sources": 5,
+      "state": "PASS"
+    },
+    {
+      "atoms": 312,
+      "claim_ceiling": "EVIDENCE_BATCH_NOT_WHOLE_PROJECT",
+      "lane": "SEEDGRAPH_EVIDENCE",
+      "sources": 25,
+      "state": "PASS"
+    },
+    {
+      "lane": "ATOM_GOVERNANCE",
+      "state": "PASS",
+      "vectors": 360
+    }
+  ],
+  "powered_positive_primary_effect": false,
+  "recorded_at_utc": "2026-08-29T07:40:32Z",
+  "schema": "hydradg.newinml_final_daisy.closeout.v2"
+}

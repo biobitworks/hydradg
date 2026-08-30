@@ -1,0 +1,7 @@
+<!doctype html><meta charset=utf-8><title>HydraLamp Backup Replay</title>
+<h1>HYDRALAMP_REAL_EVIDENCE_RESTORE_V1</h1>
+<p>Verified Studio event replay (not live provider).</p>
+<pre id=m></pre>
+<script>
+fetch('manifest.json').then(r=>r.json()).then(j=>{document.getElementById('m').textContent=JSON.stringify(j,null,2)});
+</script>

@@ -1,0 +1,310 @@
+\documentclass{article}
+
+\PassOptionsToPackage{numbers,sort&compress}{natbib}
+\usepackage[dblblindworkshop]{neurips_2026}
+\workshoptitle{New in Machine Learning (NewInML) at NeurIPS 2026}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{hyperref}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\title{HydraDG: Governed Context Interventions with Fractal Custody for Agent Experiments}
+
+\author{Anonymous Author(s)}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Agent evaluations increasingly depend on context interventions---retrieval, memory graphs, and prompt contracts---yet published reports often omit null outcomes, parser failures, and negative cells.
+We present HydraDG, a governed experimental framework that binds substantive model invocations, tool calls, and handoffs to \emph{Fractal Custody Objects} (FCOs) and a \emph{Fractal Custody Graph} (FCG).
+HydraDG preregisters hypotheses, freezes case manifests and scorers, records raw prompt and response hashes, and preserves terminal states including timeouts, abstentions, and malformed outputs without silent substitution.
+We report two preregistered studies (EXP-008, EXP-009) comparing flat prose versus structured FCG retrieval for failure-prevention endpoints; both terminate as \emph{underpowered} under bounded case replication, so confirmatory effect claims are not supported while negative and null evidence remains in custody.
+We argue that custody-first evaluation infrastructure supports reproducible agent science rather than optional logging.
+\end{abstract}
+
+\section{Introduction}
+
+Large language model agents are evaluated on task success, benchmark scores, and human preference \cite{liu2023agentbench,zhou2023webarena}.
+Less often preserved are the conditions under which experiments fail: swapped models, stale runtime selection, partial matrix execution, or JSON outputs that never parse.
+When negative and null cells disappear from the public record, later work cannot distinguish \emph{no effect} from \emph{no measurement}.
+
+HydraDG addresses this gap with a custody-first experimental contract.
+Every actor---human operator, frontier agent, local model runtime, or deterministic script---must emit or be represented by a handoff receipt before its output is promoted.
+Receipts bind actor identity, host, repository state, input hashes, raw output hashes, evidence class, claim ceiling, and signature state (hashes are identity commitments, not digital signatures unless an authorized signing operation occurred).
+Probabilistic model outputs are never treated as authority; they are evidence objects subject to deterministic scoring and graph append rules.
+
+This paper describes the HydraDG framework and reports terminal results from the IC Failure Learning structured-retrieval falsification lane.
+We do \emph{not} claim that structured FCG context improves failure prevention; preregistered EXP-008 and EXP-009 closed as underpowered.
+We also do not treat exploratory secondary patterns as promoted findings.
+
+\section{Related Work}
+
+\textbf{Agent evaluation.} Benchmark suites measure capability but rarely require publication of failed runs, malformed generations, or infrastructure blocks \cite{liu2023agentbench,zhou2023webarena}.
+HydraDG complements benchmarks with mandatory negative capture at the custody layer.
+
+\textbf{Retrieval and structured context.} Retrieval-augmented generation and graph-augmented memory systems assume structured context helps \cite{lewis2020rag,edge2024graphrag}.
+Falsification requires frozen contracts, explicit null retention, and power-aware verdicts; HydraDG enforces both.
+
+\textbf{Provenance, integrity, and reproducibility.}
+W3C PROV-O and workflow provenance systems represent process and research-object lineage \cite{lebo2013provo,khan2019cwlprov}, while append-only Merkle audit logs provide established tamper-evident integrity mechanisms \cite{laurie2013ct}; HydraDG does not claim to invent these primitives.
+Recent work surveys evidence tracing and execution provenance for LLM agents \cite{wang2026agentprovenance}, and separate work argues for preserving negative ML results rather than selective omission \cite{karl2024negative}.
+Preregistration, FAIR principles, and nanopublication-style lineage further support reproducibility \cite{nosek2018prereg,wilkinson2016fair,groth2010nano}.
+HydraDG integrates rather than replaces these foundations: probabilistic outputs, deterministic transforms, malformed cells, failures, abstentions, blocked states, and underpowered terminations remain typed evidence with explicit claim-promotion ceilings enforced via FCO/FCG handoff receipts.
+Companion custody-framework preprints (deferred to camera-ready de-anonymization) define FCO/FCG formally; they establish framework provenance, not the HydraDG empirical results reported here.
+
+\section{Framework}
+
+\subsection{Custody objects}
+
+An \textbf{FCO} (\emph{Fractal Custody Object}) materializes one bounded transformation: e.g., a model call, scorer pass, or ingest operation.
+An \textbf{FCG} (\emph{Fractal Custody Graph}) append records directed edges between FCOs with hash-linked roots \cite{laurie2013ct}.
+HydraDG preserves failures, nulls, and malformed outputs in custody (a failure-complete \emph{behavior}, not a redefinition of FCO/FCG).
+Claim ceilings (exploratory mechanistic falsification, descriptive only, etc.) are declared at preregistration and enforced at promotion time.
+
+\subsection{Experimental freeze}
+
+Each experiment declares:
+\begin{itemize}
+  \item frozen case manifest and prompt-contract hashes;
+  \item conditions (e.g., flat prose vs.\ structured FCG);
+  \item models with expected runtime digests;
+  \item primary endpoint and aggregation rule;
+  \item explicit gates for confirmatory vs.\ exploratory claims.
+\end{itemize}
+Execution emits \texttt{START\_RECEIPT}, per-cell raw outputs with prompt/response SHA-256, parser state, and terminal receipts.
+Integrity failure (duplicate keys, missing dependencies, silent model substitution) blocks promotion; scientific failure (timeout, abstention, malformed JSON) is retained as terminal evidence.
+
+\subsection{Governed local execution}
+
+Where preregistered, local model calls route through a governed bridge that records selection age, swap posture, and resolved digest.
+Direct runtime invocation and governed invocation are separate evidence classes; one is not silently labeled as the other.
+
+\section{Experimental Setup}
+
+\subsection{Task family}
+
+The IC Failure Learning suite uses synthetic agent-failure vignettes with preregistered endpoints such as E06 (prevents exposure of out-of-vault media).
+Cases are drawn from a frozen \texttt{CASES.jsonl} manifest; each case receives multiple replicates per condition.
+
+\subsection{Conditions and models}
+
+\textbf{C0 (FLAT\_PROSE):} failure-handling guidance as unstructured text.\\
+\textbf{C1 (STRUCTURED\_FCG):} the same semantic content composed through a frozen FCG retrieval contract.
+
+EXP-008 and EXP-009 used local models \texttt{qwen3:1.7b} and \texttt{qwen2.5-coder:7b} under identical case and scorer contracts.
+Thinking/reasoning modes were held consistent with preregistration.
+Primary aggregation: majority of three replicates per case.
+
+\subsection{AI and agent methodology disclosure}
+
+Frontier coding agents assisted with repository tooling and manuscript preparation; they are not listed as authors.
+All scientific endpoints come from preregistered local model executions with hashed prompts and responses.
+Routine editing does not constitute a reported experimental intervention.
+
+\subsection{Power and claim gates}
+
+E06 endpoints are known limited-power under the frozen case set.
+Confirmatory ordering claims require preregistered discordant pairs; exploratory secondary statistics are quarantined from primary promotion.
+
+\section{Results}
+
+Table~\ref{tab:terminal} summarizes terminal verdicts for preregistered studies.
+Both experiments executed the full raw matrix ($n=300$ cells each) with complete custody append.
+
+\begin{table}[t]
+  \centering
+  \caption{Terminal preregistered studies (HydraDG IC Failure Learning). \emph{Underpowered} denotes insufficient paired evidence for confirmatory promotion, not proof of null effect.}
+  \label{tab:terminal}
+  \begin{tabular}{llll}
+    \toprule
+    Study & Primary verdict & Raw cells & Valid parse rate \\
+    \midrule
+    EXP-008 & UNDERPOWERED & 300 & 0.907 \\
+    EXP-009 & UNDERPOWERED & 300 & 0.883 \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\textbf{EXP-008.} Structured FCG retrieval did not yield promotable confirmatory evidence on E06 under the frozen design ($n=2$ paired cases per model stratum at aggregation scope). Non-zero malformed and abstention rates are preserved in custody.
+
+\textbf{EXP-009.} Primary verdict remains UNDERPOWERED for confirmatory E06 ordering. An exploratory secondary pattern was recorded as directionally positive at the descriptive layer only; it is \textbf{not promoted} to a causal claim.
+
+\textbf{Stage-2 baseline.} Prior IC Failure Learning stage-2 execution (414 scored rows across two models) established \texttt{FAILURE\_LEARNING\_BEHAVIOR\_IMPROVEMENT\_NOT\_ESTABLISHED}, providing historical context for the structured-retrieval falsification lane.
+
+
+\subsection{Broader experiment inventory (successor recovery)}
+This successor manuscript recovery catalogs \textbf{20} solo-scoped experiment lanes beyond the preregistered EXP-008/009 pair, including negative, blocked, and partial terminals (Appendix~A).
+HydraLamp systems-validation results remain separated from treatment-effect claims (Table~\ref{tab:systems}).
+Immersive Commons appears only as an operational hackathon portal, not as the scientific method.
+
+\subsection{Failure-preserving systems validation}
+
+The preregistered retrieval experiments above test whether structured context improves a frozen endpoint.
+A separate systems-validation suite asks a different question: does the custody mechanism preserve integrity under perturbation, tampering, concurrency, replay, and external execution failure?
+Table~\ref{tab:systems} summarizes source-verified outcomes from a frozen HydraLamp perturbation matrix; these results evaluate custody mechanics and do \textbf{not} constitute evidence that structured FCG context improves the EXP-008/009 endpoint.
+
+\begin{table}[t]
+  \centering
+  \caption{Systems-validation outcomes (custody mechanics only; not treatment-effect evidence).}
+  \label{tab:systems}
+  \begin{tabular}{lll}
+    \toprule
+    Validation & Scope & Outcome \\
+    \midrule
+    Perturbation matrix & 100 cells & 100/100 chain verification \\
+    Synthetic tamper suite & 8 modes & 8/8 detected \\
+    Concurrent execution & 10 runs & PASS (10 unique run IDs) \\
+    Replay/restart recovery & 44 events & PASS \\
+    Live provider ladder & R0--R6 & Bounded external failure preserved \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+The tamper suite used synthetic cases only (not real security incidents).
+In a live provider repair ladder, earlier infrastructure gates passed before a structured call hit an external quota limit; the failure remained a terminal auditable state rather than being erased or substituted.
+The same custody primitives have been instantiated in sibling systems for local-model orchestration, deterministic scientific-document atomization, offline anomaly detection, bounded bioinformatics, substrate generation, and operator-facing scientific workflow monitoring; these implementations motivate transfer studies but do not provide additional evidence for the treatment effect reported here.
+
+
+\begin{figure}[t]
+  \centering
+  \includegraphics[width=\linewidth]{figures/FIG-002_exp008_009_stats.png}
+  \caption{Primary experiment parse-validity rates (frozen observations). Confirmatory endpoints remain underpowered.}
+\end{figure}
+
+\section{Discussion}
+
+HydraDG shows that agent experiments can retain null and failure cells with the negative-result integrity expected in preregistered experimental sciences: failures are first-class, hashes are mandatory, and claim ceilings block over-interpretation.
+The EXP-008/009 underpowered terminations bound what cannot yet be claimed while preserving malformed and timeout cells for audit.
+
+\subsection{Limitations}
+\label{sec:limitations}
+
+Limitations include bounded case replication, local-only model lanes in the reported matrix, and absence of runtime-equivalent successor replication in primary results.
+A preregistered Qwen~3.8 successor lane exists but is non-terminal and omitted from primary results.
+Whole-project hierarchical atomization (SeedGraph v1a validation) ran for multiple days but was interrupted during final Parquet serialization without a \texttt{BUILD\_RECEIPT}; partial node/edge artifacts are not readback-safe, so terminal whole-corpus atomization is not established in this submission.
+Biological, protein-structure, and cellular perturbation applications of the custody framework remain future validation targets, not demonstrated generalizations of the agent-context results here.
+
+\subsection{Future directions}
+
+\textbf{Agent systems.} Larger successor replications, governed multi-agent handoffs, selective replay, and resource-aware custody gates under preregistered manifests.
+
+\textbf{Structured retrieval at scale.} Checkpointed ingest and transactionally durable atomization so long hierarchy builds can resume from batch boundaries rather than materializing the entire graph at finalization.
+
+\textbf{Cross-project federation.} Project-local FCG roots with explicit cross-project references and no automatic evidence admission between repositories.
+
+\textbf{Cryptographic custody.} Authorized signatures and MMR commitments where policy permits; hashes remain identity commitments unless a verified signing operation occurred.
+
+All directions above are \emph{planned} unless independently measured; they do not extend the EXP-008/009 empirical claims.
+
+\section{Conclusion}
+
+We presented HydraDG, a custody-first framework for agent context-intervention experiments, and reported two terminal underpowered preregistered studies that block premature promotion of structured FCG retrieval effects on failure-prevention endpoints.
+We recommend FCO/FCG custody, explicit claim ceilings, and terminal-state preservation as baseline infrastructure for NewInML-style agent evaluations.
+
+\begin{thebibliography}{19}
+
+\bibitem{lewis2020rag}
+P.~Lewis, E.~Perez, A.~Piktus, et al.
+\newblock Retrieval-augmented generation for knowledge-intensive {NLP} tasks.
+\newblock In \emph{NeurIPS}, 2020.
+\newblock arXiv:2005.11401.
+
+\bibitem{liu2023agentbench}
+Y.~Liu et al.
+\newblock {AgentBench}: Evaluating {LLMs} as agents.
+\newblock arXiv:2308.03688, 2023.
+
+\bibitem{zhou2023webarena}
+S.~Zhou et al.
+\newblock {WebArena}: A realistic web environment for building autonomous agents.
+\newblock arXiv:2307.13854, 2023.
+
+\bibitem{edge2024graphrag}
+D.~Edge et al.
+\newblock From local to global: A graph {RAG} approach to query-focused summarization.
+\newblock Microsoft Research, 2024.
+\newblock arXiv:2404.16130.
+
+\bibitem{nosek2018prereg}
+B.~A. Nosek, C.~R. Ebersole, A.~C. DeHaven, and D.~T. Mellor.
+\newblock The preregistration revolution.
+\newblock \emph{PNAS}, 115(11):2600--2606, 2018.
+
+\bibitem{wilkinson2016fair}
+M.~D. Wilkinson et al.
+\newblock The {FAIR} guiding principles for scientific data management and stewardship.
+\newblock \emph{Scientific Data}, 3:160018, 2016.
+
+\bibitem{groth2010nano}
+P.~Groth, A.~Gibson, and J.~Velterop.
+\newblock The anatomy of a nanopublication.
+\newblock \emph{Information Services \& Use}, 30(1--2):51--56, 2010.
+
+\bibitem{prereg2026}
+Anonymous. (2026). HydraDG IC Failure Learning preregistrations EXP-008 and EXP-009. Internal frozen artifacts; anonymized submission.
+
+\bibitem{stage2}
+Anonymous. (2026). IC Failure Learning Stage-2 closeout receipt. Internal frozen artifacts; anonymized submission.
+
+\bibitem{neurips2026}
+NeurIPS. (2026). New in Machine Learning (NewInML) workshop call for papers. Non-archival workshop track.
+
+\bibitem{laurie2013ct}
+B.~Laurie, A.~Langley, and E.~Kasper.
+\newblock Certificate Transparency.
+\newblock RFC~6962, IETF, June 2013.
+
+\bibitem{lebo2013provo}
+T.~Lebo et al.
+\newblock PROV-O: The PROV Ontology.
+\newblock W3C Recommendation, 2013.
+
+\bibitem{khan2019cwlprov}
+F.~Z. Khan et al.
+\newblock Sharing interoperable workflow provenance: A review of best practices and their practical application in {CWLProv}.
+\newblock \emph{GigaScience}, 8(11):giz095, 2019.
+\newblock DOI:10.1093/gigascience/giz095.
+
+\bibitem{karl2024negative}
+F.~Karl, L.~M. Kemeter, G.~Dax, and P.~Sierak.
+\newblock Position: Embracing negative results in machine learning.
+\newblock In \emph{ICML}, PMLR 235:23256--23265, 2024.
+\newblock arXiv:2406.03980.
+
+\bibitem{wang2026agentprovenance}
+Y.~Wang et al.
+\newblock From Agent Traces to Trust: Evidence Tracing and Execution Provenance in {LLM} Agents.
+\newblock arXiv:2606.04990, 2026.
+
+\bibitem{kuhn2014trusty}
+T.~Kuhn and M.~Dumontier.
+\newblock Trusty {URIs}: verifiable, immutable digital artifacts.
+\newblock In \emph{ESWC}, 2014.
+
+\bibitem{walters2023fabrication}
+W.~H. Walters and E.~I. Wilder.
+\newblock Fabrication and errors in bibliographic citations generated by {ChatGPT}.
+\newblock \emph{Scientific Reports}, 13:14045, 2023.
+
+\bibitem{leo2024rocrote}
+S.~Leo et al.
+\newblock Recording provenance of workflow runs with {RO-Crate}.
+\newblock \emph{PLOS ONE}, 19(9):e0309210, 2024.
+
+\end{thebibliography}
+
+\appendix
+\input{appendix.tex}
+
+\newpage
+\input{checklist.tex}
+
+\end{document}

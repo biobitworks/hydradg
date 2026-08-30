@@ -1,0 +1,15 @@
+{
+  "schema": "hydradg.v11_scorer_source_regions.v1",
+  "timestamp_utc": "2026-08-22T06:54:05Z",
+  "track01": {
+    "TRACK01_V11_SCORER_SOURCE_IDENTITY_GATE": "PASS",
+    "TRACK01_V11_SCORER_SOURCE_SHA256": "4fd375c66c99e9b950068a2bf05cf2aaf7302a06b8bf7b103c6547b6f756af68",
+    "source_snippet": "ref_ans = case_obj[\"eval_reference\"].get(\"gold_answer\", \"\").lower()\n                if case_obj[\"track\"] == \"track01\":\n                    is_correct = any(word.lower() in raw_text.lower() for word in ref_ans.split() if len(word) > 4) if ref_ans else False"
+  },
+  "track03": {
+    "TRACK03_V11_SCORER_SOURCE_IDENTITY_GATE": "PASS",
+    "TRACK03_V11_SCORER_SOURCE_SHA256": "a4fae83feb6f3f7ac43ed13e92e9fa2ea5fe1f59c7596c9db1d40d2257aec213",
+    "source_snippet": "ref_ans = case_obj[\"eval_reference\"].get(\"gold_answer\", \"\").lower()\n                if case_obj[\"track\"] == \"track01\":\n                    is_correct = any(word.lower() in raw_text.lower() for word in ref_ans.split() if len(word) > 4) if ref_ans else False\n                else:\n                    is_correct = (ref_ans in raw_text.lower()) if ref_ans else False"
+  },
+  "v11_frozen_git_sha": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831"
+}

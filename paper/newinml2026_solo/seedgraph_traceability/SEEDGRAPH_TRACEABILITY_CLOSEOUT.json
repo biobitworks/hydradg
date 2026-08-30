@@ -1,0 +1,46 @@
+{
+  "atom_extraction": "/Users/byron/projects/active/hydradg/paper/newinml2026_solo/seedgraph_traceability/atoms/ATOM_EXTRACTION_RECEIPT.json",
+  "data_sha256": "c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
+  "git_commit": "4d8d0c4e90085c3aa89d329700dd1b24fd784d9c",
+  "graph_mode": "neo4j",
+  "graph_result": {
+    "errors": [],
+    "total": 163,
+    "written": 163
+  },
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "phase73": {
+    "logic_edge_count": 12,
+    "sentence_count": 86,
+    "sentence_diagram_count": 0,
+    "sot_count": 3,
+    "spo_applied": true,
+    "spo_errors": []
+  },
+  "recorded_at": "2026-08-29T10:46:16Z",
+  "schema": "hydradg.seedgraph_traceability.closeout.v1",
+  "script_sha256": "e79891237ea694cfd583ecc183b6f6c528195442a37ef50aa9e7e49723ffe9a9",
+  "seedgraph_root": "/Users/byron/projects/active/seedgraph",
+  "signature_state": "NOT_SIGNED",
+  "sot_count": 3,
+  "source_seed_id": "doc:c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
+  "traceability_gate": {
+    "DRAFT_TO_PUBLICATION_TRACEABILITY": "GREEN",
+    "OPENREVIEW_ANTICUBE_PUBLIC_UPLOAD": "GREEN",
+    "checks": {
+      "all_atoms_have_merkle_leaf": true,
+      "all_sots_have_supporting_atoms": true,
+      "atoms_extracted": true,
+      "graph_errors_empty": true,
+      "graph_nodes_written": true,
+      "ledger_exists": true,
+      "phase73_logic_map": true,
+      "phase73_sentence_diagram": true,
+      "sots_composed": true
+    },
+    "claim_ceiling": "CUSTODY_MECHANICS",
+    "earliest_divergence": null,
+    "graph_mode": "neo4j"
+  },
+  "transformation_id": "e0a443d4e9bc1113e63476c033e5a43a003a26b36e395060d5d263ce6935def1"
+}

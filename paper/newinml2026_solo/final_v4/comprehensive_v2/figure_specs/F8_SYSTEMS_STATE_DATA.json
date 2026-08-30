@@ -1,0 +1,42 @@
+{
+  "blocking_error": {
+    "error_message": "Test Key Limit Exceeded",
+    "first_failing_gate": "RUNTYPE_R3_STRUCTURED",
+    "http_status": 429,
+    "provider_error_code": "TEST_KEY_DAILY_LIMIT_EXCEEDED"
+  },
+  "concurrency": {
+    "CONCURRENCY_STRESS": "PASS",
+    "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
+    "failures": [],
+    "runs": 10,
+    "schema": "hydralamp.concurrency_stress_receipt.v1",
+    "signature_state": "NOT_SIGNED",
+    "unique_run_ids": 10
+  },
+  "provider_gates": {
+    "RUNTYPE_NEGATIVE": "PASS",
+    "RUNTYPE_R0_SDK": "PASS",
+    "RUNTYPE_R1_AUTH_INVENTORY": "PASS",
+    "RUNTYPE_R2_MINIMAL": "PASS",
+    "RUNTYPE_R3_STRUCTURED": "FAIL",
+    "RUNTYPE_R4_ONE_TOOL": "FAIL",
+    "RUNTYPE_R5_HYDRALAMP_TOOLS": "FAIL",
+    "RUNTYPE_R6_RESTORATION": "FAIL"
+  },
+  "restart": {
+    "RESTART_RECOVERY": "PASS",
+    "events_in_memory": 44,
+    "events_on_disk": 44,
+    "execution_source_sha": "b21f0d58234746edcb68b401398b546151e0b56e",
+    "run_id": "hlrt_mtb1rm0t_a47349de",
+    "schema": "hydralamp.restart_recovery_receipt.v1",
+    "signature_state": "NOT_SIGNED"
+  },
+  "schema": "hydradg.figure_data.v1",
+  "sources": [
+    "10b68c96167fb6840c10d476a93a37fe76a00d9ae0d9cd981fff6586280ff0c2",
+    "b0b63a512ca697d245303c05430dbb8c6b1302d9adce66955905063e1ae547d9",
+    "d2696729c543a022b6c02c8b4f6c41c8ca5fe265744856d1d346ff14ff54dcb6"
+  ]
+}

@@ -1,0 +1,44 @@
+{
+  "schema": "hydradg.sglang_replay.preregistration.v1",
+  "status": "PREREGISTERED_BLOCKED_CUDA",
+  "predecessor_ic_failure_learning_sha": "94059bbd09907a12d5bb193c9705ad8fc7dd6572",
+  "historical_root": "eval/hydralamp_runtype_20260826",
+  "historical_model_id": "qwen/qwen3.6-27b",
+  "sglang_candidate_model_id": "Qwen/Qwen3-8B",
+  "sglang_git_sha_pin": "acc918b3ece60af20321612b8ad204bdba8fcb80",
+  "graph_modes": {
+    "G0_EAGER": {
+      "prefill": "disabled",
+      "decode": "disabled"
+    },
+    "G1_FULL": {
+      "prefill": "full",
+      "decode": "full"
+    },
+    "G2_BREAKABLE": {
+      "prefill": "breakable",
+      "decode": "full",
+      "env": {
+        "SGLANG_USE_BREAKABLE_CUDA_GRAPH": "1"
+      }
+    },
+    "G3_BREAKABLE_EXTENDED": {
+      "status": "OPTIONAL_BLOCKED_UNTIL_SUPPORTED"
+    }
+  },
+  "hypotheses": [
+    "H_BCG_CORRECTNESS",
+    "H_BCG_FAILURE_LOCALIZATION",
+    "H_BCG_RECOVERY",
+    "H_BCG_SECURITY",
+    "H_BCG_PERFORMANCE"
+  ],
+  "preserve_security_vs_policy_split": true,
+  "historical_runtype_probe_preserved": {
+    "LIVE_RUNTYPE_READY": "PROBE_CONTROL_SMOKE",
+    "control_smoke_lane_status": "ERROR",
+    "runtype_execution_id": null
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED"
+}

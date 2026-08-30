@@ -1,0 +1,21 @@
+{
+  "canary_case_id": "longmemeval_s_case_0001",
+  "canary_executions_accounted_for": 10,
+  "canary_executions_expected": 10,
+  "canary_final_gate_sha256": "c5fd2677d9389b32eb9ae4c315a8e28196d52a38e7781739879c88994f880660",
+  "canary_success_count": 2,
+  "case_level_scoring_gate": "PASS",
+  "case_specific_prompt_gate": "PASS",
+  "dataset_case_gate": "PASS",
+  "fcg_lineage_gate": "PASS",
+  "independent_hash_recomputation": "PASS",
+  "label_leakage_gate": "PASS",
+  "models_accounted_for": 10,
+  "no_dummy_hash_gate": "PASS",
+  "raw_output_receipt_gate": "PASS",
+  "real_model_invocation_gate": "PASS",
+  "schema": "hydradg.canary_final_gate.v3",
+  "static_primary_evidence_audit": "PASS",
+  "status": "PASS",
+  "timestamp_unix": 1787281530
+}

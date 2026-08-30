@@ -1,0 +1,54 @@
+{
+  "schema": "hydradg.media_materialization_receipt.v1",
+  "recorded_at_utc": "2026-08-27T22:30:00Z",
+  "execution_host": "magicSTUDIObox.local",
+  "capture_id": "hydralamp-submission-hero-20260827",
+  "event_id": "anb-hack-01",
+  "raw_media": {
+    "path": "eval/immersive_commons_submission_20260827/assets/HYDRALAMP_SUBMISSION_HERO.png",
+    "public_path": "/submission/HYDRALAMP_SUBMISSION_HERO.png",
+    "media_type": "image/png",
+    "sha256": "a5d558ab914b08da7373f858fbe79f60871315740e2abe06c39c31367c392b09",
+    "bytes": null
+  },
+  "fco": {
+    "id": "fco:c39e474cfb598c86ba66b288403850aec57e65573f31342bc9644487e4a40ddc",
+    "type": "SubmissionHeroMediaFCO",
+    "object_sha256": "c39e474cfb598c86ba66b288403850aec57e65573f31342bc9644487e4a40ddc",
+    "materialization_state": "MATERIALIZED_SESSION_LOCAL_RAW_MEDIA",
+    "evidence_class": "DETERMINISTIC_RAW_MEDIA_BYTES",
+    "claim_ceiling": "SUBMISSION_HERO_NAVIGATION_AND_CUSTODY_RECEIPT_ONLY"
+  },
+  "license": {
+    "research_content": "CC-BY-NC-ND-4.0",
+    "software_metadata": "Apache-2.0",
+    "authority": "LICENSING.md",
+    "note": "License metadata is rights declaration only; not a hash, signature, or FCG root."
+  },
+  "repository_pointers": {
+    "hydradg": {
+      "remote": "https://github.com/biobitworks/hydradg",
+      "branch": "hack-hydra/hydralamp-20260826",
+      "sha": "f6d3e0a6205ef1226d04325c402c63e1343803df"
+    },
+    "hydralamp": {
+      "remote": "https://github.com/biobitworks/hydralamp",
+      "branch": "prototype/deterministic-local-20260826",
+      "sha": "d3d928aae47e12afa99c25bd5d1cd94ef74c3da7",
+      "demo_url": "https://hydralamp.vercel.app/"
+    },
+    "immersive_commons_integration": {
+      "remote": "https://github.com/biobitworks/immersivecommons-integration",
+      "branch": "main",
+      "sha": "8cc82a2"
+    }
+  },
+  "fcg": {
+    "append_state": "NOT_APPENDED",
+    "root_before": "NOT_QUERIED",
+    "root_after": "NOT_APPENDED"
+  },
+  "signature_state": "NOT_SIGNED",
+  "merkle_state": "NOT_COMMITTED",
+  "submission_write_state": "AWAITING_HUMAN_APPROVAL"
+}

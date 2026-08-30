@@ -1,0 +1,45 @@
+{
+  "actor_class": "OLLAMA_MODEL",
+  "actor_id": "granite4.1:8b",
+  "branch": "hack-hydra/studio-ollarma-daisy-20260821",
+  "claim_ceiling": "STUDIO_OLLARMA_REAL_DATASET_FULL_MATRIX_IN_PROGRESS_NOT_FINAL",
+  "empty_response_mechanism": "NOT_APPLICABLE",
+  "evidence_class": "PROBABILISTIC_MODEL_GENERATION",
+  "execution_host": "magicSTUDIObox.local",
+  "execution_status": "SUCCESS",
+  "git_commit": "0c7e6b67c6e80b8eec4a9db9c8edb8a001290831",
+  "handoff_id": "HANDOFF_V11_granite4.1_8b_LongMemEval-S_778164c6",
+  "input_dependencies": [
+    {
+      "evidence_class": "PRIMARY_DATASET_CASE",
+      "id": "LongMemEval-S_778164c6",
+      "sha256": "9da402008bd303bb471f6f46ff6fd00a60d2637c583d87a4b996fd46fe31ce0f"
+    }
+  ],
+  "merkle_mmr": {
+    "state": "PENDING_OPERATION_RECEIPT_CONFIRMATION"
+  },
+  "model": {
+    "approved_name": "granite4.1:8b",
+    "bridge": "OLLARMA",
+    "requested_name": "granite4.1:8b",
+    "runtime_digest": "444af1c4b2fedd6b54041aca558e7300b0b3d5c0468c44619126240323ba2852",
+    "runtime_name": "granite4.1:8b"
+  },
+  "output_sha256": "a3d9108441bd4e5a95761497fb6abe0c176b1b069225ca5f5b9a4077c11865d5",
+  "parent_handoff_sha256": "7102945d9375ca32941bef197c47bac135a57757f7b0d07c714d3952d74db439",
+  "prompt_sha256": "9da402008bd303bb471f6f46ff6fd00a60d2637c583d87a4b996fd46fe31ce0f",
+  "receipt_sha256": "be578e248dc1eb188f77f6f8ec0b9cde7c385c14165c7b2ba7dae9f2dcf7f3a8",
+  "repo": "biobitworks/hydradg",
+  "request_sha256": "1f2dc76c9667a5aa5236f69cba06052fed74e1102f61e1c8b4d771479ee385c3",
+  "response_text_bytes": 543,
+  "schema": "hydradg.agent_model_handoff.v1",
+  "signature": {
+    "state": "NOT_SIGNED"
+  },
+  "successful": true,
+  "terminal_state": "SUCCESS_CORRECT",
+  "timestamp_utc": "2026-08-23T16:17:43Z",
+  "transformation_class": "INFERENCE",
+  "transport_response_sha256": "87f1a4ed3c43bbecc52f40b48ecec6a04b8be3b6c6abfde08d980eb76b9d1f3b"
+}

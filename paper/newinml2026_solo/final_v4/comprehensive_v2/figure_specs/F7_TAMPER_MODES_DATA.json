@@ -1,0 +1,47 @@
+{
+  "cases": [
+    {
+      "detail": "expected\u2260got 53e2d5e79bf8",
+      "detected": true,
+      "name": "alter_model_context_byte"
+    },
+    {
+      "detail": "6bcc7d5350ff",
+      "detected": true,
+      "name": "alter_model_response_byte"
+    },
+    {
+      "detail": "27773f5c14bc",
+      "detected": true,
+      "name": "alter_tool_result"
+    },
+    {
+      "detail": "snapshot hash changed",
+      "detected": true,
+      "name": "remove_fcg_edge"
+    },
+    {
+      "detail": "[{\"seq\":2,\"reason\":\"PREV_HASH_DISCONTINUITY\"},{\"seq\":1,\"reason\":\"PREV_HASH_DISCONTINUITY\"}]",
+      "detected": true,
+      "name": "reorder_two_events"
+    },
+    {
+      "detail": "[{\"seq\":2,\"reason\":\"PREV_HASH_DISCONTINUITY\"},{\"seq\":2,\"reason\":\"EVENT_HASH_MISMATCH\"}]",
+      "detected": true,
+      "name": "change_prev_event_hash"
+    },
+    {
+      "detail": "replayed event_hash must not verify in chain",
+      "detected": true,
+      "name": "replay_old_proof"
+    },
+    {
+      "detail": "root mismatch detected",
+      "detected": true,
+      "name": "altered_graph_expected_root"
+    }
+  ],
+  "schema": "hydradg.figure_data.v1",
+  "source_sha256": "a23dd3cefc0a2d8f0a7c56c7059e326d0a78001c32e7dd08f27e57303c477f8b",
+  "synthetic": true
+}
