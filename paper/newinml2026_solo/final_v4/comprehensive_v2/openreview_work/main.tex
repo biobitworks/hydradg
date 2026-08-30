@@ -45,7 +45,7 @@ This paper separates five layers that are often conflated in agent-evaluation re
   \item \textbf{Model class} --- \emph{Mechanical Scientific Models} (proposed here; not an established external terminology): computational systems whose state transitions are mechanically exposable and failure-complete.
   \item \textbf{Custody substrate} --- FCO/FCG receipts that bind source bytes, transforms, derived evidence, bounded claims, and successor state.
   \item \textbf{Primary implementation} --- HydraDG, the experimentally evaluated implementation whose preregistered EXP-008 and EXP-009 results are reported here.
-  \item \textbf{Systems validation and companion exemplars} --- HydraLamp perturbation receipts and HydraDG scoring on local Apple Silicon (Mac Studio class, 32\,GB RAM); Antigence anticube lanes (supplement F11--F12); Vithia companion lineage in repositories \texttt{vitaology} and \texttt{fractal-custody-objects} (\texttt{ZERO\_PRIMARY\_WEIGHT} per cross-repo census; companion runs not vendored into this submission checkout).
+  \item \textbf{Systems validation and companion exemplars} --- HydraLamp perturbation receipts and HydraDG scoring on local Apple Silicon (Mac Studio class, 32\,GB RAM); companion implementation lineages are excluded from primary inference for EXP-008/009 and are not part of the reviewed source set for this submission.
 \end{itemize}
 
 HydraDG instantiates the proposed model class through a custody-first experimental contract.
@@ -54,9 +54,9 @@ Receipts bind actor identity, host, repository state, input hashes, raw output h
 Probabilistic model outputs are never treated as authority; they are evidence objects subject to deterministic scoring and graph append rules.
 
 This paper reports terminal results from the IC Failure Learning structured-retrieval falsification lane executed in HydraDG.
-Primary numbers are reverse-traced to frozen preregistered verdict JSON receipts; companion tables and figures cite SHA-256--bound supplement artifacts bundled with this submission.
-We do \emph{not} claim that structured FCG context improves failure prevention: EXP-008 and EXP-009 closed as \emph{underpowered} (\texttt{n\_paired}$=2$, \texttt{discordant}$=0$) with \texttt{conclusion\_bounded}$=$\texttt{effect not established}.
-Exploratory secondary patterns and vitaology runs are not promoted to primary findings for those experiments.
+Primary numbers are reverse-traced to frozen preregistered verdict JSON receipts retained as internal anonymized custody artifacts.
+We do \emph{not} claim that structured FCG context improves failure prevention: EXP-008 and EXP-009 closed as \emph{underpowered} (\texttt{n\_paired}$=2$, \texttt{discordant}$=0$) with bounded conclusion that the effect is not established.
+Exploratory secondary patterns from companion implementations are not promoted to primary findings for those experiments.
 
 \section{Related Work}
 
@@ -66,7 +66,8 @@ HydraDG complements benchmarks with mandatory negative capture at the custody la
 \textbf{Retrieval and structured context.} Retrieval-augmented generation and graph-augmented memory systems assume structured context helps \cite{lewis2020rag,edge2024graphrag}.
 Falsification requires frozen contracts, explicit null retention, and power-aware verdicts; HydraDG enforces both.
 
-\textbf{Local open-weights evaluation.} Frozen EXP-008/009 cells use \texttt{qwen3:1.7b} and \texttt{qwen2.5-coder:7b} only; LongMemEval track-03 rows in supplement table A4 use \texttt{qwen2.5-7b} and \texttt{deepseek-r1-14b} from \texttt{eval/track\_model\_k\_20260820/} with claim ceiling \texttt{HISTORICAL\_SUPPORTING\_ZERO\_PRIMARY\_WEIGHT}.
+\textbf{Local open-weights evaluation.} Frozen EXP-008/009 cells use \texttt{qwen3:1.7b} and \texttt{qwen2.5-coder:7b} only.
+Historical LongMemEval track-03 retrieval ablations (local \texttt{qwen2.5-7b} and \texttt{deepseek-r1-14b}) are excluded from primary inference and are not promoted here.
 No frontier API model executed a preregistered primary scorer in this submission.
 
 \textbf{Provenance, integrity, and reproducibility.}
@@ -98,13 +99,13 @@ Every transition must emit or bind:
   \item an artifact or state delta recorded as successor state rather than silent history rewriting.
 \end{enumerate}
 Required properties include: explicit evidence state; governed and versioned state transitions; deterministic vs.\ probabilistic output separation; preservation of positive, null, negative, failed, blocked, timeout, abstention, and contradictory outcomes; explicit claim ceilings; forward and reverse evidence traceability; and successor-state recording.
-Figure~\ref{fig:msm-hierarchy} situates the Mechanical Scientific Method, FCO/FCG custody, the proposed model class, HydraDG as the evaluated implementation, Vithia as a companion exemplar, and execution components used in this submission.
+Figure~\ref{fig:msm-hierarchy} situates the Mechanical Scientific Method, FCO/FCG custody, the proposed model class, HydraDG as the evaluated implementation, companion exemplars excluded from primary inference, and execution components used in this submission.
 
 \begin{figure}[t]
   \centering
   \includegraphics[width=\linewidth]{figures/F1_msm_hierarchy.png}
   \caption{Proposed intellectual hierarchy (conceptual; not empirical effect evidence).
-  HydraDG is the primary experimentally evaluated implementation; Vithia maps to companion repository \texttt{vitaology} (runs retained on the scientific execution host, \texttt{NOT\_IN\_CHECKOUT} here) and \texttt{fractal-custody-objects}; Antigence anticube panels are supplement-only; EXP-008/009 remain \emph{underpowered}.}
+  HydraDG is the primary experimentally evaluated implementation; companion implementations are excluded from primary inference and are not available in the reviewed source set; EXP-008/009 remain \emph{underpowered}.}
   \label{fig:msm-hierarchy}
 \end{figure}
 
@@ -114,12 +115,6 @@ An \textbf{FCO} (\emph{Fractal Custody Object}) materializes one bounded transfo
 An \textbf{FCG} (\emph{Fractal Custody Graph}) append records directed edges between FCOs with hash-linked roots \cite{laurie2013ct}.
 FCO/FCG provide the custody substrate on which Mechanical Scientific Models record transitions; HydraDG is one implementation that preserves failures, nulls, and malformed outputs in custody (a failure-complete \emph{behavior}, not a redefinition of FCO/FCG).
 Claim ceilings (exploratory mechanistic falsification, descriptive only, etc.) are declared at preregistration and enforced at promotion time.
-
-\subsection{Anticube evidence typing}
-
-Portfolio anticube semantics classify evidence along established vs.\ exploratory and positive vs.\ negative axes rather than a single success bit.
-In this checkout, Antigence-derived anticube state appears in supplement figures F11--F12 and table \texttt{A7\_ANTICUBE\_SOT\_STATE\_LEDGER}; temporal trajectory coordinates are sparse and labeled \texttt{NOT\_IN\_CHECKOUT} where source graphs are absent.
-These panels document classification mechanics only; they do not upgrade EXP-008/009 claim ceilings.
 
 \subsection{Experimental freeze}
 
@@ -142,7 +137,7 @@ EXP-008/009 executed on an Apple Silicon Mac Studio class workstation (32\,GB RA
 
 \subsection{Evaluation model policy}
 
-All preregistered scientific endpoints in this submission use small local open-weights models only (\texttt{qwen3:1.7b}, \texttt{qwen2.5-coder:7b}; LongMemEval historical lanes per A4 matrix).
+All preregistered scientific endpoints in this submission use small local open-weights models only (\texttt{qwen3:1.7b}, \texttt{qwen2.5-coder:7b}).
 Frontier coding agents assisted manuscript preparation only; they did not execute frozen primary scorers or replace verdict-bound cells.
 
 \section{Experimental Setup}
@@ -159,8 +154,9 @@ Cases are drawn from a frozen \texttt{CASES.jsonl} manifest; each case receives 
 
 EXP-008 and EXP-009 used local models \texttt{qwen3:1.7b} and \texttt{qwen2.5-coder:7b} under identical case and scorer contracts on private M1-class hardware (32\,GB RAM).
 Thinking/reasoning modes were held consistent with preregistration.
-Primary aggregation: majority of three replicates per case.
-Historical LongMemEval track-03 retrieval ablations (supplement F4--F5) replay the same local-only policy with \texttt{qwen2.5-7b} and \texttt{deepseek-r1-14b}; they are labeled \texttt{HISTORICAL\_SUPPORTING\_ZERO\_PRIMARY\_WEIGHT} and do not promote primary claims here.
+Primary aggregation: majority of three replicates per case, then paired comparison at the model-stratum level.
+The preregistered confirmatory aggregation operates at the paired model-stratum level, yielding \texttt{n\_paired}$=2$; the 300 raw execution cells are pre-aggregation replicates and do not constitute 300 independent confirmatory treatment pairs.
+Historical LongMemEval track-03 retrieval ablations under the same local-only policy are excluded from primary inference and are not promoted here.
 
 \subsection{AI and agent methodology disclosure}
 
@@ -205,8 +201,8 @@ Both experiments executed the full raw matrix with complete custody append.
 
 \textbf{EXP-009.} Primary verdict remains UNDERPOWERED for confirmatory E06 ordering. An exploratory secondary pattern was recorded as directionally positive at the descriptive layer only; it is \textbf{not promoted} to a causal claim.
 
-\textbf{Stage-2 baseline.} Prior IC Failure Learning stage-2 execution (414 scored rows across two models) established \texttt{FAILURE\_LEARNING\_BEHAVIOR\_IMPROVEMENT\_NOT\_ESTABLISHED}, providing historical context for the structured-retrieval falsification lane.
-LongMemEval track-03 historical lanes (local \texttt{qwen2.5-7b} / \texttt{deepseek-r1-14b}, frozen primary scorer) are retained in the supplement for audit only; they were not executed with frontier models and do not upgrade primary EXP-008/009 claims.
+\textbf{Stage-2 baseline.} Prior IC Failure Learning stage-2 execution (414 scored rows across two models) established that failure-learning behavior improvement was not established under that frozen design, providing historical context for the structured-retrieval falsification lane.
+Historical LongMemEval track-03 lanes (local open-weights models, frozen primary scorer) are retained for internal audit only; they were not executed with frontier models and do not upgrade primary EXP-008/009 claims.
 
 
 \begin{figure}[t]
@@ -240,7 +236,7 @@ Table~\ref{tab:systems} summarizes source-verified outcomes from a frozen HydraL
 
 The tamper suite used synthetic cases only (not real security incidents).
 In a live provider repair ladder, earlier infrastructure gates passed before a structured call hit an external quota limit; the failure remained a terminal auditable state rather than being erased or substituted.
-The same custody primitives have been instantiated in sibling systems for local-model orchestration, deterministic scientific-document atomization, offline anomaly detection (Antigence anticube lanes), bounded bioinformatics, substrate generation, and operator-facing scientific workflow monitoring; these implementations motivate transfer studies but do not provide additional evidence for the treatment effect reported here.
+The same custody primitives have been instantiated in sibling systems for local-model orchestration, deterministic scientific-document atomization, offline anomaly detection, bounded bioinformatics, substrate generation, and operator-facing scientific workflow monitoring; these implementations motivate transfer studies but do not provide additional evidence for the treatment effect reported here.
 
 \section{Discussion}
 
@@ -250,8 +246,7 @@ The broader methodological proposition is that scientific computational models c
 
 HydraDG demonstrates bounded custody and systems-validation behavior under that contract: failures are first-class, hashes are mandatory, and claim ceilings block over-interpretation.
 HydraLamp perturbation, tamper, concurrency, and replay results (Table~\ref{tab:systems}) evaluate custody mechanics only.
-Cross-repo census row \texttt{vitaology | EXP-001..014} is admitted as \texttt{RELATED\_IMPLEMENTATION} at \texttt{ZERO\_PRIMARY\_WEIGHT}; vitaology run receipts are retained on the scientific execution host and are not vendored into this submission checkout (\texttt{NOT\_IN\_CHECKOUT}).
-Antigence anticube panels (F11--F12) type evidence for audit; they are not confirmatory treatment-effect evidence for EXP-008/009.
+Companion implementation lineages are admitted as related implementations excluded from primary inference; their run receipts are not available in the reviewed source set for this submission.
 The EXP-008/009 underpowered terminations bound what cannot yet be claimed while preserving malformed and timeout cells for audit.
 
 \subsection{Limitations}
@@ -260,7 +255,7 @@ The EXP-008/009 underpowered terminations bound what cannot yet be claimed while
 Limitations include bounded case replication, deliberate local-only small-model lanes in the reported matrix (no frontier API substitution), and absence of runtime-equivalent successor replication in primary results.
 Execution hardware was constrained to M1-class Apple Silicon with 32\,GB RAM; results do not establish performance on datacenter GPU fleets or frontier-model endpoints.
 A preregistered Qwen~3.8 successor lane exists but is non-terminal and omitted from primary results.
-Whole-project hierarchical atomization (SeedGraph v1a validation) ran for multiple days but was interrupted during final Parquet serialization without a \texttt{BUILD\_RECEIPT}; partial node/edge artifacts are not readback-safe, so terminal whole-corpus atomization is not established in this submission.
+Whole-project hierarchical atomization (SeedGraph v1a validation) ran for multiple days but was interrupted during final Parquet serialization without a terminal build receipt; partial node/edge artifacts are not readback-safe, so terminal whole-corpus atomization is not established in this submission.
 Biological, protein-structure, and cellular perturbation applications of the custody framework remain future validation targets, not demonstrated generalizations of the agent-context results here.
 
 \subsection{Future directions}

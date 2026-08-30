@@ -114,8 +114,8 @@
 
 \item {\bf Experiments compute resources}
     \item[] Question: For each experiment, does the paper provide sufficient information on the computer resources (type of compute workers, memory, time of execution) needed to reproduce the experiments?
-    \item[] Answer: \answerYes{}
-    \item[] Justification: Section~Experimental Setup names local model identifiers and Apple Silicon Mac Studio class hardware (32\,GB RAM); systems-validation scope is summarized in Table~\ref{tab:systems}.
+    \item[] Answer: \answerNo{}
+    \item[] Justification: The manuscript reports the primary local hardware/runtime configuration and memory class, but complete experiment wall-time accounting was not retained for every reported experiment.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not include experiments.
@@ -164,8 +164,8 @@
 
 \item {\bf Licenses for existing assets}
     \item[] Question: Are the creators or original owners of assets (e.g., code, data, models), used in the paper, properly credited and are the license and terms of use explicitly mentioned and properly respected?
-    \item[] Answer: \answerYes{}
-    \item[] Justification: Related Work and the bibliography credit external benchmarks, retrieval systems, and reproducibility literature.
+    \item[] Answer: \answerNo{}
+    \item[] Justification: Related Work cites upstream benchmarks, retrieval systems, and reproducibility literature, but the reviewer-facing submission does not enumerate per-asset SPDX licenses or redistribution terms for all third-party models, datasets, and software components used in the experiments.
     \item[] Guidelines:
     \begin{itemize}
         \item The answer \answerNA{} means that the paper does not use existing assets.
