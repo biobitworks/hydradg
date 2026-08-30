@@ -7,19 +7,19 @@
   "CONTENT_PAGE_GATE": "PASS",
   "CROSS_IMPLEMENTATION_COMPARISON_FIGURES": 1,
   "CURRENT_BRANCH": "cursor/comprehensive-v2-visual-rebuild-fb0f",
-  "CURRENT_SHA": "4024d17d557f30d5145f74972636ad07ca4b69a4",
+  "CURRENT_SHA": "585b027f03ce217030abd97b9d3cecb8d3d9f22a",
   "CUSTODY_PROVENANCE_FIGURES": 1,
   "EMPIRICAL_STATISTICAL_FIGURES": 2,
   "EXECUTION_HOST": "magicSTUDIObox.local",
   "FIGURES_TOTAL": 16,
   "FIGURE_PARTITION_GATE": "PASS",
-  "FINAL_PACKAGE_GIT_SHA": "4024d17d557f30d5145f74972636ad07ca4b69a4",
+  "FINAL_PACKAGE_GIT_SHA": "585b027f03ce217030abd97b9d3cecb8d3d9f22a",
   "FINAL_PDF_PATH": "paper/newinml2026_solo/final_v4/comprehensive_v2/FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf",
-  "FINAL_PDF_SHA256": "eca9f1670ead483e5bcbf7a1c0956b7fa38a349e7c92e2ad9ab0fdb9adf2fc1e",
+  "FINAL_PDF_SHA256": "7d0392a89a822ee0e6226387dd54fa88db08800fc645b04510b7a2337cf5f22e",
   "FINAL_SUPPLEMENT_PATH": "paper/newinml2026_solo/final_v4/comprehensive_v2/FINAL_COMPREHENSIVE_SUPPLEMENT_V2.pdf",
-  "FINAL_SUPPLEMENT_SHA256": "9318d72f2492e450a7aa12438ebd41b290ed428434827f6898ec4bcb8aab0258",
-  "FINAL_ZIP_SHA256": "267a63cb4c87e95b4beb21722076a7e5d01f3dff17726471f00148e092352cb2",
-  "HEAD_PARITY": "PASS",
+  "FINAL_SUPPLEMENT_SHA256": "919161ef2d897b420b2247daedf6fcf496554a7715948c9bba5be037374eb089",
+  "FINAL_ZIP_SHA256": "55c7a8a2a40a41da5c0e3004645ad5b17d10f7cb94a9814cdc152c29535f8df9",
+  "HEAD_PARITY": "FAIL",
   "LICENSE_GATE_DERIVATION": "semantic_authoritative_registry",
   "LICENSE_METADATA_PARITY": "PASS",
   "MAIN_PAPER_FIGURES": [
@@ -27,14 +27,13 @@
     "F2",
     "F6"
   ],
-  "PARENT_SHA": "cd71bb99f30e9bc9ac67a0f688516c1665f1906f",
-  "RECEIPT_CURRENT_SHA": "4024d17d557f30d5145f74972636ad07ca4b69a4",
-  "RECEIPT_HEAD_PARITY": "PASS",
-  "RECEIPT_SHA256": "90535910a193f876ad7ef04d2b6535e8bd31d19a2e3aa32dd2cc603b1892f95a",
+  "PARENT_SHA": "585b027f03ce217030abd97b9d3cecb8d3d9f22a",
+  "RECEIPT_CURRENT_SHA": "585b027f03ce217030abd97b9d3cecb8d3d9f22a",
+  "RECEIPT_HEAD_PARITY": "FAIL",
   "REFERENCE_PAGES": 3,
   "REPRODUCIBILITY_FIGURES": 1,
   "ROBUSTNESS_FAULT_INJECTION_FIGURES": 2,
-  "SOURCE_REVISION_USED": "4024d17d557f30d5145f74972636ad07ca4b69a4",
+  "SOURCE_REVISION_USED": "585b027f03ce217030abd97b9d3cecb8d3d9f22a",
   "SUPPLEMENT_FIGURES": [
     "F3",
     "F4",
@@ -56,13 +55,23 @@
   "TABLE_LEDGER_COUNT": 13,
   "TABLE_UNIQUE_ID_GATE": "PASS",
   "TOTAL_PAGES": 17,
-  "finalize_mode": "receipt_only_clean_head",
+  "figure_type_counts": {
+    "AI_MODEL_EVALUATION": 2,
+    "CONCEPTUAL_MECHANISM": 4,
+    "CROSS_IMPLEMENTATION_COMPARISON": 1,
+    "CUSTODY_PROVENANCE": 1,
+    "EMPIRICAL_STATISTICAL": 2,
+    "REPRODUCIBILITY": 1,
+    "ROBUSTNESS_FAULT_INJECTION": 2,
+    "SYSTEMS_COMPUTER_SCIENCE": 3
+  },
   "gates": {
     "ANONYMITY_GATE": "PASS",
     "ANTICUBE_CANONICAL_SEMANTICS_GATE": "PASS",
     "ANTICUBE_INVENTED_SCALAR_COUNT": 0,
     "CITATION_GATE": "PASS",
     "CLAIM_CEILING": "CUSTODY_MECHANICS",
+    "CLAIM_CEILING_DERIVATION": "ASSERTED_FROM_baa12935f8fa4b84",
     "CLAIM_CEILING_GATE": "PASS",
     "CONTENT_PAGE_GATE": "PASS",
     "CROSS_PROJECT_PRIMARY_EVIDENCE_LEAK_COUNT": 0,
@@ -71,12 +80,12 @@
     "EXP009": "UNDERPOWERED",
     "FIGURES_R123": "PASS",
     "FIGURE_CONCEPT_VS_EMPIRICAL_CLASSIFICATION_COVERAGE": 1.0,
-    "FIGURE_NUMERIC_REVERSE_TRACE_COVERAGE": 1.0,
+    "FIGURE_NUMERIC_REVERSE_TRACE_COVERAGE": 0.875,
     "FIGURE_PARTITION_GATE": "PASS",
     "FIGURE_QUESTION_COVERAGE": 1.0,
-    "FIGURE_SOURCE_TRACE_COVERAGE": 1.0,
+    "FIGURE_SOURCE_TRACE_COVERAGE": 0.875,
     "FONT_EMBEDDING_GATE": "PASS",
-    "HEAD_PARITY": "PASS",
+    "HEAD_PARITY": "FAIL",
     "HUMAN_VISUAL_REVIEW": "REQUIRED",
     "LATEX_CITATION_WARNING_COUNT": 0,
     "LICENSE_GATE_DERIVATION": "semantic_authoritative_registry",
@@ -87,7 +96,7 @@
     "NULL_REFERENCE_VISIBILITY": "PASS",
     "PRIMARY_HYPOTHESIS_FIGURE": "PASS",
     "PROTEIN_HINGE_PRIMARY_EVIDENCE_COUNT": 0,
-    "RECEIPT_HEAD_PARITY": "PASS",
+    "RECEIPT_HEAD_PARITY": "FAIL",
     "SECURITY_GATE": "PASS",
     "SIGNATURE_STATE": "NOT_SIGNED",
     "SINGLE_BIBLIOGRAPHY_GATE": "PASS",
@@ -105,143 +114,147 @@
     "empty_pages": 0,
     "finding_count": 0,
     "hits": [],
+    "license_registry_sha256": "0719c3b79bd347799a03cf0892f3ba3bd63c4d9c5ff5a81b8ed4b30d6ab35c8d",
     "main_bibitem_count": 18,
-    "unembedded_count": 0
+    "mismatches": [],
+    "unembedded_count": 0,
+    "verifiable_component_count": 7,
+    "verified_component_count": 7
   },
   "license_gate_evidence": {
-    "license_registry": {
-      "LICENSE": {
-        "path": "LICENSE",
-        "sha256": "76e1c97f4b74316600e7e76407f0423d0f9f880867d7356a772b4c04de089ad0",
-        "expected_spdx": "Apache-2.0",
-        "detected": true
-      },
-      "LICENSING.md": {
-        "path": "LICENSING.md",
-        "sha256": "ae3dc8c988bb5ad7042a5a7664d764eba308a5c70b8765bbe0fa14b4d50ad46e",
-        "expected_spdx": "CC-BY-NC-ND-4.0",
-        "detected": true
-      },
-      "package.json": {
-        "path": "package.json",
-        "sha256": "4007832d7fd3078ccd84571622db84e3201598ecb517ec42488c20065118f381",
-        "expected_spdx": "Apache-2.0",
-        "detected": true
-      },
-      "THIRD_PARTY_NOTICES.md": {
-        "path": "THIRD_PARTY_NOTICES.md",
-        "sha256": "4c143a782b8a5a865cb9ce2db39e24f6c03aa7444ed5572baa5fc6f0a3ac5205",
-        "expected_spdx": "AGPL-3.0-upstream-HydraDB",
-        "detected": true
-      }
-    },
     "bom_license_rows": [
       {
+        "authoritative_source": "LICENSE",
         "component_id": "hydradg",
-        "license_source": "LICENSE",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "LICENSE",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "LICENSING.md",
         "component_id": "fco_fcg",
-        "license_source": "Zenodo record",
         "license_declared": "CC-BY-NC-ND-4.0",
         "license_expected": "CC-BY-NC-ND-4.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSING.md"
+        "license_source": "Zenodo record",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "gsigmad",
-        "license_source": "upstream LICENSE",
         "license_declared": "see_upstream",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM",
-        "authoritative_source": ""
+        "license_source": "upstream LICENSE",
+        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
       },
       {
+        "authoritative_source": "LICENSE",
         "component_id": "seedgraph",
-        "license_source": "LICENSE",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "LICENSE",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "ollarma",
-        "license_source": "upstream LICENSE",
         "license_declared": "see_upstream",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM",
-        "authoritative_source": ""
+        "license_source": "upstream LICENSE",
+        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
       },
       {
+        "authoritative_source": "LICENSE",
         "component_id": "hydralamp",
-        "license_source": "LICENSE",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "LICENSE",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "THIRD_PARTY_NOTICES.md",
         "component_id": "hydradb",
-        "license_source": "THIRD_PARTY_NOTICES.md",
         "license_declared": "AGPL-3.0-upstream-HydraDB",
         "license_expected": "AGPL-3.0-upstream-HydraDB",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "THIRD_PARTY_NOTICES.md"
+        "license_source": "THIRD_PARTY_NOTICES.md",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "antigence",
-        "license_source": "upstream",
         "license_declared": "see_upstream",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM",
-        "authoritative_source": ""
+        "license_source": "upstream",
+        "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
       },
       {
+        "authoritative_source": "LICENSING.md",
         "component_id": "vithia",
-        "license_source": "Zenodo",
         "license_declared": "CC-BY-NC-ND-4.0",
         "license_expected": "CC-BY-NC-ND-4.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSING.md"
+        "license_source": "Zenodo",
+        "license_verification_state": "VERIFIED"
       },
       {
+        "authoritative_source": "",
         "component_id": "qwen3-1.7b",
-        "license_source": "Ollama manifest",
         "license_declared": "model_license",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST",
-        "authoritative_source": ""
+        "license_source": "Ollama manifest",
+        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
       },
       {
+        "authoritative_source": "",
         "component_id": "qwen2.5-coder-7b",
-        "license_source": "Ollama manifest",
         "license_declared": "model_license",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST",
-        "authoritative_source": ""
+        "license_source": "Ollama manifest",
+        "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
       },
       {
+        "authoritative_source": "",
         "component_id": "neurips2026_style",
-        "license_source": "kit zip",
         "license_declared": "NeurIPS kit terms",
         "license_expected": "",
-        "license_verification_state": "EXEMPT_TEMPLATE_TERMS",
-        "authoritative_source": ""
+        "license_source": "kit zip",
+        "license_verification_state": "EXEMPT_TEMPLATE_TERMS"
       },
       {
+        "authoritative_source": "LICENSE",
         "component_id": "cases_jsonl",
-        "license_source": "repo",
         "license_declared": "Apache-2.0",
         "license_expected": "Apache-2.0",
-        "license_verification_state": "VERIFIED",
-        "authoritative_source": "LICENSE"
+        "license_source": "repo",
+        "license_verification_state": "VERIFIED"
       }
-    ]
+    ],
+    "license_registry": {
+      "LICENSE": {
+        "detected": true,
+        "expected_spdx": "Apache-2.0",
+        "path": "LICENSE",
+        "sha256": "76e1c97f4b74316600e7e76407f0423d0f9f880867d7356a772b4c04de089ad0"
+      },
+      "LICENSING.md": {
+        "detected": true,
+        "expected_spdx": "CC-BY-NC-ND-4.0",
+        "path": "LICENSING.md",
+        "sha256": "ae3dc8c988bb5ad7042a5a7664d764eba308a5c70b8765bbe0fa14b4d50ad46e"
+      },
+      "THIRD_PARTY_NOTICES.md": {
+        "detected": true,
+        "expected_spdx": "AGPL-3.0-upstream-HydraDB",
+        "path": "THIRD_PARTY_NOTICES.md",
+        "sha256": "4c143a782b8a5a865cb9ce2db39e24f6c03aa7444ed5572baa5fc6f0a3ac5205"
+      },
+      "package.json": {
+        "detected": true,
+        "expected_spdx": "Apache-2.0",
+        "path": "package.json",
+        "sha256": "4007832d7fd3078ccd84571622db84e3201598ecb517ec42488c20065118f381"
+      }
+    }
   },
-  "recorded_at_utc": "2026-08-30T06:04:19Z",
+  "recorded_at_utc": "2026-08-30T06:05:16Z",
   "schema": "hydradg.comprehensive_v2_closeout.v1"
 }

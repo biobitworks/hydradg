@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-08-30T06:03:26Z",
+  "recorded_at_utc": "2026-08-30T06:05:16Z",
   "rows": [
     {
       "evidence": "LICENSE+LICENSING.md+package.json+THIRD_PARTY_NOTICES.md",
@@ -9,7 +9,7 @@
     },
     {
       "evidence": "tables/A5_SOFTWARE_MODEL_DATASET_BOM.tsv",
-      "evidence_sha256": "fccafb53faa40f4c8b81f6663e116f8a1a1d8c5e3303348dbc2bc764c53b6c90",
+      "evidence_sha256": "2bda615f3a130756825ec974d805c6b66866001d2338594d7f66c426f3f66b47",
       "gate": "SOFTWARE_LICENSE_COVERAGE",
       "method": "derived"
     },
@@ -27,19 +27,19 @@
     },
     {
       "evidence": "r123_figures/FIGURES_R123_RECEIPT.json",
-      "evidence_sha256": "f4b090bd7100fb5df3f7fb060deb201dc67fdfee405cd1382e9d20850ea8393d",
+      "evidence_sha256": "8ab02077f5363fb93dd63ce0e3ad5bbbea25635b039eeeef1613d8ac501b6b4b",
       "gate": "FIGURES_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "r123_tables/TABLES_R123_RECEIPT.json",
-      "evidence_sha256": "f324defe72b4a7248fbeaad6b0d6a461c19a05351ae5e8d2fb89420090b60520",
+      "evidence_sha256": "d1bd99043d45c8a6c8f9e2b71572429288a02b9f9a87511d4f6cd262f9044041",
       "gate": "TABLES_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "TABLE_MASTER_LEDGER.tsv",
-      "evidence_sha256": "ed855ac3eab4f83fba57de288099601a947d1c2607dd34c50e58960336c1ec90",
+      "evidence_sha256": "56ddc101cb821e70e2964a5b5f789dd9e31206906ce2193fa84bb8bd16fa23c4",
       "gate": "TABLE_UNIQUE_ID_GATE",
       "method": "derived"
     },
@@ -51,7 +51,7 @@
     },
     {
       "evidence": "FINAL_COMPREHENSIVE_SUCCESSOR_V2.pdf",
-      "evidence_sha256": "eca9f1670ead483e5bcbf7a1c0956b7fa38a349e7c92e2ad9ab0fdb9adf2fc1e",
+      "evidence_sha256": "7d0392a89a822ee0e6226387dd54fa88db08800fc645b04510b7a2337cf5f22e",
       "gate": "HUMAN_VISUAL_REVIEW",
       "method": "operator_required"
     }
