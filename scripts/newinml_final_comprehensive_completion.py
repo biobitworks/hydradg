@@ -68,7 +68,7 @@ def git_branch() -> str:
 
 
 def git_worktree_clean() -> bool:
-    proc = run(["git", "status", "--porcelain"])
+    proc = run(["git", "status", "--porcelain", "--untracked-files=no"])
     return proc.stdout.strip() == ""
 
 
