@@ -1,0 +1,13 @@
+{
+  "CONTENT_LEAF_COUNT": 16,
+  "CONTENT_LEAF_ORDERING": "sorted(leaf_hash) via merkle_root(order_independent=True)",
+  "CONTENT_ROOT": "1a6b0a967da41e5b619ec449ab0cdbb914797321661e7ee25f8b87f2521df94d",
+  "CONTENT_TREE_ALGORITHM": "fco_train.custody.merkle_root.v3",
+  "GENESIS": "dbc1b4c900ffe48d575b5da5c638040125f65db0fe3e24494b76ea986457d986",
+  "LEAF_ENCODING": "leaf=sha256(0x00||sha256(bytes)); node=sha256(0x01||raw32||raw32); odd-promote; order_independent=sorted",
+  "implementation": "fractal-custody-objects/training/fco_train/custody.py",
+  "implementation_sha256": "e116f9ff55c639997a44e3830df8753273a68f76918fff2b68ee822a60d7b6cb",
+  "schema": "hydradg.newinml.openreview_v4.content_tree.v1",
+  "source_git_sha": "82ab3b812bbd40b3cb3e71536fd44764740149f3",
+  "v3_pdf_sha256": "6f2d56a8fb8fb22cf76ad54a5f1abb9918a4319ae6eaf748ef5d02497e8bf9f4"
+}

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="720" height="120" viewBox="0 0 720 120">
+  <defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#333"/></marker></defs>
+  <text x="10" y="20" font-size="12">FIG-001 custody pipeline (governed structured data)</text>
+  <g font-size="11" fill="#111">
+    <rect x="10" y="40" width="90" height="30" fill="#eef" stroke="#333"/><text x="20" y="58">Source</text>
+    <rect x="120" y="40" width="90" height="30" fill="#eef" stroke="#333"/><text x="135" y="58">SHA256</text>
+    <rect x="230" y="40" width="70" height="30" fill="#eef" stroke="#333"/><text x="245" y="58">Atom</text>
+    <rect x="320" y="40" width="95" height="30" fill="#eef" stroke="#333"/><text x="328" y="58">ResultAtom</text>
+    <rect x="435" y="40" width="90" height="30" fill="#eef" stroke="#333"/><text x="445" y="58">Claim</text>
+    <rect x="545" y="40" width="70" height="30" fill="#eef" stroke="#333"/><text x="555" y="58">FCG</text>
+    <rect x="630" y="40" width="80" height="30" fill="#eef" stroke="#333"/><text x="638" y="58">Verify</text>
+  </g>
+  <line x1="100" y1="55" x2="118" y2="55" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="210" y1="55" x2="228" y2="55" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="300" y1="55" x2="318" y2="55" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="415" y1="55" x2="433" y2="55" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="525" y1="55" x2="543" y2="55" stroke="#333" marker-end="url(#arrow)"/>
+  <line x1="615" y1="55" x2="628" y2="55" stroke="#333" marker-end="url(#arrow)"/>
+  <text x="10" y="100" font-size="9" fill="#555">data_sha256=b3aa0ec7562fb649...</text>
+</svg>

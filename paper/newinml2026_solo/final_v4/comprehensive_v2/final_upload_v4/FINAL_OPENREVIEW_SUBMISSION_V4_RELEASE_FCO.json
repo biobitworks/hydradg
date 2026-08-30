@@ -1,0 +1,30 @@
+{
+  "actor_id": null,
+  "anticube_state": {
+    "identity": "self",
+    "safety": "safe"
+  },
+  "authorization_basis": "double-blind workshop successor of V3; no identity-bearing signature",
+  "canonicalization_method": "fco_train.custody.canon",
+  "claim_ceiling": "CUSTODY_MECHANICS",
+  "content_hash": "sha256:3e5185a0bf03640d96342be6354b07dcd3f31ecdfbd6ac2849e17eae9ca3b79e",
+  "created_at": "2026-08-30T00:31:01-07:00",
+  "device_or_instrument_id": null,
+  "encryption": null,
+  "environment_hash": "sha256:32f9f73b7b7417393aa917b93c38dbe923e812b461787a4222a7a88dd8d996a8",
+  "fco_version": "fco_minimum.v1",
+  "notes": "Anonymous OpenReview PDF. CONTENT_ROOT is independent of this PDF hash. SIGNATURE_STATE pending anonymous key.",
+  "object_id": "fco:d77cb6f267024990d57d8df1c7fe64d208c44e76db8eb17f82ef12455606ae5d",
+  "object_type": "OPENREVIEW_SUBMISSION_PDF",
+  "parent_hashes": [
+    "sha256:1a6b0a967da41e5b619ec449ab0cdbb914797321661e7ee25f8b87f2521df94d",
+    "sha256:6f2d56a8fb8fb22cf76ad54a5f1abb9918a4319ae6eaf748ef5d02497e8bf9f4"
+  ],
+  "project_id": "hydradg",
+  "run_id": "newinml-openreview-v4-20260830",
+  "signature": null,
+  "software_hash": "sha256:e116f9ff55c639997a44e3830df8753273a68f76918fff2b68ee822a60d7b6cb",
+  "source_or_derivative": "derivative",
+  "status": "accepted",
+  "supersedes": "sha256:6f2d56a8fb8fb22cf76ad54a5f1abb9918a4319ae6eaf748ef5d02497e8bf9f4"
+}

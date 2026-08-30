@@ -1,0 +1,16 @@
+{
+  "DOUBLE_BLIND": true,
+  "KEY_ID_POLICY": "PENDING unless approved anonymous submission key exists",
+  "forbid_in_pdf": [
+    "author name",
+    "organization",
+    "github username",
+    "repository URL",
+    "hostname",
+    "local path",
+    "branch",
+    "identity-bearing certificate",
+    "operator public key"
+  ],
+  "schema": "hydradg.newinml.openreview_v4.anonymity_policy.v1"
+}

@@ -1,0 +1,11 @@
+{
+  "command": "tectonic -X compile work/main.tex --outdir final_upload_v4/build --keep-logs",
+  "custody_algorithm": "fco_train.custody.merkle_root.v3",
+  "custody_py_sha256": "e116f9ff55c639997a44e3830df8753273a68f76918fff2b68ee822a60d7b6cb",
+  "fco_minimum_schema_sha256": "04db1d2a0d6ec223ef9efad0a7b676abe8f7b988ea2d00e31943b2a38dac1b67",
+  "renderer": "tectonic",
+  "schema": "hydradg.newinml.openreview_v4.build_recipe.v1",
+  "source_git_sha": "82ab3b812bbd40b3cb3e71536fd44764740149f3",
+  "tectonic_version": "Tectonic 0.17.0",
+  "template_option": "dblblindworkshop"
+}
