@@ -1,10 +1,10 @@
 software	repo_url	version	commit_digest	role	license	license_source	citation	modified	distribution_status	paper_role
-HydraDG	https://github.com/biobitworks/hydradg	0.3.7	5cc7b50c29f518c05717ad843d848430b55f9516	Framework	MIT	LICENSE	this repo	yes	internal+anon_bundle	PRIMARY
-HydraLamp	https://github.com/biobitworks/hydradg	20260826	5cc7b50c29f518c05717ad843d848430b55f9516	Systems validation	MIT	LICENSE	this repo	yes	internal	SYSTEMS
-FCO/FCG	HydraDG_DaisyTrain_v0.3.7	v0.3.7	5cc7b50c29f518c05717ad843d848430b55f9516	Custody graph	MIT	LICENSE	companion preprint	yes	internal	FRAMEWORK
-Ollarma	eval/ollarma_*	20260827	5cc7b50c29f518c05717ad843d848430b55f9516	Local model bridge	MIT	LICENSE	internal	yes	internal	INFRA
-SeedGraph	HydraDG_DaisyTrain_v0.3.7/seedgraph	v1a	5cc7b50c29f518c05717ad843d848430b55f9516	Atomization	MIT	LICENSE	internal	yes	partial	LIMITATION
-HydraDB	scripts/project_*_hydradb.py	20260820	5cc7b50c29f518c05717ad843d848430b55f9516	Graph projection	MIT	LICENSE	internal	yes	internal	INFRA
+HydraDG	https://github.com/biobitworks/hydradg	0.3.7	00a0a9eb59d3b1bc4d5c5ad004da879678790ece	Framework	MIT	LICENSE	this repo	yes	internal+anon_bundle	PRIMARY
+HydraLamp	https://github.com/biobitworks/hydradg	20260826	00a0a9eb59d3b1bc4d5c5ad004da879678790ece	Systems validation	MIT	LICENSE	this repo	yes	internal	SYSTEMS
+FCO/FCG	HydraDG_DaisyTrain_v0.3.7	v0.3.7	00a0a9eb59d3b1bc4d5c5ad004da879678790ece	Custody graph	MIT	LICENSE	companion preprint	yes	internal	FRAMEWORK
+Ollarma	eval/ollarma_*	20260827	00a0a9eb59d3b1bc4d5c5ad004da879678790ece	Local model bridge	MIT	LICENSE	internal	yes	internal	INFRA
+SeedGraph	HydraDG_DaisyTrain_v0.3.7/seedgraph	v1a	00a0a9eb59d3b1bc4d5c5ad004da879678790ece	Atomization	MIT	LICENSE	internal	yes	partial	LIMITATION
+HydraDB	scripts/project_*_hydradb.py	20260820	00a0a9eb59d3b1bc4d5c5ad004da879678790ece	Graph projection	MIT	LICENSE	internal	yes	internal	INFRA
 Antigence	related implementation	experimental	N/A	Transfer validation	UNKNOWN	NOT_IN_REPO	internal docs	no	NOT_ADMISSIBLE_PRIMARY	FUTURE
 Python	python.org	3.x	system	Stats/figures	PSF	LICENSE	N/A	no	standard	TOOLING
 matplotlib/scipy/pandas	PyPI	pinned in requirements	lockfile	Figures/stats	BSD	LICENSE	N/A	no	standard	TOOLING

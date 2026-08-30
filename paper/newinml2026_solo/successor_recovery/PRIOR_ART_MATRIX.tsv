@@ -1,5 +1,5 @@
 capability	hydradg	nearest_prior_art	shared_functionality	hydradg_difference	evidence	claim_ceiling	citation
-failure-complete custody	HydraDG FCO/FCG	W&B logs; MLflow	experiment tracking	terminal states + claim ceilings + hash-bound handoffs	eval/custody_audit_*	SYSTEMS_DEMO	prov-o;zaharia2018mlflow
+failure-complete custody	HydraDG FCO/FCG	W&B logs; MLflow	experiment tracking	terminal states + claim ceilings + hash-bound handoffs	eval/custody_audit_*	SYSTEMS_DEMO	prov-o; mlflow
 explicit evidence classes	HydraDG	PROV-O	provenance typing	evidence_class per receipt	framework	FRAMEWORK	prov-o
 negative/null preservation	HydraDG	AgentBench etc.	benchmarks	mandatory terminal capture	EXP-008/009	PRIMARY	liu2023agentbench
 deterministic recomputation	HydraDG stats pipeline	standard stats	reproducibility	R1/R2/R3 hash gate	statistics/	RECOVERY	nosek2018prereg
