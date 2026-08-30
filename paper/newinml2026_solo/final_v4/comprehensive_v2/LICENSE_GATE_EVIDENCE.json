@@ -1,0 +1,136 @@
+{
+  "a10_sha256": "e10e7010c8ecefc0c3db3fa6a690cb3c68ae3baf463efc9101ae866592045375",
+  "a5_sha256": "0d6ca0cb1aaa7e9c6d94b2c026529fadeb116d85da5c4d76ab51af7b7e8e249b",
+  "bom_license_rows": [
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "hydradg",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "LICENSING.md",
+      "component_id": "fco_fcg",
+      "license_declared": "CC-BY-NC-ND-4.0",
+      "license_expected": "CC-BY-NC-ND-4.0",
+      "license_source": "Zenodo record",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "gsigmad",
+      "license_declared": "see_upstream",
+      "license_expected": "",
+      "license_source": "upstream LICENSE",
+      "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "seedgraph",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "ollarma",
+      "license_declared": "see_upstream",
+      "license_expected": "",
+      "license_source": "upstream LICENSE",
+      "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "hydralamp",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "LICENSE",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "THIRD_PARTY_NOTICES.md",
+      "component_id": "hydradb",
+      "license_declared": "AGPL-3.0-upstream-HydraDB",
+      "license_expected": "AGPL-3.0-upstream-HydraDB",
+      "license_source": "THIRD_PARTY_NOTICES.md",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "antigence",
+      "license_declared": "see_upstream",
+      "license_expected": "",
+      "license_source": "upstream",
+      "license_verification_state": "EXEMPT_EXTERNAL_UPSTREAM"
+    },
+    {
+      "authoritative_source": "LICENSING.md",
+      "component_id": "vithia",
+      "license_declared": "CC-BY-NC-ND-4.0",
+      "license_expected": "CC-BY-NC-ND-4.0",
+      "license_source": "Zenodo",
+      "license_verification_state": "VERIFIED"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "qwen3-1.7b",
+      "license_declared": "model_license",
+      "license_expected": "",
+      "license_source": "Ollama manifest",
+      "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "qwen2.5-coder-7b",
+      "license_declared": "model_license",
+      "license_expected": "",
+      "license_source": "Ollama manifest",
+      "license_verification_state": "EXEMPT_RUNTIME_MANIFEST"
+    },
+    {
+      "authoritative_source": "",
+      "component_id": "neurips2026_style",
+      "license_declared": "NeurIPS kit terms",
+      "license_expected": "",
+      "license_source": "kit zip",
+      "license_verification_state": "EXEMPT_TEMPLATE_TERMS"
+    },
+    {
+      "authoritative_source": "LICENSE",
+      "component_id": "cases_jsonl",
+      "license_declared": "Apache-2.0",
+      "license_expected": "Apache-2.0",
+      "license_source": "repo",
+      "license_verification_state": "VERIFIED"
+    }
+  ],
+  "license_registry": {
+    "LICENSE": {
+      "detected": true,
+      "expected_spdx": "Apache-2.0",
+      "path": "LICENSE",
+      "sha256": "76e1c97f4b74316600e7e76407f0423d0f9f880867d7356a772b4c04de089ad0"
+    },
+    "LICENSING.md": {
+      "detected": true,
+      "expected_spdx": "CC-BY-NC-ND-4.0",
+      "path": "LICENSING.md",
+      "sha256": "ae3dc8c988bb5ad7042a5a7664d764eba308a5c70b8765bbe0fa14b4d50ad46e"
+    },
+    "THIRD_PARTY_NOTICES.md": {
+      "detected": true,
+      "expected_spdx": "AGPL-3.0-upstream-HydraDB",
+      "path": "THIRD_PARTY_NOTICES.md",
+      "sha256": "4c143a782b8a5a865cb9ce2db39e24f6c03aa7444ed5572baa5fc6f0a3ac5205"
+    },
+    "package.json": {
+      "detected": true,
+      "expected_spdx": "Apache-2.0",
+      "path": "package.json",
+      "sha256": "4007832d7fd3078ccd84571622db84e3201598ecb517ec42488c20065118f381"
+    }
+  }
+}
