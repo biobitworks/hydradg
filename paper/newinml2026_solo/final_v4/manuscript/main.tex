@@ -53,9 +53,11 @@ HydraDG complements benchmarks with mandatory negative capture at the custody la
 \textbf{Retrieval and structured context.} Retrieval-augmented generation and graph-augmented memory systems assume structured context helps \cite{lewis2020rag,edge2024graphrag}.
 Falsification requires frozen contracts, explicit null retention, and power-aware verdicts; HydraDG enforces both.
 
-\textbf{Provenance and reproducibility.} Preregistration, FAIR data principles, and nanopublication-style lineage support scientific reproducibility \cite{nosek2018prereg,wilkinson2016fair,groth2010nano}.
-Agent stacks often stop at prompt logging.
-FCO/FCG extend content-addressed lineage to cross-actor handoffs so that a stale agent cannot write after ownership moves.
+\textbf{Provenance, integrity, and reproducibility.}
+W3C PROV-O and workflow provenance systems represent process and research-object lineage \cite{lebo2013provo,khan2019cwlprov}, while append-only Merkle audit logs provide established tamper-evident integrity mechanisms \cite{laurie2013ct}; HydraDG does not claim to invent these primitives.
+Recent work surveys evidence tracing and execution provenance for LLM agents \cite{wang2026agentprovenance}, and separate work argues for preserving negative ML results rather than selective omission \cite{karl2024negative}.
+Preregistration, FAIR principles, and nanopublication-style lineage further support reproducibility \cite{nosek2018prereg,wilkinson2016fair,groth2010nano}.
+HydraDG integrates rather than replaces these foundations: probabilistic outputs, deterministic transforms, malformed cells, failures, abstentions, blocked states, and underpowered terminations remain typed evidence with explicit claim-promotion ceilings enforced via FCO/FCG handoff receipts.
 Companion custody-framework preprints (deferred to camera-ready de-anonymization) define FCO/FCG formally; they establish framework provenance, not the HydraDG empirical results reported here.
 
 \section{Framework}
@@ -63,7 +65,7 @@ Companion custody-framework preprints (deferred to camera-ready de-anonymization
 \subsection{Custody objects}
 
 An \textbf{FCO} (\emph{Fractal Custody Object}) materializes one bounded transformation: e.g., a model call, scorer pass, or ingest operation.
-An \textbf{FCG} (\emph{Fractal Custody Graph}) append records directed edges between FCOs with hash-linked roots.
+An \textbf{FCG} (\emph{Fractal Custody Graph}) append records directed edges between FCOs with hash-linked roots \cite{laurie2013ct}.
 HydraDG preserves failures, nulls, and malformed outputs in custody (a failure-complete \emph{behavior}, not a redefinition of FCO/FCG).
 Claim ceilings (exploratory mechanistic falsification, descriptive only, etc.) are declared at preregistration and enforced at promotion time.
 
@@ -194,7 +196,7 @@ All directions above are \emph{planned} unless independently measured; they do n
 We presented HydraDG, a custody-first framework for agent context-intervention experiments, and reported two terminal underpowered preregistered studies that block premature promotion of structured FCG retrieval effects on failure-prevention endpoints.
 We recommend FCO/FCG custody, explicit claim ceilings, and terminal-state preservation as baseline infrastructure for NewInML-style agent evaluations.
 
-\begin{thebibliography}{12}
+\begin{thebibliography}{16}
 
 \bibitem{lewis2020rag}
 P.~Lewis, E.~Perez, A.~Piktus, et al.
@@ -241,6 +243,32 @@ Anonymous. (2026). IC Failure Learning Stage-2 closeout receipt. Internal frozen
 
 \bibitem{neurips2026}
 NeurIPS. (2026). New in Machine Learning (NewInML) workshop call for papers. Non-archival workshop track.
+
+\bibitem{laurie2013ct}
+B.~Laurie, A.~Langley, and E.~Kasper.
+\newblock Certificate Transparency.
+\newblock RFC~6962, IETF, June 2013.
+
+\bibitem{lebo2013provo}
+T.~Lebo et al.
+\newblock PROV-O: The PROV Ontology.
+\newblock W3C Recommendation, 2013.
+
+\bibitem{khan2019cwlprov}
+F.~Z. Khan et al.
+\newblock Sharing interoperable workflow provenance: {CWLProv}.
+\newblock \emph{GigaScience}, 8(11):giz095, 2019.
+
+\bibitem{karl2024negative}
+F.~Karl, L.~M. Kemeter, G.~Dax, and P.~Sierak.
+\newblock Position: Embracing negative results in machine learning.
+\newblock In \emph{ICML}, PMLR 235:23256--23265, 2024.
+\newblock arXiv:2406.03980.
+
+\bibitem{wang2026agentprovenance}
+Y.~Wang et al.
+\newblock From agent traces to trust: A survey of evidence tracing and execution provenance in {LLM} agents.
+\newblock arXiv:2606.04990, 2026.
 
 \end{thebibliography}
 

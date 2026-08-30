@@ -9,8 +9,8 @@
     },
     "bibliography_entries": {
       "expected": 10,
-      "match": true,
-      "observed": 10
+      "match": false,
+      "observed": 15
     },
     "checklist_pages": {
       "expected": 7,
@@ -19,8 +19,8 @@
     },
     "citation_callsites": {
       "expected": 9,
-      "match": true,
-      "observed": 9
+      "match": false,
+      "observed": 15
     },
     "main_content_pages": {
       "expected": 4,
@@ -44,8 +44,8 @@
     },
     "unique_bibkeys_used": {
       "expected": 7,
-      "match": true,
-      "observed": 7
+      "match": false,
+      "observed": 12
     }
   },
   "expected_baseline": {
@@ -63,18 +63,18 @@
   "manuscript_path": "paper/newinml2026_solo/final_v4/manuscript/main.tex",
   "observed": {
     "appendix_pages": 1,
-    "bibliography_entries": 10,
+    "bibliography_entries": 15,
     "checklist_pages": 7,
-    "citation_callsites": 9,
+    "citation_callsites": 15,
     "main_content_pages": 4,
     "main_figures": 0,
     "main_tables": 2,
     "reference_pages": 1,
-    "unique_bibkeys_used": 7
+    "unique_bibkeys_used": 12
   },
   "pdf_path": "paper/newinml2026_solo/final_v4/manuscript/build/main.pdf",
   "pdf_sha256": "c16be09e6ade15bbe28afa4a41d028e76806c7ec4d86c525d20c97e006497c04",
   "pdf_sha_match": false,
-  "recorded_at_utc": "2026-08-29T09:10:39Z",
+  "recorded_at_utc": "2026-08-30T03:25:55Z",
   "schema": "hydradg.newinml.final_inventory.v1"
 }
