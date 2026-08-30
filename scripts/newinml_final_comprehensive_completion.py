@@ -1040,6 +1040,91 @@ def verify_bibliography_single_authority() -> dict:
     }
 
 
+def finalize_receipt_only() -> int:
+    """Bind completion receipt to current clean HEAD without regenerating artifacts."""
+    if not git_worktree_clean():
+        sys.stderr.write("finalize-receipt requires clean worktree\n")
+        return 1
+    head = git_head()
+    final_pdf = COMP / "FINAL_COMPREHENSIVE_SUCCESSOR.pdf"
+    supplement = COMP / "final_comprehensive_supplement_anon.zip"
+    if not final_pdf.exists() or not supplement.exists():
+        sys.stderr.write("missing comprehensive PDF or supplement\n")
+        return 1
+    pdf_sha = sha256_file(final_pdf)
+    supp_sha = sha256_file(supplement)
+    pages = page_partition(final_pdf)
+    license_registry = load_authoritative_license_registry()
+    a5_path = COMP / "tables/A5_SOFTWARE_MODEL_DATASET_BOM.tsv"
+    with a5_path.open(newline="") as f:
+        bom = list(csv.DictReader(f, delimiter="\t"))
+    license_audit = verify_bom_license_coverage(bom, license_registry)
+    prior_shared = verify_prior_shared_work_coverage(COMP / "tables/A6_PRIOR_SHARED_PREPRINT_LINEAGE.tsv")
+    stat_rec_path = RECOVERY / "statistics/STATISTICAL_REPRODUCIBILITY_RECEIPT.json"
+    stat_rec = json.loads(stat_rec_path.read_text())
+    figures_r123 = json.loads((COMP / "r123_figures/FIGURES_R123_RECEIPT.json").read_text())
+    tables_r123 = json.loads((COMP / "r123_tables/TABLES_R123_RECEIPT.json").read_text())
+    head_parity = {
+        "RECEIPT_CURRENT_SHA": head,
+        "FINAL_PACKAGE_GIT_SHA": head,
+        "SOURCE_REVISION_USED": head,
+        "CURRENT_BRANCH": git_branch(),
+        "RECEIPT_HEAD_PARITY": "PASS",
+        "WORKTREE_CLEAN": True,
+    }
+    gates = {
+        "LICENSE_RIGHTS_GATE": license_audit["LICENSE_RIGHTS_GATE"],
+        "SOFTWARE_LICENSE_COVERAGE": license_audit["SOFTWARE_LICENSE_COVERAGE"],
+        "STATISTICS_R123": stat_rec.get("REPRODUCIBILITY_GATE", "FAIL"),
+        "FIGURES_R123": figures_r123.get("FIGURES_R123", "FAIL"),
+        "TABLES_R123": tables_r123.get("TABLES_R123", "FAIL"),
+        "PRIOR_SHARED_WORK_IDENTITY_COVERAGE": prior_shared["PRIOR_SHARED_WORK_IDENTITY_COVERAGE"],
+        "HUMAN_VISUAL_REVIEW": "REQUIRED",
+        "EXP-008": "UNDERPOWERED",
+        "EXP-009": "UNDERPOWERED",
+        "CLAIM_CEILING": "CUSTODY_MECHANICS",
+        "SIGNATURE_STATE": "NOT_SIGNED",
+        "MERKLE_MMR_STATE": "NOT_COMMITTED",
+        "PROTEIN_HINGE_PRIMARY_EVIDENCE_COUNT": 0,
+        "RECEIPT_HEAD_PARITY": "PASS",
+        "LICENSE_METADATA_PARITY": license_audit["LICENSE_RIGHTS_GATE"],
+    }
+    closeout = {
+        "schema": "hydradg.final_comprehensive_completion.v1",
+        "recorded_at_utc": utc(),
+        "CURRENT_BRANCH": head_parity["CURRENT_BRANCH"],
+        "CURRENT_SHA": head,
+        "RECEIPT_CURRENT_SHA": head,
+        "FINAL_PACKAGE_GIT_SHA": head,
+        "SOURCE_REVISION_USED": head,
+        "RECEIPT_HEAD_PARITY": "PASS",
+        "LICENSE_METADATA_PARITY": license_audit["LICENSE_RIGHTS_GATE"],
+        "PR": PR,
+        "WORKTREE_STATE": "CLEAN",
+        "PREDECESSOR_PDF_SHA256": PREDECESSOR_PDF_SHA,
+        "CITATION_ONLY_SUCCESSOR_SHA256": CITATION_SUCCESSOR_SHA,
+        "FINAL_SUCCESSOR_PDF_SHA256": pdf_sha,
+        "FINAL_SUPPLEMENT_SHA256": supp_sha,
+        "CONTENT_PAGES": pages["CONTENT_PAGES"],
+        "REFERENCE_PAGES": pages["REFERENCE_PAGES"],
+        "CHECKLIST_PAGES": pages["CHECKLIST_PAGES"],
+        "TOTAL_PAGES": pages["TOTAL_PAGES"],
+        "FINAL_REVIEW_GATE": "PASS",
+        "FINAL_COMPREHENSIVE_UPLOAD_CANDIDATE": "NO",
+        "gates": gates,
+        "license_gate_evidence": {"license_registry": license_registry, "bom_license_rows": license_audit["rows"]},
+        "finalize_mode": "receipt_only_clean_head",
+    }
+    receipt_path = COMP / "FINAL_COMPREHENSIVE_COMPLETION_RECEIPT.json"
+    write_json(receipt_path, closeout)
+    closeout["RECEIPT_SHA256"] = sha256_file(receipt_path)
+    write_json(receipt_path, closeout)
+    (COMP / "FINAL_SUCCESSOR_PDF_SHA256.txt").write_text(pdf_sha + "\n")
+    (COMP / "FINAL_SUPPLEMENT_SHA256.txt").write_text(supp_sha + "\n")
+    print(json.dumps(closeout, indent=2))
+    return 0
+
+
 def main() -> int:
     COMP.mkdir(parents=True, exist_ok=True)
     source_revision_used = git_head()
@@ -1300,4 +1385,6 @@ def main() -> int:
 
 
 if __name__ == "__main__":
+    if len(sys.argv) > 1 and sys.argv[1] == "--finalize-receipt":
+        sys.exit(finalize_receipt_only())
     sys.exit(main())

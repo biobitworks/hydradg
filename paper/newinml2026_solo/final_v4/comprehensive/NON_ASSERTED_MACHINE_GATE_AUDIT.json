@@ -1,9 +1,9 @@
 {
-  "recorded_at_utc": "2026-08-30T05:21:45Z",
+  "recorded_at_utc": "2026-08-30T05:22:06Z",
   "rows": [
     {
       "evidence": "A5_SOFTWARE_MODEL_DATASET_BOM.tsv",
-      "evidence_sha256": "da9eb0d4c7fd600b9e25747d636bf77cc924c102220edd542044a3d612d0f075",
+      "evidence_sha256": "31f361d3b52afb22887de14823560f5f1bc33c2d7dcbd9b4b90a26d63aa3e1b3",
       "gate": "SOFTWARE_LICENSE_COVERAGE",
       "method": "derived"
     },
@@ -21,31 +21,31 @@
     },
     {
       "evidence": "paper/newinml2026_solo/successor_recovery/statistics/STATISTICAL_REPRODUCIBILITY_RECEIPT.json",
-      "evidence_sha256": "d21f10698162a602fc9457af9a3642507ecfe84b41faa3ecebb99990f771aa95",
+      "evidence_sha256": "cdfe2ce8937d3b054e87c383d7cc4ff6bc856f194bf228ffcef930fd4690b40e",
       "gate": "STATISTICS_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "r123_figures/FIGURES_R123_RECEIPT.json",
-      "evidence_sha256": "ea307a5773df59da65cca8f8efdd02fc730cdc4f678849e4f7baa2ce35ae869d",
+      "evidence_sha256": "b0e05221ccccf1a98d4ee10d30ce721abb6842819fb719d2640384a2cf9314bd",
       "gate": "FIGURES_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "r123_tables/TABLES_R123_RECEIPT.json",
-      "evidence_sha256": "28e7571ff1d5260bfbd01eda1ff0df2c6f7d44b7b6eb106a6e7394a8a00f93ce",
+      "evidence_sha256": "1b7f7c3c669545d5e279fd465adda81b516a0afe285654a3a7607bc3ebd980a5",
       "gate": "TABLES_R123",
       "method": "ledger_verified"
     },
     {
       "evidence": "figures/FIGURE_GATE_LEDGER.json",
-      "evidence_sha256": "abb153196b9bd1ff8105d89ba7f0618a3a113b5e9e37cf9f035cd91c5fbf607c",
+      "evidence_sha256": "9d3919d450aed556cfb7422d796a6eba076987abf7e60fc9a738dce71cf9f074",
       "gate": "FIGURE_SOURCE_TRACE_COVERAGE",
       "method": "derived"
     },
     {
       "evidence": "tables/A8_FIGURE_TABLE_SOURCE_HASH_LEDGER.tsv",
-      "evidence_sha256": "4c09fb40f9f1a8c1c39ffa5c143391a19579ecff696d8a2975948a334f72179b",
+      "evidence_sha256": "fbef2cb4993cbe73a8cb3fc408199cc992005ad57510ef32481cbc1ab3dc3911",
       "gate": "TABLE_SOURCE_TRACE_COVERAGE",
       "method": "derived"
     },
@@ -57,7 +57,7 @@
     },
     {
       "evidence": "14-page PDF visual inspection",
-      "evidence_sha256": "c2bca7aa3fd9c178d6fe952f96dbc91ee0c2673b7707b71cc629f15a05222449",
+      "evidence_sha256": "a2aea38b3267c786ab9afbe780a4b8d7d6aff28800ac15ad0ef066bd225547b4",
       "gate": "HUMAN_VISUAL_REVIEW",
       "method": "operator_required"
     }
