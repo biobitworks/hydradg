@@ -1,0 +1,63 @@
+{
+  "anonymous_commitment_scheme": "NEWINML-ANON-COMMIT-V1",
+  "branch": "cursor/newinml-final-openreview-v5-anon-fco-20260830",
+  "camera_ready_successor_required": "ONLY_IF_ACCEPTED_OR_HUMAN_DIRECTED",
+  "claim_ceiling": "CUSTODY_MECHANICS",
+  "double_blind_review_state": "ACTIVE_OR_PENDING_REVIEW",
+  "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+  "execution_host": "magicSTUDIObox.local",
+  "EXP-008": {
+    "discordant": 0,
+    "n_paired": 2,
+    "state": "UNDERPOWERED"
+  },
+  "EXP-009": {
+    "discordant": 0,
+    "n_paired": 2,
+    "state": "UNDERPOWERED"
+  },
+  "git_sha": "b35e4e776365571aab382c53b2d8d875bc6d51b6",
+  "human_submission_note": "Operator confirmed NewInML OpenReview upload complete on 2026-08-30. No machine-verifiable OpenReview forum/note ID found locally.",
+  "local_citation_successor_note": "Local-only V6 citation-repair branch (cursor/newinml-final-citation-v6-20260830-9850) exists on disk; not part of origin terminal submission lineage. Do not conflate with V5 custody receipts.",
+  "merge_to_main": "PROHIBITED_DURING_DOUBLE_BLIND_REVIEW",
+  "merkle_mmr_state": "COMMITTED",
+  "openreview_machine_receipt": "NOT_FOUND_LOCALLY",
+  "post_submission_scientific_successor_work": [
+    "Daisy Train",
+    "SeedGraph",
+    "total atomization",
+    "Qwen3.8 successor experiments",
+    "Cloudflare runtime experiments",
+    "SGLang Breakable CUDA Graph experiments",
+    "Vithia comparisons",
+    "HydraDG training/inference experiments",
+    "FCO/FCG/CFMO/MMR research"
+  ],
+  "predecessor_preservation": {
+    "V3_SHA256": "6f2d56a8fb8fb22cf76ad54a5f1abb9918a4319ae6eaf748ef5d02497e8bf9f4",
+    "V4_SHA256": "3e5185a0bf03640d96342be6354b07dcd3f31ecdfbd6ac2849e17eae9ca3b79e",
+    "V5_BYTE_PRESERVATION_GATE": "PASS",
+    "v3_unmodified": true,
+    "v4_unmodified": true
+  },
+  "pr_lineage_note": "PR #45 merged to main before this closeout receipt; V5 branch remains immutable submission-custody reference at b35e4e77.",
+  "private_operator_material": "PRESENT_LOCAL_NOT_PUBLISHED",
+  "recorded_at_utc": "2026-08-31T05:49:00Z",
+  "release_fco_sha256": "4730c787f03e216f08c4e81c4d3e62250d52252c6c6a111be6377db36ed8e1c0",
+  "release_root": "b045fed4ecb4586de91182d8e2d722d5258452f2967eda42fb3613b59bdbf227",
+  "repository": "hydradg",
+  "schema": "hydradg.newinml.openreview_v5.submission_closeout.v1",
+  "scientific_successor_work": "SEPARATE_FROM_SUBMITTED_PAPER_LINEAGE",
+  "signature_state": "NOT_SIGNED",
+  "submission_event": {
+    "evidence_class": "DIRECT_HUMAN_EVIDENCE",
+    "operator_statement": "submitted",
+    "recorded_at_utc": "2026-08-31T05:49:00Z"
+  },
+  "submission_state": "SUBMITTED_HUMAN_CONFIRMED",
+  "submitted_artifact_bytes": 330886,
+  "submitted_artifact_path": "paper/newinml2026_solo/final_v4/comprehensive_v2/final_upload_v5/FINAL_OPENREVIEW_SUBMISSION_V5.pdf",
+  "submitted_artifact_sha256": "dd21288b691000bc3cf398c21c0166ac5ab70abf544d1af08a6c1a27ac39c519",
+  "treatment_effect_claim": "NOT_ESTABLISHED",
+  "venue": "NewInML @ NeurIPS 2026"
+}
