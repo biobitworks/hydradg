@@ -1,0 +1,20 @@
+{
+  "schema": "hydradg.daisy_overnight.power_assessment.v1",
+  "experiment_id": "EXP-009",
+  "E06_existing_case_count": 2,
+  "E06_case_ids": [
+    "E06-T0",
+    "E06-T1"
+  ],
+  "unused_preexisting_admissible_E06_cases": 0,
+  "expansion_permissible": false,
+  "source_manifest": "/Users/byron/projects/active/hydradg-daisy-exp008-overnight-20260828/eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+  "source_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "freeze_date_utc": "2026-08-28T15:32:44Z",
+  "label_leakage_check": "PASS_NO_EVAL_LABELS_IN_CASE_INPUT",
+  "power_disposition": "NO_PREEXISTING_INDEPENDENT_E06_EXPANSION",
+  "E06_POWER_STATE": "KNOWN_LIMITED",
+  "E06_CONFIRMATORY_CLAIM_ALLOWED": "NO",
+  "EXP009_CLASSIFICATION_SCOPE": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "note": "Only E06-T0 and E06-T1 in frozen CASES.jsonl; no held-out E06 pool"
+}

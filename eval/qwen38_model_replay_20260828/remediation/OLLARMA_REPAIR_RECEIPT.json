@@ -1,0 +1,25 @@
+{
+  "schema": "hydradg.qwen38.ollarma_repair_remediation.v1",
+  "recorded_at_utc": "2026-08-29T00:50:00Z",
+  "repair_scope": "CONTROL_PLANE_METADATA_ONLY",
+  "scientific_contract_unchanged": true,
+  "prior_direct_ollama_evidence": "PRESERVED",
+  "OLLARMA_STATE": "degraded",
+  "selection_artifact_age": "OLDER_THAN_24H",
+  "selection_timestamp": "2026-08-26T18:52:17Z",
+  "OLLARMA_MODEL_RESOLVED": "granite4.1:8b",
+  "OLLARMA_MODEL_DIGEST": "NOT_VERIFIED_THIS_PASS",
+  "expected_q38_model": "qwen3.8:27b",
+  "expected_q38_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+  "repair_attempted": "READINESS_PROBE_ONLY",
+  "repair_deferred_reason": "BLOCKED_RESOURCE_PRESSURE swap_used_pct>95 prevents governed smoke without risking scientific conflation",
+  "governed_smoke_required": true,
+  "governed_smoke_executed": false,
+  "next_fix_commands": [
+    "Relieve swap pressure on Studio",
+    "ollarma run --suites code --trials 3",
+    "curl -sS http://127.0.0.1:8484/startup/readiness | jq"
+  ],
+  "claim_ceiling": "PROBABILISTIC_MODEL_OUTPUT",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

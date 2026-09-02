@@ -1,0 +1,30 @@
+{
+  "schema": "hydradg.qwen38.runtime_compatibility_matrix.v1",
+  "recorded_at_utc": "2026-08-28T19:45:58Z",
+  "note": "Import/model-load not probed on remote; Flash-Next architecture is preview MoE+Engram",
+  "matrix": {
+    "Transformers_pinned": {
+      "Qwen3.8-27B": "UNTESTED",
+      "Flash-Next": "UNTESTED"
+    },
+    "vLLM_pinned": {
+      "Qwen3.8-27B": "UNTESTED",
+      "Flash-Next": "LIKELY_BLOCKED"
+    },
+    "SGLang_pinned": {
+      "Qwen3.8-27B": "UNTESTED",
+      "Flash-Next": "LIKELY_BLOCKED"
+    },
+    "Ollama_mlx_studio": {
+      "Qwen3.8-27B": "PASS",
+      "Flash-Next": "NOT_INSTALLED"
+    },
+    "Ollama_cuda_daytona": {
+      "Qwen3.8-27B": "BLOCKED",
+      "Flash-Next": "BLOCKED"
+    }
+  },
+  "RUNTIME_EQUIVALENCE": "NO",
+  "MODEL_COMPARISON_CLAIM": "DESCRIPTIVE_ONLY",
+  "recommended_path_if_unblocked": "same pinned Transformers for BOTH on CUDA host with pinned HF revisions"
+}

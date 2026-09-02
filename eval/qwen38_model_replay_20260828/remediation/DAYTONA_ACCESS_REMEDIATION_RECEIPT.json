@@ -1,0 +1,19 @@
+{
+  "schema": "hydradg.qwen38.daytona_access_remediation.v1",
+  "recorded_at_utc": "2026-08-29T00:49:48Z",
+  "DAYTONA_CLI": "PASS",
+  "DAYTONA_AUTH": "PASS",
+  "DAYTONA_SANDBOX_CREATE": "PASS",
+  "DAYTONA_EXEC": "PASS",
+  "DAYTONA_DESTROY": "PASS",
+  "DAYTONA_ACCESS_STATE": "PASS",
+  "DAYTONA_API_KEY_ENV": "ABSENT_IN_SHELL",
+  "note": "Auth restored via persisted Daytona CLI profile; prior BLOCKED_REMOTE_CAPACITY was ACCESS-CONFOUNDED",
+  "cli_version": "Daytona CLI version v0.200.1",
+  "sandbox_list_sha256": "cbc310b71c144e2f351bdfcee9bd52fc826ac499fbc81b618b249567c4c64e95",
+  "smoke_exec_sha256": "d04a21f7cd48b8b27271396b2d57b25fd1dc14bc4d55157485d4c55190f846e4",
+  "gpu_classes_probed": false,
+  "gpu_probe_deferred_reason": "No GPU sandbox provisioned in this remediation pass",
+  "EARLIEST_DIVERGENT_DEPENDENCY": null,
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

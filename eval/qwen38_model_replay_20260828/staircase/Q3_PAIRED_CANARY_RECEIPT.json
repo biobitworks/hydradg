@@ -1,0 +1,23 @@
+{
+  "schema": "hydradg.qwen38.staircase.q3_paired_canary.v1",
+  "stage": "Q3",
+  "recorded_at_utc": "2026-08-29T00:10:00Z",
+  "Q3_STARTED": "YES",
+  "Q3_COMPLETED": "NO",
+  "Q3_STATE": "INCOMPLETE_MISSING_C1_CELLS",
+  "expected": 6,
+  "accounted": 3,
+  "remaining": 3,
+  "frozen_case": "E01-T0",
+  "conditions_required": ["C0", "C1"],
+  "replicates_required": 3,
+  "accounted_breakdown": {
+    "C0": 3,
+    "C1": 0
+  },
+  "integrity_gate": "FAIL_ADVANCEMENT_BLOCKED",
+  "paper_admissible": false,
+  "paper_admission_class": "CANARY_EVIDENCE_ONLY",
+  "claim_ceiling": "EXPLORATORY_MECHANISTIC_FALSIFICATION",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

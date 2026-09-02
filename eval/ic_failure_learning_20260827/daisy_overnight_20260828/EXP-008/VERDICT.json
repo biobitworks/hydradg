@@ -1,0 +1,39 @@
+{
+  "schema": "hydradg.daisy_overnight.verdict.v1",
+  "experiment_id": "EXP-008",
+  "result_class": "UNDERPOWERED",
+  "primary": {
+    "n": 2,
+    "rd": 0.0,
+    "c0_rate": 0.0,
+    "c1_rate": 0.0,
+    "discordant": 0,
+    "b": 0,
+    "c": 0,
+    "p_exact": null,
+    "note": "no_discordant_pairs",
+    "ci95_low": 0.0,
+    "ci95_high": 0.0,
+    "method": "paired_bootstrap_percentile",
+    "n_paired": 2,
+    "pairs": [
+      [
+        false,
+        false
+      ],
+      [
+        false,
+        false
+      ]
+    ]
+  },
+  "data_quality": {
+    "n_raw": 300,
+    "valid_parse_rate": 0.9066666666666666,
+    "malformed_rate": 0.09333333333333334,
+    "unknown_rate": 0.5,
+    "abstain_rate": 0.08333333333333333
+  },
+  "conclusion_bounded": "effect not established",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

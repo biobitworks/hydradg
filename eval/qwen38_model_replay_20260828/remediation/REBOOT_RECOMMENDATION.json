@@ -1,0 +1,35 @@
+{
+  "schema": "hydradg.qwen38.reboot_recommendation.v1",
+  "recorded_at_utc": "2026-08-29T04:48:29Z",
+  "reason": "Soft swap remediation insufficient; macOS swap remains elevated after verified stale process termination",
+  "current_swap_used_pct": 80.87,
+  "memory_pressure": [
+    "The system has 34359738368 (2097152 pages with a page size of 16384).",
+    "",
+    "Stats: ",
+    "Pages free: 521470 ",
+    "Pages purgeable: 2971 ",
+    "Pages purged: 122983850 ",
+    "",
+    "Swap I/O:"
+  ],
+  "remaining_large_processes": [
+    "78123     1 2686496 940076416  8.0   6.7    04:12:02 Ss   /Applications/OrbStack.app/Contents/Frameworks/OrbStack Helper.app/Contents/MacOS/OrbStack Helper vmgr -build-id macho:05775f98b4bb3d75b88520220872c248 -handoff",
+    "36031 48276 1418768 1905613136  4.2  16.3    05:56:50 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Renderer).app/Contents/MacOS/Cursor Helper (Renderer) --type=renderer --user-data-dir=/Users/byron/Library/Application Support/Cursor --standard-schemes=vscode-webview,vscode-file,cursor-rpc-devtools --enable-sandbox --secure-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --fetch-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Cursor.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --force-gpu-mem-available-mb=1024 --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=311 --time-ticks-at-unix-epoch=-1786069511473442 --launch-time-ticks=1887988014084 --shared-files --field-trial-handle=1718379636,r,10896409687142994582,5730024380485941141,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709277731886533 --vscode-window-config=vscode:5b8b9d79-afbd-4720-abab-5ae17348dadc --seatbelt-client=56",
+    "27376 27368 491520 445914512  1.5   0.0       03:27 S    next-server (v16.2.0) ",
+    " 4153     1 313360 436272224  0.9   0.2 21-22:48:40 S    /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder",
+    "48276     1 279328 1892781248  0.8   2.4 01-14:28:08 S    /Applications/Cursor.app/Contents/MacOS/Cursor",
+    "25485 48276 241744 1892308016  0.7   1.4       06:06 S    Cursor Helper (Plugin): extension-host Agents Window [3-187]                      ",
+    "25486 48276 232080 1892351520  0.7   0.1       06:06 S    Cursor Helper (Plugin): extension-host watchtower [3-188]                      ",
+    "25487 48276 218320 1892329984  0.7   0.1       06:06 S    Cursor Helper (Plugin): extension-host protein-hinge [3-189]                      ",
+    "61230     1 215728 435590512  0.6   4.1    05:13:38 Us   /System/Library/CoreServices/TimeMachine/backupd",
+    "25231 24880 137360 488741152  0.4   0.2       06:57 S    /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/node --dns-result-order=ipv4first --inspect-port=0 --experimental-network-inspection /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false",
+    " 3830     1 133552 435417904  0.4   1.2 21-22:48:47 Ss   /System/Library/CoreServices/launchservicesd",
+    "72697     1 122672 461576528  0.4   3.4 02-10:17:44 Ss   /Users/byron/Library/Application Support/Cursor/User/globalStorage/anysphere.cursor-agent-worker/agent-cli/.local/bin/cursor-agent --use-system-ca /Users/byron/Library/Application Support/Cursor/User/globalStorage/anysphere.cursor-agent-worker/agent-cli/.local/share/cursor-agent/versions/2026.08.25-3e8eec8/index.js --api-key crsr_11dfea322289550f502e0df4c2d6909910eb108845bb09e61ac7c478d199a59e --endpoint https://api2.cursor.sh worker start --worker-dir /Users/byron/projects/active/hydradg --name ~/projects/active/hydradg @ byron's Mac Studio --label name=cursor-agent-worker-655b193ae2 --label cursor.private_worker.workspace_key=cursor-agent-worker-752eadc4cd --worker-api-socket /var/folders/mh/9bzx4_6n0g1b3h625lycqvsm0000gn/T/cursor-agent-worker-655b193ae2.sock --verbose",
+    " 4193     1 121600 446949040  0.4   0.0 21-22:48:40 S    /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd",
+    "52007     1 100240 512758032  0.3   1.2 16-02:50:57 RN   /opt/homebrew/bin/opencode serve --hostname 100.105.40.90 --port 4096",
+    " 4265     1  82464 436947312  0.2   0.0 21-22:48:38 S    /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight"
+  ],
+  "REBOOT_STATE": "HUMAN_APPROVAL_REQUIRED",
+  "note": "Full swap reset on macOS generally requires reboot; purge is not used as evidence"
+}

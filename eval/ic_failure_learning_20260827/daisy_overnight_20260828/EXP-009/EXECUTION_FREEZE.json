@@ -1,0 +1,32 @@
+{
+  "common_freeze": {
+    "schema": "hydradg.daisy_overnight.common_freeze.v1",
+    "case_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+    "scorer_sha256": "917a2095935610d0907bd46e821d0fa571da9585faf2dfaa859859c7dcf8fb5f",
+    "models": [
+      "qwen3:1.7b",
+      "qwen2.5-coder:7b"
+    ],
+    "model_digests": {
+      "qwen3:1.7b": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+      "qwen2.5-coder:7b": "dae161e27b0e90dd1856c8bb3209201fd6736d8eb66298e75ed87571486f4364"
+    },
+    "n_replicates": 3,
+    "context_char_budget": 8000,
+    "temperature": 0.0,
+    "num_predict": 512,
+    "fcg_predecessor_root": "c1134aa670e0cb5fcd1602f055223619ea8afa0d539087618bcaaebbed3b01bf",
+    "prohibited_eval_only_fields": [
+      "expected_answer",
+      "judge_label",
+      "scorer_label",
+      "case_outcome"
+    ],
+    "deterministic_seed_control": "UNAVAILABLE_OLLAMA",
+    "case_aggregation_rule": "MAJORITY_OF_REPLICATES",
+    "host": "magicSTUDIObox.local"
+  },
+  "power_assessment_sha256": "db4c00b1119a69af2186a507d4896eaeb7875df45704c91776516c5bfedb9ed8",
+  "atom_set_freeze_sha256": "4a1f9812d661e9ef1276139fbb07d79e847d6b03d5887539ea1817c60dd2d260",
+  "predecessor_mmr": "a8cdc6e7bbedc7d7f84a4221ce48223f9b0a0b68bd1735e351e3638a9db2ab84"
+}

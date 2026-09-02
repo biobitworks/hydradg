@@ -1,0 +1,415 @@
+{
+  "schema": "hydradg.qwen38.swap_remediation.v1",
+  "recorded_at_utc": "2026-08-29T04:44:50Z",
+  "execution_host": "magicSTUDIObox.local",
+  "evidence_class": "DETERMINISTIC_TOOL_OUTPUT",
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "pre": {
+    "timestamp_utc": "2026-08-29T04:44:50Z",
+    "swap": {
+      "raw": "vm.swapusage: total = 40960.00M  used = 40046.75M  free = 913.25M  (encrypted)",
+      "total_mb": 40960.0,
+      "used_mb": 40046.75,
+      "free_mb": 913.25,
+      "used_pct": 97.77
+    },
+    "vm_stat_head": [
+      "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+      "Pages free:                                     6405.",
+      "Pages active:                                 351668.",
+      "Pages inactive:                               349656.",
+      "Pages speculative:                              1120.",
+      "Pages throttled:                                   0.",
+      "Pages wired down:                             290399.",
+      "Pages purgeable:                                   4.",
+      "\"Translation faults\":                    19541270183.",
+      "Pages copy-on-write:                       332533040.",
+      "Pages zero filled:                        5843997099.",
+      "Pages reactivated:                        3721549026."
+    ],
+    "memory_pressure_head": [
+      "The system has 34359738368 (2097152 pages with a page size of 16384).",
+      "",
+      "Stats: ",
+      "Pages free: 6427 ",
+      "Pages purgeable: 4 ",
+      "Pages purged: 122982608 ",
+      "",
+      "Swap I/O:"
+    ],
+    "uptime": "21:44  up 22 days,  4:52, 3 users, load averages: 6.27 6.40 5.53",
+    "disk_root": "/dev/disk3s1s1   460Gi    12Gi    98Gi    11%    459k  1.0G    0%   /",
+    "disk_data": "/dev/disk3s3   460Gi   270Gi    98Gi    74%    5.5M  1.0G    1%   /System/Volumes/Data",
+    "disk_free_gb_approx": 98.0,
+    "ollama_ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL",
+    "ollama_api_ps": "{\"models\":[]}"
+  },
+  "PRE_SWAP_TOTAL": 40960.0,
+  "PRE_SWAP_USED": 40046.75,
+  "PRE_SWAP_USED_PCT": 97.77,
+  "PRE_MEMORY_PRESSURE": [
+    "The system has 34359738368 (2097152 pages with a page size of 16384).",
+    "",
+    "Stats: ",
+    "Pages free: 6427 ",
+    "Pages purgeable: 4 ",
+    "Pages purged: 122982608 ",
+    "",
+    "Swap I/O:"
+  ],
+  "PRE_DISK_FREE": 98.0,
+  "PRE_TOP_MEMORY_PROCESSES": [
+    "96177 96175 2920416 498491952  8.7  10.9 06-04:46:28 RN   /opt/homebrew/Cellar/python@3.14/3.14.7/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python /Users/byron/projects/active/hydradg/scripts/seedgraph_hierarchy_v1a.py build --output-dir /Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation --require-studio",
+    "78123     1 2509696 940076976  7.5   9.3    04:08:23 Ss   /Applications/OrbStack.app/Contents/Frameworks/OrbStack Helper.app/Contents/MacOS/OrbStack Helper vmgr -build-id macho:05775f98b4bb3d75b88520220872c248 -handoff",
+    "36031 48276 1247712 1907333840  3.7  15.6    05:53:11 R    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Renderer).app/Contents/MacOS/Cursor Helper (Renderer) --type=renderer --user-data-dir=/Users/byron/Library/Application Support/Cursor --standard-schemes=vscode-webview,vscode-file,cursor-rpc-devtools --enable-sandbox --secure-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --fetch-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/Applications/Cursor.app/Contents/Resources/app --enable-sandbox --enable-blink-features=HighlightAPI --force-gpu-mem-available-mb=1024 --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=en-US --num-raster-threads=4 --enable-zero-copy --enable-gpu-memory-buffer-compositor-resources --enable-main-frame-before-activation --renderer-client-id=311 --time-ticks-at-unix-epoch=-1786069511473442 --launch-time-ticks=1887988014084 --shared-files --field-trial-handle=1718379636,r,10896409687142994582,5730024380485941141,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190709277731886533 --vscode-window-config=vscode:5b8b9d79-afbd-4720-abab-5ae17348dadc --seatbelt-client=56",
+    "31052 31044 562816 436610544  1.7   0.0    06:08:01 S    /Applications/Yappy.app/Contents/Resources/whisper/whisper-server -m /Users/byron/.yappy/models/ggml-small.en.bin --host 127.0.0.1 --port 8971 -l en",
+    "26749 48276 424464 1892357104  1.3   0.4       00:38 S    Cursor Helper (Plugin): extension-host hydradg [3-190]                      ",
+    "25485 48276 231744 1892308016  0.7   0.2       02:27 S    Cursor Helper (Plugin): extension-host Agents Window [3-187]                      ",
+    "48276     1 220352 1892778768  0.7   1.4 01-14:24:29 S    /Applications/Cursor.app/Contents/MacOS/Cursor",
+    "25486 48276 160864 1894059600  0.5   0.2       02:27 S    Cursor Helper (Plugin): extension-host watchtower [3-188]                      ",
+    "25231 24880 131264 488741152  0.4   0.3       03:18 S    /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/node --dns-result-order=ipv4first --inspect-port=0 --experimental-network-inspection /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false",
+    "25487 48276 127664 1892329984  0.4   0.2       02:27 S    Cursor Helper (Plugin): extension-host protein-hinge [3-189]                      ",
+    "72697     1 120112 461576528  0.4   1.7 02-10:14:05 Ss   /Users/byron/Library/Application Support/Cursor/User/globalStorage/anysphere.cursor-agent-worker/agent-cli/.local/bin/cursor-agent --use-system-ca /Users/byron/Library/Application Support/Cursor/User/globalStorage/anysphere.cursor-agent-worker/agent-cli/.local/share/cursor-agent/versions/2026.08.25-3e8eec8/index.js --api-key crsr_11dfea322289550f502e0df4c2d6909910eb108845bb09e61ac7c478d199a59e --endpoint https://api2.cursor.sh worker start --worker-dir /Users/byron/projects/active/hydradg --name ~/projects/active/hydradg @ byron's Mac Studio --label name=cursor-agent-worker-655b193ae2 --label cursor.private_worker.workspace_key=cursor-agent-worker-752eadc4cd --worker-api-socket /var/folders/mh/9bzx4_6n0g1b3h625lycqvsm0000gn/T/cursor-agent-worker-655b193ae2.sock --verbose",
+    " 4193     1 104368 444785344  0.3   0.0 21-22:45:01 S    /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/corespotlightd",
+    "52007     1  96656 512758032  0.3   1.7 16-02:47:18 SN   /opt/homebrew/bin/opencode serve --hostname 100.105.40.90 --port 4096",
+    "26775 48276  69712 1892257440  0.2   0.0       00:36 S    Cursor Helper: fileWatcher [3:a89026c6a4a52e8972876fa751dbb0e6]                   ",
+    "48361 48276  69296 1892237840  0.2   0.0 01-14:24:13 S    Cursor Helper: conversation-search                   ",
+    " 4612     1  67808 441698704  0.2   0.0 02-16:23:30 Ss   /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores",
+    "25333 25311  66496 444587280  0.2   0.0       03:13 S    node /Users/byron/.npm/_npx/705d23756ff7dacc/node_modules/.bin/mcp-remote https://mcp.tavily.com/mcp",
+    "26781 26749  61584 1890481968  0.2   0.0       00:35 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) --dns-result-order=ipv4first --experimental-network-inspection /Applications/Cursor.app/Contents/Resources/app/extensions/cursor-always-local/dist/gitWorker.js",
+    "24880 24860  55504 446313472  0.2   0.0       03:42 S    /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/node /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/out/server-main.js --start-server --host 127.0.0.1 --port 0 --connection-token-file /tmp/cursor-remote-code.token.2cdd15627b38fffcba882b945b39e132 --telemetry-level off --enable-remote-auto-shutdown --accept-server-license-terms",
+    "25656 25487  54112 1890482496  0.2   0.0       02:22 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) --dns-result-order=ipv4first --experimental-network-inspection /Applications/Cursor.app/Contents/Resources/app/extensions/cursor-always-local/dist/gitWorker.js",
+    "25610 25486  54096 1890482448  0.2   0.0       02:22 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) --dns-result-order=ipv4first --experimental-network-inspection /Applications/Cursor.app/Contents/Resources/app/extensions/cursor-always-local/dist/gitWorker.js",
+    "25532 25485  53696 1890449616  0.2   0.0       02:23 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper (Plugin).app/Contents/MacOS/Cursor Helper (Plugin) --dns-result-order=ipv4first --experimental-network-inspection /Applications/Cursor.app/Contents/Resources/app/extensions/cursor-always-local/dist/gitWorker.js",
+    "48310 48276  53632 1892252800  0.2   0.0 01-14:24:17 S    Cursor Helper: shared-process                   ",
+    "50850     1  51392 435989072  0.2   0.0    21:54:20 S    /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell",
+    "36070 48276  50784 1892245824  0.2   0.0    05:53:05 S    Cursor Helper: fileWatcher [3:empty-window]                   ",
+    "25311 25231  49744 436219456  0.1   0.0       03:14 S    npm exec mcp-remote https://mcp.tavily.com/mcp    ",
+    "77145 48276  49632 1892245856  0.1   0.0    04:11:14 S    Cursor Helper: fileWatcher [3:b0fff4bd8c1523c7c38054de88f8af2d]                   ",
+    "77998 48276  49200 1892237376  0.1   0.0    04:08:24 S    Cursor Helper: fileWatcher [3:d07efde82edb5d6154cfabbde102c29a]                   ",
+    " 3861     1  48576 436143104  0.1   3.5 21-22:45:07 Rs   /System/Library/PrivateFrameworks/SkyLight.framework/Resources/WindowServer -daemon",
+    " 4153     1  47456 436150240  0.1   0.0 21-22:45:01 S    /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder",
+    "48305 48276  46976 486234240  0.1   1.4 01-14:24:17 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper --type=gpu-process --disable-skia-graphite --user-data-dir=/Users/byron/Library/Application Support/Cursor --gpu-preferences=SAAAAAAAAAAgAQAEAAAAAAAAAAAAAGAAAQAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAACAAAAAAAAAAIAAAAAAAAAA== --shared-files --field-trial-handle=1718379636,r,10896409687142994582,5730024380485941141,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708988185955192 --seatbelt-client=34",
+    "24431     1  44336 437940208  0.1   0.5    06:52:17 Ss   /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Support/mds_stores",
+    "61512     1  42720 435522896  0.1   0.0    05:09:51 S    /System/Library/PrivateFrameworks/CoreSuggestions.framework/Versions/A/Support/suggestd",
+    " 4146     1  42624 435683504  0.1   0.7 21-22:45:01 S    /System/Library/CoreServices/ControlCenter.app/Contents/MacOS/ControlCenter",
+    "25307 25231  41920 436153888  0.1   0.0       03:14 S    node /Users/byron/projects/active/tavily-mcp/build/index.js",
+    "61230     1  41680 435454752  0.1   2.7    05:09:59 Ss   /System/Library/CoreServices/TimeMachine/backupd",
+    "  870     1  40720 435544096  0.1   0.0    02:39:25 S    /System/Library/CoreServices/CoreLocationAgent.app/Contents/MacOS/CoreLocationAgent",
+    " 4265     1  39936 436946928  0.1   0.0 21-22:44:59 S    /System/Library/CoreServices/Spotlight.app/Contents/MacOS/Spotlight",
+    "25228 24880  39664 435769776  0.1   0.0       03:19 S    /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/node /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/out/bootstrap-fork --type=fileWatcher",
+    " 4007     1  39024 435302576  0.1   2.1 21-22:45:06 Ss   /System/Library/DriverExtensions/com.apple.DriverKit-AppleBCMWLAN.dext/com.apple.DriverKit-AppleBCMWLAN com.apple.bcmwlan 0x1000026e8 com.apple.DriverKit-AppleBCMWLAN",
+    "23070     1  38992 435406368  0.1   0.0       14:04 S    /usr/libexec/duetexpertd",
+    "24838 24679  37488 435724864  0.1   0.0       03:43 S    /Users/byron/.cursor-server/bin/darwin-arm64/ae3a2b7231dd56194447fe4570dfdc61640b1e90/node /Users/byron/.cursor-server/bin/multiplex-server/e0e6952a313d583840d50b387ab40c7bba7e66b79d95be1f22b3e7fc0706ae74.js 817ffb3b-6c9a-4a63-bf1d-1c03c0870859 0",
+    "25306 25231  36496 436166592  0.1   0.0       03:14 S    node /opt/homebrew/bin/mi-cortex-mcp",
+    " 3864     1  35984 435643296  0.1   0.0 21-22:45:07 Ss   /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console",
+    "78175     1  35280 435738480  0.1   0.0    04:08:22 S    /Applications/OrbStack.app/Contents/MacOS/OrbStack --internal-cli-background",
+    "19456     1  33776 435389536  0.1   0.0       38:05 S    /System/Library/PrivateFrameworks/AssistantServices.framework/Versions/A/Support/assistantd",
+    "37415 37392  33360 412352992  0.1   6.6 01-10:24:30 S    /Users/byron/projects/external/cloudflare-os/node_modules/.pnpm/@esbuild+darwin-arm64@0.28.1/node_modules/@esbuild/darwin-arm64/bin/esbuild --service=0.28.1 --ping",
+    "48360 48276  33088 1892244592  0.1   0.0 01-14:24:13 S    Cursor Helper: mcp-process                   ",
+    "18958     1  32256 435402304  0.1   0.0       40:29 S    /System/Library/PrivateFrameworks/VoiceShortcuts.framework/Versions/A/Support/siriactionsd",
+    "20255     1  31216 435383072  0.1   0.0       33:04 S    /usr/libexec/routined LAUNCHED_BY_LAUNCHD",
+    "48307 48276  29984 486066400  0.1   0.1 01-14:24:17 S    /Applications/Cursor.app/Contents/Frameworks/Cursor Helper.app/Contents/MacOS/Cursor Helper --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=network --user-data-dir=/Users/byron/Library/Application Support/Cursor --standard-schemes=vscode-webview,vscode-file,cursor-rpc-devtools --enable-sandbox --secure-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --bypasscsp-schemes=sentry-ipc --cors-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --fetch-schemes=vscode-webview,vscode-file,vscode-remote-resource,vscode-managed-remote-resource,cursor-rpc-devtools,sentry-ipc --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files --field-trial-handle=1718379636,r,10896409687142994582,5730024380485941141,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,PdfUseShowSaveFilePicker,ScreenCaptureKitPickerScreen,ScreenCaptureKitStreamPickerSonoma --disable-features=CalculateNativeWinOcclusion,LocalNetworkAccessChecks,ScreenAIOCREnabled,SpareRendererForSitePerProcess,TimeoutHangingVideoCaptureStarts,TraceSiteInstanceGetProcessCreation --variations-seed-version --trace-process-track-uuid=3190708989122997041 --seatbelt-client=36",
+    "24796     1  29792 435536144  0.1   0.0       03:45 S    /System/Library/CoreServices/CoreServicesUIAgent.app/Contents/MacOS/CoreServicesUIAgent",
+    "84705     1  27408 436892320  0.1   7.4 09-20:44:00 S    ./target/debug/graph-node",
+    "23277     1  27264 435356912  0.1   0.0       12:40 Ss   /System/Library/PrivateFrameworks/AppPredictionFoundation.framework/Versions/A/XPCServices/AppPredictionIntentsHelperService.xpc/Contents/MacOS/AppPredictionIntentsHelperService",
+    "22367     1  26896 435395216  0.1   0.0       19:02 S    /usr/libexec/knowledge-agent",
+    " 4128     1  26560 436281648  0.1   0.1 21-22:45:02 S    /usr/libexec/sharingd",
+    "17016     1  25872 436074832  0.1   0.0 10-11:30:44 S    /System/Applications/Utilities/Terminal.app/Contents/MacOS/Terminal",
+    "69544     1  25136 436663312  0.1   2.2 02-10:19:46 Ss   /Library/SystemExtensions/EE667B70-1A60-4DCE-AC0C-2FFC566E152A/io.tailscale.ipn.macsys.network-extension.systemextension/Contents/MacOS/io.tailscale.ipn.macsys.network-extension",
+    "49245 48276  24688 1892244528  0.1   0.0 01-14:23:36 S    Cursor Helper: terminal pty-host                   ",
+    "23815     1  24560 435531856  0.1   0.0       09:05 S    /System/Library/CoreServices/Siri.app/Contents/MacOS/Siri launchd"
+  ],
+  "ACTIVE_Q38_INFERENCE_PIDS": [],
+  "WATCHER_LLM_MODE": "PAUSED",
+  "ollama_unloads": [
+    {
+      "note": "no loaded models at remediation start"
+    }
+  ],
+  "actions": [
+    {
+      "pid": 96177,
+      "classification": "OPERATIONAL_STALE",
+      "reason": "6-day stale seedgraph_hierarchy_v1a.py build (2.9GB RSS)",
+      "signal": "KILL",
+      "result": "still_running",
+      "term_exit_code": 0
+    },
+    {
+      "pid": 9211,
+      "classification": "OPERATIONAL_STALE",
+      "reason": "Ollarma seedgraph watcher bound to stale PID 96177; performs LLM inference",
+      "signal": "TERM",
+      "result": "terminated",
+      "term_exit_code": 0
+    },
+    {
+      "pid": 31052,
+      "classification": "NONSCIENTIFIC_OPTIONAL",
+      "reason": "Yappy whisper-server not required for Q38",
+      "signal": "TERM",
+      "result": "terminated",
+      "term_exit_code": 0
+    },
+    {
+      "pid": 27490,
+      "classification": "OPERATIONAL_STALE",
+      "reason": "ollarma-chat next dev server stale",
+      "signal": "TERM",
+      "result": "terminated",
+      "term_exit_code": 0
+    },
+    {
+      "pid": 27619,
+      "classification": "OPERATIONAL_STALE",
+      "reason": "ollarma-chat next dev child stale",
+      "result": "already_absent"
+    }
+  ],
+  "processes_terminated": [
+    {
+      "pid": 9211,
+      "classification": "OPERATIONAL_STALE",
+      "reason": "Ollarma seedgraph watcher bound to stale PID 96177; performs LLM inference",
+      "signal": "TERM",
+      "result": "terminated",
+      "term_exit_code": 0
+    },
+    {
+      "pid": 31052,
+      "classification": "NONSCIENTIFIC_OPTIONAL",
+      "reason": "Yappy whisper-server not required for Q38",
+      "signal": "TERM",
+      "result": "terminated",
+      "term_exit_code": 0
+    },
+    {
+      "pid": 27490,
+      "classification": "OPERATIONAL_STALE",
+      "reason": "ollarma-chat next dev server stale",
+      "signal": "TERM",
+      "result": "terminated",
+      "term_exit_code": 0
+    }
+  ],
+  "time_series": [
+    {
+      "timestamp_utc": "2026-08-29T04:44:50Z",
+      "swap": {
+        "raw": "vm.swapusage: total = 40960.00M  used = 40046.75M  free = 913.25M  (encrypted)",
+        "total_mb": 40960.0,
+        "used_mb": 40046.75,
+        "free_mb": 913.25,
+        "used_pct": 97.77
+      },
+      "vm_stat_head": [
+        "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+        "Pages free:                                     6405.",
+        "Pages active:                                 351668.",
+        "Pages inactive:                               349656.",
+        "Pages speculative:                              1120.",
+        "Pages throttled:                                   0.",
+        "Pages wired down:                             290399.",
+        "Pages purgeable:                                   4.",
+        "\"Translation faults\":                    19541270183.",
+        "Pages copy-on-write:                       332533040.",
+        "Pages zero filled:                        5843997099.",
+        "Pages reactivated:                        3721549026."
+      ],
+      "memory_pressure_head": [
+        "The system has 34359738368 (2097152 pages with a page size of 16384).",
+        "",
+        "Stats: ",
+        "Pages free: 6427 ",
+        "Pages purgeable: 4 ",
+        "Pages purged: 122982608 ",
+        "",
+        "Swap I/O:"
+      ],
+      "uptime": "21:44  up 22 days,  4:52, 3 users, load averages: 6.27 6.40 5.53",
+      "disk_root": "/dev/disk3s1s1   460Gi    12Gi    98Gi    11%    459k  1.0G    0%   /",
+      "disk_data": "/dev/disk3s3   460Gi   270Gi    98Gi    74%    5.5M  1.0G    1%   /System/Volumes/Data",
+      "disk_free_gb_approx": 98.0,
+      "ollama_ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL",
+      "ollama_api_ps": "{\"models\":[]}"
+    },
+    {
+      "timestamp_utc": "2026-08-29T04:45:28Z",
+      "swap": {
+        "raw": "vm.swapusage: total = 40960.00M  used = 11305.44M  free = 29654.56M  (encrypted)",
+        "total_mb": 40960.0,
+        "used_mb": 11305.44,
+        "free_mb": 29654.56,
+        "used_pct": 27.6
+      },
+      "vm_stat_head": [
+        "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+        "Pages free:                                   791261.",
+        "Pages active:                                 326544.",
+        "Pages inactive:                               335463.",
+        "Pages speculative:                             46538.",
+        "Pages throttled:                                   0.",
+        "Pages wired down:                             238357.",
+        "Pages purgeable:                                2996.",
+        "\"Translation faults\":                    19541790454.",
+        "Pages copy-on-write:                       332549238.",
+        "Pages zero filled:                        5844180663.",
+        "Pages reactivated:                        3721550234."
+      ],
+      "memory_pressure_head": [
+        "The system has 34359738368 (2097152 pages with a page size of 16384).",
+        "",
+        "Stats: ",
+        "Pages free: 791273 ",
+        "Pages purgeable: 2996 ",
+        "Pages purged: 122983010 ",
+        "",
+        "Swap I/O:"
+      ],
+      "uptime": "21:45  up 22 days,  4:52, 3 users, load averages: 6.64 6.48 5.60",
+      "disk_root": "/dev/disk3s1s1   460Gi    12Gi    98Gi    11%    459k  1.0G    0%   /",
+      "disk_data": "/dev/disk3s3   460Gi   270Gi    98Gi    74%    5.5M  1.0G    1%   /System/Volumes/Data",
+      "disk_free_gb_approx": 98.0,
+      "ollama_ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL",
+      "ollama_api_ps": "{\"models\":[]}"
+    },
+    {
+      "timestamp_utc": "2026-08-29T04:46:29Z",
+      "swap": {
+        "raw": "vm.swapusage: total = 6144.00M  used = 5000.56M  free = 1143.44M  (encrypted)",
+        "total_mb": 6144.0,
+        "used_mb": 5000.56,
+        "free_mb": 1143.44,
+        "used_pct": 81.39
+      },
+      "vm_stat_head": [
+        "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+        "Pages free:                                   750248.",
+        "Pages active:                                 360865.",
+        "Pages inactive:                               336455.",
+        "Pages speculative:                             48590.",
+        "Pages throttled:                                   0.",
+        "Pages wired down:                             237536.",
+        "Pages purgeable:                                2992.",
+        "\"Translation faults\":                    19542355532.",
+        "Pages copy-on-write:                       332571232.",
+        "Pages zero filled:                        5844374361.",
+        "Pages reactivated:                        3721550370."
+      ],
+      "memory_pressure_head": [
+        "The system has 34359738368 (2097152 pages with a page size of 16384).",
+        "",
+        "Stats: ",
+        "Pages free: 750214 ",
+        "Pages purgeable: 2988 ",
+        "Pages purged: 122983391 ",
+        "",
+        "Swap I/O:"
+      ],
+      "uptime": "21:46  up 22 days,  4:53, 3 users, load averages: 5.86 6.30 5.59",
+      "disk_root": "/dev/disk3s1s1   460Gi    12Gi   132Gi     9%    459k  1.4G    0%   /",
+      "disk_data": "/dev/disk3s3   460Gi   270Gi   132Gi    68%    5.5M  1.4G    0%   /System/Volumes/Data",
+      "disk_free_gb_approx": 132.0,
+      "ollama_ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL",
+      "ollama_api_ps": "{\"models\":[]}"
+    },
+    {
+      "timestamp_utc": "2026-08-29T04:48:29Z",
+      "swap": {
+        "raw": "vm.swapusage: total = 6144.00M  used = 4968.56M  free = 1175.44M  (encrypted)",
+        "total_mb": 6144.0,
+        "used_mb": 4968.56,
+        "free_mb": 1175.44,
+        "used_pct": 80.87
+      },
+      "vm_stat_head": [
+        "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+        "Pages free:                                   522060.",
+        "Pages active:                                 370154.",
+        "Pages inactive:                               342077.",
+        "Pages speculative:                            266757.",
+        "Pages throttled:                                   0.",
+        "Pages wired down:                             237097.",
+        "Pages purgeable:                                2971.",
+        "\"Translation faults\":                    19543220253.",
+        "Pages copy-on-write:                       332619340.",
+        "Pages zero filled:                        5844646007.",
+        "Pages reactivated:                        3721550719."
+      ],
+      "memory_pressure_head": [
+        "The system has 34359738368 (2097152 pages with a page size of 16384).",
+        "",
+        "Stats: ",
+        "Pages free: 521470 ",
+        "Pages purgeable: 2971 ",
+        "Pages purged: 122983850 ",
+        "",
+        "Swap I/O:"
+      ],
+      "uptime": "21:48  up 22 days,  4:55, 3 users, load averages: 3.47 5.25 5.26",
+      "disk_root": "/dev/disk3s1s1   460Gi    12Gi   132Gi     9%    459k  1.4G    0%   /",
+      "disk_data": "/dev/disk3s3   460Gi   270Gi   132Gi    68%    5.5M  1.4G    0%   /System/Volumes/Data",
+      "disk_free_gb_approx": 132.0,
+      "ollama_ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL",
+      "ollama_api_ps": "{\"models\":[]}"
+    }
+  ],
+  "post": {
+    "timestamp_utc": "2026-08-29T04:48:29Z",
+    "swap": {
+      "raw": "vm.swapusage: total = 6144.00M  used = 4968.56M  free = 1175.44M  (encrypted)",
+      "total_mb": 6144.0,
+      "used_mb": 4968.56,
+      "free_mb": 1175.44,
+      "used_pct": 80.87
+    },
+    "vm_stat_head": [
+      "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+      "Pages free:                                   522060.",
+      "Pages active:                                 370154.",
+      "Pages inactive:                               342077.",
+      "Pages speculative:                            266757.",
+      "Pages throttled:                                   0.",
+      "Pages wired down:                             237097.",
+      "Pages purgeable:                                2971.",
+      "\"Translation faults\":                    19543220253.",
+      "Pages copy-on-write:                       332619340.",
+      "Pages zero filled:                        5844646007.",
+      "Pages reactivated:                        3721550719."
+    ],
+    "memory_pressure_head": [
+      "The system has 34359738368 (2097152 pages with a page size of 16384).",
+      "",
+      "Stats: ",
+      "Pages free: 521470 ",
+      "Pages purgeable: 2971 ",
+      "Pages purged: 122983850 ",
+      "",
+      "Swap I/O:"
+    ],
+    "uptime": "21:48  up 22 days,  4:55, 3 users, load averages: 3.47 5.25 5.26",
+    "disk_root": "/dev/disk3s1s1   460Gi    12Gi   132Gi     9%    459k  1.4G    0%   /",
+    "disk_data": "/dev/disk3s3   460Gi   270Gi   132Gi    68%    5.5M  1.4G    0%   /System/Volumes/Data",
+    "disk_free_gb_approx": 132.0,
+    "ollama_ps": "NAME    ID    SIZE    PROCESSOR    CONTEXT    UNTIL",
+    "ollama_api_ps": "{\"models\":[]}"
+  },
+  "POST_SWAP_USED_MB": 4968.56,
+  "POST_SWAP_USED_PCT": 80.87,
+  "POST_MEMORY_PRESSURE": [
+    "The system has 34359738368 (2097152 pages with a page size of 16384).",
+    "",
+    "Stats: ",
+    "Pages free: 521470 ",
+    "Pages purgeable: 2971 ",
+    "Pages purged: 122983850 ",
+    "",
+    "Swap I/O:"
+  ],
+  "SOFT_RESOURCE_RECOVERY": "FAIL",
+  "RESOURCE_GATE": "BLOCKED_RESOURCE_PRESSURE",
+  "REBOOT_RECOMMENDED": true,
+  "reboot_recommendation_path": "eval/qwen38_model_replay_20260828/remediation/REBOOT_RECOMMENDATION.json",
+  "receipt_sha256": "40c01388eb03580736e99f182700cc947ee9f88ffcaad53e25780537ea464e61"
+}

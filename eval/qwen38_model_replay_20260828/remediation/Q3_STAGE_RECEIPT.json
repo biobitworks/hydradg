@@ -1,0 +1,21 @@
+{
+  "schema": "hydradg.qwen38.stage_fco.q3_paired_canary.v1",
+  "stage": "Q3",
+  "recorded_at_utc": "2026-08-29T00:50:00Z",
+  "StageFCO_state": "INCOMPLETE_BLOCKED",
+  "Q3_STARTED": "YES",
+  "Q3_COMPLETED": "NO",
+  "Q3_EXPECTED": 6,
+  "Q3_TERMINAL": 3,
+  "Q3_MISSING": 3,
+  "frozen_case": "E01-T0",
+  "missing_cells": [
+    {"case_id": "E01-T0", "condition": "C1", "replicate": 1},
+    {"case_id": "E01-T0", "condition": "C1", "replicate": 2},
+    {"case_id": "E01-T0", "condition": "C1", "replicate": 3}
+  ],
+  "execution_blocked_by": "BLOCKED_RESOURCE_PRESSURE",
+  "cells_newly_executed_this_pass": 0,
+  "selective_scientific_reruns": 0,
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

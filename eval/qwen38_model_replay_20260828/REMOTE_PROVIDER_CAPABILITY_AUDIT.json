@@ -1,0 +1,100 @@
+{
+  "schema": "hydradg.qwen38.remote_provider_capability_audit.v1",
+  "recorded_at_utc": "2026-08-28T19:45:58Z",
+  "host": "magicSTUDIObox.local",
+  "daytona": {
+    "provider": "Daytona",
+    "cli_available": true,
+    "cli_version": "Daytona CLI version v0.200.1",
+    "DAYTONA_API_KEY_ENV": "ABSENT",
+    "login_state": "CLI_NOT_LOGGED_IN",
+    "sandbox_list_ok": false,
+    "prior_smoke_receipt": "eval/agent_native_sponsors_20260827/daytona/DAYTONA_SMOKE_RECEIPT.json",
+    "prior_smoke_state": "LIVE_PASS",
+    "prior_smoke_note": "Prior smoke used DAYTONA_API_KEY on Studio; current shell lacks key/profile",
+    "gpu_classes_probed": false,
+    "state": "BLOCKED"
+  },
+  "kaggle": {
+    "provider": "Kaggle",
+    "cli_available": false,
+    "KAGGLE_USERNAME": "PRESENT",
+    "KAGGLE_KEY": "ABSENT",
+    "state": "NOT_CONFIGURED",
+    "note": "Kaggle CLI not on PATH; credentials partially present in environment"
+  },
+  "feasibility_gate": {
+    "schema": "hydradg.qwen38.remote_artifact_feasibility.v1",
+    "recorded_at_utc": "2026-08-28T19:45:58Z",
+    "host_disk_free_gb": 35.38,
+    "models": {
+      "QWEN38_27B": {
+        "repo": "Qwen/Qwen3.8-27B",
+        "MODEL_WEIGHT_BYTES_BF16": 57982058496,
+        "MODEL_WEIGHT_BYTES_FP8": 30064771072,
+        "MINIMUM_GPU_VRAM_FP8_GB": 32,
+        "MINIMUM_DISK_REQUIREMENT_GB": 35,
+        "cuda_ollama_studio_artifact": "gguf Q4_K_M ~17GB \u2014 not portable to Linux CUDA"
+      },
+      "FLASH_NEXT": {
+        "repo": "Qwen/Qwen3.8-Flash-Next",
+        "ollama_mlx_tag": "qwen3.8-flash-next:125b-mlx",
+        "MODEL_WEIGHT_BYTES_MLX_OLLAMA": 112742891520,
+        "MODEL_WEIGHT_BYTES_BF16": 375809638400,
+        "MODEL_WEIGHT_BYTES_FP8": 193273528320,
+        "MINIMUM_HOST_RAM_GB": 128,
+        "MINIMUM_GPU_VRAM_FP8_GB": 80,
+        "MINIMUM_DISK_REQUIREMENT_GB": 110,
+        "OFFLOAD_REQUIREMENTS": "51B n-gram/PLE table may require NVMe offload; architecture-specific",
+        "cuda_compatible_mlx_ollama": false
+      }
+    },
+    "local_flash_next_pull_feasible": false,
+    "local_flash_next_pull_state": "BLOCKED",
+    "FLASH_NEXT_REMOTE_CAPACITY_BLOCKED": true,
+    "block_reasons": [
+      "local_disk_free_gb=35.38 < 110 required for MLX Ollama artifact",
+      "Daytona CLI not authenticated in current shell; GPU sandbox not provisioned",
+      "Flash-Next MLX Ollama artifact not admissible on Linux CUDA without separate HF artifact",
+      "Flash-Next HF full weights ~180GB+; exceeds typical single-GPU Daytona quota without multi-node"
+    ]
+  },
+  "runtime_compatibility": {
+    "schema": "hydradg.qwen38.runtime_compatibility_matrix.v1",
+    "recorded_at_utc": "2026-08-28T19:45:58Z",
+    "note": "Import/model-load not probed on remote; Flash-Next architecture is preview MoE+Engram",
+    "matrix": {
+      "Transformers_pinned": {
+        "Qwen3.8-27B": "UNTESTED",
+        "Flash-Next": "UNTESTED"
+      },
+      "vLLM_pinned": {
+        "Qwen3.8-27B": "UNTESTED",
+        "Flash-Next": "LIKELY_BLOCKED"
+      },
+      "SGLang_pinned": {
+        "Qwen3.8-27B": "UNTESTED",
+        "Flash-Next": "LIKELY_BLOCKED"
+      },
+      "Ollama_mlx_studio": {
+        "Qwen3.8-27B": "PASS",
+        "Flash-Next": "NOT_INSTALLED"
+      },
+      "Ollama_cuda_daytona": {
+        "Qwen3.8-27B": "BLOCKED",
+        "Flash-Next": "BLOCKED"
+      }
+    },
+    "RUNTIME_EQUIVALENCE": "NO",
+    "MODEL_COMPARISON_CLAIM": "DESCRIPTIVE_ONLY",
+    "recommended_path_if_unblocked": "same pinned Transformers for BOTH on CUDA host with pinned HF revisions"
+  },
+  "selection": {
+    "SELECTED_REMOTE_PROVIDER": "BLOCKED_REMOTE_CAPACITY",
+    "DAYTONA_STATE": "BLOCKED",
+    "KAGGLE_STATE": "NOT_CONFIGURED",
+    "REMOTE_SELECTION_STATE": "BLOCKED",
+    "FLASH_NEXT_BLOCK": true
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

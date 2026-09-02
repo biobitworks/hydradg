@@ -1,0 +1,29 @@
+{
+  "schema": "hydradg.model_stack.manifest.v1",
+  "recorded_at_utc": "2026-08-28T17:11:35Z",
+  "host": "magicSTUDIObox.local",
+  "models": {
+    "qwen3:1.7b": {
+      "role": "HISTORICAL_LOCAL_BASELINE",
+      "state": "VERIFIED_USED",
+      "digest_prefix": "8f68893c685c"
+    },
+    "qwen2.5-coder:7b": {
+      "role": "HISTORICAL_LOCAL_BASELINE",
+      "state": "VERIFIED_USED",
+      "digest_prefix": "dae161e27b0e"
+    },
+    "qwen3.8:27b": {
+      "role": "SUCCESSOR_LOCAL_MODEL",
+      "state": "VERIFIED_RUNNABLE",
+      "full_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "identity_receipt": "eval/model_stack_20260828/QWEN38_MAGICSTUDIO_MODEL_IDENTITY.json",
+      "smoke_receipt": "eval/model_stack_20260828/QWEN38_MAGICSTUDIO_SMOKE_RECEIPT.json"
+    },
+    "qwen3.8-flash-next": {
+      "role": "SUCCESSOR_DAYTONA_COMPARATOR",
+      "state": "ARTIFACT_AND_HARDWARE_VERIFICATION_PENDING"
+    }
+  },
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

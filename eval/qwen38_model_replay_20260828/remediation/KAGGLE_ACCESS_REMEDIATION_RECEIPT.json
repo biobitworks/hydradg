@@ -1,0 +1,17 @@
+{
+  "schema": "hydradg.qwen38.kaggle_access_remediation.v1",
+  "recorded_at_utc": "2026-08-29T00:49:48Z",
+  "KAGGLE_CLI": "FAIL",
+  "KAGGLE_AUTH": "FAIL",
+  "KAGGLE_API_READ": "NOT_ATTEMPTED",
+  "KAGGLE_ACCESS_STATE": "HUMAN_SECRET_REQUIRED",
+  "KAGGLE_USERNAME_ENV": "PRESENT",
+  "KAGGLE_KEY_ENV": "ABSENT",
+  "kaggle_json_present": true,
+  "kaggle_json_username_present": false,
+  "kaggle_json_key_present": false,
+  "historical_kernel": "biobitworks/hydradg-sglang-bcg-stress-20260826",
+  "cli_search_note": "kaggle binary not on PATH; ~/.kaggle/kaggle.json exists but lacks username/key",
+  "EARLIEST_DIVERGENT_DEPENDENCY": "CLI_BLOCK",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

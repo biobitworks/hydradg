@@ -1,0 +1,90 @@
+{
+  "schema": "hydradg.qwen38.ollarma_state.v1",
+  "recorded_at_utc": "2026-08-28T19:46:00Z",
+  "OLLARMA_STATE": "degraded",
+  "effective_model": "qwen3.8:27b",
+  "selection_status": "fallback_ready",
+  "reason_code": "SELECTION_STALE",
+  "detail": "Selection artifact is older than 24h: 2026-08-26T18:52:17Z. Using pressure-aware local fallback 'qwen3.8:27b'; strict validated selection still needs refresh.",
+  "startup_readiness": {
+    "schema_version": 1,
+    "service_label": "com.byron.ollarma",
+    "generated_at": "2026-08-28T19:46:00.064834+00:00",
+    "status": "degraded",
+    "checks": [
+      {
+        "name": "model_availability",
+        "status": "degraded",
+        "detail": "Selection artifact is older than 24h: 2026-08-26T18:52:17Z. Using pressure-aware local fallback 'qwen3.8:27b'; strict validated selection still needs refresh.",
+        "reason_code": "SELECTION_STALE"
+      },
+      {
+        "name": "swap_posture",
+        "status": "degraded",
+        "detail": "swap_used_mb=55332 exceeds threshold 16384MB",
+        "reason_code": "SWAP_DEGRADED"
+      },
+      {
+        "name": "admission_posture",
+        "status": "ready",
+        "detail": "fail-closed recovery admission is ON",
+        "reason_code": null
+      },
+      {
+        "name": "pipeline_posture",
+        "status": "ready",
+        "detail": "loaded_model_count=1 source=api/ps+ollama ps+sysctl vm.swapusage",
+        "reason_code": null
+      }
+    ],
+    "model_availability": {
+      "status": "degraded",
+      "effective_model": "qwen3.8:27b",
+      "reason_code": "SELECTION_STALE",
+      "detail": "Selection artifact is older than 24h: 2026-08-26T18:52:17Z. Using pressure-aware local fallback 'qwen3.8:27b'; strict validated selection still needs refresh."
+    },
+    "swap": {
+      "status": "degraded",
+      "swap_used_mb": 55332.31,
+      "threshold_mb": 16384.0,
+      "reason_code": "SWAP_DEGRADED"
+    },
+    "admission": {
+      "enabled": true,
+      "detail": "fail-closed recovery admission is ON"
+    },
+    "pipeline": {
+      "loaded_model_count": 1,
+      "loaded_models": [
+        "qwen3.8:27b"
+      ],
+      "telemetry_source": "api/ps+ollama ps+sysctl vm.swapusage"
+    },
+    "residency": {
+      "state": "degraded",
+      "rescue_target": "qwen2.5:1.5b",
+      "rescue_resident": false,
+      "opportunistic_target": "phi4-mini",
+      "opportunistic_resident": false,
+      "swap_used_mb": 55316.31,
+      "reason_code": "RESCUE_BLOCKED_SWAP",
+      "next_action": "hold"
+    },
+    "gateway": {
+      "enabled": true,
+      "allowlist_size": 10,
+      "virtual_keys_configured": 0,
+      "rate_cap_state": "within_caps",
+      "admissions_today": 0,
+      "receipts_today": 0
+    },
+    "next_fix_commands": [
+      "ollarma run --suites code --trials 3",
+      "ollarma report --run-id <fresh_run_id>",
+      "vm_stat | head  # inspect macOS memory pressure",
+      "sudo purge      # release file cache if needed",
+      "launchctl print gui/$(id -u)/com.byron.ollarma",
+      "curl -sS http://127.0.0.1:8484/startup/readiness | jq"
+    ]
+  }
+}

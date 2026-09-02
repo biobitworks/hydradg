@@ -1,0 +1,42 @@
+{
+  "schema": "hydradg.qwen38.local_resource_remediation.v1",
+  "recorded_at_utc": "2026-08-29T00:49:48Z",
+  "execution_host": "magicSTUDIObox.local",
+  "LOCAL_RAM_STATE": "PRESSURED",
+  "LOCAL_SWAP_STATE": "DEGRADED",
+  "LOCAL_DISK_STATE": "ADEQUATE",
+  "OLLAMA_RESIDENCY_STATE": "UNLOADED",
+  "RESOURCE_GATE": "DEGRADED",
+  "telemetry": {
+    "vm_stat_head": [
+      "Mach Virtual Memory Statistics: (page size of 16384 bytes)",
+      "Pages free:                                     4590.",
+      "Pages active:                                 352306.",
+      "Pages inactive:                               350451.",
+      "Pages speculative:                               953.",
+      "Pages throttled:                                   0.",
+      "Pages wired down:                             291853.",
+      "Pages purgeable:                                  22."
+    ],
+    "swapusage": "vm.swapusage: total = 39936.00M  used = 39318.81M  free = 617.19M  (encrypted)",
+    "swap_used_mb": null,
+    "swap_total_mb": null,
+    "swap_used_pct": null,
+    "disk_free_gb": 99.88,
+    "uptime": "17:49  up 22 days, 57 mins, 3 users, load averages: 6.86 9.22 8.23",
+    "ollama_ps": {
+      "models": []
+    }
+  },
+  "non_destructive_remediation_attempted": [
+    "re-measured telemetry",
+    "confirmed no loaded Ollama models",
+    "confirmed no active Q38 runner PID"
+  ],
+  "preservation_plan": [
+    "Do not delete scientific raw outputs or receipts",
+    "Relieve swap before resuming qwen3.8:27b matrix",
+    "Human review before reboot or purge"
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

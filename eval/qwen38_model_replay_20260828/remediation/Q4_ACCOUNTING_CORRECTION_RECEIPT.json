@@ -1,0 +1,23 @@
+{
+  "schema": "hydradg.qwen38.q4_accounting_correction.v1",
+  "recorded_at_utc": "2026-08-29T00:49:48Z",
+  "forward_only": true,
+  "supersedes_stale_prose_only": true,
+  "Q4_EXPECTED": 30,
+  "Q4_C0_EXPECTED": 15,
+  "Q4_C0_TERMINAL": 15,
+  "Q4_C1_EXPECTED": 15,
+  "Q4_C1_TERMINAL": 0,
+  "Q4_TOTAL_TERMINAL": 15,
+  "Q4_MISSING": 15,
+  "Q4_PRIOR_27_OF_30_VALID": "NO",
+  "explanation": "Prior staircase counted 27 global C0 cells including out-of-scope cases; valid Q4 intersection is 15/30.",
+  "q4_case_set": [
+    "E01-T0",
+    "E02-0",
+    "E02-1",
+    "E02-2",
+    "E02-3"
+  ],
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

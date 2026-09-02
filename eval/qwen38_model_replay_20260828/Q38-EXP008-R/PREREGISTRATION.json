@@ -1,0 +1,54 @@
+{
+  "schema": "hydradg.daisy_overnight.preregistration.v1",
+  "experiment_id": "Q38-EXP008-R",
+  "alias_ids": ["EXP-008-Q38"],
+  "formal_name": "QWEN38_STRUCTURED_RETRIEVAL_SUCCESSOR_REPLAY",
+  "predecessor_experiment": "EXP-008",
+  "relationship": "SUCCESSOR_REPLAY_NOT_HISTORICAL",
+  "changed_variable": "MODEL_IDENTITY",
+  "hypothesis": "H0_EXP008: Structured FCG retrieval/composition does not improve failure-prevention vs flat prose.",
+  "primary_comparison_question": "Under frozen cases/scorer/intervention contract, does Qwen3.8-Flash-Next exhibit different response patterns from Qwen3.8-27B?",
+  "conditions": {
+    "C0": "FLAT_PROSE",
+    "C1": "STRUCTURED_FCG"
+  },
+  "models": {
+    "QWEN38_27B": {
+      "ollama_alias": "qwen3.8:27b",
+      "expected_digest": "22130167c4c20e20c7b71454612966ca8e8171e9b3cc8ab6ce8aa6cbfec79643",
+      "hf_repo": "Qwen/Qwen3.8-27B",
+      "lane": "LOCAL_OLLAMA_STUDIO",
+      "state": "CANARY_PASS"
+    },
+    "QWEN38_FLASH_NEXT": {
+      "ollama_alias": "qwen3.8-flash-next:125b-mlx",
+      "hf_repo": "Qwen/Qwen3.8-Flash-Next",
+      "lane": "REMOTE_OR_STUDIO_MLX",
+      "state": "BLOCKED_CAPACITY"
+    }
+  },
+  "thinking_configuration": {
+    "think": false,
+    "reasoning_effort": "default_off",
+    "preserve_thinking": false,
+    "api": "ollama_generate_top_level",
+    "preregistered": true,
+    "semantic_note": "Both models must use equivalent logical reasoning-off setting when Flash-Next lane unblocks"
+  },
+  "cases": "eval/ic_failure_learning_20260827/cases/CASES.jsonl",
+  "cases_manifest_sha256": "730da91279127659e0b0117a47aac5add61e832281524c4ae6ac280204b4e8ed",
+  "n_replicates": 3,
+  "expected_matrix_cells_full": 300,
+  "expected_matrix_cells_27b_only": 150,
+  "primary_endpoint": "E06_PREVENTS_C_MEDIA_NOT_IN_VAULT",
+  "case_aggregation": "MAJORITY_OF_3_REPLICATES",
+  "E06_POWER_STATE": "KNOWN_LIMITED",
+  "E06_CONFIRMATORY_CLAIM_ALLOWED": "NO",
+  "alpha": 0.05,
+  "RUNTIME_EQUIVALENCE": "NO",
+  "MODEL_COMPARISON_CLAIM": "DESCRIPTIVE_ONLY",
+  "FLASH_NEXT_REMOTE_CAPACITY_BLOCKED": true,
+  "frozen_at_utc": "2026-08-28T19:50:00Z",
+  "scientific_parent_sha": "825964f49e730d951e9199d8386334d8083448b9",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "hydradg.model_stack.qwen38_prior_use_audit.v1",
+  "recorded_at_utc": "2026-08-28T17:10:19Z",
+  "host": "magicSTUDIObox.local",
+  "repo": "/Users/byron/projects/active/hydradg-qwen38-model-replay-20260828",
+  "search_patterns": [
+    "qwen3.8",
+    "qwen3.8:27b",
+    "22130167c4c2",
+    "Qwen3.8-27B"
+  ],
+  "terminal_state": "NOT_VERIFIED_IN_CUSTODY",
+  "findings": [
+    {
+      "path": "eval/ollarma_fcg_root_review_20260827/MODEL_INVENTORY.json",
+      "evidence_class": "MODEL_INVENTORY_DISCOVERY",
+      "experiment_id": null,
+      "commit_sha": null,
+      "host": "magicSTUDIObox.local",
+      "model_alias": "qwen3.8:27b",
+      "digest": "22130167c4c2",
+      "raw_output_or_receipt": "inventory_listing_only",
+      "verified_prior_experiment_use": false
+    },
+    {
+      "path": "eval/ollarma_measurement_review_20260827/MODEL_INVENTORY.json",
+      "evidence_class": "MODEL_INVENTORY_DISCOVERY",
+      "experiment_id": null,
+      "commit_sha": null,
+      "host": "magicSTUDIObox.local",
+      "model_alias": "qwen3.8:27b",
+      "digest": "22130167c4c2",
+      "raw_output_or_receipt": "inventory_listing_only",
+      "verified_prior_experiment_use": false
+    },
+    {
+      "path": "eval/vercel_public_closeout_20260827/FINAL_VERCEL_PUBLIC_CLOSEOUT_RECEIPT.json",
+      "evidence_class": "CLOSEOUT_REFERENCE",
+      "experiment_id": null,
+      "commit_sha": "83f75e9e",
+      "host": "magicSTUDIObox.local",
+      "model_alias": "qwen3.8:27b",
+      "digest": null,
+      "raw_output_or_receipt": "LOCAL_MODEL field only",
+      "verified_prior_experiment_use": false
+    },
+    {
+      "path": "eval/vercel_public_closeout_20260827/LOCAL_LIVE_MODEL_RECEIPT.json",
+      "evidence_class": "HEALTH_CHECK_RECEIPT",
+      "experiment_id": null,
+      "commit_sha": "83f75e9e",
+      "host": "magicSTUDIObox.local",
+      "model_alias": "qwen3.8:27b",
+      "digest": null,
+      "raw_output_or_receipt": "FRESH_INFERENCE=PASS without bound raw_response_sha256",
+      "verified_prior_experiment_use": false
+    }
+  ],
+  "verified_prior_uses": [],
+  "note": "No admitted HydraDG experiment manifest, raw execution row, or Ollarma/Ollama receipt binds qwen3.8:27b to a completed experiment ID. Inventory and closeout references do not establish prior experiment use.",
+  "SIGNATURE_STATE": "NOT_SIGNED"
+}

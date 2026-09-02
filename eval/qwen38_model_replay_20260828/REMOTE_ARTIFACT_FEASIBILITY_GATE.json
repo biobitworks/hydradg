@@ -1,0 +1,36 @@
+{
+  "schema": "hydradg.qwen38.remote_artifact_feasibility.v1",
+  "recorded_at_utc": "2026-08-28T19:45:58Z",
+  "host_disk_free_gb": 35.38,
+  "models": {
+    "QWEN38_27B": {
+      "repo": "Qwen/Qwen3.8-27B",
+      "MODEL_WEIGHT_BYTES_BF16": 57982058496,
+      "MODEL_WEIGHT_BYTES_FP8": 30064771072,
+      "MINIMUM_GPU_VRAM_FP8_GB": 32,
+      "MINIMUM_DISK_REQUIREMENT_GB": 35,
+      "cuda_ollama_studio_artifact": "gguf Q4_K_M ~17GB \u2014 not portable to Linux CUDA"
+    },
+    "FLASH_NEXT": {
+      "repo": "Qwen/Qwen3.8-Flash-Next",
+      "ollama_mlx_tag": "qwen3.8-flash-next:125b-mlx",
+      "MODEL_WEIGHT_BYTES_MLX_OLLAMA": 112742891520,
+      "MODEL_WEIGHT_BYTES_BF16": 375809638400,
+      "MODEL_WEIGHT_BYTES_FP8": 193273528320,
+      "MINIMUM_HOST_RAM_GB": 128,
+      "MINIMUM_GPU_VRAM_FP8_GB": 80,
+      "MINIMUM_DISK_REQUIREMENT_GB": 110,
+      "OFFLOAD_REQUIREMENTS": "51B n-gram/PLE table may require NVMe offload; architecture-specific",
+      "cuda_compatible_mlx_ollama": false
+    }
+  },
+  "local_flash_next_pull_feasible": false,
+  "local_flash_next_pull_state": "BLOCKED",
+  "FLASH_NEXT_REMOTE_CAPACITY_BLOCKED": true,
+  "block_reasons": [
+    "local_disk_free_gb=35.38 < 110 required for MLX Ollama artifact",
+    "Daytona CLI not authenticated in current shell; GPU sandbox not provisioned",
+    "Flash-Next MLX Ollama artifact not admissible on Linux CUDA without separate HF artifact",
+    "Flash-Next HF full weights ~180GB+; exceeds typical single-GPU Daytona quota without multi-node"
+  ]
+}
