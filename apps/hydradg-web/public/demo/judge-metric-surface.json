@@ -1,0 +1,14 @@
+{
+  "schema": "hydradg.hydralamp.judge_metric_surface.v1",
+  "recorded_at_utc": "2026-09-02T03:45:00Z",
+  "mode": "FROZEN_EVIDENCE",
+  "host": "magicPRObox.local",
+  "port": 3011,
+  "claim_ceiling": "SYSTEMS_DEMONSTRATION_ONLY",
+  "metrics": {
+    "parse_rate": null,
+    "custody_integrity": "DEMONSTRATION",
+    "live_model_state": "NOT_AVAILABLE_ON_CONTROLLER"
+  },
+  "note": "Static demo artifact for submission UI health check. Live model/runtime state is exposed via /api/hydralamp/status when the server is running."
+}
