@@ -1,0 +1,58 @@
+{
+  "ABSTENTIONS": 0,
+  "ATOMS_EMITTED": "UNKNOWN",
+  "CANONICAL_FCG_BINDINGS": "UNKNOWN_PARTIAL_NOT_VALIDATED",
+  "CANONICAL_FCO_BINDINGS": "UNKNOWN_PARTIAL_NOT_VALIDATED",
+  "CLAIM_CEILING": "DETERMINISTIC_TOOL_OUTPUT",
+  "CURRENT_BRANCH": "cursor/seedgraph-forensic-recovery-b3c8",
+  "CURRENT_SHA": "1274be3523fa2fa2092926c0cf2147702a8f0775",
+  "EARLIEST_DIVERGENCE": "FINAL_PARQUET_SERIALIZATION_WITHOUT_BUILD_RECEIPT",
+  "EVIDENCE_STATE": "FORENSIC_ARTIFACTS_RECORDED",
+  "EXPERIMENT_STATE": "SEEDGRAPH_V1A_VALIDATION_BLOCKED",
+  "FAILED_ATOMS": "UNKNOWN",
+  "FCG_STATE": "NOT_APPENDED",
+  "FCO_STATE": "PREDECESSOR_INTERRUPTED_NOT_PROMOTED",
+  "FINAL_REVIEW_GATE": "HUMAN_OPERATOR_APPROVAL_BEFORE_SUCCESSOR_BUILD",
+  "HYDRADB_STATE": "BLOCKED_PENDING_SEEDGRAPH_TERMINAL_VALID",
+  "LOGICAL_RECORDS_EXPECTED": {
+    "track01_documents": 511962,
+    "track01_questions_primary": 300,
+    "track03_questions": 500,
+    "track03_turns": 246750
+  },
+  "LOGICAL_RECORDS_INGESTED": "UNKNOWN_NOT_READBACK_SAFE",
+  "LOGICAL_RECORD_COVERAGE": "UNKNOWN",
+  "MERKLE_MMR_STATE": "NOT_COMMITTED",
+  "NEXT_SAFE_ACTION": "Preserve predecessor partials; schedule successor build to isolated output root with pinned source/engine SHA; hold Q38 until SeedGraph terminal valid or human-approved checkpoint",
+  "ORPHAN_ATOMS": "UNKNOWN",
+  "PID96177_ACTUAL_ROLE": "HydraDG SeedGraph hierarchy v1a monolithic build (import+ingest+atomize+FCO/FCG bind+parquet serialize)",
+  "PID96177_OUTPUT_ROOT": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "PID96177_SEEDGRAPH_VERSION": "engine_sha256=2592f6a2b21dd671e19402c9367376fd9b65b54b39fa7eefa52034b7701bc938 engine_git=bed70f6af58d02fab76ce4f6133444b6360bbbbe",
+  "PID96177_SOURCE_ROOT": {
+    "track01_documents": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/documents/test.parquet",
+    "track01_questions": "/Users/byron/.local/share/hydradg-datasets/track01/enterprise-rag-bench/data/questions/test.parquet",
+    "track03_json": "/Users/byron/.local/share/hydradg-datasets/track03/longmemeval-cleaned/longmemeval_s_cleaned.json"
+  },
+  "Q38_EXECUTION_STATE": "PAUSED_DURING_SEEDGRAPH_RECOVERY",
+  "ROOT_SOURCE_IMPORTED": "PASS_IN_MEMORY_NOT_DURABLY_COMMITTED",
+  "SEEDGRAPH_FINAL_STATE": "NOT_ESTABLISHED",
+  "SEEDGRAPH_INTERRUPTION_STATE": "FORENSIC_RECOVERY_REQUIRED",
+  "SEEDGRAPH_LAST_DURABLE_CHECKPOINT": "NONE_VALID",
+  "SEEDGRAPH_RECOVERY_CLASSIFICATION": "SEEDGRAPH_PARTIAL_RESTART_REQUIRED",
+  "SEEDGRAPH_RESOURCE_STATE": {
+    "seedgraph_writer_active": false,
+    "swap_used_pct": 77.61
+  },
+  "SEEDGRAPH_RESUME_SAFE": false,
+  "SEEDGRAPH_TERMINAL_RECEIPT": "ABSENT",
+  "SIGNATURE_STATE": "NOT_SIGNED",
+  "SOURCE_BYTE_COVERAGE": "UNKNOWN_DURABLE_PARTIAL_CORRUPT_PARQUET",
+  "artifact_paths": {
+    "checkpoint": "/Users/byron/projects/active/hydradg/eval/seedgraph_forensic_recovery_20260828/SEEDGRAPH_LAST_DURABLE_CHECKPOINT.json",
+    "classification": "/Users/byron/projects/active/hydradg/eval/seedgraph_forensic_recovery_20260828/SEEDGRAPH_RECOVERY_CLASSIFICATION.json",
+    "identity": "/Users/byron/projects/active/hydradg/eval/seedgraph_forensic_recovery_20260828/SEEDGRAPH_PID96177_FORENSIC_IDENTITY.json",
+    "manifest": "/Users/byron/projects/active/hydradg/eval/seedgraph_forensic_recovery_20260828/SEEDGRAPH_INTERRUPTED_OUTPUT_MANIFEST.json"
+  },
+  "recorded_at_utc": "2026-08-29T04:59:56Z",
+  "schema": "hydradg.seedgraph.forensic_final_report.v1"
+}

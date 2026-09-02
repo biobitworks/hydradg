@@ -1,0 +1,117 @@
+{
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "expected_artifacts": [
+    "nodes.parquet",
+    "edges.parquet",
+    "seed_index.parquet",
+    "questions.parquet",
+    "question_seeds.parquet",
+    "BUILD_RECEIPT.json",
+    "SHA256SUMS.txt",
+    "track03_turn_projection.parquet"
+  ],
+  "inventory": [
+    {
+      "detail": "Parquet magic bytes not found in footer",
+      "integrity_state": "partial_corrupt",
+      "mtime_utc": "2026-08-28T14:56:27Z",
+      "parquet_footer": "3465227d",
+      "parquet_header": "50415231",
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/nodes.parquet",
+      "role": "nodes.parquet",
+      "sha256": "DEFERRED_LARGE_FILE",
+      "sha256_manifest_note": "Hash deferred; preserve exact locator and size_bytes",
+      "size_bytes": 71601094693,
+      "state": "present",
+      "type": "file"
+    },
+    {
+      "detail": "Parquet magic bytes not found in footer",
+      "integrity_state": "partial_corrupt",
+      "mtime_utc": "2026-08-28T14:56:33Z",
+      "parquet_footer": "34393638",
+      "parquet_header": "50415231",
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/edges.parquet",
+      "role": "edges.parquet",
+      "sha256": "DEFERRED_LARGE_FILE",
+      "sha256_manifest_note": "Hash deferred; preserve exact locator and size_bytes",
+      "size_bytes": 46780800179,
+      "state": "present",
+      "type": "file"
+    },
+    {
+      "mtime_utc": null,
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/seed_index.parquet",
+      "role": "seed_index.parquet",
+      "sha256": null,
+      "size_bytes": 0,
+      "state": "missing",
+      "type": "file"
+    },
+    {
+      "mtime_utc": null,
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/questions.parquet",
+      "role": "questions.parquet",
+      "sha256": null,
+      "size_bytes": 0,
+      "state": "missing",
+      "type": "file"
+    },
+    {
+      "mtime_utc": null,
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/question_seeds.parquet",
+      "role": "question_seeds.parquet",
+      "sha256": null,
+      "size_bytes": 0,
+      "state": "missing",
+      "type": "file"
+    },
+    {
+      "mtime_utc": null,
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/BUILD_RECEIPT.json",
+      "role": "BUILD_RECEIPT.json",
+      "sha256": null,
+      "size_bytes": 0,
+      "state": "missing",
+      "type": "file"
+    },
+    {
+      "mtime_utc": null,
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/SHA256SUMS.txt",
+      "role": "SHA256SUMS.txt",
+      "sha256": null,
+      "size_bytes": 0,
+      "state": "missing",
+      "type": "file"
+    },
+    {
+      "mtime_utc": null,
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation/track03_turn_projection.parquet",
+      "role": "track03_turn_projection.parquet",
+      "sha256": null,
+      "size_bytes": 0,
+      "state": "missing",
+      "type": "file"
+    },
+    {
+      "mtime_utc": "2026-08-29T04:44:49Z",
+      "path": "/Volumes/magicBLACKbox/hydradg/seedgraph/audits/v1a_validation_watch_20260824.jsonl",
+      "role": "v1a_validation_watch_20260824.jsonl",
+      "sha256": "27596a47cc1f2d44adcf936ec35e7649e555d9bafa4d51776c32daa45a70ed67",
+      "size_bytes": 2872504,
+      "state": "complete",
+      "type": "file"
+    }
+  ],
+  "missing_count": 6,
+  "newest_output_mtime_utc": "2026-08-28T14:56:33Z",
+  "output_root": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+  "partial_count": 0,
+  "predecessor_pid": 96177,
+  "present_count": 2,
+  "preservation_policy": "DO_NOT_DELETE_OR_MOVE",
+  "recorded_at_utc": "2026-08-29T04:59:56Z",
+  "schema": "hydradg.seedgraph.interrupted_output_manifest.v1",
+  "signature_state": "NOT_SIGNED",
+  "total_output_bytes": 118384767376
+}

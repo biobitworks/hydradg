@@ -1,0 +1,40 @@
+{
+  "SEEDGRAPH_RECOVERY_CLASSIFICATION": "SEEDGRAPH_PARTIAL_RESTART_REQUIRED",
+  "SEEDGRAPH_RESUME_SAFE": false,
+  "claim_ceiling": "DETERMINISTIC_TOOL_OUTPUT",
+  "fco_fcg_custody": {
+    "chain": "SourceFCO -> SeedGraphImportRunFCO -> SeedGraphBatch/Atom objects -> canonical Atom/FCO -> FCG edges",
+    "interruption_relation": "RECOVERED_BY",
+    "interruption_relation_note": "Canonical hydra_schema_edges.json has no INTERRUPTED_BY; use RECOVERED_BY for successor run and preserve predecessor as historical evidence",
+    "predecessor_run_state": "INTERRUPTED_BY_RESOURCE_REMEDIATION"
+  },
+  "idempotency_answer": {
+    "answer_code": "E",
+    "answer_text": "unknown_for_interrupted_run; full deterministic re-run to a clean output root would reproduce canonical typed_id/object_sha256 values (content-addressed), but v1a has no resume/checkpoint and cannot reuse partial corrupt parquet",
+    "canonical_seedgraph_import_note": "uv run seedgraph import supports --resume-run-id for publication-family batches; that path is separate from HydraDG hierarchy v1a validation build",
+    "implementation": "seedgraph_hierarchy_v1a.py",
+    "question": "If already imported object X is submitted again with identical canonical bytes, does SeedGraph reuse safely?"
+  },
+  "interruption_state": "AFTER_IN_MEMORY_CONSTRUCTION_BEFORE_VALID_RECEIPT",
+  "merkle_mmr_state": "NOT_COMMITTED",
+  "recorded_at_utc": "2026-08-29T04:59:56Z",
+  "resource_isolation": {
+    "OLLARMA_WATCHER_LLM": "PAUSED",
+    "Q38_MODEL_EXECUTION": "PAUSED",
+    "WATCHER_TELEMETRY_ONLY": "YES"
+  },
+  "schema": "hydradg.seedgraph.recovery_classification.v1",
+  "signature_state": "NOT_SIGNED",
+  "successor_plan": {
+    "freeze_requirements": [
+      "source SHA256 unchanged",
+      "engine git sha or engine sha256 pinned",
+      "parser/config unchanged",
+      "isolated output root (no overwrite of predecessor partials)"
+    ],
+    "predecessor_output_preserve_path": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation",
+    "recovery_mode": "RESTART_FROM_FROZEN_SOURCE",
+    "relationship": "INTERRUPTED_PREDECESSOR_LINEAGE -> SUPERSEDED_BY -> SuccessorSeedGraphRunFCO",
+    "successor_output_root_recommended": "/Volumes/magicBLACKbox/hydradg/seedgraph/v1a_validation_successor_20260828"
+  }
+}
