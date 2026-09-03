@@ -71,9 +71,26 @@ def write_jsonl(p: Path, rows: list[dict]) -> None:
     p.write_text("\n".join(json.dumps(r, sort_keys=True) for r in rows) + ("\n" if rows else ""))
 
 
+def run_env() -> dict[str, str]:
+    env = os.environ.copy()
+    prefix = "/opt/homebrew/bin:/usr/local/bin"
+    env["PATH"] = f"{prefix}:{env.get('PATH', '')}" if prefix not in env.get("PATH", "") else env["PATH"]
+    return env
+
+
+def daytona_bin() -> str:
+    found = shutil.which("daytona", path=run_env().get("PATH"))
+    if found:
+        return found
+    for candidate in ("/opt/homebrew/bin/daytona", "/usr/local/bin/daytona"):
+        if Path(candidate).is_file():
+            return candidate
+    raise FileNotFoundError("daytona CLI not found (expected /opt/homebrew/bin/daytona on magicSTUDIObox)")
+
+
 def run(cmd: list[str], *, cwd: Path | None = None, timeout: int = 600, env: dict | None = None) -> subprocess.CompletedProcess:
     return subprocess.run(
-        cmd, cwd=cwd or ROOT, capture_output=True, text=True, timeout=timeout, env=env or os.environ.copy()
+        cmd, cwd=cwd or ROOT, capture_output=True, text=True, timeout=timeout, env=env or run_env()
     )
 
 
@@ -195,7 +212,7 @@ def host_preflight() -> dict[str, Any]:
 
 
 def daytona_list() -> list[dict]:
-    proc = run(["daytona", "list", "--format", "json"], timeout=60)
+    proc = run([daytona_bin(), "list", "--format", "json"], timeout=60)
     if proc.returncode != 0:
         return []
     data = json.loads(proc.stdout)
@@ -203,7 +220,7 @@ def daytona_list() -> list[dict]:
 
 
 def daytona_exec(sandbox_id: str, cmd: str, *, timeout: int = 600) -> dict[str, Any]:
-    proc = run(["daytona", "exec", sandbox_id, "--", "bash", "-lc", cmd], timeout=timeout)
+    proc = run([daytona_bin(), "exec", sandbox_id, "--", "bash", "-lc", cmd], timeout=timeout)
     return {
         "exit_code": proc.returncode,
         "stdout": proc.stdout,
@@ -373,7 +390,7 @@ else:
                         "state": result.get("state"),
                         "attempts": attempts,
                         "recorded_at_utc": utc(),
-                        "daytona_cli_version": run(["daytona", "version"]).stdout.strip(),
+                        "daytona_cli_version": run([daytona_bin(), "version"]).stdout.strip(),
                     }
                     write_json(receipt_path, receipt)
                     state["provider"] = "daytona"
@@ -412,7 +429,8 @@ print(json.dumps({
 PY
 """
     result = daytona_exec(sandbox_id, proof_script, timeout=300)
-    cuda_ok = result["exit_code"] == 0 and "True" in result.get("stdout", "")
+    stdout = result.get("stdout") or ""
+    cuda_ok = result["exit_code"] == 0 and ("true" in stdout.lower())
     proof = {
         "schema": "hydradg.gpu_runtime_proof.v1",
         "provider": "daytona",

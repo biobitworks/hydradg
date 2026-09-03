@@ -1,0 +1,108 @@
+{
+  "schema": "portfolio.wifi_migration_audit.v1",
+  "recorded_at_utc": "2026-09-02T18:32:00Z",
+  "execution_host": "magicPRObox.local",
+  "audit_scope": "four_device_connectivity_studio_execution_authority",
+  "NEW_WIFI_MIGRATION": "PARTIAL",
+  "claim_ceiling": "OPERATIONAL_CONNECTIVITY_AUDIT",
+  "signature_state": "NOT_SIGNED",
+  "hosts": {
+    "magicSTUDIObox": {
+      "hostname": "magicSTUDIObox.local",
+      "computer_name": "byron’s Mac Studio",
+      "lan_ipv4": "192.168.4.20",
+      "lan_iface": "en1",
+      "default_gateway": "192.168.4.1",
+      "ssid_reported": "UNAVAILABLE_AIRPORT_NOT_ASSOCIATED",
+      "tailscale_ipv4": "100.105.40.90",
+      "magicdns": "byrons-mac-studio.tail0cf9bb.ts.net",
+      "tailscale_peer_state": "ONLINE",
+      "address_vs_prior": "UNCHANGED"
+    },
+    "magicPRObox": {
+      "hostname": "magicPRObox.local",
+      "computer_name": "Byron’s MacBook Pro",
+      "lan_ipv4": "192.168.4.23",
+      "lan_iface": "en0",
+      "default_gateway": "192.168.4.1",
+      "ssid_reported": "UNAVAILABLE_AIRPORT_NOT_ASSOCIATED",
+      "tailscale_ipv4": "100.115.125.59",
+      "magicdns": "magicprobox.tail0cf9bb.ts.net",
+      "tailscale_peer_state": "ONLINE",
+      "address_vs_prior": "UNCHANGED"
+    },
+    "magicphonebox": {
+      "tailscale_ipv4": "100.73.199.92",
+      "magicdns": "magicphonebox.tail0cf9bb.ts.net",
+      "tailscale_peer_state": "ONLINE",
+      "active_session": false,
+      "address_vs_prior": "UNCHANGED",
+      "interactive_test": "OPERATOR_REQUIRED"
+    },
+    "ipad": {
+      "tailscale_hostname": "ipad-pro-12-9-gen-5",
+      "tailscale_ipv4": "100.113.37.87",
+      "magicdns": "ipad-pro-12-9-gen-5.tail0cf9bb.ts.net",
+      "tailscale_peer_state": "ONLINE",
+      "active_session": false,
+      "address_vs_prior": "DISCOVERED_LIVE",
+      "interactive_test": "OPERATOR_REQUIRED"
+    }
+  },
+  "connectivity_matrix": [
+    {"source": "MacBook", "destination": "Studio", "transport": "Tailscale SSH (100.105.40.90)", "test": "hostname + tailscale ip -4", "result": "PASS"},
+    {"source": "MacBook", "destination": "Studio", "transport": "mDNS magicSTUDIObox.local", "test": "ssh hostname", "result": "PASS"},
+    {"source": "MacBook", "destination": "Studio", "transport": "MagicDNS byrons-mac-studio.tail0cf9bb.ts.net", "test": "ssh hostname", "result": "PASS"},
+    {"source": "MacBook", "destination": "Ollarma@Studio", "transport": "SSH tunnel 127.0.0.1:18484", "test": "/health", "result": "PASS"},
+    {"source": "MacBook", "destination": "Ollama@Studio", "transport": "SSH tunnel 127.0.0.1:21434", "test": "/api/tags", "result": "PASS"},
+    {"source": "iPad", "destination": "Studio", "transport": "Tailscale + iSH SSH", "test": "operator interactive", "result": "OPERATOR_REQUIRED"},
+    {"source": "iPhone", "destination": "Studio", "transport": "Tailscale peer visibility", "test": "tailscale status Online=True", "result": "PEER_PASS_INTERACTIVE_OPERATOR_REQUIRED"},
+    {"source": "Studio", "destination": "Tailscale control plane", "transport": "Tailscale", "test": "status + ip -4", "result": "PASS"}
+  ],
+  "services": {
+    "ollama_local": "PASS",
+    "ollama_bind": "LOOPBACK",
+    "ollarma_local": "PASS",
+    "ollarma_bind": "LOOPBACK",
+    "public_wifi_exposure": "NO",
+    "macbook_ollarma_tunnel": "PASS",
+    "macbook_ollama_tunnel": "PASS"
+  },
+  "keys_env": {
+    "studio": {"exists": true, "shell_parse": "PASS", "placeholder_count": 0},
+    "macbook": {"exists": true, "shell_parse": "PASS", "placeholder_count": 0}
+  },
+  "sglang_daytona_host_gate": {
+    "host": "magicSTUDIObox.local",
+    "hydradg_path": "/Users/byron/projects/active/hydradg",
+    "script_present": true,
+    "daytona_cli": "PASS",
+    "experiment_executed_this_audit": false
+  },
+  "repairs": {
+    "old_lan_references_found": 4,
+    "old_lan_references_repaired": 3,
+    "stale_forensic_retained": ["~/.ssh/config Host magicstudio-connect-direct HostName 10.144.46.105"],
+    "ssh_config_backup": "~/.ssh/config.bak-wifi-migration-20260902T183103",
+    "tunnel_plist_backup": "~/Library/LaunchAgents/com.byron.macstudio.tunnel.plist.bak-wifi-migration-20260902T183103",
+    "actions": [
+      "Primary SSH aliases magicstudio/magicSTUDIObox now target Tailscale IPv4 100.105.40.90",
+      "MagicDNS HostName corrected to byrons-mac-studio.tail0cf9bb.ts.net (prior magicstudiobox.tail0cf9bb.ts.net did not resolve)",
+      "LaunchAgent com.byron.macstudio.tunnel retargeted from magicSTUDIObox.local to 100.105.40.90",
+      "hydradg studio_remote.sh + gum_studio_piecewise_e2e.sh default STUDIO_SSH_HOST=magicstudiobox-ip"
+    ]
+  },
+  "custody_precheck": {
+    "ollarma_branch": "exp/fco-006-fresh-testset-prep",
+    "ollarma_head": "c616769c05d613573dd11789308d9f8bfba0c5ce",
+    "hydradg_branch": "cursor/dual-host-reconnect-vcc-resume-3685",
+    "hydradg_head": "9fb2c3a0f62d0681cb8d67ad136b65cf8db49e90"
+  },
+  "unverified": [
+    "SSID string unavailable via airport/networksetup on both Macs",
+    "iPhone interactive reachability beyond Tailscale peer Online",
+    "iPad iSH SSH interactive session"
+  ],
+  "blockers": [],
+  "next_operator_action": "On iPad iSH and iPhone: ssh magicSTUDIObox (or Tailscale IP 100.105.40.90), run hostname && confirm magicSTUDIObox.local"
+}
