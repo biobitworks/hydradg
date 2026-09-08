@@ -1,0 +1,56 @@
+{
+  "created_at": "2026-09-08T00:02:15Z",
+  "links": [
+    {
+      "edge": "DEPENDS_ON",
+      "historical_experiment": "HYDRADG-SGLANG-REPLAY-20260827",
+      "identity_status": "LINKED",
+      "shared_source_id": "SRC-SGLANG-PCG-DOCS"
+    },
+    {
+      "edge": "DEPENDS_ON",
+      "historical_experiment": "HYDRADG-SGLANG-REPLAY-20260827",
+      "identity_status": "LINKED",
+      "shared_source_id": "SRC-SGLANG-BREAKABLE-DOCS"
+    },
+    {
+      "edge": null,
+      "historical_experiment": "HYDRALAMP-20260826-FINAL",
+      "identity_status": "SOURCE_IDENTITY_UNRESOLVED",
+      "note": "Do not invent hashes; successor linkage layer only.",
+      "shared_source_id": null
+    },
+    {
+      "edge": null,
+      "historical_experiment": "HYDRALAMP-RUNTYPE-20260826",
+      "identity_status": "SOURCE_IDENTITY_UNRESOLVED",
+      "note": "Do not invent hashes; successor linkage layer only.",
+      "shared_source_id": null
+    },
+    {
+      "edge": "DEPENDS_ON",
+      "historical_experiment": "HYDRALAMP-FINAL-REAL-SAMPLE-20260827",
+      "identity_status": "LINKED",
+      "shared_source_id": "SRC-CLOUDFLARE-OS-REPO-USED"
+    },
+    {
+      "edge": null,
+      "historical_experiment": "HYDRADG-QWEN38-SUCCESSOR-20260828",
+      "identity_status": "SOURCE_IDENTITY_UNRESOLVED",
+      "note": "Do not invent hashes; successor linkage layer only.",
+      "shared_source_id": null
+    }
+  ],
+  "policy": "Successor source-linkage; historical receipts immutable; LEGACY_PRE_CONTRACT allowed.",
+  "schema": "msm.g4c.hydradg_linkage.v1",
+  "shared_sources_available": [
+    "SRC-PHYSREVE-82-051112",
+    "SRC-ARXIV-1004-2868",
+    "SRC-SGLANG-PCG-DOCS",
+    "SRC-SGLANG-BREAKABLE-DOCS",
+    "SRC-CLOUDFLARE-OS-ARTICLE",
+    "SRC-CLOUDFLARE-OS-REPO-USED",
+    "SRC-LYCEUM-DOCS-QUICKSTART",
+    "SRC-ZKP-MCP-AGENT-UPSTREAM"
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "created_at": "2026-09-08T00:02:15Z",
+  "g4a_contract_head": "8cd1538cbc299f8ca040ed2bc5b90fe11f2a79b6",
+  "hydralamp_path": "hydralamp/ (inside biobitworks/hydradg)",
+  "mappings": [
+    {
+      "classification": "COMPATIBLE",
+      "g4a": "Actor",
+      "hydralamp": "hydralamp.actors.ActorFCO / ActorRegistry",
+      "note": "Both model actors; schemas not byte-identical."
+    },
+    {
+      "classification": "PARTIAL",
+      "g4a": "Permission",
+      "hydralamp": "hydralamp.access.AccessDecision / Capability",
+      "note": "Capability grants vs MSM Permission FCO; fail-closed semantics related but not schema-equivalent."
+    },
+    {
+      "classification": "SEMANTIC_ONLY",
+      "g4a": "Capability",
+      "hydralamp": "hydralamp.access.Capability",
+      "note": "Shared vocabulary; no verified schema equivalence."
+    },
+    {
+      "classification": "SEMANTIC_ONLY",
+      "g4a": "Transformation",
+      "hydralamp": "gateway StoredObject mutations / orchestrator steps",
+      "note": "No Transformation FCO schema in HydraLamp."
+    },
+    {
+      "classification": "PARTIAL",
+      "g4a": "Failure",
+      "hydralamp": "LIVE_BLOCKED_RECEIPT / failure learning receipts",
+      "note": "Failure receipts exist; not MSM Failure FCO schema."
+    },
+    {
+      "classification": "INCOMPATIBLE",
+      "g4a": "MerkleCommitment",
+      "hydralamp": "hydralamp.mmr.MMRAccumulator / hash chains",
+      "note": "HydraLamp MMR \u2260 MSM-FCO-MERKLE-V1 operation Merkle; do not equate."
+    },
+    {
+      "classification": "PARTIAL",
+      "g4a": "ActorAttestation",
+      "hydralamp": "REAL_CRYPTO_STATE / signature fields in receipts",
+      "note": "Attestation concepts present; G4A ActorAttestation schema not verified equivalent."
+    },
+    {
+      "classification": "COMPATIBLE",
+      "g4a": "Signature",
+      "hydralamp": "hydralamp.crypto.sign_message / Ed25519",
+      "note": "Real crypto primitives exist; G4A Signature FCO remains NOT_SIGNED in MSM gates."
+    }
+  ],
+  "schema": "msm.g4c.hydralamp_g4a_mapping.v1",
+  "schema_equivalence_claimed": false
+}
