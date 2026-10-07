@@ -292,3 +292,5 @@ It scans complete Git history and fails on any finding. A historical or partial 
 | **External papers / templates / APIs** | **Respective upstream rights** |
 
 See [`LICENSING.md`](LICENSING.md), [`docs/FCO_FCG_SOURCE_LINEAGE.md`](docs/FCO_FCG_SOURCE_LINEAGE.md), and [`THIRD_PARTY_NOTICES.md`](THIRD_PARTY_NOTICES.md) for scope, publication identity, supersession treatment, and third-party attribution.
+
+**License:** Unless otherwise explicitly licensed, original Biobitworks material in this repository is licensed under [CC BY-NC-ND 4.0](https://creativecommons.org/licenses/by-nc-nd/4.0/); third-party components remain under their respective licenses.
